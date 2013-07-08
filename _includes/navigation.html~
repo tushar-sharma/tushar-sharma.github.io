@@ -6,20 +6,20 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	  </a>
-	  <a class="brand" href="http://erjjones.github.com">My little nest</a>
+	  <a class="brand" href="http://erjjones.github.com">oxTushar</a>
 	  <div class="nav-collapse">
 		<ul class="nav">		  
 		  <li class="">
-			<a href="http://erjjones.github.com"><i class="icon-home"></i> Home</a>
+			<a href="http://tushar-sharma.github.io/"><i class="icon-home"></i> Home</a>
 		  </li>
 		  <li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-comment"></i> Social <b class="caret"></b></a>
 				<ul class="dropdown-menu">										
-					<li class=""><a href="http://www.twitter.com/erjjones" rel="tooltip" title="Go to twitter.com/erjjones" target="_blank">Twitter</a></li>
-					<li class=""><a href="http://github.com/erjjones" rel="tooltip" title="Go to github.com/erjjones" target="_blank">GitHub</a></li>
-					<li class=""><a href="http://www.delicious.com/erjjones" rel="tooltip" title="Go to delicious.com/erjjones" target="_blank">Delicious</a></li>
+					<li class=""><a href="http://www.twitter.com/tshrocks" rel="tooltip" title="Go to twitter.com/tshrocks" target="_blank">Twitter</a></li>
+					<li class=""><a href="http://github.com/tushar-sharma" rel="tooltip" title="Go to github.com/tushar-sharma" target="_blank">GitHub</a></li>
+					<li class=""><a href="http://www.delicious.com/2shar" rel="tooltip" title="Go to delicious.com/2shar" target="_blank">Delicious</a></li>
 					<li class=""><a href="http://www.linkedin.com/pub/eric-jones/a/848/1b3" rel="tooltip" title="Go to LinkedIn profile" target="_blank">LinkedIn</a></li>										
-					<li class=""><a href="http://coderwall.com/erjjones" rel="tooltip" title="Go to coderwall/erjjones" target="_blank">Coderwall</a></li>
+					<li class=""><a href="https://coderwall.com/tshrocks" rel="tooltip" title="Go to coderwall/tshrocks" target="_blank">Coderwall</a></li>
 					<li class="divider"></li>
 					<li class=""><a href="http://feeds.feedburner.com/github/xmyo" rel="tooltip" title="Go to feedburner" target="_blank">RSS</a></li>
 				</ul>
