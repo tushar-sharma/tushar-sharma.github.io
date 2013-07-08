@@ -1,5 +1,5 @@
-## About
+## tushar-sharma.github.io
 
-This is a fork of [Errjones](https://github.com/erjjones/erjjones.github.com).
+This is my GitHub user page made with Jekyll, and  [Fuel UX](http://exacttarget.github.com/fuelux/). It's inspired by Erjjones.Github.com.
 
 
