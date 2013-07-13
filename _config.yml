@@ -2,7 +2,7 @@ safe: true
 pygments: true
 lsi: false
 permalink: /:categories/:title
-url: http://pouringdrop.com
+url: http://tushar-sharma.github.io
 markdown: maruku
 port: 4000
 future: false
