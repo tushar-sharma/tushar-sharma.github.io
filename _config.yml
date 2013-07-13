@@ -1,4 +1,14 @@
-auto: true
-markdown: rdiscount
+safe: true
 pygments: true
-permalink: /blog/:title
+lsi: false
+permalink: /:categories/:title
+url: http://pouringdrop.com
+markdown: maruku
+port: 4000
+future: false
+exclude:
+- README.md
+- CNAME
+- params.json
+- Gemfile
+- Gemfile.lock

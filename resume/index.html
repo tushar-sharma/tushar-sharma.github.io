@@ -1,0 +1,14 @@
+---
+layout: none
+title: Resume
+categories: resume
+---
+
+{% assign pages = site.tags.resume %}
+{% for page in pages %}
+    <link rel="stylesheet" href="../css/pygment_trac.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/resume.css">
+    {{ page.content }}
+{% endfor %}

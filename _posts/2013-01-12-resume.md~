@@ -1,0 +1,70 @@
+---
+layout: none
+title: Resume
+categories: resume
+tags: resume
+name: resume
+---
+
+<link rel="stylesheet" href="../css/resume.css" />
+
+[tushar.sharma1729@gmail.com][email]
+[github.com/tusharsharma][github]{: .go_right}
+
++91:9837264416
+[linkedin.com/in/tsharma3][linkedin]{: .go_right}
+
+## Tushar Sharma [resume] ## {#titlename}
+
+
+#### Employment
+- - -
+
+Intern | [ONGC][moz] | May 2012 &ndash; June 2012 |
+:------|:-----------:|---------------------------:|
+{: .jobrole}
+- Had the opportunity to study the intranet of ONGC. Learnt about various servers instal led and ways to configure it
+
+
+#### Education
+- - -
+
+Gainesville, FL | [University of Florida][unif] | January 2013 &ndash; June 2013 |
+:---------------|:--------------------------:|---------------------------------:|
+- Senior Certificate, Software Engineering 
+- Coursework: Operating System, Computer Networks, Database Management System, Software Testing.
+
+<hr style="margin-top:4px;margin-bottom:4px;" />
+
+Solan, HP       | [JUIT][unij] | July 2009 &ndash; June 2013 |
+:---------------|:------------:|-----------------------------:|
+- B.tech, Electronics and Communication 
+- Computer Coursework: Data structures, Unix, Object Oriented Programming, Microprocessor and Controller.
+
+#### Languages and Technologies
+- - -
+- **Languages and Markups:**  C, C++, Java, HTML5, CSS, SQL, JavaScript, Python, 
+- **Frameworks:**             NodeJS, Drupal
+- **Libraries:**              JQuery
+- **Tools:**                  Git, Eclipse
+
+{: .nobullets}
+
+
+[resume]: /resume.pdf "Download as PDF"
+[email]: mailto:tushar.sharma1729@gmail.com "Email Me"
+[github]: https://github.com/tushar-sharma "GitHub"
+[linkedin]: http://linkedin.com/in/tsharma3 "LinkedIn"
+[skype]: skype:rsmseys "Skype"
+[unif]: http://carleton.ca "University of Florida"
+[unij]: http://juit.ac.in "Jaypee University of Infortmation Technology"
+[bb]: http://blackberry.com "BlackBerry"
+[bbb]: http://bigbluebutton.org/ "BigBlueButton"
+[bsn]: http://www.blindsidenetworks.com/ "Blindside Networks"
+[tmprtr]: http://tmprtr.herokuapp.com "tmprtr"
+[otrain]: http://nextotrain.com "Next OTrain"
+[webct]: https://addons.mozilla.org/en-US/firefox/addon/carleton-university-webct-m "Multi-Session WebCT"
+[cg]: http://campusgrids.com "CampusGrids"
+[moz]: https://www.mozilla.org/ "Mozilla"
+[persona]: https://persona.org "Mozilla Persona"
+[photogps]: http://ryanseys.com/photogps

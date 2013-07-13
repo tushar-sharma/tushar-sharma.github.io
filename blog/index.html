@@ -1,0 +1,30 @@
+---
+layout: default
+title: Blog
+categories: blog
+---
+
+<div id="blog" style="padding-top:30px; margin-top:-23px;">
+{% assign blogposts = site.categories.blog %}
+{% for post in blogposts %}
+  <small style="float:right; margin-top:5px;">{{ post.date | date:'%a %d %b %Y' }}</small>
+  <a href="{{ post.url }}">
+    <h3>{{ post.title }}</h3>
+  </a>
+  {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
+  {% if truncated_post != post.content %}
+  {{ truncated_post | append:".."}}
+  <a href="{{ post.url }}">
+    <p>Continue reading &rarr;</p>
+  </a>
+  {% else %}
+   {{ post.content }}
+  {% endif %}
+  {% if post != blogposts.last %}
+    <hr />
+  {% endif %}
+{% endfor %}
+</div>
+<script type="text/javascript">
+  window.onload = function() { scroll_to('blog'); };
+  </script>

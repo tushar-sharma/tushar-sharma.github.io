@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="A software engineering undergraduate passionate about web development">
+<meta name="keywords" content="Tushar,Sharma,Web,Development,Personal">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<link rel="apple-touch-icon" href="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087" />
+<meta property="og:image" content="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087"/>
+<meta property="og:site_name" content="Tushar Sharma"/>
+<title>Huawei Usb Modem in Debian</title>
+<link rel="icon" type="image/png" href="/img/favicon.ico">
+<link rel="stylesheet" href=" /css/pygment_trac.css ">
+<link rel="stylesheet" href=" /css/font-awesome.css ">
+<link rel="stylesheet" href=" /css/styles.css ">
+<script src=" /js/scale.fix.js "></script>
+<script src=" /js/ryanseys.js "></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img align="left" src="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087" style="height:60px; width:60px; margin-right:10px; -webkit-border-radius: 8px 8px 8px 8px;-moz-border-radius: 8px 8px 8px 8px;border-radius: 8px 8px 8px 8px;" />
+<a href="/"><h1>Tushar Sharma</h1></a>
+<!--<p class="me_blurb"></p>-->
+<p style="display:inline;">Stalk me on:&nbsp;
+  <a href="https://github.com/tushar-sharma" title="GitHub" target="_blank">
+    <div class="stalk_link">
+      <i class="icon-github"></i>&nbsp;
+    </div>
+  </a>
+  <a href="in.linkedin.com/in/tsharma3" title="LinkedIn" target="_blank">
+    <div class="stalk_link">
+      <i class="icon-linkedin"></i>&nbsp;
+    </div>
+  </a>
+  <a href="mailto:tushar.sharma1729@gmail.com" title="Email" target="_blank">
+    <div class="stalk_link">
+      <i class="icon-envelope-alt"></i>&nbsp;
+    </div>
+  </a>
+  <a href="https://twitter.com/tshrocks" title="Twitter" target="_blank">
+    <div class="stalk_link">
+      <i class="icon-twitter"></i>&nbsp;
+    </div>
+  </a>
+  <a href="https://www.facebook.com/tushar.sharma1729" title="Facebook" target="_blank">
+    <div class="stalk_link">
+      <i class="icon-facebook"></i>&nbsp;
+    </div>
+  </a>
+</p>
+
+<h2>About</h2>
+<div class="highlight">
+  <pre>
+<code><span class="nv">$</span> open <a href="/resume">resume</a></code>
+</pre>
+</div>
+
+<h2>Projects</h2>
+<div class="highlight">
+  <pre>
+<code><span class="nv">$</span> open <a href="/projects">projects</a></code>
+     └── <span class="nv"></span><a href="/projects/vocab-builder" title="Vocab builder">vocab-builder</a><br /><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+
+<h2>Blog</h2>
+<div class="highlight">
+  <pre>
+<code><span class="nv">$</span> open <a href="/blog">blog</a></code>
+     ├── <span class="nv"></span><a href="/blog/fun-vimperator" title="Fun Vimperator">Fun Vimperator</a><br />     └── <span class="nv"></span><a href="/blog/huawei-usb-modem-in-debian" title="Huawei Usb Modem in Debian">Huawei USB modem</a><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
+</pre>
+</div>
+
+      </header>
+      <section>
+        <small style="float:right; margin-top:5px;">Wed 04 Jul 2012</small>
+<h3>Huawei Usb Modem in Debian</h3>
+
+
+
+  </p>
+
+<p>The Debian claimed to be the Universal Operating System. Impressed by the stability &amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.</p>
+
+<p>I&#8217;ll be using <code>wvdial</code> to configure the internet. It&#8217;s likely that your system will have the package pre installed. Otherwise you can manyally download it from <a href='http://packages.debian.org/squeeze/wvdial' target='_blank'>here</a>.</p>
+
+<p>Now connect the modem &amp; run lsusb to see the modem connected to the usb <div class='highlight'><pre><code><span class='nv'>$</span> lsusb</code></pre></div></p>
+
+<p><img alt='w4' src='/img/w4.png' /></p>
+
+<p>Here we see Huawie usb is visible as Huawei Wireless Data Modem. Now for detecting the modem run. <div class='highlight'><pre><code><span class='nv'>#</span> wvdial /etc/wvdial.conf</code></pre></div></p>
+
+<p><img alt='w1' src='/img/w1.png' /></p>
+
+<p>This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor</p>
+<div class='highlight'><pre><code><span class='nv'>#</span> vi  /etc/wvdial.conf</code></pre></div>
+<p><img alt='w3' src='/img/w3.png' /></p>
+
+<p>Remove the semicolons &amp; change the following values.</p>
+<div class='highlight'><pre><code>
+Username: internet
+Password: internet
+Phone   : #777
+</code></pre></div>
+<p>Also add the following lines to wvdial.conf</p>
+<div class='highlight'><pre><code>
+Init3 = AT+CRM=1
+Stupid Mode = 1
+</code></pre></div>
+<p>Now run the following command.</p>
+<div class='highlight'><pre><code><span class='nv'>#</span> wvdial</code></pre></div>
+<p>Bravo! It connects to the internet. Press <b>Ctrl + C</b> anytime to disconnect.</p>
+
+<p><strong>Note:</strong> You can also use the above method for other Linux distros. Some of the above commands require super user privelege. You can become super user simply be typing su.</p>
+
+
+<hr />
+<!--<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '2shar'; // required
+    var disqus_identifier = '/blog/huawei-usb-modem-in-debian';
+    var disqus_url = 'http://pouringdrop.com/blog/huawei-usb-modem-in-debian'
+    var disqus_category_id = 'blog';
+    var disqus_title = 'Huawei Usb Modem in Debian';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments.</a></noscript>
+-->
+
+      </section>
+      <footer>
+        <!-- <p><small>Ryan Seys &copy; 2013</small></p> -->
+
+      </footer>
+    </div>
+  </body>
+</html>

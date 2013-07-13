@@ -1,0 +1,22 @@
+---
+layout: default
+title: Projects
+categories: projects
+---
+<div id="projects" style="padding-top:30px; margin-top:-23px;">
+{% assign projects = site.categories.projects %}
+{% for project in projects %}
+  <small style="float:right; padding-top:-5px;">{{ project.date | date:'%b %Y' }}</small>
+  <a name="{{ project.name }}" href="{{ project.url }}"><h3>{{ project.title }}</h3></a>
+  {% assign truncated_project = project.content | split:"<!-- truncate_here -->" %}
+  {% if truncated_project != project.content %}
+    {{ truncated_project.first }}
+  {% else %}
+   {{ truncated_project.last }}
+  {% endif %}
+  {% if project != projects.last %}<hr />{% endif %}
+{% endfor %}
+</div>
+<script type="text/javascript">
+  window.onload = function() { scroll_to('projects'); };
+</script>
