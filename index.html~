@@ -1,7 +1,0 @@
----
-layout: default
-title: Pouring Drop
-root: true
----
-
-{% include root.html %}
