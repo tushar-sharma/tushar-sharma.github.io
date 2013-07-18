@@ -1,0 +1,3 @@
+{% assign pages = site.categories.about %}
+<code><span class="nv">$</span> open <a href="/resume">resume</a>
+<span class="nv">$</span> open <a href="/quotes">quotes</a></code>
