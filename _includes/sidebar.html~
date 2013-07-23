@@ -29,6 +29,7 @@
   </a>
 </p>
 
+
 <h2>About</h2>
 <div class="highlight">
   <pre>{% include sidebar_about.html %}</pre>
@@ -42,4 +43,9 @@
 <h2>Blog</h2>
 <div class="highlight">
   <pre>{% include sidebar_blog.html %}</pre>
+</div>
+
+<h2>Omnia</h2>
+<div class="highlight">
+  <pre>{% include sidebar_omnia.html %}</pre>
 </div>

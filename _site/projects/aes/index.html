@@ -12,13 +12,13 @@
 <link rel="apple-touch-icon" href="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087" />
 <meta property="og:image" content="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087"/>
 <meta property="og:site_name" content="Tushar Sharma"/>
-<title>Blog</title>
+<title>Advanced Encryption Standard (AES)</title>
 <link rel="icon" type="image/png" href="/img/favicon.ico">
-<link rel="stylesheet" href=" ../css/pygment_trac.css ">
-<link rel="stylesheet" href=" ../css/font-awesome.css ">
-<link rel="stylesheet" href=" ../css/styles.css ">
-<script src=" ../js/scale.fix.js "></script>
-<script src=" ../js/ryanseys.js "></script>
+<link rel="stylesheet" href=" /css/pygment_trac.css ">
+<link rel="stylesheet" href=" /css/font-awesome.css ">
+<link rel="stylesheet" href=" /css/styles.css ">
+<script src=" /js/scale.fix.js "></script>
+<script src=" /js/ryanseys.js "></script>
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -86,44 +86,38 @@
 
       </header>
       <section>
-        <div id="blog" style="padding-top:30px; margin-top:-23px;">
-
-
-  <small style="float:right; margin-top:5px;">Sun 14 Jul 2013</small>
-  <a href="/blog/fun-vimperator">
-    <h3>Fun Vimperator</h3>
-  </a>
-  
-  
-  <p>Under Construction&#8230;..
-  <a href="/blog/fun-vimperator">
-    <p>Continue reading &rarr;</p>
-  </a>
-  
-  
-    <hr />
-  
-
-  <small style="float:right; margin-top:5px;">Wed 04 Jul 2012</small>
-  <a href="/blog/huawei-usb-modem-in-debian">
-    <h3>Huawei Usb Modem in Debian</h3>
-  </a>
-  
-  
-  <p>The Debian claimed to be the Universal Operating System. Impressed by the stability &amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be...
-  <a href="/blog/huawei-usb-modem-in-debian">
-    <p>Continue reading &rarr;</p>
-  </a>
-  
-  
-
-</div>
-<script type="text/javascript">
-  window.onload = function() { scroll_to('blog'); };
-  </script>
+        <small style="float:right; margin-top:5px;">Fri 02 Nov 2012</small>
+<h3>Advanced Encryption Standard (AES)</h3>
 
 
 
+  <hr />
+<p><a href='https://github.com/tushar-sharma/aes'>code</a></p>
+<hr />
+<p>Advanced Encryption Standard is a symmetric key algorithm. It means that all the parties use the same key for encryption and decryption. It It has superceded DES, another symmetric key algorithms.</p>
+
+<p><strong>About</strong></p>
+
+<p>Though DES is not used nowdays in many application, it was the predominant algorithm developed by IBM (and later modified by NSA) for encrypting electronic data. However Triple DES is considered secure and is still used in many application.</p>
+
+<p>DES is a Block Cipher. DES works on 64 bits blocks. Hence the plaintext is divided into chunks of 64 bits. Padding is used if the data could not be divided into equal blocks.</p>
+
+<p>The key used is of 56 bits length which is extracted from the 64 bit original key (by ignoring every eight bit).</p>
+
+<p><strong>Description</strong></p>
+
+<p>In each round, the key bits are shifted and then 48 bits are selected from 56 bits of key. The right half of data is expanded to 48 bits via an expansion permutation, combined with 48 bits of a shifted and permuted key via an XOR, sent through 8 s-boxes producing 32 new bits and permuted again. The four operation make up Function f. The output of <i>Function f</i> is then combined with the left half via another XOR operation. The result of these operation becomes the new left half. Mathematically <i>Function f</i> could be written as</p>
+<code><pre>
+L<sub>i</sub> = R<sub>i - 1</sub> 
+R<sub>i</sub> = L<sub>i - 1</sub> &oplus; f(R<sub>i - 1</sub>, K<sub>i</sub>)
+</pre></code>
+<p><img alt='DES' src='/img/des.jpg' /></p>
+<hr />
+<p><a href='https://github.com/tushar-sharma/aes'>code</a></p>
+
+
+<hr />
+<!---->
 
       </section>
       <footer>
