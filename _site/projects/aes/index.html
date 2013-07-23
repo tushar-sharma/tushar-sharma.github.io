@@ -98,22 +98,85 @@
 
 <p><strong>About</strong></p>
 
-<p>Though DES is not used nowdays in many application, it was the predominant algorithm developed by IBM (and later modified by NSA) for encrypting electronic data. However Triple DES is considered secure and is still used in many application.</p>
-
-<p>DES is a Block Cipher. DES works on 64 bits blocks. Hence the plaintext is divided into chunks of 64 bits. Padding is used if the data could not be divided into equal blocks.</p>
-
-<p>The key used is of 56 bits length which is extracted from the 64 bit original key (by ignoring every eight bit).</p>
+<p>Rijndael was selected by NIST (National Institute of Standards and Technology) as AES. Unlike Rijndael in which block length and key length can be specified to any multiple of 32 bits, AES fixes block length to 128 bits and key length to (128 or 192 or 256) bits.</p>
 
 <p><strong>Description</strong></p>
 
-<p>In each round, the key bits are shifted and then 48 bits are selected from 56 bits of key. The right half of data is expanded to 48 bits via an expansion permutation, combined with 48 bits of a shifted and permuted key via an XOR, sent through 8 s-boxes producing 32 new bits and permuted again. The four operation make up Function f. The output of <i>Function f</i> is then combined with the left half via another XOR operation. The result of these operation becomes the new left half. Mathematically <i>Function f</i> could be written as</p>
-<code><pre>
-L<sub>i</sub> = R<sub>i - 1</sub> 
-R<sub>i</sub> = L<sub>i - 1</sub> &oplus; f(R<sub>i - 1</sub>, K<sub>i</sub>)
-</pre></code>
-<p><img alt='DES' src='/img/des.jpg' /></p>
+<p>The total number of rounds with key of 128 bits is 10. There are four subroutine that are performed in each rounds.</p>
+
+<ul>
+<li>Byte Substitution Transformation</li>
+</ul>
+
+<p>Each element of state is non-linearly mapped to corresponding element in the s-bx. <sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup></p>
+
+<p><img alt='Byte_Sub' src='/img/sub.png' /></p>
+
+<ul>
+<li>Shift Rows</li>
+</ul>
+
+<p>Rows are cyclically shifted to the left with offset of 0, 1, 2, 3 for rows of 1, 2, 3 and 4 respectively. <sup id='fnref:2'><a href='#fn:2' rel='footnote'>2</a></sup></p>
+
+<p><img alt='Shift_Rows' src='/img/sr.png' /></p>
+
+<ul>
+<li>Mix columns <sup id='fnref:3'><a href='#fn:3' rel='footnote'>3</a></sup></li>
+</ul>
+
+<p>Each new column (ro, r1, r2, r3) is generated from old column (a0, a1, a2, a3).</p>
+
+<p><img alt='Mc' src='/img/mc1.png' /></p>
+
+<p>Here, <code><pre>
+r0 = {2 . a0} + {3 . a1} + {1 . a2} + {1. a3}
+r1 = {1 . a0} + {2 . a1} + {3 . a2} + {1. a3}
+r2 = {1 . a0} + {1 . a1} + {2 . a2} + {1 . a3}
+r3 = {3 . a0} + {1 . a1} + {1 . a2} + {2 . a3}
+</pre></code></p>
+
+<ul>
+<li>Add Round Key</li>
+</ul>
+
+<p>For each round, subkey is combined with the state matrix using biwise XOR.</p>
+
+<p><strong>Key Generation</strong></p>
+
+<p>Initial key is described as a state matrix.</p>
+<table><thead><tr><th>Co</th><th>C1</th><th>C2</th><th>C3</th></tr></thead><tbody><tr><td style='text-align: left;'>a<sub>00</sub></td><td style='text-align: left;'>a<sub>01</sub></td><td style='text-align: left;'>a<sub>02</sub></td><td style='text-align: left;'>a<sub>03</sub></td>
+</tr><tr><td style='text-align: left;'>b<sub>10</sub></td><td style='text-align: left;'>b<sub>11</sub></td><td style='text-align: left;'>b<sub>12</sub></td><td style='text-align: left;'>b<sub>13</sub></td>
+</tr><tr><td style='text-align: left;'>c<sub>20</sub></td><td style='text-align: left;'>c<sub>21</sub></td><td style='text-align: left;'>c<sub>22</sub></td><td style='text-align: left;'>c<sub>23</sub></td>
+</tr><tr><td style='text-align: left;'>d<sub>30</sub></td><td style='text-align: left;'>d<sub>31</sub></td><td style='text-align: left;'>d<sub>32</sub></td><td style='text-align: left;'>d<sub>33</sub></td>
+</tr></tbody></table>
+<p>The last column is cyclically rotated to move the last block to the top.</p>
+<table><thead><tr><th>Co</th><th>C1</th><th>C2</th><th>C3</th></tr></thead><tbody><tr><td style='text-align: left;'>a<sub>00</sub></td><td style='text-align: left;'>a<sub>01</sub></td><td style='text-align: left;'>a<sub>02</sub></td><td style='text-align: left;'>d<sub>33</sub></td>
+</tr><tr><td style='text-align: left;'>b<sub>10</sub></td><td style='text-align: left;'>b<sub>11</sub></td><td style='text-align: left;'>b<sub>12</sub></td><td style='text-align: left;'>a<sub>03</sub></td>
+</tr><tr><td style='text-align: left;'>c<sub>20</sub></td><td style='text-align: left;'>c<sub>21</sub></td><td style='text-align: left;'>c<sub>22</sub></td><td style='text-align: left;'>b<sub>13</sub></td>
+</tr><tr><td style='text-align: left;'>d<sub>30</sub></td><td style='text-align: left;'>d<sub>31</sub></td><td style='text-align: left;'>d<sub>32</sub></td><td style='text-align: left;'>c<sub>23</sub></td>
+</tr></tbody></table>
+<p>The last column is then mapped with the corresponding element of the s-box.</p>
+<table><thead><tr><th>C3</th><th /><th>C3<sup>'</sup></th></tr></thead><tbody><tr><td style='text-align: left;'>a<sub>00</sub></td><td style='text-align: left;'>&#8211;&gt;</td><td style='text-align: left;'>a<sub>02</sub></td>
+</tr><tr><td style='text-align: left;'>b<sub>10</sub></td><td style='text-align: left;'>&#8211;&gt;</td><td style='text-align: left;'>b<sub>12</sub></td>
+</tr><tr><td style='text-align: left;'>c<sub>20</sub></td><td style='text-align: left;'>&#8211;&gt;</td><td style='text-align: left;'>c<sub>22</sub></td>
+</tr><tr><td style='text-align: left;'>d<sub>30</sub></td><td style='text-align: left;'>&#8211;&gt;</td><td style='text-align: left;'>d<sub>32</sub></td>
+</tr></tbody></table>
+<p>New column C<sub>0</sub> is generated by XORing previous C<sub>0</sub> with the new column.</p>
+<table><thead><tr><th>C0</th><th /><th>C3<sup>'</sup></th></tr></thead><tbody><tr><td style='text-align: left;'>a<sub>00</sub></td><td style='text-align: left;'>&#8853;</td><td style='text-align: left;'>a<sub>02</sub></td>
+</tr><tr><td style='text-align: left;'>b<sub>10</sub></td><td style='text-align: left;'>&#8853;</td><td style='text-align: left;'>b<sub>12</sub></td>
+</tr><tr><td style='text-align: left;'>c<sub>20</sub></td><td style='text-align: left;'>&#8853;</td><td style='text-align: left;'>c<sub>22</sub></td>
+</tr><tr><td style='text-align: left;'>d<sub>30</sub></td><td style='text-align: left;'>&#8853;</td><td style='text-align: left;'>d<sub>32</sub></td>
+</tr></tbody></table>
+<p>Similarly all new coulumns are generated by XORing with pervious columns.</p>
 <hr />
 <p><a href='https://github.com/tushar-sharma/aes'>code</a></p>
+<div class='footnotes'><hr /><ol><li id='fn:1'>
+<p>http://goo.gl/lfkNI</p>
+<a href='#fnref:1' rev='footnote'>&#8617;</a></li><li id='fn:2'>
+<p>http://goo.gl/j8YGJ</p>
+<a href='#fnref:2' rev='footnote'>&#8617;</a></li><li id='fn:3'>
+<p>Understanding AES Mix-Columns Transformation Calculation by Kit Choy Xintong</p>
+<a href='#fnref:3' rev='footnote'>&#8617;</a></li></ol></div>
 
 
 <hr />
