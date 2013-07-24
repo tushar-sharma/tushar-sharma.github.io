@@ -70,7 +70,7 @@
 <div class="highlight">
   <pre>
 <code><span class="nv">$</span> open <a href="/projects">projects</a></code>
-     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     ├── <span class="nv"></span><a href="/projects/aes" title="Advanced Encryption Standard (AES)">AES</a><br />     └── <span class="nv"></span><a href="/projects/des" title="Data Encryption Standard (DES)">DES</a><br /><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     ├── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br />     ├── <span class="nv"></span><a href="/projects/aes" title="Advanced Encryption Standard (AES)">AES</a><br />     └── <span class="nv"></span><a href="/projects/des" title="Data Encryption Standard (DES)">DES</a><br /><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
 </pre>
 </div>
 
@@ -78,7 +78,7 @@
 <div class="highlight">
   <pre>
 <code><span class="nv">$</span> open <a href="/blog">blog</a></code>
-     └── <span class="nv"></span><a href="/blog/huawei-usb-modem-in-debian" title="Huawei Usb Modem in Debian">Huawei-USB-modem</a><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
+     ├── <span class="nv"></span><a href="/blog/huawei-usb-modem-in-debian" title="Huawei Usb Modem in Debian">Huawei-USB-modem</a><br />     ├── <span class="nv"></span><a href="/blog/why-hacking-is-good" title="Why hacking is good">why-hacking-is-good</a><br />     └── <span class="nv"></span><a href="/blog/fear-of-walmart" title="Fear of Walmart">Fear-of-walmart</a><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
 </pre>
 </div>
 
@@ -94,7 +94,7 @@
   <hr />
 <p><a href='https://github.com/tushar-sharma/des'>code</a></p>
 <hr />
-<p>Data Encryption Standard is a symmetric key algorithm. It means that all the parties use the same key for encryption and decryption. Look at the diagram below.</p>
+<p>Data Encryption Standard, a symmetric key algorithm, implemented in C++. All the parties use the same key for encryption and decryption. Look at the diagram below.</p>
 
 <p><img alt='Encr' src='/img/sym.png' /></p>
 
@@ -117,7 +117,7 @@
 L<sub>i</sub> = R<sub>i - 1</sub> 
 R<sub>i</sub> = L<sub>i - 1</sub> &oplus; f(R<sub>i - 1</sub>, K<sub>i</sub>)
 </pre></code>
-<p>After 16<sup>th</sup> round, right and left halves are joined and a <a href='http://en.wikipedia.org/wiki/DES_supplementary_material'>final permutation</a> finishes off the algorithm. To better understand, look at the diagram below (Image courtesy <a href='http://goo.gl/BGQO8'>http://goo.gl/BGQO8</a>).</p>
+<p>After 16<sup>th</sup> round, right and left halves are joined and a <a href='http://en.wikipedia.org/wiki/DES_supplementary_material'>final permutation</a> finishes off the algorithm. To better understand, look at the diagram below. <sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup></p>
 
 <p><img alt='DES' src='/img/des.jpg' /></p>
 
@@ -126,6 +126,9 @@ R<sub>i</sub> = L<sub>i - 1</sub> &oplus; f(R<sub>i - 1</sub>, K<sub>i</sub>)
 <p>I implemented this project in C++. This was the first encryption standard which I studied and implemented.</p>
 <hr />
 <p><a href='https://github.com/tushar-sharma/des'>code</a></p>
+<div class='footnotes'><hr /><ol><li id='fn:1'>
+<p>Network Security: Private Communication in a Public World</p>
+<a href='#fnref:1' rev='footnote'>&#8617;</a></li></ol></div>
 
 
 <hr />

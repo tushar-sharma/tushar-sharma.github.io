@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087" />
 <meta property="og:image" content="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087"/>
 <meta property="og:site_name" content="Tushar Sharma"/>
-<title>Tushar Sharma</title>
+<title>Binary Sempahore</title>
 <link rel="icon" type="image/png" href="/img/favicon.ico">
 <link rel="stylesheet" href=" /css/pygment_trac.css ">
 <link rel="stylesheet" href=" /css/font-awesome.css ">
@@ -86,27 +86,31 @@
 
       </header>
       <section>
-        <h3>About</h3>
-<p>
-  Hi! I'm a undergraduate student in Electronics & Communication from JUIT. This is my nest where I incubate my thoughts which I hope would someday hatch into something meaningful. <!--- I belive in an old Sanskrit adage from Bhagvatgita, <i>"कर्मण्येवाधिकारस्ते मा फलेषु कदाचन। मा कर्मफलहेतुर्भूर्मा ते सङ्गोस्त्वकर्मणि॥".</i>(<u>English translation</u> -Your right is to work only, But never to its fruits; Let not the fruits of action be thy motive, Nor let thy attachment be to inaction). -->
+        <small style="float:right; margin-top:5px;">Thu 28 Mar 2013</small>
+<h3>Binary Sempahore</h3>
 
 
-</p>
-<p><a href="/resume">Peruse my resume &rarr;</a></p>
 
-<h3>Projects</h3>
-<p>
+  <hr />
+<p><a href='https://github.com/tushar-sharma/dining_philosopher'>code</a></p>
+<hr />
+<p>Implemented binaray semaphore in Minix 3. Minix 3 is a micro-kernel operating system.</p>
 
-  I am a developer and a computer hobbyist. I am constantly trying to make stuffs. Some of the projects I have worked on are either a part of my academics, employment or a residue of my spare time.  
-</p>
-<p><a href="/projects">Check out my projects &rarr;</a></p>
+<p><strong>About</strong></p>
 
-<h3>Blog</h3>
-<p>
-  As part of the planet, I feel inclined to share my opinion on everything that affects me both directly and indirectly. Most of my rambling revolves around world of tech, literature or anything that steals my attention. Feel free to drop a line.
-<p><a href="/blog">Read my blog &rarr;</a></p>
+<p>Most of the process pass information among themselves using application IPC. This often result in race condition. To prevent it and provide synchronization, semaphores, first proposed by Dikstras, is used.</p>
+
+<p><strong>Description</strong></p>
+
+<p>Implemented a new system call in Minix 3 along with the library function that allows it to be called conveniently from a C program. The library interface extends different process to use semaphore.</p>
+
+<p>Binary Semaphore is used by processes to access the critical shared resources of the system. To demonstrate the working of semaphore, dining philosopher is implemented.</p>
+<hr />
+<p><a href='https://github.com/tushar-sharma/dining_philosopher'>code</a></p>
 
 
+<hr />
+<!---->
 
       </section>
       <footer>
