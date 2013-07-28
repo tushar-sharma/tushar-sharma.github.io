@@ -3,7 +3,7 @@ layout: post
 title: Huawei Usb Modem in Debian
 category: blog
 tags: debian huawei
-name: Huawei-USB-modem 
+name: huawei-modem 
 ---
 
 

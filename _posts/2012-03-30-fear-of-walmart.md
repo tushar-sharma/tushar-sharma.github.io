@@ -3,7 +3,7 @@ layout: post
 title: Fear of Walmart
 category: blog
 tags: walmart
-name: Fear-of-walmart
+name: fear-walmart
 ---
 
 After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This would have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. 

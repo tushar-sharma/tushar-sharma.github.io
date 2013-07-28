@@ -3,7 +3,7 @@ layout: post
 title: Why hacking is good
 category: blog
 tags: hacking
-name: why-hacking-is-good
+name: hacking-good
 ---
 
 <link rel="stylesheet" href="../css/post.css" />
