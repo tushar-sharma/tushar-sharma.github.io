@@ -31,7 +31,15 @@
 <style type="text/css">
 @font-face {
   font-family: 'Myfont';
-  src: url('/../font/pristina.ttf');
+  src: url('/../font/pristina.ttf'); 
+  /*src: url('/../font/mbscraps.ttf');*/
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Somefont';
+  src:url('/../font/OneDirection.ttf');
   font-weight: normal;
   font-style: normal;
 }
@@ -41,10 +49,19 @@ h1 {
   color: rgb(51, 153, 204);
 } 
 
+.top{
+  color: rgb(68, 68, 68);
+}
+
+.sub{
+  font-family:Somefont;
+  cursor: pointer;
+}
+
 </style>
 
-<a href="/"><h1>Mono Dew</h1></a> 
-<p class="me_blurb"><i>compos sui</i></p>
+<a href="/"><h1>Random<span class="top">Wits</span></h1></a> 
+<p class="me_blurb"><div class="sub" title="Master of himself">compos sui</div></p>
 <p style="display:inline;">Stalk me on:&nbsp;
   <a href="https://github.com/tushar-sharma" title="GitHub" target="_blank">
     <div class="stalk_link">
