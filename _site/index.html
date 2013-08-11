@@ -95,7 +95,6 @@ h1 {
 </p>
 
 
-
 <h2>About</h2>
 <div class="highlight">
   <pre>
@@ -120,11 +119,129 @@ h1 {
 </div>
 
 
-
       </header>
       <section>
-        <h3>About</h3>
-<p>Hi! I am <b>Tushar Sharma</b>. I am a avid blogger and voracious reader. I am passionate about <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="_blank">FOSS</a>, occasionally like to dip my pen into <a href="http://poetry.com/users/347898" target="_blank">poetry</a><!--, enjoy <a href="http://www.flickr.com/people/tushoxy/" target="_blank">travelling</a> --> and also harbour interest in <a href="https://www.goodreads.com/user/show/4658439-tushar-sharma" target="_blank">literature</a>. <!--solving interesting <a href="http://community.topcoder.com/tc?module=MemberProfile&cr=22898372" target="_blank">problems</a> and --> 
+        <style>
+.cl{ width: 200px;  color: rgb(51, 153, 204);}
+</style>
+
+<script src="/../js/jquery-1.7.1.min.js"></script>
+<script src="/../js/jquery.mousewheel-min.js"></script>
+<script src="/../js/jquery.terminal-min.js"></script>
+<link href="/../css/jquery.terminal.css" rel="stylesheet"/>
+
+<script>
+jQuery(document).ready(function($) {
+    var id = 1;
+    $('#foo').terminal(function(command, term) {
+        if (command == 'help') { 
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">blog</span> Open blog.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">randomwits</span> :)";
+          
+            term.echo(mystr, {
+              raw: function(div) {
+
+            }
+         });
+        } else if (command == 'test'){
+            term.push(function(command, term) {
+                if (command == 'help') { 
+                    term.echo('if you type ping it will display pong');
+                } else if (command == 'ping') {
+                    term.echo('pong');
+                } else {
+                    term.echo('unknown command ' + command);
+                }
+            }, {
+                prompt: 'test> ',
+                name: 'test'});
+        } else if (command == "about") {
+            window.location.href = "/about";
+        } else if (command == "man") { 
+            window.location.href="man.html";
+
+        }else if (command == "blog") {
+            
+            window.location.href = "/blog";
+        } else if (command == 'randomwits') { 
+var art = " _____________ \n" +
+"< Random Wits > \n" + 
+" ------------- \n" +  
+"   \ \n" + 
+"    \ \n" + 
+"        .--. \n" + 
+"       |o_o | \n" + 
+"       |:_/ | \n" + 
+"      //   \\ \\ \n" + 
+"     (|     | ) \n" + 
+"    /'\\_   _/`\\ \n" + 
+"    \\___)=(___/ ";
+
+
+
+      
+           term.echo(art, {
+             finalize: function(div) {
+               div.css("color", "rgb(51, 153, 204)");
+             }
+          });
+        } else if (command == 'mysql') {
+            term.push(function(command, term) {
+                term.pause();
+                $.jrpc("mysql-rpc-demo.php",
+                       id++,
+                       "query",
+                       [command],
+                       function(data) {
+                           term.resume();
+                           if (data.error) {
+                               term.error(data.error.message);
+                           } else {
+                               if (typeof data.result == 'boolean') {
+                                   term.echo(data.result ? 'success' : 'fail');
+                               } else {
+                                   var len = data.result.length;
+                                   for(var i=0;i<len; ++i) {
+                                       term.echo(data.result[i].join(' | '));
+                                   }
+                               }
+                           }
+                       },
+                       function(xhr, status, error) {
+                           term.error('[AJAX] ' + status +
+                                      ' - Server reponse is: \n' +
+                                      xhr.responseText);
+                           term.resume();
+                       });
+            }, {
+                greetings: "This is example of using mysql from terminal\n\
+you are allowed to execute: select, insert, update and delete from/to table:\n\
+    table test(integer_value integer, varchar_value varchar(255))",
+                prompt: "mysql> "});
+        } else {
+            term.echo("unknow command " + command);
+        }
+    }, {
+        greetings: "Type 'help' for a list of commands.",
+        onBlur: function() {
+            // prevent loosing focus
+            return false;
+        }
+    });
+});
+
+
+</script>
+
+
+<h2>Hello stranger.</h2>
+<div id="foo">
+</div>
+
+<!--
+
+<h3>About</h3>
+<p>Hi! I am <b>Tushar Sharma</b>. I am a avid blogger and voracious reader. I am passionate about <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="_blank">FOSS</a>, occasionally like to dip my pen into <a href="http://poetry.com/users/347898" target="_blank">poetry</a>, enjoy <a href="http://www.flickr.com/people/tushoxy/" target="_blank">travelling</a>  and also harbour interest in <a href="https://www.goodreads.com/user/show/4658439-tushar-sharma" target="_blank">literature</a>. solving interesting <a href="http://community.topcoder.com/tc?module=MemberProfile&cr=22898372" target="_blank">problems</a> and 
+
 </p> 
 <p><a href="/resume">Peruse my resume &rarr;</a></p>
 
@@ -138,8 +255,9 @@ h1 {
  As part of the planet, I feel inclined to share my opinion on everything that happens around me. Let me know what you think about them. 
 <p><a href="/blog">Read my blog &rarr;</a></p>
 
-<p style="position:relative; height: 30px;
-	clear:both; left:0px; bottom:0px;">Copyright &copy; Tushar Sharma </p>
+
+-->
+
 
 
       </section>
