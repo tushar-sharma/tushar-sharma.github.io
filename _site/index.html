@@ -134,7 +134,7 @@ jQuery(document).ready(function($) {
     var id = 1;
     $('#foo').terminal(function(command, term) {
         if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">blog</span> Open blog.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">randomwits</span> :)";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">randomwits</span> :)";
           
             term.echo(mystr, {
               raw: function(div) {
@@ -154,13 +154,26 @@ jQuery(document).ready(function($) {
                 prompt: 'test> ',
                 name: 'test'});
         } else if (command == "about") {
-            window.location.href = "/about";
+            window.open(
+              '/about', '_blank'
+            );
         } else if (command == "man") { 
-            window.location.href="man.html";
-
+            window.open(
+              'man.html', '_blank'
+            );
         }else if (command == "blog") {
             
-            window.location.href = "/blog";
+            window.open(
+                '/blog', '_blank'
+            );
+        } else if (command == "quote") {
+            jQuery.get('/../quotes.txt', function(data) { 
+              var quotes = data.split("\n");
+              var idx = Math.floor((quotes.length - 1) * Math.random());
+              term.echo("<span style=\"color: rgb(51, 153, 204); \"> " + quotes[idx] + "</span>", { 
+                  raw: function(div) { }
+               });
+            });
         } else if (command == 'randomwits') { 
 var art = " _____________ \n" +
 "< Random Wits > \n" + 
