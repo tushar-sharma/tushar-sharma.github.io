@@ -2,12 +2,6 @@
 layout: default
 title: about
 ---
-<script type="text/javascript">
-  $("a.problems").on("click", function() { 
-    window.open('http://community.topcoder.com/tc?module=MemberProfile&cr=22898372', '_blank');
-    window.open('http://codeforces.com/profile/discovery', '_blank');
-  });
-</script>
 
 <h3>Howdy</h3>
 
@@ -15,7 +9,12 @@ title: about
 </p>
 
 
-<p>I am a avid blogger and voracious reader. I am passionate about <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="_blank">FOSS</a>, occasionally like to dip my pen into <a href="http://poetry.com/users/347898" target="_blank">poetry</a> and also harbour interest in <a href="https://www.goodreads.com/user/show/4658439-tushar-sharma" target="_blank">literature</a>. Besides I spend my time solving interesting <a class="problems">problems</a> and participating in online discussion <a href="http://stackoverflow.com/users/873385/2shar" target="_blank">forums</a>. Here are some of my presentation on <a href="https://speakerdeck.com/2shar" target="_blank">Speaker Deck</a>.
+<p>I am a avid blogger and voracious reader. I am passionate about <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="_blank">FOSS</a>, occasionally like to dip my pen into <a href="http://poetry.com/users/347898" target="_blank">poetry</a> and also harbour interest in <a href="https://www.goodreads.com/user/show/4658439-tushar-sharma" target="_blank">literature</a>. Besides I spend my time solving interesting <a href="javascript:problems()">problems</a> and participating in online discussion <a href="http://stackoverflow.com/users/873385/2shar" target="_blank">forums</a>. Here are some of my presentation on <a href="https://speakerdeck.com/2shar" target="_blank">Speaker Deck</a>.
 </p>
 
-
+<script type="text/javascript">
+  function problems() { 
+    window.open('http://community.topcoder.com/tc?module=MemberProfile&cr=22898372', '_blank');
+    window.open('http://codeforces.com/profile/discovery', '_blank');
+  }
+</script>
