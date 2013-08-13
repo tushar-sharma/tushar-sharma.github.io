@@ -9,10 +9,20 @@
 
 <script>
 jQuery(document).ready(function($) {
+
+var greettxt = "" +
+" __      __           .__                                       \n" +
+"/  \\    /  \\   ____   |  |     ____     ____     _____     ____  \n" +
+"\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  \n" +
+" \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
+"  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
+"       \\/         \\/              \\/                 \\/       \\/ ";
+
+          
     var id = 1;
     $('#foo').terminal(function(command, term) {
         if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">randomwits</span> :)";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">randomwits</span> :)";
           
             term.echo(mystr, {
               raw: function(div) {
@@ -35,15 +45,20 @@ jQuery(document).ready(function($) {
             window.open(
               '/about', '_blank'
             );
-        } else if (command == "man") { 
+        } else if (command == "contact") {
+           window.open(
+             '/contact', '_blank'
+           ); 
+        }else if (command == "man") { 
             window.open(
               'man.html', '_blank'
             );
-        }else if (command == "blog") {
-            
-            window.open(
-                '/blog', '_blank'
-            );
+        } else if (command == "resume") {
+         
+           term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/resume\" target=\"_blank\">html</a>&nbsp; &nbsp; &nbsp;<a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" target=\"_blank\">pdf</a>", {
+              raw: function(div) {
+            }
+         });
         } else if (command == "quote") {
             jQuery.get('/../quotes.txt', function(data) { 
               var quotes = data.split("\n");
@@ -74,7 +89,7 @@ var art = " _____________ \n" +
                div.css("color", "rgb(51, 153, 204)");
              }
           });
-        } else if (command == 'mysql') {
+        } else if (command == 'sdfdsbugll') {
             term.push(function(command, term) {
                 term.pause();
                 $.jrpc("mysql-rpc-demo.php",
@@ -103,15 +118,15 @@ var art = " _____________ \n" +
                            term.resume();
                        });
             }, {
-                greetings: "This is example of using mysql from terminal\n\
-you are allowed to execute: select, insert, update and delete from/to table:\n\
-    table test(integer_value integer, varchar_value varchar(255))",
-                prompt: "mysql> "});
+                greetings: "hello",
+                prompt: "l> "});
         } else {
             term.echo("unknow command " + command);
         }
     }, {
-        greetings: "Type 'help' for a list of commands.",
+
+        greetings: (greettxt + "\n\nType 'help' for list of commands") ,
+ 
         onBlur: function() {
             // prevent loosing focus
             return false;
@@ -119,32 +134,9 @@ you are allowed to execute: select, insert, update and delete from/to table:\n\
     });
 });
 
-
 </script>
-
 
 <h2>Hello stranger.</h2>
 <div id="foo">
 </div>
-
-<!--
-
-<h3>About</h3>
-<p>Hi! I am <b>Tushar Sharma</b>. I am a avid blogger and voracious reader. I am passionate about <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="_blank">FOSS</a>, occasionally like to dip my pen into <a href="http://poetry.com/users/347898" target="_blank">poetry</a>, enjoy <a href="http://www.flickr.com/people/tushoxy/" target="_blank">travelling</a>  and also harbour interest in <a href="https://www.goodreads.com/user/show/4658439-tushar-sharma" target="_blank">literature</a>. solving interesting <a href="http://community.topcoder.com/tc?module=MemberProfile&cr=22898372" target="_blank">problems</a> and 
-
-</p> 
-<p><a href="/resume">Peruse my resume &rarr;</a></p>
-
-<h3>Projects</h3>
-<p>
-  I am constantly learning and trying to make stuff. My interest permeates in cryptography, software development and web designing. 
-<p><a href="/projects">Check out my projects &rarr;</a></p>
-
-<h3>Blog</h3>
-<p>
- As part of the planet, I feel inclined to share my opinion on everything that happens around me. Let me know what you think about them. 
-<p><a href="/blog">Read my blog &rarr;</a></p>
-
-
--->
 

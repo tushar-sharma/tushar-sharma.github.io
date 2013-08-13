@@ -12,13 +12,13 @@
 <link rel="apple-touch-icon" href="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087" />
 <meta property="og:image" content="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087"/>
 <meta property="og:site_name" content="Tushar Sharma"/>
-<title>Huawei Usb Modem in Debian</title>
+<title>Contact</title>
 <link rel="icon" type="image/png" href="/img/favicon.ico">
-<link rel="stylesheet" href=" /css/pygment_trac.css ">
-<link rel="stylesheet" href=" /css/font-awesome.css ">
-<link rel="stylesheet" href=" /css/styles.css ">
-<script src=" /js/scale.fix.js "></script>
-<script src=" /js/ryanseys.js "></script>
+<link rel="stylesheet" href=" ../css/pygment_trac.css ">
+<link rel="stylesheet" href=" ../css/font-awesome.css ">
+<link rel="stylesheet" href=" ../css/styles.css ">
+<script src=" ../js/scale.fix.js "></script>
+<script src=" ../js/ryanseys.js "></script>
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -119,49 +119,42 @@ h1.heading {
 
       </header>
       <section>
-        <small style="float:right; margin-top:5px;">Wed 04 Jul 2012</small>
-<h3>Huawei Usb Modem in Debian</h3>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/../css/contact.css" />
+
+<h1 class="myheading">Contact</h1>
+<p class="subheading">ask me anything or just say hi</p>
+<br><br>
+<form id="contact-form" name="contact-form"  action"/" onsubmit="return checkForm();" class="form-horizontal">
+
+<div class="control-group"><label for="name" class="control-label">Full Name</label><div class="controls"><input type="text" title="Full name" id="name" name="name"  placeholder="Full Name"  class="placeholder">
+<span  id="error_name" tabindex="-1" class="help-inline" style="line-height:21px;display: inline-block;"></span>
+</div></div>
+
+<div class="control-group"><label for="email" class="control-label">Email</label><div class="controls"><input type="text" title="Email" id="email" name="email"  placeholder="Your email"  class="placeholder"></div></div>
+
+<div class="control-group"><label for="Message" class="control-label">Message</label><div class="controls">
+    <textarea id="message" name="message" rows="8" name="message" cols="30"></textarea>
+</div></div>
+
+<div style="margin-top:15px;" class="control-group">
+  <div class="controls">
+     <input type="submit" value="Submit">
+  </div>
+</div>
 
 
-
-  </p>
-
-<p>The Debian claimed to be the Universal Operating System. Impressed by the stability &amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.</p>
-
-<p>I&#8217;ll be using <code>wvdial</code> to configure the internet. It&#8217;s likely that your system will have the package pre installed. Otherwise you can manyally download it from <a href='http://packages.debian.org/squeeze/wvdial' target='_blank'>here</a>.</p>
-
-<p>Now connect the modem &amp; run lsusb to see the modem connected to the usb <div class='highlight'><pre><code><span class='nv'>$</span> lsusb</code></pre></div></p>
-
-<p><img alt='w4' src='/img/w4.png' /></p>
-
-<p>Here we see Huawie usb is visible as Huawei Wireless Data Modem. Now for detecting the modem run. <div class='highlight'><pre><code><span class='nv'>#</span> wvdial /etc/wvdial.conf</code></pre></div></p>
-
-<p><img alt='w1' src='/img/w1.png' /></p>
-
-<p>This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor</p>
-<div class='highlight'><pre><code><span class='nv'>#</span> vi  /etc/wvdial.conf</code></pre></div>
-<p><img alt='w3' src='/img/w3.png' /></p>
-
-<p>Remove the semicolons &amp; change the following values.</p>
-<div class='highlight'><pre><code>
-Username: internet
-Password: internet
-Phone   : #777
-</code></pre></div>
-<p>Also add the following lines to wvdial.conf</p>
-<div class='highlight'><pre><code>
-Init3 = AT+CRM=1
-Stupid Mode = 1
-</code></pre></div>
-<p>Now run the following command.</p>
-<div class='highlight'><pre><code><span class='nv'>#</span> wvdial</code></pre></div>
-<p>Bravo! It connects to the internet. Press <b>Ctrl + C</b> anytime to disconnect.</p>
-
-<p><strong>Note:</strong> You can also use the above method for other Linux distros. Some of the above commands require super user privelege. You can become super user simply be typing su.</p>
+<div style="margin-top:15px;" class="control-group">
+  <div class="controls">
+   <div id="result"></div>
+  </div>
+</div>
 
 
-<hr />
-<!---->
+</form>
+
+<script src="/../js/contact.js"></script> 
 
       </section>
       <footer>
