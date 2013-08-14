@@ -22,25 +22,13 @@ var greettxt = "" +
     var id = 1;
     $('#foo').terminal(function(command, term) {
         if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">randomwits</span> :)";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">randomwits</span> :)";
           
             term.echo(mystr, {
               raw: function(div) {
 
             }
          });
-        } else if (command == 'test'){
-            term.push(function(command, term) {
-                if (command == 'help') { 
-                    term.echo('if you type ping it will display pong');
-                } else if (command == 'ping') {
-                    term.echo('pong');
-                } else {
-                    term.echo('unknown command ' + command);
-                }
-            }, {
-                prompt: 'test> ',
-                name: 'test'});
         } else if (command == "about") {
             window.open(
               '/about', '_blank'
@@ -53,6 +41,9 @@ var greettxt = "" +
             window.open('/projects', '_blank');
         } else if (command == "blog") {
           window.open('/blog', '_blank'); 
+
+        } else if (command == "books") {
+          window.open('/books', '_blank');
 
         } else if(command == "hack") {
 
@@ -98,37 +89,6 @@ var art = " _____________ \n" +
                div.css("color", "rgb(51, 153, 204)");
              }
           });
-        } else if (command == 'sdfdsbugll') {
-            term.push(function(command, term) {
-                term.pause();
-                $.jrpc("mysql-rpc-demo.php",
-                       id++,
-                       "query",
-                       [command],
-                       function(data) {
-                           term.resume();
-                           if (data.error) {
-                               term.error(data.error.message);
-                           } else {
-                               if (typeof data.result == 'boolean') {
-                                   term.echo(data.result ? 'success' : 'fail');
-                               } else {
-                                   var len = data.result.length;
-                                   for(var i=0;i<len; ++i) {
-                                       term.echo(data.result[i].join(' | '));
-                                   }
-                               }
-                           }
-                       },
-                       function(xhr, status, error) {
-                           term.error('[AJAX] ' + status +
-                                      ' - Server reponse is: \n' +
-                                      xhr.responseText);
-                           term.resume();
-                       });
-            }, {
-                greetings: "hello",
-                prompt: "l> "});
         } else {
             term.echo("unknown command " + command);
         }

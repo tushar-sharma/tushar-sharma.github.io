@@ -12,13 +12,13 @@
 <link rel="apple-touch-icon" href="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087" />
 <meta property="og:image" content="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087"/>
 <meta property="og:site_name" content="Tushar Sharma"/>
-<title>Random Wits</title>
+<title>My Books</title>
 <link rel="icon" type="image/png" href="/img/favicon.ico">
-<link rel="stylesheet" href=" /css/pygment_trac.css ">
-<link rel="stylesheet" href=" /css/font-awesome.css ">
-<link rel="stylesheet" href=" /css/styles.css ">
-<script src=" /js/scale.fix.js "></script>
-<script src=" /js/ryanseys.js "></script>
+<link rel="stylesheet" href=" ../css/pygment_trac.css ">
+<link rel="stylesheet" href=" ../css/font-awesome.css ">
+<link rel="stylesheet" href=" ../css/styles.css ">
+<script src=" ../js/scale.fix.js "></script>
+<script src=" ../js/ryanseys.js "></script>
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -120,117 +120,100 @@ h1.heading {
       </header>
       <section>
         <style>
-.cl{ width: 200px;  color: rgb(51, 153, 204);}
+img.book {
+height: 150px;
+padding: 15px 15px 15px 0px;
+}
+
+h2.entry-title{ 
+color: black;
+text-decoration: none;
+font-family: "Rokkitt", serif;
+font-size: 22px;
+line-height: 32px;
+font-weight: 700;
+-webkit-font-smoothing: antialiased;
+}
+
 </style>
 
-<script src="/../js/jquery-1.7.1.min.js"></script>
-<script src="/../js/jquery.mousewheel-min.js"></script>
-<script src="/../js/jquery.terminal-min.js"></script>
-<link href="/../css/jquery.terminal.css" rel="stylesheet"/>
+<h2 class="entry-title">My Books</h2>
+    
+<p>These are list of books that are on my shelf. </p>
 
-<script>
-jQuery(document).ready(function($) {
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Cover</strong>                                                            </th>
+<th align="center"> <strong>Title</strong>        </th>
+<th align="center"> <strong>Author</strong> </th>
+<th align="center"> <strong>Status</strong></th>
 
-var greettxt = "" +
-" __      __           .__                                       \n" +
-"/  \\    /  \\   ____   |  |     ____     ____     _____     ____  \n" +
-"\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  \n" +
-" \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
-"  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
-"       \\/         \\/              \\/                 \\/       \\/ ";
+</tr>
+</thead>
+<tbody>
 
-          
-    var id = 1;
-    $('#foo').terminal(function(command, term) {
-        if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">randomwits</span> :)";
-          
-            term.echo(mystr, {
-              raw: function(div) {
-
-            }
-         });
-        } else if (command == "about") {
-            window.open(
-              '/about', '_blank'
-            );
-        } else if (command == "contact") {
-           window.open(
-             '/contact', '_blank'
-           ); 
-        } else if (command == "projects") { 
-            window.open('/projects', '_blank');
-        } else if (command == "blog") {
-          window.open('/blog', '_blank'); 
-
-        } else if (command == "books") {
-          window.open('/books', '_blank');
-
-        } else if(command == "hack") {
-
-             javascript:var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
- 
-        } else if (command == "man") { 
-            window.open(
-              'man.html', '_blank'
-            );
-        } else if (command == "resume") {
-         
-           term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/resume\" target=\"_blank\">html</a>&nbsp; &nbsp; &nbsp;<a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" target=\"_blank\">pdf</a>", {
-              raw: function(div) {
-            }
-         });
-        } else if (command == "quote") {
-            jQuery.get('/../quotes.txt', function(data) { 
-              var quotes = data.split("\n");
-              var idx = Math.floor((quotes.length - 1) * Math.random());
-              term.echo("<span style=\"color: rgb(51, 153, 204); \"> " + quotes[idx] + "</span>", { 
-                  raw: function(div) { }
-               });
-            });
-        } else if (command == 'randomwits') { 
-var art = " _____________ \n" +
-"< Random Wits > \n" + 
-" ------------- \n" +  
-"   \ \n" + 
-"    \ \n" + 
-"        .--. \n" + 
-"       |o_o | \n" + 
-"       |:_/ | \n" + 
-"      //   \\ \\ \n" + 
-"     (|     | ) \n" + 
-"    /'\\_   _/`\\ \n" + 
-"    \\___)=(___/ ";
+<tr>
+<td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1358746649l/154126.jpg"> </td>
+<td align="center"> Discovery of India </td>
+<td align="center"> Jawaharlal Nehru </td>
+<td align="center"> TBA</td>
+</tr>
 
 
+<tr>
+<td align="center"><img class="book" src="http://ecx.images-amazon.com/images/I/41qUnYFb6YL.jpg"> </td>
+<td align="center"> Sophie's World </td>
+<td align="center"> Jostein Gaarder </td>
+<td align="center"> In-Progress</td>
+</tr>
 
-      
-           term.echo(art, {
-             finalize: function(div) {
-               div.css("color", "rgb(51, 153, 204)");
-             }
-          });
-        } else {
-            term.echo("unknown command " + command);
-        }
-    }, {
+<tr>
+<td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1327920219l/2623.jpg"> </td>
+<td align="center"> Great Expectations </td>
+<td align="center"> Charles Dickens </td>
+<td align="center"> Read</td>
+</tr>
 
-        greetings: (greettxt + "\n\nType 'help' for list of commands") ,
- 
-        onBlur: function() {
-            // prevent loosing focus
-            return false;
-        }
-    });
-});
+<tr>
+<td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1320448085l/4069.jpg"> </td>
+<td align="center"> Man's Search for Meaning </td>
+<td align="center"> Viktor E. Frankl </td>
+<td align="center"> Read</td>
+</tr>
 
-</script>
+<tr>
+<td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1330015022l/2927869.jpg"> </td>
+<td align="center"> Anna Karenina </td>
+<td align="center"> Leo Tolstoy </td>
+<td align="center"> Read</td>
+</tr>
 
-<h2>Hello stranger.</h2>
-<div id="foo">
-</div>
+<tr>
+<td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1295670969l/634583.jpg"> </td>
+<td align="center"> Wings of Fire: An Autobiography </td>
+<td align="center"> Abdul Kalam </td>
+<td align="center"> Read</td>
+</tr>
 
+<tr>
+<td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1348889243l/3431.jpg"> </td>
+<td align="center"> The Five People You Meet in Heaven </td>
+<td align="center"> Mitch Albom </td>
+<td align="center"> Read</td>
+</tr>
 
+<tr>
+<td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1312041159l/93.jpg"> </td>
+<td align="center"> Heidi </td>
+<td align="center"> Johanna Spyri </td>
+<td align="center"> Read</td>
+</tr>
+
+</tbody>
+</table>
+
+<span style="color: #382110">my to-read shelf:</span><br/><a href="http://www.goodreads.com/review/list/4658439?shelf=to-read" target="_blank" title="Tushar Sharma's book recommendations, liked quotes, book clubs, book trivia, book lists (to-read shelf)"><img border="0" alt="Tushar Sharma's book recommendations, liked quotes, book clubs, book trivia, book lists (to-read shelf)" src="https://www.goodreads.com/images/badge/badge1.jpg"></a>
 
       </section>
       <footer>
