@@ -21,6 +21,7 @@ var greettxt = "" +
           
     var id = 1;
     $('#foo').terminal(function(command, term) {
+ 
         if (command == 'help') { 
              mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">randomwits</span> :)";
           
@@ -30,29 +31,23 @@ var greettxt = "" +
             }
          });
         } else if (command == "about") {
-            window.open(
-              '/about', '_blank'
-            );
+            window.location.href="/about/";
         } else if (command == "contact") {
-           window.open(
-             '/contact', '_blank'
-           ); 
+          window.location.href="/contact";
         } else if (command == "projects") { 
-            window.open('/projects', '_blank');
+          window.location.href="/projects";
         } else if (command == "blog") {
-          window.open('/blog', '_blank'); 
-
+          window.location.href="/blog";
         } else if (command == "books") {
-          window.open('/books', '_blank');
+          //window.open('/books', '_blank');
+          window.location.href="/books";
 
         } else if(command == "hack") {
 
              javascript:var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
  
         } else if (command == "man") { 
-            window.open(
-              'man.html', '_blank'
-            );
+          window.location.href="man.html";
         } else if (command == "resume") {
          
            term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/resume\" target=\"_blank\">html</a>&nbsp; &nbsp; &nbsp;<a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" target=\"_blank\">pdf</a>", {
