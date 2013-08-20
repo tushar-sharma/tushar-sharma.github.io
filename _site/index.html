@@ -142,8 +142,11 @@ var greettxt = "" +
     var id = 1;
     $('#foo').terminal(function(command, term) {
  
-        if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">randomwits</span> :)";
+        arg = command.substr(0,command.indexOf(' ')); 
+        toSearch = command.substr(command.indexOf(' ')+1); 
+
+         if (command == 'help') { 
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br> <span class=\"cl\">g</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br> <span class=\"cl\">blekko</span> Search Blekko.<br><span class=\"cl\">sp</span> Search Search Page. <br><span class=\"cl\">randomwits</span> :)";
           
             term.echo(mystr, {
               raw: function(div) {
@@ -166,9 +169,30 @@ var greettxt = "" +
 
              javascript:var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
  
-        } else if (command == "man") { 
+        }else if (command == "man") { 
           window.location.href="man.html";
-        } else if (command == "resume") {
+        } else if (arg == "ddg" || command == "ddg") {
+            if (toSearch == "" || command =="ddg")  
+              term.echo("Wrong Parameters. Usage: ddg <to search>");
+            else window.open('http://duckduckgo.com/?q=' + toSearch, '_blank');
+        } else if (command == "sp" || arg == "sp") {
+           if (toSearch == "" || command =="sp")  
+              term.echo("Wrong Parameters. Usage: sp <to search>");
+            else window.open('https://startpage.com/do/search?language=english_au&cat=web&query=' + toSearch, '_blank');
+   
+        } else if (command == "blekko" || arg == "blekko") {
+
+            if (toSearch == "" || command =="blekko")  
+              term.echo("Wrong Parameters. Usage: blekko <to search>");
+            else window.open('https://blekko.com/ws/?q=' + toSearch, '_blank');
+ 
+        } else if (command == "g" || arg == "g") {
+         
+           if (toSearch == "" || command =="g")  
+              term.echo("Wrong Parameters. Usage: g <to search>");
+            else window.open('https://www.google.co.in/search?q=' + toSearch, '_blank');
+             
+         }else if (command == "resume") {
          
            term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/resume\" target=\"_blank\">html</a>&nbsp; &nbsp; &nbsp;<a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" target=\"_blank\">pdf</a>", {
               raw: function(div) {
