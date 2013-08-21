@@ -26,7 +26,7 @@ var greettxt = "" +
         toSearch = command.substr(command.indexOf(' ')+1); 
 
          if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br> <span class=\"cl\">g</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br> <span class=\"cl\">blekko</span> Search Blekko.<br><span class=\"cl\">sp</span> Search Start Page. <br><span class=\"cl\">randomwits</span> :)";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">man</span> My man page.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br> <span class=\"cl\">ggl</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br> <span class=\"cl\">blekko</span> Search Blekko.<br><span class=\"cl\">sp</span> Search Start Page. <br><span class=\"cl\">randomwits</span> :)";
           
             term.echo(mystr, {
               raw: function(div) {
@@ -66,10 +66,10 @@ var greettxt = "" +
               term.echo("Wrong Parameters. Usage: blekko <to search>");
             else window.open('https://blekko.com/ws/?q=' + toSearch, '_blank');
  
-        } else if (command == "g" || arg == "g") {
+        } else if (command == "ggl" || arg == "ggl") {
          
-           if (toSearch == "" || command =="g")  
-              term.echo("Wrong Parameters. Usage: g <to search>");
+           if (toSearch == "" || command =="ggl")  
+              term.echo("Wrong Parameters. Usage: ggl <to search>");
             else window.open('https://www.google.co.in/search?q=' + toSearch, '_blank');
              
          }else if (command == "resume") {
@@ -127,3 +127,4 @@ var art = " _____________ \n" +
 <h2>Hello stranger.</h2>
 <div id="foo">
 </div>
+

@@ -18,16 +18,14 @@ categories: blog
     <p>Continue reading &rarr;</p>
   </a>
   {% else %}
-   {{ post.content }}
-  {% endif %}
+      {% endif %}
   {% if post != blogposts.last %}
     <hr />
-  {% endif %}
+    {% endif %}
 {% endfor %}
+
 </div>
 <script type="text/javascript">
   window.onload = function() { scroll_to('blog'); };
   </script>
-
-
 
