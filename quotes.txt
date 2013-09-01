@@ -91,3 +91,5 @@
 "There’s nothing to writing. All you do is sit down at a typewriter and open up a vein" - Walter Smith
 "Half my life is an act of revision" - John Irving
 "The single most important thing a city can do is provide a community where interesting, smart people want to live with their families" - Malcolm Gladwell
+"Freedom is not worth having if it does not include the freedom to make mistakes" - Mahatma Gandhi
+"In programming, the hard part isn't solving problems, but deciding what problems to solve" - Paul Graham
