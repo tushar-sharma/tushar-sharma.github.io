@@ -1,53 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700);
 
-body {
-  padding:15px;
-  font:11pt/1.5 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color:#444;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color:#222;
-  margin:0 0 20px;
-}
-
-h2, h3 {
-  margin:0 0 14px;
-}
-
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
-}
-
-h1, h2, h3 {
-  line-height:1.1;
-}
-
-h1 {
-  font-size:28px;
-}
-
-.stalk_link {
-  font-size:18px;
-  display:inline;
-}
-
-.me_blurb {
-  margin:-15px 0 15px;
-}
-
-h2 {
-  color:#393939;
-}
-
-h3, h4, h5, h6 {
-  color:#494949;
-}
-
-h2 {
-  font-size: 21px;
-}
-
+body {padding:15px;font:11pt/1.5 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#444;}
+h1, h2, h3, h4, h5, h6 {color:#222;margin:0 0 20px;}
+h2, h3 {margin:0 0 14px;}
+p, ul, ol, table, pre, dl {margin:0 0 20px;}
+h1, h2, h3 {line-height:1.1;}
+h1 {font-size:28px;}
+.stalk_link {font-size:18px;display:inline;}
+.me_blurb {margin:-15px 0 15px;}
+h2 {color:#393939;}
+h3, h4, h5, h6 {color:#494949;}
+h2 {font-size: 21px;}
 a {
   color:#39c;
   font-weight:400;

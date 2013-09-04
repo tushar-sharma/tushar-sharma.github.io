@@ -1,21 +1,5 @@
-
-.myheading {
-font-size: 32px;
-line-height: 36px;
-margin: 2px 0 0 0;
-font-weight: normal;
-
-}
-
-.subheading {
-font-size: 14px;
-line-height: 23px;
-margin-left: 3px;
-padding: 7px 0 7px 0;
-border-bottom: 1px solid #d9d9d9;
-margin-bottom: 0;
-}
-
+.myheading {font-size: 32px; line-height: 36px; margin: 2px 0 0 0; font-weight: normal;}
+.subheading {font-size: 14px; line-height: 23px; margin-left: 3px; padding: 7px 0 7px 0; border-bottom: 1px solid #d9d9d9; margin-bottom: 0;}
 form{margin:0 0 21px}
 fieldset{padding:0;margin:0;border:0}
 legend{display:block;width:100%;padding:0;margin-bottom:21px;font-size:21px;line-height:42px;color:#333;border:0;border-bottom:1px solid #e5e5e5;}
@@ -41,8 +25,3 @@ input[type="file"],input[type="image"],input[type="submit"],input[type="reset"],
 .form-horizontal input + .help-block,.form-horizontal select + .help-block,.form-horizontal textarea + .help-block{margin-top:10.5px}
 .form-horizontal .form-actions{padding-left:180px}
 table{max-width:100%;background-color:transparent;border-collapse:collapse;border-spacing:0}
-
-
-.coursera-full-canvas{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-box-shadow:0 1px 2px 1px rgba(0,0,0,0.25);box-shadow:0 1px 2px 1px rgba(0,0,0,0.25);background-color:#fff;-webkit-border-radius:1px;border-radius:1px;padding:30px 30px 48px 30px;margin-left:-3.1914895%;width:106.382979%;height:100%}
-.coursera-full-border{margin-left:-30px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;height:100%;-webkit-border-radius:1px;border-radius:1px;padding:0 30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:1000px}
-
