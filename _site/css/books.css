@@ -1,3 +1,18 @@
+#progress-outer {
+    background: #333;
+    -webkit-border-radius: 13px;
+    height: 12px;
+    width: 70px;
+}
+#progress-inner {
+    background: rgb(51, 153, 204);
+    width: 51%;
+    height: 100%;
+    -webkit-border-radius: 9px;
+}
+
+.cl{ color: rgb(51, 153, 204);}
+
 img.book {
 height: 150px;
 padding: 15px 15px 15px 0px;
@@ -41,3 +56,5 @@ nav#pagination span.prev {
 display: block;
 float: left;
 }
+
+
