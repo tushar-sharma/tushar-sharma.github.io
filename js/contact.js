@@ -7,7 +7,7 @@
   }
 
   function checkForm() {
-  
+    var count = 0; 
     var name = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
@@ -15,21 +15,24 @@
  
     //check if name is not empty
     if (name=="" || name == null ) {
-        error += "Name is required <br>";
+        count += 1;
+        error += count + "- Name is required <br>";
     }
  
      
     //check if email is correct
    if (!(validateEmail(email))) {
-     error += "Email should be valid <br>";
+     count += 1;
+     error += count + "- Email should be valid <br>";
    }
    
    if (message == "")  { 
-       error +="Message is required <br>";
+       count += 1;
+       error += count + "- Message is required <br>";
    } 
   
    if (error != "") {
-        $("#result").html("<span style=\"color:red;\">" + error + "</span>");
+        $("#result").html("<span style=\"color:red;\">" + "Please correct the following " + count + " errors:<br>" + error + "</span>");
    }
 
    else  {
