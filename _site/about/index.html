@@ -144,19 +144,19 @@ padding-left: 20px;
 </style>
 
 
-<h3>Howdy</h3>
+     <script type="text/javascript">
+         function calcHeight()
+         {
+         //find the height of the internal page
+         var the_height= document.getElementById('the_iframe').contentWindow.document.body.scrollHeight;
 
-<p>Hi! I am <b>Tushar Sharma</b>. I'm from Dehradun. <!--Currently I'm staying at Gurgaon.--> I have pursued Senior Certificate from <a href="http://www.ufl.edu/" target="_blank">University of Florida</a>. I am a B.Tech Graduate in Electronics and Communication from <a href="http://www.juit.ac.in/" target="_blank">JUIT</a>. 
-</p>
+         //change the height of the iframe
+         document.getElementById('the_iframe').height = the_height;
+         }
+</script>
 
-<p>
-<blockquote class="cl">
-<!--<i class="icon-quote-left"></i>&nbsp;If you have a garden and a library, you have everything you need.&nbsp;<i class="icon-quote-right"></i> <br>
-― Marcus Tullius Cicero-->
-<i class="icon-quote-left"></i>&nbsp;Life is like a river dragging all but dreams...that never sink...but float below the velvet sky...guiding us through!&nbsp;<i class="icon-quote-right"></i> <br>
-― me (Tushar)
-</blockquote>
-</p>
+    <iframe width="100%" src="info.html" 
+    scrolling="no" id="the_iframe" onLoad="calcHeight();" height="1px" frameborder="0" ></iframe>
 
 <p>I am passionate about: </p>
 <ul>
@@ -212,68 +212,14 @@ padding-left: 20px;
 
 </ul>
 <!--
-<p>I use and advocate : </p>
-<ul>
-
-
-<li class="txt">
-<a href="http://fedoraproject.org/" target="_blank"><img class="logo" src="/../img/fedora.png" alt></a> <span class="mylogo">free OS for my notebook </span>
-</li> 
-
-<li class="txt">
-<a href="http://linuxmint.com/" target="_blank"><img class="logo" src="/../img/linuxmint.png" alt></a> <span class="mylogo">alternate OS for my notebook </span>
-</li> 
-
-<li class="txt">
-<a href="https://tails.boum.org/" target="_blank"><img class="logo" src="/../img/tails.png"  /></a> <span class="mylogo">portable OS for my flash drive </span>
-</li> 
-
-<li class="txt">
-<a href="http://www.knoppix.org/" target="_blank"><img class="logo" src="/../img/knoppix.gif"/></a> <span class="mylogo"> portable OS for my flash drive </span>
-</li> 
-
-
-<li class="txt">
-<a href="http://en.wikipedia.org/wiki/Mozilla_Thunderbird" target="_blank"><img class="logo" src="/../img/thunderbird.png"  /></a> <span class="mylogo"> email client </span>
-</li> 
-
-<li class="txt">
-<a href="http://en.wikipedia.org/wiki/Firefox" target="_blank"><img class="logo" src="/../img/firefox.png"  /></a> <span class="mylogo">open source browser</span>
-</li>
-
-<li class="txt">
-<a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/" target="blank"><img class="logo" src="/../img/noscript.png"  /></a> <span class="mylogo">favourite addon </span>
-</li> 
-
-<li class="txt">
-<a href="https://addons.mozilla.org/en-US/firefox/addon/vimperator/?src=search" target="blank"><img class="logo" src="/../img/vi.png"  /></a> <span class="mylogo">alternate addon </span>
-</li> 
-
-<li class="txt">
-<a href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank"><img class="logo" src="/../img/vim.png"  /></a> <span class="mylogo">favourite editor </span>
-</li> 
-
-
-<li class="txt">
-<a href="http://en.wikipedia.org/wiki/Emacs" target="_blank"><img class="logo" src="/../img/emacs.png"  /></a> <span class="mylogo">alternate editor </span>
-</li> 
-
-<li class="txt">
-<a href="https://duckduckgo.com/" target="_blank"><img  class="logo" src="/../img/duck.png"/></a><span class="mylogo">default search engine </span>
-</li> 
-
-<li class="txt">
-<a href="http://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view" target="_blank"><img class="logo" src="/../img/wiki.jpg" alt></a> <span class="mylogo">for its Neutral point of view</span>
-</li> 
-
-<li class="txt">
-<a href="http://xkcd.com/" target="_blank"><img class="logo" src="/../img/xkcd.jpg" alt></a> <span class="mylogo">for recreation</span>
-</li> 
-
-
-</ul>
-
+<p>
+<blockquote class="cl">
+<i class="icon-quote-left"></i>&nbsp;Life is like a river dragging all but dreams...that never sink...but float below the velvet sky...guiding us through!&nbsp;<i class="icon-quote-right"></i> <br>
+― me 
+</blockquote>
+</p>
 -->
+
 
       </section>
    </div>
