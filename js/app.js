@@ -1,5 +1,4 @@
-//var song = new Audio("http://cs9-3v4.vk.me/p7/823601ef352543.mp3"); // buffers automatically when created
-var song = new Audio("http://f2.pleer.com/5457f5beb767579f7420ceebc518f720d3bbd01a27a89392f20f1ac6ec6fd811800abc60215eec851a23ce8837/dd79a0a011.mp3"); // buffers automatically when created
+var song ;
 
 (function() {
   var Cloud, Filter, Search, fov, key, prefix, rate, transformCamel, transformDash, value, vendorPrefixes, _ref;
@@ -83,11 +82,34 @@ var song = new Audio("http://f2.pleer.com/5457f5beb767579f7420ceebc518f720d3bbd0
     toggle: function(e) {
       var name;
       name = $(e.currentTarget).children('.checkbox').data('value');
-      /* my code begin */
-      song.currentTime = 0;
-      if (song.paused)  song.play();
-      else song.pause();
+      /* my code begins */
+ 
+      if (typeof song == "undefined") {
+             jQuery.get('/../links.txt', function(data) { 
+              links = data.split("\n");
+              idx = Math.floor((links.length - 1) * Math.random());
+              url = links[idx].substring(0, links[idx].indexOf(','));
+              song = new Audio(url); // buffers automatically when created
+              song.play();
+            });
+      }
+      else { 
+        if (song.paused) {
+             song = "";
+             jQuery.get('/../links.txt', function(data) { 
+              links = data.split("\n");
+              idx = Math.floor((links.length - 1) * Math.random());
+              song = new Audio(links[idx]); // buffers automatically when created
+              song.play();
+            });
+        }
+        else {
+         song.pause();
+        } 
+      }
+
       /* my code ends */
+
       return this.nodes.filter("." + name + " li").toggle();
     },
     focus: function(node) {
