@@ -1,6 +1,5 @@
-/*var song = new Audio("mr_nobody.mp3"); // buffers automatically when created*/
 //var song = new Audio("http://cs9-3v4.vk.me/p7/823601ef352543.mp3"); // buffers automatically when created
-var song = new Audio("http://cs4835v4.vk.me/u12283475/audios/d0e668ccda44.mp3"); // buffers automatically when created
+var song = new Audio("http://f2.pleer.com/5457f5beb767579f7420ceebc518f720d3bbd01a27a89392f20f1ac6ec6fd811800abc60215eec851a23ce8837/dd79a0a011.mp3"); // buffers automatically when created
 
 (function() {
   var Cloud, Filter, Search, fov, key, prefix, rate, transformCamel, transformDash, value, vendorPrefixes, _ref;
@@ -85,7 +84,8 @@ var song = new Audio("http://cs4835v4.vk.me/u12283475/audios/d0e668ccda44.mp3");
       var name;
       name = $(e.currentTarget).children('.checkbox').data('value');
       /* my code begin */
-      if (song.paused) song.play();
+      song.currentTime = 0;
+      if (song.paused)  song.play();
       else song.pause();
       /* my code ends */
       return this.nodes.filter("." + name + " li").toggle();
