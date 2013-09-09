@@ -1,4 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700);
+.thumb {margin: 5px 10px 5px 0;
+float: left;
+height: 100px;
+width: 100px;
+-webkit-border-radius: 10px;
+-khtml-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
 
 body {padding:15px;font:11pt/1.5 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#444;}
 h1, h2, h3, h4, h5, h6 {color:#222;margin:0 0 20px;}

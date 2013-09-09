@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tushar Sharma | Blog</title>
+  <link href="https://randomwits.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://randomwits.com/atom.xml"/>
+  <updated>2013-09-10T01:58:05+05:30</updated>
+  <id>https://ryanseys.com/</id>
+  <author>
+    <name>Tushar Sharma</name>
+    <email>tushar@randomwits.com</email>
+  </author>
+  
+  
+  <entry>
+    <id>http://randomwits.com/blog/huawei-usb-modem-in-debian</id>
+    <link type="text/html" rel="alternate" href="http://randomwits.com/blog/huawei-usb-modem-in-debian"/>
+    <title>Huawei Usb Modem in Debian</title>
+    <updated>2012-07-04T00:00:00+05:30</updated>
+    <author>
+      <name>Tushar Sharma</name>
+      <uri>https://randomwits.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability &amp;amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability &amp;amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;ll be using &lt;code&gt;wvdial&lt;/code&gt; to configure the internet. It&amp;#8217;s likely that your system will have the package pre installed. Otherwise you can manyally download it from &lt;a href='http://packages.debian.org/squeeze/wvdial' target='_blank'&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now connect the modem &amp;amp; run lsusb to see the modem connected to the usb &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;$&lt;/span&gt; lsusb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='w4' src='/img/w4.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we see Huawie usb is visible as Huawei Wireless Data Modem. Now for detecting the modem run. &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; wvdial /etc/wvdial.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='w1' src='/img/w1.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; vi  /etc/wvdial.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img alt='w3' src='/img/w3.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remove the semicolons &amp;amp; change the following values.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;
+Username: internet
+Password: internet
+Phone   : #777
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Also add the following lines to wvdial.conf&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;
+Init3 = AT+CRM=1
+Stupid Mode = 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now run the following command.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; wvdial&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Bravo! It connects to the internet. Press &lt;b&gt;Ctrl + C&lt;/b&gt; anytime to disconnect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can also use the above method for other Linux distros. Some of the above commands require super user privelege. You can become super user simply be typing su.&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://randomwits.com/blog/why-hacking-is-good</id>
+    <link type="text/html" rel="alternate" href="http://randomwits.com/blog/why-hacking-is-good"/>
+    <title>Why hacking is good</title>
+    <updated>2012-05-28T00:00:00+05:30</updated>
+    <author>
+      <name>Tushar Sharma</name>
+      <uri>https://randomwits.com/</uri>
+    </author>
+    <content type="html">&lt;link href='../css/post.css' rel='stylesheet' /&gt;
+&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &amp;#8220;Don&amp;#8217;t you know what hacking is?&amp;#8221;. On insisting he recluntantly explained, &amp;#8220;breaking into website or stealing passwords of Facebook, etc&amp;#8221;. I was crestfallen at the rampant misconception about hacking. &lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &amp;#8220;Don&amp;#8217;t you know what hacking is?&amp;#8221;. On insisting he recluntantly explained, &amp;#8220;breaking into website or stealing passwords of Facebook, etc&amp;#8221;. I was crestfallen at the rampant misconception about hacking.&lt;/p&gt;
+
+&lt;p&gt;CERN has grabbed eyeballs around the globe. The notion of colliding nuclear particles at speed that of close to light is mind boggling. This has paved way for physicist to examine conditions that existed just around the Bing Bang. And the last puzzle to Standard Model Theory is Higgs Boson particle which is yet to be discovered. Higgs-Boson was coined God particle by a Noble laureate Leon Lederman. He nicknamed it so because as he states “it is so central to the state of physics today, so crucial to our understanding of the structure of matter, yet so elusive ”. But he later added “the publisher wouldn&amp;#8217;t let us call it the Goddamn Particle, though that might be a more appropriate title, given its villainous nature and the expense it is causing ”. Many scientists dislike the term since even the discovery of Higgs-Boson would not answer some of the daunting problems in physics like Dark matter &amp;amp; Dark energy which constitute more than 94% of our universe. Yet the media has made people to believe in awe of God particle.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#8217;s the media who feed the imagination of common man. Hacking itself is a victim of being misattributed to cracking. The culture of hacking emanated from the MIT where the term “hacking” resonated with creativity. Hacks was anything ingenious which may include any piece of code or even a prank. True hackers are those rare breed of people who are masterful programmers, network wizards &amp;amp; believed in collaborating with others. They have built the community which has not only made the world wide web work but also made Linux OS what it is today. Linux is powering 70% of the internet &amp;amp; all the supercomputers. Some of the famous hackers are Richard Stallman, Eric Raymond , Jamie Zawinski, etc. Another breed of programmers who are called crackers use their skills to write malicious code. These acts of intrusion caught the attention of the media. Rampant breach of security created a panic among public &amp;amp; the intruder called them-self hackers which was promulgated by the the media. Not only did they rob people of their money but also condemned such a beautiful word as hacker.&lt;/p&gt;
+&lt;div style='float:left;margin:0 20px 20px 0'&gt;
+&lt;p&gt;&lt;img alt='Glider' src='/img/glider.jpg' /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Apple has its logo and so does Mircosoft. Hackers also have their own emblem. It&amp;#8217;s glider, a pattern form Conway&amp;#8217;s Game of Life.The philosophy of hacking is itself not confined to programming. The hacking culture embarks on the motto of sharing of information and helping the community. Wikipedia is Opensource and has been built around the culture of free software where free stands for free as if freedom. Andorid device which have flooded the the mobile market is also Opensource and has been built around Linux. Next time some body tells you about hacking facebook, correct him for his own good.&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://randomwits.com/blog/fear-of-walmart</id>
+    <link type="text/html" rel="alternate" href="http://randomwits.com/blog/fear-of-walmart"/>
+    <title>Fear of Walmart</title>
+    <updated>2012-03-30T00:00:00+05:30</updated>
+    <author>
+      <name>Tushar Sharma</name>
+      <uri>https://randomwits.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. &lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart.&lt;/p&gt;
+
+&lt;p&gt;My lack of education in economics convinced me of my inability to form an opinion on this matter. But as a concerned citizen , I tried to understand the repercussion of such an important law debated in the parliament. My first hurdle was to demystify FDI ( Foreign Direct Investment). FDI is way to control the investment of a foreign company. The investment may include purchase of land, building factories, employing people, etc. Usually FDI is restricted in countries to protect domestic companies against the might of the multi-national companies. But relaxing FDI organizes the sector, drives the economy, increases employment, etc. India liberalized most of its sectors after 1991 which also witnessed the boom of Indian IT sector. Currently FDI in retail sector is restricted below 51% forbidding companies like Walmart to pounce upon the Indian market.&lt;/p&gt;
+
+&lt;p&gt;Indian acts like &lt;a href='https://en.wikipedia.org/wiki/Agricultural_Produce_Market_Committee'&gt;APMC&lt;/a&gt; have long forced farmers to only sell their products to the government mundis( market). Despite million starving in poverty, food grains across nation rots in the government godown(warehouse) thanks to the poor PDS. Unlike China, infrastructure in India is still poor. PDS( Public Distribution System) in India is also unorganized &amp;amp; less robust. Such shortcoming combined with other factors have left Indian farmers under the pangs of poverty. The rising inflation has forced RBI(Reserve Bank Of India) to continue to hike repo rates. This slowed the GDP( Gross Domestic Product) &amp;amp; devaluation of Indian ruppee against the dollar.&lt;/p&gt;
+
+&lt;p&gt;Does the much hyped Walmart would be a panacea for Indian consumers against the inflation? Entry of Walmart would usher the much needed reform in the retail sector. Food prices would fall as the Walmart would directly purchase food from the farmers thereby eliminating the middleman. India is perhaps the only developing country where Walmart is yet ink its presence. In contrast China has allowed 100% FDI in retail sector. Yet diluting FDI would be a arduous task for the central government walking a fine line between convincing the opposition &amp;amp; the local shopkeepers with a large chunk of the vote bank.&lt;/p&gt;</content>
+  </entry>
+  
+</feed>

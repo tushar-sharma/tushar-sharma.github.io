@@ -4,15 +4,16 @@ title: Why hacking is good
 category: blog
 tags: hacking
 name: hacking-good
+thumb: /img/glider.jpg
 ---
 
 <link rel="stylesheet" href="../css/post.css" />
 
 
-Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". But I remained adamant & asked him to explain himself. "Well hacking is, you know, to breach security & steal passwords of sites like Facebook, etc", he replied. I was crestfallen at the rampant misconception about hacking.
+Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". On insisting he recluntantly explained, "breaking into website or stealing passwords of Facebook, etc". I was crestfallen at the rampant misconception about hacking.
 <!-- truncate_here -->
 
-Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". But I remained adamant & asked him to explain himself. "Well hacking is, you know, to breach security & steal passwords of sites like Facebook, etc", he replied. I was crestfallen at the rampant misconception about hacking.
+Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". On insisting he recluntantly explained, "breaking into website or stealing passwords of Facebook, etc". I was crestfallen at the rampant misconception about hacking.
 
 CERN has grabbed eyeballs around the globe. The notion of colliding nuclear particles at speed that of close to light is mind boggling. This has paved way for physicist to examine conditions that existed just around the Bing Bang. And the last puzzle to Standard Model Theory is Higgs Boson particle which is yet to be discovered. Higgs-Boson was coined God particle by a Noble laureate Leon Lederman. He nicknamed it so because as he states “it is so central to the state of physics today, so crucial to our understanding of the structure of matter, yet so elusive ”. But he later added “the publisher wouldn't let us call it the Goddamn Particle, though that might be a more appropriate title, given its villainous nature and the expense it is causing ”. Many scientists dislike the term since even the discovery of Higgs-Boson would not answer some of the daunting problems in physics like Dark matter & Dark energy which constitute more than 94% of our universe. Yet the media has made people to believe in awe of God particle. 
 

@@ -13,11 +13,11 @@ categories: blog
   <a href="{{ post.url }}">
     <h3>{{ post.title }}</h3>
   </a>
- <div><img src="{{ blog.thumb }}" alt="" class="thumb">
-  {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
-  {% if truncated_post != post.content %}
-  {{ truncated_post | append:".."}}
-  </div>
+      <div><img src="{{ post.thumb }}" alt="" class="thumb">
+            {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
+            {% if truncated_post != post.content %}
+            {{ truncated_post | append:".."}}
+      </div>
   <a href="{{ post.url }}">
     <p>Continue reading &rarr;</p>
   </a>
