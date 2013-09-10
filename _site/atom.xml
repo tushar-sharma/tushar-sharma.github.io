@@ -3,7 +3,7 @@
   <title>Tushar Sharma | Blog</title>
   <link href="https://randomwits.com/"/>
   <link type="application/atom+xml" rel="self" href="http://randomwits.com/atom.xml"/>
-  <updated>2013-09-10T19:58:18+05:30</updated>
+  <updated>2013-09-10T20:09:28+05:30</updated>
   <id>https://ryanseys.com/</id>
   <author>
     <name>Tushar Sharma</name>
@@ -12,55 +12,10 @@
   
   
   <entry>
-    <id>http://randomwits.com/blog/huawei-usb-modem-in-debian</id>
-    <link type="text/html" rel="alternate" href="http://randomwits.com/blog/huawei-usb-modem-in-debian"/>
-    <title>Huawei Usb Modem in Debian</title>
-    <updated>2012-07-04T00:00:00+05:30</updated>
-    <author>
-      <name>Tushar Sharma</name>
-      <uri>https://randomwits.com/</uri>
-    </author>
-    <content type="html">&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability &amp;amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability &amp;amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;ll be using &lt;code&gt;wvdial&lt;/code&gt; to configure the internet. It&amp;#8217;s likely that your system will have the package pre installed. Otherwise you can manyally download it from &lt;a href='http://packages.debian.org/squeeze/wvdial' target='_blank'&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now connect the modem &amp;amp; run lsusb to see the modem connected to the usb &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;$&lt;/span&gt; lsusb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt='w4' src='/img/w4.png' /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here we see Huawie usb is visible as Huawei Wireless Data Modem. Now for detecting the modem run. &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; wvdial /etc/wvdial.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt='w1' src='/img/w1.png' /&gt;&lt;/p&gt;
-
-&lt;p&gt;This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; vi  /etc/wvdial.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img alt='w3' src='/img/w3.png' /&gt;&lt;/p&gt;
-
-&lt;p&gt;Remove the semicolons &amp;amp; change the following values.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;
-Username: internet
-Password: internet
-Phone   : #777
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Also add the following lines to wvdial.conf&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;
-Init3 = AT+CRM=1
-Stupid Mode = 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now run the following command.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; wvdial&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Bravo! It connects to the internet. Press &lt;b&gt;Ctrl + C&lt;/b&gt; anytime to disconnect.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can also use the above method for other Linux distros. Some of the above commands require super user privelege. You can become super user simply be typing su.&lt;/p&gt;</content>
-  </entry>
-  
-  <entry>
     <id>http://randomwits.com/blog/why-hacking-is-good</id>
     <link type="text/html" rel="alternate" href="http://randomwits.com/blog/why-hacking-is-good"/>
     <title>Why hacking is good</title>
-    <updated>2012-05-28T00:00:00+05:30</updated>
+    <updated>2013-09-10T00:00:00+05:30</updated>
     <author>
       <name>Tushar Sharma</name>
       <uri>https://randomwits.com/</uri>
@@ -122,6 +77,51 @@ Stupid Mode = 1
 &lt;a href='#fnref:4' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id='fn:5'&gt;
 &lt;p&gt;http://www.catb.org/jargon/html/C/cracker.html&lt;/p&gt;
 &lt;a href='#fnref:5' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://randomwits.com/blog/huawei-usb-modem-in-debian</id>
+    <link type="text/html" rel="alternate" href="http://randomwits.com/blog/huawei-usb-modem-in-debian"/>
+    <title>Huawei Usb Modem in Debian</title>
+    <updated>2012-07-04T00:00:00+05:30</updated>
+    <author>
+      <name>Tushar Sharma</name>
+      <uri>https://randomwits.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability &amp;amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability &amp;amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;ll be using &lt;code&gt;wvdial&lt;/code&gt; to configure the internet. It&amp;#8217;s likely that your system will have the package pre installed. Otherwise you can manyally download it from &lt;a href='http://packages.debian.org/squeeze/wvdial' target='_blank'&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now connect the modem &amp;amp; run lsusb to see the modem connected to the usb &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;$&lt;/span&gt; lsusb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='w4' src='/img/w4.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we see Huawie usb is visible as Huawei Wireless Data Modem. Now for detecting the modem run. &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; wvdial /etc/wvdial.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='w1' src='/img/w1.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; vi  /etc/wvdial.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img alt='w3' src='/img/w3.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remove the semicolons &amp;amp; change the following values.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;
+Username: internet
+Password: internet
+Phone   : #777
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Also add the following lines to wvdial.conf&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;
+Init3 = AT+CRM=1
+Stupid Mode = 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now run the following command.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; wvdial&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Bravo! It connects to the internet. Press &lt;b&gt;Ctrl + C&lt;/b&gt; anytime to disconnect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can also use the above method for other Linux distros. Some of the above commands require super user privelege. You can become super user simply be typing su.&lt;/p&gt;</content>
   </entry>
   
   <entry>
