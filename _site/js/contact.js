@@ -38,7 +38,7 @@
    else  {
          $.ajax({
              dataType: 'jsonp',
-             url: "http://getsimpleform.com/messages/ajax?form_api_token=d2e61898f5d1dbfc583d0acb7b95120f",
+             url: "http://getsimpleform.com/messages/ajax?form_api_token=23742ff758c0424fe7c088fb12148abd",
              data: $('#contact-form').serialize() 
 
            }).done(function() {
