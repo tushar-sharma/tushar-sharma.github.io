@@ -16,9 +16,7 @@ Once a friend of mine asked if I could Hack. I asked him what he meant by hackin
 
 #### What people think hacking is
 
-Often we read news of hackers breaking into websites siphoning millions of dollars. Such news not only create pervasive fear of hacking but also glorify such malicious activities. Media potrays hackers as precocious teenagers toying away with their hi-tech gadgets in their basement trying to circumvent securities. Their skills are often calibrated against the damage they can cause. Just google hacking and news of hackers getting convicted of breaching securities grabs the limelight. The most popular method used by such people involves defacing a website for hacktivism which usually involves SQL injecting, Cross Site Scripting (XSS) or DoS. None of this techniques involves any sophisticated technical skills. Even if some of them do exhibit superior technical skills, their activity would be against the hacker's ethics[^ethics].
-
-
+Often we read news of hackers breaking into websites siphoning millions of dollars. Such news not only create pervasive fear of hacking but also glorify such malicious activities. Media potrays hackers as precocious teenagers toying away with their hi-tech gadgets in their basement trying to circumvent securities. Their skills are often calibrated against the damage they can cause. Just google hacking and news of hackers getting convicted of breaching securities grabs the limelight. The most popular method used by such people involves defacing a website for <a href="http://en.wikipedia.org/wiki/Hacktivism" target="_blank">hacktivism</a> which usually involves <a href="http://en.wikipedia.org/wiki/SQL_injection" target="_blank">SQL injecting</a>, <a href="http://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank">Cross Site Scripting</a> (XSS) or <a href="http://en.wikipedia.org/wiki/Denial-of-service_attack" target="_blank">Denal of service</a> (DoS). None of the above techniques involves any sophisticated technical skills. Even if some of intrusion involved superior technical skills, it would not be hacking as it is against the hacker's ethics[^ethics].
 
 #### What hacking really is
 
