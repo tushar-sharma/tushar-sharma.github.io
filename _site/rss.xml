@@ -6,8 +6,8 @@
     <atom:link href="http://randomwits.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tushar Sharma | Blog</description>
     <language>en-us</language>
-    <pubDate>Tue, 10 Sep 2013 11:48:07 +0530</pubDate>
-    <lastBuildDate>Tue, 10 Sep 2013 11:48:07 +0530</lastBuildDate>
+    <pubDate>Tue, 10 Sep 2013 19:44:25 +0530</pubDate>
+    <lastBuildDate>Tue, 10 Sep 2013 19:44:25 +0530</lastBuildDate>
 
     
     
@@ -60,17 +60,62 @@ Stupid Mode = 1
       <author>tushar@randomwits.com (Tushar Sharma)</author>
       <guid>http://randomwits.com/blog/why-hacking-is-good</guid>
       <description>&lt;link href='../css/post.css' rel='stylesheet' /&gt;
-&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &amp;#8220;Don&amp;#8217;t you know what hacking is?&amp;#8221;. On insisting he recluntantly explained, &amp;#8220;breaking into website or stealing passwords of Facebook, etc&amp;#8221;. I was crestfallen at the rampant misconception about hacking. &lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &amp;#8220;Don&amp;#8217;t you know what hacking is?&amp;#8221;. On insisting he reluctantly explained, &amp;#8220;breaking into website or stealing passwords of Facebook, etc&amp;#8221;. I was crestfallen at the rampant misconception about hacking. &lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &amp;#8220;Don&amp;#8217;t you know what hacking is?&amp;#8221;. On insisting he recluntantly explained, &amp;#8220;breaking into website or stealing passwords of Facebook, etc&amp;#8221;. I was crestfallen at the rampant misconception about hacking.&lt;/p&gt;
+&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &amp;#8220;Don&amp;#8217;t you know what hacking is?&amp;#8221;. On insisting he reluctantly explained, &amp;#8220;breaking into website or stealing passwords of Facebook, etc&amp;#8221;. I was crestfallen at the rampant misconception about hacking.&lt;/p&gt;
 
-&lt;p&gt;CERN has grabbed eyeballs around the globe. The notion of colliding nuclear particles at speed that of close to light is mind boggling. This has paved way for physicist to examine conditions that existed just around the Bing Bang. And the last puzzle to Standard Model Theory is Higgs Boson particle which is yet to be discovered. Higgs-Boson was coined God particle by a Noble laureate Leon Lederman. He nicknamed it so because as he states “it is so central to the state of physics today, so crucial to our understanding of the structure of matter, yet so elusive ”. But he later added “the publisher wouldn&amp;#8217;t let us call it the Goddamn Particle, though that might be a more appropriate title, given its villainous nature and the expense it is causing ”. Many scientists dislike the term since even the discovery of Higgs-Boson would not answer some of the daunting problems in physics like Dark matter &amp;amp; Dark energy which constitute more than 94% of our universe. Yet the media has made people to believe in awe of God particle.&lt;/p&gt;
+&lt;h4 id='what_people_think_hacking_is'&gt;What people think hacking is&lt;/h4&gt;
 
-&lt;p&gt;It&amp;#8217;s the media who feed the imagination of common man. Hacking itself is a victim of being misattributed to cracking. The culture of hacking emanated from the MIT where the term “hacking” resonated with creativity. Hacks was anything ingenious which may include any piece of code or even a prank. True hackers are those rare breed of people who are masterful programmers, network wizards &amp;amp; believed in collaborating with others. They have built the community which has not only made the world wide web work but also made Linux OS what it is today. Linux is powering 70% of the internet &amp;amp; all the supercomputers. Some of the famous hackers are Richard Stallman, Eric Raymond , Jamie Zawinski, etc. Another breed of programmers who are called crackers use their skills to write malicious code. These acts of intrusion caught the attention of the media. Rampant breach of security created a panic among public &amp;amp; the intruder called them-self hackers which was promulgated by the the media. Not only did they rob people of their money but also condemned such a beautiful word as hacker.&lt;/p&gt;
-&lt;div style='float:left;margin:0 20px 20px 0'&gt;
-&lt;p&gt;&lt;img alt='Glider' src='/img/glider.jpg' /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Apple has its logo and so does Mircosoft. Hackers also have their own emblem. It&amp;#8217;s glider, a pattern form Conway&amp;#8217;s Game of Life.The philosophy of hacking is itself not confined to programming. The hacking culture embarks on the motto of sharing of information and helping the community. Wikipedia is Opensource and has been built around the culture of free software where free stands for free as if freedom. Andorid device which have flooded the the mobile market is also Opensource and has been built around Linux. Next time some body tells you about hacking facebook, correct him for his own good.&lt;/p&gt;</description>
+&lt;p&gt;Often we read news of hackers breaking into websites siphoning millions of dollars. Such news not only create pervasive fear of hacking but also glorify such malicious activities. Media potrays hackers as precocious teenagers toying away with their hi-tech gadgets in their basement trying to circumvent securities. Their skills are often calibrated against the damage they can cause. Just google hacking and news of hackers getting convicted of breaching securities grabs the limelight. The most popular method used by such people involves defacing a website for hacktivism which usually involves SQL injecting, Cross Site Scripting (XSS) or DoS. None of this techniques involves any sophisticated technical skills. Even if some of them do exhibit superior technical skills, their activity would be against the hacker&amp;#8217;s ethics&lt;sup id='fnref:1'&gt;&lt;a href='#fn:1' rel='footnote'&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h4 id='what_hacking_really_is'&gt;What hacking really is&lt;/h4&gt;
+
+&lt;p&gt;Hacking is learning and building constructing things and nothing else. The concept of hacking emanated from MIT in 1960 where the term &amp;#8220;hacking&amp;#8221; resonated with creativity. Hacks were anything ingenious which may include any piece of code or even a clever prank. Hacker is used to denote a person who follows a spirit of playful cleverness and loves programming&lt;sup id='fnref:2'&gt;&lt;a href='#fn:2' rel='footnote'&gt;2&lt;/a&gt;&lt;/sup&gt;. True hackers are those rare breed of people who are masterful programmers who beleive in freedom to access and share knowledge. As Eric Raymond aptly puts it, &amp;#8220;There is a community, a shared culture, of expert programmers and networking wizards that traces its history back through decades to the first time-sharing minicomputers and the earliest ARPAnet experiments. The members of this culture originated the term &amp;#8216;hacker&amp;#8217;. Hackers built the Internet. Hackers made the Unix operating system what it is today. Hackers run Usenet. Hackers make the World Wide Web work. If you are part of this culture, if you have contributed to it and other people in it know who you are and call you a hacker, you&amp;#8217;re a hacker&lt;sup id='fnref:3'&gt;&lt;a href='#fn:3' rel='footnote'&gt;3&lt;/a&gt;&lt;/sup&gt;&amp;#8221;.&lt;/p&gt;
+
+&lt;h4 id='what_is_the_difference'&gt;What is the difference&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align='center'&gt; &lt;strong /&gt; &lt;/th&gt;
+&lt;th align='center'&gt; &lt;strong&gt; Type  &lt;/strong&gt;&lt;/th&gt;
+&lt;th align='center'&gt; &lt;strong&gt;Name&lt;/strong&gt; &lt;/th&gt;
+&lt;th align='center'&gt; &lt;strong&gt;Known For&lt;/strong&gt; &lt;/th&gt;
+
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+
+&lt;tr&gt;
+&lt;td align='center'&gt;&lt;a href='http://en.wikipedia.org/wiki/Ankit_Fadia' target='_blank'&gt;&lt;img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ankitfadia2.jpg/200px-Ankitfadia2.jpg' style='height:150px;padding:15px 15px 15px 0px;max-width: 100px;' /&gt;&lt;/a&gt; &lt;/td&gt;
+&lt;td align='center'&gt;Media Hacker&lt;/td&gt;
+&lt;td align='center'&gt;Ankit Fadia&lt;/td&gt;
+&lt;td align='center'&gt; Claimed that after the 9/11 attacks, &quot;American investigating agencies&quot; invited him to decode an encrypted message posted by Al-Qaeda. Thought he got much &lt;a href='http://www.thehindu.com/sci-tech/inside-account/article48684.ece' target='_blank'&gt;publicity&lt;/a&gt;, his claims are refuted &lt;a href='http://forbesindia.com/article/beyond-business/ankit-fadia-revealed/34793/0' target='_blank'&gt;here&lt;/a&gt;. &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align='center'&gt;&lt;a href='http://en.wikipedia.org/wiki/Richard_Stallman' target='_blank'&gt;&lt;img src='http://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Richard_Matthew_Stallman.jpeg/220px-Richard_Matthew_Stallman.jpeg' style='height:150px;padding:15px 15px 15px 0px;max-width: 100px;' /&gt;&lt;/a&gt; &lt;/td&gt;
+&lt;td align='center'&gt;True Hacker&lt;/td&gt;
+&lt;td align='center'&gt;Richard Stallman&lt;/td&gt;
+&lt;td align='center'&gt;Launched GNU Project, founding the Free Software Foundation, developing the GNU Compiler Collection and GNU Emacs, and writing the GNU General Public License &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id='conclusion'&gt;Conclusion&lt;/h4&gt;
+
+&lt;p&gt;Convictions of computer crimes, which began as early as 1983 with the case of 414&lt;sup id='fnref:4'&gt;&lt;a href='#fn:4' rel='footnote'&gt;4&lt;/a&gt;&lt;/sup&gt;, caught the attention of the media. Rampant breach of security created panic among general public and intruders called themself &amp;#8216;hackers&amp;#8217;. These bunch of people, who writes malicious code, are nothing but crackers&lt;sup id='fnref:5'&gt;&lt;a href='#fn:5' rel='footnote'&gt;5&lt;/a&gt;&lt;/sup&gt;. Not only did they rob people of their money but also condemned such a beautiful word as &amp;#8216;hacker&amp;#8217;.&lt;/p&gt;
+&lt;div class='footnotes'&gt;&lt;hr /&gt;&lt;ol&gt;&lt;li id='fn:1'&gt;
+&lt;p&gt;http://en.wikipedia.org/wiki/Hacker_ethic&lt;/p&gt;
+&lt;a href='#fnref:1' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id='fn:2'&gt;
+&lt;p&gt;http://en.wikipedia.org/wiki/Hacker_(term)#Programmer_subculture_of_hackers&lt;/p&gt;
+&lt;a href='#fnref:2' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id='fn:3'&gt;
+&lt;p&gt;http://www.catb.org/esr/faqs/hacker-howto.html#whatis&lt;/p&gt;
+&lt;a href='#fnref:3' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id='fn:4'&gt;
+&lt;p&gt;http://en.wikipedia.org/wiki/The_414s&lt;/p&gt;
+&lt;a href='#fnref:4' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id='fn:5'&gt;
+&lt;p&gt;http://www.catb.org/jargon/html/C/cracker.html&lt;/p&gt;
+&lt;a href='#fnref:5' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
