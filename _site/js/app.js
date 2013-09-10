@@ -1,4 +1,4 @@
-var song ;
+var song;
 
 (function() {
   var Cloud, Filter, Search, fov, key, prefix, rate, transformCamel, transformDash, value, vendorPrefixes, _ref;
@@ -82,7 +82,7 @@ var song ;
     toggle: function(e) {
       var name;
       name = $(e.currentTarget).children('.checkbox').data('value');
-      /* my code begins */
+      /* @start */
  
       if (typeof song == "undefined") {
              jQuery.get('/../links.txt', function(data) { 
@@ -90,6 +90,14 @@ var song ;
               idx = Math.floor((links.length - 1) * Math.random());
               url = links[idx].substring(0, links[idx].indexOf(','));
               song = new Audio(url); // buffers automatically when created
+              if (typeof song.loop == 'boolean') {
+                  song.loop = true;
+              } else {
+                  song.addEventListener('ended', function() {a
+                                  this.currentTime = 0;
+                                  this.play();
+                                        }, false);
+              }
               song.play();
             });
       }
@@ -100,6 +108,15 @@ var song ;
               links = data.split("\n");
               idx = Math.floor((links.length - 1) * Math.random());
               song = new Audio(links[idx]); // buffers automatically when created
+              if (typeof song.loop == 'boolean') {
+                  song.loop = true;
+              } else {
+                  song.addEventListener('ended', function() {a
+                                  this.currentTime = 0;
+                                  this.play();
+                                        }, false);
+ 
+              }
               song.play();
             });
         }
@@ -108,7 +125,7 @@ var song ;
         } 
       }
 
-      /* my code ends */
+      /* @end */
 
       return this.nodes.filter("." + name + " li").toggle();
     },
