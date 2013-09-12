@@ -10,10 +10,6 @@ Feel free to fork the [source code](https://github.com/tushar-sharma/tushar-shar
 
 Content in the `_posts` folder is copyrighted. 
 
-## Branch
-
-Branch `r2`
-
 ## License
 
 ```bash
