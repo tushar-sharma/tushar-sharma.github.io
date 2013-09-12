@@ -26,7 +26,7 @@ var greettxt = "" +
         toSearch = command.substr(command.indexOf(' ')+1); 
 
          if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br> <span class=\"cl\">ggl</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br><span class=\"cl\">randomwits</span> :)";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">qrcode</span> My contact info in qrcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br> <span class=\"cl\">ggl</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br><span class=\"cl\">randomwits</span> :)";
           
             term.echo(mystr, {
               raw: function(div) {
@@ -46,6 +46,11 @@ var greettxt = "" +
         } else if (command == "books") {
           //window.open('/books', '_blank');
           window.location.href="/books";
+        } else if (command == "qrcode") {
+            term.echo("<img alt=\"MECARD:N:Sharma,Tushar;EMAIL:tushar@randomwits.com;TEL:+919837264416;URL:http://randomwits.com;;\" src=\"/../img/qrcode.png\" ", {
+              raw: function(div) {
+            }
+         });
 
         } else if(command == "hack") {
 

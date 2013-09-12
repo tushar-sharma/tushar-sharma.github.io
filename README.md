@@ -12,7 +12,7 @@ Content in the `_posts` folder is copyrighted.
 
 ## Branch
 
-Branch `r1`
+Branch `r2`
 
 ## License
 
