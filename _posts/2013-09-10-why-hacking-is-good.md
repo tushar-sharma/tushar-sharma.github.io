@@ -46,7 +46,7 @@ Hacking is learning and building constructing things and nothing else. The conce
 </tr>
 
 <tr>
-<td align="center"><a href="http://en.wikipedia.org/wiki/Richard_Stallman" target="_blank"><img  style="height:150px;padding:15px 15px 15px 0px;max-width: 100px;" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Richard_Matthew_Stallman.jpeg/220px-Richard_Matthew_Stallman.jpeg"></a> </td>
+<td align="center"><a href="http://en.wikipedia.org/wiki/Richard_Stallman" target="_blank"><img  style="height:150px;padding:15px 15px 15px 0px;max-width: 100px;" src="http://static.fsf.org/fsforg/img/rms-web.jpg"></a> </td>
 <td align="center">True Hacker</td>
 <td align="center">Richard Stallman</td>
 <td align="center">Launched GNU Project, founding the Free Software Foundation, developing the GNU Compiler Collection and GNU Emacs, and writing the GNU General Public License </td>
