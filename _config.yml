@@ -2,7 +2,7 @@ safe: false
 pygments: true
 lsi: false
 permalink: /:categories/:title
-url: http://tushar-sharma.github.io
+url: http://randomwits.com
 markdown: maruku
 port: 4000
 future: false
