@@ -1,3 +1,0 @@
-{% assign projects = site.categories.projects %}
-<code><span class="nv">$</span> open <a href="/projects">projects</a></code>
-{% for project in projects %}{% if project.tags contains 'sidebar' %}     {% if project == projects.last %}└{% else %}├{% endif %}── <span class="nv"></span><a href="{{project.url}}" title="{{project.title}}">{{project.name}}</a>{% if project != projects.last %}<br />{% endif %}{% endif %}{% endfor %}<br /><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
