@@ -2,7 +2,7 @@
 layout: post
 title: Why hacking is good
 category: blog
-tags: hacking
+tags: hacking 
 name: hacking-good
 thumb: /img/glider.jpg
 ---
@@ -59,9 +59,9 @@ Hacking is learning and building constructing things and nothing else. The conce
 
 Convictions of computer crimes, which began as early as 1983 with the case of 414[^414], caught the attention of the media. Rampant breach of security created panic among general public and intruders called themself 'hackers'. These bunch of people, who writes malicious code, are nothing but crackers[^crackers]. Not only did they rob people of their money but also condemned such a beautiful word as 'hacker'. 
 
-[^414]: http://en.wikipedia.org/wiki/The_414s
-[^ethics]: http://en.wikipedia.org/wiki/Hacker_ethic
-[^hacker]: http://en.wikipedia.org/wiki/Hacker_(term)#Programmer_subculture_of_hackers
-[^eric]: http://www.catb.org/esr/faqs/hacker-howto.html#whatis 
-[^crackers]: http://www.catb.org/jargon/html/C/cracker.html
-[^fadia]: http://www.hindu.com/mp/2009/11/16/stories/2009111650950300.htm
+[^414]: <a href="http://en.wikipedia.org/wiki/The_414s" target="_blank">414</a>
+[^ethics]: <a href="http://en.wikipedia.org/wiki/Hacker_ethic" target="_blank">Hacker ethic</a>
+[^hacker]: <a href="http://en.wikipedia.org/wiki/Hacker_(term)#Programmer_subculture_of_hackers" target="_blank">Hacker_(term)</a>
+[^eric]: <a href="http://www.catb.org/esr/faqs/hacker-howto.html#whatis" target="_blank">How to be a hacker</a>
+[^crackers]: <a href="http://www.catb.org/jargon/html/C/cracker.html" target="_blank">Jargon file - Cracker</a>
+[^fadia]: <a href="http://www.hindu.com/mp/2009/11/16/stories/2009111650950300.htm" target="_blank">the Hindu</a>

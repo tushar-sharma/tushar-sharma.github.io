@@ -2,7 +2,7 @@
 layout: post
 title: Fear of Walmart
 category: blog
-tags: walmart
+tags: Walmart FDI
 name: fear-walmart
 thumb: /img/walmart.jpg
 ---
