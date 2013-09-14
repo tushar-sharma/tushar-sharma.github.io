@@ -2,7 +2,7 @@
 layout: post
 title: Why hacking is good
 category: blog
-tags: hacking 
+tags: hacking  coding
 name: hacking-good
 thumb: /img/glider.jpg
 ---

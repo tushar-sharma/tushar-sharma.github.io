@@ -1,4 +1,4 @@
-safe: false
+safe: true
 pygments: true
 lsi: false
 permalink: /:categories/:title
