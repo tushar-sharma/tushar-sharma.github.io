@@ -3,7 +3,7 @@
   <title>Tushar Sharma | Blog</title>
   <link href="https://randomwits.com/"/>
   <link type="application/atom+xml" rel="self" href="http://randomwits.com/atom.xml"/>
-  <updated>2013-09-17T15:14:27+05:30</updated>
+  <updated>2013-09-18T02:04:01+05:30</updated>
   <id>https://ryanseys.com/</id>
   <author>
     <name>Tushar Sharma</name>
@@ -22,7 +22,7 @@
     </author>
     <content type="html">&lt;link href='../css/post.css' rel='stylesheet' /&gt;
 &lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &amp;#8220;Don&amp;#8217;t you know what hacking is?&amp;#8221;. On insisting he reluctantly explained, &amp;#8220;breaking into website or stealing passwords of Facebook, etc&amp;#8221;. I was crestfallen at the rampant misconception about hacking. &lt;!-- truncate_here --&gt;&lt;/p&gt;
-
+&lt;p&gt;Tags:  &lt;a class='mytag' href='/tag/hacking' title='View posts tagged with &amp;quot;hacking&amp;quot;'&gt;hacking&lt;/a&gt;     &lt;a class='mytag' href='/tag/hackers' title='View posts tagged with &amp;quot;hackers&amp;quot;'&gt;hackers&lt;/a&gt;     &lt;a class='mytag' href='/tag/coding' title='View posts tagged with &amp;quot;coding&amp;quot;'&gt;coding&lt;/a&gt;    &lt;/p&gt;
 &lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &amp;#8220;Don&amp;#8217;t you know what hacking is?&amp;#8221;. On insisting he reluctantly explained, &amp;#8220;breaking into website or stealing passwords of Facebook, etc&amp;#8221;. I was crestfallen at the rampant misconception about hacking.&lt;/p&gt;
 
 &lt;h4 id='what_people_think_hacking_is'&gt;What people think hacking is&lt;/h4&gt;
@@ -79,7 +79,7 @@
       <uri>https://randomwits.com/</uri>
     </author>
     <content type="html">&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability &amp;amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
+&lt;p&gt;Tags:  &lt;a class='mytag' href='/tag/debian' title='View posts tagged with &amp;quot;debian&amp;quot;'&gt;debian&lt;/a&gt;     &lt;a class='mytag' href='/tag/huawei' title='View posts tagged with &amp;quot;huawei&amp;quot;'&gt;huawei&lt;/a&gt;     &lt;a class='mytag' href='/tag/usb' title='View posts tagged with &amp;quot;usb&amp;quot;'&gt;usb&lt;/a&gt;     &lt;a class='mytag' href='/tag/modem' title='View posts tagged with &amp;quot;modem&amp;quot;'&gt;modem&lt;/a&gt;     &lt;a class='mytag' href='/tag/coding' title='View posts tagged with &amp;quot;coding&amp;quot;'&gt;coding&lt;/a&gt;    &lt;/p&gt;
 &lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability &amp;amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;/p&gt;
 
 &lt;p&gt;I&amp;#8217;ll be using &lt;code&gt;wvdial&lt;/code&gt; to configure the internet. It&amp;#8217;s likely that your system will have the package pre installed. Otherwise you can manyally download it from &lt;a href='http://packages.debian.org/squeeze/wvdial' target='_blank'&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -124,7 +124,7 @@ Stupid Mode = 1
       <uri>https://randomwits.com/</uri>
     </author>
     <content type="html">&lt;p&gt;After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. &lt;!-- truncate_here --&gt;&lt;/p&gt;
-
+&lt;p&gt;Tags:  &lt;a class='mytag' href='/tag/Walmart' title='View posts tagged with &amp;quot;Walmart&amp;quot;'&gt;Walmart&lt;/a&gt;     &lt;a class='mytag' href='/tag/FDI' title='View posts tagged with &amp;quot;FDI&amp;quot;'&gt;FDI&lt;/a&gt;    &lt;/p&gt;
 &lt;p&gt;After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart.&lt;/p&gt;
 
 &lt;p&gt;My lack of education in economics convinced me of my inability to form an opinion on this matter. But as a concerned citizen , I tried to understand the repercussion of such an important law debated in the parliament. My first hurdle was to demystify FDI ( Foreign Direct Investment). FDI is way to control the investment of a foreign company. The investment may include purchase of land, building factories, employing people, etc. Usually FDI is restricted in countries to protect domestic companies against the might of the multi-national companies. But relaxing FDI organizes the sector, drives the economy, increases employment, etc. India liberalized most of its sectors after 1991 which also witnessed the boom of Indian IT sector. Currently FDI in retail sector is restricted below 51% forbidding companies like Walmart to pounce upon the Indian market.&lt;/p&gt;

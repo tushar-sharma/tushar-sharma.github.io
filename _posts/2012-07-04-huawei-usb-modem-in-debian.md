@@ -10,6 +10,7 @@ thumb: /img/debian.jpg
 
 The Debian claimed to be the Universal Operating System. Impressed by the stability & the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.<!-- truncate_here -->
 
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 The Debian claimed to be the Universal Operating System. Impressed by the stability & the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.
 

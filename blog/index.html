@@ -5,6 +5,7 @@ categories: blog
 ---
 
 <link rel="stylesheet" href="/../css/styles.css" />
+<link rel="stylesheet" href="/../css/font-awesome.css" />
 
 <div id="blog" style="padding-top:30px; margin-top:-23px;">
 {% assign blogposts = site.categories.blog %}
@@ -24,7 +25,7 @@ categories: blog
     <a href="{{ post.url }}">
       <span>Continue reading &rarr;</span>
     </a>
-     <span style="float:right;">
+     <span style="float:right;"><i class="icon-tags"></i> Tags :
       {% for tag in post.tags %}
           <a class="mytag" href="/tag/{{ tag }}"> {{ tag }} </a>
       {% endfor %}

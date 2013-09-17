@@ -2,7 +2,7 @@
 layout: post
 title: Why hacking is good
 category: blog
-tags: hacking  coding
+tags: hacking hackers coding 
 name: hacking-good
 thumb: /img/glider.jpg
 ---
@@ -11,6 +11,8 @@ thumb: /img/glider.jpg
 
 Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". On insisting he reluctantly explained, "breaking into website or stealing passwords of Facebook, etc". I was crestfallen at the rampant misconception about hacking.
 <!-- truncate_here -->
+
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p> 
 
 Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". On insisting he reluctantly explained, "breaking into website or stealing passwords of Facebook, etc". I was crestfallen at the rampant misconception about hacking.
 
