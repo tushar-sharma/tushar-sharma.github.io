@@ -97,38 +97,18 @@ h1.heading {
 </script>
 
 
-
 </div>
 
 <style type="text/css">
-@font-face {
-  font-family: 'Myfont';
-  src: url('/../font/pristina.ttf');
-  /*src: url('/../font/mbscraps.ttf');*/
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Somefont';
-  src:url('/../font/OneDirection.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-h1.heading {
-  font-family: Myfont;
-  color: rgb(51, 153, 204);
-}
-
-.top{
-  color: rgb(68, 68, 68);
-}
-
-.sub{
-  font-family:Somefont;
-}
-
+@font-face{font-family:Somefont;src:url(/../font/OneDirection.ttf);font-weight:400;font-style:normal}
+h1.heading{font-family:Myfont;color:#39c}
+.top{color:#444}
+.sub{font-family:Somefont}
+#back-top{position:fixed;bottom:30px;margin-left:-150px}
+#back-top a{width:108px;display:block;text-align:center;font:11px/100% Arial, Helvetica, sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}
+#back-top a:hover{color:#000}
+#back-top span{width:28px;height:28px;background:url(/../img/nav-icons.png) no-repeat -8px -577px;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}
+#back-top a:hover span{background-color:#777}
 </style>
 
 
@@ -190,6 +170,18 @@ h1.heading {
 </pre>
 </div>
 
+<p id="back-top">
+  <a href="#top"><span></span>Back to Top</a>
+</p>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+<script src="/../js/scroll_top.js" type="text/javascript"></script>
+
+<script>
+
+</script>
+
 
       </header>
       <section>
@@ -221,7 +213,7 @@ var greettxt = "" +
         toSearch = command.substr(command.indexOf(' ')+1); 
 
          if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">qrcode</span> My contact info in qrcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br> <span class=\"cl\">ggl</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br><span class=\"cl\">randomwits</span> :)";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">qrcode</span> My contact info in qrcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.<br><span class=\"cl\">ggl</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br><span class=\"cl\">randomwits</span> :)";
           
             term.echo(mystr, {
               raw: function(div) {
@@ -238,7 +230,11 @@ var greettxt = "" +
           window.location.href="/projects";
         } else if (command == "blog") {
           window.location.href="/blog";
-        } else if (command == "books") {
+        } else if (arg == "search" || command == "search") {
+            if (toSearch == "" || command =="search")  
+              term.echo("Wrong Parameters. Usage: search <to search>");
+            else window.location.href="/search/?q=" + toSearch;
+        }  else if (command == "books") {
           //window.open('/books', '_blank');
           window.location.href="/books";
         } else if (command == "qrcode") {

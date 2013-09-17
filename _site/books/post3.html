@@ -97,38 +97,18 @@ h1.heading {
 </script>
 
 
-
 </div>
 
 <style type="text/css">
-@font-face {
-  font-family: 'Myfont';
-  src: url('/../font/pristina.ttf');
-  /*src: url('/../font/mbscraps.ttf');*/
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Somefont';
-  src:url('/../font/OneDirection.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-h1.heading {
-  font-family: Myfont;
-  color: rgb(51, 153, 204);
-}
-
-.top{
-  color: rgb(68, 68, 68);
-}
-
-.sub{
-  font-family:Somefont;
-}
-
+@font-face{font-family:Somefont;src:url(/../font/OneDirection.ttf);font-weight:400;font-style:normal}
+h1.heading{font-family:Myfont;color:#39c}
+.top{color:#444}
+.sub{font-family:Somefont}
+#back-top{position:fixed;bottom:30px;margin-left:-150px}
+#back-top a{width:108px;display:block;text-align:center;font:11px/100% Arial, Helvetica, sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}
+#back-top a:hover{color:#000}
+#back-top span{width:28px;height:28px;background:url(/../img/nav-icons.png) no-repeat -8px -577px;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}
+#back-top a:hover span{background-color:#777}
 </style>
 
 
@@ -189,6 +169,18 @@ h1.heading {
      ├── <span class="nv"></span><a href="/blog/why-hacking-is-good" title="Why hacking is good">hacking-good</a><br />     ├── <span class="nv"></span><a href="/blog/huawei-usb-modem-in-debian" title="Huawei Usb Modem in Debian">huawei-modem</a><br />     └── <span class="nv"></span><a href="/blog/fear-of-walmart" title="Fear of Walmart">fear-walmart</a><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
 </pre>
 </div>
+
+<p id="back-top">
+  <a href="#top"><span></span>Back to Top</a>
+</p>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+<script src="/../js/scroll_top.js" type="text/javascript"></script>
+
+<script>
+
+</script>
 
 
       </header>
