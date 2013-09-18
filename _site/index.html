@@ -187,6 +187,7 @@ h1.heading{font-family:Myfont;color:#39c}
       <section>
         <style>
 .cl{ width: 200px;  color: rgb(51, 153, 204);}
+.clr{ color: rgb(51, 153, 204);}
 </style>
 
 <script src="/../js/jquery-1.7.1.min.js"></script>
@@ -213,14 +214,36 @@ var greettxt = "" +
         toSearch = command.substr(command.indexOf(' ')+1); 
 
          if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">qrcode</span> My contact info in qrcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.<br><span class=\"cl\">ggl</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br><span class=\"cl\">randomwits</span> :)";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">?</span> About this terminal.<br><span class=\"cl\">whoami</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.<br><span class=\"cl\">ggl</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br><span class=\"cl\">randomwits</span> :)";
           
             term.echo(mystr, {
               raw: function(div) {
 
             }
          });
-        } else if (command == "about") {
+        } else if (command == "?") {
+         
+     term.echo("This is command line interface emulating <a href=\"http://en.wikipedia.org/wiki/Unix_shell\" target=\"_blank\">Unix shell</a>. If you're unfamiliar with it, please use the left sidebar for navigation.", {
+              raw: function(div) {
+            }
+         });
+
+         } else if (command == "whoami") {
+
+     term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.", {
+              raw: function(div) {
+            }
+         });
+
+         } else if (command == "ls") {
+
+     term.echo("Sorry! <span class=\"clr\">ls</span> won't work here as this is not Unix. Why not try this command in some new Unix like OS from <a href=\"http://distrowatch.com/ \" target=\"_blank\">here</a>.", {
+              raw: function(div) {
+            }
+         });
+
+ 
+         } else if (command == "about") {
             window.location.href="/about/";
         } else if (command == "contact") {
           window.location.href="/contact";
@@ -238,7 +261,7 @@ var greettxt = "" +
           //window.open('/books', '_blank');
           window.location.href="/books";
         } else if (command == "qrcode") {
-            term.echo("<img alt=\"MECARD:N:Sharma,Tushar;EMAIL:tushar@randomwits.com;TEL:+919837264416;URL:http://randomwits.com;;\" src=\"/../img/qrcode.png\" ", {
+            term.echo("<img src=\"http://api.qrserver.com/v1/create-qr-code/?data=MECARD%3AN%3ASharma%2CTushar%3BEMAIL%3Atushar%40randomwits.com%3BTEL%3A%2B919837264416%3BURL%3Ahttp%3A%2F%2Frandomwits.com%3B%3B&#38;size=150x150&#38;prov=goqrme\" alt=\"MECARD:N:Sharma,Tushar;EMAIL:tushar@randomwits.com;TEL:+919837264416;URL:http://randomwits.com;; \"  /> ", {
               raw: function(div) {
             }
          });
@@ -361,12 +384,11 @@ var art = " ____________ \n" +
 
   <a href="/rss.xml" >
     <i class="icon-rss"></i>
-  </a>
-
+  </a> 
 
   <small>]</small> <br>
 </span>
-<span style="float:right; width:25%;">
+<span style="float:right;">
   <small>Hosted on <a href="https://github.com/tushar-sharma/tushar-sharma.github.io" target="_blank">Github</a> & powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</small>
 </span>
   </div>

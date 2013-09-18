@@ -56,5 +56,3 @@ Now run the following command.
 Bravo! It connects to the internet. Press <b>Ctrl + C</b> anytime to disconnect.
 
 **Note:** You can also use the above method for other Linux distros. Some of the above commands require super user privelege. You can become super user simply be typing su. 
-
-
