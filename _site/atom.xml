@@ -3,7 +3,7 @@
   <title>Tushar Sharma | Blog</title>
   <link href="https://randomwits.com/"/>
   <link type="application/atom+xml" rel="self" href="http://randomwits.com/atom.xml"/>
-  <updated>2013-09-20T01:38:06+05:30</updated>
+  <updated>2013-09-20T03:20:49+05:30</updated>
   <id>https://ryanseys.com/</id>
   <author>
     <name>Tushar Sharma</name>
@@ -78,40 +78,46 @@
       <name>Tushar Sharma</name>
       <uri>https://randomwits.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability &amp;amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class='mytag' href='/tag/debian' title='View posts tagged with &amp;quot;debian&amp;quot;'&gt;debian&lt;/a&gt;    &lt;a class='mytag' href='/tag/huawei' title='View posts tagged with &amp;quot;huawei&amp;quot;'&gt;huawei&lt;/a&gt;    &lt;a class='mytag' href='/tag/usb' title='View posts tagged with &amp;quot;usb&amp;quot;'&gt;usb&lt;/a&gt;    &lt;a class='mytag' href='/tag/modem' title='View posts tagged with &amp;quot;modem&amp;quot;'&gt;modem&lt;/a&gt;    &lt;a class='mytag' href='/tag/coding' title='View posts tagged with &amp;quot;coding&amp;quot;'&gt;coding&lt;/a&gt;    &lt;/p&gt;
-&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability &amp;amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;/p&gt;
+&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;/p&gt;
 
 &lt;p&gt;I&amp;#8217;ll be using &lt;code&gt;wvdial&lt;/code&gt; to configure the internet. It&amp;#8217;s likely that your system will have the package pre installed. Otherwise you can manyally download it from &lt;a href='http://packages.debian.org/squeeze/wvdial' target='_blank'&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Now connect the modem &amp;amp; run lsusb to see the modem connected to the usb &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;$&lt;/span&gt; lsusb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Now connect the modem and run lsusb to see the modem connected to the usb:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ lusub&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img alt='w4' src='/img/w4.png' /&gt;&lt;/p&gt;
 
-&lt;p&gt;Here we see Huawie usb is visible as Huawei Wireless Data Modem. Now for detecting the modem run. &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; wvdial /etc/wvdial.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Here we see Huawie usb is visible as Huawei Wireless Data Modem. Become a super user by typing &lt;code&gt;sudo su&lt;/code&gt;. Now for detecting the modem run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# wvdial /etc/wvdial.conf &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img alt='w1' src='/img/w1.png' /&gt;&lt;/p&gt;
 
 &lt;p&gt;This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; vi  /etc/wvdial.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code&gt;# vi /etc/wvdial.conf&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;img alt='w3' src='/img/w3.png' /&gt;&lt;/p&gt;
 
-&lt;p&gt;Remove the semicolons &amp;amp; change the following values.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;
-Username: internet
-Password: internet
-Phone   : #777
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Also add the following lines to wvdial.conf&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;
-Init3 = AT+CRM=1
-Stupid Mode = 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now run the following command.&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code&gt;&lt;span class='nv'&gt;#&lt;/span&gt; wvdial&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Bravo! It connects to the internet. Press &lt;b&gt;Ctrl + C&lt;/b&gt; anytime to disconnect.&lt;/p&gt;
+&lt;p&gt;Remove the semicolons &amp;amp; change the following values:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can also use the above method for other Linux distros. Some of the above commands require super user privelege. You can become super user simply be typing su.&lt;/p&gt;</content>
+&lt;pre&gt;&lt;code&gt;Username: internet
+Password: internet
+Phone   : #777&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Also add the following lines to wvdial.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Init3 = AT+CRM=1
+Stupid Mode = 1&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now run the following command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# wvdial&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bravo! It connects to the internet. Press &lt;b&gt;Ctrl + C&lt;/b&gt; anytime to disconnect.&lt;/p&gt;</content>
   </entry>
   
   <entry>
@@ -129,9 +135,9 @@ Stupid Mode = 1
 
 &lt;p&gt;My lack of education in economics convinced me of my inability to form an opinion on this matter. But as a concerned citizen , I tried to understand the repercussion of such an important law debated in the parliament. My first hurdle was to demystify FDI ( Foreign Direct Investment). FDI is way to control the investment of a foreign company. The investment may include purchase of land, building factories, employing people, etc. Usually FDI is restricted in countries to protect domestic companies against the might of the multi-national companies. But relaxing FDI organizes the sector, drives the economy, increases employment, etc. India liberalized most of its sectors after 1991 which also witnessed the boom of Indian IT sector. Currently FDI in retail sector is restricted below 51% forbidding companies like Walmart to pounce upon the Indian market.&lt;/p&gt;
 
-&lt;p&gt;Indian acts like &lt;a href='https://en.wikipedia.org/wiki/Agricultural_Produce_Market_Committee'&gt;APMC&lt;/a&gt; have long forced farmers to only sell their products to the government mundis( market). Despite million starving in poverty, food grains across nation rots in the government godown(warehouse) thanks to the poor PDS. Unlike China, infrastructure in India is still poor. PDS( Public Distribution System) in India is also unorganized &amp;amp; less robust. Such shortcoming combined with other factors have left Indian farmers under the pangs of poverty. The rising inflation has forced RBI(Reserve Bank Of India) to continue to hike repo rates. This slowed the GDP( Gross Domestic Product) &amp;amp; devaluation of Indian ruppee against the dollar.&lt;/p&gt;
+&lt;p&gt;Indian acts like &lt;a href='https://en.wikipedia.org/wiki/Agricultural_Produce_Market_Committee'&gt;APMC&lt;/a&gt; have long forced farmers to only sell their products to the government mundis( market). Despite million starving in poverty, food grains across nation rots in the government godown(warehouse) thanks to the poor PDS. Unlike China, infrastructure in India is still poor. PDS( Public Distribution System) in India is also unorganized and less robust. Such shortcoming combined with other factors have left Indian farmers under the pangs of poverty. The rising inflation has forced RBI(Reserve Bank Of India) to continue to hike repo rates. This slowed the GDP( Gross Domestic Product) and devaluation of Indian ruppee against the dollar.&lt;/p&gt;
 
-&lt;p&gt;Does the much hyped Walmart would be a panacea for Indian consumers against the inflation? Entry of Walmart would usher the much needed reform in the retail sector. Food prices would fall as the Walmart would directly purchase food from the farmers thereby eliminating the middleman. India is perhaps the only developing country where Walmart is yet ink its presence. In contrast China has allowed 100% FDI in retail sector. Yet diluting FDI would be a arduous task for the central government walking a fine line between convincing the opposition &amp;amp; the local shopkeepers with a large chunk of the vote bank.&lt;/p&gt;</content>
+&lt;p&gt;Does the much hyped Walmart would be a panacea for Indian consumers against the inflation? Entry of Walmart would usher the much needed reform in the retail sector. Food prices would fall as the Walmart would directly purchase food from the farmers thereby eliminating the middleman. India is perhaps the only developing country where Walmart is yet ink its presence. In contrast China has allowed 100% FDI in retail sector. Yet diluting FDI would be a arduous task for the central government walking a fine line between convincing the opposition and the local shopkeepers with a large chunk of the vote bank.&lt;/p&gt;</content>
   </entry>
   
 </feed>

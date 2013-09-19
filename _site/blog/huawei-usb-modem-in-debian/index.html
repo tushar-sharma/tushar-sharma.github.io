@@ -107,7 +107,7 @@ h1.heading{font-family:Myfont;color:#39c}
 #back-top{position:fixed;bottom:30px;margin-left:-150px}
 #back-top a{width:108px;display:block;text-align:center;font:11px/100% Arial, Helvetica, sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}
 #back-top a:hover{color:#000}
-#back-top span{width:28px;height:28px;background:url(/../img/nav-icons.png) no-repeat -8px -577px;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}
+#back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat ;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}
 #back-top a:hover span{background-color:#777}
 </style>
 
@@ -192,38 +192,44 @@ h1.heading{font-family:Myfont;color:#39c}
 
   </p>
 <p>Tags:  <a class='mytag' href='/tag/debian' title='View posts tagged with &quot;debian&quot;'>debian</a>    <a class='mytag' href='/tag/huawei' title='View posts tagged with &quot;huawei&quot;'>huawei</a>    <a class='mytag' href='/tag/usb' title='View posts tagged with &quot;usb&quot;'>usb</a>    <a class='mytag' href='/tag/modem' title='View posts tagged with &quot;modem&quot;'>modem</a>    <a class='mytag' href='/tag/coding' title='View posts tagged with &quot;coding&quot;'>coding</a>    </p>
-<p>The Debian claimed to be the Universal Operating System. Impressed by the stability &amp; the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.</p>
+<p>The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.</p>
 
 <p>I&#8217;ll be using <code>wvdial</code> to configure the internet. It&#8217;s likely that your system will have the package pre installed. Otherwise you can manyally download it from <a href='http://packages.debian.org/squeeze/wvdial' target='_blank'>here</a>.</p>
 
-<p>Now connect the modem &amp; run lsusb to see the modem connected to the usb <div class='highlight'><pre><code><span class='nv'>$</span> lsusb</code></pre></div></p>
+<p>Now connect the modem and run lsusb to see the modem connected to the usb:</p>
+
+<pre><code>$ lusub</code></pre>
 
 <p><img alt='w4' src='/img/w4.png' /></p>
 
-<p>Here we see Huawie usb is visible as Huawei Wireless Data Modem. Now for detecting the modem run. <div class='highlight'><pre><code><span class='nv'>#</span> wvdial /etc/wvdial.conf</code></pre></div></p>
+<p>Here we see Huawie usb is visible as Huawei Wireless Data Modem. Become a super user by typing <code>sudo su</code>. Now for detecting the modem run:</p>
+
+<pre><code># wvdial /etc/wvdial.conf </code></pre>
 
 <p><img alt='w1' src='/img/w1.png' /></p>
 
 <p>This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor</p>
-<div class='highlight'><pre><code><span class='nv'>#</span> vi  /etc/wvdial.conf</code></pre></div>
+
+<pre><code># vi /etc/wvdial.conf</code></pre>
+
 <p><img alt='w3' src='/img/w3.png' /></p>
 
-<p>Remove the semicolons &amp; change the following values.</p>
-<div class='highlight'><pre><code>
-Username: internet
-Password: internet
-Phone   : #777
-</code></pre></div>
-<p>Also add the following lines to wvdial.conf</p>
-<div class='highlight'><pre><code>
-Init3 = AT+CRM=1
-Stupid Mode = 1
-</code></pre></div>
-<p>Now run the following command.</p>
-<div class='highlight'><pre><code><span class='nv'>#</span> wvdial</code></pre></div>
-<p>Bravo! It connects to the internet. Press <b>Ctrl + C</b> anytime to disconnect.</p>
+<p>Remove the semicolons &amp; change the following values:</p>
 
-<p><strong>Note:</strong> You can also use the above method for other Linux distros. Some of the above commands require super user privelege. You can become super user simply be typing su.</p>
+<pre><code>Username: internet
+Password: internet
+Phone   : #777</code></pre>
+
+<p>Also add the following lines to wvdial.conf</p>
+
+<pre><code>Init3 = AT+CRM=1
+Stupid Mode = 1</code></pre>
+
+<p>Now run the following command.</p>
+
+<pre><code># wvdial</code></pre>
+
+<p>Bravo! It connects to the internet. Press <b>Ctrl + C</b> anytime to disconnect.</p>
 
 
 <hr />
