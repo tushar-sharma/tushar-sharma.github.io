@@ -214,7 +214,7 @@ var greettxt = "" +
         toSearch = command.substr(command.indexOf(' ')+1); 
 
          if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">?</span> About this terminal.<br><span class=\"cl\">whoami</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.<br><span class=\"cl\">ggl</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br><span class=\"cl\">randomwits</span> :)";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">?</span> About this terminal.<br><span class=\"cl\">who<span style=\"color:#000;\">am</span>i</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.<br><span class=\"cl\">ggl</span> Search Google.&nbsp;  <br> <span class=\"cl\">ddg</span> Search Duckduckgo.<br><span class=\"cl\">randomwits</span> :)";
           
             term.echo(mystr, {
               raw: function(div) {
@@ -223,7 +223,7 @@ var greettxt = "" +
          });
         } else if (command == "?") {
          
-     term.echo("This is command line interface emulating <a href=\"http://en.wikipedia.org/wiki/Unix_shell\" target=\"_blank\">Unix shell</a>. If you're unfamiliar with it, please use the left sidebar for navigation.", {
+     term.echo("This is command line interface emulating <a href=\"http://en.wikipedia.org/wiki/Unix_shell\" target=\"_blank\">Unix shell</a>. If you don't know what it's, that's OK! Please use the left sidebar for navigation instead.", {
               raw: function(div) {
             }
          });
@@ -389,7 +389,7 @@ var art = " ____________ \n" +
   <small>]</small> <br>
 </span>
 <span style="float:right;">
-  <small>Hosted on <a href="https://github.com/tushar-sharma/tushar-sharma.github.io" target="_blank">Github</a> & powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</small>
+  <small>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</small>
 </span>
   </div>
 <br><br>
