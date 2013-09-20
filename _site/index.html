@@ -204,7 +204,19 @@ var greettxt = "" +
 "\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  \n" +
 " \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
 "  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
-"       \\/         \\/              \\/                 \\/       \\/ ";
+"       \\/         \\/              \\/                 \\/       \\/ \n" + 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n" + 
+"( Type 'help' for list of commands) \n" + 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" + 
+"   o\n" + 
+"    o \n"+ 
+"        .--. \n" + 
+"       |o_o | \n" + 
+"       |:_/ | \n" + 
+"      //   \\ \\ \n" + 
+"     (|     | ) \n" + 
+"    /'\\_   _/`\\ \n" + 
+"    \\___)=(___/ ";
 
           
     var id = 1;
@@ -214,20 +226,13 @@ var greettxt = "" +
         toSearch = command.substr(command.indexOf(' ')+1); 
 
          if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">?</span> About this terminal.<br><span class=\"cl\">who<span style=\"color:#000;\">am</span>i</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.<br><span class=\"cl\">randomwits</span> :)";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">who<span style=\"color:#000;\">am</span>i</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
           
             term.echo(mystr, {
               raw: function(div) {
 
             }
          });
-        } else if (command == "?") {
-         
-     term.echo("This is command line interface emulating <a href=\"http://en.wikipedia.org/wiki/Unix_shell\" target=\"_blank\">Unix shell</a>. If you don't know what it's, that's OK! Please use the left sidebar for navigation instead.", {
-              raw: function(div) {
-            }
-         });
-
          } else if (command == "whoami") {
 
      term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.", {
@@ -284,32 +289,18 @@ var greettxt = "" +
                   raw: function(div) { }
                });
             });
-        } else if (command == 'randomwits') { 
-var art = " ____________ \n" + 
-"( randomwits ) \n" + 
-" ------------\n" + 
-"   o\n" + 
-"    o \n"+ 
-"        .--. \n" + 
-"       |o_o | \n" + 
-"       |:_/ | \n" + 
-"      //   \\ \\ \n" + 
-"     (|     | ) \n" + 
-"    /'\\_   _/`\\ \n" + 
-"    \\___)=(___/ ";
-
       
-           term.echo(art, {
+          /* term.echo(art, {
              finalize: function(div) {
                div.css("color", "rgb(51, 153, 204)");
              }
-          });
+          });*/
         } else {
             term.echo("unknown command " + command);
         }
     }, {
 
-        greetings: (greettxt + "\n\nType 'help' for list of commands") ,
+        greetings: (greettxt + "\n\n") ,
  
         onBlur: function() {
             // prevent loosing focus
