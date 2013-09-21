@@ -194,3 +194,14 @@ An old Cherokee told his grandson: "My son, there's a battle between two wolves 
 "The tendency to turn human judgments into divine commands makes religion one of the most dangerous forces in the world."- Georgia Harkness
 "The most powerful weapon on earth is the human soul on fire."- Ferdinand Foch
 "It is the first of all problems for a man to find out what kind of work he is to do in this universe" - Thomas Carlyle
+"No violence, gentlemen -- no violence, I beg of you!  Consider the furniture!" - Sherlock Holmes
+To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is to do. -- Sartre<br>Do be do be do. -- Sinatra
+"Few things are harder to put up with than the annoyance of a good example." - Mark Twain, Pudd'nhead Wilson's Calendar
+"Training is everything.  The peach was once a bitter almond; cauliflower is nothing but cabbage with a college education. -- Mark Twain, "Pudd'nhead Wilson's Calendar
+question = ( to ) ? be : ! be; <br>-- Wm. Shakespeare
+Persons attempting to find a motive in this narrative will be prosecuted;<br>persons attempting to find a moral in it will be banished; persons attempting<br>to find a plot in it will be shot.  By Order of the Author<br>-- Mark Twain, "The Adventures of Huckleberry Finn"
+F.S. Fitzgerald to Hemingway:<br>"Ernest, the rich are different from us."<br>Hemingway:"Yes.  They have more money."
+"There are two motives for reading a book; one, that you enjoy it; the other, that you can boast about it." - Bertrand Russell
+"During the course of my life I have made provision for everything, bat I forgot about death. Alas, I die unprepared." - Cesare Borgia, the statesman.
+"Pardon me, sir. I did not do it on purpose" - said by: Queen Marie Antoinette after she accidentally stepped on the foot of her executioner as she went to the guillotine
+"Now, now, my good man, this is no time for making enemies." - said by: Voltaire when asked by a priest to renounce Satan.
