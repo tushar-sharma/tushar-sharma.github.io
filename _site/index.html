@@ -205,11 +205,12 @@ var greettxt = "" +
 " \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
 "  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
 "       \\/         \\/              \\/                 \\/       \\/ \n" + 
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n" + 
-"( Type 'help' for list of commands) \n" + 
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" + 
-"   o\n" + 
-"    o \n"+ 
+"               _  _  _  _ \n" +
+"              ( `  `  `  `) \n" + 
+"             (  Type help  ) \n" +
+"           (_   _   .   _   _) \n" +
+"                 o \n" + 
+"               o \n" +
 "        .--. \n" + 
 "       |o_o | \n" + 
 "       |:_/ | \n" + 
@@ -301,7 +302,13 @@ var greettxt = "" +
     }, {
 
         greetings: (greettxt + "\n\n") ,
- 
+  
+     /* greetings: (greettxt, {
+              raw: function(div) {
+            }
+         } ) , 
+ */
+
         onBlur: function() {
             // prevent loosing focus
             return false;
