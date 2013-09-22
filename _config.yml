@@ -12,6 +12,4 @@ exclude:
 - params.json
 - Gemfile
 - Gemfile.lock
-- quotes.txt
-- links.txt
 - branch.txt
