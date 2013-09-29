@@ -1,14 +1,1351 @@
----
-layout: none
-title: Resume
-categories: resume
----
 
-{% assign pages = site.tags.resume %}
-{% for page in pages %}
-    <link rel="stylesheet" href="../css/pygment_trac.css">
-    <link rel="stylesheet" href="../css/font-awesome.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/resume.css">
-    {{ page.content }}
-{% endfor %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/png" href="/../img/favicon.ico">
+
+    <title>Tushar Sharma's resume</title>
+
+    <!--[if lt IE 10]>
+    <meta http-equiv="refresh" content="0;URL=/resume.pdf">
+    <![endif]>-->
+
+    <link rel="stylesheet" href="/../font/Klinic_Personal/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700' rel='stylesheet' type='text/css'>
+    <style>
+      /*
+        blue:         #2C3E50 rgb(44,   62,  80);
+        red:          #FA4248 rgb(250,  66,  72);
+        light-gray:   #D7DADB rgb(215, 218, 219);
+        bright-blue:  #6DBCDB rgb(109, 188, 219);
+        white:        #fff    rgb(255, 255, 255);
+       */
+
+      html, body {
+        font-family: "Roboto";
+        color: #444;
+        font-weight: 300;
+        font-size: 14px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: #FDF9F7;
+        -webkit-print-color-adjust: exact;
+        -moz-print-color-adjust: exact;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: "Klinic Slab";
+        font-weight: 300;
+        color: #2C3E50;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .section-title .sub-text {
+        font-size: 16px;
+        margin-top: -2px;
+        color: #777;
+        font-family: Roboto;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-size: 1.6em;
+      }
+
+      h3 {
+        font-size: 1.5em;
+      }
+
+      h3 + .sub-text {
+        margin-top: -16px;
+      }
+
+      section {
+        padding: 0 20px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: dotted 1px #CCC;
+        box-shadow: 0 1px 0 #FFF;
+      }
+
+      .section-title {
+        position: relative;
+        font-size: 30px;
+        padding-left: 20px;
+        padding-bottom: 14px;
+        border-left: dotted 3px #6DBCDB;
+        padding-top: 20px;
+        margin-left: -20px;
+      }
+
+      a {
+        color: #6DBCDB;
+      }
+
+      .contact {
+        font-size: 13px;
+        font-family: Roboto;
+        float: right;
+        margin-top: -70px;
+        text-align: right;
+        color: #777;
+      }
+
+      @media (max-width: 500px) {
+        .contact {
+          float: none;
+          text-align: left;
+          margin-top: 26px;
+        }
+
+        .document-download-mobile {
+          margin-top: 20px;
+        }
+      }
+
+      .document-download-mobile {
+        display: none;
+        float: right;
+        clear: both;
+        font-size: 18px;
+      }
+
+      .content-wrapper {
+        display: table;
+        max-width: 800px;
+        min-width: 300px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 16px;
+      }
+
+      .content-wrapper > section:last-child {
+        border-bottom: 0;
+      }
+
+      .list-scoring dt {
+        display: inline-block;
+        width: 90px;
+        vertical-align: middle;
+        margin-top: -10px;
+        font-weight: 500;
+        font-size: 13px;
+      }
+
+      .list-scoring dd {
+        display: inline-block;
+        margin-left: 0;
+      }
+
+      .list-scoring .list-item {
+        display: inline-block;
+        margin: 10px 40px;
+      }
+
+      .list-scoring .list-item:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      .meter {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 12px;
+        border-radius: 8px;
+        border: solid 1px #696969;
+        font-size: 10px;
+        text-align: center;
+      }
+
+      .meter > .position {
+        position: absolute;
+        height: 100%;
+        background: #CCC;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        border-right: solid 1px #AAA;
+      }
+
+      .meter.meter-blue {
+        border: solid 1px #638A99;
+        color: #FFF;
+      }
+
+      .meter.meter-blue > .position {
+        background: #6DBCDB;
+        border-right: solid 1px #659AAF;
+      }
+
+      .block-meter span {
+        vertical-align: bottom;
+      }
+
+      .block-meter .total {
+        display: inline-block;
+        font-size: 12px;
+        margin-left: 6px;
+      }
+
+      .block-meter .block {
+        display: inline-block;
+        width: 18px;
+        height: 22px;
+        margin-right: 2px;
+        position: relative;
+        overflow: hidden;
+        border: solid 1px #ccc;
+        border-radius: 2px;
+      }
+
+      .block-meter .inner-block {
+        background: #eee;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .block-meter.block-meter-red .block {
+        border: solid 1px #FFB3B6;
+      }
+
+      .block-meter.block-meter-red .inner-block {
+        background: #FA4248;
+      }
+
+      .block-meter.block-meter-yellow .block {
+        border: solid 1px #DBDDAF;
+      }
+
+      .block-meter.block-meter-yellow .inner-block {
+        background: #FFF689;
+      }
+
+      .block-meter.block-meter-blue .block {
+        border: solid 1px #9DB3C3;
+      }
+
+      .block-meter.block-meter-blue .inner-block {
+        background: #61ADFF;
+      }
+
+      .block-meter.block-meter-purple .block {
+        border: solid 1px #BEAFDD;
+      }
+
+      .block-meter.block-meter-purple .inner-block {
+        background: #A589FF;
+      }
+
+      .block-meter.block-meter-orange .block {
+        border: solid 1px #E6CA90;
+      }
+
+      .block-meter.block-meter-orange .inner-block {
+        background: #FFBC44;
+      }
+
+      .column-list {
+        list-style: none;
+        margin: 12px 0;
+        padding: 0;
+        font-size: 0;
+      }
+
+      .column-list > li {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1rem;
+        color: #666;
+        width: 33%;
+        padding: 0 20px;
+        margin: 12px 0;
+        border-left: solid 2px #D7DADB;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      @media screen and (max-width: 600px) {
+        .column-list > li {
+          width: 100%;
+        }
+      }
+
+      @media screen and (min-width: 601px) and (max-width: 780px) {
+        .column-list > li {
+          width: 50%;
+        }
+      }
+
+      .job {
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        margin-top: 12px;
+        border-bottom: solid 1px #D7DADB;
+      }
+
+      .job:last-child {
+        border-bottom: none;
+      }
+
+      .reference-name {
+        margin-bottom: 2px;
+      }
+
+      .reference-title {
+        font-style: italic;
+      }
+
+      .document-download {
+        position: absolute;
+        bottom: -8px;
+        right: -12px;
+        text-align: center;
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        transform: scale(0.8);
+      }
+
+      .document-download path,
+      .document-download rect {
+        opacity: 0.5;
+        fill: #64292B;
+        -webkit-transition: opacity linear 0.2s;
+        -moz-transition: opacity linear 0.2s;
+        -ms-transition: opacity linear 0.2s;
+        -o-transition: opacity linear 0.2s;
+        transition: opacity linear 0.2s;
+      }
+
+      .document-download:hover path,
+      .document-download:hover rect {
+        opacity: 0.8;
+      }
+
+      .document-download .text {
+        opacity: 0;
+        -webkit-transition: opacity linear 0.2s;
+        -moz-transition: opacity linear 0.2s;
+        -ms-transition: opacity linear 0.2s;
+        -o-transition: opacity linear 0.2s;
+        transition: opacity linear 0.2s;
+      }
+
+      .document-download:hover .text {
+        opacity: 1;
+      }
+
+      .main-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 300px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: #FA4248;
+        box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
+        border-left: solid 1px #BD3338;
+        -webkit-transition: width ease-in-out 0.3s, opacity ease-in-out 0.3s;
+        -moz-transition: width ease-in-out 0.3s, opacity ease-in-out 0.3s;
+        -ms-transition: width ease-in-out 0.3s, opacity ease-in-out 0.3s;
+        -o-transition: width ease-in-out 0.3s, opacity ease-in-out 0.3s;
+        transition: width ease-in-out 0.3s, opacity ease-in-out 0.3s;
+      }
+
+      .main-nav > li {
+        display: block;
+        margin: 0;
+        border-bottom: solid 1px #BD373C;
+        box-shadow: 0 1px 0 #FF6166;
+      }
+
+      .main-nav > li:hover {
+        background: #F85056;
+        box-shadow: 0 1px 0 #FF6166,
+              inset 0 1px 0 #FF696E;
+      }
+
+      .main-nav > li.selected {
+        background: #DB3C41;
+        box-shadow: 0 1px 0 #FF6166,
+              inset 0 1px 0 #FC545A;
+      }
+
+      .main-nav > li > a {
+        position: relative;
+        display: block;
+        padding: 20px 8px 14px 32px;
+        text-decoration: none;
+        color: #64292B;
+        font-family: "Klinic Slab";
+        font-weight: 300;
+        text-shadow: 0 1px 0 #FF6166;
+        font-size: 18px;
+      }
+
+      .main-nav > li > a:before {
+        content: "";
+        position: absolute;
+        top: 22px;
+        left: 8px;
+        width: 10px;
+        height: 10px;
+        background: #752729;
+        opacity: 0.27;
+        margin: 2px;
+        border: solid #000 1px;
+      }
+
+      .main-nav > li.selected > a:before {
+        background: #2C3E50;
+      }
+
+      @media print {
+        html, body { background: #fff; }
+
+        .main-nav,
+        .document-download-mobile {
+          display: none !important;
+        }
+
+        section {
+          border-bottom: solid 1px #ccc;
+          box-shadow: none;
+        }
+
+        .list-scoring .list-item {
+          margin-left: 10px;
+        }
+
+        #language-proficiency,
+        #tool-and-environment-proficiency,
+        #job-goodybag,
+        #job-canonball {
+          page-break-after: always;
+          border-bottom: 0;
+        }
+
+        #job-enrg .responsibilities-header,
+        #job-rcisd .responsibilities-header,
+        #job-unt .technologies-header {
+          page-break-before: always;
+        }
+      }
+
+      @media (min-width: 967px) and (max-width: 1054px) {
+        .main-nav { width: 210px; }
+      }
+
+      @media (min-width: 930px) and (max-width: 966px) {
+        .main-nav { width: 170px; }
+      }
+
+      @media (max-width: 500px) {
+        .document-download-mobile {
+          display: inline-block;
+          margin-top: -54px;
+        }
+      }
+
+      @media (min-width: 501px) and (max-width: 928px) {
+        .document-download-mobile {
+          display: inline-block;
+          margin-top: 20px;
+        }
+      }
+
+      @media (max-width: 929px) {
+        .main-nav { width: 0; opacity: 0; }
+
+        .list-scoring .list-item {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+    </style>
+
+    <script>
+    var ignoreScroll = false;
+    var onAnchorClick = function(e){
+      var index;
+      if ((index = e.target.href.indexOf('#')) > -1 && index !== e.target.href.length - 1){
+        ignoreScroll = true;
+        if ( 'preventDefault' in e ) e.preventDefault();
+        var
+          hash  = e.target.href.substring( index + 1 )
+        , curr  = window.scrollY
+        , pos   = window[ hash ].offsetTop - curr - 60 // padding for nav
+
+          // Applies each step of the animation setting the proper time to execute
+        , applyScrollStep = function(step, duration){
+            setTimeout(function(){
+              window.scrollTo(0, easeInOutQuad(step, curr, pos, duration));
+            }, 1 * step);
+          }
+        ;
+
+        // Change hash
+        if (history && window.location.hash !== hash)
+          history.pushState(null, null, '#' + hash);
+
+        // Animate
+        for (var step = 0, duration = 320; step < duration; step++){
+          applyScrollStep(step, duration);
+        }
+        setTimeout(function(){ ignoreScroll = false; }, 800);
+      }
+    };
+
+    var onMainNavClick = function(e){
+      Array.prototype.slice.call(
+        document.querySelectorAll( '.main-nav li' )
+      , 0
+      ).forEach( function( anchor ){
+        anchor.className = anchor.className.replace(
+          /\s*selected\s*/, ' '
+        );
+      });
+
+      e.target.parentElement.className = 'selected';
+    };
+
+    var easeInOutQuad = function(t, b, c, d){
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    var docHeight = function(){
+      var body = document.body, html = document.documentElement;
+
+      return Math.max(
+        body.scrollHeight
+      , body.offsetHeight
+      , html.clientHeight
+      , html.scrollHeight
+      , html.offsetHeight
+      );
+    }
+
+    var debounce = function(func, wait, immediate) {
+      var result;
+      var timeout = null;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) result = func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) result = func.apply(context, args);
+        return result;
+      };
+    };
+
+    document.addEventListener('DOMContentLoaded', function(){
+      Array.prototype.slice.call(
+        document.querySelectorAll( '.main-nav > li > a' )
+      , 0
+      ).forEach( function( anchor ){
+        anchor.addEventListener( 'click', onAnchorClick );
+        anchor.addEventListener( 'click', onMainNavClick );
+      });
+
+      var navLinks = {}, watchTops = [];
+
+      [
+        "introduction"
+      , "education"
+      , "projects"
+      , "language-proficiency"
+      , "os-proficiency"
+      , "tool-and-environment-proficiency"
+      , "professional-experience"
+      ].forEach( function( id ){
+        navLinks[ id ] = {
+          el: document.getElementById( id )
+        , anchor: document.querySelector( 'a[href="#' + id + '"]' )
+        };
+      });
+
+      var threshold = 30;
+
+      var onScroll = function(){
+        if ( ignoreScroll ) return;
+
+        if ( window.scrollY + document.documentElement.clientHeight + threshold >= docHeight() - 100 ){
+
+          if ( window.location.hash === '#references' ) return;
+          onMainNavClick({
+            target: navLinks.references.anchor
+          });
+
+          return history ? history.pushState( null, null, '#references' ) : null;
+        }
+
+        for (var key in navLinks ) {
+
+          if (
+            window.scrollY > navLinks[ key ].el.offsetTop - threshold &&
+            window.scrollY <= navLinks[ key ].el.offsetTop + navLinks[ key ].el.offsetHeight + threshold - 5
+          ) {
+
+            if (window.location.hash === '#' + key) return;
+
+            onMainNavClick({
+              target: navLinks[ key ].anchor
+            });
+
+            if ( history ) history.pushState( null, null, '#' + key )
+
+            break;
+          }
+        }
+      };
+
+      window.addEventListener( 'scroll', debounce( onScroll, 5, true));
+
+      if ( window.location.hash != null && window.location.hash.substring( 1 ) in navLinks ){
+        onMainNavClick({
+          target: navLinks[ window.location.hash.substring( 1 ) ].anchor
+        });
+      }
+    });
+    </script>
+  </head>
+  <body>
+
+    <ul class="main-nav">
+      <li class="selected">
+        <a href="#introduction">
+          Introduction
+        </a>
+      </li>
+      <li>
+        <a href="#education">
+          Education
+        </a>
+      </li>
+      <li>
+        <a href="#projects">
+          Projects
+        </a>
+      </li>
+ 
+      <li>
+        <a href="#language-proficiency">
+          Language Proficiency
+        </a>
+      </li>
+      <li>
+        <a href="#os-proficiency">
+          OS Proficiency
+        </a>
+      </li>
+      <li>
+        <a href="#tool-and-environment-proficiency">
+          Tool and Environment Proficiency
+        </a>
+      </li>
+      <li>
+        <a href="#professional-experience">
+          Professional Experience
+        </a>
+      </li>
+      <li>
+        <a href="resume.pdf">
+          PDF Download
+        </a>
+      </li>
+    </ul>
+
+    <div class="content-wrapper">
+
+      <section id="introduction">
+        <h1 class="section-title">
+          Tushar Sharma 
+          <p class="sub-text">A student for life</p>
+          <div class="contact">
+            <div class="phone">91-9837-264416</div>
+            <div class="email"><a href="mailto:tushar@randomwits.com">tushar@randomwits.com</a></div>
+            <div class="address">1A/1 Nimbuwala<br>Garhi Cantt, Dehradhun, UK</div>
+          </div>
+          <a class="document-download-mobile" href="resume.pdf">
+            PDF Download
+          </a>
+        </h1>
+        <p>Hi, I'm Tushar. I'm a software developer living in Gurgaon.</p>
+      </section>
+
+      <section id="education">
+        <h1 class="section-title">
+          University of Florida
+          <p class="sub-text">
+            Senior Certificate in Computer Engineering<br />
+            Spring 2013 
+          </p>
+        </h1>
+        <h1 class="section-title">
+          Jaypee University of Information Technology
+          <p class="sub-text">
+            B.Tech in Electronics & Communication<br />
+            2009-2013
+          </p>
+        </h1>
+      </section>
+
+
+     <section id="projects">
+        <h1 class="section-title">
+          Projects
+        </h1>
+
+        <div class="job" id="job-goodybag">
+          <h2 class="job-title">Encrypted File System</h2>
+          <a href="http://randomwits.com/projects/encrypt-files/" class="website">http://randomwits.com/projects/encrypt-files/</a>
+          <div class="date">April 2013</div>
+          <p>Implemented encrypted file system in Minix 3 operating system. Each user request the virtual file system to encrypt/decrypt his file. Cipher used is simple Caesar’s cipher.</p>
+          <h3 class="technologies-header list-header">
+            Technologies Utilized
+          </h3>
+          <ul class="technologies-list column-list">
+            <li>C</li>
+            <li>Minix 3</li>
+            <li>Vim</li>
+          </ul>
+        </div>    
+
+         <div class="job" id="job-goodybag">
+          <h2 class="job-title">Binary Semaphore</h2>
+          <a href="http://randomwits.com/projects/binary-semaphore/" class="website">http://randomwits.com/projects/binary-semaphore/</a>
+          <div class="date">April 2013</div>
+          <p>Semaphores are locks used to safeguard critical sections of a operating system. Using dining philosopher algorithm, implemented binary semaphore among multiple processes in Minix 3 </p>
+          <h3 class="technologies-header list-header">
+            Technologies Utilized
+          </h3>
+          <ul class="technologies-list column-list">
+            <li>C</li>
+            <li>Minix 3</li>
+            <li>Vim</li>
+          </ul>
+        </div>   
+   
+         <div class="job" id="job-goodybag">
+          <h2 class="job-title">Cryptography</h2>
+          <a href="http://randomwits.com/projects/" class="website">http://randomwits.com/projects/</a>
+          <div class="date">April 2013</div>
+          <p>Built my final year project on private key cryptography. Implemented standards like DES, AES and RC4.</p>
+          <h3 class="technologies-header list-header">
+            Technologies Utilized
+          </h3>
+          <ul class="technologies-list column-list">
+            <li>C++</li>
+            <li>Python</li>
+          </ul>
+        </div>    
+
+
+      </section>
+
+      <section id="language-proficiency">
+        <h1 class="section-title">Language Proficiency</h1>
+        <p>Languages are just tools to make a job done. Different languages are suited for different jobs. </p>
+        <dl class="list-scoring">
+          <div class="list-item">
+            <dt>C/C++</dt>
+            <dd>
+              <div class="block-meter block-meter-red">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">4.0/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>Java</dt>
+            <dd>
+              <div class="block-meter block-meter-yellow">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 50%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.5/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>C#</dt>
+            <dd>
+              <div class="block-meter block-meter-yellow">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 50%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.5/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>Python</dt>
+            <dd>
+              <div class="block-meter block-meter-blue">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 80%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.8/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>Javscript</dt>
+            <dd>
+              <div class="block-meter block-meter-orange">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 70%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.7/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>PHP</dt>
+            <dd>
+              <div class="block-meter block-meter-purple">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 50%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.5/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>LaTeX</dt>
+            <dd>
+              <div class="block-meter block-meter-yellow">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.0/5.0</span>
+              </div>
+            </dd>
+          </div>
+ 
+           <div class="list-item">
+            <dt>SQL</dt>
+            <dd>
+              <div class="block-meter block-meter-red">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 50%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.5/5.0</span>
+              </div>
+            </dd>
+          </div>
+
+          <div class="list-item">
+            <dt>XHTML</dt>
+            <dd>
+              <div class="block-meter block-meter-blue">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 50%"></span>
+                </span>
+                <span class="total">4.5/5.0</span>
+              </div>
+            </dd>
+          </div>
+ 
+          <div class="list-item">
+            <dt>CSS</dt>
+            <dd>
+              <div class="block-meter block-meter-yellow">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 50%"></span>
+                </span>
+                <span class="total">4.5/5.0</span>
+              </div>
+            </dd>
+          </div>
+
+       </dl>
+      </section>
+
+      <section id="os-proficiency">
+        <h1 class="section-title">Operating System Proficiency</h1>
+        <p>I have experienced with different operating systems, though Linux is my favourite.</p>
+        <dl class="list-scoring">
+          <div class="list-item">
+            <dt>OS/X</dt>
+            <dd>
+              <div class="block-meter block-meter-purple">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 40%"></span>
+                </span>
+                <span class="total">4.4/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>Windows</dt>
+            <dd>
+              <div class="block-meter block-meter-blue">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 30%"></span>
+                </span>
+                <span class="total">4.3/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>Linux</dt>
+            <dd>
+              <div class="block-meter block-meter-yellow">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">4.0/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>FreeBSD</dt>
+            <dd>
+              <div class="block-meter block-meter-red">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 00%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.0/5.0</span>
+              </div>
+            </dd>
+          </div>
+
+        </dl>
+      </section>
+
+      <section id="tool-and-environment-proficiency">
+        <h1 class="section-title">Tool and Environment Proficiency</h1>
+        
+        <dl class="list-scoring">
+          <div class="list-item">
+            <dt>Android SDK</dt>
+            <dd>
+              <div class="block-meter block-meter-blue">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 50%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.5/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>Eclipse</dt>
+            <dd>
+              <div class="block-meter block-meter-yellow">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 40%"></span>
+                </span>
+                <span class="total">4.4/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>MySQL</dt>
+            <dd>
+              <div class="block-meter block-meter-yellow">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 70%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.7/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>Emacs</dt>
+            <dd>
+              <div class="block-meter block-meter-purple">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 40%"></span>
+                </span>
+                <span class="total">4.4/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>Vim</dt>
+            <dd>
+              <div class="block-meter block-meter-orange">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 60%"></span>
+                </span>
+                <span class="total">4.6/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>jQuery</dt>
+            <dd>
+              <div class="block-meter block-meter-blue">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 80%"></span>
+                </span>
+                <span class="total">4.8/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>W|LAMP</dt>
+            <dd>
+              <div class="block-meter block-meter-yellow">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0"></span>
+                </span>
+                <span class="total">4.0/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>Jekyll</dt>
+            <dd>
+              <div class="block-meter block-meter-red">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 30%"></span>
+                </span>
+                <span class="total">4.3/5.0</span>
+              </div>
+            </dd>
+          </div>
+          <div class="list-item">
+            <dt>Drupal</dt>
+            <dd>
+              <div class="block-meter block-meter-purple">
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 100%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 30%"></span>
+                </span>
+                <span class="block">
+                  <span class="inner-block" style="width: 0%"></span>
+                </span>
+                <span class="total">3.0/5.0</span>
+              </div>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="professional-experience">
+        <h1 class="section-title">
+          Professional Experience
+        </h1>
+
+        <div class="job" id="job-goodybag">
+          <h2 class="job-title">Emoxha India - Software Engineer</h2>
+          <a href="http://www.emoxshaindia.com/" class="website">http://www.emoxshaindia.com/</a>
+          <div class="date">Oct 2013 - Present</div>
+          <ul class="technologies-list column-list">
+            <li>C#</li>
+            <li>.NET</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41049204-4', 'j0.hn');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

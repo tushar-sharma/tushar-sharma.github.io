@@ -1,6 +1,5 @@
 <style>
 .cl{ width: 200px;  color: rgb(51, 153, 204);}
-.clr{ color: rgb(51, 153, 204);}
 </style>
 
 <script src="/../js/jquery-1.7.1.min.js"></script>
@@ -40,16 +39,16 @@ var greettxt = "" +
         toSearch = command.substr(command.indexOf(' ')+1); 
 
          if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">who<span style=\"color:#000;\">am</span>i</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">about</span> About me.<br><span class=\"cl\">resume</span> mini resume, links to html and pdf versions.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">resume</span> mini resume, links to html version.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
           
             term.echo(mystr, {
               raw: function(div) {
 
             }
          });
-         } else if (command == "whoami") {
+         } else if (command == "about") {
 
-     term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.", {
+     term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/about\">...more</a><br>", {
               raw: function(div) {
             }
          });
@@ -61,9 +60,6 @@ var greettxt = "" +
             }
          });
 
- 
-         } else if (command == "about") {
-            window.location.href="/about/";
         } else if (command == "contact") {
           window.location.href="/contact";
         } else if (command == "preview") {
@@ -91,7 +87,7 @@ var greettxt = "" +
  
          }else if (command == "resume") {
          
-           term.echo("<span class=\"cl\">Emoxsha Inc</span> Software Developer, present.<br><span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/resume\" >html</a>&nbsp; &nbsp; &nbsp;<a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" target=\"_blank\">pdf</a>", {
+           term.echo("<span class=\"cl\">Emoxsha Inc</span> Software Developer, present.<br><span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/resume\" >..resume</a>", {
               raw: function(div) {
             }
          });
