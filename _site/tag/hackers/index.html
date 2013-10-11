@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="author" content="Tushar Sharma">
 <meta name="description" content="Random Wits, my digital footprint.">
@@ -27,9 +27,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <style type="text/css">
-aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline} aside{display:block} aside#logo{background-color:white}aside#logo.clearfix{background-color:white}aside#logo div a{height:100px;width:100px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}aside#logo{background-color:black}aside#logo div{background-color:white}aside#logo div a{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background:#000 url("http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087?size=200") center center no-repeat;background-size:100% 100%;height:100px !important;width:100px !important} aside#logo{position:relative;display:block;width:110px;height:110px;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;margin-left:0px;margin-top:0px}aside#logo div{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;width:90px;height:90px;text-indent:-9999px;;margin-top:10px;clear:both}aside#logo div a{display:block;clear:both;width:78px;height:78px;margin-top:6px}aside#logo{width:150px;height:130px}aside#logo div{width:135px;height:135px;margin-top:15px}aside#logo div a{width:117px;height:117px;margin-top:9px}aside#logo{position:relative;left:auto;right:auto;margin-top:0px;margin-bottom:0}
-</style>
+        <link rel="stylesheet" href="/../css/styles.css" >
 
 <!--img align="left" src="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087" style="height:60px; width:60px; margin-right:10px; -webkit-border-radius: 8px 8px 8px 8px;-moz-border-radius: 8px 8px 8px 8px;border-radius: 8px 8px 8px 8px;" />  -->
 <style type="text/css">
@@ -73,10 +71,17 @@ h1.heading {
 
 <div style="clear:both;"></div>
 <div>
-<a href="/"><h1  class="heading">Random<span class="top">Wits</span></h1></a> 
+  <h1  class="heading"><span class="top">Random Wits</span></h1> 
+  <p class="me_blurb"> 
+    <div class="sub"> 
+      <a href="/../about/">About ME</a>
+    </div>
+  </p> 
+
 <a target="_blank" href="https://coderwall.com/tshrocks">
   <div id="coderwall_badges" style="margin:0 0 20px 0;"></div> 
 </a>
+
 <script type="text/javascript">
         $(document).ready(function(){
                 jQuery.getJSON("https://coderwall.com/tshrocks.json?callback=?", function(data){
@@ -96,7 +101,6 @@ h1.heading {
         });
 </script>
 
-
 </div>
 
 <style type="text/css">
@@ -107,7 +111,7 @@ h1.heading{font-family:Myfont;color:#39c}
 #back-top{position:fixed;bottom:30px;margin-left:-150px}
 #back-top a{width:108px;display:block;text-align:center;font:11px/100% Arial, Helvetica, sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}
 #back-top a:hover{color:#000}
-#back-top span{width:28px;height:28px;background:url(/../img/nav-icons.png) no-repeat -8px -577px;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}
+#back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat ;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}
 #back-top a:hover span{background-color:#777}
 </style>
 
@@ -142,17 +146,11 @@ h1.heading{font-family:Myfont;color:#39c}
     </div>
   </a>
 -->
+
 <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
 <br>
 -->
 </p>
-
-<h2>About</h2>
-<div class="highlight">
-  <pre>
-<code><span class="nv">$</span> open <a href="/about">about</a></code>
-</pre>
-</div>
 
 <h2>Projects</h2>
 <div class="highlight">
@@ -166,7 +164,7 @@ h1.heading{font-family:Myfont;color:#39c}
 <div class="highlight">
   <pre>
 <code><span class="nv">$</span> open <a href="/blog">blog</a></code>
-     ├── <span class="nv"></span><a href="/blog/why-hacking-is-good" title="Why hacking is good">hacking-good</a><br />     ├── <span class="nv"></span><a href="/blog/huawei-usb-modem-in-debian" title="Huawei Usb Modem in Debian">huawei-modem</a><br />     └── <span class="nv"></span><a href="/blog/fear-of-walmart" title="Fear of Walmart">fear-walmart</a><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
+     ├── <span class="nv"></span><a href="/blog/why-hacking-is-good" title="Why hacking is good">hacking-good</a><br />     ├── <span class="nv"></span><a href="/blog/huawei-usb-modem-in-debian" title="Huawei Usb Modem in Debian">huawei-modem</a><br />     └── <span class="nv"></span><a href="/blog/fear-of-walmart" title="Fear of Walmart">fear-of-walmart</a><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
 </pre>
 </div>
 
@@ -222,7 +220,7 @@ Once a friend of mine asked if I could Hack. I asked him what he meant by hackin
     
     <a class="mytag" href="/tag/hackers">hackers </a>
     
-    <a class="mytag" href="/tag/coding">coding </a>
+    <a class="mytag" href="/tag/code">code </a>
     
   </span>
 </p>
@@ -307,13 +305,12 @@ Once a friend of mine asked if I could Hack. I asked him what he meant by hackin
 
   <a href="/rss.xml" >
     <i class="icon-rss"></i>
-  </a>
-
+  </a> 
 
   <small>]</small> <br>
 </span>
-<span style="float:right; width:25%;">
-  <small>Hosted on <a href="https://github.com/tushar-sharma/tushar-sharma.github.io" target="_blank">Github</a> & powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>.</small>
+<span style="float:right;">
+  <small>Made with <i title="Vishi" class="icon-heart"></i> and <i class="icon-coffee"></i></small>
 </span>
   </div>
 <br><br>

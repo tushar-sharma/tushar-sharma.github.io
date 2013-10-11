@@ -1,0 +1,210 @@
+---
+layout: default
+title: Ball-Hit
+---
+
+<link rel="stylesheet" href="/../css/books.css" />
+
+<h2 class="entry-title">Ball-Hit</h2>
+
+<p>User cursor or mouse to navigate the brick. </p>
+   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<canvas id="canvas" width="300" height="300" style="border:5px solid black;">Sorry, your Browser doesn't support HTML5. Please try upgrading it. </canvas>
+<div style="clear:both;"></style>
+<img src="/../img/start_button.png" id="imgStart" name="imgStart"  style="cursor:pointer; padding-left:100px; "/>
+<audio id="paddlesong" preload="auto"> <source type="audio/ogg" src="/../sounds/paddle.ogg"></source> </audio> 
+<audio id="bricksong" preload="auto"><source type="audio/ogg" src="/../sounds/brick.ogg"> </source> </audio> 
+<div style="left:0px; padding-left:150px;">
+</div>
+
+<script type="text/javascript">
+
+$('#imgStart').click( function() {
+runCode();
+});
+
+function runCode() { 
+var ctx;
+var x = 25;
+var y = 250;
+var WIDTH;
+var HEIGHT;
+var dx = 1.4;
+var dy = -4;
+var paddlex;
+var paddlew = 75;
+var paddleh = 10;
+var rightDown = false;
+var leftDown = false;
+var canvasMaxX = 0;
+var canvasMinX = 0;
+var NROWS = 5;
+var NCOLS = 5;
+var bricks;
+var PADDING = 1;
+var BRICKHEIGHT = 15;
+var BRICKWIDTH;
+var intervalId = 0;
+var ballr = 10;
+var backcolor = "#000000";
+var ballcolor = "#FFFFFF";
+var paddlecolor = "#FFFFFF";
+var rowcolors = ["#FF1C0A", "magenta", "#00A308", "#0008DB", "#EB0093"];
+var score = 0;
+var brickTrack = document.getElementById('bricksong');
+var paddleTrack = document.getElementById('paddlesong');
+//initializing bricks
+function initbricks() {  
+    bricks = new Array(NROWS);
+    for(i = 0; i < NROWS; i++) {
+        bricks[i] = new Array(NCOLS);
+        for(j = 0; j < NCOLS; j++) {
+            bricks[i][j] = 1;
+        }
+    }
+}    
+
+
+//initializing bricks
+function initbricks() {  
+    bricks = new Array(NROWS);
+    for(i = 0; i < NROWS; i++) {
+        bricks[i] = new Array(NCOLS);
+        for(j = 0; j < NCOLS; j++) {
+            bricks[i][j] = 1;
+        }
+    }
+}    
+
+//function to move the mouse
+function onMouseMove(evt) {
+    if(evt.pageX > canvasMinX && evt.pageX < canvasMaxX) {
+        paddlex = evt.pageX - canvasMinX - (paddlew / 2);
+    }
+}
+
+//passing event to onMouseMove
+$(document).mousemove(onMouseMove);
+
+//if key is pressed
+function onKeyDown(evt) {
+    if(evt.keyCode == 39) rightDown = true;
+    else if(evt.keyCode == 37) leftDown = true;
+}
+
+//if key is released
+function onKeyUp(evt) {
+    if(evt.keyCode == 39) rightDown = false;
+    else if(evt.keyCode == 37) leftDown = false;
+}
+
+$(document).keydown(onKeyDown);
+$(document).keyup(onKeyUp);
+
+
+function init() {
+    ctx = $('#canvas')[0].getContext("2d");
+    WIDTH = $('#canvas').width();
+    HEIGHT = $('#canvas').height();
+    paddlex = WIDTH / 2;
+    BRICKWIDTH = (WIDTH / NCOLS) - 1;
+    canvasMinX = $('#canvas').offset().left;
+    canvasMaxX = canvasMinX + WIDTH;
+    intervalId = setInterval(draw, 10);
+    return intervalId;
+}
+
+//drawing circle
+function circle(x, y, r) {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.fill();
+}
+    
+//clearing screen
+function clear() {
+
+    ctx.clearRect(0, 0, WIDTH, HEIGHT);
+}
+
+//drawing rectangle
+function rectangle(x, y, w, h) {
+    ctx.beginPath();
+    ctx.rect(x, y, w, h);
+    ctx.closePath();
+    ctx.fill();
+}
+
+function drawbricks() {
+    
+    //draw bricks
+    for(i = 0; i < NROWS; i++) {
+        ctx.fillStyle = rowcolors[i];
+        for(j = 0; j < NCOLS; j++) {
+            if(bricks[i][j] ==1){
+                rectangle((j * (BRICKWIDTH + PADDING)) + PADDING, (i * (BRICKHEIGHT + PADDING) + PADDING), BRICKWIDTH, BRICKHEIGHT);
+            }
+            
+        }
+    }
+}
+function draw() {
+     ctx.fillStyle = backcolor;
+     clear();
+    //ctx.fillStyle = ballcolor;
+    circle(x, y, ballr);
+    
+    //checking if left or right key is pressed
+    if(rightDown) paddlex += 5;
+    else if(leftDown) paddlex -= 5;
+    //ctx.fillStyle = backcolor;
+    rectangle(paddlex, HEIGHT - paddleh, paddlew, paddleh);
+    
+    drawbricks();
+    //if all bricks are scored
+    if(score == (NROWS * NCOLS)){ 
+        clearInterval(intervalId);
+        alert('Congratulations! \nYou scored : ' + score);
+    }
+
+    //if ball hits the brick?
+    rowheight = BRICKHEIGHT + PADDING;
+    colwidth = BRICKWIDTH + PADDING;
+    row = Math.floor(y / rowheight);
+    col = Math.floor(x / colwidth);
+    //if yes, reverse the brick & disapper the brick
+    if(y < NROWS * rowheight && row >= 0 && col >= 0 && bricks[row][col] == 1) {
+        dy = -dy
+        bricks[row][col] = 0;
+        score = score + 1;
+        brickTrack.play();
+    }
+       
+        
+    if(x + dx > WIDTH || x + dx < 0)
+        dx = -dx;
+    if(y + dy < 0)
+        dy = -dy;
+    else if(y + dy > HEIGHT) {
+            if((x ) > paddlex && (x) < paddlex + paddlew){
+                dy = -dy;
+                paddleTrack.play();
+                }
+            else{
+                clearInterval(intervalId);
+                alert('Game Over!  \nYou scored : ' + score);
+            }
+    }
+                       
+            
+    x += dx;
+    y += dy;
+}
+
+init();
+initbricks();
+}
+</script> 
+

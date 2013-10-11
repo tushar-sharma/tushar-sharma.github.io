@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="author" content="Tushar Sharma">
 <meta name="description" content="Random Wits, my digital footprint.">
@@ -27,9 +27,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <style type="text/css">
-aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline} aside{display:block} aside#logo{background-color:white}aside#logo.clearfix{background-color:white}aside#logo div a{height:100px;width:100px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}aside#logo{background-color:black}aside#logo div{background-color:white}aside#logo div a{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background:#000 url("http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087?size=200") center center no-repeat;background-size:100% 100%;height:100px !important;width:100px !important} aside#logo{position:relative;display:block;width:110px;height:110px;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;margin-left:0px;margin-top:0px}aside#logo div{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;width:90px;height:90px;text-indent:-9999px;;margin-top:10px;clear:both}aside#logo div a{display:block;clear:both;width:78px;height:78px;margin-top:6px}aside#logo{width:150px;height:130px}aside#logo div{width:135px;height:135px;margin-top:15px}aside#logo div a{width:117px;height:117px;margin-top:9px}aside#logo{position:relative;left:auto;right:auto;margin-top:0px;margin-bottom:0}
-</style>
+        <link rel="stylesheet" href="/../css/styles.css" >
 
 <!--img align="left" src="http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087" style="height:60px; width:60px; margin-right:10px; -webkit-border-radius: 8px 8px 8px 8px;-moz-border-radius: 8px 8px 8px 8px;border-radius: 8px 8px 8px 8px;" />  -->
 <style type="text/css">
@@ -73,12 +71,17 @@ h1.heading {
 
 <div style="clear:both;"></div>
 <div>
-<h1  class="heading"><span class="top">Random Wits</span></h1> 
-<p class="me_blurb"><div class="sub"><a href="/../about/">About ME</a></div></p> 
+  <h1  class="heading"><span class="top">Random Wits</span></h1> 
+  <p class="me_blurb"> 
+    <div class="sub"> 
+      <a href="/../about/">About ME</a>
+    </div>
+  </p> 
 
 <a target="_blank" href="https://coderwall.com/tshrocks">
   <div id="coderwall_badges" style="margin:0 0 20px 0;"></div> 
 </a>
+
 <script type="text/javascript">
         $(document).ready(function(){
                 jQuery.getJSON("https://coderwall.com/tshrocks.json?callback=?", function(data){
@@ -97,7 +100,6 @@ h1.heading {
                 });
         });
 </script>
-
 
 </div>
 
@@ -222,7 +224,7 @@ var greettxt = "" +
         toSearch = command.substr(command.indexOf(' ')+1); 
 
          if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">resume</span> mini resume, links to html version.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
+             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">resume</span> mini resume, links to html version.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
           
             term.echo(mystr, {
               raw: function(div) {
@@ -258,6 +260,9 @@ var greettxt = "" +
         }  else if (command == "books") {
           //window.open('/books', '_blank');
           window.location.href="/books";
+
+        } else if (command == "games") {
+          window.location.href="/games";
         } else if (command == "qrcode") {
             term.echo("<img src=\"http://api.qrserver.com/v1/create-qr-code/?data=MECARD%3AN%3ASharma%2CTushar%3BEMAIL%3Atushar%40randomwits.com%3BTEL%3A%2B919837264416%3BURL%3Ahttp%3A%2F%2Frandomwits.com%3B%3B&#38;size=150x150&#38;prov=goqrme\" alt=\"MECARD:N:Sharma,Tushar;EMAIL:tushar@randomwits.com;TEL:+919837264416;URL:http://randomwits.com;; \"  /> ", {
               raw: function(div) {
@@ -270,7 +275,7 @@ var greettxt = "" +
  
          }else if (command == "resume") {
          
-           term.echo("<span class=\"cl\">Emoxsha Inc</span> Software Developer, present.<br><span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/resume\" >..resume</a>", {
+           term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/resume\" >..resume</a>", {
               raw: function(div) {
             }
          });
@@ -368,7 +373,7 @@ var greettxt = "" +
   <small>]</small> <br>
 </span>
 <span style="float:right;">
-  <small>Made with help of <a href="http://www.vim.org/" target="_blank">vim</a> 'n my sis.</small>
+  <small>Made with <i title="Vishi" class="icon-heart"></i> and <i class="icon-coffee"></i></small>
 </span>
   </div>
 <br><br>

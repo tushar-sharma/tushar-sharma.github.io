@@ -4,6 +4,7 @@ lsi: false
 permalink: /:categories/:title
 url: http://randomwits.com
 markdown: maruku
+title: Random Wits
 port: 4000
 future: false
 exclude:
