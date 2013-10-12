@@ -247,3 +247,13 @@ footer {
 
 aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline} aside{display:block} aside#logo{background-color:white}aside#logo.clearfix{background-color:white}aside#logo div a{height:100px;width:100px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}aside#logo{background-color:black}aside#logo div{background-color:white}aside#logo div a{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background:#000 url("http://www.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087?size=200") center center no-repeat;background-size:100% 100%;height:100px !important;width:100px !important} aside#logo{position:relative;display:block;width:110px;height:110px;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;margin-left:0px;margin-top:0px}aside#logo div{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;width:90px;height:90px;text-indent:-9999px;;margin-top:10px;clear:both}aside#logo div a{display:block;clear:both;width:78px;height:78px;margin-top:6px}aside#logo{width:150px;height:130px}aside#logo div{width:135px;height:135px;margin-top:15px}aside#logo div a{width:117px;height:117px;margin-top:9px}aside#logo{position:relative;left:auto;right:auto;margin-top:0px;margin-bottom:0}
 
+/* Sidebar */
+@font-face{font-family:Somefont;src:url(http://randomwits.com/font/OneDirection.ttf);font-weight:400;font-style:normal}
+h1.heading{font-family:Myfont;color:#39c}
+.top{color:#444}
+.sub{font-family:Somefont}
+#back-top{position:fixed;bottom:30px;margin-left:-150px}
+#back-top a{width:108px;display:block;text-align:center;font:11px/100% Arial, Helvetica, sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}
+#back-top a:hover{color:#000}
+#back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat ;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}
+#back-top a:hover span{background-color:#777}
