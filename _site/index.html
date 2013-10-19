@@ -25,6 +25,12 @@
 
   </head>
   <body>
+    <noscript>
+    <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+    For a better experience on RandomWits, enable JavaScript in your browser.
+    </h4>
+    </noscript>
+
     <div class="wrapper">
       <header>
         <link rel="stylesheet" href="http://randomwits.com/css/styles.css" >
@@ -240,7 +246,7 @@ var greettxt = "" +
 
          } else if (command == "ls") {
 
-     term.echo("Sorry! <span class=\"clr\">ls</span> won't work here as this is not Unix. Why not try this command in some new Unix like OS from <a href=\"http://distrowatch.com/ \" target=\"_blank\">here</a>.", {
+     term.echo("<span class=\"cl\">css</span>404.html<br><span class=\"cl\">js</span>index.php<br><span class=\"cl\">others</span>contact.html", {
               raw: function(div) {
             }
          });
@@ -275,7 +281,7 @@ var greettxt = "" +
  
          }else if (command == "resume") {
          
-           term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"resume.pdf\" >..resume</a>", {
+           term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" target=\"_blank\" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" >..resume</a>", {
               raw: function(div) {
             }
          });
@@ -324,6 +330,13 @@ var greettxt = "" +
       </section>
    </div>
    <div style="clear:both;"></div>
+
+   <!--[if IE]>
+     <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+     Hey Cro Magnan. This site looks better without Internet Explorer. Please download a better brower.
+    </h4>
+   <![endif]-->
+    
     <div class="wrapper">
       <footer>
         <!-- <p><small>Tushar Sharma &copy; 2013</small></p> -->
