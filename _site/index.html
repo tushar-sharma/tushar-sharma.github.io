@@ -191,6 +191,7 @@ h1.heading{font-family:Myfont;color:#39c}
       <section>
         <style>
 .cl{ width: 200px;  color: rgb(51, 153, 204);}
+.cl2{color: rgb(51, 153, 204);}
 </style>
 
 <script src="/../js/jquery-1.7.1.min.js"></script>
@@ -199,6 +200,24 @@ h1.heading{font-family:Myfont;color:#39c}
 <link href="/../css/jquery.terminal.css" rel="stylesheet"/>
 
 <script type="text/javascript">
+
+function myIP() {
+    if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
+    else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+    xmlhttp.open("GET","http://api.hostip.info/get_html.php",false);
+    xmlhttp.send();
+
+    hostipInfo = xmlhttp.responseText.split("\n");
+
+    for (i=0; hostipInfo.length >= i; i++) {
+        ipAddress = hostipInfo[i].split(":");
+        if ( ipAddress[0] == "IP" ) return ipAddress[1];
+    }
+
+    return false;
+}
+
 jQuery(document).ready(function($) {
 
 var greettxt = "" +
@@ -246,12 +265,31 @@ var greettxt = "" +
 
          } else if (command == "ls") {
 
-     term.echo("<span class=\"cl\">css</span>404.html<br><span class=\"cl\">js</span>index.php<br><span class=\"cl\">others</span>contact.html", {
+     term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
               raw: function(div) {
             }
          });
 
-        } else if (command == "contact") {
+        } else if (arg == "cd" || command == "cd") {
+ 
+          ip = myIP(); 
+     term.echo("You've tried to access something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI.", {
+              raw: function(div) {
+            }
+         });
+
+
+       } else if (arg == "cat" || command == "cat") {
+
+ 
+          ip = myIP(); 
+     term.echo("You've tried to access something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI.", {
+              raw: function(div) {
+            }
+         });
+
+
+       }else if (command == "contact") {
           window.location.href="/contact";
         } else if (command == "preview") {
           window.location.href="/preview";
@@ -300,7 +338,12 @@ var greettxt = "" +
              }
           });*/
         } else {
-            term.echo("unknown command " + command);
+     term.echo("Unknown command <span class=\"cl2\">" + command + "</span>. Please type <span class=\"cl2\">help</span>.", {
+              raw: function(div) {
+            }
+         });
+
+
         }
     }, {
 
@@ -333,7 +376,7 @@ var greettxt = "" +
 
    <!--[if IE]>
      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
-     Hey Cro Magnan. This site looks better without Internet Explorer. Please download a better brower.
+     Hey Cro-Magnan. This site looks better without Internet Explorer. Please download a better <a href="www.mozilla.org" target="_blank">browser</a>.
     </h4>
    <![endif]-->
     
