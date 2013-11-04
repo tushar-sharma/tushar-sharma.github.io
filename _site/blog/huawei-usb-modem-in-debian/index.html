@@ -77,12 +77,13 @@ h1.heading {
 
 <div style="clear:both;"></div>
 <div>
-  <h1  class="heading"><span class="top">Random Wits</span></h1> 
-  <p class="me_blurb"> 
+  <h1  class="heading"><span class="top"><a href="/../about/">About Me</a></span></h1> 
+  <!--<p class="me_blurb"> 
     <div class="sub"> 
       <a href="/../about/">About ME</a>
     </div>
   </p> 
+   -->
 
 <a target="_blank" href="https://coderwall.com/tshrocks">
   <div id="coderwall_badges" style="margin:0 0 20px 0;"></div> 
@@ -161,7 +162,7 @@ h1.heading{font-family:Myfont;color:#39c}
 <h2>Projects</h2>
 <div class="highlight">
   <pre>
-<code><span class="nv">$</span> open <a href="/projects">projects</a></code>
+<code><span class="nv">$</span> print latest <a href="/projects">projects</a></code>
      ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     ├── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br />     ├── <span class="nv"></span><a href="/projects/aes" title="Advanced Encryption Standard (AES)">AES</a><br />     └── <span class="nv"></span><a href="/projects/des" title="Data Encryption Standard (DES)">DES</a><br /><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
 </pre>
 </div>
@@ -169,7 +170,7 @@ h1.heading{font-family:Myfont;color:#39c}
 <h2>Blog</h2>
 <div class="highlight">
   <pre>
-<code><span class="nv">$</span> open <a href="/blog">blog</a></code>
+<code><span class="nv">$</span> print latest <a href="/blog">blog</a></code>
      ├── <span class="nv"></span><a href="/blog/how-vim-saved-my-day" title="How ViM Saved My Day">vim-saved-day</a><br />     ├── <span class="nv"></span><a href="/blog/why-hacking-is-good" title="Why hacking is good">hacking-good</a><br />     ├── <span class="nv"></span><a href="/blog/huawei-usb-modem-in-debian" title="Huawei Usb Modem in Debian">huawei-modem</a><br />     └── <span class="nv"></span><a href="/blog/fear-of-walmart" title="Fear of Walmart">fear-of-walmart</a><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
 </pre>
 </div>
@@ -195,29 +196,31 @@ h1.heading{font-family:Myfont;color:#39c}
 
 
   </p>
-<p>Tags:  <a class='mytag' href='/tag/debian' title='View posts tagged with &quot;debian&quot;'>debian</a>    <a class='mytag' href='/tag/huawei' title='View posts tagged with &quot;huawei&quot;'>huawei</a>    <a class='mytag' href='/tag/usb' title='View posts tagged with &quot;usb&quot;'>usb</a>    <a class='mytag' href='/tag/modem' title='View posts tagged with &quot;modem&quot;'>modem</a>    <a class='mytag' href='/tag/code' title='View posts tagged with &quot;code&quot;'>code</a>    </p><div>
+<p>Tags:  <a class='mytag' href='/tag/debian' title='View posts tagged with &quot;debian&quot;'>debian</a>     <a class='mytag' href='/tag/huawei' title='View posts tagged with &quot;huawei&quot;'>huawei</a>     <a class='mytag' href='/tag/usb' title='View posts tagged with &quot;usb&quot;'>usb</a>     <a class='mytag' href='/tag/modem' title='View posts tagged with &quot;modem&quot;'>modem</a>     <a class='mytag' href='/tag/code' title='View posts tagged with &quot;code&quot;'>code</a>    </p><div>
 <img class='thumb' src='/../img/debian.jpg' />
 The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.
-</div><br />
-<p>I&#8217;ll be using <code>wvdial</code> to configure the internet. It&#8217;s likely that your system will have the package pre installed. Otherwise you can manyally download it from <a href='http://packages.debian.org/squeeze/wvdial' target='_blank'>here</a>.</p>
+</div>
+<p><br /></p>
+
+<p>I’ll be using <code>wvdial</code> to configure the internet. It’s likely that your system will have the package pre installed. Otherwise you can manyally download it from <a href='http://packages.debian.org/squeeze/wvdial' target='_blank'>here</a>.</p>
 
 <p>Now connect the modem and run lsusb to see the modem connected to the usb:</p>
 
 <pre><code>$ lusub</code></pre>
 
-<p><img alt='w4' src='/img/w4.png' /></p>
+<p><img src="/img/w4.png" alt="w4" title="w4" /></p>
 
 <p>Here we see Huawie usb is visible as Huawei Wireless Data Modem. Become a super user by typing <code>sudo su</code>. Now for detecting the modem run:</p>
 
 <pre><code># wvdial /etc/wvdial.conf </code></pre>
 
-<p><img alt='w1' src='/img/w1.png' /></p>
+<p><img src="/img/w1.png" alt="w1" title="w1" /></p>
 
 <p>This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor</p>
 
 <pre><code># vi /etc/wvdial.conf</code></pre>
 
-<p><img alt='w3' src='/img/w3.png' /></p>
+<p><img src="/img/w3.png" alt="w3" title="w3" /></p>
 
 <p>Remove the semicolons &amp; change the following values:</p>
 
@@ -235,6 +238,9 @@ Stupid Mode = 1</code></pre>
 <pre><code># wvdial</code></pre>
 
 <p>Bravo! It connects to the internet. Press <b>Ctrl + C</b> anytime to disconnect.</p>
+<nav class='pagination clear' style='padding-bottom:20px;'>
+ <a class='prev-item' href='/blog/fear-of-walmart' title='Previous Post: Fear of Walmart'>&larr;Previous</a>     <a class='next-item' href='/projects/des' title='Next Post: Data Encryption Standard (DES)'>Next&rarr;</a>         
+</nav>
 
 
 <hr />
@@ -327,7 +333,7 @@ Stupid Mode = 1</code></pre>
   <small>]</small> <br>
 </span>
 <span style="float:right;">
-  <small>Made with <i title="Vishi" class="icon-heart"></i> and <i class="icon-coffee"></i></small>
+  <small>Made with <a href="http://www.vim.org/" target="_blank">vim</a> 'n inspired by my sis. </small>
 </span>
   </div>
 <br><br>

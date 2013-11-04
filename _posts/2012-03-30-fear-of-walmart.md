@@ -24,4 +24,9 @@ Indian acts like [APMC][APMC] have long forced farmers to only sell their produc
 
 Does the much hyped Walmart would be a panacea for Indian consumers against the inflation? Entry of Walmart would usher the much needed reform in the retail sector. Food prices would fall as the Walmart would directly purchase food from the farmers thereby eliminating the middleman. India is perhaps the only developing country where Walmart is yet ink its presence. In contrast China has allowed 100% FDI in retail sector. Yet diluting FDI would be a arduous task for the central government walking a fine line between convincing the opposition and the local shopkeepers with a large chunk of the vote bank. 
 
+<nav class="pagination clear" style="padding-bottom:20px;">
+{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
+</nav>
+
+
 [APMC]: https://en.wikipedia.org/wiki/Agricultural_Produce_Market_Committee

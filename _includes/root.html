@@ -1,6 +1,7 @@
 <style>
 .cl{ width: 200px;  color: rgb(51, 153, 204);}
 .cl2{color: rgb(51, 153, 204);}
+.like-pre { white-space: pre;}
 </style>
 
 <script src="/../js/jquery-1.7.1.min.js"></script>
@@ -28,6 +29,7 @@ function myIP() {
 }
 
 jQuery(document).ready(function($) {
+ 
 
 var greettxt = "" +
 " __      __           .__                                       \n" +
@@ -35,7 +37,9 @@ var greettxt = "" +
 "\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  \n" +
 " \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
 "  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
-"       \\/         \\/              \\/                 \\/       \\/ \n" + 
+"       \\/         \\/              \\/                 \\/       \\/ \n\n\n" +
+"      ----   to Random Wits   ----  (my digital footprint)  \n\n\n" + 
+"<div class=\"cl2\"> " +  
 "               _  _  _  _ \n" +
 "              ( `  `  `  `) \n" + 
 "             (  Type help  ) \n" +
@@ -48,7 +52,9 @@ var greettxt = "" +
 "      //   \\ \\ \n" + 
 "     (|     | ) \n" + 
 "    /'\\_   _/`\\ \n" + 
-"    \\___)=(___/ ";
+"    \\___)=(___/\n\n" +
+"</div>"; 
+
 
           
     var id = 1;
@@ -142,8 +148,8 @@ var greettxt = "" +
          });
         } else if (command == "hit") {
             jQuery.get('/../quotes.txt', function(data) { 
-              var quotes = data.split("\n");
-              var idx = Math.floor((quotes.length - 1) * Math.random());
+              quotes = data.split("\n");
+              idx = Math.floor((quotes.length - 1) * Math.random());
               term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", { 
                   raw: function(div) { }
                });
@@ -164,8 +170,19 @@ var greettxt = "" +
         }
     }, {
 
-        greetings: (greettxt + "\n\n") ,
-  
+        //greetings: (greettxt + "\n\n") ,
+ 
+   greetings: false,
+   onInit: function(term) {
+     /*setTimeout(function() {
+         term.echo("Hello World");
+     }, 3000); */
+
+     term.echo("<div class=\"like-pre\">" + greettxt + "</div>" , {
+          raw: function(div) { }
+    });
+   }, 
+ 
      /* greetings: (greettxt, {
               raw: function(div) {
             }
@@ -184,4 +201,3 @@ var greettxt = "" +
 <!--<h2>Hello stranger.</h2> -->
 <div id="foo">
 </div>
-

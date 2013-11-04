@@ -67,6 +67,11 @@ Hacking is learning and building constructing things and nothing else. The conce
 
 Convictions of computer crimes, which began as early as 1983 with the case of 414[^414], caught the attention of the media. Rampant breach of security created panic among general public and intruders called themself 'hackers'. These bunch of people, who writes malicious code, are nothing but crackers[^crackers]. Not only did they rob people of their money but also condemned such a beautiful word as 'hacker'. 
 
+<nav class="pagination clear" style="padding-bottom:20px;">
+{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
+</nav>
+
+
 [^414]: <a href="http://en.wikipedia.org/wiki/The_414s" target="_blank">414</a>
 [^ethics]: <a href="http://en.wikipedia.org/wiki/Hacker_ethic" target="_blank">Hacker ethic</a>
 [^hacker]: <a href="http://en.wikipedia.org/wiki/Hacker_(term)#Programmer_subculture_of_hackers" target="_blank">Hacker_(term)</a>

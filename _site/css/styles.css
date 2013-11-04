@@ -257,3 +257,7 @@ h1.heading{font-family:Myfont;color:#39c}
 #back-top a:hover{color:#000}
 #back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat ;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}
 #back-top a:hover span{background-color:#777}
+.pagination{border-top:1px dotted #ccc;margin:20px 0;padding:10px 0}
+.pagination a{width:50%}
+.prev-item{float:left;text-align:left}
+.next-item{float:right;text-align:right}

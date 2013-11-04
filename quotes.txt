@@ -225,3 +225,7 @@ F.S. Fitzgerald to Hemingway:<br>"Ernest, the rich are different from us."<br>He
 "It's not that we don't dare do things because they are difficult; rather, they are difficult because we don't dare" - Seneca
 "Through love all pain will turn to medicine" -  Rumi
 "For God wrote in Lisp code When He filled the leaves with green. The fractal flowers and recursive roots: The most lovely hack I’ve seen. And when I ponder snowflakes, never finding two the same, I know God likes a language with its own four-letter name. …….." - Partial lyrics of the song God Lives on Terra by Julia Ecklar
+"I asked God for a bike, but I know God doesn't work that way. So I stole a bike and asked for forgiveness" - Al Pacino.
+"Tell people there's an invisible man in the sky who created the universe, and the vast majority will believe you. Tell them the paint is wet, and they have to touch it to be sure." - George Carlin
+"All men by nature desire knowledge." - Aristotle
+A young man wrote to Mozart and said:<br>Q: "Herr Mozart, I am thinking of writing symphonies. Can you give me any suggestions as to how to get started?"<br>A: "A symphony is a very complex musical form, perhaps you should begin with some simple Lieder and work your way up to a symphony."<br>Q: "But Herr Mozart, you were writing symphonies when you were 8 years old."<br>A: "True, but I never asked anybody how to do it."

@@ -6,6 +6,7 @@ tags:
 - vi
 - vim
 - editor
+- code
 name: vim-saved-day
 thumb: /img/vim.png
 ---
@@ -15,7 +16,8 @@ thumb: /img/vim.png
 It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India's IT company. I vividly remember the countless occasions when ViM saved my day.
 <!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p> 
+<div>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </div>
+<div style="clear:both;padding-top:20px;padding-bottom:20px;"></div>
 
 <div>
 <img src="/../img/vim.png" class="thumb">
@@ -117,5 +119,11 @@ And Voila! Your Macro is saved.
 
 ViM is a wonderful editor if only you get to know it. The following task took me less than 15 minutes to complete. Of course less than 15 minutes feat dazzled my supervisor but more than the approval it's the satisfaction that comes from solving problems smartly. So what's your story? Have ViM ever saved your day? 
 
+<nav class="pagination clear" style="padding-bottom:20px;">
+{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a> 	{% endif %}
+</nav>
+
 [^1]: There's a famous editor war between VI and Emacs
 [^2]: Free means as if freedom not gratis
+
+
