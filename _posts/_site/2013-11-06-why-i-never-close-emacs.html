@@ -1,0 +1,117 @@
+<link href='../css/post.css' rel='stylesheet' />
+<p>Once a friend of mine complained how much bloated softwares have become. &#8220;Only, if there were a single software for everything&#8221;, he sighed. &#8220;There is&#8221;, I said, &#8220;only if you can shed some sweat&#8221;. I explained to him why emacs is informally known as a complete operating system and why I never close emacs. <!-- truncate_here --></p>
+<div>Tags:  <a class='mytag' href='/tag/emacs' title='View posts tagged with &quot;emacs&quot;'>emacs</a>     <a class='mytag' href='/tag/editor' title='View posts tagged with &quot;editor&quot;'>editor</a>     <a class='mytag' href='/tag/code' title='View posts tagged with &quot;code&quot;'>code</a>    </div><div style='clear:both;padding-top:20px;padding-bottom:20px;' /><div>
+<img src='/../img/emacs.png' class='thumb' />
+<p>
+<p>Once a friend of mine complained how much bloated softwares have become. &#8220;Only, if there were a single software for everything&#8221;, he sighed. &#8220;There is&#8221;, I said, &#8220;only if you can shed some sweat&#8221;. I explained to him why emacs is informally known as a complete operating system and why I never close emacs.</p>
+</p>
+</div>
+<p><strong>Note:</strong> For those who are unfamilliar with emacs, Key abbreviations used :</p>
+
+<ol>
+<li>M – Alt or Esc (in Mac)</li>
+
+<li>C – Control</li>
+
+<li>S – Shift</li>
+
+<li>C-x f – means holding both Control and x, release both, and press f</li>
+</ol>
+
+<h4 id='emacs_for_editing'>Emacs for Editing</h4>
+
+<p>Emacs is modeless editor which mean that unlike vim, you can start inserting text as soon as you open it. This is one of the reason why it&#8217;s popular with newbies. But that doesn&#8217;t mean you can&#8217;t get your hands dirty with emacs.</p>
+
+<p>Most people criticize emacs user for trying to do everything with emacs except editing. So let&#8217;s begin with editing for which emacs was built for.</p>
+
+<p>Emacs can handle pretty much any type of file. Just type</p>
+
+<pre><code>$ emacs myFile.ext</code></pre>
+
+<p>Emacs does syntax highlighting and indentation. It usually follows GNU style of indentation. The best thing about emacs is that you can customize it the way you want. I usuall like <code>K&amp;R</code> indentation when editing <code>C</code> code. To change it, add this to your <code>~/.emacs</code> file.</p>
+<div class='highlight'><pre><code class='common-lisp'>    <span class='p'>(</span><span class='k'>setq</span> <span class='nv'>c-default-style</span> <span class='s'>&quot;linux&quot;</span>
+          <span class='nv'>c-basic-offset</span> <span class='mi'>4</span><span class='p'>)</span>
+</code></pre></div>
+<h4 id='emacs_for_backup'>Emacs for Backup</h4>
+
+<p>Emacs by default creates a backup file for every file it edits. It&#8217;s usually named as the original file followed by tildel like foo~. Though backup files are life saver, they are difficult to manage if they accumulate on the same folder. To save all your files in one place, add this to your <code>~/.emacs</code></p>
+<div class='highlight'><pre><code class='common-lisp'><span class='p'>(</span><span class='k'>setq</span> <span class='nv'>backup-directory-alist</span> <span class='o'>`</span><span class='p'>((</span><span class='s'>&quot;.&quot;</span> <span class='o'>.</span> <span class='s'>&quot;~/.saves&quot;</span><span class='p'>)))</span>
+</code></pre></div>
+<h4 id='emacs_for_browsing'>Emacs for Browsing</h4>
+
+<p>If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses a extention <code>w3m</code> which uses <code>w3m</code> which itself is a <code>text-browser</code>. Of course there are <code>Lynx</code> and other text editors, but integrating w3m with emacs is very fast.</p>
+<div class='highlight'><pre><code class='common-lisp'> 
+<span class='p'>(</span><span class='nv'>add-to-list</span> <span class='ss'>&#39;load-path</span> <span class='s'>&quot;~/emacs-w3m&quot;</span><span class='p'>)</span>
+<span class='p'>(</span><span class='nb'>require</span> <span class='ss'>&#39;w3m-load</span><span class='p'>)</span>
+<span class='p'>(</span><span class='k'>setq</span> <span class='nv'>browse-url-browser-function</span> <span class='ss'>&#39;w3m-browse-url</span><span class='p'>)</span>
+<span class='p'>(</span><span class='nv'>autoload</span> <span class='ss'>&#39;w3m-browse-url</span> <span class='s'>&quot;w3m&quot;</span> <span class='s'>&quot;Ask a WWW browser to show a URL.&quot;</span> <span class='no'>t</span><span class='p'>)</span>
+<span class='c1'>;; optional keyboard short-cut</span>
+<span class='p'>(</span><span class='nv'>global-set-key</span> <span class='s'>&quot;\C-xm&quot;</span> <span class='ss'>&#39;browse-url-at-point</span><span class='p'>)</span>
+</code></pre></div>
+<h4 id='emacs_for_email'>Emacs for Email</h4>
+
+<p>How about integrating emacs to view your email. You could do this by <code>GNUS</code>.</p>
+
+<h4 id='emacs_for_photo_editing'>Emacs for Photo Editing</h4>
+
+<p>The other task I usally do is look up few photos. Emacs can do more than just viewing the pictures, it has a inbuilt powerful power editor called <code>Image-Dired</code>. Simply press <code>M-x image-dired</code> on your emacs.</p>
+
+<h4 id='emacs_for_composing_documents'>Emacs for composing Documents</h4>
+
+<p>This is one of the feature I find unparalled to emacs. The official website says about org mode, &#8220;Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system&#8221;. If you love <strong>LaTeX</strong>, then you would love <code>org mode</code>. You could integrated <strong>TeX</strong> support in org mode and publish you work.</p>
+
+<h4 id='emacs_for_static_blogging'>Emacs for Static Blogging</h4>
+
+<h4 id='emacs_for_secret_writing'>Emacs for Secret Writing</h4>
+
+<h4 id='emacs_for_playing_music'>Emacs for Playing Music</h4>
+
+<p>First install mplayer.</p>
+
+<p>In Linux (Ubuntu/Debian) try</p>
+
+<pre><code>$ sudo apt-get install mplayer</code></pre>
+
+<p>In Mac try</p>
+
+<pre><code>$ brew install mplayer</code></pre>
+
+<p>Clone <code>emms</code></p>
+
+<pre><code> $ git clone git://git.sv.gnu.org/emms.git</code></pre>
+
+<p>If it fails try this</p>
+
+<pre><code> $ git clone git://git.sv.gnu.org/r/emms.git</code></pre>
+
+<p>It will clone the folder emms. Inside the folder, there are <code>*el</code> file inside <code>lisp</code>. Copy them all to <code>~/.emacs.d/site-lisp/emms</code>. Find the executable of <code>mplayer</code> which is usually in <code>/usr/local/bin/</code>. Then add this to your <code>~/.emacs</code></p>
+<div class='highlight'><pre><code class='common-lisp'><span class='p'>(</span><span class='k'>setq</span> <span class='nv'>exec-path</span> <span class='p'>(</span><span class='nb'>append</span> <span class='nv'>exec-path</span> <span class='o'>&#39;</span><span class='p'>(</span><span class='s'>&quot;/usr/local/bin&quot;</span><span class='p'>)))</span>
+<span class='p'>(</span><span class='nv'>add-to-list</span> <span class='ss'>&#39;load-path</span> <span class='s'>&quot;~/.emacs.d/site-lisp/emms/lisp&quot;</span><span class='p'>)</span>
+<span class='p'>(</span><span class='nb'>require</span> <span class='ss'>&#39;emms-setup</span><span class='p'>)</span>
+<span class='p'>(</span><span class='nb'>require</span> <span class='ss'>&#39;emms-player-mplayer</span><span class='p'>)</span>
+<span class='p'>(</span><span class='nv'>emms-standard</span><span class='p'>)</span>
+<span class='p'>(</span><span class='nv'>emms-default-players</span><span class='p'>)</span>
+<span class='p'>(</span><span class='nv'>define-emms-simple-player</span> <span class='nv'>mplayer</span> <span class='o'>&#39;</span><span class='p'>(</span><span class='nv'>file</span> <span class='nv'>url</span><span class='p'>)</span>
+      <span class='p'>(</span><span class='nv'>regexp-opt</span> <span class='o'>&#39;</span><span class='p'>(</span><span class='s'>&quot;.ogg&quot;</span> <span class='s'>&quot;.mp3&quot;</span> <span class='s'>&quot;.wav&quot;</span> <span class='s'>&quot;.mpg&quot;</span> <span class='s'>&quot;.mpeg&quot;</span> <span class='s'>&quot;.wmv&quot;</span> <span class='s'>&quot;.wma&quot;</span>
+                    <span class='s'>&quot;.mov&quot;</span> <span class='s'>&quot;.avi&quot;</span> <span class='s'>&quot;.divx&quot;</span> <span class='s'>&quot;.ogm&quot;</span> <span class='s'>&quot;.asf&quot;</span> <span class='s'>&quot;.mkv&quot;</span> <span class='s'>&quot;http://&quot;</span> <span class='s'>&quot;mms://&quot;</span>
+                    <span class='s'>&quot;.rm&quot;</span> <span class='s'>&quot;.rmvb&quot;</span> <span class='s'>&quot;.mp4&quot;</span> <span class='s'>&quot;.flac&quot;</span> <span class='s'>&quot;.vob&quot;</span> <span class='s'>&quot;.m4a&quot;</span> <span class='s'>&quot;.flv&quot;</span> <span class='s'>&quot;.ogv&quot;</span> <span class='s'>&quot;.pls&quot;</span><span class='p'>))</span>
+      <span class='s'>&quot;mplayer&quot;</span> <span class='s'>&quot;-slave&quot;</span> <span class='s'>&quot;-quiet&quot;</span> <span class='s'>&quot;-really-quiet&quot;</span> <span class='s'>&quot;-fullscreen&quot;</span><span class='p'>)</span>
+</code></pre></div>
+<p>Then type <code>M-x emms-play-directory</code> to navigate to music directory and play files.</p>
+
+<h4 id='emacs_for_playing_games'>Emacs for Playing Games</h4>
+
+<ol>
+<li>Doctor</li>
+
+<li>Tetris</li>
+
+<li>Butterfly effect</li>
+</ol>
+
+<h4 id='conclusion'>Conclusion</h4>
+
+<p>This is just a snapshot of what emacs is really capable of. No doubt it&#8217;s dubbed by many as a complete operating system. Of course there is there&#8217;s a price of everything. To unleash the true potential of emacs, you have to dive into world elisp. Some argue why go into so much trouble when there are other softwares does hassle free work for you. Emacs in not meant for substituting all softwares. It&#8217;s sometimes cozy to not leave your editor and do trivial things within it. To unleash the true potential of emacs, you have to dive into the world of elisp. If you&#8217;re convince, welcome to the <code>Church of Emacs</code>. If not, lets part ways with an old joke, &#8220;The Emacs opearting system needs a better editor&#8221;.</p>
+<nav class='pagination clear' style='padding-bottom:20px;'>
+  
+</nav>

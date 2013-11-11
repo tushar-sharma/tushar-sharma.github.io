@@ -171,7 +171,7 @@ h1.heading{font-family:Myfont;color:#39c}
 <div class="highlight">
   <pre>
 <code><span class="nv">$</span> print latest <a href="/blog">blog</a></code>
-     ├── <span class="nv"></span><a href="/blog/how-vim-saved-my-day" title="How ViM Saved My Day">vim-saved-day</a><br />     ├── <span class="nv"></span><a href="/blog/why-hacking-is-good" title="Why hacking is good">hacking-good</a><br />     ├── <span class="nv"></span><a href="/blog/huawei-usb-modem-in-debian" title="Huawei Usb Modem in Debian">huawei-modem</a><br />     └── <span class="nv"></span><a href="/blog/fear-of-walmart" title="Fear of Walmart">fear-of-walmart</a><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
+     ├── <span class="nv"></span><a href="/blog/why-i-never-close-emacs" title="Why I never close Emacs">never-close-emacs</a><br />     ├── <span class="nv"></span><a href="/blog/how-vim-saved-my-day" title="How ViM Saved My Day">vim-saved-day</a><br />     ├── <span class="nv"></span><a href="/blog/why-hacking-is-good" title="Why hacking is good">hacking-good</a><br />     └── <span class="nv"></span><a href="/blog/huawei-usb-modem-in-debian" title="Huawei Usb Modem in Debian">huawei-modem</a><br /><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
 </pre>
 </div>
 
@@ -196,7 +196,7 @@ h1.heading{font-family:Myfont;color:#39c}
 
 
   <hr />
-<p><a href="http://www.scribd.com/doc/164002353/Study-and-Implementation-of-various-Cryptographic-techniques#page=42">details</a> — <a href="https://github.com/tushar-sharma/aes">code</a></p>
+<p><a href='http://www.scribd.com/doc/164002353/Study-and-Implementation-of-various-Cryptographic-techniques#page=42'>details</a> &#8212; <a href='https://github.com/tushar-sharma/aes'>code</a></p>
 <hr />
 <p>Advanced Encryption Standard, a symmetric key algorithm, implemented in C++. All the parties use the same key for encryption and decryption. It has superceded DES, another symmetric key algorithms.</p>
 
@@ -212,25 +212,25 @@ h1.heading{font-family:Myfont;color:#39c}
 <li>Byte Substitution Transformation</li>
 </ul>
 
-<p>Each element of state is non-linearly mapped to corresponding element in the s-bx. <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+<p>Each element of state is non-linearly mapped to corresponding element in the s-bx. <sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup></p>
 
-<p><img src="/img/sub.png" alt="Byte_Sub" title="Byte Sub" /></p>
+<p><img alt='Byte_Sub' src='/img/sub.png' /></p>
 
 <ul>
 <li>Shift Rows</li>
 </ul>
 
-<p>Rows are cyclically shifted to the left with offset of 0, 1, 2, 3 for rows of 1, 2, 3 and 4 respectively. <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></p>
+<p>Rows are cyclically shifted to the left with offset of 0, 1, 2, 3 for rows of 1, 2, 3 and 4 respectively. <sup id='fnref:2'><a href='#fn:2' rel='footnote'>2</a></sup></p>
 
-<p><img src="/img/sr.png" alt="Shift_Rows" title="Shift Rows" /></p>
+<p><img alt='Shift_Rows' src='/img/sr.png' /></p>
 
 <ul>
-<li>Mix columns <sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup></li>
+<li>Mix columns <sup id='fnref:3'><a href='#fn:3' rel='footnote'>3</a></sup></li>
 </ul>
 
 <p>Each new column (ro, r1, r2, r3) is generated from old column (a0, a1, a2, a3).</p>
 
-<p><img src="/img/mc1.png" alt="Mc" title="Mix Column" /></p>
+<p><img alt='Mc' src='/img/mc1.png' /></p>
 
 <p>Here, r0 = {2 . a0} + {3 . a1} + {1 . a2} + {1. a3} r1 = {1 . a0} + {2 . a1} + {3 . a2} + {1. a3} r2 = {1 . a0} + {1 . a1} + {2 . a2} + {1 . a3} r3 = {3 . a0} + {1 . a1} + {1 . a2} + {2 . a3}</p>
 
@@ -243,41 +243,39 @@ h1.heading{font-family:Myfont;color:#39c}
 <p><strong>Key Generation</strong></p>
 
 <p>Initial key is described as a state matrix.</p>
-<table><thead><tr><th>Co</th><th>C1</th><th>C2</th><th>C3</th></tr></thead><tbody><tr><td style="text-align: left;">a<sub>00</sub></td><td style="text-align: left;">a<sub>01</sub></td><td style="text-align: left;">a<sub>02</sub></td><td style="text-align: left;">a<sub>03</sub></td></tr>
-<tr><td style="text-align: left;">b<sub>10</sub></td><td style="text-align: left;">b<sub>11</sub></td><td style="text-align: left;">b<sub>12</sub></td><td style="text-align: left;">b<sub>13</sub></td></tr>
-<tr><td style="text-align: left;">c<sub>20</sub></td><td style="text-align: left;">c<sub>21</sub></td><td style="text-align: left;">c<sub>22</sub></td><td style="text-align: left;">c<sub>23</sub></td></tr>
-<tr><td style="text-align: left;">d<sub>30</sub></td><td style="text-align: left;">d<sub>31</sub></td><td style="text-align: left;">d<sub>32</sub></td><td style="text-align: left;">d<sub>33</sub></td></tr>
-</tbody></table>
+<table><thead><tr><th>Co</th><th>C1</th><th>C2</th><th>C3</th></tr></thead><tbody><tr><td style='text-align: left;'>a<sub>00</sub></td><td style='text-align: left;'>a<sub>01</sub></td><td style='text-align: left;'>a<sub>02</sub></td><td style='text-align: left;'>a<sub>03</sub></td>
+</tr><tr><td style='text-align: left;'>b<sub>10</sub></td><td style='text-align: left;'>b<sub>11</sub></td><td style='text-align: left;'>b<sub>12</sub></td><td style='text-align: left;'>b<sub>13</sub></td>
+</tr><tr><td style='text-align: left;'>c<sub>20</sub></td><td style='text-align: left;'>c<sub>21</sub></td><td style='text-align: left;'>c<sub>22</sub></td><td style='text-align: left;'>c<sub>23</sub></td>
+</tr><tr><td style='text-align: left;'>d<sub>30</sub></td><td style='text-align: left;'>d<sub>31</sub></td><td style='text-align: left;'>d<sub>32</sub></td><td style='text-align: left;'>d<sub>33</sub></td>
+</tr></tbody></table>
 <p>The last column is cyclically rotated to move the last block to the top.</p>
-<table><thead><tr><th>Co</th><th>C1</th><th>C2</th><th>C3</th></tr></thead><tbody><tr><td style="text-align: left;">a<sub>00</sub></td><td style="text-align: left;">a<sub>01</sub></td><td style="text-align: left;">a<sub>02</sub></td><td style="text-align: left;">d<sub>33</sub></td></tr>
-<tr><td style="text-align: left;">b<sub>10</sub></td><td style="text-align: left;">b<sub>11</sub></td><td style="text-align: left;">b<sub>12</sub></td><td style="text-align: left;">a<sub>03</sub></td></tr>
-<tr><td style="text-align: left;">c<sub>20</sub></td><td style="text-align: left;">c<sub>21</sub></td><td style="text-align: left;">c<sub>22</sub></td><td style="text-align: left;">b<sub>13</sub></td></tr>
-<tr><td style="text-align: left;">d<sub>30</sub></td><td style="text-align: left;">d<sub>31</sub></td><td style="text-align: left;">d<sub>32</sub></td><td style="text-align: left;">c<sub>23</sub></td></tr>
-</tbody></table>
+<table><thead><tr><th>Co</th><th>C1</th><th>C2</th><th>C3</th></tr></thead><tbody><tr><td style='text-align: left;'>a<sub>00</sub></td><td style='text-align: left;'>a<sub>01</sub></td><td style='text-align: left;'>a<sub>02</sub></td><td style='text-align: left;'>d<sub>33</sub></td>
+</tr><tr><td style='text-align: left;'>b<sub>10</sub></td><td style='text-align: left;'>b<sub>11</sub></td><td style='text-align: left;'>b<sub>12</sub></td><td style='text-align: left;'>a<sub>03</sub></td>
+</tr><tr><td style='text-align: left;'>c<sub>20</sub></td><td style='text-align: left;'>c<sub>21</sub></td><td style='text-align: left;'>c<sub>22</sub></td><td style='text-align: left;'>b<sub>13</sub></td>
+</tr><tr><td style='text-align: left;'>d<sub>30</sub></td><td style='text-align: left;'>d<sub>31</sub></td><td style='text-align: left;'>d<sub>32</sub></td><td style='text-align: left;'>c<sub>23</sub></td>
+</tr></tbody></table>
 <p>The last column is then mapped with the corresponding element of the s-box.</p>
-<table><thead><tr><th>C3</th><th></th><th>C3<sup>’</sup></th></tr></thead><tbody><tr><td style="text-align: left;">a<sub>00</sub></td><td style="text-align: left;">–&gt;</td><td style="text-align: left;">a<sub>02</sub></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">b<sub>10</sub></td><td style="text-align: left;">–&gt;</td></tr>
-<tr><td style="text-align: left;">b<sub>12</sub></td><td style="text-align: left;">c<sub>20</sub></td><td style="text-align: left;">–&gt;</td></tr>
-<tr><td style="text-align: left;">c<sub>22</sub></td><td style="text-align: left;"></td><td style="text-align: left;">d<sub>30</sub></td></tr>
-<tr><td style="text-align: left;">–&gt;</td><td style="text-align: left;">d<sub>32</sub></td><td style="text-align: left;"></td></tr>
-</tbody></table>
+<table><thead><tr><th>C3</th><th /><th>C3<sup>'</sup></th></tr></thead><tbody><tr><td style='text-align: left;'>a<sub>00</sub></td><td style='text-align: left;'>&#8211;&gt;</td><td style='text-align: left;'>a<sub>02</sub></td>
+</tr><tr><td style='text-align: left;'>b<sub>10</sub></td><td style='text-align: left;'>&#8211;&gt;</td><td style='text-align: left;'>b<sub>12</sub></td>
+</tr><tr><td style='text-align: left;'>c<sub>20</sub></td><td style='text-align: left;'>&#8211;&gt;</td><td style='text-align: left;'>c<sub>22</sub></td>
+</tr><tr><td style='text-align: left;'>d<sub>30</sub></td><td style='text-align: left;'>&#8211;&gt;</td><td style='text-align: left;'>d<sub>32</sub></td>
+</tr></tbody></table>
 <p>New column C<sub>0</sub> is generated by XORing previous C<sub>0</sub> with the new column.</p>
-<table><thead><tr><th>C0</th><th></th><th>C3<sup>’</sup></th></tr></thead><tbody><tr><td style="text-align: left;">a<sub>00</sub></td><td style="text-align: left;">⊕</td><td style="text-align: left;">a<sub>02</sub></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">b<sub>10</sub></td><td style="text-align: left;">⊕</td></tr>
-<tr><td style="text-align: left;">b<sub>12</sub></td><td style="text-align: left;">c<sub>20</sub></td><td style="text-align: left;">⊕</td></tr>
-<tr><td style="text-align: left;">c<sub>22</sub></td><td style="text-align: left;"></td><td style="text-align: left;">d<sub>30</sub></td></tr>
-<tr><td style="text-align: left;">⊕</td><td style="text-align: left;">d<sub>32</sub></td><td style="text-align: left;"></td></tr>
-</tbody></table>
+<table><thead><tr><th>C0</th><th /><th>C3<sup>'</sup></th></tr></thead><tbody><tr><td style='text-align: left;'>a<sub>00</sub></td><td style='text-align: left;'>&#8853;</td><td style='text-align: left;'>a<sub>02</sub></td>
+</tr><tr><td style='text-align: left;'>b<sub>10</sub></td><td style='text-align: left;'>&#8853;</td><td style='text-align: left;'>b<sub>12</sub></td>
+</tr><tr><td style='text-align: left;'>c<sub>20</sub></td><td style='text-align: left;'>&#8853;</td><td style='text-align: left;'>c<sub>22</sub></td>
+</tr><tr><td style='text-align: left;'>d<sub>30</sub></td><td style='text-align: left;'>&#8853;</td><td style='text-align: left;'>d<sub>32</sub></td>
+</tr></tbody></table>
 <p>Similarly all new coulumns are generated by XORing with pervious columns.</p>
 <hr />
-<p><a href="http://www.scribd.com/doc/164002353/Study-and-Implementation-of-various-Cryptographic-techniques#page=42">details</a> — <a href="https://github.com/tushar-sharma/aes">code</a></p>
-<div class="footnotes"><hr /><ol><li id="fn:1">
-<p>http://goo.gl/lfkNI <a href="#fnref:1" rev="footnote">↩</a></p>
-</li><li id="fn:2">
-<p>http://goo.gl/j8YGJ <a href="#fnref:2" rev="footnote">↩</a></p>
-</li><li id="fn:3">
-<p>Understanding AES Mix-Columns Transformation Calculation by Kit Choy Xintong <a href="#fnref:3" rev="footnote">↩</a></p>
-</li></ol></div>
+<p><a href='http://www.scribd.com/doc/164002353/Study-and-Implementation-of-various-Cryptographic-techniques#page=42'>details</a> &#8212; <a href='https://github.com/tushar-sharma/aes'>code</a></p>
+<div class='footnotes'><hr /><ol><li id='fn:1'>
+<p>http://goo.gl/lfkNI</p>
+<a href='#fnref:1' rev='footnote'>&#8617;</a></li><li id='fn:2'>
+<p>http://goo.gl/j8YGJ</p>
+<a href='#fnref:2' rev='footnote'>&#8617;</a></li><li id='fn:3'>
+<p>Understanding AES Mix-Columns Transformation Calculation by Kit Choy Xintong</p>
+<a href='#fnref:3' rev='footnote'>&#8617;</a></li></ol></div>
 
 
 <hr />
@@ -370,7 +368,7 @@ h1.heading{font-family:Myfont;color:#39c}
   <small>]</small> <br>
 </span>
 <span style="float:right;">
-  <small>Made with <a href="http://www.vim.org/" target="_blank">vim</a> 'n inspired by my sis. </small>
+  <small>Made with <a href="http://www.vim.org/" target="_blank">vim</a>. Inspired by my sis.</small>
 </span>
   </div>
 <br><br>

@@ -1,0 +1,19 @@
+<link href='../css/styles.css.css' rel='stylesheet' />
+<p>Implemented encrypted files in Minix 3. Minix 3 is a micro-kernel operating system.</p>
+
+<p><a href='/projects/encrypt-files'>details</a> &#8212; <a href='https://github.com/tushar-sharma/encrypted-file-sytem'>code</a></p>
+<!-- truncate_here --><hr />
+<p><a href='https://github.com/tushar-sharma/encrypted-file-sytem'>code</a></p>
+<hr />
+<p>Implemented encrypted files in Minix 3. The cipher used is simple Caesar&#8217;s cipher.</p>
+
+<p><strong>Description</strong></p>
+
+<p>Implemented a new system call in Minix 3 along with the library function that allows it to be called conveniently from a C program. The library interface extends extends file access operations to handle encrypted files.</p>
+
+<p>Reading and writing to a file is done through a system call. The first is to access the &#8220;master encryption table&#8221; file (/etc/encryptTable) that stores the information about every file that is encrypted within Minix and contains three pieces of information: fs_dev, inode_nr and hashed_pw. The first two information uniquely identifies what file is encrypted and can be obtained from the vnode for the file.</p>
+<hr />
+<p><a href='https://github.com/tushar-sharma/encrypted-file-sytem'>code</a></p>
+<nav class='pagination clear' style='padding-bottom:20px;'>
+  
+</nav>
