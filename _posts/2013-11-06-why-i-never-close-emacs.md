@@ -56,7 +56,7 @@ Emacs by default creates a backup file for every file it edits. It's usually nam
 
 #### Emacs for Browsing
 
-If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses a extention `w3m` which uses `w3m` which itself is a `text-browser`. Of course there are `Lynx` and other text editors, but integrating w3m with emacs is very fast. 
+If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses a extention `w3m.el` which uses `w3m` which itself is a `text-browser`. Of course there are `Lynx` and other text editors, but integrating w3m with emacs is very fast. 
 
 {% highlight common-lisp  %} 
 (add-to-list 'load-path "~/emacs-w3m")
