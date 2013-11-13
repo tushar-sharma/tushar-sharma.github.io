@@ -13,7 +13,7 @@ After a ruckus the government agreed to roll back the proposed decision to incre
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <div>
-<img src="/../img/walmart.jpg" class="thumb">
+<img src="{{ root_url }}/img/walmart.jpg" class="thumb">
 <p>After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. </p>
 </div>
 
