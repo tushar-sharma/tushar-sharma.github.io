@@ -77,7 +77,7 @@ h1.heading {
 
 <div style="clear:both;"></div>
 <div>
-  <h1  class="heading"><span class="top"><a href="/../about/">About Me</a></span></h1> 
+  <h1  class="heading"><span class="top"><a href="/about/">About Me</a></span></h1> 
   <!--<p class="me_blurb"> 
     <div class="sub"> 
       <a href="/../about/">About ME</a>
@@ -111,7 +111,7 @@ h1.heading {
 </div>
 
 <style type="text/css">
-@font-face{font-family:Somefont;src:url(/../font/OneDirection.ttf);font-weight:400;font-style:normal}
+@font-face{font-family:Somefont;src:url(/font/OneDirection.ttf);font-weight:400;font-style:normal}
 h1.heading{font-family:Myfont;color:#39c}
 .top{color:#444}
 .sub{font-family:Somefont}
@@ -196,7 +196,7 @@ h1.heading{font-family:Myfont;color:#39c}
 
 
   </p>
-<p>Tags:  <a href='/tag/debian' class='mytag' title='View posts tagged with &quot;debian&quot;'>debian</a>     <a href='/tag/huawei' class='mytag' title='View posts tagged with &quot;huawei&quot;'>huawei</a>     <a href='/tag/usb' class='mytag' title='View posts tagged with &quot;usb&quot;'>usb</a>     <a href='/tag/modem' class='mytag' title='View posts tagged with &quot;modem&quot;'>modem</a>     <a href='/tag/code' class='mytag' title='View posts tagged with &quot;code&quot;'>code</a>    </p><div>
+<p>Tags:  <a title='View posts tagged with &quot;debian&quot;' href='/tag/debian' class='mytag'>debian</a>     <a title='View posts tagged with &quot;huawei&quot;' href='/tag/huawei' class='mytag'>huawei</a>     <a title='View posts tagged with &quot;usb&quot;' href='/tag/usb' class='mytag'>usb</a>     <a title='View posts tagged with &quot;modem&quot;' href='/tag/modem' class='mytag'>modem</a>     <a title='View posts tagged with &quot;code&quot;' href='/tag/code' class='mytag'>code</a>    </p><div>
 <img src='/img/debian.jpg' class='thumb' />
 The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.
 </div><br />
@@ -206,19 +206,19 @@ The Debian claimed to be the Universal Operating System. Impressed by the stabil
 
 <pre><code>$ lusub</code></pre>
 
-<p><img alt='w4' src='/img/w4.png' /></p>
+<p><img src='/img/w4.png' alt='w4' /></p>
 
 <p>Here we see Huawie usb is visible as Huawei Wireless Data Modem. Become a super user by typing <code>sudo su</code>. Now for detecting the modem run:</p>
 
 <pre><code># wvdial /etc/wvdial.conf </code></pre>
 
-<p><img alt='w1' src='/img/w1.png' /></p>
+<p><img src='/img/w1.png' alt='w1' /></p>
 
 <p>This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor</p>
 
 <pre><code># vi /etc/wvdial.conf</code></pre>
 
-<p><img alt='w3' src='/img/w3.png' /></p>
+<p><img src='/img/w3.png' alt='w3' /></p>
 
 <p>Remove the semicolons &amp; change the following values:</p>
 
@@ -236,8 +236,8 @@ Stupid Mode = 1</code></pre>
 <pre><code># wvdial</code></pre>
 
 <p>Bravo! It connects to the internet. Press <b>Ctrl + C</b> anytime to disconnect.</p>
-<nav class='pagination clear' style='padding-bottom:20px;'>
- <a href='/blog/fear-of-walmart' class='prev-item' title='Previous Post: Fear of Walmart'>&larr;Previous</a>     <a href='/projects/des' class='next-item' title='Next Post: Data Encryption Standard (DES)'>Next&rarr;</a>         
+<nav style='padding-bottom:20px;' class='pagination clear'>
+ <a title='Previous Post: Fear of Walmart' href='/blog/fear-of-walmart' class='prev-item'>&larr;Previous</a>     <a title='Next Post: Data Encryption Standard (DES)' href='/projects/des' class='next-item'>Next&rarr;</a>         
 </nav>
 
 

@@ -77,7 +77,7 @@ h1.heading {
 
 <div style="clear:both;"></div>
 <div>
-  <h1  class="heading"><span class="top"><a href="/../about/">About Me</a></span></h1> 
+  <h1  class="heading"><span class="top"><a href="/about/">About Me</a></span></h1> 
   <!--<p class="me_blurb"> 
     <div class="sub"> 
       <a href="/../about/">About ME</a>
@@ -111,7 +111,7 @@ h1.heading {
 </div>
 
 <style type="text/css">
-@font-face{font-family:Somefont;src:url(/../font/OneDirection.ttf);font-weight:400;font-style:normal}
+@font-face{font-family:Somefont;src:url(/font/OneDirection.ttf);font-weight:400;font-style:normal}
 h1.heading{font-family:Myfont;color:#39c}
 .top{color:#444}
 .sub{font-family:Somefont}
@@ -200,7 +200,7 @@ h1.heading{font-family:Myfont;color:#39c}
 <hr />
 <p>Data Encryption Standard, a symmetric key algorithm, implemented in C++. All the parties use the same key for encryption and decryption. Look at the diagram below.</p>
 
-<p><img alt='Encr' src='/img/sym.png' /></p>
+<p><img src='/img/sym.png' alt='Encr' /></p>
 
 <p>Here, m is message which is passed through an encrypted function <i>E</i> along with key <i>K</i>. The resultant is a unintelligent gibberish cipher. The cipher is decoded again using the same key to produce plain message.</p>
 
@@ -223,15 +223,15 @@ R<sub>i</sub> = L<sub>i - 1</sub> &oplus; f(R<sub>i - 1</sub>, K<sub>i</sub>)
 </pre></code>
 <p>After 16<sup>th</sup> round, right and left halves are joined and a <a href='http://en.wikipedia.org/wiki/DES_supplementary_material'>final permutation</a> finishes off the algorithm. To better understand, look at the diagram below. <sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup></p>
 
-<p><img alt='DES' src='/img/des.jpg' /></p>
+<p><img src='/img/des.jpg' alt='DES' /></p>
 
 <p><strong>Conclusion</strong></p>
 
 <p>I implemented this project in C++. This was the first encryption standard which I studied and implemented.</p>
 <hr />
 <p><a href='http://www.scribd.com/doc/164002353/Study-and-Implementation-of-various-Cryptographic-techniques#page=11'>details</a> &#8212; <a href='https://github.com/tushar-sharma/des'>code</a></p>
-<nav class='pagination clear' style='padding-bottom:20px;'>
- <a href='/blog/huawei-usb-modem-in-debian' class='prev-item' title='Previous Post: Huawei Usb Modem in Debian'>&larr;Previous</a>     <a href='/projects/aes' class='next-item' title='Next Post: Advanced Encryption Standard (AES)'>Next&rarr;</a>         
+<nav style='padding-bottom:20px;' class='pagination clear'>
+ <a title='Previous Post: Huawei Usb Modem in Debian' href='/blog/huawei-usb-modem-in-debian' class='prev-item'>&larr;Previous</a>     <a title='Next Post: Advanced Encryption Standard (AES)' href='/projects/aes' class='next-item'>Next&rarr;</a>         
 </nav><div class='footnotes'><hr /><ol><li id='fn:1'>
 <p>Network Security: Private Communication in a Public World</p>
 <a href='#fnref:1' rev='footnote'>&#8617;</a></li></ol></div>

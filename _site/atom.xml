@@ -3,7 +3,7 @@
   <title>Tushar Sharma | Blog</title>
   <link href="https://randomwits.com/"/>
   <link type="application/atom+xml" rel="self" href="http://randomwits.com/atom.xml"/>
-  <updated>2013-11-13T12:43:10+05:30</updated>
+  <updated>2013-11-15T00:03:39+05:30</updated>
   <id>https://ryanseys.com/</id>
   <author>
     <name>Tushar Sharma</name>
@@ -60,7 +60,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h4 id='emacs_for_browsing'&gt;Emacs for Browsing&lt;/h4&gt;
 
-&lt;p&gt;If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses a extention &lt;code&gt;w3m&lt;/code&gt; which uses &lt;code&gt;w3m&lt;/code&gt; which itself is a &lt;code&gt;text-browser&lt;/code&gt;. Of course there are &lt;code&gt;Lynx&lt;/code&gt; and other text editors, but integrating w3m with emacs is very fast.&lt;/p&gt;
+&lt;p&gt;If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses a extention &lt;code&gt;w3m.el&lt;/code&gt; which uses &lt;code&gt;w3m&lt;/code&gt; which itself is a &lt;code&gt;text-browser&lt;/code&gt;. Of course there are &lt;code&gt;Lynx&lt;/code&gt; and other text editors, but integrating w3m with emacs is very fast.&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='common-lisp'&gt; 
 &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nv'&gt;add-to-list&lt;/span&gt; &lt;span class='ss'&gt;&amp;#39;load-path&lt;/span&gt; &lt;span class='s'&gt;&amp;quot;~/emacs-w3m&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
 &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;require&lt;/span&gt; &lt;span class='ss'&gt;&amp;#39;w3m-load&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
@@ -71,7 +71,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Here&amp;#8217;s a snapshot of my website in emacs.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='myblog' src='/img/myblog.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/myblog.png' alt='myblog' /&gt;&lt;/p&gt;
 
 &lt;h4 id='emacs_for_email'&gt;Emacs for Email&lt;/h4&gt;
 
@@ -98,7 +98,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587&lt;/code&gt
 
 &lt;p&gt;The password field is optional. Type &lt;code&gt;M-x gnus&lt;/code&gt; to start GNUS. To compose email, type &lt;code&gt;m&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='gnus' src='/img/gnus.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/gnus.png' alt='gnus' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Press &lt;code&gt;C-c C-c&lt;/code&gt; to send mail.&lt;/p&gt;
 
@@ -106,13 +106,13 @@ machine smtp.gmail.com login user@gmail.com password secret port 587&lt;/code&gt
 
 &lt;p&gt;The other task I usally do is look up few photos. Emacs can do more than just viewing the pictures, it has a inbuilt powerful power editor called &lt;code&gt;Image-Dired&lt;/code&gt;. Simply press &lt;code&gt;M-x image-dired&lt;/code&gt; on your emacs.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='Image-dired' src='/img/image_dired.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/image_dired.png' alt='Image-dired' /&gt;&lt;/p&gt;
 
 &lt;h4 id='emacs_for_composing_documents'&gt;Emacs for composing Documents&lt;/h4&gt;
 
 &lt;p&gt;This is one of the feature I find unparalled to emacs. The official website says about org mode, &amp;#8220;Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system&amp;#8221;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='orgMode' src='/img/orgMode.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/orgMode.png' alt='orgMode' /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you love &lt;em&gt;LaTeX&lt;/em&gt;, then there are more reasons to love &lt;code&gt;org mode&lt;/code&gt;. You could integrated &lt;em&gt;TeX&lt;/em&gt; support and export your work in &lt;em&gt;PDF&lt;/em&gt;.For this add this to your ~/.emacs file&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='common-lisp'&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nb'&gt;require&lt;/span&gt; &lt;span class='ss'&gt;&amp;#39;org-latex&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
@@ -127,7 +127,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587&lt;/code&gt
 
 &lt;p&gt;If you happen to maintain a personal diary, you must be paranoid about it&amp;#8217;s secrecy. Emacs could be used to store your personal information. It uses &lt;code&gt;GNU GPG&lt;/code&gt; to save the file. Open any file in emacs with &lt;code&gt;gpg&lt;/code&gt; extention.To save it, press &lt;code&gt;C-s&lt;/code&gt; which asks for which type of encryption method to use. Just use the default and press OK. This would prompt for a passphrase for saving.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='secretGPG' src='/img/secretGPG.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/secretGPG.png' alt='secretGPG' /&gt;&lt;/p&gt;
 
 &lt;h4 id='emacs_for_playing_music'&gt;Emacs for Playing Music&lt;/h4&gt;
 
@@ -178,7 +178,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587&lt;/code&gt
 
 &lt;p&gt;Last but not least, emacs also has lots of interesting features for amusement.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='snake' src='/img/snake.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/doctor.png' alt='doctor' /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Type &lt;code&gt;M-x doctor&lt;/code&gt; to talk to a pyschologist.&lt;/li&gt;
@@ -207,8 +207,8 @@ machine smtp.gmail.com login user@gmail.com password secret port 587&lt;/code&gt
 &lt;h4 id='conclusion'&gt;Conclusion&lt;/h4&gt;
 
 &lt;p&gt;Emacs is not meant to be a &lt;strong&gt;all-in-one&lt;/strong&gt; substitue for all softwares. Of course certain softwares are better at doing specific tasks. Emacs wins over the fact that I rarely needs to close it. One can easily customize and extend emacs using elisp, a dialect of lisp. If you&amp;#8217;re convinced of the power of emacs, let me welcome you to the &lt;a href='http://www.emacswiki.org/emacs/ChurchOfEmacs'&gt;Church of Emacs&lt;/a&gt;. If not, let&amp;#8217;s part ways with an old joke, &amp;#8221;&lt;em&gt;The Emacs opearting system needs a better editor&lt;/em&gt;&amp;#8221;.&lt;/p&gt;
-&lt;nav class='pagination clear' style='padding-bottom:20px;'&gt;
- &lt;a href='/blog/how-vim-saved-my-day' class='prev-item' title='Previous Post: How ViM Saved My Day'&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;nav style='padding-bottom:20px;' class='pagination clear'&gt;
+ &lt;a title='Previous Post: How ViM Saved My Day' href='/blog/how-vim-saved-my-day' class='prev-item'&gt;&amp;larr;Previous&lt;/a&gt;     
 &lt;/nav&gt;</content>
   </entry>
   
@@ -222,7 +222,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587&lt;/code&gt
       <uri>https://randomwits.com/</uri>
     </author>
     <content type="html">&lt;p&gt;It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle. Though I am a FOSS enthusiast, my first job landed me to just another India&amp;#8217;s IT company. I vividly remember the countless occasions when ViM saved my day. &lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;div&gt;Tags:  &lt;a href='/tag/vi' class='mytag' title='View posts tagged with &amp;quot;vi&amp;quot;'&gt;vi&lt;/a&gt;     &lt;a href='/tag/vim' class='mytag' title='View posts tagged with &amp;quot;vim&amp;quot;'&gt;vim&lt;/a&gt;     &lt;a href='/tag/editor' class='mytag' title='View posts tagged with &amp;quot;editor&amp;quot;'&gt;editor&lt;/a&gt;     &lt;a href='/tag/code' class='mytag' title='View posts tagged with &amp;quot;code&amp;quot;'&gt;code&lt;/a&gt;    &lt;/div&gt;&lt;div style='clear:both;padding-top:20px;padding-bottom:20px;' /&gt;&lt;div&gt;
+&lt;div&gt;Tags:  &lt;a title='View posts tagged with &amp;quot;vi&amp;quot;' href='/tag/vi' class='mytag'&gt;vi&lt;/a&gt;     &lt;a title='View posts tagged with &amp;quot;vim&amp;quot;' href='/tag/vim' class='mytag'&gt;vim&lt;/a&gt;     &lt;a title='View posts tagged with &amp;quot;editor&amp;quot;' href='/tag/editor' class='mytag'&gt;editor&lt;/a&gt;     &lt;a title='View posts tagged with &amp;quot;code&amp;quot;' href='/tag/code' class='mytag'&gt;code&lt;/a&gt;    &lt;/div&gt;&lt;div style='clear:both;padding-top:20px;padding-bottom:20px;' /&gt;&lt;div&gt;
 &lt;img src='/img/vim.png' class='thumb' /&gt;
 &lt;p&gt;
 It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India's IT company. I vividly remember the countless occasions when ViM saved my day.
@@ -242,13 +242,13 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 
 &lt;p&gt;He showed me a csv file. Unfortunately I can&amp;#8217;t post the original files but I&amp;#8217;ve tried to create resemblance of original file. See the picture 1 below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='Picture1' src='/img/figure1.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/figure1.png' alt='Picture1' /&gt;&lt;/p&gt;
 
 &lt;p&gt;He began scrolling down the file. It took him more than two minutes to get to the middle of the file while my eyes remained glued to the screen counting the number of lines. At last when he reached the bottom, deducing my curiosity he said, “It has 2000 lines”.&lt;/p&gt;
 
 &lt;p&gt;“All you have to do”, he said, “is to pick each line of this CSV file and paste it to another text file with slight alteration”. He showed me another text file which resembled to Picture 2.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='Picture2' src='/img/figure2.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/figure2.png' alt='Picture2' /&gt;&lt;/p&gt;
 
 &lt;p&gt;“Each line should be similar to the other file”, he said pointing to Picture 2. Not only did I have to rearrange items of the line but also had to insert some extra text to match Picture 2.&lt;/p&gt;
 
@@ -318,7 +318,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 
 &lt;p&gt;Of course you can reduce the number of steps by a more elegant solution. But this alone helped me solve my task. See my resulted file in Picture 3 below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='Picture3' src='/img/figure3.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/figure3.png' alt='Picture3' /&gt;&lt;/p&gt;
 
 &lt;h4 id='even_more_smart_way'&gt;Even More Smart Way&lt;/h4&gt;
 
@@ -341,8 +341,8 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 &lt;h4 id='conclusion'&gt;Conclusion&lt;/h4&gt;
 
 &lt;p&gt;ViM is a wonderful editor if only you get to know it. The following task took me less than 15 minutes to complete. Of course less than 15 minutes feat dazzled my supervisor but more than the approval it&amp;#8217;s the satisfaction that comes from solving problems smartly. So what&amp;#8217;s your story? Have ViM ever saved your day?&lt;/p&gt;
-&lt;nav class='pagination clear' style='padding-bottom:20px;'&gt;
- &lt;a href='/blog/why-hacking-is-good' class='prev-item' title='Previous Post: Why hacking is good'&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a href='/blog/why-i-never-close-emacs' class='next-item' title='Next Post: Why I never close Emacs'&gt;Next&amp;rarr;&lt;/a&gt; 	
+&lt;nav style='padding-bottom:20px;' class='pagination clear'&gt;
+ &lt;a title='Previous Post: Why hacking is good' href='/blog/why-hacking-is-good' class='prev-item'&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a title='Next Post: Why I never close Emacs' href='/blog/why-i-never-close-emacs' class='next-item'&gt;Next&amp;rarr;&lt;/a&gt; 	
 &lt;/nav&gt;&lt;div class='footnotes'&gt;&lt;hr /&gt;&lt;ol&gt;&lt;li id='fn:1'&gt;
 &lt;p&gt;There&amp;#8217;s a famous editor war between VI and Emacs&lt;/p&gt;
 &lt;a href='#fnref:1' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id='fn:2'&gt;
@@ -360,7 +360,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
       <uri>https://randomwits.com/</uri>
     </author>
     <content type="html">&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &amp;#8220;Don&amp;#8217;t you know what hacking is?&amp;#8221;. On insisting he reluctantly explained, &amp;#8220;breaking into website or stealing passwords of Facebook, etc&amp;#8221;. I was crestfallen at the rampant misconception about hacking. &lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a href='/tag/hacking' class='mytag' title='View posts tagged with &amp;quot;hacking&amp;quot;'&gt;hacking&lt;/a&gt;     &lt;a href='/tag/hackers' class='mytag' title='View posts tagged with &amp;quot;hackers&amp;quot;'&gt;hackers&lt;/a&gt;     &lt;a href='/tag/code' class='mytag' title='View posts tagged with &amp;quot;code&amp;quot;'&gt;code&lt;/a&gt;    &lt;/p&gt;&lt;div&gt;
+&lt;p&gt;Tags:  &lt;a title='View posts tagged with &amp;quot;hacking&amp;quot;' href='/tag/hacking' class='mytag'&gt;hacking&lt;/a&gt;     &lt;a title='View posts tagged with &amp;quot;hackers&amp;quot;' href='/tag/hackers' class='mytag'&gt;hackers&lt;/a&gt;     &lt;a title='View posts tagged with &amp;quot;code&amp;quot;' href='/tag/code' class='mytag'&gt;code&lt;/a&gt;    &lt;/p&gt;&lt;div&gt;
 &lt;img src='/img/glider.jpg' class='thumb' /&gt;
 &lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &quot;Don't you know what hacking is?&quot;. On insisting he reluctantly explained, &quot;breaking into website or stealing passwords of Facebook, etc&quot;. I was crestfallen at the rampant misconception about hacking. &lt;/p&gt;
 &lt;/div&gt;
@@ -387,14 +387,14 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 &lt;tbody&gt;
 
 &lt;tr&gt;
-&lt;td align='center'&gt;&lt;a href='http://en.wikipedia.org/wiki/Ankit_Fadia' target='_blank'&gt;&lt;img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ankitfadia2.jpg/200px-Ankitfadia2.jpg' style='height:150px;padding:15px 15px 15px 0px;max-width: 100px;' /&gt;&lt;/a&gt; &lt;/td&gt;
+&lt;td align='center'&gt;&lt;a href='http://en.wikipedia.org/wiki/Ankit_Fadia' target='_blank'&gt;&lt;img style='height:150px;padding:15px 15px 15px 0px;max-width: 100px;' src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ankitfadia2.jpg/200px-Ankitfadia2.jpg' /&gt;&lt;/a&gt; &lt;/td&gt;
 &lt;td align='center'&gt;Media Hacker&lt;/td&gt;
 &lt;td align='center'&gt;Ankit Fadia&lt;/td&gt;
 &lt;td align='center'&gt; Claimed that after the 9/11 attacks, &quot;American investigating agencies&quot; invited him to decode an encrypted message posted by Al-Qaeda. Thought he got much &lt;a href='http://www.thehindu.com/sci-tech/inside-account/article48684.ece' target='_blank'&gt;publicity&lt;/a&gt;, his claims are refuted &lt;a href='http://forbesindia.com/article/beyond-business/ankit-fadia-revealed/34793/0' target='_blank'&gt;here&lt;/a&gt;. &lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td align='center'&gt;&lt;a href='http://en.wikipedia.org/wiki/Richard_Stallman' target='_blank'&gt;&lt;img src='http://static.fsf.org/fsforg/img/rms-web.jpg' style='height:150px;padding:15px 15px 15px 0px;max-width: 100px;' /&gt;&lt;/a&gt; &lt;/td&gt;
+&lt;td align='center'&gt;&lt;a href='http://en.wikipedia.org/wiki/Richard_Stallman' target='_blank'&gt;&lt;img style='height:150px;padding:15px 15px 15px 0px;max-width: 100px;' src='http://static.fsf.org/fsforg/img/rms-web.jpg' /&gt;&lt;/a&gt; &lt;/td&gt;
 &lt;td align='center'&gt;True Hacker&lt;/td&gt;
 &lt;td align='center'&gt;Richard Stallman&lt;/td&gt;
 &lt;td align='center'&gt;Launched GNU Project, founding the Free Software Foundation, developing the GNU Compiler Collection and GNU Emacs, and writing the GNU General Public License &lt;/td&gt;
@@ -405,8 +405,8 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 &lt;h4 id='conclusion'&gt;Conclusion&lt;/h4&gt;
 
 &lt;p&gt;Convictions of computer crimes, which began as early as 1983 with the case of 414&lt;sup id='fnref:4'&gt;&lt;a href='#fn:4' rel='footnote'&gt;4&lt;/a&gt;&lt;/sup&gt;, caught the attention of the media. Rampant breach of security created panic among general public and intruders called themself &amp;#8216;hackers&amp;#8217;. These bunch of people, who writes malicious code, are nothing but crackers&lt;sup id='fnref:5'&gt;&lt;a href='#fn:5' rel='footnote'&gt;5&lt;/a&gt;&lt;/sup&gt;. Not only did they rob people of their money but also condemned such a beautiful word as &amp;#8216;hacker&amp;#8217;.&lt;/p&gt;
-&lt;nav class='pagination clear' style='padding-bottom:20px;'&gt;
- &lt;a href='/projects/encrypt-files' class='prev-item' title='Previous Post: Encrypted Files in Minix 3'&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a href='/blog/how-vim-saved-my-day' class='next-item' title='Next Post: How ViM Saved My Day'&gt;Next&amp;rarr;&lt;/a&gt;         
+&lt;nav style='padding-bottom:20px;' class='pagination clear'&gt;
+ &lt;a title='Previous Post: Encrypted Files in Minix 3' href='/projects/encrypt-files' class='prev-item'&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a title='Next Post: How ViM Saved My Day' href='/blog/how-vim-saved-my-day' class='next-item'&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;&lt;div class='footnotes'&gt;&lt;hr /&gt;&lt;ol&gt;&lt;li id='fn:1'&gt;&lt;a href='http://en.wikipedia.org/wiki/Hacker_ethic' target='_blank'&gt;Hacker ethic&lt;/a&gt;&lt;a href='#fnref:1' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id='fn:2'&gt;&lt;a href='http://en.wikipedia.org/wiki/Hacker_(term)#Programmer_subculture_of_hackers' target='_blank'&gt;Hacker_(term)&lt;/a&gt;&lt;a href='#fnref:2' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id='fn:3'&gt;&lt;a href='http://www.catb.org/esr/faqs/hacker-howto.html#whatis' target='_blank'&gt;How to be a hacker&lt;/a&gt;&lt;a href='#fnref:3' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id='fn:4'&gt;&lt;a href='http://en.wikipedia.org/wiki/The_414s' target='_blank'&gt;414&lt;/a&gt;&lt;a href='#fnref:4' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;li id='fn:5'&gt;&lt;a href='http://www.catb.org/jargon/html/C/cracker.html' target='_blank'&gt;Jargon file - Cracker&lt;/a&gt;&lt;a href='#fnref:5' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</content>
   </entry>
   
@@ -420,7 +420,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
       <uri>https://randomwits.com/</uri>
     </author>
     <content type="html">&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a href='/tag/debian' class='mytag' title='View posts tagged with &amp;quot;debian&amp;quot;'&gt;debian&lt;/a&gt;     &lt;a href='/tag/huawei' class='mytag' title='View posts tagged with &amp;quot;huawei&amp;quot;'&gt;huawei&lt;/a&gt;     &lt;a href='/tag/usb' class='mytag' title='View posts tagged with &amp;quot;usb&amp;quot;'&gt;usb&lt;/a&gt;     &lt;a href='/tag/modem' class='mytag' title='View posts tagged with &amp;quot;modem&amp;quot;'&gt;modem&lt;/a&gt;     &lt;a href='/tag/code' class='mytag' title='View posts tagged with &amp;quot;code&amp;quot;'&gt;code&lt;/a&gt;    &lt;/p&gt;&lt;div&gt;
+&lt;p&gt;Tags:  &lt;a title='View posts tagged with &amp;quot;debian&amp;quot;' href='/tag/debian' class='mytag'&gt;debian&lt;/a&gt;     &lt;a title='View posts tagged with &amp;quot;huawei&amp;quot;' href='/tag/huawei' class='mytag'&gt;huawei&lt;/a&gt;     &lt;a title='View posts tagged with &amp;quot;usb&amp;quot;' href='/tag/usb' class='mytag'&gt;usb&lt;/a&gt;     &lt;a title='View posts tagged with &amp;quot;modem&amp;quot;' href='/tag/modem' class='mytag'&gt;modem&lt;/a&gt;     &lt;a title='View posts tagged with &amp;quot;code&amp;quot;' href='/tag/code' class='mytag'&gt;code&lt;/a&gt;    &lt;/p&gt;&lt;div&gt;
 &lt;img src='/img/debian.jpg' class='thumb' /&gt;
 The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.
 &lt;/div&gt;&lt;br /&gt;
@@ -430,19 +430,19 @@ The Debian claimed to be the Universal Operating System. Impressed by the stabil
 
 &lt;pre&gt;&lt;code&gt;$ lusub&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img alt='w4' src='/img/w4.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/w4.png' alt='w4' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here we see Huawie usb is visible as Huawei Wireless Data Modem. Become a super user by typing &lt;code&gt;sudo su&lt;/code&gt;. Now for detecting the modem run:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;# wvdial /etc/wvdial.conf &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img alt='w1' src='/img/w1.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/w1.png' alt='w1' /&gt;&lt;/p&gt;
 
 &lt;p&gt;This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;# vi /etc/wvdial.conf&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img alt='w3' src='/img/w3.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/img/w3.png' alt='w3' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Remove the semicolons &amp;amp; change the following values:&lt;/p&gt;
 
@@ -460,8 +460,8 @@ Stupid Mode = 1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;# wvdial&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Bravo! It connects to the internet. Press &lt;b&gt;Ctrl + C&lt;/b&gt; anytime to disconnect.&lt;/p&gt;
-&lt;nav class='pagination clear' style='padding-bottom:20px;'&gt;
- &lt;a href='/blog/fear-of-walmart' class='prev-item' title='Previous Post: Fear of Walmart'&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a href='/projects/des' class='next-item' title='Next Post: Data Encryption Standard (DES)'&gt;Next&amp;rarr;&lt;/a&gt;         
+&lt;nav style='padding-bottom:20px;' class='pagination clear'&gt;
+ &lt;a title='Previous Post: Fear of Walmart' href='/blog/fear-of-walmart' class='prev-item'&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a title='Next Post: Data Encryption Standard (DES)' href='/projects/des' class='next-item'&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;</content>
   </entry>
   
@@ -475,7 +475,7 @@ Stupid Mode = 1&lt;/code&gt;&lt;/pre&gt;
       <uri>https://randomwits.com/</uri>
     </author>
     <content type="html">&lt;p&gt;After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. &lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a href='/tag/Walmart' class='mytag' title='View posts tagged with &amp;quot;Walmart&amp;quot;'&gt;Walmart&lt;/a&gt;     &lt;a href='/tag/FDI' class='mytag' title='View posts tagged with &amp;quot;FDI&amp;quot;'&gt;FDI&lt;/a&gt;    &lt;/p&gt;&lt;div&gt;
+&lt;p&gt;Tags:  &lt;a title='View posts tagged with &amp;quot;Walmart&amp;quot;' href='/tag/Walmart' class='mytag'&gt;Walmart&lt;/a&gt;     &lt;a title='View posts tagged with &amp;quot;FDI&amp;quot;' href='/tag/FDI' class='mytag'&gt;FDI&lt;/a&gt;    &lt;/p&gt;&lt;div&gt;
 &lt;img src='/img/walmart.jpg' class='thumb' /&gt;
 &lt;p&gt;After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. &lt;/p&gt;
 &lt;/div&gt;
@@ -484,8 +484,8 @@ Stupid Mode = 1&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Indian acts like &lt;a href='https://en.wikipedia.org/wiki/Agricultural_Produce_Market_Committee'&gt;APMC&lt;/a&gt; have long forced farmers to only sell their products to the government mundis( market). Despite million starving in poverty, food grains across nation rots in the government godown(warehouse) thanks to the poor PDS. Unlike China, infrastructure in India is still poor. PDS( Public Distribution System) in India is also unorganized and less robust. Such shortcoming combined with other factors have left Indian farmers under the pangs of poverty. The rising inflation has forced RBI(Reserve Bank Of India) to continue to hike repo rates. This slowed the GDP( Gross Domestic Product) and devaluation of Indian ruppee against the dollar.&lt;/p&gt;
 
 &lt;p&gt;Does the much hyped Walmart would be a panacea for Indian consumers against the inflation? Entry of Walmart would usher the much needed reform in the retail sector. Food prices would fall as the Walmart would directly purchase food from the farmers thereby eliminating the middleman. India is perhaps the only developing country where Walmart is yet ink its presence. In contrast China has allowed 100% FDI in retail sector. Yet diluting FDI would be a arduous task for the central government walking a fine line between convincing the opposition and the local shopkeepers with a large chunk of the vote bank.&lt;/p&gt;
-&lt;nav class='pagination clear' style='padding-bottom:20px;'&gt;
-  &lt;a href='/blog/huawei-usb-modem-in-debian' class='next-item' title='Next Post: Huawei Usb Modem in Debian'&gt;Next&amp;rarr;&lt;/a&gt;         
+&lt;nav style='padding-bottom:20px;' class='pagination clear'&gt;
+  &lt;a title='Next Post: Huawei Usb Modem in Debian' href='/blog/huawei-usb-modem-in-debian' class='next-item'&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;</content>
   </entry>
   

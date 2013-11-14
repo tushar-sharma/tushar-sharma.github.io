@@ -192,7 +192,7 @@ To use twitter, download `twittering-mode.el` and store it somewhere. Add this t
 
 Last but not least, emacs also has lots of interesting features for amusement. 
 
-![snake](/img/snake.png "Snake")
+![doctor](/img/doctor.png "doctor")
 
 1. Type `M-x doctor` to talk to a pyschologist. 
 2. Type `M-x tetris` to play tetris. 
