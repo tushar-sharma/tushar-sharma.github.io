@@ -199,10 +199,10 @@ h1.heading{font-family:Myfont;color:#39c}
 <div>
 <img src='/img/emacs.png' class='thumb' />
 <p>
-<p>I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &#8220;It&#8217;s easier this way.&#8221;, he chuckled, &#8220;I can quickly find all the softwares I need.&#8221;. I showed him my desktop which was spick and span.&#8221;Doesn&#8217;t it consumes time in finding the softwares you need?&#8221;, he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. &#8220;You just use one software?&#8221;, he asked.&#8221;Mostly, yes&#8221;, I said. &#8220;What about <em>editing</em>, <em>browsing</em>, <em>music</em>, etc?&#8221;, he asked. &#8220;I do it all in emacs.&#8221;, I quipped. Before he rasied his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.</p>
+<p>I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &#8220;It&#8217;s easier this way.&#8221;, he chuckled, &#8220;I can quickly find all the softwares I need.&#8221;. I showed him my desktop which was spick and span.&#8221;Doesn&#8217;t it consumes time in finding the softwares you need?&#8221;, he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. &#8220;You just use one software?&#8221;, he asked.&#8221;Mostly, yes&#8221;, I said. &#8220;What about <em>editing</em>, <em>browsing</em>, <em>music</em>, etc?&#8221;, he asked. &#8220;I do it all in emacs.&#8221;, I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.</p>
 </p>
 </div>
-<p><strong>Note:</strong> For those who are unfamilliar with emacs, Key abbreviations used :</p>
+<p><strong>Note:</strong> For those who are unfamiliar with emacs, Key abbreviations used :</p>
 
 <ol>
 <li>M – x means holding meta key (usually Esc) and x</li>
@@ -218,24 +218,24 @@ h1.heading{font-family:Myfont;color:#39c}
 
 <p>Emacs is modeless editor which mean that unlike vim, you can start inserting text as soon as you open it. This is one of the reason why it&#8217;s popular with newbies. But that doesn&#8217;t mean you can&#8217;t get your hands dirty with emacs.</p>
 
-<p>Most people criticize emacs user for trying to do everything with emacs except editing. So let&#8217;s begin with editing for which emacs was built for.</p>
+<p>Most people criticize emacs user for trying to do everything with emacs except editing. So let&#8217;s begin with editing for which emacs was initially built.</p>
 
 <p>Emacs can handle pretty much any type of file. Just type</p>
 
 <pre><code>$ emacs myFile.ext</code></pre>
 
-<p>Emacs does syntax highlighting and indentation. It usually follows GNU style of indentation. The best thing about emacs is that you can customize it the way you want. I usuall like <a href='http://en.wikipedia.org/wiki/Indent_style#Allman_style'>Allman</a> indentation when editing <code>C</code> code with <code>4 spaces</code>. To change it, add this to your <code>~/.emacs</code> file.</p>
+<p>Emacs also does syntax highlighting and indentation. It usually follows GNU style of indentation. The best thing about emacs is that you can customize it the way you want. I usually like <a href='http://en.wikipedia.org/wiki/Indent_style#Allman_style'>Allman</a> indentation when editing <code>C</code> code with <code>4 spaces</code>. To change it, add this to your <code>~/.emacs</code> file.</p>
 <div class='highlight'><pre><code class='common-lisp'>    <span class='p'>(</span><span class='k'>setq</span> <span class='nv'>c-default-style</span> <span class='s'>&quot;linux&quot;</span>
           <span class='nv'>c-basic-offset</span> <span class='mi'>4</span><span class='p'>)</span>
 </code></pre></div>
 <h4 id='emacs_for_backup'>Emacs for Backup</h4>
 
-<p>Emacs by default creates a backup file for every file it edits. It&#8217;s usually named as the original file followed by tildel like foo~. Though backup files are life saver, they are difficult to manage if they accumulate on the same folder. To save all your files in one place, add this to your <code>~/.emacs</code></p>
+<p>Emacs by default creates a backup file for every file it edits. It&#8217;s usually named as the original file followed by tilde like FileName~. Though backup files are life saver, they are difficult to manage if they accumulate on the same folder. To save all your files in one place, let&#8217;s say in folder <code>.saves</code>, add this to your <code>~/.emacs</code></p>
 <div class='highlight'><pre><code class='common-lisp'><span class='p'>(</span><span class='k'>setq</span> <span class='nv'>backup-directory-alist</span> <span class='o'>`</span><span class='p'>((</span><span class='s'>&quot;.&quot;</span> <span class='o'>.</span> <span class='s'>&quot;~/.saves&quot;</span><span class='p'>)))</span>
 </code></pre></div>
 <h4 id='emacs_for_browsing'>Emacs for Browsing</h4>
 
-<p>If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses a extention <code>w3m.el</code> which uses <code>w3m</code> which itself is a <code>text-browser</code>. Of course there are <code>Lynx</code> and other text editors, but integrating w3m with emacs is very fast.</p>
+<p>If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses an extension <code>w3m.el</code> which uses <code>w3m</code> which itself is a <code>text-browser</code>. Of course there are <code>Lynx</code> and other text editors, but integrating w3m with emacs is very fast.</p>
 <div class='highlight'><pre><code class='common-lisp'> 
 <span class='p'>(</span><span class='nv'>add-to-list</span> <span class='ss'>&#39;load-path</span> <span class='s'>&quot;~/emacs-w3m&quot;</span><span class='p'>)</span>
 <span class='p'>(</span><span class='nb'>require</span> <span class='ss'>&#39;w3m-load</span><span class='p'>)</span>
@@ -271,21 +271,19 @@ h1.heading{font-family:Myfont;color:#39c}
 <pre><code>machine imap.gmail.com login user@gmail.com password secret port 993
 machine smtp.gmail.com login user@gmail.com password secret port 587</code></pre>
 
-<p>The password field is optional. Type <code>M-x gnus</code> to start GNUS. To compose email, type <code>m</code>.</p>
+<p>The password field is optional. Type <code>M-x gnus</code> to start GNUS. To compose email, type <code>m</code>. Press <code>C-c C-c</code> to send mail.</p>
 
 <p><img src='/img/gnus.png' alt='gnus' /></p>
 
-<p>Press <code>C-c C-c</code> to send mail.</p>
-
 <h4 id='emacs_for_photo_editing'>Emacs for Photo Editing</h4>
 
-<p>The other task I usally do is look up few photos. Emacs can do more than just viewing the pictures, it has a inbuilt powerful power editor called <code>Image-Dired</code>. Simply press <code>M-x image-dired</code> on your emacs.</p>
+<p>The other task I usally do is look up few photos. Emacs can do more than just viewing the pictures, it has an inbuilt powerful power editor called <code>Image-Dired</code>. Simply press <code>M-x image-dired</code> on your emacs.</p>
 
 <p><img src='/img/image_dired.png' alt='Image-dired' /></p>
 
 <h4 id='emacs_for_composing_documents'>Emacs for composing Documents</h4>
 
-<p>This is one of the feature I find unparalled to emacs. The official website says about org mode, &#8220;Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system&#8221;.</p>
+<p>This is one of the feature I find unparalleled to emacs. The official website says about org mode, &#8220;Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system&#8221;.</p>
 
 <p><img src='/img/orgMode.png' alt='orgMode' /></p>
 
@@ -341,7 +339,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587</code></pre
 
 <h4 id='emacs_for_social_networking'>Emacs for Social Networking</h4>
 
-<p>If you cling for user experience, it&#8217;s better to use regular browsers for social networking. And it sometimes becomes difficul to replicate all functionality of websites in emacs. Nevertheless, there&#8217;s a ways to circument some of the limitations and use social networking in emacs.</p>
+<p>If you cling for user experience, it&#8217;s better to use regular browsers for social networking. And it sometimes becomes difficult to replicate all functionality of websites in emacs. Nevertheless, there&#8217;s a ways to circumvent some of the limitations and use social networking in emacs.</p>
 
 <p>To use facebook, visit <code>http://m.facebook.com</code>. If you want login information to remain store, add cookie information in emacs.</p>
 <div class='highlight'><pre><code class='common-lisp'><span class='p'>(</span><span class='k'>setq</span> <span class='nv'>w3m-use-cookies</span> <span class='no'>t</span><span class='p'>)</span>
@@ -356,7 +354,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587</code></pre
 <p><img src='/img/doctor.png' alt='doctor' /></p>
 
 <ol>
-<li>Type <code>M-x doctor</code> to talk to a pyschologist.</li>
+<li>Type <code>M-x doctor</code> to talk to a psychologist.</li>
 
 <li>Type <code>M-x tetris</code> to play tetris.</li>
 
@@ -381,9 +379,9 @@ machine smtp.gmail.com login user@gmail.com password secret port 587</code></pre
 
 <h4 id='conclusion'>Conclusion</h4>
 
-<p>Emacs is not meant to be a <strong>all-in-one</strong> substitue for all softwares. Of course certain softwares are better at doing specific tasks. Emacs wins over the fact that I rarely needs to close it. One can easily customize and extend emacs using elisp, a dialect of lisp. If you&#8217;re convinced of the power of emacs, let me welcome you to the <a href='http://www.emacswiki.org/emacs/ChurchOfEmacs'>Church of Emacs</a>. If not, let&#8217;s part ways with an old joke, &#8221;<em>The Emacs opearting system needs a better editor</em>&#8221;.</p>
+<p>Emacs is not meant to be an <strong>all-in-one</strong> substitue for all softwares. Of course certain softwares are better at doing specific tasks. Emacs wins over the fact that I rarely needs to close it. One can easily customize and extend emacs using elisp, a dialect of lisp. If you&#8217;re convinced of the power of emacs, let me welcome you to the <a href='http://www.emacswiki.org/emacs/ChurchOfEmacs'>Church of Emacs</a>. If not, let&#8217;s part ways with an old joke, &#8221;<em>The Emacs operaating system needs a better editor</em>&#8221;.</p>
 <nav style='padding-bottom:20px;' class='pagination clear'>
- <a title='Previous Post: How ViM Saved My Day' href='/blog/how-vim-saved-my-day' class='prev-item'>&larr;Previous</a>     
+ <a href='/blog/how-vim-saved-my-day' title='Previous Post: How ViM Saved My Day' class='prev-item'>&larr;Previous</a>     
 </nav>
 
 

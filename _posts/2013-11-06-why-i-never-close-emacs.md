@@ -12,17 +12,17 @@ thumb: /img/emacs.png
 
 CSS: post.css
 
-I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. "It's easier this way.", he chuckled, "I can quickly find all the softwares I need.". I showed him my desktop which was spick and span."Doesn't it consumes time in finding the softwares you need?", he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. "You just use one software?", he asked."Mostly, yes", I said. "What about *editing*, *browsing*, *music*, etc?", he asked. "I do it all in emacs.", I quipped. Before he rasied his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
+I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. "It's easier this way.", he chuckled, "I can quickly find all the softwares I need.". I showed him my desktop which was spick and span."Doesn't it consumes time in finding the softwares you need?", he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. "You just use one software?", he asked."Mostly, yes", I said. "What about *editing*, *browsing*, *music*, etc?", he asked. "I do it all in emacs.", I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
 <!-- truncate_here -->
 
 <div markdown="1">
 <img src="{{ root_url}}/img/emacs.png" class="thumb" />
 <p>
-I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. "It's easier this way.", he chuckled, "I can quickly find all the softwares I need.". I showed him my desktop which was spick and span."Doesn't it consumes time in finding the softwares you need?", he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. "You just use one software?", he asked."Mostly, yes", I said. "What about *editing*, *browsing*, *music*, etc?", he asked. "I do it all in emacs.", I quipped. Before he rasied his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
+I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. "It's easier this way.", he chuckled, "I can quickly find all the softwares I need.". I showed him my desktop which was spick and span."Doesn't it consumes time in finding the softwares you need?", he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. "You just use one software?", he asked."Mostly, yes", I said. "What about *editing*, *browsing*, *music*, etc?", he asked. "I do it all in emacs.", I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
 </p>
 </div>
 
-**Note:** For those who are unfamilliar with emacs, Key abbreviations used :
+**Note:** For those who are unfamiliar with emacs, Key abbreviations used :
 
 1. M – x means holding meta key (usually Esc) and x
 2. C – Control
@@ -33,13 +33,13 @@ I once complained to my friend of his desktop on his computer. His desktop was a
 
 Emacs is modeless editor which mean that unlike vim, you can start inserting text as soon as you open it. This is one of the reason why it's popular with newbies. But that doesn't mean you can't get your hands dirty with emacs.
 
-Most people criticize emacs user for trying to do everything with emacs except editing. So let's begin with editing for which emacs was built for.
+Most people criticize emacs user for trying to do everything with emacs except editing. So let's begin with editing for which emacs was initially built.
 
 Emacs can handle pretty much any type of file. Just type 
 	
 	$ emacs myFile.ext
 
-Emacs does syntax highlighting and indentation. It usually follows GNU style of indentation. The best thing about emacs is that you can customize it the way you want. I usuall like [Allman] indentation when editing `C` code with `4 spaces`. To change it, add this to your `~/.emacs` file.
+Emacs also does syntax highlighting and indentation. It usually follows GNU style of indentation. The best thing about emacs is that you can customize it the way you want. I usually like [Allman] indentation when editing `C` code with `4 spaces`. To change it, add this to your `~/.emacs` file.
 
 {% highlight common-lisp  %}
     (setq c-default-style "linux"
@@ -48,7 +48,7 @@ Emacs does syntax highlighting and indentation. It usually follows GNU style of 
 
 #### Emacs for Backup
 
-Emacs by default creates a backup file for every file it edits. It's usually named as the original file followed by tildel like foo~. Though backup files are life saver, they are difficult to manage if they accumulate on the same folder. To save all your files in one place, add this to your `~/.emacs`
+Emacs by default creates a backup file for every file it edits. It's usually named as the original file followed by tilde like FileName~. Though backup files are life saver, they are difficult to manage if they accumulate on the same folder. To save all your files in one place, let's say in folder `.saves`, add this to your `~/.emacs`
 
 {% highlight common-lisp  %}
 (setq backup-directory-alist `(("." . "~/.saves")))
@@ -56,7 +56,7 @@ Emacs by default creates a backup file for every file it edits. It's usually nam
 
 #### Emacs for Browsing
 
-If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses a extention `w3m.el` which uses `w3m` which itself is a `text-browser`. Of course there are `Lynx` and other text editors, but integrating w3m with emacs is very fast. 
+If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses an extension `w3m.el` which uses `w3m` which itself is a `text-browser`. Of course there are `Lynx` and other text editors, but integrating w3m with emacs is very fast. 
 
 {% highlight common-lisp  %} 
 (add-to-list 'load-path "~/emacs-w3m")
@@ -98,21 +98,20 @@ Replace user with you're gmail username.Also add this to your `~/.authinfo` file
 	machine smtp.gmail.com login user@gmail.com password secret port 587
 
 
-The password field is optional. Type `M-x gnus` to start GNUS. To compose email, type `m`. 
+The password field is optional. Type `M-x gnus` to start GNUS. To compose email, type `m`. Press `C-c C-c` to send mail.
 
 ![gnus](/img/gnus.png "GNUS")
 
-Press `C-c C-c` to send mail.
 
 #### Emacs for Photo Editing
 
-The other task I usally do is look up few photos. Emacs can do more than just viewing the pictures, it has a inbuilt powerful power editor called `Image-Dired`. Simply press `M-x image-dired` on your emacs.
+The other task I usually do is look up few photos. Emacs can do more than just viewing the pictures, it has an inbuilt powerful power editor called `Image-Dired`. Simply press `M-x image-dired` on your emacs.
 
 ![Image-dired](/img/image_dired.png "Image Dired")  
 
 #### Emacs for composing Documents
 
-This is one of the feature I find unparalled to emacs. The official website says about org mode, "Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system". 
+This is one of the feature I find unparalleled to emacs. The official website says about org mode, "Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system". 
 
 ![orgMode](/img/orgMode.png "Org")
 
@@ -130,7 +129,7 @@ If you love *LaTeX*, then there are more reasons to love `org mode`. You could i
 
 #### Emacs for Secret Writing
 
-If you happen to maintain a personal diary, you must be paranoid about it's secrecy. Emacs could be used to store your personal information. It uses `GNU GPG` to save the file. Open any file in emacs with `gpg` extention.To save it, press `C-s` which asks for which type of encryption method to use. Just use the default and press OK. This would prompt for a passphrase for saving. 
+If you happen to maintain a personal diary, you must be paranoid about it's secrecy. Emacs could be used to store your personal information. It uses `GNU GPG` to save the file. Open any file in emacs with `gpg` extension.To save it, press `C-s` which asks for which type of encryption method to use. Just use the default and press OK. This would prompt for a passphrase for saving. 
 
 ![secretGPG](/img/secretGPG.png "GPGa")
 
@@ -175,7 +174,7 @@ Then type `M-x emms-play-directory` to navigate to music directory and play file
 
 #### Emacs for Social Networking
 
-If you cling for user experience, it's better to use regular browsers for social networking. And it sometimes becomes difficul to replicate all functionality of websites in emacs. Nevertheless, there's a ways to circument some of the limitations and use social networking in emacs. 
+If you cling for user experience, it's better to use regular browsers for social networking. And it sometimes becomes difficult to replicate all functionality of websites in emacs. Nevertheless, there's a ways to circumvent some of the limitations and use social networking in emacs. 
 
 To use facebook, visit `http://m.facebook.com`. If you want login information to remain store, add cookie information in emacs. 
 {% highlight common-lisp %}
@@ -194,7 +193,7 @@ Last but not least, emacs also has lots of interesting features for amusement.
 
 ![doctor](/img/doctor.png "doctor")
 
-1. Type `M-x doctor` to talk to a pyschologist. 
+1. Type `M-x doctor` to talk to a psychologist. 
 2. Type `M-x tetris` to play tetris. 
 3. Type `M-x snake` to play classic snake game.
 4. Type `M-x pong` to play ping pong.
@@ -209,7 +208,7 @@ For more visit emac's [games].
 
 #### Conclusion
 
-Emacs is not meant to be a **all-in-one** substitue for all softwares. Of course certain softwares are better at doing specific tasks. Emacs wins over the fact that I rarely needs to close it. One can easily customize and extend emacs using elisp, a dialect of lisp. If you're convinced of the power of emacs, let me welcome you to the [Church of Emacs]. If not, let's part ways with an old joke, "*The Emacs opearting system needs a better editor*".
+Emacs is not meant to be an **all-in-one** substitute for all softwares. Of course certain softwares are better at doing specific tasks. Emacs wins over the fact that I rarely needs to close it. One can easily customize and extend emacs using elisp, a dialect of lisp. If you're convinced of the power of emacs, let me welcome you to the [Church of Emacs]. If not, let's part ways with an old joke, "*The Emacs operaating system needs a better editor*".
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a> 	{% endif %}
