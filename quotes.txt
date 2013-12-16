@@ -202,7 +202,7 @@ question = ( to ) ? be : ! be; <br>-- Wm. Shakespeare
 Persons attempting to find a motive in this narrative will be prosecuted;<br>persons attempting to find a moral in it will be banished; persons attempting<br>to find a plot in it will be shot.  By Order of the Author<br>-- Mark Twain, "The Adventures of Huckleberry Finn"
 F.S. Fitzgerald to Hemingway:<br>"Ernest, the rich are different from us."<br>Hemingway:"Yes.  They have more money."
 "There are two motives for reading a book; one, that you enjoy it; the other, that you can boast about it." - Bertrand Russell
-"During the course of my life I have made provision for everything, bat I forgot about death. Alas, I die unprepared." - Cesare Borgia, the statesman.
+"During the course of my life I have made provision for everything, but I forgot about death. Alas, I die unprepared." - Cesare Borgia, the statesman.
 "Pardon me, sir. I did not do it on purpose" - said by: Queen Marie Antoinette after she accidentally stepped on the foot of her executioner as she went to the guillotine
 "Now, now, my good man, this is no time for making enemies." - said by: Voltaire when asked by a priest to renounce Satan.
 "The only certainty life contains is death." - Patricia Briggs
@@ -239,3 +239,7 @@ A young man wrote to Mozart and said:<br>Q: "Herr Mozart, I am thinking of writi
 "My Best friend is a person who will give me a book I have not read" - Abraham lincoln 
 "The opinion of the intelligent is better than the certainty of the ignorant" - Egyptian Proverb
 "The truth, it has the habit of revealing itself" - Agatha Christie
+"Inside my empty bottle I was constructing a lighthouse while all the others were making ships." - Charles Simic
+"You will find poetry nowhere unless you bring some of it with you" - Joseph Joubert
+"What would you do if you weren't afraid?"- Spencer Johnson
+"If you pick up a starving dog and make him prosperous, he will not bite you. That is the difference between dog and man." - Mark Twain

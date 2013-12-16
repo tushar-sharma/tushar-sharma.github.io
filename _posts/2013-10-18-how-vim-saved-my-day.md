@@ -52,7 +52,7 @@ He began scrolling down the file. It took him more than two minutes to get to th
 
 “How do you do it here”, I asked hoping if there was a trick.
 
-“You have to do it manually”, he continued, “No other way”. Taking cognizance of my crestfallen face he said, “Don't worry. There's no hurry. You can take few days as you are new”, he said. 
+“You have to do it manually”, he continued, “No other way”. Taking cognisance of my crestfallen face he said, “Don't worry. There's no hurry. You can take few days as you are new”, he said. 
 
 With those words he left me with this task. Nothing peeves a programmer more than doing a monotonous repetitive work. But as every cloud has a sliver lining, similarly every problem too has a smarter solution.
 
@@ -70,7 +70,7 @@ Now its time to return to our problem i.e the file in Picture 1. I had to edit t
 
 1. Start recording the macro
 2. Jump to Fourth element of the file
-3. Cut the whole line from this element upto the end
+3. Cut the whole line from this element up to the end
 4. Paste in the beginning of file
 5. Go to last element
 6. Cut the last element 
@@ -84,7 +84,7 @@ To translate the above steps in ViM
 1. Press `qa` to start the macro and save it in register a
 2. Press `/` to search for comma. Press `n` 2 times to reach fourth element
 3. Press `v` + `$` + `d` to cut the line from fourth element to end
-4. Press `0` to go to begining of file. Press `p` to paste.
+4. Press `0` to go to beginning of file. Press `p` to paste.
 5. Press `$` to reach last element. 
 6. Press `v` + `?` + `'` to cut the last element
 7. Press `?` to reverse search comma and press `n`. Press `p` to paste.  
