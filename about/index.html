@@ -3,113 +3,56 @@ layout: default
 title: about
 ---
 
-<script type="text/javascript">
-         function calcHeight()
-         {
-         //find the height of the internal page
-         var head_height= document.getElementById('head_iframe').contentWindow.document.body.scrollHeight;
+<script src="{{ root_url}}/js/jquery-1.7.1.min.js"></script>
+</script>
+<h2 class="entry-title">About</h2>
 
-         //change the height of the iframe
-         document.getElementById('head_iframe').height = head_height;
-         }
+<script language="JavaScript">
 
+var text = "<p>Greetings Stranger! Thanks for finding a way out of the mesh of the behemoth web in visisting a tiny little nest of mine.</p><p>If you could roll out a dime of your time in knowing me, I would appreciate our acquaintance.</p>" + "<p>Professional Bio ".link("prof.html") + "</p>" + "<p>" + "OR".bold() +  "</p>" + "<p>Personal Bio ".link("personal.html") + "(if you can digest nonsense)</p>";
+var delay=30;
+var currentChar=1;
+var destination="[not defined]";
 
+function type()
+{
+  if (document.getElementById)
+  {
+    var dest=document.getElementById(destination);
+    if (dest)
+    {
+      dest.innerHTML=text.substr(0, currentChar);
+      currentChar++
+      if (currentChar>text.length)
+      {
+        currentChar=1;
+        setTimeout("type()", 50000);
+      }
+      else
+      {
+        setTimeout("type()", delay);
+      }
+    }
+  }
+}
+ 
+function startTyping(textParam, delayParam, destinationParam)
+{
+  text=textParam;
+  delay=delayParam;
+  currentChar=1;
+  destination=destinationParam;
+  type();
+}
 </script>
 
-<iframe width="100%" src="head.html" 
-    scrolling="no" id="head_iframe" onLoad="calcHeight();" height="1px" frameborder="0" ></iframe>
-
-<p>
-<blockquote class="cl">
-<i class="icon-quote-left"></i>&nbsp;Know Thyself&nbsp;<i class="icon-quote-right"></i>
-<br>
-― The Oracle at Delphi
-</blockquote>
-</p>
-
-
-<style type="text/css">
-.txt{ margin-top: 5px; }
-.cl{ color: rgb(51, 153, 204);}
- li.txt {list-style: none outside none; }
-.logo { float:left; display: block;  width: 24px; height: 24px; 
-}
-
-.mylogo { 
-padding-top: 2px;
-padding-left: 20px;
-}
-
-</style>
-
-<div style="clear:both;"></div>
-<div>
-<span style="float:left; width:50%;">
-
-<p>I am passionate about: </p>
-<ul>
-<li class="txt">
-  <a class="logo" href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="_blank"><i class="icon-linux icon-large"></i></a><span class="mylogo">FOSS</span> 
-</li>  
-
-<li class="txt">
-  <a class="logo" href="http://poetry.com/users/347898" target="_blank"><i class="icon-pencil icon-large"></i></a><span class="mylogo">Poetry</span>
-</li>  
-<li class="txt">
-  <a class="logo" href="/../books/" ><i class="icon-book icon-large"></i></a><span class="mylogo">Books</span>
-</li>
-<li class="txt">
-  <a class="logo" href="http://codeforces.com/profile/discovery" target="_blank"><i class="icon-code icon-large"></i></a><span class="mylogo">Code</span>
-</li>
-<li class="txt">
-  <a class="logo" href="http://en.wikipedia.org/wiki/Badminton" target="_blank"><i class="icon-zoom-in icon-large"></i></a><span class="mylogo">Badminton</span>
-</li>
-
-<li class="txt">
-  <a class="logo" href="https://soundcloud.com/tushar-sharma-14" target="_blank"><i class="icon-music icon-large"></i></a><span class="mylogo">Music</span>
-</li>
- 
-</ul>
-</span>
-<span style="float:right; widht:50%;">
-<p>Feel free to : </p>
-<ul class="myicon">
-<li class="txt"> 
-  <a class="logo" href="/../contact/" ><i class="icon-bell icon-large"></i></a><span class="mylogo">say Hello</span>
-</li> 
-
-<li class="txt"> 
-  <a class="logo" href="/../preview/" ><i class="icon-play-circle icon-large"></i></a><span class="mylogo">preview Site</span>
-</li> 
-
-<li class="txt">
-  <a class="logo" href="timeline.html"><i class="icon-film icon-large"></i></a><span class="mylogo">see Timeline</span>
-</li>
-
-<li class="txt">
- <a class="logo" href="http://www.scribd.com/awake9" target="_blank"><i class="icon-bar-chart icon-large"></i></a><span class="mylogo">follow Publications</span>
-</li>
-
-<li class="txt"> 
-  <a class="logo" href="https://delicious.com/2shar" target="_blank"><i class="icon-bookmark icon-large"></i></a><span class="mylogo">follow Bookmarks</span>
-
-</li> 
-
-
-<li class="txt">
-  <a class="logo" target="_blank" href="https://dl.dropboxusercontent.com/u/85584172/resume.pdf" ><i class="icon-anchor icon-large"></i></a><span class="mylogo">Download résumé</span>
-</li>
-
-</ul>
-</span>
+<div  id="textDestination"> 
 </div>
 
-<!--
-<p>
-<blockquote class="cl">
-<i class="icon-quote-left"></i>&nbsp;Life is like a river dragging all but dreams...that never sink...but float below the velvet sky...guiding us through!&nbsp;<i class="icon-quote-right"></i> <br>
-― me 
-</blockquote>
-</p>
--->
 
+<script language="JavaScript">
+(function ($) {
+  startTyping(text, 30, "textDestination");
+  // All your code here
+})(jQuery);
+</script>
