@@ -1,4 +1,4 @@
-<link href='../css/styles.css.css' rel='stylesheet' />
+<link rel='stylesheet' href='../css/styles.css.css' />
 <p>Advanced Encryption Standard, a symmetric key algorithm, implemented in C++.</p>
 
 <p><a href='http://www.scribd.com/doc/164002353/Study-and-Implementation-of-various-Cryptographic-techniques#page=42'>details</a> &#8212; <a href='https://github.com/tushar-sharma/aes'>code</a></p>
@@ -19,25 +19,25 @@
 <li>Byte Substitution Transformation</li>
 </ul>
 
-<p>Each element of state is non-linearly mapped to corresponding element in the s-bx. <sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup></p>
+<p>Each element of state is non-linearly mapped to corresponding element in the s-bx. <sup id='fnref:1'><a rel='footnote' href='#fn:1'>1</a></sup></p>
 
-<p><img src='/img/sub.png' alt='Byte_Sub' /></p>
+<p><img alt='Byte_Sub' src='/img/sub.png' /></p>
 
 <ul>
 <li>Shift Rows</li>
 </ul>
 
-<p>Rows are cyclically shifted to the left with offset of 0, 1, 2, 3 for rows of 1, 2, 3 and 4 respectively. <sup id='fnref:2'><a href='#fn:2' rel='footnote'>2</a></sup></p>
+<p>Rows are cyclically shifted to the left with offset of 0, 1, 2, 3 for rows of 1, 2, 3 and 4 respectively. <sup id='fnref:2'><a rel='footnote' href='#fn:2'>2</a></sup></p>
 
-<p><img src='/img/sr.png' alt='Shift_Rows' /></p>
+<p><img alt='Shift_Rows' src='/img/sr.png' /></p>
 
 <ul>
-<li>Mix columns <sup id='fnref:3'><a href='#fn:3' rel='footnote'>3</a></sup></li>
+<li>Mix columns <sup id='fnref:3'><a rel='footnote' href='#fn:3'>3</a></sup></li>
 </ul>
 
 <p>Each new column (ro, r1, r2, r3) is generated from old column (a0, a1, a2, a3).</p>
 
-<p><img src='/img/mc1.png' alt='Mc' /></p>
+<p><img alt='Mc' src='/img/mc1.png' /></p>
 
 <p>Here, r0 = {2 . a0} + {3 . a1} + {1 . a2} + {1. a3} r1 = {1 . a0} + {2 . a1} + {3 . a2} + {1. a3} r2 = {1 . a0} + {1 . a1} + {2 . a2} + {1 . a3} r3 = {3 . a0} + {1 . a1} + {1 . a2} + {2 . a3}</p>
 
@@ -78,8 +78,8 @@
 <p><a href='http://www.scribd.com/doc/164002353/Study-and-Implementation-of-various-Cryptographic-techniques#page=42'>details</a> &#8212; <a href='https://github.com/tushar-sharma/aes'>code</a></p>
 <div class='footnotes'><hr /><ol><li id='fn:1'>
 <p>http://goo.gl/lfkNI</p>
-<a href='#fnref:1' rev='footnote'>&#8617;</a></li><li id='fn:2'>
+<a rev='footnote' href='#fnref:1'>&#8617;</a></li><li id='fn:2'>
 <p>http://goo.gl/j8YGJ</p>
-<a href='#fnref:2' rev='footnote'>&#8617;</a></li><li id='fn:3'>
+<a rev='footnote' href='#fnref:2'>&#8617;</a></li><li id='fn:3'>
 <p>Understanding AES Mix-Columns Transformation Calculation by Kit Choy Xintong</p>
-<a href='#fnref:3' rev='footnote'>&#8617;</a></li></ol></div>
+<a rev='footnote' href='#fnref:3'>&#8617;</a></li></ol></div>

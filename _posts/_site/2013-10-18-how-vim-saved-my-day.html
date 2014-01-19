@@ -1,7 +1,6 @@
-<link href='../css/post.css' rel='stylesheet' />
 <p>It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle. Though I am a FOSS enthusiast, my first job landed me to just another India&#8217;s IT company. I vividly remember the countless occasions when ViM saved my day. <!-- truncate_here --></p>
-<div>Tags:  <a class='mytag' href='/tag/vi' title='View posts tagged with &quot;vi&quot;'>vi</a>     <a class='mytag' href='/tag/vim' title='View posts tagged with &quot;vim&quot;'>vim</a>     <a class='mytag' href='/tag/editor' title='View posts tagged with &quot;editor&quot;'>editor</a>     <a class='mytag' href='/tag/code' title='View posts tagged with &quot;code&quot;'>code</a>    </div><div style='clear:both;padding-top:20px;padding-bottom:20px;' /><div>
-<img src='/../img/vim.png' class='thumb' />
+<div>Tags:  <a class='mytag' title='View posts tagged with &quot;vi&quot;' href='/tag/vi'>vi</a>     <a class='mytag' title='View posts tagged with &quot;vim&quot;' href='/tag/vim'>vim</a>     <a class='mytag' title='View posts tagged with &quot;editor&quot;' href='/tag/editor'>editor</a>     <a class='mytag' title='View posts tagged with &quot;code&quot;' href='/tag/code'>code</a>    </div><div style='clear:both;padding-top:20px;padding-bottom:20px;' /><div>
+<img src='/img/vim.png' class='thumb' />
 <p>
 It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India's IT company. I vividly remember the countless occasions when ViM saved my day.
 </p>
@@ -20,27 +19,27 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 
 <p>He showed me a csv file. Unfortunately I can&#8217;t post the original files but I&#8217;ve tried to create resemblance of original file. See the picture 1 below.</p>
 
-<p><img src='/img/figure1.png' alt='Picture1' /></p>
+<p><img alt='Picture1' src='/img/figure1.png' /></p>
 
 <p>He began scrolling down the file. It took him more than two minutes to get to the middle of the file while my eyes remained glued to the screen counting the number of lines. At last when he reached the bottom, deducing my curiosity he said, “It has 2000 lines”.</p>
 
 <p>“All you have to do”, he said, “is to pick each line of this CSV file and paste it to another text file with slight alteration”. He showed me another text file which resembled to Picture 2.</p>
 
-<p><img src='/img/figure2.png' alt='Picture2' /></p>
+<p><img alt='Picture2' src='/img/figure2.png' /></p>
 
 <p>“Each line should be similar to the other file”, he said pointing to Picture 2. Not only did I have to rearrange items of the line but also had to insert some extra text to match Picture 2.</p>
 
 <p>“How do you do it here”, I asked hoping if there was a trick.</p>
 
-<p>“You have to do it manually”, he continued, “No other way”. Taking cognizance of my crestfallen face he said, “Don&#8217;t worry. There&#8217;s no hurry. You can take few days as you are new”, he said.</p>
+<p>“You have to do it manually”, he continued, “No other way”. Taking cognisance of my crestfallen face he said, “Don&#8217;t worry. There&#8217;s no hurry. You can take few days as you are new”, he said.</p>
 
 <p>With those words he left me with this task. Nothing peeves a programmer more than doing a monotonous repetitive work. But as every cloud has a sliver lining, similarly every problem too has a smarter solution.</p>
 
 <h4 id='hello_vim'>Hello ViM</h4>
 
-<p>ViM stands for Vi Improved which is clone based on VI editor. If you&#8217;ve never heard of vi, chances are you are still accustomed to the world of WYSIWYG editors like Notepad, etc. Well, those editors are great if you&#8217;re daily tasks are to simply edit, copy, paste, search, etc but if you want to get you&#8217;re hands dirty, vim is the panacea every programmer wants. Of course few other editors like emacs are equally powerful (or more<sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup>), but this post is about my romance with ViM (Sorry Emacs).</p>
+<p>ViM stands for Vi Improved which is clone based on VI editor. If you&#8217;ve never heard of vi, chances are you are still accustomed to the world of WYSIWYG editors like Notepad, etc. Well, those editors are great if you&#8217;re daily tasks are to simply edit, copy, paste, search, etc but if you want to get you&#8217;re hands dirty, vim is the panacea every programmer wants. Of course few other editors like emacs are equally powerful (or more<sup id='fnref:1'><a rel='footnote' href='#fn:1'>1</a></sup>), but this post is about my romance with ViM (Sorry Emacs).</p>
 
-<p>Ideally I would want to lay my hands on some Unix clone to get such task done. But my system was running legacy operating system, I did not have that luxury. Nevertheless most free<sup id='fnref:2'><a href='#fn:2' rel='footnote'>2</a></sup> softwares today easily run on non-Unix operating systems (like Windows). I fired internet explorer (to download firefox :) ) and downloaded a portable version of ViM.</p>
+<p>Ideally I would want to lay my hands on some Unix clone to get such task done. But my system was running legacy operating system, I did not have that luxury. Nevertheless most free<sup id='fnref:2'><a rel='footnote' href='#fn:2'>2</a></sup> softwares today easily run on non-Unix operating systems (like Windows). I fired internet explorer (to download firefox :) ) and downloaded a portable version of ViM.</p>
 
 <h4 id='smart_way'>Smart Way</h4>
 
@@ -53,7 +52,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 
 <li>Jump to Fourth element of the file</li>
 
-<li>Cut the whole line from this element upto the end</li>
+<li>Cut the whole line from this element up to the end</li>
 
 <li>Paste in the beginning of file</li>
 
@@ -79,7 +78,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 
 <li>Press <code>v</code> + <code>$</code> + <code>d</code> to cut the line from fourth element to end</li>
 
-<li>Press <code>0</code> to go to begining of file. Press <code>p</code> to paste.</li>
+<li>Press <code>0</code> to go to beginning of file. Press <code>p</code> to paste.</li>
 
 <li>Press <code>$</code> to reach last element.</li>
 
@@ -96,7 +95,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 
 <p>Of course you can reduce the number of steps by a more elegant solution. But this alone helped me solve my task. See my resulted file in Picture 3 below.</p>
 
-<p><img src='/img/figure3.png' alt='Picture3' /></p>
+<p><img alt='Picture3' src='/img/figure3.png' /></p>
 
 <h4 id='even_more_smart_way'>Even More Smart Way</h4>
 
@@ -119,10 +118,10 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 <h4 id='conclusion'>Conclusion</h4>
 
 <p>ViM is a wonderful editor if only you get to know it. The following task took me less than 15 minutes to complete. Of course less than 15 minutes feat dazzled my supervisor but more than the approval it&#8217;s the satisfaction that comes from solving problems smartly. So what&#8217;s your story? Have ViM ever saved your day?</p>
-<nav class='pagination clear' style='padding-bottom:20px;'>
+<nav style='padding-bottom:20px;' class='pagination clear'>
   
 </nav><div class='footnotes'><hr /><ol><li id='fn:1'>
 <p>There&#8217;s a famous editor war between VI and Emacs</p>
-<a href='#fnref:1' rev='footnote'>&#8617;</a></li><li id='fn:2'>
+<a rev='footnote' href='#fnref:1'>&#8617;</a></li><li id='fn:2'>
 <p>Free means as if freedom not gratis</p>
-<a href='#fnref:2' rev='footnote'>&#8617;</a></li></ol></div>
+<a rev='footnote' href='#fnref:2'>&#8617;</a></li></ol></div>
