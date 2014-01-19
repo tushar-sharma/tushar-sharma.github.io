@@ -22,6 +22,9 @@ I once complained to my friend of his desktop on his computer. His desktop was a
 </p>
 </div>
 
+<pre><code>This article has been published in <a href="http://www.linuxforu.com" target="_blank">LinuxforYou</a> magazine,January 2014 issue
+</code></pre>
+	
 **Note:** For those who are unfamiliar with emacs, Key abbreviations used :
 
 1. M – x means holding meta key (usually Esc) and x
