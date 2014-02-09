@@ -8,36 +8,96 @@ title: My Personal Bio
   display: block;
   margin: 0px auto 20px;
 }
+
+.myheading{
+       font-family: Georgia, "Times New Roman", Times, serif;
+        font-size:24px;
+	margin-top: 5px; margin-bottom: 0px;
+	text-align: center;
+        font-weight: normal;
+        color: #222;
+}
+.mysubheading{
+       font-family: "Lucida Grande", Tahoma;
+	font-size: 10px;
+	font-weight: lighter;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #666666;
+        margin-top: 10px;
+	text-align: center!important;
+	letter-spacing: 0.3em;
+}
+
+.wp_caption{margin-top:20px; }
+
+.myalign {float: left; margin-right: 20px;}
+
+.img_cover {
+max-width: 550px;
+padding: 4px;
+border: 1px solid #e5e5e5;
+box-shadow: 2px #f7f7f7;
+}
+
+.mythumbnail {
+width: 200px;
+height: 200px;
+}
+.mythumbnail2 {
+width: 100px;
+height: 100px;
+}
+<
 </style>
 
 <img style="padding:5px;" src="{{ root_url }}/img/little_world.png" alt="Little World pic" class="aligncenter size-medium wp-image-571">
-</p>
 <div style="clear:both;"></div>
 
-<p>The universe is 13.798 billion years old since the Big Bang. Our tiny blue planet floates around the Sun at 100,000 km/hr. Completely oblivious of the gigantic universe in a tiny valley of Dehradun, I was born. Since my memory was still <i>under construction</i>, I had to believe what my parents told me that this is me.
+<p class="myheading">Chapter 1</p>
+<p class="mysubheading">In The Beginning</p>
+
+
+<p class="entry_content">
+<img class="mythumbnail myalign img_cover"  style="padding:5px;" src="{{ root_url }}/img/childhood2.jpg" width="350px;" height="250px;" alt="Childhood pic" class="aligncenter size-medium wp-image-571">
+The universe is 13.798 billion years old since the Big Bang. Our tiny blue planet floates around the Sun at 100,000 km/hr. Completely oblivious of the gigantic universe in a tiny valley of Dehradun, I was born. Since my memory was still <i>under construction</i>, I had to believe what my parents told me that this is me.
 </p>
 
-<img style="padding:5px;" src="{{ root_url }}/img/childhood2.jpg" width="350px;" height="250px;" alt="Childhood pic" class="aligncenter size-medium wp-image-571">
+<!--<img style="padding:5px;" src="{{ root_url }}/img/childhood2.jpg" width="350px;" height="250px;" alt="Childhood pic" class="aligncenter size-medium wp-image-571">-->
 <div style="clear:both;"></div>
 
-<p>
+<p class="wp_caption">
 My nomenclature was done by my mosi <a href="#">[1]</a> and hence I was called Tushar. I was fortunate enough to escape the pangs of poverty or the ugly side of life. In fact much of my childhood had been joie de vivre. Often my relatives recollect memory of me as a scamp always ready to scoot away into the wild.
 </p>
 
 <p>
 <p>
-<img style="padding:5px;" src="{{ root_url }}/img/childhood1.jpg" width="350px;" height="250px;" alt="Childhood pic" class="aligncenter size-medium wp-image-571">
+<center>
+<img align="center" style="padding:5px;" class="img_cover"  src="{{ root_url }}/img/childhood1.jpg" width="350px;" height="250px;" alt="Childhood pic" class="aligncenter size-medium wp-image-571">
+</center>
 </p>
 <div style="clear:both;"></div>
+
+<p class="myheading">Chapter 2</p>
+<p class="mysubheading">growing up</p>
+
 
 <div style="clear:both;"></div>
 <p> While growing up I struggled with <a href="http://en.wikipedia.org/wiki/Lisp" target="_blank">lisp</a> yet I hardly felt any trepidation because of it. I even joined music choir at school though I sucked. Mostly I reminisce old days when my friends use to suggest me remedies which included from eating chillies to some bizarre tips like keeping the spoon in the mouth at a particular orientation.
 </p>
 
-<p> 
-<img style="float:left; padding:5px;" src="{{ root_url }}/img/glider.jpg" alt="Glider pic" widht="100px;" height="100px;">
-I am a computer hobbyist. My infatuation with computer began at my sophomore years at college. I am an ardent follower of Free and Open Source Software (FOSS). I advocate internet freedom and criticize acts like section 66A of Indian Information technology, SOPA, PIPA, etc. Governments capitalize on pubic fear to prosecute the innocents like Aaron Swartz [<a href="#2">2</a>] and the Mumbai girls who were arrested for liking the facebook post [<a href="#3">3</a>].
+<div style="clear:both;"></div>
+
+<p class="myheading">Chapter 3</p>
+<p class="mysubheading">Present</p>
+
+
+<p class="entry_content">
+<img class="mythumbnail2 myalign img_cover"  style="padding:5px;" src="{{ root_url }}/img/glider.jpg" width="350px;" height="250px;" alt="Childhood pic" class="aligncenter size-medium wp-image-571">
+I am a aspiring computer hobbyist, though I am not quite in the league of other hobbyist. My infatuation with computer began at my sophomore years at college. I am an ardent follower of Free and Open Source Software (FOSS). I advocate internet freedom and criticize acts like section 66A of Indian Information technology, SOPA, PIPA, etc. Governments capitalize on pubic fear to prosecute the innocents like Aaron Swartz [<a href="#2">2</a>] and the Mumbai girls who were arrested for liking the facebook post [<a href="#3">3</a>].
 </p>
+
+
 
 <div style="clear:both;"></div>
 <p>The grace of the majestic sun, the eloquence of the night accompanied by nomadic clouds, different people interwoven in their own unique story, with vibrant flora and fauna surrounded with magnificent cosmos makes me recall an old Sanskrit phrase of Vasudhaiva Kutumbakam [<a href="#4">4</a>] which means the whole universe is one whole family.
@@ -47,7 +107,6 @@ I am a computer hobbyist. My infatuation with computer began at my sophomore yea
 
 <p>...to be continued</p>
 
-<img width="350px" height="250px" style="padding:5px;" src="{{ root_url }}/img/kiss.png" alt="KISS pic" class="aligncenter size-medium wp-image-571">
 
 <p>Feel free to drop me a <a href="{{ root_url }}/contact">line</a></p>
 <hr>

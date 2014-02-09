@@ -2,6 +2,11 @@
 .cl{ width: 200px;  color: rgb(51, 153, 204);}
 .cl2{color: rgb(51, 153, 204);}
 .like-pre { white-space: pre;}
+.myterminal{
+        color: #424242;
+        font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	font-size: 25pt;
+}
 </style>
 
 <script src="{{ root_url}}/js/jquery-1.7.1.min.js"></script>
@@ -28,18 +33,19 @@ function myIP() {
     return false;
 }
 
-jQuery(document).ready(function($) {
- 
+$(function() {
+    var aOnce = true;
 
-var greettxt = "" +
-" __      __           .__                                       \n" +
+    var greetTxt = " __      __           .__                                       \n" +
 "/  \\    /  \\   ____   |  |     ____     ____     _____     ____  \n" +
 "\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  \n" +
 " \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
 "  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
 "       \\/         \\/              \\/                 \\/       \\/ \n\n\n" +
-"      ----   to Random Wits   ----  (my digital footprint)  \n\n\n" + 
-"<div class=\"cl2\"> " +  
+"      ----   to Random Wits   ----  (my digital footprint)  \n\n\n"; 
+
+ 
+    var picTxt = "<div class=\"cl2\"> " +  
 "               _  _  _  _ \n" +
 "              ( `  `  `  `) \n" + 
 "             (  Type help  ) \n" +
@@ -54,38 +60,77 @@ var greettxt = "" +
 "    /'\\_   _/`\\ \n" + 
 "    \\___)=(___/\n\n" +
 "</div>"; 
-
-
-          
-    var id = 1;
-    $('#foo').terminal(function(command, term) {
  
-        arg = command.substr(0,command.indexOf(' ')); 
-        toSearch = command.substr(command.indexOf(' ')+1); 
 
-         if (command == 'help') { 
-             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">resume</span> mini resume, links to html version.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
+    var anim = false;
+    function typed(finish_typing) {
+        return function(term, message, delay, finish) {
+            anim = true;
+            var prompt = term.get_prompt();
+            var c = 0;
+            if (message.length > 0) {
+                term.set_prompt('');
+                var interval = setInterval(function() {
+                    term.insert(message[c++]);
+                    if (c == message.length) {
+                        clearInterval(interval);
+                        // execute in next interval
+                        setTimeout(function() {
+                            // swap command with prompt
+                            finish_typing(term, message, prompt);
+                            anim = false
+                            finish && finish();
+                        }, delay);
+                    }
+                }, delay);
+            }
+        };
+    }
+    var typed_prompt = typed(function(term, message, prompt) {
+        // swap command with prompt
+        term.set_command('');
+        term.set_prompt(message + ' ');
+    });
+    var typed_message = typed(function(term, message, prompt) {
+        term.set_command('');
+        term.echo(message)
+        term.set_prompt(prompt);
+    });
+    $('#foo').terminal(function(cmd, term) {
+        var finish = false;
+        var msg = "\nHi " + cmd + "! Feel free to explore my site...\n";
+        term.set_prompt('$ ');
+
+        /*typed_message(term, msg, 100, function() {
+            finish = true;
+        });*/
+      
+        arg = cmd.substr(0,cmd.indexOf(' ')); 
+        toSearch = cmd.substr(cmd.indexOf(' ')+1); 
+
+ 
+        if (cmd == "help") {
+
+            mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
           
             term.echo(mystr, {
               raw: function(div) {
-
             }
-         });
-         } else if (command == "about") {
-
-     term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/about\">...more</a><br>", {
+         });  
+        } else if (cmd == "about") {
+           term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/about\">...more</a><br>", {
               raw: function(div) {
             }
          });
 
-         } else if (command == "ls") {
+         } else if (cmd == "ls") {
 
-     term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
+           term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
               raw: function(div) {
             }
          });
 
-        } else if (arg == "cd" || command == "cd") {
+        } else if (arg == "cd" || cmd == "cd") {
  
           ip = myIP(); 
      term.echo("You've tried to gain access to something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI. To avoid reporting it, please submit an apology <a href=\"/../contact/\">here</a>.", {
@@ -94,7 +139,7 @@ var greettxt = "" +
          });
 
 
-       } else if (arg == "cat" || command == "cat") {
+       } else if (arg == "cat" || cmd == "cat") {
 
  
           ip = myIP(); 
@@ -104,7 +149,7 @@ var greettxt = "" +
          });
 
 
-       }  else if (arg == "dir" || command == "dir") {
+       }  else if (arg == "dir" || cmd == "dir") {
 
      term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
               raw: function(div) {
@@ -112,41 +157,41 @@ var greettxt = "" +
          });
 
 
-        }else if (command == "contact") {
+        }else if (cmd == "contact") {
           window.location.href="/contact";
-        } else if (command == "preview") {
+        } else if (cmd == "preview") {
           window.location.href="/preview";
-        } else if (command == "projects") { 
+        } else if (cmd == "projects") { 
           window.location.href="/projects";
-        } else if (command == "blog") {
+        } else if (cmd == "blog") {
           window.location.href="/blog";
-        } else if (arg == "search" || command == "search") {
-            if (toSearch == "" || command =="search")  
+        } else if (arg == "search" || cmd == "search") {
+            if (toSearch == "" || cmd =="search")  
               term.echo("Wrong Parameters. Usage: search <to search>");
             else window.location.href="/search/?q=" + toSearch;
-        }  else if (command == "books") {
+        }  else if (cmd == "books") {
           //window.open('/books', '_blank');
           window.location.href="/books";
 
-        } else if (command == "games") {
+        } else if (cmd == "games") {
           window.location.href="/games";
-        } else if (command == "qrcode") {
+        } else if (cmd == "qrcode") {
             term.echo("<img src=\"http://api.qrserver.com/v1/create-qr-code/?data=MECARD%3AN%3ASharma%2CTushar%3BEMAIL%3Atushar%40randomwits.com%3BTEL%3A%2B919837264416%3BURL%3Ahttp%3A%2F%2Frandomwits.com%3B%3B&#38;size=150x150&#38;prov=goqrme\" alt=\"MECARD:N:Sharma,Tushar;EMAIL:tushar@randomwits.com;TEL:+919837264416;URL:http://randomwits.com;; \"  /> ", {
               raw: function(div) {
             }
          });
 
-        } else if(command == "hack") {
+        } else if(cmd == "hack") {
 
              javascript:var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
  
-         }else if (command == "resume") {
+         }else if (cmd == "resume") {
          
            term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" target=\"_blank\" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" >..resume</a>", {
               raw: function(div) {
             }
          });
-        } else if (command == "hit") {
+        } else if (cmd == "hit") {
             jQuery.get('/../quotes.txt', function(data) { 
               quotes = data.split("\n");
               idx = Math.floor((quotes.length - 1) * Math.random());
@@ -160,38 +205,47 @@ var greettxt = "" +
                div.css("color", "rgb(51, 153, 204)");
              }
           });*/
-        } else {
-     term.echo("Unknown command <span class=\"cl2\">" + command + "</span>. Please type <span class=\"cl2\">help</span>.", {
+        } else  {
+          if (aOnce == false) {
+            term.echo("Unknown command <span class=\"cl2\">" + cmd + "</span>. Please type <span class=\"cl2\">help</span>.", {
               raw: function(div) {
             }
          });
+         }
+       }
 
+        if (aOnce == true) {  //only once
+            aOnce = false; 
+            term.echo("<br><br>Hi " + cmd + "!" + "\n<div class=\"like-pre\">" + picTxt + "</div>" , {
+              raw: function(div) { }
+            });
+       }
 
-        }
+       var args = {cmd: cmd};
+        $.get('cmds.php', args, function(result) {
+            (function wait() {
+                if (finish) {
+                    term.echo(result);
+                } else {
+                    setTimeout(wait, 500);
+                }
+            })();
+        });
     }, {
-
-        //greetings: (greettxt + "\n\n") ,
- 
-   greetings: false,
-   onInit: function(term) {
-     /*setTimeout(function() {
-         term.echo("Hello World");
-     }, 3000); */
-
-     term.echo("<div class=\"like-pre\">" + greettxt + "</div>" , {
-          raw: function(div) { }
-    });
-   }, 
- 
-     /* greetings: (greettxt, {
-              raw: function(div) {
+        name: 'Tushar',
+        greetings: greetTxt,
+        onInit: function(term) {
+            // first question
+            var msg = "Greeting Stranger! It's nice to get acquaintance with people like you.\n";
+            typed_message(term, msg, 100, function() {
+                typed_prompt(term, "What's your name? :", 100, function() {});
+            });
+        },
+        keydown: function(e) {
+            //disable keyboard when animating
+            if (anim) {
+                return false;
             }
-         } ) , 
- */
-
-        onBlur: function() {
-            // prevent loosing focus
-            return false;
         }
     });
 });
@@ -199,5 +253,5 @@ var greettxt = "" +
 </script>
 
 <!--<h2>Hello stranger.</h2> -->
-<div id="foo">
+<div style="" class="myterminal" id="foo">
 </div>
