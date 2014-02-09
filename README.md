@@ -10,6 +10,10 @@ Feel free to fork the [source code](https://github.com/tushar-sharma/tushar-shar
 
 Content in the `_posts` folder is copyrighted. 
 
+## TODO 
+
+- [ ] Post titled **Idea of God**
+
 ## License
 
 
