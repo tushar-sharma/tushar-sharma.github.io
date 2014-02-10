@@ -3,56 +3,30 @@ layout: default
 title: about
 ---
 
-<script src="{{ root_url}}/js/jquery-1.7.1.min.js"></script>
-</script>
+<link rel="stylesheet" href="{{ root_url }}/css/books.css" />
+
+
+
 <h2 class="entry-title">About</h2>
 
-<script language="JavaScript">
 
-var text = "<p>Greetings Stranger! Thanks for finding a way out of the mesh of the behemoth web in visisting a tiny little nest of mine.</p><p>If you could roll out a dime of your time in knowing me, I would appreciate our acquaintance.</p>" + "<p>Professional Bio ".link("prof.html") + "</p>" + "<p>" + "OR".bold() +  "</p>" + "<p>Personal Bio ".link("personal.html") + "(if you can digest nonsense)</p>";
-var delay=30;
-var currentChar=1;
-var destination="[not defined]";
+<p>
+<blockquote>
+<i class="icon-quote-left"></i>&nbsp;Life is like a river dragging all but dreams...that never sink...but float below the velvet sky...guiding us through!&nbsp;<i class="icon-quote-right"></i> <br>
+</blockquote>
+</p>
 
-function type()
-{
-  if (document.getElementById)
-  {
-    var dest=document.getElementById(destination);
-    if (dest)
-    {
-      dest.innerHTML=text.substr(0, currentChar);
-      currentChar++
-      if (currentChar>text.length)
-      {
-        currentChar=1;
-        setTimeout("type()", 50000);
-      }
-      else
-      {
-        setTimeout("type()", delay);
-      }
-    }
-  }
-}
- 
-function startTyping(textParam, delayParam, destinationParam)
-{
-  text=textParam;
-  delay=delayParam;
-  currentChar=1;
-  destination=destinationParam;
-  type();
-}
-</script>
+<br><br>
 
-<div  id="textDestination"> 
-</div>
+  <table>
+          <tr>
+            <td align="center"><h3><a href="prof.html">Professional Bio</a></h3></td>
+            <td align="center"><h3><h3>||</h3></td>
+            <td align="center"><h3><a href="personal.html">Personal Bio</a></h3></td>
+
+          </tr>
+
+     </table>
 
 
-<script language="JavaScript">
-(function ($) {
-  startTyping(text, 30, "textDestination");
-  // All your code here
-})(jQuery);
-</script>
+
