@@ -10,14 +10,16 @@ name: idea-god
 thumb: /img/singularity.png
 ---
 
-I was lying under the open sky watching the clouds scudding by. And the trees stretched their boughs trying to reach the rainbow that ran across the sky. Suddenly the whole place was torpedoed. The Machiavelli alarm pulled me out of my dreams. My drowsy eyes glance out of the window. The sun was yet to crawl up the sky. But the enough brightness had diffused into the sky. I flung open the door and stood before my balcony.  <!-- truncate_here -->
+I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedoed the whole place. And the Machiavelli alarm pulled me out of my dreams. 
+
+After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony. <!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <div>
 <img src="{{ root_url }}/img/singularity.png" class="thumb">
 <p>
-I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpadoe the whole place. And the Machiavelli alarm pulled me out of my dreams. 
+I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedoed the whole place. And the Machiavelli alarm pulled me out of my dreams. 
 </p>
 
 <p>After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony. 
