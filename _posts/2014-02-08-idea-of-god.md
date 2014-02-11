@@ -16,11 +16,20 @@ I was lying under the open sky watching the clouds scudding by. And the trees st
 
 <div>
 <img src="{{ root_url }}/img/singularity.png" class="thumb">
-<p>I was lying under the open sky watching the clouds scudding by. And the trees stretched their boughs trying to reach the rainbow that ran across the sky. Suddenly the whole place was torpedoed. The Machiavelli alarm pulled me out of my dreams. My drowsy eyes glance out of the window. The sun was yet to crawl up the sky. But the enough brightness had diffused into the sky. I flung open the door and stood before my balcony.  </p>
+<p>
+I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpadoe the whole place. And the Machiavelli alarm pulled me out of my dreams. 
+</p>
 
-<p>Across my building was a roof that I spotted. The wind was blowing briskly.  My wandering eyes caught the sight of a nomadic cat. She leapt across building and finally rested on the roof. At my sight she stood still. A moment passed and gust of wind passed by. Seeing her motionless aroused my curiosity. A few distance away was another building. There hung a piece of cloth which occasionally fluttered with the wind. Before me stood a motionless cat and fluttering cloth. After some time swept, came a lady who took the cloth away. And the cat soon after disappeared into oblivion. And that was left was an empty roof and me. </p>
+<p>After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony. 
+</p>
 
-<p>It dawned to me that roof was akin to a portrait. A moment ago it had the tinge of a cat and the cloth. After some time the brush of life has wiped them away from the portrait. Life itself appeared like a mammoth portrait with each one us resembling different strokes of color only to eventually swept away by the current of time.</p>
+<p>
+Opposite to my building was a roof of another building. Out of nowhere leapt a nomadic cat onto the roof. She wandered around occasionally licking her paws. She caught the sight of me and stood still. Seeing her motionless aroused my curiosity.  As I receded my eyes I saw a sheet of cloth hung on another roof. A moment passed and a gust of wind left the cat motionless and the cloth fluttered. And another moment later, came a lady who took the cloth away. And the cat also escaped into oblivion. 
+</p>
+
+<p>
+It dawned to me that the roof resembled a portrait. A portrait with different strokes of colors. A moment ago it had a tinge of a cat and the cloth. But soon the brush of life wiped them off. I wondered if Life per se was one giant portrait with each one of us resembling different strokes of colors only to eventually swept away by the current of time.
+</p>
 </div>
 
 <br>
@@ -38,21 +47,23 @@ After regaining consciousness and relinquishing my bed, I decided to stroll out 
 
 Pavements on Indian roads are designed with nefarious motive. A person walking on them needs to master the art of maneuvering. Sometimes you may encounter among other things cows, stray dogs, two-wheelers and sometimes wandering people. After meandering through myriad streets, I came across a divergence on a street. I stood still and soon sweat started pouring down my face along with some thoughts. I was stuck with a choice however trivial. And I wondered what are my odds that I make a right choice?
 
-Whenever I retrospect I wonder if everything that ever happened to me was a part of a grand design. If a man abuses his power, does the law of 'dharma' prevails? 'Dharma' in many religions is consider to be actions that keep the order of things in the universe. It is the cosmic law and order. 
+There is different way of looking at the universe. One way is to through the lens of determinism. It means that we believe that the universe obeys laws of physics. From the gigantic sun revolving around its axis to the motor car driving in the highway, all of them obey cause and effect. This means you are also sure that memories of your childhood are real.
 
-But when I introspect all I see around is randomness. It looks life life is rolling a dice and the events that happen is a matter of chance. Though this notion makes me believe in 'free will', but robs me of belief that the god in the stars could affect my life. 
+Another way of looking at the universe is through non-determinism. As you penetrate down into the world of atoms, you see the space time fabric becomes completely random. The certainty is sacrificed for randomness. The bizarre world of quantum physics demands to relinquish the idea of causality. This means that a particle can be at two different position at the same time (superposition). 
 
-Are our choices completely random? Or the randomness but a mere illusion confined within this cosmic world. This bewilderment makes me recall a famous quote from Macbeth. 
+This two different model of universe poses a moral dilemma. Are the events of our life completely random? This would give me 'free will' but rob me of any intervention from higher power. Or the events in life follow some grand design? This would give me a sense of protectionism but will render my 'free will' a mere illusion? Or it could be a middle world where there is 'free will' but also allow gods in the stars to intervene.
+
+Einstein became disillusioned with the non-determinism model of the world. These were his famous words:
 
 <blockquote>
-Life's but a walking shadow, a poor player, that struts and frets his hour upon the stage, and then is heard no more; it is a tale told by an idiot, full of sound and fury, signifying nothing. - Shakespeare
+Life doesn't play dice with the world.
 </blockquote>
 
 <br>
 
 #### Curious case of religion
 
-The early humans learnt the art of hunting. The discovery of fire and invention of wheel are two remarkable event in the history of mankind. Man began to cling to religion as he survived the hostile environment. When a sudden thunder could usher fear, religion came to the rescue. Most of the religions have a myths to explain worldly events. The absence of rainfall could be attributed to the angry gods craving sacrifice. Also religion made man feel privileged than the rest of animals. 
+The course of human evolution was completely turned with the occurrence of two historic events. One was the discovery of fire and the other invention of wheel. The fire gave men the much needed protection. And the wheel allowed him to travel larger distance which helped him find the niche required for survival. Yet the sudden roar of thunder ushered the greatest fear. When there was the fear of the unknown, religion came to the rescue. The fundamental question of where we came from, also know as creation myth, is found in all religions. The absence of rainfall could be easily attributed to the angry gods craving sacrifice. Hence dogmas and ritual gave religious institution authority to control the masses. Also religion made men feel privileged than the rest of the animals.
 
 <blockquote>
 God created man in his own image, in the image of God he created him - Gen 1.27
@@ -60,11 +71,11 @@ God created man in his own image, in the image of God he created him - Gen 1.27
 
 <br>
 
-My purpose is not to authenticate or refute any religious belief. I believe religion as a private affair. People like Spinoza have long argued separation of Church and state, though some countries are still plagued by religious fundamentalism. 
+My purpose is not to authenticate or refute any religious belief. I believe religion is a private affair. Philosophers like Spinoza have long argued separation of Church and state, though some countries are still plagued by religious fundamentalism. 
 
 Most of the religion rely on miracles for indoctrinating people. Indoctrination robs people of questioning authority. Countless innocent people have been prosecuted in the name of religion like Bruno and Galileo. 
 
-But what is miracle? Is talking to someone over long distance over phone miracle? It's not since in this century most of us are taught how technology works. But if I could time travel to medieval past and reveal to them an ordinary phone, they might held me in high reverence. One century's magic is another's century's science. 
+But what is miracle? Is talking to someone over long distance over phone miracle? It's not since in this century most of us are taught how technology works. But if I could time travel to medieval past and reveal to them an ordinary phone, they might hold me in high reverence. One century's magic is another's century's science. 
 
 
 #### Chicken or the Egg
@@ -81,27 +92,42 @@ Chicken or the egg is the causality dilemma. Both can't come independent of each
 
 Most scientist believe that the answer to the chicken and egg paradox lies in quantum fluctuation which states that conservation of energy could be violated if the time is small. Hence something can come out of nothing. 
 
-#### Beginning to understand the world
+#### Is God the Architect?
 
-Earlier people believed that earth was flat. Eratosthenes, ancient Greek mathematician, came to the conclusion that earth was spherical. When he travelled to Syene, he saw the sun rays were vertical as they didn't cast any shadow on a bar. When he travelled to north of Syene to Alexandria, he saw that the sun rays casted shadow on the same bar. This could only happen if the earth was not flat. 
+In earlier times people believed that earth was flat. As per Mesopotamian mythology, earth was considered as a flat disk floating in the ocean and surrounded by a spherical sky. Aristotle gave the idea that the earth was spherical as the shadow of Earth on the Moon during a lunar eclipse is round. 
 
+But it was Eratosthenes calculated the circumference of the earth.  He travelled to Syene  where the sun was directly overhead at the summer solstice. He saw that the sun rays doesn't cast shadow on a metal bar. But when he travelled to north to Alexandria, the sun rays did cast a shadow on the same bar. This could only happen if the earth was not flat. 
 
-Most people believed that earth was the center of the universe. This was based on the system devised by Claudius Ptolemy and favoured by the Church of Rome. But Nicolus Copernicus, a Renaissance mathematician and astronomer, came up with a heliocentric model of the universe. He stated that sun and not the earth was the center of the solar system. 
+The myth that earth was the center of the universe was based on the system devised by Ptolemy and favoured by Church of Rome. But Copernicus came up with a heliocentric model and stated that sun and not earth was the center of the solar system. 
 
+Gravity was described in 11th century by Indian mathematician Bhaskaracharya. Later building on the foundation of Kepler and Galileo, Newton formulated laws of gravity. This gave us the insight into the physical model of the universe.
 
-Building from the foundation of works of Kepler and Galileo, Newton formulated laws of gravity. This gave us insight of the physical model of the universe.
+When Napoleon was asked to explain why his works on celestial mechanics made no mention of god, he replied
 
-People still believed in the axioms of the Euclidean geometry. A simple example of it would be that sum of all angles of a triangle would always be 180. But this view was about to be shattered. 
+<blockquote>
+Your Highness, I have no need of this hypothesis
+</blockquote>
 
-Reimann first came up with the idea that space is curved. Einstein, a patent clerk, revolutionize science with his theory of General Relativity. This gave a unified picture of gravity and space and time.  To understand it, think of universe as a trampoline where objects could roll. The curves or warps produced are directly proportional to energy or momentum of matter present. It gave a completely new picture of the universe.
+<br>
+
+#### We live in curved space?
+
+The physics of sixteen and seventeen century was having honeymoon period. The Euclidean view of the world still remained. That means the sum of the angles of a triangle would always be 180<sup>0</sup>. But this idea of the geometry of space was about to be shattered by a patent clerk.
+
+Einstein came up with a revolutionary idea of the universe in his theory of General Relativity. The sum of the angles of a triangle no longer adds up to 180<sup>0</sup>. The universe was reduced to a inextricable fabric of space and time. Imagine the universe as a trampoline. The object with mass bends and curve the fabric of space time. The distortion in the fabric causes the ripples of gravity. Einstein calculated the speed of these ripples equal to that of speed of light. In fact Einstein set the speed of light as a cosmic limit. Nothing can go faster than light (though certain particles like Tachyon have been observe to supercede the speed of light under laboratory conditions).
 
 
 ![img](/img/curve.jpg "Curve space")
 
-Doppler had conjured way to calculate frequency of two distant objects. Using this concept, Hubble extended and applied it to our own galaxy. He saw that the galaxies are in fact moving apart. If we reverse the steps, we came at a point of infinite gravity, called singularity. 
+#### Our universe is expanding
 
-The discovery of cosmic microwave background radiation in 1965 confirmed the authenticity of Big Bang theory. These are result of light from ancient stars which has been scattered by galactic dust. 
+Doppler proposed that the frequency is higher if the source is moving towards the observer. Similarly the frequency is lower if the source is moving away from the observer. He observed this phenomena in the sound waves. Hubble extended this idea by applying Doppler effect in light waves. He observed that the light from the distant galaxies were shifted towards the red end spectrum. If a star is moving away from us, the whole pattern of spectrum is shifted toward red end of spectrum. Hence he came to the conclusion that universe is expanding. 
 
+But scientist argued how long the universe will expand. The density of the universe was believed to eventually halt its expansion. But in 1998 observations of type Ia supernovae suggested that universe is not only expanding but accelerating.
+
+How could the universe's expansion accelerate is still an enigma in the scientific community. It's believed that the know universe accounts for only 4% approximately. Rest have been attributed to dark matter which is a hypothesized matter that accounts for the mass missing in the universe and dark energy which is believed to be accelerating energy. 
+
+The universe is an open book riddled with mysteries. Men have so far only able to scratch its surface. If we could unravel these mysteries then one day we may be able to read the mind of the creator. 
 
 #### Anthropic Principle
 
@@ -112,11 +138,18 @@ But if flip the question and instead ask does it rain so that all the living bei
 
 #### Ultimate truth
 
+Scientist have fantasied of the theory of everything. This is major unsolved problem of physics. When we try to combine the rules of deterministic world with that of non-deterministic, the equation breaks down. The rule of gravity that is obeyed by the gigantic planets has no relevance in the atomic world. 
+
 I once encountered two pretty girls who I presumed were Christian missionary. They asked me if they believed in Jesus. I replied in affirmative and said, 'I believe in Jesus, Krishna or any other Higher Being there is'. 'But there can be only path to ultimate truth', they revolted. This made me recall a reply by Swami Vivekanada on which religion is true.
 
 <blockquote>
 As so many rivers, having their source in different mountains, roll down, crooked or straight, and at last come into the ocean --- so, all these various creeds and religions, taking their start from different standpoints and running through crooked or straight courses, at last come unto Thee. 
 </blockquote>
+
+<br>
+
+After a while I returned from my jogging. The streets had now grown in people and traffic. Cows are considered sacred in India and can roam anywhere. As I was crossing a street, I saw a cow mooing. Afterward the cow disposed her dung on the street. I quietly chuckled, 'Where is God? In the dung, cosmos or me. May be idea of the god needs another revision'.
+
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
