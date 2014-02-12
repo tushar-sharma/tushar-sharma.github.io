@@ -58,14 +58,14 @@ This two different model of universe poses a moral dilemma. Are the events of ou
 Einstein became disillusioned with the non-determinism model of the world. These were his famous words:
 
 <blockquote>
-Life doesn't play dice with the world.
+God doesn't play dice with the world.
 </blockquote>
 
 <br>
 
 #### Curious case of religion
 
-The course of human evolution was completely turned with the occurrence of two historic events. One was the discovery of fire and the other invention of wheel. The fire gave men the much needed protection. And the wheel allowed him to travel larger distance which helped him find the niche required for survival. Yet the sudden roar of thunder ushered the greatest fear. When there was the fear of the unknown, religion came to the rescue. The fundamental question of where we came from, also know as creation myth, is found in all religions. The absence of rainfall could be easily attributed to the angry gods craving sacrifice. Hence dogmas and ritual gave religious institution authority to control the masses. Also religion made men feel privileged than the rest of the animals.
+The course of human evolution was completely turned with the occurrence of two historic events. One was the discovery of fire and the other invention of wheel. The fire gave men the much needed protection. And the wheel allowed him to travel larger distance which helped him find the niche required for survival. Yet the sudden roar of thunder ushered the greatest fear. When there was the fear of the unknown, religion came to the rescue. The fundamental question of where we came from, also known as creation myth, is found in all religions. The absence of rainfall could be easily attributed to the angry gods craving sacrifice. Hence dogmas and ritual gave religious institution authority to control the masses. Also religion made men feel privileged than the rest of the animals.
 
 <blockquote>
 God created man in his own image, in the image of God he created him - Gen 1.27
@@ -114,7 +114,7 @@ Your Highness, I have no need of this hypothesis
 
 #### We live in curved space?
 
-The physics of sixteen and seventeen century was having honeymoon period. The Euclidean view of the world still remained. That means the sum of the angles of a triangle would always be 180<sup>0</sup>. But this idea of the geometry of space was about to be shattered by a patent clerk.
+The physics of sixteen and seventeen century was having honeymoon period. The Euclidean view of the world still remained. That means the sum of the angles of a triangle would always be 180<sup>0</sup>. But this idea of the geometry of space was about to be shattered by a German scientist working as a patent clerk.
 
 Einstein came up with a revolutionary idea of the universe in his theory of General Relativity. The sum of the angles of a triangle no longer adds up to 180<sup>0</sup>. The universe was reduced to a inextricable fabric of space and time. Imagine the universe as a trampoline. The object with mass bends and curve the fabric of space time. The distortion in the fabric causes the ripples of gravity. Einstein calculated the speed of these ripples equal to that of speed of light. In fact Einstein set the speed of light as a cosmic limit. Nothing can go faster than light (though certain particles like Tachyon have been observe to supercede the speed of light under laboratory conditions).
 
@@ -127,7 +127,7 @@ Doppler proposed that the frequency is higher if the source is moving towards th
 
 But scientist argued how long the universe will expand. The density of the universe was believed to eventually halt its expansion. But in 1998 observations of type Ia supernovae suggested that universe is not only expanding but accelerating.
 
-How could the universe's expansion accelerate is still an enigma in the scientific community. It's believed that the know universe accounts for only 4% approximately. Rest have been attributed to dark matter which is a hypothesized matter that accounts for the mass missing in the universe and dark energy which is believed to be accelerating energy. 
+How could the universe's expansion accelerate is still an enigma in the scientific community. It's believed that the known universe accounts for only 4% approximately. Rest have been attributed to dark matter which is a hypothesized matter that accounts for the mass missing in the universe and dark energy which is believed to be accelerating energy. 
 
 The universe is an open book riddled with mysteries. Men have so far only able to scratch its surface. If we could unravel these mysteries then one day we may be able to read the mind of the creator. 
 
