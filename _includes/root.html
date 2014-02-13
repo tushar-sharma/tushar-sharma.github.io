@@ -111,7 +111,7 @@ $(function() {
  
         if (cmd == "help") {
 
-            mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">qrcode</span> My contact info in matrix barcode.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
+            mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">ls</span> List directory content.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
           
             term.echo(mystr, {
               raw: function(div) {
@@ -175,13 +175,13 @@ $(function() {
 
         } else if (cmd == "games") {
           window.location.href="/games";
-        } else if (cmd == "qrcode") {
+        } /*else if (cmd == "qrcode") {
             term.echo("<img src=\"http://api.qrserver.com/v1/create-qr-code/?data=MECARD%3AN%3ASharma%2CTushar%3BEMAIL%3Atushar%40randomwits.com%3BTEL%3A%2B919837264416%3BURL%3Ahttp%3A%2F%2Frandomwits.com%3B%3B&#38;size=150x150&#38;prov=goqrme\" alt=\"MECARD:N:Sharma,Tushar;EMAIL:tushar@randomwits.com;TEL:+919837264416;URL:http://randomwits.com;; \"  /> ", {
               raw: function(div) {
             }
          });
 
-        } else if(cmd == "hack") {
+        }*/ else if(cmd == "hack") {
 
              javascript:var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
  
