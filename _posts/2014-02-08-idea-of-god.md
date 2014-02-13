@@ -10,7 +10,7 @@ name: idea-god
 thumb: /img/singularity.png
 ---
 
-I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedoed the whole place. And the Machiavelli alarm pulled me out of my dreams. 
+I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedo the whole place. And the Machiavelli alarm pulled me out of my dreams. 
 
 After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony. <!-- truncate_here -->
 
@@ -26,11 +26,11 @@ I was lying around on a secluded meadow. Under the open sky I gazed at the cloud
 </p>
 
 <p>
-Opposite to my building was a roof of another building. Out of nowhere leapt a nomadic cat onto the roof. She wandered around occasionally licking her paws. She caught the sight of me and stood still. Seeing her motionless aroused my curiosity.  As I receded my eyes I saw a sheet of cloth hung on another roof. A moment passed and a gust of wind left the cat motionless and the cloth fluttered. And another moment later, came a lady who took the cloth away. And the cat also escaped into oblivion. 
+Opposite to my building was a roof of another building. Out of nowhere leapt a nomadic cat onto the roof. She wandered around occasionally licking her paws. She caught the sight of me and stood still. Seeing her motionless aroused my curiosity.  As I receded my eyes I saw a sheet of cloth hung on another roof. A moment passed and a gust of wind left the cat still and the cloth fluttered. And another moment later, came a lady who took the cloth away. And the cat also escaped into oblivion. 
 </p>
 
 <p>
-It dawned to me that the roof resembled a portrait. A portrait with different strokes of colors. A moment ago it had a tinge of a cat and the cloth. But soon the brush of life wiped them off. I wondered if Life per se was one giant portrait with each one of us resembling different strokes of colors only to eventually swept away by the current of time.
+It dawned to me that the roof resembled a portrait. A portrait with different strokes of colors. A moment ago it had a tinge of a cat and the cloth. But soon the brush of life wiped them off. I wondered if Life per se was one giant portrait with each one of us resembling different strokes of colors only to be eventually swept away by the current of time.
 </p>
 </div>
 
@@ -49,13 +49,13 @@ After regaining consciousness and relinquishing my bed, I decided to stroll out 
 
 Pavements on Indian roads are designed with nefarious motive. A person walking on them needs to master the art of maneuvering. Sometimes you may encounter among other things cows, stray dogs, two-wheelers and sometimes wandering people. After meandering through myriad streets, I came across a divergence on a street. I stood still and soon sweat started pouring down my face along with some thoughts. I was stuck with a choice however trivial. And I wondered what are my odds that I make a right choice?
 
-There is different way of looking at the universe. One way is to through the lens of determinism. It means that we believe that the universe obeys laws of physics. From the gigantic sun revolving around its axis to the motor car driving in the highway, all of them obey cause and effect. This means you are also sure that memories of your childhood are real.
+There is two ways of looking at the universe. One way is to through the lens of determinism. It means that we believe that the universe obeys laws of physics. From the gigantic sun revolving around its axis to the motor car driving in the highway, all of them obey cause and effect. This means you are also sure that memories of your childhood are real.
 
-Another way of looking at the universe is through non-determinism. As you penetrate down into the world of atoms, you see the space time fabric becomes completely random. The certainty is sacrificed for randomness. The bizarre world of quantum physics demands to relinquish the idea of causality. This means that a particle can be at two different position at the same time (superposition). 
+Another way of looking at the universe is through non-determinism. If you penetrate down to the world of atoms, you see the space time fabric becomes completely random. The certainty is sacrificed for randomness. The bizarre world of quantum physics demands to relinquish the idea of causality. This means that a particle can be at two different position at the same time (superposition). 
 
-This two different model of universe poses a moral dilemma. Are the events of our life completely random? This would give me 'free will' but rob me of any intervention from higher power. Or the events in life follow some grand design? This would give me a sense of protectionism but will render my 'free will' a mere illusion? Or it could be a middle world where there is 'free will' but also allow gods in the stars to intervene.
+This two different models of universe poses a moral dilemma. Are the events of our life completely random? This would give me 'free will' but rob me of any intervention from higher power. Or the events in life follow some grand design? This would give me a sense of protectionism but will render my 'free will' a mere illusion? Or it could be a middle world where there is 'free will' but also allow gods in the stars to intervene.
 
-Einstein became disillusioned with the non-determinism model of the world. These were his famous words:
+Einstein became disillusioned with the non-deterministic model of the universe. During the dusk of his life, he ceaselessly endeavoured in finding an alternate model. These were his famous words:
 
 <blockquote>
 God doesn't play dice with the world.
@@ -65,7 +65,7 @@ God doesn't play dice with the world.
 
 #### Curious case of religion
 
-The course of human evolution was completely turned with the occurrence of two historic events. One was the discovery of fire and the other invention of wheel. The fire gave men the much needed protection. And the wheel allowed him to travel larger distance which helped him find the niche required for survival. Yet the sudden roar of thunder ushered the greatest fear. When there was the fear of the unknown, religion came to the rescue. The fundamental question of where we came from, also known as creation myth, is found in all religions. The absence of rainfall could be easily attributed to the angry gods craving sacrifice. Hence dogmas and ritual gave religious institution authority to control the masses. Also religion made men feel privileged than the rest of the animals.
+The course of human evolution was completely turned with the occurrence of two historic events. One was the discovery of fire and the other invention of wheel. The fire gave men the much needed protection. And the wheel allowed him to travel larger distance in finding niche required for survival. Yet the sudden roar of thunder easily ushered the greatest fear. When there was the fear of the unknown, religion came to the rescue. The fundamental question of where we came from, also known as creation myth, is found in all major religions. The absence of rainfall could be easily attributed to the angry gods craving sacrifice. Hence dogmas and ritual gave religious institution authority to control the masses. Also religion made men feel privileged than the rest of the animals.
 
 <blockquote>
 God created man in his own image, in the image of God he created him - Gen 1.27
@@ -96,9 +96,9 @@ Most scientist believe that the answer to the chicken and egg paradox lies in qu
 
 #### Is God the Architect?
 
-In earlier times people believed that earth was flat. As per Mesopotamian mythology, earth was considered as a flat disk floating in the ocean and surrounded by a spherical sky. Aristotle gave the idea that the earth was spherical as the shadow of Earth on the Moon during a lunar eclipse is round. 
+In earlier times people believed that earth was flat. As per Mesopotamian mythology, earth was considered to be a flat disk floating in the ocean and surrounded by a spherical sky. Aristotle gave the idea that the earth was spherical as the shadow of Earth on the Moon during a lunar eclipse is round. 
 
-But it was Eratosthenes calculated the circumference of the earth.  He travelled to Syene  where the sun was directly overhead at the summer solstice. He saw that the sun rays doesn't cast shadow on a metal bar. But when he travelled to north to Alexandria, the sun rays did cast a shadow on the same bar. This could only happen if the earth was not flat. 
+But it was Eratosthenes who calculated the circumference of the earth.  He travelled to Syene  where the sun was directly overhead at the summer solstice. He saw that the sun rays doesn't cast shadow on a metal bar. But when he travelled to Alexandria, which was north to Syene, the sun rays cast a shadow on the same bar. This could only happen if the earth was not flat. 
 
 The myth that earth was the center of the universe was based on the system devised by Ptolemy and favoured by Church of Rome. But Copernicus came up with a heliocentric model and stated that sun and not earth was the center of the solar system. 
 
@@ -127,15 +127,15 @@ Doppler proposed that the frequency is higher if the source is moving towards th
 
 But scientist argued how long the universe will expand. The density of the universe was believed to eventually halt its expansion. But in 1998 observations of type Ia supernovae suggested that universe is not only expanding but accelerating.
 
-How could the universe's expansion accelerate is still an enigma in the scientific community. It's believed that the known universe accounts for only 4% approximately. Rest have been attributed to dark matter which is a hypothesized matter that accounts for the mass missing in the universe and dark energy which is believed to be accelerating energy. 
+How could the universe's expansion accelerate is still an enigma in the scientific community. It's believed that the known universe accounts for only 4% approximately. Rest of mass have been attributed to dark matter which is a hypothesized matter that accounts for the mass missing in the universe and dark energy which is believed to be accelerating energy. 
 
 The universe is an open book riddled with mysteries. Men have so far only able to scratch its surface. If we could unravel these mysteries then one day we may be able to read the mind of the creator. 
 
 #### Anthropic Principle
 
-If I ask why does it rain, most of us would feel insulted on being ask such a trivial question. A kid in the five standard could very well compose in the following words, “It rains because the water from different parts of earth evaporate into water vapours. The vapours rise up as they are lighter than air which in turn condense into water which fall as rain”.
+If I ask why does it rain, most of us would feel insulted on being ask such a trivial question. A kid in the five standard could very well explain in the following words, “It rains because the water from different parts of earth evaporate into water vapours. The vapours rise up as they are lighter than air which in turn condense into water which fall as rain”.
 
-But if flip the question and instead ask does it rain so that all the living being on earth could live, most of us would find it difficult to reach conclusion. This is called anthropic principle. Does the physical laws of the universe is compatible with conscious life that observes it? Why does the distance between earth and sun is optimum to sustain life? Why the optimum size of moon helps earth not to wobble? Had the precise values of fundamental physical constants not what they are, the whole universe would simple collapse in itself.
+But if I flip the question and instead ask does it rain so that all the living being on earth could live, most of us would find it difficult to reach conclusion. This is called anthropic principle. Does the physical laws of the universe is compatible with conscious life that observes it? Why does the distance between earth and sun is optimum to sustain life? Why the optimum size of moon helps earth not to wobble? Had the precise values of fundamental physical constants not what they are, the whole universe would simple collapse in itself.
 
 
 #### Ultimate truth
