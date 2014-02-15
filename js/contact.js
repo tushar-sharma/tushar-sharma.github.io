@@ -43,6 +43,7 @@
 
            }).done(function() {
              $("#result").html("<span style=\"color:green;\">" + "Thanks! I'll get back to you soon :)" + "</span>");
+             $('#contact-form')[0].reset();
            });
      }
 
