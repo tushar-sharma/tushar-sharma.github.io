@@ -73,7 +73,7 @@ God created man in his own image, in the image of God he created him - Gen 1.27
 
 <br>
 
-My purpose is not to authenticate or refute any religious belief. I believe religion is a private affair. Philosophers like Spinoza have long argued separation of Church and state, though some countries are still plagued by religious fundamentalism. 
+My purpose is not to authenticate or refute any religious belief. I believe religion is a private affair. Philosophers like Spinoza have long argued for the separation of Church and the State, though some countries are still plagued by religious fundamentalism. 
 
 Most of the religion rely on miracles for indoctrinating people. Indoctrination robs people of questioning authority. Countless innocent people have been prosecuted in the name of religion like Bruno and Galileo. 
 
