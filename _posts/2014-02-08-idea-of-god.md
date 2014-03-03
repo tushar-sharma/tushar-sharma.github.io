@@ -77,7 +77,7 @@ My purpose is not to authenticate or refute any religious belief. I believe reli
 
 Most of the religion rely on miracles for indoctrinating people. Indoctrination robs people of questioning authority. Countless innocent people have been prosecuted in the name of religion like Bruno and Galileo. 
 
-But what is miracle? Is talking to someone over long distance over phone miracle? It's not since in this century most of us are taught how technology works. But if I could time travel to medieval past and reveal to them an ordinary phone, they might hold me in high reverence. One century's magic is another's century's science. 
+But what is miracle? Is talking to someone over long distance over phone miracle? It's not since in this century most of us are taught how technology works. But if I could time travel to medieval past and reveal to them an ordinary phone, they might hold me in high reverence. After all, one century's magic, another century's science [^man].
 
 
 #### Chicken or the Egg
@@ -157,3 +157,4 @@ After a while I returned from my jogging. The streets had now grown in people an
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
 </nav>
 
+[^man]: The Man from Earth (2007)
