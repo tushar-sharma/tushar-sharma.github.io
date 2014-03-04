@@ -52,12 +52,12 @@ input::-webkit-input-placeholder {
 </style>
 
 <!-- search box --!> 
+<div id="blog" style="padding-top:30px; margin-top:-23px;">
 <div style="padding-bottom:60px; padding-top:20px;">
   <form style="float:right;" action="{{ root_url }}/search/?">
     <input type="search" name="q" placeholder="Search">
   </form>
 </div>
-<div id="blog" style="padding-top:30px; margin-top:-23px;">
 {% assign blogposts = site.categories.blog %}
 <div class="pure-u-1-2">
 <div style="padding-right:10px; padding-left:10px;">
