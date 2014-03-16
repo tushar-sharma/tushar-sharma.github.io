@@ -35,6 +35,7 @@ function myIP() {
 
 $(function() {
     var aOnce = true;
+    var aHelp = true; /* used to avoid triggering help in greetings */
 
     var greetTxt = " __      __           .__                                       \n" +
 "/  \\    /  \\   ____   |  |     ____     ____     _____     ____  \n" +
@@ -98,6 +99,7 @@ $(function() {
     });
     $('#foo').terminal(function(cmd, term) {
         var finish = false;
+
         var msg = "\nHi " + cmd + "! Feel free to explore my site...\n";
         term.set_prompt('$ ');
 
@@ -108,8 +110,12 @@ $(function() {
         arg = cmd.substr(0,cmd.indexOf(' ')); 
         toSearch = cmd.substr(cmd.indexOf(' ')+1); 
 
- 
-        if (cmd == "help") {
+        if (aOnce == true) {  //only once
+            aOnce = false; 
+            term.echo("<br><br>Hi " + cmd + "!" + "\n<div class=\"like-pre\">" + picTxt + "</div>" , {
+              raw: function(div) { }
+            });
+        } else if (cmd == "help") {
 
             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">preview</span> Preview site.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">ls</span> List directory content.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> List my favourite books.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
           
@@ -129,7 +135,7 @@ $(function() {
               raw: function(div) {
             }
          });
-
+	 
         } else if (arg == "cd" || cmd == "cd") {
  
           ip = myIP(); 
@@ -214,14 +220,7 @@ $(function() {
          }
        }
 
-        if (aOnce == true) {  //only once
-            aOnce = false; 
-            term.echo("<br><br>Hi " + cmd + "!" + "\n<div class=\"like-pre\">" + picTxt + "</div>" , {
-              raw: function(div) { }
-            });
-       }
-
-       var args = {cmd: cmd};
+      var args = {cmd: cmd};
         $.get('cmds.php', args, function(result) {
             (function wait() {
                 if (finish) {
