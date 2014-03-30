@@ -152,7 +152,6 @@ As so many rivers, having their source in different mountains, roll down, crooke
 
 After a while I returned from my jogging. The streets had now grown in people and traffic. Cows are considered sacred in India and can roam anywhere. As I was crossing a street, I saw a cow mooing. Afterward the cow disposed her dung on the street. I quietly chuckled, 'Where is God? In the dung, cosmos or me. May be idea of the god needs another revision'.
 
-
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
 </nav>
