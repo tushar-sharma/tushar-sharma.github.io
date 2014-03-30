@@ -59,7 +59,7 @@ And miles away she glow,<br>
 How dissimilar are we?<br>
 If only we could meet to know.<br>
 
-What avails us now,<br>
+What awaits us now,<br>
 Is only a mystery of time,<br>
 Will the Fate make us one?<br>
 Or our love will be a mournful chime? <br>
