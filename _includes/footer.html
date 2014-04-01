@@ -6,14 +6,27 @@
 <hr>
   <span style="float:left;width:45%;">
     <h3><small>What’s this blog all about?</small></h3>
-    {% assign blogposts = site.categories.blog %}
-    {% for post in blogposts %}
-      {% for tag in post.tags %}
-        <span style="font-size: {{ tag | size | times: 60 | divided_by: post.tags.size | plus: 40 }}%">
-          <a href="/tag/{{ tag }}"> {{ tag }} </a>
-        </span>
-      {% endfor %}
-    {% endfor %}
+
+       {% assign tags_list = site.tags %}
+       {% if tags_list.first[0] == null %}
+         {% for tag in tags_list %}
+            <a href="/tag/{{ tag }}">{{ tag }} <span><sup>{{ site.tags[tag].size }}</sup></span></a>
+         {% endfor %}
+       {% else %}
+         {% for tag in tags_list %}
+           <a href="/tag/{{ tag[0] }}">{{ tag[0] }} <span><sup>{{ tag[1].size }}</sup></span></a>
+         {% endfor %}
+       {% endif %}
+       {% assign tags_list = nil %}
+
+<!--
+   {% for category in site.categories %}
+       <span style="font-size: {{ category | size | times: 60 | divided_by: site.categories.size | plus: 40 }}%">
+        <a href="/tag/{{ tag }}"> {{ category[0] }} </a>
+      </span>
+   {% endfor %}
+-->
+ 
   </span>
   <!--
   {% for category in site.categories %} 
