@@ -15,7 +15,7 @@
        {% else %}
          {% for tag in tags_list %}
 	   {% if tag[0] != 'sidebar' %} <!-- hack to remove sidebar tags -->
-           <a class="mytag" style="display:inline-block;" href="/tag/{{ tag[0] }}">{{ tag[0] }} <span><sup>{{ tag[1].size }}</sup></span></a>
+           <a style="font-size: {{ tag | last | size | times: 100 | divided_by: site.categories.size | plus: 70 }}%"  style="display:inline-block;" href="/tag/{{ tag[0] }}">{{ tag[0] }} <span></span></a>
 	   {% endif %}
          {% endfor %}
        {% endif %}
