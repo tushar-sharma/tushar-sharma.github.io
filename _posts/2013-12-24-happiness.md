@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Happiness
-category: poems
+category: blog
+tags: poetry happiness
 name: Happiness
+thumb: /img/happy.jpg
 ---
 
 <link rel="stylesheet" href="../css/styles.css.css" />
@@ -18,6 +20,8 @@ still I dragged my feet amidst all fears, <br>
 at night when the moon swept the tides away, <br>
 I dreamt of my past till sleep made me her prey. <br>
 <!-- truncate_here -->
+
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 I walked miles on my feet and hope, <br>
 against all weather, people and slope, <br>
