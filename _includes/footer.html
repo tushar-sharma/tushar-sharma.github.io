@@ -4,17 +4,19 @@
 
 <div class="footer">
 <hr>
-  <span style="float:left;width:45%;">
+  <span style="float:left;width:50%;">
     <h3><small>What’s this blog all about?</small></h3>
 
        {% assign tags_list = site.tags %}
        {% if tags_list.first[0] == null %}
          {% for tag in tags_list %}
-            <a href="/tag/{{ tag }}">{{ tag }} <span><sup>{{ site.tags[tag].size }}</sup></span></a>
+            <a class="mytag" href="/tag/{{ tag }}">{{ tag }} <span><sup>{{ site.tags[tag].size }}</sup></span></a>
          {% endfor %}
        {% else %}
          {% for tag in tags_list %}
-           <a href="/tag/{{ tag[0] }}">{{ tag[0] }} <span><sup>{{ tag[1].size }}</sup></span></a>
+	   {% if tag[0] != 'sidebar' %} <!-- hack to remove sidebar tags -->
+           <a class="mytag" style="display:inline-block;" href="/tag/{{ tag[0] }}">{{ tag[0] }} <span><sup>{{ tag[1].size }}</sup></span></a>
+	   {% endif %}
          {% endfor %}
        {% endif %}
        {% assign tags_list = nil %}
@@ -33,7 +35,7 @@
     <div> <a href="/{{ category | first | slugize }}/"> {{ category | first }} </a> </div> <br>
   {% endfor %}`
   -->
-  <span style="float:left; width:50%;margin-left:5%;">
+  <span style="float:left; width:48%;margin-left:2%; ">
  <h3>
   <small>Copyright &copy; Tushar Sharma </small>
   <small>[</small>
