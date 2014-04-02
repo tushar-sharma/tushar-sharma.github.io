@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Romance with Moon
-category: poems
+category: blog
+tags: poetry romance moon
 name: romance-moon
+thumb: /img/moon.jpg
 ---
 
 <link rel="stylesheet" href="../css/styles.css.css" />
@@ -18,6 +20,8 @@ And sweeps the earth below,<br>
 Posing as the one, only she could be.<br>
 
 <!-- truncate_here -->
+
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Often we meet,<br>
 Avoiding prying eyes secretly,<br>
