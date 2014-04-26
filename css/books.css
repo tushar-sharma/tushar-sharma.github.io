@@ -10,9 +10,9 @@
     -webkit-border-radius: 9px;
 }
 .book1 { width: 70%; }
-.book2 { width: 89.42%;} /* Code Book */
 .book3 {width: 15%;}
 .book4 {width: 17.03%;} /* Discovery of India */
+.book5 {width: 12%; } /* Python Algorithm */
 
 .cl{ color: rgb(51, 153, 204);}
 
