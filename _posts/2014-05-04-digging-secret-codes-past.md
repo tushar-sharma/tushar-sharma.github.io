@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Digging on the secret codes of the Past
+title: Digging on the codes of the Past
 category: blog
 tags: 
 - code
