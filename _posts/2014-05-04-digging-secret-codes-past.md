@@ -34,7 +34,7 @@ On the mounds of Mahanjo-Daro and Harappa, lays the ruins of some 5000 years old
 
 <p>
 <img style="float: left; margin: 0px 15px 15px 0px;" src="{{ root_url }}/img/seal.jpg" />
-The excavations have recovered some of the seals used at that time. The seal is in Indus script. There two camps divided on how to interpret this script. First camp believe this is nothing more than semagrams. In this each letter represents  whole idea. Like the drawing of fish would represent fish. The other camp argues that this hieroglyphs represent phonograms based on rebus system . In this each letters represents a phoneme (speech sound). Unfortunately Indus script is yet to be deciphered.
+The excavations have recovered some of the seals used at that time. The seal is in Indus script. There two camps divided on how to interpret this script. First camp believe this is nothing more than <b>semagrams</b>. In this each letter represents  whole idea. Like the drawing of fish would represent fish. The other camp argues that this hieroglyphs represent <b>phonograms</b> based on rebus system . In this each letters represents a phoneme (speech sound). Unfortunately Indus script is yet to be deciphered.
 </p>
 
 
