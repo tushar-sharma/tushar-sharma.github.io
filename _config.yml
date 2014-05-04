@@ -3,7 +3,7 @@ pygments: true
 lsi: false
 permalink: /:categories/:title
 url: http://randomwits.com
-markdown: kramdown
+markdown: kramdown 
 title: Random Wits
 port: 4000
 future: false
