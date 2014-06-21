@@ -13,7 +13,7 @@ thumb: /img/ancient.jpg
 
 <link rel="stylsheet" type="text/css" href="{{ root_url }}/css/post.css" />
 
-Different religion tells us about plethora of beautiful tales about the genesis of humans. But we humans, like any other trivial species, descended not from heaven (sigh) but from single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we began to unearth what once our ancestors spoke. 
+Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.
 
 <!-- truncate_here -->
 
@@ -22,15 +22,15 @@ Different religion tells us about plethora of beautiful tales about the genesis 
 <div>
 <img src="{{ root_url }}/img/ancient.jpg" class="thumb">
 <p>
-Different religion tells us about plethora of beautiful tales about the genesis of humans. But we humans, like any other trivial species, descended not from heaven (sigh) but from single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we began to unearth what once our ancestors spoke. 
+Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.
 </p>
 </div>
 
-While the universe is pretty old (3.798±0.037 billion years), it was only few millions years ago did the early humans appeared. We did come a long way since then. We have cultivated colonies and also fought wars, became industrialized as well as ushered global warming, made technological breakthrough with also jeopardizing our own survival with the looming fear of nuclear winter and much more has happened in the annals of human history. Though I can not plunge into the whole labyrinth of human history, but I can dig into some of the codes of the Past.
+While the universe is pretty old (3.7987 billion years and counting), it has been only few million years since the chapter of humans commenced. We had come a long way since. From time in memorial, numerous civilizations thrived and collapsed leaving behind their legacy. The episodes of both glory and horror are conspicuous part of history. Distant from the hurly burly of the present civilization, on the mounds of Mahanjo-Daro and Harrapa, an entirely different civilization spoke another language.
 
 #### Indus Valley Civilization
 
-On the mounds of Mahanjo-Daro and Harappa, lays the ruins of some 5000 years old Indus Valley Civilization. It is considered as a cradle of early civilization along with Mesopotamia and Pharonic Egypt. It was noted for urban planning, baked brick houses, elaborate drainage systems, water supply systems, and clusters of large non-residential buildings <sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup>.
+Indus Valley Civilization is considered as a cradle of early civilization along with Mesopotamia and Pharonic Egypt. It was noted for urban planning, baked brick houses, elaborate drainage systems, water supply systems, and clusters of large non-residential buildings <sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup>.
 
 <p>
 <img style="float: left; margin: 0px 15px 15px 0px;" src="{{ root_url }}/img/seal.jpg" />
