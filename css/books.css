@@ -9,10 +9,10 @@
       height: 100%;
     -webkit-border-radius: 9px;
 }
-.book1 { width: 70%; }
-.book3 {width: 15%;}
-.book4 {width: 48.89%;} /* Discovery of India */
-.book5 {width: 12%; } /* Python Algorithm */
+.book1 { width: 70%; } /* Sophie's World */
+.book2 {width: 20.20%;} /* Trespassing on Einsteins's Lawn */
+.book3 {width: 15%; } /* Beginning Perl */
+
 
 .cl{ color: rgb(51, 153, 204);}
 
