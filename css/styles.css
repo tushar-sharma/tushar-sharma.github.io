@@ -29,6 +29,7 @@ h1, h2, h3 {line-height:1.1;}
 h1 {font-size:28px;}
 .stalk_link {font-size:18px;display:inline;}
 .me_blurb {margin:-15px 0 15px;}
+.clear { width:100%; clear:both; }
 h2 {color:#393939;}
 h3, h4, h5, h6 {color:#494949;}
 h2 {font-size: 21px;}
