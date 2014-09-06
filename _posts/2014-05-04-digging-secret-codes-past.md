@@ -11,7 +11,7 @@ name: digging-past
 thumb: /img/ancient.jpg
 ---
 
-<link rel="stylsheet" type="text/css" href="{{ root_url }}/css/post.css" />
+
 
 Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.
 
@@ -67,7 +67,7 @@ Similarly all the message is encrypted as 'DZBBNCXP'
 
 #### Javascript Implementation
 
-{% highlight javascript %}
+{% highlight javascript  %}
 function encryption(message, alphabet) {
   for (i = 0; i < msg.length; ++i) {
     pos = alphabet.indexOf(msg.substr(i,1));
