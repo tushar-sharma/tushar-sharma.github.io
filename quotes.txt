@@ -331,3 +331,15 @@ A young man wrote to Mozart and said:<br>Q: "Herr Mozart, I am thinking of writi
 "Man is equally incapable of seeing the nothingness from which he emerges and the infinity in which he is engulfed." - Blaise Pascal, Pensées, The Misery of Man Without God
 "Computing is like air conditioning it gets ineffective as you open Windows" - Linus Torvalds
 "It is not God that is worshipped but the authority that claims to speak in His name. Sin becomes disobedience to authority not violation of integrity."― Sarvepalli Radhakrishnan
+"For me, great algorithms are the poetry of computation. Just like verse, they can be terse, allusive, dense , and even mysterious. But once unlocked, they cast a brilliant new light on some aspect of computing. " - Francis Sullivan
+"I will, in fact, claim that the difference between a bad programmer and a good one is whether he considers his code or his data structures more important. Bad programmers worry about the code. Good programmers worry about the data structures and their relationships. " - Linus Torvalds (creator of Linux)
+"You know you're in love when you can't fall asleep because reality is finally better than your dreams" - Dr. Seuss
+"Just consider how terrible the day of your death will be. Others will go on speaking, and you will not be able to argue back. " - Ram Mohun Roy, one of the pioneer reformers in the nineteenth-century India. 
+"Time is an illusion. Lunchtime doubly so." ― Douglas Adams, The Hitchhiker's Guide to the Galaxy
+"I am a Quantum Engineer, but on Sundays I Have Principles" - John Bell
+"The larger the island of knowledge, the longer the shoreline of wonder." -- Ralph Sockman
+"Showing up is 80 percent of life" - Woody Allen
+"Why make things difficult, when it is possible to make them cryptic and totally illogical, with just a little bit more effort?” — Aksel Peter Jørgensen
+"School is the advertising agency which makes you believe that you need the society as it is."-  Ivan Illich
+Feed the masses, eat with the classes.
+"You are the average of the five people you spend the most time with." - Jim Rohn
