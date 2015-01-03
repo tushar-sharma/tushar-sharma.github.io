@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta property="og:site_name" content="Tushar Sharma"/>
+<title>Random Wits</title>
+<link rel="icon" type="image/png" href="/img/favicon.ico">
+<link rel="stylesheet" href=" /css/pygment_trac.css ">
+<link rel="stylesheet" href=" /css/font-awesome.css ">
+<link rel="stylesheet" href=" /css/styles.css ">
+<script async src=" /js/scale.fix.js "></script>
+<script async src=" /js/redirect.js "></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+  </head>
+  <body>
+    <noscript>
+    <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+    For a better experience on RandomWits, enable JavaScript in your browser.
+    </h4>
+    </noscript>
+
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="http://randomwits.com/css/styles.css" >
+
+<style type="text/css">
+@font-face {font-family: 'Myfont';
+  src: url('/../font/pristina.ttf'); 
+  /*src: url('/../font/mbscraps.ttf');*/
+  font-weight: normal;
+  font-style: normal;}
+@font-face {font-family: 'Somefont';
+  src:url('/../font/OneDirection.ttf');
+  font-weight: normal;
+  font-style: normal;}
+h1.heading { font-family: Myfont;
+  color: rgb(51, 153, 204);} 
+.top{color: rgb(68, 68, 68);}
+.sub{font-family:Somefont;}
+
+aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline} aside{display:block} aside#logo{background-color:white}aside#logo.clearfix{background-color:white}aside#logo div a{height:100px;width:100px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}aside#logo{background-color:black}aside#logo div{background-color:white}aside#logo div a{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background:#000 url("http://en.gravatar.com/userimage/29847012/e65258408c161deddae43025832e8767.jpg?size=200") center center no-repeat;background-size:100% 100%;height:100px !important;width:100px !important} aside#logo{position:relative;display:block;width:110px;height:110px;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;margin-left:0px;margin-top:0px}aside#logo div{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;width:90px;height:90px;text-indent:-9999px;;margin-top:10px;clear:both}aside#logo div a{display:block;clear:both;width:78px;height:78px;margin-top:6px}aside#logo{width:150px;height:130px}aside#logo div{width:135px;height:135px;margin-top:15px}aside#logo div a{width:117px;height:117px;margin-top:9px}aside#logo{position:relative;left:auto;right:auto;margin-top:0px;margin-bottom:0}
+
+</style>
+
+<aside id="logo" class="clearfix">
+  <div class="clearfix">
+    <a href="/">Tushar Sharma</a> <p style="float:right;"> </p>
+  </div> 
+</aside>
+
+<script  src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<div style="clear:both;"></div>
+<div>
+  <h1  class="heading"><span class="top"><a href="/about/">About Me</a></span></h1> 
+  <!--<p class="me_blurb"> 
+    <div class="sub"> 
+      <a href="/../about/">About ME</a>
+    </div>
+  </p> 
+   -->
+
+<!--<a target="_blank" href="https://coderwall.com/tshrocks">
+  <div id="coderwall_badges" style="margin:0 0 20px 0;"></div> 
+</a>
+-->
+
+<script type="text/javascript">
+        $(document).ready(function(){
+                jQuery.getJSON("https://coderwall.com/tshrocks.json?callback=?", function(data){
+                        for(var i = 0; i < data.data.badges.length ; i++){
+                                var badge = data.data.badges[i];
+                                var badge_tag;
+                                // if ((i+1) % 5 == 0) {
+                                        // badge_tag = $("<img /><br/>");
+                                // } else {
+                                        badge_tag = $("<img />");
+                                //}
+                                badge_tag.attr("src",badge.badge);
+                                badge_tag.css("width","10%");
+                                $("#coderwall_badges").append(badge_tag);
+                        }
+                });
+        });
+</script>
+
+</div>
+
+<style type="text/css">
+@font-face{font-family:Somefont;src:url(/font/OneDirection.ttf);font-weight:400;font-style:normal}
+h1.heading{font-family:Myfont;color:#39c}
+.top{color:#444}
+.sub{font-family:Somefont}
+#back-top{position:fixed;bottom:30px;margin-left:-150px}
+#back-top a{width:108px;display:block;text-align:center;font:11px/100% Arial, Helvetica, sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}
+#back-top a:hover{color:#000}
+#back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat ;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}
+#back-top a:hover span{background-color:#777}
+</style>
+
+
+
+<!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> 
+<p class="me_blurb"><div class="sub">compos sui</div></p> -->
+<!--<p style="display:inline;">Stalk me on:&nbsp;
+  <a href="https://github.com/tushar-sharma" title="GitHub" target="_blank">
+    <div class="stalk_link">
+      <i class="icon-github"></i>&nbsp;
+    </div>
+  </a>
+  <a href="http://in.linkedin.com/in/tsharma3" title="LinkedIn" target="_blank">
+    <div class="stalk_link">
+      <i class="icon-linkedin"></i>&nbsp;
+    </div>
+  </a>
+  <a href="mailto:tushar.sharma1729@gmail.com" title="Email" target="_blank">
+    <div class="stalk_link">
+      <i class="icon-envelope-alt"></i>&nbsp;
+    </div>
+  </a>
+  <a href="https://twitter.com/tshrocks" title="Twitter" target="_blank">
+    <div class="stalk_link">
+      <i class="icon-twitter"></i>&nbsp;
+    </div>
+  </a>
+  <a href="https://www.facebook.com/tushar.sharma1729" title="Facebook" target="_blank">
+    <div class="stalk_link">
+      <i class="icon-facebook"></i>&nbsp;
+    </div>
+  </a>
+-->
+
+<!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+</p>
+
+<h2>Projects</h2>
+<div class="highlight">
+  <pre>
+<code><span class="nv">$</span> latest <a href="/projects">projects</a></code>
+     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     ├── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br />     ├── <span class="nv"></span><a href="/projects/aes" title="Advanced Encryption Standard (AES)">AES</a><br />     └── <span class="nv"></span><a href="/projects/des" title="Data Encryption Standard (DES)">DES</a><br /><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+
+<h2>Blog</h2>
+<div class="highlight">
+  <pre>
+<code><span class="nv">$</span> latest <a href="/blog">blog</a></code>
+     ├── <span class="nv"></span><a href="/blog/digging-secret-codes-past" title="Digging on the codes of the Past">digging-past</a><br />     ├── <span class="nv"></span><a href="/blog/romance-moon" title="Romance with Moon">romance-moon</a><br />     ├── <span class="nv"></span><a href="/blog/idea-of-god" title="Idea of God">idea-god</a><br />     └── <span class="nv"></span><a href="/blog/happiness" title="Happiness">Happiness</a><br /><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
+</pre>
+</div>
+
+<p id="back-top">
+  <a href="#top"><span></span>Back to Top</a>
+</p>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+<script src="/js/scroll_top.js" type="text/javascript"></script>
+
+<script>
+
+</script>
+
+
+      </header>
+      <section>
+        <style>
+.cl{ width: 200px;  color: rgb(51, 153, 204);}
+.cl2{color: rgb(51, 153, 204);}
+.like-pre { white-space: pre;}
+.myterminal{
+        color: #424242;
+        font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+	font-size: 25pt;
+}
+</style>
+
+<script src="/js/jquery-1.7.1.min.js"></script>
+<script src="/js/jquery.mousewheel-min.js"></script>
+<script src="/js/jquery.terminal-min.js"></script>
+<link href="/css/jquery.terminal.css" rel="stylesheet"/>
+
+<script type="text/javascript">
+
+function myIP() {
+    if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
+    else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+    xmlhttp.open("GET","http://api.hostip.info/get_html.php",false);
+    xmlhttp.send();
+
+    hostipInfo = xmlhttp.responseText.split("\n");
+
+    for (i=0; hostipInfo.length >= i; i++) {
+        ipAddress = hostipInfo[i].split(":");
+        if ( ipAddress[0] == "IP" ) return ipAddress[1];
+    }
+
+    return false;
+}
+
+$(function() {
+    var aOnce = true;
+    var aHelp = true; /* used to avoid triggering help in greetings */
+
+    var greetTxt = " __      __           .__                                       \n" +
+"/  \\    /  \\   ____   |  |     ____     ____     _____     ____  \n" +
+"\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  \n" +
+" \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
+"  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
+"       \\/         \\/              \\/                 \\/       \\/ \n\n\n" +
+"      ----   to Random Wits   ----  (my digital footprint)  \n\n\n"; 
+
+ 
+    var picTxt = "<div class=\"cl2\"> " +  
+"               _  _  _  _ \n" +
+"              ( `  `  `  `) \n" + 
+"             (  Type help  ) \n" +
+"           (_   _   .   _   _) \n" +
+"                 o \n" + 
+"               o \n" +
+"        .--. \n" + 
+"       |o_o | \n" + 
+"       |:_/ | \n" + 
+"      //   \\ \\ \n" + 
+"     (|     | ) \n" + 
+"    /'\\_   _/`\\ \n" + 
+"    \\___)=(___/\n\n" +
+"</div>"; 
+ 
+
+    var anim = false;
+    function typed(finish_typing) {
+        return function(term, message, delay, finish) {
+            anim = true;
+            var prompt = term.get_prompt();
+            var c = 0;
+            if (message.length > 0) {
+                term.set_prompt('');
+                var interval = setInterval(function() {
+                    term.insert(message[c++]);
+                    if (c == message.length) {
+                        clearInterval(interval);
+                        // execute in next interval
+                        setTimeout(function() {
+                            // swap command with prompt
+                            finish_typing(term, message, prompt);
+                            anim = false
+                            finish && finish();
+                        }, delay);
+                    }
+                }, delay);
+            }
+        };
+    }
+    var typed_prompt = typed(function(term, message, prompt) {
+        // swap command with prompt
+        term.set_command('');
+        term.set_prompt(message + ' ');
+    });
+    var typed_message = typed(function(term, message, prompt) {
+        term.set_command('');
+        term.echo(message)
+        term.set_prompt(prompt);
+    });
+    $('#foo').terminal(function(cmd, term) {
+        var finish = false;
+
+        var msg = "\nHi " + cmd + "! Feel free to explore my site...\n";
+        term.set_prompt('$ ');
+
+        /*typed_message(term, msg, 100, function() {
+            finish = true;
+        });*/
+      
+        arg = cmd.substr(0,cmd.indexOf(' ')); 
+        toSearch = cmd.substr(cmd.indexOf(' ')+1); 
+
+        if (aOnce == true) {  //only once
+            aOnce = false; 
+            term.echo("<br><br>Hi " + cmd + "!" + "\n<div class=\"like-pre\">" + picTxt + "</div>" , {
+              raw: function(div) { }
+            });
+        } else if (cmd == "help") {
+
+            mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">ls</span> List directory content.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> Books on my shelf.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
+          
+            term.echo(mystr, {
+              raw: function(div) {
+            }
+         });  
+        } else if (cmd == "about") {
+           term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/about\">...more</a><br>", {
+              raw: function(div) {
+            }
+         });
+
+         } else if (cmd == "ls") {
+
+           term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
+              raw: function(div) {
+            }
+         });
+	 
+        } else if (arg == "cd" || cmd == "cd") {
+ 
+          ip = myIP(); 
+     term.echo("You've tried to gain access to something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI. To avoid reporting it, please submit an apology <a href=\"/../contact/\">here</a>.", {
+              raw: function(div) {
+            }
+         });
+
+
+       } else if (arg == "cat" || cmd == "cat") {
+
+ 
+          ip = myIP(); 
+    term.echo("You've tried to gain access to something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI. To avoid reporting it, please submit an apology <a href=\"/../contact/\">here</a>.", {
+              raw: function(div) {
+            }
+         });
+
+
+       }  else if (arg == "dir" || cmd == "dir") {
+
+     term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
+              raw: function(div) {
+            }
+         });
+
+
+        }else if (cmd == "contact") {
+          window.location.href="/contact";
+        } else if (cmd == "projects") { 
+          window.location.href="/projects";
+        } else if (cmd == "blog") {
+          window.location.href="/blog";
+        } else if (arg == "search" || cmd == "search") {
+            if (toSearch == "" || cmd =="search")  
+              term.echo("Wrong Parameters. Usage: search <to search>");
+            else window.location.href="/search/?q=" + toSearch;
+        }  else if (cmd == "books") {
+          //window.open('/books', '_blank');
+          window.location.href="/books";
+
+        } else if (cmd == "games") {
+          window.location.href="/games";
+        } /*else if (cmd == "qrcode") {
+            term.echo("<img src=\"http://api.qrserver.com/v1/create-qr-code/?data=MECARD%3AN%3ASharma%2CTushar%3BEMAIL%3Atushar%40randomwits.com%3BTEL%3A%2B919837264416%3BURL%3Ahttp%3A%2F%2Frandomwits.com%3B%3B&#38;size=150x150&#38;prov=goqrme\" alt=\"MECARD:N:Sharma,Tushar;EMAIL:tushar@randomwits.com;TEL:+919837264416;URL:http://randomwits.com;; \"  /> ", {
+              raw: function(div) {
+            }
+         });
+
+        }*/ else if(cmd == "hack") {
+
+             javascript:var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
+ 
+         }else if (cmd == "resume") {
+         
+           term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" target=\"_blank\" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" >..resume</a>", {
+              raw: function(div) {
+            }
+         });
+        } else if (cmd == "hit") {
+            jQuery.get('/../quotes.txt', function(data) { 
+              quotes = data.split("\n");
+              idx = Math.floor((quotes.length - 1) * Math.random());
+              term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", { 
+                  raw: function(div) { }
+               });
+            });
+      
+          /* term.echo(art, {
+             finalize: function(div) {
+               div.css("color", "rgb(51, 153, 204)");
+             }
+          });*/
+        } else  {
+          if (aOnce == false) {
+            term.echo("Unknown command <span class=\"cl2\">" + cmd + "</span>. Please type <span class=\"cl2\">help</span>.", {
+              raw: function(div) {
+            }
+         });
+         }
+       }
+
+      var args = {cmd: cmd};
+        $.get('cmds.php', args, function(result) {
+            (function wait() {
+                if (finish) {
+                    term.echo(result);
+                } else {
+                    setTimeout(wait, 500);
+                }
+            })();
+        });
+    }, {
+        name: 'Tushar',
+        greetings: greetTxt,
+        onInit: function(term) {
+            // first question
+            var msg = "Ahoy there, stranger. I am Tushar Sharma.\n";
+            typed_message(term, msg, 100, function() {
+                typed_prompt(term, "What's your name? :", 100, function() {});
+            });
+        },
+        keydown: function(e) {
+            //disable keyboard when animating
+            if (anim) {
+                return false;
+            }
+        }
+    });
+});
+
+</script>
+
+<!--<h2>Hello stranger.</h2> -->
+<div style="" class="myterminal" id="foo">
+</div>
+
+
+      </section>
+   </div>
+   <div style="clear:both;"></div>
+
+   <!--[if IE]>
+     <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+     Hey Cro-Magnan. This site looks better without Internet Explorer. Please use Chrome or Firefox. 
+    </h4>
+   <![endif]-->
+    
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2014</small></p> -->
+<link rel="stylesheet" href="/css/footer.css" />
+<link rel="stylesheet" href="/css/font-awesome.css" />
+
+<div class="footer">
+<hr>
+  <span style="float:left;width:50%;">
+    <h3><small>What’s this blog all about?</small></h3>
+
+       
+       
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/Walmart">Walmart <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/FDI">FDI <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/debian">debian <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/huawei">huawei <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/usb">usb <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/modem">modem <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 320%"  style="display:inline-block;" href="/tag/code">code <span></span></a>
+	   
+         
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 220%"  style="display:inline-block;" href="/tag/poetry">poetry <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/sleep">sleep <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/hacking">hacking <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/hackers">hackers <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/vi">vi <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/vim">vim <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 170%"  style="display:inline-block;" href="/tag/editor">editor <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/emacs">emacs <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/happiness">happiness <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/god">god <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/religion">religion <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/science">science <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/romance">romance <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/moon">moon <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/cryptography">cryptography <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/cipher">cipher <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/monoalphabetic">monoalphabetic <span></span></a>
+	   
+         
+       
+       
+
+<!--
+   
+       <span style="font-size: 100%">
+        <a href="/tag/"> blog </a>
+      </span>
+   
+       <span style="font-size: 100%">
+        <a href="/tag/"> projects </a>
+      </span>
+   
+-->
+ 
+  </span>
+  <!--
+   
+    <div> <a href="/blog/"> blog </a> </div> <br>
+   
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  `
+  -->
+  <span style="float:left; width:48%;margin-left:2%; ">
+ <h3>
+  <small>Copyright &copy; Tushar Sharma </small>
+  <small>[
+  <a title="Email" href="mailto:tushar@randomwits.com">
+    <i class="icon-envelope-alt"></i> &nbsp;
+  </a>
+  <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+  <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+    <i class="icon-github"></i>  &nbsp;
+
+  </a>
+  <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+    <i class="icon-linkedin"></i> &nbsp;
+
+  </a>
+  <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+    <i class="icon-twitter"></i> &nbsp;
+
+
+  </a>
+  <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+    <i class="icon-facebook"></i> &nbsp;
+
+  </a>
+  <a tilte="Google Plus" href="https://plus.google.com/u/0/110524088447553948769" target="_blank">
+    <i class="icon-google-plus"></i> &nbsp;
+  </a>
+
+  <a title="RSS" href="/rss.xml" >
+    <i class="icon-rss"></i>
+  </a> 
+
+  ]</small> <br>
+</h3>
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Randomwits</span> is licensed under under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br><br>
+    <div>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> &nbsp; &nbsp; <a title="Real Time Web Analytics" href="http://clicky.com/100650351"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+         <script src="//static.getclicky.com/js" type="text/javascript"></script>
+         <script type="text/javascript">try{ clicky.init(100650351); }catch(e){}</script>
+         <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100650351ns.gif" /></p></noscript>
+    </div>
+  </span>
+</div>
+<div style="clear:both;">
+  <hr>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43895904-1', 'randomwits.com');
+  ga('send', 'pageview');
+
+</script>
+
+      </footer>
+    </div>
+  </body>
+</html>

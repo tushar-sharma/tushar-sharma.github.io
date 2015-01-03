@@ -1,0 +1,1017 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tushar Sharma | Blog</title>
+    <link>http://randomwits.com/</link>
+    <atom:link href="http://randomwits.com/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Tushar Sharma | Blog</description>
+    <language>en-us</language>
+    <pubDate>Sun, 28 Dec 2014 09:03:30 +0530</pubDate>
+    <lastBuildDate>Sun, 28 Dec 2014 09:03:30 +0530</lastBuildDate>
+
+    
+    
+    <item>
+      <title>Digging on the codes of the Past</title>
+      <link>http://randomwits.com/blog/digging-secret-codes-past</link>
+      <pubDate>Sun, 04 May 2014 00:00:00 +0530</pubDate>
+      <author>tushar@randomwits.com (Tushar Sharma)</author>
+      <guid>http://randomwits.com/blog/digging-secret-codes-past</guid>
+      <description>&lt;p&gt;Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.&lt;/p&gt;
+
+&lt;!-- truncate_here --&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/code&quot; title=&quot;View posts tagged with &amp;quot;code&amp;quot;&quot;&gt;code&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/cryptography&quot; title=&quot;View posts tagged with &amp;quot;cryptography&amp;quot;&quot;&gt;cryptography&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/cipher&quot; title=&quot;View posts tagged with &amp;quot;cipher&amp;quot;&quot;&gt;cipher&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/monoalphabetic&quot; title=&quot;View posts tagged with &amp;quot;monoalphabetic&amp;quot;&quot;&gt;monoalphabetic&lt;/a&gt;    &lt;/p&gt;
+
+&lt;div&gt;
+&lt;img src=&quot;/img/ancient.jpg&quot; class=&quot;thumb&quot; /&gt;
+&lt;p&gt;
+Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;While the universe is pretty old (3.7987 billion years and counting), it has been only few million years since the chapter of humans commenced. We had come a long way since. From time in memorial, numerous civilizations thrived and collapsed leaving behind their legacy. The episodes of both glory and horror are conspicuous part of history. Distant from the hurly burly of the present civilization, on the mounds of Mahanjo-Daro and Harrapa, an entirely different civilization spoke another language.&lt;/p&gt;
+
+&lt;h4 id=&quot;indus-valley-civilization&quot;&gt;Indus Valley Civilization&lt;/h4&gt;
+
+&lt;p&gt;Indus Valley Civilization is considered as a cradle of early civilization along with Mesopotamia and Pharonic Egypt. It was noted for urban planning, baked brick houses, elaborate drainage systems, water supply systems, and clusters of large non-residential buildings &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;img style=&quot;float: left; margin: 0px 15px 15px 0px;&quot; src=&quot;/img/seal.jpg&quot; /&gt;
+The excavations have recovered some of the seals used at that time. The seal is in Indus script. There two camps divided on how to interpret this script. First camp believe this is nothing more than &lt;b&gt;semagrams&lt;/b&gt;. In this each letter represents  whole idea. Like the drawing of fish would represent fish. The other camp argues that this hieroglyphs represent &lt;b&gt;phonograms&lt;/b&gt; based on rebus system . In this each letters represents a phoneme (speech sound). Unfortunately Indus script is yet to be deciphered.
+&lt;/p&gt;
+
+&lt;h4 id=&quot;mlecchita-vikalpa&quot;&gt;Mlecchita Vikalpa&lt;/h4&gt;
+
+&lt;p&gt;The Indus valley civilization thrived much to the presence of Indus river. The river basin not only provided cultivable land but also sea routes to other ancient civilizations like Sumerian, Mesopotamia, etc. &lt;/p&gt;
+
+&lt;p&gt;Mleccha were the smiths that use to inscribe text of the mleccha language on the copper. Later mlecchita vikalpa, which means writing in cipher, was developed. It is the earliest use of cryptography. It was first mentioned in ancient Indian manuscript, Kama sutra, written around 4th century AD.&lt;/p&gt;
+
+&lt;p&gt;Mlecchita Vikalpa is one of the 64 arts recommended by Kama sutra to help women conceal details of their liaisons. It is a monoalphabetic substitution cipher. It means that it uses only one cipher alphabet to encrypt message. The cipher alphabet is randomly generated and each letter of the message is substituted to produce the cipher. Decipherment is simply re-substituting letters of the ciphers with the cipher alphabet. &lt;/p&gt;
+
+&lt;h4 id=&quot;recreating-the-ancient-cipher&quot;&gt;Recreating the ancient cipher&lt;/h4&gt;
+
+&lt;p&gt;To encipher a secret message, a random cipher alphabet needs to be generated. Below is a random key.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;UDJLKNCRZEBTMHPFQVWOXAGSIY
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now bifurcate the key &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;UDJLKNCRZEBTM
+HPFQVWOXAGSIY
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let us suppose the message is ‘password’. So the first letter of the message i.e. ‘p’ is searched in the cipher alphabet. ‘p’ is found opposite to ‘D’ which is then substituted&lt;/p&gt;
+
+&lt;p&gt;Similarly all the message is encrypted as ‘DZBBNCXP’&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Note: As convention, message is written in small letters 
+where as resultant cipher is written in capital letters.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;javascript-implementation&quot;&gt;Javascript Implementation&lt;/h4&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;function encryption(message, alphabet) {
+  for (i = 0; i &amp;lt; msg.length; ++i) {
+    pos = alphabet.indexOf(msg.substr(i,1));
+    if (pos &amp;gt; -1) {
+      newPos = pos - 13;
+      if (newPos &amp;lt; 0) {
+        newPos += 26;
+       }
+       result += alphabet.charAt(newPos);
+    } else  {
+      result += msg.substr(i,1);
+    }
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;fisher-yates-shuffle&quot;&gt;Fisher Yates shuffle&lt;/h4&gt;
+
+&lt;p&gt;Each time a new message needs to be sent, a random key is also needed. In order to generate alphabet of random lettters, Fisher Yates algorithms is used. A random permutation of a finite sets is produced. Shuffling is similar to randomly picking numbered tickets out of a hat without replacement until there are none left &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Below is the implementation in Javascript. &lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;/* shuffle an array of n elements 
+   array.length = n */
+for (i = array.length -1; i &amp;gt;0; i--) {
+
+    /* Pick a random number j 
+       between one and the number of unstruck numbers remaining */
+    j = Math.floor(Math.random() * (i + 1));
+
+    /* exchange array[i] and array[j]*/
+    temp     = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;demo&quot;&gt;Demo&lt;/h4&gt;
+
+&lt;form name=&quot;form1&quot; id=&quot;form1&quot; onsubmit=&quot;return false;&quot;&gt;
+  &lt;label for=&quot;alphabet&quot;&gt;Key&lt;/label&gt;&lt;br /&gt;
+  &lt;input type=&quot;text&quot; name=&quot;alphabet&quot; id=&quot;alphabet&quot; value=&quot;UDJLKNCRZEBTMHPFQVWOXAGSIY&quot; maxlength=&quot;26&quot; size=&quot;40&quot; /&gt; &lt;input type=&quot;submit&quot; value=&quot;Change&quot; onclick=&quot;document.form1.alphabet.value=submitForm(this)&quot; /&gt;&lt;br /&gt;
+  &lt;label for=&quot;text&quot;&gt;Plain Text&lt;/label&gt; &lt;br /&gt;
+  &lt;textarea name=&quot;cipher1&quot; id=&quot;cipher1&quot; rows=&quot;6&quot; cols=&quot;40&quot;&gt; &lt;/textarea&gt; &lt;br /&gt; 
+  &lt;label for=&quot;result&quot;&gt;Result&lt;/label&gt; &lt;br /&gt;
+  &lt;textarea name=&quot;result1&quot; id=&quot;result1&quot; rows=&quot;6&quot; cols=&quot;40&quot;&gt; &lt;/textarea&gt;&lt;br /&gt;
+  &lt;input type=&quot;button&quot; value=&quot;Encrypt/Decrypt&quot; onclick=&quot;return submitForm(this)&quot; /&gt; 
+  &lt;input type=&quot;submit&quot; value=&quot;Clear Form&quot; onclick=&quot;return submitForm(this)&quot; /&gt;
+&lt;/form&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;cryptanalysis&quot;&gt;Cryptanalysis&lt;/h4&gt;
+
+&lt;p&gt;This is the demonstration of a simple  monoalphabetic cipher. It is not secure and could be easily broken by frequency analysis &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;&lt;h3&gt;Footnotes&lt;/h3&gt;&lt;hr /&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+     &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Indus_Valley_Civilization&quot; targe=&quot;_blank&quot;&gt;Indus Valley Civilization&lt;/a&gt; &lt;/p&gt;
+     &lt;a href=&quot;#fnref:1&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Fisher–Yates_shuffle&quot; target=&quot;_blank&quot;&gt;Fisher–Yates shuffle&lt;/a&gt;&lt;/p&gt;
+     &lt;a href=&quot;#fnref:2&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Frequency_analysis&quot; target=&quot;_blank&quot;&gt;Frequency Analysis&lt;/a&gt;&lt;/p&gt;
+     &lt;a href=&quot;#fnref:3&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/crypto.js&quot;&gt;&lt;/script&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/romance-moon&quot; title=&quot;Previous Post: Romance with Moon&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;/nav&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Romance with Moon</title>
+      <link>http://randomwits.com/blog/romance-moon</link>
+      <pubDate>Sun, 30 Mar 2014 00:00:00 +0530</pubDate>
+      <author>tushar@randomwits.com (Tushar Sharma)</author>
+      <guid>http://randomwits.com/blog/romance-moon</guid>
+      <description>&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/styles.css.css&quot; /&gt;
+
+&lt;p&gt;Often we meet,&lt;br /&gt;
+Avoiding prying eyes secretly,&lt;br /&gt;
+In between stretches a velvet sky,&lt;br /&gt;
+Only gulf in between us apparently.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;High tides doth comes,&lt;br /&gt;
+As she tries approaching me,&lt;br /&gt;
+And sweeps the earth below,&lt;br /&gt;
+Posing as the one, only she could be.&lt;br /&gt;&lt;/p&gt;
+
+&lt;!-- truncate_here --&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/poetry&quot; title=&quot;View posts tagged with &amp;quot;poetry&amp;quot;&quot;&gt;poetry&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/romance&quot; title=&quot;View posts tagged with &amp;quot;romance&amp;quot;&quot;&gt;romance&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/moon&quot; title=&quot;View posts tagged with &amp;quot;moon&amp;quot;&quot;&gt;moon&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Often we meet,&lt;br /&gt;
+Avoiding prying eyes secretly,&lt;br /&gt;
+In between stretches a velvet sky,&lt;br /&gt;
+Only a gulf in between us apparently.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;High tides doth comes,&lt;br /&gt;
+As she tries approaching me,&lt;br /&gt;
+And sweeps the earth below,&lt;br /&gt;
+Posing as the one, only she could be.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Out of the window I gaze,&lt;br /&gt;
+Shooting stars falls before her grace,&lt;br /&gt;
+While the rest clings to the sky,&lt;br /&gt;
+In a hope that to her they could embrace. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Of many suitors I am one,&lt;br /&gt;
+Not noteworthy yet I whisper in hope,&lt;br /&gt;
+That by chance she could pay heed,&lt;br /&gt;
+To my melancholy heart that mope. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;At times I hear her throbbing heart,&lt;br /&gt;
+With waxing and waning of her sight,&lt;br /&gt;
+Into the puddle of fluffy clouds,&lt;br /&gt;
+She plays flute of her moonlight.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I have seen her new,&lt;br /&gt;
+And also at times when she grows crescent, &lt;br /&gt;
+Often craters mars her luminescent face,&lt;br /&gt;
+Yet her smile always remains pleasant. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I have seen the winds steal her pride, &lt;br /&gt;
+Of melody whilst she floats,&lt;br /&gt;
+Around the lonely orbit of life,&lt;br /&gt;
+Like me while the life gloats.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;How similar are we?&lt;br /&gt;
+And miles away she glow,&lt;br /&gt;
+How dissimilar are we?&lt;br /&gt;
+If only we could meet to know.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;What awaits us now,&lt;br /&gt;
+Is only a mystery of time,&lt;br /&gt;
+Will the Fate make us one?&lt;br /&gt;
+Or our love will be a mournful chime? &lt;br /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Idea of God</title>
+      <link>http://randomwits.com/blog/idea-of-god</link>
+      <pubDate>Sat, 08 Feb 2014 00:00:00 +0530</pubDate>
+      <author>tushar@randomwits.com (Tushar Sharma)</author>
+      <guid>http://randomwits.com/blog/idea-of-god</guid>
+      <description>&lt;p&gt;I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedo the whole place. And the Machiavelli alarm pulled me out of my dreams. &lt;/p&gt;
+
+&lt;p&gt;After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony. &lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/god&quot; title=&quot;View posts tagged with &amp;quot;god&amp;quot;&quot;&gt;god&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/religion&quot; title=&quot;View posts tagged with &amp;quot;religion&amp;quot;&quot;&gt;religion&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/science&quot; title=&quot;View posts tagged with &amp;quot;science&amp;quot;&quot;&gt;science&lt;/a&gt;    &lt;/p&gt;
+
+&lt;div&gt;
+&lt;img src=&quot;/img/singularity.png&quot; class=&quot;thumb&quot; /&gt;
+&lt;p&gt;
+I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedoed the whole place. And the Machiavelli alarm pulled me out of my dreams. 
+&lt;/p&gt;
+
+&lt;p&gt;After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony. 
+&lt;/p&gt;
+
+&lt;p&gt;
+Opposite to my building was a roof of another building. Out of nowhere leapt a nomadic cat onto the roof. She wandered around occasionally licking her paws. She caught the sight of me and stood still. Seeing her motionless aroused my curiosity.  As I receded my eyes I saw a sheet of cloth hung on another roof. A moment passed and a gust of wind left the cat still and the cloth fluttered. And another moment later, came a lady who took the cloth away. And the cat also escaped into oblivion. 
+&lt;/p&gt;
+
+&lt;p&gt;
+It dawned to me that the roof resembled a portrait. A portrait with different strokes of colors. A moment ago it had a tinge of a cat and the cloth. But soon the brush of life wiped them off. I wondered if Life per se was one giant portrait with each one of us resembling different strokes of colors only to be eventually swept away by the current of time.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&quot;No man ever steps in the same river twice&quot; - Heraclitus
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;paradox-of-choice&quot;&gt;Paradox of Choice&lt;/h4&gt;
+
+&lt;p&gt;After regaining consciousness and relinquishing my bed, I decided to stroll out in the morn. I quickly slipped into my pyjamas and shoes. The sky had the company of a dwindling moon who looked upset at the ascending sun. Occasionally birds chirped and bade the moon goodbye. The winds descended and raced with me to keep me company. &lt;/p&gt;
+
+&lt;p&gt;Pavements on Indian roads are designed with nefarious motive. A person walking on them needs to master the art of maneuvering. Sometimes you may encounter among other things cows, stray dogs, two-wheelers and sometimes wandering people. After meandering through myriad streets, I came across a divergence on a street. I stood still and soon sweat started pouring down my face along with some thoughts. I was stuck with a choice however trivial. And I wondered what are my odds that I make a right choice?&lt;/p&gt;
+
+&lt;p&gt;There is two ways of looking at the universe. One way is to through the lens of determinism. It means that we believe that the universe obeys laws of physics. From the gigantic sun revolving around its axis to the motor car driving in the highway, all of them obey cause and effect. This means you are also sure that memories of your childhood are real.&lt;/p&gt;
+
+&lt;p&gt;Another way of looking at the universe is through non-determinism. If you penetrate down to the world of atoms, you see the space time fabric becomes completely random. The certainty is sacrificed for randomness. The bizarre world of quantum physics demands to relinquish the idea of causality. This means that a particle can be at two different position at the same time (superposition). &lt;/p&gt;
+
+&lt;p&gt;This two different models of universe poses a moral dilemma. Are the events of our life completely random? This would give me ‘free will’ but rob me of any intervention from higher power. Or the events in life follow some grand design? This would give me a sense of protectionism but will render my ‘free will’ a mere illusion? Or it could be a middle world where there is ‘free will’ but also allow gods in the stars to intervene.&lt;/p&gt;
+
+&lt;p&gt;Einstein became disillusioned with the non-deterministic model of the universe. During the dusk of his life, he ceaselessly endeavoured in finding an alternate model. These were his famous words:&lt;/p&gt;
+
+&lt;blockquote&gt;
+God doesn&#39;t play dice with the world.
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;curious-case-of-religion&quot;&gt;Curious case of religion&lt;/h4&gt;
+
+&lt;p&gt;The course of human evolution was completely turned with the occurrence of two historic events. One was the discovery of fire and the other invention of wheel. The fire gave men the much needed protection. And the wheel allowed him to travel larger distance in finding niche required for survival. Yet the sudden roar of thunder easily ushered the greatest fear. When there was the fear of the unknown, religion came to the rescue. The fundamental question of where we came from, also known as creation myth, is found in all major religions. The absence of rainfall could be easily attributed to the angry gods craving sacrifice. Hence dogmas and ritual gave religious institution authority to control the masses. Also religion made men feel privileged than the rest of the animals.&lt;/p&gt;
+
+&lt;blockquote&gt;
+God created man in his own image, in the image of God he created him - Gen 1.27
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;My purpose is not to authenticate or refute any religious belief. I believe religion is a private affair. Philosophers like Spinoza have long argued for the separation of Church and the State, though some countries are still plagued by religious fundamentalism. &lt;/p&gt;
+
+&lt;p&gt;Most of the religion rely on miracles for indoctrinating people. Indoctrination robs people of questioning authority. Countless innocent people have been prosecuted in the name of religion like Bruno and Galileo. &lt;/p&gt;
+
+&lt;p&gt;But what is miracle? Is talking to someone over long distance over phone miracle? It’s not since in this century most of us are taught how technology works. But if I could time travel to medieval past and reveal to them an ordinary phone, they might hold me in high reverence. After all, one century’s magic, another century’s science &lt;sup id=&quot;fnref:man&quot;&gt;&lt;a href=&quot;#fn:man&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;chicken-or-the-egg&quot;&gt;Chicken or the Egg&lt;/h4&gt;
+
+&lt;p&gt;In the ‘Allegory of Cave’, Pluto describes gathering of people who have lived all their lives inside cave facing a blank wall. When they see projections of shadows on the wall of things in front of the fire, they give name to them. Then one day a cave men escapes. He is freed and begin to understand the shadows. Man have long tried contemplating his surrounding.&lt;/p&gt;
+
+&lt;p&gt;Imagine if you were a fish born and raise in aquarium. You would have no idea of the world outside the aquarium. Your awareness would have been restricted within the peripheral of the aquarium. If I were to ask you then, “where did the aquarium came from”, you would have been bewildered.&lt;/p&gt;
+
+&lt;p&gt;Our situation is quite akin to that of fish. We live in a bigger aquarium of three spacial and a time dimension universe. If I were to ask you, “where did the universe came from”, you could only surmise.&lt;/p&gt;
+
+&lt;p&gt;Chicken or the egg is the causality dilemma. Both can’t come independent of each other. Similarly it’s difficult to fathom beginning of universe since at the end something must come out of nothing. &lt;/p&gt;
+
+&lt;p&gt;Most scientist believe that the answer to the chicken and egg paradox lies in quantum fluctuation which states that conservation of energy could be violated if the time is small. Hence something can come out of nothing. &lt;/p&gt;
+
+&lt;h4 id=&quot;is-god-the-architect&quot;&gt;Is God the Architect?&lt;/h4&gt;
+
+&lt;p&gt;In earlier times people believed that earth was flat. As per Mesopotamian mythology, earth was considered to be a flat disk floating in the ocean and surrounded by a spherical sky. Aristotle gave the idea that the earth was spherical as the shadow of Earth on the Moon during a lunar eclipse is round. &lt;/p&gt;
+
+&lt;p&gt;But it was Eratosthenes who calculated the circumference of the earth.  He travelled to Syene  where the sun was directly overhead at the summer solstice. He saw that the sun rays doesn’t cast shadow on a metal bar. But when he travelled to Alexandria, which was north to Syene, the sun rays cast a shadow on the same bar. This could only happen if the earth was not flat. &lt;/p&gt;
+
+&lt;p&gt;The myth that earth was the center of the universe was based on the system devised by Ptolemy and favoured by Church of Rome. But Copernicus came up with a heliocentric model and stated that sun and not earth was the center of the solar system. &lt;/p&gt;
+
+&lt;p&gt;Gravity was described in 11th century by Indian mathematician Bhaskaracharya. Later building on the foundation of Kepler and Galileo, Newton formulated laws of gravity. This gave us the insight into the physical model of the universe.&lt;/p&gt;
+
+&lt;p&gt;When Napoleon was asked to explain why his works on celestial mechanics made no mention of god, he replied&lt;/p&gt;
+
+&lt;blockquote&gt;
+Your Highness, I have no need of this hypothesis
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;we-live-in-curved-space&quot;&gt;We live in curved space?&lt;/h4&gt;
+
+&lt;p&gt;The physics of sixteen and seventeen century was having honeymoon period. The Euclidean view of the world still remained. That means the sum of the angles of a triangle would always be 180&lt;sup&gt;0&lt;/sup&gt;. But this idea of the geometry of space was about to be shattered by a German scientist working as a patent clerk.&lt;/p&gt;
+
+&lt;p&gt;Einstein came up with a revolutionary idea of the universe in his theory of General Relativity. The sum of the angles of a triangle no longer adds up to 180&lt;sup&gt;0&lt;/sup&gt;. The universe was reduced to a inextricable fabric of space and time. Imagine the universe as a trampoline. The object with mass bends and curve the fabric of space time. The distortion in the fabric causes the ripples of gravity. Einstein calculated the speed of these ripples equal to that of speed of light. In fact Einstein set the speed of light as a cosmic limit. Nothing can go faster than light (though certain particles like Tachyon have been observe to supercede the speed of light under laboratory conditions).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/curve.jpg&quot; alt=&quot;img&quot; title=&quot;Curve space&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;our-universe-is-expanding&quot;&gt;Our universe is expanding&lt;/h4&gt;
+
+&lt;p&gt;Doppler proposed that the frequency is higher if the source is moving towards the observer. Similarly the frequency is lower if the source is moving away from the observer. He observed this phenomena in the sound waves. Hubble extended this idea by applying Doppler effect in light waves. He observed that the light from the distant galaxies were shifted towards the red end spectrum. If a star is moving away from us, the whole pattern of spectrum is shifted toward red end of spectrum. Hence he came to the conclusion that universe is expanding. &lt;/p&gt;
+
+&lt;p&gt;But scientist argued how long the universe will expand. The density of the universe was believed to eventually halt its expansion. But in 1998 observations of type Ia supernovae suggested that universe is not only expanding but accelerating.&lt;/p&gt;
+
+&lt;p&gt;How could the universe’s expansion accelerate is still an enigma in the scientific community. It’s believed that the known universe accounts for only 4% approximately. Rest of mass have been attributed to dark matter which is a hypothesized matter that accounts for the mass missing in the universe and dark energy which is believed to be accelerating energy. &lt;/p&gt;
+
+&lt;p&gt;The universe is an open book riddled with mysteries. Men have so far only able to scratch its surface. If we could unravel these mysteries then one day we may be able to read the mind of the creator. &lt;/p&gt;
+
+&lt;h4 id=&quot;anthropic-principle&quot;&gt;Anthropic Principle&lt;/h4&gt;
+
+&lt;p&gt;If I ask why does it rain, most of us would feel insulted on being ask such a trivial question. A kid in the five standard could very well explain in the following words, “It rains because the water from different parts of earth evaporate into water vapours. The vapours rise up as they are lighter than air which in turn condense into water which fall as rain”.&lt;/p&gt;
+
+&lt;p&gt;But if I flip the question and instead ask does it rain so that all the living being on earth could live, most of us would find it difficult to reach conclusion. This is called anthropic principle. Does the physical laws of the universe is compatible with conscious life that observes it? Why does the distance between earth and sun is optimum to sustain life? Why the optimum size of moon helps earth not to wobble? Had the precise values of fundamental physical constants not what they are, the whole universe would simple collapse in itself.&lt;/p&gt;
+
+&lt;h4 id=&quot;ultimate-truth&quot;&gt;Ultimate truth&lt;/h4&gt;
+
+&lt;p&gt;Scientist have fantasied of the theory of everything. This is major unsolved problem of physics. When we try to combine the rules of deterministic world with that of non-deterministic, the equation breaks down. The rule of gravity that is obeyed by the gigantic planets has no relevance in the atomic world. &lt;/p&gt;
+
+&lt;p&gt;I once encountered two pretty girls who I presumed were Christian missionary. They asked me if they believed in Jesus. I replied in affirmative and said, ‘I believe in Jesus, Krishna or any other Higher Being there is’. ‘But there can be only path to ultimate truth’, they revolted. This made me recall a reply by Swami Vivekanada on which religion is true.&lt;/p&gt;
+
+&lt;blockquote&gt;
+As so many rivers, having their source in different mountains, roll down, crooked or straight, and at last come into the ocean --- so, all these various creeds and religions, taking their start from different standpoints and running through crooked or straight courses, at last come unto Thee. 
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;After a while I returned from my jogging. The streets had now grown in people and traffic. Cows are considered sacred in India and can roam anywhere. As I was crossing a street, I saw a cow mooing. Afterward the cow disposed her dung on the street. I quietly chuckled, ‘Where is God? In the dung, cosmos or me. May be idea of the god needs another revision’.&lt;/p&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/happiness&quot; title=&quot;Previous Post: Happiness&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/romance-moon&quot; title=&quot;Next Post: Romance with Moon&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
+&lt;/nav&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:man&quot;&gt;
+      &lt;p&gt;The Man from Earth (2007)&lt;a href=&quot;#fnref:man&quot; rel=&quot;reference&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Happiness</title>
+      <link>http://randomwits.com/blog/happiness</link>
+      <pubDate>Tue, 24 Dec 2013 00:00:00 +0530</pubDate>
+      <author>tushar@randomwits.com (Tushar Sharma)</author>
+      <guid>http://randomwits.com/blog/happiness</guid>
+      <description>&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/styles.css.css&quot; /&gt;
+
+&lt;p&gt;I walked miles on my feet and hope,  &lt;br /&gt;
+against all weather, people and slope, &lt;br /&gt;
+But after some distance I could not keep, &lt;br /&gt;
+enough pace as the way was steep.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I was already late not by months but years, &lt;br /&gt;
+still I dragged my feet amidst all fears, &lt;br /&gt;
+at night when the moon swept the tides away, &lt;br /&gt;
+I dreamt of my past till sleep made me her prey. &lt;br /&gt;
+&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/poetry&quot; title=&quot;View posts tagged with &amp;quot;poetry&amp;quot;&quot;&gt;poetry&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/happiness&quot; title=&quot;View posts tagged with &amp;quot;happiness&amp;quot;&quot;&gt;happiness&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;I walked miles on my feet and hope, &lt;br /&gt;
+against all weather, people and slope, &lt;br /&gt;
+But after some distance I could not keep, &lt;br /&gt;
+enough pace as the way was steep. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I was already late not by months but years, &lt;br /&gt;
+still I dragged my feet amidst all fears, &lt;br /&gt;
+at night when the moon swept the tides away, &lt;br /&gt;
+I dreamt of my past till sleep made me her prey. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Where was I up to ? What did I yearn? &lt;br /&gt;
+for there are left enough experiences to earn, &lt;br /&gt;
+I was no genius, king or noble soul, &lt;br /&gt;
+But that never deter me to walk towards my goal. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Often in way people inquired about my way, &lt;br /&gt;
+“There are better players than me”, all would say, &lt;br /&gt;
+I must but forget since the goal is too high, &lt;br /&gt;
+and I lacked the skills to fly to the sky. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s still early to lay to test, &lt;br /&gt;
+my faith before I finally rest, &lt;br /&gt;
+Only God knows if I could ever harvest, &lt;br /&gt;
+the crop of happiness without remorse or pest &lt;br /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why I never close Emacs</title>
+      <link>http://randomwits.com/blog/why-i-never-close-emacs</link>
+      <pubDate>Wed, 06 Nov 2013 00:00:00 +0530</pubDate>
+      <author>tushar@randomwits.com (Tushar Sharma)</author>
+      <guid>http://randomwits.com/blog/why-i-never-close-emacs</guid>
+      <description>&lt;p&gt;CSS: post.css&lt;/p&gt;
+
+&lt;p&gt;I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. “It’s easier this way.”, he chuckled, “I can quickly find all the softwares I need.”. I showed him my desktop which was spick and span.”Doesn’t it consumes time in finding the softwares you need?”, he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. “You just use one software?”, he asked.”Mostly, yes”, I said. “What about &lt;em&gt;editing&lt;/em&gt;, &lt;em&gt;browsing&lt;/em&gt;, &lt;em&gt;music&lt;/em&gt;, etc?”, he asked. “I do it all in emacs.”, I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
+&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;p&gt;&lt;img src=&quot;/img/emacs.png&quot; class=&quot;thumb&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;
+I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &quot;It&#39;s easier this way.&quot;, he chuckled, &quot;I can quickly find all the softwares I need.&quot;. I showed him my desktop which was spick and span.&quot;Doesn&#39;t it consumes time in finding the softwares you need?&quot;, he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. &quot;You just use one software?&quot;, he asked.&quot;Mostly, yes&quot;, I said. &quot;What about *editing*, *browsing*, *music*, etc?&quot;, he asked. &quot;I do it all in emacs.&quot;, I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&lt;code&gt;This article has been published in &lt;a href=&quot;http://www.linuxforu.com&quot; target=&quot;_blank&quot;&gt;LinuxforYou&lt;/a&gt; magazine,January 2014 issue
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; For those who are unfamiliar with emacs, Key abbreviations used :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;M – x means holding meta key (usually Esc) and x&lt;/li&gt;
+  &lt;li&gt;C – Control&lt;/li&gt;
+  &lt;li&gt;S – Shift&lt;/li&gt;
+  &lt;li&gt;C-x f – means holding both Control and x, release both, and press f&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;emacs-for-editing&quot;&gt;Emacs for Editing&lt;/h4&gt;
+
+&lt;p&gt;Emacs is modeless editor which mean that unlike vim, you can start inserting text as soon as you open it. This is one of the reason why it’s popular with newbies. But that doesn’t mean you can’t get your hands dirty with emacs.&lt;/p&gt;
+
+&lt;p&gt;Most people criticize emacs user for trying to do everything with emacs except editing. So let’s begin with editing for which emacs was initially built.&lt;/p&gt;
+
+&lt;p&gt;Emacs can handle pretty much any type of file. Just type &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ emacs myFile.ext
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Emacs also does syntax highlighting and indentation. It usually follows GNU style of indentation. The best thing about emacs is that you can customize it the way you want. I usually like &lt;a href=&quot;http://en.wikipedia.org/wiki/Indent_style#Allman_style&quot;&gt;Allman&lt;/a&gt; indentation when editing &lt;code&gt;C&lt;/code&gt; code with &lt;code&gt;4 spaces&lt;/code&gt;. To change it, add this to your &lt;code&gt;~/.emacs&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class=&quot;common-lisp&quot;&gt;(setq c-default-style &amp;quot;linux&amp;quot;
+          c-basic-offset 4)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;emacs-for-backup&quot;&gt;Emacs for Backup&lt;/h4&gt;
+
+&lt;p&gt;Emacs by default creates a backup file for every file it edits. It’s usually named as the original file followed by tilde like FileName~. Though backup files are life saver, they are difficult to manage if they accumulate on the same folder. To save all your files in one place, let’s say in folder &lt;code&gt;.saves&lt;/code&gt;, add this to your &lt;code&gt;~/.emacs&lt;/code&gt;&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class=&quot;common-lisp&quot;&gt;(setq backup-directory-alist `((&amp;quot;.&amp;quot; . &amp;quot;~/.saves&amp;quot;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;emacs-for-browsing&quot;&gt;Emacs for Browsing&lt;/h4&gt;
+
+&lt;p&gt;If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses an extension &lt;code&gt;w3m.el&lt;/code&gt; which uses &lt;code&gt;w3m&lt;/code&gt; which itself is a &lt;code&gt;text-browser&lt;/code&gt;. Of course there are &lt;code&gt;Lynx&lt;/code&gt; and other text editors, but integrating w3m with emacs is very fast. &lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class=&quot;common-lisp&quot;&gt;(add-to-list &amp;#39;load-path &amp;quot;~/emacs-w3m&amp;quot;)
+(require &amp;#39;w3m-load)
+(setq browse-url-browser-function &amp;#39;w3m-browse-url)
+(autoload &amp;#39;w3m-browse-url &amp;quot;w3m&amp;quot; &amp;quot;Ask a WWW browser to show a URL.&amp;quot; t)
+;; optional keyboard short-cut
+(global-set-key &amp;quot;\C-xm&amp;quot; &amp;#39;browse-url-at-point)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here’s a snapshot of my website in emacs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/myblog.png&quot; alt=&quot;myblog&quot; title=&quot;My Blog&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;emacs-for-email&quot;&gt;Emacs for Email&lt;/h4&gt;
+
+&lt;p&gt;How about integrating emacs to view your email. You could do this by &lt;code&gt;GNUS&lt;/code&gt;. Add this to your &lt;code&gt;~/.gnus&lt;/code&gt; file&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class=&quot;common-lisp&quot;&gt;(setq gnus-select-method
+      &amp;#39;(nnimap &amp;quot;gmail&amp;quot;
+	       (nnimap-address &amp;quot;imap.gmail.com&amp;quot;)
+	       (nnimap-server-port 993)
+	       (nnimap-stream ssl)))
+
+(setq message-send-mail-function &amp;#39;smtpmail-send-it
+      smtpmail-starttls-credentials &amp;#39;((&amp;quot;smtp.gmail.com&amp;quot; 587 nil nil))
+      smtpmail-auth-credentials &amp;#39;((&amp;quot;smtp.gmail.com&amp;quot; 587
+				   &amp;quot;user@gmail.com&amp;quot; nil))
+      smtpmail-default-smtp-server &amp;quot;smtp.gmail.com&amp;quot;
+      smtpmail-smtp-server &amp;quot;smtp.gmail.com&amp;quot;
+      smtpmail-smtp-service 587
+      gnus-ignored-newsgroups &amp;quot;^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\&amp;quot;]\&amp;quot;[#&amp;#39;()]&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Replace user with you’re gmail username.Also add this to your &lt;code&gt;~/.authinfo&lt;/code&gt; file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;machine imap.gmail.com login user@gmail.com password secret port 993
+machine smtp.gmail.com login user@gmail.com password secret port 587
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The password field is optional. Type &lt;code&gt;M-x gnus&lt;/code&gt; to start GNUS. To compose email, type &lt;code&gt;m&lt;/code&gt;. Press &lt;code&gt;C-c C-c&lt;/code&gt; to send mail.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/gnus.png&quot; alt=&quot;gnus&quot; title=&quot;GNUS&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;emacs-for-photo-editing&quot;&gt;Emacs for Photo Editing&lt;/h4&gt;
+
+&lt;p&gt;The other task I usually do is look up few photos. Emacs can do more than just viewing the pictures, it has an inbuilt powerful power editor called &lt;code&gt;Image-Dired&lt;/code&gt;. Simply press &lt;code&gt;M-x image-dired&lt;/code&gt; on your emacs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/image_dired.png&quot; alt=&quot;Image-dired&quot; title=&quot;Image Dired&quot; /&gt;  &lt;/p&gt;
+
+&lt;h4 id=&quot;emacs-for-composing-documents&quot;&gt;Emacs for composing Documents&lt;/h4&gt;
+
+&lt;p&gt;This is one of the feature I find unparalleled to emacs. The official website says about org mode, “Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system”. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/orgMode.png&quot; alt=&quot;orgMode&quot; title=&quot;Org&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you love &lt;em&gt;LaTeX&lt;/em&gt;, then there are more reasons to love &lt;code&gt;org mode&lt;/code&gt;. You could integrated &lt;em&gt;TeX&lt;/em&gt; support and export your work in &lt;em&gt;PDF&lt;/em&gt;.For this add this to your ~/.emacs file&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class=&quot;common-lisp&quot;&gt;(require &amp;#39;org-latex)
+(unless (boundp &amp;#39;org-export-latex-classes)
+  (setq org-export-latex-classes nil))
+(add-to-list &amp;#39;org-export-latex-classes
+             &amp;#39;(&amp;quot;article&amp;quot;
+               &amp;quot;\\documentclass{article}&amp;quot;
+               (&amp;quot;\\section{ %s}&amp;quot; . &amp;quot;\\section*{ %s}&amp;quot;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;emacs-for-secret-writing&quot;&gt;Emacs for Secret Writing&lt;/h4&gt;
+
+&lt;p&gt;If you happen to maintain a personal diary, you must be paranoid about it’s secrecy. Emacs could be used to store your personal information. It uses &lt;code&gt;GNU GPG&lt;/code&gt; to save the file. Open any file in emacs with &lt;code&gt;gpg&lt;/code&gt; extension.To save it, press &lt;code&gt;C-s&lt;/code&gt; which asks for which type of encryption method to use. Just use the default and press OK. This would prompt for a passphrase for saving. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/secretGPG.png&quot; alt=&quot;secretGPG&quot; title=&quot;GPGa&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;emacs-for-playing-music&quot;&gt;Emacs for Playing Music&lt;/h4&gt;
+
+&lt;p&gt;First install mplayer.&lt;/p&gt;
+
+&lt;p&gt;In Linux (Ubuntu/Debian) try &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install mplayer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In Mac try&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew install mplayer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Clone &lt;code&gt;emms&lt;/code&gt; &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; $ git clone git://git.sv.gnu.org/emms.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If it fails try this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; $ git clone git://git.sv.gnu.org/r/emms.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It will clone the folder emms. Inside the folder, there are &lt;code&gt;*el&lt;/code&gt; file inside &lt;code&gt;lisp&lt;/code&gt;. Copy them all to &lt;code&gt;~/.emacs.d/site-lisp/emms&lt;/code&gt;. Find the executable of &lt;code&gt;mplayer&lt;/code&gt; which is usually in &lt;code&gt;/usr/local/bin/&lt;/code&gt;. Then add this to your &lt;code&gt;~/.emacs&lt;/code&gt;&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class=&quot;common-lisp&quot;&gt;(setq exec-path (append exec-path &amp;#39;(&amp;quot;/usr/local/bin&amp;quot;)))
+(add-to-list &amp;#39;load-path &amp;quot;~/.emacs.d/site-lisp/emms/lisp&amp;quot;)
+(require &amp;#39;emms-setup)
+(require &amp;#39;emms-player-mplayer)
+(emms-standard)
+(emms-default-players)
+(define-emms-simple-player mplayer &amp;#39;(file url)
+      (regexp-opt &amp;#39;(&amp;quot;.ogg&amp;quot; &amp;quot;.mp3&amp;quot; &amp;quot;.wav&amp;quot; &amp;quot;.mpg&amp;quot; &amp;quot;.mpeg&amp;quot; &amp;quot;.wmv&amp;quot; &amp;quot;.wma&amp;quot;
+                    &amp;quot;.mov&amp;quot; &amp;quot;.avi&amp;quot; &amp;quot;.divx&amp;quot; &amp;quot;.ogm&amp;quot; &amp;quot;.asf&amp;quot; &amp;quot;.mkv&amp;quot; &amp;quot;http://&amp;quot; &amp;quot;mms://&amp;quot;
+                    &amp;quot;.rm&amp;quot; &amp;quot;.rmvb&amp;quot; &amp;quot;.mp4&amp;quot; &amp;quot;.flac&amp;quot; &amp;quot;.vob&amp;quot; &amp;quot;.m4a&amp;quot; &amp;quot;.flv&amp;quot; &amp;quot;.ogv&amp;quot; &amp;quot;.pls&amp;quot;))
+      &amp;quot;mplayer&amp;quot; &amp;quot;-slave&amp;quot; &amp;quot;-quiet&amp;quot; &amp;quot;-really-quiet&amp;quot; &amp;quot;-fullscreen&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then type &lt;code&gt;M-x emms-play-directory&lt;/code&gt; to navigate to music directory and play files. &lt;/p&gt;
+
+&lt;h4 id=&quot;emacs-for-social-networking&quot;&gt;Emacs for Social Networking&lt;/h4&gt;
+
+&lt;p&gt;If you cling for user experience, it’s better to use regular browsers for social networking. And it sometimes becomes difficult to replicate all functionality of websites in emacs. Nevertheless, there’s a ways to circumvent some of the limitations and use social networking in emacs. &lt;/p&gt;
+
+&lt;p&gt;To use facebook, visit &lt;code&gt;http://m.facebook.com&lt;/code&gt;. If you want login information to remain store, add cookie information in emacs. &lt;/p&gt;
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class=&quot;common-lisp&quot;&gt;(setq w3m-use-cookies t)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To use twitter, download &lt;code&gt;twittering-mode.el&lt;/code&gt; and store it somewhere. Add this to your &lt;code&gt;~/.emacs&lt;/code&gt;&lt;/p&gt;
+&lt;div&gt;
+  &lt;pre&gt;&lt;code class=&quot;common-lisp&quot;&gt;(add-to-list &amp;#39;load-path &amp;quot;/PATH/TO/&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;emacs-for-amusement&quot;&gt;Emacs for Amusement&lt;/h4&gt;
+
+&lt;p&gt;Last but not least, emacs also has lots of interesting features for amusement. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/doctor.png&quot; alt=&quot;doctor&quot; title=&quot;doctor&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Type &lt;code&gt;M-x doctor&lt;/code&gt; to talk to a psychologist. &lt;/li&gt;
+  &lt;li&gt;Type &lt;code&gt;M-x tetris&lt;/code&gt; to play tetris. &lt;/li&gt;
+  &lt;li&gt;Type &lt;code&gt;M-x snake&lt;/code&gt; to play classic snake game.&lt;/li&gt;
+  &lt;li&gt;Type &lt;code&gt;M-x pong&lt;/code&gt; to play ping pong.&lt;/li&gt;
+  &lt;li&gt;Type &lt;code&gt;M-x mpuz&lt;/code&gt; for multiplication puzzle. &lt;/li&gt;
+  &lt;li&gt;Type &lt;code&gt;M-x hanoi&lt;/code&gt; for computer solving towers of hanoi game &lt;/li&gt;
+  &lt;li&gt;Type &lt;code&gt;M-x gomoku&lt;/code&gt; for five-in-a-row against the computer 
+8.Type &lt;code&gt;M-x dunnet&lt;/code&gt; for text based adventure game.&lt;/li&gt;
+  &lt;li&gt;Type &lt;code&gt;M-x life&lt;/code&gt; to grow your own cell in emacs. &lt;/li&gt;
+  &lt;li&gt;Type &lt;code&gt;M-x butterfly&lt;/code&gt; if you’re a &lt;a href=&quot;http://xkcd.com/378/&quot;&gt;xkcd&lt;/a&gt; fan.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For more visit emac’s &lt;a href=&quot;http://www.emacswiki.org/emacs/CategoryGames&quot;&gt;games&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h4&gt;
+
+&lt;p&gt;Emacs is not meant to be an &lt;strong&gt;all-in-one&lt;/strong&gt; substitute for all softwares. Of course certain softwares are better at doing specific tasks. Emacs wins over the fact that I rarely needs to close it. One can easily customize and extend emacs using elisp, a dialect of lisp. If you’re convinced of the power of emacs, let me welcome you to the &lt;a href=&quot;http://www.emacswiki.org/emacs/ChurchOfEmacs&quot;&gt;Church of Emacs&lt;/a&gt;. If not, let’s part ways with an old joke, “&lt;em&gt;The Emacs operaating system needs a better editor&lt;/em&gt;”.&lt;/p&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/how-vim-saved-my-day&quot; title=&quot;Previous Post: How ViM Saved My Day&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/happiness&quot; title=&quot;Next Post: Happiness&quot;&gt;Next&amp;rarr;&lt;/a&gt; 	
+&lt;/nav&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>How ViM Saved My Day</title>
+      <link>http://randomwits.com/blog/how-vim-saved-my-day</link>
+      <pubDate>Fri, 18 Oct 2013 00:00:00 +0530</pubDate>
+      <author>tushar@randomwits.com (Tushar Sharma)</author>
+      <guid>http://randomwits.com/blog/how-vim-saved-my-day</guid>
+      <description>&lt;p&gt;CSS: post.css&lt;/p&gt;
+
+&lt;p&gt;It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India’s IT company. I vividly remember the countless occasions when ViM saved my day.
+&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;div&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/vi&quot; title=&quot;View posts tagged with &amp;quot;vi&amp;quot;&quot;&gt;vi&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/vim&quot; title=&quot;View posts tagged with &amp;quot;vim&amp;quot;&quot;&gt;vim&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/editor&quot; title=&quot;View posts tagged with &amp;quot;editor&amp;quot;&quot;&gt;editor&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/code&quot; title=&quot;View posts tagged with &amp;quot;code&amp;quot;&quot;&gt;code&lt;/a&gt;    &lt;/div&gt;
+&lt;div style=&quot;clear:both;padding-top:20px;padding-bottom:20px;&quot;&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;img src=&quot;/img/vim.png&quot; class=&quot;thumb&quot; /&gt;
+&lt;p&gt;
+It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India&#39;s IT company. I vividly remember the countless occasions when ViM saved my day.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;early-days&quot;&gt;Early Days&lt;/h4&gt;
+
+&lt;p&gt;I mostly received rudimentary tasks in early days of my work. I received one such task just few days after my joining. I was slouching on my chair when I heard this commanding voice.&lt;/p&gt;
+
+&lt;p&gt;“New joining”.&lt;/p&gt;
+
+&lt;p&gt;“Yes, sir”,  I replied looking around trying to find the source of the voice.&lt;/p&gt;
+
+&lt;p&gt;A tall thin man with the air of authority stood glaring over my shoulders.&lt;/p&gt;
+
+&lt;p&gt;“Come, I have a work for you”, he said and drew me to his cabin.  &lt;/p&gt;
+
+&lt;p&gt;He showed me a csv file. Unfortunately I can’t post the original files but I’ve tried to create resemblance of original file. See the picture 1 below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/figure1.png&quot; alt=&quot;Picture1&quot; title=&quot;The CSV file&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;He began scrolling down the file. It took him more than two minutes to get to the middle of the file while my eyes remained glued to the screen counting the number of lines. At last when he reached the bottom, deducing my curiosity he said, “It has 2000 lines”.&lt;/p&gt;
+
+&lt;p&gt;“All you have to do”, he said, “is to pick each line of this CSV file and paste it to another text file with slight alteration”. He showed me another text file which resembled to Picture 2. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/figure2.png&quot; alt=&quot;Picture2&quot; title=&quot;The SQL File&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“Each line should be similar to the other file”, he said pointing to Picture 2.  Not only did I have to rearrange items of the line but also had to insert some extra text to match Picture 2. &lt;/p&gt;
+
+&lt;p&gt;“How do you do it here”, I asked hoping if there was a trick.&lt;/p&gt;
+
+&lt;p&gt;“You have to do it manually”, he continued, “No other way”. Taking cognisance of my crestfallen face he said, “Don’t worry. There’s no hurry. You can take few days as you are new”, he said. &lt;/p&gt;
+
+&lt;p&gt;With those words he left me with this task. Nothing peeves a programmer more than doing a monotonous repetitive work. But as every cloud has a sliver lining, similarly every problem too has a smarter solution.&lt;/p&gt;
+
+&lt;h4 id=&quot;hello-vim&quot;&gt;Hello ViM&lt;/h4&gt;
+
+&lt;p&gt;ViM stands for Vi Improved which is clone based on VI editor. If you’ve never heard of vi, chances are you are still accustomed to the world of WYSIWYG editors like Notepad, etc. Well, those editors are great if you’re daily tasks are to simply edit, copy, paste, search, etc but if you want to get you’re hands dirty, vim is the panacea every programmer wants. Of course few other editors like emacs are equally powerful (or more&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;), but this post is about my romance with ViM (Sorry Emacs). &lt;/p&gt;
+
+&lt;p&gt;Ideally I would want to lay my hands on some Unix clone to get such task done. But my system was running legacy operating system, I did not have that luxury. Nevertheless most free&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; softwares today easily run on non-Unix operating systems (like Windows). I fired internet explorer (to download firefox :) ) and downloaded a portable version of ViM.&lt;/p&gt;
+
+&lt;h4 id=&quot;smart-way&quot;&gt;Smart Way&lt;/h4&gt;
+
+&lt;p&gt;ViM is a modal editor. Unlike other common editors, you can’t start typing text in it straight away. ViM opens in command mode. To switch to insert mode, you have to press &lt;code&gt;i&lt;/code&gt;. If you love typing and rarely use mouse (which most programmers do) then you’ll love ViM. Navigation in ViM is by using classic &lt;code&gt;hjkl&lt;/code&gt; keys. &lt;/p&gt;
+
+&lt;p&gt;Now its time to return to our problem i.e the file in Picture 1. I had to edit to look similar to file in Picture 2. To acomplish this task, I use a nifty feature of ViM called macros. Macros help to record my sequence of steps and play it again and again. In simple words, what I do for one line, I can repeat it for 1999 lines. These were sequence of steps&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start recording the macro&lt;/li&gt;
+  &lt;li&gt;Jump to Fourth element of the file&lt;/li&gt;
+  &lt;li&gt;Cut the whole line from this element up to the end&lt;/li&gt;
+  &lt;li&gt;Paste in the beginning of file&lt;/li&gt;
+  &lt;li&gt;Go to last element&lt;/li&gt;
+  &lt;li&gt;Cut the last element &lt;/li&gt;
+  &lt;li&gt;Paste it before last two elements&lt;/li&gt;
+  &lt;li&gt;Add extra text wherever required &lt;/li&gt;
+  &lt;li&gt;Stop the macro&lt;/li&gt;
+  &lt;li&gt;Repeat the macro of 1999 lines&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To translate the above steps in ViM&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Press &lt;code&gt;qa&lt;/code&gt; to start the macro and save it in register a&lt;/li&gt;
+  &lt;li&gt;Press &lt;code&gt;/&lt;/code&gt; to search for comma. Press &lt;code&gt;n&lt;/code&gt; 2 times to reach fourth element&lt;/li&gt;
+  &lt;li&gt;Press &lt;code&gt;v&lt;/code&gt; + &lt;code&gt;$&lt;/code&gt; + &lt;code&gt;d&lt;/code&gt; to cut the line from fourth element to end&lt;/li&gt;
+  &lt;li&gt;Press &lt;code&gt;0&lt;/code&gt; to go to beginning of file. Press &lt;code&gt;p&lt;/code&gt; to paste.&lt;/li&gt;
+  &lt;li&gt;Press &lt;code&gt;$&lt;/code&gt; to reach last element. &lt;/li&gt;
+  &lt;li&gt;Press &lt;code&gt;v&lt;/code&gt; + &lt;code&gt;?&lt;/code&gt; + &lt;code&gt;&#39;&lt;/code&gt; to cut the last element&lt;/li&gt;
+  &lt;li&gt;Press &lt;code&gt;?&lt;/code&gt; to reverse search comma and press &lt;code&gt;n&lt;/code&gt;. Press &lt;code&gt;p&lt;/code&gt; to paste.  &lt;/li&gt;
+  &lt;li&gt;Copy paste extra text where required. Press &lt;code&gt;i&lt;/code&gt; to enter insert mode and to paste  press &lt;code&gt;SHIFT&lt;/code&gt; + &lt;code&gt;CTRL&lt;/code&gt; + &lt;code&gt;V&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Press &lt;code&gt;Enter&lt;/code&gt; to jump off the line and press &lt;code&gt;q&lt;/code&gt; to stop the macro&lt;/li&gt;
+  &lt;li&gt;Press &lt;code&gt;1999@a&lt;/code&gt; to repeat macro&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Of course you can reduce the number of steps by a more elegant solution. But this alone helped me solve my task. See my resulted file in Picture 3 below. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/figure3.png&quot; alt=&quot;Picture3&quot; title=&quot;The Result&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;even-more-smart-way&quot;&gt;Even More Smart Way&lt;/h4&gt;
+
+&lt;p&gt;Imagine if you have to repeat this task again and again. It’s cumbersome to write the same macro again and again after you switch off your machine. There’s a way to store macro so that you don’t need to remember them. First copy the value of your macro. To see your macro’s value type&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:anew
+
+:&quot;ap
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And copy paste this value of macro in your &lt;code&gt;.vimrc&lt;/code&gt; file &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let @a = &#39;MACRO_VALUE&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Just replace MACRO_VALUE with the value of your own macro. Here’s value of my own macro &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;0/,^Mnnlv$hd0i ^[p^[0^[lu^[uuuuuuuuuuuuuuu
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And Voila! Your Macro is saved. &lt;/p&gt;
+
+&lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h4&gt;
+
+&lt;p&gt;ViM is a wonderful editor if only you get to know it. The following task took me less than 15 minutes to complete. Of course less than 15 minutes feat dazzled my supervisor but more than the approval it’s the satisfaction that comes from solving problems smartly. So what’s your story? Have ViM ever saved your day? &lt;/p&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/why-hacking-is-good&quot; title=&quot;Previous Post: Why hacking is good&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/why-i-never-close-emacs&quot; title=&quot;Next Post: Why I never close Emacs&quot;&gt;Next&amp;rarr;&lt;/a&gt; 	
+&lt;/nav&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;There’s a famous editor war between VI and Emacs&lt;a href=&quot;#fnref:1&quot; rel=&quot;reference&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Free means as if freedom not gratis&lt;a href=&quot;#fnref:2&quot; rel=&quot;reference&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why hacking is good</title>
+      <link>http://randomwits.com/blog/why-hacking-is-good</link>
+      <pubDate>Tue, 10 Sep 2013 00:00:00 +0530</pubDate>
+      <author>tushar@randomwits.com (Tushar Sharma)</author>
+      <guid>http://randomwits.com/blog/why-hacking-is-good</guid>
+      <description>&lt;p&gt;CSS: post.css&lt;/p&gt;
+
+&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, “Don’t you know what hacking is?”. On insisting he reluctantly explained, “breaking into website or stealing passwords of Facebook, etc”. I was crestfallen at the rampant misconception about hacking.
+&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/hacking&quot; title=&quot;View posts tagged with &amp;quot;hacking&amp;quot;&quot;&gt;hacking&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/hackers&quot; title=&quot;View posts tagged with &amp;quot;hackers&amp;quot;&quot;&gt;hackers&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/code&quot; title=&quot;View posts tagged with &amp;quot;code&amp;quot;&quot;&gt;code&lt;/a&gt;    &lt;/p&gt;
+
+&lt;div&gt;
+&lt;img src=&quot;/img/glider.jpg&quot; class=&quot;thumb&quot; /&gt;
+&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, &quot;Don&#39;t you know what hacking is?&quot;. On insisting he reluctantly explained, &quot;breaking into website or stealing passwords of Facebook, etc&quot;. I was crestfallen at the rampant misconception about hacking. &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;what-people-think-hacking-is&quot;&gt;What people think hacking is&lt;/h4&gt;
+
+&lt;p&gt;Often we read news of hackers breaking into websites siphoning millions of dollars. Such news not only create pervasive fear of hacking but also glorify such malicious activities. Media portrays hackers as precocious teenagers toying away with their hi-tech gadgets in their basement trying to circumvent securities. Their skills are often calibrated against the damage they can cause. Just google hacking and news of hackers getting convicted of breaching securities grabs the limelight. The most popular method used by such people involves defacing a website for &lt;a href=&quot;http://en.wikipedia.org/wiki/Hacktivism&quot; target=&quot;_blank&quot;&gt;hacktivism&lt;/a&gt; which usually involves &lt;a href=&quot;http://en.wikipedia.org/wiki/SQL_injection&quot; target=&quot;_blank&quot;&gt;SQL injecting&lt;/a&gt;, &lt;a href=&quot;http://en.wikipedia.org/wiki/Cross-site_scripting&quot; target=&quot;_blank&quot;&gt;Cross Site Scripting&lt;/a&gt; (XSS) or &lt;a href=&quot;http://en.wikipedia.org/wiki/Denial-of-service_attack&quot; target=&quot;_blank&quot;&gt;Denial of service&lt;/a&gt; (DoS). None of the above techniques involves any sophisticated technical skills. Even if some of intrusion involved superior technical skills, it would not be hacking as it is against the hacker’s ethics&lt;sup id=&quot;fnref:ethics&quot;&gt;&lt;a href=&quot;#fn:ethics&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;what-hacking-really-is&quot;&gt;What hacking really is&lt;/h4&gt;
+
+&lt;p&gt;Hacking is learning and building constructing things and nothing else. The concept of hacking emanated from MIT in 1960 where the term “hacking” resonated with creativity. Hacks were anything ingenious which may include any piece of code or even a clever prank. Hacker is used to denote a person who follows a spirit of playful cleverness and loves programming&lt;sup id=&quot;fnref:hacker&quot;&gt;&lt;a href=&quot;#fn:hacker&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. True hackers are those rare breed of people who are masterful programmers who believe in freedom to access and share knowledge. As Eric Raymond aptly puts it, “There is a community, a shared culture, of expert programmers and networking wizards that traces its history back through decades to the first time-sharing minicomputers and the earliest ARPAnet experiments. The members of this culture originated the term ‘hacker’. Hackers built the Internet. Hackers made the Unix operating system what it is today. Hackers run Usenet. Hackers make the World Wide Web work. If you are part of this culture, if you have contributed to it and other people in it know who you are and call you a hacker, you’re a hacker&lt;sup id=&quot;fnref:eric&quot;&gt;&lt;a href=&quot;#fn:eric&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;”.&lt;/p&gt;
+
+&lt;h4 id=&quot;what-is-the-difference&quot;&gt;What is the difference&lt;/h4&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt; &lt;strong /&gt; &lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt; &lt;strong&gt; Type  &lt;/strong&gt;&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt; &lt;strong&gt;Name&lt;/strong&gt; &lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt; &lt;strong&gt;Known For&lt;/strong&gt; &lt;/th&gt;
+
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Ankit_Fadia&quot; target=&quot;_blank&quot;&gt;&lt;img style=&quot;height:150px;padding:15px 15px 15px 0px;max-width: 100px;&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ankitfadia2.jpg/200px-Ankitfadia2.jpg&quot; /&gt;&lt;/a&gt; &lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;Media Hacker&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;Ankit Fadia&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt; Claimed that after the 9/11 attacks, &quot;American investigating agencies&quot; invited him to decode an encrypted message posted by Al-Qaeda. Thought he got much &lt;a href=&quot;http://www.thehindu.com/sci-tech/inside-account/article48684.ece&quot; target=&quot;_blank&quot;&gt;publicity&lt;/a&gt;, his claims are refuted &lt;a href=&quot;http://forbesindia.com/article/beyond-business/ankit-fadia-revealed/34793/0&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Richard_Stallman&quot; target=&quot;_blank&quot;&gt;&lt;img style=&quot;height:150px;padding:15px 15px 15px 0px;max-width: 100px;&quot; src=&quot;http://static.fsf.org/fsforg/img/rms-web.jpg&quot; /&gt;&lt;/a&gt; &lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;True Hacker&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;Richard Stallman&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;Launched GNU Project, founding the Free Software Foundation, developing the GNU Compiler Collection and GNU Emacs, and writing the GNU General Public License &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h4&gt;
+
+&lt;p&gt;Convictions of computer crimes, which began as early as 1983 with the case of 414&lt;sup id=&quot;fnref:414&quot;&gt;&lt;a href=&quot;#fn:414&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, caught the attention of the media. Rampant breach of security created panic among general public and intruders called themselves ‘hackers’. These bunch of people, who writes malicious code, are nothing but crackers&lt;sup id=&quot;fnref:crackers&quot;&gt;&lt;a href=&quot;#fn:crackers&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. Not only did they rob people of their money but also condemned such a beautiful word as ‘hacker’. &lt;/p&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/sleep&quot; title=&quot;Previous Post: Sleep&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/how-vim-saved-my-day&quot; title=&quot;Next Post: How ViM Saved My Day&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
+&lt;/nav&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:ethics&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Hacker_ethic&quot; target=&quot;_blank&quot;&gt;Hacker ethic&lt;/a&gt;&lt;a href=&quot;#fnref:ethics&quot; rel=&quot;reference&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:hacker&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Hacker_(term)#Programmer_subculture_of_hackers&quot; target=&quot;_blank&quot;&gt;Hacker_(term)&lt;/a&gt;&lt;a href=&quot;#fnref:hacker&quot; rel=&quot;reference&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:eric&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://www.catb.org/esr/faqs/hacker-howto.html#whatis&quot; target=&quot;_blank&quot;&gt;How to be a hacker&lt;/a&gt;&lt;a href=&quot;#fnref:eric&quot; rel=&quot;reference&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:414&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/The_414s&quot; target=&quot;_blank&quot;&gt;414&lt;/a&gt;&lt;a href=&quot;#fnref:414&quot; rel=&quot;reference&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:crackers&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://www.catb.org/jargon/html/C/cracker.html&quot; target=&quot;_blank&quot;&gt;Jargon file - Cracker&lt;/a&gt;&lt;a href=&quot;#fnref:crackers&quot; rel=&quot;reference&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sleep</title>
+      <link>http://randomwits.com/blog/sleep</link>
+      <pubDate>Sat, 07 Sep 2013 00:00:00 +0530</pubDate>
+      <author>tushar@randomwits.com (Tushar Sharma)</author>
+      <guid>http://randomwits.com/blog/sleep</guid>
+      <description>&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/styles.css.css&quot; /&gt;
+
+&lt;p&gt;As I lay on my cosy bed,&lt;br /&gt; 
+a hanging moon did my curtains lit,&lt;br /&gt; 
+under my pillow sank my weary head,&lt;br /&gt; 
+and slumber weaved its sleepy knit.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The clock ticked and ticked away,&lt;br /&gt; 
+I climbed mountains and travelled like a bullet,&lt;br /&gt; 
+no laws of physics or Michael Faraday,&lt;br /&gt; 
+only in dreams can everyone shine like a starlet.&lt;br /&gt;
+&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/poetry&quot; title=&quot;View posts tagged with &amp;quot;poetry&amp;quot;&quot;&gt;poetry&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/sleep&quot; title=&quot;View posts tagged with &amp;quot;sleep&amp;quot;&quot;&gt;sleep&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;As I lay on my cosy bed,&lt;br /&gt; 
+a hanging moon did my curtains lit,&lt;br /&gt; 
+under my pillow sank my weary head,&lt;br /&gt; 
+and slumber weaved its sleepy knit.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The clock ticked and ticked away,&lt;br /&gt; 
+I climbed mountains and travelled like a bullet,&lt;br /&gt; 
+no laws of physics or Michael Faraday,&lt;br /&gt; 
+only in dreams can everyone shine like a starlet.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Suddenly the window lost its shine,&lt;br /&gt; 
+the clouds caged away the moonlit night,&lt;br /&gt; 
+no breeze came to play the rhyme,&lt;br /&gt; 
+my dreams were wreaked by this monstrous plight.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;As my heart was pumping fast,&lt;br /&gt; 
+adrenaline but then a hand came past,&lt;br /&gt; 
+of my mother caressing my forehead and left,&lt;br /&gt; 
+the dark murky clouds away through the cleft.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Huawei Usb Modem in Debian</title>
+      <link>http://randomwits.com/blog/huawei-usb-modem-in-debian</link>
+      <pubDate>Wed, 04 Jul 2012 00:00:00 +0530</pubDate>
+      <author>tushar@randomwits.com (Tushar Sharma)</author>
+      <guid>http://randomwits.com/blog/huawei-usb-modem-in-debian</guid>
+      <description>&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/debian&quot; title=&quot;View posts tagged with &amp;quot;debian&amp;quot;&quot;&gt;debian&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/huawei&quot; title=&quot;View posts tagged with &amp;quot;huawei&amp;quot;&quot;&gt;huawei&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/usb&quot; title=&quot;View posts tagged with &amp;quot;usb&amp;quot;&quot;&gt;usb&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/modem&quot; title=&quot;View posts tagged with &amp;quot;modem&amp;quot;&quot;&gt;modem&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/code&quot; title=&quot;View posts tagged with &amp;quot;code&amp;quot;&quot;&gt;code&lt;/a&gt;    &lt;/p&gt;
+
+&lt;div&gt;
+&lt;img src=&quot;/img/debian.jpg&quot; class=&quot;thumb&quot; /&gt;
+The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+I’ll be using &lt;code&gt;wvdial&lt;/code&gt; to configure the internet. It’s likely that your system will have the package pre installed. Otherwise you can manyally download it from &lt;a href=&quot;http://packages.debian.org/squeeze/wvdial&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Now connect the modem and run lsusb to see the modem connected to the usb:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ lusub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/w4.png&quot; alt=&quot;w4&quot; title=&quot;w4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we see Huawie usb is visible as Huawei Wireless Data Modem. Become a super user by typing &lt;code&gt;sudo su&lt;/code&gt;. Now for detecting the modem run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# wvdial /etc/wvdial.conf 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/w1.png&quot; alt=&quot;w1&quot; title=&quot;w1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# vi /etc/wvdial.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/w3.png&quot; alt=&quot;w3&quot; title=&quot;w3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remove the semicolons &amp;amp; change the following values:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Username: internet
+Password: internet
+Phone   : #777
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Also add the following lines to wvdial.conf&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Init3 = AT+CRM=1
+Stupid Mode = 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now run the following command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# wvdial
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bravo! It connects to the internet. Press &lt;b&gt;Ctrl + C&lt;/b&gt; anytime to disconnect.&lt;/p&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/fear-of-walmart&quot; title=&quot;Previous Post: Fear of Walmart&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/projects/des&quot; title=&quot;Next Post: Data Encryption Standard (DES)&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
+&lt;/nav&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fear of Walmart</title>
+      <link>http://randomwits.com/blog/fear-of-walmart</link>
+      <pubDate>Fri, 30 Mar 2012 00:00:00 +0530</pubDate>
+      <author>tushar@randomwits.com (Tushar Sharma)</author>
+      <guid>http://randomwits.com/blog/fear-of-walmart</guid>
+      <description>&lt;p&gt;After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. 
+&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/Walmart&quot; title=&quot;View posts tagged with &amp;quot;Walmart&amp;quot;&quot;&gt;Walmart&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/FDI&quot; title=&quot;View posts tagged with &amp;quot;FDI&amp;quot;&quot;&gt;FDI&lt;/a&gt;    &lt;/p&gt;
+
+&lt;div&gt;
+&lt;img src=&quot;/img/walmart.jpg&quot; class=&quot;thumb&quot; /&gt;
+&lt;p&gt;After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;My lack of education in economics convinced me of my inability to form an opinion on this matter. But as a concerned citizen , I tried to understand the repercussion of such an important law debated in the parliament. My first hurdle was to demystify FDI ( Foreign Direct Investment). FDI is way to control the investment of a foreign company. The investment may include purchase of land, building factories, employing people, etc. Usually FDI is restricted in countries to protect domestic companies against the might of the multi-national companies. But relaxing FDI organizes the sector, drives the economy, increases employment, etc. India liberalized most of its sectors after 1991 which also witnessed the boom of Indian IT sector. Currently FDI in retail sector is restricted below 51% forbidding companies like Walmart to pounce upon the Indian market.&lt;/p&gt;
+
+&lt;p&gt;Indian acts like &lt;a href=&quot;https://en.wikipedia.org/wiki/Agricultural_Produce_Market_Committee&quot;&gt;APMC&lt;/a&gt; have long forced farmers to only sell their products to the government mundis( market). Despite million starving in poverty, food grains across nation rots in the government godown(warehouse) thanks to the poor PDS. Unlike China, infrastructure in India is still poor. PDS( Public Distribution System) in India is also unorganized and less robust. Such shortcoming combined with other factors have left Indian farmers under the pangs of poverty. The rising inflation has forced RBI(Reserve Bank Of India) to continue to hike repo rates. This slowed the GDP( Gross Domestic Product) and devaluation of Indian ruppee against the dollar. &lt;/p&gt;
+
+&lt;p&gt;Does the much hyped Walmart would be a panacea for Indian consumers against the inflation? Entry of Walmart would usher the much needed reform in the retail sector. Food prices would fall as the Walmart would directly purchase food from the farmers thereby eliminating the middleman. India is perhaps the only developing country where Walmart is yet ink its presence. In contrast China has allowed 100% FDI in retail sector. Yet diluting FDI would be a arduous task for the central government walking a fine line between convincing the opposition and the local shopkeepers with a large chunk of the vote bank. &lt;/p&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+  &lt;a class=&quot;next-item&quot; href=&quot;/blog/huawei-usb-modem-in-debian&quot; title=&quot;Next Post: Huawei Usb Modem in Debian&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
+&lt;/nav&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>
