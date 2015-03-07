@@ -2,8 +2,9 @@
 layout: post
 title: Encrypted Files in Minix 3
 category: projects
-tags: sidebar
+tags: projects
 name: encrypted-files
+thumb: /img/code.png
 ---
 
 <link rel="stylesheet" href="../css/styles.css.css" />
@@ -21,7 +22,7 @@ Implemented encrypted files in Minix 3. Minix 3 is a micro-kernel operating syst
 Implemented encrypted files in Minix 3. The cipher used is simple Caesar's cipher.
 
 
-**Description **
+**Description**
 
 Implemented a new system call in Minix 3 along with the library function that allows it to be called conveniently from a C program. The library interface extends extends file access operations to handle encrypted files.
 

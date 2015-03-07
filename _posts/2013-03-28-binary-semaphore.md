@@ -2,8 +2,9 @@
 layout: post
 title: Binary Sempahore
 category: projects
-tags: sidebar
+tags: projects
 name: binary-semaphore
+thumb: /img/code.png
 ---
 
 <link rel="stylesheet" href="../css/styles.css.css" />
