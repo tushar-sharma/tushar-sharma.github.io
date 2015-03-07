@@ -52,7 +52,7 @@ input::-webkit-input-placeholder {
   </form>
 </div>
 <!--{% assign blogposts = paginator.posts and !paginator.posts.hidden %}-->
-{% assign blogposts = paginator.posts | where:"blog"  %}
+{% assign blogposts = paginator.posts  %}
 {% if true %}
   {% for post in blogposts %}
         <small style="float:right; margin-top:5px;">{{ post.date | date:'%a %d %b %Y' }}</small>
