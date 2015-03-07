@@ -15,3 +15,7 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - branch.txt
+- .gitignore
+paginate: 3
+not_paginated_categories:
+  - 'projects'
