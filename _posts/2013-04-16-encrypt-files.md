@@ -2,7 +2,10 @@
 layout: post
 title: Encrypted Files in Minix 3
 category: projects
-tags: projects
+tags: 
+- projects
+- minix
+- encrypted-files
 name: encrypted-files
 thumb: /img/code.png
 ---
@@ -20,7 +23,6 @@ Implemented encrypted files in Minix 3. Minix 3 is a micro-kernel operating syst
 - - -
 
 Implemented encrypted files in Minix 3. The cipher used is simple Caesar's cipher.
-
 
 **Description**
 
