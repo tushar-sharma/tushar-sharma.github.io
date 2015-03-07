@@ -33,6 +33,8 @@ _site/
 ######################
 .DS_Store
 .DS_Store?
+_posts/.DS_Store
+img/.DS_Store
 ._*
 .Spotlight-V100
 .Trashes

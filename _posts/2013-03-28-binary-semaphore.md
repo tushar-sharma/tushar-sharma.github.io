@@ -2,8 +2,11 @@
 layout: post
 title: Binary Sempahore
 category: projects
-tags: sidebar
+tags: 
+- projects
+- binary semaphore
 name: binary-semaphore
+thumb: /img/code.png
 ---
 
 <link rel="stylesheet" href="../css/styles.css.css" />
@@ -24,9 +27,7 @@ Implemented binary semaphore in Minix 3. Minix 3 is a micro-kernel operating sys
 
 Most of the process pass information among themselves using application IPC. This often result in race condition. To prevent it and provide synchronization, semaphores, first proposed by Dikstras, is used. 
 
-**Description **
-
-
+**Description**
 
 Implemented a new system call in Minix 3 along with the library function that allows it to be called conveniently from a C program. The library interface extends different process to use semaphore. 
 
@@ -43,3 +44,14 @@ Binary Semaphore is used by processes to access the critical shared resources of
 
 [details]: /projects/binary-semaphore
 [code]: https://github.com/tushar-sharma/dining_philosopher
+
+<div class='footnotes'><h3>Footnotes</h3><hr />
+  <ol>
+    <li id='fn:1'>
+         <p>Image courtesy ~ <a href="https://opensourcewin.wordpress.com/2012/03/16/what-is-minix-linux/" target="_blank">OpenSourcewin.Wordpress.com</a>
+</p>
+         <a href='#fnref:1' rev='footnote'>&#8617;</a>
+    </li>
+  </ol>
+</div>
+

@@ -176,260 +176,183 @@ h1.heading{font-family:Myfont;color:#39c}
 
       </header>
       <section>
-        <style>
-.cl{ width: 200px;  color: rgb(51, 153, 204);}
-.cl2{color: rgb(51, 153, 204);}
-.like-pre { white-space: pre;}
-.myterminal{
-        color: #424242;
-        font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-	font-size: 25pt;
+        <link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/css/font-awesome.css" />
+
+<style type="text/css">
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+input[type=search] {
+	background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #66CC75;
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
 }
 </style>
 
-<script src="/js/jquery-1.7.1.min.js"></script>
-<script src="/js/jquery.mousewheel-min.js"></script>
-<script src="/js/jquery.terminal-min.js"></script>
-<link href="/css/jquery.terminal.css" rel="stylesheet"/>
-
-<script type="text/javascript">
-
-function myIP() {
-    if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
-    else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-
-    xmlhttp.open("GET","http://api.hostip.info/get_html.php",false);
-    xmlhttp.send();
-
-    hostipInfo = xmlhttp.responseText.split("\n");
-
-    for (i=0; hostipInfo.length >= i; i++) {
-        ipAddress = hostipInfo[i].split(":");
-        if ( ipAddress[0] == "IP" ) return ipAddress[1];
-    }
-
-    return false;
-}
-
-$(function() {
-    var aOnce = true;
-    var aHelp = true; /* used to avoid triggering help in greetings */
-
-    var greetTxt = " __      __           .__                                       \n" +
-"/  \\    /  \\   ____   |  |     ____     ____     _____     ____  \n" +
-"\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  \n" +
-" \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
-"  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
-"       \\/         \\/              \\/                 \\/       \\/ \n\n\n" +
-"      ----   to Random Wits   ----  (my digital footprint)  \n\n\n"; 
-
- 
-    var picTxt = "<div class=\"cl2\"> " +  
-"               _  _  _  _ \n" +
-"              ( `  `  `  `) \n" + 
-"             (  Type help  ) \n" +
-"           (_   _   .   _   _) \n" +
-"                 o \n" + 
-"               o \n" +
-"        .--. \n" + 
-"       |o_o | \n" + 
-"       |:_/ | \n" + 
-"      //   \\ \\ \n" + 
-"     (|     | ) \n" + 
-"    /'\\_   _/`\\ \n" + 
-"    \\___)=(___/\n\n" +
-"</div>"; 
- 
-
-    var anim = false;
-    function typed(finish_typing) {
-        return function(term, message, delay, finish) {
-            anim = true;
-            var prompt = term.get_prompt();
-            var c = 0;
-            if (message.length > 0) {
-                term.set_prompt('');
-                var interval = setInterval(function() {
-                    term.insert(message[c++]);
-                    if (c == message.length) {
-                        clearInterval(interval);
-                        // execute in next interval
-                        setTimeout(function() {
-                            // swap command with prompt
-                            finish_typing(term, message, prompt);
-                            anim = false
-                            finish && finish();
-                        }, delay);
-                    }
-                }, delay);
-            }
-        };
-    }
-    var typed_prompt = typed(function(term, message, prompt) {
-        // swap command with prompt
-        term.set_command('');
-        term.set_prompt(message + ' ');
-    });
-    var typed_message = typed(function(term, message, prompt) {
-        term.set_command('');
-        term.echo(message)
-        term.set_prompt(prompt);
-    });
-    $('#foo').terminal(function(cmd, term) {
-        var finish = false;
-
-        var msg = "\nHi " + cmd + "! Feel free to explore my site...\n";
-        term.set_prompt('$ ');
-
-        /*typed_message(term, msg, 100, function() {
-            finish = true;
-        });*/
-      
-        arg = cmd.substr(0,cmd.indexOf(' ')); 
-        toSearch = cmd.substr(cmd.indexOf(' ')+1); 
-
-        if (aOnce == true) {  //only once
-            aOnce = false; 
-            term.echo("<br><br>Hi " + cmd + "!" + "\n<div class=\"like-pre\">" + picTxt + "</div>" , {
-              raw: function(div) { }
-            });
-        } else if (cmd == "help") {
-
-            mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">ls</span> List directory content.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> Books on my shelf.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">hit</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
-          
-            term.echo(mystr, {
-              raw: function(div) {
-            }
-         });  
-        } else if (cmd == "about") {
-           term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/about\">...more</a><br>", {
-              raw: function(div) {
-            }
-         });
-
-         } else if (cmd == "ls") {
-
-           term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
-              raw: function(div) {
-            }
-         });
-	 
-        } else if (arg == "cd" || cmd == "cd") {
- 
-          ip = myIP(); 
-     term.echo("You've tried to gain access to something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI. To avoid reporting it, please submit an apology <a href=\"/../contact/\">here</a>.", {
-              raw: function(div) {
-            }
-         });
-
-
-       } else if (arg == "cat" || cmd == "cat") {
-
- 
-          ip = myIP(); 
-    term.echo("You've tried to gain access to something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI. To avoid reporting it, please submit an apology <a href=\"/../contact/\">here</a>.", {
-              raw: function(div) {
-            }
-         });
-
-
-       }  else if (arg == "dir" || cmd == "dir") {
-
-     term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
-              raw: function(div) {
-            }
-         });
-
-
-        }else if (cmd == "contact") {
-          window.location.href="/contact";
-        } else if (cmd == "projects") { 
-          window.location.href="/projects";
-        } else if (cmd == "blog") {
-          window.location.href="/blog";
-        } else if (arg == "search" || cmd == "search") {
-            if (toSearch == "" || cmd =="search")  
-              term.echo("Wrong Parameters. Usage: search <to search>");
-            else window.location.href="/search/?q=" + toSearch;
-        }  else if (cmd == "books") {
-          //window.open('/books', '_blank');
-          window.location.href="/books";
-
-        } else if (cmd == "games") {
-          window.location.href="/games";
-        } /*else if (cmd == "qrcode") {
-            term.echo("<img src=\"http://api.qrserver.com/v1/create-qr-code/?data=MECARD%3AN%3ASharma%2CTushar%3BEMAIL%3Atushar%40randomwits.com%3BTEL%3A%2B919837264416%3BURL%3Ahttp%3A%2F%2Frandomwits.com%3B%3B&#38;size=150x150&#38;prov=goqrme\" alt=\"MECARD:N:Sharma,Tushar;EMAIL:tushar@randomwits.com;TEL:+919837264416;URL:http://randomwits.com;; \"  /> ", {
-              raw: function(div) {
-            }
-         });
-
-        }*/ else if(cmd == "hack") {
-
-             javascript:var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
- 
-         }else if (cmd == "resume") {
-         
-           term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" target=\"_blank\" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" >..resume</a>", {
-              raw: function(div) {
-            }
-         });
-        } else if (cmd == "hit") {
-            jQuery.get('/../quotes.txt', function(data) { 
-              quotes = data.split("\n");
-              idx = Math.floor((quotes.length - 1) * Math.random());
-              term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", { 
-                  raw: function(div) { }
-               });
-            });
-      
-          /* term.echo(art, {
-             finalize: function(div) {
-               div.css("color", "rgb(51, 153, 204)");
-             }
-          });*/
-        } else  {
-          if (aOnce == false) {
-            term.echo("Unknown command <span class=\"cl2\">" + cmd + "</span>. Please type <span class=\"cl2\">help</span>.", {
-              raw: function(div) {
-            }
-         });
-         }
-       }
-
-      var args = {cmd: cmd};
-        $.get('cmds.php', args, function(result) {
-            (function wait() {
-                if (finish) {
-                    term.echo(result);
-                } else {
-                    setTimeout(wait, 500);
-                }
-            })();
-        });
-    }, {
-        name: 'Tushar',
-        greetings: greetTxt,
-        onInit: function(term) {
-            // first question
-            var msg = "Ahoy there, stranger. I am Tushar Sharma.\n";
-            typed_message(term, msg, 100, function() {
-                typed_prompt(term, "What's your name? :", 100, function() {});
-            });
-        },
-        keydown: function(e) {
-            //disable keyboard when animating
-            if (anim) {
-                return false;
-            }
-        }
-    });
-});
-
-</script>
-
-<!--<h2>Hello stranger.</h2> -->
-<div style="" class="myterminal" id="foo">
+<!-- search box --!> 
+<div id="blog" style="padding-top:30px; margin-top:-23px;">
+<div style="padding-bottom:60px; padding-top:20px;">
+  <form style="float:right;" action="/search/?">
+    <input type="search" name="q" placeholder="Search">
+  </form>
 </div>
+
+<div class="pure-u-1-2">
+<div style="padding-right:10px; padding-left:10px;">
+
+<!-- only print blog posts -->
+
+  <small style="float:right; margin-top:5px;">Sun 04 May 2014</small>
+  <a href="/blog/digging-secret-codes-past">
+    <h3>Digging on the codes of the Past</h3>
+  </a>
+      <div><img src="/img/ancient.jpg" alt="" class="thumb">
+            
+            
+            <p>Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.</p>
+
+..
+      </div>
+  <p> 
+    <a href="/blog/digging-secret-codes-past">
+      <span>Continue reading &rarr;</span>
+    </a>
+     <span style="float:right;"><i class="icon-tags"></i> Tags :
+      
+          <a class="mytag" href="/tag/code"> code </a>
+      
+          <a class="mytag" href="/tag/cryptography"> cryptography </a>
+      
+          <a class="mytag" href="/tag/cipher"> cipher </a>
+      
+          <a class="mytag" href="/tag/monoalphabetic"> monoalphabetic </a>
+      
+     </span>
+  </p>
+  
+  
+    <hr />
+    
+
+
+<!-- only print blog posts -->
+
+  <small style="float:right; margin-top:5px;">Sun 30 Mar 2014</small>
+  <a href="/blog/romance-moon">
+    <h3>Romance with Moon</h3>
+  </a>
+      <div><img src="/img/moon.jpg" alt="" class="thumb">
+            
+            
+            <link rel="stylesheet" href="../css/styles.css.css" />
+
+<p>Often we meet,<br />
+Avoiding prying eyes secretly,<br />
+In between stretches a velvet sky,<br />
+Only gulf in between us apparently.<br /></p>
+
+<p>High tides doth comes,<br />
+As she tries approaching me,<br />
+And sweeps the earth below,<br />
+Posing as the one, only she could be.<br /></p>
+
+..
+      </div>
+  <p> 
+    <a href="/blog/romance-moon">
+      <span>Continue reading &rarr;</span>
+    </a>
+     <span style="float:right;"><i class="icon-tags"></i> Tags :
+      
+          <a class="mytag" href="/tag/poetry"> poetry </a>
+      
+          <a class="mytag" href="/tag/romance"> romance </a>
+      
+          <a class="mytag" href="/tag/moon"> moon </a>
+      
+     </span>
+  </p>
+  
+  
+    <hr />
+    
+
+
+<!-- only print blog posts -->
+
+  <small style="float:right; margin-top:5px;">Sat 08 Feb 2014</small>
+  <a href="/blog/idea-of-god">
+    <h3>Idea of God</h3>
+  </a>
+      <div><img src="/img/singularity.png" alt="" class="thumb">
+            
+            
+            <p>I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedo the whole place. And the Machiavelli alarm pulled me out of my dreams. </p>
+
+<p>After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony. ..
+      </div>
+  <p> 
+    <a href="/blog/idea-of-god">
+      <span>Continue reading &rarr;</span>
+    </a>
+     <span style="float:right;"><i class="icon-tags"></i> Tags :
+      
+          <a class="mytag" href="/tag/god"> god </a>
+      
+          <a class="mytag" href="/tag/religion"> religion </a>
+      
+          <a class="mytag" href="/tag/science"> science </a>
+      
+     </span>
+  </p>
+  
+  
+    <hr />
+    
+
+
+
+<nav class="pagination">   <a href="/page" class="next ">&raquo;</a>  </nav>
+
+</div>
+<script type="text/javascript">
+  window.onload = function() { scroll_to('blog'); };
+  </script>
+
 
 
       </section>
@@ -444,7 +367,7 @@ $(function() {
     
     <div class="wrapper">
       <footer>
-        <!-- <p><small>Tushar Sharma &copy; 2014</small></p> -->
+        <!-- <p><small>Tushar Sharma &copy; 2015</small></p> -->
 <link rel="stylesheet" href="/css/footer.css" />
 <link rel="stylesheet" href="/css/font-awesome.css" />
 
