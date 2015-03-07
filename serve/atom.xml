@@ -3,7 +3,7 @@
   <title>Tushar Sharma | Blog</title>
   <link href="https://randomwits.com/"/>
   <link type="application/atom+xml" rel="self" href="http://randomwits.com/atom.xml"/>
-  <updated>2015-02-24T00:12:00+05:30</updated>
+  <updated>2015-03-07T11:16:43+05:30</updated>
   <id>https://ryanseys.com/</id>
   <author>
     <name>Tushar Sharma</name>
@@ -145,6 +145,9 @@ for (i = array.length -1; i &amp;gt;0; i--) {
     &lt;li id=&quot;fn:3&quot;&gt;
       &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Frequency_analysis&quot; target=&quot;_blank&quot;&gt;Frequency Analysis&lt;/a&gt;&lt;/p&gt;
      &lt;a href=&quot;#fnref:3&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://www.lib.utexas.edu/maps/middle_east_and_asia/pakistan_rel96.jpg&quot; target=&quot;_blank&quot;&gt;Image courtesy&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -450,9 +453,7 @@ the crop of happiness without remorse or pest &lt;br /&gt;&lt;/p&gt;
       <name>Tushar Sharma</name>
       <uri>https://randomwits.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;CSS: post.css&lt;/p&gt;
-
-&lt;p&gt;I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. “It’s easier this way.”, he chuckled, “I can quickly find all the softwares I need.”. I showed him my desktop which was spick and span.”Doesn’t it consumes time in finding the softwares you need?”, he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. “You just use one software?”, he asked.”Mostly, yes”, I said. “What about &lt;em&gt;editing&lt;/em&gt;, &lt;em&gt;browsing&lt;/em&gt;, &lt;em&gt;music&lt;/em&gt;, etc?”, he asked. “I do it all in emacs.”, I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
+    <content type="html">&lt;p&gt;I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. “It’s easier this way.”, he chuckled, “I can quickly find all the softwares I need.”. I showed him my desktop which was spick and span.”Doesn’t it consumes time in finding the softwares you need?”, he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. “You just use one software?”, he asked.”Mostly, yes”, I said. “What about &lt;em&gt;editing&lt;/em&gt;, &lt;em&gt;browsing&lt;/em&gt;, &lt;em&gt;music&lt;/em&gt;, etc?”, he asked. “I do it all in emacs.”, I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
 &lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;div&gt;
@@ -675,9 +676,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
       <name>Tushar Sharma</name>
       <uri>https://randomwits.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;CSS: post.css&lt;/p&gt;
-
-&lt;p&gt;It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India’s IT company. I vividly remember the countless occasions when ViM saved my day.
+    <content type="html">&lt;p&gt;It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India’s IT company. I vividly remember the countless occasions when ViM saved my day.
 &lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;div&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/vi&quot; title=&quot;View posts tagged with &amp;quot;vi&amp;quot;&quot;&gt;vi&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/vim&quot; title=&quot;View posts tagged with &amp;quot;vim&amp;quot;&quot;&gt;vim&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/editor&quot; title=&quot;View posts tagged with &amp;quot;editor&amp;quot;&quot;&gt;editor&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/code&quot; title=&quot;View posts tagged with &amp;quot;code&amp;quot;&quot;&gt;code&lt;/a&gt;    &lt;/div&gt;
@@ -815,9 +814,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
       <name>Tushar Sharma</name>
       <uri>https://randomwits.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;CSS: post.css&lt;/p&gt;
-
-&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, “Don’t you know what hacking is?”. On insisting he reluctantly explained, “breaking into website or stealing passwords of Facebook, etc”. I was crestfallen at the rampant misconception about hacking.
+    <content type="html">&lt;p&gt;Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, “Don’t you know what hacking is?”. On insisting he reluctantly explained, “breaking into website or stealing passwords of Facebook, etc”. I was crestfallen at the rampant misconception about hacking.
 &lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/hacking&quot; title=&quot;View posts tagged with &amp;quot;hacking&amp;quot;&quot;&gt;hacking&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/hackers&quot; title=&quot;View posts tagged with &amp;quot;hackers&amp;quot;&quot;&gt;hackers&lt;/a&gt;     &lt;a class=&quot;mytag&quot; href=&quot;/tag/code&quot; title=&quot;View posts tagged with &amp;quot;code&amp;quot;&quot;&gt;code&lt;/a&gt;    &lt;/p&gt;

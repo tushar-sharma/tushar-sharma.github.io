@@ -15,8 +15,8 @@
 <link rel="stylesheet" href=" ../css/pygment_trac.css ">
 <link rel="stylesheet" href=" ../css/font-awesome.css ">
 <link rel="stylesheet" href=" ../css/styles.css ">
-<script src=" ../js/scale.fix.js "></script>
-<script src=" ../js/redirect.js "></script>
+<script async src=" ../js/scale.fix.js "></script>
+<script async src=" ../js/redirect.js "></script>
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -48,7 +48,7 @@ h1.heading { font-family: Myfont;
 .top{color: rgb(68, 68, 68);}
 .sub{font-family:Somefont;}
 
-aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline} aside{display:block} aside#logo{background-color:white}aside#logo.clearfix{background-color:white}aside#logo div a{height:100px;width:100px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}aside#logo{background-color:black}aside#logo div{background-color:white}aside#logo div a{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background:#000 url("http://en.gravatar.com/userimage/29847012/e65258408c161deddae43025832e8767.jpg?size=200") center center no-repeat;background-size:100% 100%;height:100px !important;width:100px !important} aside#logo{position:relative;display:block;width:110px;height:110px;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;margin-left:0px;margin-top:0px}aside#logo div{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;width:90px;height:90px;text-indent:-9999px;;margin-top:10px;clear:both}aside#logo div a{display:block;clear:both;width:78px;height:78px;margin-top:6px}aside#logo{width:150px;height:130px}aside#logo div{width:135px;height:135px;margin-top:15px}aside#logo div a{width:117px;height:117px;margin-top:9px}aside#logo{position:relative;left:auto;right:auto;margin-top:0px;margin-bottom:0}
+aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline} aside{display:block} aside#logo{background-color:white}aside#logo.clearfix{background-color:white}aside#logo div a{height:100px;width:100px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}aside#logo{background-color:black}aside#logo div{background-color:white}aside#logo div a{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background:#000 url("http://s.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087.jpg?size=200") center center no-repeat;background-size:100% 100%;height:100px !important;width:100px !important} aside#logo{position:relative;display:block;width:110px;height:110px;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;margin-left:0px;margin-top:0px}aside#logo div{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;width:90px;height:90px;text-indent:-9999px;;margin-top:10px;clear:both}aside#logo div a{display:block;clear:both;width:78px;height:78px;margin-top:6px}aside#logo{width:150px;height:130px}aside#logo div{width:135px;height:135px;margin-top:15px}aside#logo div a{width:117px;height:117px;margin-top:9px}aside#logo{position:relative;left:auto;right:auto;margin-top:0px;margin-bottom:0}
 
 </style>
 
@@ -58,41 +58,15 @@ aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:bas
   </div> 
 </aside>
 
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-
 <div style="clear:both;"></div>
 <div>
-  <h1  class="heading"><span class="top"><a href="/about/">About Me</a></span></h1> 
+ <h1  class="heading"><span class="top"><a href="/about/">About Me</a></span></h1> 
   <!--<p class="me_blurb"> 
     <div class="sub"> 
       <a href="/../about/">About ME</a>
     </div>
   </p> 
    -->
-
-<!--<a target="_blank" href="https://coderwall.com/tshrocks">
-  <div id="coderwall_badges" style="margin:0 0 20px 0;"></div> 
-</a>
--->
-
-<script type="text/javascript">
-        $(document).ready(function(){
-                jQuery.getJSON("https://coderwall.com/tshrocks.json?callback=?", function(data){
-                        for(var i = 0; i < data.data.badges.length ; i++){
-                                var badge = data.data.badges[i];
-                                var badge_tag;
-                                // if ((i+1) % 5 == 0) {
-                                        // badge_tag = $("<img /><br/>");
-                                // } else {
-                                        badge_tag = $("<img />");
-                                //}
-                                badge_tag.attr("src",badge.badge);
-                                badge_tag.css("width","10%");
-                                $("#coderwall_badges").append(badge_tag);
-                        }
-                });
-        });
-</script>
 
 </div>
 
@@ -148,7 +122,7 @@ h1.heading{font-family:Myfont;color:#39c}
 <h2>Projects</h2>
 <div class="highlight">
   <pre>
-<code><span class="nv">$</span> latest <a href="/projects">projects</a></code>
+<code><span class="nv">$</span> latest projects</code>
      ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     ├── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br />     ├── <span class="nv"></span><a href="/projects/aes" title="Advanced Encryption Standard (AES)">AES</a><br />     └── <span class="nv"></span><a href="/projects/des" title="Data Encryption Standard (DES)">DES</a><br /><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
 </pre>
 </div>
@@ -156,7 +130,7 @@ h1.heading{font-family:Myfont;color:#39c}
 <h2>Blog</h2>
 <div class="highlight">
   <pre>
-<code><span class="nv">$</span> latest <a href="/blog">blog</a></code>
+<code><span class="nv">$</span> latest blog</code>
      ├── <span class="nv"></span><a href="/blog/digging-secret-codes-past" title="Digging on the codes of the Past">digging-past</a><br />     ├── <span class="nv"></span><a href="/blog/romance-moon" title="Romance with Moon">romance-moon</a><br />     ├── <span class="nv"></span><a href="/blog/idea-of-god" title="Idea of God">idea-god</a><br />     └── <span class="nv"></span><a href="/blog/happiness" title="Happiness">Happiness</a><br /><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
 </pre>
 </div>
@@ -169,9 +143,6 @@ h1.heading{font-family:Myfont;color:#39c}
 
 <script src="/js/scroll_top.js" type="text/javascript"></script>
 
-<script>
-
-</script>
 
 
       </header>
@@ -182,6 +153,8 @@ h1.heading{font-family:Myfont;color:#39c}
 <h1 style="color: rgb(51, 153, 204);">Posts Tagged &ldquo;romance&rdquo;</h1>
 
 <div id="blog" style="padding-top:30px; margin-top:-23px;">
+<!-- -->
+<!-- use this only when you want blog category  --> 
 
 <div class="pure-u-1-2">
 <div style="padding-right:10px; padding-left:10px;">
@@ -309,6 +282,32 @@ Posing as the one, only she could be.<br>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 <script type="text/javascript">
   window.onload = function() { scroll_to('blog'); };
@@ -328,7 +327,7 @@ Posing as the one, only she could be.<br>
     
     <div class="wrapper">
       <footer>
-        <!-- <p><small>Tushar Sharma &copy; 2014</small></p> -->
+        <!-- <p><small>Tushar Sharma &copy; 2015</small></p> -->
 <link rel="stylesheet" href="/css/footer.css" />
 <link rel="stylesheet" href="/css/font-awesome.css" />
 
@@ -368,6 +367,28 @@ Posing as the one, only she could be.<br>
            <a style="font-size: 320%"  style="display:inline-block;" href="/tag/code">code <span></span></a>
 	   
          
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 270%"  style="display:inline-block;" href="/tag/projects">projects <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/des">des <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/aes">aes <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/binary semaphore">binary semaphore <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/minix">minix <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/encrypted-files">encrypted-files <span></span></a>
 	   
          
 	    <!-- hack to remove sidebar tags -->
@@ -505,7 +526,7 @@ Posing as the one, only she could be.<br>
 </h3>
 <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Randomwits</span> is licensed under under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br><br>
     <div>
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />         <a title="Real Time Web Analytics" href="http://clicky.com/100650351"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> &nbsp; &nbsp; <a title="Real Time Web Analytics" href="http://clicky.com/100650351"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
          <script src="//static.getclicky.com/js" type="text/javascript"></script>
          <script type="text/javascript">try{ clicky.init(100650351); }catch(e){}</script>
          <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100650351ns.gif" /></p></noscript>
