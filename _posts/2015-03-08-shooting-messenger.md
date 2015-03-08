@@ -42,7 +42,7 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 <p>There’s no rocket science to understand why we need to watch the documentary. The blatant lack of remorse and callousness from the rapist as well as defence lawyers reflect something is wrong with our society.
 </p>
 
-<p class="myheading"><b>What did the persons interviewed said?</b></p>
+<p class="myheading"><b>What was the interview about?</b></p>
 
 
 <p>“When being raped, she shouldn’t fight back”. “She should just be silent and allow the rape. Then they’d have dropped her off after ‘doing her’ and only hit the boy”, said Mukesh Singh, one the accused in Delhi Gang Rape. Instead of being apologetic, he had the temerity to question the character of girl when he adds, "A decent girl won't roam around at 9 o'clock at night.".
@@ -90,7 +90,7 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 
 <p>India is probably the most hypocritical society. At one instance we worship girls as goddess. Paint her in hues and colors and associate her with prosperity. On the hand we burden the bride’s father with dowry. Callously judge her character every time. As a boy, nobody questions my character when at times I come late at night. Why such double standard? Why can't I be slut?</p>
 
-<p>The notion that women needs to be protected fuels the male chauvinist mentality. Women are often portrayed as delicate flower always in need of a guardian. Such idea lead to belief that women cannot protect themselves. Our movie industry is also responsible for promulgating such beliefs. 
+<p>The notion that women needs to be protected fuels the male chauvinist mentality. Women are often portrayed as delicate flower always in need of a guardian. Such idea lead to belief that women tender, feeble & dependent. Our movie industry is also responsible for promulgating such beliefs. 
 </p>
 
 <p>
