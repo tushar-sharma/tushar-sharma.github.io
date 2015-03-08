@@ -15,7 +15,7 @@ thumb: /img/women.jpg
 .mysubheading{font-family:"Lucida Grande", Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
 </style>
 
-India’s Daughter”, a documentary on Gang rape of 2012 has been officially ban. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable. 
+India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable. 
 
 Leslee Udwin, the maker of the documentary, has flown out of India citing her security. In an interview to BBC, she said, “But I’m not muzzled. Nor will I be muzzled”. India’s Home Minister, Rajnath Singh, was furious & sought report from Tihar’s jail authorities on how the Nirbhaya's rape accused had given a controversial interview to BBC. "This is an international conspiracy to defame India. We will see how the film can be stopped abroad too", said parliamentary affairs minister M. Venkaiah Naidu.
 <!-- truncate_here -->
@@ -33,10 +33,10 @@ Leslee Udwin, the maker of the documentary, has flown out of India citing her se
 </p>
 
 <p>
-Kudos to the government for silencing the interviewer. We don’t want another ‘Slumdog millionaire’ to remind us of our filth in society. We are a competing global power. We just launched a satellite to Mars for God’s sake. Such western propaganda will not work. How dare a western correspondent air something demeaning to our country? Shouldn’t she need to visit Taj Majal and experience incredible India?
+Kudos to the government for silencing the interviewer. We don’t want another ‘Slumdog millionaire’ to remind us of the filth in our society. We are a competing global power. We just launched a satellite to Mars for God’s sake. Such western propaganda will not work. How dare a western correspondent air something demeaning to our country? Shouldn’t she need to visit Taj Majal and experience incredible India?
 </p>
 
-<p>Pity the nation who champions to be the largest democracy in the world. Pity the nation who needs to silence the dissenting voice. Pity the nation who could be easily ruffled by an uncomfortable truth. Pity the nation where discomforting voices feel threatened. I feel pity and sad. 
+<p>Pity the nation who champions to be the largest democracy in the world. Pity the nation who needs to silence the dissenting voice. Pity the nation who could easily be ruffled by an uncomfortable truth. Pity the nation where discomforting voices feel threatened. I feel pity and sad. 
 </p>
 
 <p>There’s no rocket science to understand why we need to watch the documentary. The blatant lack of remorse and callousness from the rapist as well as defence lawyers reflect something is wrong with our society.
@@ -45,7 +45,7 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 <p class="myheading"><b>What was the interview about?</b></p>
 
 
-<p>“When being raped, she shouldn’t fight back”. “She should just be silent and allow the rape. Then they’d have dropped her off after ‘doing her’ and only hit the boy”, said Mukesh Singh, one the accused in Delhi Gang Rape. Instead of being apologetic, he had the temerity to question the character of girl when he adds, "A decent girl won't roam around at 9 o'clock at night.".
+<p>“When being raped, she shouldn’t fight back”. “She should just be silent and allow the rape. Then they’d have dropped her off after ‘doing her’ and only hit the boy”, said Mukesh Singh, one of the accused in Delhi Gang Rape. Instead of being apologetic, he had the temerity to question the character of girl when he adds, "A decent girl won't roam around at 9 o'clock at night.".
 </p>
 
 <p>He is even undeterred by the stringent tough law against rape. He says, “The death penalty will make things even more dangerous for girls. Now when they rape, they won't leave the girl like we did. They will kill her. Before, they would rape and say, 'Leave her, she won't tell anyone.' Now when they rape, especially the criminal types, they will just kill the girl. Death.". 
@@ -78,7 +78,7 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 <p>The other lawyer, AP Singh, had said in a previous televised interview: "If my daughter or sister engaged in pre-marital activities and disgraced herself and allowed herself to lose face and character by doing such things, I would most certainly take this sort of sister or daughter to my farmhouse, and in front of my entire family, I would put petrol on her and set her alight."
 </p>
 
-<p>Such Talibani comments reflects the sad state of affairs of our country. And these men are not exceptions. Even our politicians are party to such comment. 
+<p>Such Talibani comments reflects the sad state of affairs of our country. And these men are not exceptions. Even our politicians are party to such comments. 
 </p>
 
 <p>In June 2013 in Bhopal, former Rajya Sabha MP and currently vice-president of BJP, Raghunandan Sharma, had said, “Girls should stop wearing skin-tight jeans because they show the body in its natural shape, and that’s not good. Nari ki ek maryada hoti hai.’’
@@ -88,9 +88,9 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 
 <p class="myheading"><b>Whose responsible? </b></p>
 
-<p>India is probably the most hypocritical society. At one instance we worship girls as goddess. Paint her in hues and colors and associate her with prosperity. On the hand we burden the bride’s father with dowry. Callously judge her character every time. As a boy, nobody questions my character when at times I come late at night. Why such double standard? Why can't I be slut?</p>
+<p>India is probably the most hypocritical society. At one instance we worship girls as goddess. Paint her in hues and colors and associate her with prosperity. On the other hand we burden the bride’s father with dowry. Callously judge her character every time. As a boy, nobody questions my character when at times I come late at night. Why such double standard? Why can't I be a slut?</p>  
 
-<p>The notion that women needs to be protected fuels the male chauvinist mentality. Women are often portrayed as delicate flower always in need of a guardian. Such idea lead to belief that women tender, feeble & dependent. Our movie industry is also responsible for promulgating such beliefs. 
+<p>The notion that women needs to be protected fuels the male chauvinist mentality. Women are often portrayed as delicate flower always in need of a guardian. Such idea lead to belief that women are tender,feeble & dependent. Our film industry is also responsible for promulgating such beliefs.
 </p>
 
 <p>
@@ -100,7 +100,7 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 
 <p class="myheading"><b>in the end</b></p>
 
-<p>Instead of being furious and decry western conspiracies we need to a deep breadth. Yes there are more rapes in United States & United Kingdom<sup id='fnref:9'><a href='#fn:9' rel='footnote'>9</a></sup>. Yet the public places in these countries are far safer than India. Ask any women in India what she goes through whenever she travels in public transport. 
+<p>Instead of being furious and decry western conspiracies, we need to take a deep breath. Yes, there are more rapes in United States & United Kingdom<sup id='fnref:9'><a href='#fn:9' rel='footnote'>9</a></sup>, yet the public places in these countries are far safer than India. Ask any women in India what she goes through whenever she travels in public transport. 
 </p> 
 
 <p> Girls don't need protection. They can take care of themselves. What they need is co-operation. Yes our society needs to be shamed. We don’t want the best culture, only a culture where our "second gender" feel safe. </p> 
