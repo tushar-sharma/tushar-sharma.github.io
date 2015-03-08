@@ -42,7 +42,7 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 <p>There’s no rocket science to understand why we need to watch the documentary. The blatant lack of remorse and callousness from the rapist as well as defence lawyers reflect something is wrong with our society.
 </p>
 
-<p class="myheading"><b>What did the interviewer said?</b></p>
+<p class="myheading"><b>What did the persons interviewed said?</b></p>
 
 
 <p>“When being raped, she shouldn’t fight back”. “She should just be silent and allow the rape. Then they’d have dropped her off after ‘doing her’ and only hit the boy”, said Mukesh Singh, one the accused in Delhi Gang Rape. Instead of being apologetic, he had the temerity to question the character of girl when he adds, "A decent girl won't roam around at 9 o'clock at night.".
