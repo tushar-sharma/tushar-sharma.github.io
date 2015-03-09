@@ -15,7 +15,7 @@ thumb: /img/women.jpg
 .mysubheading{font-family:"Lucida Grande", Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
 </style>
 
-India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable. 
+"India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable. 
 
 Leslee Udwin, the maker of the documentary, has flown out of India citing her security. In an interview to BBC, she said, “But I’m not muzzled. Nor will I be muzzled”. India’s Home Minister, Rajnath Singh, was furious & sought report from Tihar’s jail authorities on how the Nirbhaya's rape accused had given a controversial interview to BBC. "This is an international conspiracy to defame India. We will see how the film can be stopped abroad too", said parliamentary affairs minister M. Venkaiah Naidu.
 <!-- truncate_here -->
@@ -25,8 +25,7 @@ Leslee Udwin, the maker of the documentary, has flown out of India citing her se
 <div>
 <img src="{{ root_url }}/img/women.jpg" class="thumb">
 <p>
- India’s Daughter”, a documentary on Gang rape of 2012 has been officially ban. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable. 
-
+"India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable.
 </p>
 
 <p>Leslee Udwin, the maker of the documentary, has flown out of India citing her security. In an interview to BBC, she said, “But I’m not muzzled. Nor will I be muzzled” <sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup>. India’s Home Minister, Rajnath Singh, was furious & sought report from Tihar’s jail authorities on how the Nirbhaya's rape accused had given a controversial interview to BBC <sup id='fnref:2'><a href='#fn:2' rel='footnote'>2</a></sup>. "This is an international conspiracy to defame India. We will see how the film can be stopped abroad too", said parliamentary affairs minister M. Venkaiah Naidu <sup id='fnref:3'><a href='#fn:3' rel='footnote'>3</a></sup>.
