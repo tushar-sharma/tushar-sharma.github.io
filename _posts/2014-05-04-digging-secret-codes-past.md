@@ -8,7 +8,6 @@ tags:
 - cipher
 - monoalphabetic
 name: digging-past
-thumb: /img/ancient.jpg
 ---
 
 
@@ -20,7 +19,6 @@ Different religion tells us about plethora of beautiful tales about the genesis 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p> 
 
 <div>
-<img src="{{ root_url }}/img/ancient.jpg" class="thumb">
 <p>
 Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.
 </p>

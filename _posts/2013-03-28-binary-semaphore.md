@@ -6,7 +6,6 @@ tags:
 - projects
 - binary semaphore
 name: binary-semaphore
-thumb: /img/code.png
 ---
 
 <link rel="stylesheet" href="../css/styles.css.css" />

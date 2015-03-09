@@ -6,7 +6,7 @@ title: About
 <link rel="stylesheet" href="{{ root_url }}/css/books.css" />
 
 <style type="text/css">
-.txt{ margin-top: 5px; }
+.txt{ padding-top: 5px; }
 .cl{ color: rgb(51, 153, 204);}
  li.txt {list-style: none outside none; }
 .logo { float:left; display: block;  width: 24px; height: 24px;
@@ -14,23 +14,23 @@ title: About
 }
 
 .mylogo {
-padding-top: 2px;
-padding-left: 20px;
+padding-right-top: 2px;
+padding-right-left: 20px;
 }
 
 .img_cover {
 max-width: 550px;
-padding: 4px;
+padding-right: 4px;
 border: 1px solid #e5e5e5;
 box-shadow: 2px #f7f7f7;
 }
 
 .aligncenter, .center {
   display: block;
-  margin: 0px auto 20px;
+  padding: 0px auto 20px;
 }
 
-.wp_caption{margin-top:20px; }
+.wp_caption{padding-top:20px; }
 
 .myterminal{
 	font-family: FreeMono, monospace;
@@ -39,7 +39,7 @@ box-shadow: 2px #f7f7f7;
 	font-size: 12px;
 	line-height: 14px;/
 	/*starting pre */
-	padding:8px 15px;
+	padding-right:8px 15px;
 	overflow-x: auto;
 }
 
@@ -70,46 +70,31 @@ box-shadow: 2px #f7f7f7;
 
 <div style="clear:both;"></div>
 
-<div>
-<span style="float:left; width:50%;">
 
 <p>Interest: </p>
-<ul>
-<li class="txt">
-  <a class="logo" href="{{ root_url }}/blog" ><i class="icon-file icon-large"></i></a><span class="mylogo">Blogging</span>
-</li>
 
-<li class="txt">
-  <a class="logo" href="{{ root_url }}/tag/poetry/"><i class="icon-pencil icon-large"></i></a><span class="mylogo">Poetry</span>
-</li>
-<li class="txt">
-  <a class="logo" href="{{ root_url }}/books/" ><i class="icon-book icon-large"></i></a><span class="mylogo">Books</span>
-</li>
-<li class="txt">
-  <a class="logo" href="{{ root_url }}/projects" ><i class="icon-code icon-large"></i></a><span class="mylogo">Code</span>
-</li>
+<div>
+  <a style="padding:0 10px" class="logo" href="{{ root_url }}/blog" ><i class="icon-file icon-large"></i></a>
 
-<li class="txt">
-  <a class="logo" href="http://en.wikipedia.org/wiki/Free_and_open-source_software" target="_blank"><i class="icon-linux icon-large"></i></a><span class="mylogo">FOSS </span>
-  </li>
+  <a  style="padding:0 10px" class="logo" href="{{ root_url }}/tag/poetry/"><i class="icon-pencil icon-large"></i></a>
 
-</ul>
+  <a  style="padding:0 10px" class="logo" href="{{ root_url }}/books/" ><i class="icon-book icon-large"></i></a>
 
-</span>
-<span style="float:right; widht:50%;">
+ <a  style="padding:0 10px" class="logo" href="{{ root_url }}/projects" ><i class="icon-code icon-large"></i></a>
+
+
+</div>
+
+<div style="clear:both;"></div><br>
+
 <p>Feel free to: </p>
-<ul class="myicon">
-<li class="txt">
-  <a class="logo" href="{{ root_url }}/contact/" ><i class="icon-bell icon-large"></i></a><span class="mylogo">say Hello</span>
-</li>
 
-<li class="txt">
-  <a class="logo" target="_blank" href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC" ><i class="icon-key icon-large"></i></a><span class="mylogo">My PGP Key</span>
-</li>
+<div>
+  <a  style="padding:0 10px" class="logo" href="{{ root_url }}/contact/" ><i class="icon-bell icon-large"></i></a>
 
-<li class="txt">
- <a class="logo" href="http://www.scribd.com/awake9" target="_blank"><i class="icon-bar-chart icon-large"></i></a><span class="mylogo">Publication</span>
-</li>
+  <a  style="padding:0 10px" class="logo" target="_blank" href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC" ><i class="icon-key icon-large"></i></a>
+
+<a  style="padding:0 10px" class="logo" href="http://www.scribd.com/awake9" target="_blank"><i class="icon-bar-chart icon-large"></i></a>
 
 <!--<li class="txt">
   <a class="logo" href="https://delicious.com/2shar" target="_blank"><i class="icon-bookmark icon-large"></i></a><span class="mylogo">follow Bookmarks</span>
@@ -118,16 +103,53 @@ box-shadow: 2px #f7f7f7;
 -->
 
 
-<li class="txt">
-  <a class="logo" target="_blank" href="https://dl.dropboxusercontent.com/u/85584172/resume.pdf" ><i class="icon-anchor icon-large"></i></a><span class="mylogo">Résumé</span>
-</li>
+<a  style="padding:0 10px" style="padding-right:30px" class="logo" target="_blank" href="https://dl.dropboxusercontent.com/u/85584172/resume.pdf" ><i class="icon-anchor icon-large"></i></a>
 
-<li class="txt">
-  <a class="logo" href="{{ root_url }}/about/personal.html" ><i class="icon-smile icon-large"></i></a><span class="mylogo">A little more rambling... </span>
-</li>
+<a  style="padding:0 10px" class="logo" href="{{ root_url }}/about/personal.html" ><i class="icon-smile icon-large"></i></a>
+
+<div style="clear:both;"></div><br>
+
+<p>Get in touch : </p>
+
+<div>
+
+  <a style="padding:0 10px" title="Email" href="mailto:tushar@randomwits.com">
+    <i class="icon-envelope-alt"></i> &nbsp;
+  </a>
+  <!--
+  <a href="{{ root_url }}/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+  <a style="padding:0 10px" title="Github" href="https://github.com/tushar-sharma" target="_blank">
+    <i class="icon-github"></i>  &nbsp;
+
+  </a>
+  <a style="padding:0 10px" title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+    <i class="icon-linkedin"></i> &nbsp;
+
+  </a>
+  <a style="padding:0 10px" title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+    <i class="icon-twitter"></i> &nbsp;
 
 
-</ul>
-</span>
+  </a>
+  <a style="padding:0 10px" title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+    <i class="icon-facebook"></i> &nbsp;
+
+  </a>
+  <a style="padding:0 10px" tilte="Google Plus" href="https://plus.google.com/u/0/110524088447553948769" target="_blank">
+    <i class="icon-google-plus"></i> &nbsp;
+  </a>
+
+  <a style="padding:0 10px" title="RSS" href="/rss.xml" >
+    <i class="icon-rss"></i>
+  </a> 
+
+
 </div>
+
 

@@ -7,7 +7,6 @@ tags:
 - india
 - ban
 name: shoot-messenger
-thumb: /img/women.jpg
 ---
 
 <style type="text/css">
@@ -23,7 +22,6 @@ Leslee Udwin, the maker of the documentary, has flown out of India citing her se
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <div>
-<img src="{{ root_url }}/img/women.jpg" class="thumb">
 <p>
 "India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable.
 </p>

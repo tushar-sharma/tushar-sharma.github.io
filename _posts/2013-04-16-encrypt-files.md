@@ -7,7 +7,6 @@ tags:
 - minix
 - encrypted-files
 name: encrypted-files
-thumb: /img/code.png
 ---
 
 <link rel="stylesheet" href="../css/styles.css.css" />

@@ -4,7 +4,6 @@ title: Happiness
 category: blog
 tags: poetry happiness
 name: Happiness
-thumb: /img/happy.jpg
 ---
 
 <link rel="stylesheet" href="../css/styles.css.css" />

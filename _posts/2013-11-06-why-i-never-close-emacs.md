@@ -7,14 +7,12 @@ tags:
 - editor
 - code
 name: never-close-emacs
-thumb: /img/emacs.png
 ---
 
 I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. "It's easier this way.", he chuckled, "I can quickly find all the softwares I need.". I showed him my desktop which was spick and span."Doesn't it consumes time in finding the softwares you need?", he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. "You just use one software?", he asked."Mostly, yes", I said. "What about *editing*, *browsing*, *music*, etc?", he asked. "I do it all in emacs.", I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
 <!-- truncate_here -->
 
 <div markdown="1">
-<img src="{{ root_url}}/img/emacs.png" class="thumb" />
 <p>
 I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. "It's easier this way.", he chuckled, "I can quickly find all the softwares I need.". I showed him my desktop which was spick and span."Doesn't it consumes time in finding the softwares you need?", he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. "You just use one software?", he asked."Mostly, yes", I said. "What about *editing*, *browsing*, *music*, etc?", he asked. "I do it all in emacs.", I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
 </p>

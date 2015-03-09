@@ -4,7 +4,6 @@ title: Romance with Moon
 category: blog
 tags: poetry romance moon
 name: romance-moon
-thumb: /img/moon.jpg
 ---
 
 <link rel="stylesheet" href="../css/styles.css.css" />

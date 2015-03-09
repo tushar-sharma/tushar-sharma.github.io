@@ -7,7 +7,6 @@ tags:
 - religion
 - science
 name: idea-god
-thumb: /img/singularity.png
 ---
 
 I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedo the whole place. And the Machiavelli alarm pulled me out of my dreams. 
@@ -17,7 +16,6 @@ After few seconds, the world came back to me. I glanced out of the window to cat
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <div>
-<img src="{{ root_url }}/img/singularity.png" class="thumb">
 <p>
 I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedoed the whole place. And the Machiavelli alarm pulled me out of my dreams. 
 </p>
