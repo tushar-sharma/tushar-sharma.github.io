@@ -13,7 +13,7 @@ categories: blog
   <a href="{{ post.url }}">
     <h3>{{ post.title }}</h3>
   </a>
-      <div><img src="{{ post.thumb }}" alt="" class="thumb">
+      <div>
             {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
             {% if truncated_post != post.content %}
             {{ truncated_post | append:".."}}
