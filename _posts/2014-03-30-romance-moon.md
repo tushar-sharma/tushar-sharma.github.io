@@ -6,8 +6,6 @@ tags: poetry romance moon
 name: romance-moon
 ---
 
-<link rel="stylesheet" href="../css/styles.css.css" />
-
 Often we meet,<br>
 Avoiding prying eyes secretly,<br>
 In between stretches a velvet sky,<br>

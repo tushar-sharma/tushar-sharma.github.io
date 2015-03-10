@@ -6,8 +6,6 @@ tags: poetry happiness
 name: Happiness
 ---
 
-<link rel="stylesheet" href="../css/styles.css.css" />
-
 
 I walked miles on my feet and hope,  <br>
 against all weather, people and slope, <br>

@@ -9,8 +9,6 @@ tags:
 name: encrypted-files
 ---
 
-<link rel="stylesheet" href="../css/styles.css.css" />
-
 Implemented encrypted files in Minix 3. Minix 3 is a micro-kernel operating system. 
 
 [details][details] &mdash; [code][code]

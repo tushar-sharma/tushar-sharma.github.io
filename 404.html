@@ -1,43 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Oops! 404!</title>
-    <link rel="stylesheet" href="/css/styles.css">
-  </head>
-  <style>
-    body {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 800px;
-      height: 70px;
-      margin-top: -35px; /* Half the height */
-      margin-left: -400px; /* Half the width */
-    }
-  </style>
+---
+layout: default
+title: Oops! 404!
+root: true
+---
+<style>
+.fullscreenDiv {
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    position: relative;
+}
+.center {
+    position: relative;
+    width: 500px;
+    height: 550px;
+    top: 200px;
+    left: 200px;
+    margin-top: -25px;
+    margin-left: -50px;
+    font-size: 18px;
+}
 
-  <script>
-  var t = 3; //redirect in this many seconds
+</style>
 
-  function load() {
-    setTimeout(function() {
-      window.location = "http://tushar-sharma.github.io";
-    }, t*1000);
-    countdown();
-  }
-
-  function countdown() {
-    document.getElementById("attempt").innerHTML = "Attempting to redirect in " + t + "...";
-    if(t != 0) {
-      setTimeout('countdown(t-1)', 1000);
-    }
-    t--;
-  }
-  </script>
-
-  <body style="text-align:center;" onload="load()">
-    <code style="margin-bottom:5px">404! Page NOT FOUND! </code>
-    <img src="/img/404.gif" />
-    <p id="attempt"></p>
-  </body>
-</html>
+<div class='fullscreenDiv'>
+    <div class="center">
+      <code style="margin-bottom:5px">404! Page NOT FOUND! </code>
+      <img src="/img/404.gif" />
+    </div>
+</div>

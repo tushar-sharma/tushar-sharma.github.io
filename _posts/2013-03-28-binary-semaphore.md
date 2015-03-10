@@ -8,8 +8,6 @@ tags:
 name: binary-semaphore
 ---
 
-<link rel="stylesheet" href="../css/styles.css.css" />
-
 Implemented binary semaphore in Minix 3. Minix 3 is a micro-kernel operating system. 
 
 [details][details] &mdash; [code][code]
