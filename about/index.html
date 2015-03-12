@@ -31,6 +31,8 @@ box-shadow: 2px #f7f7f7;
 }
 
 .wp_caption{padding-top:20px; }
+/* button css  */
+/* end button css */
 
 </style>
 
@@ -38,9 +40,39 @@ box-shadow: 2px #f7f7f7;
 
 <h2 class="entry-title">About</h2>
 
+<script type="text/javascript">
+/* generate a random number */
+function quotesGet() { 
+  jQuery.get('/../quotes.txt', function(data) { 
+     var quotes = data.split("\n");
+     var idx = Math.floor((quotes.length - 1) * Math.random());
+              /*term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", { 
+                  raw: function(div) { }
+               });
+            */
+     var quoteArr = quotes[idx].split('"');
+     /* get the quotes */
+     if (typeof quoteArr[1] !== 'undefined') {
+       document.getElementById("myquotes").innerHTML = quoteArr[1];
+     }
+
+     /* get the author */
+     if (typeof quoteArr[2] !== 'undefined') {
+       document.getElementById("author").innerHTML = quoteArr[2];
+     }
+
+  });
+}
+quotesGet();
+</script> 
+
 <p>
 <blockquote class="cl">
-<i class="icon-quote-left"></i>&nbsp;Life is a narrative that you have a hand in writing.&nbsp;<i class="icon-quote-right"></i> - <span style="color:black;">Henriette Anne Klauser</span><br>
+<i class="icon-quote-left"></i>&nbsp;<span  id="myquotes"></span>&nbsp;<i class="icon-quote-right"></i>&nbsp;&nbsp; <span style="color:black;"><span id="author"></span></span><br>
+<!--<i class="icon-quote-left"></i>&nbsp;Life is a narrative that you have a hand in writing.&nbsp;<i class="icon-quote-right"></i> - <span style="color:black;">Henriette Anne Klauser</span><br>
+-->
+<br>
+  <button class="btn" onclick="quotesGet()">Change</button>
 </blockquote>
 </p>
 

@@ -11,7 +11,7 @@
 "And then one day you find, ten years have got behind you; no one told when to run, you missed the starting gun" - Roger Waters
 "It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts" - Sir Arthur Conan Doyle
 "Always move towards pain when making art." - J.M. Coetzee
-"A fool flatters himself, a wise man flatters the fool." - Robert Bulwer-Lytton
+"A fool flatters himself, a wise man flatters the fool." - Robert Bulwer Lytton
 "Death is not extinguishing the light; it is only putting out the lamp because the dawn has come." - Rabindranath Tagore
 "Don't go around saying the world owes you a living. The world owes you nothing. It was here first." - Mark Twain
 "The roots below the earth claim no rewards for making the branches fruitful" - Rabindranath Tagore
@@ -22,8 +22,8 @@
 "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle." - Albert Einstein
 "Don't water your weeds." - Harvey Mackay
 "Life is a narrative that you have a hand in writing." - Henriette Anne Klauser
-"Every man is ignorant - just on different subjects." - Will Rogers
-"I have a simple philosophy - Fill what's empty, Empty what's full" - Anonymous
+"Every man is ignorant ... just on different subjects." - Will Rogers
+"I have a simple philosophy ... Fill what's empty, Empty what's full" - Anonymous
 "Some people drink from the fountain of knowledge, others just gargle" - Anonymous
 "Some men have thousands of reasons why they cannot do what they want to, when all they need is one reason why they can" - Willis Whitney
 "O beautiful for spacious skies, For amber waves of grain." - Katharine Lee Bates
@@ -52,13 +52,13 @@
 "What is history but a fable agreed upon?" - Napoleon Bonaparte
 "Isn't it funny how day by day nothing changes, but when you look back everything is different" - C.S. Lewis
 "Know Thyself" - The Oracle at Delphi
-"Have I gone mad?", The Mad Hatter. "I am afraid so. You're entirely bonkers. But I'll tell you a secret. All the best people are", Alice.
+"'Have I gone mad?', The Mad Hatter.<br> 'I am afraid so. You're entirely bonkers. But I'll tell you a secret. All the best people are', Alice.<br>" -  Alice in Wonderland, Lewis Caroll
 "Atticus told me to delete the adjectives and I'd have the facts" - To kill a Mocking Bird
 "I may have stopped loving you, friends; but I will never stop loving the Day I loved you" - Ruskin Bond, Room on the roof.
 "Sometimes you wake up. Sometimes the fall kills you. And sometimes, when you fall, you fly" - Neil Gaiman
 "All science is either Physics or Stamp Collecting" - Ernest Rutherford
 "That which can be asserted without evidence, can be dismissed without evidence." - Christopher Hitchens
-"History doesn't repeat itself - at best it sometimes rhymes" - Mark Twain
+"History doesn't repeat itself ... at best it sometimes rhymes" - Mark Twain
 "There is pleasure in the pathless woods; There is rapture on the lonely shore; There is society, where none intrudes, by the deep sea and music in its roar: I love not man the less, but Nature more." - Lord Byron
 "Don't let schooling interfere with your education." - Mark Twain
 "To gain that worth having, it may be necessary to lose everything else" - Bernadetter Devlin
@@ -71,7 +71,7 @@
 "The flower that blooms in adversity is the rarest and most beautiful of all" - Walt Disney Company, Mulan
 "Happiness is not an island, but a hill" - George Catlin
 "If we do meet again, we'll smile indeed; If not, 'tis true this parting was well made" - William Shakespeare, Julius Caesar
-"Good-night, good-night! parting is such sweet sorrow, That I shall say good-night till it be morrow" - William Shakespeare, Romeo and Juliet
+"Goodnight, goodnight! parting is such sweet sorrow, That I shall say good-night till it be morrow" - William Shakespeare, Romeo and Juliet
 "Sweet tears! the awful language, eloquent Of infinite affection; far too big For words" - Robert Pollok, The Course of Time
 "The tears live in an onion that should water this sorrow" - William Shakespeare, Anthony and Cleopatra
 "I cannot weep; for all my body's moisture scarce serves to quench my furnace-burning heart." - William Shakespeare, Henry VI
@@ -147,7 +147,7 @@
 "Sir, if you were my husband, I would poison your drink." -Lady Astor to Winston Churchill. "Madam, if you were my wife, I would drink it." -His reply
 "Be humble, for you are of the earth. Be noble, for you are of the stars" - Serbian Proverb
 "When the axe came into the woods, many of the trees said: 'At least the handle is one of us'" - Turkish proverb
-"Alice asked the Chesire Cat, who was sitting in a tree, 'What road do I take?'<br>The cat asked, 'Where do you want to go?'<br>'I don't know', Alice answered.<br>'Then,' said the cat, 'it really doesn't matter, does it?'<br>Alice in Wonderland, LEWIS CARROLL
+"Alice asked the Chesire Cat, who was sitting in a tree, 'What road do I take?'<br>The cat asked, 'Where do you want to go?'<br>'I don't know', Alice answered.<br>'Then,' said the cat, 'it really doesn't matter, does it?'<br>" - Alice in Wonderland, LEWIS CARROLL
 "I used to think that the human brain was the most fascinating part of the body. Then I thought, 'What part of my body is telling me that?'" - Emo Philips
 "Everyone has a plan until they get punched in the face" - Mike Tyson
 "You can count the seeds in an orange but you can never count the oranges in a seed." - Henry Musoma, Texas A&M Professor.
@@ -188,7 +188,7 @@ The Zen master Lin Chi said, "The miracle is not to walk on water but to walk on
 "By all means, marry. If you get a good wife, you'll become happy; if you get a bad one, you'll become a philosopher" - Socrates
 "Life is too important to take seriously" - Corky Siegel
 "Youth is a blunder; Manhood a struggle; Old Age a regret" - Benjamin Dizzy
-An old Cherokee told his grandson: "My son, there's a battle between two wolves inside us all. One is Evil. It's anger, jelousy, greed, resentment, inferiority, lies and ego. The other is Good. It's joy, peace, love, hope, humility, kindness, & truth". The boy thought about it and asked: "Grandfather, which wolf wins?". The old man quietly replied: "The one you feed".
+"An old Cherokee told his grandson: 'My son, there's a battle between two wolves inside us all. One is Evil. It's anger, jelousy, greed, resentment, inferiority, lies and ego. The other is Good. It's joy, peace, love, hope, humility, kindness, & truth'. The boy thought about it and asked: 'Grandfather, which wolf wins?'. The old man quietly replied: 'The one you feed'."
 "I do not approve of anything that tampers with natural ignorance. Ignorance is like a delicate exotic fruit; touch it and the bloom is gone"- Oscar Wilrde, Lady Bracknell, from Act I, The Importance of Being Earnest
 "Chains of habit are too light to be felt until they are too heavy to be broken" -- Warren Buffet
 "The tendency to turn human judgments into divine commands makes religion one of the most dangerous forces in the world."- Georgia Harkness
@@ -198,9 +198,9 @@ An old Cherokee told his grandson: "My son, there's a battle between two wolves 
 To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is to do. -- Sartre<br>Do be do be do. -- Sinatra
 "Few things are harder to put up with than the annoyance of a good example." - Mark Twain, Pudd'nhead Wilson's Calendar
 "Training is everything.  The peach was once a bitter almond; cauliflower is nothing but cabbage with a college education. -- Mark Twain, "Pudd'nhead Wilson's Calendar
-question = ( to ) ? be : ! be; <br>-- Wm. Shakespeare
-Persons attempting to find a motive in this narrative will be prosecuted;<br>persons attempting to find a moral in it will be banished; persons attempting<br>to find a plot in it will be shot.  By Order of the Author<br>-- Mark Twain, "The Adventures of Huckleberry Finn"
-F.S. Fitzgerald to Hemingway:<br>"Ernest, the rich are different from us."<br>Hemingway:"Yes.  They have more money."
+"question = ( to ) ? be : ! be;" <br>-- Wm. Shakespeare
+"Persons attempting to find a motive in this narrative will be prosecuted;<br>persons attempting to find a moral in it will be banished; persons attempting<br>to find a plot in it will be shot.  By Order of the Author" <br>-- Mark Twain, The Adventures of Huckleberry Finn
+"F.S. Fitzgerald to Hemingway:<br>'Ernest, the rich are different from us.'<br>Hemingway:'Yes. They have more money.'
 "There are two motives for reading a book; one, that you enjoy it; the other, that you can boast about it." - Bertrand Russell
 "During the course of my life I have made provision for everything, but I forgot about death. Alas, I die unprepared." - Cesare Borgia, the statesman.
 "Pardon me, sir. I did not do it on purpose" - said by: Queen Marie Antoinette after she accidentally stepped on the foot of her executioner as she went to the guillotine
@@ -228,7 +228,6 @@ F.S. Fitzgerald to Hemingway:<br>"Ernest, the rich are different from us."<br>He
 "I asked God for a bike, but I know God doesn't work that way. So I stole a bike and asked for forgiveness" - Al Pacino.
 "Tell people there's an invisible man in the sky who created the universe, and the vast majority will believe you. Tell them the paint is wet, and they have to touch it to be sure." - George Carlin
 "All men by nature desire knowledge." - Aristotle
-A young man wrote to Mozart and said:<br>Q: "Herr Mozart, I am thinking of writing symphonies. Can you give me any suggestions as to how to get started?"<br>A: "A symphony is a very complex musical form, perhaps you should begin with some simple Lieder and work your way up to a symphony."<br>Q: "But Herr Mozart, you were writing symphonies when you were 8 years old."<br>A: "True, but I never asked anybody how to do it."
 "He who would travel happily must travel light." - Antoine de Saint-Exupery
 "When a man cannot find meaning, he numbs himself with pleasure"  ― Victor Frankl
 "This is no world. It is God Himself. In delusion we call it world" – Swami Vivekananda
@@ -310,10 +309,10 @@ A young man wrote to Mozart and said:<br>Q: "Herr Mozart, I am thinking of writi
 "I love you as certain dark things are to be loved, in secret, between the shadow and the soul." ― Pablo Neruda, 100 Love Sonnets
 "I choose to love you in silence, because in silence I find no rejection, and in silence no one owns you but me" - Anonymous
 "You make me want to be a better person" - As Good as it Gets (1997)
-"After all this time?"<br>"Always!"<br>- Snape to Dumbledore, Harry Potter
+"After all this time?"<br>'Always!'<br>- Snape to Dumbledore, Harry Potter
 "Not only did I love her, but I could tell the universe loved her, too. More than others. She was different. After all, I would be a fool not to notice the way the sunshine played with her hair" - Christopher Poindexter
 "This too, shall pass" - Bible
-"What day is it?"<br>"It's today", squeaked Piglet<br>"My favorite day", said Pooh<br> - A.A. Milne
+"What day is it?<br>'It's today', squeaked Piglet<br>'My favorite day', said Pooh"<br> - A.A. Milne
 "Let the beauty of what you love be what you do." - Rumi
 "Don't worry about failure; you only have to be right once" - Drew Houston, Dropbox CEO & Founder
 "You can't cross the sea merely by standing and staring at the water."- Rabindranath Tagore
@@ -323,7 +322,7 @@ A young man wrote to Mozart and said:<br>Q: "Herr Mozart, I am thinking of writi
 "If you're the most intelligent person in the room . . . you're in the wrong room." James D Watson.
 "The world is full of nice people. If you  can't find one, be one" - Nishan Panwar
 "Love me when I least deserve it because that is when I really need it " - Swedish Proverb
-"The wheels of fate will some day compel the English to give up their Indian Empire. But what kind of India will they leave behind, what stark misery? When the stream of their centuries' administration runs dry at last, what a waste of mud and filth will they leave behind them.",referring reproachfully to the legacy bequeathed by colonialism, Tagore wrote just three months before his death in 1941.
+"The wheels of fate will some day compel the English to give up their Indian Empire. But what kind of India will they leave behind, what stark misery? When the stream of their centuries' administration runs dry at last, what a waste of mud and filth will they leave behind them." - Tagore, referring reproachfully to the legacy bequeathed by colonialism, he wrote just three months before his death in 1941.
 "May you grow like an onion, with your head in the ground." — Old Yiddish Curse
 "I took her by the hand to say<br>All faith forever has been washed away<br>I returned for you in great dismay<br>Come with me, far away to stay<br>Endlessly gazing in nocturnal prime<br>She spoke of her vices and broke the rhyme,But baffled herself with the final line<br>My promise is made but my heart is thine"<br><br>- Mikael_Åkerfeldt
 "If your ship doesn't come in, swim out to meet it." - Jonathan Winters
@@ -397,5 +396,5 @@ Feed the masses, eat with the classes.
 "Fall seven times, stand up eight" - Japanese proverb
 "Listen or thy tongue will keep thee deaf" - Native-American proverb 
 "Someday, we'll run into each other again. I know it. Maybe I'll be older and smarter and just plain better. If that happens, that's when I'll deserve you. But now, at this moment, you can't hook your boat to mine, because I'm liable to sink us both." - Gabrielle Zevin, Memoirs of a Teenage Amnesiac
-"Sufism has taught me that just as the rain and the sun do not differentiate between people,neither should we." A.R Rahman 
-"Like me or Hate me,<br>both are in my favour,<br>If you like me I am in your Heart,<br>If you hate me I am in your mind'.<br>-Swami Vivekananda
+"Sufism has taught me that just as the rain and the sun do not differentiate between people,neither should we." - A.R Rahman 
+"Like me or Hate me,<br>both are in my favour,<br>If you like me I am in your Heart,<br>If you hate me I am in your mind".<br>-Swami Vivekananda
