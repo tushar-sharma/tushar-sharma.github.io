@@ -31,8 +31,6 @@ box-shadow: 2px #f7f7f7;
 }
 
 .wp_caption{padding-top:20px; }
-/* button css  */
-/* end button css */
 
 </style>
 
@@ -42,10 +40,16 @@ box-shadow: 2px #f7f7f7;
 
 <script type="text/javascript">
 /* generate a random number */
-function quotesGet() { 
+function quotesGet(defaultValue) { 
   jQuery.get('/../quotes.txt', function(data) { 
      var quotes = data.split("\n");
-     var idx = Math.floor((quotes.length - 1) * Math.random());
+ 
+     var idx;
+     if (typeof defaultValue !== 'undefined') {
+         idx = defaultValue;
+     } else {
+         idx = Math.floor((quotes.length - 1) * Math.random());
+     }
               /*term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", { 
                   raw: function(div) { }
                });
@@ -63,7 +67,9 @@ function quotesGet() {
 
   });
 }
-quotesGet();
+/* send the default quote number 66 */
+var defaultValue = 65;
+quotesGet(defaultValue);
 </script> 
 
 <p>
@@ -76,20 +82,21 @@ quotesGet();
 </blockquote>
 </p>
 
+</script> 
 
 <div style="clear:both;"></div>
 
-<p>Interest: </p>
+<p>Interest: <span id="dspText"></span> </p>
 
-<div>
-  <a title="blog" style="padding:0 10px" class="logo" href="{{ root_url }}/blog" ><i class="icon-file icon-large"></i></a>
+<div >
 
-  <a  title="poetry" style="padding:0 10px" class="logo" href="{{ root_url }}/tag/poetry/"><i class="icon-pencil icon-large"></i></a>
+    <a id="interestBlog"  style="padding:0 10px" class="logo" href="{{ root_url }}/blog" ><i class="icon-file"></i></a> 
 
-  <a  title="books" style="padding:0 10px" class="logo" href="{{ root_url }}/books/" ><i class="icon-book icon-large"></i></a>
+    <a  id="interestPoetry"  style="padding:0 10px" class="logo" href="{{ root_url }}/tag/poetry/"><i class="icon-pencil"></i></a>
 
- <a  title="code" style="padding:0 10px" class="logo" href="{{ root_url }}/projects" ><i class="icon-code icon-large"></i></a>
+    <a  class="interestBooks" style="padding:0 10px" class="logo" href="{{ root_url }}/books/" ><i class="icon-book"></i></a>
 
+    <a  class="interestCode" style="padding:0 10px" class="logo" href="{{ root_url }}/projects" ><i class="icon-code"></i></a>
 
 </div>
 
@@ -98,22 +105,23 @@ quotesGet();
 <p>Feel free to: </p>
 
 <div>
-  <a  title="Say Hi" style="padding:0 10px" class="logo" href="{{ root_url }}/contact/" ><i class="icon-bell icon-large"></i></a>
 
-  <a  title="Public key" style="padding:0 10px" class="logo" target="_blank" href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC" ><i class="icon-key icon-large"></i></a>
+  <a  class="interestContact" style="padding:0 10px" class="logo" href="{{ root_url }}/contact/" ><i class="icon-bell"></i></a>
 
-<a  title="Publications" style="padding:0 10px" class="logo" href="http://www.scribd.com/awake9" target="_blank"><i class="icon-bar-chart icon-large"></i></a>
+  <a  class="interestKey" style="padding:0 10px" class="logo" target="_blank" href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC" ><i class="icon-key"></i></a>
+
+    <a  class="interestPub" style="padding:0 10px" class="logo" href="http://www.scribd.com/awake9" target="_blank"><i class="icon-bar-chart"></i></a>
 
 <!--<li class="txt">
   <a class="logo" href="https://delicious.com/2shar" target="_blank"><i class="icon-bookmark icon-large"></i></a><span class="mylogo">follow Bookmarks</span>
 
 </li>
 -->
+    <a  class="interestResume" style="padding:0 10px" class="logo" target="_blank" href="https://dl.dropboxusercontent.com/u/85584172/resume.pdf" ><i class="icon-anchor"></i></a>
 
-
-<a  title="Resume" style="padding:0 10px" style="padding-right:30px" class="logo" target="_blank" href="https://dl.dropboxusercontent.com/u/85584172/resume.pdf" ><i class="icon-anchor icon-large"></i></a>
-
-<a  title="Rambling" style="padding:0 10px" class="logo" href="{{ root_url }}/about/personal.html" ><i class="icon-smile icon-large"></i></a>
+    <a  class="rambling" style="padding:0 10px" class="logo" href="{{ root_url }}/about/personal.html" ><i class="icon-smile"></i></a>
+<br> 
+</div>
 
 <div style="clear:both;"></div><br>
 
