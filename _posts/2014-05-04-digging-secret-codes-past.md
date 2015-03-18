@@ -68,7 +68,7 @@ Similarly all the message is encrypted as 'DZBBNCXP'
 
 #### Javascript Implementation
 
-<pre class="brush: js;">
+<pre class="brush: js;  title: ; notranslate">
 function encryption(message, alphabet) {
   for (i = 0; i < msg.length; ++i) {
     pos = alphabet.indexOf(msg.substr(i,1));
@@ -93,7 +93,7 @@ Each time a new message needs to be sent, a random key is also needed. In order 
 
 Below is the implementation in Javascript. 
 
-<pre class="brush: js;">
+<pre class="brush: js;  title: ; notranslate">
 /* shuffle an array of n elements 
    array.length = n */
 for (i = array.length -1; i >0; i--) {
