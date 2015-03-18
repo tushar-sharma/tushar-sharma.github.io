@@ -16,6 +16,11 @@ Different religion tells us about plethora of beautiful tales about the genesis 
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p> 
 
+<script type="text/javascript" src="{{ root_url }}/js/shCore.js"></script>
+<script type="text/javascript" src="{{ root_url }}/js/shBrushJScript.js"></script>
+<link type="text/css" rel="stylesheet" href="{{ root_url }}/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
 <div>
 <p>
 Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.
@@ -63,7 +68,7 @@ Similarly all the message is encrypted as 'DZBBNCXP'
 
 #### Javascript Implementation
 
-{% highlight javascript  %}
+<pre class="brush: js;">
 function encryption(message, alphabet) {
   for (i = 0; i < msg.length; ++i) {
     pos = alphabet.indexOf(msg.substr(i,1));
@@ -78,7 +83,7 @@ function encryption(message, alphabet) {
     }
   }
 }
-{% endhighlight %}
+</pre>
 
 
 
@@ -88,7 +93,7 @@ Each time a new message needs to be sent, a random key is also needed. In order 
 
 Below is the implementation in Javascript. 
 
-{% highlight javascript %}
+<pre class="brush: js;">
 /* shuffle an array of n elements 
    array.length = n */
 for (i = array.length -1; i >0; i--) {
@@ -102,7 +107,7 @@ for (i = array.length -1; i >0; i--) {
     array[i] = array[j];
     array[j] = temp;
 }
-{% endhighlight %}
+</pre> 
 
 #### Demo
 
