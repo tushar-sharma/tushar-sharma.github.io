@@ -22,40 +22,6 @@ a.myIcon:hover { color:red;}
 
 <h2 class="entry-title">About</h2>
 
-<script type="text/javascript">
-/* generate a random number */
-function quotesGet(defaultValue) { 
-  jQuery.get('/../quotes.txt', function(data) { 
-     var quotes = data.split("\n");
- 
-     var idx;
-     if (typeof defaultValue !== 'undefined') {
-         idx = defaultValue;
-     } else {
-         idx = Math.floor((quotes.length - 1) * Math.random());
-     }
-              /*term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", { 
-                  raw: function(div) { }
-               });
-            */
-     var quoteArr = quotes[idx].split('"');
-     /* get the quotes */
-     if (typeof quoteArr[1] !== 'undefined') {
-       document.getElementById("myquotes").innerHTML = quoteArr[1];
-     }
-
-     /* get the author */
-     if (typeof quoteArr[2] !== 'undefined') {
-       document.getElementById("author").innerHTML = quoteArr[2];
-     }
-
-  });
-}
-/* send the default quote number 66 */
-var defaultValue = 65;
-quotesGet(defaultValue);
-
-</script> 
 
 <p><img style="padding:5px;" src="{{ root_url }}/img/little_world.png" alt="Little World pic" class="aligncenter size-medium wp-image-571"></p>
 
@@ -63,19 +29,10 @@ quotesGet(defaultValue);
 
 <p>Drop me a <a href="{{ root_url }}/contact/">quick message</a> or use my <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">PGP key</a> (did you ask <a href="{{ root_url }}/blog/protect-privacy/">why</a>?) </p>
 
-<p>For my professional bio, download my <a  target="_blank" href="https://dl.dropboxusercontent.com/u/85584172/resume.pdf" >resume</a> or <a class="logo" href="http://www.scribd.com/awake9" target="_blank">published work</i>.</a>
+<p>For my professional bio, download my <a  target="_blank" href="https://dl.dropboxusercontent.com/u/85584172/resume.pdf" >resume</a>.
 </p>
 
 <p>I love reading. Wanna peep into my <a href="{{ root_url }}/books">book shelf</a>? As for writing, I hope you enjoy it. </p> 
 
 <p>Elsewhere, you can follow me <a title="Twitter" target="_blank" href="https://twitter.com/tshrocks">@tshrocks</a>, <a title="Quora" href="http://www.quora.com/Tushar-Sharma-3" target="_blank">Quora</a>.</p> 
-
-<br>
-<p style="padding:0 40px">
-<blockquote class="cl">
-<i class="icon-quote-left"></i>&nbsp;<span  id="myquotes"></span>&nbsp;<i class="icon-quote-right"></i>&nbsp;&nbsp; <span style="color:black;"><span id="author"></span></span><br>
-<br>
-  <button class="btn" onclick="quotesGet()">Change</button>
-</blockquote>
-</p>
 

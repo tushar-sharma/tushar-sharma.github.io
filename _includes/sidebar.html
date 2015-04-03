@@ -60,13 +60,17 @@ h1.heading{font-family:Myfont;color:#39c}
   <pre>{% include sidebar_projects.html %}</pre>
 </div>
 
-<!--
 <h2>Blog</h2>
 <div class="highlight">
   <pre>{% include sidebar_blog.html %}</pre>
 </div>
---> 
 
+<h2>Quotes </h2> 
+<div class="highlight" style="padding:8px 15px;background:#f8f8f8;border-radius:5px;border:1px solid #e5e5e5;overflow-x:auto">
+{% include quotes.html %}
+</div> 
+
+<br><br>
 
 <p id="back-top">
   <a href="#top"><span></span>Back to Top</a>
@@ -75,5 +79,3 @@ h1.heading{font-family:Myfont;color:#39c}
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 
 <script src="{{ root_url }}/js/scroll_top.js" type="text/javascript"></script>
-
-
