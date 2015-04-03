@@ -408,3 +408,4 @@ Feed the masses, eat with the classes.
 "When people get used to preferential treatment, equal treatment feels like discrimination." - Thomas Sowell
 "What you can do today can improve all your tomorrows" - Ralph Marston 
 "If you don't build your dream, someone else will hire you to help them build theirs" - Dhirubhai Ambani 
+"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live." - John F. Woods
