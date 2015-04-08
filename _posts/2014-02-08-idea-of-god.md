@@ -6,7 +6,7 @@ tags:
 - god
 - religion
 - science
-name: idea-god
+thumb: /img/the-thinker.jpg 
 ---
 
 I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedo the whole place. And the Machiavelli alarm pulled me out of my dreams. 
@@ -15,22 +15,15 @@ After few seconds, the world came back to me. I glanced out of the window to cat
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-<div>
-<p>
 I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedoed the whole place. And the Machiavelli alarm pulled me out of my dreams. 
-</p>
 
-<p>After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony. 
-</p>
+<img src="{{ root_url }}/img/the-thinker.jpg" >
 
-<p>
+After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony. 
+
 Opposite to my building was a roof of another building. Out of nowhere leapt a nomadic cat onto the roof. She wandered around occasionally licking her paws. She caught the sight of me and stood still. Seeing her motionless aroused my curiosity.  As I receded my eyes I saw a sheet of cloth hung on another roof. A moment passed and a gust of wind left the cat still and the cloth fluttered. And another moment later, came a lady who took the cloth away. And the cat also escaped into oblivion. 
-</p>
 
-<p>
 It dawned to me that the roof resembled a portrait. A portrait with different strokes of colors. A moment ago it had a tinge of a cat and the cloth. But soon the brush of life wiped them off. I wondered if Life per se was one giant portrait with each one of us resembling different strokes of colors only to be eventually swept away by the current of time.
-</p>
-</div>
 
 <br>
 

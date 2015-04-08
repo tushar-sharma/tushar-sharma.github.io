@@ -4,8 +4,8 @@ title: Happiness
 category: blog
 tags: poetry happiness
 name: Happiness
+thumb: /img/happy.jpg
 ---
-
 
 I walked miles on my feet and hope,  <br>
 against all weather, people and slope, <br>
@@ -15,8 +15,7 @@ enough pace as the way was steep.<br>
 I was already late not by months but years, <br>
 still I dragged my feet amidst all fears, <br>
 at night when the moon swept the tides away, <br>
-I dreamt of my past till sleep made me her prey. <br>
-<!-- truncate_here -->
+I dreamt of my past till sleep made me her prey.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 

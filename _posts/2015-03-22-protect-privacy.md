@@ -7,7 +7,7 @@ tags:
 - surveillance
 - snooping 
 name: protect-privacy
-thumb: img/privacy.jpg
+thumb: /img/privacy.jpg
 ---
 
 "If you've got nothing to hide, you've got nothing to fear". This is the most common retort used by governments to espouse Mass surveillance. They do it in the pretext of security. But even if you're not a fugitive, you have the right to protect your privacy. 

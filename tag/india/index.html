@@ -95,6 +95,7 @@ h1.heading{font-family:Myfont;color:#39c}
 </pre>
 </div>
 
+<!--
 <h2>Blog</h2>
 <div class="highlight">
   <pre>
@@ -102,8 +103,9 @@ h1.heading{font-family:Myfont;color:#39c}
      ├── <span class="nv"></span><a href="/blog/protect-privacy" title="Protect Your Privacy">protect-privacy</a><br />     ├── <span class="nv"></span><a href="/blog/shooting-messenger" title="Shooting the Messenger">shoot-messenger</a><br />     ├── <span class="nv"></span><a href="/blog/digging-secret-codes-past" title="Digging on the codes of the Past">digging-past</a><br />     └── <span class="nv"></span><a href="/blog/romance-moon" title="Romance with Moon">romance-moon</a><br /><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
 </pre>
 </div>
+-->
 
-<h2>Quotes </h2> 
+<h2>Quote</h2> 
 <div class="highlight" style="padding:8px 15px;background:#f8f8f8;border-radius:5px;border:1px solid #e5e5e5;overflow-x:auto">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
@@ -144,15 +146,22 @@ function quotesGet(defaultValue) {
 
   });
 }
+$(document).ready(function() {
+    quotesGet();
+});
+
 /* send the default quote number 66 */
+/* omit it ; as i need to display random quotes 
 $(document).ready(function() {
   var defaultValue = 65;
   quotesGet(defaultValue);
 });
+*/
+
 </script>
 
 <i class="cl icon-quote-left"></i>&nbsp;<span class="cl" id="myquotes"></span>&nbsp;<i class="icon-quote-right cl"></i>&nbsp;&nbsp; <span style="color:black;"><span id="author"></span></span><br>
-<div style="float:right;">+&nbsp;<a href="javascript:quotesGet();">change it</a></div>
+<div style="float:right;">+&nbsp;<a href="javascript:quotesGet();">view next</a></div>
 
 
 </div> 
@@ -195,6 +204,9 @@ $(document).ready(function() {
     <h3>Shooting the Messenger</h3>
   </a>
       <div>
+            <!-- this is for thumb images;  -->
+	    <div style="background:url('/img/women.jpg') no-repeat;background-size:100% auto;" class="thumb"></div>
+
             
             
             <style type="text/css">

@@ -7,6 +7,7 @@ tags:
 - minix
 - encrypted-files
 name: encrypted-files
+thumb: /img/code.png
 ---
 
 Implemented encrypted files in Minix 3. Minix 3 is a micro-kernel operating system. 

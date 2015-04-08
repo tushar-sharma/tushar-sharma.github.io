@@ -7,6 +7,7 @@ tags:
 - india
 - ban
 name: shoot-messenger
+thumb: /img/women.jpg
 ---
 
 <style type="text/css">
@@ -26,8 +27,14 @@ Leslee Udwin, the maker of the documentary, has flown out of India citing her se
 "India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable.
 </p>
 
+<p> 
+<img src="{{ root_url }}/img/women.jpg" >
+</p>
+
 <p>Leslee Udwin, the maker of the documentary, has flown out of India citing her security. In an interview to BBC, she said, “But I’m not muzzled. Nor will I be muzzled” <sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup>. India’s Home Minister, Rajnath Singh, was furious & sought report from Tihar’s jail authorities on how the Nirbhaya's rape accused had given a controversial interview to BBC <sup id='fnref:2'><a href='#fn:2' rel='footnote'>2</a></sup>. "This is an international conspiracy to defame India. We will see how the film can be stopped abroad too", said parliamentary affairs minister M. Venkaiah Naidu <sup id='fnref:3'><a href='#fn:3' rel='footnote'>3</a></sup>.
 </p>
+
+
 
 <p>
 Kudos to the government for silencing the interviewer. We don’t want another ‘Slumdog millionaire’ to remind us of the filth in our society. We are a competing global power. We just launched a satellite to Mars for God’s sake. Such western propaganda will not work. How dare a western correspondent air something demeaning to our country? Shouldn’t she need to visit Taj Majal and experience incredible India?

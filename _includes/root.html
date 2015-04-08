@@ -60,6 +60,8 @@ input::-webkit-input-placeholder {
     <h3>{{ post.title }}</h3>
   </a>
       <div>
+        <!-- this is for thumb images;  --> 
+           <div style="background:url('{{ post.thumb }}') no-repeat;background-size:100% auto;" class="thumb"></div>
             {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
             {% if truncated_post != post.content %}
             {{ truncated_post | append:".."}}

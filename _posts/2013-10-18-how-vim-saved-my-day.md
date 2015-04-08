@@ -8,6 +8,7 @@ tags:
 - editor
 - code
 name: vim-saved-day
+thumb: /img/vim.png
 ---
 
 It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India's IT company. I vividly remember the countless occasions when ViM saved my day.
@@ -21,6 +22,9 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India's IT company. I vividly remember the countless occasions when ViM saved my day.
 </p>
 </div>
+
+<img src="{{ root_url }}/img/vim.png" >
+
 
 #### Early Days
 

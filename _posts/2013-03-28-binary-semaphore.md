@@ -6,6 +6,7 @@ tags:
 - projects
 - binary semaphore
 name: binary-semaphore
+thumb: /img/code.png
 ---
 
 Implemented binary semaphore in Minix 3. Minix 3 is a micro-kernel operating system. 

@@ -4,6 +4,7 @@ title: Fear of Walmart
 category: blog
 tags: Walmart FDI
 name: fear-of-walmart
+thumb: /img/walmart.jpg
 ---
 
 After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. 
@@ -11,10 +12,9 @@ After a ruckus the government agreed to roll back the proposed decision to incre
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-<div>
+After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. 
 
-<p>After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart. </p>
-</div>
+<img src="{{ root_url }}/img/walmart.jpg" >
 
 My lack of education in economics convinced me of my inability to form an opinion on this matter. But as a concerned citizen , I tried to understand the repercussion of such an important law debated in the parliament. My first hurdle was to demystify FDI ( Foreign Direct Investment). FDI is way to control the investment of a foreign company. The investment may include purchase of land, building factories, employing people, etc. Usually FDI is restricted in countries to protect domestic companies against the might of the multi-national companies. But relaxing FDI organizes the sector, drives the economy, increases employment, etc. India liberalized most of its sectors after 1991 which also witnessed the boom of Indian IT sector. Currently FDI in retail sector is restricted below 51% forbidding companies like Walmart to pounce upon the Indian market.
 

@@ -7,6 +7,7 @@ tags:
 - hackers 
 - code
 name: hacking-good
+thumb: /img/hacker.jpg
 ---
 
 Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". On insisting he reluctantly explained, "breaking into website or stealing passwords of Facebook, etc". I was crestfallen at the rampant misconception about hacking.
@@ -14,9 +15,9 @@ Once a friend of mine asked if I could Hack. I asked him what he meant by hackin
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p> 
 
-<div>
-<p>Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". On insisting he reluctantly explained, "breaking into website or stealing passwords of Facebook, etc". I was crestfallen at the rampant misconception about hacking. </p>
-</div>
+Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". On insisting he reluctantly explained, "breaking into website or stealing passwords of Facebook, etc". I was crestfallen at the rampant misconception about hacking. 
+
+<img src="{{ root_url }}/img/hacker.jpg" >
 
 
 #### What people think hacking is
