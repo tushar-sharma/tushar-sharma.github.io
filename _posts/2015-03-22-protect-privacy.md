@@ -10,10 +10,9 @@ name: protect-privacy
 thumb: /img/privacy.jpg
 ---
 
-"If you've got nothing to hide, you've got nothing to fear". This is the most common retort used by governments to espouse Mass surveillance. They do it in the pretext of security. But even if you're not a fugitive, you have the right to protect your privacy. 
+"If you've got nothing to hide, you've got nothing to fear". This is the most common retort used by governments to espouse Mass surveillance. They do it in the pretext of security. But even if you're not a fugitive, you have the right to protect your privacy.
 
-Privacy is not all about hiding bad things. Surveillance, for example, can inhibit such lawful activities as free speech, free association, and other First Amendment rights essential for democracy.
-<!-- truncate_here -->
+Privacy is not all about hiding bad things. Surveillance, for example, can inhibit such lawful activities as free speech, free association, and other First Amendment rights essential for democracy.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
