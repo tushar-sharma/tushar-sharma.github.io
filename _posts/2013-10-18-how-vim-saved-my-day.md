@@ -12,7 +12,8 @@ thumb: /img/vim.png
 ---
 
 It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India's IT company. I vividly remember the countless occasions when ViM saved my day.
-<!-- truncate_here -->
+
+I mostly received rudimentary tasks in early days of my work. I received one such task just few days after my joining. I was slouching on my chair when I heard this commanding voice.<!-- truncate_here -->
 
 <div>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </div>
 <div style="clear:both;padding-top:20px;padding-bottom:20px;"></div>

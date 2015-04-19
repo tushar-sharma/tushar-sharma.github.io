@@ -11,7 +11,8 @@ thumb: /img/hacker.jpg
 ---
 
 Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". On insisting he reluctantly explained, "breaking into website or stealing passwords of Facebook, etc". I was crestfallen at the rampant misconception about hacking.
-<!-- truncate_here -->
+
+Often we read news of hackers breaking into websites siphoning millions of dollars. Such news not only create pervasive fear of hacking but also glorify such malicious activities<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p> 
 
