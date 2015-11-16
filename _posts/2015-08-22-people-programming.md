@@ -72,7 +72,7 @@ and then there was light<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
 <img src="{{ root_url }}/img/programming-art.jpg" >
 </p>
 
-I've tried my hands on cooking albeit unsuccessfully. But I've learned to cook a descent meal as to not scare off my guests. I usually search online for the recipe or occassionally call my mother for tips. Aftewards I collect all the required ingredients. Then I follow the each step to conclusively prepare a meal. Afterwards I record the method in my diary so as to recall it later or to aid anybody else with the same dish. 
+I've tried my hands on cooking albeit unsuccessfully. But I've learned to cook a descent meal as to not scare off my guests. I usually search online for the recipe or occassionally call my mother for tips. Afterwards I collect all the required ingredients. Then I follow the each step to conclusively prepare a meal. Afterwards I record the method in my diary so as to recall it later or to aid anybody else with the same dish. 
 
 Programming is similar to cooking. Your recipe is your algorithms which you decide after you understand the problem. Each step is a sub problem which leads to the desired output. Since most of the code is read more than written<sup><a href='#fn:3' rel='footnote'>3</a></sup> , thus documenting the code properly is very important. Comments also help while debugging the code. 
 
