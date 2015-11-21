@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta property="og:site_name" content="Tushar Sharma"/>
-<title>Posts Tagged &ldquo;minix&rdquo;</title>
+<title>Posts Tagged &ldquo;lsd radix sort&rdquo;</title>
 <link rel="icon" type="image/png" href="/img/favicon.ico">
 <link rel="stylesheet" href=" /css/pygment_trac.css ">
 <link rel="stylesheet" href=" /css/font-awesome.css ">
@@ -207,7 +207,7 @@ $(document).ready(function() {
 
       </header>
       <section>
-        <h1 style="color: rgb(51, 153, 204);">Posts Tagged &ldquo;minix&rdquo;</h1>
+        <h1 style="color: rgb(51, 153, 204);">Posts Tagged &ldquo;lsd radix sort&rdquo;</h1>
 
 <div id="blog" style="padding-top:30px; margin-top:-23px;">
 <!-- -->
@@ -220,130 +220,39 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <small style="float:right; margin-top:5px;">Tue 16 Apr 2013</small>
-  <a href="/projects/encrypt-files">
-    <h3>Encrypted Files in Minix 3</h3>
+  <small style="float:right; margin-top:5px;">Fri 20 Nov 2015</small>
+  <a href="/blog/lsd">
+    <h3>LSD Radix Sort</h3>
   </a>
       <div>
             <!-- this is for thumb images;  -->
-	    <div style="background:url('/img/code.png') no-repeat;background-size:100% auto;" class="thumb"></div>
+	    <div style="background:url('/img/alphabet.jpg') no-repeat;background-size:100% auto;" class="thumb"></div>
 
             
             
-            Implemented a new system call in Minix 3 along with the library function that allows it to be called conveniently from a C program. The library interface extends extends file access operations to handle encrypted files.
+            <style type="text/css">
+.myheading{font-family:Georgia, "Times New Roman", Times, serif;font-size:24px;margin-top:5px;margin-bottom:0;text-align:center;font-weight:400;color:#222}
+.mysubheading{font-family:"Lucida Grande", Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
+</style>
 
-Reading and writing to a file is done through a system call. The first is to access the "master encryption table" file (/etc/encryptTable) that stores the information about every file that is encrypted within Minix and contains three pieces of information: fs_dev, inode_nr and hashed_pw. The first two information uniquely identifies what file is encrypted and can be obtained from the vnode for the file. 
+Any deterministic general sorting algorithm  has average case time complexity @L \Omega(n\log{}n) @L . However, certain sorting algorithm can run faster in @L O(n) @L but with limitation. Instead of comparision-based sort, each element is looked individually by its value. Radix sort is one fine example of integer sorting.
 
-[details][details] &mdash; [code][code]..
+Suppose, we have large directory containing names of people in random order. The names need not be distinct. We need to sort the name in the ascending order. Also our algorithm should run in linear time. A sample of the input file is shown below..
       </div>
   <br>
   <p>
-  <a href="/projects/encrypt-files">
+  <a href="/blog/lsd">
     <span>Continue reading &rarr;</span>
   </a>
    <span style="float:right;" >
     
-    <a class="mytag" href="/tag/projects">projects </a>
+    <a class="mytag" href="/tag/programming">programming </a>
     
-    <a class="mytag" href="/tag/minix">minix </a>
+    <a class="mytag" href="/tag/lsd radix sort">lsd radix sort </a>
     
-    <a class="mytag" href="/tag/encrypted-files">encrypted-files </a>
+    <a class="mytag" href="/tag/sorting">sorting </a>
+    
+    <a class="mytag" href="/tag/code">code </a>
     
   </span>
 </p>
@@ -351,6 +260,102 @@ Reading and writing to a file is done through a system call. The first is to acc
   
     <hr />
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
