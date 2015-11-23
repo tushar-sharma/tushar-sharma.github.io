@@ -324,11 +324,9 @@ $(document).ready(function() {
 
             
             
-            Implemented a new system call in Minix 3 along with the library function that allows it to be called conveniently from a C program. The library interface extends extends file access operations to handle encrypted files.
+            <p>Implemented a new system call in Minix 3 along with the library function that allows it to be called conveniently from a C program. The library interface extends extends file access operations to handle encrypted files.</p>
 
-Reading and writing to a file is done through a system call. The first is to access the "master encryption table" file (/etc/encryptTable) that stores the information about every file that is encrypted within Minix and contains three pieces of information: fs_dev, inode_nr and hashed_pw. The first two information uniquely identifies what file is encrypted and can be obtained from the vnode for the file. 
-
-[details][details] &mdash; [code][code]..
+Reading and writing to a file is done through a system call. The first is to access the "master encryption table" file (/etc/encryptTable) that stores the information about every file that is encrypted within Minix and contains three pieces of information: fs_dev, inode_nr and hashed_pw. The first two information uniquely identifies what file is encrypted and can be obtained from the vnode for the file...
       </div>
   <br>
   <p>
@@ -368,11 +366,9 @@ Reading and writing to a file is done through a system call. The first is to acc
 
             
             
-            Implemented binary semaphore in Minix 3. Minix 3 is a micro-kernel operating system. 
+            <p>Implemented binary semaphore in Minix 3. Minix 3 is a micro-kernel operating system.</p>
 
-Most of the process pass information among themselves using application IPC. This often result in race condition. To prevent it and provide synchronization, semaphores, first proposed by Dikstras, is used. 
-
-[details][details] &mdash; [code][code]..
+Most of the process pass information among themselves using application IPC. This often result in race condition. To prevent it and provide synchronization, semaphores, first proposed by Dikstras, is used...
       </div>
   <br>
   <p>
@@ -408,11 +404,9 @@ Most of the process pass information among themselves using application IPC. Thi
 
             
             
-            Advanced Encryption Standard, a symmetric key algorithm, implemented in C++. All the parties use the same key for encryption and decryption. It has superceded DES, another symmetric key algorithms. 
+            <p>Advanced Encryption Standard, a symmetric key algorithm, implemented in C++. All the parties use the same key for encryption and decryption. It has superceded DES, another symmetric key algorithms.</p>
 
-Rijndael was selected by NIST (National Institute of Standards and Technology) as AES. Unlike Rijndael in which block length and key length can be specified to any multiple of 32 bits, AES fixes block length to 128 bits and key length to (128 or 192 or 256) bits. 
- 
-[details][details] &mdash; [code][code]..
+Rijndael was selected by NIST (National Institute of Standards and Technology) as AES. Unlike Rijndael in which block length and key length can be specified to any multiple of 32 bits, AES fixes block length to 128 bits and key length to (128 or 192 or 256) bits...
       </div>
   <br>
   <p>
@@ -448,11 +442,9 @@ Rijndael was selected by NIST (National Institute of Standards and Technology) a
 
             
             
-            Data Encryption Standard, a symmetric key algorithm, implemented in C++. All the parties use the same key for encryption and decryption. Look at the diagram below. 
+            <p>Data Encryption Standard, a symmetric key algorithm, implemented in C++. All the parties use the same key for encryption and decryption. Look at the diagram below.</p>
 
-Here, m is message which is passed through an encrypted function <i>E</i> along with key <i>K</i>. The resultant is a unintelligent gibberish cipher. The cipher is decoded again using the same key to produce plain message.
-
-[details][details] &mdash; [code][code]..
+Here, m is message which is passed through an encrypted function <i>E</i> along with key <i>K</i>. The resultant is a unintelligent gibberish cipher. The cipher is decoded again using the same key to produce plain message...
       </div>
   <br>
   <p>
