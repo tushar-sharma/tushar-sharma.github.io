@@ -14,10 +14,9 @@ thumb: /img/sunset.jpg
 .mysubheading{font-family:"Lucida Grande", Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
 </style>
 
-Imagine a sunset, with a tired sun sinking over a meadow. The chirping of birds steals your attention as they return to their homes. And while the sun disappears, you sink back and
-relish your sourrounding.
+<p>Imagine a sunset, with a tired sun sinking over a meadow. The chirping of birds steals your attention as they return to their homes. And while the sun disappears, you sink back and relish your sourrounding.</p>
 
-Well the sunset is beautiful because it's obvious to your eyes. Similarly programming is beautiful for those who enjoy it. Below is the poem which which eulogises lisp programming language<sup><a href='#fn:1' rel='footnote'>1</a></sup> but it may be bland for those who have no experience with lisp.<!-- truncate_here -->
+Well the sunset is beautiful because it's obvious to your eyes. Similarly programming is beautiful for those who enjoy it. Below is the poem which which eulogises lisp programming language, but it may be bland for those who have no experience with lisp.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 

@@ -7,10 +7,11 @@ name: Happiness
 thumb: /img/happy.jpg
 ---
 
-I walked miles on my feet and hope,  <br>
+<p>I walked miles on my feet and hope,  <br>
 against all weather, people and slope, <br>
 But after some distance I could not keep, <br>
 enough pace as the way was steep.<br>
+</p>
 
 I was already late not by months but years, <br>
 still I dragged my feet amidst all fears, <br>

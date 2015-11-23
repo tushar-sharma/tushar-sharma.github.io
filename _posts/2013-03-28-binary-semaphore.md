@@ -9,11 +9,9 @@ name: binary-semaphore
 thumb: /img/code.png
 ---
 
-Implemented binary semaphore in Minix 3. Minix 3 is a micro-kernel operating system. 
+<p>Implemented binary semaphore in Minix 3. Minix 3 is a micro-kernel operating system.</p>
 
-Most of the process pass information among themselves using application IPC. This often result in race condition. To prevent it and provide synchronization, semaphores, first proposed by Dikstras, is used. 
-
-[details][details] &mdash; [code][code]<!-- truncate_here -->
+Most of the process pass information among themselves using application IPC. This often result in race condition. To prevent it and provide synchronization, semaphores, first proposed by Dikstras, is used.<!-- truncate_here -->
 - - -
 
 [code][code]
