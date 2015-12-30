@@ -19,7 +19,7 @@ thumb: /img/lego.jpg
 
 <p>I started with my Linux adventure with Ubuntu. It gave me a respite from vendor-lock that's common with Microsoft Windows. Ubuntu gave me an out-of-the box usable system with a simplified installer and a clean interface of Unity (Ok! Some people hate it) which made me feel at home. As my familiarity with Linux grew, I found user-friendliness impeding to my learning. So I began searching for a new Linux disto until I fell in love with Arch Linux. </p>
 
-Arch Linux as it says is focused on simplicity, minimalism and code elegance. I soon found that installing Arch Linux was like a lego game. You need to create foundation and tie other pieces together until they make sense while reading the `manual`. However building Arch Linux is more simple than building a car in lego.<!-- truncate_here -->
+Arch Linux is focused on simplicity, minimalism and code elegance. I soon found that installing Arch Linux was like a Lego game. You need to do little digging and tie other pieces together until they make sense while still reading the  <a href="https://wiki.archlinux.org/index.php/Beginners%27_guide" target="_blank">manual</a>. However building a usable Arch Linux is more simple than building a house in Lego.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
@@ -29,7 +29,7 @@ Arch Linux as it says is focused on simplicity, minimalism and code elegance. I 
 <link type="text/css" rel="stylesheet" href="{{ root_url }}/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-I started with my Linux adventure with Ubuntu. It gave me a respite from vendor-lock that I was accustomed with Microsoft Windows. Ubuntu gave me an out-of-the box usable system which I found somewhat similar to Microsoft Windows. It has a simplifid package installer with Ubuntu Software Center and a clean interface of Unity (Ok! Some people hate it) similar to Windows. As my familiarity with Linux grew, I found user-friendliness impeding to my learning. So I began searching for a new Linux disto until I fell in love with Arch Linux. 
+<p>I started with my Linux adventure with Ubuntu. It gave me a respite from vendor-lock that's common with Microsoft Windows. Ubuntu gave me an out-of-the box usable system with a simplified installer and a clean interface of Unity (Ok! Some people hate it) which made me feel at home. As my familiarity with Linux grew, I found user-friendliness impeding to my learning. So I began searching for a new Linux disto until I fell in love with Arch Linux. </p>
 
 Arch Linux is focused on simplicity, minimalism and code elegance<sup><a href='#fn:1' rel='footnote'>1</a></sup>. I soon found that installing Arch Linux was like a Lego game. You need to do little digging and tie other pieces together until they make sense while still reading the  <a href="https://wiki.archlinux.org/index.php/Beginners%27_guide" target="_blank">manual</a>. However building a usable Arch Linux is more simple than building a house in Lego. 
 
