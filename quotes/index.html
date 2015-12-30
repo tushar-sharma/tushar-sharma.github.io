@@ -1,0 +1,71 @@
+---
+layout: default
+title: Random Quotes
+---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<style type="text/css">
+.txt{ padding-top: 5px; }
+.cl{ color: rgb(51, 153, 204);}
+ li.txt {list-style: none outside none; }
+.btn {cursor: pointer; 
+border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
+}
+.mainQuotes {
+  position: absolute;
+  margin-top: 200px;
+  margin: 3em auto 5em auto;
+  max-width: 800px;
+  width: 100%;
+  min-height: 400px
+}
+</style>
+
+<script type="text/javascript">
+/* generate a random number */
+function quotesGet(defaultValue) { 
+  jQuery.get('/../quotes.txt', function(data) { 
+     var quotes = data.split("\n");
+ 
+     var idx;
+     if (typeof defaultValue !== 'undefined') {
+         idx = defaultValue;
+     } else {         idx = Math.floor((quotes.length - 1) * Math.random());
+     }
+              /*term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", { 
+                  raw: function(div) { }
+               });
+            */
+     var quoteArr = quotes[idx].split('"');
+     /* get the quotes */
+     if (typeof quoteArr[1] !== 'undefined') {
+       document.getElementById("myquotes").innerHTML = quoteArr[1];
+     }
+
+     /* get the author */
+     if (typeof quoteArr[2] !== 'undefined') {
+       document.getElementById("author").innerHTML = quoteArr[2];
+     }
+
+  });
+}
+$(document).ready(function() {
+    quotesGet();
+});
+
+/* send the default quote number 66 */
+/* omit it ; as i need to display random quotes 
+$(document).ready(function() {
+  var defaultValue = 65;
+  quotesGet(defaultValue);
+});
+*/
+
+</script>
+
+
+
+<div id="mainQuotes">
+  <i class="cl icon-quote-left"></i>&nbsp;<span class="cl" id="myquotes"></span>&nbsp;<i class="icon-quote-right cl"></i>&nbsp;&nbsp; <span style="color:black;"><span id="author"></span></span><br>
+  <div style="float:right;">+&nbsp;<a href="javascript:quotesGet();">view next</a></div>
+</div>

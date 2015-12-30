@@ -19,6 +19,13 @@ Posing as the one, only she could be.<br><!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
+
+<p>
+ <img src="{{ root_url }}/img/moon.jpg" alt="Blue Moon Picture" /> 
+</p> 
+
+
+
 Often we meet,<br>
 Avoiding prying eyes secretly,<br>
 In between stretches a velvet sky,<br>

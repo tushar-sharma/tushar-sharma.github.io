@@ -52,11 +52,9 @@
 "What is history but a fable agreed upon?" - Napoleon Bonaparte
 "Isn't it funny how day by day nothing changes, but when you look back everything is different" - C.S. Lewis
 "Know Thyself" - The Oracle at Delphi
-"'Have I gone mad?', The Mad Hatter.<br> 'I am afraid so. You're entirely bonkers. But I'll tell you a secret. All the best people are', Alice.<br>" -  Alice in Wonderland, Lewis Caroll
 "Atticus told me to delete the adjectives and I'd have the facts" - To kill a Mocking Bird
 "I may have stopped loving you, friends; but I will never stop loving the Day I loved you" - Ruskin Bond, Room on the roof.
 "Sometimes you wake up. Sometimes the fall kills you. And sometimes, when you fall, you fly" - Neil Gaiman
-"All science is either Physics or Stamp Collecting" - Ernest Rutherford
 "That which can be asserted without evidence, can be dismissed without evidence." - Christopher Hitchens
 "History doesn't repeat itself ... at best it sometimes rhymes" - Mark Twain
 "There is pleasure in the pathless woods; There is rapture on the lonely shore; There is society, where none intrudes, by the deep sea and music in its roar: I love not man the less, but Nature more." - Lord Byron
@@ -122,7 +120,7 @@
 "The devil can cite Scripture for his purpose" - William Shakespeare, The Merchant of Venice
 "When the only tool you own is a hammer, every problem begins to resemble a nail" - Abraham Maslow
 "I am become death, the destroyer of worlds" - Robert J. Oppenheimer (citing the Bhagavadgita, about witnessing the world’s first nuclear explosion)
-"After I’m dead I’d rather have people ask why I have no monument than why I have one" - Cato the Elder aka Marcus Porcius Cato
+"After I’m dead I’d rather have people ask why I have no monument than why I have one" - Cato the Elder
 "Even a stopped clock is right twice a day" - Proverb
 "Better to light a candle than curse the darkness" - Chinese Proverb
 "Two roads diverged in a wood, and I took the one less traveled by, and that has made all the difference" - Robert Frost
@@ -146,7 +144,6 @@
 "'Sir, if you were my husband, I would poison your drink.' -Lady Astor to Winston Churchill. 'Madam, if you were my wife, I would drink it.' -His reply"
 "Be humble, for you are of the earth. Be noble, for you are of the stars" - Serbian Proverb
 "When the axe came into the woods, many of the trees said: 'At least the handle is one of us'" - Turkish proverb
-"Alice asked the Chesire Cat, who was sitting in a tree, 'What road do I take?'<br>The cat asked, 'Where do you want to go?'<br>'I don't know', Alice answered.<br>'Then,' said the cat, 'it really doesn't matter, does it?'<br>" - Alice in Wonderland, LEWIS CARROLL
 "I used to think that the human brain was the most fascinating part of the body. Then I thought, 'What part of my body is telling me that?'" - Emo Philips
 "Everyone has a plan until they get punched in the face" - Mike Tyson
 "You can count the seeds in an orange but you can never count the oranges in a seed." - Henry Musoma, Texas A&M Professor.
@@ -157,12 +154,10 @@
 "If we take man as he is, we make him worse. But if we take man as he should be, we make him capable of becoming what he can be" - Goethe
 "Education is an admirable thing. But it is well to remember from time to time that nothing that is worth knowing can be taught" - Oscar Wilde
 "The reasonable man adapts himself to the world; the unreasonable one persists in trying to adapt the world to himself. Therefore all progress depends on the unreasonable man" - George Bernard Shaw
-"First they ignore you<br> Then they laugh at you<br> Then they fight you<br> Then you win"<br> - Mahatma Gandhi
 "For large values of one, one equals two, for small values of two" - fortune
 "What you give to others is your legacy, what you give to God are your treasures" - GBatiste
 "Never give up on something that you can't go a day without thinking about" - Winston Chuchill
 "I always knew looking back on my tears would bring me laughter, but I never knew looking back on my laughter would make me cry" - Cat Stevens
-"Some say the world will end in fire,<br> Some say in ice.<br> From what I’ve tasted of desire <br> I hold with those who favor fire. <br> But if it had to perish twice,<br> I think I know enough of hate <br> To say that for destruction ice <br> Is also great <br> And would suffice" <br> - Robert Frost
 "It is time that we steered by the stars, not by the lights of each passing ship" - Omar Brandley
 "Considering the way the world is, one happy day is almost a miracle" - Paulo Coelho
 "My mother said to me, 'If you are a soldier, you will become a general. If you are a monk, you will become the pope.' Instead, I was a painter, and became Picasso" <br> - Pablo Picasso
@@ -186,7 +181,6 @@
 "By all means, marry. If you get a good wife, you'll become happy; if you get a bad one, you'll become a philosopher" - Socrates
 "Life is too important to take seriously" - Corky Siegel
 "Youth is a blunder; Manhood a struggle; Old Age a regret" - Benjamin Dizzy
-"An old Cherokee told his grandson: 'My son, there's a battle between two wolves inside us all. One is Evil. It's anger, jelousy, greed, resentment, inferiority, lies and ego. The other is Good. It's joy, peace, love, hope, humility, kindness, & truth'. The boy thought about it and asked: 'Grandfather, which wolf wins?'. The old man quietly replied: 'The one you feed'."
 "I do not approve of anything that tampers with natural ignorance. Ignorance is like a delicate exotic fruit; touch it and the bloom is gone"- Oscar Wilrde, Lady Bracknell, from Act I, The Importance of Being Earnest
 "Chains of habit are too light to be felt until they are too heavy to be broken" -- Warren Buffet
 "The tendency to turn human judgments into divine commands makes religion one of the most dangerous forces in the world."- Georgia Harkness
@@ -209,8 +203,6 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "I have made this letter longer than usual, because I lack the time to make it short" -  Blaise Pasca
 "An inordinate fondness for beetles", J B S Haldane, response he gave when theologians asked him what could be inferred about the mind of the Creator from the works of His Creation. This is in reference to there being over 400,000 known species of beetles in the world, and that this represents 40% of all known insect species (at the time of the statement, it was over half of all known insect species).
 "If u look in the mirror & don't like what u see don't blame the mirror, if u look at the world & don't like what u see don't blame the world" - Anonymous
-"When someone says: 'I want a programming language in which I need only say what I wish done', give him a lollipop." - Alan J. Perlis
-"Trying to outsmart a compiler defeats much of the purpose of using one." - Kernighan & Plauger, The Elements of Programming Style
 "There are many causes that I am prepared to die for but no causes that I am prepared to kill for" - Mahatma Gandhi, The Story of My experiments with Truth, 1927
 "An engagement should come on a young girl as a surprise, pleasant or unpleasant as the case may be." - Lady Bracknell, from Act I, "The Importance of Being Earnest
 "Learn from the masses, and then teach them" - Mao Tse-Tung
@@ -220,7 +212,6 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "The highest result of education is tolerance" -  Helen Keller
 "It's not that we don't dare do things because they are difficult; rather, they are difficult because we don't dare" - Seneca
 "Through love all pain will turn to medicine" -  Rumi
-"For God wrote in Lisp code When He filled the leaves with green. The fractal flowers and recursive roots: The most lovely hack I’ve seen. And when I ponder snowflakes, never finding two the same, I know God likes a language with its own four-letter name. …….." - Partial lyrics of the song God Lives on Terra by Julia Ecklar
 "I asked God for a bike, but I know God doesn't work that way. So I stole a bike and asked for forgiveness" - Al Pacino.
 "Tell people there's an invisible man in the sky who created the universe, and the vast majority will believe you. Tell them the paint is wet, and they have to touch it to be sure." - George Carlin
 "All men by nature desire knowledge." - Aristotle
@@ -238,7 +229,6 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "You will find poetry nowhere unless you bring some of it with you" - Joseph Joubert
 "What would you do if you weren't afraid?"- Spencer Johnson
 "If you pick up a starving dog and make him prosperous, he will not bite you. That is the difference between dog and man." - Mark Twain
-"I want God, not my idea of God." - C. S. Lewis
 "There are far better things ahead than any we leave behind." - C. S. Lewis
 "God does not play dice." - Albert Einstein
 "Not only does God play dice, but... he sometimes throws them where they cannot be seen." - Stephen Hawking
@@ -257,7 +247,7 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "You might never fail on the scale I did, but some failure in life is inevitable. It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all – in which case, you fail by default." - J.K Rowling
 "I can understand wanting to have a million dollars, but once you get beyond that, I have to tell you, it's the same hamburger." - Bill Gates
 "If slaughterhouses had glass walls, everyone would be a vegetarian." - Paul McCartney 
-"May this night carry my will. And may these old mountains forever remember this night. May the forest whisper my name. And may the storm bring these words to the end of all worlds" - Ihsahn, "Alsvartr"
+"May this night carry my will. And may these old mountains forever remember this night. May the forest whisper my name. And may the storm bring these words to the end of all worlds" - Ihsahn
 "In the end, only three things matter: how much you loved, how gently you lived, and how gracefully you let go of things not meant for you." - Buddha 
 "Failure is a signpost to turn you in another direction." -  Oprah
 "Anyone can sympathise with the sufferings of a friend, but it requires a very fine nature to sympathise with a friend's success." - Sebastian Melmoth
@@ -265,7 +255,7 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "Loneliness is only an opportunity to cut adrift and find yourself. In solitude you are least alone." -Bruce Lee
 "Somewhere in the world someone is training when you are not. When you race him, he will win." --Tom Fleming
 "A virus is a virus!" - Nobel laureate Andre Lwoff's answer on the question 'What is a virus'?
-"When she transformed into a butterfly, the caterpillars spoke not of her beauty but of her weirdness. They wanted her to change back into what she always had been. <br>But she had wings." - Dean Jackson
+"When she transformed into a butterfly, the caterpillars spoke not of her beauty but of her weirdness. They wanted her to change back into what she always had been. But she had wings." - Dean Jackson
 "I don't know where I'm going, But I'm on my way" - Carl Sagan
 "Romance is the privilege of the rich, not the profession of the unemployed. The poor should be practical and prosaic." - from 'The Model Millionaire' by Oscar Wilde
 "Every heart sings a song, incomplete, until another heart whispers back" - Plato
@@ -277,7 +267,6 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is." - John von Neumann
 "I know not with what weapons World War III will be fought, but World War IV will be fought with sticks and stones." - Albert Einstein
 "When words run dry, he does not try, nor do I. We are on par. He just is, I just am and we just are." - Lang Leav
-"...unrequited love does not die; it's only beaten down to a secret place where it hides, curled and wounded. For some unfortunates, it turns bitter and mean, and those who come after pay the price for the hurt done by the one who came before." -  Elle Newmark, The Book of Unholy Mischief
 "The morning always has a way of creeping up on me and peeking in my bedroom windows. The sunrise is such a pervert." -  Jarod Kintz
 "By plucking her petals, you do not gather the beauty of the flower. - " Rabindranath Tagore
 "I sometimes think that people’s hearts are like deep wells. Nobody knows what’s at the bottom. All you can do is imagine by what comes floating to the surface every once in a while." - Blind Willow, Sleeping Woman
@@ -320,16 +309,14 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "Love me when I least deserve it because that is when I really need it " - Swedish Proverb
 "The wheels of fate will some day compel the English to give up their Indian Empire. But what kind of India will they leave behind, what stark misery? When the stream of their centuries' administration runs dry at last, what a waste of mud and filth will they leave behind them." - Tagore, referring reproachfully to the legacy bequeathed by colonialism, he wrote just three months before his death in 1941.
 "May you grow like an onion, with your head in the ground." — Old Yiddish Curse
-"I took her by the hand to say<br>All faith forever has been washed away<br>I returned for you in great dismay<br>Come with me, far away to stay<br>Endlessly gazing in nocturnal prime<br>She spoke of her vices and broke the rhyme,But baffled herself with the final line<br>My promise is made but my heart is thine"<br><br>- Mikael_Åkerfeldt
 "If your ship doesn't come in, swim out to meet it." - Jonathan Winters
 "Nothing will come of nothing" - William Shakespeare, King Lear
 "Man is equally incapable of seeing the nothingness from which he emerges and the infinity in which he is engulfed." - Blaise Pascal, Pensées, The Misery of Man Without God
 "Computing is like air conditioning it gets ineffective as you open Windows" - Linus Torvalds
 "It is not God that is worshipped but the authority that claims to speak in His name. Sin becomes disobedience to authority not violation of integrity."― Sarvepalli Radhakrishnan
-"For me, great algorithms are the poetry of computation. Just like verse, they can be terse, allusive, dense , and even mysterious. But once unlocked, they cast a brilliant new light on some aspect of computing. " - Francis Sullivan
 "I will, in fact, claim that the difference between a bad programmer and a good one is whether he considers his code or his data structures more important. Bad programmers worry about the code. Good programmers worry about the data structures and their relationships. " - Linus Torvalds (creator of Linux)
 "You know you're in love when you can't fall asleep because reality is finally better than your dreams" - Dr. Seuss
-"Just consider how terrible the day of your death will be. Others will go on speaking, and you will not be able to argue back. " - Ram Mohun Roy, one of the pioneer reformers in the nineteenth-century India. 
+"Just consider how terrible the day of your death will be. Others will go on speaking, and you will not be able to argue back. " - Ram Mohun Roy
 "Time is an illusion. Lunchtime doubly so." ― Douglas Adams, The Hitchhiker's Guide to the Galaxy
 "I am a Quantum Engineer, but on Sundays I Have Principles" - John Bell
 "The larger the island of knowledge, the longer the shoreline of wonder." -- Ralph Sockman
@@ -393,14 +380,12 @@ Feed the masses, eat with the classes.
 "Listen or thy tongue will keep thee deaf" - Native-American proverb 
 "Someday, we'll run into each other again. I know it. Maybe I'll be older and smarter and just plain better. If that happens, that's when I'll deserve you. But now, at this moment, you can't hook your boat to mine, because I'm liable to sink us both." - Gabrielle Zevin, Memoirs of a Teenage Amnesiac
 "Sufism has taught me that just as the rain and the sun do not differentiate between people,neither should we." - A.R Rahman 
-"Like me or Hate me,<br>both are in my favour,<br>If you like me I am in your Heart,<br>If you hate me I am in your mind".<br>-Swami Vivekananda
 "I would rather die standing than live on my knees" - Charlie Hebdo's Editor Stephane 'Charb' Charbonnier.
 "Love is but the discovery of ourselves in others, and the delight in the recognition." - Alexander Smith
 "If you've got nothing to dance about, find a reason to sing." ― Melody Carstairs
 "Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself." -  Rumi
 "I need the starshine of your heavenly eyes, / After the day's great sun." - Charles Hanson Towne
 "To love would be an awfully big adventure." - J.M. Barrie (Peter Pan)
-"Inebriate of Air - am I<br>And Debauchee of Dew<br>Reeling - thro endless summer days<br>From inns of Molten Blue" - Emily Dickinson
 "Any man who can drive safely while kissing a pretty girl is simply not giving the kiss the attention it deserves." - Albert Einstein
 "When people get used to preferential treatment, equal treatment feels like discrimination." - Thomas Sowell
 "What you can do today can improve all your tomorrows" - Ralph Marston 

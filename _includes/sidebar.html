@@ -55,22 +55,31 @@ h1.heading{font-family:Myfont;color:#39c}
 -->
 </p>
 
+
+<div class="highlight fb-page" data-href="https://www.facebook.com/randomwits/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/randomwits/"><a href="https://www.facebook.com/randomwits/">Random Wits</a></blockquote></div></div>
+
+
 <h2>Projects</h2>
 <div class="highlight">
   <pre>{% include sidebar_projects.html %}</pre>
 </div>
 
-<!--
-<h2>Blog</h2>
-<div class="highlight">
-  <pre>{% include sidebar_blog.html %}</pre>
-</div>
--->
 
-<h2>Quote</h2> 
-<div class="highlight" style="padding:8px 15px;background:#f8f8f8;border-radius:5px;border:1px solid #e5e5e5;overflow-x:auto">
-{% include quotes.html %}
-</div> 
+<h2>Random</h2>
+<div class="highlight">
+  {% include sidebar_random.html %}
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 
 <br>
 

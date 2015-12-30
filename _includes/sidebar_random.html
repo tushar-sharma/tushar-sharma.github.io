@@ -1,15 +1,22 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
+<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="cl icon-quote-left"></i>&nbsp;<span  class="cl" id="myquotes"></span>&nbsp;<i class="cl icon-quote-right"></i><br><span id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="{{ root_url }}/books">my bookshelf</a></span>
+ 
+ <div style="float:right;">+&nbsp;<a href="#">I'm Feeling Lucky</a></div><div id="showQuote" style="display:none;"></div></code></pre>
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 <style type="text/css">
 .txt{ padding-top: 5px; }
-.cl{ color: rgb(51, 153, 204);}
+.cl{ color: black; white-space: initial;}
  li.txt {list-style: none outside none; }
 .btn {cursor: pointer; 
 border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
 }
 </style>
 
+
 <script type="text/javascript">
+
+
+
 /* generate a random number */
 function quotesGet(defaultValue) { 
   jQuery.get('/../quotes.txt', function(data) { 
@@ -41,6 +48,21 @@ $(document).ready(function() {
     quotesGet();
 });
 
+$(document).ready(function(){	
+    $('.quotebox').hide().before('<a href="#" id="open-quotebox" class="button">throw me a quote</a>');
+	$('.quotebox').append('<a href="#close-quotebox" id="close-quotebox" class="button">Close quote ↑</a>');
+	$('a#open-quotebox').click(function() {
+		$('.quotebox').slideDown(1000);
+		quotesGet();
+		return false;
+	});
+	$('a#close-quotebox').click(function() {
+		$('.quotebox').slideUp(1000);
+		return false;
+	});
+});
+
+
 /* send the default quote number 66 */
 /* omit it ; as i need to display random quotes 
 $(document).ready(function() {
@@ -50,7 +72,3 @@ $(document).ready(function() {
 */
 
 </script>
-
-<i class="cl icon-quote-left"></i>&nbsp;<span class="cl" id="myquotes"></span>&nbsp;<i class="icon-quote-right cl"></i>&nbsp;&nbsp; <span style="color:black;"><span id="author"></span></span><br>
-<div style="float:right;">+&nbsp;<a href="javascript:quotesGet();">view next</a></div>
-
