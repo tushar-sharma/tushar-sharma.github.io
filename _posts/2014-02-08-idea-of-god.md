@@ -2,6 +2,7 @@
 layout: post
 title: Idea of God
 category: blog
+name: idea-god
 tags: 
 - god
 - religion
@@ -9,13 +10,13 @@ tags:
 thumb: /img/the-thinker.jpg 
 ---
 
-<p>I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedo the whole place. And the Machiavelli alarm pulled me out of my dreams. </p>
+<p>I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to wreak the whole place. And the mischievous alarm pulled me out of my dreams.</p>
 
 After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to torpedoed the whole place. And the Machiavelli alarm pulled me out of my dreams. 
+<p>I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to wreak the whole place. And the mischievous alarm pulled me out of my dreams.</p>
 
 <img src="{{ root_url }}/img/the-thinker.jpg" >
 

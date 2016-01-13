@@ -10,9 +10,9 @@ name: protect-privacy
 thumb: /img/privacy.jpg
 ---
 
-<p>"If you've got nothing to hide, you've got nothing to fear". This is the most common retort used by governments to espouse Mass surveillance. They do it in the pretext of security. But even if you're not a fugitive, you have the right to protect your privacy.Privacy is not all about hiding bad things.</p>
+<p>"If you've got nothing to hide, you've got nothing to fear". This is the most common retort used by governments to espouse Mass surveillance. They do it in the pretext of security. But even if you're not a fugitive, you have the right to protect your privacy.</p>
 
-Surveillance, for example, can inhibit such lawful activities as free speech, free association, and other First Amendment rights essential for democracy.Edward Snowden leaked the largest infamous clandestine mass surveillance by the NSA and GCHQ called PRISM (surveillance program). The prism program taps into the system of technolgoy giants like Apple, Google, Microsoft, Facebook, etc. Since many of the world's leading technology companies are based in the U.S. , anybody who uses Google or Skype can have their privacy violated through prism.<!-- truncate_here -->
+Surveillance, for example, can inhibit such lawful activities as free speech, free association, and other First Amendment rights essential for democracy.Edward Snowden leaked the largest infamous clandestine mass surveillance by the NSA and GCHQ called PRISM (surveillance program). <!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 

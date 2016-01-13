@@ -1,3 +1,0 @@
-{% assign blogposts = site.categories.blog and !site.categories.hidden %}
-<code><span class="nv">$</span> latest blog</code>{% if true %}
-{% for post in blogposts limit:4 %}     {% if post == blogposts[3] %}└{% else %}├{% endif %}── <span class="nv"></span><a href="{{post.url}}" title="{{post.title}}">{{post.name}}</a>{% if post != blogposts.last %}<br />{% endif %}{% endfor %}{% endif %}<br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>

@@ -8,7 +8,7 @@ tags:
 - virtual box
 - install
 name: arch-virtual
-thumb: /img/lego.jpg
+thumb: /img/lego_walls.jpg
 ---
 
 <style type="text/css">
@@ -16,10 +16,9 @@ thumb: /img/lego.jpg
 .mysubheading{font-family:"Lucida Grande", Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
 </style>
 
+I finally divorced `Windows` soon after I fell in love with Linux. Ubuntu was my first love. I met her on `Distrowatch`. But she spoke no English. So I spent hours gawking at her sleaky terminal trying to learn her language, `bash`. 
 
-<p>I started with my Linux adventure with Ubuntu. It gave me a respite from vendor-lock that's common with Microsoft Windows. Ubuntu gave me an out-of-the box usable system with a simplified installer and a clean interface of Unity (Ok! Some people hate it) which made me feel at home. As my familiarity with Linux grew, I found user-friendliness impeding to my learning. So I began searching for a new Linux disto until I fell in love with Arch Linux. </p>
-
-Arch Linux is focused on simplicity, minimalism and code elegance. I soon found that installing Arch Linux was like a Lego game. You need to do little digging and tie other pieces together until they make sense while still reading the  <a href="https://wiki.archlinux.org/index.php/Beginners%27_guide" target="_blank">manual</a>. However building a usable Arch Linux is more simple than building a house in Lego.<!-- truncate_here -->
+Soon I flirted with others; Mint came but reminded me of my ex, Fedora had a different `yum`, BSD couldn't agree on my license, Debian was old schooled. Few months ago, I discovered grey hair on my head and decided to settle down. So I started looking for someone who was simple yet speaks elegantly. Little did I know that I would stumble upon Arch Linux<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
@@ -29,12 +28,15 @@ Arch Linux is focused on simplicity, minimalism and code elegance. I soon found 
 <link type="text/css" rel="stylesheet" href="{{ root_url }}/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<p>I started with my Linux adventure with Ubuntu. It gave me a respite from vendor-lock that's common with Microsoft Windows. Ubuntu gave me an out-of-the box usable system with a simplified installer and a clean interface of Unity (Ok! Some people hate it) which made me feel at home. As my familiarity with Linux grew, I found user-friendliness impeding to my learning. So I began searching for a new Linux disto until I fell in love with Arch Linux. </p>
+I finally divorced `Windows` soon after I fell in love with Linux. Ubuntu was my first love. I met her on `Distrowatch`. But she spoke no English. So I spent hours gawking at her sleaky terminal trying to learn her language, `bash`. 
 
-Arch Linux is focused on simplicity, minimalism and code elegance<sup><a href='#fn:1' rel='footnote'>1</a></sup>. I soon found that installing Arch Linux was like a Lego game. You need to do little digging and tie other pieces together until they make sense while still reading the  <a href="https://wiki.archlinux.org/index.php/Beginners%27_guide" target="_blank">manual</a>. However building a usable Arch Linux is more simple than building a house in Lego. 
+Soon I flirted with others; Mint came but reminded me of my ex, Fedora had a different `yum`, BSD couldn't agree on my license, Debian was old schooled. Few months ago, I discovered grey hair on my head and decided to settle down. So I started looking for someone who was simple yet speaks elegantly. Little did I know that I would stumble upon Arch Linux.
+
+Dating Arch is a different game. She is not just another `click-next-install` Linux. Like any good relationship, it needs time. So you need to undertand `bricks & bolts` of Linux system. Well it turns out, learning Arch is much simpler than building a house in LEGO.
+
 
 <p> 
-<img src="{{ root_url }}/img/lego.jpg" >
+<img src="{{ root_url }}/img/lego_walls.jpg" >
 </p>
 
 
@@ -45,25 +47,27 @@ Arch Linux is focused on simplicity, minimalism and code elegance<sup><a href='#
 {:toc}
 
 
-# Step 1 : Find a base
+# Step 1 : Find the base
 
-In Lego, we begin by find a base. This is a piece on which all other pieces could be clubbed together. For Arch Linux, we have three options for our base
+Through out this guide, I'll keep our LEGO analogy. At the end we'll have a working house i.e. Arch Linux. But before we begin installing Arch, we need to decide our base. 
 
-1. Completely wipe off clean install 
+Loosely speaking, Base is a box on which the Arch Linux will be installed. There are multiple candidates for the base
+
+1. Whole system 
 2. Dual Boot 
 3. **Hypervisor** 
 
-<p><b>First Method</b> : Choose this option if you prefer to run only Arch Linux. Though GNU / Linux OS are becoming more usable day by day, yet many hardware vendors still shy away from publishing their drivers in the open source community. So some of your fancy NVIDIA graphic card, etc may not properly work here<sup><a href='#fn:2' rel='footnote'>2</a></sup>. However things may change in the future<sup><a href='#fn:3' rel='footnote'>3</a></sup>.</p>
-
-<p><b>Second Method</b> : Most of the people opt for this option. This lets you to conveniently use your legacy system along side Arch Linux. You could easily switch back and forth any OS as you like. However this requires partitioning the file system and tinkering with the boot loader.</p> 
-
-<p><b>Third Method</b> : This is great bet for those who prefers quick solution to run multiple OS without the hassle of memory partition.</p> 
-
-**NOTE** : I'll be using Virtual Box, a hypervisor for x86 computers, for this guide to install Arch Linux. 
+<p><b>Whole System</b> : Choose this if you want to remain faithful to only Arch Linux. This would wipe off any other operating system you have on your computer. Though Arch is great, however some your fancy hardware may not find their drivers. If you like games, probably you also occassionally need to talk to Windows. </p>
 
 
+<p><b>Dual Boot</b> : Choose this if you want the best of both worlds. You can install Arch Linux along side your legacy operating system. However this requires little effort in trying to keep both operating system together. You need to manually partition physical file system and edit the boot loader.</p> 
+**Hypervisor** : Choose this if you dont want to physically partition your memory. It lets you create an abstraction layer where you could virtually run mutliple operating systems. Also if you're beginning to learn Arch Linux, I would recommend you to proceed with this method.
 
-## What is an hypervisor?
+**NOTE** : I'll be using Virtual Box, a hypervisor for x86 computers, for this guide to install Arch Linux. However most of the instructions below could be applied to any of the above three methods with slight variations.
+
+
+
+## Little bit of theory
 
 Each operating system has its own complexity (architecture, HAL and device drivers, etc). In 1960's it was difficult to migrate operating system to new hardware. This was a problematic due to frequent hardware failures & cost of each hardware. Thus it was required to run multiple OS instances on a single hardware. This was achieved by decoupling OS from the hardware. 
 
@@ -82,14 +86,14 @@ across Virtual Machines
 
 ## Using Virtual Box 
 
-Download <a href="https://www.virtualbox.org" target="_blank">Virtual Box</a> and create a new machine.
 
+Downloading and installing Virtual Box is easy. First create a new machine & give it a new name.   
 
 <p> 
 <img src="{{ root_url }}/img/vbox_create.png" >
 </p>
 
-Allocate `RAM` to your VM (Virtual Machine). I've dragged it to 1g which is sufficient. However you could also run it with 128 Mb.
+Allocate `RAM` to your VM (Virtual Machine). This will partition your current `RAM` and distribute it between your virtual and host operating system. Remember not to drag it close to red line. I've set this to 1 GB.
 
 <p> 
 <img src="{{ root_url }}/img/vbox_ram.png" >
@@ -111,14 +115,14 @@ Choose the default configuration for the virtual machine.
 </p>
 
 
-I've allocated 40g for the Arch Linux. However, you could also allocate as low as 8g according to your requirements. 
+I've allocated 40 GB for the Arch Linux. However, you could also allocate as low as 8 GB according to your requirements. 
 
 <p> 
 <img src="{{ root_url }}/img/vbox_size.png" >
 </p>
 
 
-Select the downloaded **iso** file to install Arch Linux.
+This is where you need to select the downloaded **iso** file which will be used to install Arch Linux.
 
 
 <p> 
@@ -128,9 +132,9 @@ Select the downloaded **iso** file to install Arch Linux.
 
 # Step 2 : Plan your house
 
-Next step in our Lego design, require us to plan our house. For Arch Linux, we need to prepare our system before installing Arch it. 
+Next step in our LEGO design, require us to plan our house. For Arch Linux, we need to prepare our system before installing Arch it. 
 
-<p>After creating Arch Virtual Machine, you need to launch the machine. It splashes a bluish black screen with multiple options. I'll proceed with the first option which is load a 64 bits Arch Linux. </p>
+<p>After creating Arch Virtual Machine, you need to launch the machine. It splashes a bluish black screen with multiple options. I'll proceed with the first option which loads a 64 bits Arch Linux. </p>
 
 
 <p> 
@@ -298,11 +302,6 @@ Also format the swap space and switch it on.
 <p>We are very close to building <strike>our house in Lego</strike> Arch Linux. We need to start building our <strike>walls</strike> system.
 </p>
 
-<p> 
-<img src="{{ root_url }}/img/lego_walls.jpg" >
-</p>
-
-
 Linux follows the root hierarchy. So we need to mount the root partition first i.e. `/dev/sda4`.  
 
     # mount /dev/sda4 /mnt
@@ -387,11 +386,39 @@ Change the time zone to your location
 
     # ln -s /usr/share/zoneinfo/America/New\_York /etc/localtime
 
+
+We need to tell the computer to connect to the internet. We need to run the following command
+
+    # dhcpcd
+
+To permanently make this changes, type
+
+    # systemctl enable dhcpcd 
+
+
+Install X11 
+
+    # sudo pacman -S xorg-twm xorg-xclock xterm
+
+
+Well we also need to install a window environment. To install i3 
+
+    # sudo pacman -S i3
+
+
+Now, once you have .i3 installed, just go to your ~/.xinitrc and add:
+
+    exec i3
+
+
+Customize GTK 
+
+    $ sudo pacman -S lxappearance 
+    
 And finally :) 
 
     # reboot
 
-  
 
 # Step 6 : Play with your house  
 
@@ -403,10 +430,6 @@ And finally :)
 <p> 
 <img src="{{ root_url }}/img/final_display.png" >
 </p>
-
- 
-
-
 
 
 <div class='footnotes'><h3>Footnotes</h3><hr />

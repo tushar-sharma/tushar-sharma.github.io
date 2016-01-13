@@ -5,7 +5,7 @@ category: blog
 tags:
 - programming
 - general
-name: people-programming
+name: people-program
 thumb: /img/sunset.jpg
 ---
 
