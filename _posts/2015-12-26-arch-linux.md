@@ -18,7 +18,7 @@ thumb: /img/lego_walls.jpg
 
 I finally divorced `Windows` soon after I fell in love with Linux. Ubuntu was my first love. I met her on `Distrowatch`. But she spoke no English. So I spent hours gawking at her sleaky terminal trying to learn her language, `bash`. 
 
-Soon I flirted with others; Mint came but reminded me of my ex, Fedora had a different `yum`, BSD couldn't agree on my license, Debian was old schooled. Few months ago, I discovered grey hair on my head and decided to settle down. So I started looking for someone who was simple yet thinking man's crumpet. Little did I know that I would stumble upon Arch Linux<!-- truncate_here -->
+Soon I flirted with others; Mint came but reminded me of my ex, Fedora had a different `yum`, BSD couldn't agree on my license, Debian was old schooled. Few months ago, I discovered grey hair on my head and decided to settle down. So I started looking for someone who was simple yet was a thinking man's crumpet. Little did I know that I would stumble upon Arch Linux<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
@@ -30,7 +30,7 @@ Soon I flirted with others; Mint came but reminded me of my ex, Fedora had a dif
 
 I finally divorced `Windows` soon after I fell in love with Linux. Ubuntu was my first love. I met her on `Distrowatch`. But she spoke no English. So I spent hours gawking at her sleaky terminal trying to learn her language, `bash`. 
 
-Soon I flirted with others; Mint came but reminded me of my ex, Fedora had a different `yum`, BSD couldn't agree on my license, Debian was old schooled. Few months ago, I discovered grey hair on my head and decided to settle down. So I started looking for someone who was simple yet thinking man's crumpet. Little did I know that I would stumble upon Arch Linux.
+Soon I flirted with others; Mint came but reminded me of my ex, Fedora had a different `yum`, BSD couldn't agree on my license, Debian was old schooled. Few months ago, I discovered grey hair on my head and decided to settle down. So I started looking for someone who was simple yet was a thinking man's crumpet. Little did I know that I would stumble upon Arch Linux.
 
 Dating Arch is a different game. She is not just another `click-next-install` Linux. Like any good relationship, it needs time. So you need to undertand `bricks & bolts` of Linux system. Well it turns out, learning Arch is much simpler than building a house in LEGO.
 
