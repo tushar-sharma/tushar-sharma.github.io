@@ -340,9 +340,8 @@ After this we need to install bootloader. When a computer loads up, it needs boo
 You can't live in your Lego home before you add a roof. Similarly you can't reboot your system now before you initialize your Boot Loader. 
 
 First you need to login to your system without rebooting. Type 
- 
-    # arch-chroot /mnt /bin/bash
 
+    # arch-chroot /mnt /bin/bash
     # grub-install --no-floppy /dev/sda
 
 
