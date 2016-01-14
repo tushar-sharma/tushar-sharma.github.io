@@ -46,12 +46,12 @@ input::-webkit-input-placeholder {
 </style>
 
 <!-- search box --> 
-<div style="padding-bottom:60px; padding-top:20px;">
-    <span style="ont-family: 'Hoefler Text', Georgia, 'Times New Roman', serif;font-weight: normal;font-size: 2.75em;letter-spacing: 0.2em;line-height: 1.1em;margin: 0px;text-align: center;text-transform: uppercase;color: #6a9ca7"> Random Wits</span>
+<div style="padding-bottom:60px; padding-top:20px; background : white;">
   <form style="float:right;" action="{{ root_url }}/search/?">
     <input type="search" name="q" placeholder="Search">
   </form>
 </div>
+<br>
 <!--{% assign blogposts = paginator.posts and !paginator.posts.hidden %}-->
 {% assign blogposts = paginator.posts  %}
 {% if true %}
