@@ -3,8 +3,8 @@ layout: post
 title: A random stranger
 category: blog
 tags:
-- Story 
-- India 
+- story 
+- india 
 name: get-post
 thumb: /img/bus-india.jpg
 ---

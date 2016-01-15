@@ -4,10 +4,10 @@ title: Get all GET and POST requests using tshark
 category: blog
 tags:
 - tshark 
-- REST
-- HTTP
-- GET
-- POST
+- rest
+- http
+- get
+- post
 name: get-post
 thumb: /img/shart.jpg
 ---
