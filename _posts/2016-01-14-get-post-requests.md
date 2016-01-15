@@ -52,7 +52,7 @@ The above commands looks gibberish, however if you analyze closely, its plain ea
 4. `(tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x504F5354`
     - Take the upper 4 bits of the 12th octet in the tcp header  ( tcp[12:1] & 0xf0 )
     - multiply it by four `((tcp[12:1] & 0xf0)>>2)` which should give the tcp header length
-    - Take Four octets from the tcp stream, starting at that offset starting at that offset `(tcp[(((tcp[12:1] & 0xf0) >> 2)):4])`
+    - Take Four octets from the tcp stream, starting at that offset `(tcp[(((tcp[12:1] & 0xf0) >> 2)):4])`
     - Lastly, verify that they are equal to POST which is 0x504F5354 in hex.     
 5. `tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x47455420)`
     - Like `POST` command, it checks for `GET` request. 
