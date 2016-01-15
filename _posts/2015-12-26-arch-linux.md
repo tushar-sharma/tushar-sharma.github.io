@@ -395,15 +395,14 @@ To permanently make this changes, type
     # systemctl enable dhcpcd 
 
 
-Install X11 
+You dont want to forever live with the terminal. Legacy operating system usually come preinstalled with Windowing Environment. For Unix like OS we need to install Window Manger to manage graphical user interface. X11 is a windowing protocol which provides basic user interface. To install X11, type
 
     # sudo pacman -S xorg-twm xorg-xclock xterm
 
 
-Well we also need to install a window environment. To install i3 
+Well we also need to install a destop environment. Destop environment uses X11 to provide better user interface. Popular examples are GNOME, KDE, etc. I like tiling window environment which is suited for people who like tinkering & since you're installing Arch Linux, I reckon i3 would appeal to you. To install i3, type 
 
     # sudo pacman -S i3
-
 
 Now, once you have .i3 installed, just go to your ~/.xinitrc and add:
 
@@ -428,6 +427,14 @@ And finally :)
 
 <p> 
 <img src="{{ root_url }}/img/final_display.png" >
+</p>
+
+To start the Window Enviroment, type 
+
+    $ startx 
+
+<p> 
+<img src="{{ root_url }}/img/arch_i3.png" >
 </p>
 
 
