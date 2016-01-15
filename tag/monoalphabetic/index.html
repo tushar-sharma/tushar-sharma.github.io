@@ -30,7 +30,7 @@
     </script>
 
 
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
     <noscript>
@@ -65,13 +65,12 @@ aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:bas
 
 <div style="clear:both;"></div>
 <div>
- <h1  class="heading"><span class="top"><a href="/about/"><i>About me</i></a></span></h1> 
-  <!--<p class="me_blurb"> 
-    <div class="sub"> 
-      <a href="/../about/">About ME</a>
+     <h1  class="heading"><span class="top"><a href=""><i>Random Wits</i></a></span></h1> 
+  <p class="me_blurb"> 
+  <div class="sub"> 
+      Life is too short for a diary
     </div>
   </p> 
-   -->
 
 </div>
 
@@ -88,15 +87,15 @@ h1.heading{font-family:Myfont;color:#39c}
 </style>
 
 
+<!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+<!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
 
-<!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> 
-<p class="me_blurb"><div class="sub">compos sui</div></p> 
--->
 
 <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
 <br>
 -->
 </p>
+
 
 <h2>Projects</h2>
 <div class="highlight">
@@ -106,30 +105,27 @@ h1.heading{font-family:Myfont;color:#39c}
 </pre>
 </div>
 
-<!--
-<h2>Blog</h2>
+<h2>Random</h2>
 <div class="highlight">
-  <pre>
-<code><span class="nv">$</span> latest blog</code>
-     ├── <span class="nv"></span><a href="/blog/lsd" title="Quickly sort large file in linear time">linear-sort</a><br />     ├── <span class="nv"></span><a href="/blog/people-programming" title="Why people like Programming">people-programming</a><br />     ├── <span class="nv"></span><a href="/blog/protect-privacy" title="Protect Your Privacy">protect-privacy</a><br />     └── <span class="nv"></span><a href="/blog/shooting-messenger" title="Shooting the Messenger">shoot-messenger</a><br /><br /><div style="float:right;">+&nbsp;<a href="/blog">view all</a></div>
-</pre>
-</div>
--->
-
-<h2>Quote</h2> 
-<div class="highlight" style="padding:8px 15px;background:#f8f8f8;border-radius:5px;border:1px solid #e5e5e5;overflow-x:auto">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 <style type="text/css">
 .txt{ padding-top: 5px; }
-.cl{ color: rgb(51, 153, 204);}
+.newcl{color: black; white-space: initial;}
  li.txt {list-style: none outside none; }
 .btn {cursor: pointer; 
 border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
 }
 </style>
 
+<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
+ 
+ <div style="float:right;">+&nbsp;<a href="#"><a href="/contact/">Say Hello</a></a></div><div id="showQuote" style="display:none;"></div></code></pre>
+ 
+
 <script type="text/javascript">
+
+
+
 /* generate a random number */
 function quotesGet(defaultValue) { 
   jQuery.get('/../quotes.txt', function(data) { 
@@ -161,6 +157,21 @@ $(document).ready(function() {
     quotesGet();
 });
 
+$(document).ready(function(){	
+    $('.quotebox').hide().before('<a href="#" id="open-quotebox" class="button">throw me a quote</a>');
+	$('.quotebox').append('<a href="#close-quotebox" id="close-quotebox" class="button">Close quote ↑</a>');
+	$('a#open-quotebox').click(function() {
+		$('.quotebox').slideDown(1000);
+		quotesGet();
+		return false;
+	});
+	$('a#close-quotebox').click(function() {
+		$('.quotebox').slideUp(1000);
+		return false;
+	});
+});
+
+
 /* send the default quote number 66 */
 /* omit it ; as i need to display random quotes 
 $(document).ready(function() {
@@ -171,11 +182,26 @@ $(document).ready(function() {
 
 </script>
 
-<i class="cl icon-quote-left"></i>&nbsp;<span class="cl" id="myquotes"></span>&nbsp;<i class="icon-quote-right cl"></i>&nbsp;&nbsp; <span style="color:black;"><span id="author"></span></span><br>
-<div style="float:right;">+&nbsp;<a href="javascript:quotesGet();">view next</a></div>
+</div>
+
+<div class="highlight">
+  <code>
+    <a class="twitter-timeline" data-tweet-limit=3  href="https://twitter.com/tshrocks" data-widget-id="687399874313195520">Tweets by @tshrocks</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</code>
+
+</div>
 
 
-</div> 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 
 <br>
 
@@ -256,6 +282,28 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <small style="float:right; margin-top:5px;">Sun 04 May 2014</small>
   <a href="/blog/digging-secret-codes-past">
     <h3>Digging on the codes of the Past</h3>
@@ -266,9 +314,9 @@ $(document).ready(function() {
 
             
             
-            <p>Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. </p>
+            <p>Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms.  </p>
 
-Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.While the universe is pretty old (3.7987 billion years and counting), it has been only few million years since the chapter of humans commenced. We had come a long way since. From time in memorial, numerous civilizations thrived and collapsed leaving behind their legacy. The episodes of both glory and horror are conspicuous part of history. Distant from the hurly burly of the present civilization, on the mounds of Mahanjo-Daro and Harrapa, an entirely different civilization spoke another language...
+Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.While the universe is pretty old (3.7987 billion years and counting), it has been only few million years since the chapter of humans commenced. We had come a long way since...
       </div>
   <br>
   <p>
@@ -403,7 +451,7 @@ Such a long odysseys of humans is replete with footprints of the past. In these 
 
     <div class="wrapper">
       <footer>
-        <!-- <p><small>Tushar Sharma &copy; 2015</small></p> -->
+        <!-- <p><small>Tushar Sharma &copy; 2016</small></p> -->
 <link rel="stylesheet" href="/css/font-awesome.css" />
 
 <div class="footer">
@@ -576,6 +624,42 @@ Such a long odysseys of humans is replete with footprints of the past. In these 
          
 	    <!-- hack to remove sidebar tags -->
            <a style="font-size: 120%"  style="display:inline-block;" href="/tag/sorting">sorting <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/arch">arch <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/linux">linux <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/virtual box">virtual box <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/install">install <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/tshark">tshark <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/REST">REST <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/HTTP">HTTP <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/GET">GET <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/POST">POST <span></span></a>
 	   
          
        
