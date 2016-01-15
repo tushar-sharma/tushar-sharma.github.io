@@ -53,7 +53,7 @@ I wanted to wake up from this dream. Usually dreams are chaotic with little sens
 
 I was facing him or he was facing me. The North and South had lost their distinction. And the words were never said for they were not needed. And and time came to a halt and I was hugging my random stranger. It had been some time for someone to hug me. And my eyes were moist but less heavy. And the random stranger was smiling. 
 
-Heavy bumps are often advised by doctors to wake people from dreams. Luckily I woke up just in time before my destination. I stood up & offered my seat to a lady, who thanked with her large smile, eclipsed by her protruding gold tooth. Was it a dream? I began scouring my random stranger. But he was gone. I knew where he had gone. It has been a long time since I had been away from my home. Soon my stop came and I alighted from the bus and called my mom.
+Heavy bumps are often advised by doctors to wake people from dreams. Luckily I woke up just in time before my destination. I stood up & offered my seat to a lady, who thanked with her large smile, eclipsed by her protruding gold tooth. Was it a dream? I began scouring my random stranger. But he was gone. I knew where he had gone. It has been a long time I had been away from my home. Soon my stop came and I alighted from the bus and called my mom.
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
