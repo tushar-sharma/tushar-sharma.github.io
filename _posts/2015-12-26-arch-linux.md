@@ -447,6 +447,8 @@ And finally :)
 
     # reboot
 
+<!--break-->
+
 
 # Step 6 : Play with your house  
 
