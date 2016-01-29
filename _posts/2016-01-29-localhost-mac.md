@@ -30,7 +30,7 @@ Testing web sites on your personal computer is indispensable for web developers 
 
  Users with the newest versions of Mac OS X (Mountain Lion or later) no longer see the option of web sharing in `System Preferences->Sharing`. If you are a web developer / designer, you might find this change unpleasant. However Mac OS X still includes Apache HTTP version. 
  
-Testing web sites on your personal computer is indispensable for developers / designers. Enabling `php` on Mac OX S is plain and easy. 
+Testing web sites on your personal computer is indispensable for web developers / designers. Enabling `php` on Mac OX S is plain and easy. 
 
 First test your apache server. Open your terminal and type 
 
