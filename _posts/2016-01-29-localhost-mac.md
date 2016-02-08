@@ -51,20 +51,23 @@ Copy the default `php` file.  The php.ini file is where you declare changes to y
 
 Open the following file & search line number containing  `libexec/apache2/libphp5.so` & uncomment it (remove the `#` from the front)
 
-	$ sudo pico /etc/apache2/httd.conf 
+	$ sudo nano /etc/apache2/httd.conf 
 
-Save and close the editor by pressing **Control-O** followed by **Control-X**
+Save and close the editor by pressing **Control-X**
 
 Next we need to create `Sites` folder. It will be used for saving sites hosted on `localhost`.
     
 	$ sudo mkdir ~/Sites
 	$ sudo chmod o+r ~/Sites
-	$ sudo echo "<?php phpinfo(); ?>" > ~/Sites/phptest.php
+	$ sudo cat >> ~/Sites/phptest.php <<EOF
+	  <?php phpinfo(); ?
+	  EOF
+
 	$ sudo chmod o+r ~/Sites/phptest.php
 
 Next, edit the following file. Write your username instead of `tushar`. 
 	
-	$ sudo pico /etc/apache2/users/`whoami`.conf
+	$ sudo nano /etc/apache2/users/`whoami`.conf
 
 For all systems other than Yosemite, use the following as the content:
 
