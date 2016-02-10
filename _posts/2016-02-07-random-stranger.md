@@ -29,7 +29,7 @@ For outside world, India is chaotic. They imagine cars driving in zigzag manner 
 <img src="{{ root_url }}/img/india-traffic.jpg" >
 </p>
 
-Traffic in India at times do turn messy. Traffic overflows into pavements leading the vehicles to compete with the pedestrians for space. However pedestrians in India are `second class` citizen still struggling to get their rights. They are always honked at disdainfully by the drivers. Zebra crossing is often a `piece of art` designed for foreigners to make them feel at home. [Richard Stallman](https://en.wikipedia.org/wiki/Richard_Stallman), eminent computer programmer, has stated in his [speaking condition](https://github.com/ddol/rre-rms/blob/master/rider.txt), "I have crossed streets without assistance even in the chaotic traffic of Bangalore and Delhi. Please just leave me alone when I cross streets."
+Traffic in India at times do turn messy. Traffic overflows into pavements leading the vehicles to compete with the pedestrians for space. However pedestrians in India are `second class` citizen still struggling to get their rights. They are always honked at disdainfully by the drivers. Zebra crossing is often a `piece of art` designed for foreigners to make them feel at home. [Richard Stallman](https://en.wikipedia.org/wiki/Richard_Stallman), eminent computer programmer, has boasted in his [speaking condition](https://github.com/ddol/rre-rms/blob/master/rider.txt), "I have crossed streets without assistance even in the chaotic traffic of Bangalore and Delhi. Please just leave me alone when I cross streets."
 
 
 [A P J Abdul Kalam](https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam), one the most beloved President of India, was once asked, "Do you think India is chaotic?". He quipped, "Order comes from disorder". It is a fascinating concept in science called [chaos theory](https://en.wikipedia.org/wiki/Chaos_theory) in which randomness can sometimes leads to symmetry. Can India turn her chaos into her strength? I peeped down from the window at the children begging on the roads and I wondered if the earth was weeping at the loss of their innocence. However one of little girl among them was smiling. She was playfully absorbed with the marbles in her hands. I could see reflection of my past with my fixation on marbles. But I knew life had also given her broken marbles.
@@ -91,7 +91,27 @@ Alice Kingsley: "I’m afraid so. You’re entirely bonkers. But I’ll tell you
 </blockquote>
 <br>
 
-Some times traffic makes you mad. Common symptom involves visualising cinematic effects around you. The windows of the bus turned into a hologram projecting the life outside the bus. And time slowed down and nothing moved except the light which was everywhere. 
+Some times traffic makes you mad. Common symptom involves visualising cinematic effects around you. The windows of the bus turned into a hologram projecting the life outside the bus. And time slowed down and nothing moved except the flurry of images on the window. 
+
+Out of the cosmic window I saw lifes of people dragging their mundane lives. A lady was selling buttermilk on the sides of the pavement. And every time a customer came, she smiled and thanked him wholeheartedly. Her protruding teeth and bare foot could not conceal her poverty. And the sun felt pity on her and blaze down on the people below which attracted her more customers. 
+
+I caught the glance of another window. Few people were standing across the street waiting for the bus. Girls had draped scarf over ther head to avoid any dust and ogling. A young boy was absorbed in his music as he stood in corner separated from the crowd. I saw two man crossing streets holding hands. Such behaviour is not cosidered homosexual in India. According to Indian government, homosexuality doesn't exist. 
+
+Another window had a reflection of a beatutiful young girl. Draped in fomal attire, exhausted by work, she stood beside the shop to have a cigarette. One middle age man was looking scornfully at the girl while puffing his own smoke. Another young lad stood at the opposite side of the road bearing a distressed look. "But why is she smoking. She is so pretty", he thought. Like many other man he also held common misconceptions about pretty descent girls in India. However he forgot that pretty girls were humans too. They also fart.
+
+And the images continued to flash. It was difficult to describe the immense diversity of the life I saw at once; both the rich and the poor; the beauty and their admirers, hawkers selling in their high pitched voice. Lastly I saw the random stranger, a common man who was everywhere. 
+
+And soon the hangover of the images had a anathestic effect on me. And the light grew dimmer until my surrounding were devoid of any images and sound.. According to quantum theory, I had plunged into quantum sleep.
+
+<p> 
+<center>
+<img src="{{ root_url }}/img/quantum_mechanics.png" >
+</center>
+<center>
+Image credit ~ <a href="https://xkcd.com/1240/">xckd</a>
+</center>
+</p>
+
 
 Heavy bumps are often advised by doctors to cure for day dreaming. Luckily Indian Municipality has heeded to doctor's advice and deliberately created potholes on Indian roads at regular intervals for convenience. However sudden brakes of the bus literary pulled me out of my dreams. I stood up & offered my seat to another man, who thanked me. I somehow squeezed past to reach the exit and alighted from the bus.
 
