@@ -101,7 +101,7 @@ Another window had a reflection of a beatutiful young girl. Draped in fomal atti
 
 And the images continued to flash. It was difficult to describe the immense diversity of the life I saw at once; both the rich and the poor; the beauty and their admirers, hawkers selling in their high pitched voice. Lastly I saw the random stranger, a common man who was everywhere. 
 
-And soon the hangover of the images had a anathestic effect on me. And the light grew dimmer until my surrounding were devoid of any images and sound.. According to quantum theory, I had plunged into quantum sleep.
+And soon the hangover of the images had a anathestic effect on me. And the light grew dimmer until my surrounding were devoid of any images and sound.. According to quantum mechanics, I had plunged into a quantum sleep.
 
 <p> 
 <center>
