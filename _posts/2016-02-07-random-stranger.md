@@ -40,7 +40,7 @@ Traffic in India at times do turn messy. Traffic overflows into pavements leadin
 </blockquote>
 <br>
 
-Traffic in Bangalore has the potential of holding the Guinness World Records for keeping people stuck for indefinite hours. The stray dogs no longer found appealing to bark at the motionless traffic. The scortching sun made debut on the wrong day; people were packed inside the bus, sweating profusely, with the dust sweeping across the window blocking our nostrils thus saving us from the odor of our fellow passenger. And the bus moved sluggishly, I wondered if I would grow old in this traffic. I even imagined myself getting married and dying in the bus.
+Traffic in Bangalore has the potential of holding the Guinness World Records for keeping people stuck for indefinite hours. The stray dogs no longer found appealing to bark at the motionless traffic. The scorching sun made debut on the wrong day; people were packed inside the bus, sweating profusely, with the dust sweeping across the window blocking our nostrils thus saving us from the odor of our fellow passenger. And the bus moved sluggishly, I wondered if I would grow old in this traffic. I even imagined myself getting married and dying in the bus.
 
 A fine gentleman was sitting in front of me. He was typing frantically on his laptop absorbed in deep smadhi. He occasionally slipped open his blackberry phone, a rarity in this day. He spoke IT, a common language usually spoken by Indian graduates who could not change their career before their marriageable age. Beside him sat a tired man, who occasionally made his shoulders rest on the fine gentleman. However after much discomfort, the fine gentleman exchanged some not so fine pleasantries which lead to the conductor to intervene.
 
@@ -72,7 +72,7 @@ Soon more passengers flooded the bus thus disturbing the geometry of space. The 
 </blockquote>
 <br>
 
-The other day I was reading about `Quantum Physics`. Bizzare events happens in quantum which are antithesis to common sense. Atoms could be at two different position at the same time thanks to superpostition. Or electrons could message each other instantly from any distance due to quantum entanglement. But ripples of such quantum effects are usually not felt in our larger world. However scientist agree that this whole universe is quantum. And sometimes such bizarre quantum effects may spill into our world. 
+The other day I was reading about `Quantum Physics`. Bizarre events happens in quantum which are antithesis to common sense. Atoms could be at two different position at the same time thanks to superpostition. Or electrons could message each other instantly from any distance due to quantum entanglement. But ripples of such quantum effects are usually not felt in our larger world. However scientist agree that this whole universe is quantum. And sometimes such bizarre quantum effects may spill into our world. 
 
 <p> 
 <center>
@@ -91,13 +91,13 @@ Alice Kingsley: "I’m afraid so. You’re entirely bonkers. But I’ll tell you
 </blockquote>
 <br>
 
-Some times traffic makes you mad. Common symptom involves visualising cinematic effects around you. The windows of the bus turned into a hologram projecting the life outside the bus. And time slowed down and nothing moved except the flurry of images on the window. 
+Some times traffic makes you mad. Common symptom involves visualizing cinematic effects around you. The windows of the bus turned into a hologram projecting the life outside the bus. And time slowed down and nothing moved except the flurry of images on the window. 
 
-Out of the cosmic window I saw lifes of people dragging their mundane lives. A lady was selling buttermilk on the sides of the pavement. And every time a customer came, she smiled and thanked him wholeheartedly. Her protruding teeth and bare foot could not conceal her poverty. And the sun felt pity on her and blaze down on the people below which attracted her more customers. 
+Out of the cosmic window I saw lives of people dragging their mundane lives. A lady was selling buttermilk on the sides of the pavement. And every time a customer came, she smiled and thanked him wholeheartedly. Her protruding teeth and bare foot could not conceal her poverty. And the sun felt pity on her and blaze down on the people below which attracted her more customers. 
 
 I caught the glance of another window. Few people were standing across the street waiting for the bus. Girls had draped scarf over ther head to avoid any dust and ogling. A young boy was absorbed in his music as he stood in corner separated from the crowd. I saw two man crossing the street while holding hands. Such behaviour is tacitly considered as romantic worldwide. However Indian government doesn't believe homosexuality exist as it is against Indian culture. They were just close friends, I believed.
 
-Another window had a reflection of a beatutiful young girl. Draped in fomal attire, exhausted by work, she stood beside the shop to have a cigarette. One middle age man was looking scornfully at the girl. "Girls in jeans these days have lost all values", he mumbled while puffing his own smoke. Another young lad stood at the opposite side of the road bore a distressed look. "But why is she smoking. She is so pretty", he thought. Like many other man he also held common misconceptions about pretty descent girls in India. However he forgot that pretty girls were humans too. They also fart.
+Another window had a reflection of a beautiful young girl. Wearing a funky T-shirt and jeans, she stood beside the shop to have a cigarette. One middle age man was looking scornfully at the girl. "Girls in jeans these days have lost all values", he mumbled while puffing his own smoke. Another young lad stood at the opposite side of the road bore a distressed look. "But why is she smoking. She is so pretty", he thought. Like many other man he also held common misconceptions about pretty descent girls in India. However he forgot that pretty girls were humans too. They also fart.
 
 And the images continued to flash. It was difficult to describe the immense diversity of the life I saw at once; both the rich and the poor; the beauty and their admirers, hawkers selling in their high pitched voice. Lastly I saw the random stranger, a common man who was everywhere. 
 
