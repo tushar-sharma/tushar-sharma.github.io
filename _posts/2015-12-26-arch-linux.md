@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Guide to install Arch Linux in Virtual Box
+title: Guide to install Arch Linux
 category: blog
 tags:
 - arch 
 - linux
-- virtual box
 - install
-name: arch-virtual
+name: arch-linux
 thumb: /img/lego_walls.jpg
 ---
 
@@ -55,7 +54,7 @@ Loosely speaking, Base is a box on which the Arch Linux will be installed. There
 
 1. Whole system 
 2. Dual Boot 
-3. **Hypervisor** 
+3. Hypervisor
 
 <p><b>Whole System</b> : Choose this if you want to remain faithful to only Arch Linux. This would wipe off any other operating system you have on your computer. Though Arch is great, however some your fancy hardware may not find their drivers. If you like games, probably you also occassionally need to talk to Windows. </p>
 
@@ -63,78 +62,19 @@ Loosely speaking, Base is a box on which the Arch Linux will be installed. There
 <p><b>Dual Boot</b> : Choose this if you want the best of both worlds. You can install Arch Linux along side your legacy operating system. However this requires little effort in trying to keep both operating system together. You need to manually partition physical file system and edit the boot loader.</p> 
 **Hypervisor** : Choose this if you dont want to physically partition your memory. It lets you create an abstraction layer where you could virtually run mutliple operating systems. Also if you're beginning to learn Arch Linux, I would recommend you to proceed with this method.
 
-**NOTE** : I'll be using Virtual Box, a hypervisor for x86 computers, for this guide to install Arch Linux. However most of the instructions below could be applied to any of the above three methods with slight variations.
-
-
-
-## Little bit of theory
-
-Each operating system has its own complexity (architecture, HAL and device drivers, etc). In 1960's it was difficult to migrate operating system to new hardware. This was a problematic due to frequent hardware failures & cost of each hardware. Thus it was required to run multiple OS instances on a single hardware. This was achieved by decoupling OS from the hardware. 
-
-So **hypervisor**
-
-1. Behaves like hardware
-2. Encapsulates all OS and application state 
-3. Provides Software Abstraction
-
-It uses **Virtualization layer (VMM)** which  
-
-1. Decouples hardware, OS
-2. Enforces isolation
-3. Multiplexes physical hardware
-across Virtual Machines
-
-## Using Virtual Box 
-
-
-Downloading and installing Virtual Box is easy. First create a new machine & give it a new name.   
-
-<p> 
-<img src="{{ root_url }}/img/vbox_create.png" >
-</p>
-
-Allocate `RAM` to your VM (Virtual Machine). This will partition your current `RAM` and distribute it between your virtual and host operating system. Remember not to drag it close to red line. I've set this to 1 GB.
-
-<p> 
-<img src="{{ root_url }}/img/vbox_ram.png" >
-</p>
-
-
-Choose the default configuration for the virtual machine.
-
-<p> 
-<img src="{{ root_url }}/img/vbox_type.png" >
-</p>
-
-<p> 
-<img src="{{ root_url }}/img/vbox_dy.png" >
-</p>
-
-<p> 
-<img src="{{ root_url }}/img/vbox_harddisk.png" >
-</p>
-
-
-I've allocated 40 GB for the Arch Linux. However, you could also allocate as low as 8 GB according to your requirements. 
-
-<p> 
-<img src="{{ root_url }}/img/vbox_size.png" >
-</p>
-
-
-This is where you need to select the downloaded **iso** file which will be used to install Arch Linux.
-
-
-<p> 
-<img src="{{ root_url }}/img/vbox_iso.png" >
-</p>
 
 
 # Step 2 : Plan your house
 
 Next step in our LEGO design, require us to plan our house. For Arch Linux, we need to prepare our system before installing Arch it. 
 
-<p>After creating Arch Virtual Machine, you need to launch the machine. It splashes a bluish black screen with multiple options. I'll proceed with the first option which loads a 64 bits Arch Linux. </p>
+I'm assuming that you have createa a bootable medium (CD or usb)  for Arch Linux. If you are on a Unix like system, you can type
+
+	$ sudo dd if=/path/to/arch.iso  of=/dev/sdX bs=4m && sync
+
+If you are using Windows, you can find many bootable software like Unetbootin.
+
+<p>Next you need to plug in your bootable medium & select your computer to boot from that instead of your default boot medium. After successful booting, you will be greeted with a bluish black screen with multiple options. I'll proceed with the first option which loads a 64 bits Arch Linux. </p>
 
 
 <p> 
@@ -322,9 +262,7 @@ Now we are ready to install Arch Linux on our system. Type the following command
     # pacstrap /mnt base base-devel
 
 
-After this we need to install bootloader. When a computer loads up, it needs bootloader to find and load an operating system. There are many bootloaders to install like syslinux, grub, LILO, etc but we'll be using GRUB for this guide. To install GRUB type 
-
-    # pacstrap /mnt grub
+After this we need to install bootloader. When a computer loads up, it needs bootloader to find and load an operating system. There are many bootloaders to install like syslinux, grub, LILO, etc but we'll be using GRUB for this guide. 
 
  Local and remote filesystem mounts a special file `/etc/fstab` which contains instructions on starting up all your Linux system’s various partitions. To generate `fstab` file type
 
@@ -339,7 +277,12 @@ After this we need to install bootloader. When a computer loads up, it needs boo
 
 You can't live in your Lego home before you add a roof. Similarly you can't reboot your system now before you initialize your Boot Loader. 
 
-First you need to login to your system without rebooting. Type 
+### Install Grub on non-efi system 
+
+    # pacstrap /mnt grub
+
+
+Next you need to login to your system without rebooting. Type 
 
     # arch-chroot /mnt /bin/bash
     # grub-install --no-floppy /dev/sda
@@ -354,6 +297,7 @@ Lastly, generate the configuration file for the `grub`.
 
     # grub-mkconfig -o /boot/grub/grub.cfg
 
+**Note**: If you are dual booting on efi system, installing grub would be slightly different. You could follow this [blog](https://github.com/pandeiro/arch-on-air)
 
 
 Now you could easily reboot your system. However it's advised that you follow the last step to make it more usable. 
@@ -497,4 +441,5 @@ To start the Window Enviroment, type
 
 
 [code]: https://github.com/tushar-sharma/lsdRadixSort.git
+
 

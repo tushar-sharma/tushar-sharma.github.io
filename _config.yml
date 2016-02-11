@@ -19,6 +19,6 @@ exclude:
 - branch.txt
 - .gitignore
 gems: [jekyll-paginate]
-paginate: 3 
+paginate: 4 
 not_paginated_categories:
   - 'projects'

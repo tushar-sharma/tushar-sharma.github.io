@@ -97,7 +97,7 @@ Out of the cosmic window I saw lives of people dragging their mundane lives. A l
 
 I caught the glance of another window. Few people were standing across the street waiting for the bus. Girls had draped scarf over ther head to avoid any dust and ogling. A young boy was absorbed in his music as he stood in corner separated from the crowd. I saw two man crossing the street while holding hands. Such behaviour is tacitly considered as romantic worldwide. However Indian government doesn't believe homosexuality exist as it is against Indian culture. They were just close friends, I believed.
 
-Another window had a reflection of a beautiful young girl. Wearing a funky T-shirt and a jean, she leaned towards the shop to have a cigarette. One middle age man was scornfully looking at her. "Girls wearing jeans these days have lost all values", he mumbled while puffing his own smoke. Another young lad stood at the opposite side of the road bore a distressed look. "But why is she smoking. She is so pretty", he thought. Like many other man he also held common misconceptions about pretty descent girls in India. However he forgot that pretty girls were humans too. Pretty girls also fart, he never thought.
+Another window had a reflection of a beautiful young girl. Wearing a funky T-shirt and a jean, she leaned towards the shop to have a cigarette. One middle age man was scornfully looking at her. "Girls wearing jeans these days have lost all values", he mumbled while puffing his own smoke. Another young lad stood at the opposite side of the road bore a distressed look. "But why is she smoking. She is so pretty", he thought. Like some men he also held common misconceptions about pretty descent girls in India. However he forgot that pretty girls were humans too. They also did fart.
 
 And the images continued to flash. It was difficult to describe the immense diversity of the life I saw at once; both the rich and the poor; the beauty and their admirers, hawkers selling in their high pitched voice. Lastly I saw the random stranger, a common man who was everywhere. 
 
@@ -113,7 +113,7 @@ Image credit ~ <a href="https://xkcd.com/1240/">xckd</a>
 </p>
 
 
-Heavy bumps are often advised by doctors to cure for day dreaming. Luckily Indian Municipality has heeded to doctor's advice and deliberately created potholes on Indian roads at regular intervals for convenience. However sudden brakes of the bus literary pulled me out of my dreams. I stood up & offered my seat to another man, who thanked me. I somehow squeezed past to reach the exit and alighted from the bus.
+Heavy bumps are often advised by doctors to cure for day dreaming. Luckily Indian Municipality has heeded to doctor's advice and deliberately created potholes on Indian roads at regular intervals for convenience. However sudden brakes of the bus literary pulled me out of my dreams. I stood up & offered my seat to another man, who thanked me. I somehow squeezed throught to reach the exit and alighted from the bus.
 
 The sun had now retired to give respite to people for the day. The traffic was gradually uncoiling. I stood there watching the bus depart. The experience I spent in the bus was surreal. The bus was anthropomorphically transmuted into a random stranger with whom I shared my dream. My eyes were moist as I saw the bus dissolve into traffic and disappear (May be my emotions were due to inhaling of smoke). I pulled out my ticket & tossed it into the air in agony of estrangement. And I walked away in the opposite direction of the bus. 
 
