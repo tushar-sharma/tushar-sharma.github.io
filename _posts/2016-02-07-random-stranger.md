@@ -82,7 +82,7 @@ The other day I was reading about `Quantum Physics`. Bizarre events happens in q
 
 His glanced at me occasionally, arousing my curiosity. However I shrugged off this behaviour as it was trivial. There was nothing appealing in him. May be his prosaicness was his hallmark; bland, unpolished shoes, uncouth hair, with a air of callousness. He glanced at me occasionally, arousing my curiosity. His shoes were worn out and his looks had fatigue. His eyes met mine more than once and it seems they spoke. And it seems the surrounding around me grew dimmer until I could feel only his presence in the bus. 
 
-Atom could be superposition which means it could be at two places at once. Time often slows down when you move closer to the speed of light. Electrons communicates at wide distances almost instantly. However sometimes you experience quantum physics in your macro life. When you see your own reflection sitting in front of you. And your heart beats faster when you realize that your reflection is real. I stood motionless when I saw the random stranger was nothing but my own reflection. The random stranger was me. 
+Time often slows down when you move closer to the speed of light. Electrons communicates at wide distances almost instantly. However sometimes you experience quantum physics in your macro life. When you see your own reflection sitting in front of you. And your heart beats faster when you realize that your reflection is real. I stood motionless when I saw the random stranger was nothing but my own reflection. The random stranger was me. 
 
 <br> 
 <blockquote>
