@@ -1,5 +1,5 @@
 safe: false
-highlighter: Pygments
+highlighter: rouge
 lsi: false
 permalink: /:categories/:title
 url: http://randomwits.com
