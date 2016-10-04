@@ -8,17 +8,18 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 }
 </style>
 
-<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="{{ root_url }}/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="{{ root_url }}/about">about me</a></span>
- 
+<!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="{{ root_url }}/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="{{ root_url }}/about">about me</a></span>
+-->
+
+<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><a href="{{ root_url }}/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="{{ root_url }}/about">about me</a></span>
+
  <div style="float:right;">+&nbsp;<a href="#"><a href="{{ root_url }}/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div></code></pre>
  
 
 <script type="text/javascript">
 
-
-
 /* generate a random number */
-function quotesGet(defaultValue) { 
+/*function quotesGet(defaultValue) { 
   jQuery.get('/../quotes.txt', function(data) { 
      var quotes = data.split("\n");
  
@@ -27,17 +28,11 @@ function quotesGet(defaultValue) {
          idx = defaultValue;
      } else {         idx = Math.floor((quotes.length - 1) * Math.random());
      }
-              /*term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", { 
-                  raw: function(div) { }
-               });
-            */
      var quoteArr = quotes[idx].split('"');
-     /* get the quotes */
      if (typeof quoteArr[1] !== 'undefined') {
        document.getElementById("myquotes").innerHTML = quoteArr[1];
      }
 
-     /* get the author */
      if (typeof quoteArr[2] !== 'undefined') {
        document.getElementById("author").innerHTML = quoteArr[2];
      }
