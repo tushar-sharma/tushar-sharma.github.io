@@ -49,7 +49,7 @@
   font-weight: normal;
   font-style: normal;}
 h1.heading { font-family: Myfont;
-  color: rgb(51, 153, 204);} 
+  color: rgb(51, 153, 204);}
 .top{color: rgb(68, 68, 68);}
 .sub{font-family:Somefont;}
 
@@ -60,17 +60,17 @@ aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:bas
 <aside id="logo" class="clearfix">
   <div class="clearfix">
     <a href="/">Tushar Sharma</a> <p style="float:right;"> </p>
-  </div> 
+  </div>
 </aside>
 
 <div style="clear:both;"></div>
 <div>
-     <h1  class="heading"><span class="top"><a href=""><i>Random Wits</i></a></span></h1> 
-  <p class="me_blurb"> 
-  <div class="sub"> 
+     <h1  class="heading"><span class="top"><a href=""><i>Random Wits</i></a></span></h1>
+  <p class="me_blurb">
+  <div class="sub">
       Life is too short for a diary
     </div>
-  </p> 
+  </p>
 
 </div>
 
@@ -117,17 +117,18 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 }
 </style>
 
-<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
- 
+<!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
+-->
+
+<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
+
  <div style="float:right;">+&nbsp;<a href="#"><a href="/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div></code></pre>
  
 
 <script type="text/javascript">
 
-
-
 /* generate a random number */
-function quotesGet(defaultValue) { 
+/*function quotesGet(defaultValue) { 
   jQuery.get('/../quotes.txt', function(data) { 
      var quotes = data.split("\n");
  
@@ -136,17 +137,11 @@ function quotesGet(defaultValue) {
          idx = defaultValue;
      } else {         idx = Math.floor((quotes.length - 1) * Math.random());
      }
-              /*term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", { 
-                  raw: function(div) { }
-               });
-            */
      var quoteArr = quotes[idx].split('"');
-     /* get the quotes */
      if (typeof quoteArr[1] !== 'undefined') {
        document.getElementById("myquotes").innerHTML = quoteArr[1];
      }
 
-     /* get the author */
      if (typeof quoteArr[2] !== 'undefined') {
        document.getElementById("author").innerHTML = quoteArr[2];
      }
@@ -186,7 +181,7 @@ $(document).ready(function() {
 
 <div class="highlight">
   <code>
-    <a class="twitter-timeline" data-tweet-limit=3  href="https://twitter.com/tshrocks" data-widget-id="687399874313195520">Tweets by @tshrocks</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <a class="twitter-timeline" data-tweet-limit=2  href="https://twitter.com/tshrocks" data-widget-id="687399874313195520">Tweets by @tshrocks</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </code>
 
 </div>
@@ -201,24 +196,6 @@ $(document).ready(function() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
-
-<br>
-
-
-  <div style="height:600px;max-height:600px;max-width:160px;width:160px;margin:0 auto;">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Randomwits -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9042793908161534"
-     data-ad-slot="2246959206"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  </div>
 
 
 <br>
