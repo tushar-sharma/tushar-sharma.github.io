@@ -3,7 +3,7 @@ highlighter: rouge
 lsi: false
 permalink: /:categories/:title
 url: http://randomwits.com
-markdown: kramdown 
+markdown: kramdown
 title: Random Wits
 port: 4000
 future: false
@@ -19,6 +19,6 @@ exclude:
 - branch.txt
 - .gitignore
 gems: [jekyll-paginate]
-paginate: 4 
+paginate: 3
 not_paginated_categories:
   - 'projects'
