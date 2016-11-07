@@ -1,0 +1,15 @@
+---
+title: Todos
+---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/../js/todos.js"></script>
+<link rel="stylesheet" href="/../css/contact.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+   
+        $("#result").html("bla <b>world!</b>");
+</script>
+
+<div id="result"></div>

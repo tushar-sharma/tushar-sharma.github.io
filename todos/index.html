@@ -1,0 +1,204 @@
+---
+layout: default
+title: Todos
+---
+<link rel="stylesheet" href="/../css/contact.css" />
+<h1 class="myheading">Todos</h1>
+
+<style type="text/css">
+input[type="checkbox"]{
+position:absolute;
+height:0;
+width:0;
+opacity:0;
+top:-600px;
+}
+
+.todo{
+display:inline-block;
+font-weight:200;
+padding:10px 5px;
+height:37px;
+position:relative;
+}
+.todo:before{
+content:'';
+display:block;
+position:absolute;
+top:calc(50% + 2px);
+left:0;
+width:0%;
+height:1px;
+background:#cd4400;
+/*transition*/
+-webkit-transition:.25s ease-in-out;
+   -moz-transition:.25s ease-in-out;
+     -o-transition:.25s ease-in-out;
+        transition:.25s ease-in-out;
+}
+.todo:after{
+content:'';
+display:block;
+position:absolute;
+z-index:0;
+height:18px;
+width:18px;
+top:9px;
+left:-25px;
+/*box-shadow*/
+-webkit-box-shadow:inset 0 0 0 2px #d8d8d8;
+   -moz-box-shadow:inset 0 0 0 2px #d8d8d8;
+        box-shadow:inset 0 0 0 2px #d8d8d8;
+/*transition*/
+-webkit-transition:.25s ease-in-out;
+   -moz-transition:.25s ease-in-out;
+     -o-transition:.25s ease-in-out;
+        transition:.25s ease-in-out;
+/*border-radius*/
+-webkit-border-radius:4px;
+   -moz-border-radius:4px;
+        border-radius:4px;
+}
+.todo:hover:after{
+/*box-shadow*/
+-webkit-box-shadow:inset 0 0 0 2px #949494;
+   -moz-box-shadow:inset 0 0 0 2px #949494;
+        box-shadow:inset 0 0 0 2px #949494;
+}
+.todo .fa-check{
+position:absolute;
+z-index:1;
+left:-31px;
+top:0;
+font-size:1px;
+line-height:36px;
+width:36px;
+height:36px;
+text-align:center;
+color:transparent;
+text-shadow:1px 1px 0 white, -1px -1px 0 white;
+}
+:checked + .todo{
+color:#717171;
+}
+:checked + .todo:before{
+width:100%;
+}
+:checked + .todo:after{
+/*box-shadow*/
+-webkit-box-shadow:inset 0 0 0 2px #0eb0b7;
+   -moz-box-shadow:inset 0 0 0 2px #0eb0b7;
+        box-shadow:inset 0 0 0 2px #0eb0b7;
+}
+:checked + .todo .fa-check{
+font-size:20px;
+line-height:35px;
+color:#0eb0b7;
+}
+/* Delete Items */
+
+</style>
+
+<script>
+$(document).ready(function() {
+	
+	/* return the remaing days between current date and future date*/
+    function rem_days(future_date, msg) {
+		/* get the current date */
+        var today = new Date();
+	    var dd = today.getDate();
+	    var mm = today.getMonth()+1; //January is 0!
+	    var yyyy = today.getFullYear();
+
+        /* get the future date */
+	    var f = future_date.split('-');
+	    var future = new Date(f[0], f[1], f[2]);
+	    var f_dd = future.getDate();
+	    var f_mm = future.getMonth() + 1;
+
+	    diff = f_dd - dd; // get the difference
+
+	    if ((mm == f_mm) && diff > 0 ) {
+	        document.getElementById(msg).innerHTML = "<span style=\"color:red;\">" + diff.toString() + " days remaining</span>";
+			
+	    } else if (f_mm > mm)  {
+
+	        diff = f_dd + (30 - dd);
+
+	        // check for extra month
+
+	        if ((f_mm - mm) >  1)  {
+	           diff = (f_mm - mm - 1) * 30 + diff;
+	        }
+	   
+	        document.getElementById(msg).innerHTML = "<span style=\"color:red;\">" + diff.toString() + " days remaining</span>";
+	    } else {
+	        document.getElementById(msg).innerHTML = "<span style=\"color:blue;\">Deadline has passed for " + msg + "</span>";
+	    }
+	} 
+
+	rem_days('2016-10-07', 'opt'); // for OPT submission 
+	rem_days('2016-10-07', 'tarball'); // for tarball
+	rem_days('2016-10-07', 'build'); // for automate build 
+	rem_days('2016-10-07', 'disk'); // for automate disk space 
+	rem_days('2016-10-11', 'hw3'); // for Machine Leanring Assignment 3
+	rem_days('2016-10-12', 'quiz4'); // for Machine Learning Quiz 4 
+	rem_days('2016-11-05', 'projectdm'); // for Project Submission for Data Mining
+	rem_days('2016-11-16', 'finaldm'); // for Final Exam for Data Mining
+	    
+});
+</script>
+                                                                               
+<p> List of my Todos. </p>
+ 
+<input type="checkbox" id="1" checked/>
+<label for="1" class="todo">
+	<i class="fa fa-check"></i>
+    OPT <span id="opt"></span><br>
+</label><br>
+
+
+<input type="checkbox" id="1" checked/>
+<label for="2" class="todo">
+	<i class="fa fa-check"></i>
+    Tarball <span id="tarball"></span>
+</label><br>
+
+<input type="checkbox" id="1" checked/>
+<label for="2" class="todo">
+	<i class="fa fa-check"></i>
+    Automate build <span id="build"></span>
+</label><br>
+
+<input type="checkbox" id="1" checked/>
+<label for="2" class="todo">
+	<i class="fa fa-check"></i>
+    Automate Disk space <span id="disk"></span>
+</label><br>
+
+<input type="checkbox" id="1" checked/>
+<label for="2" class="todo">
+	<i class="fa fa-check"></i>
+    Assignment 3 (Machine Learing) <span id="hw3"></span>
+</label><br>
+
+
+<input type="checkbox" id="1" checked/>
+<label for="2" class="todo">
+	<i class="fa fa-check"></i>
+    Quiz 4 (Machine Learning) <span id="quiz4"></span>
+</label><br>
+
+
+<input type="checkbox" id="1" checked/>
+<label for="2" class="todo">
+	<i class="fa fa-check"></i>
+    Final Term Project (Data Mining) <span id="projectdm"></span>
+</label><br>
+
+
+<input type="checkbox" id="1" checked/>
+<label for="2" class="todo">
+	<i class="fa fa-check"></i>
+    Final exam (Data Mining) <span id="finaldm"></span>
+</label><br>
