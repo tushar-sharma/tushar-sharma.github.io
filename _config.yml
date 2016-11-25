@@ -22,3 +22,5 @@ gems: [jekyll-paginate]
 paginate: 3
 not_paginated_categories:
   - 'projects'
+author:
+  name: "Tushar Sharma"
