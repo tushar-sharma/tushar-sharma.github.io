@@ -3,7 +3,7 @@
 .txt{ padding-top: 5px; }
 .newcl{color: black; white-space: initial;}
  li.txt {list-style: none outside none; }
-.btn {cursor: pointer; 
+.btn {cursor: pointer;
 border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
 }
 </style>
@@ -11,18 +11,18 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 <!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="{{ root_url }}/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="{{ root_url }}/about">about me</a></span>
 -->
 
-<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><a href="{{ root_url }}/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="{{ root_url }}/about">about me</a></span>
+<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><a href="{{ root_url }}/books">my bookshelf</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="{{ root_url }}/resources">resources</a></span><br> &nbsp;&nbsp;&nbsp; └── <span class="nv"><a href="{{ root_url }}/about">about me</a></span>
 
  <div style="float:right;">+&nbsp;<a href="#"><a href="{{ root_url }}/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div></code></pre>
- 
+
 
 <script type="text/javascript">
 
 /* generate a random number */
-/*function quotesGet(defaultValue) { 
-  jQuery.get('/../quotes.txt', function(data) { 
+/*function quotesGet(defaultValue) {
+  jQuery.get('/../quotes.txt', function(data) {
      var quotes = data.split("\n");
- 
+
      var idx;
      if (typeof defaultValue !== 'undefined') {
          idx = defaultValue;
@@ -43,7 +43,7 @@ $(document).ready(function() {
     quotesGet();
 });
 
-$(document).ready(function(){	
+$(document).ready(function(){
     $('.quotebox').hide().before('<a href="#" id="open-quotebox" class="button">throw me a quote</a>');
 	$('.quotebox').append('<a href="#close-quotebox" id="close-quotebox" class="button">Close quote ↑</a>');
 	$('a#open-quotebox').click(function() {
@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 
 /* send the default quote number 66 */
-/* omit it ; as i need to display random quotes 
+/* omit it ; as i need to display random quotes
 $(document).ready(function() {
   var defaultValue = 65;
   quotesGet(defaultValue);
