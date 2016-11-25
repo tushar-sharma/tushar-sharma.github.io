@@ -16,6 +16,9 @@ title: Resources for Programmers
 * [Codecademy APIs course](http://www.codecademy.com/tracks/apis)
 * [Yale API Portal](https://developers.yale.edu/)
 
+## Big Data
+* [Introduction to Apache Spark](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x)
+
 ## Command line / Terminal
 * [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/) -
  a somewhat long, but complete (exercise-heavy) guide to using the command line.
@@ -36,6 +39,10 @@ title: Resources for Programmers
 * [Use the Index, Luke! (SQL Tuning and Indexing)](http://use-the-index-luke.com) -
 This is an in-depth guide to how indexes work in SQL DBs, more of an advanced topic, but
 it's really interesting.
+
+## Functional Programming
+* [Functional Programming Principles in Scala](https://www.coursera.org/learn/progfun1)
+* [Introduction to Functional Programming in Haskell](https://www.edx.org/course/introduction-functional-programming-delftx-fp101x-0)
 
 ## Git
 * [Try Git](http://www.codeschool.com/courses/try-git) - A great interactive
@@ -88,6 +95,9 @@ overview of HTML.
 
 ### Videos
 * [Crockford on JS - Video Lecture Series](http://yuiblog.com/crockford/)
+
+## MVC
+* [The MVC Pattern in Ruby](https://www.udacity.com/course/the-mvc-pattern-in-ruby--ud270)
 
 ## Rails
 * [Model View Controller (Lynda)](http://www.youtube.com/watch?v=3mQjtk2YDkM)
@@ -164,8 +174,7 @@ it's only useful after having programmed using Ruby already.
 * [Understanding Ruby Symbols](http://glu.ttono.us/articles/2005/08/19/understanding-ruby-symbols)
 
 ## Sinatra
-* [Sinatra Restafari Book](http://sinatra.restafari.org/book.html)
-* [Rails Sinatra Comparison PDF](http://www.christopher-wood.com/papers/RailsSinatraComparison.pdf)
+* [Dynamic Web Applications with Sinatra](https://www.udacity.com/course/dynamic-web-applications-with-sinatra--ud268)
 
 ## Web app basics (Ruby)
 * [How The Web Works Overview](http://mkcohen.com/how-the-web-works-in-one-easy-lesson)
