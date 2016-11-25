@@ -16,8 +16,13 @@ title: Resources for Programmers
 * [Codecademy APIs course](http://www.codecademy.com/tracks/apis)
 * [Yale API Portal](https://developers.yale.edu/)
 
-## Big Data
+## Data Science & Big Data
 * [Introduction to Apache Spark](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x)
+* [Data Visualization](https://www.coursera.org/learn/datavisualization)
+* [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
+* [Text Retrieval and Search Engines](https://www.coursera.org/learn/text-retrieval)
+* [Pattern Discovery in Data Mining](https://www.coursera.org/learn/data-patterns)
+* [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
 
 ## Command line / Terminal
 * [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/) -
