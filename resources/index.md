@@ -102,6 +102,9 @@ overview of HTML.
 ### Videos
 * [Crockford on JS - Video Lecture Series](http://yuiblog.com/crockford/)
 
+## Jekyll
+* [Create RSS feed](http://jekyll.tips/jekyll-casts/rss-feed/)
+
 ## MVC
 * [The MVC Pattern in Ruby](https://www.udacity.com/course/the-mvc-pattern-in-ruby--ud270)
 
