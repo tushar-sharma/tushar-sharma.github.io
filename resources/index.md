@@ -18,6 +18,7 @@ title: Resources for Programmers
 
 ## Data Science & Big Data
 * [Introduction to Apache Spark](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x)
+* [Setup Spark Cluster Step By Step](http://blog.insightdatalabs.com/spark-cluster-step-by-step/)
 * [Data Visualization](https://www.coursera.org/learn/datavisualization)
 * [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
 * [Text Retrieval and Search Engines](https://www.coursera.org/learn/text-retrieval)
