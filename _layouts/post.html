@@ -2,6 +2,10 @@
 layout: default
 root: true
 ---
+<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
+<link rel="stylesheet" href="{{ root_url }}/css/toc.css" />
+
+
 <!-- search box begins -->
 <div style="padding-bottom:60px; padding-top:20px; background : white;">
   <form style="float:right;" action="{{ root_url }}/search/?">
@@ -13,8 +17,6 @@ root: true
 
 <small style="float:right; margin-top:5px;">{{ page.date | date:'%a %d %b %Y' }}</small>
 <h3>{{ page.title }}</h3>
-
-<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
 
 {% assign truncated_post = content | split:"<!-- truncate_here -->" %}
 {% if truncated_post != content %}

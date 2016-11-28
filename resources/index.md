@@ -4,12 +4,9 @@ title: Resources for Programmers
 ---
 
 <h1 class="entry-title">Resources for Programmers</h1>
+<link rel="stylesheet" href="{{ root_url }}/css/toc.css" />
 
-
-# Table of Contents
-{:.no_toc}
-
-1. Will be replaced with the ToC, excluding the "Table of Contents" header
+* Will be replaced with the ToC
 {:toc}
 
 ## APIs
