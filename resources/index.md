@@ -9,6 +9,13 @@ title: Resources for Programmers
 * Will be replaced with the ToC
 {:toc}
 
+## Algorithms & Data Structure 
+* [AI Algorithms, Data Structures, and Idioms in Prolog, Lisp, and Java](https://web.cecs.pdx.edu/~york/cs441/Luger_Idioms.pdf)
+* [Algorithms, Data Structures, and Design Patterns for Self-Taught Developers](https://antjanus.com/blog/web-development-tutorials/learn-the-unlearned-algorithms-data-structures-and-design-patterns/)
+* [Mastering Algorithms with Perl](http://ebook.pldworld.com/_eBook/_OReilly_/133.Books/pdf_Perl/OReilly.-.Mastering_Algorithms_with_Perl_Oreilly.pdf)
+* [Problem Solving with Algorithms and Data Structures using Python](https://interactivepython.org/runestone/static/pythonds/index.html)
+* [Purely Functional Data Structures](http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf)
+
 ## APIs
 * [Codecademy APIs course](http://www.codecademy.com/tracks/apis)
 * [Yale API Portal](https://developers.yale.edu/)
