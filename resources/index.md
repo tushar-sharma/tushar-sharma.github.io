@@ -120,7 +120,7 @@ overview of HTML.
 * [Codechef](https://www.codechef.com/)
 * [Topcoder](https://www.topcoder.com/)
 * [Python Challenge](http://www.pythonchallenge.com/)
-* [Ninety Nine Haskell Problems)(https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems)
+* [Ninety Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems)
 
 ## Rails
 * [Model View Controller (Lynda)](http://www.youtube.com/watch?v=3mQjtk2YDkM)
