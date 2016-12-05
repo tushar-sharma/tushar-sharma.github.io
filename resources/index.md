@@ -112,6 +112,16 @@ overview of HTML.
 ## MVC
 * [The MVC Pattern in Ruby](https://www.udacity.com/course/the-mvc-pattern-in-ruby--ud270)
 
+## Programming Contest 
+* [LeetCode](https://leetcode.com)
+* [Project Euler](https://projecteuler.net/)
+* [Hacker Rank](https://www.hackerrank.com/)
+* [Codeforces](http://codeforces.com/)
+* [Codechef](https://www.codechef.com/)
+* [Topcoder](https://www.topcoder.com/)
+* [Python Challenge](http://www.pythonchallenge.com/)
+* [Ninety Nine Haskell Problems)(https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems)
+
 ## Rails
 * [Model View Controller (Lynda)](http://www.youtube.com/watch?v=3mQjtk2YDkM)
 * [Agile Web Development with Rails, 4th Ed](http://www.amazon.com/Agile-Web-Development-Rails-Programmers/dp/097669400X)
