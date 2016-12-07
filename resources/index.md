@@ -214,6 +214,10 @@ it's only useful after having programmed using Ruby already.
 ### ERB
 * [Stuart Ellis' Guide to .erb](http://www.stuartellis.eu/articles/erb/)
 
+## Search Engine 
+* [Hacking DuckDuckGo](https://duckduckhack.com/#get-help)
+* [Build a search engine](https://www.udacity.com/course/intro-to-computer-science--cs101)
+
 ## Web Browser
 
 ### Programming Lanugages
