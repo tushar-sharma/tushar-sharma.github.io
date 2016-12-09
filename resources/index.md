@@ -12,7 +12,12 @@ title: Resources for Programmers
 ## Algorithms & Data Structure 
 * [AI Algorithms, Data Structures, and Idioms in Prolog, Lisp, and Java](https://web.cecs.pdx.edu/~york/cs441/Luger_Idioms.pdf)
 * [Algorithms, Data Structures, and Design Patterns for Self-Taught Developers](https://antjanus.com/blog/web-development-tutorials/learn-the-unlearned-algorithms-data-structures-and-design-patterns/)
+* [Develop Powerful Interactive Software](https://www.coursera.org/specializations/java-object-oriented)
+* [Hacking a google interview](http://courses.csail.mit.edu/iap/interview/index.php)
+* [I will get that job at google](http://iwillgetthatjobatgoogle.tumblr.com/)
+* [Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data)
 * [Mastering Algorithms with Perl](http://ebook.pldworld.com/_eBook/_OReilly_/133.Books/pdf_Perl/OReilly.-.Mastering_Algorithms_with_Perl_Oreilly.pdf)
+* [Mastering Algorithms techniques - Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
 * [Problem Solving with Algorithms and Data Structures using Python](https://interactivepython.org/runestone/static/pythonds/index.html)
 * [Purely Functional Data Structures](http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf)
 
