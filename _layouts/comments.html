@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="alternate" type="application/rss+xml" title="Bakery Store RSS" href="/feed.xml">
+    <script async type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  <body>
+    <noscript>
+    <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+    For a better experience on RandomWits, enable JavaScript in your browser.
+    </h4>
+    </noscript>
+
+    <div class="wrapper">
+      <header>
+        {% include sidebar.html %}
+      </header>
+      <section>
+        {{ content }}
+        <hr>
+        {% include comments.html %}
+      </section>
+   </div>
+   <div style="clear:both;"></div>
+
+    <div class="wrapper">
+      <footer>
+        {% include footer.html %}
+      </footer>
+    </div>
+  </body>
+</html>
