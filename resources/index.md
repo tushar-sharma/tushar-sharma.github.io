@@ -273,6 +273,7 @@ it's only useful after having programmed using Ruby already.
 * [How to be a hacker](http://www.catb.org/esr/faqs/hacker-howto.html)
 * [Hack yourself first](https://averagesecurityguy.github.io/assets/hack-yourself-first-final.pdf)
 * [Hack this site](https://www.hackthissite.org/)
+* [Offensive Security Bookmarks](https://jivoi.github.io/2015/07/03/offensive-security-bookmarks/)
 * [Software Security](https://www.coursera.org/learn/software-security/)
 * [Computer virus Development Quaterly](http://read.pudn.com/downloads165/sourcecode/asm/756887/cvdq1_2.pdf)
 * [The Code Book by Simon Singh](https://www.amazon.com/Code-Book-Science-Secrecy-Cryptography/dp/0385495323)
@@ -286,8 +287,9 @@ it's only useful after having programmed using Ruby already.
 ### Programming Lanugages
 * [Building a Web Browser](https://www.udacity.com/course/programming-languages--cs262)
 
-### Firefox Addons
+### Addons & Extensions
 * [Developing Addons](https://developer.mozilla.org/en-US/Add-ons)
+* [Create your own Chrome extensions](http://coryg89.github.io/technical/2013/08/13/how-to-create-your-own-chrome-extensions/)
 
 ## Miscellaneous
 
