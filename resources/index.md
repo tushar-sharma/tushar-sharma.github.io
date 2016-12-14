@@ -330,3 +330,6 @@ a good online resource which goes through design fundamentals
 * [How to be a program manager - Joel on Software](http://www.joelonsoftware.com/items/2009/03/09.html)
 * [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
 * [mid-1980's textfiles](http://www.textfiles.com/)
+
+<hr>
+% include comments.html %}
