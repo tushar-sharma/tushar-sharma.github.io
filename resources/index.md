@@ -9,7 +9,7 @@ title: Resources for Programmers
 * Will be replaced with the ToC
 {:toc}
 
-## Algorithms & Data Structure & Paradigms
+## Algorithms & Data Structure
 * [Algorithms, Part I by Robert Sedgewick](https://www.coursera.org/learn/algorithms-part1#)
 * [Algorithms, Part II by Robert Sedgewick](https://www.coursera.org/learn/java-data-structures-algorithms-2)
 * [Analysis of Algorithms by Robert Sedgewick](https://www.coursera.org/learn/analysis-of-algorithms#creators)
@@ -118,12 +118,16 @@ overview of HTML.
 
 ## Lisp
 * [Learn Lisp the hard way](http://learnlispthehardway.org/book/)
-
-## MVC
-* [The MVC Pattern in Ruby](https://www.udacity.com/course/the-mvc-pattern-in-ruby--ud270)
+* [Overview & Introduction of Lisp](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/1a-overview-and-introduction-to-lisp/)
 
 ## Operating Systems & Parallel
 * [cs4414 Operating Systems](http://rust-class.org/)
+
+## Paradigms
+* [How code systematic program design by Edx](https://www.edx.org/xseries/how-code-systematic-program-design)
+* [Java object oriented crashcourse coursera](https://www.coursera.org/specializations/java-object-oriented)
+* [Software Development Process by udacity](https://www.udacity.com/course/software-development-process--ud805)
+* [The MVC Pattern in Ruby](https://www.udacity.com/course/the-mvc-pattern-in-ruby--ud270)
 
 ## Programming Contest & Interviews
 * [LeetCode](https://leetcode.com)
