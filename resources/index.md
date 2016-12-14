@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: comments
 title: Resources for Programmers
+root: true
 ---
 
 <h1 class="entry-title">Resources for Programmers</h1>
@@ -331,5 +332,3 @@ a good online resource which goes through design fundamentals
 * [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
 * [mid-1980's textfiles](http://www.textfiles.com/)
 
-<hr>
-{% include comments.html %}
