@@ -153,7 +153,7 @@ overview of HTML.
 * [Programming from Ground Up by Jonathan Bartlett](http://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
 * [Programming Pearls](https://www.amazon.com/Programming-Pearls-2nd-Jon-Bentley/dp/0201657880)
 
-## Programming Contest & Interviews
+## Programming Contest, Interviews & Puzzles
 * [Csacademy](https://csacademy.com/)
 * [Codeforces](http://codeforces.com/)
 * [Codechef](https://www.codechef.com/)
@@ -169,6 +169,9 @@ overview of HTML.
 * [Python Challenge](http://www.pythonchallenge.com/)
 * [Sphere Online Judge](http://www.spoj.com/)
 * [Topcoder](https://www.topcoder.com/)
+
+### Books
+* [Alice in Puzzleland](https://www.amazon.com/Alice-Puzzle-Land-Carrollian-Children-Recreational/dp/0486482006)
 
 ## Rails
 * [Model View Controller (Lynda)](http://www.youtube.com/watch?v=3mQjtk2YDkM)
@@ -267,12 +270,16 @@ it's only useful after having programmed using Ruby already.
 * [Build a search engine](https://www.udacity.com/course/intro-to-computer-science--cs101)
 
 ## Security
+* [How to be a hacker](http://www.catb.org/esr/faqs/hacker-howto.html)
 * [Hack yourself first](https://averagesecurityguy.github.io/assets/hack-yourself-first-final.pdf)
 * [Hack this site](https://www.hackthissite.org/)
 * [Software Security](https://www.coursera.org/learn/software-security/)
+* [Computer virus Development Quaterly](http://read.pudn.com/downloads165/sourcecode/asm/756887/cvdq1_2.pdf)
+* [The Code Book by Simon Singh](https://www.amazon.com/Code-Book-Science-Secrecy-Cryptography/dp/0385495323)
 
 ### Books
 * [Giant Black Book Computer Viruses](https://www.amazon.com/Giant-Black-Book-Computer-Viruses/dp/0929408233)
+* [The Art of Computer Virus Research and Defense](https://www.amazon.com/Art-Computer-Virus-Research-Defense/dp/0321304543/ref=pd_sbs_14_1?_encoding=UTF8&psc=1&refRID=N5DCFQNDDRV3CT3HDFZA)
 
 ## Web Browser
 
@@ -319,4 +326,5 @@ a good online resource which goes through design fundamentals
 
 ### Other
 * [How to be a program manager - Joel on Software](http://www.joelonsoftware.com/items/2009/03/09.html)
-* [Cheat Sheets](http://devcheatsheet.com/)
+* [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
+* [mid-1980's textfiles](http://www.textfiles.com/)
