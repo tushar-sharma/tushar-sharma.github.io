@@ -9,12 +9,14 @@ title: Resources for Programmers
 * Will be replaced with the ToC
 {:toc}
 
-## Algorithms & Data Structure 
+## Algorithms & Data Structure & Paradigms
+* [Algorithms, Part I by Robert Sedgewick](https://www.coursera.org/learn/algorithms-part1#)
+* [Algorithms, Part II by Robert Sedgewick](https://www.coursera.org/learn/java-data-structures-algorithms-2)
+* [Analysis of Algorithms by Robert Sedgewick](https://www.coursera.org/learn/analysis-of-algorithms#creators)
 * [AI Algorithms, Data Structures, and Idioms in Prolog, Lisp, and Java](https://web.cecs.pdx.edu/~york/cs441/Luger_Idioms.pdf)
 * [Algorithms, Data Structures, and Design Patterns for Self-Taught Developers](https://antjanus.com/blog/web-development-tutorials/learn-the-unlearned-algorithms-data-structures-and-design-patterns/)
+* [cs3102: Theory of Computation](http://www.cs.virginia.edu/~evans/cs3102/)
 * [Develop Powerful Interactive Software](https://www.coursera.org/specializations/java-object-oriented)
-* [Hacking a google interview](http://courses.csail.mit.edu/iap/interview/index.php)
-* [I will get that job at google](http://iwillgetthatjobatgoogle.tumblr.com/)
 * [Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data)
 * [Mastering Algorithms with Perl](http://ebook.pldworld.com/_eBook/_OReilly_/133.Books/pdf_Perl/OReilly.-.Mastering_Algorithms_with_Perl_Oreilly.pdf)
 * [Mastering Algorithms techniques - Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
@@ -114,18 +116,27 @@ overview of HTML.
 ## Jekyll
 * [Create RSS feed](http://jekyll.tips/jekyll-casts/rss-feed/)
 
+## Lisp
+* [Learn Lisp the hard way](http://learnlispthehardway.org/book/)
+
 ## MVC
 * [The MVC Pattern in Ruby](https://www.udacity.com/course/the-mvc-pattern-in-ruby--ud270)
 
-## Programming Contest 
+## Operating Systems & Parallel
+* [cs4414 Operating Systems](http://rust-class.org/)
+
+## Programming Contest & Interviews
 * [LeetCode](https://leetcode.com)
-* [Project Euler](https://projecteuler.net/)
-* [Hacker Rank](https://www.hackerrank.com/)
 * [Codeforces](http://codeforces.com/)
 * [Codechef](https://www.codechef.com/)
-* [Topcoder](https://www.topcoder.com/)
-* [Python Challenge](http://www.pythonchallenge.com/)
+* [Hacker Rank](https://www.hackerrank.com/)
+* [Hacking a google interview](http://courses.csail.mit.edu/iap/interview/index.php)
+* [How can I prepare myself to be software engineer at Google](https://www.quora.com/How-can-I-prepare-myself-to-be-a-software-engineer-at-Google/answer/Gaurav-Jha-9)
+* [I will get that job at google](http://iwillgetthatjobatgoogle.tumblr.com/)
 * [Ninety Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems)
+* [Project Euler](https://projecteuler.net/)
+* [Python Challenge](http://www.pythonchallenge.com/)
+* [Topcoder](https://www.topcoder.com/)
 
 ## Rails
 * [Model View Controller (Lynda)](http://www.youtube.com/watch?v=3mQjtk2YDkM)
@@ -219,9 +230,13 @@ it's only useful after having programmed using Ruby already.
 ### ERB
 * [Stuart Ellis' Guide to .erb](http://www.stuartellis.eu/articles/erb/)
 
-## Search Engine 
+## Search Engine
 * [Hacking DuckDuckGo](https://duckduckhack.com/#get-help)
 * [Build a search engine](https://www.udacity.com/course/intro-to-computer-science--cs101)
+
+## Security
+* [Hack yourself first](https://averagesecurityguy.github.io/assets/hack-yourself-first-final.pdf)
+* [Software Security](https://www.coursera.org/learn/software-security/)
 
 ## Web Browser
 
