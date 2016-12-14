@@ -332,4 +332,4 @@ a good online resource which goes through design fundamentals
 * [mid-1980's textfiles](http://www.textfiles.com/)
 
 <hr>
-% include comments.html %}
+{% include comments.html %}
