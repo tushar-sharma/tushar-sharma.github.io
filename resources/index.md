@@ -20,6 +20,8 @@ root: true
 * [cs3102: Theory of Computation](http://www.cs.virginia.edu/~evans/cs3102/)
 * [Develop Powerful Interactive Software](https://www.coursera.org/specializations/java-object-oriented)
 * [Foundations of Data Structures](https://www.edx.org/course/foundations-data-structures-iitbombayx-cs213-1x#!)
+* [Introduction to Algorithms by MIT Erik Demaine](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/index.htm)
+* [Introduction to Algorithms (SMA 5503)](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/)
 * [Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data)
 * [Mastering Algorithms with Perl](http://ebook.pldworld.com/_eBook/_OReilly_/133.Books/pdf_Perl/OReilly.-.Mastering_Algorithms_with_Perl_Oreilly.pdf)
 * [Mastering Algorithms techniques - Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
@@ -27,6 +29,7 @@ root: true
 * [Purely Functional Data Structures](http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf)
 
 ### Books
+* [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X)
 * [Python Algorithms - Mastering Basic Algorithms in the Python Language](http://www.apress.com/us/book/9781430232377)
 * [Think Complexity](http://www.greenteapress.com/complexity/thinkcomplexity.pdf)
 
@@ -39,6 +42,9 @@ root: true
 
 ### Books
 * [Expert C programming](https://www.amazon.com/Expert-Programming-Peter-van-Linden/dp/0131774298)
+
+## Blogs
+* [Ginlo Blog](http://blog.gainlo.co/)
 
 ## Data Science & Big Data
 * [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
@@ -141,7 +147,7 @@ overview of HTML.
 
 ## Programming & Paradigms
 * [Design of Computer Program by Peter Norvig](https://www.udacity.com/course/design-of-computer-programs--cs212)
-* [How code systematic program design by Edx](https://www.edx.org/xseries/how-code-systematic-program-design
+* [How code systematic program design by Edx](https://www.edx.org/xseries/how-code-systematic-program-design)
 * [Introduction to Computing](http://www.computingbook.org/)
 * [Java object oriented crashcourse coursera](https://www.coursera.org/specializations/java-object-oriented)
 * [Paradigms of Computer Programming by louvainx](https://www.edx.org/course/paradigms-computer-programming-louvainx-louv1-1x-1#!)
@@ -159,6 +165,7 @@ overview of HTML.
 * [Codeforces](http://codeforces.com/)
 * [Codechef](https://www.codechef.com/)
 * [Coderbyte](https://coderbyte.com/){:target="_blank"}
+* [Codefights](https://codefights.com/)
 * [LeetCode](https://leetcode.com)
 * [Google Code Jam](https://code.google.com/codejam/)
 * [Hacker Rank](https://www.hackerrank.com/)
