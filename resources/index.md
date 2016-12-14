@@ -15,26 +15,39 @@ title: Resources for Programmers
 * [Analysis of Algorithms by Robert Sedgewick](https://www.coursera.org/learn/analysis-of-algorithms#creators)
 * [AI Algorithms, Data Structures, and Idioms in Prolog, Lisp, and Java](https://web.cecs.pdx.edu/~york/cs441/Luger_Idioms.pdf)
 * [Algorithms, Data Structures, and Design Patterns for Self-Taught Developers](https://antjanus.com/blog/web-development-tutorials/learn-the-unlearned-algorithms-data-structures-and-design-patterns/)
+* [Advance Data Structure](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/)
 * [cs3102: Theory of Computation](http://www.cs.virginia.edu/~evans/cs3102/)
 * [Develop Powerful Interactive Software](https://www.coursera.org/specializations/java-object-oriented)
+* [Foundations of Data Structures](https://www.edx.org/course/foundations-data-structures-iitbombayx-cs213-1x#!)
 * [Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data)
 * [Mastering Algorithms with Perl](http://ebook.pldworld.com/_eBook/_OReilly_/133.Books/pdf_Perl/OReilly.-.Mastering_Algorithms_with_Perl_Oreilly.pdf)
 * [Mastering Algorithms techniques - Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
 * [Problem Solving with Algorithms and Data Structures using Python](https://interactivepython.org/runestone/static/pythonds/index.html)
 * [Purely Functional Data Structures](http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf)
 
+### Books
+* [Python Algorithms - Mastering Basic Algorithms in the Python Language](http://www.apress.com/us/book/9781430232377)
+* [Think Complexity](http://www.greenteapress.com/complexity/thinkcomplexity.pdf)
+
 ## APIs
 * [Codecademy APIs course](http://www.codecademy.com/tracks/apis)
 * [Yale API Portal](https://developers.yale.edu/)
 
+## C & C++
+* [Learn C the hard way](https://learncodethehardway.org/c/)
+
+### Books
+* [Expert C programming](https://www.amazon.com/Expert-Programming-Peter-van-Linden/dp/0131774298)
+
 ## Data Science & Big Data
+* [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
+* [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
+* [Data Visualization](https://www.coursera.org/learn/datavisualization)
 * [Introduction to Apache Spark](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x)
 * [Setup Spark Cluster Step By Step](http://blog.insightdatalabs.com/spark-cluster-step-by-step/)
-* [Data Visualization](https://www.coursera.org/learn/datavisualization)
 * [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
 * [Text Retrieval and Search Engines](https://www.coursera.org/learn/text-retrieval)
 * [Pattern Discovery in Data Mining](https://www.coursera.org/learn/data-patterns)
-* [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
 
 ## Command line / Terminal
 * [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/) -
@@ -113,7 +126,9 @@ overview of HTML.
 ### Videos
 * [Crockford on JS - Video Lecture Series](http://yuiblog.com/crockford/)
 
-## Jekyll
+### Static Sites
+
+### Jekyll
 * [Create RSS feed](http://jekyll.tips/jekyll-casts/rss-feed/)
 
 ## Lisp
@@ -123,17 +138,28 @@ overview of HTML.
 ## Operating Systems & Parallel
 * [cs4414 Operating Systems](http://rust-class.org/)
 
-## Paradigms
-* [How code systematic program design by Edx](https://www.edx.org/xseries/how-code-systematic-program-design)
+## Programming & Paradigms
+* [Design of Computer Program by Peter Norvig](https://www.udacity.com/course/design-of-computer-programs--cs212)
+* [How code systematic program design by Edx](https://www.edx.org/xseries/how-code-systematic-program-design
+* [Introduction to Computing](http://www.computingbook.org/)
 * [Java object oriented crashcourse coursera](https://www.coursera.org/specializations/java-object-oriented)
+* [Paradigms of Computer Programming by louvainx](https://www.edx.org/course/paradigms-computer-programming-louvainx-louv1-1x-1#!)
 * [Software Development Process by udacity](https://www.udacity.com/course/software-development-process--ud805)
 * [The MVC Pattern in Ruby](https://www.udacity.com/course/the-mvc-pattern-in-ruby--ud270)
+* [This is CS50](http://cs50.tv/2013/fall/)
+
+
+### Books
+* [Programming from Ground Up by Jonathan Bartlett](http://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
+* [Programming Pearls](https://www.amazon.com/Programming-Pearls-2nd-Jon-Bentley/dp/0201657880)
 
 ## Programming Contest & Interviews
 * [Csacademy](https://csacademy.com/)
 * [Codeforces](http://codeforces.com/)
 * [Codechef](https://www.codechef.com/)
+* [Coderbyte](https://coderbyte.com/){:target="_blank"}
 * [LeetCode](https://leetcode.com)
+* [Google Code Jam](https://code.google.com/codejam/)
 * [Hacker Rank](https://www.hackerrank.com/)
 * [Hacking a google interview](http://courses.csail.mit.edu/iap/interview/index.php)
 * [How can I prepare myself to be software engineer at Google](https://www.quora.com/How-can-I-prepare-myself-to-be-a-software-engineer-at-Google/answer/Gaurav-Jha-9)
@@ -141,6 +167,7 @@ overview of HTML.
 * [Ninety Nine Haskell Problems](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems)
 * [Project Euler](https://projecteuler.net/)
 * [Python Challenge](http://www.pythonchallenge.com/)
+* [Sphere Online Judge](http://www.spoj.com/)
 * [Topcoder](https://www.topcoder.com/)
 
 ## Rails
@@ -241,7 +268,11 @@ it's only useful after having programmed using Ruby already.
 
 ## Security
 * [Hack yourself first](https://averagesecurityguy.github.io/assets/hack-yourself-first-final.pdf)
+* [Hack this site](https://www.hackthissite.org/)
 * [Software Security](https://www.coursera.org/learn/software-security/)
+
+### Books
+* [Giant Black Book Computer Viruses](https://www.amazon.com/Giant-Black-Book-Computer-Viruses/dp/0929408233)
 
 ## Web Browser
 
