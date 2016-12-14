@@ -1,172 +1,172 @@
 ---
-layout: default
+layout: comments
 title: Books on my shelf
 ---
 
 <link rel="stylesheet" href="{{ root_url }}/css/books.css" />
 
 <h2 class="entry-title">Books on my shelf</h2>
-    
+
 <p>These are some of books that are currently on my shelf. If you know a book that would blend in my taste, feel free to <a href="{{ root_url }}/contact" >suggest</a> me some.</p>
 
 <script type="text/javascript">
 jQuery.fn.pagination = function(maxentries, opts){
-	opts = jQuery.extend({
-		items_per_page:10,
-		num_display_entries:10,
-		current_page:0,
-		num_edge_entries:0,
-		link_to:"#",
-		prev_text:"Prev ",
-		next_text:"Next",
-		ellipse_text:"...",
-		prev_show_always:true,
-		next_show_always:true,
-		callback:function(){return false;}
-	},opts||{});
-	
-	return this.each(function() {
-		/**
-		 * Calculate the maximum number of pages
-		 */
-		function numPages() {
-			return Math.ceil(maxentries/opts.items_per_page);
-		}
-		
-		/**
-		 * Calculate start and end point of pagination links depending on 
-		 * current_page and num_display_entries.
-		 * @return {Array}
-		 */
-		function getInterval()  {
-			var ne_half = Math.ceil(opts.num_display_entries/2);
-			var np = numPages();
-			var upper_limit = np-opts.num_display_entries;
-			var start = current_page>ne_half?Math.max(Math.min(current_page-ne_half, upper_limit), 0):0;
-			var end = current_page>ne_half?Math.min(current_page+ne_half, np):Math.min(opts.num_display_entries, np);
-			return [start,end];
-		}
-		
-		/**
-		 * This is the event handling function for the pagination links. 
-		 * @param {int} page_id The new page number
-		 */
-		function pageSelected(page_id, evt){
-			current_page = page_id;
-			drawLinks();
-			var continuePropagation = opts.callback(page_id, panel);
-			if (!continuePropagation) {
-				if (evt.stopPropagation) {
-					evt.stopPropagation();
-				}
-				else {
-					evt.cancelBubble = true;
-				}
-			}
-			location.href='#top'; /*to return to top*/
-			return continuePropagation;
-		}
-		
-		/**
-		 * This function inserts the pagination links into the container element
-		 */
-		function drawLinks() {
-			panel.empty();
-			var interval = getInterval();
-			var np = numPages();
-			// This helper function returns a handler function that calls pageSelected with the right page_id
-			var getClickHandler = function(page_id) {
-				return function(evt){ return pageSelected(page_id,evt); }
-			}
-			// Helper function for generating a single link (or a span tag if it's the current page)
-			var appendItem = function(page_id, appendopts){
-				page_id = page_id<0?0:(page_id<np?page_id:np-1); // Normalize page id to sane value
-				appendopts = jQuery.extend({text:page_id+1, classes:""}, appendopts||{});
-				if(page_id == current_page){
-					var lnk = jQuery("<span style='padding-right:5px;padding-left:5px; cursor:pointer;' class='current'>"+(appendopts.text)+"</span>");
-				}
-				else
-				{
-					var lnk = jQuery("<span  style='padding-right:5px;padding-left:5px; cursor:pointer;'> <a>"+(appendopts.text)+"</a></span>")
-						.bind("click", getClickHandler(page_id))
-						.attr('href', opts.link_to.replace(/__id__/,page_id));
-						
-						
-				}
-				if(appendopts.classes){lnk.addClass(appendopts.classes);}
-				panel.append(lnk);
-			}
-			// Generate "Previous"-Link
-			if(opts.prev_text && (current_page > 0 || opts.prev_show_always)){
-				appendItem(current_page-1,{text:opts.prev_text, classes:"prev"});
-			}
-			// Generate starting points
-			if (interval[0] > 0 && opts.num_edge_entries > 0)
-			{
-				var end = Math.min(opts.num_edge_entries, interval[0]);
-				for(var i=0; i<end; i++) {
-					appendItem(i);
-				}
-				if(opts.num_edge_entries < interval[0] && opts.ellipse_text)
-				{
-					jQuery("<span>"+opts.ellipse_text+"</span>").appendTo(panel);
-				}
-			}
-			// Generate interval links
-			for(var i=interval[0]; i<interval[1]; i++) {
-				appendItem(i);
-			}
-			// Generate ending points
-			if (interval[1] < np && opts.num_edge_entries > 0)
-			{
-				if(np-opts.num_edge_entries > interval[1]&& opts.ellipse_text)
-				{
-					jQuery("<span>"+opts.ellipse_text+"</span>").appendTo(panel);
-				}
-				var begin = Math.max(np-opts.num_edge_entries, interval[1]);
-				for(var i=begin; i<np; i++) {
-					appendItem(i);
-				}
-				
-			}
-			// Generate "Next"-Link
-			if(opts.next_text && (current_page < np-1 || opts.next_show_always)){
-				appendItem(current_page+1,{text:opts.next_text, classes:"next"});
-			}
-		}
-		
-		// Extract current_page from options
-		var current_page = opts.current_page;
-		// Create a sane value for maxentries and items_per_page
-		maxentries = (!maxentries || maxentries < 0)?1:maxentries;
-		opts.items_per_page = (!opts.items_per_page || opts.items_per_page < 0)?1:opts.items_per_page;
-		// Store DOM element for easy access from all inner functions
-		var panel = jQuery(this);
-		// Attach control functions to the DOM element 
-		this.selectPage = function(page_id){ pageSelected(page_id);}
-		this.prevPage = function(){ 
-			if (current_page > 0) {
-				pageSelected(current_page - 1);
-				return true;
-			}
-			else {
-				return false;
-			}
-		}
-		this.nextPage = function(){ 
-			if(current_page < numPages()-1) {
-				pageSelected(current_page+1);
-				return true;
-			}
-			else {
-				return false;
-			}
-		}
-		// When all initialisation is done, draw the links
-		drawLinks();
+    opts = jQuery.extend({
+        items_per_page:10,
+        num_display_entries:10,
+        current_page:0,
+        num_edge_entries:0,
+        link_to:"#",
+        prev_text:"Prev ",
+        next_text:"Next",
+        ellipse_text:"...",
+        prev_show_always:true,
+        next_show_always:true,
+        callback:function(){return false;}
+    },opts||{});
+
+    return this.each(function() {
+        /**
+         * Calculate the maximum number of pages
+         */
+        function numPages() {
+            return Math.ceil(maxentries/opts.items_per_page);
+        }
+
+        /**
+         * Calculate start and end point of pagination links depending on
+         * current_page and num_display_entries.
+         * @return {Array}
+         */
+        function getInterval()  {
+            var ne_half = Math.ceil(opts.num_display_entries/2);
+            var np = numPages();
+            var upper_limit = np-opts.num_display_entries;
+            var start = current_page>ne_half?Math.max(Math.min(current_page-ne_half, upper_limit), 0):0;
+            var end = current_page>ne_half?Math.min(current_page+ne_half, np):Math.min(opts.num_display_entries, np);
+            return [start,end];
+        }
+
+        /**
+         * This is the event handling function for the pagination links.
+         * @param {int} page_id The new page number
+         */
+        function pageSelected(page_id, evt){
+            current_page = page_id;
+            drawLinks();
+            var continuePropagation = opts.callback(page_id, panel);
+            if (!continuePropagation) {
+                if (evt.stopPropagation) {
+                    evt.stopPropagation();
+                }
+                else {
+                    evt.cancelBubble = true;
+                }
+            }
+            location.href='#top'; /*to return to top*/
+            return continuePropagation;
+        }
+
+        /**
+         * This function inserts the pagination links into the container element
+         */
+        function drawLinks() {
+            panel.empty();
+            var interval = getInterval();
+            var np = numPages();
+            // This helper function returns a handler function that calls pageSelected with the right page_id
+            var getClickHandler = function(page_id) {
+                return function(evt){ return pageSelected(page_id,evt); }
+            }
+            // Helper function for generating a single link (or a span tag if it's the current page)
+            var appendItem = function(page_id, appendopts){
+                page_id = page_id<0?0:(page_id<np?page_id:np-1); // Normalize page id to sane value
+                appendopts = jQuery.extend({text:page_id+1, classes:""}, appendopts||{});
+                if(page_id == current_page){
+                    var lnk = jQuery("<span style='padding-right:5px;padding-left:5px; cursor:pointer;' class='current'>"+(appendopts.text)+"</span>");
+                }
+                else
+                {
+                    var lnk = jQuery("<span  style='padding-right:5px;padding-left:5px; cursor:pointer;'> <a>"+(appendopts.text)+"</a></span>")
+                        .bind("click", getClickHandler(page_id))
+                        .attr('href', opts.link_to.replace(/__id__/,page_id));
+
+
+                }
+                if(appendopts.classes){lnk.addClass(appendopts.classes);}
+                panel.append(lnk);
+            }
+            // Generate "Previous"-Link
+            if(opts.prev_text && (current_page > 0 || opts.prev_show_always)){
+                appendItem(current_page-1,{text:opts.prev_text, classes:"prev"});
+            }
+            // Generate starting points
+            if (interval[0] > 0 && opts.num_edge_entries > 0)
+            {
+                var end = Math.min(opts.num_edge_entries, interval[0]);
+                for(var i=0; i<end; i++) {
+                    appendItem(i);
+                }
+                if(opts.num_edge_entries < interval[0] && opts.ellipse_text)
+                {
+                    jQuery("<span>"+opts.ellipse_text+"</span>").appendTo(panel);
+                }
+            }
+            // Generate interval links
+            for(var i=interval[0]; i<interval[1]; i++) {
+                appendItem(i);
+            }
+            // Generate ending points
+            if (interval[1] < np && opts.num_edge_entries > 0)
+            {
+                if(np-opts.num_edge_entries > interval[1]&& opts.ellipse_text)
+                {
+                    jQuery("<span>"+opts.ellipse_text+"</span>").appendTo(panel);
+                }
+                var begin = Math.max(np-opts.num_edge_entries, interval[1]);
+                for(var i=begin; i<np; i++) {
+                    appendItem(i);
+                }
+
+            }
+            // Generate "Next"-Link
+            if(opts.next_text && (current_page < np-1 || opts.next_show_always)){
+                appendItem(current_page+1,{text:opts.next_text, classes:"next"});
+            }
+        }
+
+        // Extract current_page from options
+        var current_page = opts.current_page;
+        // Create a sane value for maxentries and items_per_page
+        maxentries = (!maxentries || maxentries < 0)?1:maxentries;
+        opts.items_per_page = (!opts.items_per_page || opts.items_per_page < 0)?1:opts.items_per_page;
+        // Store DOM element for easy access from all inner functions
+        var panel = jQuery(this);
+        // Attach control functions to the DOM element
+        this.selectPage = function(page_id){ pageSelected(page_id);}
+        this.prevPage = function(){
+            if (current_page > 0) {
+                pageSelected(current_page - 1);
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        this.nextPage = function(){
+            if(current_page < numPages()-1) {
+                pageSelected(current_page+1);
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        // When all initialisation is done, draw the links
+        drawLinks();
         // call callback function
         opts.callback(current_page, this);
-	});
+    });
 }
 
 </script>
@@ -190,16 +190,16 @@ jQuery.fn.pagination = function(maxentries, opts){
       // Create pagination element
       $("#Pagination").pagination(num_entries, pagination_options);
     }
-    $(document).ready(function(){      
+    $(document).ready(function(){
       initPagination();
     });
 </script>
   <!-- Heading of the table -->
       <table>
-	  <th>
-	    <td align="left">Cover</td>
-	    <td class="rating2" align="center"> Title </td>
-	    <td class="rating" align="center"> Author </td>
+      <th>
+        <td align="left">Cover</td>
+        <td class="rating2" align="center"> Title </td>
+        <td class="rating" align="center"> Author </td>
             <td align="center" class="rating"> Status</td>
           </tr>
      </table>
@@ -208,14 +208,14 @@ jQuery.fn.pagination = function(maxentries, opts){
   <!--<div id="Pagination" class="pagination"></div>
   <br style="clear:both;" /> -->
   <div id="Searchresult"></div>
-  
-  <div id="hiddenresult" style="display:none;"> 
+
+  <div id="hiddenresult" style="display:none;">
     <div class="result">
       <table>
-	  <tr>
-	    <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1327920219l/2623.jpg"> </td>
-	    <td class="rating2" align="center"> Great Expectations </td>
-	    <td class="rating" align="center"> Charles Dickens </td>
+      <tr>
+        <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1327920219l/2623.jpg"> </td>
+        <td class="rating2" align="center"> Great Expectations </td>
+        <td class="rating" align="center"> Charles Dickens </td>
             <td align="center" class="rating"> Read <a target="_blank" href="http://www.goodreads.com/review/show/689523091"><i class="icon-info-sign"></i></a> <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> </td>
           </tr>
      </table>
@@ -260,7 +260,7 @@ jQuery.fn.pagination = function(maxentries, opts){
           <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1348889243l/3431.jpg"> </td>
           <td class="rating2" align="center"> The Five People You Meet in Heaven </td>
           <td class="rating" align="center"> Mitch Albom </td>
-	  <td align="center" class="rating"> Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></span>  </td> 
+      <td align="center" class="rating"> Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></span>  </td>
         </tr>
       </table>
     </div>
@@ -275,7 +275,7 @@ jQuery.fn.pagination = function(maxentries, opts){
           <td align="center" class="rating"> Johanna Spyri </td>
           <td align="center" class="rating">  Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> </td>
         </tr>
-      </table> 
+      </table>
     </div>
 
     <div class="result">
@@ -286,7 +286,7 @@ jQuery.fn.pagination = function(maxentries, opts){
           <td align="center" class="rating"> Arthur Conan Doyle </td>
           <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>  </td>
         </tr>
-      </table> 
+      </table>
     </div>
 
     <div class="result">
@@ -297,7 +297,7 @@ jQuery.fn.pagination = function(maxentries, opts){
           <td align="center" class="rating"> Robin Sharma </td>
           <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></span> </td>
           </tr>
-      </table> 
+      </table>
     </div>
 
     <div class="result">
@@ -308,7 +308,7 @@ jQuery.fn.pagination = function(maxentries, opts){
          <td align="center" class="rating"> Charlie Kaufman </td>
          <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>  </td>
          </tr>
-      </table> 
+      </table>
     </div>
 
     <div class="result">
@@ -317,10 +317,10 @@ jQuery.fn.pagination = function(maxentries, opts){
           <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1385089383l/17994.jpg"> </td>
           <td align="center" class="rating2"> The Code Book </td>
           <td align="center" class="rating"> Simon Singh </td>
-          <td align="center" class="rating"> Read <a target="_blank" href="https://www.goodreads.com/review/show/814242676"><i class="icon-info-sign"></i></a> <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> 
+          <td align="center" class="rating"> Read <a target="_blank" href="https://www.goodreads.com/review/show/814242676"><i class="icon-info-sign"></i></a> <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
           </td>
         </tr>
-      </table> 
+      </table>
     </div>
 
     <div class="result">
@@ -329,11 +329,11 @@ jQuery.fn.pagination = function(maxentries, opts){
           <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1358746649l/154126.jpg"> </td>
           <td align="center" class="rating2"> The Discovery of India </td>
           <td align="center" class="rating"> Jawaharlal Nehru </td>
-          <td align="center" class="rating"> Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> 
+          <td align="center" class="rating"> Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
           </td>
 
         </tr>
-      </table> 
+      </table>
     </div>
 
 
@@ -346,10 +346,10 @@ jQuery.fn.pagination = function(maxentries, opts){
           <td align="center" class="rating"> Reading <br>
             <div id="progress-outer">
               <div id="progress-inner" class="book1"></div>
-            </div> 
+            </div>
           </td>
-	</tr>
-      </table> 
+    </tr>
+      </table>
     </div>
 
     <div class="result">
@@ -364,7 +364,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table> 
+      </table>
     </div>
 
     <div class="result">
@@ -379,7 +379,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table> 
+      </table>
     </div>
 
     <div class="result">
@@ -394,7 +394,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table> 
+      </table>
     </div>
 
     <div class="result">
@@ -409,7 +409,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table> 
+      </table>
     </div>
 
 
