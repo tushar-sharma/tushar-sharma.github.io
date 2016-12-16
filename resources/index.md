@@ -11,6 +11,7 @@ root: true
 {:toc}
 
 ## Algorithms & Data Structure
+* [Algorithmic Technique for Big Data](http://sublinear.wikischolars.columbia.edu/Lectures+and+Scribes)
 * [Algorithms, Part I by Robert Sedgewick](https://www.coursera.org/learn/algorithms-part1#)
 * [Algorithms, Part II by Robert Sedgewick](https://www.coursera.org/learn/java-data-structures-algorithms-2)
 * [Analysis of Algorithms by Robert Sedgewick](https://www.coursera.org/learn/analysis-of-algorithms#creators)
@@ -18,6 +19,7 @@ root: true
 * [Algorithms, Data Structures, and Design Patterns for Self-Taught Developers](https://antjanus.com/blog/web-development-tutorials/learn-the-unlearned-algorithms-data-structures-and-design-patterns/)
 * [Advance Data Structure](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/)
 * [cs3102: Theory of Computation](http://www.cs.virginia.edu/~evans/cs3102/)
+* [cs157 Design & Analysis of Algorithms](http://cs.brown.edu/courses/csci1570/lectures.html)
 * [Develop Powerful Interactive Software](https://www.coursera.org/specializations/java-object-oriented)
 * [Foundations of Data Structures](https://www.edx.org/course/foundations-data-structures-iitbombayx-cs213-1x#!)
 * [Introduction to Algorithms by MIT Erik Demaine](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/index.htm)
@@ -32,6 +34,7 @@ root: true
 * [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X)
 * [Python Algorithms - Mastering Basic Algorithms in the Python Language](http://www.apress.com/us/book/9781430232377)
 * [Think Complexity](http://www.greenteapress.com/complexity/thinkcomplexity.pdf)
+* [Computers and Intractability: A Guide to the Theory of NP-Completeness](https://www.amazon.com/Computers-Intractability-NP-Completeness-Mathematical-Sciences/dp/0716710455)
 
 ## APIs
 * [Codecademy APIs course](http://www.codecademy.com/tracks/apis)
@@ -144,8 +147,10 @@ overview of HTML.
 
 ## Operating Systems & Parallel
 * [cs4414 Operating Systems](http://rust-class.org/)
+* [W4118 OPERATING SYSTEMS I](http://www.cs.columbia.edu/~junfeng/11sp-w4118/syllabus.html)
 
 ## Programming & Paradigms
+* [Advanced Topics in Programming Languages and Compilers](http://www.cs.columbia.edu/~aho/cs6998/)
 * [Design of Computer Program by Peter Norvig](https://www.udacity.com/course/design-of-computer-programs--cs212)
 * [How code systematic program design by Edx](https://www.edx.org/xseries/how-code-systematic-program-design)
 * [Introduction to Computing](http://www.computingbook.org/)
