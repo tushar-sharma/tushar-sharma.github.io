@@ -9,71 +9,63 @@
       height: 100%;
     -webkit-border-radius: 9px;
 }
-.book1 { width: 70%; } /* Sophie's World */
-.book2 {width: 40.90%;} /* Trespassing on Einsteins's Lawn */
-.book3 {width: 26.69%; } /* Introduction to Computing : Page 71 out of 266 */
-.book4 {width: 28.74%; } /* Midnight's Children , 165 out of 647 */
-.book5 {width: 0.061%; } /* The Argumentative Indian , 165 out of 647 */
-
 
 .cl{ color: rgb(51, 153, 204);}
-
 img.book {
-height: 150px;
-padding: 15px 15px 15px 0px;
-max-width: 100px;
+    height: 150px;
+    padding: 15px 15px 15px 0px;
+    max-width: 100px;
 }
-
 img.book_p {
-height: 250px;
-padding: 15px 15px 15px 0px;
-max-width: 250px;
+    height: 250px;
+    padding: 15px 15px 15px 0px;
+    max-width: 250px;
 }
-
-
 .rating{
-width: 100px;
+    width: 100px;
 }
 .rating2{
-width: 200px;
+    width: 200px;
 }
-
-h2.entry-title{ 
-color: black;
-text-decoration: none;
-font-family: "Rokkitt", serif;
-font-size: 22px;
-line-height: 32px;
-font-weight: 700;
--webkit-font-smoothing: antialiased;
+h2.entry-title{
+    color: black;
+    text-decoration: none;
+    font-family: "Rokkitt", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
 }
-
 nav#pagination span.next a, nav#pagination span.prev a {
-padding: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 30px;
--moz-border-radius: 30px;
--webkit-border-radius: 30px;
-font-weight: 700;
-text-transform: uppercase;
-border: 3px solid;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid;
 }
-
 nav a, nav a:visited {
-color: #080808;
-text-decoration: none;
-outline: 0;
+    color: #080808;
+    text-decoration: none;
+    outline: 0;
 }
-
 nav#pagination span.next {
-display: block;
-float: right;
+    display: block;
+    float: right;
 }
-
 nav#pagination span.prev {
-display: block;
-float: left;
+    display: block;
+    float: left;
 }
 
-
+/* begin - books progress*/
+.book1 {width: 70%; }    /* Sophie's World */
+.book2 {width: 40.90%;}   /* Trespassing on Einsteins's Lawn */
+.book3 {width: 26.69%; }  /* Introduction to Computing : Page 71 out of 266 */
+.book4 {width: 5.5%; }    /* Midnight's Children , 165 out of 647 */
+.book5 {width: 0.061%; }  /* The Argumentative Indian , 165 out of 647 */
+.tbd {width: 0%; }  /* TBD */
+/* end -  book progress*/
