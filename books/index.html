@@ -2,343 +2,165 @@
 layout: comments
 title: Books on my shelf
 ---
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.3.0/list.min.js"></script>
 <link rel="stylesheet" href="{{ root_url }}/css/books.css" />
+<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="http://listjs.com/assets/javascripts/list.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js"></script>
 
 <h2 class="entry-title">Books on my shelf</h2>
 
 <p>These are some of books that are currently on my shelf. If you know a book that would blend in my taste, feel free to <a href="{{ root_url }}/contact" >suggest</a> me some.</p>
 
-<script type="text/javascript">
-jQuery.fn.pagination = function(maxentries, opts){
-    opts = jQuery.extend({
-        items_per_page:10,
-        num_display_entries:10,
-        current_page:0,
-        num_edge_entries:0,
-        link_to:"#",
-        prev_text:"Prev ",
-        next_text:"Next",
-        ellipse_text:"...",
-        prev_show_always:true,
-        next_show_always:true,
-        callback:function(){return false;}
-    },opts||{});
-
-    return this.each(function() {
-        /**
-         * Calculate the maximum number of pages
-         */
-        function numPages() {
-            return Math.ceil(maxentries/opts.items_per_page);
-        }
-
-        /**
-         * Calculate start and end point of pagination links depending on
-         * current_page and num_display_entries.
-         * @return {Array}
-         */
-        function getInterval()  {
-            var ne_half = Math.ceil(opts.num_display_entries/2);
-            var np = numPages();
-            var upper_limit = np-opts.num_display_entries;
-            var start = current_page>ne_half?Math.max(Math.min(current_page-ne_half, upper_limit), 0):0;
-            var end = current_page>ne_half?Math.min(current_page+ne_half, np):Math.min(opts.num_display_entries, np);
-            return [start,end];
-        }
-
-        /**
-         * This is the event handling function for the pagination links.
-         * @param {int} page_id The new page number
-         */
-        function pageSelected(page_id, evt){
-            current_page = page_id;
-            drawLinks();
-            var continuePropagation = opts.callback(page_id, panel);
-            if (!continuePropagation) {
-                if (evt.stopPropagation) {
-                    evt.stopPropagation();
-                }
-                else {
-                    evt.cancelBubble = true;
-                }
-            }
-            location.href='#top'; /*to return to top*/
-            return continuePropagation;
-        }
-
-        /**
-         * This function inserts the pagination links into the container element
-         */
-        function drawLinks() {
-            panel.empty();
-            var interval = getInterval();
-            var np = numPages();
-            // This helper function returns a handler function that calls pageSelected with the right page_id
-            var getClickHandler = function(page_id) {
-                return function(evt){ return pageSelected(page_id,evt); }
-            }
-            // Helper function for generating a single link (or a span tag if it's the current page)
-            var appendItem = function(page_id, appendopts){
-                page_id = page_id<0?0:(page_id<np?page_id:np-1); // Normalize page id to sane value
-                appendopts = jQuery.extend({text:page_id+1, classes:""}, appendopts||{});
-                if(page_id == current_page){
-                    var lnk = jQuery("<span style='padding-right:5px;padding-left:5px; cursor:pointer;' class='current'>"+(appendopts.text)+"</span>");
-                }
-                else
-                {
-                    var lnk = jQuery("<span  style='padding-right:5px;padding-left:5px; cursor:pointer;'> <a>"+(appendopts.text)+"</a></span>")
-                        .bind("click", getClickHandler(page_id))
-                        .attr('href', opts.link_to.replace(/__id__/,page_id));
-
-
-                }
-                if(appendopts.classes){lnk.addClass(appendopts.classes);}
-                panel.append(lnk);
-            }
-            // Generate "Previous"-Link
-            if(opts.prev_text && (current_page > 0 || opts.prev_show_always)){
-                appendItem(current_page-1,{text:opts.prev_text, classes:"prev"});
-            }
-            // Generate starting points
-            if (interval[0] > 0 && opts.num_edge_entries > 0)
-            {
-                var end = Math.min(opts.num_edge_entries, interval[0]);
-                for(var i=0; i<end; i++) {
-                    appendItem(i);
-                }
-                if(opts.num_edge_entries < interval[0] && opts.ellipse_text)
-                {
-                    jQuery("<span>"+opts.ellipse_text+"</span>").appendTo(panel);
-                }
-            }
-            // Generate interval links
-            for(var i=interval[0]; i<interval[1]; i++) {
-                appendItem(i);
-            }
-            // Generate ending points
-            if (interval[1] < np && opts.num_edge_entries > 0)
-            {
-                if(np-opts.num_edge_entries > interval[1]&& opts.ellipse_text)
-                {
-                    jQuery("<span>"+opts.ellipse_text+"</span>").appendTo(panel);
-                }
-                var begin = Math.max(np-opts.num_edge_entries, interval[1]);
-                for(var i=begin; i<np; i++) {
-                    appendItem(i);
-                }
-
-            }
-            // Generate "Next"-Link
-            if(opts.next_text && (current_page < np-1 || opts.next_show_always)){
-                appendItem(current_page+1,{text:opts.next_text, classes:"next"});
-            }
-        }
-
-        // Extract current_page from options
-        var current_page = opts.current_page;
-        // Create a sane value for maxentries and items_per_page
-        maxentries = (!maxentries || maxentries < 0)?1:maxentries;
-        opts.items_per_page = (!opts.items_per_page || opts.items_per_page < 0)?1:opts.items_per_page;
-        // Store DOM element for easy access from all inner functions
-        var panel = jQuery(this);
-        // Attach control functions to the DOM element
-        this.selectPage = function(page_id){ pageSelected(page_id);}
-        this.prevPage = function(){
-            if (current_page > 0) {
-                pageSelected(current_page - 1);
-                return true;
-            }
-            else {
-                return false;
-            }
-        }
-        this.nextPage = function(){
-            if(current_page < numPages()-1) {
-                pageSelected(current_page+1);
-                return true;
-            }
-            else {
-                return false;
-            }
-        }
-        // When all initialisation is done, draw the links
-        drawLinks();
-        // call callback function
-        opts.callback(current_page, this);
-    });
+<style type="text/css">
+.pagination li {
+  display:inline-block;
+  padding:5px;
 }
+</style>
 
-</script>
-
-  <script>
-    var pagination_options = {
-      num_edge_entries: 2,
-      num_display_entries: 8,
-      callback: pageselectCallback,
-      items_per_page:5
-    }
-    function pageselectCallback(page_index, jq){
-      var items_per_page = pagination_options.items_per_page;
-      var offset = page_index * items_per_page;
-      var new_content = $('#hiddenresult div.result').slice(offset, offset + items_per_page).clone();
-      $('#Searchresult').empty().append(new_content);
-      return false;
-    }
-    function initPagination() {
-      var num_entries = $('#hiddenresult div.result').length;
-      // Create pagination element
-      $("#Pagination").pagination(num_entries, pagination_options);
-    }
-    $(document).ready(function(){
-      initPagination();
+<script type="text/javascript">
+$(document).ready(function() {
+    var monkeyList = new List('test-list', {
+      valueNames: ['name', 'author'],
+      page: 4,
+      plugins: [ ListPagination({}) ]
     });
+} );
+
 </script>
-  <!-- Heading of the table -->
-      <table>
-      <th>
-        <td align="left">Cover</td>
-        <td class="rating2" align="center"> Title </td>
-        <td class="rating" align="center"> Author </td>
-            <td align="center" class="rating"> Status</td>
-          </tr>
-     </table>
 
-
-  <!--<div id="Pagination" class="pagination"></div>
-  <br style="clear:both;" /> -->
-  <div id="Searchresult"></div>
-
-  <div id="hiddenresult" style="display:none;">
-    <div class="result">
-      <table>
+<div id="test-list">
+  <table>
+    <thead>
       <tr>
+        <th class="sort" data-sort="name">Title</th>
+        <th class="sort" data-sort="title">Cover</th>
+        <th class="sort" data-sort="author">Author</th>
+        <th class="sort" data-sort="status">Status</th>
+        <th colspan="2">
+                  <input  type="search" class="search"  placeholder="Search">
+        </th>
+      </tr>
+    </thead>
+
+    <!-- IMPORTANT, class="list" have to be at tbody -->
+    <tbody class="list">
+    <tr>
+        <td class="name">Great Expectation</td>
         <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1327920219l/2623.jpg"> </td>
-        <td class="rating2" align="center"> Great Expectations </td>
-        <td class="rating" align="center"> Charles Dickens </td>
-            <td align="center" class="rating"> Read <a target="_blank" href="http://www.goodreads.com/review/show/689523091"><i class="icon-info-sign"></i></a> <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> </td>
-          </tr>
-     </table>
-    </div>
+        <td class="author" align="center"> Charles Dickens </td>
+        <td align="center" class="rating"> Read <a target="_blank" href="http://www.goodreads.com/review/show/689523091">
+                                                <i class="icon-info-sign"></i>
+                                                </a>
+                                                <br> <span class="cl">
+                                                <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+                                                <i class="icon-star"></i><i class="icon-star"></i></span>
+       </td>
+    </tr>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1320448085l/4069.jpg"> </td>
-          <td class="rating2" align="center"> Man's Search for Meaning </td>
-          <td class="rating" align="center"> Viktor E. Frankl </td>
-          <td align="center" class="rating"> Read<br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> </td>
-        </tr>
-      </table>
-    </div>
+    <tr>
+        <td class="name"> Man's Search for Meaning </td>
+        <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1320448085l/4069.jpg"> </td>
+        <td class="author" align="center"> Viktor Frankl </td>
+        <td align="center" class="rating"> Read<br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> </td>
+    </tr>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1330015022l/2927869.jpg"> </td>
-          <td class="rating2" align="center"> Anna Karenina  </td>
-          <td class="rating" align="center"> Leo Tolstoy </td>
-          <td align="center" class="rating"> Read<br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> </td>
-        </tr>
-      </table>
-    </div>
+    <tr>
+      <td class="name" > Anna Karenina  </td>
+      <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1330015022l/2927869.jpg"> </td>
+      <td class="author" align="center"> Leo Tolstoy </td>
+      <td align="center" class="rating"> Read<br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> </td>
+    </tr>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1295670969l/634583.jpg"> </td>
-          <td class="rating2" align="center"> Wings of Fire: An Autobiography </td>
-          <td class="rating" align="center"> Abdul Kalam </td>
-          <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-half"></i><i class="icon-star-empty"></i></span> </td>
-        </tr>
-      </table>
-    </div>
+    <tr>
+      <td class="name" align="center"> Wings of Fire: An Autobiography </td>
+      <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1295670969l/634583.jpg"> </td>
+      <td class="author" align="center"> Abdul Kalam </td>
+      <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-half"></i><i class="icon-star-empty"></i></span> </td>
+    </tr>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1348889243l/3431.jpg"> </td>
-          <td class="rating2" align="center"> The Five People You Meet in Heaven </td>
-          <td class="rating" align="center"> Mitch Albom </td>
+    <tr>
+      <td class="name" align="center"> The Five People You Meet in Heaven </td>
+      <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1348889243l/3431.jpg"> </td>
+      <td class="author" align="center"> Mitch Albom </td>
       <td align="center" class="rating"> Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></span>  </td>
-        </tr>
-      </table>
-    </div>
+    </tr>
 
+    <tr>
+      <td class="name" align="center"> Heidi </td>
+      <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1312041159l/93.jpg"> </td>
+      <td class="author" align="center"> Johanna Spyri </td>
+      <td align="center" class="rating">  Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> </td>
+    </tr>
 
+    <tr>
+     <td align="center" class="name"> The Complete Sherlock Holmes </td>
+      <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1348815538l/188572.jpg"> </td>
+       <td align="center" class="author"> Arthur Conan Doyle </td>
+      <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>  </td>
+    </tr>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1312041159l/93.jpg"> </td>
-          <td align="center" class="rating2"> Heidi </td>
-          <td align="center" class="rating"> Johanna Spyri </td>
-          <td align="center" class="rating">  Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span> </td>
-        </tr>
-      </table>
-    </div>
+    <tr>
+      <td align="center" class="name"> The Monk Who Sold His Ferrari </td>
+      <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1348383805l/43877.jpg"> </td>
+      <td align="center" class="author"> Robin Sharma </td>
+      <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></span> </td>
+    </tr>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1348815538l/188572.jpg"> </td>
-          <td align="center" class="rating2"> The Complete Sherlock Holmes </td>
-          <td align="center" class="rating"> Arthur Conan Doyle </td>
-          <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>  </td>
-        </tr>
-      </table>
-    </div>
+    <tr>
+        <td align="center" class="name"> Network Security </td>
+        <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1347266602l/128231.jpg"> </td>
+        <td align="center" class="author"> Charlie Kaufman </td>
+        <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>  </td>
+     </tr>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1348383805l/43877.jpg"> </td>
-          <td align="center" class="rating2"> The Monk Who Sold His Ferrari </td>
-          <td align="center" class="rating"> Robin Sharma </td>
-          <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></span> </td>
-          </tr>
-      </table>
-    </div>
+    <tr>
+        <td align="center" class="name"> The Code Book </td>
+         <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1385089383l/17994.jpg"> </td>
+         <td align="center" class="author"> Simon Singh </td>
+         <td align="center" class="rating"> Read <a target="_blank" href="https://www.goodreads.com/review/show/814242676">
+              <i class="icon-info-sign"></i></a> <br> <span class="cl">
+              <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
+         </td>
+    </tr>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1347266602l/128231.jpg"> </td>
-         <td align="center" class="rating2"> Network Security </td>
-         <td align="center" class="rating"> Charlie Kaufman </td>
-         <td align="center" class="rating"> Read   <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>  </td>
-         </tr>
-      </table>
-    </div>
+    <tr>
+        <td align="center" class="name"> Five Point Someone </td>
+         <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/511wMMedbhL._SX327_BO1,204,203,200_.jpg"> </td>
+         <td align="center" class="author"> Chetan Bhagat </td>
+         <td align="center" class="rating"> Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i>
+                     <i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></span>
+         </td>
+    </tr>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1385089383l/17994.jpg"> </td>
-          <td align="center" class="rating2"> The Code Book </td>
-          <td align="center" class="rating"> Simon Singh </td>
-          <td align="center" class="rating"> Read <a target="_blank" href="https://www.goodreads.com/review/show/814242676"><i class="icon-info-sign"></i></a> <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
+    <tr>
+         <td align="center" class="name"> The Discovery of India </td>
+         <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1358746649l/154126.jpg"> </td>
+         <td align="center" class="author"> Jawaharlal Nehru </td>
+         <td align="center" class="rating"> Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
+         </td>
+    </tr>
+
+    <tr>
+          <td align="center" class="name"> Midnight's Children </td>
+          <td align="center"><img class="book" src="http://d.gr-assets.com/books/1371063511l/14836.jpg"> </td>
+          <td align="center" class="author">  Salman Rushdie </td>
+          <td align="center" class="rating"> Reading<br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book4"></div>
+            </div>
           </td>
-        </tr>
-      </table>
-    </div>
+    </tr>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d202m5krfqbpi5.cloudfront.net/books/1358746649l/154126.jpg"> </td>
-          <td align="center" class="rating2"> The Discovery of India </td>
-          <td align="center" class="rating"> Jawaharlal Nehru </td>
-          <td align="center" class="rating"> Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span>
-          </td>
-
-        </tr>
-      </table>
-    </div>
+    </tbody>
+  </table>
+    <ul class="pagination"></ul>
+</div>
 
 
-    <div class="result">
-      <table>
+<!--
         <tr>
           <td align="center"><img class="book" src="http://ecx.images-amazon.com/images/I/41qUnYFb6YL.jpg"> </td>
           <td align="center" class="rating2"> Sophie's World </td>
@@ -349,11 +171,6 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
     </tr>
-      </table>
-    </div>
-
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="http://d.gr-assets.com/books/1367256542l/17834895.jpg"> </td>
           <td align="center" class="rating2"> Trespasssing on Einsteins's Lawn </td>
@@ -364,11 +181,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://d.gr-assets.com/books/1340464270l/15718657.jpg"> </td>
           <td align="center" class="rating2"> Introduction to Computing </td>
@@ -379,26 +192,9 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
-        <tr>
-          <td align="center"><img class="book" src="http://d.gr-assets.com/books/1371063511l/14836.jpg"> </td>
-          <td align="center" class="rating2"> Midnight's Children </td>
-          <td align="center" class="rating">  Salman Rushdie </td>
-          <td align="center" class="rating"> Reading<br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book4"></div>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
+
         <tr>
           <td align="center"><img class="book" src="http://d.gr-assets.com/books/1389175338l/10310.jpg"> </td>
           <td align="center" class="rating2"> The Argumentative Indian  </td>
@@ -409,11 +205,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1347456079l/548914.jpg"> </td>
           <td align="center" class="rating2"> The Little Schemer  </td>
@@ -424,11 +216,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1391032527l/43713.jpg"> </td>
           <td align="center" class="rating2">Structure and Interpretation of Computer Programs </td>
@@ -439,11 +227,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1330656663l/154128.jpg"> </td>
           <td align="center" class="rating2"> Glimpses of World History  </td>
@@ -454,11 +238,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/5175XXWA0BL._SX403_BO1,204,203,200_.jpg"> </td>
           <td align="center" class="rating2"> Programming Language Pragmatics  </td>
@@ -469,11 +249,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1328872386l/344676.jpg"> </td>
           <td align="center" class="rating2"> The Financial Expert  </td>
@@ -484,11 +260,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1328018977l/11472345.jpg"> </td>
           <td align="center" class="rating2"> Deng Xiaoping and the Transformation of China  </td>
@@ -499,11 +271,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/411gVQKl4eL._SX367_BO1,204,203,200_.jpg"> </td>
           <td align="center" class="rating2"> The Formal Semantics of Programming Languages  </td>
@@ -514,11 +282,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/41O3KHcm%2BnL._SX333_BO1,204,203,200_.jpg"> </td>
           <td align="center" class="rating2"> Communicating Sequential Processes   </td>
@@ -528,12 +292,7 @@ jQuery.fn.pagination = function(maxentries, opts){
               <div id="progress-inner" class="tbd"></div>
             </div>
           </td>
-        </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1386925123l/31196.jpg"> </td>
           <td align="center" class="rating2"> The Razor's Edge   </td>
@@ -544,11 +303,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1427735982l/129877.jpg"> </td>
           <td align="center" class="rating2"> The Guide </td>
@@ -559,11 +314,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/51jGYhAkCtL._SX403_BO1,204,203,200_.jpg"> </td>
           <td align="center" class="rating2">Smalltalk-80: The Language and its Implementation </td>
@@ -574,11 +325,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/41rpu2m9vkL._SX331_BO1,204,203,200_.jpg"> </td>
           <td align="center" class="rating2"> Let Over Lambdan </td>
@@ -589,12 +336,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!-- The Richest Man in Babylon-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1348336780l/1052.jpg"> </td>
           <td align="center" class="rating2"> The Richest Man in Babylon </td>
@@ -605,12 +347,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!-- Python Algorithms -->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1347719364l/9537756.jpg"> </td>
           <td align="center" class="rating2"> Python Algorithms </td>
@@ -621,12 +358,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!-- Algorithms by DasGupta-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/510VmClAncL._SX359_BO1,204,203,200_.jpg"> </td>
           <td align="center" class="rating2"> Algorithms </td>
@@ -637,12 +369,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!-- 1Q84-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/417qN9YA3QL.jpg"> </td>
           <td align="center" class="rating2"> 1Q84 </td>
@@ -653,12 +380,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!-- Matters Computational Ideas, Algorithms, Source Code-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/51pgBIa57uL._SX370_BO1,204,203,200_.jpg"> </td>
           <td align="center" class="rating2"> Matters Computational Ideas, Algorithms, Source Code </td>
@@ -669,12 +391,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!-- Miguel Street-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1403189899l/49741.jpg"> </td>
           <td align="center" class="rating2"> Miguel Street</td>
@@ -685,12 +402,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!-- Tanya Tania-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1460911673l/28260532.jpg"> </td>
           <td align="center" class="rating2"> Tanya Tania</td>
@@ -701,12 +413,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!-- Hitch-22: A Memoir-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1327906136l/7332753.jpg"> </td>
           <td align="center" class="rating2"> Hitch-22: A Memoir</td>
@@ -717,12 +424,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!--Decision Procedures: An Algorithmic Point of View-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1347465858l/5374770.jpg"> </td>
           <td align="center" class="rating2"> Decision Procedures: An Algorithmic Point of View</td>
@@ -733,12 +435,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!--Mathematics for Computer Science-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1375771781l/12836498.jpg"> </td>
           <td align="center" class="rating2"> Mathematics for Computer Science</td>
@@ -749,12 +446,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!--The Shellcoder's Handbook: Discovering and Exploiting Security Holes-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1347287784l/1174511.jpg"> </td>
           <td align="center" class="rating2"> The Shellcoder's Handbook: Discovering and Exploiting Security Holes</td>
@@ -765,12 +457,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
 
-    <!--The Dwarf-->
-    <div class="result">
-      <table>
         <tr>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1347459391l/1880020.jpg"> </td>
           <td align="center" class="rating2"> The Dwarf</td>
@@ -781,10 +468,7 @@ jQuery.fn.pagination = function(maxentries, opts){
             </div>
           </td>
         </tr>
-      </table>
-    </div>
-
-
 
   </div>
 <div style="border:none;" id="Pagination" class="pagination"></div>
+-->
