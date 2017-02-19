@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <link rel="alternate" type="application/rss+xml" title="Bakery Store RSS" href="/feed.xml">
     <meta charset="UTF-8">
 <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -112,7 +113,7 @@ h1.heading{font-family:Myfont;color:#39c}
 .txt{ padding-top: 5px; }
 .newcl{color: black; white-space: initial;}
  li.txt {list-style: none outside none; }
-.btn {cursor: pointer; 
+.btn {cursor: pointer;
 border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
 }
 </style>
@@ -120,18 +121,18 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 <!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
 -->
 
-<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
+<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><a href="/books">my bookshelf</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="/resources">resources</a></span><br> &nbsp;&nbsp;&nbsp; └── <span class="nv"><a href="/about">about me</a></span>
 
  <div style="float:right;">+&nbsp;<a href="#"><a href="/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div></code></pre>
- 
+
 
 <script type="text/javascript">
 
 /* generate a random number */
-/*function quotesGet(defaultValue) { 
-  jQuery.get('/../quotes.txt', function(data) { 
+/*function quotesGet(defaultValue) {
+  jQuery.get('/../quotes.txt', function(data) {
      var quotes = data.split("\n");
- 
+
      var idx;
      if (typeof defaultValue !== 'undefined') {
          idx = defaultValue;
@@ -152,7 +153,7 @@ $(document).ready(function() {
     quotesGet();
 });
 
-$(document).ready(function(){	
+$(document).ready(function(){
     $('.quotebox').hide().before('<a href="#" id="open-quotebox" class="button">throw me a quote</a>');
 	$('.quotebox').append('<a href="#close-quotebox" id="close-quotebox" class="button">Close quote ↑</a>');
 	$('a#open-quotebox').click(function() {
@@ -168,7 +169,7 @@ $(document).ready(function(){
 
 
 /* send the default quote number 66 */
-/* omit it ; as i need to display random quotes 
+/* omit it ; as i need to display random quotes
 $(document).ready(function() {
   var defaultValue = 65;
   quotesGet(defaultValue);
@@ -211,16 +212,6 @@ $(document).ready(function() {
 
 <div class="pure-u-1-2">
 <div style="padding-right:10px; padding-left:10px;">
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -447,7 +438,7 @@ Rijndael was selected by NIST (National Institute of Standards and Technology) a
 
     <div class="wrapper">
       <footer>
-        <!-- <p><small>Tushar Sharma &copy; 2016</small></p> -->
+        <!-- <p><small>Tushar Sharma &copy; 2017</small></p> -->
 <link rel="stylesheet" href="/css/font-awesome.css" />
 
 <div class="footer">
@@ -511,7 +502,7 @@ Rijndael was selected by NIST (National Institute of Standards and Technology) a
 	   
          
 	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 270%"  style="display:inline-block;" href="/tag/poetry">poetry <span></span></a>
+           <a style="font-size: 220%"  style="display:inline-block;" href="/tag/poetry">poetry <span></span></a>
 	   
          
 	    <!-- hack to remove sidebar tags -->
@@ -686,18 +677,6 @@ Rijndael was selected by NIST (National Institute of Standards and Technology) a
            <a style="font-size: 120%"  style="display:inline-block;" href="/tag/max-heap">max-heap <span></span></a>
 	   
          
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/friends">friends <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/lost">lost <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/life">life <span></span></a>
-	   
-         
        
        
 
@@ -712,17 +691,17 @@ Rijndael was selected by NIST (National Institute of Standards and Technology) a
       </span>
    
 -->
- 
+
   </span>
   <!--
-   
+  
     <div> <a href="/blog/"> blog </a> </div> <br>
-   
+  
     <div> <a href="/projects/"> projects </a> </div> <br>
   `
   -->
   <span style="float:left; width:48%;margin-left:2%; ">
- <span> Copyright &copy; Tushar Sharma <small>[
+      <span> Made with <span style="color:#e00"><i class="icon-heart"></i></span> using <a href="http://jekyllrb.com">Jekyll</a> &middot; <i class="icon-code"></i> on <a href="https://github.com/tushar-sharma/tushar-sharma.github.io">GitHub</a> <i class="icon-github-alt"></i> &copy; 2017 <br> Tushar Sharma <small>[
   <a title="Email" href="mailto:tushar@randomwits.com">
     <i class="icon-envelope-alt"></i> &nbsp;
   </a>
@@ -755,12 +734,12 @@ Rijndael was selected by NIST (National Institute of Standards and Technology) a
     <i class="icon-google-plus"></i> &nbsp;
   </a>
 
-  <a  title="RSS" href="/rss.xml" >
+  <a  title="RSS" href="/feed.xml" >
     <i class="icon-rss"></i>
   </a>
 
  ] </small></span><br>
-<small><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Randomwits</span> is licensed under under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</small><br><br>
+ <small><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Randomwits</span> is licensed under under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</small><br><br>
     <div>
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> &nbsp; &nbsp; <a title="Real Time Web Analytics" href="http://clicky.com/100650351"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
          <script src="//static.getclicky.com/js" type="text/javascript"></script>
