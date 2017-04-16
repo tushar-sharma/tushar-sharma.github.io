@@ -1,7 +1,6 @@
 ---
 layout: comments
 title: Resources for Programmers
-root: true
 ---
 
 <h1 class="entry-title">Resources for Programmers</h1>
@@ -15,6 +14,7 @@ root: true
 * [Algorithms, Part I by Robert Sedgewick](https://www.coursera.org/learn/algorithms-part1#)
 * [Algorithms, Part II by Robert Sedgewick](https://www.coursera.org/learn/java-data-structures-algorithms-2)
 * [Analysis of Algorithms by Robert Sedgewick](https://www.coursera.org/learn/analysis-of-algorithms#creators)
+* [Algorithmic Toolbox](https://www.coursera.org/learn/algorithmic-toolbox)
 * [AI Algorithms, Data Structures, and Idioms in Prolog, Lisp, and Java](https://web.cecs.pdx.edu/~york/cs441/Luger_Idioms.pdf)
 * [Algorithms, Data Structures, and Design Patterns for Self-Taught Developers](https://antjanus.com/blog/web-development-tutorials/learn-the-unlearned-algorithms-data-structures-and-design-patterns/)
 * [Advance Data Structure](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/)
@@ -42,6 +42,8 @@ root: true
 
 ## C & C++
 * [Learn C the hard way](https://learncodethehardway.org/c/)
+* [C++ for C programmers Part A](https://www.coursera.org/learn/c-plus-plus-a)
+* [C++ for C programmers Part B](https://www.coursera.org/learn/c-plus-plus-b)
 
 ### Books
 * [Expert C programming](https://www.amazon.com/Expert-Programming-Peter-van-Linden/dp/0131774298)
@@ -74,6 +76,9 @@ root: true
 * [Learn SQL The Hard Way](http://sql.learncodethehardway.org/book/)
 * [Postgres, the Best Tool You're Already Using](http://adamsanderson.github.io/railsconf_2013/?full#1)
 * [Visual Explanation of SQL Joins](http://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html)
+
+### Books
+* [Sqoop Cookbook](http://shop.oreilly.com/product/0636920029519.do)
 
 ### Supplementary
 * [Use the Index, Luke! (SQL Tuning and Indexing)](http://use-the-index-luke.com) -
@@ -144,6 +149,9 @@ overview of HTML.
 ## Lisp
 * [Learn Lisp the hard way](http://learnlispthehardway.org/book/)
 * [Overview & Introduction of Lisp](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/1a-overview-and-introduction-to-lisp/)
+
+## Machine Learning
+* [ CS 156 by Professor Yaser Abu-Mostafa](https://www.youtube.com/watch?v=mbyG85GZ0PI&list=PLD63A284B7615313A)
 
 ## Operating Systems & Parallel
 * [cs4414 Operating Systems](http://rust-class.org/)
@@ -343,4 +351,3 @@ a good online resource which goes through design fundamentals
 * [How to be a program manager - Joel on Software](http://www.joelonsoftware.com/items/2009/03/09.html)
 * [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
 * [mid-1980's textfiles](http://www.textfiles.com/)
-
