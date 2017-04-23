@@ -36,6 +36,11 @@ title: Resources for Programmers
 * [Think Complexity](http://www.greenteapress.com/complexity/thinkcomplexity.pdf)
 * [Computers and Intractability: A Guide to the Theory of NP-Completeness](https://www.amazon.com/Computers-Intractability-NP-Completeness-Mathematical-Sciences/dp/0716710455)
 
+### Tutorials
+* [CodeChef: DataStructure & Algorithms](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
+* [Dynamic Programming](http://prismoskills.appspot.com/lessons/Dynamic_Programming/Chapter_01_-_Introduction.jsp)
+* [National Taiwan Normal University](http://www.csie.ntnu.edu.tw/~u91029/)
+
 ## APIs
 * [Codecademy APIs course](http://www.codecademy.com/tracks/apis)
 * [Yale API Portal](https://developers.yale.edu/)
