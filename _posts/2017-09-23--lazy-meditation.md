@@ -20,7 +20,7 @@ The sun’s rays had already crept through my window & drenched my room with lig
 
 | <img align="center" src="{{ root_url }}/img/bhudda_st.jpg" alt="" /> |
 
-It seems like yesterday when I hit a wall & made a crazy resolution to indulge in meditation. Before some of the readers' protest, I dispose with an earnestness that mediation is a very useful transcendental exercise. But being Indian, along with genes to eat pani puri & digest spicy food, I also have some false preconceptions about myself. Like billion Indians, I believe that meditation, like cricket, dancing, acting, etc comes naturally to Indians. I once joked with my American friend on how I would have played for Indian cricket team if not for the engineering. Also, I told him that India produces 1.5 million engineers a year which is twice the population of Iceland<sup><a href='#fn:2' rel='footnote'>2</a></sup>, which left him gaping at me.
+It seems like yesterday when I hit a wall & made a crazy resolution to indulge in meditation. Before some of the readers' protest, I dispose with an earnestness that mediation is a very useful transcendental exercise. But being Indian, along with genes to eat pani puri & digest spicy food, I also have some false preconceptions about myself. Like billion Indians, I believe that meditation, like cricket, dancing, acting, etc comes naturally to Indians. I once joked with my American friend on how I would have played for Indian cricket team if not for the engineering. Also, I told him that India produces 1.5 million engineers a year which is twice the population of Iceland<sup><a href='#fn:1' rel='footnote'>1</a></sup>, which left him gaping at me.
 
 Before I digress more, I should come back to the bed. Yes the abode of eteral happiness. But tranquility was disturbed by one mistake. The crazy resolution had pumped up ideas in my mind. Yesterday I had fallen to one of such idea, to set up my alarm clock. It's a sin, decreed by Gods against setting alarm in the weekend. The chapter 2, verse 2 of sleeping scripture mandates against any temptation to use of unholy alarm clocks. But sometimes infectious displine compels us to use alarm clocks which I did yesterday to set the alarm of 10 AM.
 
@@ -29,7 +29,7 @@ Meditation are often advised in the wee hours of day. My parents have a habit of
 
 Both arms of the clock had stopped graceously at 10 before the sound filled the room. A slip of hand to snooze and clock raced faster, a minute became a score, while I pressed another "snooze". Before I regain consciousness & pulled myself out of slumber, it was 11 AM. Half of the world was already busy doing chores and I decided it was time to practice meditation. 
 
-I pulled up a meditation lesson by "Ravi Ravi Shankar". His photo with long hair while smiling profusely, instilled unparalled motivation in me. "I could be next Vivekanada", I quipped, though the Bhudda statue in my room chuckled mischeviously. I have seen American do challenging "yoga" while as an Indian I felt the shame to simple task such as sitting cross legs. Since I needed a scapegoat to blame for my flaws, I blame western culture & modernity. (A common phrase used India to blame for our woes<sup><a href='#fn:3' rel='footnote'>3</a></sup>, though such reasons are as much genuine as my rambling). 
+I pulled up a meditation lesson by "Ravi Ravi Shankar". His photo with long hair while smiling profusely, instilled unparalled motivation in me. "I could be next Vivekanada", I quipped, though the Bhudda statue in my room chuckled mischeviously. I have seen American do challenging "yoga" while as an Indian I felt the shame to simple task such as sitting cross legs. Since I needed a scapegoat to blame for my flaws, I blame western culture & modernity. (A common phrase used India to blame for our woes<sup><a href='#fn:2' rel='footnote'>2</a></sup>, though such reasons are as much genuine as my rambling). 
 
 | <img align="center" src="{{ root_url }}/img/dog_yoga.jpg" alt="" /> |
 
@@ -43,7 +43,7 @@ The restless of meditation was soon crumbling down under the weight of tranquili
 <blockquote>
 कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।
 <br>मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥
-<sup><a href='#fn:1' rel='footnote'>1</a></sup><br>
+<sup><a href='#fn:3' rel='footnote'>3</a></sup><br>
 </blockquote><br>
 
 
@@ -62,22 +62,21 @@ The restless of meditation was soon crumbling down under the weight of tranquili
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
+
+
     <li id='fn:1'>
-         <p> Translation: You have the right to perform your actions,but you are not entitled to the fruits of the actions. Do not let the fruit be the purpose of your actions, and therefore you won’t be attached to not doing your duty. </p>
+         <p><a href="https://www.buzzfeed.com/andreborges/13-eye-opening-facts-that-show-how-engineering-obsessed-indi" target="_blank">Buzzfeed.com</a></p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
     </li>
-
-    <li id='fn:2'>
-         <p><a href="https://www.buzzfeed.com/andreborges/13-eye-opening-facts-that-show-how-engineering-obsessed-indi" target="_blank">Buzzfeed.com</a></p>
-         <a href='#fnref:2' rev='footnote'>&#8617;</a>
-    </li>
     
-    <li id='fn:3'>
+    <li id='fn:2'>
          <p><a href="    http://www.dw.com/en/blame-victims-and-the-west-indias-way-of-justifying-sexual-assaults/a-37023646" target="_blank">Blame victims and the West</a></p>
          <a href='#fnref:2' rev='footnote'>&#8617;</a>
     </li>
     
-    
-    
+    <li id='fn:3'>
+         <p> Translation: You have the right to perform your actions,but you are not entitled to the fruits of the actions. Do not let the fruit be the purpose of your actions, and therefore you won’t be attached to not doing your duty. </p>
+         <a href='#fnref:3' rev='footnote'>&#8617;</a>
+    </li>
   </ol>
 </div>
