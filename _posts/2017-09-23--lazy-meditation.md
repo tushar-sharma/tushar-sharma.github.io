@@ -31,7 +31,7 @@ Both arms of the clock had stopped graceously at 10 before the sound filled the 
 
 I pulled up a meditation lesson by "Ravi Ravi Shankar". His photo with long hair while smiling profusely, instilled unparalled motivation in me. "I could be next Vivekanada", I quipped, though the Bhudda statue in my room chuckled mischeviously. I have seen American do challenging "yoga" while as an Indian I felt the shame to simple task such as sitting cross legs. Since I needed a scapegoat to blame for my flaws, I chose western culture & modernity (A common phrase used India to blame for our woes, though such reasons are as much genuine as my rambling). 
 
-| <img align="center" src="{{ root_url }}/img/rr_shankar.jpg" alt="" /> |
+| <img align="center" src="{{ root_url }}/img/dog_yoga.jpg" alt="" /> |
 
 
 The meditation started with nice Sitars. And I really felt enerzised through out the meditation. It was all beautiful and I could feel the inhale & the outhale. After a long time, I sheepishly opened my eye to keep track of the time. It was only eleapsed five mintues while twenty five mintues were left. It seems that the time froze. The clocks were taking revenge on my by dragging slowly & meditaiton felt like a journey. With every minture I grew more unconfortable. It seems my body had lost the capacity to comprehend stillness. And like a sponge I sat, marinating in my restlesness. 
