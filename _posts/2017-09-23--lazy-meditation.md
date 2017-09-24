@@ -40,7 +40,7 @@ The statue of Bhudda was quiet. It had a contempt for me but also some pity. In 
 
 The restless of meditation was soon crumbling down under the weight of tranquility. The car reminded me of the charriot that Arjuna drove in Mahabharata, an Indian magnum opus. Like Krishna, a charioteer driving Arjuna in the battle, the car symbolizes human body with the soul behind the steering. 
 
-Though it was a longest half hour meditation for me, I have commited to indulge more in meditation. It means I might have to pick up some vices like waking up quite early and little displine. But I belive my next experience with meditation will be more consistent & frutiful. 
+Though it was a longest half hour meditation for me, I have commited to indulge more in meditation. It means I might have to pick up some vices like waking up quite early tinge with displine. But I believe my next experience with meditation will be more consistent & frutiful. 
 
 
 <nav class="pagination clear" style="padding-bottom:20px;">
