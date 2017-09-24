@@ -10,13 +10,13 @@ thumb: /img/bhudda_st.jpg
 ---
 
 
-The sun's rays had already crept through my window & drenched my room with light. Sleep taste sweetest when you resist to wake up. It is but with heavy heart that I relinquish my sleep & pull myself toghether. <br>But not today! It was a weekend that bought me few more drops of honey as I extended my sleep while a statue of abstemious Bhudda, which I recently bought, wandered aloud at the petty cumberworld outgrowing in both time & stupidity.  
+The sun’s rays had already crept through my window & drenched my room with light. Sleep taste sweetest when you resist to wake up. It is but with a heavy heart that I relinquish my sleep & pull myself together. <br>But not today! It was a weekend that brought me few more drops of honey as I extended my sleep while a statue of abstemious Buddha, which I recently bought, wandered at the petty cumberworld outgrowing in both time & stupidity.
+  
   <!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
-The sun's rays had already crept through my window & drenched my room with light. Sleep taste sweetest when you resist to wake up. It is but with heavy heart that I relinquish my sleep & pull myself toghether. But not today! It was a weekend that bought me few more drops of honey as I extended my sleep while a statue of abstemious Bhudda, which I recently bought, wandered aloud at the petty cumberworld outgrowing in both time & stupidity.  
-
+The sun’s rays had already crept through my window & drenched my room with light. Sleep taste sweetest when you resist to wake up. It is but with a heavy heart that I relinquish my sleep & pull myself together. But not today! It was a weekend that brought me few more drops of honey as I extended my sleep while a statue of abstemious Buddha, which I recently bought, wandered at the petty cumberworld outgrowing in both time & stupidity.
 
 | <img align="center" src="{{ root_url }}/img/bhudda_st.jpg" alt="" /> |
 
