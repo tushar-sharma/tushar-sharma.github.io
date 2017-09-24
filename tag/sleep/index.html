@@ -21,7 +21,17 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-    <script async type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ["@L","@L"], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+    });
+    </script>
+
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
     <noscript>
@@ -202,6 +212,12 @@ $(document).ready(function() {
 
 <div class="pure-u-1-2">
 <div style="padding-right:10px; padding-left:10px;">
+
+
+
+
+
+
 
 
 
@@ -694,6 +710,14 @@ only in dreams can everyone shine like a starlet...
          
 	    <!-- hack to remove sidebar tags -->
            <a style="font-size: 120%"  style="display:inline-block;" href="/tag/vigilantism">vigilantism <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/lazy">lazy <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/meditation">meditation <span></span></a>
 	   
          
        

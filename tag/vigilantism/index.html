@@ -21,7 +21,17 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-    <script async type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ["@L","@L"], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+    });
+    </script>
+
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
     <noscript>
@@ -211,6 +221,12 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+
   <small style="float:right; margin-top:5px;">Wed 26 Apr 2017</small>
   <a href="/blog/india-pak">
     <h3>What India can learn from Pakistan?</h3>
@@ -225,7 +241,7 @@ $(document).ready(function() {
 On a brisk day, I was carpooling with my manager. Amidst the roaring traffic, was the familiar melodious voice on the radio. We have grown accustomed to the RJ who played songs that was music to our ears. As my manager revved up the engine, with the occasional drip in audio of the AM, often we broke into conversation.
 </p>
 
-Amartya Sen in his book, The Argumentative Indian, has argued the Indians are inherently loquacious. True to the argumentative traditions, our conversation percolated through the porous soil of sports into the sedimentary rocks of politics while amassing lump of Bollywood, music, economics, etc along the way. While an old classic Bollywood song played on the radio and I hymned along, dragging our conversation to halt. I gazed out of the window, many sign posts passed by, most of them visibly crestfallen like me...
+Amartya Sen in his book, The Argumentative Indian, has argued the Indians are inherently loquacious. True to the argumentative traditions, our conversation percolated through the porous soil of sports into the sedimentary rocks of politics while amassing lump of Bollywood, music, economics, etc along the way. While an old classic Bollywood song played on the radio and I hummed along, dragging our conversation to halt. I gazed out of the window, many sign posts passed by, most of them visibly crestfallen like me...
       </div>
   <br>
   <p>
@@ -693,6 +709,14 @@ Amartya Sen in his book, The Argumentative Indian, has argued the Indians are in
          
 	    <!-- hack to remove sidebar tags -->
            <a style="font-size: 120%"  style="display:inline-block;" href="/tag/vigilantism">vigilantism <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/lazy">lazy <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/meditation">meditation <span></span></a>
 	   
          
        
