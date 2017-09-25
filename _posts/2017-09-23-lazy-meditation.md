@@ -22,7 +22,7 @@ The sun’s rays had already crept through my window & drenched my room with lig
 
 It seems like yesterday when I hit a wall & made a crazy resolution to indulge in meditation. Before some of the readers' protest, I dispose with an earnestness that mediation is a very useful transcendental exercise. But being Indian, along with genes to eat pani puri & digest spicy food, I also have some false preconceptions about myself. Like billion Indians, I believe that meditation, like cricket, dancing, acting, etc comes naturally to Indians. I once joked with my American friend on how I would have played for Indian cricket team if not for the engineering. Also, I told him that India produces 1.5 million engineers a year which is twice the population of Iceland<sup><a href='#fn:1' rel='footnote'>1</a></sup>, which left him gaping at me.
 
-Before I digress more, I should come back to the bed. Yes the abode of eteral happiness. But tranquility was disturbed by one mistake. The crazy resolution had pumped up ideas in my mind. Yesterday I had fallen to one of such idea, to set up my alarm clock. It's a sin, decreed by Gods against setting alarm in the weekend. The chapter 2, verse 2 of sleeping scripture mandates against any temptation to use of unholy alarm clocks. But sometimes infectious displine compels us to use alarm clocks which I did yesterday to set the alarm of 10 AM.
+Before I digress more, I should come back to the bed. Yes the abode of eteral happiness. But tranquility was disturbed by one mistake. The crazy resolution had pumped up ideas in my mind. Yesterday I had fallen to one of such idea, to set up my alarm clock. It's a sin, decreed by Gods against setting alarm in the weekend. Inspired by ilks of Zaik Naik, I proclaim chapter 1, verse 2 of sleeping scripture mandates against any temptation to use of unholy alarm clocks. But sometimes infectious displine compels us to use alarm clocks which I did yesterday to set the alarm of 10 AM.
 
 Meditation are often advised in the wee hours of day. My parents have a habit of walking at 5 AM. But such infectious displine was never caught by me. I was saved by vaccination of "laziness" which I received in four year of my college. I urge the goverment to promulgate such vaccination to all and sundry.  
 
@@ -38,12 +38,12 @@ The meditation started with nice Sitars. And I really felt energized in midst of
 
 The statue of Bhudda was quiet. It had a contempt for me but also some pity. In midst of meditaton, I felt I was sitting in my car. I revved up the engine and navigated through the familiar streets weaving in and out of traffic. But soon streets were unfamiliar which slowed my car. Like a fool I drove many times across the same street. But I liked the driving with the wind gushing through the window. It was the journey that I liked instead of the destination. 
 
-The restless of meditation was soon crumbling down under the weight of tranquility. The car reminded me of the charriot of Arjuna, the protagonist of the ancient Indian epic in Mahabharata. The fatigue of driving against the loved one distraught Arjuna. Krishna explained the necessity and inevitability of the war to Arjuna. Krishna becomes a charioteer for Arjuna in the battle. Similarly I felt my soul has become a charioteer for my human body as she races 60 miles per hour.  
+The restless of meditation was soon crumbling down under the weight of tranquility. The car reminded me of the charriot of Arjuna, the protagonist of the ancient Indian epic in Mahabharata. The fatigue of driving against the loved one distraught Arjuna. Krishna explained the necessity and inevitability of the war to Arjuna. Krishna becomes a charioteer for Arjuna in the battle. Similarly I felt my soul has become a charioteer for my human body as she races 1729<sup><a href='#fn:3' rel='footnote'>3</a></sup> miles per hour.  
 
 <blockquote>
 कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।
 <br>मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥
-<sup><a href='#fn:3' rel='footnote'>3</a></sup><br>
+<sup><a href='#fn:4' rel='footnote'>4</a></sup><br>
 </blockquote><br>
 
 
@@ -75,8 +75,15 @@ The restless of meditation was soon crumbling down under the weight of tranquili
     </li>
     
     <li id='fn:3'>
-         <p> Translation: You have the right to perform your actions,but you are not entitled to the fruits of the actions. Do not let the fruit be the purpose of your actions, and therefore you won’t be attached to not doing your duty. </p>
+         <p> <a href="https://en.wikipedia.org/wiki/Taxicab_number" target="_blank">Taxicab_number</a> </p>
          <a href='#fnref:3' rev='footnote'>&#8617;</a>
     </li>
+    
+    <li id='fn:3'>
+         <p> <b>Translation:</b> You have the right to perform your actions,but you are not entitled to the fruits of the actions. Do not let the fruit be the purpose of your actions, and therefore you won’t be attached to not doing your duty. </p>
+         <a href='#fnref:3' rev='footnote'>&#8617;</a>
+    </li>
+    
+    
   </ol>
 </div>
