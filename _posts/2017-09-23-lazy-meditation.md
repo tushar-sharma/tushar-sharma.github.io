@@ -25,7 +25,7 @@ It seems like yesterday when I hit a wall & made a crazy resolution to indulge i
 
 Before I digress more, I should come back to the bed. Yes, the bed, the abode of eternal happiness. But the tranquility was perturbed by one mistake. The crazy resolution had pumped up ideas in my mind. Yesterday I had fallen to one such idea, to set up my alarm clock. It’s a sin, decreed by the Gods, against setting up an alarm in the weekend. Inspired by ilks of Zakir Naik, I hereby proclaim that chapter 1, verse 24 of the sleeping scripture warns against any temptation to use of unholy alarm clocks. But sometimes infectious discipline creeps in & making us falter to the temptation of using alarm clocks.
 
-Meditation is often advised in the wee hours of the day. My parents have a despicable habit of waking up at 5 AM. But I never caught to influenza of discipline. I was saved by the vaccination of “laziness” which I received in four years of my college. I urge the government to promulgate such vaccination to all and sundry.
+Meditation is often advised in the wee hours of the day. My parents have a despicable habit of waking up at 5 AM. But I never caught the influenza of discipline. I was saved by the vaccination of “laziness” which I received in four years of my college. I urge the government to promulgate such vaccination to all and sundry.
 
 
 Both arms of the clock had stopped graciously at 10 before the sound filled the room. A slip of hand on “snooze” and clock raced faster, a minute became a score, while I pressed another “snooze”. Before I regain consciousness & pulled myself out of slumber, it was already 11 AM. Half of the world was already busy doing chores and I decided it was time to practice meditation.
