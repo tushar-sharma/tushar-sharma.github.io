@@ -303,6 +303,8 @@ it's only useful after having programmed using Ruby already.
 * [Software Security](https://www.coursera.org/learn/software-security/)
 * [Computer virus Development Quaterly](http://read.pudn.com/downloads165/sourcecode/asm/756887/cvdq1_2.pdf)
 * [The Code Book by Simon Singh](https://www.amazon.com/Code-Book-Science-Secrecy-Cryptography/dp/0385495323)
+* [Repository of Live Malwares](https://github.com/ytisf/theZoo)
+* [Hacking and Pactching](https://www.coursera.org/learn/hacking-patching)
 
 ### Books
 * [Giant Black Book Computer Viruses](https://www.amazon.com/Giant-Black-Book-Computer-Viruses/dp/0929408233)
