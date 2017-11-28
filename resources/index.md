@@ -44,6 +44,7 @@ title: Resources for Programmers
 ## APIs
 * [Codecademy APIs course](http://www.codecademy.com/tracks/apis)
 * [Yale API Portal](https://developers.yale.edu/)
+* [Designing RESTful API](https://www.udacity.com/course/designing-restful-apis--ud388)
 
 ## C & C++
 * [Learn C the hard way](https://learncodethehardway.org/c/)
