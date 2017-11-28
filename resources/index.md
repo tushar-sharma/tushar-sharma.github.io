@@ -18,6 +18,7 @@ title: Resources for Programmers
 * [AI Algorithms, Data Structures, and Idioms in Prolog, Lisp, and Java](https://web.cecs.pdx.edu/~york/cs441/Luger_Idioms.pdf)
 * [Algorithms, Data Structures, and Design Patterns for Self-Taught Developers](https://antjanus.com/blog/web-development-tutorials/learn-the-unlearned-algorithms-data-structures-and-design-patterns/)
 * [Advance Data Structure](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/)
+* [Codechef discussion - Algorithms & Data structure](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
 * [cs3102: Theory of Computation](http://www.cs.virginia.edu/~evans/cs3102/)
 * [cs157 Design & Analysis of Algorithms](http://cs.brown.edu/courses/csci1570/lectures.html)
 * [Develop Powerful Interactive Software](https://www.coursera.org/specializations/java-object-oriented)
@@ -58,6 +59,8 @@ title: Resources for Programmers
 * [Ginlo Blog](http://blog.gainlo.co/)
 
 ## Data Science & Big Data
+* [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
+* [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
 * [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
 * [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
 * [Data Visualization](https://www.coursera.org/learn/datavisualization)
