@@ -23,6 +23,7 @@ title: Books on my shelf
 </style>
 
 <script type="text/javascript">
+/* Sorting books based on author, name */
 $(document).ready(function() {
     var monkeyList = new List('test-list', {
       valueNames: ['name', 'author'],
@@ -157,12 +158,12 @@ $(document).ready(function() {
     </tr>
 
       <tr>
-          <td align="center" class="rating2"> The Hindu View Of Life  </td>
+          <td align="center" class="name"> The Hindu View Of Life  </td>
           <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/51oQR2C1GTL._SX311_BO1,204,203,200_.jpg"> </td>
-          <td align="center" class="rating">  S. Radhakrishnan </td>
+          <td align="center" class="author">  S. Radhakrishnan </td>
           <td align="center" class="rating"> Reading<br>
             <div id="progress-outer">
-            <div id="progress-inner" class="book6"></div>
+              <div id="progress-inner" class="book6"></div>
             </div>
           </td>
       </tr>
