@@ -1,5 +1,4 @@
-#progress-outer {
-    background: #333;
+#progress-outer { background: #333;
     -webkit-border-radius: 13px;
     height: 12px;
     width: 70px;
@@ -68,5 +67,6 @@ nav#pagination span.prev {
 .book4 {width: 8%; }    /* Midnight's Children */
 .book5 {width: 0.061%; }  /* The Argumentative Indian , 165 out of 647 */
 .book6 {width: 0.1%; }  /* Crime & Punishment */
+.book7 {width: 0.1%; }  /* A Suitable Boy */
 .tbd {width: 0%; }  /* TBD */
 /* end -  book progress*/
