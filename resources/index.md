@@ -42,13 +42,9 @@ title: Resources for Programmers
 * [Dynamic Programming](http://prismoskills.appspot.com/lessons/Dynamic_Programming/Chapter_01_-_Introduction.jsp)
 * [National Taiwan Normal University](http://www.csie.ntnu.edu.tw/~u91029/)
 
-## Algorithms SOlutions
-
-### Comparable vs Comparator
-
+#### Comparable vs Comparator
 * [Geeks for Geeks - Comparable vs Comparators](https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/)
 * [Geeks for Geeks - Comparable](https://www.geeksforgeeks.org/comparator-interface-java/)
-
 
 
 ## APIs
