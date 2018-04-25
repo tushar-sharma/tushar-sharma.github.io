@@ -31,6 +31,11 @@ title: Resources for Programmers
 * [Problem Solving with Algorithms and Data Structures using Python](https://interactivepython.org/runestone/static/pythonds/index.html)
 * [Purely Functional Data Structures](http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf)
 
+### Sorting
+#### Quicksort
+* [Quicksort Implementation](https://www.coursera.org/learn/algorithms-part1/lecture/vjvnC/quicksort)
+* [Quicksort Average case Analysis](https://www.coursera.org/learn/algorithms-part1/lecture/vjvnC/quicksort)
+
 ### Books
 * [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X)
 * [Python Algorithms - Mastering Basic Algorithms in the Python Language](http://www.apress.com/us/book/9781430232377)
