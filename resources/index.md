@@ -56,10 +56,10 @@ title: Resources for Programmers
 * [Designing RESTful API](https://www.udacity.com/course/designing-restful-apis--ud388)
 
 ## Bash
-* [Match command line arguments](https://explainshell.com)
+* [Match command line arguments to see help text](https://explainshell.com)
 * [Getopts tutorial](http://wiki.bash-hackers.org/howto/getopts_tutorial)
 * [Parallelism tutorial](https://pebblesinthesand.wordpress.com/2008/05/22/a-srcipt-for-running-processes-in-parallel-in-bash/)
-* [Find bugs in your shell scripts](https://www.shellcheck.net)h
+* [Find bugs in your shell scripts](https://www.shellcheck.net)
 
 ## C & C++
 * [Learn C the hard way](https://learncodethehardway.org/c/)
