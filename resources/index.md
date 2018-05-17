@@ -37,6 +37,7 @@ title: Resources for Programmers
 * [Analysis of Algorithms](https://www.coursera.org/learn/analysis-of-algorithms/lecture/5iqb3/tries)
 * [Coding Made Simple](https://www.youtube.com/watch?v=AXjmTQ8LEoI)
 * [CS Princeton](https://algs4.cs.princeton.edu/52trie/)
+* [Implementation - coursera](https://www.coursera.org/learn/data-structures-optimizing-performance/lecture/DFvd3/core-implementing-a-trie)
 
 
 ### Sorting
