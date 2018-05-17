@@ -33,11 +33,12 @@ title: Resources for Programmers
 
 ## Tries
 
-* [MIT Lecture](https://courses.csail.mit.edu/6.851/spring12/lectures/L16.html)
 * [Analysis of Algorithms](https://www.coursera.org/learn/analysis-of-algorithms/lecture/5iqb3/tries)
+* [A neglected data structure](https://www.toptal.com/java/the-trie-a-neglected-data-structure)
 * [Coding Made Simple](https://www.youtube.com/watch?v=AXjmTQ8LEoI)
 * [CS Princeton](https://algs4.cs.princeton.edu/52trie/)
 * [Implementation - coursera](https://www.coursera.org/learn/data-structures-optimizing-performance/lecture/DFvd3/core-implementing-a-trie)
+* [MIT Lecture](https://courses.csail.mit.edu/6.851/spring12/lectures/L16.html)
 
 
 ### Sorting
