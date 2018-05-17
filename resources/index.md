@@ -35,7 +35,9 @@ title: Resources for Programmers
 
 * [MIT Lecture](https://courses.csail.mit.edu/6.851/spring12/lectures/L16.html)
 * [Analysis of Algorithms](https://www.coursera.org/learn/analysis-of-algorithms/lecture/5iqb3/tries)
-* [Problems](https://algs4.cs.princeton.edu/52trie/)
+* [Coding Made Simple](https://www.youtube.com/watch?v=AXjmTQ8LEoI)
+* [CS Princeton](https://algs4.cs.princeton.edu/52trie/)
+
 
 ### Sorting
 #### Quicksort
