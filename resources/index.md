@@ -31,6 +31,11 @@ title: Resources for Programmers
 * [Problem Solving with Algorithms and Data Structures using Python](https://interactivepython.org/runestone/static/pythonds/index.html)
 * [Purely Functional Data Structures](http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf)
 
+### Tries
+* [MIT Lecture] (https://courses.csail.mit.edu/6.851/spring12/lectures/L16.html)
+* [Analysis of Algorithms] (https://www.coursera.org/learn/analysis-of-algorithms/lecture/5iqb3/tries)
+* [Problems](https://algs4.cs.princeton.edu/52trie/)
+
 ### Sorting
 #### Quicksort
 * [Quicksort Implementation](https://www.coursera.org/learn/algorithms-part1/lecture/vjvnC/quicksort)
