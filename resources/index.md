@@ -331,6 +331,8 @@ it's only useful after having programmed using Ruby already.
 * [Hack yourself first](https://averagesecurityguy.github.io/assets/hack-yourself-first-final.pdf)
 * [Hack this site](https://www.hackthissite.org/)
 * [Hacking and Patching](https://www.coursera.org/learn/hacking-patching)
+* [How bitcoin actually works](http://www.michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/)
+* [GPG for Daily Use](http://moser-isi.ethz.ch/gpg.html)
 * [Offensive Security Bookmarks](https://jivoi.github.io/2015/07/03/offensive-security-bookmarks/)
 * [Software Security](https://www.coursera.org/learn/software-security/)
 * [Computer virus Development Quaterly](http://read.pudn.com/downloads165/sourcecode/asm/756887/cvdq1_2.pdf)
@@ -338,6 +340,7 @@ it's only useful after having programmed using Ruby already.
 * [The Code Book by Simon Singh](https://www.amazon.com/Code-Book-Science-Secrecy-Cryptography/dp/0385495323)
 * [Repository of Live Malwares](https://github.com/ytisf/theZoo)
 * [Reddit Netsec](https://www.reddit.com/r/netsec/)
+
 
 ### Books
 * [Giant Black Book Computer Viruses](https://www.amazon.com/Giant-Black-Book-Computer-Viruses/dp/0929408233)
