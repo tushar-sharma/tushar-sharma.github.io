@@ -40,6 +40,7 @@ title: Resources for Programmers
 * [Implementation - coursera](https://www.coursera.org/learn/data-structures-optimizing-performance/lecture/DFvd3/core-implementing-a-trie)
 * [MIT Lecture](https://courses.csail.mit.edu/6.851/spring12/lectures/L16.html)
 * [Using Tries](https://www.topcoder.com/community/data-science/data-science-tutorials/using-tries/)
+* [Visualizing Tries](https://www.cs.usfca.edu/~galles/visualization/Trie.html)
 
 ### Sorting
 #### Quicksort
