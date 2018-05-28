@@ -1,0 +1,73 @@
+.chat {
+    width: 500px;
+    margin : 0 auto; 
+}
+.chat-bubble{
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
+}
+
+.chat-bubble::before {
+    background-color: #F2F2F2;
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    position: absolute;
+    top: 11px;
+    transform:             rotate( 29deg ) skew( -35deg );
+        -moz-transform:    rotate( 29deg ) skew( -35deg );
+        -ms-transform:     rotate( 29deg ) skew( -35deg );
+        -o-transform:      rotate( 29deg ) skew( -35deg );
+        -webkit-transform: rotate( 29deg ) skew( -35deg );
+    width:  20px;
+}
+
+.chat-me {
+    float: left;   
+    margin: 5px 45px 5px 20px;         
+}
+
+.chat-me::before {
+    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+    left: -9px;           
+}
+
+.chat-you {
+    float: right;    
+    background: yellow;
+    margin: 5px 20px 5px 45px;         
+}
+
+.chat-you::before {
+    box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
+    right: -9px;    
+    background: yellow;
+}
+
+/*attention */
+.info, .error, .success, .attention { 
+     display: block;
+     padding: 20px;
+     margin: 10px; 
+    }
+.info {
+     background: skyblue;  
+     border-left: 10px solid #6666ff;
+  }
+.error {
+       background: pink;
+       border-left: 10px solid red;
+       }  
+.success {
+     background: lightgreen;
+     border-left: 10px solid green;
+  }
+.attention{
+      background: #ffffb3;
+      border-left: 10px solid orange;
+}
