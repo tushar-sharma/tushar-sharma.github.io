@@ -21,6 +21,7 @@ title: Resources for Programmers
 * [Codechef discussion - Algorithms & Data structure](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
 * [cs3102: Theory of Computation](http://www.cs.virginia.edu/~evans/cs3102/)
 * [cs157 Design & Analysis of Algorithms](http://cs.brown.edu/courses/csci1570/lectures.html)
+* [Data structure for interviews](http://www.columbia.edu/~jxz2101/#1)
 * [Develop Powerful Interactive Software](https://www.coursera.org/specializations/java-object-oriented)
 * [Foundations of Data Structures](https://www.edx.org/course/foundations-data-structures-iitbombayx-cs213-1x#!)
 * [Introduction to Algorithms by MIT Erik Demaine](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/index.htm)
