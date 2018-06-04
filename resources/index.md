@@ -33,7 +33,6 @@ title: Resources for Programmers
 * [Purely Functional Data Structures](http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf)
 
 ## Tries
-
 * [Analysis of Algorithms](https://www.coursera.org/learn/analysis-of-algorithms/lecture/5iqb3/tries)
 * [A neglected data structure](https://www.toptal.com/java/the-trie-a-neglected-data-structure)
 * [Coding Made Simple](https://www.youtube.com/watch?v=AXjmTQ8LEoI)
@@ -43,24 +42,26 @@ title: Resources for Programmers
 * [Using Tries](https://www.topcoder.com/community/data-science/data-science-tutorials/using-tries/)
 * [Visualizing Tries](https://www.cs.usfca.edu/~galles/visualization/Trie.html)
 
-### Sorting
-#### Quicksort
+## Graph
+* [Codeforces problems](http://codeforces.com/blog/entry/55219)
+
+## Sorting
+### Quicksort
 * [Quicksort Implementation](https://www.coursera.org/learn/algorithms-part1/lecture/vjvnC/quicksort)
 * [Quicksort Average case Analysis](https://www.coursera.org/learn/algorithms-part1/lecture/vjvnC/quicksort)
 
-### Books
+## Books
 * [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/098478280X)
 * [Python Algorithms - Mastering Basic Algorithms in the Python Language](http://www.apress.com/us/book/9781430232377)
 * [Think Complexity](http://www.greenteapress.com/complexity/thinkcomplexity.pdf)
 * [Computers and Intractability: A Guide to the Theory of NP-Completeness](https://www.amazon.com/Computers-Intractability-NP-Completeness-Mathematical-Sciences/dp/0716710455)
 
-### Tutorials
+## Tutorials
 * [CodeChef: DataStructure & Algorithms](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
 * [Dynamic Programming](http://prismoskills.appspot.com/lessons/Dynamic_Programming/Chapter_01_-_Introduction.jsp)
 * [National Taiwan Normal University](http://www.csie.ntnu.edu.tw/~u91029/)
 * [Comparable vs Comparators in Java](https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/)
 * [Comparator in Java](https://www.geeksforgeeks.org/comparator-interface-java/)
-
 
 ## APIs
 * [Codecademy APIs course](http://www.codecademy.com/tracks/apis)
