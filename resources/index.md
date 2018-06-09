@@ -75,6 +75,11 @@ title: Resources for Programmers
 * [Parallelism tutorial](https://pebblesinthesand.wordpress.com/2008/05/22/a-srcipt-for-running-processes-in-parallel-in-bash/)
 * [Find bugs in your shell scripts](https://www.shellcheck.net)
 
+### kill command
+* [Understanding Kill command](http://bencane.com/2014/04/01/understanding-the-kill-command-and-how-to-terminate-processes-in-linux/)
+* [man page kill command](https://ss64.com/osx/kill.html)
+* [What does kill 0 pid does?](https://stackoverflow.com/questions/11012527/what-does-kill-0-pid-in-a-shell-script-do)
+
 ## C & C++
 * [Learn C the hard way](https://learncodethehardway.org/c/)
 * [C++ for C programmers Part A](https://www.coursera.org/learn/c-plus-plus-a)
