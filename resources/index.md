@@ -50,7 +50,10 @@ title: Resources for Programmers
 * [Codeforces problems](http://codeforces.com/blog/entry/55219)
 * [Leetcode](https://leetcode.com/tag/graph/)
 * [Graph Search, Shortest Paths, and Data Structures](https://www.coursera.org/learn/algorithms-graphs-data-structures)
-8 [Introduction to Graph Theory](https://www.coursera.org/learn/graphs)
+* [Introduction to Graph Theory](https://www.coursera.org/learn/graphs)
+
+### Two Hop neighbors
+* [Two Hop Neighbors - Chen Su](http://www.chen-su.com/static/slides/java_ucsd/c3/m1/C3M1L3S2_TwoHopNeighbors.pdf?q=1516568491)
 
 ## Sorting
 
