@@ -50,6 +50,7 @@ title: Resources for Programmers
 * [Codeforces problems](http://codeforces.com/blog/entry/55219)
 * [Leetcode](https://leetcode.com/tag/graph/)
 * [Graph Search, Shortest Paths, and Data Structures](https://www.coursera.org/learn/algorithms-graphs-data-structures)
+8 [Introduction to Graph Theory](https://www.coursera.org/learn/graphs)
 
 ## Sorting
 
