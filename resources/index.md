@@ -10,6 +10,7 @@ title: Resources for Programmers
 {:toc}
 
 ## Algorithms & Data Structure
+* [Algorithms - Paul Valiant](http://cs.brown.edu/courses/csci1570/classes.html)
 * [Algorithmic Technique for Big Data](http://sublinear.wikischolars.columbia.edu/Lectures+and+Scribes)
 * [Algorithms, Part I by Robert Sedgewick](https://www.coursera.org/learn/algorithms-part1#)
 * [Algorithms, Part II by Robert Sedgewick](https://www.coursera.org/learn/java-data-structures-algorithms-2)
@@ -17,11 +18,14 @@ title: Resources for Programmers
 * [Algorithmic Toolbox](https://www.coursera.org/learn/algorithmic-toolbox)
 * [AI Algorithms, Data Structures, and Idioms in Prolog, Lisp, and Java](https://web.cecs.pdx.edu/~york/cs441/Luger_Idioms.pdf)
 * [Algorithms, Data Structures, and Design Patterns for Self-Taught Developers](https://antjanus.com/blog/web-development-tutorials/learn-the-unlearned-algorithms-data-structures-and-design-patterns/)
-* [Advance Data Structure](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/)
+* [Advance Data Structure - MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/)
+* [Advanced Data Structure - coursera java](https://www.coursera.org/learn/advanced-data-structures)
 * [Codechef discussion - Algorithms & Data structure](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
 * [cs3102: Theory of Computation](http://www.cs.virginia.edu/~evans/cs3102/)
 * [cs157 Design & Analysis of Algorithms](http://cs.brown.edu/courses/csci1570/lectures.html)
+* [CS 161](http://web.stanford.edu/class/archive/cs/cs161/cs161.1168/)
 * [Data structure for interviews](http://www.columbia.edu/~jxz2101/#1)
+* [Data Structures and Algorithms - CS 121](http://www.seas.upenn.edu/~cis121/current/index.html)
 * [Develop Powerful Interactive Software](https://www.coursera.org/specializations/java-object-oriented)
 * [Foundations of Data Structures](https://www.edx.org/course/foundations-data-structures-iitbombayx-cs213-1x#!)
 * [Introduction to Algorithms by MIT Erik Demaine](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/index.htm)
@@ -45,8 +49,10 @@ title: Resources for Programmers
 ## Graph
 * [Codeforces problems](http://codeforces.com/blog/entry/55219)
 * [Leetcode](https://leetcode.com/tag/graph/)
+* [Graph Search, Shortest Paths, and Data Structures](https://www.coursera.org/learn/algorithms-graphs-data-structures)
 
 ## Sorting
+
 ### Quicksort
 * [Quicksort Implementation](https://www.coursera.org/learn/algorithms-part1/lecture/vjvnC/quicksort)
 * [Quicksort Average case Analysis](https://www.coursera.org/learn/algorithms-part1/lecture/vjvnC/quicksort)
@@ -84,6 +90,7 @@ title: Resources for Programmers
 * [Learn C the hard way](https://learncodethehardway.org/c/)
 * [C++ for C programmers Part A](https://www.coursera.org/learn/c-plus-plus-a)
 * [C++ for C programmers Part B](https://www.coursera.org/learn/c-plus-plus-b)
+* [Introduction to C Memory Management and C++ Object-Oriented Programming](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-088-introduction-to-c-memory-management-and-c-object-oriented-programming-january-iap-2010/#)
 
 ### Books
 * [Expert C programming](https://www.amazon.com/Expert-Programming-Peter-van-Linden/dp/0131774298)
@@ -118,6 +125,8 @@ title: Resources for Programmers
 * [Learn SQL The Hard Way](http://sql.learncodethehardway.org/book/)
 * [Postgres, the Best Tool You're Already Using](http://adamsanderson.github.io/railsconf_2013/?full#1)
 * [Visual Explanation of SQL Joins](http://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html)
+* [cs 61 - Charles C. Palmer](http://www.cs.dartmouth.edu/~cs61/)
+* [Getting Started with Impala](https://coe4bd.github.io/TechnicalReports/Setting%20Up%20a%20Hadoop%20Cluster%20with%20Cloudera%20Manager%20and%20Impala.pdf)
 
 ### Books
 * [Sqoop Cookbook](http://shop.oreilly.com/product/0636920029519.do)
@@ -196,20 +205,27 @@ overview of HTML.
 * [ CS 156 by Professor Yaser Abu-Mostafa](https://www.youtube.com/watch?v=mbyG85GZ0PI&list=PLD63A284B7615313A)
 
 ## Operating Systems & Parallel
+* [Introduction to Operating Systems - udacity](https://www.udacity.com/course/introduction-to-operating-systems--ud923)
 * [cs4414 Operating Systems](http://rust-class.org/)
+* [GT - Refresher - Advanced OS by Georgia Tech](https://www.udacity.com/course/gt-refresher-advanced-os--ud098)
+* [Advanced Operating Systems by Georgia Tech](https://www.udacity.com/course/advanced-operating-systems--ud189)
 * [W4118 OPERATING SYSTEMS I](http://www.cs.columbia.edu/~junfeng/11sp-w4118/syllabus.html)
+* [Real time Systems - coursera](https://www.coursera.org/learn/real-time-systems)
 
 ## Programming & Paradigms
 * [Advanced Topics in Programming Languages and Compilers](http://www.cs.columbia.edu/~aho/cs6998/)
 * [Design of Computer Program by Peter Norvig](https://www.udacity.com/course/design-of-computer-programs--cs212)
 * [How code systematic program design by Edx](https://www.edx.org/xseries/how-code-systematic-program-design)
+* [How to design Programs](http://www.htdp.org)
 * [Introduction to Computing](http://www.computingbook.org/)
 * [Java object oriented crashcourse coursera](https://www.coursera.org/specializations/java-object-oriented)
 * [Paradigms of Computer Programming by louvainx](https://www.edx.org/course/paradigms-computer-programming-louvainx-louv1-1x-1#!)
+* [Software Development - Edx](https://www.edx.org/micromasters/software-development)
 * [Software Development Process by udacity](https://www.udacity.com/course/software-development-process--ud805)
 * [The MVC Pattern in Ruby](https://www.udacity.com/course/the-mvc-pattern-in-ruby--ud270)
 * [This is CS50](http://cs50.tv/2013/fall/)
-
+* [CS 50  Software Design and Implementation - or, how to be a hacker](http://www.cs.dartmouth.edu/~campbell/cs50/)
+* [Software Design Architecture](https://www.coursera.org/specializations/software-design-architecture)
 
 ### Books
 * [Programming from Ground Up by Jonathan Bartlett](http://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
