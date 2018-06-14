@@ -47,6 +47,7 @@ title: Resources for Programmers
 * [Visualizing Tries](https://www.cs.usfca.edu/~galles/visualization/Trie.html)
 
 ## Graph
+* [Graph Theory](https://www3.nd.edu/~dgalvin1/40210/40210_F12/CGT_early.pdf)
 * [Codeforces problems](http://codeforces.com/blog/entry/55219)
 * [Leetcode](https://leetcode.com/tag/graph/)
 * [Graph Search, Shortest Paths, and Data Structures](https://www.coursera.org/learn/algorithms-graphs-data-structures)
