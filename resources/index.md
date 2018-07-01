@@ -129,9 +129,10 @@ title: Resources for Programmers
 ## Databases
 * [Learn SQL The Hard Way](http://sql.learncodethehardway.org/book/)
 * [Postgres, the Best Tool You're Already Using](http://adamsanderson.github.io/railsconf_2013/?full#1)
-* [Visual Explanation of SQL Joins](http://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html)
 * [cs 61 - Charles C. Palmer](http://www.cs.dartmouth.edu/~cs61/)
+* [CS 340 - Database & Web System](http://www.cburch.com/cs/340/index.html)
 * [Getting Started with Impala](https://coe4bd.github.io/TechnicalReports/Setting%20Up%20a%20Hadoop%20Cluster%20with%20Cloudera%20Manager%20and%20Impala.pdf)
+* [Visual Explanation of SQL Joins](http://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html)
 
 ### Books
 * [Sqoop Cookbook](http://shop.oreilly.com/product/0636920029519.do)
