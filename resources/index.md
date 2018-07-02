@@ -56,6 +56,9 @@ title: Resources for Programmers
 ### Two Hop neighbors
 * [Two Hop Neighbors - Chen Su](http://www.chen-su.com/static/slides/java_ucsd/c3/m1/C3M1L3S2_TwoHopNeighbors.pdf?q=1516568491)
 
+## IT
+* [Restore USB drive back to full capacity](http://www.eassos.com/blog/how-to-restore-usb-drive-back-to-full-capacity)
+
 ## Sorting
 
 ### Quicksort
