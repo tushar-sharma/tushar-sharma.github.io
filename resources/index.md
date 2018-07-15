@@ -106,6 +106,10 @@ title: Resources for Programmers
 ## Blogs
 * [Ginlo Blog](http://blog.gainlo.co/)
 
+## Concurrency
+* [C++ Concurrency](https://www.youtube.com/playlist?list=PL1835A90FC78FF8BE)
+* [Parallel, Concurrent, and Distributed Programming in Java Specialization](https://www.coursera.org/specializations/pcdp)
+
 ## Data Science & Big Data
 * [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
 * [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
