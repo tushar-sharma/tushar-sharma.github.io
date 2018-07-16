@@ -30,6 +30,7 @@ title: Resources for Programmers
 * [Foundations of Data Structures](https://www.edx.org/course/foundations-data-structures-iitbombayx-cs213-1x#!)
 * [Introduction to Algorithms by MIT Erik Demaine](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/index.htm)
 * [Introduction to Algorithms (SMA 5503)](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/)
+* [Introduction to class based class design](https://course.ccs.neu.edu/cs2510h)
 * [Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data)
 * [Mastering Algorithms with Perl](http://ebook.pldworld.com/_eBook/_OReilly_/133.Books/pdf_Perl/OReilly.-.Mastering_Algorithms_with_Perl_Oreilly.pdf)
 * [Mastering Algorithms techniques - Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
