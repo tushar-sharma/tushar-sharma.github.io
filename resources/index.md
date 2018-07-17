@@ -121,13 +121,13 @@ title: Resources for Programmers
 
 ## Distributed Systems
 * [CMSC course - Hadoop ecosystem](https://www.csee.umbc.edu/~shadam1/491s16/)
-* [6.824 schedule](http://nil.csail.mit.edu/6.824/2017/schedule.html)
+* [6.824 Spring 2017 MIT](http://nil.csail.mit.edu/6.824/2017/schedule.html)
 * [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
 * [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
 * [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
 * [Setup Spark Cluster Step By Step](http://blog.insightdatalabs.com/spark-cluster-step-by-step/)
 * [MapReduce Tutorial - Yahoo](https://developer.yahoo.com/hadoop/tutorial/)
-* [MapReduce : The programming model and practice](200~https://ai.google/research/pubs/pub36249)
+* [MapReduce : The programming model and practice](https://ai.google/research/pubs/pub36249)
 * [Parallel Data Processing in MapReduce](http://www.ccs.neu.edu/home/mirek/classes/2012-F-CS6240/)
 
 ## Command line / Terminal
