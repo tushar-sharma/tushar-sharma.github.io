@@ -111,17 +111,22 @@ title: Resources for Programmers
 * [C++ Concurrency](https://www.youtube.com/playlist?list=PL1835A90FC78FF8BE)
 * [Parallel, Concurrent, and Distributed Programming in Java Specialization](https://www.coursera.org/specializations/pcdp)
 
-## Data Science & Big Data
-* [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
-* [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
-* [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
+## Data Science
 * [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
 * [Data Visualization](https://www.coursera.org/learn/datavisualization)
 * [Introduction to Apache Spark](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x)
-* [Setup Spark Cluster Step By Step](http://blog.insightdatalabs.com/spark-cluster-step-by-step/)
 * [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
 * [Text Retrieval and Search Engines](https://www.coursera.org/learn/text-retrieval)
 * [Pattern Discovery in Data Mining](https://www.coursera.org/learn/data-patterns)
+
+## Distributed Systems
+* [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
+* [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
+* [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
+* [Setup Spark Cluster Step By Step](http://blog.insightdatalabs.com/spark-cluster-step-by-step/)
+* [MapReduce Tutorial - Yahoo](https://developer.yahoo.com/hadoop/tutorial/)
+* [MapReduce : The programming model and practice](200~https://ai.google/research/pubs/pub36249)
+* [Parallel Data Processing in MapReduce](http://www.ccs.neu.edu/home/mirek/classes/2012-F-CS6240/)
 
 ## Command line / Terminal
 * [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/) -
