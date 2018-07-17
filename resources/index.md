@@ -120,8 +120,9 @@ title: Resources for Programmers
 * [Pattern Discovery in Data Mining](https://www.coursera.org/learn/data-patterns)
 
 ## Distributed Systems
-* [CMSC course - Hadoop ecosystem](https://www.csee.umbc.edu/~shadam1/491s16/)
 * [6.824 Spring 2017 MIT](http://nil.csail.mit.edu/6.824/2017/schedule.html)
+* [CMSC course - Hadoop ecosystem](https://www.csee.umbc.edu/~shadam1/491s16/)
+* [CS9223 - Massive Data Analysis](https://vgc.poly.edu/~juliana/courses/cs9223/)
 * [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
 * [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
 * [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
