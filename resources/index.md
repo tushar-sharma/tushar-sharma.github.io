@@ -121,6 +121,7 @@ title: Resources for Programmers
 
 ## Distributed Systems
 * [CMSC course - Hadoop ecosystem](https://www.csee.umbc.edu/~shadam1/491s16/)
+* [6.824 schedule](http://nil.csail.mit.edu/6.824/2017/schedule.html)
 * [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
 * [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
 * [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
