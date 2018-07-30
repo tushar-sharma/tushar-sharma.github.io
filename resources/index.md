@@ -30,6 +30,7 @@ title: Resources for Programmers
 * [Foundations of Data Structures](https://www.edx.org/course/foundations-data-structures-iitbombayx-cs213-1x#!)
 * [Introduction to Algorithms by MIT Erik Demaine](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/index.htm)
 * [Introduction to Algorithms (SMA 5503)](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/)
+* [Introduction to class based class design](https://course.ccs.neu.edu/cs2510h)
 * [Java Programming: Arrays, Lists, and Structured Data](https://www.coursera.org/learn/java-programming-arrays-lists-data)
 * [Mastering Algorithms with Perl](http://ebook.pldworld.com/_eBook/_OReilly_/133.Books/pdf_Perl/OReilly.-.Mastering_Algorithms_with_Perl_Oreilly.pdf)
 * [Mastering Algorithms techniques - Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
@@ -55,6 +56,9 @@ title: Resources for Programmers
 
 ### Two Hop neighbors
 * [Two Hop Neighbors - Chen Su](http://www.chen-su.com/static/slides/java_ucsd/c3/m1/C3M1L3S2_TwoHopNeighbors.pdf?q=1516568491)
+
+## IT
+* [Restore USB drive back to full capacity](http://www.eassos.com/blog/how-to-restore-usb-drive-back-to-full-capacity)
 
 ## Sorting
 
@@ -103,17 +107,29 @@ title: Resources for Programmers
 ## Blogs
 * [Ginlo Blog](http://blog.gainlo.co/)
 
-## Data Science & Big Data
-* [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
-* [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
-* [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
+## Concurrency
+* [C++ Concurrency](https://www.youtube.com/playlist?list=PL1835A90FC78FF8BE)
+* [Parallel, Concurrent, and Distributed Programming in Java Specialization](https://www.coursera.org/specializations/pcdp)
+
+## Data Science
 * [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
 * [Data Visualization](https://www.coursera.org/learn/datavisualization)
 * [Introduction to Apache Spark](https://www.edx.org/course/introduction-apache-spark-uc-berkeleyx-cs105x)
-* [Setup Spark Cluster Step By Step](http://blog.insightdatalabs.com/spark-cluster-step-by-step/)
 * [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
 * [Text Retrieval and Search Engines](https://www.coursera.org/learn/text-retrieval)
 * [Pattern Discovery in Data Mining](https://www.coursera.org/learn/data-patterns)
+
+## Distributed Systems
+* [6.824 Spring 2017 MIT](http://nil.csail.mit.edu/6.824/2017/schedule.html)
+* [CMSC course - Hadoop ecosystem](https://www.csee.umbc.edu/~shadam1/491s16/)
+* [CS9223 - Massive Data Analysis](https://vgc.poly.edu/~juliana/courses/cs9223/)
+* [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
+* [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
+* [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
+* [Setup Spark Cluster Step By Step](http://blog.insightdatalabs.com/spark-cluster-step-by-step/)
+* [MapReduce Tutorial - Yahoo](https://developer.yahoo.com/hadoop/tutorial/)
+* [MapReduce : The programming model and practice](https://ai.google/research/pubs/pub36249)
+* [Parallel Data Processing in MapReduce](http://www.ccs.neu.edu/home/mirek/classes/2012-F-CS6240/)
 
 ## Command line / Terminal
 * [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/) -
@@ -129,9 +145,10 @@ title: Resources for Programmers
 ## Databases
 * [Learn SQL The Hard Way](http://sql.learncodethehardway.org/book/)
 * [Postgres, the Best Tool You're Already Using](http://adamsanderson.github.io/railsconf_2013/?full#1)
-* [Visual Explanation of SQL Joins](http://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html)
 * [cs 61 - Charles C. Palmer](http://www.cs.dartmouth.edu/~cs61/)
+* [CS 340 - Database & Web System](http://www.cburch.com/cs/340/index.html)
 * [Getting Started with Impala](https://coe4bd.github.io/TechnicalReports/Setting%20Up%20a%20Hadoop%20Cluster%20with%20Cloudera%20Manager%20and%20Impala.pdf)
+* [Visual Explanation of SQL Joins](http://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html)
 
 ### Books
 * [Sqoop Cookbook](http://shop.oreilly.com/product/0636920029519.do)
