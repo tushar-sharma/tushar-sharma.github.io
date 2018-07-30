@@ -25,7 +25,7 @@ title: Books on my shelf
     display:inline-block;
     border-radius: 10px;
     position: relative;
-    margin: 5px15;
+    margin: 5px;
     padding: 2px 5px;
 }
 .sidebar-box-text {
@@ -38,6 +38,7 @@ title: Books on my shelf
    padding: 0 10px 0 0;
    overflow: hidden;
 }
+
 .sidebar-box-text .read-more {
   position: absolute;
   bottom: 0; left: 0;
@@ -50,10 +51,12 @@ title: Books on my shelf
   background-image: -moz-linear-gradient(top, transparent, white);
   background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, white));
 }
+
 </style>
 
 <script type="text/javascript">
 /* Sorting books based on author, name */
+/*global $*/
 $(document).ready(function() {
     var monkeyList = new List('test-list', {
       valueNames: ['name', 'author'],
@@ -318,6 +321,26 @@ $(document).ready(function() {
  
     </tr>
 
+<!-- left hand of darkness -->
+    <tr>
+          <td align="center" class="name"> The Left Hand of Darkness </td>
+          <td align="center"><img class="book" src="https://images-na.ssl-images-amazon.com/images/I/41bl2ognhpL._SY346_.jpg"> </td>
+          <td align="center" class="author">Ursula K. Le Guin</td>
+         <td align="center">
+	   <div class="rating">
+	     Read <br> <span class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></span>
+	   </div>
+         </td>
+      <td> 
+         <div class="sidebar-box-text">
+           <p> A classic must-read in science-fiction genre, the story revolves around Genly Ai, an earthling, on his perilous journey in an alien planet Gethen to pursuade them to join Ekumen (an intergalactic civilization). Living with androgynous people of Gethens, he embraces contradictory aspects of psychology, society,  patriotism, friendship, religion, sexual orientation, etc. 
+           </p>
+           <p class="read-more"><a href="#" class="button mytag" style="color:red;">Read More</a></p>
+          </div>
+       </td>
+ 
+    </tr>
+    
     <tr>
           <td align="center" class="name"> David Copperfield</td>
           <td align="center"><img class="book" src="https://images.gr-assets.com/books/1461452762l/58696.jpg"> </td>
@@ -364,30 +387,6 @@ $(document).ready(function() {
             </div>
           </td>
     </tr>
-
-    <tr>
-          <td align="center" class="name"> Crime And Punishment </td>
-          <td align="center"><img class="book" src="https://images.gr-assets.com/books/1382846449l/7144.jpg"> </td>
-          <td align="center" class="author">  Fyodor Dostoyevsky, </td>
-          <td align="center" class="rating"> Reading<br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book6"></div>
-            </div>
-          </td>
-    </tr>
-
-    <tr>
-          <td align="center" class="name"> A suitable boy </td>
-          <td align="center"><img class="book" src="https://images.gr-assets.com/books/1329421639l/50365.jpg"> </td>
-          <td align="center" class="author"> Vikram Seth </td>
-          <td align="center" class="rating"> Reading<br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book7"></div>
-            </div>
-          </td>
-    </tr>
-
-
 
 
     </tbody>
