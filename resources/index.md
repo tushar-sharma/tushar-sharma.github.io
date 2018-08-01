@@ -120,6 +120,7 @@ title: Resources for Programmers
 * [Pattern Discovery in Data Mining](https://www.coursera.org/learn/data-patterns)
 
 ## Distributed Systems
+* [CS 166 Data Structures](http://web.stanford.edu/class/archive/cs/cs166/cs166.1146/)
 * [6.824 Spring 2017 MIT](http://nil.csail.mit.edu/6.824/2017/schedule.html)
 * [CMSC course - Hadoop ecosystem](https://www.csee.umbc.edu/~shadam1/491s16/)
 * [CS9223 - Massive Data Analysis](https://vgc.poly.edu/~juliana/courses/cs9223/)
@@ -274,6 +275,9 @@ overview of HTML.
 
 ### Books
 * [Alice in Puzzleland](https://www.amazon.com/Alice-Puzzle-Land-Carrollian-Children-Recreational/dp/0486482006)
+
+## Python
+* [Decorators](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
 
 ## Rails
 * [Model View Controller (Lynda)](http://www.youtube.com/watch?v=3mQjtk2YDkM)
