@@ -128,6 +128,9 @@ title: Resources for Programmers
 * [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
 * [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
 * [Setup Spark Cluster Step By Step](http://blog.insightdatalabs.com/spark-cluster-step-by-step/)
+
+### MapReduce
+* [Data Manipulation at Scale - MapReduce](https://www.coursera.org/lecture/data-manipulation/mapreduce-simple-example-LBLUh)
 * [MapReduce Tutorial - Yahoo](https://developer.yahoo.com/hadoop/tutorial/)
 * [MapReduce : The programming model and practice](https://ai.google/research/pubs/pub36249)
 * [Parallel Data Processing in MapReduce](http://www.ccs.neu.edu/home/mirek/classes/2012-F-CS6240/)
