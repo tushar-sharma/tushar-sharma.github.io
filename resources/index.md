@@ -40,10 +40,10 @@ title: Resources for Programmers
 ### Hash Table
 
 * [Hashing with Chaining](https://www.youtube.com/watch?v=0M_kIqhwbFo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8)
-* [Hash Table](https://www.coursera.org/lecture/algorithms-graphs-data-structures/hash-tables-operations-and-applications-b2Uee)
-* [Hash Table](http://www.cs.cornell.edu/courses/JavaAndDS/hashing/01hashing.html)
-* [Hashing Implementation](https://medium.com/omarelgabrys-blog/hash-tables-2fec6870207f)
-* [Hashing Implementation](http://www.cs.princeton.edu/courses/archive/spring07/cos226/lectures/10Hashing.pdf)
+* [Hash Table - coursera](https://www.coursera.org/lecture/algorithms-graphs-data-structures/hash-tables-operations-and-applications-b2Uee)
+* [Hash Table - Conrell](http://www.cs.cornell.edu/courses/JavaAndDS/hashing/01hashing.html)
+* [Hashing Implementation - Medium](https://medium.com/omarelgabrys-blog/hash-tables-2fec6870207f)
+* [Hashing Implementation- Princeton](http://www.cs.princeton.edu/courses/archive/spring07/cos226/lectures/10Hashing.pdf)
 
 ### Tries
 * [Analysis of Algorithms](https://www.coursera.org/learn/analysis-of-algorithms/lecture/5iqb3/tries)
