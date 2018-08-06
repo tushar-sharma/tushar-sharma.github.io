@@ -37,7 +37,15 @@ title: Resources for Programmers
 * [Problem Solving with Algorithms and Data Structures using Python](https://interactivepython.org/runestone/static/pythonds/index.html)
 * [Purely Functional Data Structures](http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf)
 
-## Tries
+### Hash Table
+
+* [Hashing with Chaining](https://www.youtube.com/watch?v=0M_kIqhwbFo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8)
+* [Hash Table](https://www.coursera.org/lecture/algorithms-graphs-data-structures/hash-tables-operations-and-applications-b2Uee)
+* [Hash Table](http://www.cs.cornell.edu/courses/JavaAndDS/hashing/01hashing.html)
+* [Hashing Implementation](https://medium.com/omarelgabrys-blog/hash-tables-2fec6870207f)
+* [Hashing Implementation](http://www.cs.princeton.edu/courses/archive/spring07/cos226/lectures/10Hashing.pdf)
+
+### Tries
 * [Analysis of Algorithms](https://www.coursera.org/learn/analysis-of-algorithms/lecture/5iqb3/tries)
 * [A neglected data structure](https://www.toptal.com/java/the-trie-a-neglected-data-structure)
 * [Coding Made Simple](https://www.youtube.com/watch?v=AXjmTQ8LEoI)
@@ -47,7 +55,7 @@ title: Resources for Programmers
 * [Using Tries](https://www.topcoder.com/community/data-science/data-science-tutorials/using-tries/)
 * [Visualizing Tries](https://www.cs.usfca.edu/~galles/visualization/Trie.html)
 
-## Graph
+### Graph
 * [Graph Theory](https://www3.nd.edu/~dgalvin1/40210/40210_F12/CGT_early.pdf)
 * [Codeforces problems](http://codeforces.com/blog/entry/55219)
 * [Leetcode](https://leetcode.com/tag/graph/)
