@@ -132,8 +132,6 @@ title: Resources for Programmers
 * [6.824 Spring 2017 MIT](http://nil.csail.mit.edu/6.824/2017/schedule.html)
 * [CMSC course - Hadoop ecosystem](https://www.csee.umbc.edu/~shadam1/491s16/)
 * [CS9223 - Massive Data Analysis](https://vgc.poly.edu/~juliana/courses/cs9223/)
-* [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
-* [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
 * [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
 * [Setup Spark Cluster Step By Step](http://blog.insightdatalabs.com/spark-cluster-step-by-step/)
 
@@ -142,6 +140,9 @@ title: Resources for Programmers
 * [MapReduce Tutorial - Yahoo](https://developer.yahoo.com/hadoop/tutorial/)
 * [MapReduce : The programming model and practice](https://ai.google/research/pubs/pub36249)
 * [Parallel Data Processing in MapReduce](http://www.ccs.neu.edu/home/mirek/classes/2012-F-CS6240/)
+* [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
+* [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
+* [MapReduce - Data Manipulation - coursera](https://www.coursera.org/lecture/data-manipulation/mapreduce-abstraction-1Fvee])
 
 ## Command line / Terminal
 * [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/) -
