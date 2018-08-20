@@ -37,7 +37,15 @@ title: Resources for Programmers
 * [Problem Solving with Algorithms and Data Structures using Python](https://interactivepython.org/runestone/static/pythonds/index.html)
 * [Purely Functional Data Structures](http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf)
 
-## Tries
+### Hash Table
+
+* [Hashing with Chaining](https://www.youtube.com/watch?v=0M_kIqhwbFo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8)
+* [Hash Table - coursera](https://www.coursera.org/lecture/algorithms-graphs-data-structures/hash-tables-operations-and-applications-b2Uee)
+* [Hash Table - Conrell](http://www.cs.cornell.edu/courses/JavaAndDS/hashing/01hashing.html)
+* [Hashing Implementation - Medium](https://medium.com/omarelgabrys-blog/hash-tables-2fec6870207f)
+* [Hashing Implementation- Princeton](http://www.cs.princeton.edu/courses/archive/spring07/cos226/lectures/10Hashing.pdf)
+
+### Tries
 * [Analysis of Algorithms](https://www.coursera.org/learn/analysis-of-algorithms/lecture/5iqb3/tries)
 * [A neglected data structure](https://www.toptal.com/java/the-trie-a-neglected-data-structure)
 * [Coding Made Simple](https://www.youtube.com/watch?v=AXjmTQ8LEoI)
@@ -47,7 +55,7 @@ title: Resources for Programmers
 * [Using Tries](https://www.topcoder.com/community/data-science/data-science-tutorials/using-tries/)
 * [Visualizing Tries](https://www.cs.usfca.edu/~galles/visualization/Trie.html)
 
-## Graph
+### Graph
 * [Graph Theory](https://www3.nd.edu/~dgalvin1/40210/40210_F12/CGT_early.pdf)
 * [Codeforces problems](http://codeforces.com/blog/entry/55219)
 * [Leetcode](https://leetcode.com/tag/graph/)
@@ -120,16 +128,21 @@ title: Resources for Programmers
 * [Pattern Discovery in Data Mining](https://www.coursera.org/learn/data-patterns)
 
 ## Distributed Systems
+* [CS 166 Data Structures](http://web.stanford.edu/class/archive/cs/cs166/cs166.1146/)
 * [6.824 Spring 2017 MIT](http://nil.csail.mit.edu/6.824/2017/schedule.html)
 * [CMSC course - Hadoop ecosystem](https://www.csee.umbc.edu/~shadam1/491s16/)
 * [CS9223 - Massive Data Analysis](https://vgc.poly.edu/~juliana/courses/cs9223/)
-* [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
-* [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
 * [Cloud Computing coursework by Coursera](https://www.coursera.org/specializations/cloud-computing)
 * [Setup Spark Cluster Step By Step](http://blog.insightdatalabs.com/spark-cluster-step-by-step/)
+
+### MapReduce
+* [Data Manipulation at Scale - MapReduce](https://www.coursera.org/lecture/data-manipulation/mapreduce-simple-example-LBLUh)
 * [MapReduce Tutorial - Yahoo](https://developer.yahoo.com/hadoop/tutorial/)
 * [MapReduce : The programming model and practice](https://ai.google/research/pubs/pub36249)
 * [Parallel Data Processing in MapReduce](http://www.ccs.neu.edu/home/mirek/classes/2012-F-CS6240/)
+* [Introduction to hadoop and Mapreduce](https://www.udacity.com/course/intro-to-hadoop-and-mapreduce--ud617)
+* [Hadoop Platform and Application Framework](https://www.coursera.org/learn/hadoop/)
+* [MapReduce - Data Manipulation - coursera](https://www.coursera.org/lecture/data-manipulation/mapreduce-abstraction-1Fvee])
 
 ## Command line / Terminal
 * [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/) -
@@ -274,6 +287,9 @@ overview of HTML.
 
 ### Books
 * [Alice in Puzzleland](https://www.amazon.com/Alice-Puzzle-Land-Carrollian-Children-Recreational/dp/0486482006)
+
+## Python
+* [Decorators](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
 
 ## Rails
 * [Model View Controller (Lynda)](http://www.youtube.com/watch?v=3mQjtk2YDkM)
