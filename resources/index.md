@@ -105,6 +105,11 @@ title: Resources for Programmers
 * [man page kill command](https://ss64.com/osx/kill.html)
 * [What does kill 0 pid does?](https://stackoverflow.com/questions/11012527/what-does-kill-0-pid-in-a-shell-script-do)
 
+## Blockchain
+* [Blockchain at Berkeley](https://blockchain.berkeley.edu)
+* [Blockchain specialization - coursera](https://www.coursera.org/specializations/blockchain)
+* [Blockchain udacity nanodegree](https://www.udacity.com/course/blockchain-developer-nanodegree--nd1309)
+
 ## C & C++
 * [Learn C the hard way](https://learncodethehardway.org/c/)
 * [C++ for C programmers Part A](https://www.coursera.org/learn/c-plus-plus-a)
