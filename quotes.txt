@@ -166,14 +166,14 @@
 "You know, I'm sick of following my dreams, man. I'm just going to ask where they're going and hook up with 'em later" - Mitch Hedberg
 "I trust that everything happens for a reason, even if we are not wise enough to see it" - Oprah Winfrey
 "Great spirits have always encountered violent opposition from mediocre minds" - Albert Einstein
-"A wise girl kisses but doesn't love, listens but doesn't believe, and leaves before she is left" - Marilyn Monroe 
+"A wise girl kisses but doesn't love, listens but doesn't believe, and leaves before she is left" - Marilyn Monroe
 "A library is infinity under a roof" - Gail Carson Levine
 "No one really knows why they are alive until they know what they'd die for" - Martin Luther King Jr
 "There are some things you learn best in calm, and some in storm" - Willa Cather
 "A bend in the road is not the end of the road...unless you fail to make the turn" - Anonymous
 "I regret that it takes a life to learn how to live" - Jonathan Safran Foer
-"We all die. The goal isn't to live forever, the goal is to create something that will" - Chuck Palahniuk 
-"To be bored is an insult to yourself" - Jules Renard 
+"We all die. The goal isn't to live forever, the goal is to create something that will" - Chuck Palahniuk
+"To be bored is an insult to yourself" - Jules Renard
 "Have you ever had a dream that you were so sure was real? What if you were unable to wake up from that dream? How would you know the difference between the dream world, and the real one?" — Morphius, The Matrix
 "In matters of style, swim with the current; in matters of principle, stand like a rock" - Thomas Jefferson
 "Laws are like cobwebs, which may catch small flies, but let wasps and hornets break through" - Jonathan Swift
@@ -221,7 +221,7 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "I am dying, since you asked , so are you." - Christopher Hitchens
 "The privilege of a lifetime is to become who you truly are" - C.G.Jung
 "The windows of my soul I throw, wide open to the sun" - John Greenleaf Whittier
-"My Best friend is a person who will give me a book I have not read" - Abraham lincoln 
+"My Best friend is a person who will give me a book I have not read" - Abraham lincoln
 "The opinion of the intelligent is better than the certainty of the ignorant" - Egyptian Proverb
 "The truth, it has the habit of revealing itself" - Agatha Christie
 "Inside my empty bottle I was constructing a lighthouse while all the others were making ships." - Charles Simic
@@ -245,9 +245,9 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "A guy who builds a nice chair doesn't owe money to everyone who ever has built a chair." - The Social Network
 "You might never fail on the scale I did, but some failure in life is inevitable. It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all – in which case, you fail by default." - J.K Rowling
 "I can understand wanting to have a million dollars, but once you get beyond that, I have to tell you, it's the same hamburger." - Bill Gates
-"If slaughterhouses had glass walls, everyone would be a vegetarian." - Paul McCartney 
+"If slaughterhouses had glass walls, everyone would be a vegetarian." - Paul McCartney
 "May this night carry my will. And may these old mountains forever remember this night. May the forest whisper my name. And may the storm bring these words to the end of all worlds" - Ihsahn
-"In the end, only three things matter: how much you loved, how gently you lived, and how gracefully you let go of things not meant for you." - Buddha 
+"In the end, only three things matter: how much you loved, how gently you lived, and how gracefully you let go of things not meant for you." - Buddha
 "Failure is a signpost to turn you in another direction." -  Oprah
 "Anyone can sympathise with the sufferings of a friend, but it requires a very fine nature to sympathise with a friend's success." - Sebastian Melmoth
 "If you want to build a ship, don't drum up people to collect wood and don't assign them tasks and work, but rather teach them to long for the endless immensity of the sea."- Antoine de Saint Exupéry
@@ -261,7 +261,7 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "Mathematics, rightly viewed, possesses not only truth, but supreme beauty—a beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show." - Bertrand Russell
 "Vision without execution is hallucination." ― Thomas Edison
 "Men know life too early; women know life too late--that is the difference between men and women." -  Oscar Wilde
-"Any intelligent fool can make things bigger and more complex. It takes a touch of genius - and a lot of courage to move in the opposite direction." - Einstein 
+"Any intelligent fool can make things bigger and more complex. It takes a touch of genius - and a lot of courage to move in the opposite direction." - Einstein
 "The scientist does not study nature because it is useful to do so. He studies it because he takes pleasure in it, and he takes pleasure in it because it is beautiful." - Poincaré
 "If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is." - John von Neumann
 "I know not with what weapons World War III will be fought, but World War IV will be fought with sticks and stones." - Albert Einstein
@@ -280,7 +280,7 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "If there is meaning in life at all, then there must be meaning in suffering." - Victor. E Frankl
 "So many books, so little time" - Frank Zappa
 "I am so clever that sometimes I don't understand a single word of what I am saying" - Oscar Wilde
-"A woman is like a tea bag; you never know how strong it is until it's in hot water." - Eleanor Roosevelt 
+"A woman is like a tea bag; you never know how strong it is until it's in hot water." - Eleanor Roosevelt
 "Whenever you find yourself on the side of the majority, it is time to pause and reflect." - Mark Twain
 "All that is gold does not glitter,<br>Not all those who wander are lost;<br>The old that is strong does not wither,<br>Deep roots are not reached by the frost.<br>" - J.R.R. Tolkien, The Fellowship of the Ring
 "The universe is a continuous web. Touch it at any point and the whole web quivers." - Stanley Kunitz
@@ -324,24 +324,24 @@ To be or not to be. -- Shakespeare <br>To do is to be. -- Nietzsche<br>To be is 
 "School is the advertising agency which makes you believe that you need the society as it is."-  Ivan Illich
 Feed the masses, eat with the classes.
 "You are the average of the five people you spend the most time with." - Jim Rohn
-"We build too many walls and not enough bridges." - Sir Isaac Newton 
-"If I have lost every friend on earth, I shall have one friend left down inside me" - Abraham Lincoln 
+"We build too many walls and not enough bridges." - Sir Isaac Newton
+"If I have lost every friend on earth, I shall have one friend left down inside me" - Abraham Lincoln
 "A chattering bird builds no nest " - African Proverb
 "A book is like a garden carried in the pocket" - Chinese Proverb
 "No one can make you feel inferior without your consent" - Eleanor Roosevelt
 "If I am not for myself, who will be?" - Pirke Avoth
-"You have to expect things of yourself before you can do them" - Michael Jordan 
-"Every man has his peculiar ambition" - Abraham Lincoln 
+"You have to expect things of yourself before you can do them" - Michael Jordan
+"Every man has his peculiar ambition" - Abraham Lincoln
 "Everyone lives by selling something" - Robert Louis Stevenson
 "Good fences make good neighbours" - Robert Frost
 "The wastebasket is a writer's best friend" - Issac Bashevis Singer
 "To have great poets there must be great audiences too" - Walt Whitman
 "I don't know the key to success, but the key to failure is trying to please everybody" - Bill Cosby
 "No army can withstand the strength of an idea whose time has come" - Victor Hugo
-"The memories of men are too frail a thread to hang history from" - John Still 
-"A man's rootage is more important than his leafage" - Woodrow Wilson 
-"Those who cannot remember the past are condemned to repeat it" - George Santayana 
-"When it  is dark enough, you can see the stars" - Charles A. Beard 
+"The memories of men are too frail a thread to hang history from" - John Still
+"A man's rootage is more important than his leafage" - Woodrow Wilson
+"Those who cannot remember the past are condemned to repeat it" - George Santayana
+"When it  is dark enough, you can see the stars" - Charles A. Beard
 "Nature never did betray the heart that loved her" - William Wordsworth
 "The bluebird carries the sky on his back" - Henry David Thoreau
 "Women can do everything; men can do the rest." - Russian proverb
@@ -356,8 +356,8 @@ Feed the masses, eat with the classes.
 "Too much agreement kills a chat" - Eldridge Cleaver
 "God has given you one face, and you make yourself another" - William Shakespeare
 "I hear and I forget. I see and I remember. I do and I understand." - Chinese Proverb
-"Education is not the filling of a pail, but he lighting of a fire" - William Butler Yeats 
-"Happiness to a dog is what lies on the other side of a door" - Charleton Ogburn, Jr. 
+"Education is not the filling of a pail, but he lighting of a fire" - William Butler Yeats
+"Happiness to a dog is what lies on the other side of a door" - Charleton Ogburn, Jr.
 "The teeth are smiling, but is the heart?" - African Proverb
 "I just wanted to make a difference, however small, in the world" - Arthur Ashe
 "Being a hero is about the shortest lived profession on earth" - Will Rogers
@@ -366,19 +366,19 @@ Feed the masses, eat with the classes.
 "Every artist was first an amateur" - Ralph Waldo Emerson
 "I dream my painting, and then I paint my dream" - Vincent van Gogh
 "Advertising is legalized lying" - H.G. Wells
-"A friend is one before whom I may think aloud" - Ralph Waldo Emerson 
-"When the mind is thinking, it is talking to itself" - Plato 
+"A friend is one before whom I may think aloud" - Ralph Waldo Emerson
+"When the mind is thinking, it is talking to itself" - Plato
 "Genius is one percent inspiration and ninety-nine percent perspiration" - Thomas Alva Edison
 "There are people who have money and people who are rich" - Coco Chanel
-"Everybody is ignorant, only on different subjects" - Will Rogers 
-"Every path has its puddle" - Anonymous 
+"Everybody is ignorant, only on different subjects" - Will Rogers
+"Every path has its puddle" - Anonymous
 "Don't look where you fall, but where you slipped" - African Proverb
 "Bad is never good until worse happens" - Danish poverb
 "The price spoils the pleasure" - French proverb
 "Fall seven times, stand up eight" - Japanese proverb
-"Listen or thy tongue will keep thee deaf" - Native-American proverb 
+"Listen or thy tongue will keep thee deaf" - Native-American proverb
 "Someday, we'll run into each other again. I know it. Maybe I'll be older and smarter and just plain better. If that happens, that's when I'll deserve you. But now, at this moment, you can't hook your boat to mine, because I'm liable to sink us both." - Gabrielle Zevin, Memoirs of a Teenage Amnesiac
-"Sufism has taught me that just as the rain and the sun do not differentiate between people,neither should we." - A.R Rahman 
+"Sufism has taught me that just as the rain and the sun do not differentiate between people,neither should we." - A.R Rahman
 "I would rather die standing than live on my knees" - Charlie Hebdo's Editor Stephane 'Charb' Charbonnier.
 "Love is but the discovery of ourselves in others, and the delight in the recognition." - Alexander Smith
 "If you've got nothing to dance about, find a reason to sing." ― Melody Carstairs
@@ -387,10 +387,11 @@ Feed the masses, eat with the classes.
 "To love would be an awfully big adventure." - J.M. Barrie (Peter Pan)
 "Any man who can drive safely while kissing a pretty girl is simply not giving the kiss the attention it deserves." - Albert Einstein
 "When people get used to preferential treatment, equal treatment feels like discrimination." - Thomas Sowell
-"What you can do today can improve all your tomorrows" - Ralph Marston 
-"If you don't build your dream, someone else will hire you to help them build theirs" - Dhirubhai Ambani 
+"What you can do today can improve all your tomorrows" - Ralph Marston
+"If you don't build your dream, someone else will hire you to help them build theirs" - Dhirubhai Ambani
 "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live." - John F. Woods
 "And God said “Love Your Enemy,” and I obeyed him and loved myself." -  Kahlil Gibran, The Broken Wings
 "An expert is a person who has made all the mistakes that can be made in a very narrow field." - Neil Bohr
 "Memento mori (remember that you have to die)" - medieval Latin Christian theory
 "vulnerant omnes, ultima necat (they all wound, and the last kills)"  - Lain motto
+“Properly read, the Bible is the most potent force for atheism ever conceived" - Issac Asimov
