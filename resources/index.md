@@ -36,6 +36,9 @@ title: Resources for Programmers
 * [Mastering Algorithms techniques - Coursera](https://www.coursera.org/specializations/data-structures-algorithms)
 * [Problem Solving with Algorithms and Data Structures using Python](https://interactivepython.org/runestone/static/pythonds/index.html)
 * [Purely Functional Data Structures](http://www.cs.cmu.edu/~rwh/theses/okasaki.pdf)
+* [Open Data Structures - Java](http://opendatastructures.org/ods-java/)
+* [The data structure project](https://github.com/williamfiset/data-structures)
+* [Coding Made Simple](https://www.youtube.com/channel/UCZLJf_R2sWyUtXSKiKlyvAw)
 
 ### Hash Table
 
@@ -44,6 +47,11 @@ title: Resources for Programmers
 * [Hash Table - Conrell](http://www.cs.cornell.edu/courses/JavaAndDS/hashing/01hashing.html)
 * [Hashing Implementation - Medium](https://medium.com/omarelgabrys-blog/hash-tables-2fec6870207f)
 * [Hashing Implementation- Princeton](http://www.cs.princeton.edu/courses/archive/spring07/cos226/lectures/10Hashing.pdf)
+* [Chaining - Jan Georg Smaus](http://gki.informatik.uni-freiburg.de/teaching/ss11/theoryI/07_Hashing_Chaining.pdf)
+* [Hasing with Chaining - ods](http://opendatastructures.org/ods-java/5_1_ChainedHashTable_Hashin.html)
+* [Hash Table - Chiu CC (use Google translator)](http://alrightchiu.github.io/SecondRound/hash-tablechaining.html)
+* [Hash table - University of Cambridge](https://www.cl.cam.ac.uk/teaching/1112/AlgorithI/rkh_hashtables.pdf)
+* [University of Oslo - problems](https://www.uio.no/studier/emner/matnat/ifi/INF2220/h17/undervisningsmateriale/ex03.pdf)
 
 ### Tries
 * [Analysis of Algorithms](https://www.coursera.org/learn/analysis-of-algorithms/lecture/5iqb3/tries)
@@ -103,6 +111,11 @@ title: Resources for Programmers
 * [man page kill command](https://ss64.com/osx/kill.html)
 * [What does kill 0 pid does?](https://stackoverflow.com/questions/11012527/what-does-kill-0-pid-in-a-shell-script-do)
 
+## Blockchain
+* [Blockchain at Berkeley](https://blockchain.berkeley.edu)
+* [Blockchain specialization - coursera](https://www.coursera.org/specializations/blockchain)
+* [Blockchain udacity nanodegree](https://www.udacity.com/course/blockchain-developer-nanodegree--nd1309)
+
 ## C & C++
 * [Learn C the hard way](https://learncodethehardway.org/c/)
 * [C++ for C programmers Part A](https://www.coursera.org/learn/c-plus-plus-a)
@@ -126,6 +139,12 @@ title: Resources for Programmers
 * [Cluster Analysis in Data Mining](https://www.coursera.org/learn/cluster-analysis)
 * [Text Retrieval and Search Engines](https://www.coursera.org/learn/text-retrieval)
 * [Pattern Discovery in Data Mining](https://www.coursera.org/learn/data-patterns)
+
+## Django
+* [Writing your first Django app Part 1](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
+* [Django Girls Tutorial](https://tutorial.djangogirls.org/en/)
+* [Django-tables2 getting started](https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html)
+* [Importing a CSV file to database models](http://abhishekchhibber.com/django-importing-a-csv-file-to-database-models/)
 
 ## Distributed Systems
 * [CS 166 Data Structures](http://web.stanford.edu/class/archive/cs/cs166/cs166.1146/)
