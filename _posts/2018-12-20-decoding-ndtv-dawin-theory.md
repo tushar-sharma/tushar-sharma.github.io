@@ -34,7 +34,7 @@ The debate panelist include the following members viz,
 
 4. Two young students
 
-I wander why there was no evolutionary biologist invited to the panel while discussing evolution. without lawyers. I would love to hear the defense of "evolution" by biologist like Richard Dawkins or Amitabh Joshi. Here's a link to speech on evolution[2] by Amitabh Joshi.
+I wander why there was no evolutionary biologist invited to the panel while discussing evolution. without lawyers. I would love to hear the defense of "evolution" by biologist like Richard Dawkins or Amitabh Joshi. Speech by Amitabh Joshi on evolution<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
 
 RSS is an Indian right wing organisation. So it's usualy predictable that right wingers usually oppose "evolution" since it embarrases their relgious beliefs. Religion always give anthromorphic view of the world where human deserve a pedastal higher than rest of the animals. While with evolution, there's nothign special about humans, just another species that branched from last universal commmon ancestor.In the United States, many right wings religous group often opposed "evolution" to being taught in school.[us]
 
@@ -86,7 +86,7 @@ Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta
 
 
 [1] 
-[2] https://www.youtube.com/watch?v=xppn7ITteZw
+[2] 
 [3] https://www.youtube.com/watch?v=Sztt70n6geE
 [flat] : https://en.wikipedia.org/wiki/Modern_flat_Earth_societies
 [court] https://www.thehindu.com/2000/07/14/stories/0214000q.htm
@@ -107,6 +107,12 @@ Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta
          <p><a href="https://www.ndtv.com/video/news/the-buck-stops-here/darwin-s-theory-should-minister-s-views-be-dismissed-477172?yt" target="_blank">ndtv</a></p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
     </li>
+	
+	   <li id='fn:2'>
+         <p><a href="https://www.youtube.com/watch?v=xppn7ITteZw" target="_blank">ndtv</a></p>
+         <a href='#fnref:2' rev='footnote'>&#8617;</a>
+    </li>
+	
 
     
   </ol>
