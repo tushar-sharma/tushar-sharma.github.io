@@ -20,8 +20,14 @@ I wanted to decode an old debate that saw on ndtv. It was about a controversy er
 
 <img src="https://i.ytimg.com/vi/ljlN_sk2yrE/hqdefault.jpg" >
 
-How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or expertise to comment on the subject? On the contrary he served as the Police Commisioner of Mumbai. So evolutionary biology is not his forte.
+How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or published a paper that can be peer reviewed? On the contrary he served as the Police Commisioner of Mumbai. So does he understand how science works? 
 
+#### What is science 
+
+Probably someone wearing a white garb while looking streanously into the microsope. 
+
+
+<img src="http://footage.framepool.com/shotimg/qf/933507018-forensic-pathology-pipette-analysing-microscope.jpg" >
 
 The debate begis with the following members viz,
 1. Das Ratan Nigam (a lawyer & also a member of RSS)
