@@ -10,17 +10,17 @@ name: three-sum-problem
 thumb: https://i.ytimg.com/vi/ljlN_sk2yrE/hqdefault.jpg
 ---
 
-I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about an controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". <!-- truncate_here -->
+I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" because he never "<b>saw an ape turning into human being</b>". <!-- truncate_here -->
 
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
-I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about an controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". 
+I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" because he never "<b>saw an ape turning into human being</b>". 
 
 <img src="https://i.ytimg.com/vi/ljlN_sk2yrE/hqdefault.jpg" >
 
-How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary he had a carrer of Police Commisioner of Mumbai.
+How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary, he had a career of Police Commisioner of Mumbai.
 
 #### Panelist for the debate
 
@@ -28,27 +28,26 @@ The debate panelist include the following members viz,
 
 1. *Das Ratan Nigam* (a lawyer & also a member of RSS)
 
-2. *Ankit Sule*,  doctorate in Asotphysics from Bhabha Centre for Science Education
+2. *Ankit Sule*, a doctorate in Astophysics from Bhabha Centre for Science Education
 
 3. *Chandra Sharma*, professor of education at IGNOUS
 
 4. Two young students
 
-I wander why there was no evolutionary biologist invited to the panel while discussing evolution. It's akin to debating laws without inviting lawyers. I would love to hear the defense of "evolution" by biologist like Richard Dawkins or Amitabh Joshi. Speech by Amitabh Joshi on evolution<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
+I wonder why there was no evolutionary biologist invited to the panel while discussing evolution. It's akin to debating laws without inviting lawyers. I would love to hear the defense of "evolution" by biologists like Richard Dawkins or Amitabh Joshi. Speech by Amitabh Joshi on evolution<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
 
 <img src="https://media.giphy.com/media/19tv1qZSYGO2nsUChn/giphy.gif" alt="Expert funny picture" >
 
-RSS is an Indian right wing organisation. Right wing ususally oppose "evolution" since it embarrases their relgious beliefs. Religion presents an anthromorphic view of the world where human deserve a pedastal higher than rest of the animals. While evolution dashes those hopes stating that there is nothing special about humans who originated from last universal commmon ancestors 3.5 billion years ago & recently branched off from orangutans 14 million year ago. In the United States, many right wings religous group often opposed "evolution" to being taught in school<sup><a href='#fn:3' rel='footnote'>3</a></sup>.
+RSS is an Indian right-wing organization. Right wing usually opposes "evolution" since it embarrasses their religious beliefs. Religion presents an anthropomorphic view of the world where human deserves a pedestal higher than rest of the animals. While evolution dashes those hopes stating that there is nothing special about humans who originated from last universal common ancestors 3.5 billion years ago & recently branched off from orangutans 14 million years ago. In the United States, many right wings religious group often opposed "evolution" to being taught in school<sup><a href='#fn:3' rel='footnote'>3</a></sup>.
 
-Das Ratan Nigam is lawyer by profession & is affliated to RSS. He is known to espouse pseudoscietific theories likes which were promulgated by self-procalimed historian P.N. Oak who stated that both Christaniy & Islam were derivatives of Hinduism and that Vatican City, Kaaba, Westminster Abbey and the Taj Mahal were once Hindu temples of Shiva. His petition to rewrite history has been dismissed by the Indian Supreme court<sup><a href='#fn:4' rel='footnote'>4</a></sup>.
+Das Ratan Nigam is a lawyer by profession & is affiliated to RSS. He is known to espouse pseudoscientific theories likes which were promulgated by self-proclaimed historian P.N. Oak who stated that both Christianity & Islam were derivatives of Hinduism and that Vatican City, Kaaba, Westminster Abbey, and the Taj Mahal were once Hindu temples of Shiva. His petition to rewrite history has been dismissed by the Indian Supreme court<sup><a href='#fn:4' rel='footnote'>4</a></sup>.
 
-
-In 1:19 minutes of the video, Das Ratan says the minsiter Saytapal Singh is only challenging Darwins's theory of evolution. He says that there are muliple theories of evolution. But he didn't elaborate on what other theories of evolutions he was alluding to. May be he meant botanist Carolus Linnaeu's theory who based his categorization of species on theory of unchanging life created by God. Or George Louis Leclerc who believed that Earth was only 75,000 year old & men descendent from apes. Or Does he believe in Genesis or tales of Hiranyagarbha (golden embryo) mentioned in the Rig Vedas?
+In 1:19 minutes of the video, Das Ratan says the minister Saytapal Singh is only challenging Darwins's theory of evolution. He says that there are multiple theories of evolution. But he didn't elaborate on what other theories of evolutions he was alluding to. Maybe he meant botanist Carolus Linnaeu's theory who based his categorization of species on the theory of unchanging life created by God. Or George Louis Leclerc who believed that Earth was only 75,000 year old & men descendent from apes. Or Does he believe in Genesis or tales of Hiranyagarbha (golden embryo) mentioned in the Rig Vedas?
 
 <img src="https://media.giphy.com/media/BDz6tWBtXDL4Q/giphy.gif" alt="Charles Darwin" >
 
 
-However he makes a straw man fallacy by claiming that Darwin himself didn't belive in his theory as there was lack of fossil evidence. When confronted by the anchor that fossil evidence has been found, he retorts that "no fossil evidence has come for the incomplete species". This argument has always been used in popular media to discredit evolution. But missing link is now considered a non-scientific term. Copied verbatim from wikipedia
+However, he makes a straw man fallacy by claiming that Darwin himself didn't believe in his theory as there was a lack of fossil evidence. When confronted by the anchor that fossil evidence has been found, he retorts that "no fossil evidence has come for the incomplete species". This argument has always been used in popular media to discredit evolution. But missing link is now considered a non-scientific term. Copied verbatim from Wikipedia
 
 <blockquote>
 The term "missing link" has fallen out of favor with biologists because it implies the evolutionary process is a linear phenomenon and that forms originate consecutively in a chain. Instead, last common ancestor is preferred since this does not have the connotation of a linear evolution, as evolution is a branching process.
@@ -58,32 +57,31 @@ The term "missing link" has fallen out of favor with biologists because it impli
 
 It would be prudent for him to listen to this speech by Richard Dawkins on "missing link"<sup><a href='#fn:5' rel='footnote'>5</a></sup>.
 
-He babbles that evolution taught today is Neo Darwanism which has nothing to do Darwin's theory of evolution. He confuses Modern Synthetic theory with Neo Darwanism. Neo Darwainism is the interpretation of Darwanian evolution by incorporating Mendelian genetics. However the theory still hinges on the Darwin's idea of "natural selection".
+He babbles that evolution taught today is Neo Darwinism which has nothing to do Darwin's theory of evolution. He confuses Modern Synthetic theory with Neo Darwinism. Neo Darwinism is the interpretation of Darwinian evolution by incorporating Mendelian genetics. However, the theory still hinges on Darwin's idea of "natural selection".
 
-Ras Ratan Nigam continues to discredit evolution by claiming that Darwing had no clue for genetic mutation. This is similar arguement to reject Newtonian physics by claiming that Newton had no idea about space time continuum or that mass increase with velocity or space is not infinite. Newton's idea was revolutionary in understanding laws of gravity. Einstien realised that Newton's theory of gravity was not comlete which eventually gave birth to "theory of relativity". Darwin didn't know much about DNA or nucleotide. He was also wrong about heredity due to blending (later it's found to be particulate). Yet his idea of natural selection lays the foundation for modern evolution theory. People opposing evolution howver never suggest alterantive thoery that is both falsifiable & verifiable. 
- 
+Ras Ratan Nigam continues to discredit evolution by claiming that Darwin had no clue for genetic mutation. This is a similar argument to reject Newtonian physics by claiming that Newton had no idea about space-time continuum or that mass increase with velocity or space is not infinite. Newton's idea was revolutionary in understanding the laws of gravity. Einstein realized that Newton's theory of gravity was not complete which eventually gave birth to "theory of relativity". Darwin didn't know much about DNA or nucleotide. He was also wrong about heredity due to blending (later it's found to be particulate). Yet his idea of natural selection lays the foundation for modern evolutionary theory. People opposing evolution however never suggest alternative theory that is both falsifiable & verifiable.  
 
-In 3:48 minutes of the video, anchor ask Chandra Sharma about his views on evolution. He deplomatically says that the minister has only raised question on evolution. He said that it's valid that we must more research on evolution. He says that the Indian misister quoted scientist and books that discredit evolution. He somehow slips into Vishnu (India god) claiming that ancient India books contained much more knowledge. This is a slipper slope becaues many people claim that their holy anicent books contains scientific wisdom. It might be true sometimes, but often it leads into maze of psedo scientific claims. 
+In 3:48 minutes of the video, anchor ask Chandra Sharma about his views on evolution. He diplomatically says that the minister has only raised the question on evolution. He said that it's valid that we must more research on evolution. He says that the Indian minister quoted scientist and books that discredit evolution. He somehow slips into Vishnu (India god) claiming that ancient India books contained much more knowledge. This is a slippery slope because many people claim that their holy ancient books contain scientific wisdom. It might be true sometimes, but often it leads into a maze of pseudo scientific claims. 
 
-In 7:21 minutes of the video, Das Ratan Nigam said that a Noble laureate Fred Hoyle doesn't belive in evolution. This is argument ad populum often used by people to say that a proposition is true because "If a smart scientist belive so". However he doesn't understand science. 
+In 7:21 minutes of the video, Das Ratan Nigam said that a Noble laureate Fred Hoyle doesn't believe in evolution. This is argument ad populum often used by people to say that a proposition is true because "If a smart scientist believe so". Probably he doesn't understand science. 
 
 #### What is science 
 
-Probably it represents someone wearing a white garb while looking streanously into the microsope. 
-
+Uusualy someone wearing a white garb while looking streanously into the microsope captures how people in general look at science. 
 
 <img src="http://footage.framepool.com/shotimg/qf/933507018-forensic-pathology-pipette-analysing-microscope.jpg" >
 
-However being scientific means that a theory satisfies the following
+However being scientific means that a theory must satisfy the following
 
-1. *verifiable* (based on observation) 
+1. *verifiability * (based on observation) 
 
-2. *peer reviewed* (reviewed by other qualitifed scientists) 
+2. *peer-reviewed* (reviewed by other qualified scientists) 
 
-3. *falsifablity*  (that can be refuted)
+3. *falsifiability*  (that can be refuted)
 
-Hence germ theory is scientific theory but "law of attraction" is not. Quantum healing or homeopath also fails the scientific test. 
+Hence germ theory is a scientific theory but "law of attraction" is not. Quantum healing or homeopath also fails the scientific test. But I am sad that "law of attraction" is not a scientific fact along with Santa Claus.
 
+<img src="https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif" >
 
 How do we know evolution is true? It's because of "scientfic consensus". It's the collective judgment, position, and opinion of community of scientists in a particular field. Newton was a brilliant physicist who postulated laws of gravity. However he also belived in alchemy. There is no "scientific consensus" that alchemy is valid. Kurt Wise is also a smart man who holds a PhD in paleontology from Harvard University. He belives that earth is literary less than 10,000 year old. However there is "scietific consensus" that earth is a 4.5 billion year old. So it doesn't matter if a particular scientist holds a fringe belief which is often touted by religious people to promulgate their beliefs. 
 
