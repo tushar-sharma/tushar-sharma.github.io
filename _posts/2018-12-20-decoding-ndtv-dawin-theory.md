@@ -26,11 +26,11 @@ How does he claim evolution is "scientifically wrong"? Does the said minister ha
 
 The debate panelist include the following members viz,
 
-1. Das Ratan Nigam (a lawyer & also a member of RSS)
+1. *Das Ratan Nigam* (a lawyer & also a member of RSS)
 
-2. Ankit Sule,  doctorate in Asotphysics
+2. *Ankit Sule*,  doctorate in Asotphysics from Bhabha Centre for Science Education
 
-3. Chandra Sharma, professor of education at IGNOUS
+3. *Chandra Sharma*, professor of education at IGNOUS
 
 4. Two young students
 
@@ -67,10 +67,13 @@ Probably it represents someone wearing a white garb while looking streanously in
 
 <img src="http://footage.framepool.com/shotimg/qf/933507018-forensic-pathology-pipette-analysing-microscope.jpg" >
 
-However being scientific means that theory satisfies the following
-1. verifiable 
-2. peer reviewed
-3. falsifablity  
+However being scientific means that a theory satisfies the following
+
+1. *verifiable* (based on observation) 
+
+2. *peer reviewed* (reviewed by other qualitifed scientists) 
+
+3. *falsifablity*  (that can be refuted)
 
 Hence germ theory is scientific theory but "law of attraction" is not. Quantum healing or homeopath also fails the scientific test. 
 
@@ -109,7 +112,7 @@ Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta
     </li>
 	
 	   <li id='fn:2'>
-         <p><a href="https://www.youtube.com/watch?v=xppn7ITteZw" target="_blank">ndtv</a></p>
+         <p><a href="https://www.youtube.com/watch?v=xppn7ITteZw" target="_blank">Amitabh Joshi's Youtube video</a></p>
          <a href='#fnref:2' rev='footnote'>&#8617;</a>
     </li>
 	
