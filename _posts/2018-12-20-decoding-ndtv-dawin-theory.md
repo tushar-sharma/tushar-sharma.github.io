@@ -87,7 +87,7 @@ How do we know evolution is true? It’s because of “scientific consensus”. 
 
 The only sane voice I found was that of Ankit Sule. He had started the petition addressed to the minister Mr. Singh and was signed by over 5000 scientists from India and abroad. In 9:53, we must look & study ancient Indian science but opposes every modern theory and trying to find it in ancient scriptures<sup><a href='#fn:6' rel='footnote'>6</a></sup>.
 
-In parliament, once a BJP MP said that cow dung and cow urnie could cure cancer (cow is sacred for the Hindus). The minister Mr. Singh had also earlier talked of  airplanes in ancient India.Or the speed of light in hanuman sholkas. Such exaggerated claims are made by all religious people. Some people have found big bang in Quran. Or photoelectric effect in BIble. 
+In parliament, once a BJP MP said that cow dung and cow urnie could cure cancer <sup><a href='#fn:7' rel='footnote'>7</a></sup>. The minister Mr. Singh had also earlier talked of airplanes in ancient India<sup><a href='#fn:8' rel='footnote'>8</a></sup>.Or the speed of light in hanuman sholkas. Such exaggerated claims are made by all religious people. Some people have found big bang in Quran. Or photoelectric effect in BIble. 
 
 
 Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta had a treatise in surgery or Paigal in grammar. And people accross the globe.  Yet to calim credit and save their scriptuure, relgious people someitmes stoop to defy the obvious empiracle fact as evolution.
@@ -137,6 +137,13 @@ Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta
          <p><a href=" https://www.thehindu.com/news/national/cow-urine-can-cure-cancer-bjp-member-in-rs/article7012010.ece" target="_blank">cow dung & urine</a></p>
          <a href='#fnref:7' rev='footnote'>&#8617;</a>
        </li>
+	   
+	   	<li id='fn:8'>
+         <p><a href="https://en.wikipedia.org/wiki/Vaimānika_Shāstra" target="_blank">Vaimānika Shāstra</a></p>
+         <a href='#fnref:8' rev='footnote'>&#8617;</a>
+       </li>
+	   
+	   
 	   
     
   </ol>
