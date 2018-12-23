@@ -48,20 +48,19 @@ In 1:19 minutes of the video, Das Ratan says the minsiter Saytapal Singh is only
 <img src="https://media.giphy.com/media/BDz6tWBtXDL4Q/giphy.gif" alt="Charles Darwin" >
 
 
-
-
 However he makes a straw man fallacy by claiming that Darwin himself didn't belive in his theory as there was lack of fossil evidence. When confronted by the anchor that fossil evidence has been found, he retorts that "no fossil evidence has come for the incomplete species". This argument has always been used in popular media to discredit evolution. But missing link is now considered a non-scientific term. Copied verbatim from wikipedia
 
 <blockquote>
 The term "missing link" has fallen out of favor with biologists because it implies the evolutionary process is a linear phenomenon and that forms originate consecutively in a chain. Instead, last common ancestor is preferred since this does not have the connotation of a linear evolution, as evolution is a branching process.
 </blockquote>
+<br>
 
 
 It would be prudent for him to listen to this speech by Richard Dawkins on "missing link"<sup><a href='#fn:5' rel='footnote'>5</a></sup>.
 
-He babbles that evolution taught today is Neo Darwanism which has nothing to do Darwin's theory of evolution. He confuses Modern Synthetic theory with Neo Darwanism. Neo Darwainism is the interpretation of Darwanian evolution by incorporating Mendelian genetics. However the theory still on the Darwin's idea of "natural selection".
+He babbles that evolution taught today is Neo Darwanism which has nothing to do Darwin's theory of evolution. He confuses Modern Synthetic theory with Neo Darwanism. Neo Darwainism is the interpretation of Darwanian evolution by incorporating Mendelian genetics. However the theory still hinges on the Darwin's idea of "natural selection".
 
-Ras Ratan Nigam continues to discredit evolution by claiming that Darwing had no clue for genetic mutation. This is similar arguemnt to reject Newtonian physics by claiming that Newton had no idea about space time continuum or that mass increase with velocity or space is not infinite. Newton's idea was revolutionary in understanding laws of gravity. Einstien realised that Newton's theory of gravity was not comlete which eventually gave birth to "theory of relativity". Darwin didn't know much about DNA or nucleotide. He was also wrong about heredity due to blending (later it's found to be particulate). Yet his idea of natural selection which lays the foundation for modern evolution theory. People opposing evolution howver never suggest alterantive thoery that is both falsifiable & verifiable. 
+Ras Ratan Nigam continues to discredit evolution by claiming that Darwing had no clue for genetic mutation. This is similar arguement to reject Newtonian physics by claiming that Newton had no idea about space time continuum or that mass increase with velocity or space is not infinite. Newton's idea was revolutionary in understanding laws of gravity. Einstien realised that Newton's theory of gravity was not comlete which eventually gave birth to "theory of relativity". Darwin didn't know much about DNA or nucleotide. He was also wrong about heredity due to blending (later it's found to be particulate). Yet his idea of natural selection lays the foundation for modern evolution theory. People opposing evolution howver never suggest alterantive thoery that is both falsifiable & verifiable. 
  
 
 In 3:48 minutes of the video, anchor ask Chandra Sharma about his views on evolution. He deplomatically says that the minister has only raised question on evolution. He said that it's valid that we must more research on evolution. He says that the Indian misister quoted scientist and books that discredit evolution. He somehow slips into Vishnu (India god) claiming that ancient India books contained much more knowledge. This is a slipper slope becaues many people claim that their holy anicent books contains scientific wisdom. It might be true sometimes, but often it leads into maze of psedo scientific claims. 
