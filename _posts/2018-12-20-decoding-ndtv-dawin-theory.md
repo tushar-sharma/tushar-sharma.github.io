@@ -10,27 +10,31 @@ name: three-sum-problem
 thumb: https://i.ytimg.com/vi/ljlN_sk2yrE/hqdefault.jpg
 ---
 
-I wanted to decode an old debate that saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". <!-- truncate_here -->
+I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about an controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". <!-- truncate_here -->
 
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
-I wanted to decode an old debate that saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". 
+I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about an controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". 
 
 <img src="https://i.ytimg.com/vi/ljlN_sk2yrE/hqdefault.jpg" >
 
-How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or published a paper that can be peer reviewed? On the contrary he served as the Police Commisioner of Mumbai. So does he understand how science works? 
+How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary he had a carrer of Police Commisioner of Mumbai.
 
-#### The debate
+#### Panelist for the debate
 
-The debate begis with the following members viz,
+The debate panelist include the following members viz,
+
 1. Das Ratan Nigam (a lawyer & also a member of RSS)
+
 2. Ankit Sule,  doctorate in Asotphysics
+
 3. Chandra Sharma, professor of education at IGNOUS
+
 4. Two young students
 
-I wander why there was no evolutionary biologist invited to the panel while discussing evolution. It's like debating about a law without inviting any lawyers. I would love to hear the defense of "evolution" by biologist like Richard Dawkins or Amitabh Joshi (in Indian context). Here's a link to speech on evolution[2] by Amitabh Joshi.
+I wander why there was no evolutionary biologist invited to the panel while discussing evolution. without lawyers. I would love to hear the defense of "evolution" by biologist like Richard Dawkins or Amitabh Joshi. Here's a link to speech on evolution[2] by Amitabh Joshi.
 
 RSS is an Indian right wing organisation. So it's usualy predictable that right wingers usually oppose "evolution" since it embarrases their relgious beliefs. Religion always give anthromorphic view of the world where human deserve a pedastal higher than rest of the animals. While with evolution, there's nothign special about humans, just another species that branched from last universal commmon ancestor.In the United States, many right wings religous group often opposed "evolution" to being taught in school.[us]
 
@@ -81,7 +85,7 @@ Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta
 
 
 
-[1] https://www.ndtv.com/video/news/the-buck-stops-here/darwin-s-theory-should-minister-s-views-be-dismissed-477172?yt
+[1] 
 [2] https://www.youtube.com/watch?v=xppn7ITteZw
 [3] https://www.youtube.com/watch?v=Sztt70n6geE
 [flat] : https://en.wikipedia.org/wiki/Modern_flat_Earth_societies
@@ -89,3 +93,21 @@ Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta
 [us] https://en.wikipedia.org/wiki/Creation_and_evolution_in_public_education_in_the_United_States
 
 [pet] https://drive.google.com/file/d/1P3La0NkprXiLd31V6IGQHqGsdHuV1cJ-/view
+
+<nav class="pagination clear" style="padding-bottom:20px;">
+{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
+</nav>
+
+
+<div class='footnotes'><h3>Footnotes</h3><hr />
+  <ol>
+
+
+    <li id='fn:1'>
+         <p><a href="https://www.ndtv.com/video/news/the-buck-stops-here/darwin-s-theory-should-minister-s-views-be-dismissed-477172?yt" target="_blank">ndtv</a></p>
+         <a href='#fnref:1' rev='footnote'>&#8617;</a>
+    </li>
+
+    
+  </ol>
+</div>
