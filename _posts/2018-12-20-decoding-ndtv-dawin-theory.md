@@ -34,13 +34,13 @@ The debate panelist include the following members viz,
 
 4. Two young students
 
-I wander why there was no evolutionary biologist invited to the panel while discussing evolution. It's akin to discussing some laws without lawyers. I would love to hear the defense of "evolution" by biologist like Richard Dawkins or Amitabh Joshi. Speech by Amitabh Joshi on evolution<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
+I wander why there was no evolutionary biologist invited to the panel while discussing evolution. It's akin to debating laws without inviting lawyers. I would love to hear the defense of "evolution" by biologist like Richard Dawkins or Amitabh Joshi. Speech by Amitabh Joshi on evolution<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
 
 <img src="https://media.giphy.com/media/19tv1qZSYGO2nsUChn/giphy.gif" alt="Expert funny picture" >
 
-RSS is an Indian right wing organisation. Right wing ususally oppose "evolution" since it embarrases their relgious beliefs. Religion always give anthromorphic view of the world where human deserve a pedastal higher than rest of the animals. While with evolution, there's nothign special about humans who branched from last universal commmon ancestor. In the United States, many right wings religous group often opposed "evolution" to being taught in school<sup><a href='#fn:3' rel='footnote'>3</a></sup>.
+RSS is an Indian right wing organisation. Right wing ususally oppose "evolution" since it embarrases their relgious beliefs. Religion always give anthromorphic view of the world where human deserve a pedastal higher than rest of the animals. While with evolution, there's nothing special about humans who branched from last universal commmon ancestor. In the United States, many right wings religous group often opposed "evolution" to being taught in school<sup><a href='#fn:3' rel='footnote'>3</a></sup>.
 
-Das Ratan Nigam is lawyer by profession & is affliated to RSS. He is known to espouse pseudoscietific theories likes that of P.N. Oak who claimed that both Christaniy & Islam were derivatives of Hinduism and that Vatican City, Kaaba, Westminster Abbey and the Taj Mahal were once Hindu temples of Shiva. His petition to rewrite history has been dismissed by the Indian Supreme court[court].
+Das Ratan Nigam is lawyer by profession & is affliated to RSS. He is known to espouse pseudoscietific theories likes which were promulgated by self-procalimed historian P.N. Oak who claimed that both Christaniy & Islam were derivatives of Hinduism and that Vatican City, Kaaba, Westminster Abbey and the Taj Mahal were once Hindu temples of Shiva. His petition to rewrite history has been dismissed by the Indian Supreme court[court].
 
 
 In 1:19 minutes of the video, Das Ratan says the minsiter Saytapal Singh is only challenging Darwins's theory of evolution. He says that there are muliple theories of evolution. But he didn't elaborate on what other theories of evolutions he was alluding to. May be he meant botanist Carolus Linnaeu's theory who based his categorization of species on theory of unchanging life created by God. Or George Louis Leclerc who believed that Earth was only 75,000 year old & men descendent from apes. Or Does he believe in Genesis or tales of Hiranyagarbha (golden embryo) mentioned in the Rig Vedas?
