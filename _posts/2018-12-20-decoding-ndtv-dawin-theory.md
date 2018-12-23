@@ -18,10 +18,12 @@ I wanted to decode an old debate that saw on ndtv. It was about a controversy er
 
 I wanted to decode an old debate that saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". 
 
+<img src="https://i.ytimg.com/vi/ljlN_sk2yrE/hqdefault.jpg" >
+
 How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or expertise to comment on the subject? On the contrary he served as the Police Commisioner of Mumbai. So evolutionary biology is not his forte.
 
 
-The members invited to the show were viz,
+The debate begis with the following members viz,
 1. Das Ratan Nigam (a lawyer & also a member of RSS)
 2. Ankit Sule,  doctorate in Asotphysics
 3. Chandra Sharma, professor of education at IGNOUS
