@@ -7,7 +7,7 @@ tags:
 - evolution
 - india
 name: three-sum-problem
-thumb: http://footage.framepool.com/shotimg/qf/933507018-forensic-pathology-pipette-analysing-microscope.jpg
+thumb: http://www.whizzpast.com/wp-content/uploads/2015/02/Editorial_cartoon_depicting_Charles_Darwin_as_an_ape_1871.jpg
 ---
 
 I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" because he never "<b>saw an ape turning into human being</b>". 
@@ -20,8 +20,7 @@ I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup>
 
 I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" because he never "<b>saw an ape turning into human being</b>". 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sd1Tkr0lXkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
-
+<img src="http://www.whizzpast.com/wp-content/uploads/2015/02/Editorial_cartoon_depicting_Charles_Darwin_as_an_ape_1871.jpg" alt="Charles darwin" >
 
 How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary, he had a career of Police Commisioner of Mumbai.
 
