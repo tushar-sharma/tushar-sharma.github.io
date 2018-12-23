@@ -93,7 +93,7 @@ In parliament, once a BJP MP said that cow dung and cow urnie could cure cancer 
 Of course, it doesn't mean that there is no wisdom in ancient scriptures. Sushruta wrote the treatise The Compendium of Suśruta in surgery around 6 century BCE. Or Pāṇini was the father of linguistics lived around 4th century BCE. Algebra was coined by Persian mathematician and astronomer al-Khwarizmi around 820 AD. Or the works of Confucious(479 BC), one the greatest philosophers of China. And much more. 
 
 
-Since time immemorial, religion has to forsake some parts belief to accommodate science. Nordic believed in God Thor responsible for thunder. I guess that myth died as soon as the science filled the gaps. Some Hindus believed that demon Rahu swallows the sun to cause the eclipse. However, people no longer believe such myths. 
+Since time immemorial, religion has to forsake some parts belief to accommodate science. Nordic believed in God Thor responsible for thunder. I guess that myth died as soon as the science filled the gaps. Some Hindus believed that demon Rahu swallows the sun to cause the eclipse. However, as science explained eclipses, people no longer believe such myths. 
 
 Even if religious books contain scientific fact, it doesn't prove them divine. As an atheist, I  refrain from commenting on the validity of religious scriptures.  I respect & celebrate all religion with their diversity. However, when it comes to science, the evidence is the king. And the science doesn't owe you anything that it would not offend your sentiments. 
 
