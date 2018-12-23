@@ -10,6 +10,23 @@ name: three-sum-problem
 thumb: https://i.ytimg.com/vi/ljlN_sk2yrE/hqdefault.jpg
 ---
 
+<script type="text/javascript">
+var youtube = document.querySelectorAll( ".youtube" );
+
+    youtube.addEventListener( "click", function() {
+ 
+        var iframe = document.createElement( "iframe" );
+ 
+            iframe.setAttribute( "frameborder", "0" );
+            iframe.setAttribute( "allowfullscreen", "" );
+            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+ 
+            this.innerHTML = "";
+            this.appendChild( iframe );
+    } );
+</script>
+
+
 I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about an controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". <!-- truncate_here -->
 
 
@@ -18,7 +35,15 @@ I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup>
 
 I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about an controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". 
 
-<img src="https://i.ytimg.com/vi/ljlN_sk2yrE/hqdefault.jpg" >
+
+<!-- (1) video wrapper -->
+<div class="youtube" data-embed="AqcjdkPMPJA"> 
+ 
+    <!-- (2) the "play" button -->
+    <div class="play-button"></div> 
+     
+</div>
+
 
 How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary he had a carrer of Police Commisioner of Mumbai.
 
