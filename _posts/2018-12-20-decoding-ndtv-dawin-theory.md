@@ -85,7 +85,11 @@ Hence germ theory is a scientific theory but "law of attraction" is not. Quantum
 
 <img src="https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif" >
 
-How do we know evolution is true? It’s because of “scientific consensus”. It’s the collective judgment, position, and opinion of the community of scientists in a particular field. Newton was a brilliant physicist who postulated laws of gravity. However, he also believed in alchemy. There is no “scientific consensus” that alchemy is valid. Kurt Wise is also a smart man who holds a Ph.D. in paleontology from Harvard University. He believes that earth is literary less than 10,000 years old. However, there is “scientific consensus” that earth is a 4.5 billion-year-old. So it doesn’t matter if a particular scientist holds a fringe belief which is often touted by religious people to promulgate their beliefs.
+#### Scientific Consensus
+
+How do we know evolution is true? It’s because of "scientific consensus". It’s the collective judgment, position, and opinion of the community of scientists in a particular field. Newton was a brilliant physicist who postulated laws of gravity. However, he also believed in alchemy. There is no “scientific consensus” that alchemy is valid. Kurt Wise is also a smart man who holds a Ph.D. in paleontology from Harvard University. He believes that earth is literary less than 10,000 years old. However, there is "scientific consensus" that earth is a 4.5 billion-year-old. So it doesn’t matter if a particular scientist holds a fringe belief which is often touted by religious people to promulgate their beliefs.
+
+But what if Scientific consensus is wrong? Scientist in mid-20th century believed in Steady state model instead of Big Bang Theory. Or scientist believed in the ether, a hypothetical medium, that allowed light & heat to transmit in space. But with evidence, scientific consensus corrects itself while the religious folks are frozen in time in their scriptures. 
 
 The only sane voice I found was that of Ankit Sule. He had started the petition addressed to the minister Mr. Singh and was signed by over 5000 scientists from India and abroad<sup><a href='#fn:6' rel='footnote'>6</a></sup>. In 9:53 minutes of the video, he says that he support the efforts to study ancient Indian scriptures but opposes reverse engineering every modern scientific fact and try to trace in the ancient scriptures.
 
