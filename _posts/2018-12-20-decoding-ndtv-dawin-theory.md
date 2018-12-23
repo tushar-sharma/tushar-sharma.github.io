@@ -112,18 +112,18 @@ Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta
 	   <li id='fn:2'>
          <p><a href="https://www.youtube.com/watch?v=xppn7ITteZw" target="_blank">Amitabh Joshi's Youtube video</a></p>
          <a href='#fnref:2' rev='footnote'>&#8617;</a>
-    </li>
-	   </li>
+       </li>
+
 	
 	   <li id='fn:3'>
          <p><a href="https://en.wikipedia.org/wiki/Creation_and_evolution_in_public_education_in_the_United_States" target="_blank">Creation and evolution in US</a></p>
          <a href='#fnref:3' rev='footnote'>&#8617;</a>
-    </li>
+       </li>
 	
 	   <li id='fn:4'>
          <p><a href="https://www.thehindu.com/2000/07/14/stories/0214000q.htm" target="_blank">the hindu</a></p>
          <a href='#fnref:4' rev='footnote'>&#8617;</a>
-    </li>
+       </li>
 	
     
   </ol>
