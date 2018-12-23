@@ -73,7 +73,7 @@ Uusualy someone wearing a white garb while looking streanously into the microsop
 
 However being scientific means that a theory must satisfy the following
 
-1. *verifiability * (based on observation) 
+1. *verifiability* (based on observation) 
 
 2. *peer-reviewed* (reviewed by other qualified scientists) 
 
@@ -87,10 +87,17 @@ How do we know evolution is true? It’s because of “scientific consensus”. 
 
 The only sane voice I found was that of Ankit Sule. He had started the petition addressed to the minister Mr. Singh and was signed by over 5000 scientists from India and abroad. In 9:53 minutes of the video, he says that he support the efforts to study ancient Indian scriptures but opposes reverse engineering every modern scientific fact and try to trace in the ancient scriptures<sup><a href='#fn:6' rel='footnote'>6</a></sup>.
 
-In parliament, once a BJP MP said that cow dung and cow urnie could cure cancer <sup><a href='#fn:7' rel='footnote'>7</a></sup>. The minister Mr. Singh had also earlier talked of airplanes in ancient India<sup><a href='#fn:8' rel='footnote'>8</a></sup>. Such exaggerated claims are made by all religious people. Some people have found big bang in Quran<sup><a href='#fn:9' rel='footnote'>9</a></sup>. Or that Bible says that earth is supended in empty space<sup><a href='#fn:10' rel='footnote'>10</a></sup>. Or the speed of light in Rig Vedas<sup><a href='#fn:11' rel='footnote'>11</a></sup>. 
+In parliament, once a BJP MP said that cow dung and cow urnie could cure cancer <sup><a href='#fn:7' rel='footnote'>7</a></sup>. The minister Mr. Singh had also earlier talked of airplanes in ancient India<sup><a href='#fn:8' rel='footnote'>8</a></sup>. Such exaggerated claims are made by all religious people. Some people have found big bang in Quran<sup><a href='#fn:9' rel='footnote'>9</a></sup>. Or that Bible says that earth is supended in empty space<sup><a href='#fn:10' rel='footnote'>10</a></sup>. Or the speed of light is mentioned in Rig Vedas around 1200 BC<sup><a href='#fn:11' rel='footnote'>11</a></sup>. 
 
 
-Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta had a treatise in surgery or Paigal in grammar. And people accross the globe.  Yet to calim credit and save their scriptuure, relgious people someitmes stoop to defy the obvious empiracle fact as evolution.
+Of course, it doesn't mean that there is no wisdom in ancient scriptures. Sushruta wrote the treatise The Compendium of Suśruta in surgery around 6 century BCE. Or Pāṇini was the father of linguistics lived around 4th century BCE. Algebra was coined by Persian mathematician and astronomer al-Khwarizmi around 820 AD. Or the works of Confucious(479 BC), one the greatest philosophers of China. And much more. 
+
+
+Since time immemorial, religion has to forsake some parts belief to accommodate science. Nordic believed in God Thor responsible for thunder. I guess that myth died as soon as the science filled the gaps. Some Hindus believe that demon Rahu swallows the sun to cause the eclipse. However, people no longer believe such myths. 
+
+Even if religious books contain scientific fact, it doesn't prove them divine. As an atheist, I  refrain from commenting on the validity of religious scriptures.  I respect & celebrate all religion with their diversity. However, when it comes to science, the evidence is the king. And the science doesn't owe you anything that it would not offend your sentiments. 
+
+Evolution is a harsh fact thought sometimes I hope that there was the more gentle & benign beginning of the life in the universe. But I guess it is said, I did not choose this universe, but this universe chose me. 
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
