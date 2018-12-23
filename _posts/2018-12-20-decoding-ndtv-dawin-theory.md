@@ -10,23 +10,6 @@ name: three-sum-problem
 thumb: https://i.ytimg.com/vi/ljlN_sk2yrE/hqdefault.jpg
 ---
 
-<script type="text/javascript">
-var youtube = document.querySelectorAll( ".youtube" );
-
-    youtube.addEventListener( "click", function() {
- 
-        var iframe = document.createElement( "iframe" );
- 
-            iframe.setAttribute( "frameborder", "0" );
-            iframe.setAttribute( "allowfullscreen", "" );
-            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
- 
-            this.innerHTML = "";
-            this.appendChild( iframe );
-    } );
-</script>
-
-
 I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about an controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". <!-- truncate_here -->
 
 
@@ -35,15 +18,7 @@ I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup>
 
 I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about an controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" becaue he never "<b>saw an ape turning into human being</b>". 
 
-
-<!-- (1) video wrapper -->
-<div class="youtube" data-embed="AqcjdkPMPJA"> 
- 
-    <!-- (2) the "play" button -->
-    <div class="play-button"></div> 
-     
-</div>
-
+<img src="https://i.ytimg.com/vi/ljlN_sk2yrE/hqdefault.jpg" >
 
 How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary he had a carrer of Police Commisioner of Mumbai.
 
@@ -61,7 +36,7 @@ The debate panelist include the following members viz,
 
 I wander why there was no evolutionary biologist invited to the panel while discussing evolution. without lawyers. I would love to hear the defense of "evolution" by biologist like Richard Dawkins or Amitabh Joshi. Speech by Amitabh Joshi on evolution<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
 
-RSS is an Indian right wing organisation. So it's usualy predictable that right wingers usually oppose "evolution" since it embarrases their relgious beliefs. Religion always give anthromorphic view of the world where human deserve a pedastal higher than rest of the animals. While with evolution, there's nothign special about humans, just another species that branched from last universal commmon ancestor.In the United States, many right wings religous group often opposed "evolution" to being taught in school.[us]
+RSS is an Indian right wing organisation. So it's usualy predictable that right wingers usually oppose "evolution" since it embarrases their relgious beliefs. Religion always give anthromorphic view of the world where human deserve a pedastal higher than rest of the animals. While with evolution, there's nothign special about humans who branched from last universal commmon ancestor. In the United States, many right wings religous group often opposed "evolution" to being taught in school<sup><a href='#fn:3' rel='footnote'>3</a></sup>.
 
 Das Ratan Nigam is lawyer by profession & is affliated to RSS. He is known to espouse pseudoscietific theories likes that of P.N. Oak who claimed that both Christaniy & Islam were derivatives of Hinduism and that Vatican City, Kaaba, Westminster Abbey and the Taj Mahal were once Hindu temples of Shiva. His petition to rewrite history has been dismissed by the Indian Supreme court[court].
 
@@ -112,10 +87,6 @@ In parliamnet , BJP MP said that cow dung and cow urnie could cure cancer. The m
 Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta had a treatise in surgery or Paigal in grammar. And people accross the globe.  Yet to calim credit and save their scriptuure, relgious people someitmes stoop to defy the obvious empiracle fact as evolution.
 
 
-
-[1] 
-[2] 
-[3] https://www.youtube.com/watch?v=Sztt70n6geE
 [flat] : https://en.wikipedia.org/wiki/Modern_flat_Earth_societies
 [court] https://www.thehindu.com/2000/07/14/stories/0214000q.htm
 [us] https://en.wikipedia.org/wiki/Creation_and_evolution_in_public_education_in_the_United_States
@@ -138,6 +109,12 @@ Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta
 	
 	   <li id='fn:2'>
          <p><a href="https://www.youtube.com/watch?v=xppn7ITteZw" target="_blank">Amitabh Joshi's Youtube video</a></p>
+         <a href='#fnref:2' rev='footnote'>&#8617;</a>
+    </li>
+	   </li>
+	
+	   <li id='fn:2'>
+         <p><a href="https://www.youtube.com/watch?v=Sztt70n6geE" target="_blank">Amitabh Joshi's Youtube video</a></p>
          <a href='#fnref:2' rev='footnote'>&#8617;</a>
     </li>
 	
