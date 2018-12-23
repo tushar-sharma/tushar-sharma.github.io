@@ -85,9 +85,9 @@ Hence germ theory is a scientific theory but "law of attraction" is not. Quantum
 
 How do we know evolution is true? It’s because of “scientific consensus”. It’s the collective judgment, position, and opinion of the community of scientists in a particular field. Newton was a brilliant physicist who postulated laws of gravity. However, he also believed in alchemy. There is no “scientific consensus” that alchemy is valid. Kurt Wise is also a smart man who holds a Ph.D. in paleontology from Harvard University. He believes that earth is literary less than 10,000 years old. However, there is “scientific consensus” that earth is a 4.5 billion-year-old. So it doesn’t matter if a particular scientist holds a fringe belief which is often touted by religious people to promulgate their beliefs.
 
-The only sane voice I found was that of Ankit Sule. He had started the petition addressed to the minister Mr. Singh and was signed by over 5000 scientists from India and abroad. In 9:53, we must look & study ancient Indian science but opposes every modern theory and trying to find it in ancient scriptures<sup><a href='#fn:6' rel='footnote'>6</a></sup>.
+The only sane voice I found was that of Ankit Sule. He had started the petition addressed to the minister Mr. Singh and was signed by over 5000 scientists from India and abroad. In 9:53 minutes of the video, he says that he support the efforts to study ancient Indian scriptures but opposes reverse engineering every modern scientific fact and try to trace in the ancient scriptures<sup><a href='#fn:6' rel='footnote'>6</a></sup>.
 
-In parliament, once a BJP MP said that cow dung and cow urnie could cure cancer <sup><a href='#fn:7' rel='footnote'>7</a></sup>. The minister Mr. Singh had also earlier talked of airplanes in ancient India<sup><a href='#fn:8' rel='footnote'>8</a></sup>.Or the speed of light in hanuman sholkas. Such exaggerated claims are made by all religious people. Some people have found big bang in Quran. Or photoelectric effect in BIble. 
+In parliament, once a BJP MP said that cow dung and cow urnie could cure cancer <sup><a href='#fn:7' rel='footnote'>7</a></sup>. The minister Mr. Singh had also earlier talked of airplanes in ancient India<sup><a href='#fn:8' rel='footnote'>8</a></sup>.Or the speed of light in hanuman sholkas. Such exaggerated claims are made by all religious people. Some people have found big bang in Quran<sup><a href='#fn:9' rel='footnote'>9</a></sup>. 
 
 
 Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta had a treatise in surgery or Paigal in grammar. And people accross the globe.  Yet to calim credit and save their scriptuure, relgious people someitmes stoop to defy the obvious empiracle fact as evolution.
@@ -141,6 +141,11 @@ Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta
 	   	<li id='fn:8'>
          <p><a href="https://en.wikipedia.org/wiki/Vaimānika_Shāstra" target="_blank">Vaimānika Shāstra</a></p>
          <a href='#fnref:8' rev='footnote'>&#8617;</a>
+       </li>
+	   
+	   <li id='fn:9'>
+         <p><a href="https://www.islamreligion.com/articles/1560/quran-on-expanding-universe-and-big-bang-theory/" target="_blank">Big Bang Quran</a></p>
+         <a href='#fnref:9' rev='footnote'>&#8617;</a>
        </li>
 	   
 	   
