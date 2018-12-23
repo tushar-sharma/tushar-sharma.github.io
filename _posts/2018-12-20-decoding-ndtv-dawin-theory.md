@@ -34,7 +34,7 @@ The debate panelist include the following members viz,
 
 4. Two young students
 
-I wander why there was no evolutionary biologist invited to the panel while discussing evolution. without lawyers. I would love to hear the defense of "evolution" by biologist like Richard Dawkins or Amitabh Joshi. Speech by Amitabh Joshi on evolution<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
+I wander why there was no evolutionary biologist invited to the panel while discussing evolution. It's akin to discussing some laws without lawyers. I would love to hear the defense of "evolution" by biologist like Richard Dawkins or Amitabh Joshi. Speech by Amitabh Joshi on evolution<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
 
 <img src="https://media.giphy.com/media/19tv1qZSYGO2nsUChn/giphy.gif" alt="Expert funny picture" >
 
