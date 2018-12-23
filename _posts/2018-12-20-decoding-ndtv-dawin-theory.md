@@ -43,7 +43,7 @@ However he makes a straw man fallacy by claiming that Darwin himself didn't beli
 
 <blockquote>
 The term "missing link" has fallen out of favor with biologists because it implies the evolutionary process is a linear phenomenon and that forms originate consecutively in a chain. Instead, last common ancestor is preferred since this does not have the connotation of a linear evolution, as evolution is a branching process.
-<blockquote>
+</blockquote>
 
 Here's a speech by Richard Dawkin on "missing link"[3]
 
