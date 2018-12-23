@@ -22,12 +22,7 @@ I wanted to decode an old debate that saw on ndtv. It was about a controversy er
 
 How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or published a paper that can be peer reviewed? On the contrary he served as the Police Commisioner of Mumbai. So does he understand how science works? 
 
-#### What is science 
-
-Probably someone wearing a white garb while looking streanously into the microsope. 
-
-
-<img src="http://footage.framepool.com/shotimg/qf/933507018-forensic-pathology-pipette-analysing-microscope.jpg" >
+#### The debate
 
 The debate begis with the following members viz,
 1. Das Ratan Nigam (a lawyer & also a member of RSS)
@@ -59,7 +54,22 @@ Ras Ratan Nigam continues to discredit evolution by claiming that Darwing had no
 
 In 3:48 minutes of the video, anchor ask Chandra Sharma about his views on evolution. He deplomatically says that the minister has only raised question on evolution. He said that it's valid that we must more research on evolution. He says that the Indian misister quoted scientist and books that discredit evolution. He somehow slips into Vishnu (India god) claiming that ancient India books contained much more knowledge. This is a slipper slope becaues many people claim that their holy anicent books contains scientific wisdom. It might be true sometimes, but often it leads into maze of psedo scientific claims. 
 
-In 7:21 minutes of the video, Das Ratan Nigam said that a Noble laureate Fred Hoyle doesn't belive in evolution. This is argument ad populum often used by people to say that a proposition is true because "If a smart scientist belive so". However he doesn't understand scientific consensus. 
+In 7:21 minutes of the video, Das Ratan Nigam said that a Noble laureate Fred Hoyle doesn't belive in evolution. This is argument ad populum often used by people to say that a proposition is true because "If a smart scientist belive so". However he doesn't understand science. 
+
+#### What is science 
+
+Probably it represents someone wearing a white garb while looking streanously into the microsope. 
+
+
+<img src="http://footage.framepool.com/shotimg/qf/933507018-forensic-pathology-pipette-analysing-microscope.jpg" >
+
+However being scientific means that theory satisfies the following
+1. verifiable 
+2. peer reviewed
+3. falsifablity  
+
+Hence germ theory is scientific theory but "law of attraction" is not. Quantum healing or homeopath also fails the scientific test. 
+
 
 How do we know evolution is true? It's because of "scientfic consensus". It's the collective judgment, position, and opinion of community of scientists in a particular field. Newton was a brilliant physicist who postulated laws of gravity. However he also belived in alchemy. There is no "scientific consensus" that alchemy is valid. Kurt Wise is also a smart man who holds a PhD in paleontology from Harvard University. He belives that earth is literary less than 10,000 year old. However there is "scietific consensus" that earth is a 4.5 billion year old. So it doesn't matter if a particular scientist holds a fringe belief which is often touted by religious people to promulgate their beliefs. 
 
