@@ -87,7 +87,7 @@ How do we know evolution is true? It’s because of “scientific consensus”. 
 
 The only sane voice I found was that of Ankit Sule. He had started the petition addressed to the minister Mr. Singh and was signed by over 5000 scientists from India and abroad. In 9:53 minutes of the video, he says that he support the efforts to study ancient Indian scriptures but opposes reverse engineering every modern scientific fact and try to trace in the ancient scriptures<sup><a href='#fn:6' rel='footnote'>6</a></sup>.
 
-In parliament, once a BJP MP said that cow dung and cow urnie could cure cancer <sup><a href='#fn:7' rel='footnote'>7</a></sup>. The minister Mr. Singh had also earlier talked of airplanes in ancient India<sup><a href='#fn:8' rel='footnote'>8</a></sup>.Or the speed of light in hanuman sholkas. Such exaggerated claims are made by all religious people. Some people have found big bang in Quran<sup><a href='#fn:9' rel='footnote'>9</a></sup>. 
+In parliament, once a BJP MP said that cow dung and cow urnie could cure cancer <sup><a href='#fn:7' rel='footnote'>7</a></sup>. The minister Mr. Singh had also earlier talked of airplanes in ancient India<sup><a href='#fn:8' rel='footnote'>8</a></sup>. Such exaggerated claims are made by all religious people. Some people have found big bang in Quran<sup><a href='#fn:9' rel='footnote'>9</a></sup>. Or that Bible says that earth is supended in empty space<sup><a href='#fn:10' rel='footnote'>10</a></sup>. Or the speed of light in Rig Vedas<sup><a href='#fn:11' rel='footnote'>11</a></sup>. 
 
 
 Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta had a treatise in surgery or Paigal in grammar. And people accross the globe.  Yet to calim credit and save their scriptuure, relgious people someitmes stoop to defy the obvious empiracle fact as evolution.
@@ -146,6 +146,18 @@ Ofcourse it doesn't mean that there is no wisdom in ancient scriputres. Shustuta
 	   <li id='fn:9'>
          <p><a href="https://www.islamreligion.com/articles/1560/quran-on-expanding-universe-and-big-bang-theory/" target="_blank">Big Bang Quran</a></p>
          <a href='#fnref:9' rev='footnote'>&#8617;</a>
+       </li>
+	   
+	  
+	   <li id='fn:10'>
+         <p><a href="https://www.jw.org/en/bible-teachings/questions/science-and-the-bible/" target="_blank">Bible science</a></p>
+         <a href='#fnref:10' rev='footnote'>&#8617;</a>
+       </li>
+	   
+	   
+	   	<li id='fn:11'>
+         <p><a href="http://www.indiathewonderland.com/2009/09/speed-of-light-in-rigveda.html" target="_blank">Rig Veda speed of light</a></p>
+         <a href='#fnref:11' rev='footnote'>&#8617;</a>
        </li>
 	   
 	   
