@@ -63,7 +63,7 @@ Ras Ratan Nigam continues to discredit evolution by claiming that Darwin had no 
 
 In 3:48 minutes of the video, anchor ask Chandra Sharma about his views on evolution. He diplomatically says that the minister has only raised the question on evolution. He said that it's valid that we must more research on evolution. He says that the Indian minister quoted scientist and books that discredit evolution. He somehow slips into Vishnu (India god) claiming that ancient India books contained much more knowledge. This is a slippery slope because many people claim that their holy ancient books contain scientific wisdom. It might be true sometimes, but often it leads into a maze of pseudo scientific claims. 
 
-In 7:21 minutes of the video, Das Ratan Nigam said that a Noble laureate Fred Hoyle doesn't believe in evolution. This is argument ad populum often used by people to say that a proposition is true because "If a smart scientist believe so". Probably he doesn't understand science. 
+In 7:21 minutes of the video, Das Ratan Nigam quotes Noble laureate Fred Hoyle who doesn't believe in Darwinian evolution. He probably forgot that Fred Hoyle also doesn't believe in Big Bang Theory. This is argument ad populum often used by people to claim a proposition is true because "Some smart scientist believes so". Probably he doesn't understand science. 
 
 #### What is science 
 
