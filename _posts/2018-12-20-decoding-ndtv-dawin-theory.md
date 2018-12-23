@@ -81,7 +81,7 @@ However being scientific means that a theory must satisfy the following
 
 3. *falsifiability*  (that can be refuted)
 
-Hence germ theory is a scientific theory but "law of attraction" is not. Quantum healing or homeopath also fails the scientific test. But I am sad that "law of attraction" is not a scientific fact along with Santa Claus.
+Hence germ theory is a scientific theory but "law of attraction" is not. Quantum healing or homeopathy also fails the scientific test. But I am sad that "law of attraction" is not a scientific fact along with Santa Claus.
 
 <img src="https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif" >
 
