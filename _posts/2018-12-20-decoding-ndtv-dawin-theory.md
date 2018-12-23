@@ -43,7 +43,12 @@ RSS is an Indian right wing organisation. Right wing ususally oppose "evolution"
 Das Ratan Nigam is lawyer by profession & is affliated to RSS. He is known to espouse pseudoscietific theories likes which were promulgated by self-procalimed historian P.N. Oak who stated that both Christaniy & Islam were derivatives of Hinduism and that Vatican City, Kaaba, Westminster Abbey and the Taj Mahal were once Hindu temples of Shiva. His petition to rewrite history has been dismissed by the Indian Supreme court<sup><a href='#fn:4' rel='footnote'>4</a></sup>.
 
 
-At 1:19 minutes of the video, Das Ratan says the minsiter Saytapal Singh is only challenging Darwins's theory of evolution. He says that there are muliple theories of evolution. But he didn't elaborate on what other theories of evolutions he was alluding to. May be he meant botanist Carolus Linnaeu's theory who based his categorization of species on theory of unchanging life created by God. Or George Louis Leclerc who believed that Earth was only 75,000 year old & men descendent from apes. Or Does he believe in Genesis or tales of Hiranyagarbha (golden embryo) mentioned in the Rig Vedas?
+In 1:19 minutes of the video, Das Ratan says the minsiter Saytapal Singh is only challenging Darwins's theory of evolution. He says that there are muliple theories of evolution. But he didn't elaborate on what other theories of evolutions he was alluding to. May be he meant botanist Carolus Linnaeu's theory who based his categorization of species on theory of unchanging life created by God. Or George Louis Leclerc who believed that Earth was only 75,000 year old & men descendent from apes. Or Does he believe in Genesis or tales of Hiranyagarbha (golden embryo) mentioned in the Rig Vedas?
+
+<img src="https://media.giphy.com/media/BDz6tWBtXDL4Q/giphy.gif" alt="Charles Darwin" >
+
+
+
 
 However he makes a straw man fallacy by claiming that Darwin himself didn't belive in his theory as there was lack of fossil evidence. When confronted by the anchor that fossil evidence has been found, he retorts that "no fossil evidence has come for the incomplete species". This argument has always been used in popular media to discredit evolution. But missing link is now considered a non-scientific term. Copied verbatim from wikipedia
 
