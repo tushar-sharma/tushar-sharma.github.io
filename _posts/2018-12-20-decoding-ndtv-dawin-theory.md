@@ -71,11 +71,11 @@ In 7:21 minutes of the video, Das Ratan Nigam quotes Noble laureate Fred Hoyle w
 
 #### What is science
 
-People often perceive science as people in a white garb while looking strenuously into the microscope. People often believe any article published in news or Whatsapp that conform to their cognitive bias.
+Non-scientific folks often perceive science as cryptic work performed by people in a white garb strenuously looking into the microscope. This mystery around science leads layman to believe anything they consume online or Whatsapp as long as it conforms to their cognitive bias.
 
 <img src="http://footage.framepool.com/shotimg/qf/933507018-forensic-pathology-pipette-analysing-microscope.jpg" >
 
-However being scientific means that a theory must at least satisfy the following
+In crude terms, any scientific theory must at least satisfy the following
 
 1. *verifiability* (based on observation)
 
@@ -83,7 +83,7 @@ However being scientific means that a theory must at least satisfy the following
 
 3. *falsifiability*  (that can be refuted)
 
-Hence germ theory is a scientific theory but "law of attraction" is not. Quantum healing or homeopathy also fails the scientific test. But I am sad that "law of attraction" is not a scientific fact along with Santa Claus.
+Hence germ theory is a scientific theory but homeopathy is pseudoscience. Quantum healing or "laws of attraction" also fails the scientific test despite being bestsellers. Science also dismisses "astrology" as pseudoscience yet a large number of people still believe in it. Many Indian universities offer advanced degrees in Hindu astrology, despite protest from the scientific community.
 
 <img src="https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif" >
 
@@ -97,9 +97,7 @@ The only sane voice I found was that of Ankit Sule. He had started the petition 
 
 In parliament, once a BJP MP said that cow dung and cow urine could cure cancer <sup><a href='#fn:7' rel='footnote'>7</a></sup>. The minister Mr. Singh had also earlier talked of airplanes in ancient India<sup><a href='#fn:8' rel='footnote'>8</a></sup>. Such exaggerated claims are made by all religious people. Some people have found big bang in Quran<sup><a href='#fn:9' rel='footnote'>9</a></sup>. Or that Bible says that earth is supended in empty space<sup><a href='#fn:10' rel='footnote'>10</a></sup>. Or the speed of light is mentioned in Rig Vedas around 1200 BC<sup><a href='#fn:11' rel='footnote'>11</a></sup>.
 
-
 Of course, it doesn't mean that there is no wisdom in ancient scriptures. Sushruta wrote the treatise The Compendium of Suśruta in surgery around 6 century BCE. Or Pāṇini was the father of linguistics lived around 4th century BCE. Algebra was coined by Persian mathematician and astronomer al-Khwarizmi around 820 AD. Or the works of Confucious(479 BC), one the greatest philosophers of China. And much more.
-
 
 Since time immemorial, religion has to forsake some parts belief to accommodate science. Nordic believed in God Thor responsible for thunder. I guess that myth died as soon as the science filled the gaps. Some Hindus believed that demon Rahu swallows the sun to cause the eclipse. However, as science explained eclipses, people no longer believe such myths.
 
@@ -114,12 +112,10 @@ Evolution is a harsh fact thought sometimes I hope that there was the more gentl
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
-
-
-    <li id='fn:1'>
+       <li id='fn:1'>
          <p><a href="https://www.ndtv.com/video/news/the-buck-stops-here/darwin-s-theory-should-minister-s-views-be-dismissed-477172?yt" target="_blank">ndtv</a></p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
-    </li>
+        </li>
 
 	   <li id='fn:2'>
          <p><a href="https://www.youtube.com/watch?v=xppn7ITteZw" target="_blank">Amitabh Joshi's Youtube video</a></p>
