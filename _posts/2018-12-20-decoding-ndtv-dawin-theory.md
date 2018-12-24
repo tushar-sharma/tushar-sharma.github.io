@@ -17,7 +17,6 @@ thumb: http://www.whizzpast.com/wp-content/uploads/2015/02/Editorial_cartoon_dep
 
 How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary, he had a career of Police Commisioner of Mumbai.<!-- truncate_here -->
 
-
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
@@ -72,11 +71,11 @@ In 7:21 minutes of the video, Das Ratan Nigam quotes Noble laureate Fred Hoyle w
 
 #### What is science
 
-Uusualy someone wearing a white garb while looking streanously into the microsope captures how people in general look at science.
+People often perceive science as people in a white garb while looking strenuously into the microscope. People often believe any article published in news or Whatsapp that conform to their cognitive bias.
 
 <img src="http://footage.framepool.com/shotimg/qf/933507018-forensic-pathology-pipette-analysing-microscope.jpg" >
 
-However being scientific means that a theory must satisfy the following
+However being scientific means that a theory must at least satisfy the following
 
 1. *verifiability* (based on observation)
 
