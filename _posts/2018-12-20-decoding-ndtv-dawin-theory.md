@@ -58,7 +58,6 @@ The term "missing link" has fallen out of favor with biologists because it impli
 </blockquote>
 <br>
 
-
 It would be prudent for him to listen to this speech by Richard Dawkins on "missing link"<sup><a href='#fn:5' rel='footnote'>5</a></sup>.
 
 He babbles that evolution taught today is Neo Darwinism which has nothing to do Darwin's theory of evolution. He confuses Modern Synthetic theory with Neo Darwinism. Neo Darwinism is the interpretation of Darwinian evolution by incorporating Mendelian genetics. However, the theory still hinges on Darwin's idea of "natural selection".
@@ -84,8 +83,6 @@ In crude terms, any scientific theory must at least satisfy the following
 3. *falsifiability*  (that can be refuted)
 
 Hence germ theory is a scientific theory but homeopathy is pseudoscience. Quantum healing or "laws of attraction" also fails the scientific test despite being bestsellers. Science also dismisses "astrology" as pseudoscience yet a large number of people still believe in it. Many Indian universities offer advanced degrees in Hindu astrology, despite protest from the scientific community.
-
-<img src="https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif" >
 
 #### Scientific Consensus
 
