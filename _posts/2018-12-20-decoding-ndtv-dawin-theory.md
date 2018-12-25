@@ -24,6 +24,10 @@ I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup>
 
 <img src="http://www.whizzpast.com/wp-content/uploads/2015/02/Editorial_cartoon_depicting_Charles_Darwin_as_an_ape_1871.jpg" alt="Charles darwin" >
 
+<pre><code>I'm not a scientist. However, it is not my forte to expound on the meaning of science. However, there are scientists who believe in god whereas some don't. Life with all its diversity, I am just sharing my personal views.
+</code></pre>
+
+
 How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary, he had a career of Police Commisioner of Mumbai.
 
 #### Panelist for the debate
