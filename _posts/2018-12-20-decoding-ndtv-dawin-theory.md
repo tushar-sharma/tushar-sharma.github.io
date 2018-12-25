@@ -24,7 +24,7 @@ I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup>
 
 <img src="http://www.whizzpast.com/wp-content/uploads/2015/02/Editorial_cartoon_depicting_Charles_Darwin_as_an_ape_1871.jpg" alt="Charles darwin" >
 
-<pre style="overflow-x:hidden;white-space:pre-wrap;"><code>I'm not a scientist. However, it is not my forte to expound on the meaning of science. However, there are scientists who believe in god whereas some don't. Life with all its diversity, I am just sharing my personal views.
+<pre style="overflow-x:hidden;white-space:pre-wrap;"><code>I'm not a scientist. Thus its not my forte to expound on the meaning of science. However, there are scientists who believe in god whereas some don't. Life with all its diversity, I am just sharing my personal views.
 </code></pre>
 
 
