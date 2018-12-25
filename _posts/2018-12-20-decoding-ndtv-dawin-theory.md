@@ -22,7 +22,7 @@ How does he claim evolution is "scientifically wrong"? Does the said minister ha
 
 I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" because he never "<b>saw an ape turning into human being</b>".
 
-<a href="https://www.ndtv.com/video/news/the-buck-stops-here/darwin-s-theory-should-minister-s-views-be-dismissed-477172?yt" target="_blank"><img src="https://i.imgur.com/nvegAOw.jpg" title="source: imgur.com" /></a>
+<a href="https://www.ndtv.com/video/news/the-buck-stops-here/darwin-s-theory-should-minister-s-views-be-dismissed-477172?yt" target="_blank"><img src="https://i.imgur.com/nvegAOw.jpg" title="source: ndtv.com" /></a>
 
 <pre style="overflow-x:hidden;white-space:pre-wrap;"><code>I'm not a scientist. Thus its not my forte to expound on the meaning of science. However, there are scientists who believe in god whereas some don't. With all the diversity of life, I am just sharing my personal views.
 </code></pre>
