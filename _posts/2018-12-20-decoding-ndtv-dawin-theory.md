@@ -72,10 +72,6 @@ In 7:21 minutes of the video, Das Ratan Nigam quotes Noble laureate Fred Hoyle w
 
 #### What is science
 
-Non-scientific folks often perceive science as cryptic work performed by people in a white garb strenuously looking into the microscope. This mystery around science leads layman to believe anything they consume online or Whatsapp as long as it conforms to their cognitive bias.
-
-<img src="http://footage.framepool.com/shotimg/qf/933507018-forensic-pathology-pipette-analysing-microscope.jpg" >
-
 In crude terms, any scientific theory must at least satisfy the following
 
 1. *verifiability* (based on observation)
@@ -84,7 +80,9 @@ In crude terms, any scientific theory must at least satisfy the following
 
 3. *falsifiability*  (that can be refuted)
 
-Hence germ theory is a scientific theory but homeopathy is pseudoscience. Quantum healing or "laws of attraction" also fails the scientific test despite being bestsellers. Science also dismisses "astrology" as pseudoscience yet a large number of people still believe in it. Many Indian universities offer advanced degrees in Hindu astrology, despite protest from the scientific community.
+Hence germ theory is a scientific theory but homeopathy is a pseudoscience. Quantum healing or "laws of attraction" also fails the scientific test despite being bestsellers. Science also dismisses "astrology" as pseudoscience yet a large number of people still believe in it. "String theory" with all its fanfare & mathematical theoretical framework is still a hypothesis.
+
+<img src="https://imgs.xkcd.com/comics/string_theory.png" title="source: xkcd" /></a>
 
 #### Scientific Consensus
 
