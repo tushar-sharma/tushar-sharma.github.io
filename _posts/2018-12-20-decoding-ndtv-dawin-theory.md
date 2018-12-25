@@ -80,9 +80,9 @@ In crude terms, any scientific theory must at least satisfy the following
 
 3. *falsifiability*  (that can be refuted)
 
-Hence germ theory is a scientific theory but homeopathy is a pseudoscience. Quantum healing or "laws of attraction" also fails the scientific test despite being bestsellers. Science also dismisses "astrology" as pseudoscience yet a large number of people still believe in it. "String theory" with all its fanfare & mathematical theoretical framework is still a hypothesis.
+Hence **germ theory** is a scientific theory but **homeopathy** is a pseudoscience. **Quantum healing** or "**laws of attraction**" also fails the scientific test despite being bestsellers. Science also dismisses "**astrology**" as pseudoscience yet a large number of people still believe in it. "**String theory**" with all its fanfare & mathematical theoretical framework is still a hypothesis.
 
-<img src="https://imgs.xkcd.com/comics/string_theory.png" title="source: xkcd" /></a>
+<img src="https://imgs.xkcd.com/comics/string_theory.png" title="source: xkcd" />
 
 #### Scientific Consensus
 
