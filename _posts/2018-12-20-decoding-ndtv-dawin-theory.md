@@ -40,8 +40,6 @@ The debate panelist include the following members viz,
 
 I wonder why there was no evolutionary biologist invited to the panel while discussing evolution. It's akin to debating laws without inviting lawyers. I would love to hear the defense of "evolution" by biologists like Richard Dawkins or Amitabh Joshi. Here's an interesting speech on evolution by Amitabh Joshi<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
 
-<img src="https://media.giphy.com/media/19tv1qZSYGO2nsUChn/giphy.gif" alt="Expert funny picture" >
-
 RSS is an Indian right-wing organization. Right wing usually opposes "evolution" since it embarrasses their religious beliefs. Religion presents an anthropomorphic view of the world where human deserves a pedestal higher than rest of the animals. While evolution dashes those hopes stating that there is nothing special about humans who originated from last universal common ancestors 3.5 billion years ago & recently branched off from orangutans 14 million years ago. In the United States, many right wings religious group often opposed "evolution" to being taught in school<sup><a href='#fn:3' rel='footnote'>3</a></sup>.
 
 Das Ratan Nigam is a lawyer by profession & is affiliated to RSS. He is known to espouse pseudoscientific theories likes which were promulgated by self-proclaimed historian P.N. Oak who stated that both Christianity & Islam were derivatives of Hinduism and that Vatican City, Kaaba, Westminster Abbey, and the Taj Mahal were once Hindu temples of Shiva. His petition to rewrite history has been dismissed by the Indian Supreme court<sup><a href='#fn:4' rel='footnote'>4</a></sup>.
