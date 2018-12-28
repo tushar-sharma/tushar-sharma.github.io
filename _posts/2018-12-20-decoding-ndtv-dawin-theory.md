@@ -100,7 +100,7 @@ Since time immemorial, religion has to forsake some parts belief to accommodate 
 
 Even if religious books contain scientific fact, it doesn't prove them divine. As an atheist, I  refrain from commenting on the validity of religious scriptures.  I respect & celebrate all religion with their diversity. However, when it comes to science, the evidence is the king. And the science doesn't owe you anything that it would not offend your sentiments.
 
-Evolution is a harsh fact thought sometimes I hope that there was the more gentle & benign beginning of the life in the universe. But I guess, I did not choose this universe, but this universe chose me.
+Evolution is a harsh fact<sup><a href='#fn:12' rel='footnote'>12</a></sup>, though sometimes I hope that there was the more gentle & benign beginning of the life in the universe. But I guess, I did not choose this universe, but this universe chose me.
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
@@ -168,6 +168,10 @@ Evolution is a harsh fact thought sometimes I hope that there was the more gentl
          <a href='#fnref:11' rev='footnote'>&#8617;</a>
        </li>
 
+	   	<li id='fn:12'>
+         <p><a href="https://en.wikipedia.org/wiki/Scientific_consensus" target="_blank">Scientific consensus</a></p>
+         <a href='#fnref:12' rev='footnote'>&#8617;</a>
+       </li>
 
 
 
