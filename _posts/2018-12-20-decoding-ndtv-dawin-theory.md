@@ -81,7 +81,7 @@ In crude terms, any scientific theory must at least satisfy the following
 3. *falsifiability*  (that can be refuted)
 
 Hence [Germ theory of disease](https://en.wikipedia.org/wiki/Germ_theory_of_disease) is a scientific theory but [Homeopathy](https://en.wikipedia.org/wiki/Homeopathy)
-is a pseudoscience. [Quantum Healing](https://en.wikipedia.org/wiki/Quantum_healing) or [Law of Attraction](https://en.wikipedia.org/wiki/Law_of_attraction_(New_Thought)) also fails the scientific test despite being bestsellers. Science also dismisses [Astrology](https://en.wikipedia.org/wiki/Astrology) has no scientific validity yet large number of people still believe in it. [String theory](https://en.wikipedia.org/wiki/String_theory) with all its fanfare & mathematical theoretical framework is still a hypothesis.
+is a pseudoscience. [Quantum Healing](https://en.wikipedia.org/wiki/Quantum_healing) or [Law of Attraction](https://en.wikipedia.org/wiki/Law_of_attraction_(New_Thought)) also fails the scientific test despite being bestsellers. Science also dismisses [Astrology](https://en.wikipedia.org/wiki/Astrology) with no scientific validity yet large number of people still believe in it. [String theory](https://en.wikipedia.org/wiki/String_theory) with all its fanfare & mathematical theoretical framework is still a hypothesis.
 
 <img src="https://imgs.xkcd.com/comics/string_theory.png" title="source: xkcd" />
 
