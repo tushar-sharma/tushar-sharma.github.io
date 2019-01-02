@@ -61,7 +61,7 @@ nav#pagination span.prev {
 }
 
 /* begin - books progress*/
-.book1 {width: 8%; }    /* boook thief */
+.book1 {width: 10%; }    /* boook thief */
 .book2 {width: 20%;}    /* selfish gene */
 .book3 {width: 0%; }    /* other  */
 .book4 {width: 8%; }    /* Midnight's Children */
