@@ -16,12 +16,16 @@ thumb: /img/heap_array.png
 </style>
 
 
-It's a simple problem in Leetcode. Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>. The new list should be made by splicing together the nodes of the first two lists.
+<p>Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>. The new list should be made by splicing together the nodes of the first two lists.</p> 
+
+It's an easy problem in Leetcode for practicing linked list. It's similar to the merge step of the Merge sort.
 <!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
-It's a simple problem in Leetcode. Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>The new list should be made by splicing together the nodes of the first two lists.
+Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>The new list should be made by splicing together the nodes of the first two lists.
+
+It's an easy problem in Leetcode for practicing linked list. It's similar to the merge step of the Merge sort.
 
 # Brute force algorithm
 
