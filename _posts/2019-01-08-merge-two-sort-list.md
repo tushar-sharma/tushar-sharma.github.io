@@ -7,7 +7,7 @@ tags:
 - leetcode
 - code
 name: merge-sorted-lists
-thumb: https://3.bp.blogspot.com/-g7AMBnQ4fqE/WdOndiufhNI/AAAAAAAAEM0/X3LZJDdTQyEbqlxNxg2R6OlSN6dcQekLACLcBGAs/s640/Two%2BWay%2Bor%2BDoubly%2BLinked%2BList.gif
+thumb: http://destructor.de/linklist/linklist.png
 ---
 
 <style type="text/css">
