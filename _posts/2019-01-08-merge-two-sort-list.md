@@ -7,7 +7,7 @@ tags:
 - leetcode
 - code
 name: merge-sorted-lists
-thumb: http://destructor.de/linklist/linklist.png
+thumb: /img/heap_array.png
 ---
 
 <style type="text/css">
@@ -16,7 +16,7 @@ thumb: http://destructor.de/linklist/linklist.png
 </style>
 
 
-<p>Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>. The new list should be made by splicing together the nodes of the first two lists.</p> 
+<p>Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>. The new list should be made by splicing together the nodes of the first two lists.</p>
 
 It's an easy problem in Leetcode for practicing linked list. It's similar to the merge step of the Merge sort.
 <!-- truncate_here -->
