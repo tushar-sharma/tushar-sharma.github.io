@@ -19,6 +19,7 @@ title: Books on my shelf
 <p>These are some of books, other miscellaneous writings, & courses that are currently on my shelf. Feel free to <a href="{{ root_url }}/contact" >suggest</a> me any book or literature that you feel is interesting.</p>
 
 <!-- end heading -->
+
 <style type="text/css">
 .pagination li {
     display:inline-block;
@@ -515,7 +516,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
          </td>
       <td>
          <div class="sidebar-box-text">
-           <p>Listed as the most influential science book of all time in a poll to celebrate the 30th anniversary of the Royal Society science book prize. To be updated...
+           <p> To be updated...
            </p>
           </div>
        </td>
@@ -537,147 +538,12 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
          </td>
       <td>
          <div class="sidebar-box-text">
-           <p> An International bestseller. To be updated...
+           <p> To be updated...
            </p>
           </div>
        </td>
     </tr>
 <!-- END -->
-
-<!--Elements of Programming Interviews in Java: The Insider's Guide-->
-    <tr>
-        <td align="center" class="name">Elements of Programming Interviews in Java: The Insider's Guide</td>
-        <td align="center" class="author">Adnan Aziz, Amit Prakash, and Tsung-Hsien Lee</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by Pragathi Reddy. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Chance and Necessity : recommended by Pusha Mittra Bhargava-->
-    <tr>
-        <td align="center" class="name">Chance and Necessity</td>
-        <td align="center" class="author">Jacques Monod</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by Pushpa Mittra Bhargava, an Indian scientist. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--The Story of Philosophy : recommended by Aarti Tikoo Singh-->
-    <tr>
-        <td align="center" class="name">The Story of Philosophy </td>
-          <td align="center" class="author">Will Durrant</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommened by Tejasvita Apte. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Immortals of Meluha-->
-    <tr>
-        <td align="center" class="name">The Immortals of Meluha</td>
-        <td align="center" class="author">Amish Tripathi</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by Prashant Malik. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!-- Sapiens: A Brief History of Humankind : recommended by Aarti Tickoo Singh -->
-    <tr>
-          <td align="center" class="name">Sapiens: A Brief History of Humankind</td>
-          <td align="center" class="author">Yuval Noah Harari</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by Aarti Tikoo Singh. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Possible worlds, and other essays : recommended by Maynard Smith-->
-    <tr>
-        <td align="center" class="name">Possible worlds, and other essays</td>
-        <td align="center" class="author">J. B. S. Haldane</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by John Maynard Smith. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
 
 <!-- Diary of Anne Frank -->
     <tr>
@@ -694,7 +560,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
          </td>
       <td>
          <div class="sidebar-box-text">
-           <p>Book of writings by Anne Frank when she was in hiding for two years with her family during Nazi occupation of the Netherlands. To be updated...
+           <p> To be updated...
            </p>
           </div>
        </td>
@@ -702,10 +568,11 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
 
 <!-- END -->
 
-<!--A Universe from Nothing -->
+
+<!-- Is the moon there when nobody looks? -->
     <tr>
-        <td align="center" class="name">A Universe from Nothing</td>
-          <td align="center" class="author">Lawrence M. Krauss</td>
+          <td align="center" class="name">Is the moon there when nobody looks?</td>
+          <td align="center" class="author">Nathaniel David Mermin</td>
 
          <td align="center">
            <div class="rating">
@@ -724,58 +591,10 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
-<!--The Kite Runner: recommended by Tossali-->
+<!-- Sapiens: A Brief History of Humankind -->
     <tr>
-        <td align="center" class="name">The Kite Runner</td>
-        <td align="center" class="author">Khaled Hosseini</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by Tossali Nanda. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-
-<!-- How the Mind Works : recommended by Richard Dawkins -->
-    <tr>
-          <td align="center" class="name">How the Mind Works</td>
-          <td align="center" class="author">Steven Pinker</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by Richard Dawkins. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-
-<!--Why I Am Not a Christian -->
-    <tr>
-        <td align="center" class="name">Why I Am Not a Christian</td>
-          <td align="center" class="author">Bertrand Russell</td>
+          <td align="center" class="name">Sapiens: A Brief History of Humankind</td>
+          <td align="center" class="author">Yuval Noah Harari</td>
 
          <td align="center">
            <div class="rating">
@@ -788,28 +607,6 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
       <td>
          <div class="sidebar-box-text">
            <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Why I Am an Atheist -->
-    <tr>
-        <td align="center" class="name">Why I Am an Atheist</td>
-          <td align="center" class="author">Bhagat Singh</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by S. Irfan Habib. To be updated...
            </p>
           </div>
        </td>
@@ -905,28 +702,6 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
-<!-- The Richest Man in Babylon -->
-    <tr>
-          <td align="center" class="name">The Richest Man in Babylon</td>
-          <td align="center" class="author">George S. Clason </td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by a uber driver. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
 <!-- More money than God -->
     <tr>
           <td align="center" class="name">More money than God</td>
@@ -986,190 +761,12 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
          </td>
       <td>
          <div class="sidebar-box-text">
-           <p> Recommended by Tarek Fatah. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Journey to the West -->
-    <tr>
-        <td align="center" class="name">Journey to the West</td>
-          <td align="center" class="author">Wu Cheng'en</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
            <p> To be updated...
            </p>
           </div>
        </td>
     </tr>
 <!-- END -->
-
-<!-- Deng Xiaoping and the Transformation of China -->
-    <tr>
-          <td align="center" class="name">Deng Xiaoping and the Transformation of China</td>
-          <td align="center" class="author">Ezra F. Vogel</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!-- Cat's Cradle -->
-    <tr>
-          <td align="center" class="name">Cat's Cradle</td>
-          <td align="center" class="author">Kurt Vonnegut</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!-- Neuromancer -->
-    <tr>
-          <td align="center" class="name">Neuromancer</td>
-          <td align="center" class="author">William Gibson</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Early India: From the Origins to A.D. 1300-->
-    <tr>
-        <td align="center" class="name">Early India: From the Origins to A.D. 1300</td>
-        <td align="center" class="author">Romila Thapar</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Wonder That Was India-->
-    <tr>
-        <td align="center" class="name">The Wonder That Was India</td>
-        <td align="center" class="author">Arthur Llewellyn Basham</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!-- Is the moon there when nobody looks? -->
-    <tr>
-          <td align="center" class="name">Is the moon there when nobody looks?</td>
-          <td align="center" class="author">Nathaniel David Mermin</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!-- 1Q84-->
-    <tr>
-          <td align="center" class="name">1Q84</td>
-          <td align="center" class="author">Haruki Murakami</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-    <p> Recommended by my sister, Vidushi Sharma. To be updated...
-    </p>
-     </div>
-     </td>
-   </tr>
-<!-- END -->
-
 
 <!-- 12 Rules for life -->
     <tr>
@@ -1186,7 +783,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
          </td>
       <td>
          <div class="sidebar-box-text">
-           <p> Recommended by Candice Malcolm. To be updated...
+           <p> To be updated...
            </p>
           </div>
        </td>
@@ -1208,7 +805,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
          </td>
       <td>
          <div class="sidebar-box-text">
-           <p> Recommended by Ancy Peter. To be updated...
+           <p> To be updated...
            </p>
           </div>
        </td>
@@ -1280,29 +877,6 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
        </td>
     </tr>
 <!-- END -->
-
-<!--Contact-->
-    <tr>
-          <td align="center" class="name">Contact</td>
-          <td align="center" class="author">Carl Sagan</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by Richard Dawkins. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
 
 <!-- The Five Ages of the Universe-->
     <tr>
@@ -1392,6 +966,28 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
+<!-- Deng Xiaoping and the Transformation of China -->
+    <tr>
+          <td align="center" class="name">Deng Xiaoping and the Transformation of China</td>
+          <td align="center" class="author">Ezra F. Vogel</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
 
 <!-- The Razor's Edge  -->
     <tr>
@@ -1415,6 +1011,49 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
+<!-- The Richest Man in Babylon -->
+    <tr>
+          <td align="center" class="name">The Richest Man in Babylon</td>
+          <td align="center" class="author">George S. Clason </td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!-- 1Q84-->
+    <tr>
+          <td align="center" class="name">1Q84</td>
+          <td align="center" class="author">Haruki Murakami</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+    <p> To be updated...
+    </p>
+     </div>
+     </td>
+   </tr>
+<!-- END -->
 
 <!--The God of Small Things:  -->
     <tr>
@@ -1460,10 +1099,56 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
+
+
 <!-- Fire on the mountain -->
     <tr>
           <td align="center" class="name">Fire on the mountain</td>
           <td align="center" class="author">Anita Desai</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!-- Cat's Cradle -->
+    <tr>
+          <td align="center" class="name">Cat's Cradle</td>
+          <td align="center" class="author">Kurt Vonnegut</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!-- Neuromancer -->
+    <tr>
+          <td align="center" class="name">Neuromancer</td>
+          <td align="center" class="author">William Gibson</td>
 
          <td align="center">
            <div class="rating">
@@ -1607,7 +1292,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
          </td>
       <td>
          <div class="sidebar-box-text">
-           <p> Read review in thequint.com. To be updated...
+           <p> To be updated...
            </p>
           </div>
        </td>
@@ -1705,7 +1390,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
 <!-- Time in quantum gravity  -->
     <tr>
         <td align="center" class="name">Time in quantum gravity</td>
-          <td align="center" class="author">Nick Huggett, Tiziana Vistarini, Christian Wüthrich</td>
+          <td align="center" class="author">Nick Huggett, Tiziana Vistarini, Christian W¨uthrich</td>
 
          <td align="center">
            <div class="rating">
@@ -1768,7 +1453,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
-<!--
+<!-- Principles of Chemical Science  -->
     <tr>
         <td align="center" class="name"><a href="https://ocw.mit.edu/courses/chemistry/5-111-principles-of-chemical-science-fall-2008/">Principles of Chemical Science</a></a></td>
           <td align="center" class="author">Elizabeth Vogel Taylor, Catherine Drennan</td>
@@ -1788,7 +1473,9 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
           </div>
        </td>
     </tr>
+<!-- END -->
 
+<!-- Nature, in Code: Biology in JavaScript  -->
     <tr>
         <td align="center" class="name"><a href="https://www.edx.org/course/nature-code-biology-javascript-epflx-nic1-0x">Nature, in Code: Biology in JavaScript</a></td>
           <td align="center" class="author">Marcel Salathé</td>
@@ -1808,7 +1495,122 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
           </div>
        </td>
     </tr>
--->
+<!-- END -->
+
+<!-- Introduction into General Theory of Relativity -->
+    <tr>
+        <td align="center" class="name"><a href="https://www.coursera.org/learn/general-relativity">Introduction into General Theory of Relativity</a></td>
+          <td align="center" class="author">Emil Akhmedov</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!-- Understanding Einstein: The Special Theory of Relativity -->
+    <tr>
+        <td align="center" class="name"><a href="https://www.coursera.org/learn/einstein-relativity">Understanding Einstein: The Special Theory of Relativity</a></td>
+          <td align="center" class="author">Larry Randles Lagerstrom</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!-- Astro 101: Black Holes -->
+    <tr>
+        <td align="center" class="name"><a href="https://www.coursera.org/learn/black-holes-astro-101">Astro 101: Black Holes</a></td>
+          <td align="center" class="author">Sharon Morsink</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+
+
+
+
+<!-- Gravity! The Big Bang, Black Holes and Gravitational Waves -->
+    <tr>
+        <td align="center" class="name"><a href="https://www.futurelearn.com/courses/gravity">Gravity! The Big Bang, Black Holes and Gravitational Waves</a></td>
+          <td align="center" class="author">Pierre Binétruy</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!-- The Discovery of the Higgs Boson -->
+    <tr>
+        <td align="center" class="name"><a href="https://www.futurelearn.com/courses/higgs">The Discovery of the Higgs Boson</a></td>
+          <td align="center" class="author">Christos Leonidopoulos, Luigi Del Debbio</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
 
 <!-- India Wins Freedom -->
     <tr>
@@ -1854,6 +1656,8 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
+
+
 <!-- The Great Indian Novel -->
     <tr>
         <td align="center" class="name">The Great Indian Novel</td>
@@ -1897,6 +1701,53 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
        </td>
     </tr>
 <!-- END -->
+
+
+
+<!--Why I Am Not a Christian -->
+    <tr>
+        <td align="center" class="name">Why I Am Not a Christian</td>
+          <td align="center" class="author">Bertrand Russell</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!--Why I Am an Atheist -->
+    <tr>
+        <td align="center" class="name">Why I Am an Atheist</td>
+          <td align="center" class="author">Bhagat Singh</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
 
 <!--Tau Zero -->
     <tr>
@@ -1942,6 +1793,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
        </td>
     </tr>
 <!-- END -->
+
 
 <!--God Is Not Great-->
     <tr>
@@ -2076,6 +1928,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
+
 <!--Letter to a Christian Nation -->
     <tr>
         <td align="center" class="name">Letter to a Christian Nation</td>
@@ -2142,6 +1995,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
+
 <!--1984 -->
     <tr>
         <td align="center" class="name">1984</td>
@@ -2163,6 +2017,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
        </td>
     </tr>
 <!-- END -->
+
 
 <!--De Profundis -->
     <tr>
@@ -2208,6 +2063,27 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
+<!--A Universe from Nothing -->
+    <tr>
+        <td align="center" class="name">A Universe from Nothing</td>
+          <td align="center" class="author">Lawrence M. Krauss</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
 
 <!--The Demon-Haunted World  -->
     <tr>
@@ -2235,6 +2111,28 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     <tr>
         <td align="center" class="name">Myths from Mesopotamia </td>
           <td align="center" class="author">Stephanie Dalley</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!--Ancient Philosophy: Aristotle and His Successors -->
+    <tr>
+        <td align="center" class="name"><a href="https://www.coursera.org/learn/aristotle">Ancient Philosophy: Aristotle and His Successors</a></td>
+          <td align="center" class="author">Susan Sauvé Meyer</td>
 
          <td align="center">
            <div class="rating">
@@ -2319,6 +2217,27 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
+<!--Journey to the West -->
+    <tr>
+        <td align="center" class="name">Journey to the West</td>
+          <td align="center" class="author">Wu Cheng'en</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
 
 <!--Discovery of Quarks -->
     <tr>
@@ -2976,7 +2895,7 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
          </td>
       <td>
          <div class="sidebar-box-text">
-           <p> Recommended by Jawaharlal Nehru, India's first Prime Minster. To be updated...
+           <p> To be updated...
            </p>
           </div>
        </td>
@@ -3255,6 +3174,50 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     <tr>
         <td align="center" class="name">Kashmir, 1947: Rival Versions of History</td>
           <td align="center" class="author">Prem Shankar Jha</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!--Category Theory for Programmers -->
+    <tr>
+        <td align="center" class="name">Category Theory for Programmers </td>
+          <td align="center" class="author">Bartosz Milewski</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!--The Story of Philosophy -->
+    <tr>
+        <td align="center" class="name">The Story of Philosophy </td>
+          <td align="center" class="author">Will Durrant</td>
 
          <td align="center">
            <div class="rating">
@@ -3783,6 +3746,27 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
+<!--The Kite Runner-->
+    <tr>
+        <td align="center" class="name">The Kite Runner</td>
+        <td align="center" class="author">Khaled Hosseini</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
 
 <!--Seven Brief Lessons on Physics-->
     <tr>
@@ -4091,28 +4075,6 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
       <td>
          <div class="sidebar-box-text">
            <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Art of the Soluble: Creativity and Originality in Science-->
-    <tr>
-        <td align="center" class="name">The Art of the Soluble: Creativity and Originality in Science</td>
-        <td align="center" class="author">Peter Medawar</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by V. S. Ramachandran, neuroscientist. To be updated...
            </p>
           </div>
        </td>
@@ -4432,6 +4394,50 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
+<!--Early India: From the Origins to A.D. 1300-->
+    <tr>
+        <td align="center" class="name">Early India: From the Origins to A.D. 1300</td>
+        <td align="center" class="author">Romila Thapar</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
+<!--Possible worlds, and other essays-->
+    <tr>
+        <td align="center" class="name">Possible worlds, and other essays</td>
+        <td align="center" class="author">J. B. S. Haldane</td>
+
+         <td align="center">
+           <div class="rating">
+             To Read <br>
+            <div id="progress-outer">
+              <div id="progress-inner" class="book3"></div>
+            </div>
+           </div>
+         </td>
+      <td>
+         <div class="sidebar-box-text">
+           <p> To be updated...
+           </p>
+          </div>
+       </td>
+    </tr>
+<!-- END -->
+
 
 <!--Introduction to the Constitution of India-->
     <tr>
@@ -4455,10 +4461,10 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
-<!--White Mughals -->
+<!--The Wonder That Was India-->
     <tr>
-        <td align="center" class="name">White Mughals </td>
-        <td align="center" class="author">William Dalrymple </td>
+        <td align="center" class="name">The Wonder That Was India</td>
+        <td align="center" class="author">Arthur Llewellyn Basham</td>
 
          <td align="center">
            <div class="rating">
@@ -4477,1582 +4483,6 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
     </tr>
 <!-- END -->
 
-<!-- India: A History-->
-    <tr>
-        <td align="center" class="name">India: A History</td>
-        <td align="center" class="author">John Keay</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Calcutta -->
-    <tr>
-        <td align="center" class="name">Calcutta </td>
-        <td align="center" class="author">Amit Chaudhuri</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--The Story of Civilization -->
-    <tr>
-        <td align="center" class="name">The Story of Civilization </td>
-        <td align="center" class="author">Will Durant, Ariel Durant</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Curry and Rice-->
-    <tr>
-        <td align="center" class="name">Curry and Rice</td>
-        <td align="center" class="author">George Francklin Atkinson</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Idea of India -->
-    <tr>
-        <td align="center" class="name">The Idea of India </td>
-        <td align="center" class="author">Sunil Khilnani</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Spy and the Traitor: The Greatest Espionage Story of the Cold War -->
-    <tr>
-        <td align="center" class="name">The Spy and the Traitor: The Greatest Espionage Story of the Cold War</td>
-        <td align="center" class="author">Ben Macintyre</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Case for Reason-->
-    <tr>
-        <td align="center" class="name">The Case for Reason</td>
-        <td align="center" class="author">Narendra Dabholkar</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Invitation to a Beheading-->
-    <tr>
-        <td align="center" class="name">Invitation to a Beheading</td>
-        <td align="center" class="author">Vladimir Nabokov</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Trial-->
-    <tr>
-        <td align="center" class="name">The Trial</td>
-        <td align="center" class="author">Franz Kafka</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Women Who Run with the Wolves-->
-    <tr>
-        <td align="center" class="name">Women Who Run with the Wolves</td>
-        <td align="center" class="author">Clarissa Pinkola Estés</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--A Room of One's Own-->
-    <tr>
-        <td align="center" class="name">A Room of One's Own</td>
-        <td align="center" class="author">Virginia Woolf</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Crime and Punishment-->
-    <tr>
-        <td align="center" class="name">Crime and Punishment</td>
-        <td align="center" class="author">Fyodor Dostoyevsky</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--Who Killed Osho-->
-    <tr>
-        <td align="center" class="name">Who Killed Osho</td>
-        <td align="center" class="author">Abhay Vaidya</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Major Transitions in Evolution-->
-    <tr>
-        <td align="center" class="name">The Major Transitions in Evolution</td>
-        <td align="center" class="author">John Maynard Smith and Eörs Szathmáry</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--Why We Get Sick: The New Science of Darwinian Medicine-->
-    <tr>
-        <td align="center" class="name">Why We Get Sick: The New Science of Darwinian Medicine</td>
-        <td align="center" class="author">Randolph M. Nesse</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Stalin and the Scientists-->
-    <tr>
-        <td align="center" class="name">Stalin and the Scientists</td>
-        <td align="center" class="author">Simon Ings</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--Red poppies-->
-    <tr>
-        <td align="center" class="name">Red poppies</td>
-        <td align="center" class="author">Alai</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--The Arctic Home in the Vedas-->
-    <tr>
-        <td align="center" class="name">The Arctic Home in the Vedas</td>
-        <td align="center" class="author">Bal Gangadhar Tilak</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The New World of Mr Tompkins-->
-    <tr>
-        <td align="center" class="name">The New World of Mr Tompkins</td>
-        <td align="center" class="author">George Gamow</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Why Does E=mc²?-->
-    <tr>
-        <td align="center" class="name">Why Does E=mc²?</td>
-        <td align="center" class="author">Brian Cox, Jeff Forshaw</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Joyful Wisdom-->
-    <tr>
-        <td align="center" class="name">The Joyful Wisdom</td>
-        <td align="center" class="author">Friedrich Nietzsche</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Zadig-->
-    <tr>
-        <td align="center" class="name">Zadig</td>
-        <td align="center" class="author">Voltaire</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Three Princes of Serendip-->
-    <tr>
-        <td align="center" class="name">The Three Princes of Serendip</td>
-        <td align="center" class="author">Cristoforo Armeno</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--A Hedonist Manifesto : The Power to Exist-->
-    <tr>
-        <td align="center" class="name">A Hedonist Manifesto : The Power to Exist</td>
-        <td align="center" class="author">Michel Onfray</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Principal Doctrines-->
-    <tr>
-        <td align="center" class="name">Principal Doctrines</td>
-        <td align="center" class="author">Epicurus</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Jefferson himself-->
-    <tr>
-        <td align="center" class="name">Jefferson himself</td>
-        <td align="center" class="author">Thomas Jefferson</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Interpretation of Dreams-->
-    <tr>
-        <td align="center" class="name">The Interpretation of Dreams</td>
-        <td align="center" class="author">Sigmund Freud</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The gift of death-->
-    <tr>
-        <td align="center" class="name">The gift of death</td>
-        <td align="center" class="author">Jacques Derrida</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--A Tale of Four Dervishes-->
-    <tr>
-        <td align="center" class="name">A Tale of Four Dervishes</td>
-        <td align="center" class="author">Mir Amman</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Haft Paykar: A Medieval Persian Romance-->
-    <tr>
-        <td align="center" class="name">The Haft Paykar: A Medieval Persian Romance</td>
-        <td align="center" class="author">Nizami Ganjavi</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Brave New World-->
-    <tr>
-        <td align="center" class="name">Brave New World</td>
-        <td align="center" class="author">Aldous Huxley</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--The Principal Upanishads-->
-    <tr>
-        <td align="center" class="name">The Principal Upanishads</td>
-        <td align="center" class="author">Sarvepalli Radhakrishnan</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Secret of the Veda-->
-    <tr>
-        <td align="center" class="name">Secret of the Veda</td>
-        <td align="center" class="author">Sri Aurobindo</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Last Question-->
-    <tr>
-        <td align="center" class="name">The Last Question</td>
-        <td align="center" class="author">Issac Asimov</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--The Ones Who Walk Away from Omelas-->
-    <tr>
-        <td align="center" class="name">The Ones Who Walk Away from Omelas</td>
-        <td align="center" class="author">Ursula K. Le Guin</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Inferno-->
-    <tr>
-        <td align="center" class="name">Inferno</td>
-        <td align="center" class="author">Dan Brown</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The People of the Abyss-->
-    <tr>
-        <td align="center" class="name">The People of the Abyss</td>
-        <td align="center" class="author">Jack London</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Man Who Loved Only Numbers: The Story of Paul Erdős and the Search for Mathematical Truth-->
-    <tr>
-        <td align="center" class="name">The Man Who Loved Only Numbers: The Story of Paul Erdős and the Search for Mathematical Truth</td>
-        <td align="center" class="author">Paul Hoffman</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--Tao Te Ching-->
-    <tr>
-        <td align="center" class="name">Tao Te Ching</td>
-        <td align="center" class="author">Laozi</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Grapes of Wrath-->
-    <tr>
-        <td align="center" class="name">The Grapes of Wrath</td>
-        <td align="center" class="author">John Steinbeck</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--Perfect Rigor: A Genius and the Mathematical Breakthrough of the Century-->
-    <tr>
-        <td align="center" class="name">Perfect Rigor: A Genius and the Mathematical Breakthrough of the Century</td>
-        <td align="center" class="author">Masha Gessen</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Lectures on Quantum Mechanics-->
-    <tr>
-        <td align="center" class="name">Lectures on Quantum Mechanics</td>
-        <td align="center" class="author">Paul Dirac</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Two Faces of Beauty: Science and Art-->
-    <tr>
-        <td align="center" class="name">The Two Faces of Beauty: Science and Art</td>
-        <td align="center" class="author">Pushpa Mittra Bhargava, Chandana Chakrabarti</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--A Journey Around My Room-->
-    <tr>
-        <td align="center" class="name">A Journey Around My Room</td>
-        <td align="center" class="author">Xavier de Maistre</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Quote mentioned by Lawrence M. Krauss in a presentation. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Lighter Side of Gravity-->
-    <tr>
-        <td align="center" class="name">The Lighter Side of Gravity</td>
-        <td align="center" class="author">Jayant Vishnu Narlikar</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Scientific Edge: The Indian Scientist from Vedic to Modern Times-->
-    <tr>
-        <td align="center" class="name">The Scientific Edge: The Indian Scientist from Vedic to Modern Times</td>
-        <td align="center" class="author">Jayant Vishnu Narlikar</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--An Invitation to Astrophysics-->
-    <tr>
-        <td align="center" class="name">An Invitation to Astrophysics</td>
-        <td align="center" class="author">Thanu Padmanabhan</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--Climbing the Limitless Ladder: A Life in Chemistry-->
-    <tr>
-        <td align="center" class="name">Climbing the Limitless Ladder: A Life in Chemistry</td>
-        <td align="center" class="author">C.N.R. Rao</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Black Swan-->
-    <tr>
-        <td align="center" class="name">The Black Swan: The Impact of the Highly Improbable</td>
-        <td align="center" class="author">Nassim Nicholas Taleb</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by Nobel Prize–winning psychologist Daniel Kahneman. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets-->
-    <tr>
-        <td align="center" class="name">Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets</td>
-        <td align="center" class="author">Nassim Nicholas Taleb</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> 75 "Smartest Books of All Time." by Fortune. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Making of the Atomic Bomb-->
-    <tr>
-        <td align="center" class="name">The Making of the Atomic Bomb</td>
-        <td align="center" class="author">Richard Rhodes</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Won Pulitzer Prize for General Non-Fiction. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Farthest North: The Incredible Three-Year Voyage to the Frozen Latitudes of the North-->
-    <tr>
-        <td align="center" class="name">Farthest North: The Incredible Three-Year Voyage to the Frozen Latitudes of the North</td>
-        <td align="center" class="author">Fridjtof Nanse</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by Steve Jones, geneticist. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--Lincoln in the Bardo: A Novel -->
-    <tr>
-        <td align="center" class="name">Lincoln in the Bardo: A Novel </td>
-        <td align="center" class="author">George Saunders</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> Recommended by Bill Gates. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Naked Ape-->
-    <tr>
-        <td align="center" class="name">The Naked Ape: A Zoologist's Study of the Human Animal </td>
-        <td align="center" class="author">Desmond Morris</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p>Recommended by Elaine Morgan, author of The Aquatic Ape Hypothesis. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Mein Kampf-->
-    <tr>
-        <td align="center" class="name">Mein Kampf</td>
-        <td align="center" class="author">Adolf Hitler</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p>It's a controversial book. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The "Hitler Myth": Image and Reality in the Third Reich-->
-    <tr>
-        <td align="center" class="name">The "Hitler Myth": Image and Reality in the Third Reich</td>
-        <td align="center" class="author">Ian Kershaw</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p>To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--They Made America-->
-    <tr>
-        <td align="center" class="name">They Made America</td>
-        <td align="center" class="author">David Lefer, Gail Buckland, and Harold Evans</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p>To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Future Shock-->
-    <tr>
-        <td align="center" class="name">Future Shock</td>
-        <td align="center" class="author">Alvin Toffler</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Ancestor's Tale: A Pilgrimage to the Dawn of Evolution-->
-    <tr>
-        <td align="center" class="name">The Ancestor's Tale: A Pilgrimage to the Dawn of Evolution</td>
-        <td align="center" class="author">Richard Dawkins,Yan Wong</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Poor Economics: A Radical Rethinking of the Way to Fight Global Poverty-->
-    <tr>
-        <td align="center" class="name">Poor Economics: A Radical Rethinking of the Way to Fight Global Poverty</td>
-        <td align="center" class="author">Abhijit V. Banerjee, Esther Duflo</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Serious Men-->
-    <tr>
-        <td align="center" class="name">Serious Men</td>
-        <td align="center" class="author">Manu Joseph</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Hidden Reality-->
-    <tr>
-        <td align="center" class="name">The Hidden Reality</td>
-        <td align="center" class="author">Brian Greene</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p>Nominated for the Royal Society Winton Prize for Science Books for 2012.  To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Determinism and Free Will: New Insights from Physics, Philosophy, and Theology-->
-    <tr>
-        <td align="center" class="name">Determinism and Free Will: New Insights from Physics, Philosophy, and Theology</td>
-        <td align="center" class="author">Emanuele Severino, Gerard 't Hooft, Piero Coda</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Infinite Jest-->
-    <tr>
-        <td align="center" class="name">Infinite Jest</td>
-        <td align="center" class="author">David Foster Wallace</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p>Time magazine's list of the 100 best English-language novels published between 1923 and 2005. To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Of Gravity, Black Holes, and Information-->
-    <tr>
-        <td align="center" class="name">Of Gravity, Black Holes, and Information</td>
-        <td align="center" class="author">Jacob D. Bekenstein</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Einstein's Dreams-->
-    <tr>
-        <td align="center" class="name">Einstein's Dreams</td>
-        <td align="center" class="author">Alan Lightman</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Maha Upanishad-->
-    <tr>
-        <td align="center" class="name">Maha Upanishad</td>
-        <td align="center" class="author">Anonymous</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--Love's Labour's Lost-->
-    <tr>
-        <td align="center" class="name">Love's Labour's Lost</td>
-        <td align="center" class="author">William Shakespeare</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-
-<!--Genes in Conflict: The Biology of Selfish Genetic Elements-->
-    <tr>
-        <td align="center" class="name">Genes in Conflict: The Biology of Selfish Genetic Elements</td>
-        <td align="center" class="author">Austin Burt, Robert Trivers</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--One Hundred Years of Solitude-->
-    <tr>
-        <td align="center" class="name">One Hundred Years of Solitude</td>
-        <td align="center" class="author">Gabriel García Márquez</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
-
-<!--The Time Traveler's Wife-->
-    <tr>
-        <td align="center" class="name">The Time Traveler's Wife</td>
-        <td align="center" class="author">Audrey Niffenegger</td>
-
-         <td align="center">
-           <div class="rating">
-             To Read <br>
-            <div id="progress-outer">
-              <div id="progress-inner" class="book3"></div>
-            </div>
-           </div>
-         </td>
-      <td>
-         <div class="sidebar-box-text">
-           <p> To be updated...
-           </p>
-          </div>
-       </td>
-    </tr>
-<!-- END -->
 
 
   </table>
@@ -6060,4 +4490,5 @@ This book won Physics World's 2015 book of the year award. It's a memoir where A
 </div>
 
 <div style="border:none;" id="Pagination" class="pagination"></div>
+
 
