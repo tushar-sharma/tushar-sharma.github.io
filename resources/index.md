@@ -257,6 +257,7 @@ overview of HTML.
 
 ## LDAP
 * [LDAP Linux HowTO](http://www.tldp.org/HOWTO/LDAP-HOWTO/)
+* [REDHAT - LDAP](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/deployment_guide/ch-ldap)
 
 ## Machine Learning
 * [ CS 156 by Professor Yaser Abu-Mostafa](https://www.youtube.com/watch?v=mbyG85GZ0PI&list=PLD63A284B7615313A)
