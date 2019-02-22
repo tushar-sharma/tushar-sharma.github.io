@@ -255,6 +255,9 @@ overview of HTML.
 * [Learn Lisp the hard way](http://learnlispthehardway.org/book/)
 * [Overview & Introduction of Lisp](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/1a-overview-and-introduction-to-lisp/)
 
+## LDAP
+* [LDAP Linux HowTO](http://www.tldp.org/HOWTO/LDAP-HOWTO/)
+
 ## Machine Learning
 * [ CS 156 by Professor Yaser Abu-Mostafa](https://www.youtube.com/watch?v=mbyG85GZ0PI&list=PLD63A284B7615313A)
 
