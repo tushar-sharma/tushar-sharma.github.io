@@ -10,12 +10,12 @@ name: red-queen-race
 thumb: https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg
 ---
 
-<p>When I was a kid, I was perturbed at the outbreaks of new diseases. There was no <b>Swine Flue</b> before twenty first century or <b>HIV</b> before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime we humans make progress in science?</p> 
+<p>When I was a kid, I was perturbed at the outbreaks of new diseases. There was no <b>Swine Flue</b> before twenty first century or <b>HIV</b> before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime humans make progress in science?</p> 
 
 Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) & karma (accumulated effects of good and bad actions) somehow illusioned  to maintain harmony in the world. But evolution shattered my perception of reality.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-When I was a kid, I was perturbed at the outbreaks of new diseases. There was no **Swine Flue** before twenty first century or **HIV** before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime we humans make progress in science?
+When I was a kid, I was perturbed at the outbreaks of new diseases. There was no **Swine Flue** before twenty first century or **HIV** before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime humans make progress in science?
 
 | <img align="center" src="https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg" alt="" /> |
 
