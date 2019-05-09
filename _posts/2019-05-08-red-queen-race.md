@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Red Queen Race 
+title: Red Queen Race
 category: blog
 tags:
 - biology
@@ -10,7 +10,7 @@ name: red-queen-race
 thumb: https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg
 ---
 
-<p>When I was a kid, I was perturbed at the outbreaks of new diseases. There was no <b>Swine Flue</b> before twenty first century or <b>HIV</b> before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime humans make progress in science?</p> 
+<p>When I was a kid, I was perturbed at the outbreaks of new diseases. There was no <b>Swine Flue</b> before twenty first century or <b>HIV</b> before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime humans make progress in science?</p>
 
 Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) & karma (accumulated effects of good and bad actions) somehow illusioned  to maintain harmony in the world. But evolution shattered my perception of reality.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
@@ -31,16 +31,16 @@ With ravine, shriek'd against his creed<br>
 </blockquote>
 <br>
 
-Darwinian nature's is not beingn. Natural selection, the chisel of nature, leads to increase in frequency of genes (allele) which are more reproducible. Thus both prey or predators evolve in a arm race to counter each other. But not all evolution benefit the species. 
+Darwinian nature's is not beingn. Natural selection, the chisel of nature, leads to increase in frequency of genes (allele) which are more reproducible. Thus both prey or predators evolve in a arm race to counter each other. But not all evolution benefit the species.
 
 | <img align="center" src="https://news.nationalgeographic.com/content/dam/news/2015/12/cavefish.ngsversion.1441823512384.adapt.1900.1.jpg" alt="" /> |
 
 A classic case of blind cave fish shows how evolution lacks any ultimate purpose. Over the past few million years, blind forms of the Mexican tetra (Astyanax mexicanus) have evolved in caves. The fish subsequently have lost their eyes after mutations disabled key genes. This trait helped fish to save energy.
 
 
-The reason new diseases outbreaks is due to fast generic mutation of the pathogens. It's estimated that evolution of a bacteria in a day is equivalent of evolution of human in thousand years. That is the reaons why many antibiotic become useless after certain amount of time example staphylococcal bacteria was very vunerable to penicillin in 1941. Currently only ninety five percent of staphylococcal bacteria are resistent to penicillin<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
+The reason new diseases outbreaks is due to fast generic mutation of the pathogens. It's estimated that evolution of a bacteria in a day is equivalent of evolution of human in thousand years. That is the reaons why many antibiotic become useless after certain amount of time example staphylococcal bacteria was very vunerable to penicillin in 1941. Currently ninety five percent of staphylococcal bacteria are resistent to penicillin<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
 
-Lewis Caroll was not only a world famous children's writer but also a mathematician. Hence it's not surprising to find intriguing logics in his writings. One such writing that I stumbled upon was an incident that appears in Lewis Carroll's Through the Looking-Glass. 
+Lewis Caroll was not only a world famous children's writer but also a mathematician. Hence it's not surprising to find intriguing logics in his writings. One such writing that I stumbled upon was an incident that appears in Lewis Carroll's Through the Looking-Glass.
 
 <blockquote>
 "Well, in our country," said Alice, still panting a little, "you'd generally get to somewhere else—if you run very fast for a long time, as we've been doing."<br><br>
@@ -60,20 +60,20 @@ I wonder about the arm race between humans and pathogens. Will we evolve to deve
          <p>Why we get sick ? by Randolph M. Nesse</p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
     </li>
-	
+
      <li id='fn:2'>
          <p><a href="http://www.indiana.edu/~curtweb/Research/Red_Queen%20hyp.h" target="_blank">Red Queen Hypothesis</a></p>
          <a href='#fnref:2' rev='footnote'>&#8617;</a>
     </li>
-	
+
     <li id='fn:3'>
          <p><a href="https://apps.who.int/iris/bitstream/handle/10665/112642/9789241564748_eng.pdf;jsessionid=A33A2486ED8B2999A6E44FE20B7EE1F2?sequence=1" target="_blank">WHO</a></p>
          <a href='#fnref:3' rev='footnote'>&#8617;</a>
     </li>
-    
+
   </ol>
 </div>
-	
+
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a> 	{% endif %}
 </nav>
