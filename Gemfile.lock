@@ -3,7 +3,7 @@ GEM
   specs:
     RedCloth (4.2.9)
     colorator (0.1)
-    ffi (1.9.10)
+    ffi (1.9.18)
     iconv (1.0.4)
     jekyll (3.0.1)
       colorator (~> 0.1)
