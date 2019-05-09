@@ -18,13 +18,13 @@ When I was a kid, I was perturbed at the outbreaks of new diseases. There was no
 When I was a kid, I was perturbed at the outbreaks of new diseases. There was no *Swine Flue* before twenty first century or *HIV* before tenth century. Why nature was hell-bent in pull out of a hat new diseases? 
 
 
-<p>Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) & karma (accumulated effects of good and bad actions) and dharma(duty) tries to maintain harmony in the world. But evolution shattered my perception of reality.
-
-
 | <img align="center" src="https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg" alt="" /> |
 
 
-However reading about evolution and natural selection shattered my views of benign nature. Evolution has itself no goal. Though natural selection is non random, the evolution meanders aimlessly without ultimate purpose. As poet Lord Alfred Tennyson in his poem "In Memorial A.H.H", aptly descibes violent nature "red in tooth and claw". 
+<p>Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) & karma (accumulated effects of good and bad actions) and dharma(duty) tries to maintain harmony in the world. But evolution shattered my perception of reality.
+
+
+A famous poem "In Memorial A.H.H" by Lord Alfred Tennyson tries to reconcile with the violent natural world
 
 <blockquote>
 Who trusted God was love indeed<br>
@@ -34,7 +34,14 @@ With ravine, shriek'd against his creed<br>
 </blockquote>
 <br>
 
-The reasons outbreaks of new diseases is that pathogens like bacteria, virus, etc evolve (genetic mutation) really fast. It's estimated that evolution of a bacteria in a day is equivalent of evolution of human in thousand years. for example staphylococcal bacteria was very vunerable to penicillin in 1941. Currenly 95 percent of staphylococcal bacteria are resistent to penicillin<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
+Darwinian nature's is not beingn. Natural selection, the chisel of nature, leads to increase in frequency of genes (allele) which are more reproducible. Thus both prey or predators evolve in a arm race to counter each other. But not all evolution benefit the species. 
+
+| <img align="center" src="https://news.nationalgeographic.com/content/dam/news/2015/12/cavefish.ngsversion.1441823512384.adapt.1900.1.jpg" alt="" /> |
+
+A classic case of blind cave fish shows how evolution is blind. Over the past few million years, blind forms of the Mexican tetra (Astyanax mexicanus) have evolved in caves. The fish subsequently have lost their eyes after mutations disabled key genes. This trait helped fish to save energy.
+
+
+The reason new diseases outbreaks is due to fast generic mutation of the pathogens. It's estimated that evolution of a bacteria in a day is equivalent of evolution of human in thousand years. That is the reaons why many antibiotic become useless after certain amount of time example staphylococcal bacteria was very vunerable to penicillin in 1941. Currenly only ninety five percent of staphylococcal bacteria are resistent to penicillin<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
 
 Lewis Caroll was not only a world famous children's writer but also a mathematician. Hence it's not surprising to find intriguing logics in his writings. One such writing that I stumbled upon was an incident that appears in Lewis Carroll's Through the Looking-Glass. 
 
