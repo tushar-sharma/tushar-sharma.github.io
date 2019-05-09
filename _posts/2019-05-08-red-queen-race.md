@@ -38,7 +38,7 @@ Darwinian nature's is not beingn. Natural selection, the chisel of nature, leads
 
 | <img align="center" src="https://news.nationalgeographic.com/content/dam/news/2015/12/cavefish.ngsversion.1441823512384.adapt.1900.1.jpg" alt="" /> |
 
-A classic case of blind cave fish shows how evolution is blind. Over the past few million years, blind forms of the Mexican tetra (Astyanax mexicanus) have evolved in caves. The fish subsequently have lost their eyes after mutations disabled key genes. This trait helped fish to save energy.
+A classic case of blind cave fish shows how evolution lacks any ultimate purpose. Over the past few million years, blind forms of the Mexican tetra (Astyanax mexicanus) have evolved in caves. The fish subsequently have lost their eyes after mutations disabled key genes. This trait helped fish to save energy.
 
 
 The reason new diseases outbreaks is due to fast generic mutation of the pathogens. It's estimated that evolution of a bacteria in a day is equivalent of evolution of human in thousand years. That is the reaons why many antibiotic become useless after certain amount of time example staphylococcal bacteria was very vunerable to penicillin in 1941. Currently only ninety five percent of staphylococcal bacteria are resistent to penicillin<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
