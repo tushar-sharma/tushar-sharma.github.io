@@ -26,10 +26,10 @@ Naively I belived that new diseases were nature's way of pushing against human's
 However reading about evolution and natural selection shattered my views of benign nature. Evolution has itself no goal. Though natural selection is non random, the evolution meanders aimlessly without ultimate purpose. As poet Lord Alfred Tennyson in his poem "In Memorial A.H.H", aptly descibes violent nature "red in tooth and claw". 
 
 <blockquote>
-Who trusted God was love indeed
-And love Creation's final law
-Tho' Nature, red in tooth and claw
-With ravine, shriek'd against his creed
+Who trusted God was love indeed<br>
+And love Creation's final law<br>
+Tho' Nature, red in tooth and claw<br>
+With ravine, shriek'd against his creed<br>
 </blockquote>
 <br><br>
 
