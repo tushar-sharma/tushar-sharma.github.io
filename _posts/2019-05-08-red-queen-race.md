@@ -10,18 +10,19 @@ name: red-queen-race
 thumb: https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg
 ---
 
-When I was a kid , I was perturbed at the outbreak of new diseases. Swine Flu was first seen in 2009 in Mexico and HIV virus never exited thounsand of year ago. Where does new diseases come from?
+When I was a kid, I was perturbed at the outbreaks of new diseases. There was no *Swine Flue* before twenty first century or *HIV* before tenth century. Why nature was hell-bent in pull out of a hat new diseases? 
 
-<p>Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order that balances karma (accumulated effects of good and bad actions) and dharma(duty) in the world. </p><!-- truncate_here -->
+<p>Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) & karma (accumulated effects of good and bad actions) and dharma(duty) tries to maintain harmony in the world. But evolution shattered my perception of reality. </p><!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-When I was a kid , I was perturbed at the outbreak of new diseases. Swine Flu was first seen in 2009 in Mexico and HIV virus never exited thounsand of year ago. Where does new diseases come from?
+When I was a kid, I was perturbed at the outbreaks of new diseases. There was no *Swine Flue* before twenty first century or *HIV* before tenth century. Why nature was hell-bent in pull out of a hat new diseases? 
+
+
+<p>Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) & karma (accumulated effects of good and bad actions) and dharma(duty) tries to maintain harmony in the world. But evolution shattered my perception of reality.
 
 
 | <img align="center" src="https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg" alt="" /> |
 
-	
-Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order that balances karma (accumulated effects of good and bad actions) and dharma(duty) in the world. 
 
 However reading about evolution and natural selection shattered my views of benign nature. Evolution has itself no goal. Though natural selection is non random, the evolution meanders aimlessly without ultimate purpose. As poet Lord Alfred Tennyson in his poem "In Memorial A.H.H", aptly descibes violent nature "red in tooth and claw". 
 
