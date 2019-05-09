@@ -62,7 +62,7 @@ I wonder about the arm race between humans and pathogens. Will we evolve to deve
     </li>
 	
     <li id='fn:3'>
-         <p><a href="https://apps.who.int/iris/bitstream/handle/10665/112642/9789241564748_eng.pdf;jsessionid=A33A2486ED8B2999A6E44FE20B7EE1F2?sequence=1" target="_blank">Red Queen Hypothesis</a></p>
+         <p><a href="https://apps.who.int/iris/bitstream/handle/10665/112642/9789241564748_eng.pdf;jsessionid=A33A2486ED8B2999A6E44FE20B7EE1F2?sequence=1" target="_blank">WHO</a></p>
          <a href='#fnref:3' rev='footnote'>&#8617;</a>
     </li>
     
