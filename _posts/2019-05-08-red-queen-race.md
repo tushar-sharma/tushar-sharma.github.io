@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Red Queen Race 
-category: blog
 tags: 
 - evolution 
 - arms race
