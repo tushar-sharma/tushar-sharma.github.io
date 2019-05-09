@@ -12,7 +12,7 @@ thumb: https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg
 
 When I was a kid, I was perturbed at the outbreaks of new diseases. There was no *Swine Flue* before twenty first century or *HIV* before tenth century. Why nature was hell-bent in pull out of a hat new diseases? 
 
-<p>Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) & karma (accumulated effects of good and bad actions) and dharma(duty) tries to maintain harmony in the world. But evolution shattered my perception of reality. </p><!-- truncate_here -->
+<p>Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) & karma (accumulated effects of good and bad actions) and dharma(duty) tries to maintain harmony in the world. But evolution shattered my perception of reality.</p><!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 When I was a kid, I was perturbed at the outbreaks of new diseases. There was no *Swine Flue* before twenty first century or *HIV* before tenth century. Why nature was hell-bent in pull out of a hat new diseases? 
@@ -21,7 +21,7 @@ When I was a kid, I was perturbed at the outbreaks of new diseases. There was no
 | <img align="center" src="https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg" alt="" /> |
 
 
-<p>Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) & karma (accumulated effects of good and bad actions) and dharma(duty) tries to maintain harmony in the world. But evolution shattered my perception of reality.
+<p>Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) & karma (accumulated effects of good and bad actions) and dharma(duty) tries to maintain harmony in the world. But evolution shattered my perception of reality.</p>
 
 
 A famous poem "In Memorial A.H.H" by Lord Alfred Tennyson tries to reconcile with the violent natural world
