@@ -41,7 +41,7 @@ Darwinian nature's is not beingn. Natural selection, the chisel of nature, leads
 A classic case of blind cave fish shows how evolution is blind. Over the past few million years, blind forms of the Mexican tetra (Astyanax mexicanus) have evolved in caves. The fish subsequently have lost their eyes after mutations disabled key genes. This trait helped fish to save energy.
 
 
-The reason new diseases outbreaks is due to fast generic mutation of the pathogens. It's estimated that evolution of a bacteria in a day is equivalent of evolution of human in thousand years. That is the reaons why many antibiotic become useless after certain amount of time example staphylococcal bacteria was very vunerable to penicillin in 1941. Currenly only ninety five percent of staphylococcal bacteria are resistent to penicillin<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
+The reason new diseases outbreaks is due to fast generic mutation of the pathogens. It's estimated that evolution of a bacteria in a day is equivalent of evolution of human in thousand years. That is the reaons why many antibiotic become useless after certain amount of time example staphylococcal bacteria was very vunerable to penicillin in 1941. Currently only ninety five percent of staphylococcal bacteria are resistent to penicillin<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
 
 Lewis Caroll was not only a world famous children's writer but also a mathematician. Hence it's not surprising to find intriguing logics in his writings. One such writing that I stumbled upon was an incident that appears in Lewis Carroll's Through the Looking-Glass. 
 
