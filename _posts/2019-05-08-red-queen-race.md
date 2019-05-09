@@ -10,17 +10,18 @@ name: red-queen-race
 thumb: https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg
 ---
 
-When I was a kid , I was perturbed at the outbreak of new diseases. Swine Flu was first seen in 2009 in Mexico and HIV virus never exited thounsand of year ago. Where does new diseases come from?<!-- truncate_here -->
+When I was a kid , I was perturbed at the outbreak of new diseases. Swine Flu was first seen in 2009 in Mexico and HIV virus never exited thounsand of year ago. Where does new diseases come from?
+
+<p>Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order that balances karma (accumulated effects of good and bad actions) and dharma(duty) in the world. </p><!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 When I was a kid , I was perturbed at the outbreak of new diseases. Swine Flu was first seen in 2009 in Mexico and HIV virus never exited thounsand of year ago. Where does new diseases come from?
 
-<img src= >
 
 | <img align="center" src="https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg" alt="" /> |
 
 	
-Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order mentioned in the Vedas that balances karma (accumulated effects of good and bad actions) and dharma (duty) in the world. 
+Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order that balances karma (accumulated effects of good and bad actions) and dharma(duty) in the world. 
 
 However reading about evolution and natural selection shattered my views of benign nature. Evolution has itself no goal. Though natural selection is non random, the evolution meanders aimlessly without ultimate purpose. As poet Lord Alfred Tennyson in his poem "In Memorial A.H.H", aptly descibes violent nature "red in tooth and claw". 
 
@@ -30,6 +31,7 @@ And love Creation's final law
 Tho' Nature, red in tooth and claw
 With ravine, shriek'd against his creed
 </blockquote>
+<br><br>
 
 The reasons outbreaks of new diseases is that pathogens like bacteria, virus, etc evolve (genetic mutation) really fast. It's estimated that evolution of a bacteria in a day is equivalent of evolution of human in thousand years. for example staphylococcal bacteria was very vunerable to penicillin in 1941. Currenly 95 percent of staphylococcal bacteria are resistent to penicillin<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
 
@@ -39,6 +41,7 @@ Lewis Caroll was not only a world famous children's writer but also a mathematic
 "Well, in our country," said Alice, still panting a little, "you'd generally get to somewhere else—if you run very fast for a long time, as we've been doing."<br><br>
 "A slow sort of country!" said the Queen. "Now, here, you see, it takes all the running you can do, to keep in the same place. If you want to get somewhere else, you must run at least twice as fast as that!"
 </blockquote>
+<br><br>
 
 Leigh Van Valen, an evolutionary biologist, proposed Red Queen hypothesis that captures arms race between co-evolving species. Coevolution leads to situations where the probabily of extinction is relatively constant over millions of years(Van Valen 1973). In tightly coevolved interactions, evolutionary change of one species could lead to extinction of other species. The longer evolutionary history is neither better adopter or less adapted. So evolution doesn't have a progressive quality. The species thus have to run(evolve) to remain in the same place (extant)<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
 
