@@ -2,10 +2,10 @@
 layout: post
 title: Red Queen Race 
 category: blog
-tags: 
-- evolution 
-- arms race
+tags:
 - biology
+- evolution
+- antibiotics
 name: red-queen-race
 thumb: https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg
 ---
