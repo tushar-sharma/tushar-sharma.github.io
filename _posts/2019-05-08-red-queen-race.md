@@ -31,7 +31,7 @@ And love Creation's final law<br>
 Tho' Nature, red in tooth and claw<br>
 With ravine, shriek'd against his creed<br>
 </blockquote>
-<br><br>
+<br>
 
 The reasons outbreaks of new diseases is that pathogens like bacteria, virus, etc evolve (genetic mutation) really fast. It's estimated that evolution of a bacteria in a day is equivalent of evolution of human in thousand years. for example staphylococcal bacteria was very vunerable to penicillin in 1941. Currenly 95 percent of staphylococcal bacteria are resistent to penicillin<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
 
@@ -41,7 +41,7 @@ Lewis Caroll was not only a world famous children's writer but also a mathematic
 "Well, in our country," said Alice, still panting a little, "you'd generally get to somewhere else—if you run very fast for a long time, as we've been doing."<br><br>
 "A slow sort of country!" said the Queen. "Now, here, you see, it takes all the running you can do, to keep in the same place. If you want to get somewhere else, you must run at least twice as fast as that!"
 </blockquote>
-<br><br>
+<br>
 
 Leigh Van Valen, an evolutionary biologist, proposed Red Queen hypothesis that captures arms race between co-evolving species. Coevolution leads to situations where the probabily of extinction is relatively constant over millions of years(Van Valen 1973). In tightly coevolved interactions, evolutionary change of one species could lead to extinction of other species. The longer evolutionary history is neither better adopter or less adapted. So evolution doesn't have a progressive quality. The species thus have to run(evolve) to remain in the same place (extant)<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
 
