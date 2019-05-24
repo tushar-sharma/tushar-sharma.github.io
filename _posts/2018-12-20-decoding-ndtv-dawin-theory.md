@@ -24,9 +24,6 @@ I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup>
 
 <a href="https://www.ndtv.com/video/news/the-buck-stops-here/darwin-s-theory-should-minister-s-views-be-dismissed-477172?yt" target="_blank"><img src="https://i.imgur.com/nvegAOw.jpg" title="source: ndtv.com" /></a>
 
-<pre style="overflow-x:hidden;white-space:pre-wrap;"><code>I'm not a scientist. Thus its not my forte to expound on the meaning of science. However, there are scientists who believe in god whereas some don't. With all the diversity of life, I am just sharing my personal views.
-</code></pre>
-
 
 How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary, he had a career of Police Commisioner of Mumbai.
 
