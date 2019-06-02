@@ -9,7 +9,7 @@
     -webkit-border-radius: 9px;
 }
 
-.cl{ color: rgb(51, 153, 204);}
+.cl{ color: rgb(51, 153, 204);white-space: nowrap;}
 img.book {
     height: 150px;
     padding: 15px 15px 15px 0px;
