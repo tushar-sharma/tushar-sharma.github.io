@@ -10,23 +10,16 @@ title: Books on my shelf
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 <!-- end heading -->
 <style type="text/css">
-.note {
-  margin: 30px 0;
-  margin-left: -30px;
-  padding: 20px 20px 24px;
-  padding-left: 50px;
-  @include border-radius(0 5px 5px 0);
-  position: relative;
-  @include box-shadow(0 1px 5px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255,255,255,.2), inset 0 -1px 0 rgba(0,0,0,.3));
-  background-color: #7e6d42;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdlNmQ0MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YzRlMzUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#7e6d42), to(#5c4e35));
-  background-image: -webkit-linear-gradient(top, #7e6d42 0%, #5c4e35 100%);
-  background-image: -moz-linear-gradient(top, #7e6d42 0%, #5c4e35 100%);
-  background-image: -o-linear-gradient(top, #7e6d42 0%, #5c4e35 100%);
-  background-image: linear-gradient(to bottom, #7e6d42 0%,#5c4e35 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7e6d42', endColorstr='#5c4e35',GradientType=0 );
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
 }
+
+.alert.info {background-color: #2196F3;}
 </style>
 <!-- end heading -->
 
@@ -76,11 +69,10 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 
 <p><b>Challenge:</b> Search your favourite author or a book in the <i>search bar</i>. If you can't find it, feel free to send me your name and the <a href="{{ root_url }}/contact" >book suggestion</a>. I will give you a shout-out by adding your name in the comments.</p>
 
-
-<div class="note">
+<div class="alert info">
  The rating of the books are my prerogative & compelely subjective. Some of the books are drawn from diverse subjects. I believe in absolute freedom of expression that includes freedom to read any book even that are banned or controversial. My ratings are neither endorsement or repudiation of any ideology or books.  
 </div>
-<br><br>
+<br>
   
 <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
   <thead>
