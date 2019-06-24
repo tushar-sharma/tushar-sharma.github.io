@@ -8,7 +8,6 @@ title: Random Wits
 port: 4000
 future: false
 mod: "%"
-encoding: UTF-8
 kramdown:
   math_engine: mathjax
   input: GFM
@@ -22,6 +21,7 @@ exclude:
 - branch.txt
 - .gitignore
 gems: [jekyll-paginate]
+encoding: UTF-8
 paginate: 3
 not_paginated_categories:
   - 'projects'
