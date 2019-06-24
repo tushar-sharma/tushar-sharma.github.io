@@ -21,9 +21,9 @@ exclude:
 - branch.txt
 - .gitignore
 gems: [jekyll-paginate]
-encoding: UTF-8
 paginate: 3
 not_paginated_categories:
   - 'projects'
 author:
   name: "Tushar Sharma"
+encoding: UTF-8
