@@ -8,6 +8,7 @@ title: Random Wits
 port: 4000
 future: false
 mod: "%"
+encoding: UTF-8
 kramdown:
   math_engine: mathjax
   input: GFM
@@ -26,4 +27,3 @@ not_paginated_categories:
   - 'projects'
 author:
   name: "Tushar Sharma"
-encoding: UTF-8
