@@ -1,19 +1,16 @@
 ---
-published: true
----
----
 layout: post
 title: Recursively sort a array
 category: blog
 tags:
-- programming 
+- programming
 - interview
 - code
 name: rec-sort
 thumb: /img/heap_array.png
 ---
 
-I came accross a simple telephonic interview problem. The problem was to soft an array recursively. However even numbers were placed before odd numbers. At first glance it appears a simple case of implementation of merge sort. 
+I came accross a simple telephonic interview problem. The problem was to soft an array recursively. However even numbers were placed before odd numbers. At first glance it appears a simple case of implementation of merge sort.
 
 <style type="text/css">
 .myheading{font-family:Georgia, "Times New Roman", Times, serif;font-size:24px;margin-top:5px;margin-bottom:0;text-align:center;font-weight:400;color:#222}
@@ -21,25 +18,25 @@ I came accross a simple telephonic interview problem. The problem was to soft an
 </style>
 
 
-<p>I recently accross a simple telephonic interview problem. The problem was to soft an array recursively. However even numbers were placed before odd numbers. At first glance it appears a simple case of implementation of merge sort. 
+<p>I recently accross a simple telephonic interview problem. The problem was to soft an array recursively. However even numbers were placed before odd numbers. At first glance it appears a simple case of implementation of merge sort.
 </p>
 <!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-<p>I recently accross a simple telephonic interview problem. The problem was to soft an array recursively. However even numbers were placed before odd numbers. At first glance it appears a simple case of implementation of merge sort. 
+<p>I recently accross a simple telephonic interview problem. The problem was to soft an array recursively. However even numbers were placed before odd numbers. At first glance it appears a simple case of implementation of merge sort.
 </p>
 
 ## Problem statement
 
 Given input array, produce a output array
 
-eg, 
-    
-    input array = [10 8 1 7 1 2] 
+eg,
+
+    input array = [10 8 1 7 1 2]
 
     output array = [2 8 10 1 1 7]
-    
- 
+
+
 
 ## let's use a simple template class
 
@@ -56,17 +53,17 @@ public class RecSortEven {
 public class RecSortEven {
      public static void main(String[] args) {
          List<Integer> testInput = new ArrayList<Integer>(Arrays.asList(10, 8, 1, 7, 1, 2));
-                                                          
+
          /*sort the array recursively*/
-         cusSort(testInput); 
-       
+         cusSort(testInput);
+
      }
 }
 ```
 
 ## Merge sort
 
-If you are unfamiliary with merge sort, we just break the array into sub parts and later combine them based on our criteria. Here, we will maintiain left and right pointer which keeps track of the end of the array. Initially, the left is equal to 0 and right equals to the last element of the array. 
+If you are unfamiliary with merge sort, we just break the array into sub parts and later combine them based on our criteria. Here, we will maintiain left and right pointer which keeps track of the end of the array. Initially, the left is equal to 0 and right equals to the last element of the array.
 
 
 ```java
@@ -83,7 +80,7 @@ public static void cusSort(List<Integer> testInput) {
 We calculate a mid point and recursively call the method twice one half of array and another half of array. lastly we add the crux of our logic in merge sort.
 
 ```java
-/* recursively sort the array 
+/* recursively sort the array
  * @param testInput: ArrayList
  * @param left integer
  * @param right integer
@@ -96,7 +93,7 @@ public static void mergeSort(List<Integer> testInput, int left, int right) {
 
     int mid = left + (right - left) / 2;
 
- 
+
     mergeSort(testInput, left, mid );
 
     mergeSort(testInput, mid + 1, right);
@@ -106,7 +103,7 @@ public static void mergeSort(List<Integer> testInput, int left, int right) {
 ```
 
 
-As per our requirement we need to sort even arrays before odd arrays, so we need to have a method to check that. 
+As per our requirement we need to sort even arrays before odd arrays, so we need to have a method to check that.
 
 ```java
     /*
@@ -122,7 +119,7 @@ As per our requirement we need to sort even arrays before odd arrays, so we need
     }
 ```
 
-Lastly we need to write our merge method. 
+Lastly we need to write our merge method.
 
 ```java
     /*combine arrays */
@@ -166,9 +163,8 @@ Lastly we need to write our merge method.
 ```
 
 
-## What is the complexity of the program 
+## What is the complexity of the program
 
-It's a recursive algorithm , so we need a recurrence 
-
+It's a recursive algorithm , so we need a recurrence
 
 ![rec.png]({{site.baseurl}}/_posts/rec.png)
