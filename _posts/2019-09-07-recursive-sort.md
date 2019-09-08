@@ -18,11 +18,15 @@ thumb: /img/rec.png
 .mysubheading{font-family:"Lucida Grande", Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
 </style>
 
+<script type="text/javascript" src="{{ root_url }}/js/shCore.js"></script>
+<script type="text/javascript" src="{{ root_url }}/js/shBrushJava.js"></script>
+<link type="text/css" rel="stylesheet" href="{{ root_url }}/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
 
 <p>I recently came across a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort.
 </p>
 
-<P><b>Problem Statement</b></p> 
+<P><b>Problem Statement</b></p>
 
 Given an input array, produce the following output array...<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
@@ -125,7 +129,7 @@ As per our requirement we need to sort even arrays before odd arrays, so we need
 
 Lastly we need to write our merge method.
 
-```java
+<pre class="brush: cpp;  title: ; notranslate">
     /*combine arrays */
     public static void merge(List<Integer> testInput, int left1, int right1, int left2, int right2) {
 
@@ -164,8 +168,7 @@ Lastly we need to write our merge method.
 
     }
 
-```
-
+</pre>
 
 ## What is the complexity of the program
 
