@@ -5,6 +5,8 @@ category: blog
 tags:
 - programming
 - interview
+- merge sort
+- sort
 - code
 name: rec-sort
 thumb: /img/rec.png
