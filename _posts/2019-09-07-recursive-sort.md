@@ -7,10 +7,8 @@ tags:
 - interview
 - code
 name: rec-sort
-thumb: /img/heap_array.png
+thumb: /img/rec.png
 ---
-
-I came accross a simple telephonic interview problem. The problem was to soft an array recursively. However even numbers were placed before odd numbers. At first glance it appears a simple case of implementation of merge sort.
 
 <style type="text/css">
 .myheading{font-family:Georgia, "Times New Roman", Times, serif;font-size:24px;margin-top:5px;margin-bottom:0;text-align:center;font-weight:400;color:#222}
@@ -167,4 +165,4 @@ Lastly we need to write our merge method.
 
 It's a recursive algorithm , so we need a recurrence
 
-![rec.png]({{site.baseurl}}/_posts/rec.png)
+<img src="{{ root_url }}/img/emacs.png" >
