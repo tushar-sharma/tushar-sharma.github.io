@@ -165,4 +165,4 @@ Lastly we need to write our merge method.
 
 It's a recursive algorithm , so we need a recurrence
 
-<img src="{{ root_url }}/img/emacs.png" >
+<img src="{{ root_url }}/img/rec.png" >
