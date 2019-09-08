@@ -1,9 +1,24 @@
 ---
 published: false
 ---
+---
+layout: post
+title: Recursively sort a array
+category: blog
+tags:
+- programming 
+- interview
+- code
+name: rec-sort
+thumb: /img/heap_array.png
+---
+
+I came accross a simple telephonic interview problem. The problem was to soft an array recursively. However even numbers were placed before odd numbers. At first glance it appears a simple case of implementation of merge sort. 
+
+
 ## Problem statement
 
-Recursively sort an array. However even numbers are placed before odd number. 
+Given input array, produce a output array
 
 eg, 
     
@@ -144,7 +159,3 @@ It's a recursive algorithm , so we need a recurrence
 
 
 ![rec.png]({{site.baseurl}}/_posts/rec.png)
-
-
-
-
