@@ -10,3 +10,11 @@ eg, input array = [10 8 1 7 1 2]
     
  
 
+## Template for simple program
+
+{% highlight java %}
+public class RecSortEven {
+     public static void main(String[] args) {
+     }
+}
+{% endhighlight %}
