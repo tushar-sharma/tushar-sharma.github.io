@@ -19,12 +19,12 @@ thumb: /img/rec.png
 </style>
 
 
-<p>I recently accross a simple telephonic interview problem. The problem was to sort an array recursively. However even numbers were placed before odd numbers. At first glance it appears a simple case of implementation of merge sort.
+<p>I recently came accross a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort.
 </p>
 <!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-<p>I recently accross a simple telephonic interview problem. The problem was to sort an array recursively. However even numbers were placed before odd numbers. At first glance it appears a simple case of implementation of merge sort.
+<p>I recently came accross a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort.
 </p>
 
 ## Problem statement
