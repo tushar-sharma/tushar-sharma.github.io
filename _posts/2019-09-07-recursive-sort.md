@@ -129,7 +129,7 @@ As per our requirement we need to sort even arrays before odd arrays, so we need
 
 Lastly we need to write our merge method.
 
-<pre class="brush: cpp;  title: ; notranslate">
+<pre class="brush: java;  title: ; notranslate">
     /*combine arrays */
     public static void merge(List<Integer> testInput, int left1, int right1, int left2, int right2) {
 
