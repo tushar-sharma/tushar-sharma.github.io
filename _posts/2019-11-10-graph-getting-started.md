@@ -24,8 +24,6 @@ First we need to create a vertex. A vertex is a fundamental unit of graph. A gra
 
 First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).
 
-| <img align="center" src="{{ root_url }}/img/node0.png" alt="one node in a graph"  /> |
-
 ```java
 class Vertex {
 
