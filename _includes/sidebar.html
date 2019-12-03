@@ -6,7 +6,7 @@
   font-weight: normal;
   font-style: normal;}
 h1.heading { font-family: Myfont;
-  color: rgb(51, 153, 204);} 
+  color: rgb(51, 153, 204);}
 .top{color: rgb(68, 68, 68);}
 .sub{font-family:Somefont;}
 
@@ -17,17 +17,17 @@ aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:bas
 <aside id="logo" class="clearfix">
   <div class="clearfix">
     <a href="/">Tushar Sharma</a> <p style="float:right;"> </p>
-  </div> 
+  </div>
 </aside>
 
 <div style="clear:both;"></div>
 <div>
-     <h1  class="heading"><span class="top"><a href="{{ root_url}}"><i>Random Wits</i></a></span></h1> 
-  <p class="me_blurb"> 
-  <div class="sub"> 
+     <h1  class="heading"><span class="top"><a href="{{ root_url}}"><i>Random Wits</i></a></span></h1>
+  <p class="me_blurb">
+  <div class="sub">
       Life is too short for a diary
     </div>
-  </p> 
+  </p>
 
 </div>
 
@@ -64,11 +64,6 @@ h1.heading{font-family:Myfont;color:#39c}
   {% include sidebar_random.html %}
 </div>
 
-<div class="highlight">
-  {% include sidebar_tweets.html %}
-</div>
-
-
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -79,14 +74,6 @@ h1.heading{font-family:Myfont;color:#39c}
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-
-<br>
-
-{% if page.title != "Random Wits" %}
-  <div style="height:600px;max-height:600px;max-width:160px;width:160px;margin:0 auto;">
-    {% include adds.html %}
-  </div>
-{% endif %}
 
 <br>
 
