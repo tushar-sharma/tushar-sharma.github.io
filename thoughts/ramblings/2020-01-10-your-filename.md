@@ -6,5 +6,8 @@
 
 2. Oracle databse configured with kerberos (I've tried with 12 c) 
 
+3. Oracle thin client-side JDBC driver (ojdbc6.jar)
+
 3. Docker (if running on Windows)
 
+4. 
