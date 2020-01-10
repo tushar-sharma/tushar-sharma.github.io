@@ -1,4 +1,5 @@
-## Connecting to Oracle database with kerberos using python 
+## Connect to Database using oracle client and kerberos with Python
+tags : python, database, oracle, kerberos
 
 ### Prerequisite 
 
