@@ -45,3 +45,69 @@ if __name__ == "__main__":
 
     config = OracleConfig(info)
 ```
+
+
+Let's create OracleConfig class
+
+```python
+class OracleConfig(object):
+    """
+    Oracle Connection details
+    """
+
+    def __init__(self, data):
+        self.__dict__ = data
+
+    @property
+    def hostname(self):
+        return self._hostname
+
+    @property
+    def portnumber(self):
+        return self._portnumber
+
+    @property
+    def service_name(self):
+        return self._service_name
+
+    @property
+    def username(self):
+        return self._username
+
+    @property
+    def password(self):
+        return self._password
+
+    @property
+    def kPrincipal(self):
+        return self._kPrincipal
+
+    @property
+    def keytab(self):
+        return self._keytab
+
+    @property
+    def jdbc_jar(self):
+        return self._jdbc_jar
+
+    @property
+    def jdbc_class(self):
+        return self._jdbc_class
+
+    @property
+    def jdbc_url(self):
+        return self._jdbc_url
+
+    @keytab.setter
+    def keytab(self, keytab):
+        self._keytab = keytab
+
+    @jdbc_jar.setter
+    def jdbc_jar(self, jdbc_jar):
+        self._jdbc_jar = jdbc_jar
+
+    @jdbc_url.setter
+    def jdbc_url(self, jdbc_url):
+        self._jdbc_url = jdbc_url
+
+```
