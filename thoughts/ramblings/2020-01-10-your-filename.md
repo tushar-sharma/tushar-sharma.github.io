@@ -16,4 +16,5 @@ tags : python, database, oracle, kerberos
 Let's create a config.json used for our script
 
 ```sh 
+
 `` 
