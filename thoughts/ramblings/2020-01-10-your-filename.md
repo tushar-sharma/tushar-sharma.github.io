@@ -76,14 +76,6 @@ class OracleConfig(object):
         return self._password
 
     @property
-    def kPrincipal(self):
-        return self._kPrincipal
-
-    @property
-    def keytab(self):
-        return self._keytab
-
-    @property
     def jdbc_jar(self):
         return self._jdbc_jar
 
@@ -94,10 +86,6 @@ class OracleConfig(object):
     @property
     def jdbc_url(self):
         return self._jdbc_url
-
-    @keytab.setter
-    def keytab(self, keytab):
-        self._keytab = keytab
 
     @jdbc_jar.setter
     def jdbc_jar(self, jdbc_jar):
