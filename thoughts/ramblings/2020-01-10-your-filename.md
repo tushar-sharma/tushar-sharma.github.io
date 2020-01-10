@@ -10,3 +10,4 @@
 
 4. Docker (if running on Windows)
 
+### Step 1 
