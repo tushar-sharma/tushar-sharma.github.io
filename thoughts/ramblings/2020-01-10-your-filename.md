@@ -33,3 +33,15 @@ Let's create a config.json used for our script
 
 ### Step 2 Create a python script to parse config.json
 
+krbOracle.py
+
+```python
+if __name__ == "__main__":
+    # parse the configuration file
+    config_file = os.getcwd() + '/config.json'
+
+    with open(config_file, "r") as handler:
+        info = json.load(handler)
+
+    config = OracleConfig(info)
+```
