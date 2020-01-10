@@ -10,4 +10,4 @@
 
 4. Docker (if running on Windows)
 
-### Step 1 
+### Step 1 Creaet a configuration file
