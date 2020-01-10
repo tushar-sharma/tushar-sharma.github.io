@@ -46,9 +46,6 @@ if __name__ == "__main__":
     config = OracleConfig(info)
 ```
 
-
-Let's create a class OracleConfig with setters & getters for the fields
-
 ```python
 class OracleConfig(object):
     """
@@ -206,18 +203,10 @@ def connectOracle(config):
                           {'username': config.username,
                            'password': config.password},
                               jars=config.jdbc_jar)
-        except Exception as e:
-            print(e)
+    except Exception as e:
+        print(e)
 
-        if conn:
-            curs = conn.cursor()
-
-            query = 'select username as schema_name from sys.all_users order by username'
-
-            curs.execute(query)
-
-            print(curs.fetchall())
-
+    
 
 if __name__ == "__main__":
     # parse the configuration file
@@ -230,3 +219,11 @@ if __name__ == "__main__":
 
     connectOracle(config)
 ```
+
+When running the following, you would get something similar error 
+
+```
+ORA-01017: invalid username/password; logon denied
+```
+
+### Step 
