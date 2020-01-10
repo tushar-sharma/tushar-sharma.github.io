@@ -13,7 +13,7 @@ I've assumed the following prerequisite:
 
 4. Docker (if running on Windows)
 
-If you just want o jump to code without explanation
+If you just want to jump to code without explanation
 
 
 ### Step 1 Create a configuration file
