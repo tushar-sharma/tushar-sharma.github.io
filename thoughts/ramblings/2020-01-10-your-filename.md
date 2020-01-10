@@ -203,4 +203,6 @@ When running the following, you would get something similar error
 ORA-01017: invalid username/password; logon denied
 ```
 
-### Step 
+### Step 3 Get keytab file for kerberos (skip this if you already have one)
+
+
