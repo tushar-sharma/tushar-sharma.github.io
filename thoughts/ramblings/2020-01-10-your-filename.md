@@ -47,7 +47,7 @@ if __name__ == "__main__":
 ```
 
 
-Let's create OracleConfig class
+Let's create a class OracleConfig with setters & getters for the fields
 
 ```python
 class OracleConfig(object):
