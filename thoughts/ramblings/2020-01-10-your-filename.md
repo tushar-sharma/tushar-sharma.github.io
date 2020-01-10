@@ -12,3 +12,8 @@ tags : python, database, oracle, kerberos
 4. Docker (if running on Windows)
 
 ### Step 1 Create a configuration file
+
+Let's create a config.json used for our script
+
+```sh 
+`` 
