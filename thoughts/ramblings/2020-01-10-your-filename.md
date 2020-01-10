@@ -29,7 +29,7 @@ Let's create a config.json used for our script
 	"_jdbc_class": "oracle.jdbc.OracleDriver",
 	"_jdbc_url": "jdbc:oracle:thin:@//{}:{}/{}"
 }
-`` 
+```
 
 ### Step 2 Create a python script to parse config.json
 
