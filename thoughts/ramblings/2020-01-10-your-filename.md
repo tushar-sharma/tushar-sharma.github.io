@@ -8,6 +8,5 @@
 
 3. Oracle thin client-side JDBC driver (ojdbc6.jar)
 
-3. Docker (if running on Windows)
+4. Docker (if running on Windows)
 
-4. 
