@@ -13,11 +13,8 @@ I've assumed the following prerequisite:
 
 4. Docker (if running on Windows)
 
-### Step 1 Skip if you already have a keytab file
 
-Loging to the server 
-
-### Step 2 Create a configuration file
+### Step 1 Create a configuration file
 
 Let's create a config.json used for our script
 
@@ -28,10 +25,11 @@ Let's create a config.json used for our script
     "_service_name": "$SERVICE_NAME",
     "_username": "$USERNAME",
     "_password": "$PASSWORD",
-    "_kPrincipal": "$KERBEROS_PRINCIPAL",
-    "_keytab": "$KEYTAB_FILE",
 	"_jdbc_jar": "ojdbc6.jar",
 	"_jdbc_class": "oracle.jdbc.OracleDriver",
 	"_jdbc_url": "jdbc:oracle:thin:@//{}:{}/{}"
 }
 `` 
+
+### Step 2 Create a python script to parse config.json
+
