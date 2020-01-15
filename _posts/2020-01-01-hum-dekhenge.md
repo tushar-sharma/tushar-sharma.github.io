@@ -12,7 +12,7 @@ tags:
 - nrc
 - npr
 name: hum-dekhenge
-thumb: https://im.idiva.com/content/2020/Jan/A-History-Lesson-About-Iqbal-Bano-Who-First-Sang-Hum-Dekhenge-In-Protest-iDiva-Lead_5e16bcba7cb36.jpg
+thumb: https://img.youtube.com/vi/unOqa2tnzSM/0.jpg
 ---
 
 <p>India is currently witnessing multiple protests against the Citizenship Amendment Act (CAA) passed by the BJP (the ruling party of India). In a nutshell it fast tracks citizenship to few religiously persecuted refugees like Hindu, Sikh, Jain, Buddhist, Christian and Parsi from neighbouring countries.</p>
