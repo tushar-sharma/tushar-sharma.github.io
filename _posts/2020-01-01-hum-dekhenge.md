@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unwanted Controversy - Hum Dekhenge
+title: Unwarranted Controversy - Hum Dekhenge
 category: blog
 tags:
 - faiz
