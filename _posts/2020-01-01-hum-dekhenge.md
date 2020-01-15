@@ -27,7 +27,11 @@ Some argue this act brazenly violates secular structure of India by explicitly i
 
 It all started when a video of a student in IIT Kanpur reciting Faiz's poem when viral on Twitter.
 
+<p>
+<center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A faculty at IIT Kanpur has submitted this video and a complaint to director, alleging anti-India &amp; communal statements made at a recent event held in &#39;solidarity with Jamia&#39; &amp; that event held without permission.<br><br>&quot;When All Idols Will Be Removed...<br>Only Allah’s Name Will Remain&quot; <a href="https://t.co/fbmNFwVBiw">pic.twitter.com/fbmNFwVBiw</a></p>&mdash; Swati Goel Sharma (@swati_gs) <a href="https://twitter.com/swati_gs/status/1208244364364763136?ref_src=twsrc%5Etfw">December 21, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+</p>
 
 Following are the lines of the poems which are deemed controversial
 
@@ -69,4 +73,8 @@ In Somali, a Muslim extremist group banned samosas (a delicacy) as it resembles 
 
 I've a short life on earth & have no time for such bigotry. So I enjoy beautiful things from all cultures. In the end, I'll share a rendition of the poem by Coke Studio which you might enjoy
 
+<p>
+<center>
 <a href="https://www.youtube.com/watch?v=unOqa2tnzSM" target="_blank"><img src="https://img.youtube.com/vi/unOqa2tnzSM/0.jpg" title="source: youtube.com"/></a>
+</center>
+</p>
