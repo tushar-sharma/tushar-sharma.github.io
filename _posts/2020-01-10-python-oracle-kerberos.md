@@ -18,6 +18,11 @@ After few digging, I learnt few things about kerberos authentication. Kerberos i
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
+<script type="text/javascript" src="{{ root_url }}/js/shCore.js"></script>
+<script type="text/javascript" src="{{ root_url }}/js/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="{{ root_url }}/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
 
 <p>Previously I had written python scripts connecting to oracle database. However recently the server was upgraded with kerberos & most of the scripts were failings.</p>
 
@@ -64,7 +69,7 @@ Let's create a config.json used for our script & replace $HOSTNAME, $PORT_NUMBER
 
 Let's create a simple python script to parse config file
 
-```python
+<pre class="brush: python;  title: ; notranslate">
 if __name__ == "__main__":
     # parse the configuration file
     config_file = os.getcwd() + '/config.json'
@@ -73,9 +78,7 @@ if __name__ == "__main__":
         info = json.load(handler)
 
     config = OracleConfig(info)
-```
 
-```python
 class OracleConfig(object):
     """
     Oracle Connection details
@@ -124,7 +127,7 @@ class OracleConfig(object):
     def jdbc_url(self, jdbc_url):
         self._jdbc_url = jdbc_url
 
-```
+</pre>
 
 
 ### Connect to Oracle database
@@ -132,7 +135,7 @@ class OracleConfig(object):
 Let us try to connect to oracle database using jaydebeapi library.
 
 
-```python
+<pre class="brush: python;  title: ; notranslate">
 import jaydebeapi as jj
 import jpype as j
 import os
@@ -165,7 +168,7 @@ def connectOracle(config):
     except Exception as e:
         print(e)
 
-```
+</pre>
 
 
 However while running the script, you will get the following error
@@ -214,7 +217,8 @@ if you got no errors till these steps, you can copy the file to your test folder
 
 ### Full code to use kerberos
 
-```python
+<pre class="brush: python;  title: ; notranslate">
+
 import jaydebeapi as jj
 import jpype as j
 import os
@@ -339,7 +343,7 @@ if __name__ == "__main__":
 
     connectOracle(config)
 
-```
+</pre>
 
 ### Using Docker
 
