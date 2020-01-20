@@ -23,7 +23,7 @@ After few digging, I learnt few things about kerberos authentication. Kerberos i
 
 After few digging, I learnt few things about kerberos authentication. Kerberos is a network authentication protocol which uses tickets to authenticate access to services.
 
-# Table of Contents 
+# Table of Contents
 {:.no_toc}
 
 1. Will be replaced with the ToC, excluding the "Table of Contents" header
@@ -34,7 +34,7 @@ After few digging, I learnt few things about kerberos authentication. Kerberos i
 Connect to your host server which is hosting the oracle database. For my setup, I was using RedHat Server. Get the host IP address & use it as $HOSTNAME
 
 
-```sh 
+```sh
 $ hostname -I
 ```
 
@@ -54,9 +54,9 @@ Let's create a config.json used for our script & replace $HOSTNAME, $PORT_NUMBER
     "_service_name": "$SERVICE_NAME",
     "_username": "$USERNAME",
     "_password": "$PASSWORD",
-	"_jdbc_jar": "ojdbc6.jar",
-	"_jdbc_class": "oracle.jdbc.OracleDriver",
-	"_jdbc_url": "jdbc:oracle:thin:@//{}:{}/{}"
+    "_jdbc_jar": "ojdbc6.jar",
+    "_jdbc_class": "oracle.jdbc.OracleDriver",
+    "_jdbc_url": "jdbc:oracle:thin:@//{}:{}/{}"
 }
 ```
 
@@ -177,12 +177,12 @@ ORA-01017: invalid username/password; logon denied
 
 ### Kerberos
 
-To connect to Oracle database using kerberos, we need the following 
+To connect to Oracle database using kerberos, we need the following
 
 * kerberos principal
 * keytab file
 
-Assuming that the oracle is already configured to use kerberos, 
+Assuming that the oracle is already configured to use kerberos,
 
 ```sh
 $ ssh $HOSTNAME
@@ -193,14 +193,14 @@ $ kinit
 
 Ketyab file is a binary file containing pairs of Kerberos principals and encrypted keys use to authenticate to the server. It should be provided by the IT administrator. Else you can generate it like this
 
-```sh 
+```sh
 $ ktutil
 addent -password -p username@MYDOMAIN.com -k 1 -e RC4-HMAC
 # - enter password for username -
 wkt username.keytab
 ```
 
-This will create a `username.keytab` file on the system. Use can verify if the file is valid 
+This will create a `username.keytab` file on the system. Use can verify if the file is valid
 
 ```sh
 # check if existing ticket
@@ -343,9 +343,9 @@ if __name__ == "__main__":
 
 ### Using Docker
 
-As if [now](https://github.com/krbcontext/python-krbcontext/issues/33#issuecomment-569232653), `krbcontext` library only supports Linux like OS. So we can use Docker to run the python script on windows 
+As if [now](https://github.com/krbcontext/python-krbcontext/issues/33#issuecomment-569232653), `krbcontext` library only supports Linux like OS. So we can use Docker to run the python script on windows
 
-```sh 
+```sh
 FROM alpine:3.7
 
 ### 2. config
