@@ -70,7 +70,7 @@ Let's create a config.json used for our script & replace $HOSTNAME, $PORT_NUMBER
 
 Let's create a simple python script to parse config file
 
-{% highlight python linenos  %}
+<pre class="brush: python;  title: ; notranslate">
 if __name__ == "__main__":
     # parse the configuration file
     config_file = os.getcwd() + '/config.json'
@@ -128,7 +128,7 @@ class OracleConfig(object):
     def jdbc_url(self, jdbc_url):
         self._jdbc_url = jdbc_url
 
-{% endhighlight %}
+</pre>
 
 
 ### Connect to Oracle database
