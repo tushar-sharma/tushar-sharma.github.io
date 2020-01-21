@@ -70,7 +70,7 @@ Let's create a config.json used for our script & replace $HOSTNAME, $PORT_NUMBER
 
 Let's create a simple python script to parse config file
 
-{% highlight python lineos %}
+{% highlight python linenos  %}
 if __name__ == "__main__":
     # parse the configuration file
     config_file = os.getcwd() + '/config.json'
