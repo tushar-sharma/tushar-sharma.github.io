@@ -3,13 +3,14 @@ layout: post
 title: Connect to an Oracle Database using kerberos with python
 category: blog
 tags:
-- kerberos
-- python
-- docker
-- oracle
-- database
+  - kerberos
+  - python
+  - docker
+  - oracle
+  - database
 name: python-kerberos-oracle
-thumb: https://d22e4d61ky6061.cloudfront.net/sites/default/files/Kerberos_1.png
+thumb: 'https://d22e4d61ky6061.cloudfront.net/sites/default/files/Kerberos_1.png'
+published: true
 ---
 
 <p>Previously I had written python scripts connecting to oracle database. However recently the server was upgraded with kerberos & most of the scripts were failings.</p>
@@ -69,7 +70,7 @@ Let's create a config.json used for our script & replace $HOSTNAME, $PORT_NUMBER
 
 Let's create a simple python script to parse config file
 
-<pre class="brush: python;  title: ; notranslate">
+{% highlight python %}
 if __name__ == "__main__":
     # parse the configuration file
     config_file = os.getcwd() + '/config.json'
@@ -127,7 +128,7 @@ class OracleConfig(object):
     def jdbc_url(self, jdbc_url):
         self._jdbc_url = jdbc_url
 
-</pre>
+{% endhighlight %}
 
 
 ### Connect to Oracle database
