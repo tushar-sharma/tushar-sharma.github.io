@@ -375,6 +375,12 @@ RUN apk add --update \
 
 RUN apk --update add krb5-dev
 
+### uncomment these lines if kerberos complain following error
+### error :  Clock skew too great
+### set the timezone accordingly
+# ENV TZ=America/New_York
+# RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 ### 5. set the environment
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 ENV PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
