@@ -344,7 +344,7 @@ if __name__ == "__main__":
 
     connectOracle(config)
 
-</pre>
+```
 
 ### Using Docker
 
