@@ -19,12 +19,6 @@ After few digging, I learnt few things about kerberos authentication. Kerberos i
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-<script type="text/javascript" src="{{ root_url }}/js/shCore.js"></script>
-<script type="text/javascript" src="{{ root_url }}/js/shBrushPython.js"></script>
-<link type="text/css" rel="stylesheet" href="{{ root_url }}/css/shCoreDefault.css"/>
-<script type="text/javascript">SyntaxHighlighter.all();</script>
-
-
 <p>Previously I had written python scripts connecting to oracle database. However recently the server was upgraded with kerberos & most of the scripts were failings.</p>
 
 After few digging, I learnt few things about kerberos authentication. Kerberos is a network authentication protocol which uses tickets to authenticate access to services.
@@ -70,7 +64,7 @@ Let's create a config.json used for our script & replace $HOSTNAME, $PORT_NUMBER
 
 Let's create a simple python script to parse config file
 
-<pre class="brush: python;  title: ; notranslate">
+```python
 if __name__ == "__main__":
     # parse the configuration file
     config_file = os.getcwd() + '/config.json'
@@ -169,8 +163,7 @@ def connectOracle(config):
     except Exception as e:
         print(e)
 
-</pre>
-
+```
 
 However while running the script, you will get the following error
 
@@ -218,8 +211,7 @@ if you got no errors till these steps, you can copy the file to your test folder
 
 ### Full code to use kerberos
 
-<pre class="brush: python;  title: ; notranslate">
-
+```python
 import jaydebeapi as jj
 import jpype as j
 import os
@@ -401,6 +393,12 @@ ADD krbOracle.py /
 CMD [ "python3", "./krbOracle.py"]
 ```
 
+You can build & run the dockerfile 
+
+```sh 
+$ docker build -t tshrocks/krboracle . 
+$ docker run -it --rm tshrocks/krboracle
+```
 
 
 <nav class="pagination clear" style="padding-bottom:20px;">
