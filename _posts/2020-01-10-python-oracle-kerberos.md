@@ -122,8 +122,6 @@ class OracleConfig(object):
     def jdbc_url(self, jdbc_url):
         self._jdbc_url = jdbc_url
 
-</pre>
-
 
 ### Connect to Oracle database
 
@@ -393,10 +391,10 @@ ADD krbOracle.py /
 CMD [ "python3", "./krbOracle.py"]
 ```
 
-You can build & run the dockerfile 
+You can build & run the dockerfile
 
-```sh 
-$ docker build -t tshrocks/krboracle . 
+```sh
+$ docker build -t tshrocks/krboracle .
 $ docker run -it --rm tshrocks/krboracle
 ```
 
