@@ -123,6 +123,7 @@ class OracleConfig(object):
         self._jdbc_url = jdbc_url
 ```
 
+
 ### Connect to Oracle database
 
 Let us try to connect to oracle database using jaydebeapi library.
