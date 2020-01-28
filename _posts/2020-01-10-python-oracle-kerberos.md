@@ -121,7 +121,7 @@ class OracleConfig(object):
     @jdbc_url.setter
     def jdbc_url(self, jdbc_url):
         self._jdbc_url = jdbc_url
-
+```
 
 ### Connect to Oracle database
 
