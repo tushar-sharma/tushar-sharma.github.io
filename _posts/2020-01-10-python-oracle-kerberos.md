@@ -128,7 +128,7 @@ class OracleConfig(object):
 Let us try to connect to oracle database using jaydebeapi library.
 
 
-<pre class="brush: python;  title: ; notranslate">
+```python
 import jaydebeapi as jj
 import jpype as j
 import os
