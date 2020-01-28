@@ -1,6 +1,7 @@
 ---
 layout: comments
 title: Resources for Programmers
+published: true
 ---
 
 <h1 class="entry-title">Resources for Programmers</h1>
@@ -72,6 +73,10 @@ title: Resources for Programmers
 
 ### Two Hop neighbors
 * [Two Hop Neighbors - Chen Su](http://www.chen-su.com/static/slides/java_ucsd/c3/m1/C3M1L3S2_TwoHopNeighbors.pdf?q=1516568491)
+
+## AWS
+* [AWS Developer: Building on AWS - Edx](https://www.edx.org/course/aws-developer-building-on-aws)
+* [AWS Sagemaker Machine Learning - Pluralsight](https://www.pluralsight.com/courses/aws-sagemaker-machine-learning-models)
 
 ## IT
 * [Restore USB drive back to full capacity](http://www.eassos.com/blog/how-to-restore-usb-drive-back-to-full-capacity)
