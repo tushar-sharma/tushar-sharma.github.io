@@ -341,7 +341,7 @@ if __name__ == "__main__":
 
 As if [now](https://github.com/krbcontext/python-krbcontext/issues/33#issuecomment-569232653), `krbcontext` library only supports Linux like OS. So we can use Docker to run the python script on windows
 
-```sh
+```language-dockerfile
 FROM alpine:3.7
 
 ### 2. config
