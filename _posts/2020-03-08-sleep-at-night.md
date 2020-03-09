@@ -1,0 +1,25 @@
+---
+layout: post
+title: Sleeping At Night
+category: blog
+tags:
+- sleep
+- rambling
+- human rights
+name: sleep-at-night
+thumb: https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/10/p-1-army-sleep.jpg
+---
+
+It feels great to sleep at night. I have a smally but cozy room. It's not lavish or splending. It doesn't hoard much furntiure. However it's as much peaceful as it can get.
+
+I wonder about those unfortunate people who couldn't sleep at night. Some of them are stuck in war-torn countries. Around 150 million people are homeless in the world. Astonishly 1.6 billion people don't proper housing. That's 20 percent of entire human population.<!-- truncate_here -->
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
+
+It feels great to sleep at night. I have a smally but cozy room. It's not lavish or splending. It doesn't hoard much furntiure. However it's as much peaceful as it can get.
+
+I wonder about those unfortunate people who couldn't sleep at night. Some of them are stuck in war-torn countries. Around 150 million people are homeless in the world. Astonishly 1.6 billion people don't proper housing. That's 20 percent of entire human population.
+
+| <img align="center" src="https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/10/p-1-army-sleep.jpg" alt="" /> |
+
+
+I sleep in my apartment at night without the annoyance of traffic or train. Though I fear burglary, but not enough to lose my sleep. I believe sleeping without fear is a human right. It's a privilege that I am grateful everyday. 
