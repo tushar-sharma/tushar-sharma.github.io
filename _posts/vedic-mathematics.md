@@ -1,1 +1,0 @@
-"India is one of the oldest civilization in the world", began Gaurav Tekriwal, a Ted-Ed presenter. He continues, "It has contributed to the world concepts such as yoga, ayurveda, spicy chicken tikka, and vedic math". It bemoans me how he clubbed anicent science of yoga and ayurveda with trival amateurish math tricks like Vedic math.
