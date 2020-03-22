@@ -64,64 +64,7 @@ Let's create a config.json used for our script & replace $HOSTNAME, $PORT_NUMBER
 
 Let's create a simple python script to parse config file
 
-```python
-if __name__ == "__main__":
-    # parse the configuration file
-    config_file = os.getcwd() + '/config.json'
-
-    with open(config_file, "r") as handler:
-        info = json.load(handler)
-
-    config = OracleConfig(info)
-
-class OracleConfig(object):
-    """
-    Oracle Connection details
-    """
-
-    def __init__(self, data):
-        self.__dict__ = data
-
-    @property
-    def hostname(self):
-        return self._hostname
-
-    @property
-    def portnumber(self):
-        return self._portnumber
-
-    @property
-    def service_name(self):
-        return self._service_name
-
-    @property
-    def username(self):
-        return self._username
-
-    @property
-    def password(self):
-        return self._password
-
-    @property
-    def jdbc_jar(self):
-        return self._jdbc_jar
-
-    @property
-    def jdbc_class(self):
-        return self._jdbc_class
-
-    @property
-    def jdbc_url(self):
-        return self._jdbc_url
-
-    @jdbc_jar.setter
-    def jdbc_jar(self, jdbc_jar):
-        self._jdbc_jar = jdbc_jar
-
-    @jdbc_url.setter
-    def jdbc_url(self, jdbc_url):
-        self._jdbc_url = jdbc_url
-```
+<script src="https://gist.github.com/tushar-sharma/4564f7c5ece9d5acaf439fe3142a8937.js"></script>
 
 
 ### Connect to Oracle database
@@ -129,40 +72,8 @@ class OracleConfig(object):
 Let us try to connect to oracle database using jaydebeapi library.
 
 
-```python
-import jaydebeapi as jj
-import jpype as j
-import os
-import json
+<script src="https://gist.github.com/tushar-sharma/bb2209809bacbb3f8c6edd909722cbf1.js"></script>
 
-def connectOracle(config):
-    """
-    connecting to the oracle with kerberos
-    @param config object: reference to config.json
-    """
-    # set the environement
-    config.jdbc_jar = os.path.join(os.getcwd(), config.jdbc_jar)
-    config.jdbc_url = config.jdbc_url.format(config.hostname,
-                                             config.portnumber,
-                                             config.service_name)
-
-
-    # create instance of JVM
-    args = '-Djava.class.path=%s' % config.jdbc_jar
-    jvm_path = j.getDefaultJVMPath()
-    j.startJVM(jvm_path, args)
-
-    conn = None
-    try:
-        conn = jj.connect(config.jdbc_class,
-                          config.jdbc_url,
-                          {'username': config.username,
-                           'password': config.password},
-                           jars=config.jdbc_jar)
-    except Exception as e:
-        print(e)
-
-```
 
 However while running the script, you will get the following error
 
@@ -210,132 +121,7 @@ if you got no errors till these steps, you can copy the file to your test folder
 
 ### Full code to use kerberos
 
-```python
-import jaydebeapi as jj
-import jpype as j
-import os
-import krbcontext
-import json
-
-
-class OracleConfig(object):
-    """
-    Oracle Connection details
-    """
-
-    def __init__(self, data):
-        self.__dict__ = data
-
-    @property
-    def hostname(self):
-        return self._hostname
-
-    @property
-    def portnumber(self):
-        return self._portnumber
-
-    @property
-    def service_name(self):
-        return self._service_name
-
-    @property
-    def username(self):
-        return self._username
-
-    @property
-    def password(self):
-        return self._password
-
-    @property
-    def kPrincipal(self):
-        return self._kPrincipal
-
-    @property
-    def keytab(self):
-        return self._keytab
-
-    @property
-    def jdbc_jar(self):
-        return self._jdbc_jar
-
-    @property
-    def jdbc_class(self):
-        return self._jdbc_class
-
-    @property
-    def jdbc_url(self):
-        return self._jdbc_url
-
-    @keytab.setter
-    def keytab(self, keytab):
-        self._keytab = keytab
-
-    @jdbc_jar.setter
-    def jdbc_jar(self, jdbc_jar):
-        self._jdbc_jar = jdbc_jar
-
-    @jdbc_url.setter
-    def jdbc_url(self, jdbc_url):
-        self._jdbc_url = jdbc_url
-
-
-def connectOracle(config):
-    """
-    connecting to the oracle with kerberos
-    @param config object: reference to config.json
-    """
-    # set the environement
-    config.keytab = os.path.join(os.getcwd(), config.keytab)
-    config.jdbc_jar = os.path.join(os.getcwd(), config.jdbc_jar)
-    config.jdbc_url = config.jdbc_url.format(config.hostname,
-                                             config.portnumber,
-                                             config.service_name)
-
-    # create a kerberos ticket
-    with krbcontext.krbContext(
-        using_keytab=True,
-        principal=config.kPrincipal,
-        keytab_file=config.keytab,
-        ccache_file='/tmp/krb5cc'
-    ):
-        # create instance of JVM
-        args = '-Djava.class.path=%s' % config.jdbc_jar
-        jvm_path = j.getDefaultJVMPath()
-        j.startJVM(jvm_path, args)
-
-        conn = None
-        try:
-            conn = jj.connect(config.jdbc_class,
-                              config.jdbc_url,
-                              {'username': config.username,
-                              'password': config.password,
-                              'oracle.net.authentication_services': "(KERBEROS5)"},
-                              jars=config.jdbc_jar)
-        except Exception as e:
-            print(e)
-
-        if conn:
-            curs = conn.cursor()
-
-            query = 'select username as schema_name from sys.all_users order by username'
-
-            curs.execute(query)
-
-            print(curs.fetchall())
-
-
-if __name__ == "__main__":
-    # parse the configuration file
-    config_file = os.getcwd() + '/config.json'
-
-    with open(config_file, "r") as handler:
-        info = json.load(handler)
-
-    config = OracleConfig(info)
-
-    connectOracle(config)
-
-```
+<script src="https://gist.github.com/tushar-sharma/c95a7f50b88fb14ff1bfaec306b99e20.js"></script>
 
 ### Using Docker
 
