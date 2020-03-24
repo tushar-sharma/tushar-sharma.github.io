@@ -22,7 +22,7 @@ It feels great to sleep at night. I have a small but a cozy room. It’s not lav
 
 I wonder about those unfortunate people who couldn’t sleep at night. Some of them are stuck in war-torn countries. Around 150 million people are homeless in the world. Astonishing 1.6 billion people don’t have proper housing. That’s 20 percent of the entire human population.
 
-My parents were living on a rented house when I was born. Had they been poorer, I might have dewelled in some slum. How did I escape the abject poverty? It was a biological accident that I had a pre-natal privilege. Around 1 in 50 people are born with genetic disorder in the world. I again won a gene lottery to escape pangs of this misfortune. All men are created equal, if only they had some lottery of genes & privileges.
+My parents were living on a rented house when I was born. Had they been poorer, I might have dwelled in some slum. How did I escape the abject poverty? It was a biological accident that I had a prenatal privilege. Around 1 in 50 people are born with genetic disorder in the world. I again won a gene lottery to escape these pangs of misfortune. All men are created equal, if only they had some lottery of genes & privileges.
 
 | <img align="center" src="https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/10/p-1-army-sleep.jpg" alt="" /> |
 
