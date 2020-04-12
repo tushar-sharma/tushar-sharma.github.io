@@ -44,7 +44,7 @@ Here's a thought experiment. It might be insensitive but the hypothesis is prote
 
 You don't need to experimentally test this hypothesis. It's common sense. Laws of physics are the same for everybody. All religious people, atheists, agnostics, hippies, sinners, even animals obey the laws of physics. Gravity doesn't discriminate nor does the microbes. That's why currently every religious place, restaurants,  social gathering, etc has been suspended due to Coronavirus pandemic. 
 
- If a person suffers from either Cholera, you may just pray or give him 500 mg of tetracycline. If he suffers from Schizophrenia, you could just pray or give him 500 mg of clozapine. Smallpox was eradicated from the world due to science, not religion. 
+ If a person suffers from Cholera, you may just pray or give him 500 mg of tetracycline. If he suffers from Schizophrenia, you could just pray or give him 500 mg of clozapine. Smallpox was eradicated from the world due to science, not religion. 
 
 I fail to understand why people romanticize the past. My mother often complains about how children in the past were more obedient. My grandfather uses to say that people lived in the past for more than a hundred years due to clean air & less pollution. I agree that pollution & global warming are a recent crisis, but I fail to see how rosy life was thousands of years ago. 
 
