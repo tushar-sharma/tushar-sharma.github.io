@@ -44,13 +44,13 @@ Here's a thought experiment. It might be insensitive but I hope the hypothesis a
 
 If you have common sense you already know experimental result of this hypothesis. Laws of physics are never suspended for anyone. Even microbes doesn't discriminate. A pious person has equal chances of catching a flu like a sinner. That's the reason why all social gathering, church, temples, mosques, bus, trains, restaurants, etc have been suspended around the world during Coronavirus pandemic.
 
-Carl Sagan explains how prayers are ineffective, "If a person suffers from Cholera, you could just pray or give him 500 mg of tetracycline. If he suffers from Schizophrenia, you could just pray or give him 500 mg of clozapine." There is no empircal evidence that prayers works other than placebo.
+Carl Sagan explains how ineffective prayers are, "If a person suffers from Cholera, you could just pray or give him 500 mg of tetracycline. If he suffers from Schizophrenia, you could just pray or give him 500 mg of clozapine." There is no emperical evidence that prayers works other than placebo.
 
 I fail to understand why people romanticize the past. My mother often complains about how children in the past were more obedient. My grandfather uses to say that people living in the past had a life span of more than hundred years due to pristine air. I agree that pollution & global warming are a recent crisis, but I fail to see how rosy life was thousands of years ago. 
 
 A classic example is of Queen Anne, British monarch of eighteen century. She was pregnant eighteen times out of which only five children survived. Another royal example is of Mumtaj Mahal, 4<sup>th</sup> wife of Shan Jahan, an Indian Mughal Emperor in the seventeenth century. She bore thirteen children. Seven of the children died at birth or at a very young age. 
 
-If the royal families of the past had to endure tragic pregnancies, I wonder how gruesome was childbirth for poor families. Techniques like Cesarean deliveries, vacuum-assisted vaginal deliveries, etc have save countless lives.  
+If the royal families of the past had to endure such tragic pregnancies, I wonder how gruesome was childbirth for poor families. Techniques like Cesarean deliveries, vacuum-assisted vaginal deliveries, etc have saved countless lives.  
 
 Thought science has advanced humanity, it has also created lots of environmental disasters like
 
