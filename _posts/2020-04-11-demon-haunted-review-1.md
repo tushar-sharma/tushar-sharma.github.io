@@ -54,7 +54,7 @@ A classic example is of Queen Anne, last Stuart monarch of eighteen century. She
 
 If the royal families of the past had to endure the loss of their children during childbirth, it would be more gruesome for poor families. We should wonder how science has drastically improved life expectancy at birth with the invention of techniques like Cesarean delivery, vacuum-assisted vaginal delivery, etc.
 
-Science has produced grave ramifications like 
+Thought science has advanced humanity, it has also created lots of menance like
 
 1. Global warming 
 2. Nuclear weapons
@@ -63,9 +63,9 @@ Science has produced grave ramifications like
 5. CFC
 6. Thalidomide, etc
 
-A classic example of how scientific literate politicians better help the environment. DuPont was the largest producer of CFCs in the world. Sherry Rowland and Mario Molina discovered in 1974 how CFCs were responsible for ozone depletion. However, DuPont refused to accept the findings of Rowland and Molina<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
+However scientific literacy among politicians can help them make rational decision that are sustainable for the environment. For example Margaret Thatcher, British Prime Minister, played a significant role in curbing use of CFCs. 
 
-Margaret Thatcher, former British prime minister, had a Ph.D. in Chemistry under the tutelage of Dorothy Hodgkin, a Nobel laureate. She was instrumental in advocating a ban on CFCs worldwide. Here's [link](https://www.margaretthatcher.org/document/108133) to here speech at Speech to Ozone Layer Conference.  
+DuPont was the largest producer of CFCs in the world. Sherry Rowland and Mario Molina discovered in 1974 how CFCs were responsible for ozone depletion. However, DuPont refused to accept the findings of Rowland and Molina<sup><a href='#fn:1' rel='footnote'>1</a></sup>. Margaret Thatcher, had a Ph.D. in Chemistry under the tutelage of Dorothy Hodgkin, a Nobel laureate. She was instrumental in advocating a ban on CFCs worldwide. Here's [link](https://www.margaretthatcher.org/document/108133) to here speech at Speech to Ozone Layer Conference.  
 
 Of course, science is not perfect. But it is our only best bet. 
 
