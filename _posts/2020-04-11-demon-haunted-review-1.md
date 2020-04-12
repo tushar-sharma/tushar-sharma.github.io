@@ -27,7 +27,7 @@ One day, Carl Sagan is received at the airport by his driver. On learning that h
 
 Carl Sagan replied that the "evidence is crummy" for all these theories. 
 
-As a Hindu, I care less about Noah's Ark or the existence of shroud of Turin. I was fascinated more about whether Ram Setu was natural or man-made? I saw frequent posts on my Facebook on how NASA has confirmed that it's an ancient bridge. Though NASA said that its satellite photos had been egregiously misinterpreted to make this point ("The images reproduced on the websites may well be ours, but their interpretation is certainly not ours). Ram Setu is mentioned in Sanskrit Epic Ramayana (7th century BCE). Hindus believe that the structure was constructed by god Ram. 
+As a Hindu, I care less about Noah's Ark or the existence of shroud of Turin. I was fascinated more about whether Ram Setu was natural or man-made? I saw frequent posts on my Facebook on how NASA has confirmed that it's an ancient bridge. Though NASA said that its satellite photos had been egregiously misinterpreted to make this point (The images reproduced on the websites may well be ours, but their interpretation is certainly not ours). Ram Setu is mentioned in Sanskrit Epic Ramayana (7th century BCE). Hindus believe that the structure was constructed by god Ram. 
 
 Later I realized people of other religions did the same. Some Muslims claim that the NASA photograph of Rima Ariadaeus, the 300 km-long rift line on the surface of the Moon, confirms the splitting of the moon mentioned in the Quran. Many Christian claims of geological evidence of Noah's Ark in Eastern Turkey. Most Muslims would probably care about the miraculous properties of [ZamZam](https://en.wikipedia.org/wiki/Zamzam_Well) water. Hindus would care more about the piousness of [Ganga water](https://en.wikipedia.org/wiki/Ganges). Chrisitan would consider water sanctified by a priest to be holy. 
 
@@ -52,9 +52,9 @@ I fail to understand why people romanticize the past. My mother often complains 
 
 A classic example is of Queen Anne, British monarch of eighteen century. She was pregnant eighteen times out of which only five children survived. Another royal example is of Mumtaj Mahal, 4<sup>th</sup> wife of Shan Jahan, an Indian Mughal Emperor in the seventeenth century. She bore thirteen children. Seven of the children died at birth or at a very young age. 
 
-If the royal families of the past had to endure such tragic pregnancies, I wonder how gruesome was childbirth for poor families. Techniques like Cesarean deliveries, vacuum-assisted vaginal deliveries, etc have saved countless lives.  
+If the royal families of the past had to endure such tragic pregnancies, I wonder how tragic was childbirth for poor families. Techniques like Cesarean deliveries, vacuum-assisted vaginal deliveries, ultrasound, sonogram etc have saved countless lives.  
 
-Thought science has advanced humanity, it has also created lots of environmental disasters like
+Thought science has advanced humanity, it has also poses threat to the world like
 
 1. Global warming 
 2. Nuclear weapons
