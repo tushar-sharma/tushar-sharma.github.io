@@ -13,13 +13,13 @@ thumb: https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/0/2/5/5/10010040009
 
 <p>This is my Part 1 of the review of the Carl Sagan's book, Demon Haunted World. </p>
 
-I have begun to realize how many posts in Facebook, Whatsapp, etc contains puedo science & misinformation. Few posts are easy to debunk. A magic water curing cancer is no-brainer. However other posts are too meticulate to debunk. I thought it might be fruitful to me as layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan. <!-- truncate_here -->
+I have begun to realize how many posts in Facebook, Whatsapp, etc contains puedo science & misinformation. Few posts are easy to debunk. A magic water curing cancer is no-brainer. However other posts are too meticulate to debunk. I thought it might be fruitful for me as layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan. <!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 This is my Part 1 of the review of the Carl Sagan's book, Demon Haunted World. 
 
-I have begun to realize how many posts in Facebook, Whatsapp, etc contains puedo science & misinformation. Few posts are easy to debunk. A magic water curing cancer is no-brainer. However other posts are too meticulate to debunk. I thought it might be fruitful to me as layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan.  
+I have begun to realize how many posts in Facebook, Whatsapp, etc contains puedo science & misinformation. Few posts are easy to debunk. A magic water curing cancer is no-brainer. However other posts are too meticulate to debunk. I thought it might be fruitful for me as layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan.  
 
 Carl Sagan is received at the airport by his driver. On learning that he is scientit, the driver is curious to ask lots of scientific quesitons? Are aliens (UFO) hiding in the Air Force Base? Was advance civilization living in Atlantis, an island destroyed by the flood? 
 
