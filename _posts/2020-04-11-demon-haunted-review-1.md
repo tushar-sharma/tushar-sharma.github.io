@@ -40,21 +40,19 @@ Religion is the opium of the masses - Karl Marx
 </blockquote>
 <br>
 
-Here's a thought experiment. It might be insensitive but the hypothesis is protected under freedom of speech (I hope!). Gather one person from all religions of the world on the top of the highest skyscraper. And then throw them all simultaneously. Ask people of all religions to earnestly pray for the person of their religion. Correct prayers from the "only true" religion should save the persons. The gravity would somehow disappear for the right person & he will levitate & reach the ground unhurt. 
+Here's a thought experiment. It might be insensitive but I hope the hypothesis are usually protected under freedom of speech. Assemble each person from all religions of the world on a plane & fly up to the Stratosphere. While close to 128,000 feet, throw all persons off the plane without parachute. In the meantime, ask people of all religions to earnestly pray for the person of their respective religion. Prayers for the "only true" religion should save the right person. Gravity would disappear allowing the person to levitate & reach the ground unhurt. 
 
-You don't need to experimentally test this hypothesis. It's common sense. Laws of physics are the same for everybody. All religious people, atheists, agnostics, hippies, sinners, even animals obey the laws of physics. Gravity doesn't discriminate nor does the microbes. That's why currently every religious place, restaurants,  social gathering, etc has been suspended due to Coronavirus pandemic. 
+If you have common sense you already know experimental result of this hypothesis. Laws of physics are never suspended for anyone. Even microbes doesn't discriminate. A pious person has equal chances of catching a flu like a sinner. That's the reason why all social gathering, church, temples, mosques, bus, trains, restaurants, etc have been suspended around the world during Coronavirus pandemic.
 
- If a person suffers from either Cholera, you may just pray or give him 500 mg of tetracycline. If he suffers from Schizophrenia, you could just pray or give him 500 mg of clozapine. Smallpox was eradicated from the world due to science, not religion. 
+Carl Sagan explains how prayers are ineffective, "If a person suffers from Cholera, you could just pray or give him 500 mg of tetracycline. If he suffers from Schizophrenia, you could just pray or give him 500 mg of clozapine." There is no empircal evidence that prayers works other than placebo.
 
-I fail to understand why people romanticize the past. My mother often complains about how children in the past were more obedient. My grandfather uses to say that people lived in the past for more than a hundred years due to clean air & less pollution. I agree that pollution & global warming are a recent crisis, but I fail to see how rosy life was thousands of years ago. 
+I fail to understand why people romanticize the past. My mother often complains about how children in the past were more obedient. My grandfather uses to say that people living in the past had a life span of more than hundred years due to pristine air. I agree that pollution & global warming are a recent crisis, but I fail to see how rosy life was thousands of years ago. 
 
-Currently, the world is engulfed in coronavirus pandemic. The best prevention for coronavirus is just using ordinary soap to wash hands for 20 seconds. I wish our ancestors knew the germ theory of diseases. Life expectancy at birth was below 30 years even as lates seventeen century.
+A classic example is of Queen Anne, British monarch of eighteen century. She was pregnant eighteen times out of which only five children survived. Another royal example is of Mumtaj Mahal, 4<sup>th</sup> wife of Shan Jahan, an Indian Mughal Emperor in the seventeenth century. She bore thirteen children. Seven of the children died at birth or at a very young age. 
 
-A classic example is of Queen Anne, last Stuart monarch of eighteen century. She was pregnant eighteen times but only five children survived. Another royal example is of Mumtaj Mahal, 4th wife of Shan Jahan, Indian Mughal Emperor in the seventeenth century. She had thirteen children together. 7 of the children died at birth or at a very young age. 
+If the royal families of the past had to endure tragic pregnancies, I wonder how gruesome was childbirth for poor families. Techniques like Cesarean deliveries, vacuum-assisted vaginal deliveries, etc have save countless lives.  
 
-If the royal families of the past had to endure the loss of their children during childbirth, it would be more gruesome for poor families. We should wonder how science has drastically improved life expectancy at birth with the invention of techniques like Cesarean delivery, vacuum-assisted vaginal delivery, etc.
-
-Thought science has advanced humanity, it has also created lots of menance like
+Thought science has advanced humanity, it has also created lots of environmental disasters like
 
 1. Global warming 
 2. Nuclear weapons
@@ -63,11 +61,11 @@ Thought science has advanced humanity, it has also created lots of menance like
 5. CFC
 6. Thalidomide, etc
 
-However scientific literacy among politicians can help them make rational decision that are sustainable for the environment. For example Margaret Thatcher, British Prime Minister, played a significant role in banning use of CFCs. 
+However scientific literacy among politicians can help them make rational decision that are sustainable for the environment. For example Margaret Thatcher, British Prime Minister, played a significant role in advocating ban of CFCs. 
 
 DuPont was the largest producer of CFCs in the world. Sherry Rowland and Mario Molina discovered in 1974 how CFCs were responsible for ozone depletion. However, DuPont refused to accept the findings of Rowland and Molina<sup><a href='#fn:1' rel='footnote'>1</a></sup>. Margaret Thatcher had a Ph.D. in Chemistry under the tutelage of Dorothy Hodgkin, a Nobel laureate. She was instrumental in advocating a ban on CFCs worldwide. Here's [link](https://www.margaretthatcher.org/document/108133) to here speech at Ozone Layer Conference.  
 
-Of course, science is not perfect. But it is our only best bet. 
+Of course, science has its flaws. But it is our only best bet. 
 
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
