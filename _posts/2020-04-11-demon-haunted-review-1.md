@@ -44,7 +44,7 @@ Here's a thought experiment. It might be insensitive but the hypothesis is prote
 
 You don't need to experimentally test this hypothesis. It's common sense. Laws of physics are the same for everybody. All religious people, atheists, agnostics, hippies, sinners, even animals obey the laws of physics. Gravity doesn't discriminate nor does the microbes. That's why currently every religious place, restaurants,  social gathering, etc has been suspended due to Coronavirus pandemic. 
 
- If a person suffers from Cholera, you may just pray or give him 500 mg of tetracycline. If he suffers from Schizophrenia, you could just pray or give him 500 mg of clozapine. Smallpox was eradicated from the world due to science, not religion. 
+ If a person suffers from either Cholera, you may just pray or give him 500 mg of tetracycline. If he suffers from Schizophrenia, you could just pray or give him 500 mg of clozapine. Smallpox was eradicated from the world due to science, not religion. 
 
 I fail to understand why people romanticize the past. My mother often complains about how children in the past were more obedient. My grandfather uses to say that people lived in the past for more than a hundred years due to clean air & less pollution. I agree that pollution & global warming are a recent crisis, but I fail to see how rosy life was thousands of years ago. 
 
@@ -54,18 +54,34 @@ A classic example is of Queen Anne, last Stuart monarch of eighteen century. She
 
 If the royal families of the past had to endure the loss of their children during childbirth, it would be more gruesome for poor families. We should wonder how science has drastically improved life expectancy at birth with the invention of techniques like Cesarean delivery, vacuum-assisted vaginal delivery, etc.
 
+Science has produced grave ramifications like 
+
+1. Global warming 
+2. Nuclear weapons
+3. Agent Orange
+4. Nerve gas 
+5. CFC
+6. Thalidomide, etc
+
+A classic example of how scientific literate politicians better help the environment. DuPont was the largest producer of CFCs in the world. Sherry Rowland and Mario Molina discovered in 1974 how CFCs were responsible for ozone depletion. However, DuPont refused to accept the findings of Rowland and Molina<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
+
+Margaret Thatcher, former British prime minister, had a Ph.D. in Chemistry under the tutelage of Dorothy Hodgkin, a Nobel laureate. She was instrumental in advocating a ban on CFCs worldwide. Here's [link](https://www.margaretthatcher.org/document/108133) to here speech at Speech to Ozone Layer Conference.  
+
+Of course, science is not perfect. But it is our only best bet. 
 
 
-Of course, science is not perfect. Science has produced grave ramifications like 
-Global warming 
-Nuclear weapons
-Agent Orange
-Nerve gas 
-CFC
-Thalidomide, etc
+<div class='footnotes'><h3>Footnotes</h3><hr />
+  <ol>
+       <li id='fn:1'>
+         <p><a href="http://dust.ess.uci.edu/ppr/ppr_Smi98.pdf" target="_blank">DuPont Ethics</a></p>
+         <a href='#fnref:1' rev='footnote'>&#8617;</a>
+        </li>
 
-However, science is just a tool. If used constructively, it could feed easily feed people.  Science is our only bet.
+    
+  </ol>
+</div>
 
 <nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
+{% if pag
+e.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
 </nav>
