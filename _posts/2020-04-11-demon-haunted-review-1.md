@@ -29,12 +29,9 @@ As an Hindu I care less about Noah's Ark or the existence of shroud of Turin. As
 
 Later I realized people of other religion did the same. Some Muslims claims that the NASA photograph of Rima Ariadaeus, the 300 km-long rift line on the surface of the Moon, confirms splitting of the moon mentioned in Quran. Many Christian claims of geological evidence of Noah's Ark in Eastern Turkey. Most Muslims would probably care about miraculous properties of [ZamZam](https://en.wikipedia.org/wiki/Zamzam_Well) water. Hindus would care more about piousness of [Ganga water](https://en.wikipedia.org/wiki/Ganges). Chrisitan would consider water sanctified by a priest to be holy. 
 
-Every religion have their own dogmas & believes. All religions contradict each other in some way. So which religion is the truth? It's a biological accident that you were born into your religion. Some religion vigorously proselytise (like Christianity, Islam) while some dont (like Jainism).
+Every religion have their own dogmas & believes. All religions contradict each other in some way. So which religion is the truth? It's a biological accident that you were born into your religion. Some religion vigorously proselytise (like Christianity, Islam) while some don't (like Jainism).
 
-
-
-However there are poor people in all religions. You wont become a rich as Bill Gates just by converting to Christianity. Or become Mukesh Ambani if you converted to Hinduism. Of course televengelist in all religion claims easy cure & succes if only you pray more. 
-
+Why does evil exist in the world? People suffer in all religons. There are poor Christians, Muslims, Hindus, Jews, etc. Of course opposite is also true. There are rich Christians, Hindus, Muslims, etc. Are all atheist have pores in their body & suffering from epilepsy due to their renunciation of god? You wont become Bill Gates just because you converted to Christianity. Nor would you become a business magnate like Mukesh Ambani just because you converted to Hindusim. Of course televangelist claims otherwise.
 
 
 <blockquote>
@@ -42,69 +39,18 @@ Religion is the opium of the masses - Karl Marx
 </blockquote>
 <br>
 
+Here's a thought experiment. It might be insensitive but hypothesis are protected under freeom of speech (I hope!). Throw one good person from all religion including an atheist from the top of the hightest skyscrapper. Ask all the priest & the people to pray earnestly. Prayers from the "only true" religion would save the person. The gravity would disappear and right religous person would levitate & reach the ground unhurt. 
 
-Here's a thought experiment. It might be little insensitive however it's just a hypothesis. Gather one good person & one evil person of all religion on the top of skyscrapper. Throw them & let people the world pray. Prayers from the right relgion will save the person falling from the skyscrapper. He will levitate and fall on the ground unhurt. 
+You don't need to experimentally test this hypothesis. Its a common sense. Laws of physics are same from everybody. All religion people, atheist, sinners, even animals obey the laws of physics. Gravity doesn't discriminate nor does the microbes. That's every religious places , social gathering has been suspended due to Coronavirus pandemic. Isnt science beautiful?
 
-Of course we all know that wont happen. Laws of physics are same for everyone. Gravity doesn't care about our relgious dogmas or piousnes. Isnt science beautiful?  
+In conclusion , 
 
-
-
-
-Since so many pseduoscience has flooded our world, it's an great read to try to develop scientific temper. It's not easy to debunk pseduoscience so easily. A classic example is device ADE 651 manufactured by British company, ATSC. It was marketed as bomb detector. It was sold to 20 countries in Middle East with each device cost up to $60,000. Eventually fraud was debunked & it's founder, James McCormick, is now languising in jail. Now this is a complicated fraud? 
-
-How about prophecy of Nostrodamus? As a child I believed in them religiously. I rememberd during 9/11 bombing, lots of news channel claimign to have found in somewhere in Nostrodamus? What does science says about Astrology? 
-
-Carl Sagan is received by his river at his airport. The driver is excited to meet the scietist. Out of his curiousity , he asks him lost of questions. But none of his questions pertains to science. He is more excited with conspiracy theories and psuedo science. 
-
-He belived that something mysterious about Nostrodamus prophecy. Also he believed that aliens are hiding in Air force base. Or there was an advanced civilication in Atlantis island that was flooded. 
-
-Human are bias animals. It also affects us on how we consume science. A Chrisitan might be more interested if there is some scientific evidence for Noah' Ark or shroud of Turin? A Hindu, or Zorastrian might not care. A Hindu might care more about validity of Ram Setu or Pushap Viman. Any science that reconfirms his confictions or faith, he is most likely to buy it. 
-
-Smart People can be wrong. Ptolemy was a smart man in ? century. He believed that sun revolve around the earth. Newton was a smart man. He belived that in alchemy. Kurt Wise belives that earth is literally less than 10, 000 year old. Lord Kelvin didnot believe in evolution, sun was too young, x rays were hoax, higher than heaverying metal can never fly. Smart people can be wrong. 
+| If a person suffering from chorlera | Pray | Or give him 500 mg of tetracycline|
+| If a person suffering from Schrizopherina | Pray | or give him 500 mg of clozapine|
 
 
-SO how do we know what's the truth? Scietific consensus/ 
 
-
-Pray or give 500 mg of tetracylcine for cholera
-pray or 500 mg of chlozapine for schirphrenia
-pray or thorw the people form a skyscrapper
-
-Science is not all good. 
-
-- cfc 
-- aganet orange
-- pollution 
-- nerve gas
-- nuclear weapons 
-- etc
-
-
-Hippocrates of COs is father of medicine. 
-
-God of Gaps
-
-Margaret Thatcher phd from Dorothy hodgkin (chemistyr) 
-
-banned cfc advocacy 
-
-DuPont advocated heavily agaisnt
-
-$ rommanticizing the past 
-
-QUeen Anne 17the centyr 15 childen but 5 surived
-Shahu Jahan wife had same situation.
-
-sicnece has increasted our life expectancy not religion
-Small pox was eradicated by sciencde not religion
-
-
-Chrisitan science against religion 
-in indian, religon 
-
-https://news.jagatgururampalji.org/novel-coronavirus-covid-19-cure-symptoms/
-
-
+You decide!
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
