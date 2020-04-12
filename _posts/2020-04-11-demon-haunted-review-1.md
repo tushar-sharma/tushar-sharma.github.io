@@ -63,9 +63,9 @@ Thought science has advanced humanity, it has also created lots of menance like
 5. CFC
 6. Thalidomide, etc
 
-However scientific literacy among politicians can help them make rational decision that are sustainable for the environment. For example Margaret Thatcher, British Prime Minister, played a significant role in curbing use of CFCs. 
+However scientific literacy among politicians can help them make rational decision that are sustainable for the environment. For example Margaret Thatcher, British Prime Minister, played a significant role in banning use of CFCs. 
 
-DuPont was the largest producer of CFCs in the world. Sherry Rowland and Mario Molina discovered in 1974 how CFCs were responsible for ozone depletion. However, DuPont refused to accept the findings of Rowland and Molina<sup><a href='#fn:1' rel='footnote'>1</a></sup>. Margaret Thatcher, had a Ph.D. in Chemistry under the tutelage of Dorothy Hodgkin, a Nobel laureate. She was instrumental in advocating a ban on CFCs worldwide. Here's [link](https://www.margaretthatcher.org/document/108133) to here speech at Speech to Ozone Layer Conference.  
+DuPont was the largest producer of CFCs in the world. Sherry Rowland and Mario Molina discovered in 1974 how CFCs were responsible for ozone depletion. However, DuPont refused to accept the findings of Rowland and Molina<sup><a href='#fn:1' rel='footnote'>1</a></sup>. Margaret Thatcher had a Ph.D. in Chemistry under the tutelage of Dorothy Hodgkin, a Nobel laureate. She was instrumental in advocating a ban on CFCs worldwide. Here's [link](https://www.margaretthatcher.org/document/108133) to here speech at Ozone Layer Conference.  
 
 Of course, science is not perfect. But it is our only best bet. 
 
