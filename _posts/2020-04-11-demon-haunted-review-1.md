@@ -21,11 +21,15 @@ This is my Part 1 of the review of the Carl Sagan's book, Demon Haunted World.
 
 I have begun to realize how many posts in Facebook, Whatsapp, etc contains puedo science & misinformation. Few posts are easy to debunk. A magic water curing cancer is no-brainer. However other posts are too meticulate to debunk. I thought it might be fruitful for me as layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan.  
 
-Carl Sagan is received at the airport by his driver. On learning that he is scientit, the driver is curious to ask lots of scientific quesitons? Are aliens (UFO) hiding in the Air Force Base? Was advance civilization living in Atlantis, an island destroyed by the flood? 
+One day, Carl Sagan is received at the airport by his driver. On learning that he is scientist, the driver is curious to ask lots of scientific quesitons? Are aliens (UFO) hiding in the Air Force Base? Was an advance civilization living in an island Atlantis only to be destroyed by the flood? Are the prophecy of Nostradamus accurate?
 
-As an Hindu I care less about Noah's Ark. Or existence of shroud of Turin. As a child I was fascinated more whether Ram Setu was NASA declared Ram Setu man made? If there was anything in science that validiated my religion, it reinforces my religious belief. Like if science says that yoga is good for health, it made me more devout Hindu. 
+Carl Sagan replied that the "evidence is crummy" for all these theories. 
 
-Later I realized people of other religion did the same. Like Muslims care about miraclous properties of ZamZam water. Hindus care more about piousness of Ganga water. Chrisitan would consider water sanctified by a priest to be holy. 
+As an Hindu I care less about Noah's Ark or the existence of shroud of Turin. As a child I was fascinated more whether Ram Setu was natural or man-made? I saw frequent posts on my facebook on how NASA has confirmed that it's an ancient bridge. Though NASA said that its satellite photos had been egregiously misinterpreted to make this point ("The images reproduced on the websites may well be ours, but their interpretation is certainly not ours. Ram Setu is mentioned in Sanskrit Epic Ramayana (7th century BCE). Hindus believe that the structure was constructed by god Ram. 
+
+Later I realized people of other religion did the same. Like Muslims care about miraculous properties of ZamZam water. Hindus care more about piousness of Ganga water. Chrisitan would consider water sanctified by a priest to be holy. Every religion have their own dogmas & believes. Often religous believes contradict each other. Even within same religion, there are multiple interpretation.  
+
+
 
 
 Since so many pseduoscience has flooded our world, it's an great read to try to develop scientific temper. It's not easy to debunk pseduoscience so easily. A classic example is device ADE 651 manufactured by British company, ATSC. It was marketed as bomb detector. It was sold to 20 countries in Middle East with each device cost up to $60,000. Eventually fraud was debunked & it's founder, James McCormick, is now languising in jail. Now this is a complicated fraud? 
