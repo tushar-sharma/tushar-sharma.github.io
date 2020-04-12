@@ -41,16 +41,14 @@ Religion is the opium of the masses - Karl Marx
 
 Here's a thought experiment. It might be insensitive but hypothesis are protected under freeom of speech (I hope!). Throw one good person from all religion including an atheist from the top of the hightest skyscrapper. Ask all the priest & the people to pray earnestly. Prayers from the "only true" religion would save the person. The gravity would disappear and right religous person would levitate & reach the ground unhurt. 
 
-You don't need to experimentally test this hypothesis. Its a common sense. Laws of physics are same from everybody. All religion people, atheist, sinners, even animals obey the laws of physics. Gravity doesn't discriminate nor does the microbes. That's every religious places , social gathering has been suspended due to Coronavirus pandemic. Isnt science beautiful?
+You don't need to experimentally test this hypothesis. Its a common sense. Laws of physics are same from everybody. All religion people, atheist, sinners, even animals obey the laws of physics. Gravity doesn't discriminate nor does the microbes. That's every religious places , social gathering has been suspended due to Coronavirus pandemic. 
 
-In conclusion , 
+In conclusion , If a person suffers from either
 
-| If a person suffering from chorlera | Pray | Or give him 500 mg of tetracycline|
-| If a person suffering from Schrizopherina | Pray | or give him 500 mg of clozapine|
+|chorlera | Just Pray | Or give him 500 mg of tetracycline|
+| Schizophrenia | Just Pray | Or give him 500 mg of clozapine|
 
-
-
-You decide!
+Of course science is not perfect. But it's our best bet!
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
