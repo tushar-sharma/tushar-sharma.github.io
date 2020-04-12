@@ -7,6 +7,8 @@ tags:
 - carl sagan
 - books
 - review
+- cfc
+- religion
 name: demon-haunted-1
 thumb: https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/0/2/5/5/1001004000945520.jpg
 ---
