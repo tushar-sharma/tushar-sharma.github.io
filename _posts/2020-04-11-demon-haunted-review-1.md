@@ -14,6 +14,12 @@ thumb: https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/0/2/5/5/10010040009
 
 This is my Part 1 of the review of the Carl Sagan's book, Demon Haunted World. 
 
+Since so many pseduoscience has flooded our world, it's an great read to try to develop scientific temper. It's not easy to debunk pseduoscience so easily. A classic example is device ADE 651 manufactured by British company, ATSC. It was marketed as bomb detector. It was sold to 20 countries in Middle East with each device cost up to $60,000. Eventually fraud was debunked & it's founder, James McCormick, is now languising in jail. Now this is a complicated fraud? <!-- truncate_here -->
+
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
+
+This is my Part 1 of the review of the Carl Sagan's book, Demon Haunted World. 
+
 Since so many pseduoscience has flooded our world, it's an great read to try to develop scientific temper. It's not easy to debunk pseduoscience so easily. A classic example is device ADE 651 manufactured by British company, ATSC. It was marketed as bomb detector. It was sold to 20 countries in Middle East with each device cost up to $60,000. Eventually fraud was debunked & it's founder, James McCormick, is now languising in jail. Now this is a complicated fraud? 
 
 How about prophecy of Nostrodamus? As a child I believed in them religiously. I rememberd during 9/11 bombing, lots of news channel claimign to have found in somewhere in Nostrodamus? What does science says about Astrology? 
