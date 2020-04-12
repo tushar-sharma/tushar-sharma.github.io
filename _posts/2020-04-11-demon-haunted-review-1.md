@@ -27,7 +27,14 @@ Carl Sagan replied that the "evidence is crummy" for all these theories.
 
 As an Hindu I care less about Noah's Ark or the existence of shroud of Turin. As a child I was fascinated more whether Ram Setu was natural or man-made? I saw frequent posts on my facebook on how NASA has confirmed that it's an ancient bridge. Though NASA said that its satellite photos had been egregiously misinterpreted to make this point ("The images reproduced on the websites may well be ours, but their interpretation is certainly not ours). Ram Setu is mentioned in Sanskrit Epic Ramayana (7th century BCE). Hindus believe that the structure was constructed by god Ram. 
 
-Later I realized people of other religion did the same. Some Muslims claims that the NASA photograph of Rima Ariadaeus, the 300 km-long rift line on the surface of the Moon, confirms splitting of the moon mentioned in Quran. Many Christian claims of geological evidence of Noah's Ark in Eastern Turkey.   
+Later I realized people of other religion did the same. Some Muslims claims that the NASA photograph of Rima Ariadaeus, the 300 km-long rift line on the surface of the Moon, confirms splitting of the moon mentioned in Quran. Many Christian claims of geological evidence of Noah's Ark in Eastern Turkey. Most Muslims would probably care about miraculous properties of [ZamZam](https://en.wikipedia.org/wiki/Zamzam_Well) water. Hindus would care more about piousness of [Ganga water](https://en.wikipedia.org/wiki/Ganges). Chrisitan would consider water sanctified by a priest to be holy. 
+
+Every religion have their own dogmas & believes. All religions contradict each other in some way. So which religion is the truth? It's a biological accident that you were born into your religion. Some religion vigorously proselytise (like Christianity, Islam) while some dont (like Jainism).
+
+There are poor people in religion. People suffer in a religions. In a thought experiment (though little outrageous), if you threw people of all religion from a sky scrapper, laws of physics would apply same to everybody. No amount of praying could levitate and save the falling person due to gravity. Is science beautiful? 
+
+
+Often religous believes contradict each other. Even within same religion, there are multiple interpretation. 
 
 I am not here to question validity of religion. My sole aim was only to describe different relgious beliefs. Religion is sacred to its believers & its difficult to rationalize religious belives & faith.One religious person might find religious belief of another religion uncanny. For an atheist, all relgious believes are irrational.
 
