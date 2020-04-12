@@ -11,14 +11,16 @@ name: demon-haunted-1
 thumb: https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/0/2/5/5/1001004000945520.jpg
 ---
 
+<p>This is my Part 1 of the review of the Carl Sagan's book, Demon Haunted World. </p>
 
-This is my Part 1 of the review of the Carl Sagan's book, Demon Haunted World. 
-
-Since so many pseduoscience has flooded our world, it's an great read to try to develop scientific temper. It's not easy to debunk pseduoscience so easily. A classic example is device ADE 651 manufactured by British company, ATSC. It was marketed as bomb detector. It was sold to 20 countries in Middle East with each device cost up to $60,000. Eventually fraud was debunked & it's founder, James McCormick, is now languising in jail. Now this is a complicated fraud? <!-- truncate_here -->
+I have begun to realize how many posts in Facebook, Whatsapp, etc contains puedo science & misinformation. Few posts are easy to debunk. A magic water curing cancer is nobrainer. However other posts are too meticulate to debunk. I thought it might be fruitful to me as layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan. <!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 This is my Part 1 of the review of the Carl Sagan's book, Demon Haunted World. 
+
+I have begun to realize how many posts in Facebook, Whatsapp, etc contains puedo science & misinformation. Few posts are easy to debunk. A magic water curing cancer is nobrainer. However other posts are too meticulate to debunk. I thought it might be fruitful to me as layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan.  
+
 
 Since so many pseduoscience has flooded our world, it's an great read to try to develop scientific temper. It's not easy to debunk pseduoscience so easily. A classic example is device ADE 651 manufactured by British company, ATSC. It was marketed as bomb detector. It was sold to 20 countries in Middle East with each device cost up to $60,000. Eventually fraud was debunked & it's founder, James McCormick, is now languising in jail. Now this is a complicated fraud? 
 
