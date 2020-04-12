@@ -31,12 +31,11 @@ Later I realized people of other religion did the same. Some Muslims claims that
 
 Every religion have their own dogmas & believes. All religions contradict each other in some way. So which religion is the truth? It's a biological accident that you were born into your religion. Some religion vigorously proselytise (like Christianity, Islam) while some dont (like Jainism).
 
-There are poor people in religion. People suffer in a religions. In a thought experiment (though little outrageous), if you threw people of all religion from a sky scrapper, laws of physics would apply same to everybody. No amount of praying could levitate and save the falling person due to gravity. Is science beautiful? 
 
 
-Often religous believes contradict each other. Even within same religion, there are multiple interpretation. 
+However there are poor people in all religions. You wont become a rich as Bill Gates just by converting to Christianity. Or become Mukesh Ambani if you converted to Hinduism. Of course televengelist in all religion claims easy cure & succes if only you pray more. 
 
-I am not here to question validity of religion. My sole aim was only to describe different relgious beliefs. Religion is sacred to its believers & its difficult to rationalize religious belives & faith.One religious person might find religious belief of another religion uncanny. For an atheist, all relgious believes are irrational.
+
 
 <blockquote>
 Religion is the opium of the masses - Karl Marx
@@ -44,8 +43,9 @@ Religion is the opium of the masses - Karl Marx
 <br>
 
 
+Here's a thought experiment. It might be little insensitive however it's just a hypothesis. Gather one good person & one evil person of all religion on the top of skyscrapper. Throw them & let people the world pray. Prayers from the right relgion will save the person falling from the skyscrapper. He will levitate and fall on the ground unhurt. 
 
-Like Muslims care about miraculous properties of ZamZam water. Hindus care more about piousness of Ganga water. Chrisitan would consider water sanctified by a priest to be holy. Every religion have their own dogmas & believes. Often religous believes contradict each other. Even within same religion, there are multiple interpretation.  
+Of course we all know that wont happen. Laws of physics are same for everyone. Gravity doesn't care about our relgious dogmas or piousnes. Isnt science beautiful?  
 
 
 
