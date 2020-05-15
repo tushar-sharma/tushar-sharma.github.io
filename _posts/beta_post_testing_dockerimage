@@ -1,0 +1,92 @@
+---
+published: false
+---
+## How do you test docker image in AWS?
+
+I am using github workflow to build my docker image
+
+```bash
+docker build -t $IMAGE
+```
+
+And push it to AWS ECR repository
+
+```bash
+docker push $IMAGE
+```
+
+There are many ways to test docker image, but the way we do is something like this 
+
+so our Dockerfile is somthing like this
+
+```bash
+FROM python:3.7.7-buster
+
+RUN pip install -r requirements.txt
+
+COPY main_script .
+
+ENTRYPOINT ["python3", "main_script"]
+```
+
+To test this we added a test script in our Dockerfile
+
+```bash
+FROM python:3.7.7-buster
+
+RUN pip install -r requirements.txt
+
+COPY main_script .
+COP test_script . 
+
+ENTRYPOINT ["python3", "main_script"]
+```
+
+Next we need to define task definition to run Docker container in ECS. Something like this using AWS ECS cli
+
+
+```bash
+aws ecs register-task-definition --cli-input-json file://task-def.json
+```
+
+You can deregister the task. Everytime you register task definition again , it will append a revision number. 
+
+task-def.json looks something like this 
+
+```bash
+{
+  "family": "mytaskdefinition",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [{
+    "name": "myappv1",
+    "image": "httpd:2.4",
+    "portMappings": [{
+      "containerPort": 80,
+      "hostPort": 80,
+      "protocol": "tcp"
+    }],
+    "essential": true,
+    "entryPoint": [ 
+     
+    ],
+    "command": [
+     
+    ]
+  }],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "256",
+  "memory": "512"
+}
+```
+
+You can get the latest revision number for your register task
+
+```bash
+revision=$(aws ecs describe-task-definition --task-definition testing-dummy-register --query 'taskDefinition.revision')
+```
+
+Questions:
+I still dont know how to delete task definition. You can only deregister it. So need to get revision number.
+
