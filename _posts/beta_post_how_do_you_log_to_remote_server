@@ -1,0 +1,32 @@
+---
+published: false
+---
+##  How to log to remote server in python 
+
+A common way to log in python is to use the logging library 
+
+```python
+import logging
+```
+
+So to create a log file like log.txt you could do something like this 
+
+```python
+import logging
+class MyLogger(object):
+    def __init__(self, log_filename):
+        logging.basicConfig(filename=log_filename,
+                            filemode="w")
+        self._logger = logging.getLogger(__name__)
+        self._logger.setLevel(logging.DEBUG)
+        
+    def get_logger(self):
+        return self._logger
+   
+  
+logger = MyLogger() 
+logger.debug("Logging started")
+        
+```
+
+However sometimes you want to save logs directly to a remote server. 
