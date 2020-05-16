@@ -24,9 +24,13 @@ class MyLogger(object):
         return self._logger
    
   
-logger = MyLogger() 
+logger = MyLogger("log.txt") 
 logger.debug("Logging started")
         
 ```
 
-However sometimes you want to save logs directly to a remote server. 
+One easy way to is to simply copy this file to remote server
+
+```python 
+shutil.copy("log.txt", "$REMOTE_SERVER")
+```
