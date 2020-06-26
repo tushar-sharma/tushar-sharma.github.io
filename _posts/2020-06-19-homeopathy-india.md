@@ -21,10 +21,22 @@ Mukesh Batra has played a key role in development of homeopathy in India. But is
 
 I  came across a youtube video where Mukesh Batra is receiving a Padma Shri award from the President of India. Padma Shri is a fourth highest prestigious civilian award in India. It’s usually conferred to people for distinguished service to the country. I had no prior knowledge about Batra’s work so I decided to dig more about him. 
 
+<center>
 <a href="https://www.youtube.com/watch?v=2r4NCbqev0M" target="_blank"><img src="https://img.youtube.com/vi/2r4NCbqev0M/hqdefault.jpg" title="source: youtube.com" /></a>
+</center>
 
+Mukesh Batra has played a key role in development of homeopathy in India. He claims to use homepathy for genetics. Many famous celebrities & polticians in India are known to endorse or promote him. 
 
-Mukesh Batra has played a key role in development of homeopathy in India. But isn’t homeopathy a pseudoscience. Countless scientific journals are filled with results from double blind studies which have vindicated the homeopathy medicine are mere placebo. However homeopathy continue to flourish not only in India but rest of the world.
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Launching Dr Mukesh Batra&#39;s new magazine &quot;Homeopathy &amp; You&quot; at the Lalit basement shortly. Open to public, Regency Room 5</p>&mdash; Shashi Tharoor (@ShashiTharoor) <a href="https://twitter.com/ShashiTharoor/status/395801712050454528?ref_src=twsrc%5Etfw">October 31, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">On Tuesday evening, Dr. Batra&#39;s Positive Health Awards were held at the Royal Opera House. Dr. Mukesh Batra a world renowned Homeopath along with his son, Dr.Akshay Batra celebrated the 12th anniversary of these special awards.His dedication towards his work has been remarkable</p>&mdash; Shatrughan Sinha (@ShatruganSinha) <a href="https://twitter.com/ShatruganSinha/status/1068407477165793280?ref_src=twsrc%5Etfw">November 30, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/NitaAmbani?src=hash&amp;ref_src=twsrc%5Etfw">#NitaAmbani</a> receiving the ‘Shri Pravinchandra V Gandhi Award for Excellence in Public Life’ for Philanthropy from Dr Mukesh Batra <a href="https://twitter.com/Rotary?ref_src=twsrc%5Etfw">@Rotary</a> <a href="https://t.co/F0kC3CGZDh">pic.twitter.com/F0kC3CGZDh</a></p>&mdash; Reliance Foundation (@ril_foundation) <a href="https://twitter.com/ril_foundation/status/849246465272807426?ref_src=twsrc%5Etfw">April 4, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Dr.Mukesh Batra.Proud of you!Your yeoman service to Healthcare and Homeopathy.Impressed by your generosity yesterday <a href="https://t.co/c5xIOadHZY">pic.twitter.com/c5xIOadHZY</a></p>&mdash; Rishi Kapoor (@chintskap) <a href="https://twitter.com/chintskap/status/687525171385745408?ref_src=twsrc%5Etfw">January 14, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Homeopathy is pseudoscience. Countless studies have dismissed it as nothing more than placebo. I have met numerous people who swear by their anecdotal experience how effective homeopathy is.
+
 
 I was surprised to find homeopathy medicine in CVS, a common drugstore in the US. I came across the news that a lawsuit has been filed by the Center for Inquiry (CFI) against this practice<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
 
@@ -53,6 +65,15 @@ Homeopathy was developed by Samuel Hahnemann in 1796 when scientist still believ
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
+  
+  
+       <li id='fn:1'>
+         <p><a href="  https://health.economictimes.indiatimes.com/news/industry/for-the-first-time-in-the-world-we-are-using-homeopathy-for-genetics-dr-mukesh-batra/64657541
+" target="_blank">Homeopathy Genetics India Times</a></p>
+         <a href='#fnref:1' rev='footnote'>&#8617;</a>
+  
+  
+  
        <li id='fn:1'>
          <p><a href="https://centerforinquiry.org/press_releases/cfi-sues-cvs/" target="_blank">Center for Inquiry</a></p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
