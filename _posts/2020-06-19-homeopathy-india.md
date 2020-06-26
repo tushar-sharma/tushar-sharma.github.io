@@ -14,8 +14,8 @@ thumb: https://timesofindia.indiatimes.com/thumb/msid-75080827,width-1200,height
 <p>I  came across a youtube video where Mukesh Batra is receiving a Padma Shri award from the President of India. Padma Shri is a fourth highest prestigious civilian award in India. It’s usually conferred to people for distinguished service to the country. I had no prior knowledge about Batra’s work so I decided to dig more about him. 
 </p>
 
-Mukesh Batra has played a key role in development of homeopathy in India. But isn’t homeopathy a pseudoscience. Countless scientific journals are filled with results from double blind studies which have vindicated the homeopathy medicine are mere placebo. However homeopathy continue to flourish not only in India but rest of the world.
- <!-- truncate_here -->
+Mukesh Batra has played a key role in development of homeopathy in India. He claims to use homepathy for genetics. Many famous celebrities & polticians in India are known to endorse or promote him. 
+<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
@@ -25,7 +25,13 @@ I  came across a youtube video where Mukesh Batra is receiving a Padma Shri awar
 <a href="https://www.youtube.com/watch?v=2r4NCbqev0M" target="_blank"><img src="https://img.youtube.com/vi/2r4NCbqev0M/hqdefault.jpg" title="source: youtube.com" /></a>
 </center>
 
+<br>
+<br>
+
 Mukesh Batra has played a key role in development of homeopathy in India. He claims to use homepathy for genetics. Many famous celebrities & polticians in India are known to endorse or promote him. 
+
+<br>
+<br>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Launching Dr Mukesh Batra&#39;s new magazine &quot;Homeopathy &amp; You&quot; at the Lalit basement shortly. Open to public, Regency Room 5</p>&mdash; Shashi Tharoor (@ShashiTharoor) <a href="https://twitter.com/ShashiTharoor/status/395801712050454528?ref_src=twsrc%5Etfw">October 31, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
