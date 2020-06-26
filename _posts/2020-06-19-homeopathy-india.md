@@ -49,12 +49,16 @@ I was surprised to find homeopathy medicine in CVS, a common drugstore in the US
 
 Pragya Thakur was elected as member of parliament in India in 2019. She has a controversial past for being a prime accused in Malegaon blasts. However I was also disapointed how she continues to promote homeopathy. Her speech in a nutshell, “Koi bhi pathy hoon paranthu who pathy kabhi bhi buri nahin hothi.” (sic) . Translation, “Whatever pathy it is, no pathy is ever bad”.
 
+<center>
 <a href="https://www.youtube.com/watch?v=ewW3AOtMZ-0" target="_blank"><img src="https://img.youtube.com/vi/ewW3AOtMZ-0/hqdefault.jpg" title="source: youtube.com" /></a>
+</center>
 
 
 Politicans supporting homeopathy is not unique to India. British conservative politician David Tredinnick supports homeopathy & chiropractic.  In the video below, he raises benefits of homeopathy in the UK parliament. However Prime Minster Teresa May replies that it would be best to follow the recommendations of National Health Service (NHS). Simon Stevens, head of NHS, had publicly expressing his "serious concerns about the fundamentally flawed practice of homeopathy". 
 
+<center>
 <a href="https://www.youtube.com/watch?v=pKKjIPxliuc" target="_blank"><img src="https://img.youtube.com/vi/pKKjIPxliuc/hqdefault.jpg" title="source: youtube.com" /></a>
+</center>
 
 
 Indian government has created AYUSH<sup><a href='#fn:2' rel='footnote'>2</a></sup> department which focuses on research & development of Ayurveda, Yoga and Naturopathy, Unani, Siddha, and Homeopathy. It has been often criticized for peddling pseudoscience. It suggested homeopathy remedies for prevention of coronavirus infection<sup><a href='#fn:3' rel='footnote'>3</a></sup>.
