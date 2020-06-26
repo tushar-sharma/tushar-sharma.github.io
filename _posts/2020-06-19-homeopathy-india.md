@@ -48,6 +48,14 @@ Mukesh Batra has played a key role in development of homeopathy in India. He cla
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Dr.Mukesh Batra.Proud of you!Your yeoman service to Healthcare and Homeopathy.Impressed by your generosity yesterday <a href="https://t.co/c5xIOadHZY">pic.twitter.com/c5xIOadHZY</a></p>&mdash; Rishi Kapoor (@chintskap) <a href="https://twitter.com/chintskap/status/687525171385745408?ref_src=twsrc%5Etfw">January 14, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <br>
 
+Even the goverment of India recommended Homeopathy for Coronavirus. 
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Advisory for <a href="https://twitter.com/hashtag/CoronaVirus?src=hash&amp;ref_src=twsrc%5Etfw">#CoronaVirus</a><br><br>Homoeopathy for Prevention of Corona virus Infections<br><br>Unani Medicines useful in the symptomatic management of Corona Virus infection<br><br>Details here: <a href="https://t.co/OXC7PtM7L3">https://t.co/OXC7PtM7L3</a></p>&mdash; PIB India (@PIB_India) <a href="https://twitter.com/PIB_India/status/1222385553892528128?ref_src=twsrc%5Etfw">January 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
 Homeopathy is pseudoscience. Countless studies have dismissed it as nothing more than placebo. I have met numerous people who swear by their anecdotal experience how effective homeopathy is.
 
 
