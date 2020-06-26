@@ -31,7 +31,6 @@ I  came across a youtube video where Mukesh Batra is receiving a Padma Shri awar
 Mukesh Batra has played a key role in development of homeopathy in India. He claims to use homepathy for genetics. Many famous celebrities & polticians in India are known to endorse or promote him. 
 
 <br>
-<br>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Launching Dr Mukesh Batra&#39;s new magazine &quot;Homeopathy &amp; You&quot; at the Lalit basement shortly. Open to public, Regency Room 5</p>&mdash; Shashi Tharoor (@ShashiTharoor) <a href="https://twitter.com/ShashiTharoor/status/395801712050454528?ref_src=twsrc%5Etfw">October 31, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
