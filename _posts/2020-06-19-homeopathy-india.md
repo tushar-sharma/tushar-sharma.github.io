@@ -112,8 +112,7 @@ Many countries are discontinuing funding to homeopathy for example France will e
 India is currently ruled by nationalist right-wing BJP government. Certain promotion of ancient cultures & practices like yoga is welcomed. However too much glorification on past like research on cows, urine, dung, homeopathy, Ayurveda, etc may not be best bet for India to remain competitive in research in 21st century<sup><a href='#fn:5' rel='footnote'>5</a></sup>. 
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
-
- <ol>
+  <ol>
        <li id='fn:1'>
          <p><a href="https://health.economictimes.indiatimes.com/news/industry/for-the-first-time-in-the-world-we-are-using-homeopathy-for-genetics-dr-mukesh-batra/64657541" target="_blank">Homeopathy Genetics India Times</a></p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a
@@ -140,10 +139,7 @@ India is currently ruled by nationalist right-wing BJP government. Certain promo
          <a href='#fnref:5' rev='footnote'>&#8617;</a>
         </li>
 
-
   </ol>
-  
-
 </div>
 
 <nav class="pagination clear" style="padding-bottom:20px;">
