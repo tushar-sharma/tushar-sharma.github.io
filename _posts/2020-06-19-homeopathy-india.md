@@ -19,7 +19,7 @@ Mukesh Batra has played a key role in development of homeopathy in India. He cla
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-I  came across a youtube video where Mukesh Batra is receiving a Padma Shri award from the President of India. Padma Shri is a fourth highest prestigious civilian award in India. It’s usually conferred to people for distinguished service to the country. I had no prior knowledge about Batra’s work so I decided to dig more about him. 
+I recently came across a Youtube video where Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India. It’s usually conferred on people for distinguished service to the country. He was awarded for his contribution to homeopathy in India. Alarm bell went off in my head as soon as I heard homeopathy.
 
 <center>
 <a href="https://www.youtube.com/watch?v=2r4NCbqev0M" target="_blank"><img src="https://img.youtube.com/vi/2r4NCbqev0M/hqdefault.jpg" title="source: youtube.com" /></a>
@@ -28,7 +28,7 @@ I  came across a youtube video where Mukesh Batra is receiving a Padma Shri awar
 <br>
 <br>
 
-Mukesh Batra has played a key role in development of homeopathy in India. He claims to use homepathy for genetics. Many famous celebrities & polticians in India are known to endorse or promote him. 
+Mukesh Batra has played a key role in promotion of homeopathy in India. He claims to use homeopathy for genetics. Many famous celebrities & polticians in India are known to endorse or promote him.
 
 <br>
 
@@ -50,14 +50,21 @@ Mukesh Batra has played a key role in development of homeopathy in India. He cla
 
 Even the goverment of India recommended Homeopathy for Coronavirus. 
 
-<br>
-
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Advisory for <a href="https://twitter.com/hashtag/CoronaVirus?src=hash&amp;ref_src=twsrc%5Etfw">#CoronaVirus</a><br><br>Homoeopathy for Prevention of Corona virus Infections<br><br>Unani Medicines useful in the symptomatic management of Corona Virus infection<br><br>Details here: <a href="https://t.co/OXC7PtM7L3">https://t.co/OXC7PtM7L3</a></p>&mdash; PIB India (@PIB_India) <a href="https://twitter.com/PIB_India/status/1222385553892528128?ref_src=twsrc%5Etfw">January 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
 
-Homeopathy is pseudoscience. Countless studies have dismissed it as nothing more than placebo. I have met numerous people who swear by their anecdotal experience how effective homeopathy is.
+### What is Homeopathy? 
 
+It was developed by Samuel Hahnemann in 1796 when scientist still believed in miasma theory of disease. It was a time when frequent blood letting was used to cure patient. Homeopathy is based on two theories:
+
+1. **Like cures like** —the notion that a disease can be cured by a substance that produces similar symptoms in healthy people
+
+2. **Law of minimum dose**—the notion that the lower the dose of the medication, the greater its effectiveness. Many homeopathic products are so diluted that no molecules of the original substance remain.
+
+None of these theories of hemeopathy is backed by science. Countless studies have dismissed it as quackery that may have placebo effect. I have met numerous people who swear by their anecdotal experience how effective homeopathy is.
+
+Another common misconception is that homeopathy products have no sideffect[https://onlinelibrary.wiley.com/doi/full/10.1111/ijcp.12026]. In 2017, FDA confirms elevated levels of belladonna in certain homeopathic teething products[https://www.fda.gov/news-events/press-announcements/fda-confirms-elevated-levels-belladonna-certain-homeopathic-teething-products]. 
 
 I was surprised to find homeopathy medicine in CVS, a common drugstore in the US. I came across the news that a lawsuit has been filed by the Center for Inquiry (CFI) against this practice<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
 
@@ -83,9 +90,7 @@ I think government of India is doing great disservice to Ayurveda by conflating 
 
 Not everything in ayurveda is manna. Some medicine of ayurveda have reportedly high lead, mercury or arsenic concentrations. I believe Ayurveda has some useful herbs & treatments. However it needs to embrace mainstream science to allow scrutiny & randomised clinical trials. 
 
-However homeopathy is a quackery. For a example mainstream science would take cinchona bark to treat malaria. However homeopathy would take a small substance and repeatedly dilute it with water, alcohol or milk sugar. Homeopathy claims that more dilution creates more potent solution. Science disagrees. The laws of chemistry state that there is a limit to the dilution that can be made without losing the original substance altogether. This limit is called Avogadro’s number (6.023 x 1023). A 30 X diluted solution would not have any memory of the active ingredient. 
-
-Homeopathy was developed by Samuel Hahnemann in 1796 when scientist still believed in miasma theory of disease. It was a time when frequent blood letting was used to cure patient. Many countries are discontinuing funding to homeopathy example France will end reimbursing of homeopathic patient by 2021, Spain in 2018 plans to ban homeopathy, etc. I hope India should also follow suit.
+Many countries are discontinuing funding to homeopathy for example France will end reimbursing of homeopathic patient by 2021, Spain in 2018 plans to ban homeopathy, etc. I hope good sense prevails in India to follow suit.
 
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
