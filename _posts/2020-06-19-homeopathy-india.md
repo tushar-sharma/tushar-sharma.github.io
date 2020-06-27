@@ -66,31 +66,36 @@ Vice President of India, M. Venkaiah Naidu, said, “Homeopathy should become a 
 
 <br>
 
-<p> 
-<center>
-Genelia & Ritesh Deshmukh, Indian actors, have invested in homeopathy, Welcome Cure. <br>
-</center>
-<br>
-<center>
-<a href="https://www.youtube.com/watch?v=rFP0iF5toOg" target="_blank"><img src="https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg" title="source: youtube.com" /></a>
-</center>
-</p>
-
 <p>
 <center>
-Pragya Thakur is an Indian politician speaking on The Homeopathy Central Council (Amendment) Bill, 2019. 
-</center>
-<center>
-<a href="https://www.youtube.com/watch?v=ewW3AOtMZ-0" target="_blank"><img src="https://img.youtube.com/vi/ewW3AOtMZ-0/hqdefault.jpg" title="source: youtube.com" /></a>
-</center>
-</p>
-
-
-<p>
 <figure>
-    <figcaption>DD News is a news channel funded by the Government of India. It has panel of homeopathic experts expounding that homeopathy is powerful medicine system without any side effecs.</figcaption>
+    <figcaption>Genelia & Ritesh Deshmukh, Indian actors, have invested in homeopathy, Welcome Cure. <br></figcaption><br>
+  <a href="https://www.youtube.com/watch?v=rFP0iF5toOg" target="_blank"><img src="https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg" title="source: youtube.com" /></a>
+</figure>
+</center>
+</p>
+
+
+
+
+<p>
+<center>
+<figure>
+    <figcaption>Pragya Thakur is an Indian politician speaking on The Homeopathy Central Council (Amendment) Bill, 2019. </figcaption><br>
+   <a href="https://www.youtube.com/watch?v=ewW3AOtMZ-0" target="_blank"><img src="https://img.youtube.com/vi/ewW3AOtMZ-0/hqdefault.jpg" title="source: youtube.com" /></a>
+</figure>
+</center>
+</p>
+
+
+
+<p>
+<center>
+<figure>
+    <figcaption>DD News is a news channel funded by the Government of India. It has panel of homeopathic experts expounding that homeopathy is powerful medicine system without any side effects.</figcaption><br>
     <a href="https://www.youtube.com/watch?v=i55cV7BlIRg" target="_blank"><img src="https://img.youtube.com/vi/i55cV7BlIRg/hqdefault.jpg" title="source: youtube.com" /></a>
 </figure>
+</center>
 </p>
 
 
