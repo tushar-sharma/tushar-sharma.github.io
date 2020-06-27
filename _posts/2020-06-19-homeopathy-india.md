@@ -24,6 +24,8 @@ I recently came across a Youtube video where Mukesh Batra is recipient of Padma 
 <a href="https://www.youtube.com/watch?v=2r4NCbqev0M" target="_blank"><img src="https://img.youtube.com/vi/2r4NCbqev0M/hqdefault.jpg" title="source: youtube.com" /></a>
 </center>
 
+<br>
+
 ## Allopathy vs Homeopathy
 As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. It was always blamed for side effects. “Only if you are really sick”, my uncle used to say, “should you take allopathy”.
 
