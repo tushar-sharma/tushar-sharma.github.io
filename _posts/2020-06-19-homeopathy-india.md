@@ -115,7 +115,9 @@ India is currently ruled by nationalist right-wing BJP government. Certain promo
   <ol>
        <li id='fn:1'>
          <p><a href="https://health.economictimes.indiatimes.com/news/industry/for-the-first-time-in-the-world-we-are-using-homeopathy-for-genetics-dr-mukesh-batra/64657541" target="_blank">Homeopathy Genetics India Times</a></p>
-         <a href='#fnref:1' rev='footnote'>&#8617;</a
+         <a href='#fnref:1' rev='footnote'>&#8617;</a>
+		</li>
+		 
   
        <li id='fn:2'>
          <p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ijcp.12026" target="_blank">Online Library</a></p>
