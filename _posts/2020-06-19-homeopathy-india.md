@@ -68,7 +68,7 @@ Vice President of India, M. Venkaiah Naidu, said, “Homeopathy should become a 
 
 <p> 
 <center>
-Genelia & Ritesh Deshmukh, Indian actors, have invested in homeopathy, Welcome Cure. 
+Genelia & Ritesh Deshmukh, Indian actors, have invested in homeopathy, Welcome Cure. <br>
 </center>
 <center>
 <a href="https://www.youtube.com/watch?v=rFP0iF5toOg" target="_blank"><img src="https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg" title="source: youtube.com" /></a>
