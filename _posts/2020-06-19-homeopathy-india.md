@@ -129,6 +129,16 @@ Some homeopathic practitioner uses scientific jargon to legitimize homeopathy. "
 
 
 
+<p>
+<center>
+Here's video of James Randi debunking homeopathy, quackery & fraud. 
+</center>
+<br>
+<center>
+<a href="https://www.youtube.com/watch?v=c0Z7KeNCi7g" target="_blank"><img src="https://img.youtube.com/vi/c0Z7KeNCi7g/hqdefault.jpg" title="source: youtube.com" /></a>
+</center>
+</p>
+
 
 ## No side effects?
 
