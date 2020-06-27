@@ -96,6 +96,17 @@ DD News is a news channel funded by the Government of India. It has panel of hom
 </center>
 </p>
 
+<p>
+<center>
+Claims that homeopathy can cure genetic disorders.
+</center>
+<br>
+<center>
+<a href="https://www.youtube.com/watch?v=x4_HjgUgvp4" target="_blank"><img src="https://img.youtube.com/vi/x4_HjgUgvp4/hqdefault.jpg" title="source: youtube.com" /></a>
+</center>
+</p>
+
+
 
 <br>
 ## What’s homeopathy? 
@@ -115,6 +126,9 @@ Homeopathy in a nutshell has two theory
 None of the claims of homeopathy has been scientifically proven. In fact, homeopathy has been dismissed as quackery, pseudoscientific, placebo, etc<sup><a href='#fn:0' rel='footnote'>0</a></sup>. 
 
 Some homeopathic practitioner uses scientific jargon to legitimize homeopathy. "For the first time in the world, we are using homeopathy for genetics"- Mukesh Batra<sup><a href='#fn:1' rel='footnote'>1</a></sup>. Such claims are nothing but bunkum.
+
+
+
 
 ## No side effects?
 
