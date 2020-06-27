@@ -38,7 +38,8 @@ Press Information Bureau, government of India, suggesting homeopathy for coronav
 
  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Advisory for <a href="https://twitter.com/hashtag/CoronaVirus?src=hash&amp;ref_src=twsrc%5Etfw">#CoronaVirus</a><br><br>Homoeopathy for Prevention of Corona virus Infections<br><br>Unani Medicines useful in the symptomatic management of Corona Virus infection<br><br>Details here: <a href="https://t.co/OXC7PtM7L3">https://t.co/OXC7PtM7L3</a></p>&mdash; PIB India (@PIB_India) <a href="https://twitter.com/PIB_India/status/1222385553892528128?ref_src=twsrc%5Etfw">January 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <br>
-Shashi Tharor is the Indian politician, writer, diplomat. He was  formerly Under-Secretary General of the United Nations. 
+Shashi Tharor is the Indian politician, writer, former Under-Secretary General of the United Nations. 
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Launching Dr Mukesh Batra&#39;s new magazine &quot;Homeopathy &amp; You&quot; at the Lalit basement shortly. Open to public, Regency Room 5</p>&mdash; Shashi Tharoor (@ShashiTharoor) <a href="https://twitter.com/ShashiTharoor/status/395801712050454528?ref_src=twsrc%5Etfw">October 31, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
@@ -72,6 +73,7 @@ Pragya Thakur is an Indian politician.
 <a href="https://www.youtube.com/watch?v=ewW3AOtMZ-0" target="_blank"><img src="https://img.youtube.com/vi/ewW3AOtMZ-0/hqdefault.jpg" title="source: youtube.com" /></a>
 </center>
 
+<br>
 ## What’s homeopathy? 
 
 It was developed by Samuel Hahnemann in 1796. During this time modern germ theory of disease was not prevalent. Most scientist believed in miasma theory of disease. Also unconventional methods like bloodletting was also prevalent.  Homeopathy in a nutshell has two theory 
