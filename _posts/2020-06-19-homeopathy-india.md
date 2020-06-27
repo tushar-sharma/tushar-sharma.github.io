@@ -84,6 +84,17 @@ Pragya Thakur is an Indian politician speaking onon The Homoeopathy Central Coun
 </center>
 </p>
 
+
+<p>
+<center>
+DD News is a news channel founded by the Government of India.  
+</center>
+<center>
+<a href="https://www.youtube.com/watch?v=i55cV7BlIRg" target="_blank"><img src="https://img.youtube.com/vi/i55cV7BlIRg/hqdefault.jpg" title="source: youtube.com" /></a>
+</center>
+</p>
+
+
 <br>
 ## What’s homeopathy? 
 
