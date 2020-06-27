@@ -58,11 +58,16 @@ Rishi Kapoor is an Indian actor.
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Dr.Mukesh Batra.Proud of you!Your yeoman service to Healthcare and Homeopathy.Impressed by your generosity yesterday <a href="https://t.co/c5xIOadHZY">pic.twitter.com/c5xIOadHZY</a></p>&mdash; Rishi Kapoor (@chintskap) <a href="https://twitter.com/chintskap/status/687525171385745408?ref_src=twsrc%5Etfw">January 14, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <br>
 
-<br>
-Vice President of India, M. Venkaiah Naidu, said, “Homeopathy should become a mass movement”. 
+
+<p>
 <center>
-<a href="https://www.youtube.com/watch?v=rDy5oTAhaLw" target="_blank"><img src="https://img.youtube.com/vi/rDy5oTAhaLw/hqdefault.jpg" title="source: youtube.com" /></a>
+<figure>
+    <figcaption>Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a mass movement". <br></figcaption><br>
+ <a href="https://www.youtube.com/watch?v=rDy5oTAhaLw" target="_blank"><img src="https://img.youtube.com/vi/rDy5oTAhaLw/hqdefault.jpg" title="source: youtube.com" /></a>
+</figure>
 </center>
+</p>
+
 
 <br>
 
@@ -74,8 +79,6 @@ Vice President of India, M. Venkaiah Naidu, said, “Homeopathy should become a 
 </figure>
 </center>
 </p>
-
-
 
 
 <p>
@@ -139,6 +142,16 @@ Here's video of James Randi debunking homeopathy, quackery & fraud.
 <br>
 <center>
 <a href="https://www.youtube.com/watch?v=c0Z7KeNCi7g" target="_blank"><img src="https://img.youtube.com/vi/c0Z7KeNCi7g/hqdefault.jpg" title="source: youtube.com" /></a>
+</center>
+</p>
+
+<p>
+<center>
+Alternative medicine is quackery. 
+</center>
+<br>
+<center>
+<a href="https://www.youtube.com/watch?v=7-BJpAFIca8" target="_blank"><img src="https://img.youtube.com/vi/7-BJpAFIca8/hqdefault.jpg" title="source: youtube.com" /></a>
 </center>
 </p>
 
