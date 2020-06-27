@@ -78,7 +78,7 @@ Genelia & Ritesh Deshmukh, Indian actors, have invested in homeopathy, Welcome C
 
 <p>
 <center>
-Pragya Thakur is an Indian politician speaking onon The Homoeopathy Central Council (Amendment) Bill, 2019. 
+Pragya Thakur is an Indian politician speaking on The Homeopathy Central Council (Amendment) Bill, 2019. 
 </center>
 <center>
 <a href="https://www.youtube.com/watch?v=ewW3AOtMZ-0" target="_blank"><img src="https://img.youtube.com/vi/ewW3AOtMZ-0/hqdefault.jpg" title="source: youtube.com" /></a>
@@ -88,7 +88,7 @@ Pragya Thakur is an Indian politician speaking onon The Homoeopathy Central Coun
 
 <p>
 <center>
-DD News is a news channel founded by the Government of India.  
+DD News is a news channel funded by the Government of India. It has panel of homeopathic experts expounding that homeopathy is powerful medicine system without any side effecs.
 </center>
 <br>
 <center>
