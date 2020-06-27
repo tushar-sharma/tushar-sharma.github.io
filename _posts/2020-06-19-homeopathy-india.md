@@ -25,17 +25,15 @@ I recently came across a Youtube video where Mukesh Batra is recipient of Padma 
 <a href="https://www.youtube.com/watch?v=2r4NCbqev0M" target="_blank"><img src="https://img.youtube.com/vi/2r4NCbqev0M/hqdefault.jpg" title="source: youtube.com" /></a>
 </center>
 
+## Allopathy vs Homeopathy
+As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. It was always blamed for side effects. “Only if you are really sick”, my uncle used to say, “should you take allopathy”.
+Other was alternative medicine which is an umbrella term for Ayurveda, homeopathy, yoga, acupuncture, etc. “They don’t have any side effects”, I often heard, “they should be recommended first”.
+
+## Celebrities & Politicians
+
+Celebrities & Politicians are powerful influencers in any country. The product they endorse usually have huge impact on consumer buying behavior. List of politicians endorsing homeopathy products: 
+ <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Advisory for <a href="https://twitter.com/hashtag/CoronaVirus?src=hash&amp;ref_src=twsrc%5Etfw">#CoronaVirus</a><br><br>Homoeopathy for Prevention of Corona virus Infections<br><br>Unani Medicines useful in the symptomatic management of Corona Virus infection<br><br>Details here: <a href="https://t.co/OXC7PtM7L3">https://t.co/OXC7PtM7L3</a></p>&mdash; PIB India (@PIB_India) <a href="https://twitter.com/PIB_India/status/1222385553892528128?ref_src=twsrc%5Etfw">January 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <br>
-<br>
-
-As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. It was always blamed for side effects. “Only if you are really sick”, my uncle used to say, “only then you should take allopathy”.
-
-Traditional medicine was an umbrella term for Ayurveda, homeopathy, etc. “They don’t have any side effects”, I often heard, “why not try them first”.
-
-Mukesh Batra has played a key role in promotion of homeopathy in India. He claims to use homeopathy for genetics. Many famous celebrities & politicians in India are known to endorse or promote him.
-
-<br>
-
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Launching Dr Mukesh Batra&#39;s new magazine &quot;Homeopathy &amp; You&quot; at the Lalit basement shortly. Open to public, Regency Room 5</p>&mdash; Shashi Tharoor (@ShashiTharoor) <a href="https://twitter.com/ShashiTharoor/status/395801712050454528?ref_src=twsrc%5Etfw">October 31, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
@@ -52,50 +50,35 @@ Mukesh Batra has played a key role in promotion of homeopathy in India. He claim
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Dr.Mukesh Batra.Proud of you!Your yeoman service to Healthcare and Homeopathy.Impressed by your generosity yesterday <a href="https://t.co/c5xIOadHZY">pic.twitter.com/c5xIOadHZY</a></p>&mdash; Rishi Kapoor (@chintskap) <a href="https://twitter.com/chintskap/status/687525171385745408?ref_src=twsrc%5Etfw">January 14, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <br>
 
-Even the goverment of India recommended Homeopathy for Coronavirus. 
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Advisory for <a href="https://twitter.com/hashtag/CoronaVirus?src=hash&amp;ref_src=twsrc%5Etfw">#CoronaVirus</a><br><br>Homoeopathy for Prevention of Corona virus Infections<br><br>Unani Medicines useful in the symptomatic management of Corona Virus infection<br><br>Details here: <a href="https://t.co/OXC7PtM7L3">https://t.co/OXC7PtM7L3</a></p>&mdash; PIB India (@PIB_India) <a href="https://twitter.com/PIB_India/status/1222385553892528128?ref_src=twsrc%5Etfw">January 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <br>
-
-### What is Homeopathy? 
-
-It was developed by Samuel Hahnemann in 1796 when scientist still believed in miasma theory of disease. It was a time when frequent blood letting was used to cure patient. Homeopathy is based on two theories:
-
-1. **Like cures like** —the notion that a disease can be cured by a substance that produces similar symptoms in healthy people
-
-2. **Law of minimum dose**—the notion that the lower the dose of the medication, the greater its effectiveness. Many homeopathic products are so diluted that no molecules of the original substance remain.
-
-None of these theories of hemeopathy is backed by science. Countless studies have dismissed it as quackery that may have placebo effect. I have met numerous people who swear by their anecdotal experience how effective homeopathy is.
-
-Another common misconception is that homeopathy products have no sideffect[https://onlinelibrary.wiley.com/doi/full/10.1111/ijcp.12026]. In 2017, FDA confirms elevated levels of belladonna in certain homeopathic teething products[https://www.fda.gov/news-events/press-announcements/fda-confirms-elevated-levels-belladonna-certain-homeopathic-teething-products]. 
-
-I was surprised to find homeopathy medicine in CVS, a common drugstore in the US. I came across the news that a lawsuit has been filed by the Center for Inquiry (CFI) against this practice<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
-
-
-Pragya Thakur was elected as member of parliament in India in 2019. She has a controversial past for being a prime accused in Malegaon blasts. However I was also disapointed how she continues to promote homeopathy. Her speech in a nutshell, “Koi bhi pathy hoon paranthu who pathy kabhi bhi buri nahin hothi.” (sic) . Translation, “Whatever pathy it is, no pathy is ever bad”.
 
 <center>
 <a href="https://www.youtube.com/watch?v=ewW3AOtMZ-0" target="_blank"><img src="https://img.youtube.com/vi/ewW3AOtMZ-0/hqdefault.jpg" title="source: youtube.com" /></a>
 </center>
 
 
-Politicans supporting homeopathy is not unique to India. British conservative politician David Tredinnick supports homeopathy & chiropractic.  In the video below, he raises benefits of homeopathy in the UK parliament. However Prime Minster Teresa May replies that it would be best to follow the recommendations of National Health Service (NHS). Simon Stevens, head of NHS, had publicly expressing his "serious concerns about the fundamentally flawed practice of homeopathy". 
+## What’s homeopathy? 
+It was developed by Samuel Hahnemann in 1796. During this time modern germ theory of disease was not prevalent. Most scientist believed in miasma theory of disease. Also unconventional methods like bloodletting was also prevalent.  Homeopathy in a nutshell has two theory 
+1. **Like cures Like** : the notion that a disease can be cured by a substance that produces similar symptoms in healthy people
 
-<center>
-<a href="https://www.youtube.com/watch?v=pKKjIPxliuc" target="_blank"><img src="https://img.youtube.com/vi/pKKjIPxliuc/hqdefault.jpg" title="source: youtube.com" /></a>
-</center>
+2. **Law of minimum dose** —the notion that the lower the dose of the medication, the greater its effectiveness. Many homeopathic products are so diluted that no molecules of the original substance remain.
 
+## What does the science say? 
+None of the claims of homeopathy has been scientifically proven. In fact homeopathy has been dismissed as quackery, pseudoscientific, placebo, etc. 
 
+## India & the Homeopathy
 Indian government has created AYUSH<sup><a href='#fn:2' rel='footnote'>2</a></sup> department which focuses on research & development of Ayurveda, Yoga and Naturopathy, Unani, Siddha, and Homeopathy. It has been often criticized for peddling pseudoscience. It suggested homeopathy remedies for prevention of coronavirus infection<sup><a href='#fn:3' rel='footnote'>3</a></sup>.
+I think government of India is doing great disservice to Ayurveda by conflating it with Homeopathy. Ayurveda is an ancient Indian system of medicine. Sushruta Samhita is an ancient text(1st-millennium BCE) that explains surgical training. Sarpagandha is another Indian herb mentioned in Ayurveda that is used in treatment of of systolic hypertension. 
+However not everything in Ayurveda is benign. Some medicine of Ayurveda has reportedly high lead, mercury or arsenic concentrations. I believe Ayurveda has some useful herbs & treatments. However, it needs to embrace mainstream science to embrace scrutiny & randomized clinical trials. 
 
+## No side effects?
+One of the myths of Homeopathy is that it has no side effects[ https://onlinelibrary.wiley.com/doi/full/10.1111/ijcp.12026] . 
 
-I think government of India is doing great disservice to Ayurveda by conflating it with Homepathy. Ayurveda is an ancient Indian system of medicine. Sushruta Samhita is an ancient text(1st-millennium BCE) that explains surgical training. Sarpagandha is another Indian herb mentioned in Ayurveda that is used in treatment of of systolic hypertension. 
+A 2012 systematic review of case reports and case series concluded that using certain homeopathic products (such as those containing heavy metals like mercury or iron that are not highly diluted) or replacing an effective conventional treatment with an ineffective homeopathic one can cause adverse effects, some of which may be serious.
 
-Not everything in ayurveda is manna. Some medicine of ayurveda have reportedly high lead, mercury or arsenic concentrations. I believe Ayurveda has some useful herbs & treatments. However it needs to embrace mainstream science to allow scrutiny & randomised clinical trials. 
-
-Many countries are discontinuing funding to homeopathy for example France will end reimbursing of homeopathic patient by 2021, Spain in 2018 plans to ban homeopathy, etc. I hope good sense prevails in India to follow suit.
-
+The FDA has warned consumers about different products labeled as homeopathic. For example, in 2017 it alerted consumers that some homeopathic teething tablets had excessive amounts of the toxic substance belladonna; in 2015, it warned consumers not to rely on over-the-counter asthma products labeled as homeopathic, because they are not evaluated by the FDA for safety and effectiveness. [https://www.nccih.nih.gov/health/homeopathy]
+## Conclusion
+Many countries are discontinuing funding to homeopathy for example France will end reimbursing of homeopathic patient by 2021, Spain in 2018 plans to ban homeopathy, etc. India is currently ruled by nationalist right-wing BJP government. Certain promotion of ancient cultures & practices like yoga is welcomed. However too much glorification on cows, urine, dung, homeopathy, Ayurveda, etc may not be best bet for India to remain competitive in research in 21st century. https://dst.gov.in/callforproposals/call-proposal-sutra-pic-india-program
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
@@ -136,4 +119,4 @@ Many countries are discontinuing funding to homeopathy for example France will e
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>
+</nav> 
