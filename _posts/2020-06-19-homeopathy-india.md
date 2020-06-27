@@ -28,7 +28,11 @@ I recently came across a Youtube video where Mukesh Batra is recipient of Padma 
 <br>
 <br>
 
-Mukesh Batra has played a key role in promotion of homeopathy in India. He claims to use homeopathy for genetics. Many famous celebrities & polticians in India are known to endorse or promote him.
+As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. It was always blamed for side effects. “Only if you are really sick”, my uncle used to say, “only then you should take allopathy”.
+
+Traditional medicine was an umbrella term for Ayurveda, homeopathy, etc. “They don’t have any side effects”, I often heard, “why not try them first”.
+
+Mukesh Batra has played a key role in promotion of homeopathy in India. He claims to use homeopathy for genetics. Many famous celebrities & politicians in India are known to endorse or promote him.
 
 <br>
 
