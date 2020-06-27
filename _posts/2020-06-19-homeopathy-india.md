@@ -87,14 +87,12 @@ Pragya Thakur is an Indian politician speaking on The Homeopathy Central Council
 
 
 <p>
-<center>
-</center>
-<br>
-<center>
-DD News is a news channel funded by the Government of India. It has panel of homeopathic experts expounding that homeopathy is powerful medicine system without any side effecs.<br>
-<a href="https://www.youtube.com/watch?v=i55cV7BlIRg" target="_blank"><img src="https://img.youtube.com/vi/i55cV7BlIRg/hqdefault.jpg" title="source: youtube.com" /></a>
-</center>
+<figure>
+    <figcaption>DD News is a news channel funded by the Government of India. It has panel of homeopathic experts expounding that homeopathy is powerful medicine system without any side effecs.</figcaption>
+    <a href="https://www.youtube.com/watch?v=i55cV7BlIRg" target="_blank"><img src="https://img.youtube.com/vi/i55cV7BlIRg/hqdefault.jpg" title="source: youtube.com" /></a>
+</figure>
 </p>
+
 
 <p>
 <center>
