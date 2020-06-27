@@ -65,13 +65,14 @@ Vice President of India, M. Venkaiah Naidu, said, “Homeopathy should become a 
 </center>
 
 <br>
-Genelia & Ritesh Deshmukh, Indian actors, have invested in homeopathy startup, Welcome Cure. 
 <center>
+Genelia & Ritesh Deshmukh, Indian actors, have invested in homeopathy startup, Welcome Cure. 
+
 <a href="https://www.youtube.com/watch?v=rFP0iF5toOg" target="_blank"><img src="https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg" title="source: youtube.com" /></a>
 </center>
 
-Pragya Thakur is an Indian politician. 
 <center>
+Pragya Thakur is an Indian politician speaking onon The Homoeopathy Central Council (Amendment) Bill, 2019. 
 <a href="https://www.youtube.com/watch?v=ewW3AOtMZ-0" target="_blank"><img src="https://img.youtube.com/vi/ewW3AOtMZ-0/hqdefault.jpg" title="source: youtube.com" /></a>
 </center>
 
