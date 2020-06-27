@@ -173,7 +173,7 @@ If an herb in Ayurveda can cures an illness, it becomes part of modern medicine 
 
 Many countries are discontinuing funding to homeopathy for example France will end reimbursing of homeopathic patient by 2021, Spain in 2018 plans to ban homeopathy, etc. I was surprised to find homeopathy medicine in CVS, a common drugstore in the US. I came across the news that a lawsuit has been filed by the Center for Inquiry (CFI) against this practice<sup><a href='#fn:4' rel='footnote'>4</a></sup>.
 
-India is currently ruled by nationalist right-wing BJP government. Certain promotion of ancient cultures & practices like yoga is welcomed. However too much glorification on past like research on cows, urine, dung, homeopathy, Ayurveda, etc may not be best bet for India to remain competitive in research in 21st century<sup><a href='#fn:5' rel='footnote'>5</a></sup>. 
+India is currently ruled by nationalist right-wing BJP government. Certain promotion of ancient cultures & practices like yoga is welcomed. However too much glorification on past like research on cows, urine, dung, homeopathy, etc may not be best bet for India to remain competitive in research in 21st century<sup><a href='#fn:5' rel='footnote'>5</a></sup>. 
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
