@@ -145,16 +145,6 @@ Here's video of James Randi debunking homeopathy, quackery & fraud.
 </center>
 </p>
 
-<p>
-<center>
-Alternative medicine is quackery. 
-</center>
-<br>
-<center>
-<a href="https://www.youtube.com/watch?v=7-BJpAFIca8" target="_blank"><img src="https://img.youtube.com/vi/7-BJpAFIca8/hqdefault.jpg" title="source: youtube.com" /></a>
-</center>
-</p>
-
 
 ## No side effects?
 
