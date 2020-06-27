@@ -112,7 +112,7 @@ Homeopathy in a nutshell has two theory
 
 ## What does the science say? 
 
-None of the claims of homeopathy has been scientifically proven. In fact, homeopathy has been dismissed as quackery, pseudoscientific, placebo, etc. 
+None of the claims of homeopathy has been scientifically proven. In fact, homeopathy has been dismissed as quackery, pseudoscientific, placebo, etc<sup><a href='#fn:0' rel='footnote'>0</a></sup>. 
 
 Some homeopathic practitioner uses scientific jargon to legitimize homeopathy. "For the first time in the world, we are using homeopathy for genetics"- Mukesh Batra<sup><a href='#fn:1' rel='footnote'>1</a></sup>. Such claims are nothing but bunkum.
 
@@ -137,6 +137,13 @@ India is currently ruled by nationalist right-wing BJP government. Certain promo
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
+  
+         <li id='fn:0'>
+         <p><a href="https://zenodo.org/record/1035885#.XveHF-hKg2x" target="_blank">HOMEOPATHY IS UNSCIENTIFIC AND UNETHICAL</a></p>
+         <a href='#fnref:0' rev='footnote'>&#8617;</a>
+		</li>
+		
+		
        <li id='fn:1'>
          <p><a href="https://health.economictimes.indiatimes.com/news/industry/for-the-first-time-in-the-world-we-are-using-homeopathy-for-genetics-dr-mukesh-batra/64657541" target="_blank">Homeopathy Genetics India Times</a></p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
