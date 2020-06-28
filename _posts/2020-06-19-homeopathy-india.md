@@ -8,7 +8,7 @@ tags:
 - ayurveda
 - india
 name: homeopathy-india
-thumb: https://timesofindia.indiatimes.com/thumb/msid-75080827,width-1200,height-900,resizemode-4/.jpg
+thumb: https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg
 ---
 
 <p> I recently came across a Youtube video where Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India. It’s usually conferred on people for distinguished service to the country. He was awarded for his contribution to homeopathy in India. Alarm bell went off in my head as soon as I heard homeopathy.
