@@ -31,10 +31,6 @@ As a kid I usually heard about two types of medicine. One was allopathy which is
 
 Other was alternative medicine, which is an umbrella term for Ayurveda, homeopathy, yoga, acupuncture, etc. “They don’t have any side effects”, I often heard, “they should be recommended first”.
 
-
-
-
-<br>
 ## What’s homeopathy? 
 
 It was developed by Samuel Hahnemann in 1796. During this time modern germ theory of disease was not prevalent. Most scientist believed in miasma theory of disease. Also unconventional methods like bloodletting was also prevalent.  
