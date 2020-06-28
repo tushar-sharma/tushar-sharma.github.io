@@ -31,7 +31,50 @@ As a kid I usually heard about two types of medicine. One was allopathy which is
 
 Other was alternative medicine, which is an umbrella term for Ayurveda, homeopathy, yoga, acupuncture, etc. “They don’t have any side effects”, I often heard, “they should be recommended first”.
 
-## Celebrities & Politicians
+
+
+
+<br>
+## What’s homeopathy? 
+
+It was developed by Samuel Hahnemann in 1796. During this time modern germ theory of disease was not prevalent. Most scientist believed in miasma theory of disease. Also unconventional methods like bloodletting was also prevalent.  
+
+Homeopathy in a nutshell has two theory 
+
+1. **Like cures Like**: the notion that a disease can be cured by a substance that produces similar symptoms in healthy people
+
+
+2. **Law of minimum dose** —the notion that the lower the dose of the medication, the greater its effectiveness. Many homeopathic products are so diluted that no molecules of the original substance remain.
+
+
+## What does the science say? 
+
+None of the claims of homeopathy has been scientifically proven. In fact, homeopathy has been dismissed as quackery, pseudoscientific, placebo, etc<sup><a href='#fn:0' rel='footnote'>0</a></sup>. 
+
+Some homeopathic practitioner uses scientific jargon to legitimize homeopathy. "For the first time in the world, we are using homeopathy for genetics"- Mukesh Batra<sup><a href='#fn:1' rel='footnote'>1</a></sup>. Such claims are nothing but bunkum.
+
+
+
+<p>
+<center>
+Here's video of James Randi debunking homeopathy, quackery & fraud. 
+</center>
+<br>
+<center>
+<a href="https://www.youtube.com/watch?v=c0Z7KeNCi7g" target="_blank"><img src="https://img.youtube.com/vi/c0Z7KeNCi7g/hqdefault.jpg" title="source: youtube.com" /></a>
+</center>
+</p>
+
+
+## No side effects?
+
+One of the myths of Homeopathy is that it has no side effects<sup><a href='#fn:2' rel='footnote'>2</a></sup>. 
+
+A 2012 systematic review of case reports and case series concluded that using certain homeopathic products (such as those containing heavy metals like mercury or iron that are not highly diluted) or replacing an effective conventional treatment with an ineffective homeopathic one can cause adverse effects, some of which may be serious.
+
+The FDA has warned consumers about different products labeled as homeopathic. For example, in 2017 it alerted consumers that some homeopathic teething tablets had excessive amounts of the toxic substance belladonna; in 2015, it warned consumers not to rely on over-the-counter asthma products labeled as homeopathic, because they are not evaluated by the FDA for safety and effectiveness.<sup><a href='#fn:3' rel='footnote'>3</a></sup>
+
+## Celebrities & Politicians in India
 
 Celebrities & Politicians are powerful influencers in any country. The product they endorse usually have huge impact on consumer buying behavior. List of politicians endorsing homeopathy products: 
 <br>
@@ -112,47 +155,6 @@ Claims that homeopathy can cure genetic disorders.
 </center>
 </p>
 
-
-
-<br>
-## What’s homeopathy? 
-
-It was developed by Samuel Hahnemann in 1796. During this time modern germ theory of disease was not prevalent. Most scientist believed in miasma theory of disease. Also unconventional methods like bloodletting was also prevalent.  
-
-Homeopathy in a nutshell has two theory 
-
-1. **Like cures Like**: the notion that a disease can be cured by a substance that produces similar symptoms in healthy people
-
-
-2. **Law of minimum dose** —the notion that the lower the dose of the medication, the greater its effectiveness. Many homeopathic products are so diluted that no molecules of the original substance remain.
-
-
-## What does the science say? 
-
-None of the claims of homeopathy has been scientifically proven. In fact, homeopathy has been dismissed as quackery, pseudoscientific, placebo, etc<sup><a href='#fn:0' rel='footnote'>0</a></sup>. 
-
-Some homeopathic practitioner uses scientific jargon to legitimize homeopathy. "For the first time in the world, we are using homeopathy for genetics"- Mukesh Batra<sup><a href='#fn:1' rel='footnote'>1</a></sup>. Such claims are nothing but bunkum.
-
-
-
-<p>
-<center>
-Here's video of James Randi debunking homeopathy, quackery & fraud. 
-</center>
-<br>
-<center>
-<a href="https://www.youtube.com/watch?v=c0Z7KeNCi7g" target="_blank"><img src="https://img.youtube.com/vi/c0Z7KeNCi7g/hqdefault.jpg" title="source: youtube.com" /></a>
-</center>
-</p>
-
-
-## No side effects?
-
-One of the myths of Homeopathy is that it has no side effects<sup><a href='#fn:2' rel='footnote'>2</a></sup>. 
-
-A 2012 systematic review of case reports and case series concluded that using certain homeopathic products (such as those containing heavy metals like mercury or iron that are not highly diluted) or replacing an effective conventional treatment with an ineffective homeopathic one can cause adverse effects, some of which may be serious.
-
-The FDA has warned consumers about different products labeled as homeopathic. For example, in 2017 it alerted consumers that some homeopathic teething tablets had excessive amounts of the toxic substance belladonna; in 2015, it warned consumers not to rely on over-the-counter asthma products labeled as homeopathic, because they are not evaluated by the FDA for safety and effectiveness.<sup><a href='#fn:3' rel='footnote'>3</a></sup>
 
 ## Conclusion
 
