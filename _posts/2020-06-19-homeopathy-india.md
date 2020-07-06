@@ -11,18 +11,22 @@ name: homeopathy-india
 thumb: https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg
 ---
 
-<p> I recently came across a Youtube video where Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India. It’s usually conferred on people for distinguished service to the country. He was awarded for his contribution to homeopathy in India. Alarm bell went off in my head as soon as I heard homeopathy.
+<p> I recently came across a Youtube video of Genelia Deshmukh, famous Indian actress, promoting homeopathic products. Along with her husband, they have invested in a startup called Welcome Cure. Science has repeatedly dismissed homepathy as quakery or at best placebo, but that has not deter government of India to fund & research homeopathy under AYUSH ministry. 
 </p>
 
 As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. It was always blamed for side effects. “Only if you are really sick”, my uncle used to say, “should you take allopathy”.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-I recently came across a Youtube video where Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India. It’s usually conferred on people for distinguished service to the country. He was awarded for his contribution to homeopathy in India. Alarm bell went off in my head as soon as I heard homeopathy.
+I recently came across a Youtube video of Genelia Deshmukh, famous Indian actress, promoting homeopathic products. Along with her husband, they have invested in a startup called Welcome Cure. Science has repeatedly dismissed homepathy as quakery or at best placebo, but that has not deter government of India to fund & research homeopathy under AYUSH ministry. 
 
+<p>
 <center>
-<a href="https://www.youtube.com/watch?v=2r4NCbqev0M" target="_blank"><img src="https://img.youtube.com/vi/2r4NCbqev0M/hqdefault.jpg" title="source: youtube.com" /></a>
+<figure>
+  <a href="https://www.youtube.com/watch?v=rFP0iF5toOg" target="_blank"><img src="https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg" title="source: youtube.com" /></a>
+</figure>
 </center>
+</p>
 
 <br>
 
@@ -45,30 +49,19 @@ Homeopathy in a nutshell has two theory
 
 ## What does the science say? 
 
-None of the claims of homeopathy has been scientifically proven. In fact, homeopathy has been dismissed as quackery, pseudoscientific, placebo, etc<sup><a href='#fn:0' rel='footnote'>0</a></sup>. 
+None of the claims of homeopathy has been scientifically proven. In fact, homeopathy has been dismissed as quackery, pseudoscientific, placebo, etc<sup><a href='#fn:1' rel='footnote'>1</a></sup>. 
 
-Some homeopathic practitioner uses scientific jargon to legitimize homeopathy. "For the first time in the world, we are using homeopathy for genetics"- Mukesh Batra<sup><a href='#fn:1' rel='footnote'>1</a></sup>. Such claims are nothing but bunkum.
+Some homeopathic practitioner uses scientific jargon to legitimize homeopathy. "For the first time in the world, we are using homeopathy for genetics"- Mukesh Batra<sup><a href='#fn:2' rel='footnote'>2</a></sup>. Such claims are nothing but baloney.
 
-
-
-<p>
-<center>
-Here's video of James Randi debunking homeopathy, quackery & fraud. 
-</center>
-<br>
-<center>
-<a href="https://www.youtube.com/watch?v=c0Z7KeNCi7g" target="_blank"><img src="https://img.youtube.com/vi/c0Z7KeNCi7g/hqdefault.jpg" title="source: youtube.com" /></a>
-</center>
-</p>
 
 
 ## No side effects?
 
-One of the myths of Homeopathy is that it has no side effects<sup><a href='#fn:2' rel='footnote'>2</a></sup>. 
+One of the myths of Homeopathy is that it has no side effects<sup><a href='#fn:3' rel='footnote'>3</a></sup>. 
 
 A 2012 systematic review of case reports and case series concluded that using certain homeopathic products (such as those containing heavy metals like mercury or iron that are not highly diluted) or replacing an effective conventional treatment with an ineffective homeopathic one can cause adverse effects, some of which may be serious.
 
-The FDA has warned consumers about different products labeled as homeopathic. For example, in 2017 it alerted consumers that some homeopathic teething tablets had excessive amounts of the toxic substance belladonna; in 2015, it warned consumers not to rely on over-the-counter asthma products labeled as homeopathic, because they are not evaluated by the FDA for safety and effectiveness.<sup><a href='#fn:3' rel='footnote'>3</a></sup>
+The FDA has warned consumers about different products labeled as homeopathic. For example, in 2017 it alerted consumers that some homeopathic teething tablets had excessive amounts of the toxic substance belladonna; in 2015, it warned consumers not to rely on over-the-counter asthma products labeled as homeopathic, because they are not evaluated by the FDA for safety and effectiveness.<sup><a href='#fn:4' rel='footnote'>4</a></sup>
 
 ## Celebrities & Politicians in India
 
@@ -92,10 +85,7 @@ Shatrughan Sinha, Indian film actor & politician.
 Nita Ambani is the chairperson and founder of the Reliance Foundation. 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/NitaAmbani?src=hash&amp;ref_src=twsrc%5Etfw">#NitaAmbani</a> receiving the ‘Shri Pravinchandra V Gandhi Award for Excellence in Public Life’ for Philanthropy from Dr Mukesh Batra <a href="https://twitter.com/Rotary?ref_src=twsrc%5Etfw">@Rotary</a> <a href="https://t.co/F0kC3CGZDh">pic.twitter.com/F0kC3CGZDh</a></p>&mdash; Reliance Foundation (@ril_foundation) <a href="https://twitter.com/ril_foundation/status/849246465272807426?ref_src=twsrc%5Etfw">April 4, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <br>
-Rishi Kapoor is an Indian actor. 
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Dr.Mukesh Batra.Proud of you!Your yeoman service to Healthcare and Homeopathy.Impressed by your generosity yesterday <a href="https://t.co/c5xIOadHZY">pic.twitter.com/c5xIOadHZY</a></p>&mdash; Rishi Kapoor (@chintskap) <a href="https://twitter.com/chintskap/status/687525171385745408?ref_src=twsrc%5Etfw">January 14, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<br>
 
 
 <p>
@@ -110,32 +100,24 @@ Rishi Kapoor is an Indian actor.
 
 <br>
 
-<p>
-<center>
-<figure>
-    <figcaption>Genelia & Ritesh Deshmukh, Indian actors, have invested in homeopathy, Welcome Cure. <br></figcaption><br>
-  <a href="https://www.youtube.com/watch?v=rFP0iF5toOg" target="_blank"><img src="https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg" title="source: youtube.com" /></a>
-</figure>
-</center>
-</p>
-
 
 <p>
 <center>
 <figure>
-    <figcaption>Pragya Thakur is an Indian politician speaking on The Homeopathy Central Council (Amendment) Bill, 2019. </figcaption><br>
-   <a href="https://www.youtube.com/watch?v=ewW3AOtMZ-0" target="_blank"><img src="https://img.youtube.com/vi/ewW3AOtMZ-0/hqdefault.jpg" title="source: youtube.com" /></a>
+    <figcaption>Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India. <br></figcaption><br>
+<a href="https://www.youtube.com/watch?v=2r4NCbqev0M" target="_blank"><img src="https://img.youtube.com/vi/2r4NCbqev0M/hqdefault.jpg" title="source: youtube.com" /></a>
 </figure>
 </center>
 </p>
 
 
 
+
 <p>
 <center>
 <figure>
-    <figcaption>DD News is a news channel funded by the Government of India. It has panel of homeopathic experts expounding that homeopathy is powerful medicine system without any side effects.</figcaption><br>
-    <a href="https://www.youtube.com/watch?v=i55cV7BlIRg" target="_blank"><img src="https://img.youtube.com/vi/i55cV7BlIRg/hqdefault.jpg" title="source: youtube.com" /></a>
+    <figcaption>DD News is a Indian government funded news channel. It reports how homeopathy can treat respiratory problems</figcaption><br>
+    <a href="https://www.youtube.com/watch?v=zhoDZrGj9Kc" target="_blank"><img src="https://img.youtube.com/vi/zhoDZrGj9Kc/hqdefault.jpg" title="source: youtube.com" /></a>
 </figure>
 </center>
 </p>
@@ -159,46 +141,67 @@ I always believed there were two system of medicine. Modern medicine & tradition
 If an herb in Ayurveda can cures an illness, it becomes part of modern medicine like Sarpagandha is used in treatment of systolic hypertension. Artemisinin inhibits malaria parasite has been part of Chinese Traditional Medicine. Yoga has been demonstrated to increase mental and physical benefits. 
 
 
-Many countries are discontinuing funding to homeopathy for example France will end reimbursing of homeopathic patient by 2021, Spain in 2018 plans to ban homeopathy, etc. I was surprised to find homeopathy medicine in CVS, a common drugstore in the US. I came across the news that a lawsuit has been filed by the Center for Inquiry (CFI) against this practice<sup><a href='#fn:4' rel='footnote'>4</a></sup>.
+Many countries are discontinuing funding to homeopathy for example France will end reimbursing of homeopathic patient by 2021, Spain in 2018 plans to ban homeopathy, etc. I was surprised to find homeopathy medicine in CVS, a common drugstore in the US. I came across the news that a lawsuit has been filed by the Center for Inquiry (CFI) against this practice<sup><a href='#fn:5' rel='footnote'>5</a></sup>.
 
-India is currently ruled by nationalist right-wing BJP government. Certain promotion of ancient cultures & practices like yoga is welcomed. However too much glorification on past like research on cows, urine, dung, homeopathy, etc may not be best bet for India to remain competitive in research in 21st century<sup><a href='#fn:5' rel='footnote'>5</a></sup>. 
+It's unethical for the government of India to continue to promote hemeopoathy. Indian budget 2019 allocated ₹ 62,398 crore for healh sector. AYUSH ministry got ₹ 1,939.76 crore which is 15 per cent more than the previous fiscal<sup><a href='#fn:6' rel='footnote'>6</a></sup>. It's a boon for politicians as they can delude India masses by providing them substandard healthcare with less expense. It's ironical that most of Indian politicians continue to go abroad for their medical care.  
+
+Investing in modern science requires both capital & extensive research in R&D. Successive Indian government have tried to use ancient past to hide their failures. Vedic Mathematics, documentary by K. Jagjivan Ram, won the 48th National Film Awards for the best scientific film by the government of India. Vedic mathematics has nothing do with either mathematics or vedas<sup><a href='#fn:7' rel='footnote'>7</a></sup>. Promotion of yoga is great, but obsession on research on cow<sup><a href='#fn:8' rel='footnote'>8</a></sup> is unwarranted. Instead of splurging money on researching on Ganga water's<sup><a href='#fn:9' rel='footnote'>9</a></sup> miraculous properties, it would be prudent for the government of India to clean the river first plagued by serious pollution<sup><a href='#fn:10' rel='footnote'>10</a></sup>. Homeopathy is one such tomfoolery which India must get rid sooner for her own good. 
+
+
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
   
-         <li id='fn:0'>
-         <p><a href="https://zenodo.org/record/1035885#.XveHF-hKg2x" target="_blank">HOMEOPATHY IS UNSCIENTIFIC AND UNETHICAL</a></p>
-         <a href='#fnref:0' rev='footnote'>&#8617;</a>
-		</li>
-		
-		
-       <li id='fn:1'>
-         <p><a href="https://health.economictimes.indiatimes.com/news/industry/for-the-first-time-in-the-world-we-are-using-homeopathy-for-genetics-dr-mukesh-batra/64657541" target="_blank">Homeopathy Genetics India Times</a></p>
+    <li id='fn:1'>
+        <p><a href="https://zenodo.org/record/1035885#.XveHF-hKg2x" target="_blank">Homeopathy is unscientific</a></p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
-		</li>
-		 
-  
-       <li id='fn:2'>
+    </li>   
+    
+    <li id='fn:2'>
+            <p><a href="https://health.economictimes.indiatimes.com/news/industry/for-the-first-time-in-the-world-we-are-using-homeopathy-for-genetics-dr-mukesh-batra/64657541" target="_blank">Homeopathy Genetics India Times</a></p>
+         <a href='#fnref:2' rev='footnote'>&#8617;</a> 
+    </li>   
+    
+    <li id='fn:3'>
          <p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ijcp.12026" target="_blank">Online Library</a></p>
-         <a href='#fnref:2' rev='footnote'>&#8617;</a>
-        </li>
-		
-		
-         <li id='fn:3'>
-           <p><a href="https://www.nccih.nih.gov/health/homeopathy" target="_blank">NCCIH</a></p>
-           <a href='#fnref:3' rev='footnote'>&#8617;</a>
-        </li>
-		
-
-         <li id='fn:4'>
-           <p><a href="https://centerforinquiry.org/press_releases/cfi-sues-cvs/" target="_blank">CFI</a></p>
+         <a href='#fnref:3' rev='footnote'>&#8617;</a>
+    </li>   
+    
+    <li id='fn:4'>
+               <p><a href="https://www.nccih.nih.gov/health/homeopathy" target="_blank">NCCIH</a></p>
            <a href='#fnref:4' rev='footnote'>&#8617;</a>
-        </li>
+    </li>   
 
-       <li id='fn:5'>
-         <p><a href="https://dst.gov.in/callforproposals/call-proposal-sutra-pic-india-program" target="_blank">PIC India Program</a></p>
-         <a href='#fnref:5' rev='footnote'>&#8617;</a>
-        </li>
+    <li id='fn:5'>
+               <p><a href="https://centerforinquiry.org/press_releases/cfi-sues-cvs/" target="_blank">CFI</a></p>
+           <a href='#fnref:5' rev='footnote'>&#8617;</a>
+    </li>   
+    
+    <li id='fn:6'>
+             <p><a href="https://economictimes.indiatimes.com/news/economy/policy/budget-2019-in-fillip-to-traditional-medicine-ayush-ministry-gets-rs-1939-76-crore/articleshow/70094965.cms" target="_blank">Budget 2019</a></p>
+         <a href='#fnref:6' rev='footnote'>&#8617;</a>
+    </li>   
+
+    <li id='fn:7'>
+             <p><a href="https://www.thehindu.com/opinion/op-ed/nothing-vedic-in-vedic-maths/article6373689.ece" target="_blank">Vedic Math</a></p>
+         <a href='#fnref:7' rev='footnote'>&#8617;</a>
+    </li>   
+    
+    <li id='fn:8'>
+             <p><a href="https://dst.gov.in/callforproposals/call-proposal-sutra-pic-india-program" target="_blank">PIC India Program</a></p>
+         <a href='#fnref:8' rev='footnote'>&#8617;</a>
+    </li>   
+
+    <li id='fn:9'>
+             <p><a href="https://timesofindia.indiatimes.com/india/govt-body-wants-research-on-spl-properties-of-ganga-water/articleshow/75566538.cms" target="_blank">Gov spending on Ganga water research</a></p>
+         <a href='#fnref:9' rev='footnote'>&#8617;</a>
+    </li>
+
+
+    <li id='fn:10'>
+             <p><a href="https://www.reuters.com/article/us-india-ganges/indias-federal-auditor-slams-modis-slow-ganges-clean-up-idUSKBN1EN0LL" target="_blank">Gov spending on Ganga water research</a></p>
+         <a href='#fnref:10' rev='footnote'>&#8617;</a>
+    </li>
 
   </ol>
 </div>
