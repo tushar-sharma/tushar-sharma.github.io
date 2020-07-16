@@ -1,3 +1,5 @@
-{% assign projects = site.categories.projects %}
+{% assign projects = site.categories.projects  %}
 <code><span class="nv">$</span> latest projects</code>
-{% for project in projects %}{% if project.tags contains 'projects' %}     {% if project == projects.last %}└{% else %}├{% endif %}── <span class="nv"></span><a href="{{project.url}}" title="{{project.title}}">{{project.name}}</a>{% if project != projects.last %}<br />{% endif %}{% endif %}{% endfor %}<br /><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+{% for project in projects limit:2 %}{% if project.tags contains 'projects' %}     {% if project == projects.last %}└{% else %}├{% endif %}── <span class="nv"></span><a href="{{project.url}}" title="{{project.title}}">{{project.name}}</a>{% if project != projects.last %}<br />{% endif %}{% endif %}{% endfor %}{% for project in projects offset:2 limit:1 %}{% if project.tags contains 'projects' %}     └── <span class="nv"></span><a href="{{project.url}}" title="{{project.title}}">{{project.name}}</a>{% if project != projects.last %}{% endif %}{% endif %}{% endfor %}
+
+<div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
