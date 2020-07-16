@@ -102,7 +102,9 @@ h1.heading{font-family:Myfont;color:#39c}
 <div class="highlight">
   <pre>
 <code><span class="nv">$</span> latest projects</code>
-     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     ├── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br />     ├── <span class="nv"></span><a href="/projects/aes" title="Advanced Encryption Standard (AES)">AES</a><br />     └── <span class="nv"></span><a href="/projects/des" title="Data Encryption Standard (DES)">DES</a><br /><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+     ├── <span class="nv"></span><a href="/projects/python-oracle-kerberos" title="Connect to an Oracle Database using kerberos with python">python-kerberos-oracle</a><br />     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     └── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a>
+
+<div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
 </pre>
 </div>
 
@@ -122,8 +124,6 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 -->
 
 <pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><a href="/books">my bookshelf</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="/resources">resources</a></span><br> &nbsp;&nbsp;&nbsp; └── <span class="nv"><a href="/quotes">quotes</a></span><br> &nbsp;&nbsp;&nbsp; └── <span class="nv"><a href="/about">about me</a></span>
-
-
  <div style="float:right;">+&nbsp;<a href="#"><a href="/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div></code></pre>
 
 
@@ -299,6 +299,8 @@ $(document).ready(function() {
 
 
 
+
+
   <small style="float:right; margin-top:5px;">Sat 07 Sep 2019</small>
   <a href="/blog/recursive-sort">
     <h3>Recursively sort a array</h3>
@@ -314,9 +316,9 @@ $(document).ready(function() {
 .mysubheading{font-family:"Lucida Grande", Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
 </style>
 
-<script type="text/javascript" src="/js/shCore.js"></script>
-<script type="text/javascript" src="/js/shBrushJava.js"></script>
-<link type="text/css" rel="stylesheet" href="/css/shCoreDefault.css"/>
+<script type="text/javascript" src="{{ root_url }}/js/shCore.js"></script>
+<script type="text/javascript" src="{{ root_url }}/js/shBrushJava.js"></script>
+<link type="text/css" rel="stylesheet" href="{{ root_url }}/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
 <p>I recently came across a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort.
@@ -351,6 +353,8 @@ Given an input array, produce the following output array.....
   
     <hr />
     
+
+
 
 
 
@@ -659,7 +663,7 @@ Given an input array, produce the following output array.....
 	   
          
 	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 270%"  style="display:inline-block;" href="/tag/projects">projects <span></span></a>
+           <a style="font-size: 370%"  style="display:inline-block;" href="/tag/projects">projects <span></span></a>
 	   
          
 	    <!-- hack to remove sidebar tags -->
