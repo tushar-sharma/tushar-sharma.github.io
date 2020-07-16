@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Connect to an Oracle Database using kerberos with python
-category: blog
+category: projects
 tags:
   - kerberos
+  - projects
   - python
   - docker
   - oracle
