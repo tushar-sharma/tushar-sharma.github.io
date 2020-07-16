@@ -9,7 +9,7 @@ tags:
   - docker
   - oracle
   - database
-name: python-kerberos-oracle
+name: kerberos-oracle
 thumb: 'https://d22e4d61ky6061.cloudfront.net/sites/default/files/Kerberos_1.png'
 published: true
 ---
