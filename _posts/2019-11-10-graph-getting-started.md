@@ -7,7 +7,7 @@ tags:
 - graph
 - java
 - code
-name: graph-data-structure
+name: graph-part1
 thumb: /img/noden.png
 ---
 
