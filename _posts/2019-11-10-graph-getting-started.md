@@ -1,13 +1,12 @@
 ---
 layout: post
 title: Getting started with Graph Part 1
-category: projects
+category: blog
 tags:
-- projects
 - graph
 - java
 - code
-name: graph-part1
+name: graph-data-structure
 thumb: /img/noden.png
 ---
 
