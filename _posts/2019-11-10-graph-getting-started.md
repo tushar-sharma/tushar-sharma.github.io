@@ -100,7 +100,7 @@ class Vertex {
         this.label = label;
     }
 
-    public boolean hashKey(String label) {
+    public boolean hasKey(String label) {
         return label.equals(this.label);
     }
 }
@@ -168,7 +168,7 @@ class Vertex {
         this.label = label;
     }
 
-    public boolean hashKey(String label) {
+    public boolean hasKey(String label) {
         return label.equals(this.label);
     }
 
