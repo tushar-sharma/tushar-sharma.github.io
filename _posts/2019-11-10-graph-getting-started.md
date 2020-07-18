@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Getting started with Graph Part 1
-category: blog
+category: projects
 tags:
+- projects
 - graph
 - java
 - code
