@@ -60,7 +60,7 @@ So we have a graph like below
 |**6**|  0    |  0    |  0     |  0   |  1    |  0    | 1     |
 |**7**|  0    |  0    |  0    |  0    | 0    |   0    | 0     |
 
-## Using Adjacency List (we'll be using this forefficiency)
+## Using Adjacency List (we'll be using this for efficiency)
 
 Here each vertex correspond to a linked list of outgoing edges
 
