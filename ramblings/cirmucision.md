@@ -7,3 +7,5 @@ Brian Morris
 https://www.cbsnews.com/news/circumcision-rates-declining-health-risks-rising-study-says/
 
 https://qz.com/885018/why-is-circumcision-so-popular-in-the-us/
+
+https://nationalpost.com/health/canadian-pediatricians-objection-to-circumcising-babies-at-odds-with-the-evidence-new-study-suggests
