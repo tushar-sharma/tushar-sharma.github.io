@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem "jekyll", ">= 3.6.3"
 gem 'jekyll-paginate'
-gem "kramdown", ">= 2.3.0"
+gem 'kramdown', '~> 1.3', '>= 1.3.2'
 gem 'liquid',     '>= 3.0'
 gem 'redcarpet',  '=2.1.1'
 gem 'maruku',     '=0.6.0'
