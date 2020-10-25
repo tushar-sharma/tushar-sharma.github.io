@@ -67,7 +67,7 @@ Another way to export data is to use boto3 client. It's a low level AWS services
 
 
 
-However boto3 client will generates dynamodb JSON. A simple python script to convert it back to normalized JSON. 
+However boto3 client will generates dynamodb JSON. A simple python script to convert it back to normalized JSON using `dynamodb_json` library.
 
 
 ```python
