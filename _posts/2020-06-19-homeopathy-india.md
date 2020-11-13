@@ -23,7 +23,7 @@ I recently came across a Youtube video of Genelia Deshmukh, famous Indian actres
 <p>
 <center>
 <figure>
-  <a href="https://www.youtube.com/watch?v=rFP0iF5toOg" target="_blank"><img src="https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg" title="source: youtube.com" /></a>
+  <iframe height="500" src="https://www.youtube.com/embed/rFP0iF5toOg"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 </center>
 </p>
