@@ -98,6 +98,7 @@ h1.heading{font-family:Myfont;color:#39c}
 </p>
 
 
+
 <!-- <h2>Projects</h2>
 <div class="highlight" >
   <pre style="overflow: hidden; overflow-y: hidden;">
@@ -180,6 +181,80 @@ $(document).ready(function() {
 
 </div>
 
+
+<h2>Twitter</h2>
+<div class="highlight">
+  <style type="text/css">
+.txt{ padding-top: 5px; }
+.newcl{color: black; white-space: initial;}
+ li.txt {list-style: none outside none; }
+.btn {cursor: pointer;
+border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
+}
+</style>
+
+<!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
+-->
+
+<pre style="border:0;overflow:hidden;"><code ><a   class="twitter-timeline" data-chrome="noheader nofooter noborders transparent noscrollbar" data-tweet-limit="2" href="https://twitter.com/tshrocks?ref_src=twsrc%5Etfw">Tweets by tshrocks</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</code></pre>
+
+
+<script type="text/javascript">
+
+/* generate a random number */
+/*function quotesGet(defaultValue) {
+  jQuery.get('/../quotes.txt', function(data) {
+     var quotes = data.split("\n");
+
+     var idx;
+     if (typeof defaultValue !== 'undefined') {
+         idx = defaultValue;
+     } else {         idx = Math.floor((quotes.length - 1) * Math.random());
+     }
+     var quoteArr = quotes[idx].split('"');
+     if (typeof quoteArr[1] !== 'undefined') {
+       document.getElementById("myquotes").innerHTML = quoteArr[1];
+     }
+
+     if (typeof quoteArr[2] !== 'undefined') {
+       document.getElementById("author").innerHTML = quoteArr[2];
+     }
+
+  });
+}
+$(document).ready(function() {
+    quotesGet();
+});
+
+$(document).ready(function(){
+    $('.quotebox').hide().before('<a href="#" id="open-quotebox" class="button">throw me a quote</a>');
+	$('.quotebox').append('<a href="#close-quotebox" id="close-quotebox" class="button">Close quote ↑</a>');
+	$('a#open-quotebox').click(function() {
+		$('.quotebox').slideDown(1000);
+		quotesGet();
+		return false;
+	});
+	$('a#close-quotebox').click(function() {
+		$('.quotebox').slideUp(1000);
+		return false;
+	});
+});
+
+
+/* send the default quote number 66 */
+/* omit it ; as i need to display random quotes
+$(document).ready(function() {
+  var defaultValue = 65;
+  quotesGet(defaultValue);
+});
+*/
+
+</script>
+
+</div>
+
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -211,6 +286,16 @@ $(document).ready(function() {
 
 <div class="pure-u-1-2">
 <div style="padding-right:10px; padding-left:10px;">
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -677,7 +762,7 @@ Surveillance, for example, can inhibit such lawful activities as free speech, fr
 	   
          
 	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 220%"  style="display:inline-block;" href="/tag/poetry">poetry <span></span></a>
+           <a style="font-size: 270%"  style="display:inline-block;" href="/tag/poetry">poetry <span></span></a>
 	   
          
 	    <!-- hack to remove sidebar tags -->
@@ -973,7 +1058,7 @@ Surveillance, for example, can inhibit such lawful activities as free speech, fr
 	   
          
 	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/python">python <span></span></a>
+           <a style="font-size: 170%"  style="display:inline-block;" href="/tag/python">python <span></span></a>
 	   
          
 	    <!-- hack to remove sidebar tags -->
@@ -1044,6 +1129,14 @@ Surveillance, for example, can inhibit such lawful activities as free speech, fr
            <a style="font-size: 120%"  style="display:inline-block;" href="/tag/s3">s3 <span></span></a>
 	   
          
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/windows">windows <span></span></a>
+	   
+         
+	    <!-- hack to remove sidebar tags -->
+           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/bug">bug <span></span></a>
+	   
+         
        
        
 
@@ -1068,7 +1161,7 @@ Surveillance, for example, can inhibit such lawful activities as free speech, fr
   `
   -->
   <span style="float:left; width:48%;margin-left:2%; ">
-      <span> Made with <span style="color:#e00"><i class="icon-heart"></i></span> using <a href="http://jekyllrb.com">Jekyll</a> &copy; 2020 <br> Tushar Sharma <small>[
+      <span> Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://sharmiwish.wordpress.com/" target="_blank">Vishi</a> using <a href="http://jekyllrb.com">Jekyll</a> &copy; 2020 <br> Tushar Sharma <small>[
   <a title="Email" href="mailto:tushar@randomwits.com">
     <i class="icon-envelope-alt"></i> &nbsp;
   </a>
