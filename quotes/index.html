@@ -47,6 +47,11 @@ function quotesGet(defaultValue) {
        document.getElementById("author").innerHTML = quoteArr[2];
      }
 
+     /* add tweets*/
+     var tweetText = '"' + quoteArr[1] + '"' + quoteArr[2] + " %23quotes. For more quotes: http://randomwits.com/quotes/";
+
+     $('.twitter-button').attr("href", 'https://twitter.com/intent/tweet?text=' + tweetText);
+
   });
 }
 $(document).ready(function() {
@@ -71,6 +76,7 @@ $(document).ready(function() {
 <div id="mainQuotes">
     <div style="white-space:pre-wrap;overflow-x: hidden;border-top: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;">
   <i class="cl icon-quote-left"></i>&nbsp;<span class="cl" id="myquotes"></span>&nbsp;<i class="icon-quote-right cl"></i>&nbsp;&nbsp; <span style="color:black;"><span id="author"></span></span><br>
-   <div style="float:right;">&nbsp;<a class="mytag" style="font-size:14px" href="javascript:quotesGet();">next</a></a></div>
+   <div style="float:right;">
+    &nbsp;<a class="mytag" style="font-size:14px" href="javascript:quotesGet();">next</a>&nbsp;&nbsp;&nbsp;<a class="twitter-button mytag" style="font-size:14px" href="https://twitter.com/intent/tweet?text=">tweet</a>
   </div>
 </div>
