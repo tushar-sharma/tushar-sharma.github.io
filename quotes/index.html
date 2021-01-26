@@ -8,7 +8,7 @@ title: Random Quotes
 .txt{ padding-top: 5px; }
 .cl{ color: rgb(51, 153, 204);}
  li.txt {list-style: none outside none; }
-.btn {cursor: pointer; 
+.btn {cursor: pointer;
 border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
 }
 .mainQuotes {
@@ -23,16 +23,16 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
 <script type="text/javascript">
 /* generate a random number */
-function quotesGet(defaultValue) { 
-  jQuery.get('/../quotes.txt', function(data) { 
+function quotesGet(defaultValue) {
+  jQuery.get('/../quotes.txt', function(data) {
      var quotes = data.split("\n");
- 
+
      var idx;
      if (typeof defaultValue !== 'undefined') {
          idx = defaultValue;
      } else {         idx = Math.floor((quotes.length - 1) * Math.random());
      }
-              /*term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", { 
+              /*term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", {
                   raw: function(div) { }
                });
             */
@@ -48,7 +48,7 @@ function quotesGet(defaultValue) {
      }
 
      /* add tweets*/
-     var tweetText = '"' + quoteArr[1] + '"' + quoteArr[2] + " %23quotes. For more quotes: http://randomwits.com/quotes/";
+     var tweetText = '"' + quoteArr[1].replace('<br>', '')  + '"' + quoteArr[2] + " %23quotes. For more quotes: http://randomwits.com/quotes/";
 
      $('.twitter-button').attr("href", 'https://twitter.com/intent/tweet?text=' + tweetText);
 
@@ -59,7 +59,7 @@ $(document).ready(function() {
 });
 
 /* send the default quote number 66 */
-/* omit it ; as i need to display random quotes 
+/* omit it ; as i need to display random quotes
 $(document).ready(function() {
   var defaultValue = 65;
   quotesGet(defaultValue);
