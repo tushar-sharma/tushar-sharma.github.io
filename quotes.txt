@@ -20,7 +20,8 @@
 "If you want a place in the sun, you have to put up with a few blisters." - Abigail Van Burren
 "Pause you who read this, and think for a moment of the long chain of iron or gold, of thorns or flowers, that would never have bound you, but for the formation of the first link on one memorable day." - Charles Dickens, Great Expectation
 "Faith is the bird that feels the light and sings when the dawn is still dark." - Rabindranath Tagore
-"There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle." - Albert Einstein
+"There are only two ways to live your life. One is as though nothing is a mi
+racle. The other is as though everything is a miracle." - Albert Einstein
 "Don't water your weeds." - Harvey Mackay
 "Life is a narrative that you have a hand in writing." - Henriette Anne Klauser
 "Every man is ignorant ... just on different subjects." - Will Rogers
@@ -406,3 +407,6 @@ Feed the masses, eat with the classes.
 "Well, the people I would say. There is no patent. Could you patent the sun?" - Jonas Salk when asked who owned the patent on his vaccine for polio
 "Medicine is a social science, and politics is nothing more than medicine on a large scale" - Rudolf Virchow
 "Who knows whence this creation had its origin?<br>He, whether He fashioned it or whether He did not,<br>He, who surveys it all from the highest heaven,<br>He knows—or maybe even He does not know" - Rig Veda, X.129
+"If people are not laughing at your goals, your goals are too small" - Azim Premji
+"The tree that would grow to heaven must send its roots to hell" - Frederick Nietzsche
+"Outside of a dog, a book is man's best friend. Inside of a dog it's too dark to read" - Groucho Marx,
