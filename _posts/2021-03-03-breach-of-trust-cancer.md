@@ -17,8 +17,7 @@ Before I understood anything, I have to understand what bone marrow was. I remem
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-
-I am currently reading [The Emperor of Maladies](http://randomwits.com). I came across a famous breach of trust in cancer treatment. It involved infamous oncologist, Werner Bezwoda who fudged data about bone marrow transplant in women with metastatic breast cancer. 
+<p>I am currently reading <a href="http://randomwits.com/books" target="_blank">The Emperor of Maladies</a>. I came across a famous breach of trust in cancer treatment. It involved infamous oncologist, Werner Bezwoda who fudged data about bone marrow transplant in women with metastatic breast cancer.</p>
 
 Before I understood anything, I have to understand what bone marrow was. I remembered vaguely from my science class in school but I guess I needed a revision.
 
