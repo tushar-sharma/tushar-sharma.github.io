@@ -11,17 +11,17 @@ name: poetry-windows-fail
 thumb: /img/code.png
 ---
 
-<p>Poetry is a great dependency management tool in python. It's better than managing a flat file like `requirements.txt`. Recently poetry has been crashing on my Windows machine. However, I have not encountered this issue in other platform like Linux.</p>
+<p>Poetry is a great dependency management tool in python. It's better than managing a flat file like `requirements.txt`. There are also other great tools like pipenv. However I found poetry much simpler in resolving dependencies. </p>
 
-Folks who are unfamiliar with poetry, below is a quick refresher.<!-- truncate_here -->
+ Recently poetry has been crashing on my Windows machine. However, I have not encountered this issue in other platform like Linux. Folks who are unfamiliar with poetry, below is a quick refresher.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-<p>Poetry is a great dependency management tool in python. It's better than managing a flat file like `requirements.txt`. Recently poetry has been crashing on my Windows machine. However, I have not encountered this issue in other platform like Linux.</p>
+<p>Poetry is a great dependency management tool in python. It's better than managing a flat file like `requirements.txt`. There are also other great tools like pipenv. However I found poetry much simpler in resolving dependencies. </p>
 
-Folks who are unfamiliar with poetry, below is a quick refresher. 
+ Recently poetry has been crashing on my Windows machine. However, I have not encountered this issue in other platform like Linux. Folks who are unfamiliar with poetry, below is a quick refresher.
 
-In the cygwin, install poetry
+In cygwin, install poetry
 
 ```bash
 $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
