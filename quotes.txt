@@ -20,8 +20,7 @@
 "If you want a place in the sun, you have to put up with a few blisters." - Abigail Van Burren
 "Pause you who read this, and think for a moment of the long chain of iron or gold, of thorns or flowers, that would never have bound you, but for the formation of the first link on one memorable day." - Charles Dickens, Great Expectation
 "Faith is the bird that feels the light and sings when the dawn is still dark." - Rabindranath Tagore
-"There are only two ways to live your life. One is as though nothing is a mi
-racle. The other is as though everything is a miracle." - Albert Einstein
+"There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle." - Albert Einstein
 "Don't water your weeds." - Harvey Mackay
 "Life is a narrative that you have a hand in writing." - Henriette Anne Klauser
 "Every man is ignorant ... just on different subjects." - Will Rogers
@@ -422,3 +421,4 @@ Feed the masses, eat with the classes.
 "All photographs are accurate. None of them is the truth" - Richard Avedon
 "They see only their own shadows, or the shadows of one another, which the fire throws on the opposite wall of the cave?" - Plato
 "The Universe is under no obligation to make sense to you" -Neil DeGrasse Tyson
+"Cancer is a tremendous opportunity to have your face pressed right up against the glass of your mortality" - Jason Shinder
