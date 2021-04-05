@@ -48,7 +48,7 @@ function quotesGet(defaultValue) {
      }
 
      /* add tweets*/
-     var tweetText = '"' + quoteArr[1].replace(/\<br\>/g,"")  + '"' + quoteArr[2].replace(/\<br\>/g,"") + " %23quotes. For more quotes: http://randomwits.com/quotes/";
+     var tweetText = '"' + quoteArr[1].replace(/\<br\>/g,"")  + '"' + quoteArr[2].replace(/\<br\>/g,"") + " %23quotes http://randomwits.com/quotes/";
 
      $('.twitter-button').attr("href", 'https://twitter.com/intent/tweet?text=' + tweetText);
 
