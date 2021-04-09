@@ -34,8 +34,8 @@ Lets say you want to buy or sell some stocks. You can use some website to track 
 Open your favourite terminal to create directory
 
 ```bash
-$ mkdir $stocks 
-$ cd $_ 
+$ mkdir $stocks
+$ cd $_
 ```
 
 We will be using `poetry` to manage our library depedencies. Create a default `pyproject.toml` file like this
@@ -50,14 +50,14 @@ Keep pressing enter to keep the defualt configuration
 
 Next we will create a text file,  `stocks.csv`. This will list all the stocks that we need to track. For this example I am using aaple and microsoft.
 
-```bash 
+```bash
 ticker,sell,sell,buy
 aapl,0,125,0,0
 msft,0,0,230,0
 ```
 
 
-Here let me briefly expalin the columns: 
+Here let me briefly expalin the columns:
 
 1. ticker : stock ticker symbol
 
@@ -71,7 +71,7 @@ Here let me briefly expalin the columns:
 <b>- Paul Samuelson</b><br>
 </blockquote><br>
 
-Next create python file, `stocks/main.py` 
+Next create python file, `stocks/main.py`
 
 ```python
 import pandas as pd
@@ -115,7 +115,7 @@ So our algorithm is like this for every stock
 
 3. Notify me if the current price is smaller then my desirec buying prices
 
-I'll be using `reportlab` to generate `pdf` for my output. 
+I'll be using `reportlab` to generate `pdf` for my output.
 
 Run this command using
 
@@ -129,9 +129,7 @@ The output looks like this
 
 | <img align="center" src="{{ root_url }}/img/st3.png" alt="" /> |
 
-Of course predicting the buying and selling prices is another uphill task. May be you can call up Warren Buffett for tips. But I can't since he doesn't pick up my call 😢. So in next tutorial we'll do some technical analysis on stocks. 
-
-## pagination
+Of course predicting the buying and selling prices is an uphill task. May be you can call up Warren Buffett for tips. But I can't since he doesn't pick up my call 😢. So in next tutorial we'll do some technical analysis on stocks.
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
