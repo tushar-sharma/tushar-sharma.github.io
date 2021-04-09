@@ -111,11 +111,11 @@ So our algorithm is like this for every stock
 
 1. get current price of stock
 
-2. Notify me if the current price is greater than my desired selling price
+2. Prints if the current price is greater than my desired selling price
 
-3. Notify me if the current price is smaller then my desirec buying prices
+3. Prints if the current price is smaller then my desired buying prices
 
-I'll be using `reportlab` to generate `pdf` for my output.
+I'll be using `reportlab` library to generate `pdf` for my output.
 
 Run this command using
 
