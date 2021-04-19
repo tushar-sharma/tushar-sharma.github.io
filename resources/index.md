@@ -10,11 +10,16 @@ published: true
 * Will be replaced with the ToC
 {:toc}
 
-## Github repo
+## Users repo
 * [Personal Repo](https://github.com/tushar-sharma/prep-coding)
 * [Missiong Peace Interview](https://github.com/mission-peace/interview)
 * [Onsite-Interview-Preparation](https://github.com/05Khushboo/Onsite-Interview-Preparation)
 * [Dropbox Interview Question](https://github.com/insideofdrop/Dropbox-Interview-Prep)
+* [Interviews](https://github.com/kdn251/interviews)
+* [Google Docs](https://docs.google.com/document/d/1wUCqhVHydWiDk6FJdFLSMpgigNrGcs4OFZg0Wa7JGEw/edit)
+* [asdf](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
+* [algo](https://the-algorithms.com/language/java)
+* [fishercoder1534](https://github.com/fishercoder1534/Leetcode)
 
 ## Algorithms & Data Structure
 * [Algorithms - Paul Valiant](http://cs.brown.edu/courses/csci1570/classes.html)
