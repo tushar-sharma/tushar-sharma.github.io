@@ -80,7 +80,7 @@ The other day I was reading about `Quantum Physics`. Bizarre events happens in q
 </center>
 </p>
 
-His glanced at me occasionally, arousing my curiosity. However I shrugged off this behaviour as it was trivial. There was nothing appealing in him. May be his prosaicness was his hallmark; bland, unpolished shoes, uncouth hair, with a air of callousness. He glanced at me occasionally, arousing my curiosity. His shoes were worn out and his looks had fatigue. His eyes met mine more than once and it seems they spoke. And it seems the surrounding around me grew dimmer until I could feel only his presence in the bus. 
+His glanced at me occasionally, arousing my curiosity. However I shrugged off this behaviour as it was trivial. There was nothing appealing in him. May be his prosaicness was his hallmark; bland, unpolished shoes, uncouth hair, with a air of callousness. His shoes were worn out and his looks had fatigue. His eyes met mine more than once and it seems they spoke. And it seems the surrounding around me grew dimmer until I could feel only his presence in the bus. 
 
 Time often slows down when you move closer to the speed of light. Electrons communicates at wide distances almost instantly. However sometimes you experience quantum physics in your macro life. When you see your own reflection sitting in front of you. And your heart beats faster when you realize that your reflection is real. I stood motionless when I saw the random stranger was nothing but my own reflection. The random stranger was me. 
 
@@ -113,7 +113,7 @@ Image credit ~ <a href="https://xkcd.com/1240/">xckd</a>
 </p>
 
 
-Heavy bumps are often advised by doctors to cure for day dreaming. Luckily Indian Municipality has heeded to doctor's advice and deliberately created potholes on Indian roads at regular intervals for convenience. However sudden brakes of the bus literary pulled me out of my dreams. I stood up & offered my seat to another man, who thanked me. I somehow squeezed throught to reach the exit and alighted from the bus.
+Heavy bumps are often advised by doctors to cure for day dreaming. Luckily Indian Municipality has heeded to doctor's advice and deliberately created potholes on Indian roads at regular intervals for convenience. However sudden brakes of the bus literary pulled me out of my dreams. I stood up & offered my seat to another man, who thanked me. I somehow squeezed through to reach the exit and alighted from the bus.
 
 The sun had now retired to give respite to people for the day. The traffic was gradually uncoiling. I stood there watching the bus depart. The experience I spent in the bus was surreal. The bus was anthropomorphically transmuted into a random stranger with whom I shared my dream. My eyes were moist as I saw the bus dissolve into traffic and disappear (May be my emotions were due to inhaling of smoke). I pulled out my ticket & tossed it into the air in agony of estrangement. And I walked away in the opposite direction of the bus. 
 
