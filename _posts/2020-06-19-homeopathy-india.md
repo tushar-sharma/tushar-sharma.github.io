@@ -87,19 +87,17 @@ Nita Ambani is the chairperson and founder of the Reliance Foundation.
 <br>
 
 
-
 <p>
 <center>
 <figure>
     <figcaption>Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a mass movement". <br></figcaption><br>
- <a href="https://www.youtube.com/watch?v=rDy5oTAhaLw" target="_blank"><img src="https://img.youtube.com/vi/rDy5oTAhaLw/hqdefault.jpg" title="source: youtube.com" /></a>
-</figure>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rDy5oTAhaLw" title="YouTube video player"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"   allowfullscreen></iframe>
+  </figure>
 </center>
 </p>
 
 
 <br>
-
 
 <p>
 <center>
