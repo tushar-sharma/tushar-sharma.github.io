@@ -99,16 +99,14 @@ Nita Ambani is the chairperson and founder of the Reliance Foundation.
 
 <br>
 
+
 <p>
 <center>
 <figure>
-    <figcaption>Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India. <br></figcaption><br>
-<a href="https://www.youtube.com/watch?v=2r4NCbqev0M" target="_blank"><img src="https://img.youtube.com/vi/2r4NCbqev0M/hqdefault.jpg" title="source: youtube.com" /></a>
-</figure>
+<figcaption>Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India. <br></figcaption><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2r4NCbqev0M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
 </center>
 </p>
-
-
 
 
 <p>
