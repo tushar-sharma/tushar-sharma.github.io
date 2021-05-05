@@ -1,0 +1,38 @@
+---
+layout: default
+title: About
+---
+
+<link rel="stylesheet" href="{{ root_url }}/css/books.css" />
+
+<style type="text/css">
+.txt{ padding-top: 5px; }
+.cl{ color: rgb(51, 153, 204);}
+ li.txt {list-style: none outside none; }
+
+.aligncenter, .center {
+  display: block;
+  padding: 0px auto 20px;
+}
+
+.wp_caption{padding-top:20px; }
+
+a.myIcon:hover { color:red;}
+</style>
+
+<h2 class="entry-title">What’s this blog all about?</h2>
+
+
+{% assign tags_list = site.tags %}
+{% if tags_list.first[0] == null %}
+  {% for tag in tags_list %}
+     <a class="mytag" href="/tag/{{ tag }}">{{ tag }} <span><sup>{{ site.tags[tag].size }}</sup></span></a>
+  {% endfor %}
+{% else %}
+  {% for tag in tags_list %}
+{% if tag[0] != 'sidebar' %} <!-- hack to remove sidebar tags -->
+    <a style="font-size: {{ tag | last | size | times: 100 | divided_by: site.categories.size | plus: 70 }}%"  style="display:inline-block;" href="/tag/{{ tag[0] }}">{{ tag[0] }} <span></span></a>
+{% endif %}
+  {% endfor %}
+{% endif %}
+{% assign tags_list = nil %}

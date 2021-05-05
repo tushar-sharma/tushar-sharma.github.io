@@ -3,39 +3,14 @@
 
 <div class="footer">
 <hr>
-  <span style="float:left;width:50%;">
-    <h3><small>What’s this blog all about?</small></h3>
 
-       {% assign tags_list = site.tags %}
-       {% if tags_list.first[0] == null %}
-         {% for tag in tags_list %}
-            <a class="mytag" href="/tag/{{ tag }}">{{ tag }} <span><sup>{{ site.tags[tag].size }}</sup></span></a>
-         {% endfor %}
-       {% else %}
-         {% for tag in tags_list %}
-	   {% if tag[0] != 'sidebar' %} <!-- hack to remove sidebar tags -->
-           <a style="font-size: {{ tag | last | size | times: 100 | divided_by: site.categories.size | plus: 70 }}%"  style="display:inline-block;" href="/tag/{{ tag[0] }}">{{ tag[0] }} <span></span></a>
-	   {% endif %}
-         {% endfor %}
-       {% endif %}
-       {% assign tags_list = nil %}
-
-<!--
-   {% for category in site.categories %}
-       <span style="font-size: {{ category | size | times: 60 | divided_by: site.categories.size | plus: 40 }}%">
-        <a href="/tag/{{ tag }}"> {{ category[0] }} </a>
-      </span>
-   {% endfor %}
--->
-
-  </span>
   <!--
   {% for category in site.categories %}
     <div> <a href="/{{ category | first | slugize }}/"> {{ category | first }} </a> </div> <br>
   {% endfor %}`
   -->
-  <span style="float:left; width:48%;margin-left:2%; ">
-      <span> Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://sharmiwish.wordpress.com/" target="_blank">Vishi</a> using <a href="http://jekyllrb.com">Jekyll</a> &copy; {{ site.time | date: "%Y" }} <br> Tushar Sharma <small>[
+  <div style="margin: 0 auto; text-align: center;">
+      <span> Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://sharmiwish.wordpress.com/" target="_blank">Vishi</a>  <br>Tushar Sharma &copy; {{ site.time | date: "%Y" }} <small>[
   <a title="Email" href="mailto:tushar@randomwits.com">
     <i class="icon-envelope-alt"></i> &nbsp;
   </a>
@@ -72,16 +47,10 @@
     <i class="icon-rss"></i>
   </a>
 
- ] </small></span><br>
- <small><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Randomwits</span> is licensed under under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</small><br><br>
-    <div>
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> &nbsp; &nbsp; <a title="Real Time Web Analytics" href="http://clicky.com/100650351"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
-         <script src="//static.getclicky.com/js" type="text/javascript"></script>
-         <script type="text/javascript">try{ clicky.init(100650351); }catch(e){}</script>
-         <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100650351ns.gif" /></p></noscript>
-    </div>
-  </span>
+ ] </small></span><br><br>
+
 </div>
+
 <div style="clear:both;">
   <hr>
 </div>
