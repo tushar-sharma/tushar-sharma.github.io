@@ -25,7 +25,7 @@ I am beginning to practice meditation. Though I am not a religous person, I reck
 
 ### Reading
 
-Currently, I am reading Glimpses of [World History by Nehru](http://randomwits.com/books/) by Nehru. I read an interesting history of England's monarch.There was a tussle between the Parliament and the king, Charles I. The Parliament introduced a "Petition of Right" in 1628 which limited the kings powers to impose tax or imprison anyone. This enraged the king and he dissolve the Parliament. However he was later beheaded. This episode panied the royals in England. Soon after monarch stopped interferring with the Parliament. 
+Currently, I am reading [Glimpses of World History](http://randomwits.com/books/) by Nehru. I read an interesting history of England's monarch.There was a tussle between the Parliament and the king, Charles I. The Parliament introduced a "Petition of Right" in 1628 which limited the kings powers to impose tax or imprison anyone. This enraged the king and he dissolve the Parliament. However he was later beheaded. This episode panied the royals in England. Soon after monarch stopped interferring with the Parliament. 
 
 Also there's an interesting story of etymology of name of the US state "Virginia". Walter Raleigh crossed Atlantic and reached the state paving way for future English settlements. It was named in honor of Queen Elizabeth I, the virgin Queen.
 
@@ -45,6 +45,12 @@ Today I binged watched [Malgudi Series](https://en.wikipedia.org/wiki/Malgudi_Da
 ### Games
 
 I am currently hooked on to a tennis game called Tennis Clash in my phone. I am just wasting time in investing in improving my swiping skills. I probably should delete this game from my phone. 
+
+
+## Work
+
+Currently I am creating a pipeline using StepFunction in AWS using cloudformation.
+
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
