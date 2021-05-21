@@ -6,7 +6,7 @@ tags:
 - diary
 - rambling
 name: 2021-05-21-dear-kitty
-thumb: https://image.freepik.com/free-photo/black-fountain-pen-with-blue-notepad-dark-wooden-rustic-table_94064-1200.jpg
+thumb: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbmnSabWD5a0W1Sasnht8NGqrRCDtSzFapGQ&usqp=CAU
 ---
 
 <p>I didn't have proper sleep today. I could barely keep my eyes open. Empty stomach and a heavy mind is a disaster for sound sleep. Yesterday I was brooding too much while trying to sleep. I guess I need to filter noises in my mind. Proper sleep is the basic physiological need in Maslow's pyramid. I guess it's a blessed day not to have a insomnia.</p>
