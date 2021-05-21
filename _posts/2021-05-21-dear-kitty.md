@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dear Kitty on 21 May 2021
+title: Dear Kitty
 category: blog
 tags:
 - diary
