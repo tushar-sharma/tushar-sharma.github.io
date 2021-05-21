@@ -42,6 +42,9 @@ Another Interesting signpost while driving in Virginia is, "Virginia is for love
 
 Today I binged watched [Malgudi Series](https://en.wikipedia.org/wiki/Malgudi_Days_(TV_series)) based on the works of [R.K. Narayan](https://en.wikipedia.org/wiki/R._K._Narayan). Since childhood, I am quite fond of the [Title Song](https://www.youtube.com/watch?v=PEHj4YSS1nw). It has a rustic charm which draws me to memories of my childhood.
 
+### Games
+
+I am currently hooked on to a tennis game called Tennis Clash in my phone. I am just wasting time in investing in improving my swiping skills. I probably should delete this game from my phone. 
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
