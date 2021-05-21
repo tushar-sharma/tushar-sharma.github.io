@@ -9,6 +9,9 @@ name: 2021-05-21-dear-kitty
 thumb: https://image.freepik.com/free-photo/black-fountain-pen-with-blue-notepad-dark-wooden-rustic-table_94064-1200.jpg
 ---
 
+<p>I didn't have proper sleep today. I could barely keep my eyes open. Empty stomach and a heavy mind is a disaster for sound sleep. Yesterday I was brooding too much while trying to sleep. I guess I need to filter noises in my mind. Proper sleep is the basic physiological need in Maslow's pyramid. I guess it's a blessed day not to have a insomnia.</p>
+
+I am beginning to practice meditation. Though I am not a religous person, I reckon meditation is a good practice to adopt from my religion. I like the [babbling sound of the water](https://www.youtube.com/watch?v=IvjMgVS6kng&list=LL&index=1) while I meditate. Today I meditated for 15 minutes.
 {% include_relative tags.md %}
 
 ## Dear Kitty[1]
