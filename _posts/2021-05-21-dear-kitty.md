@@ -1,5 +1,12 @@
 ---
-published: true
+layout: post
+title: Dear Kitty on 21 May 2021
+category: blog
+tags:
+- diary
+- rambling
+name: 2021-05-21-dear-kitty
+thumb: https://image.freepik.com/free-photo/black-fountain-pen-with-blue-notepad-dark-wooden-rustic-table_94064-1200.jpg
 ---
 
 {% include_relative tags.md %}
