@@ -34,7 +34,7 @@ I've myself drove past Virginia on a trip from New Jersey to North Carolina. One
 ![Virginal Aircraft Signpost](https://gray-whsv-prod.cdn.arcpublishing.com/resizer/dXuUcxgfsnwb207wLMBrz4SEAlw=/800x800/smart/cloudfront-us-east-1.images.arcpublishing.com/gray/BYPIX7IB5ROK5JKR6RNUP2JHGA.jpg)
 
 
-Another Interesting signpost while driving in Virginia was, "Virginia is for lovers" which is a tourism slogan of the State.
+Another Interesting signpost while driving in Virginia is, "Virginia is for lovers" which is a tourism slogan of the State.
 
 ![Virginia_Lovers](https://cdn.geekwire.com/wp-content/uploads/2016/02/virginia-shutterstock_364806335.jpg)
 
