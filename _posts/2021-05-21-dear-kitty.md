@@ -2,7 +2,6 @@
 published: true
 ---
 
-
 {% include_relative tags.md %}
 
 ## Dear Kitty[1]
@@ -22,7 +21,7 @@ Also there's an interesting story of etymology of name of the US state "Virginia
 
 I've myself drove past Virginia on a trip from New Jersey to North Carolina. One of the interesting signpost I saw while driving on freeway was "Speed Limit Enforced by Aircraft". I was little scared if I inadvertently crossed the speed limit then the the SWAT-style aircraft would chase my car. However it seems like there are no traffic control aircraft in Virginia.[1]  
 
-![Virginal Aircraft Signpost]({{site.baseurl}}/https://gray-whsv-prod.cdn.arcpublishing.com/resizer/dXuUcxgfsnwb207wLMBrz4SEAlw=/800x800/smart/cloudfront-us-east-1.images.arcpublishing.com/gray/BYPIX7IB5ROK5JKR6RNUP2JHGA.jpg)
+![Virginal Aircraft Signpost](https://gray-whsv-prod.cdn.arcpublishing.com/resizer/dXuUcxgfsnwb207wLMBrz4SEAlw=/800x800/smart/cloudfront-us-east-1.images.arcpublishing.com/gray/BYPIX7IB5ROK5JKR6RNUP2JHGA.jpg)
 
 
 Another Interesting signpost while driving in Virginia was, "Virginia is for lovers" which is a tourism slogan of the State.
