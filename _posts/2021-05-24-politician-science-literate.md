@@ -1,7 +1,7 @@
 ---
 published: false
 ---
-Why we need science literate politicians?
+Why we need scientifically literate politicians?
 
 ## Marget Thatcher
 
