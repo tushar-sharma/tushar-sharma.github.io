@@ -1,6 +1,5 @@
 ---
 published: false
 ---
-## A New Post
+Why we need science literate politicians in India?
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
