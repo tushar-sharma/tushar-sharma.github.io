@@ -1,7 +1,14 @@
 ---
 published: false
 ---
-Why we need scientifically literate politicians?
+Why do we need scientific literate politicians? 
+
+I believe scientific literacy is important for both masses & politicians. Pushpa Bharghav made efforts to include "scientific temper" in India's constitution. Perhaps Indian consitution is the only constition in the world which explicitly mentions "a duty" to develop scientic temper. 
+
+But what's scientific temper? 
+
+Before we answer that question, let's talk about Margaret Thatcher. She was a famous British prime minsiter. She is called "Iron Lady". During her time a controversy erupted with regards to CFC. CFccs are chlorinated
+
 
 India is currently battling second wave of Covid. Indian news is flooded by people asking for hospital bed or oxygen. India's already frailing healthcare system seems to be collapsing. In these challenging times, scientific literacy is scarce resource among India polticians. 
 
