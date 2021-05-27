@@ -66,10 +66,10 @@ aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:bas
 
 <div style="clear:both;"></div>
 <div>
-     <h1  class="heading"><span class="top"><a href=""><i>Random Wits</i></a></span></h1>
+     <h1  class="heading"><span class="top"><a href="/"><i>Random Wits</i></a></span></h1>
   <p class="me_blurb">
   <div class="sub">
-      Life is too short for a diary
+Life is too short for a diary
     </div>
   </p>
 
@@ -123,7 +123,7 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 <!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
 -->
 
-<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><a href="/books">my bookshelf</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="/resources">resources</a></span><br> &nbsp;&nbsp;&nbsp; └── <span class="nv"><a href="/quotes">quotes</a></span><br> &nbsp;&nbsp;&nbsp; └── <span class="nv"><a href="/about">about me</a></span>
+<pre><code><span class="nv">$</span> random stuff</code><br> &nbsp;&nbsp;&nbsp;&nbsp;├── <span class="nv"><a href="/tags">tags</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="/books">bookshelf</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="/resources">resources</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="/quotes">quotes</a></span><br> &nbsp;&nbsp;&nbsp; └── <span class="nv"><a href="/about">about me</a></span>
  <div style="float:right;">+&nbsp;<a href="#"><a href="/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div></code></pre>
 
 
@@ -181,10 +181,8 @@ $(document).ready(function() {
 
 </div>
 
-
-<h2>Twitter</h2>
-<div class="highlight">
-  <style type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<style type="text/css">
 .txt{ padding-top: 5px; }
 .newcl{color: black; white-space: initial;}
  li.txt {list-style: none outside none; }
@@ -196,63 +194,8 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 <!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
 -->
 
-<pre style="border:0;overflow:hidden;"><code ><a   class="twitter-timeline" data-chrome="noheader nofooter noborders transparent noscrollbar" data-tweet-limit="2" href="https://twitter.com/tshrocks?ref_src=twsrc%5Etfw">Tweets by tshrocks</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</code></pre>
 
 
-<script type="text/javascript">
-
-/* generate a random number */
-/*function quotesGet(defaultValue) {
-  jQuery.get('/../quotes.txt', function(data) {
-     var quotes = data.split("\n");
-
-     var idx;
-     if (typeof defaultValue !== 'undefined') {
-         idx = defaultValue;
-     } else {         idx = Math.floor((quotes.length - 1) * Math.random());
-     }
-     var quoteArr = quotes[idx].split('"');
-     if (typeof quoteArr[1] !== 'undefined') {
-       document.getElementById("myquotes").innerHTML = quoteArr[1];
-     }
-
-     if (typeof quoteArr[2] !== 'undefined') {
-       document.getElementById("author").innerHTML = quoteArr[2];
-     }
-
-  });
-}
-$(document).ready(function() {
-    quotesGet();
-});
-
-$(document).ready(function(){
-    $('.quotebox').hide().before('<a href="#" id="open-quotebox" class="button">throw me a quote</a>');
-	$('.quotebox').append('<a href="#close-quotebox" id="close-quotebox" class="button">Close quote ↑</a>');
-	$('a#open-quotebox').click(function() {
-		$('.quotebox').slideDown(1000);
-		quotesGet();
-		return false;
-	});
-	$('a#close-quotebox').click(function() {
-		$('.quotebox').slideUp(1000);
-		return false;
-	});
-});
-
-
-/* send the default quote number 66 */
-/* omit it ; as i need to display random quotes
-$(document).ready(function() {
-  var defaultValue = 65;
-  quotesGet(defaultValue);
-});
-*/
-
-</script>
-
-</div>
 
 
 <div id="fb-root"></div>
@@ -286,6 +229,32 @@ $(document).ready(function() {
 
 <div class="pure-u-1-2">
 <div style="padding-right:10px; padding-left:10px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -733,488 +702,7 @@ How does he claim evolution is "scientifically wrong"? Does the said minister ha
 
 <div class="footer">
 <hr>
-  <span style="float:left;width:50%;">
-    <h3><small>What’s this blog all about?</small></h3>
 
-       
-       
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/Walmart">Walmart <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/FDI">FDI <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/debian">debian <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/huawei">huawei <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/usb">usb <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/modem">modem <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 570%"  style="display:inline-block;" href="/tag/code">code <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 370%"  style="display:inline-block;" href="/tag/projects">projects <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/des">des <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/aes">aes <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/binary semaphore">binary semaphore <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/minix">minix <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/encrypted-files">encrypted-files <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 270%"  style="display:inline-block;" href="/tag/poetry">poetry <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 170%"  style="display:inline-block;" href="/tag/sleep">sleep <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/hacking">hacking <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/hackers">hackers <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/vi">vi <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/vim">vim <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 170%"  style="display:inline-block;" href="/tag/editor">editor <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/emacs">emacs <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/happiness">happiness <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/god">god <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 170%"  style="display:inline-block;" href="/tag/religion">religion <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/science">science <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/romance">romance <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/moon">moon <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/cryptography">cryptography <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/cipher">cipher <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/monoalphabetic">monoalphabetic <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/bbc">bbc <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 370%"  style="display:inline-block;" href="/tag/india">india <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/ban">ban <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/privacy">privacy <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/surveillance">surveillance <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/snooping">snooping <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 270%"  style="display:inline-block;" href="/tag/programming">programming <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/general">general <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/lsd">lsd <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/radix sort">radix sort <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/sorting">sorting <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/arch">arch <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/linux">linux <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/install">install <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/tshark">tshark <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/rest">rest <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/http">http <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/get">get <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/post">post <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/story">story <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/fiction">fiction <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/bangalore">bangalore <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/sci-fi">sci-fi <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/algorithm">algorithm <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/ruby">ruby <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/heap">heap <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/max-heap">max-heap <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/pakistan">pakistan <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/cow">cow <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/vigilantism">vigilantism <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/lazy">lazy <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/meditation">meditation <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/rent">rent <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/scam">scam <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/baahubali">baahubali <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/movies">movies <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 170%"  style="display:inline-block;" href="/tag/leetcode">leetcode <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 270%"  style="display:inline-block;" href="/tag/pseudoscience">pseudoscience <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 170%"  style="display:inline-block;" href="/tag/evolution">evolution <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/ndtv">ndtv <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/news">news <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/debate">debate <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/biology">biology <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/antibiotics">antibiotics <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/interview">interview <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/merge sort">merge sort <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/sort">sort <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 170%"  style="display:inline-block;" href="/tag/java">java <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/graph">graph <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/faiz">faiz <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/urdu">urdu <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/bjp">bjp <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/nationalism">nationalism <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/caa">caa <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/nrc">nrc <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/npr">npr <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/kerberos">kerberos <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 220%"  style="display:inline-block;" href="/tag/python">python <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/docker">docker <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 170%"  style="display:inline-block;" href="/tag/oracle">oracle <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 170%"  style="display:inline-block;" href="/tag/database">database <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/rambling">rambling <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/human rights">human rights <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/jdbc">jdbc <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/scala">scala <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/carl sagan">carl sagan <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/books">books <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/review">review <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/cfc">cfc <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/homeopathy">homeopathy <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/ayurveda">ayurveda <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/aws">aws <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/lambda function">lambda function <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/dynamodb">dynamodb <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/s3">s3 <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/windows">windows <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/bug">bug <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/cancer">cancer <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/breast cancer">breast cancer <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/bone marrow">bone marrow <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/stocks">stocks <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/finance">finance <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/money">money <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/google">google <span></span></a>
-	   
-         
-	    <!-- hack to remove sidebar tags -->
-           <a style="font-size: 120%"  style="display:inline-block;" href="/tag/selenium">selenium <span></span></a>
-	   
-         
-       
-       
-
-<!--
-   
-       <span style="font-size: 100%">
-        <a href="/tag/"> blog </a>
-      </span>
-   
-       <span style="font-size: 100%">
-        <a href="/tag/"> projects </a>
-      </span>
-   
--->
-
-  </span>
   <!--
   
     <div> <a href="/blog/"> blog </a> </div> <br>
@@ -1222,8 +710,8 @@ How does he claim evolution is "scientifically wrong"? Does the said minister ha
     <div> <a href="/projects/"> projects </a> </div> <br>
   `
   -->
-  <span style="float:left; width:48%;margin-left:2%; ">
-      <span> Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://sharmiwish.wordpress.com/" target="_blank">Vishi</a> using <a href="http://jekyllrb.com">Jekyll</a> &copy; 2021 <br> Tushar Sharma <small>[
+  <div style="margin: 0 auto; text-align: center;">
+      <span> Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://sharmiwish.wordpress.com/" target="_blank">Vishi</a>  <br>Tushar Sharma &copy; 2021 <small>[
   <a title="Email" href="mailto:tushar@randomwits.com">
     <i class="icon-envelope-alt"></i> &nbsp;
   </a>
@@ -1260,16 +748,10 @@ How does he claim evolution is "scientifically wrong"? Does the said minister ha
     <i class="icon-rss"></i>
   </a>
 
- ] </small></span><br>
- <small><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Randomwits</span> is licensed under under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</small><br><br>
-    <div>
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> &nbsp; &nbsp; <a title="Real Time Web Analytics" href="http://clicky.com/100650351"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
-         <script src="//static.getclicky.com/js" type="text/javascript"></script>
-         <script type="text/javascript">try{ clicky.init(100650351); }catch(e){}</script>
-         <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100650351ns.gif" /></p></noscript>
-    </div>
-  </span>
+ ] </small></span><br><br>
+
 </div>
+
 <div style="clear:both;">
   <hr>
 </div>
