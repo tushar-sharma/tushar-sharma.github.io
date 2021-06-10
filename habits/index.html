@@ -1,0 +1,85 @@
+---
+layout: comments
+title: Habit Tracker
+published: true
+---
+<!-- courtesy : https://mdbootstrap.com/snippets/jquery/ascensus/453950#html-tab-view -->
+
+<script type="text/javascript">
+
+let xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    let data = JSON.parse(this.responseText).feed.entry;
+
+    let i;
+    for (i = 0; i < data.length; i++) {
+
+      let activity = data[i]["gsx$activity"]["$t"];
+      let streak  = data[i]["gsx$streak"]["$t"];
+      let max_streak = data[i]["gsx$maxstreak"]["$t"];
+      let logging = data[i]["gsx$logging"]["$t"];
+      let latest_activity = data[i]["gsx$latestactivity"]["$t"];
+
+      document.getElementById("demo").innerHTML +=
+        "<tr>" +
+        "<td>" +
+        activity +
+        "</td>" +
+        "<td>" +
+        streak +
+        "</td>" +
+        "<td>" +
+        max_streak +
+        "</td>" +
+        "<td>" +
+        logging +
+        "</td>" +
+        "<td>" +
+        latest_activity +
+        "</td>" +
+        "</tr>";
+    }
+  }
+};
+
+xmlhttp.open(
+  "GET",
+  "https://spreadsheets.google.com/feeds/list/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/od6/public/values?alt=json",
+  true
+);
+xmlhttp.send();
+</script>
+
+
+<!-- heading -->
+<h2 class="entry-title">Habits Tracker</h2>
+
+<p>I am trying to build habits</p>
+
+
+<div class="container my-5">
+
+  <div class="row">
+
+    <div class="col-md-7 mb-4 mb-md-0">
+
+      <!-- Table -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Activity</th>
+            <th>Streak</th>
+            <th>Max Streak</th>
+            <th>Logging</th>
+            <th>Latest Activity</th>
+          </tr>
+        </thead>
+        <tbody id="demo"></tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
