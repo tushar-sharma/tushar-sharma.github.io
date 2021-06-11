@@ -12,6 +12,13 @@ published: true
 
 let xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
+
+  //get the date
+  const todayDateHeader = new Date()
+  const yesterdayDateHeader = new Date(todayDateHeader)
+  yesterdayDateHeader.setDate(yesterdayDateHeader.getDate() - 1)
+
+
   if (this.readyState == 4 && this.status == 200) {
     let data = JSON.parse(this.responseText).feed.entry;
 
@@ -23,7 +30,8 @@ xmlhttp.onreadystatechange = function () {
       let max_streak = data[i]["gsx$maxstreak"]["$t"];
       let logging = data[i]["gsx$logging"]["$t"];
       let comments = data[i]["gsx$comments"]["$t"];
-      let daily_check = (data[i]["gsx$dailycheck"]["$t"] === "yes") ? "✅": "❌";
+      let todayDate = (data[i]["gsx$today"]["$t"] === "yes") ? "✅": "❌";
+      let yesterdayDate = (data[i]["gsx$yesterday"]["$t"] === "yes") ? "✅": "❌";
 
       document.getElementById("demo").innerHTML +=
         "<tr>" +
@@ -43,11 +51,17 @@ xmlhttp.onreadystatechange = function () {
         comments +
         "</td>" +
         "<td>" +
-        daily_check +
+        todayDate +
+        "</td>" +
+        "<td>" +
+        yesterdayDate +
         "</td>" +
         "</tr>";
     }
   }
+
+  document.getElementById("today").innerHTML = todayDateHeader.toDateString();
+  document.getElementById("yesterday").innerHTML = yesterdayDateHeader.toDateString();
 };
 
 xmlhttp.open(
@@ -80,7 +94,8 @@ xmlhttp.send();
             <th>Max Streak</th>
             <th>Logging</th>
             <th>Comments</th>
-            <th>Daily Check</th>
+            <th><span id="today"></span></th>
+            <th><span id="yesterday"></span></th>
           </tr>
         </thead>
         <tbody id="demo"></tbody>
