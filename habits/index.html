@@ -23,6 +23,7 @@ xmlhttp.onreadystatechange = function () {
       let max_streak = data[i]["gsx$maxstreak"]["$t"];
       let logging = data[i]["gsx$logging"]["$t"];
       let comments = data[i]["gsx$comments"]["$t"];
+      let daily_check = (data[i]["gsx$dailycheck"]["$t"] === "yes") ? "✅": "❌";
 
       document.getElementById("demo").innerHTML +=
         "<tr>" +
@@ -40,6 +41,9 @@ xmlhttp.onreadystatechange = function () {
         "</td>" +
         "<td>" +
         comments +
+        "</td>" +
+        "<td>" +
+        daily_check +
         "</td>" +
         "</tr>";
     }
@@ -76,6 +80,7 @@ xmlhttp.send();
             <th>Max Streak</th>
             <th>Logging</th>
             <th>Comments</th>
+            <th>Daily Check</th>
           </tr>
         </thead>
         <tbody id="demo"></tbody>
