@@ -21,7 +21,7 @@ xmlhttp.onreadystatechange = function () {
   const yesterdayDateHeader = new Date(todayDateHeader)
   const yesterdayOneMinusDateHeader = new Date(todayDateHeader)
   yesterdayDateHeader.setDate(yesterdayDateHeader.getDate() - 1)
-  yesterdayOneMinusDateHeader.setDate(yesterdayDateHeader.getDate() - 2)
+  yesterdayOneMinusDateHeader.setDate(yesterdayDateHeader.getDate() - 1)
 
   if (this.readyState == 4 && this.status == 200) {
     let data = JSON.parse(this.responseText).feed.entry;
