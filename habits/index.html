@@ -19,8 +19,9 @@ xmlhttp.onreadystatechange = function () {
   //get the date
   const todayDateHeader = new Date()
   const yesterdayDateHeader = new Date(todayDateHeader)
+  const yesterdayOneMinusDateHeader = new Date(todayDateHeader)
   yesterdayDateHeader.setDate(yesterdayDateHeader.getDate() - 1)
-
+  yesterdayOneMinusDateHeader.setDate(yesterdayDateHeader.getDate() - 2)
 
   if (this.readyState == 4 && this.status == 200) {
     let data = JSON.parse(this.responseText).feed.entry;
@@ -35,6 +36,7 @@ xmlhttp.onreadystatechange = function () {
       let comments = data[i]["gsx$comments"]["$t"];
       let todayDate = (data[i]["gsx$today"]["$t"] === "yes") ? "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
       let yesterdayDate = (data[i]["gsx$yesterday"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayMinusOneDate = (data[i]["gsx$yesterdayminusone"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
 
       document.getElementById("demo").innerHTML +=
         "<tr>" +
@@ -59,12 +61,16 @@ xmlhttp.onreadystatechange = function () {
         "<td>" +
         yesterdayDate +
         "</td>" +
+        "<td>" +
+        yesterdayMinusOneDate +
+        "</td>" +
         "</tr>";
     }
   }
 
   document.getElementById("today").innerHTML = todayDateHeader.toDateString();
   document.getElementById("yesterday").innerHTML = yesterdayDateHeader.toDateString();
+  document.getElementById("yesterdayOneMinus").innerHTML = yesterdayOneMinusDateHeader.toDateString();
 };
 
 xmlhttp.open(
@@ -99,6 +105,7 @@ xmlhttp.send();
             <th>Comments</th>
             <th><span  id="today"></span></th>
             <th><span  id="yesterday"></span></th>
+            <th><span id="yesterdayOneMinus"></span></th>
           </tr>
         </thead>
         <tbody id="demo"></tbody>
