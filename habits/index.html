@@ -8,6 +8,9 @@ published: true
     Inspired: paulscotti.github.io/Productivity-Analysis
 -->
 
+<link rel="stylesheet" href="{{ root_url }}/css/books.css" />>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script type="text/javascript">
 
 let xmlhttp = new XMLHttpRequest();
@@ -30,8 +33,8 @@ xmlhttp.onreadystatechange = function () {
       let max_streak = data[i]["gsx$maxstreak"]["$t"];
       let logging = data[i]["gsx$logging"]["$t"];
       let comments = data[i]["gsx$comments"]["$t"];
-      let todayDate = (data[i]["gsx$today"]["$t"] === "yes") ? "✅": "❌";
-      let yesterdayDate = (data[i]["gsx$yesterday"]["$t"] === "yes") ? "✅": "❌";
+      let todayDate = (data[i]["gsx$today"]["$t"] === "yes") ? "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayDate = (data[i]["gsx$yesterday"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
 
       document.getElementById("demo").innerHTML +=
         "<tr>" +
@@ -94,8 +97,8 @@ xmlhttp.send();
             <th>Max Streak</th>
             <th>Logging</th>
             <th>Comments</th>
-            <th><span id="today"></span></th>
-            <th><span id="yesterday"></span></th>
+            <th><span  id="today"></span></th>
+            <th><span  id="yesterday"></span></th>
           </tr>
         </thead>
         <tbody id="demo"></tbody>
