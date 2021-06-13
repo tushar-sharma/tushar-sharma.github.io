@@ -20,8 +20,17 @@ xmlhttp.onreadystatechange = function () {
   const todayDateHeader = new Date()
   const yesterdayDateHeader = new Date(todayDateHeader)
   const yesterdayOneMinusDateHeader = new Date(todayDateHeader)
-  yesterdayDateHeader.setDate(yesterdayDateHeader.getDate() - 1)
-  yesterdayOneMinusDateHeader.setDate(yesterdayDateHeader.getDate() - 1)
+  const yesterdayTwoMinusDateHeader = new Date(todayDateHeader)
+  const yesterdayThreeMinusDateHeader = new Date(todayDateHeader)
+  const yesterdayFourMinusDateHeader = new Date(todayDateHeader)
+  const yesterdayFiveMinusDateHeader = new Date(todayDateHeader)
+
+  yesterdayDateHeader.setDate(todayDateHeader.getDate() - 1)
+  yesterdayOneMinusDateHeader.setDate(todayDateHeader.getDate() - 2)
+  yesterdayTwoMinusDateHeader.setDate(todayDateHeader.getDate() - 3)
+  yesterdayThreeMinusDateHeader.setDate(todayDateHeader.getDate() - 4)
+  yesterdayFourMinusDateHeader.setDate(todayDateHeader.getDate() - 5)
+  yesterdayFiveMinusDateHeader.setDate(todayDateHeader.getDate() - 6)
 
   if (this.readyState == 4 && this.status == 200) {
     let data = JSON.parse(this.responseText).feed.entry;
@@ -37,6 +46,10 @@ xmlhttp.onreadystatechange = function () {
       let todayDate = (data[i]["gsx$today"]["$t"] === "yes") ? "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
       let yesterdayDate = (data[i]["gsx$yesterday"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
       let yesterdayMinusOneDate = (data[i]["gsx$yesterdayminusone"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayMinusTwoDate = (data[i]["gsx$yesterdayminustwo"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayMinusThreeDate = (data[i]["gsx$yesterdayminusthree"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayMinusFourDate = (data[i]["gsx$yesterdayminusfour"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayMinusFiveDate = (data[i]["gsx$yesterdayminusfive"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
 
       document.getElementById("demo").innerHTML +=
         "<tr>" +
@@ -64,6 +77,19 @@ xmlhttp.onreadystatechange = function () {
         "<td>" +
         yesterdayMinusOneDate +
         "</td>" +
+        "<td>" +
+          yesterdayMinusTwoDate +
+        "</td>" +
+        "<td>" +
+          yesterdayMinusThreeDate +
+        "</td>" +
+        "<td>" +
+          yesterdayMinusFourDate +
+        "</td>" +
+        "<td>" +
+          yesterdayMinusFiveDate +
+        "</td>" +
+        
         "</tr>";
     }
   }
@@ -71,6 +97,12 @@ xmlhttp.onreadystatechange = function () {
   document.getElementById("today").innerHTML = todayDateHeader.toDateString();
   document.getElementById("yesterday").innerHTML = yesterdayDateHeader.toDateString();
   document.getElementById("yesterdayOneMinus").innerHTML = yesterdayOneMinusDateHeader.toDateString();
+  document.getElementById("yesterdayTwoMinus").innerHTML = yesterdayTwoMinusDateHeader.toDateString();
+  document.getElementById("yesterdayThreeMinus").innerHTML = yesterdayThreeMinusDateHeader.toDateString();
+  document.getElementById("yesterdayFourMinus").innerHTML = yesterdayFourMinusDateHeader.toDateString();
+  document.getElementById("yesterdayFiveMinus").innerHTML = yesterdayFiveMinusDateHeader.toDateString();
+
+
 };
 
 xmlhttp.open(
@@ -106,6 +138,10 @@ xmlhttp.send();
             <th><span  id="today"></span></th>
             <th><span  id="yesterday"></span></th>
             <th><span id="yesterdayOneMinus"></span></th>
+            <th><span id="yesterdayTwoMinus"></span></th>
+            <th><span id="yesterdayThreeMinus"></span></th>
+            <th><span id="yesterdayFourMinus"></span></th>
+            <th><span id="yesterdayFiveMinus"></span></th>
           </tr>
         </thead>
         <tbody id="demo"></tbody>
