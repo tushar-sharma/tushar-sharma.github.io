@@ -67,5 +67,5 @@ $ pip install -r requirements.txt
 ```bash
 $ pip install aws-cdk.aws-stepfunctions
 $ npm install  "@aws-cdk/aws-stepfunctions"
-$ npm install "@aws-cdk/cloudformation_include"
+$ npm install "@aws-cdk/cloudformation-include"
 ```
