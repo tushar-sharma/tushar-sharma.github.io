@@ -66,5 +66,5 @@ $ pip install -r requirements.txt
 
 ```bash
 $ pip install aws-cdk.aws-stepfunctions
-$ npm install install aws-cdk/aws-stepfunction
+$ npm install install  "@aws-cdk/aws-stepfunctions"
 ```
