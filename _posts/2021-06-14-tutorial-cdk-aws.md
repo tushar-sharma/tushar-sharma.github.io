@@ -69,3 +69,5 @@ $ pip install aws-cdk.aws-stepfunctions
 $ npm install  "@aws-cdk/aws-stepfunctions"
 $ npm install "@aws-cdk/cloudformation-include"
 ```
+
+$ cdk synth --version-reporting false
