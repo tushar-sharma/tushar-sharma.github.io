@@ -58,3 +58,9 @@ you can do something like
 $ source .env/bin/activate
 $ pip install -r requirements.txt
 ```
+
+2. 
+
+```bash
+$ pip install aws-cdk.aws-stepfunctions
+```
