@@ -20,7 +20,7 @@ $ cdk init sample-app --language=python
 
 node js 
 
-$ cdk init app --language javascript
+$ cdk init sample-app --language=javascript
 
 
 then try the following command 
