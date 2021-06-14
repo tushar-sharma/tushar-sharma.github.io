@@ -18,6 +18,11 @@ $ cd $_
 
 $ cdk init sample-app --language=python
 
+node js 
+
+$ cdk init app --language javascript
+
+
 then try the following command 
 
 $ cdk synth
@@ -31,7 +36,6 @@ from aws_cdk import (
     core
 )
 
-
 class HelloCdkStack(core.Stack):
 
     def __init__(self, scope: core.Construct, construct_id: str, **kwargs) -> None:
@@ -42,7 +46,6 @@ class HelloCdkStack(core.Stack):
         )
 
 ```
-
 
 ## Errors 
 
