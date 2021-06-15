@@ -165,4 +165,8 @@ $ npm install  "@aws-cdk/aws-stepfunctions"
 $ 
 ```
 
+3. Template contains invalid characters
+
+
+
 $ cdk synth --version-reporting false
