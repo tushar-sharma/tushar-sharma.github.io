@@ -77,23 +77,42 @@ Resources:
       aws:cdk:path: TestCdkStack/TestCdkTopic/Resource
 ```
 
-`hello_cdk_stack.py` 
+## Part 2 
 
-```python
-from aws_cdk import (
-    core
-)
+Here we need to focus on following file 
 
-class HelloCdkStack(core.Stack):
+1. lib/test-cdk-stack.js
 
-    def __init__(self, scope: core.Construct, construct_id: str, **kwargs) -> None:
-        super().__init__(scope, construct_id, **kwargs)
+```javascript
+const sns = require('@aws-cdk/aws-sns');
+const subs = require('@aws-cdk/aws-sns-subscriptions');
+const sqs = require('@aws-cdk/aws-sqs');
+const cdk = require('@aws-cdk/core');
 
-        NullResource = core.CfnWaitConditionHandle( 
-            self, "NullResource"
-        )
+class TestCdkStack extends cdk.Stack {
+  /**
+   * @param {cdk.App} scope
+   * @param {string} id
+   * @param {cdk.StackProps=} props
+   */
+  constructor(scope, id, props) {
+    super(scope, id, props);
 
+    const queue = new sqs.Queue(this, 'TestCdkQueue', {
+      visibilityTimeout: cdk.Duration.seconds(300)
+    });
+
+    const topic = new sns.Topic(this, 'TestCdkTopic');
+
+    topic.addSubscription(new subs.SqsSubscription(queue));
+  }
+}
+
+module.exports = { TestCdkStack }
 ```
+
+
+
 
 ## Errors 
 
