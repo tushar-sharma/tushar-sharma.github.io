@@ -82,7 +82,7 @@ Resources:
 
 We will create an existing cloudformation template and place it at the root of the project folder called `template.yaml`. Then we will import it in cdk
 
-``bash
+```bash
 $ npm install "@aws-cdk/cloudformation-include"
 ```
 
