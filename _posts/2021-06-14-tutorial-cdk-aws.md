@@ -17,15 +17,35 @@ $ npm i -g aws-cdk
 
 Let's create a project
 
+```bash
 $ test-cdk  
 
 $ cd $_
 
 $ cdk init sample-app --language=javascript
 
+```
+
+Then you can verify it using 
+```bash
+$ cdk doctor
+ CDK Version: 1.108.1 (build ae24d8a)
+ AWS environment variables:
+  - AWS_NODEJS_CONNECTION_REUSE_ENABLED = 1
+  - AWS_SDK_LOAD_CONFIG = 1
+  - AWS_STS_REGIONAL_ENDPOINTS = regional
+ No CDK environment variables
+
+```
+
+You can generate cloudformation template
+
+```bash
+
 $  cdk synth --version-reporting false > output.yaml
 
-It will emit the cloudformation in yaml format
+```
+
 
 ```yaml
 Resources:
@@ -118,6 +138,9 @@ Then will will generate the cloudformation again
 ```bash
 $  cdk synth --version-reporting false > output.yaml
 ```
+
+## Part 3
+
 
 ## Errors 
 
