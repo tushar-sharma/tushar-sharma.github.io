@@ -79,15 +79,21 @@ Resources:
 
 ## Part 2 
 
-Here we need to focus on following file 
 
-1. lib/test-cdk-stack.js
+We will create an existing cloudformation template and place it at the root of the project folder called `template.yaml`. Then we will import it in cdk
+
+``bash
+$ npm install "@aws-cdk/cloudformation-include"
+```
+
+We will modify the lib/test-cdk-stack.js as 
 
 ```javascript
 const sns = require('@aws-cdk/aws-sns');
 const subs = require('@aws-cdk/aws-sns-subscriptions');
 const sqs = require('@aws-cdk/aws-sqs');
 const cdk = require('@aws-cdk/core');
+const cfninc = require('@aws-cdk/cloudformation-include');
 
 class TestCdkStack extends cdk.Stack {
   /**
@@ -98,21 +104,20 @@ class TestCdkStack extends cdk.Stack {
   constructor(scope, id, props) {
     super(scope, id, props);
 
-    const queue = new sqs.Queue(this, 'TestCdkQueue', {
-      visibilityTimeout: cdk.Duration.seconds(300)
+    const template = new cfninc.CfnInclude(this, 'Template', { 
+        templateFile: 'template.yaml',
     });
-
-    const topic = new sns.Topic(this, 'TestCdkTopic');
-
-    topic.addSubscription(new subs.SqsSubscription(queue));
+    
   }
 }
 
 module.exports = { TestCdkStack }
 ```
+Then will will generate the cloudformation again
 
-
-
+```bash
+$  cdk synth --version-reporting false > output.yaml
+```
 
 ## Errors 
 
@@ -134,7 +139,7 @@ $ pip install -r requirements.txt
 ```bash
 $ pip install aws-cdk.aws-stepfunctions
 $ npm install  "@aws-cdk/aws-stepfunctions"
-$ npm install "@aws-cdk/cloudformation-include"
+$ 
 ```
 
 $ cdk synth --version-reporting false
