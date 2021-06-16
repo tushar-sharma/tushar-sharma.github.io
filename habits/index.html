@@ -40,9 +40,7 @@ xmlhttp.onreadystatechange = function () {
 
       let activity = data[i]["gsx$activity"]["$t"];
       let streak  = data[i]["gsx$streak"]["$t"];
-      let max_streak = data[i]["gsx$maxstreak"]["$t"];
       let logging = data[i]["gsx$logging"]["$t"];
-      let comments = data[i]["gsx$comments"]["$t"];
       let todayDate = (data[i]["gsx$today"]["$t"] === "yes") ? "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
       let yesterdayDate = (data[i]["gsx$yesterday"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
       let yesterdayMinusOneDate = (data[i]["gsx$yesterdayminusone"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
@@ -55,18 +53,6 @@ xmlhttp.onreadystatechange = function () {
         "<tr>" +
         "<td>" +
         activity +
-        "</td>" +
-        "<td>" +
-        streak +
-        "</td>" +
-        "<td>" +
-        max_streak +
-        "</td>" +
-        "<td>" +
-        logging +
-        "</td>" +
-        "<td>" +
-        comments +
         "</td>" +
         "<td>" +
         todayDate +
@@ -89,7 +75,13 @@ xmlhttp.onreadystatechange = function () {
         "<td>" +
           yesterdayMinusFiveDate +
         "</td>" +
-        
+        "<td>" +
+        streak +
+        "</td>" +
+        "<td>" +
+        logging +
+        "</td>" +
+
         "</tr>";
     }
   }
@@ -131,17 +123,15 @@ xmlhttp.send();
         <thead>
           <tr>
             <th>Activity</th>
-            <th>Streak</th>
-            <th>Max Streak</th>
-            <th>Logging</th>
-            <th>Comments</th>
-            <th><span  id="today"></span></th>
+           <th><span  id="today"></span></th>
             <th><span  id="yesterday"></span></th>
             <th><span id="yesterdayOneMinus"></span></th>
             <th><span id="yesterdayTwoMinus"></span></th>
             <th><span id="yesterdayThreeMinus"></span></th>
             <th><span id="yesterdayFourMinus"></span></th>
             <th><span id="yesterdayFiveMinus"></span></th>
+            <th>Streak</th>
+            <th>Logging</th>
           </tr>
         </thead>
         <tbody id="demo"></tbody>
