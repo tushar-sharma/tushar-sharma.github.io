@@ -1,172 +1,208 @@
 ---
-published: false
+layout: post
+title: Gettting Started with AWS cdk 
+category: blog
+tags:
+- aws
+- cdk
+- cloudformation
+- typescript
+- tutorial
+name: aws-cdk
+thumb: https://docs.aws.amazon.com/step-functions/latest/dg/images/tutorial-getting-started-visual-pane-render.png
 ---
-# Tutorial on AWS CDK
 
-Tags: 
--python
--cdk 
--aws
+<p>Cloudformation service in AWS allows you to describe an entire set of resources required to make a pipeline. The cloudformation template can be described in JSON or YAML format. Updating the cloudformation template was not a pleasant experience. I wanted to discover alternative ways to generate cloudformation template programmatically.</p>
+
+The CDK library provides you a way to declare the resources in your favorite languages like Java, Javascript, Typescript, and Python. In this tutorial, we will use typescript to generate our cloudformation template.<!-- truncate_here -->
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
+
+<p>Cloudformation service in AWS allows you to describe an entire set of resources required to make a pipeline. The cloudformation template can be described in JSON or YAML format. Updating the cloudformation template was not a pleasant experience. I wanted to discover alternative ways to generate cloudformation template programmatically.</p>
+
+The CDK library provides you a way to declare the resources in your favorite languages like Java, Javascript, Typescript, and Python. In this tutorial, we will use typescript to generate our cloudformation template.
 
 
-Install or update the AWS CDK CLI from command line using
+First, install the AWS CDK CLI from command line using
 
+```bash
 $ npm i -g aws-cdk
-
-## Part 1
+```
 
 Let's create a project
 
 ```bash
-$ test-cdk  
-
-$ cd $_
-
-$ cdk init sample-app --language=javascript
-
+$ mkdir test-cdk  
+$ cd test-cdk
+$ cdk init sample-app --language=typescript
 ```
 
-Then you can verify it using 
+Then you can verify it  
+
 ```bash
 $ cdk doctor
- CDK Version: 1.108.1 (build ae24d8a)
- AWS environment variables:
+_ CDK Version: 1.108.1 (build ae24d8a)
+_ AWS environment variables:
+  - AWS_STS_REGIONAL_ENDPOINTS = regional
   - AWS_NODEJS_CONNECTION_REUSE_ENABLED = 1
   - AWS_SDK_LOAD_CONFIG = 1
-  - AWS_STS_REGIONAL_ENDPOINTS = regional
- No CDK environment variables
-
+_ No CDK environment variables
 ```
 
-You can generate cloudformation template
+We will edit the `lib/test-cdk-stack.ts` file from scratch. First we will add Parameters to our cdk class.
+
+<script src="https://gist.github.com/tushar-sharma/8d66c6e91a4de56b4a9f9385465b5958.js"></script>
+
+We can see the output of the cloudformation template by using the following command
 
 ```bash
+$ cdk synth  > cfn-template.yaml
+```
 
-$  cdk synth --version-reporting false > output.yaml
+If you want to generate cloudformation template without metadata
 
+```bash
+$ cdk synth --version-reporting false  > cfn-template.yaml 
+```
+
+The output of the `cfn-template.yaml` is 
+
+```yaml
+Parameters:
+  Application:
+    Type: String
+    Default: CDK Tutorial
+  Environment:
+    Type: String
+    Default: development
+    AllowedValues:
+      - development
+      - production
+```
+
+The cloudformation template needs at least one resource to validate. We will add a `stepfunction` to our cloudformation. We will define our stepfunction inside a json file, `helloworld.asl.json`
+
+```json
+{
+  "Comment" : "A very very simple StepFunction",
+  "StartAt": "Hello", 
+  "States": {
+    "Hello": {
+      "Type": "Wait",
+      "Seconds": 10,
+      "Next": "World"
+    },
+    "World": {
+      "Type": "Pass",
+      "End": true
+    }
+  }
+}
+```
+
+If you are not familiar with Stepfunction, AWS Stepfunction console has a nice visualization
+
+<center>
+<img src="https://docs.aws.amazon.com/step-functions/latest/dg/images/tutorial-getting-started-visual-pane-render.png" alt="stepfunction image">
+</center><br>
+
+Next we need to upload the `helloworld.asl.json` to s3 bucket. We also need to define a mapping to access this `json` file.
+
+<script src="https://gist.github.com/tushar-sharma/f7d3ff867b2a9b10c15744ba186fa7c8.js"></script>
+
+
+```bash
+$ cdk synth --version-reporting false  > cfn-template.yaml 
 ```
 
 
 ```yaml
+Parameters:
+  Application:
+    Type: String
+    Default: CDK Tutorial
+  Environment:
+    Type: String
+    Default: development
+    AllowedValues:
+      - development
+      - production
+Mappings:
+  MyMapping:
+    development:
+      S3Bucket: development-s3-bucket
+      S3Key: development-s3-prefix
+    production:
+      S3Bucket: production-s3-bucket
+      S3Key: production-s3-prefix
+```
+
+Lastly, we will add stepfunction to our resources
+
+```bash
+$ npm i "@aws-cdk/aws-stepfunctions"
+```
+
+<script src="https://gist.github.com/tushar-sharma/4bb0490ee424b2866c55bafca8b7fc76.js"></script>
+
+
+The final cloudformation template is
+
+
+```yaml
+Parameters:
+  Application:
+    Type: String
+    Default: CDK Tutorial
+  Environment:
+    Type: String
+    Default: development
+    AllowedValues:
+      - development
+      - production
+  StepFunctionRole:
+    Type: String
+    Default: put-your-stepfunction-execution-role
+Mappings:
+  MyMapping:
+    development:
+      S3Bucket: development-s3-bucket
+      S3Key: development-s3-prefix
+    production:
+      S3Bucket: production-s3-bucket
+      S3Key: production-s3-prefix
 Resources:
-  TestCdkQueueB8639E0A:
-    Type: AWS::SQS::Queue
+  DemoStepFunction:
+    Type: AWS::StepFunctions::StateMachine
     Properties:
-      VisibilityTimeout: 300
-    UpdateReplacePolicy: Delete
-    DeletionPolicy: Delete
+      RoleArn:
+        Fn::Join:
+          - ""
+          - - "arn:aws:iam::"
+            - Ref: AWS::AccountId
+            - :role/
+            - Ref: StepFunctionRole
+      DefinitionS3Location:
+        Bucket:
+          Fn::FindInMap:
+            - MyMapping
+            - development
+            - S3Bucket
+        Key:
+          Fn::FindInMap:
+            - MyMapping
+            - development
+            - S3Key
+      StateMachineType: STANDARD
+      Tags:
+        - Key: environment
+          Value: development
     Metadata:
-      aws:cdk:path: TestCdkStack/TestCdkQueue/Resource
-  TestCdkQueuePolicyDEED76FA:
-    Type: AWS::SQS::QueuePolicy
-    Properties:
-      PolicyDocument:
-        Statement:
-          - Action: sqs:SendMessage
-            Condition:
-              ArnEquals:
-                aws:SourceArn:
-                  Ref: TestCdkTopicC4135911
-            Effect: Allow
-            Principal:
-              Service: sns.amazonaws.com
-            Resource:
-              Fn::GetAtt:
-                - TestCdkQueueB8639E0A
-                - Arn
-        Version: "2012-10-17"
-      Queues:
-        - Ref: TestCdkQueueB8639E0A
-    Metadata:
-      aws:cdk:path: TestCdkStack/TestCdkQueue/Policy/Resource
-  TestCdkQueueTestCdkStackTestCdkTopicA4B3C5120A17CBB7:
-    Type: AWS::SNS::Subscription
-    Properties:
-      Protocol: sqs
-      TopicArn:
-        Ref: TestCdkTopicC4135911
-      Endpoint:
-        Fn::GetAtt:
-          - TestCdkQueueB8639E0A
-          - Arn
-    Metadata:
-      aws:cdk:path: TestCdkStack/TestCdkQueue/TestCdkStackTestCdkTopicA4B3C512/Resource
-  TestCdkTopicC4135911:
-    Type: AWS::SNS::Topic
-    Metadata:
-      aws:cdk:path: TestCdkStack/TestCdkTopic/Resource
+      aws:cdk:path: TestCdkStack/DemoStepFunction
+
 ```
 
-## Part 2 
-
-
-We will create an existing cloudformation template and place it at the root of the project folder called `template.yaml`. Then we will import it in cdk
+Lastly, you can either upload the `cfn-template.yaml` yaml file using AWS console or simply deploy it using
 
 ```bash
-$ npm install "@aws-cdk/cloudformation-include"
+$ cdk deploy
 ```
-
-We will modify the lib/test-cdk-stack.js as 
-
-```javascript
-const sns = require('@aws-cdk/aws-sns');
-const subs = require('@aws-cdk/aws-sns-subscriptions');
-const sqs = require('@aws-cdk/aws-sqs');
-const cdk = require('@aws-cdk/core');
-const cfninc = require('@aws-cdk/cloudformation-include');
-
-class TestCdkStack extends cdk.Stack {
-  /**
-   * @param {cdk.App} scope
-   * @param {string} id
-   * @param {cdk.StackProps=} props
-   */
-  constructor(scope, id, props) {
-    super(scope, id, props);
-
-    const template = new cfninc.CfnInclude(this, 'Template', { 
-        templateFile: 'template.yaml',
-    });
-    
-  }
-}
-
-module.exports = { TestCdkStack }
-```
-Then will will generate the cloudformation again
-
-```bash
-$  cdk synth --version-reporting false > output.yaml
-```
-
-## Part 3
-
-
-## Errors 
-
-1. 
-
-```bash
-    from aws_cdk import core
-ModuleNotFoundError: No module named 'aws_cdk
-```
-
-you can do something like
-```bash
-$ source .env/bin/activate
-$ pip install -r requirements.txt
-```
-
-2. 
-
-```bash
-$ pip install aws-cdk.aws-stepfunctions
-$ npm install  "@aws-cdk/aws-stepfunctions"
-$ 
-```
-
-3. Template contains invalid characters
-
-
-
-$ cdk synth --version-reporting false
