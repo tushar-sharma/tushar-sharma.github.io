@@ -55,6 +55,4 @@ def main():
 
 if __name__=="__main__":
 
-    filename = args[0]
-
     main()
