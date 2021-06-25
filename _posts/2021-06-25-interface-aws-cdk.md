@@ -2,6 +2,7 @@
 published: false
 category: blog
 layout: post
+title: Dynamically create cloudformation stack using AWS CDK
 ---
 
 <style>
@@ -22,10 +23,12 @@ th, td {
 
 </style>
 
-If you are not familiar with AWS CDK, then I would recommend to visit [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws). 
+<a href="https://aws.amazon.com/cdk/" target="_bank">AWS CDK</a> is a great framework to programmatically deploy cloudformation stack. If you are unfamiliar with AWS CDK, I would recommend first to check out [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws). 
+
+One of pet peeves with cloudformation is to copy paste same information across multiple resources. I wanted to leverage AWS CDK to create an interface that would allow tto dynamically create cloudformation. For the interface, I harked back to the good old csv file.
 
 
-create a project first
+Create a project first
 
 $ mkdir projectCDK  && cd $_ 
 
@@ -105,3 +108,12 @@ Our aim is to dynamically generate parameter resource. We will edit het `lib/hel
 
 
 <script src="https://gist.github.com/tushar-sharma/8cb4e903d0ca972ecaac81f7de042704.js"></script>
+
+
+```bash
+$ cdk synth > resources/output.yaml
+```
+
+```bash 
+$ cdk deploy
+```
