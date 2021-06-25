@@ -114,6 +114,23 @@ Our aim is to dynamically generate parameter resource. We will edit het `lib/hel
 $ cdk synth > resources/output.yaml
 ```
 
+```bash
+Parameters:
+  Environment:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - qa
+      - prod
+    Description: Enter your environment
+  Project:
+    Type: String
+    Default: version
+    Description: Enter your version
+
+```
+
 ```bash 
 $ cdk deploy
 ```
