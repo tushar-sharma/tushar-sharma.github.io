@@ -1,9 +1,17 @@
 ---
-published: false
-category: blog
 layout: post
 title: Dynamically create cloudformation stack using AWS CDK
+category: blog
+tags:
+- aws
+- cdk
+- cloudformation
+- typescript
+- tutorial
+name: interface-aws-cdk
+thumb: https://cdkworkshop.com/images/new-cdk-logo.png
 ---
+
 
 <style>
 table, td, th {  
@@ -25,36 +33,46 @@ th, td {
 
 <a href="https://aws.amazon.com/cdk/" target="_bank">AWS CDK</a> is a great framework to programmatically deploy cloudformation stack. If you are unfamiliar with AWS CDK, I would recommend first to check out [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws). 
 
-One of pet peeves with cloudformation is to copy paste same information across multiple resources. I wanted to leverage AWS CDK to create an interface that would allow tto dynamically create cloudformation. For the interface, I harked back to the good old csv file.
+One of the pet peeves I have while designing <a href="https://aws.amazon.com/cloudformation/" target="_blank">cloudformation</a> template is redundancy. I have to manually copy-paste the same properties across multiple resources. I wanted to leverage AWS CDK to create an interface that would allow tto dynamically create cloudformation. For the interface, I harked back to the good old CSV file.<!-- truncate_here -->
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
+<a href="https://aws.amazon.com/cdk/" target="_bank">AWS CDK</a> is a great framework to programmatically deploy cloudformation stack. If you are unfamiliar with AWS CDK, I would recommend first to check out [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws). 
 
-Create a project first
+One of the pet peeves I have while designing <a href="https://aws.amazon.com/cloudformation/" target="_blank">cloudformation</a> template is redundancy. I have to manually copy-paste the same properties across multiple resources. I wanted to leverage AWS CDK to create an interface that would allow tto dynamically create cloudformation. For the interface, I harked back to the good old CSV file.
 
-$ mkdir projectCDK  && cd $_ 
-
-verify everyting is installed okay 
-
-$ cdk doctor 
+For a simple example, let's consider a simple cloudformation template 
 
 
 ```bash
-$ cdk doctor
-_ CDK Version: 1.108.1 (build ae24d8a)
-_ AWS environment variables:
-  - AWS_STS_REGIONAL_ENDPOINTS = regional
-  - AWS_NODEJS_CONNECTION_REUSE_ENABLED = 1
-  - AWS_SDK_LOAD_CONFIG = 1
-_ No CDK environment variables
+Parameters:
+  Environment:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - qa
+      - prod
+    Description: Enter your environment
+  Project:
+    Type: String
+    Default: version
+    Description: Enter your version
+
 ```
 
-Next we will create a csv file 
+What if we have to maintain 100 parameters, resources, etc in our project. Soon it will become tedious to maintain multiple resources. Instead, we create a class called `Parameter` that we instantiate multiple times using different parameters. Here is a class diagram for our `Parameter` class.
 
-```bash
-$ mkdir resources
-$ touch ckdInput.csv
-```
- 
-This csv will be our interface for our CDK project. The CSV looks like
+<center>
+<img src="https://i.imgur.com/XnSkPM5.png" alt="class diagram">  
+</center>
+
+Using typescript, we can define the class as 
+
+<script src="https://gist.github.com/tushar-sharma/ba6ca7d009513cc3ddb0bc7105cc0aa2.js"></script><br>
+
+
+<p>We will create a `CSV` file under folder `resources`  which would contain information for each instance of our class.</p>
+
 
 <table >
   <tr>
@@ -84,53 +102,39 @@ This csv will be our interface for our CDK project. The CSV looks like
   </tr>
 </table>
 
-We will edit the `lib/project_cdk-stack.ts` file.
-
-<script src="https://gist.github.com/tushar-sharma/b541b614e6be8502c95f460ecdf2dd37.js"></script>
-
-
-Then we will create `lib/helpers.ts` file. 
-
-<script src="https://gist.github.com/tushar-sharma/4a080d416faf980b71723bdce21feb66.js"></script>
+First, we will read our `CSV` file into our project. We would need to install an additional library to read the file.
 
 ```bash 
 $ npm i --save csvtojson
 ```
 
-Our code till now will not generate any cloudformtion. However we can test it for any compile errors
+We will edit the `lib/project_cdk-stack.ts` file.
+
+<script src="https://gist.github.com/tushar-sharma/b541b614e6be8502c95f460ecdf2dd37.js"></script> 
+
+
+Then we will create `lib/helpers.ts` file. 
+
+<script src="https://gist.github.com/tushar-sharma/4a080d416faf980b71723bdce21feb66.js"></script> 
+
+
+Our code till now will not generate any cloudformation. However, we can test it for any compile errors
 
 
 ```bash 
 $ cdk synth --quiet
 ```
 
-Our aim is to dynamically generate parameter resource. We will edit het `lib/helpers.ts` file as
+Next, we will implement our `generateTemplate` function.
 
 
-<script src="https://gist.github.com/tushar-sharma/8cb4e903d0ca972ecaac81f7de042704.js"></script>
+<script src="https://gist.github.com/tushar-sharma/8cb4e903d0ca972ecaac81f7de042704.js"></script><br>
 
+Lastly, we can deploy our cloudformation stack using 
 
-```bash
-$ cdk synth > resources/output.yaml
-```
-
-```bash
-Parameters:
-  Environment:
-    Type: String
-    Default: dev
-    AllowedValues:
-      - dev
-      - qa
-      - prod
-    Description: Enter your environment
-  Project:
-    Type: String
-    Default: version
-    Description: Enter your version
-
-```
 
 ```bash 
 $ cdk deploy
 ```
+
+In the next article, we will update our code to add additional classes to handle `resources`, `output`, etc for our cloudformation template.
