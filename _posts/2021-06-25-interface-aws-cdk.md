@@ -85,3 +85,7 @@ This csv will be our interface for our CDK project. The CSV looks like
 </table>
 
 We will edit the `lib/project_cdk-stack.ts` file from scratch. First we will add Parameters to our cdk class.
+
+<script src="https://gist.github.com/tushar-sharma/b541b614e6be8502c95f460ecdf2dd37.js"></script>
+
+<script src="https://gist.github.com/tushar-sharma/4a080d416faf980b71723bdce21feb66.js"></script>
