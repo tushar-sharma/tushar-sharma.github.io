@@ -7,7 +7,25 @@ published: false
 - aws 
 - cdk 
 
-If you are not familiar with AWS CDK, then I would recommend to first refer to [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws). 
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+
+
+</style>
+
+If you are not familiar with AWS CDK, then I would recommend to visit [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws). 
 
 
 create a project first
@@ -35,10 +53,35 @@ Next we will create a csv file
 $ mkdir resources
 $ touch ckdInput.csv
 ```
+ 
+This csv will be our interface for our CDK project. The CSV looks like
 
-This csv will be our interface for our CDK project. 
+<table >
+  <tr>
+    <th>resource</th>
+    <th>create</th>
+    <th>category</th>
+    <th>default</th>
+    <th>description</th>
+    <th>allowed_values</th>
+  </tr>
+  <tr>
+    <td>Environment</td>
+    <td>yes</td>
+    <td>parameter</td>
+    <td>dev</td>
+    <td>Enter your environment</td>
+    <td>dev | qa | prod</td>
+  </tr>
 
-| **resources** | **create ** | **category** | **default** | **description**| **allowed_values**|
-|---------------+-------------+--------------+-------------+----------------+-------------------|
-| Environment   | yes         | parameter    | dev         |  Enter enviroment | dev "|" qa | prod |
+  <tr>
+    <td>Project</td>
+    <td>yes</td>
+    <td>parameter</td>
+    <td>version1</td>
+    <td>Enter version</td>
+    <td></td>
+  </tr>
+</table>
 
+We will edit the `lib/project_cdk-stack.ts` file from scratch. First we will add Parameters to our cdk class.
