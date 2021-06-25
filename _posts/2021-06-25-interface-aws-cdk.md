@@ -1,11 +1,8 @@
 ---
 published: false
+category: blog
+layout: post
 ---
-# Dynamic Interface for you AWS CDK Project
-
-- typescript
-- aws 
-- cdk 
 
 <style>
 table, td, th {  
@@ -84,8 +81,25 @@ This csv will be our interface for our CDK project. The CSV looks like
   </tr>
 </table>
 
-We will edit the `lib/project_cdk-stack.ts` file from scratch. First we will add Parameters to our cdk class.
+We will edit the `lib/project_cdk-stack.ts` file.
 
 <script src="https://gist.github.com/tushar-sharma/b541b614e6be8502c95f460ecdf2dd37.js"></script>
 
+
+Then we will create `lib/helpers.ts` file. 
+
 <script src="https://gist.github.com/tushar-sharma/4a080d416faf980b71723bdce21feb66.js"></script>
+
+```bash 
+$ npm i --save csvtojson
+```
+
+Our code till now will not generate any cloudformtion. However we can test it for any compile errors
+
+
+```bash 
+$ cdk synth --quiet
+```
+
+Our aim is to dynamically generate paramter resource. We will edit het `lib/helpers.ts` file as 
+
