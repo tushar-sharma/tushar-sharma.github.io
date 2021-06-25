@@ -101,5 +101,7 @@ Our code till now will not generate any cloudformtion. However we can test it fo
 $ cdk synth --quiet
 ```
 
-Our aim is to dynamically generate paramter resource. We will edit het `lib/helpers.ts` file as 
+Our aim is to dynamically generate parameter resource. We will edit het `lib/helpers.ts` file as
 
+
+<script src="https://gist.github.com/tushar-sharma/8cb4e903d0ca972ecaac81f7de042704.js"></script>
