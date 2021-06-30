@@ -7,7 +7,7 @@ def main():
     """update google sheet"""
 
     lower_row = 2
-    upper_row = 13
+    upper_row = 14
 
     scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
 
