@@ -35,18 +35,18 @@ def main():
 
             sheet_instance.update("%s%s" % (curr_sheet, sheet_counter), curr_val , value_input_option='USER_ENTERED')
 
-        time.sleep(5)
+        time.sleep(15)
 
 
 
-    time.sleep(10)
+    time.sleep(15)
 
     for sheet_counter in range(lower_row, upper_row):
         print("Deleting value for H%s" % (sheet_counter))
 
         sheet_instance.update("H%s" % (sheet_counter), "no" , value_input_option='USER_ENTERED')
 
-    time.sleep(10)
+    time.sleep(15)
 
     for sheet_counter in range(lower_row, upper_row):
         print("Deleting value for O%s" % (sheet_counter))
