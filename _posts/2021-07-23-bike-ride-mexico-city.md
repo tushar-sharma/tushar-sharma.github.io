@@ -33,7 +33,7 @@ Our first stop was Mercado Medellín. It's a public market in Colonia Roma. We s
 Next we rode to Parque Mexico. It's a large urban park located in Colonia Hipódromo in the Condesa area of Mexico City. One of the main attraction is Fuente de los Cántaros (Fountain of the jugs). It's a sculpture of an indigenous women. 
 
 
-![img](https://i.imgur.com/UIQTx2g.jpeg)
+<!-- ![img](https://i.imgur.com/UIQTx2g.jpeg) -->
 
 
 Lastly we went to Bosque de Chapultepec. It's one of the largest city parks largest in both Mexico City as well as Latin America. I saw the Monumento a los Niños Héroes. It's a monument to honor six Mexican military cadets during Mexican-American war in the battle of Chapultepec. 
