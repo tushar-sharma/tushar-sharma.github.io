@@ -8,7 +8,7 @@ tags:
   - travel
   - bike
 name: bike-ride-mexico
-thumb: https://i.imgur.com/UIQTx2g.jpeg
+thumb: https://i.imgur.com/wNay8o5.jpeg
 published: true
 ---
 
