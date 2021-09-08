@@ -3,6 +3,7 @@ layout: comments
 title: Habit Tracker
 published: true
 ---
+
 <!--
     courtesy : https://mdbootstrap.com/snippets/jquery/ascensus/453950#html-tab-view
     Inspired: paulscotti.github.io/Productivity-Analysis
@@ -13,41 +14,31 @@ published: true
 
 <script type="text/javascript">
 
-let xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function () {
+var req = new XMLHttpRequest();
+req.responseType = 'json';
 
-  //get the date
-  const todayDateHeader = new Date()
-  const yesterdayDateHeader = new Date(todayDateHeader)
-  const yesterdayOneMinusDateHeader = new Date(todayDateHeader)
-  const yesterdayTwoMinusDateHeader = new Date(todayDateHeader)
-  const yesterdayThreeMinusDateHeader = new Date(todayDateHeader)
-  const yesterdayFourMinusDateHeader = new Date(todayDateHeader)
-  const yesterdayFiveMinusDateHeader = new Date(todayDateHeader)
+const url = "https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits?alt=json&key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw";
 
-  yesterdayDateHeader.setDate(todayDateHeader.getDate() - 1)
-  yesterdayOneMinusDateHeader.setDate(todayDateHeader.getDate() - 2)
-  yesterdayTwoMinusDateHeader.setDate(todayDateHeader.getDate() - 3)
-  yesterdayThreeMinusDateHeader.setDate(todayDateHeader.getDate() - 4)
-  yesterdayFourMinusDateHeader.setDate(todayDateHeader.getDate() - 5)
-  yesterdayFiveMinusDateHeader.setDate(todayDateHeader.getDate() - 6)
+req.open('GET', url, true);
 
-  if (this.readyState == 4 && this.status == 200) {
-    let data = JSON.parse(this.responseText).feed.entry;
+req.onload  = function() {
+    var data = req.response["values"];
 
     let i;
-    for (i = 0; i < data.length; i++) {
 
-      let activity = data[i]["gsx$activity"]["$t"];
-      let streak  = data[i]["gsx$streak"]["$t"];
-      let logging = data[i]["gsx$logging"]["$t"];
-      let todayDate = (data[i]["gsx$today"]["$t"] === "yes") ? "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
-      let yesterdayDate = (data[i]["gsx$yesterday"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
-      let yesterdayMinusOneDate = (data[i]["gsx$yesterdayminusone"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
-      let yesterdayMinusTwoDate = (data[i]["gsx$yesterdayminustwo"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
-      let yesterdayMinusThreeDate = (data[i]["gsx$yesterdayminusthree"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
-      let yesterdayMinusFourDate = (data[i]["gsx$yesterdayminusfour"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
-      let yesterdayMinusFiveDate = (data[i]["gsx$yesterdayminusfive"]["$t"] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+    console.log(data);
+    for (i = 1; i < data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let todayDate = (data[i][7] === "yes") ? "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayDate = (data[i][8] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayMinusOneDate = (data[i][9] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayMinusTwoDate = (data[i][10] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayMinusThreeDate = (data[i][11] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayMinusFourDate = (data[i][12] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+      let yesterdayMinusFiveDate = (data[i][13] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
 
       document.getElementById("demo").innerHTML +=
         "<tr>" +
@@ -84,29 +75,11 @@ xmlhttp.onreadystatechange = function () {
 
         "</tr>";
     }
-  }
-
-  document.getElementById("today").innerHTML = todayDateHeader.toDateString();
-  document.getElementById("yesterday").innerHTML = yesterdayDateHeader.toDateString();
-  document.getElementById("yesterdayOneMinus").innerHTML = yesterdayOneMinusDateHeader.toDateString();
-  document.getElementById("yesterdayTwoMinus").innerHTML = yesterdayTwoMinusDateHeader.toDateString();
-  document.getElementById("yesterdayThreeMinus").innerHTML = yesterdayThreeMinusDateHeader.toDateString();
-  document.getElementById("yesterdayFourMinus").innerHTML = yesterdayFourMinusDateHeader.toDateString();
-  document.getElementById("yesterdayFiveMinus").innerHTML = yesterdayFiveMinusDateHeader.toDateString();
-
-
 };
-
-xmlhttp.open(
-  "GET",
-  "https://spreadsheets.google.com/feeds/list/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/od6/public/values?alt=json",
-  true
-);
-xmlhttp.send();
+req.send(null);
 </script>
 
 
-<!-- heading -->
 <h2 class="entry-title">Habits Tracker</h2>
 
 <p>Here is the snapshot of my daily habits. Hopefully this will keep me motivated.</p>
