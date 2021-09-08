@@ -26,7 +26,22 @@ req.onload  = function() {
 
     let i;
 
-    console.log(data);
+    //get the date
+    const todayDateHeader = new Date()
+    const yesterdayDateHeader = new Date(todayDateHeader)
+    const yesterdayOneMinusDateHeader = new Date(todayDateHeader)
+    const yesterdayTwoMinusDateHeader = new Date(todayDateHeader)
+    const yesterdayThreeMinusDateHeader = new Date(todayDateHeader)
+    const yesterdayFourMinusDateHeader = new Date(todayDateHeader)
+    const yesterdayFiveMinusDateHeader = new Date(todayDateHeader)
+  
+    yesterdayDateHeader.setDate(todayDateHeader.getDate() - 1)
+    yesterdayOneMinusDateHeader.setDate(todayDateHeader.getDate() - 2)
+    yesterdayTwoMinusDateHeader.setDate(todayDateHeader.getDate() - 3)
+    yesterdayThreeMinusDateHeader.setDate(todayDateHeader.getDate() - 4)
+    yesterdayFourMinusDateHeader.setDate(todayDateHeader.getDate() - 5)
+    yesterdayFiveMinusDateHeader.setDate(todayDateHeader.getDate() - 6)
+
     for (i = 1; i < data.length; i++) {
 
       let activity = data[i][0];
