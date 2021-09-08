@@ -90,6 +90,13 @@ req.onload  = function() {
 
         "</tr>";
     }
+    document.getElementById("today").innerHTML = todayDateHeader.toDateString();
+    document.getElementById("yesterday").innerHTML = yesterdayDateHeader.toDateString();
+    document.getElementById("yesterdayOneMinus").innerHTML = yesterdayOneMinusDateHeader.toDateString();
+    document.getElementById("yesterdayTwoMinus").innerHTML = yesterdayTwoMinusDateHeader.toDateString();
+    document.getElementById("yesterdayThreeMinus").innerHTML = yesterdayThreeMinusDateHeader.toDateString();
+    document.getElementById("yesterdayFourMinus").innerHTML = yesterdayFourMinusDateHeader.toDateString();
+    document.getElementById("yesterdayFiveMinus").innerHTML = yesterdayFiveMinusDateHeader.toDateString();
 };
 req.send(null);
 </script>
