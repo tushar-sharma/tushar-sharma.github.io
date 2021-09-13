@@ -8,7 +8,7 @@ tags:
 - code
 - dp
 name: maximum-subarray
-thumb: /img/code.png
+thumb: https://www.hrccu.org/wp-content/uploads/2020/05/hackers.jpg
 ---
 
 <style type="text/css">
