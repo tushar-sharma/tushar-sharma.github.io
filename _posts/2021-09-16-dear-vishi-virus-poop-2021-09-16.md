@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dear Vishi, do a virus poop?
+title: Dear Vishi, does a virus poop?
 category: blog
 tags:
   - virus
@@ -13,13 +13,13 @@ published: true
 
 <p>When the alarm clock breaks my slumber, I roll down on my bed, blindly crawling towards my alarm clock as if it was a bomb to diffuse it. After multiple snoozes, I relinquished my dreams and come to my senses. Gulping water after I wake up is my first activity. Next, I excuse myself to the bathroom for “nature call”. All living things from a simple bacteria to a giant dinosaur needs to perform two basic life function; eat and excrete.</p>
 
-Since our world has been ravaged by covid pandemic lately, I wanted to discuss viruses. As a child, I often wondered, does the virus poop?<!-- truncate_here -->
+Since our world has been ravaged by covid pandemic lately, I wanted to discuss viruses. As a child, I often wondered, does a virus poop?<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
 When the alarm clock breaks my slumber, I roll down on my bed, blindly crawling towards my alarm clock as if it was a bomb to diffuse it. After multiple snoozes, I relinquished my dreams and come to my senses. Gulping water after I wake up is my first activity. Next, I excuse myself to the bathroom for “nature call”. All living things from a simple bacteria to a giant dinosaur needs to perform two basic life function; eat and excrete.
 
-Since our world has been ravaged by covid pandemic lately, I wanted to discuss viruses. As a child, I often wondered, does the virus poop?
+Since our world has been ravaged by covid pandemic lately, I wanted to discuss viruses. As a child, I often wondered, does a virus poop?
 
 What’s a virus? It’s a bundle of genetic material (RNA or DNA) wrapped in a protein capsule called capsids. The virus seems to live a stark opposite twin life; inside and outside of a host cell.
 
