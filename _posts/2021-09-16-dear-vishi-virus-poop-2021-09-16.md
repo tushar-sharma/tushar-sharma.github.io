@@ -31,7 +31,12 @@ Due to this disparity, scientist often describe viruses as "organisms at the edg
 
 Do virus die? Virus cannot die outside the host since they are not alive. However its capsid can degrades in the environment which ultimately makes the virus inactive. Inside our bodies, we have specialized T cells (white blood cells) that circulates looking for cells that are infected with viruses. Cytotoxic T cells kills cells that are infected with viruses. They recognize an antigenic peptide bounded to an infected cell.
 
-![Image](https://i.imgur.com/P3t5Lf2.png)
+<p> 
+<center>
+<img src="https://i.imgur.com/P3t5Lf2.png" >
+</center>
+</p>
+
 
 Science has enabled humans to escape the  perilous life of the cave and settle into the human civilization. Most of the humans dont fear being devoured by a lion or attacked by rampaging elephant. However we now fear not the giant but the invisible minuscle microbes. The elemination of all diseases by microbes is still a far fletched dream.
   
