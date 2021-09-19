@@ -7,7 +7,7 @@ def main():
     """update google sheet"""
 
     lower_row = 2
-    upper_row = 14
+    upper_row = 15
 
     scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
 
@@ -25,7 +25,7 @@ def main():
 
     for cols in ["N", "M", "L", "K", "J", "I", "H"]:
 
-        for sheet_counter  in range(lower_row, upper_row):
+        for sheet_counter  in range(lower_row, upper_row + 1):
 
             curr_val = sheet_instance.acell("%s%s"%(cols,sheet_counter)).value
 
@@ -41,14 +41,14 @@ def main():
 
     time.sleep(15)
 
-    for sheet_counter in range(lower_row, upper_row):
+    for sheet_counter in range(lower_row, upper_row + 1):
         print("Deleting value for H%s" % (sheet_counter))
 
         sheet_instance.update("H%s" % (sheet_counter), "no" , value_input_option='USER_ENTERED')
 
     time.sleep(15)
 
-    for sheet_counter in range(lower_row, upper_row):
+    for sheet_counter in range(lower_row, upper_row + 1):
         print("Deleting value for O%s" % (sheet_counter))
         sheet_instance.update("O%s" % (sheet_counter), "" , value_input_option='USER_ENTERED')
 
