@@ -86,6 +86,20 @@ published: true
 ### Two Hop neighbors
 * [Two Hop Neighbors - Chen Su](http://www.chen-su.com/static/slides/java_ucsd/c3/m1/C3M1L3S2_TwoHopNeighbors.pdf?q=1516568491)
 
+## Python
+### MOOCS
+* [Future Learn - Python courses](https://www.futurelearn.com/subjects/it-and-computer-science-courses/python)
+
+## Django
+* [Writing your first Django app Part 1](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
+* [Django Girls Tutorial](https://tutorial.djangogirls.org/en/)
+* [Django-tables2 getting started](https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html)
+* [Importing a CSV file to database models](http://abhishekchhibber.com/django-importing-a-csv-file-to-database-models/)
+
+### Topics
+* [Decorators](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
+
+
 ## AWS
 * [AWS Developer: Building on AWS - Edx](https://www.edx.org/course/aws-developer-building-on-aws)
 * [AWS Sagemaker Machine Learning - Pluralsight](https://www.pluralsight.com/courses/aws-sagemaker-machine-learning-models)
@@ -319,19 +333,6 @@ overview of HTML.
 
 ### Books
 * [Alice in Puzzleland](https://www.amazon.com/Alice-Puzzle-Land-Carrollian-Children-Recreational/dp/0486482006)
-
-## Python
-### MOOCS
-* [Future Learn - Python courses](https://www.futurelearn.com/subjects/it-and-computer-science-courses/python)
-
-## Django
-* [Writing your first Django app Part 1](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
-* [Django Girls Tutorial](https://tutorial.djangogirls.org/en/)
-* [Django-tables2 getting started](https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html)
-* [Importing a CSV file to database models](http://abhishekchhibber.com/django-importing-a-csv-file-to-database-models/)
-
-### Topics
-* [Decorators](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
 
 ## Rails
 * [Model View Controller (Lynda)](http://www.youtube.com/watch?v=3mQjtk2YDkM)
