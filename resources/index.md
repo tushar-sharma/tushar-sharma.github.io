@@ -157,12 +157,6 @@ published: true
 * [Text Retrieval and Search Engines](https://www.coursera.org/learn/text-retrieval)
 * [Pattern Discovery in Data Mining](https://www.coursera.org/learn/data-patterns)
 
-## Django
-* [Writing your first Django app Part 1](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
-* [Django Girls Tutorial](https://tutorial.djangogirls.org/en/)
-* [Django-tables2 getting started](https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html)
-* [Importing a CSV file to database models](http://abhishekchhibber.com/django-importing-a-csv-file-to-database-models/)
-
 ## Distributed Systems
 * [CS 166 Data Structures](http://web.stanford.edu/class/archive/cs/cs166/cs166.1146/)
 * [6.824 Spring 2017 MIT](http://nil.csail.mit.edu/6.824/2017/schedule.html)
@@ -331,6 +325,12 @@ overview of HTML.
 ## Python
 ### MOOCS
 * [Future Learn - Python courses](https://www.futurelearn.com/subjects/it-and-computer-science-courses/python)
+
+## Django
+* [Writing your first Django app Part 1](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
+* [Django Girls Tutorial](https://tutorial.djangogirls.org/en/)
+* [Django-tables2 getting started](https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html)
+* [Importing a CSV file to database models](http://abhishekchhibber.com/django-importing-a-csv-file-to-database-models/)
 
 ### Topics
 * [Decorators](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
