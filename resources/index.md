@@ -329,6 +329,10 @@ overview of HTML.
 * [Alice in Puzzleland](https://www.amazon.com/Alice-Puzzle-Land-Carrollian-Children-Recreational/dp/0486482006)
 
 ## Python
+### MOOCS
+* [Future Learn - Python courses](https://www.futurelearn.com/subjects/it-and-computer-science-courses/python)
+
+### Topics
 * [Decorators](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
 
 ## Rails
