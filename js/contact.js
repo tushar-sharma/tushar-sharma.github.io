@@ -36,15 +36,20 @@
    }
 
    else  {
-         $.ajax({
-             dataType: 'jsonp',
-             url: "http://getsimpleform.com/messages/ajax?form_api_token=23742ff758c0424fe7c088fb12148abd",
-             data: $('#contact-form').serialize() 
 
-           }).done(function() {
-             $("#result").html("<span style=\"color:green;\">" + "Thanks! I'll get back to you soon :)" + "</span>");
-             $('#contact-form')[0].reset();
-           });
+        $.ajax({
+          url: "http://getsimpleform.com/messages/ajax?form_api_token=23742ff758c0424fe7c088fb12148abd",
+          type: 'post',
+          data: $('#contact-form').serialize(),
+          contentType: 'application/json',
+          success: function (data) {
+            alert("success");
+          },
+          error: function(data) {
+            alert("fail");
+          }
+      });
+
      }
 
      return false;
