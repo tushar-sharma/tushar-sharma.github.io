@@ -38,15 +38,16 @@
    else  {
 
         $.ajax({
-          url: "http://getsimpleform.com/messages/ajax?form_api_token=23742ff758c0424fe7c088fb12148abd",
+          url: "https://formspree.io/f/xwkaewnl",
           type: 'post',
           data: $('#contact-form').serialize(),
-          contentType: 'application/json',
+          dataType: ' json',
           success: function (data) {
             $("#result").html("<span style=\"color:green;\">" + "Thanks! I'll get back to you soon :)" + "</span>");
             $('#contact-form')[0].reset();
           },
           error: function(data) {
+            console.log(data);
             $("#result").html("<span style=\"color:red;\">" + "Error in sending the email :( Please drop an email at tushar(at)randomwits(dot)com." + error + "</span>");
             $('#contact-form')[0].reset();
           }
