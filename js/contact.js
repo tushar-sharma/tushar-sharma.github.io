@@ -47,7 +47,7 @@
             $('#contact-form')[0].reset();
           },
           error: function(data) {
-            $("#result").html("<span style=\"color:red;\">" + "Error sending the email. " + error + "</span>");
+            $("#result").html("<span style=\"color:red;\">" + "Error in sending the email :( Please drop an email at tushar(at)randomwits(dot)com." + error + "</span>");
             $('#contact-form')[0].reset();
           }
       });
