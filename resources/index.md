@@ -89,6 +89,7 @@ published: true
 ## Python
 ### MOOCS
 * [Future Learn - Python courses](https://www.futurelearn.com/subjects/it-and-computer-science-courses/python)
+* [Udacity - Introduction to Python](https://www.udacity.com/course/introduction-to-python--ud1110)
 
 ## Django
 * [Writing your first Django app Part 1](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
