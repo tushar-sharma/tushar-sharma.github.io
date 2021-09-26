@@ -122,8 +122,6 @@ published: true
 * [Getopts tutorial](http://wiki.bash-hackers.org/howto/getopts_tutorial)
 * [Parallelism tutorial](https://pebblesinthesand.wordpress.com/2008/05/22/a-srcipt-for-running-processes-in-parallel-in-bash/)
 * [Find bugs in your shell scripts](https://www.shellcheck.net)
-
-### Command
 * [Understanding Kill command](http://bencane.com/2014/04/01/understanding-the-kill-command-and-how-to-terminate-processes-in-linux/)
 * [man page kill command](https://ss64.com/osx/kill.html)
 * [What does kill 0 pid does?](https://stackoverflow.com/questions/11012527/what-does-kill-0-pid-in-a-shell-script-do)
