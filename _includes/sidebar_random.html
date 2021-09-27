@@ -1,133 +1,68 @@
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 <style type="text/css">
+.txt{ padding-top: 5px; }
+.newcl{color: black; white-space: initial;}
+ li.txt {list-style: none outside none; }
+.btn {cursor: pointer;
+border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
+}
+</style>
 
-    /*override properties parent*/
-    header {
-        padding-right: none;
-        width: 100px;
-    }
-    
-    header ul {
-        border-radius: none;
-        background:#fff !important;
-        height: auto;
-        width: 100%;
-        border: none !important;
-        height: 100%;
-    }
-    
-    header li
-    {
-        width: 89px;
-        float: none !important;
-        border-right: none !important ;
-        height: 40px;
-    }
-    
-    
-    @import "compass/css3";
-     *, :before, :after {
-         box-sizing: border-box;
-    }
-     .unstyled {
-         list-style: none;
-         padding: 0;
-         margin: 0;
-    }
-     .unstyled a {
-         text-decoration: none;
-    }
-     .list-inline {
-         overflow: hidden;
-    }
-     .list-inline li {
-         float: left;
-    }
-     .header {
-         position: fixed;
-         left: 0;
-         top: 0;
-         bottom: 0;
-         background: white;
-    }
-     .logo2 {
-         font: 300 2em 'Source Sans Pro', Helvetica, Arial, sans-serif;
-         padding: 0;
-         margin: 0;
-    }
-     .logo2 a {
-         display: block;
-         padding: 0 !important;
-         color: #dfdbd9;
-         text-decoration: none;
-         transition: 0.15s linear color;
-       color: black;
-    }
-     .logo2 a:hover {
-         color:     ;
-    }
-     .logo2 a:hover span {
-         color: #39c;
-    }
-     .logo2 span {
-         font-weight: 700;
-         transition: 0.15s linear color;
-    }
-     .main-nav ul {
-    }
-     .main-nav li {
-    }
-     .main-nav a {
-         color: #000;
-         font: 400 1.125em 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    }
-     .main-nav a:hover {
-         color: #fff;
-    }
-
-     .list-hover-slide li {
-         position: relative;
-         overflow: hidden;
-    }
-     .list-hover-slide a {
-         display: block;
-         position: relative;
-         z-index: 1;
-         transition: 0.35s ease color;
-    }
-     .list-hover-slide a:before {
-         content: '';
-         display: block;
-         z-index: -1;
-         position: absolute;
-         left: -100%;
-         top: 0;
-         width: 100%;
-         height: 100%;
-         border-right: solid 2px #df4500;
-         background: #39c;
-         transition: 0.35s ease left;
-    }
-     .list-hover-slide a.is-current:before, .list-hover-slide a:hover:before {
-         left: 0;
-    }
-     .sub{font-family:Somefont}
-    .me_blurb{margin:-15px 0 15px}
-    </style>
-    
-      
-    <h1 class="logo2">
-          <a href="/">Random<span>wits</span></a> 
-        </h1>
-         <p class="me_blurb">
-       <div class="sub">
-         <b>Life is too short for a diary</b>
-        </div>
-        </p>
-      
-
+<!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="{{ root_url }}/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="{{ root_url }}/about">about me</a></span>
+-->
 
 <pre><code><span class="nv">$</span> random stuff</code><br> &nbsp;&nbsp;&nbsp;&nbsp;├── <span class="nv"><a href="{{ root_url }}/tags">tags</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="{{ root_url }}/books">bookshelf</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="{{ root_url }}/resources">resources</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="{{ root_url }}/quotes">quotes</a></span><br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="{{ root_url }}/habits">habits</a></span><br> &nbsp;&nbsp;&nbsp; └── <span class="nv"><a href="{{ root_url }}/about">about me</a></span>
  <div style="float:right;">+&nbsp;<a href="#"><a href="{{ root_url }}/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div></code></pre>
 
 
+<script type="text/javascript">
+
+/* generate a random number */
+/*function quotesGet(defaultValue) {
+  jQuery.get('/../quotes.txt', function(data) {
+     var quotes = data.split("\n");
+
+     var idx;
+     if (typeof defaultValue !== 'undefined') {
+         idx = defaultValue;
+     } else {         idx = Math.floor((quotes.length - 1) * Math.random());
+     }
+     var quoteArr = quotes[idx].split('"');
+     if (typeof quoteArr[1] !== 'undefined') {
+       document.getElementById("myquotes").innerHTML = quoteArr[1];
+     }
+
+     if (typeof quoteArr[2] !== 'undefined') {
+       document.getElementById("author").innerHTML = quoteArr[2];
+     }
+
+  });
+}
+$(document).ready(function() {
+    quotesGet();
+});
+
+$(document).ready(function(){
+    $('.quotebox').hide().before('<a href="#" id="open-quotebox" class="button">throw me a quote</a>');
+	$('.quotebox').append('<a href="#close-quotebox" id="close-quotebox" class="button">Close quote ↑</a>');
+	$('a#open-quotebox').click(function() {
+		$('.quotebox').slideDown(1000);
+		quotesGet();
+		return false;
+	});
+	$('a#close-quotebox').click(function() {
+		$('.quotebox').slideUp(1000);
+		return false;
+	});
+});
+
+
+/* send the default quote number 66 */
+/* omit it ; as i need to display random quotes
+$(document).ready(function() {
+  var defaultValue = 65;
+  quotesGet(defaultValue);
+});
+*/
+
+</script>
