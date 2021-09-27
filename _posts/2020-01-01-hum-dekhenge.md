@@ -73,7 +73,6 @@ In Somali, a Muslim extremist group banned samosas (a delicacy) as it resembles 
 
 I've a short life on earth & have no time for such bigotry. So I enjoy beautiful things from all cultures. In the end, I'll share a rendition of the poem by Coke Studio which you might enjoy
 
-<
 <p>
 <center>
 <figure>
