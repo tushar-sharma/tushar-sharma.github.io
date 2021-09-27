@@ -21,8 +21,15 @@ aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:bas
 </aside>
 
 <div style="clear:both;"></div>
-{% include sidebar_random.html %}
+<div>
+     <h1  class="heading"><span class="top"><a href="/"><i>Random Wits</i></a></span></h1>
+  <p class="me_blurb">
+  <div class="sub">
+Life is too short for a diary
+    </div>
+  </p>
 
+</div>
 
 <style type="text/css">
 @font-face{font-family:Somefont;src:url({{ root_url }}/font/OneDirection.ttf);font-weight:400;font-style:normal}
@@ -37,6 +44,15 @@ h1.heading{font-family:Myfont;color:#39c}
 </style>
 
 
+<!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+<!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+
+
+<!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+</p>
+
 
 
 <!-- <h2>Projects</h2>
@@ -44,6 +60,11 @@ h1.heading{font-family:Myfont;color:#39c}
   <pre style="overflow: hidden; overflow-y: hidden;">{% include sidebar_projects.html %}</pre>
 </div>
 -->
+
+<h2>Random</h2>
+<div class="highlight">
+  {% include sidebar_random.html %}
+</div>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
