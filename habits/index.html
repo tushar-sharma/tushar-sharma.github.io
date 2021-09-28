@@ -26,21 +26,7 @@ req.onload  = function() {
 
     let i;
 
-    //get the date
-    const todayDateHeader = new Date()
-    const yesterdayDateHeader = new Date(todayDateHeader)
-    const yesterdayOneMinusDateHeader = new Date(todayDateHeader)
-    const yesterdayTwoMinusDateHeader = new Date(todayDateHeader)
-    const yesterdayThreeMinusDateHeader = new Date(todayDateHeader)
-    const yesterdayFourMinusDateHeader = new Date(todayDateHeader)
-    const yesterdayFiveMinusDateHeader = new Date(todayDateHeader)
-  
-    yesterdayDateHeader.setDate(todayDateHeader.getDate() - 1)
-    yesterdayOneMinusDateHeader.setDate(todayDateHeader.getDate() - 2)
-    yesterdayTwoMinusDateHeader.setDate(todayDateHeader.getDate() - 3)
-    yesterdayThreeMinusDateHeader.setDate(todayDateHeader.getDate() - 4)
-    yesterdayFourMinusDateHeader.setDate(todayDateHeader.getDate() - 5)
-    yesterdayFiveMinusDateHeader.setDate(todayDateHeader.getDate() - 6)
+    let getDate = [];
 
     for (i = 1; i < data.length; i++) {
 
@@ -54,6 +40,10 @@ req.onload  = function() {
       let yesterdayMinusThreeDate = (data[i][11] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
       let yesterdayMinusFourDate = (data[i][12] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
       let yesterdayMinusFiveDate = (data[i][13] === "yes") ?  "<i style=\"font-size:24px\" class=\"icon-check cl\"></i>": "<i style=\"font-size:24px\" class=\"icon-check-empty cl\"></i>";
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
 
       document.getElementById("demo").innerHTML +=
         "<tr>" +
@@ -90,13 +80,14 @@ req.onload  = function() {
 
         "</tr>";
     }
-    document.getElementById("today").innerHTML = todayDateHeader.toDateString();
-    document.getElementById("yesterday").innerHTML = yesterdayDateHeader.toDateString();
-    document.getElementById("yesterdayOneMinus").innerHTML = yesterdayOneMinusDateHeader.toDateString();
-    document.getElementById("yesterdayTwoMinus").innerHTML = yesterdayTwoMinusDateHeader.toDateString();
-    document.getElementById("yesterdayThreeMinus").innerHTML = yesterdayThreeMinusDateHeader.toDateString();
-    document.getElementById("yesterdayFourMinus").innerHTML = yesterdayFourMinusDateHeader.toDateString();
-    document.getElementById("yesterdayFiveMinus").innerHTML = yesterdayFiveMinusDateHeader.toDateString();
+
+    document.getElementById("today").innerHTML = getDate[0];
+    document.getElementById("yesterday").innerHTML = getDate[1];
+    document.getElementById("yesterdayOneMinus").innerHTML = getDate[2];
+    document.getElementById("yesterdayTwoMinus").innerHTML = getDate[3];
+    document.getElementById("yesterdayThreeMinus").innerHTML = getDate[4];
+    document.getElementById("yesterdayFourMinus").innerHTML = getDate[5];
+    document.getElementById("yesterdayFiveMinus").innerHTML = getDate[6];
 };
 req.send(null);
 </script>
