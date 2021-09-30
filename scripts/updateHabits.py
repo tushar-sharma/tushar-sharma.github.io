@@ -56,8 +56,8 @@ def main():
     time.sleep(15)
 
     # update the sheet date
+    print("Reseting dates...")
     date_col = "S"
-
     date_col_row_number = 2
 
     curr_val = sheet_instance.acell("%s%s"%(date_col,date_col_row_number)).value
