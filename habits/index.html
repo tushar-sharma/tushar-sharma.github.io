@@ -15,7 +15,6 @@ published: true
 <style type="text/css">
   .sketch-cirlce{
     position:relative;
-    white-space: nowrap;
   }
   
   .sketch-cirlce:before{
@@ -96,7 +95,7 @@ req.onload  = function() {
 
       document.getElementById("demo").innerHTML +=
         "<tr>" +
-        "<td>" +
+        "<td style=\"white-space:nowrap;\" >" + 
         activity +
         "</td>" +
         "<td>" +
