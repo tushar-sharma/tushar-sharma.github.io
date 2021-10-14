@@ -111,7 +111,7 @@ Next we need to upload the `helloworld.asl.json` to s3 bucket. We also need to d
 
 
 ```bash
-$ cdk synth --version-reporting false  > cfn-template.yaml 
+$ cdk synth --version-reporting false --path-metadata false  > cfn-template.yaml 
 ```
 
 
