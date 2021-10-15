@@ -9,6 +9,7 @@ tags:
 - s3
 name: dynamodb-table-s3
 thumb: https://cdn-media-1.freecodecamp.org/images/NRiku0VLpjCZJtuf14-rhKFtFpHe2iqs9oZP
+featuredPost: true
 ---
 
 <p> Dynamodb is a great NoSQL service by AWS. One of the most common use case is to export data to s3. There are multiple ways to export data to s3. For this tutorial we will leverage lambda function to achieve our goal.
