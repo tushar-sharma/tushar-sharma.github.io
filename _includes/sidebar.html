@@ -64,6 +64,16 @@ h1.heading{font-family:Myfont;color:#39c}
   {% include sidebar_random.html %}
 </div>
 
+<br>
+
+<!-- only if page is root page-->
+{% if page.url == '/' %}
+<div class="highlight">
+  {% include sidebar_blog.html %}
+</div>
+
+{% endif %}
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

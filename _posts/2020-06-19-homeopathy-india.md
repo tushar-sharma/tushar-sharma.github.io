@@ -9,6 +9,7 @@ tags:
 - india
 name: homeopathy-india
 thumb: https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg
+featuredPost: true
 ---
 
 <p> I recently came across a Youtube video of Genelia Deshmukh, famous Indian actress, promoting homeopathic products. Along with her husband, they have invested in a startup called Welcome Cure. Science has repeatedly dismissed homepathy as quakery or at best placebo, but that has not deter government of India to fund & research homeopathy under AYUSH ministry.
