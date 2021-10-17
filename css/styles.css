@@ -39,9 +39,21 @@ header,section,footer{float:none;position:static;width:auto}section{border:1px s
 
 header a small{display:inline}header ul{position:absolute;right:50px;top:52px}}@media print,screen and (max-width: 600px){body{word-wrap:break-word}header{padding:0}
 
-header ul,header p.view{position:static}pre,code{word-wrap:break-word}}@media print{body{padding:15px;font-size:16pt;color:#444}}.mytag{border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px}@font-face{font-family:Somefont;src:url(http://randomwits.com/font/OneDirection.ttf);font-weight:400;font-style:normal}
+header ul,header p.view{position:static}pre,code{word-wrap:break-word}}@media print{body{padding:15px;font-size:16pt;color:#444}}.mytag{border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px}@font-face{font-family:Somefont;
+    
+src:url(../font/OneDirection.ttf);font-weight:400;font-style:normal}
 
-h1.heading{font-family:Myfont;color:#39c}.top{color:#444}.sub{font-family:Somefont}#back-top{position:fixed;bottom:30px;margin-left:-150px}#back-top a{width:108px;display:block;text-align:center;font:11px/100% Arial,Helvetica,sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}#back-top a:hover{color:#000}#back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}#back-top a:hover span{background-color:#777}.pagination{border-top:1px dotted #ccc;margin:20px 0;padding:10px 0}.pagination a{width:50%}.prev-item{float:left;text-align:left}.next-item{float:right;text-align:right}.footer{bottom:0;left:0;float:left;clear:both;margin:0;padding:0;width:100%}.footer hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(255,255,255,0.3)}.footer p{padding-left:400px;display:block;-webkit-margin-before:1em;-webkit-margin-after:1em;-webkit-margin-start:0;-webkit-margin-end:0}
+h1.heading{font-family:Myfont;color:#39c}.top{color:#444}.sub{font-family:Somefont}#back-top{position:fixed;bottom:30px;margin-left:-150px}#back-top a{width:108px;display:block;text-align:center;font:11px/100% Arial,Helvetica,sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}#back-top a:hover{color:#000}#back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}#back-top a:hover span{background-color:#777}.pagination{border-top:1px dotted #ccc;margin:20px 0;padding:10px 0}
+
+.pagination a{width:50%}
+
+.prev-item{float:left;text-align:left}
+
+.next-item{float:right;text-align:right}
+
+.footer{bottom:0;left:0;float:left;clear:both;margin:0;padding:0;width:100%}
+
+.footer hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(255,255,255,0.3)}.footer p{padding-left:400px;display:block;-webkit-margin-before:1em;-webkit-margin-after:1em;-webkit-margin-start:0;-webkit-margin-end:0}
 
 .codeblock{
     padding: 8px 15px;
