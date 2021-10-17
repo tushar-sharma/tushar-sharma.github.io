@@ -23,15 +23,6 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ["@L","@L"], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-    });
-    </script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
     <noscript>
@@ -121,63 +112,37 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 <!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
 -->
 
-<pre><code><span style="font-size: 18px; " class="nv">$</span>&nbsp; <span style=" font-size: 18px;">print wits</span></code><br> &nbsp;&nbsp;&nbsp;&nbsp;├── <span class="nv"><a href="/tags">tags</a></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="/books">bookshelf</a></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="/resources">resources</a></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="/quotes">quotes</a></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br> &nbsp;&nbsp;&nbsp; ├── <span class="nv"><a href="/habits">habits</a></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br> &nbsp;&nbsp;&nbsp; └── <span class="nv"><a href="/about">about me</a></span>
- <div style="float:right;">+&nbsp;<a href="#"><a href="/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div></code></pre>
+<div class="codeblock">
+    <span style="font-size: 18px; " class="nv">$</span>&nbsp;<span style=" font-size: 18px;">print wits</span>
+    <br>
+    <div style="padding-left:25px;">
+        ├── <span class="nv"><a href="/tags">tags</a></span> <br>
+        │<br>
+        ├── <span class="nv"><a href="/books">bookshelf</a></span><br>
+        │<br>
+        ├── <span class="nv"><a href="/resources">resources</a></span><br>
+        │<br>
+        ├── <span class="nv"><a href="/quotes">quotes</a></span><br>
+        │<br>
+        ├── <span class="nv"><a href="/habits">habits</a></span><br>
+        │<br>
+        └── <span class="nv"><a href="/about">about me</a></span><br>
+        <div style="float:right;">+&nbsp;<a href="#"><a href="/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div>
+        
+    </div>
 
+    
+</div>
 
-<script type="text/javascript">
-
-/* generate a random number */
-/*function quotesGet(defaultValue) {
-  jQuery.get('/../quotes.txt', function(data) {
-     var quotes = data.split("\n");
-
-     var idx;
-     if (typeof defaultValue !== 'undefined') {
-         idx = defaultValue;
-     } else {         idx = Math.floor((quotes.length - 1) * Math.random());
-     }
-     var quoteArr = quotes[idx].split('"');
-     if (typeof quoteArr[1] !== 'undefined') {
-       document.getElementById("myquotes").innerHTML = quoteArr[1];
-     }
-
-     if (typeof quoteArr[2] !== 'undefined') {
-       document.getElementById("author").innerHTML = quoteArr[2];
-     }
-
-  });
-}
-$(document).ready(function() {
-    quotesGet();
-});
-
-$(document).ready(function(){
-    $('.quotebox').hide().before('<a href="#" id="open-quotebox" class="button">throw me a quote</a>');
-	$('.quotebox').append('<a href="#close-quotebox" id="close-quotebox" class="button">Close quote ↑</a>');
-	$('a#open-quotebox').click(function() {
-		$('.quotebox').slideDown(1000);
-		quotesGet();
-		return false;
-	});
-	$('a#close-quotebox').click(function() {
-		$('.quotebox').slideUp(1000);
-		return false;
-	});
-});
-
-
-/* send the default quote number 66 */
-/* omit it ; as i need to display random quotes
-$(document).ready(function() {
-  var defaultValue = 65;
-  quotesGet(defaultValue);
-});
-*/
-
-</script>
 
 </div>
+
+<br><br>
+
+<!-- only if page is root page -->
+
+
+<br><br>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -192,13 +157,15 @@ $(document).ready(function() {
 
 <br>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+<script src="/js/scroll_top.js" type="text/javascript"></script>
+
 <p id="back-top">
   <a href="#top"><span></span>Back to Top</a>
 </p>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 
-<script src="/js/scroll_top.js" type="text/javascript"></script>
 
       </header>
       <section>
@@ -229,7 +196,7 @@ $(document).ready(function() {
 
             
             
-            <p>I was an intern working in upstate [upsttate New York](https://en.wikipedia.org/wiki/Upstate_New_York). Public transport required hopping multiple trains & buses and was woefully tedious. I found some other interns who were willing to split the fare with me for Uber. Even a ride in Uber consumed more than two hours. Occasionally I used to steal a quick nap. After a siesta of a few hours, I had always woken up with a gaggle of laughter. My peers often pulled my leg, "You were snoring like a pig". However, I dismissed my faux pas as just a mere nuisance.</p>
+            <p>I was an intern working in <a href="https://en.wikipedia.org/wiki/Upstate_New_York" target="_blank">Upstate New York</a>. Public transport required hopping multiple trains & buses and was woefully tedious. I found some other interns who were willing to split the fare with me for Uber. Even a ride in Uber consumed more than two hours. Occasionally I used to steal a quick nap. After a siesta of a few hours, I had always woken up with a gaggle of laughter. My peers often pulled my leg, "You were snoring like a pig". However, I dismissed my faux pas as just a mere nuisance.</p>
 
 Recently I was listening to a clubhouse talk about snoring<sup><a href='#fn:1' rel='footnote'>1</a></sup>. I always believed that snoring was innocuous. However, I learned that snoring might be a symptom of a disorder like sleep apnea. Since most of us snore or are more likely to snore in the later part of our lives, it would be prudent to delve deeper into the understanding of snoring...
       </div>
