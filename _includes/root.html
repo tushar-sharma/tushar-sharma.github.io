@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="{{ root_url }}/css/styles.css" />
 <link rel="stylesheet" href="{{ root_url }}/css/font-awesome.css" />
-
 <link rel="stylesheet" href="{{ root_url }}/css/search.css" />
 
 <!-- search box begins -->
@@ -50,11 +49,11 @@
   {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
       <span style="padding-right: 25px;">
-        <a href="/" title="Previous Page">&laquo; Previous</a>
+        <a  style="font-size:15px;" class="mytag"  href="/" title="Previous Page">&laquo; Previous</a>
       </span>
       {% else %}
       <span style="padding-right: 25px;">
-        <a href="/page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Previous</a>
+        <a style="font-size:15px;" class="mytag" href="/page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Previous</a>
       </span>
       {% endif %}
   {% endif %}
@@ -63,8 +62,7 @@
   <!-- check if the next link doesn't return null -->
   {% if paginator.next_page %}
   <span style="padding-left: 25px;">
-    <a href="/page{{ paginator.next_page }}" title="Next Page">Next &raquo;</a>
+    <a style="font-size:15px;" class="mytag" href="/page{{ paginator.next_page }}" title="Next Page">Next &raquo;</a>
   </span>
   {% endif %}
 </nav>
-
