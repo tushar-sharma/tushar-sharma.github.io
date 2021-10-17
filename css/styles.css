@@ -16,7 +16,7 @@ header ul{
     background:-webkit-linear-gradient(top,#f8f8f8 0%,#ddd 100%);background:-o-linear-gradient(top,#f8f8f8 0%,#ddd 100%);
     background:-ms-linear-gradient(top,#f8f8f8 0%,#ddd 100%);background:linear-gradient(top,#f8f8f8 0%,#ddd 100%);
     border-radius:5px;border:1px solid #d2d2d2;box-shadow:inset #fff 0 1px 0,inset rgba(0,0,0,0.03) 0 -1px 0;
-    width:220px
+    width:240px;
 }
 
 header li{width:89px;float:left;border-right:1px solid #d2d2d2;height:40px}
@@ -31,7 +31,7 @@ header ul li + li + li{border-right:none;width:89px}
 
 header ul a strong{font-size:13px;display:block;color:#222}
 
-section{width:680px;float:right;padding-bottom:50px}small{font-size:12px;color:#888}
+section{width:630px;float:right;padding-bottom:50px}small{font-size:12px;color:#888}
 
 hr{border:0;background:#e5e5e5;height:1px;margin:0 0 20px}footer{bottom:0}@media print,screen and (max-width: 960px){div.wrapper{width:auto;margin:0}
 
