@@ -4,7 +4,7 @@
 <style type="text/css">
 @font-face {
   font-family: 'Somefont';
-  src:url('/../font/OneDirection.ttf');
+  src:url('{{ root_url }}/font/OneDirection.ttf');
   font-weight: normal;
   font-style: normal;
 }
@@ -33,11 +33,11 @@ h1.heading {
 <div style="clear:both;"></div>
 <div>
 <h1  class="heading"><span class="top">Random Wits</span></h1> 
-<p class="me_blurb"><div class="sub"><a href="/../about/">About ME</a></div></p> 
+<p class="me_blurb"><div class="sub"><a href="{{ root_url }}/about/">About ME</a></div></p> 
 </div>
 
 <style type="text/css">
-@font-face{font-family:Somefont;src:url(/../font/OneDirection.ttf);font-weight:400;font-style:normal}
+@font-face{font-family:Somefont;src:url({{ root_url }}/font/OneDirection.ttf);font-weight:400;font-style:normal}
 h1.heading{font-family:Myfont;color:#39c}
 .top{color:#444}
 .sub{font-family:Somefont}
