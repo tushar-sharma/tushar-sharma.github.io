@@ -5,6 +5,7 @@ category: blog
 tags: poetry romance moon
 name: romance-moon
 thumb: /img/moon.jpg
+featuredPost: true
 ---
 
 <p>Often we meet,<br>
