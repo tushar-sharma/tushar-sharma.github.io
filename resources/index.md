@@ -93,13 +93,17 @@ toc_icon: "cog"
 * [Future Learn - Python courses](https://www.futurelearn.com/subjects/it-and-computer-science-courses/python)
 * [Udacity - Introduction to Python](https://www.udacity.com/course/introduction-to-python--ud1110)
 
-## Django
+### Django
 * [Writing your first Django app Part 1](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
 * [Django Girls Tutorial](https://tutorial.djangogirls.org/en/)
 * [Django-tables2 getting started](https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html)
 * [Importing a CSV file to database models](http://abhishekchhibber.com/django-importing-a-csv-file-to-database-models/)
 
-### Topics
+### Books 
+* The Hacker's Guide to Python by Julien Danjou
+* Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People by Aditya Bhargava
+
+### Selected Topics
 * [Decorators](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
 
 
