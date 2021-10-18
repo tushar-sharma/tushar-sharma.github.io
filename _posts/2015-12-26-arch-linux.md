@@ -118,7 +118,7 @@ To use **GPT partition**, type
 
 To create five partion, follow five parts 
 
-### Create Partition ONE
+## Create Partition ONE
 
 1. Type ‘n’ at the prompt and hit 'Return'.
 
@@ -137,7 +137,7 @@ To create five partion, follow five parts
     
 
 
-### Create Partition Two
+## Create Partition Two
 
 
 1. Type ‘n’ at the prompt and hit 'Return'.
@@ -151,7 +151,7 @@ To create five partion, follow five parts
 5. When it asks for a "hex code", type '8300' and hit 'Return'
 
 
-### Create Partition Three
+## Create Partition Three
 
 
 1. Type ‘n’ at the prompt and hit 'Return'.
@@ -166,7 +166,7 @@ To create five partion, follow five parts
 
 
 
-### Create Partition Four
+## Create Partition Four
 
     
 
@@ -180,7 +180,7 @@ To create five partion, follow five parts
 
 5. When it asks for a "hex code", type '8300' and hit 'Return'
 
-### Create Partition Five
+## Create Partition Five
 
 
 1. Type ‘n’ at the prompt and hit 'Return'.
@@ -194,7 +194,7 @@ To create five partion, follow five parts
 5. When it asks for a "hex code", type '8300' and hit 'Return'
 
 
-### Write to Partition 
+## Write to Partition 
 
 1. Type 'p' to see all the partition
 
@@ -273,7 +273,7 @@ After this we need to install bootloader. When a computer loads up, it needs boo
 
 You can't live in your Lego home before you add a roof. Similarly you can't reboot your system now before you initialize your Boot Loader. 
 
-### Install Grub on non-efi system 
+## Install Grub on non-efi system 
 
     # pacstrap /mnt grub
 
