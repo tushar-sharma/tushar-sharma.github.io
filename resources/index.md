@@ -2,13 +2,15 @@
 layout: comments
 title: Resources for Programmers
 published: true
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 
 <h1 class="entry-title">Resources for Programmers</h1>
 <link rel="stylesheet" href="{{ root_url }}/css/toc.css" />
 
-* Will be replaced with the ToC
-{:toc}
+
 
 <!-- ## Users repo
 * [Personal Repo](https://github.com/tushar-sharma/prep-coding)
