@@ -96,8 +96,11 @@
  
     render[settings.showEffect]();
    
-    document.getElementById("toc-block").style.display="block";
+    var toc = document.getElementById("toc-block"); 
 
+    if (toc) {
+	    toc.style.display="block";
+    }
     
   };
 })(jQuery);
