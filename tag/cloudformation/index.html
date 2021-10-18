@@ -59,16 +59,16 @@ header ul  {
   width: auto !important;
   border-radius: 0px solid !important;
   border-right: 0px solid !important;
-  font-size: 0.8rem !important;
-  letter-spacing: 1px !important;
+  font-size: 1rem !important;
+  letter-spacing: 2px !important;
 }
 header ul a {
   padding-top: none !important;
-  color: #37c;
+  color: #37c !important;
   border-right: 0px solid !important;
   display: inline !important;
   padding: 0.5rem 1rem !important;
-  border-bottom: 1px solid #f2f3f3 !important;
+  border-bottom: 1px solid #37c !important;
 }
 header li {
   width: auto !important;
@@ -76,6 +76,10 @@ header li {
   margin: 10px 0 !important;
 }
 
+
+.nv {
+  color: #008080 !important;
+}
 .newToc {
     font-size: 0.9em;
     border: 1px solid #aaa;
@@ -157,7 +161,7 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 -->
 
 <div class="codeblock">
-    <span style="font-size: 18px; " class="nv">$</span>&nbsp;<span style=" font-size: 18px;">print wits</span>
+    <span style="font-size: 18px; " class="nv">$</span>&nbsp;<span style=" font-size: 18px;">about</span>
     <br>
     <div style="padding-left:25px;">
         ├── <span class="nv"><a href="/tags">tags</a></span> <br>
@@ -170,7 +174,7 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
         │<br>
         ├── <span class="nv"><a href="/habits">habits</a></span><br>
         │<br>
-        └── <span class="nv"><a href="/about">about me</a></span><br>
+        └── <span class="nv"><a href="/about">bio</a></span><br>
         <div style="float:right;">+&nbsp;<a href="#"><a href="/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div>
         
     </div>
@@ -185,10 +189,10 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
 <!-- only if page is root page -->
 
-<div id="markdown-toc" style="display:none;">
+<div id="toc-block" class="codeblock" style="display:none;">
+  <span style="font-size: 18px; " class="nv">$</span>&nbsp;<span style=" font-size: 18px;">table of contents</span>
   <div id="toc"></div>
 </div>
-  
 
 
 <!-- toc page -->
