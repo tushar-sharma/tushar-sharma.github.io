@@ -30,13 +30,8 @@ Given an integer array nums, find the contiguous subarray (containing at least o
 
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. A subarray is a contiguous part of an array.<sup><a href='#fn:1' rel='footnote'>1</a></sup>
 
-# Table of Contents
-{:.no_toc}
 
-1. Will be replaced with the ToC, excluding the "Table of Contents" header
-{:toc}
-
-# Brute force algorithm
+## Brute force algorithm
 
 We can commence with a brute force algorithm. For every element of array, we compare its sum with the rest of the element to calculate maximum sum. 
 
