@@ -39,11 +39,7 @@ Dating Arch is a different game. She is not just another `click-next-install` Li
 </p>
 
 
-# Table of Contents 
-{:.no_toc}
 
-1. Will be replaced with the ToC, excluding the "Table of Contents" header
-{:toc}
 
 
 # Step 1 : Find the base
@@ -122,7 +118,7 @@ To use **GPT partition**, type
 
 To create five partion, follow five parts 
 
-### Create Partition 1  
+### Create Partition ONE
 
 1. Type ‘n’ at the prompt and hit 'Return'.
 
@@ -141,7 +137,7 @@ To create five partion, follow five parts
     
 
 
-### Create Partition 2
+### Create Partition Two
 
 
 1. Type ‘n’ at the prompt and hit 'Return'.
@@ -155,7 +151,7 @@ To create five partion, follow five parts
 5. When it asks for a "hex code", type '8300' and hit 'Return'
 
 
-### Create Partition 3
+### Create Partition Three
 
 
 1. Type ‘n’ at the prompt and hit 'Return'.
@@ -170,7 +166,7 @@ To create five partion, follow five parts
 
 
 
-### Create Partition 4
+### Create Partition Four
 
     
 
@@ -184,7 +180,7 @@ To create five partion, follow five parts
 
 5. When it asks for a "hex code", type '8300' and hit 'Return'
 
-### Create Partition 5
+### Create Partition Five
 
 
 1. Type ‘n’ at the prompt and hit 'Return'.
