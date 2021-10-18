@@ -9,6 +9,7 @@ tags:
 - dp
 name: maximum-subarray
 thumb: https://www.hrccu.org/wp-content/uploads/2020/05/hackers.jpg
+toc: true
 ---
 
 <style type="text/css">
@@ -70,7 +71,7 @@ class Solution {
 
 Time complexity is <b>O(n<sup>2</sup>)</b> and the execution time is 110 ms on leetcode.
 
-# More efficient solution
+## More efficient solution
 
 
 We can use <a href="https://en.wikipedia.org/wiki/Maximum_subarray_problem">Kadane algorithm</a> to solve. It cans the given array <b>A[1..n]</b> from left to right. In the jth step, it computes the subarray with the largest sum ending at j; this sum is maintained in variable cSum. It computes the subarray with the largest sum anywhere in <b>A[1..j]</b>, maintained in variable oSum;
@@ -104,7 +105,7 @@ class Solution {
 
 The time complexity is <b>O(n<sup></sup>)</b>. The execution time took 0 ms on leetcode.
 
-<div class='footnotes'><h3>Footnotes</h3><hr />
+<div class='footnotes'><h4>Footnotes</h4><hr />
   <ol>
     <li id='fn:1'>
          <p><a href="https://leetcode.com/problems/maximum-subarray/" target="_blank">Leetcode</a></p>
