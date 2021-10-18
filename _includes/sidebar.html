@@ -23,22 +23,24 @@ header ul  {
   width: auto !important;
   border-radius: 0px solid !important;
   border-right: 0px solid !important;
-  font-size: 0.8rem !important;
-  letter-spacing: 1px !important;
+  font-size: 1rem !important;
+  letter-spacing: 2px !important;
 }
 header ul a {
   padding-top: none !important;
-  color: #37c;
+  color: #37c !important;
   border-right: 0px solid !important;
   display: inline !important;
   padding: 0.5rem 1rem !important;
-  border-bottom: 1px solid #f2f3f3 !important;
+  border-bottom: 1px solid #37c !important;
 }
 header li {
   width: auto !important;
   border-right: 0px solid !important;
   margin: 10px 0 !important;
 }
+
+
 
 .newToc {
     font-size: 0.9em;
@@ -116,10 +118,10 @@ h1.heading{font-family:Myfont;color:#39c}
   {% include sidebar_blog.html %}
 </div>
 {% else %}
-<div id="markdown-toc" style="display:none;">
+<div id="toc-block" class="codeblock" style="display:none;">
+  <span style="font-size: 18px; " class="nv">$</span>&nbsp;<span style=" font-size: 18px;">table of contents</span>
   <div id="toc"></div>
 </div>
-  
 {% endif %}
 
 <!-- toc page -->

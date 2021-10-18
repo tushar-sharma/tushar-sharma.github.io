@@ -94,7 +94,7 @@
       });
     }
  
-    document.getElementById("markdown-toc").style.display = "block";
+    document.getElementById("toc-block").style.display = "block";
 
     render[settings.showEffect]();
     
