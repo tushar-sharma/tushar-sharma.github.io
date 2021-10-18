@@ -8,9 +8,17 @@ toc_icon: "cog"
 ---
 
 <h1 class="entry-title">Resources for Programmers</h1>
-<link rel="stylesheet" href="{{ root_url }}/css/toc.css" />
 
+<style type="text/css">
+section ul li  { 
+padding-bottom: 15px !important;
+letter-spacing: 5px !important;
+}
 
+section ul li a { 
+  border-bottom: 1px solid #f2f3f3 !important;
+}
+</style>
 
 <!-- ## Users repo
 * [Personal Repo](https://github.com/tushar-sharma/prep-coding)
