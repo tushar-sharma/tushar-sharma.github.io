@@ -21,7 +21,6 @@ Leslee Udwin, the maker of the documentary, has flown out of India citing her se
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-<div>
 <p>
 "India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable.
 </p>
@@ -143,7 +142,6 @@ Such prevalent mentality is the reason why we need to see more of such documenta
 
 
   </ol>
-</div>
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
