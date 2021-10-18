@@ -45,8 +45,7 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 <p>There’s no rocket science to understand why we need to watch the documentary. The blatant lack of remorse and callousness from the rapist as well as defence lawyers reflect something is wrong with our society.
 </p>
 
-<p class="myheading"><b>What was the interview about?</b></p>
-
+## What was the interview about?
 
 <p>“When being raped, she shouldn’t fight back”. “She should just be silent and allow the rape. Then they’d have dropped her off after ‘doing her’ and only hit the boy”, said Mukesh Singh, one of the accused in Delhi Gang Rape. Instead of being apologetic, he had the temerity to question the character of girl when he adds, "A decent girl won't roam around at 9 o'clock at night.".
 </p>
@@ -60,7 +59,7 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 <p>"You are talking about man and woman as friends. Sorry, that doesn't have any place in our society. We have the best culture. In our culture, there is no place for a woman."
 </p>
 
-<p class="myheading"><b>Best Culture?</b></p>
+## Best Culture?
 
 <p>A woman in northern India has been stripped naked and paraded on a donkey on the orders of village elders after being accused of killing her nephew.<sup id='fnref:4'><a href='#fn:4' rel='footnote'>4</a></sup></p>
 
@@ -70,13 +69,13 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 
 <p>In January 2012, some upper-caste men in Maharashtra state beat, stripped and paraded naked a low-caste Dalit woman because her son had eloped with an upper-caste girl.<sup id='fnref:7'><a href='#fn:7' rel='footnote'>7</a></sup></p>
 
-<p class="myheading"><b>Mera Bharat Mahan?</b></p>
+## Mera Bharat Mahan?
 
 <p>Best culture? Culture who still believes the women should be confined within the four walls. Culture who has more abhorrence for Valentine day than female feticide. Culture who burdens the bride’s father under the garb of extravagant wedding & dowry. Culture where Marital Rape is still acceptable. Culture where women are still wary to travel alone outside. Women are branded witched and paraded naked in villages. Yes sir, we do have a best culture.
 
 </p>
 
-<p class="myheading"><b>And we have more in the herd</b></p>
+## And we have more in the herd
 
 <p>The other lawyer, AP Singh, had said in a previous televised interview: "If my daughter or sister engaged in pre-marital activities and disgraced herself and allowed herself to lose face and character by doing such things, I would most certainly take this sort of sister or daughter to my farmhouse, and in front of my entire family, I would put petrol on her and set her alight."
 </p>
@@ -89,7 +88,7 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 
 <p>Manohar Lal Khattar, now the Chief Minister of Haryana, also prescribed a dress code for women. “If a girl is dressed decently, a boy will not look at her in the wrong way. If they want freedom, why don’t they just roam around naked? Freedom has to be limited,” Khattar had said in the run-up to last year’s Lok Sabha polls.<sup id='fnref:8'><a href='#fn:8' rel='footnote'>8</a></sup></p>
 
-<p class="myheading"><b>Whose responsible? </b></p>
+## Whose responsible? 
 
 <p>India is probably the most hypocritical society. At one instance we worship girls as goddess. Paint her in hues and colors and associate her with prosperity. On the other hand we burden the bride’s father with dowry. Callously judge her character every time. As a boy, nobody questions my character when at times I come late at night. Why such double standard? Why can't I be a slut?</p>  
 
@@ -97,7 +96,7 @@ Kudos to the government for silencing the interviewer. We don’t want another �
 </p>
 
 
-<p class="myheading"><b>In the end</b></p>
+## Conclusion
 
 <p>Instead of being furious and decry western conspiracies, we need to take a deep breath. Yes, there are more rapes in United States & United Kingdom<sup id='fnref:9'><a href='#fn:9' rel='footnote'>9</a></sup>, yet the public places in these countries are far safer than India. Ask any women in India what she goes through whenever she travels in public transport. 
 </p> 
