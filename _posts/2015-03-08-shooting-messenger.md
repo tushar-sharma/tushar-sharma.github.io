@@ -96,12 +96,8 @@ Kudos to the government for silencing the interviewer. We donâ€™t want another â
 <p>The notion that women needs to be protected fuels the male chauvinist mentality. Women are often portrayed as delicate flower always in need of a guardian. Such idea lead to belief that women are tender,feeble & dependent. Our film industry is also responsible for promulgating such beliefs.
 </p>
 
-<p>
-<object width="425" height="344"><param name="movie" value="http://swf.tubechop.com/tubechop.swf?vurl=vuo4wbREE4U&start=3494&end=3609&cid=5370860"></param><embed src="http://swf.tubechop.com/tubechop.swf?vurl=vuo4wbREE4U&start=3494&end=3609&cid=5370860" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
-</p>
 
-
-<p class="myheading"><b>in the end</b></p>
+<p class="myheading"><b>In the end</b></p>
 
 <p>Instead of being furious and decry western conspiracies, we need to take a deep breath. Yes, there are more rapes in United States & United Kingdom<sup id='fnref:9'><a href='#fn:9' rel='footnote'>9</a></sup>, yet the public places in these countries are far safer than India. Ask any women in India what she goes through whenever she travels in public transport. 
 </p> 
