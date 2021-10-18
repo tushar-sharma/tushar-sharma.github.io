@@ -94,9 +94,10 @@
       });
     }
  
-    document.getElementById("toc-block").style.display = "block";
-
     render[settings.showEffect]();
+   
+    document.getElementById("toc-block").style.display="block";
+
     
   };
 })(jQuery);
