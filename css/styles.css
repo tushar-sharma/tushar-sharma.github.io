@@ -6,9 +6,9 @@ code,pre{font-family:Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal;col
 
 pre{padding:8px 15px;background:#f8f8f8;border-radius:5px;border:1px solid #e5e5e5;overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:5px 10px;border-bottom:1px solid #e5e5e5}dt{color:#444;font-weight:700}th{color:#444}img{max-width:100%}
 
-header{width:20%;height:100%;float:left;position:relative;overflow:auto;padding:5%;}
+header{width:20%;height:100%;float:left;position:relative;overflow:auto;padding-left:5%; padding-right:5%;}
 
-section{width:60%;float:left;padding-right:5%; padding-bottom:20px;}small{font-size:12px;color:#888}
+section{width:60%;float:left;padding-right:5%; padding-bottom:50px;}small{font-size:12px;color:#888}
 
 header ul{
     list-style:none;
