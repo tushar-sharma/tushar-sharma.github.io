@@ -2,7 +2,7 @@ safe: false
 highlighter: rouge
 lsi: false
 permalink: /:categories/:title
-url: http://randomwits.com
+url: https://randomwits.com
 markdown: kramdown
 title: Random Wits
 port: 4000
