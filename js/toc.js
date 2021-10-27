@@ -4,7 +4,7 @@
     var defaults = {
       noBackToTopLinks: false,
       title: '',
-      minimumHeaders: 3,
+      minimumHeaders: 2,
       headers: 'h1, h2, h3',
       listType: 'ol', // values: [ol|ul]
       showEffect: 'show', // values: [show|slideDown|fadeIn|none]
@@ -93,14 +93,14 @@
         window.location.hash = '';
       });
     }
- 
+
     render[settings.showEffect]();
-   
-    var toc = document.getElementById("toc-block"); 
+
+    var toc = document.getElementById("toc-block");
 
     if (toc) {
 	    toc.style.display="block";
     }
-    
+
   };
 })(jQuery);
