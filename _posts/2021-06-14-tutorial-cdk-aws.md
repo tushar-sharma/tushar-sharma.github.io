@@ -25,7 +25,7 @@ The CDK library provides you a way to declare the resources in your favorite lan
 First, install the AWS CDK CLI from command line using
 
 ```bash
-$ npm i -g aws-cdk
+$ npm i -g aws-cdk@latest
 ```
 
 Let's create a project
