@@ -21,6 +21,7 @@ The CDK library provides you a way to declare the resources in your favorite lan
 
 The CDK library provides you a way to declare the resources in your favorite languages like Java, Javascript, Typescript, and Python. In this tutorial, we will use typescript to generate our cloudformation template.
 
+## Installation
 
 First, install the AWS CDK CLI from command line using
 
@@ -61,7 +62,7 @@ $ cdk synth  > cfn-template.yaml
 If you want to generate cloudformation template without metadata
 
 ```bash
-$ cdk synth --version-reporting false  > cfn-template.yaml 
+$ cdk synth --version-reporting false --path-metadata false > cfn-template.yaml 
 ```
 
 The output of the `cfn-template.yaml` is 
@@ -78,6 +79,9 @@ Parameters:
       - development
       - production
 ```
+
+
+## Stepfunction
 
 The cloudformation template needs at least one resource to validate. We will add a `stepfunction` to our cloudformation. We will define our stepfunction inside a json file, `helloworld.asl.json`
 
@@ -98,6 +102,7 @@ The cloudformation template needs at least one resource to validate. We will add
   }
 }
 ```
+
 
 If you are not familiar with Stepfunction, AWS Stepfunction console has a nice visualization
 
