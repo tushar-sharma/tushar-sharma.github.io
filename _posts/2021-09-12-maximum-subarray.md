@@ -65,7 +65,7 @@ class Solution {
 
 Time complexity is <b>O(n<sup>2</sup>)</b> and the execution time is 110 ms on leetcode.
 
-## More efficient solution
+### More efficient solution
 
 
 We can use <a href="https://en.wikipedia.org/wiki/Maximum_subarray_problem">Kadane algorithm</a> to solve. It cans the given array <b>A[1..n]</b> from left to right. In the jth step, it computes the subarray with the largest sum ending at j; this sum is maintained in variable cSum. It computes the subarray with the largest sum anywhere in <b>A[1..j]</b>, maintained in variable oSum;
