@@ -25,7 +25,7 @@ Our world has been ravaged by covid pandemic recently. So it would be apt to tal
 
 It’s a bundle of genetic material (RNA or DNA) wrapped in a protein capsule called capsids. It's different than other microbes like single cellular organisms. For example bacteria is a free-living cell which can survive inside or outside of a body. Outside the body, viruses look like just a lifeless collection of molecule. 
 
-[Van Leeuwenhoek](https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek) is often noted as **"father of microbiology"**. He was able to observe many microbes like bacteria around 1676 using single-lensed microscope. However viruses are 100 times smaller than bacteria usually in the range of 100 nanometer. Visible light has a wavelength of 400-700 nanometer. So we cant see any object less than half of the wavelength of light. So anything smaller than 200-350 nanometer is not visible under optical microscope. Hence electron microscope are used to probe the structure of a virus. 
+[Van Leeuwenhoek](https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek) is often noted as **"father of microbiology"**. He was able to observe many microbes like bacteria around 1676 using single-lensed microscope. However viruses are 100 times smaller than bacteria usually in the range of 100 nanometer. Visible light has a wavelength of 400-700 nanometer. So we cannot see any object less than half of the wavelength of light. So anything smaller than 200-350 nanometer is not visible under optical microscope. Hence electron microscope are used to probe the structure of a virus. 
 
 
 
@@ -60,7 +60,7 @@ Do viruses die? A virus cannot die outside the host since they are not alive. Ho
 
 ## Conclusion
 
-There are many hypothesis regarding origin of viruses like **escaped hypothesis** which describes viruses as RNA or DNA fragments which escaped from cells. Another hypothesis like **virus-first** suggest that viruses predates singled cell organisms. Viruses were simple self replicating RNA molecule with enzymatic activities. Sadly virus cant leave physical fossils since either they persist for short duration or invade the genome of the host. So origin of viruses is still shrouded in mystery.
+There are many hypothesis regarding origin of viruses like **escaped hypothesis** which describes viruses as RNA or DNA fragments which escaped from cells. Another hypothesis like **virus-first** suggest that viruses predates singled cell organisms. Viruses were simple self replicating RNA molecule with enzymatic activities. Sadly virus cannot leave physical fossils since either they persist for short duration or invade the genome of the host. So origin of viruses is still shrouded in mystery.
 
 Science has enabled humans to escape the perilous life of the cave and settle into modern human civilization. The comforts of modern human civilization offer us protection from predators like lions or wolves. Humans in modern cities no longer fear being devoured by giant predators but the invisible minuscule microbes.  Viruses are the most dangerous parasite that infects all living things. Will humans be able to win the **arm race** with viruses still appears to be a far-fetched dream.
 
