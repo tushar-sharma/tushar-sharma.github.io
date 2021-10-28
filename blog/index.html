@@ -19,18 +19,18 @@ input[type=search] {
 }
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
-	display: none; 
+	display: none;
 }
 input[type=search] {
 	background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
 	border: solid 1px #ccc;
 	padding: 9px 10px 9px 32px;
 	width: 55px;
-	
+
 	-webkit-border-radius: 10em;
 	-moz-border-radius: 10em;
 	border-radius: 10em;
-	
+
 	-webkit-transition: all .5s;
 	-moz-transition: all .5s;
 	transition: all .5s;
@@ -51,7 +51,7 @@ input::-webkit-input-placeholder {
 }
 </style>
 
-<!-- search box --!> 
+<!-- search box --!>
 <div id="blog" style="padding-top:30px; margin-top:-23px;">
 <div style="padding-bottom:60px; padding-top:20px;">
   <form style="float:right;" action="{{ root_url }}/search/?">
@@ -64,14 +64,14 @@ input::-webkit-input-placeholder {
 {% for post in blogposts %}
   <small style="float:right; margin-top:5px;">{{ post.date | date:'%a %d %b %Y' }}</small>
   <a href="{{ post.url }}">
-    <h3>{{ post.title }}</h3>
+    <h2>{{ post.title }}</h2>
   </a>
       <div>
             {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
             {% if truncated_post != post.content %}
             {{ truncated_post | append:".."}}
       </div>
-  <p> 
+  <p>
     <a href="{{ post.url }}">
       <span>Continue reading &rarr;</span>
     </a>

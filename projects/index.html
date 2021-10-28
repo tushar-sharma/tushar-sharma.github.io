@@ -7,7 +7,7 @@ categories: projects
 {% assign projects = site.categories.projects %}
 {% for project in projects %}
   <small style="float:right; padding-top:-5px;">{{ project.date | date:'%b %Y' }}</small>
-  <a name="{{ project.name }}" href="{{ project.url }}"><h3>{{ project.title }}</h3></a>
+  <a name="{{ project.name }}" href="{{ project.url }}"><h2>{{ project.title }}</h2></a>
   {% assign truncated_project = project.content | split:"<!-- truncate_here -->" %}
   {% if truncated_project != project.content %}
     {{ truncated_project.first }}
