@@ -11,7 +11,7 @@ categories: blog
 {% for post in blogposts %}
   <small style="float:right; margin-top:5px;">{{ post.date | date:'%a %d %b %Y' }}</small>
   <a href="{{ post.url }}">
-    <h3>{{ post.title }}</h3>
+    <h2>{{ post.title }}</h2>
   </a>
       <div>
             {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
