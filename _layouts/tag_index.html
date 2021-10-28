@@ -6,7 +6,7 @@ root: true
 
 <div id="blog" style="padding-top:30px; margin-top:-23px;">
 <!--{% assign blogposts = site.categories.blog %} -->
-<!-- use this only when you want blog category  --> 
+<!-- use this only when you want blog category  -->
 {% assign blogposts = site.posts %}
 <div class="pure-u-1-2">
 <div style="padding-right:10px; padding-left:10px;">
@@ -15,7 +15,7 @@ root: true
 {% if tag == page.tag %}
   <small style="float:right; margin-top:5px;">{{ post.date | date:'%a %d %b %Y' }}</small>
   <a href="{{ post.url }}">
-    <h3>{{ post.title }}</h3>
+    <h2>{{ post.title }}</h2>
   </a>
       <div>
             <!-- this is for thumb images;  -->
