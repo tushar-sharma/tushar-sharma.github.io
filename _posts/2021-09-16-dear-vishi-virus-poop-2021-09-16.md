@@ -62,7 +62,7 @@ Do viruses die? A virus cannot die outside the host since they are not alive. Ho
 
 There are many hypothesis regarding origin of viruses like **escaped hypothesis** which describes viruses as RNA or DNA fragments which escaped from cells. Another hypothesis like **virus-first** suggest that viruses predates singled cell organisms. Viruses were simple self replicating RNA molecule with enzymatic activities. Sadly virus cannot leave physical fossils since either they persist for short duration or invade the genome of the host. So origin of viruses is still shrouded in mystery.
 
-Science has enabled humans to escape the perilous life of the cave and settle into modern human civilization. The comforts of modern human civilization offer us protection from predators like lions or wolves. Humans in modern cities no longer fear being devoured by giant predators but the invisible minuscule microbes.  Viruses are the most dangerous parasite that infects all living things. Winning an **arm race** against viruses for humans still appears to be a far-fetched dream.
+Science has enabled humans to escape the perilous life of the cave and settle into modern human civilization. The comforts of modern human civilization offer us protection from predators like lions or wolves. Humans in modern cities no longer fear being devoured by giant predators but are vulnerable from minuscule microbes.  Viruses are the most dangerous parasite that infects all living things. Winning an **arm race** against viruses for humans still appears to be a far-fetched dream.
 
   
 <nav class="pagination clear" style="padding-bottom:20px;">
