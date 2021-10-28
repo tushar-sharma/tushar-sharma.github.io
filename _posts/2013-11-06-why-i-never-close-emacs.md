@@ -8,6 +8,7 @@ tags:
 - code
 name: never-close-emacs
 thumb: /img/emacs.png
+featuredPost: true
 ---
 
 <p>I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. "It's easier this way.", he chuckled, "I can quickly find all the softwares I need.". I showed him my desktop which was spick and span."Doesn't it consumes time in finding the softwares you need?", he asked. </p>
