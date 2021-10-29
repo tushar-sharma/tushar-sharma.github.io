@@ -12,6 +12,7 @@ thumb: https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg
 featuredPost: true
 ---
 
+
 <p> I recently came across a Youtube video of Genelia Deshmukh, famous Indian actress, promoting homeopathic products. Along with her husband, they have invested in a startup called Welcome Cure. Science has repeatedly dismissed homepathy as quakery or at best placebo, but that has not deter government of India to fund & research homeopathy under AYUSH ministry.
 </p>
 
@@ -101,9 +102,10 @@ Nita Ambani is the chairperson and founder of the Reliance Foundation.
 
 
 <p>
+Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a mass movement". <br>
+
 <center>
 <figure>
-    <figcaption>Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a mass movement". <br></figcaption><br>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/rDy5oTAhaLw" title="YouTube video player"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"   allowfullscreen></iframe>
   </figure>
 </center>
@@ -114,33 +116,39 @@ Nita Ambani is the chairperson and founder of the Reliance Foundation.
 
 
 <p>
+Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India. <br>
+
 <center>
 <figure>
-<figcaption>Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India. <br></figcaption><br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2r4NCbqev0M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></figure>
 </center>
 </p>
 
 
 <p>
+DD News is a Indian government funded news channel. It reports how homeopathy can treat respiratory problems
+
 <center>
 <figure>
-    <figcaption>DD News is a Indian government funded news channel. It reports how homeopathy can treat respiratory problems</figcaption><br>
-    <a href="https://www.youtube.com/watch?v=zhoDZrGj9Kc" target="_blank"><img src="https://img.youtube.com/vi/zhoDZrGj9Kc/hqdefault.jpg" title="source: youtube.com" /></a>
-</figure>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/zhoDZrGj9Kc" title="YouTube video player"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"   allowfullscreen></iframe>
+  </figure>
 </center>
 </p>
 
+<div class="attention">
+<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+    Claims that homeopathy can cure genetic disorders
+</div>
+<br>
 
 <p>
 <center>
-Claims that homeopathy can cure genetic disorders.
-</center>
-<br>
-<center>
-<a href="https://www.youtube.com/watch?v=x4_HjgUgvp4" target="_blank"><img src="https://img.youtube.com/vi/x4_HjgUgvp4/hqdefault.jpg" title="source: youtube.com" /></a>
+<figure>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/x4_HjgUgvp4" title="YouTube video player"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"   allowfullscreen></iframe>
+  </figure>
 </center>
 </p>
+
 
 
 ## Conclusion
