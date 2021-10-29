@@ -14,21 +14,26 @@ thumb: 'https://d22e4d61ky6061.cloudfront.net/sites/default/files/Kerberos_1.png
 published: true
 ---
 
-<p>Previously I had written python scripts connecting to oracle database. However recently the server was upgraded with kerberos & most of the scripts were failings.</p>
+<p>Jobs failed! Screamed an automatic failure alert in email inbox. Existing python scripts were failing in the server which fetched data from Oracle database. I wondered if the credentials had changed.</p>
 
-After few digging, I learnt few things about kerberos authentication. Kerberos is a network authentication protocol which uses tickets to authenticate access to services<!-- truncate_here -->
+After few emails back and forth with the Support team, I discoverd that the server had been upgraded with Kerberos authentication. I have to modify my scripts to support kerberos authentication. I have to dig up more to understand more about kerberos.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-<p>Previously I had written python scripts connecting to oracle database. However recently the server was upgraded with kerberos & most of the scripts were failings.</p>
+<p>Jobs failed! Screamed an automatic failure alert in email inbox. Existing python scripts were failing in the server which fetched data from Oracle database. I wondered if the credentials had changed.</p>
 
-After few digging, I learnt few things about kerberos authentication. Kerberos is a network authentication protocol which uses tickets to authenticate access to services.
+After few emails back and forth with the Support team, I discoverd that the server had been upgraded with Kerberos authentication. I have to modify my scripts to support kerberos authentication. I have to dig up more to understand more about kerberos. 
 
-# Table of Contents
-{:.no_toc}
+## What's a Kerberos?
 
-1. Will be replaced with the ToC, excluding the "Table of Contents" header
-{:toc}
+Kerberos is a system for authenticating access to services. 
+
+1. The caller to a service represent a  `principal` in the system
+
+2. Caller to a service has been granted right on behalf of a principal for a limited period of a time
+
+
+## Connectiong to Oracle without kerberos
 
 ### Get Host IP address
 
@@ -78,12 +83,11 @@ Let us try to connect to oracle database using jaydebeapi library.
 
 However while running the script, you will get the following error
 
-```
+```sh
 ORA-01017: invalid username/password; logon denied
 ```
 
-
-### Kerberos
+### Connecting to Oracle with Kerberos
 
 To connect to Oracle database using kerberos, we need the following
 
