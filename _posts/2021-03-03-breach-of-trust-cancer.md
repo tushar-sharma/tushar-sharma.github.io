@@ -11,13 +11,13 @@ name: breach-trust-cancer
 thumb: https://www.andersonregional.org/images/content/WEB-3D-MAMMOGRAPHY-PROCEDURE.jpg
 ---
 
-<p>I am currently reading <a href="http://randomwits.com/books" target="_blank">The Emperor of Maladies</a>. I came across a famous breach of trust in cancer treatment. It involved infamous oncologist, Werner Bezwoda who fudged data about bone marrow transplant in women with metastatic breast cancer.</p>
+<p>I am currently reading <a href="http://randomwits.com/books" target="_blank">The Emperor of Maladies</a>. This is a fascination book where Siddhartha Mukherjee not only educate its readers about cancer disease but also shares interesting tidbits. Werner Bezwoda was an infamous oncologist who fudged data about bone marrow transplant in women with metastatic breast cancer.</p>
 
-Before I understood anything, I have to understand what bone marrow was. I remembered vaguely from my science class in school but I guess I needed a revision.<!-- truncate_here -->
+Before I understood anything, I have to understand what the heck was a bone marrow. I remembered vaguely from my science class in school but I guess I needed a revision.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-<p>I am currently reading <a href="http://randomwits.com/books" target="_blank">The Emperor of Maladies</a>. I came across a famous breach of trust in cancer treatment. It involved infamous oncologist, Werner Bezwoda who fudged data about bone marrow transplant in women with metastatic breast cancer.</p>
+<p>I am currently reading <a href="http://randomwits.com/books" target="_blank">The Emperor of Maladies</a>. This is a fascination book where Siddhartha Mukherjee not only educate its readers about cancer disease but also shares interesting tidbits. Werner Bezwoda was an infamous oncologist who fudged data about bone marrow transplant in women with metastatic breast cancer.</p>
 
 Before I understood anything, I have to understand what bone marrow was. I remembered vaguely from my science class in school but I guess I needed a revision.
 
