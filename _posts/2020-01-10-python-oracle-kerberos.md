@@ -73,7 +73,7 @@ Let's create a simple python script to parse config file
 <script src="https://gist.github.com/tushar-sharma/4564f7c5ece9d5acaf439fe3142a8937.js"></script>
 
 
-### Connect to Oracle database
+### Establishing a connection
 
 Let us try to connect to oracle database using jaydebeapi library.
 
@@ -87,7 +87,7 @@ However while running the script, you will get the following error
 ORA-01017: invalid username/password; logon denied
 ```
 
-### Connecting to Oracle with Kerberos
+###= Connecting to Oracle with Kerberos
 
 To connect to Oracle database using kerberos, we need the following
 
