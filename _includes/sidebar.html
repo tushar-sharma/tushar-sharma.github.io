@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="{{ root_url }}/css/styles.css" >
 <link rel="stylesheet" href="{{ root_url }}/css/toc.css" >
 <script src="{{ root_url }}/js/toc.js" type="text/javascript"></script>
+<script src="{{ root_url }}/js/scroll_top.js" type="text/javascript"></script>
 
 
 <style type="text/css">
@@ -127,3 +128,18 @@ Life is too short for a diary
 
 
 
+<!-- back to top scroll -->
+
+{% if page.url != '/' %}
+
+{% if paginator.previous_page  %}
+
+{% else %}
+
+<br><br>
+<p id="back-top">
+  <a href="#top"><span></span></a>
+</p>
+
+{% endif %}
+{% endif %}
