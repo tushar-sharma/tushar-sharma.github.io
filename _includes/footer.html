@@ -1,6 +1,7 @@
 <!-- <p><small>Tushar Sharma &copy; {{ site.time | date: '%Y' }}</small></p> -->
 <link rel="stylesheet" href="{{ root_url }}/css/font-awesome.css" />
 <script src="{{ root_url }}/js/scroll_top.js" type="text/javascript"></script>
+<script src="{{ root_url }}/js/scroll_top.js" type="text/javascript"></script>
 
 <div class="footer">
 <hr>
@@ -64,3 +65,18 @@
 </script>
 
 
+<!-- back to top scroll -->
+
+{% if page.url != '/' %}
+
+{% if paginator.previous_page  %}
+
+{% else %}
+
+<br><br>
+<p id="back-top">
+  <a href="#top"><span></span></a>
+</p>
+
+{% endif %}
+{% endif %}
