@@ -74,7 +74,11 @@ header li {
      <h1  class="heading"><span class="top"><a href="/"><i>Random Wits</i></a></span></h1>
   <p class="me_blurb">
   <div class="sub">
+    {% if page.url == '/' %}
     <span id="textAnimation"></span>
+    {% else %}
+    Life is too short for a diary
+    {% endif %}
     </div>
   </p>
 
