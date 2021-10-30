@@ -24,593 +24,567 @@ Courtesy: https://codepen.io/brandonmcconnell/pen/bZqGdw
 		$j
 	}
 	 */
-	 0%, 0.3743753754% {
+	/* string #{
+		$i
+	}
+	, char #{
+		$j
+	}
+	 */
+	 0%, 0.349140056% {
+		 content: "G";
+	}
+	 0.350140056%, 0.699280112% {
+		 content: "Gr";
+	}
+	 0.700280112%, 1.0494201681% {
+		 content: "Gre";
+	}
+	 1.0504201681%, 1.3995602241% {
+		 content: "Gree";
+	}
+	 1.4005602241%, 1.7497002801% {
+		 content: "Greet";
+	}
+	 1.7507002801%, 2.0998403361% {
+		 content: "Greeti";
+	}
+	 2.1008403361%, 2.4499803922% {
+		 content: "Greetin";
+	}
+	 2.4509803922%, 2.8001204482% {
+		 content: "Greeting";
+	}
+	 2.8011204482%, 3.1502605042% {
+		 content: "Greeting ";
+	}
+	 3.1512605042%, 3.5004005602% {
+		 content: "Greeting S";
+	}
+	 3.5014005602%, 3.8505406162% {
+		 content: "Greeting St";
+	}
+	 3.8515406162%, 4.2006806723% {
+		 content: "Greeting Str";
+	}
+	 4.2016806723%, 4.5508207283% {
+		 content: "Greeting Stra";
+	}
+	 4.5518207283%, 4.9009607843% {
+		 content: "Greeting Stran";
+	}
+	 4.9019607843%, 5.2511008403% {
+		 content: "Greeting Strang";
+	}
+	 5.2521008403%, 5.6012408964% {
+		 content: "Greeting Strange";
+	}
+	 5.6022408964%, 5.9513809524% {
+		 content: "Greeting Stranger";
+	}
+	 5.9523809524%, 6.3015210084% {
+		 content: "Greeting Stranger.";
+	}
+	 6.3025210084%, 6.6516610644% {
+		 content: "Greeting Stranger..";
+	}
+	 6.6526610644%, 14.2847142857% {
+		 content: "Greeting Stranger...";
+	}
+	 14.2857142857%, 14.5648263305% {
+		 content: "Greeting Stranger..";
+	}
+	 14.5658263305%, 14.8449383754% {
+		 content: "Greeting Stranger.";
+	}
+	 14.8459383754%, 15.1250504202% {
+		 content: "Greeting Stranger";
+	}
+	 15.1260504202%, 15.405162465% {
+		 content: "Greeting Strange";
+	}
+	 15.406162465%, 15.6852745098% {
+		 content: "Greeting Strang";
+	}
+	 15.6862745098%, 15.9653865546% {
+		 content: "Greeting Stran";
+	}
+	 15.9663865546%, 16.2454985994% {
+		 content: "Greeting Stra";
+	}
+	 16.2464985994%, 16.5256106443% {
+		 content: "Greeting Str";
+	}
+	 16.5266106443%, 16.8057226891% {
+		 content: "Greeting St";
+	}
+	 16.8067226891%, 17.0858347339% {
+		 content: "Greeting S";
+	}
+	 17.0868347339%, 17.3659467787% {
+		 content: "Greeting ";
+	}
+	 17.3669467787%, 17.6460588235% {
+		 content: "Greeting";
+	}
+	 17.6470588235%, 17.9261708683% {
+		 content: "Greetin";
+	}
+	 17.9271708683%, 18.2062829132% {
+		 content: "Greeti";
+	}
+	 18.2072829132%, 18.486394958% {
+		 content: "Greet";
+	}
+	 18.487394958%, 18.7665070028% {
+		 content: "Gree";
+	}
+	 18.7675070028%, 19.0466190476% {
+		 content: "Gre";
+	}
+	 19.0476190476%, 19.3267310924% {
+		 content: "Gr";
+	}
+	 19.3277310924%, 19.6068431373% {
+		 content: "G";
+	}
+	 19.6078431373%, 23.1082436975% {
+		 content: "​";
+	}
+	 23.1092436975%, 23.4583837535% {
 		 content: "W";
 	}
-	 0.3753753754%, 0.7497507508% {
+	 23.4593837535%, 23.8085238095% {
 		 content: "We";
 	}
-	 0.7507507508%, 1.1251261261% {
+	 23.8095238095%, 24.1586638655% {
 		 content: "Wel";
 	}
-	 1.1261261261%, 1.5005015015% {
+	 24.1596638655%, 24.5088039216% {
 		 content: "Welc";
 	}
-	 1.5015015015%, 1.8758768769% {
+	 24.5098039216%, 24.8589439776% {
 		 content: "Welco";
 	}
-	 1.8768768769%, 2.2512522523% {
+	 24.8599439776%, 25.2090840336% {
 		 content: "Welcom";
 	}
-	 2.2522522523%, 2.6266276276% {
+	 25.2100840336%, 25.5592240896% {
 		 content: "Welcome";
 	}
-	 2.6276276276%, 3.002003003% {
+	 25.5602240896%, 25.9093641457% {
 		 content: "Welcome ";
 	}
-	 3.003003003%, 3.3773783784% {
+	 25.9103641457%, 26.2595042017% {
 		 content: "Welcome t";
 	}
-	 3.3783783784%, 3.7527537538% {
+	 26.2605042017%, 26.6096442577% {
 		 content: "Welcome to";
 	}
-	 3.7537537538%, 4.1281291291% {
+	 26.6106442577%, 26.9597843137% {
 		 content: "Welcome to ";
 	}
-	 4.1291291291%, 4.5035045045% {
+	 26.9607843137%, 27.3099243697% {
 		 content: "Welcome to m";
 	}
-	 4.5045045045%, 4.8788798799% {
+	 27.3109243697%, 27.6600644258% {
 		 content: "Welcome to my";
 	}
-	 4.8798798799%, 5.2542552553% {
+	 27.6610644258%, 28.0102044818% {
 		 content: "Welcome to my ";
 	}
-	 5.2552552553%, 5.6296306306% {
+	 28.0112044818%, 28.3603445378% {
 		 content: "Welcome to my d";
 	}
-	 5.6306306306%, 6.005006006% {
+	 28.3613445378%, 28.7104845938% {
 		 content: "Welcome to my di";
 	}
-	 6.006006006%, 6.3803813814% {
+	 28.7114845938%, 29.0606246499% {
 		 content: "Welcome to my dig";
 	}
-	 6.3813813814%, 6.7557567568% {
+	 29.0616246499%, 29.4107647059% {
 		 content: "Welcome to my digi";
 	}
-	 6.7567567568%, 7.1311321321% {
+	 29.4117647059%, 29.7609047619% {
 		 content: "Welcome to my digit";
 	}
-	 7.1321321321%, 7.5065075075% {
+	 29.7619047619%, 30.1110448179% {
 		 content: "Welcome to my digita";
 	}
-	 7.5075075075%, 7.8818828829% {
+	 30.1120448179%, 30.4611848739% {
 		 content: "Welcome to my digital";
 	}
-	 7.8828828829%, 8.2572582583% {
+	 30.4621848739%, 30.81132493% {
 		 content: "Welcome to my digital ";
 	}
-	 8.2582582583%, 8.6326336336% {
+	 30.81232493%, 31.161464986% {
 		 content: "Welcome to my digital n";
 	}
-	 8.6336336336%, 9.008009009% {
+	 31.162464986%, 31.511605042% {
 		 content: "Welcome to my digital ne";
 	}
-	 9.009009009%, 9.3833843844% {
+	 31.512605042%, 31.861745098% {
 		 content: "Welcome to my digital nes";
 	}
-	 9.3843843844%, 17.5665675676% {
+	 31.862745098%, 32.2118851541% {
 		 content: "Welcome to my digital nest";
 	}
-	 17.5675675676%, 17.8668678679% {
+	 32.2128851541%, 39.8449383754% {
+		 content: "Welcome to my digital nest.";
+	}
+	 39.8459383754%, 40.1250504202% {
+		 content: "Welcome to my digital nest";
+	}
+	 40.1260504202%, 40.405162465% {
 		 content: "Welcome to my digital nes";
 	}
-	 17.8678678679%, 18.1671681682% {
+	 40.406162465%, 40.6852745098% {
 		 content: "Welcome to my digital ne";
 	}
-	 18.1681681682%, 18.4674684685% {
+	 40.6862745098%, 40.9653865546% {
 		 content: "Welcome to my digital n";
 	}
-	 18.4684684685%, 18.7677687688% {
+	 40.9663865546%, 41.2454985994% {
 		 content: "Welcome to my digital ";
 	}
-	 18.7687687688%, 19.0680690691% {
+	 41.2464985994%, 41.5256106443% {
 		 content: "Welcome to my digital";
 	}
-	 19.0690690691%, 19.3683693694% {
+	 41.5266106443%, 41.8057226891% {
 		 content: "Welcome to my digita";
 	}
-	 19.3693693694%, 19.6686696697% {
+	 41.8067226891%, 42.0858347339% {
 		 content: "Welcome to my digit";
 	}
-	 19.6696696697%, 19.96896997% {
+	 42.0868347339%, 42.3659467787% {
 		 content: "Welcome to my digi";
 	}
-	 19.96996997%, 20.2692702703% {
+	 42.3669467787%, 42.6460588235% {
 		 content: "Welcome to my dig";
 	}
-	 20.2702702703%, 20.5695705706% {
+	 42.6470588235%, 42.9261708683% {
 		 content: "Welcome to my di";
 	}
-	 20.5705705706%, 20.8698708709% {
+	 42.9271708683%, 43.2062829132% {
 		 content: "Welcome to my d";
 	}
-	 20.8708708709%, 21.1701711712% {
+	 43.2072829132%, 43.486394958% {
 		 content: "Welcome to my ";
 	}
-	 21.1711711712%, 21.4704714715% {
+	 43.487394958%, 43.7665070028% {
 		 content: "Welcome to my";
 	}
-	 21.4714714715%, 21.7707717718% {
+	 43.7675070028%, 44.0466190476% {
 		 content: "Welcome to m";
 	}
-	 21.7717717718%, 22.0710720721% {
+	 44.0476190476%, 44.3267310924% {
 		 content: "Welcome to ";
 	}
-	 22.0720720721%, 22.3713723724% {
+	 44.3277310924%, 44.6068431373% {
 		 content: "Welcome to";
 	}
-	 22.3723723724%, 22.6716726727% {
+	 44.6078431373%, 44.8869551821% {
 		 content: "Welcome t";
 	}
-	 22.6726726727%, 22.971972973% {
+	 44.8879551821%, 45.1670672269% {
 		 content: "Welcome ";
 	}
-	 22.972972973%, 23.2722732733% {
+	 45.1680672269%, 45.4471792717% {
 		 content: "Welcome";
 	}
-	 23.2732732733%, 23.5725735736% {
+	 45.4481792717%, 45.7272913165% {
 		 content: "Welcom";
 	}
-	 23.5735735736%, 23.8728738739% {
+	 45.7282913165%, 46.0074033613% {
 		 content: "Welco";
 	}
-	 23.8738738739%, 24.1731741742% {
+	 46.0084033613%, 46.2875154062% {
 		 content: "Welc";
 	}
-	 24.1741741742%, 24.4734744745% {
+	 46.2885154062%, 46.567627451% {
 		 content: "Wel";
 	}
-	 24.4744744745%, 24.7737747748% {
+	 46.568627451%, 46.8477394958% {
 		 content: "We";
 	}
-	 24.7747747748%, 25.0740750751% {
+	 46.8487394958%, 47.1278515406% {
 		 content: "W";
 	}
-	 25.0750750751%, 28.8278288288% {
+	 47.1288515406%, 50.6292521008% {
 		 content: "​";
 	}
-	 28.8288288288%, 29.2032042042% {
-		 content: "L";
-	}
-	 29.2042042042%, 29.5785795796% {
-		 content: "Li";
-	}
-	 29.5795795796%, 29.953954955% {
-		 content: "Lif";
-	}
-	 29.954954955%, 30.3293303303% {
-		 content: "Life";
-	}
-	 30.3303303303%, 30.7047057057% {
-		 content: "Life ";
-	}
-	 30.7057057057%, 31.0800810811% {
-		 content: "Life i";
-	}
-	 31.0810810811%, 31.4554564565% {
-		 content: "Life is";
-	}
-	 31.4564564565%, 31.8308318318% {
-		 content: "Life is ";
-	}
-	 31.8318318318%, 32.2062072072% {
-		 content: "Life is t";
-	}
-	 32.2072072072%, 32.5815825826% {
-		 content: "Life is to";
-	}
-	 32.5825825826%, 32.956957958% {
-		 content: "Life is too";
-	}
-	 32.957957958%, 33.3323333333% {
-		 content: "Life is too ";
-	}
-	 33.3333333333%, 33.7077087087% {
-		 content: "Life is too s";
-	}
-	 33.7087087087%, 34.0830840841% {
-		 content: "Life is too sh";
-	}
-	 34.0840840841%, 34.4584594595% {
-		 content: "Life is too sho";
-	}
-	 34.4594594595%, 34.8338348348% {
-		 content: "Life is too shor";
-	}
-	 34.8348348348%, 35.2092102102% {
-		 content: "Life is too short";
-	}
-	 35.2102102102%, 35.5845855856% {
-		 content: "Life is too short ";
-	}
-	 35.5855855856%, 35.959960961% {
-		 content: "Life is too short f";
-	}
-	 35.960960961%, 36.3353363363% {
-		 content: "Life is too short fo";
-	}
-	 36.3363363363%, 36.7107117117% {
-		 content: "Life is too short for";
-	}
-	 36.7117117117%, 37.0860870871% {
-		 content: "Life is too short for ";
-	}
-	 37.0870870871%, 37.4614624625% {
-		 content: "Life is too short for a";
-	}
-	 37.4624624625%, 37.8368378378% {
-		 content: "Life is too short for a ";
-	}
-	 37.8378378378%, 38.2122132132% {
-		 content: "Life is too short for a d";
-	}
-	 38.2132132132%, 38.5875885886% {
-		 content: "Life is too short for a di";
-	}
-	 38.5885885886%, 38.962963964% {
-		 content: "Life is too short for a dia";
-	}
-	 38.963963964%, 39.3383393393% {
-		 content: "Life is too short for a diar";
-	}
-	 39.3393393393%, 47.5215225225% {
-		 content: "Life is too short for a diary";
-	}
-	 47.5225225225%, 47.8218228228% {
-		 content: "Life is too short for a diar";
-	}
-	 47.8228228228%, 48.1221231231% {
-		 content: "Life is too short for a dia";
-	}
-	 48.1231231231%, 48.4224234234% {
-		 content: "Life is too short for a di";
-	}
-	 48.4234234234%, 48.7227237237% {
-		 content: "Life is too short for a d";
-	}
-	 48.7237237237%, 49.023024024% {
-		 content: "Life is too short for a ";
-	}
-	 49.024024024%, 49.3233243243% {
-		 content: "Life is too short for a";
-	}
-	 49.3243243243%, 49.6236246246% {
-		 content: "Life is too short for ";
-	}
-	 49.6246246246%, 49.9239249249% {
-		 content: "Life is too short for";
-	}
-	 49.9249249249%, 50.2242252252% {
-		 content: "Life is too short fo";
-	}
-	 50.2252252252%, 50.5245255255% {
-		 content: "Life is too short f";
-	}
-	 50.5255255255%, 50.8248258258% {
-		 content: "Life is too short ";
-	}
-	 50.8258258258%, 51.1251261261% {
-		 content: "Life is too short";
-	}
-	 51.1261261261%, 51.4254264264% {
-		 content: "Life is too shor";
-	}
-	 51.4264264264%, 51.7257267267% {
-		 content: "Life is too sho";
-	}
-	 51.7267267267%, 52.026027027% {
-		 content: "Life is too sh";
-	}
-	 52.027027027%, 52.3263273273% {
-		 content: "Life is too s";
-	}
-	 52.3273273273%, 52.6266276276% {
-		 content: "Life is too ";
-	}
-	 52.6276276276%, 52.9269279279% {
-		 content: "Life is too";
-	}
-	 52.9279279279%, 53.2272282282% {
-		 content: "Life is to";
-	}
-	 53.2282282282%, 53.5275285285% {
-		 content: "Life is t";
-	}
-	 53.5285285285%, 53.8278288288% {
-		 content: "Life is ";
-	}
-	 53.8288288288%, 54.1281291291% {
-		 content: "Life is";
-	}
-	 54.1291291291%, 54.4284294294% {
-		 content: "Life i";
-	}
-	 54.4294294294%, 54.7287297297% {
-		 content: "Life ";
-	}
-	 54.7297297297%, 55.02903003% {
-		 content: "Life";
-	}
-	 55.03003003%, 55.3293303303% {
-		 content: "Lif";
-	}
-	 55.3303303303%, 55.6296306306% {
-		 content: "Li";
-	}
-	 55.6306306306%, 55.9299309309% {
-		 content: "L";
-	}
-	 55.9309309309%, 59.6836846847% {
-		 content: "​";
-	}
-	 59.6846846847%, 60.0590600601% {
+	 50.6302521008%, 50.9793921569% {
 		 content: "B";
 	}
-	 60.0600600601%, 60.4344354354% {
+	 50.9803921569%, 51.3295322129% {
 		 content: "Be";
 	}
-	 60.4354354354%, 60.8098108108% {
+	 51.3305322129%, 51.6796722689% {
 		 content: "Bew";
 	}
-	 60.8108108108%, 61.1851861862% {
+	 51.6806722689%, 52.0298123249% {
 		 content: "Bewa";
 	}
-	 61.1861861862%, 61.5605615616% {
+	 52.0308123249%, 52.379952381% {
 		 content: "Bewar";
 	}
-	 61.5615615616%, 61.9359369369% {
+	 52.380952381%, 52.730092437% {
 		 content: "Beware";
 	}
-	 61.9369369369%, 62.3113123123% {
+	 52.731092437%, 53.080232493% {
 		 content: "Beware ";
 	}
-	 62.3123123123%, 62.6866876877% {
+	 53.081232493%, 53.430372549% {
 		 content: "Beware o";
 	}
-	 62.6876876877%, 63.0620630631% {
+	 53.431372549%, 53.780512605% {
 		 content: "Beware of";
 	}
-	 63.0630630631%, 63.4374384384% {
+	 53.781512605%, 54.1306526611% {
 		 content: "Beware of ";
 	}
-	 63.4384384384%, 63.8128138138% {
+	 54.1316526611%, 54.4807927171% {
 		 content: "Beware of r";
 	}
-	 63.8138138138%, 64.1881891892% {
+	 54.4817927171%, 54.8309327731% {
 		 content: "Beware of ra";
 	}
-	 64.1891891892%, 64.5635645646% {
+	 54.8319327731%, 55.1810728291% {
 		 content: "Beware of ran";
 	}
-	 64.5645645646%, 64.9389399399% {
+	 55.1820728291%, 55.5312128852% {
 		 content: "Beware of rand";
 	}
-	 64.9399399399%, 65.3143153153% {
+	 55.5322128852%, 55.8813529412% {
 		 content: "Beware of rando";
 	}
-	 65.3153153153%, 65.6896906907% {
+	 55.8823529412%, 56.2314929972% {
 		 content: "Beware of random";
 	}
-	 65.6906906907%, 66.0650660661% {
+	 56.2324929972%, 56.5816330532% {
 		 content: "Beware of randomw";
 	}
-	 66.0660660661%, 66.4404414414% {
+	 56.5826330532%, 56.9317731092% {
 		 content: "Beware of randomwi";
 	}
-	 66.4414414414%, 66.8158168168% {
+	 56.9327731092%, 57.2819131653% {
 		 content: "Beware of randomwit";
 	}
-	 66.8168168168%, 67.1911921922% {
+	 57.2829131653%, 57.6320532213% {
 		 content: "Beware of randomwits";
 	}
-	 67.1921921922%, 67.5665675676% {
-		 content: "Beware of randomwits,";
+	 57.6330532213%, 57.9821932773% {
+		 content: "Beware of randomwits.";
 	}
-	 67.5675675676%, 67.9419429429% {
-		 content: "Beware of randomwits, ";
+	 57.9831932773%, 58.3323333333% {
+		 content: "Beware of randomwits..";
 	}
-	 67.9429429429%, 68.3173183183% {
-		 content: "Beware of randomwits, s";
+	 58.3333333333%, 65.9653865546% {
+		 content: "Beware of randomwits...";
 	}
-	 68.3183183183%, 68.6926936937% {
-		 content: "Beware of randomwits, so";
+	 65.9663865546%, 66.2454985994% {
+		 content: "Beware of randomwits..";
 	}
-	 68.6936936937%, 69.0680690691% {
-		 content: "Beware of randomwits, som";
+	 66.2464985994%, 66.5256106443% {
+		 content: "Beware of randomwits.";
 	}
-	 69.0690690691%, 69.4434444444% {
-		 content: "Beware of randomwits, some";
-	}
-	 69.4444444444%, 69.8188198198% {
-		 content: "Beware of randomwits, somet";
-	}
-	 69.8198198198%, 70.1941951952% {
-		 content: "Beware of randomwits, someti";
-	}
-	 70.1951951952%, 70.5695705706% {
-		 content: "Beware of randomwits, sometim";
-	}
-	 70.5705705706%, 70.9449459459% {
-		 content: "Beware of randomwits, sometime";
-	}
-	 70.9459459459%, 71.3203213213% {
-		 content: "Beware of randomwits, sometime ";
-	}
-	 71.3213213213%, 71.6956966967% {
-		 content: "Beware of randomwits, sometime t";
-	}
-	 71.6966966967%, 72.0710720721% {
-		 content: "Beware of randomwits, sometime th";
-	}
-	 72.0720720721%, 72.4464474474% {
-		 content: "Beware of randomwits, sometime the";
-	}
-	 72.4474474474%, 72.8218228228% {
-		 content: "Beware of randomwits, sometime they";
-	}
-	 72.8228228228%, 73.1971981982% {
-		 content: "Beware of randomwits, sometime they ";
-	}
-	 73.1981981982%, 73.5725735736% {
-		 content: "Beware of randomwits, sometime they b";
-	}
-	 73.5735735736%, 73.9479489489% {
-		 content: "Beware of randomwits, sometime they bi";
-	}
-	 73.9489489489%, 74.3233243243% {
-		 content: "Beware of randomwits, sometime they bit";
-	}
-	 74.3243243243%, 74.6986996997% {
-		 content: "Beware of randomwits, sometime they bite";
-	}
-	 74.6996996997%, 75.0740750751% {
-		 content: "Beware of randomwits, sometime they bite ";
-	}
-	 75.0750750751%, 75.4494504505% {
-		 content: "Beware of randomwits, sometime they bite :";
-	}
-	 75.4504504505%, 83.6326336336% {
-		 content: "Beware of randomwits, sometime they bite :)";
-	}
-	 83.6336336336%, 83.9329339339% {
-		 content: "Beware of randomwits, sometime they bite :";
-	}
-	 83.9339339339%, 84.2332342342% {
-		 content: "Beware of randomwits, sometime they bite ";
-	}
-	 84.2342342342%, 84.5335345345% {
-		 content: "Beware of randomwits, sometime they bite";
-	}
-	 84.5345345345%, 84.8338348348% {
-		 content: "Beware of randomwits, sometime they bit";
-	}
-	 84.8348348348%, 85.1341351351% {
-		 content: "Beware of randomwits, sometime they bi";
-	}
-	 85.1351351351%, 85.4344354354% {
-		 content: "Beware of randomwits, sometime they b";
-	}
-	 85.4354354354%, 85.7347357357% {
-		 content: "Beware of randomwits, sometime they ";
-	}
-	 85.7357357357%, 86.035036036% {
-		 content: "Beware of randomwits, sometime they";
-	}
-	 86.036036036%, 86.3353363363% {
-		 content: "Beware of randomwits, sometime the";
-	}
-	 86.3363363363%, 86.6356366366% {
-		 content: "Beware of randomwits, sometime th";
-	}
-	 86.6366366366%, 86.9359369369% {
-		 content: "Beware of randomwits, sometime t";
-	}
-	 86.9369369369%, 87.2362372372% {
-		 content: "Beware of randomwits, sometime ";
-	}
-	 87.2372372372%, 87.5365375375% {
-		 content: "Beware of randomwits, sometime";
-	}
-	 87.5375375375%, 87.8368378378% {
-		 content: "Beware of randomwits, sometim";
-	}
-	 87.8378378378%, 88.1371381381% {
-		 content: "Beware of randomwits, someti";
-	}
-	 88.1381381381%, 88.4374384384% {
-		 content: "Beware of randomwits, somet";
-	}
-	 88.4384384384%, 88.7377387387% {
-		 content: "Beware of randomwits, some";
-	}
-	 88.7387387387%, 89.038039039% {
-		 content: "Beware of randomwits, som";
-	}
-	 89.039039039%, 89.3383393393% {
-		 content: "Beware of randomwits, so";
-	}
-	 89.3393393393%, 89.6386396396% {
-		 content: "Beware of randomwits, s";
-	}
-	 89.6396396396%, 89.9389399399% {
-		 content: "Beware of randomwits, ";
-	}
-	 89.9399399399%, 90.2392402402% {
-		 content: "Beware of randomwits,";
-	}
-	 90.2402402402%, 90.5395405405% {
+	 66.5266106443%, 66.8057226891% {
 		 content: "Beware of randomwits";
 	}
-	 90.5405405405%, 90.8398408408% {
+	 66.8067226891%, 67.0858347339% {
 		 content: "Beware of randomwit";
 	}
-	 90.8408408408%, 91.1401411411% {
+	 67.0868347339%, 67.3659467787% {
 		 content: "Beware of randomwi";
 	}
-	 91.1411411411%, 91.4404414414% {
+	 67.3669467787%, 67.6460588235% {
 		 content: "Beware of randomw";
 	}
-	 91.4414414414%, 91.7407417417% {
+	 67.6470588235%, 67.9261708683% {
 		 content: "Beware of random";
 	}
-	 91.7417417417%, 92.041042042% {
+	 67.9271708683%, 68.2062829132% {
 		 content: "Beware of rando";
 	}
-	 92.042042042%, 92.3413423423% {
+	 68.2072829132%, 68.486394958% {
 		 content: "Beware of rand";
 	}
-	 92.3423423423%, 92.6416426426% {
+	 68.487394958%, 68.7665070028% {
 		 content: "Beware of ran";
 	}
-	 92.6426426426%, 92.9419429429% {
+	 68.7675070028%, 69.0466190476% {
 		 content: "Beware of ra";
 	}
-	 92.9429429429%, 93.2422432432% {
+	 69.0476190476%, 69.3267310924% {
 		 content: "Beware of r";
 	}
-	 93.2432432432%, 93.5425435435% {
+	 69.3277310924%, 69.6068431373% {
 		 content: "Beware of ";
 	}
-	 93.5435435435%, 93.8428438438% {
+	 69.6078431373%, 69.8869551821% {
 		 content: "Beware of";
 	}
-	 93.8438438438%, 94.1431441441% {
+	 69.8879551821%, 70.1670672269% {
 		 content: "Beware o";
 	}
-	 94.1441441441%, 94.4434444444% {
+	 70.1680672269%, 70.4471792717% {
 		 content: "Beware ";
 	}
-	 94.4444444444%, 94.7437447447% {
+	 70.4481792717%, 70.7272913165% {
 		 content: "Beware";
 	}
-	 94.7447447447%, 95.044045045% {
+	 70.7282913165%, 71.0074033613% {
 		 content: "Bewar";
 	}
-	 95.045045045%, 95.3443453453% {
+	 71.0084033613%, 71.2875154062% {
 		 content: "Bewa";
 	}
-	 95.3453453453%, 95.6446456456% {
+	 71.2885154062%, 71.567627451% {
 		 content: "Bew";
 	}
-	 95.6456456456%, 95.9449459459% {
+	 71.568627451%, 71.8477394958% {
 		 content: "Be";
 	}
-	 95.9459459459%, 96.2452462462% {
+	 71.8487394958%, 72.1278515406% {
 		 content: "B";
 	}
-	 96.2462462462%, 100% {
+	 72.1288515406%, 75.6292521008% {
 		 content: "​";
+	}
+	 75.6302521008%, 75.9793921569% {
+		 content: "s";
+	}
+	 75.9803921569%, 76.3295322129% {
+		 content: "so";
+	}
+	 76.3305322129%, 76.6796722689% {
+		 content: "som";
+	}
+	 76.6806722689%, 77.0298123249% {
+		 content: "some";
+	}
+	 77.0308123249%, 77.379952381% {
+		 content: "somet";
+	}
+	 77.380952381%, 77.730092437% {
+		 content: "someti";
+	}
+	 77.731092437%, 78.080232493% {
+		 content: "sometim";
+	}
+	 78.081232493%, 78.430372549% {
+		 content: "sometime";
+	}
+	 78.431372549%, 78.780512605% {
+		 content: "sometimes";
+	}
+	 78.781512605%, 79.1306526611% {
+		 content: "sometimes ";
+	}
+	 79.1316526611%, 79.4807927171% {
+		 content: "sometimes t";
+	}
+	 79.4817927171%, 79.8309327731% {
+		 content: "sometimes th";
+	}
+	 79.8319327731%, 80.1810728291% {
+		 content: "sometimes the";
+	}
+	 80.1820728291%, 80.5312128852% {
+		 content: "sometimes they";
+	}
+	 80.5322128852%, 80.8813529412% {
+		 content: "sometimes they ";
+	}
+	 80.8823529412%, 81.2314929972% {
+		 content: "sometimes they b";
+	}
+	 81.2324929972%, 81.5816330532% {
+		 content: "sometimes they bi";
+	}
+	 81.5826330532%, 81.9317731092% {
+		 content: "sometimes they bit";
+	}
+	 81.9327731092%, 82.2819131653% {
+		 content: "sometimes they bite";
+	}
+	 82.2829131653%, 82.6320532213% {
+		 content: "sometimes they bite ";
+	}
+	 82.6330532213%, 82.9821932773% {
+		 content: "sometimes they bite :";
+	}
+	 82.9831932773%, 90.6152464986% {
+		 content: "sometimes they bite :)";
+	}
+	 90.6162464986%, 90.8953585434% {
+		 content: "sometimes they bite :";
+	}
+	 90.8963585434%, 91.1754705882% {
+		 content: "sometimes they bite ";
+	}
+	 91.1764705882%, 91.4555826331% {
+		 content: "sometimes they bite";
+	}
+	 91.4565826331%, 91.7356946779% {
+		 content: "sometimes they bit";
+	}
+	 91.7366946779%, 92.0158067227% {
+		 content: "sometimes they bi";
+	}
+	 92.0168067227%, 92.2959187675% {
+		 content: "sometimes they b";
+	}
+	 92.2969187675%, 92.5760308123% {
+		 content: "sometimes they ";
+	}
+	 92.5770308123%, 92.8561428571% {
+		 content: "sometimes they";
+	}
+	 92.8571428571%, 93.136254902% {
+		 content: "sometimes the";
+	}
+	 93.137254902%, 93.4163669468% {
+		 content: "sometimes th";
+	}
+	 93.4173669468%, 93.6964789916% {
+		 content: "sometimes t";
+	}
+	 93.6974789916%, 93.9765910364% {
+		 content: "sometimes ";
+	}
+	 93.9775910364%, 94.2567030812% {
+		 content: "sometimes";
+	}
+	 94.2577030812%, 94.5368151261% {
+		 content: "sometime";
+	}
+	 94.5378151261%, 94.8169271709% {
+		 content: "sometim";
+	}
+	 94.8179271709%, 95.0970392157% {
+		 content: "someti";
+	}
+	 95.0980392157%, 95.3771512605% {
+		 content: "somet";
+	}
+	 95.3781512605%, 95.6572633053% {
+		 content: "some";
+	}
+	 95.6582633053%, 95.9373753501% {
+		 content: "som";
+	}
+	 95.9383753501%, 96.217487395% {
+		 content: "so";
+	}
+	 96.218487395%, 96.4975994398% {
+		 content: "s";
+	}
+	 96.4985994398% {
+		 content: "";
+	}
+	100% {
+		content: "Life is too short for a diary"
 	}
 }
  @keyframes beam-blink {
@@ -621,7 +595,6 @@ Courtesy: https://codepen.io/brandonmcconnell/pen/bZqGdw
  * {
 	 backface-visibility: hidden;
 }
-
  textAnimation {
 	 display: inline;
 	 align-items: center;
@@ -645,14 +618,14 @@ Courtesy: https://codepen.io/brandonmcconnell/pen/bZqGdw
 	 animation-name: typed;
 	 -webkit-animation-duration: 26.94s;
 	 animation-duration: 26.94s;
-	 -webkit-animation-iteration-count: infinite;
-	 animation-iteration-count: infinite;
+	 -webkit-animation-iteration-count: forwards;
+	 animation-iteration-count: forwards;
 	 -webkit-animation-timing-function: linear;
 	 animation-timing-function: linear;
-	 -webkit-animation-fill-mode: infinite;
-	 animation-fill-mode: infinite;
-	 -webkit-animation: typed 26.94s linear 1s infinite, beam-blink 1s infinite; ;
-	 animation: typed 26.94s linear 1s infinite, beam-blink 1s infinite;
+	 -webkit-animation-fill-mode: forwards;
+	 animation-fill-mode: forwards;
+	 -webkit-animation: typed 26.94s linear 1s forwards, beam-blink 1s forwards; ;
+	 animation: typed 26.94s linear 1s forwards, beam-blink 1s forwards;
 }
  @media (max-width: 575px) {
 	 #textAnimation::after {
