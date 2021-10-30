@@ -641,7 +641,17 @@ Courtesy: https://codepen.io/brandonmcconnell/pen/bZqGdw
 	 display: inline-block;
 	 border-right: 4px solid #39c;
 	 white-space: nowrap;
-     -webkit-animation: typed 26.94s linear 1s infinite, beam-blink 1s infinite; 
+     -webkit-animation-name: typed;
+	 animation-name: typed;
+	 -webkit-animation-duration: 26.94s;
+	 animation-duration: 26.94s;
+	 -webkit-animation-iteration-count: infinite;
+	 animation-iteration-count: infinite;
+	 -webkit-animation-timing-function: linear;
+	 animation-timing-function: linear;
+	 -webkit-animation-fill-mode: infinite;
+	 animation-fill-mode: infinite;
+	 -webkit-animation: typed 26.94s linear 1s infinite, beam-blink 1s infinite; ;
 	 animation: typed 26.94s linear 1s infinite, beam-blink 1s infinite;
 }
  @media (max-width: 575px) {
