@@ -641,7 +641,7 @@ Courtesy: https://codepen.io/brandonmcconnell/pen/bZqGdw
 	 display: inline-block;
 	 border-right: 4px solid #39c;
 	 white-space: nowrap;
-   -webkit-animation: typed 26.94s linear 1s infinite, beam-blink 1s infinite; /* for safari */
+     -webkit-animation: typed 26.94s linear 1s infinite, beam-blink 1s infinite; 
 	 animation: typed 26.94s linear 1s infinite, beam-blink 1s infinite;
 }
  @media (max-width: 575px) {
