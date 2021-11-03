@@ -12,6 +12,7 @@ encoding: "utf-8"
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
 kramdown:
   math_engine: mathjax
   input: GFM
