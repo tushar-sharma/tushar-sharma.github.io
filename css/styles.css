@@ -85,3 +85,7 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     font-size: 15px;
     word-wrap: break-word;
 }
+
+
+/* Better styles for embedding GitHub Gists */
+.gist .blob-code-inner{ font-size:16px !important; }
