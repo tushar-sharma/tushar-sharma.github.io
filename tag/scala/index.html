@@ -36,8 +36,8 @@
       <header>
         <link rel="stylesheet" href="/css/styles.css" >
 <link rel="stylesheet" href="/css/toc.css" >
+<link rel="stylesheet" href="/css/textAnimation.css" >
 <script src="/js/toc.js" type="text/javascript"></script>
-<script src="/js/scroll_top.js" type="text/javascript"></script>
 
 
 <style type="text/css">
@@ -96,6 +96,7 @@ header li {
   height : auto !important;
   float: none !important;
 }
+
 </style>
 
 <aside id="logo" class="clearfix">
@@ -109,23 +110,12 @@ header li {
      <h1  class="heading"><span class="top"><a href="/"><i>Random Wits</i></a></span></h1>
   <p class="me_blurb">
   <div class="sub">
-Life is too short for a diary
+    <!-- <span id="textAnimation"></span>-->
+    Life is too short for a diary
     </div>
   </p>
 
 </div>
-
-<style type="text/css">
-@font-face{font-family:Somefont;src:url(/font/OneDirection.ttf);font-weight:400;font-style:normal}
-h1.heading{font-family:Myfont;color:#39c}
-.top{color:#444}
-.sub{font-family:Somefont}
-#back-top{position:fixed;bottom:30px;margin-left:-150px}
-#back-top a{width:108px;display:block;text-align:center;font:11px/100% Arial, Helvetica, sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}
-#back-top a:hover{color:#000}
-#back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat ;background-color:rgba(255,255,255,1);display:block;float:right;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}
-#back-top a:hover span{background-color:#777}
-</style>
 
 
 <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
@@ -142,7 +132,7 @@ h1.heading{font-family:Myfont;color:#39c}
 <div class="highlight" >
   <pre style="overflow: hidden; overflow-y: hidden;">
 <code><span class="nv">$</span> latest projects</code>
-     ├── <span class="nv"></span><a href="/projects/python-oracle-kerberos" title="Connect to an Oracle Database using kerberos with python">kerberos-oracle</a><br />     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     └── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
 </pre>
 </div>
 -->
@@ -161,7 +151,7 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 -->
 
 <div class="codeblock">
-    <span style="font-size: 18px; " class="nv">$</span>&nbsp;<span style=" font-size: 18px;">random wits</span>
+    <span style="font-size: 16px; " class="nv">$</span>&nbsp;<span style=" font-size: 16px;">random wits</span>
     <br>
     <div style="padding-left:25px;">
         ├── <span class="nv"><a href="/tags">tags</a></span> <br>
@@ -191,7 +181,7 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 <!-- only if page is root page -->
 
 <div id="toc-block" class="codeblock" style="display:none;">
-  <span style="font-size: 18px; " class="nv">$</span>&nbsp;<span style=" font-size: 18px;">table of contents</span>
+  <span style="font-size: 16px; " class="nv">$</span>&nbsp;<span style=" font-size: 16px;">table of contents</span>
   <div id="toc"></div>
 </div>
 
@@ -207,12 +197,6 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 </script>
 
 
-<!-- back to top scroll -->
-
-<br><br>
-<p id="back-top">
-  <a href="#top"><span></span></a>
-</p>
 
 
 
@@ -226,6 +210,20 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
 <div class="pure-u-1-2">
 <div style="padding-right:10px; padding-left:10px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -443,6 +441,7 @@ We need ojdbc6.jar to connect to the Oracle 12 c database. We will create a Scal
   </span>
 </p>
   
+      <br>
   
     <hr />
     
@@ -778,6 +777,8 @@ We need ojdbc6.jar to connect to the Oracle 12 c database. We will create a Scal
       <footer>
         <!-- <p><small>Tushar Sharma &copy; 2021</small></p> -->
 <link rel="stylesheet" href="/css/font-awesome.css" />
+<script src="/js/scroll_top.js" type="text/javascript"></script>
+<script src="/js/scroll_top.js" type="text/javascript"></script>
 
 <div class="footer">
 <hr>
@@ -790,8 +791,7 @@ We need ojdbc6.jar to connect to the Oracle 12 c database. We will create a Scal
   `
   -->
   <div style="margin: 0 auto; text-align: center; font-size:large;">
-      <span> Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://sharmiwish.wordpress.com/" target="_blank">Vishi</a>  <br>Tushar Sharma &copy; 2021 <small>[
-
+      <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>Tushar Sharma &copy; 2021 
         <a title="Email" href="mailto:tushar@randomwits.com">
     <i class="icon-envelope-alt icon-large"></i> &nbsp;
   </a>
@@ -825,7 +825,7 @@ We need ojdbc6.jar to connect to the Oracle 12 c database. We will create a Scal
     <i class="icon-rss icon-large"></i>
   </a>
 
- ] </small></span><br><br>
+ </small></span><br><br>
 
 </div>
 
@@ -842,6 +842,21 @@ We need ojdbc6.jar to connect to the Oracle 12 c database. We will create a Scal
   ga('send', 'pageview');
 
 </script>
+
+
+<!-- back to top scroll -->
+
+
+
+
+
+<br><br>
+<p id="back-top">
+  <a href="#top"><span></span></a>
+</p>
+
+
+
 
       </footer>
     </div>
