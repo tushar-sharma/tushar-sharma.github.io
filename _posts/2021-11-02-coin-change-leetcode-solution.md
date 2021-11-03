@@ -25,7 +25,7 @@ You are given an integer array coins representing coins of different denominatio
 
 <script src="{{ root_url }}/js/multipleTab.js"></script>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 <p>It's one of the most popular question on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceeding to an efficient correct solution.</p>
