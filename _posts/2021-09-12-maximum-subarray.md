@@ -19,6 +19,14 @@ Given an integer array nums, find the contiguous subarray (containing at least o
 <!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
+
+<link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>
+
+<script src="{{ root_url }}/js/jquery.easytabs.min.js"></script>
+
+<script src="{{ root_url }}/js/multipleTab.js"></script>
+
+
 <p>There's an interesting problem I recently solved on leetcode based on dynamic programming. My <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github</a> repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution.</p>
 
 
@@ -31,68 +39,47 @@ We can commence with a brute force algorithm. For every element of array, we com
 
 ![img](https://i.imgur.com/WHMSDtu.png)
 
-{% highlight java %}
+<div class="tab-container">
+  <ul>
+    <li class="tab Java1"><a href="#Java1">Java</a></li>
+    <li class="tab Python1"><a href="#Python1">Python</a></li>
+  </ul>
 
-class Solution {
-    public int maxSubArray(int[] nums) {
-        
-        if (nums.length == 1){
-            return nums[0];
-        }
+   <div class="codeSample Java1" id="Java1">
+      <script src="https://gist.github.com/tushar-sharma/5fab75b08c891f6e2ca958b2338c369d.js"></script>
+   </div>
 
-        int output = nums[0];
-        
-        for (int i = 0; i < nums.length; i++) {
-            int tempSum = nums[i];
-            for (int j = i + 1; j < nums.length; j++) {
-                tempSum += nums[j];
-                output = Math.max(tempSum, output);
-            }
-            
-            output = Math.max(output, nums[i]);
-            
-        }     
-        return output;   
-        
-    }
-}
-{% endhighlight %}
+   <div class="codeSample Python1" id="Python1">
+       <script src="https://gist.github.com/tushar-sharma/d8c221cf6eb1f4c8abd85c625127a9c1.js"></script>   
+    </div>
 
-Time complexity is <b>O(n<sup>2</sup>)</b> and the execution time is 110 ms on leetcode.
+</div>
+
+
+Time complexity is <b>O(n<sup>2</sup>)</b> and has **Time Limit Exceeded** on leetcode.
 
 ### More efficient solution
 
 
 We can use <a href="https://en.wikipedia.org/wiki/Maximum_subarray_problem">Kadane algorithm</a> to solve. It scans the given array <b>A[1..n]</b> from left to right. In the jth step, it computes the subarray with the largest sum ending at j; this sum is maintained in variable cSum. It computes the subarray with the largest sum anywhere in <b>A[1..j]</b>, maintained in variable oSum;
 
-{% highlight java %}
-class Solution {
-    public int maxSubArray(int[] nums) {
-        
-        if (nums.length == 1){
-            return nums[0];
-        }
+<div class="tab-container">
+  <ul>
+    <li class="tab Java2"><a href="#Java2">Java</a></li>
+    <li class="tab Python2"><a href="#Python2">Python</a></li>
+  </ul>
 
-        int cSum = nums[0];
-        int oSum = nums[0];
-        
-        for (int i = 1; i < nums.length; i++){
-            if (nums[i] > nums[i] + cSum) {
-                cSum = nums[i];
-                
-            } else { 
-                cSum += nums[i];
-            }
-            oSum = Math.max(oSum, cSum);
-        }
- 
-        return oSum;
-  
-    }
-}
-{% endhighlight %}
+   <div class="codeSample Java2" id="Java2">
+      <script src="https://gist.github.com/tushar-sharma/e1bc03cd4bb10fe2739c8cbef11b2c47.js"></script>
+   </div>
 
-The time complexity is <b>O(n<sup></sup>)</b>. The execution time took 0 ms on leetcode.
+   <div class="codeSample Python2" id="Python2">
+     <script src="https://gist.github.com/tushar-sharma/d7ae08673b2170467d84fd1183ef2d34.js"></script>
+   </div>
+
+</div>
+
+The time complexity is <b>O(n<sup></sup>)</b>.
 
 <div class='footnotes'><h4>Footnotes</h4><hr />
   <ol>
