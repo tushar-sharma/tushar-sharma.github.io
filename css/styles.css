@@ -80,9 +80,8 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     border-radius: 5px;
     border: 1px solid #e5e5e5;
     overflow-x: auto;
-    font-family: Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal;
     color: #444;
-    font-size: 15px;
+    font: 12pt/1.5 'Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal';
     word-wrap: break-word;
 }
 
