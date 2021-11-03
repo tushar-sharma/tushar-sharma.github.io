@@ -58,8 +58,8 @@ My first instinct is to sort the coins array. Pick the largest coin first and th
 **However this solution fails the following test case as the minimum sequence is [8, 4]**
 
 ```sh
-[1, 2, 4, 8, 9]
-12
+coins = [1, 2, 4, 8, 9]
+amount = 12
 
 Output : 3
 Expected: 2
@@ -70,20 +70,22 @@ Expected: 2
 
 ## Dynamic Programming
 
-We have to find some subproblem that will help in solving coin-change problem. We can start with substructure dp[i] such that 
+We have to find some subproblem that will help in solving coin-change problem. Given an amount n, we want to generate an exact change using the fewest number of coins
+of denominations d1 < d2 < ... < dm.
+ 
+Let Dp(n) represent the minimum number of coins required for a given amount n. Coins d<sub>j</sub> can be added to amount n - d<sub>j</sub> only if d<sub>j</sub> <= n and 0 <= j <= n -1 wher Dp(0) is 0.
 
 \begin{equation}
-Dp(i) = \min_{j=0}^{n-1} Dp(i - C_j) + 1
+Dp(n) = \min_{j=0}^{d_j<=n} Dp(n - D_j) + 1
 \end{equation}
 
-
-Let us proceed with following test case 
+Let us proceed with following test case
 
 ```sh
-[1, 2, 5]
-11
+coins = [1, 2, 5]
+amount = 11
 ```
-We can vary the amount as i from 0 to amount. The value of dp[i] becomes for each iteration
+We can vary the amount as i from 0 to amount. The value of Dp[i] for each iteration becomes
 
 |         | *0*| *1* | *2*| *3*| *4*| *5*| *6* | *7* | *8* | *9* | *10* | *11* |
 |---------+----+-----+----+----+----+----+-----+-----+-----+-----+-------+-----+
@@ -101,7 +103,6 @@ We can vary the amount as i from 0 to amount. The value of dp[i] becomes for eac
 | i = 11  |  0 |  1  | 1  | 2  | 2  | 1  | 2   | 2  | 3  | 3  | 2  | 3   |
 
 
-
 <div class="tab-container">
   <ul>
     <li class="tab Java2"><a href="#Java2">Java</a></li>
@@ -117,6 +118,11 @@ We can vary the amount as i from 0 to amount. The value of dp[i] becomes for eac
    </div>
 
 </div>
+
+## Complexity
+
+Time Complexity is **$$\theta(n * m)$$**, Space complexity is **$$\theta(n)$$**
+
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
