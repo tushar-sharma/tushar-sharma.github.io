@@ -13,8 +13,7 @@ name: coin-change
 thumb: https://i.imgur.com/LYeioqF.jpeg
 ---
 
-<p>It's one of the most popular question on leetcode that seems very easy at first. Coin change is a classic problem to solve if you are practice dynamic programming. I will proceed with a naive (albeit wrong) which only passes few test cases. Subsequently I'll proceed to a correct & more efficient solution.</p>
-
+<p>It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.</p>
 
 You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money. Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1. You may assume that you have an infinite number of each kind of coin.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
@@ -28,16 +27,17 @@ You are given an integer array coins representing coins of different denominatio
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
 
-<p>It's one of the most popular question on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceeding to an efficient correct solution.</p>
+<p>It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.</p>
 
 ## Problem Statement
 
-<p>You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1. You may assume that you have an infinite number of each kind of coin.</p>
+<p>You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money. Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1. You may assume that you have an infinite number of each kind of coin.</p>
 
 ## Greedy Solution
 
-My first instinct is to sort the coins array. Pick the largest coin first and then substract the largest possible value from the amount. Subsequently proceed with smaller denomination while keeping track of the count.
- 
+My first instinct is to sort the coins array. Pick the largest coin first and then subtract the largest possible value from the amount. Subsequently, proceed with smaller denominations while keeping track of the count.
+
+
 <div class="tab-container">
   <ul>
     <li class="tab Java1"><a href="#Java1">Java</a></li>
@@ -68,8 +68,7 @@ Expected: 2
 
 ## Dynamic Programming
 
-We have to find some subproblem that will help in solving coin-change problem. Given an amount n, we want to generate an exact change using the fewest number of coins
-of denominations d1 < d2 < ... < dm.
+We have to find some subproblem that will help in solving coin-change problem. Given an amount n, we want to generate an exact change using the fewest number of coins of denominations d<sub>1</sub> < d<sub>2</sub> < ... < d<sub>m</sub>.
  
 Let Dp(n) represent the minimum number of coins required for a given amount n. Coins d<sub>j</sub> can be added to amount n - d<sub>j</sub> only if d<sub>j</sub> <= n and 0 <= j <= n -1 wher Dp(0) is 0.
 
