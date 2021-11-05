@@ -8,6 +8,7 @@ tags:
 - religion
 - science
 thumb: /img/the-thinker.jpg 
+featuredPost: true
 ---
 
 <p>I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to wreak the whole place. And the mischievous alarm pulled me out of my dreams.</p>
