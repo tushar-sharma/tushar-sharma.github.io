@@ -92,3 +92,36 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 
 /* Better styles for embedding GitHub Gists */
 .gist .blob-code-inner{ font-size:16px !important; }
+
+.latex-pseudo-code {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin: 30px auto;
+    font-size: 0.9em;
+    text-align: left;
+    overflow-x: auto;
+}
+
+.katex-display>.katex {
+    display: block;
+    text-align: left !important;
+    white-space: nowrap;
+}
+
+.katex .mtable .col-align-l>.vlist-t { 
+    text-align: left;
+}
+.katex .vlist-t {
+    display: inline-table;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.katex-display.fleqn>.katex {
+    text-align: left;
+    padding-left: 2em;
+}
+
+.MathJax_Display {
+    text-align: left !important;
+}
