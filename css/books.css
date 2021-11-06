@@ -61,6 +61,32 @@ nav#pagination span.prev {
     float: left;
 }
 
+.disclaimer{
+    border-radius: 25px;
+   border: 2px solid rgb(51, 153, 204);
+   padding: 20px;
+   width: 100%;
+ }
+
+ .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+  }
+ 
+ .alert.success {background-color: #4CAF50;}
+
+ td{
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #667;
+    letter-spacing: 0.015em;
+    hyphens: none;
+}
+
 /* begin - books progress*/
 .book1 {width: 25%; }    /*Possible world 44 pages out of  200 */
 .book3 {width: 0%; }    /* other  */
