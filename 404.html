@@ -12,22 +12,53 @@ root: true
     left: 0;
     position: relative;
 }
-.center {
-    position: relative;
-    width: 500px;
-    height: 550px;
-    top: 200px;
-    left: 200px;
-    margin-top: -25px;
-    margin-left: -50px;
-    font-size: 18px;
+
+.error{
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    margin: 0 0 0.4 em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+;
 }
 
+.thumbinner {
+    border: 1px solid #c8ccd1;
+    padding: 3px;
+    background-color: #f8f9fa;
+    font-size: 94%;
+    text-align: center;
+    overflow: hidden;
+}
 </style>
 
 <div class='fullscreenDiv'>
-    <div class="center">
-      <code style="margin-bottom:5px">404! Page NOT FOUND! </code>
-      <img src="/img/404.gif" />
-    </div>
+    <center>
+      <div class="error">404! Page NOT FOUND! </div>
+      <div>
+          <div class="thumbinner" style="float:left; width:50%;">
+              <a href="/"> 
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg/440px-PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg"  />
+              </a>
+              Courtesy ~ Carl Sagan, <a href="https://en.wikipedia.org/wiki/Pale_Blue_Dot" target="_blank">Pale Blue Dot</a> 
+          </div>
+          <div style="float:right;width:45%;">
+            <h2>Dear Voyager, you are wayyyy off the map</h2> 
+            <p>
+                You have flown 3.7 billion miles away from your destination.
+                Look again at that dot. That's here. That's home.
+            </p> 
+
+            <p> 
+                This website is a small stage in a vast cosmic arena. Please return to <a href="/">home</a> to fly back to the mote of dust suspended in a sunbeam, <span class="sub">Randomwits</sub>.
+            </p>
+          </div>
+      </div>
+
 </div>
