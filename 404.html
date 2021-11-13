@@ -14,9 +14,7 @@ root: true
 }
 
 .error{
-    font-family: Open Sans;
-    font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: .1em;
     text-transform: uppercase;
     line-height: 1.4em;
@@ -27,44 +25,55 @@ root: true
     margin-inline-end: 0px;
 ;
 }
-
 .thumbinner {
-    border: 1px solid #c8ccd1;
     padding: 3px;
     background-color: #f8f9fa;
     font-size: 94%;
     text-align: center;
     overflow: hidden;
-    min-height:218px;
 }
+
 img {
-    width: 220px;
-    aspect-ratio: auto 220 / 218;
-    height: 218px;
+    max-width: 100%;
+    height: 100%;  
 }
 </style>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        var height = Math.max($("#left").height(), $("#right").height());
+        $("#left").height(height);
+        $("#right").height(height);
+    });
+  </script>
+
+
 <div class='fullscreenDiv'>
-    <center>
-      <div class="error">404! Page NOT FOUND! </div>
-      <div>
-          <div class="thumbinner" style="float:left; width:50%;">
-              <a href="/"> 
+      <div class="error sub"> 
+          Dear Voyager, you've lost your orbit! 
+      </div>
+          
+      <div  class="thumbinner" style="float:left; width:50%;">
+              <div id="left">
+                  <a href="/"> 
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg/440px-PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg"  />
-              </a>
-              Courtesy ~ Carl Sagan, <a href="https://en.wikipedia.org/wiki/Pale_Blue_Dot" target="_blank">Pale Blue Dot</a> 
-          </div>
-          <div style="float:right;width:45%;">
-            <h2>Dear Voyager, you are wayyyy off the map</h2> 
+                 </a>
+              </div>
+              
+      </div>
+          
+      <div id="right" style="float:right;width:45%;">
             <p>
                 You have flown 3.7 billion miles away from your destination.
                 Look again at that dot. That's here. That's home.
             </p> 
 
             <p> 
-                This website is a small stage in a vast cosmic arena. Please return to <a href="/">home</a> to fly back to the mote of dust suspended in a sunbeam, <span class="sub">Randomwits</sub>.
+                This website is a small stage in a vast cosmic arena. Please return to <a href="/">home</a> to fly back to the mote of dust suspended in a sunbeam, <a href="/"><span class="sub">Randomwits</sub></a>.
             </p>
-          </div>
-      </div>
 
+            <p> 
+                Courtesy ~ Carl Sagan, Pale Blue Dot. 
+            </p>
+      </div>
 </div>
