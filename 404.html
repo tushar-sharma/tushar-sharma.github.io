@@ -27,6 +27,8 @@ root: true
 ;
 }
 .thumbinner {
+    display: flex;
+    align-items: center;
     overflow: hidden;
     margin-right: 20px;
     font-size: 94%;
@@ -36,7 +38,10 @@ root: true
 
 img {
     max-width: 100%;
-    height: 100%;  
+    object-fit: contain;
+    height: auto;  
+    transform: scaleX(1.2);
+    min-width: 210px;
 }
 </style>
 
