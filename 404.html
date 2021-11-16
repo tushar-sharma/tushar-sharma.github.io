@@ -10,6 +10,7 @@ root: true
     bottom: 0px;
     top: 0px;
     left: 0;
+    font-size:16px !important;
     position: relative;
 }
 
@@ -27,9 +28,9 @@ root: true
 }
 .thumbinner {
     overflow: hidden;
-    min-width: 220px;
-    min-height: 218px;
-    margin-right: 50px;
+    min-width: 300px;
+    min-height: 300px;
+    margin-right: 20px;
     border: 1px solid #c8ccd1;
     font-size: 94%;
     text-align: center;
@@ -48,14 +49,14 @@ img {
         var height = $("#right").height();
         $("#left").height(height);
         $("#right").height(height);
-        $('#left').prepend('<img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg/440px-PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg" />')
+        $('#left').prepend('<a href="/"><img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg/1212px-PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg"/></a>')
     });
   </script>
 
 
 <div class='fullscreenDiv'>
       <div class="error sub"> 
-          Dear Voyager, you've lost your orbit! 
+          Dear Voyager, you've lost your orbit! 4041
       </div>
           
       <div>
@@ -63,19 +64,27 @@ img {
           </div>
           
           <div id="right" style="float:left;width:45%;">
+            <p>
+                <b>404!</b> That’s an error.
+            </p>
               <p>
-                You have flown 3.7 billion miles away from your destination.
-                Look again at that dot. That's here. That's home.
-              </p> 
+                You have flown 3.7 billion miles away from your destination. Look again at that dot. That's here. That's home.
+            </p> 
 
+            <p>
+                This website is a small stage in a vast cosmic arena. It is a lonely speck in the great cosmic dark. In our obscurity, in all this vastness, there is no hint that this website might enlighten its visiors. On the contrary, it might have psychedelic effects on the weaklings.
+            </p>
+
+            <p>
+                This website is the only world known so far to harbor my thoughts. There is nowhere else, at least in the near future, to which my random thoughts could migrate.
+
+            </p>
                <p> 
-                This website is a small stage in a vast cosmic arena. Please return to <a href="/">home</a> to fly back to the mote of dust suspended in a sunbeam, <a href="/"><span class="sub">Randomwits</sub></a>.
-                </p>
+                Please return to home to fly back to the mote of dust suspended in a sunbeam, <a href="/"><span style="font-size:24px;" class="sub">Randomwits.</span></a>
+            </p>
 
-     
-                <p> 
-                     Courtesy ~ Carl Sagan, Pale Blue Dot. 
-                </p>
+            <p>Courtesy ~ Carl Sagan, Pale Blue Dot.</p>
+
           </div>
       </div> <br>
 </div>
