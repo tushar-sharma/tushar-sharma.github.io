@@ -47,25 +47,36 @@ img {
 
 <script type="text/javascript">
     $(document).ready(function() {
+        if (window.matchMedia("(max-width: 767px)").matches)  {
+            $("#right").width("100%");
+            $("#right").css("display","block");
+
+        } else {
+
+            var height = $("#right").height();
+            $("#left").css("display","block");
+            $("#right").css("display","block");
+            $("#left").height(height);
+            $("#right").height(height);
+            $('#left').prepend('<a href="/"><img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg/1212px-PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg"/></a>');
+        }
+
         //var height = Math.max($("#left").height(), $("#right").height());
-        var height = $("#right").height();
-        $("#left").height(height);
-        $("#right").height(height);
-        $('#left').prepend('<a href="/"><img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg/1212px-PIA23645-Earth-PaleBlueDot-6Bkm-Voyager1-orig19900214-upd20200212.jpg"/></a>')
+      
     });
   </script>
 
 
-<div class='fullscreenDiv'>
+<div class=none'fullscreenDiv'>
       <div class="error sub"> 
           Dear Voyager, you've lost your orbit!
       </div>
           
       <div>
-          <div id="left" class="thumbinner" style="float:left; width: 47%">
+          <div id="left" class="thumbinner" style="float:left; width: 47%; display:none">
           </div>
           
-          <div id="right" style="float:left;width:50%;">
+          <div id="right" style="float:left;width:50%;display:none;">
             <p>
                 <b>404! That's an error.</b>
             </p> 
