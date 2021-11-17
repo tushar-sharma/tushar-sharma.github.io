@@ -76,7 +76,7 @@ nav#pagination span.prev {
     transition: opacity 0.6s;
     margin-bottom: 15px;
   }
- 
+
  .alert.success {background-color: #4CAF50;}
 
  td{
@@ -97,6 +97,6 @@ nav#pagination span.prev {
 .book8 {width: 20%; }  /* evolution of physics */
 .book9 {width: 14%; }  /* eminent historians */
 .book10 {width: 9.45%; }  /* java 8 in action */
-.book11 {width: 10%; }  /* One, Two, Three...Infinity */
+.book11 {width: 17%; }  /* One, Two, Three...Infinity */
 .tbd {width: 0%; }  /* TBD */
 /* end -  book progress*/
