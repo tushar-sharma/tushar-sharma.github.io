@@ -29,7 +29,7 @@ Ternary string is an interesting problem that could be solved using two pointers
 ## Problem Statement
 
 <p>
-You are given a string s such that each its character is either 1, 2, or 3. You have to choose the shortest contiguous substring of s such that it contains each of these three characters at least once. 
+You are given a string s such that each its character is either 1, 2, or 3. You have to choose the shortest contiguous substring of s such that it contains each of these three characters at least once.
 
 A contiguous substring of string s is a string that can be obtained from s by removing some (possibly zero) characters from the beginning of s and some (possibly zero) characters from the end of s.<sup><a href='#fn:1' rel='footnote'>1</a></sup>
 </p>
@@ -40,7 +40,7 @@ The first line contains one integer t (1≤t≤20000) - the number of test cases
 
 Each test case consists of one line containing the string s (1≤s≤200000). It is guaranteed that each character of s is either 1, 2, or 3.
 
-The sum of lengths of all strings in all test cases does not exceed 
+The sum of lengths of all strings in all test cases does not exceed
 
 ```bash
 7
@@ -70,36 +70,6 @@ For each test case, print one integer — the length of the shortest contiguous 
 ## Two pointers
 
 We can start with two pointers; left and right. Index array is used to keep track of the frequency of each occurrence of characters in string s. We can safely increment left pointer till index[s[left]] is greater than 1. The output is the minimum value of the window (right - left + 1);
-
-## Psuedocode
-
-<div class="latex-pseudo-code">$$\textbf {getTernaryString}(s)$$$$\begin{aligned}
-1&amp; \quad left \leftarrow 0 \\
-
-2&amp; \quad count \leftarrow \infty \\
-
-3&amp; \quad index \leftarrow
-\begin{array}{|c|c|c|}
-  \hline
-  0 & 0 & 0 \\ \hline 
-\end{array}
- \\
-
-4&amp; \quad  \textbf {for }i\leftarrow0\textbf { to }s.length \\
-
-5&amp; \quad \qquad index[s[i]] \mathrel{+=} 1 \\
-
-7&amp; \quad \qquad while \;index[s[left]] \gt 1\;do \\
-
-8&amp; \quad \qquad \qquad index[s[left]]  \mathrel{-=} 1 \\
-
-9&amp; \quad \qquad  \qquad left \mathrel{+=} 1 \\
-
-9&amp; \quad \qquad \textbf {count} = minimum(count,  right -left + 1)  \\
-
-10&amp; \quad return \;\textbf{count}
-
-\end{aligned}$$</div>
 
 ## Implementation
 
