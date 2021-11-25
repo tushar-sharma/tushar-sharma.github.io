@@ -10,12 +10,12 @@ toc_icon: "cog"
 <h1 class="entry-title">Resources for Programmers</h1>
 
 <style type="text/css">
-section ul li  { 
+section ul li  {
 padding-bottom: 15px !important;
 letter-spacing: 5px !important;
 }
 
-section ul li a { 
+section ul li a {
   border-bottom: 1px solid #f2f3f3 !important;
 }
 </style>
@@ -118,7 +118,7 @@ section ul li a {
 * [Django-tables2 getting started](https://django-tables2.readthedocs.io/en/latest/pages/tutorial.html)
 * [Importing a CSV file to database models](http://abhishekchhibber.com/django-importing-a-csv-file-to-database-models/)
 
-### Books 
+### Books
 * The Hacker's Guide to Python by Julien Danjou
 * Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People by Aditya Bhargava
 
@@ -230,14 +230,18 @@ section ul li a {
 * [CS 340 - Database & Web System](http://www.cburch.com/cs/340/index.html)
 * [Getting Started with Impala](https://coe4bd.github.io/TechnicalReports/Setting%20Up%20a%20Hadoop%20Cluster%20with%20Cloudera%20Manager%20and%20Impala.pdf)
 * [Visual Explanation of SQL Joins](http://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html)
+* [Use the Index, Luke! (SQL Tuning and Indexing)](http://use-the-index-luke.com) -
+This is an in-depth guide to how indexes work in SQL DBs, more of an advanced topic, but
+it's really interesting.
 
 ### Books
 * [Sqoop Cookbook](http://shop.oreilly.com/product/0636920029519.do)
 
-### Supplementary
-* [Use the Index, Luke! (SQL Tuning and Indexing)](http://use-the-index-luke.com) -
-This is an in-depth guide to how indexes work in SQL DBs, more of an advanced topic, but
-it's really interesting.
+### Practice
+
+* [PostgreSQL Exercises](https://pgexercises.com/)
+* [SQLZoo](http://sqlzoo.net/)
+* [Leetcode Database Problemset](https://leetcode.com/problemset/database/)
 
 ## Functional Programming
 * [Functional Programming Principles in Scala](https://www.coursera.org/learn/progfun1)
