@@ -32,8 +32,6 @@ section ul li a {
 * [fishercoder1534](https://github.com/fishercoder1534/Leetcode)
 -->
 
-## Github Repository
-
 ### Interview Preparation
 
 * [Prep Coding](https://github.com/tushar-sharma/prep-coding)
@@ -242,6 +240,8 @@ it's really interesting.
 * [PostgreSQL Exercises](https://pgexercises.com/)
 * [SQLZoo](http://sqlzoo.net/)
 * [Leetcode Database Problemset](https://leetcode.com/problemset/database/)
+* [Hackerrank SQL](https://www.hackerrank.com/domains/sql)
+* [Wikibooks SQL Exercises](https://en.wikibooks.org/wiki/SQL_Exercises)
 
 ## Functional Programming
 * [Functional Programming Principles in Scala](https://www.coursera.org/learn/progfun1)
