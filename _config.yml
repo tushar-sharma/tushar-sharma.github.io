@@ -36,3 +36,7 @@ disqus:
     # Leave shortname blank to disable comments site-wide.
     # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
     shortname: randomwits
+# Social usernames/URLs
+twitter_username: tshrocks
+title_image: "https://randomwits.com/img/little_world.png"
+description: "Welcome to Randomwits, the little nest of bytes and ramblings."
