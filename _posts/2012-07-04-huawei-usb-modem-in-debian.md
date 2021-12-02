@@ -5,6 +5,9 @@ category: blog
 tags: debian huawei usb modem code
 name: huawei-modem 
 thumb: /img/debian.png
+summary: Huawei Usb Modem in Debian
+image: /img/debian.png
+author: Tushar Sharma
 ---
 
 
