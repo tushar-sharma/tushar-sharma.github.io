@@ -120,7 +120,6 @@ Nita Ambani is the chairperson and founder of the Reliance Foundation.
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/NitaAmbani?src=hash&amp;ref_src=twsrc%5Etfw">#NitaAmbani</a> receiving the ‘Shri Pravinchandra V Gandhi Award for Excellence in Public Life’ for Philanthropy from Dr Mukesh Batra <a href="https://twitter.com/Rotary?ref_src=twsrc%5Etfw">@Rotary</a> <a href="https://t.co/F0kC3CGZDh">pic.twitter.com/F0kC3CGZDh</a></p>&mdash; Reliance Foundation (@ril_foundation) <a href="https://twitter.com/ril_foundation/status/849246465272807426?ref_src=twsrc%5Etfw">April 4, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
-
 <br>
 
 
@@ -144,8 +143,8 @@ Mukesh Batra is recipient of Padma Shri award from the president of India. It’
 </div>
 <br>
 
-<figure>
 <center>
+<figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2r4NCbqev0M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </figure>
