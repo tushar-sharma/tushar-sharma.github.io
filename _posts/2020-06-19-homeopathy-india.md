@@ -76,7 +76,6 @@ The FDA has warned consumers about different products labeled as homeopathic. Fo
 Celebrities & Politicians are powerful influencers in any country. The product they endorse usually have huge impact on consumer buying behavior. List of politicians endorsing homeopathy products:
 <br>
 
-
 <div class="attention">
 <i style="color: orange;" class="fas fa-exclamation-circle"> </i>
 Press Information Bureau, government of India, suggesting homeopathy for coronavirus
@@ -125,21 +124,17 @@ Nita Ambani is the chairperson and founder of the Reliance Foundation.
 <br>
 
 
-
 <div class="attention">
 <i style="color: orange;" class="fas fa-exclamation-circle"> </i>
 Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a mass movement". <br>
 </div>
 <br>
 
-<p>
 <center>
 <figure>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/rDy5oTAhaLw" title="YouTube video player"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"   allowfullscreen></iframe>
   </figure>
 </center>
-</p>
-
 
 <br>
 
@@ -149,14 +144,12 @@ Mukesh Batra is recipient of Padma Shri award from the president of India. It’
 </div>
 <br>
 
-<p>
 <figure>
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2r4NCbqev0M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </figure>
 </center>
-</p>
 
 
 <div class="attention">
@@ -165,13 +158,11 @@ DD News is a Indian government funded news channel. It reports how homeopathy ca
 </div>
 <br>
 
-<p>
 <center>
 <figure>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/zhoDZrGj9Kc" title="YouTube video player"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"   allowfullscreen></iframe>
   </figure>
 </center>
-</p>
 
 <div class="attention">
 <i style="color: orange;" class="fas fa-exclamation-circle"> </i>
@@ -180,13 +171,11 @@ Claims that homeopathy can cure genetic disorders
 <br>
 
 
-<p>
 <center>
 <figure>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/x4_HjgUgvp4" title="YouTube video player"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"   allowfullscreen></iframe>
   </figure>
 </center>
-</p>
 
 <div markdown="1">
 
