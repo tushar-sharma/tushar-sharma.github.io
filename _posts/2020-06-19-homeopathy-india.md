@@ -129,11 +129,13 @@ Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a ma
 </div>
 <br>
 
+<p>
 <center>
 <figure>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/rDy5oTAhaLw" title="YouTube video player"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"   allowfullscreen></iframe>
-  </figure>
+  <iframe height="500" src="https://www.youtube.com/embed/rDy5oTAhaLw"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 </center>
+</p>
 
 <br>
 
@@ -143,12 +145,13 @@ Mukesh Batra is recipient of Padma Shri award from the president of India. It’
 </div>
 <br>
 
+<p>
 <center>
 <figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2r4NCbqev0M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
+  <iframe height="500" src="https://www.youtube.com/embed/2r4NCbqev0M"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 </center>
+</p>
 
 
 <div class="attention">
@@ -157,11 +160,15 @@ DD News is a Indian government funded news channel. It reports how homeopathy ca
 </div>
 <br>
 
+<p>
 <center>
 <figure>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/zhoDZrGj9Kc" title="YouTube video player"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"   allowfullscreen></iframe>
-  </figure>
+  <iframe height="500"  src="https://www.youtube.com/embed/zhoDZrGj9Kc"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 </center>
+</p>
+
+
 
 <div class="attention">
 <i style="color: orange;" class="fas fa-exclamation-circle"> </i>
@@ -169,12 +176,13 @@ Claims that homeopathy can cure genetic disorders
 </div>
 <br>
 
-
+<p>
 <center>
 <figure>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/x4_HjgUgvp4" title="YouTube video player"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"   allowfullscreen></iframe>
-  </figure>
+  <iframe height="500"  src="https://www.youtube.com/embed/x4_HjgUgvp4"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
 </center>
+</p>
 
 <div markdown="1">
 
