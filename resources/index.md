@@ -32,14 +32,22 @@ section ul li a {
 * [fishercoder1534](https://github.com/fishercoder1534/Leetcode)
 -->
 
-### Interview Preparation
+## Interview Preparation
 
-* [Prep Coding](https://github.com/tushar-sharma/prep-coding)
+### Github repositories
+
+* [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 * [Missiong Peace Interview](https://github.com/mission-peace/interview)
-* [Onsite-Interview-Preparation](https://github.com/05Khushboo/Onsite-Interview-Preparation)
 * [Dropbox Interview Question](https://github.com/insideofdrop/Dropbox-Interview-Prep)
 * [Interviews](https://github.com/kdn251/interviews)
 * [fishercoder1534](https://github.com/fishercoder1534/Leetcode)
+* [Prep Coding](https://github.com/tushar-sharma/prep-coding)
+* [Onsite-Interview-Preparation](https://github.com/05Khushboo/Onsite-Interview-Preparation)
+
+### Books
+
+* Cracking the Coding Interview by  Gayle Laakmann McDowell
+* Elements of Programming Interviews in Java by Adnan Aziz
 
 ## Algorithms & Data Structure
 * [Algorithms - Paul Valiant](http://cs.brown.edu/courses/csci1570/classes.html)
@@ -102,9 +110,6 @@ section ul li a {
 * [Graph Search, Shortest Paths, and Data Structures](https://www.coursera.org/learn/algorithms-graphs-data-structures)
 * [Introduction to Graph Theory](https://www.coursera.org/learn/graphs)
 
-### Two Hop neighbors
-* [Two Hop Neighbors - Chen Su](http://www.chen-su.com/static/slides/java_ucsd/c3/m1/C3M1L3S2_TwoHopNeighbors.pdf?q=1516568491)
-
 ## Python
 ### MOOCS
 * [Future Learn - Python courses](https://www.futurelearn.com/subjects/it-and-computer-science-courses/python)
@@ -127,9 +132,6 @@ section ul li a {
 ## AWS
 * [AWS Developer: Building on AWS - Edx](https://www.edx.org/course/aws-developer-building-on-aws)
 * [AWS Sagemaker Machine Learning - Pluralsight](https://www.pluralsight.com/courses/aws-sagemaker-machine-learning-models)
-
-## IT
-* [Restore USB drive back to full capacity](http://www.eassos.com/blog/how-to-restore-usb-drive-back-to-full-capacity)
 
 ## Sorting
 
