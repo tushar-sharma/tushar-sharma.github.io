@@ -62,10 +62,10 @@ nav#pagination span.prev {
 }
 
 .disclaimer{
-    border-radius: 25px;
+   border-radius: 25px;
    border: 2px solid rgb(51, 153, 204);
    padding: 20px;
-   width: 100%;
+   text-align: left;
  }
 
  .alert {
