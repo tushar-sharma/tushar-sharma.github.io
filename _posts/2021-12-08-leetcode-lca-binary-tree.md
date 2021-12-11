@@ -30,8 +30,6 @@ Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in
 <p>Questions involving the binary tree data structure are very popular in tech interviews, and can be challenging and varied! A binary tree is a data structure consisting of a collection of nodes (starting at a root node), where each node consists of a value (data), together with a directed edges to at most two nodes (the "left child" and "right child"), with the additional conditions that no two edges point to the same node and no edge points to the root. I recently solved an interesting problem on binary tree.
 </p>
 
-Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/Lowest_common_ancestor): "The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself)".
-
 <link rel="stylesheet" href="{{ root_url }}/css/books.css" />
 
 <!-- disclaimer -->
