@@ -9,9 +9,9 @@ tags:
 - javascript
 - scala
 name: lca-binary-tree
-thumb: https://www.yoreoyster.com/wp-content/uploads/2021/06/LeetCode-Review.png 
-summary: Homeopathy and pseudoscience
-image: https://www.yoreoyster.com/wp-content/uploads/2021/06/LeetCode-Review.png
+thumb: https://i.imgur.com/4YDq7FT.jpg
+summary: Finding lowest common ancestor of a binary tree
+image: https://i.imgur.com/4YDq7FT.jpg
 author: Tushar Sharma
 ---
 
