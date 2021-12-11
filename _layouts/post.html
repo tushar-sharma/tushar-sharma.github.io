@@ -16,7 +16,7 @@ root: true
 <br>
 
 <small style="float:right; margin-top:5px;">{{ page.date | date:'%a %d %b %Y' }}</small>
-<h2>{{ page.title }}</h2>
+<h1>{{ page.title }}</h1>
 
 {% assign truncated_post = content | split:"<!-- truncate_here -->" %}
 {% if truncated_post != content %}
