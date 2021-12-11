@@ -24,11 +24,12 @@ I once complained to my friend of his desktop on his computer. His desktop was a
 <link rel="stylesheet" href="{{ root_url }}/css/books.css" />
 
 <!-- disclaimer -->
-<div class="cl disclaimer">
+<div style="margin: 0 auto" class="cl disclaimer">
   <i class="icon-star"></i>
     <span style="color:black"> &nbsp;&nbsp;This article has been published in <a href="http://www.linuxforu.com" target="_blank">LinuxforYou</a> magazine,January 2014 issue
 </span> 
-</div><br>
+</div>
+<br>
 
 
 **Note:** For those who are unfamiliar with emacs, Key abbreviations used :

@@ -3,9 +3,7 @@ title: Coin Change solution leetcode
 category: blog
 layout: post
 tags:
-- programming
 - leetcode
-- code
 - dp
 - java
 - python
