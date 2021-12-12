@@ -48,7 +48,7 @@ Other was alternative medicine, which is an umbrella term for Ayurveda, homeopat
 
 It was developed by Samuel Hahnemann in 1796. During this time modern germ theory of disease was not prevalent. Most scientist believed in miasma theory of disease. Also unconventional methods like bloodletting was also prevalent.
 
-Homeopathy in a nutshell has two theory
+Homeopathy in a nutshell has two main concepts i.e. 
 
 1. **Like cures Like**: the notion that a disease can be cured by a substance that produces similar symptoms in healthy people
 
