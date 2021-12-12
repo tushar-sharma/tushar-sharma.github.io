@@ -22,7 +22,12 @@ After few seconds, the world came back to me. I glanced out of the window to cat
 
 <p>I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to wreak the whole place. And the mischievous alarm pulled me out of my dreams.</p>
 
-<img src="{{ root_url }}/img/the-thinker.jpg" >
+<p> 
+<center>
+<img src="{{ root_url }}/img/the-thinker.jpg" alt="Thinking man">
+</center>
+</p>
+
 
 After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony. 
 
