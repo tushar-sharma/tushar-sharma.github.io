@@ -33,7 +33,7 @@ It dawned to me that the roof resembled a portrait. A portrait with different st
 <br>
 
 <blockquote>
-"No man ever steps in the same river twice" - Heraclitus
+"No man ever steps in the same river twice" - Heraclitus.
 </blockquote>
 
 <br>
@@ -64,7 +64,7 @@ God doesn't play dice with the world.
 The course of human evolution was completely turned with the occurrence of two historic events. One was the discovery of fire and the other invention of wheel. The fire gave men the much needed protection. And the wheel allowed him to travel larger distance in finding niche required for survival. Yet the sudden roar of thunder easily ushered the greatest fear. When there was the fear of the unknown, religion came to the rescue. The fundamental question of where we came from, also known as creation myth, is found in all major religions. The absence of rainfall could be easily attributed to the angry gods craving sacrifice. Hence dogmas and ritual gave religious institution authority to control the masses. Also religion made men feel privileged than the rest of the animals.
 
 <blockquote>
-God created man in his own image, in the image of God he created him - Gen 1.27
+God created man in his own image, in the image of God he created him - Genesis.
 </blockquote>
 
 <br>
@@ -103,7 +103,7 @@ Gravity was described in 11th century by Indian mathematician Bhaskaracharya. La
 When Napoleon was asked to explain why his works on celestial mechanics made no mention of god, he replied
 
 <blockquote>
-Your Highness, I have no need of this hypothesis
+Your Highness, I have no need of this hypothesis. 
 </blockquote>
 
 <br>
