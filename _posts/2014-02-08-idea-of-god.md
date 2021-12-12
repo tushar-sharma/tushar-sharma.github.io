@@ -17,6 +17,9 @@ After few seconds, the world came back to me. I glanced out of the window to cat
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
+{% include embed-audio.html src="/sounds/2014-02-08-idea-of-god.mp3" %}<br>
+<!--begin_of_post -->
+
 <p>I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to wreak the whole place. And the mischievous alarm pulled me out of my dreams.</p>
 
 <img src="{{ root_url }}/img/the-thinker.jpg" >
@@ -112,7 +115,11 @@ The physics of sixteen and seventeen century was having honeymoon period. The Eu
 Einstein came up with a revolutionary idea of the universe in his theory of General Relativity. The sum of the angles of a triangle no longer adds up to 180<sup>0</sup>. The universe was reduced to a inextricable fabric of space and time. Imagine the universe as a trampoline. The object with mass bends and curve the fabric of space time. The distortion in the fabric causes the ripples of gravity. Einstein calculated the speed of these ripples equal to that of speed of light. In fact Einstein set the speed of light as a cosmic limit. Nothing can go faster than light (though certain particles like Tachyon have been observe to supercede the speed of light under laboratory conditions).
 
 
-![img](/img/curve.jpg "Curve space")
+<p> 
+<center>
+<img src="{{ root_url }}/img/curve.jpg" alt="Curved space time picture">
+</center>
+</p>
 
 #### Our universe is expanding
 
@@ -144,6 +151,8 @@ As so many rivers, having their source in different mountains, roll down, crooke
 <br>
 
 After a while I returned from my jogging. The streets had now grown in people and traffic. Cows are considered sacred in India and can roam anywhere. As I was crossing a street, I saw a cow mooing. Afterward the cow disposed her dung on the street. I quietly chuckled, 'Where is God? In the dung, cosmos or me. May be idea of the god needs another revision'.
+
+<!--end_of_post -->
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
