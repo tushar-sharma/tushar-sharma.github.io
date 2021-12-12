@@ -16,17 +16,16 @@ featuredPost: true
 ---
 
 
-<p> I recently came across a Youtube video of Genelia Deshmukh, famous Indian actress, promoting homeopathic products. Along with her husband, they have invested in a startup called Welcome Cure. Science has repeatedly dismissed homepathy as quakery or at best placebo, but that has not deter government of India to fund & research homeopathy under AYUSH ministry.
-</p>
+<p> I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.</p>
 
-As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. It was always blamed for side effects. “Only if you are really sick”, my uncle used to say, “should you take allopathy”.<!-- truncate_here -->
+As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. Allopathy was always criticised for side effects. “Only if you are really sick", my uncle used to say, “take allopathy medicine only as a last resort."<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
 {% include embed-audio.html src="/sounds/2020-06-19-homeopathy-india.mp3" %}<br>
 <!--begin_of_post -->
 
-I recently came across a Youtube video of Genelia Deshmukh, famous Indian actress, promoting homeopathic products. Along with her husband, they have invested in a startup called Welcome Cure. Science has repeatedly dismissed homepathy as quakery or at best placebo, but that has not deter government of India to fund & research homeopathy under AYUSH ministry.
+<p> I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.</p>
 
 <p>
 <center>
@@ -40,7 +39,8 @@ I recently came across a Youtube video of Genelia Deshmukh, famous Indian actres
 
 
 ## Allopathy vs Homeopathy
-As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. It was always blamed for side effects. “Only if you are really sick”, my uncle used to say, “should you take allopathy”.
+
+As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. Allopathy was always criticised for side effects. “Only if you are really sick", my uncle used to say, “take allopathy medicine only as a last resort."
 
 Other was alternative medicine, which is an umbrella term for Ayurveda, homeopathy, yoga, acupuncture, etc. “They don’t have any side effects”, I often heard, “they should be recommended first”.
 
