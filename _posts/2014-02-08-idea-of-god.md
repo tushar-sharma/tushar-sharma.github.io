@@ -44,7 +44,7 @@ It dawned to me that the roof resembled a portrait. A portrait with different st
 <br>
 <br>
 
-#### Paradox of Choice
+## Paradox of Choice
 
 After regaining consciousness and relinquishing my bed, I decided to stroll out in the morn. I quickly slipped into my pyjamas and shoes. The sky had the company of a dwindling moon who looked upset at the ascending sun. Occasionally birds chirped and bade the moon goodbye. The winds descended and raced with me to keep me company. 
 
@@ -64,7 +64,7 @@ God doesn't play dice with the world.
 
 <br>
 
-#### Curious case of religion
+## Curious case of religion
 
 The course of human evolution was completely turned with the occurrence of two historic events. One was the discovery of fire and the other invention of wheel. The fire gave men the much needed protection. And the wheel allowed him to travel larger distance in finding niche required for survival. Yet the sudden roar of thunder easily ushered the greatest fear. When there was the fear of the unknown, religion came to the rescue. The fundamental question of where we came from, also known as creation myth, is found in all major religions. The absence of rainfall could be easily attributed to the angry gods craving sacrifice. Hence dogmas and ritual gave religious institution authority to control the masses. Also religion made men feel privileged than the rest of the animals.
 
@@ -81,7 +81,7 @@ Most of the religion rely on miracles for indoctrinating people. Indoctrination 
 But what is miracle? Is talking to someone over long distance over phone miracle? It's not since in this century most of us are taught how technology works. But if I could time travel to medieval past and reveal to them an ordinary phone, they might hold me in high reverence. After all, one century's magic, another century's science [^man].
 
 
-#### Chicken or the Egg
+## Chicken or the Egg
 
 
 In the 'Allegory of Cave', Pluto describes gathering of people who have lived all their lives inside cave facing a blank wall. When they see projections of shadows on the wall of things in front of the fire, they give name to them. Then one day a cave men escapes. He is freed and begin to understand the shadows. Man have long tried contemplating his surrounding.
@@ -95,7 +95,7 @@ Chicken or the egg is the causality dilemma. Both can't come independent of each
 
 Most scientist believe that the answer to the chicken and egg paradox lies in quantum fluctuation which states that conservation of energy could be violated if the time is small. Hence something can come out of nothing. 
 
-#### Is God the Architect?
+## Is God the Architect?
 
 In earlier times people believed that earth was flat. As per Mesopotamian mythology, earth was considered to be a flat disk floating in the ocean and surrounded by a spherical sky. Aristotle gave the idea that the earth was spherical as the shadow of Earth on the Moon during a lunar eclipse is round. 
 
@@ -113,7 +113,7 @@ Your Highness, I have no need of this hypothesis.
 
 <br>
 
-#### We live in curved space?
+## We live in curved space?
 
 The physics of sixteen and seventeen century was having honeymoon period. The Euclidean view of the world still remained. That means the sum of the angles of a triangle would always be 180<sup>0</sup>. But this idea of the geometry of space was about to be shattered by a German scientist working as a patent clerk.
 
@@ -126,7 +126,7 @@ Einstein came up with a revolutionary idea of the universe in his theory of Gene
 </center>
 </p>
 
-#### Our universe is expanding
+## Our universe is expanding
 
 Doppler proposed that the frequency is higher if the source is moving towards the observer. Similarly the frequency is lower if the source is moving away from the observer. He observed this phenomena in the sound waves. Hubble extended this idea by applying Doppler effect in light waves. He observed that the light from the distant galaxies were shifted towards the red end spectrum. If a star is moving away from us, the whole pattern of spectrum is shifted toward red end of spectrum. Hence he came to the conclusion that universe is expanding. 
 
@@ -136,14 +136,14 @@ How could the universe's expansion accelerate is still an enigma in the scientif
 
 The universe is an open book riddled with mysteries. Men have so far only able to scratch its surface. If we could unravel these mysteries then one day we may be able to read the mind of the creator. 
 
-#### Anthropic Principle
+## Anthropic Principle
 
 If I ask why does it rain, most of us would feel insulted on being ask such a trivial question. A kid in the five standard could very well explain in the following words, “It rains because the water from different parts of earth evaporate into water vapours. The vapours rise up as they are lighter than air which in turn condense into water which fall as rain”.
 
 But if I flip the question and instead ask does it rain so that all the living being on earth could live, most of us would find it difficult to reach conclusion. This is called anthropic principle. Does the physical laws of the universe is compatible with conscious life that observes it? Why does the distance between earth and sun is optimum to sustain life? Why the optimum size of moon helps earth not to wobble? Had the precise values of fundamental physical constants not what they are, the whole universe would simple collapse in itself.
 
 
-#### Ultimate truth
+## Ultimate truth
 
 Scientist have fantasied of the theory of everything. This is major unsolved problem of physics. When we try to combine the rules of deterministic world with that of non-deterministic, the equation breaks down. The rule of gravity that is obeyed by the gigantic planets has no relevance in the atomic world. 
 
