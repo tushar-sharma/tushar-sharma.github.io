@@ -139,3 +139,18 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 .MathJax_Display {
     text-align: left !important;
 }
+
+/* audio button */
+
+#player{
+    padding: 5%;
+    border-radius:3px;
+    box-shadow:0 0 8px #eee;
+    width:100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.listen{color:#39c;margin-bottom:7px}
+
+#player #waveform img{width:100%}#player audio{width:100%}

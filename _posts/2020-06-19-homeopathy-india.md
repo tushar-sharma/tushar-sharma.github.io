@@ -21,10 +21,10 @@ featuredPost: true
 
 As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. It was always blamed for side effects. “Only if you are really sick”, my uncle used to say, “should you take allopathy”.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
-<link rel="stylesheet" type="text/css" href="{{ root_url }}/css/chat.css">
-
+{% include embed-audio.html src="/sound/2020-06-19-homeopathy-india.mp3" %}<br>
+<!--begin_of_post -->
 
 I recently came across a Youtube video of Genelia Deshmukh, famous Indian actress, promoting homeopathic products. Along with her husband, they have invested in a startup called Welcome Cure. Science has repeatedly dismissed homepathy as quakery or at best placebo, but that has not deter government of India to fund & research homeopathy under AYUSH ministry.
 
@@ -37,6 +37,7 @@ I recently came across a Youtube video of Genelia Deshmukh, famous Indian actres
 </p>
 
 <br>
+
 
 ## Allopathy vs Homeopathy
 As a kid I usually heard about two types of medicine. One was allopathy which is a pejorative term for modern science. It was always blamed for side effects. “Only if you are really sick”, my uncle used to say, “should you take allopathy”.
@@ -83,7 +84,7 @@ Press Information Bureau, government of India, suggesting homeopathy for coronav
 <br>
 
 <center>
- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Advisory for <a href="https://twitter.com/hashtag/CoronaVirus?src=hash&amp;ref_src=twsrc%5Etfw">#CoronaVirus</a><br><br>Homoeopathy for Prevention of Corona virus Infections<br><br>Unani Medicines useful in the symptomatic management of Corona Virus infection<br><br>Details here: <a href="https://t.co/OXC7PtM7L3">https://t.co/OXC7PtM7L3</a></p>&mdash; PIB India (@PIB_India) <a href="https://twitter.com/PIB_India/status/1222385553892528128?ref_src=twsrc%5Etfw">January 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Advisory for <a href="https://twitter.com/hashtag/CoronaVirus?src=hash&amp;ref_src=twsrc%5Etfw">#CoronaVirus</a><br><br>Homoeopathy for Prevention of Corona virus Infections<br><br>Unani Medicines useful in the symptomatic management of Corona Virus infection<br><br><a href="https://t.co/OXC7PtM7L3">Details here.</a></p>&mdash; PIB India (@PIB_India) <a href="https://twitter.com/PIB_India/status/1222385553892528128?ref_src=twsrc%5Etfw">January 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
  </center>
 <br>
 
@@ -198,8 +199,11 @@ Many countries are discontinuing funding to homeopathy for example France will e
 It's unethical for the government of India to continue to promote hemeopoathy. Indian budget 2019 allocated ₹ 62,398 crore for healh sector. AYUSH ministry got ₹ 1,939.76 crore which is 15 per cent more than the previous fiscal<sup><a href='#fn:6' rel='footnote'>6</a></sup>. It's a boon for politicians as they can delude India masses by providing them substandard healthcare with less expense. It's ironical that most of Indian politicians continue to go abroad for their medical care.
 
 Investing in modern science requires both capital & extensive research in R&D. Successive Indian government have tried to use ancient past to hide their failures. Vedic Mathematics, documentary by K. Jagjivan Ram, won the 48th National Film Awards for the best scientific film by the government of India. Vedic mathematics has nothing do with either mathematics or vedas<sup><a href='#fn:7' rel='footnote'>7</a></sup>. Promotion of yoga is great, but obsession on research on cow<sup><a href='#fn:8' rel='footnote'>8</a></sup> is unwarranted. Instead of splurging money on researching on Ganga water's<sup><a href='#fn:9' rel='footnote'>9</a></sup> miraculous properties, it would be prudent for the government of India to clean the river first plagued by serious pollution<sup><a href='#fn:10' rel='footnote'>10</a></sup>. Homeopathy is one such tomfoolery which India must get rid sooner for her own good.
-
 </div>
+
+<!--end_of_post -->
+
+
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
