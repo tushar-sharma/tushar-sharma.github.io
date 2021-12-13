@@ -11,6 +11,9 @@ tags:
 name: snoring
 thumb: https://i.imgur.com/Dos9r5p.jpeg
 published: true
+summary: Sleep apnea.
+image: https://i.imgur.com/Dos9r5p.jpeg
+author: Tushar Sharma
 ---
 
 <p>I was an intern working in <a href="https://en.wikipedia.org/wiki/Upstate_New_York" target="_blank">Upstate New York</a>. Public transport required hopping multiple trains & buses and was woefully tedious. I found some other interns who were willing to split the fare with me for Uber. Even a ride in Uber consumed more than two hours. Occasionally I used to steal a quick nap. After a siesta of a few hours, I had always woken up with a gaggle of laughter. My peers often pulled my leg, "You were snoring like a pig". However, I dismissed my faux pas as just a mere nuisance.</p>
