@@ -5,6 +5,9 @@ category: blog
 tags: poetry romance moon
 name: romance-moon
 thumb: /img/moon.jpg
+summary: My musing in my solitude.
+image: /img/moon.jpg
+author: Tushar Sharma
 featuredPost: true
 ---
 
@@ -20,6 +23,8 @@ Posing as the one, only she could be.<br><!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
+{% include embed-audio.html src="/sounds/2014-03-30-romance-moon.mp3" %}<br>
+<!--begin_of_post -->
 
 <p>
  <img src="{{ root_url }}/img/moon.jpg" alt="Blue Moon Picture" /> 
@@ -71,3 +76,8 @@ What awaits us now,<br>
 Is only a mystery of time,<br>
 Will the Fate make us one?<br>
 Or our love will be a mournful chime? <br>
+
+<!--end_of_post -->
+<nav class="pagination clear" style="padding-bottom:20px;">
+{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
+</nav>
