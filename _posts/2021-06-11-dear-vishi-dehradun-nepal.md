@@ -5,21 +5,23 @@ category: blog
 tags:
   - diary
   - rambling
-name: dear-vishi
+name: dehradun-nepal
 thumb: >-
   https://www.irishtimes.com/polopoly_fs/1.3158018.1500311533!/image/image.jpg_gen/derivatives/box_620_330/image.jpg
 published: true
 ---
 <p>What’s a nationality? The idea of the nation-state is pretty modern. Ancient lands were usually under the suzerainty of kings & queens. While most emperors spilled blood to expand their kingdom, the common man was seldom concerned about borders.</p>
 
-[Peace of Westphalia](https://en.wikipedia.org/wiki/Peace_of_Westphalia) was a famous peace treaty in 1648 that ended [thirty years war](https://en.wikipedia.org/wiki/Thirty_Years'_War). Historians often cite this as an example of first nation state. It relied on a system of independent states refraining from interference in each other's domestic affairs and checking each other's ambitions through a general equilibrium of power.<!-- truncate_here -->
+[Peace of Westphalia](https://en.wikipedia.org/wiki/Peace_of_Westphalia) was a famous peace treaty in 1648 that ended [thirty years war](https://en.wikipedia.org/wiki/Thirty_Years'_War). Historians often cite this as an example of first nation state. It relied on a system of independent states refraining from interference in each other's domestic affairs and checking each other's ambitions through a general equilibrium of power.
+
+I was born in Dehradun, a valley crowned by the mountains of Mussoorie. "A town called Dehra" is a phrase immortalized by Ruskin Bond stories. Doon is a place that has nurtured us.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 What’s a nationality? The idea of the nation-state is pretty modern. Ancient lands were usually under the suzerainty of kings & queens. While most emperors spilled blood to expand their kingdom, the common man was seldom concerned about borders.
 
 [Peace of Westphalia](https://en.wikipedia.org/wiki/Peace_of_Westphalia) was a famous peace treaty in 1648 that ended [thirty years war](https://en.wikipedia.org/wiki/Thirty_Years'_War). Historians often cite this as an example of first nation state. It relied on a system of independent states refraining from interference in each other's domestic affairs and checking each other's ambitions through a general equilibrium of power. 
 
-I am born in Dehradun, a valley crowned by the mountains of Mussoorie. "A town called Dehra" is a phrase immortalized by Ruskin Bond stories. Doon is a place that has nurtured us. We love Dehradun because we were born there & it dwells in our memories. Were we born in Albania, we would probably be romanticizing the streets of Albania.
+I was born in Dehradun, a valley crowned by the mountains of Mussoorie. "A town called Dehra" is a phrase immortalized by Ruskin Bond stories. Doon is a place that has nurtured us. We love Dehradun because we were born there & it dwells in our memories. Were we born in Albania, we would probably be romanticizing the streets of Albania.
 
 The British had a war with Nepal from 1814 to 1816. Nepal lost the war & signed the Treaty of Sugauli. It ceded territory to the British which included Dehradun, Kumaun & Nainital. This was called **Anglo-Nepalese War**. With the stroke of luck, Dehradun eventually became part of independent India.
 
