@@ -13,11 +13,7 @@ published: true
 ---
 
 
-<p>This is my first time visiting Mexico city, also known as CDMX. Initially I was scared to come here because of Narcos. However during my brief two weeks stay I have felt safe. With my limited Spanish, I decided to book an <a href="https://www.airbnb.co.in/experiences/102485" target="_blank">Airbnb experience</a> for a bike tour.</p> 
-
-<p>The tour had a meeting point at Bazar Fusion. Uber is cheap & convenient to commute in Mexico city. On reaching at Bazar Fusion, I had a cappuccinos before hopping on to the bike. The bike was comfortable enough however with no helmet which I didn't mind.</p>
-
-This is my first time visiting Mexico city, also known as CDMX. Initially I was scared to come here because of Narcos. However during my brief two weeks stay I have felt safe.<!-- truncate_here -->
+This is my first time visiting Mexico city, also known as CDMX. Initially I was scared to come here because of Narcos. However during my brief two weeks stay I have felt safe. With my limited Spanish, I decided to book an <a href="https://www.airbnb.co.in/experiences/102485" target="_blank">Airbnb experience</a> for a bike tour.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <p>This is my first time visiting Mexico city, also known as CDMX. Initially I was scared to come here because of Narcos. However during my brief two weeks stay I have felt safe. With my limited Spanish, I decided to book an <a href="https://www.airbnb.co.in/experiences/102485" target="_blank">Airbnb experience</a> for a bike tour.</p> 

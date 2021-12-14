@@ -11,11 +11,7 @@ name: maximum-subarray
 thumb: https://www.hrccu.org/wp-content/uploads/2020/05/hackers.jpg
 ---
 
-<p>There's an interesting problem I recently solved on leetcode based on dynamic programming. My <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github</a> repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution.</p>
-
-<p>Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. A subarray is a contiguous part of an array.<sup><a href='#fn:1' rel='footnote'>1</a></sup></p>
-
-Brute force algorithm? We can commence with a brute force algorithm. For every element of array, we compare its sum with the rest of the element to calculate maximum sum.<!-- truncate_here -->
+There's an interesting problem I recently solved on leetcode based on dynamic programming. My <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github</a> repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 

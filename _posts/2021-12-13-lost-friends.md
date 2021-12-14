@@ -12,22 +12,10 @@ image: https://i.imgur.com/imYXtDU.jpg
 author: Tushar Sharma
 ---
 
-<p>
 Today I walked a little further,<br>
 Few more steps than yesterday,<br>
 For I love walking,<br>
-And I have walked all my life.<br>
-</p>
-
-My walk is not straight,<br>
-Often I stray from the path,<br>
-Lost in thoughts of wilderness,<br>
-Caged in the civilization of life.
-
-Today I walked a little further,<br>
-Few more steps than yesterday,<br>
-For the people that I have met,<br>
-Mostly I have lost them in the way.<!-- truncate_here -->
+And I have walked all my life.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
