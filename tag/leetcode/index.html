@@ -269,10 +269,7 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
             
             
-            <p>Questions involving the binary tree data structure are very popular in tech interviews, and can be challenging and varied! A binary tree is a data structure consisting of a collection of nodes (starting at a root node), where each node consists of a value (data), together with a directed edges to at most two nodes (the "left child" and "right child"), with the additional conditions that no two edges point to the same node and no edge points to the root. I recently solved an interesting problem on binary tree.
-</p>
-
-Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/Lowest_common_ancestor): "The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself)"...
+            Questions involving the binary tree data structure are very popular in tech interviews, and can be challenging and varied! A binary tree is a data structure consisting of a collection of nodes (starting at a root node), where each node consists of a value (data), together with a directed edges to at most two nodes (the "left child" and "right child"), with the additional conditions that no two edges point to the same node and no edge points to the root. I recently solved an interesting problem on binary tree...
       </div>
   <br>
   <p>
@@ -325,8 +322,6 @@ Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in
 
 
 
-
-
   <small style="float:right; margin-top:5px;">Tue 02 Nov 2021</small>
   <a href="/blog/coin-change-leetcode-solution">
     <h2>Coin Change solution leetcode</h2>
@@ -337,9 +332,7 @@ Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in
 
             
             
-            <p>It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.</p>
-
-You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money. Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1. You may assume that you have an infinite number of each kind of coin...
+            It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution...
       </div>
   <br>
   <p>
@@ -406,12 +399,7 @@ You are given an integer array coins representing coins of different denominatio
 
             
             
-            <p>There's an interesting problem I recently solved on leetcode based on dynamic programming. My <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github</a> repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution.</p>
-
-Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. A subarray is a contiguous part of an array.<sup><a href='#fn:1' rel='footnote'>1</a></sup>
-
-
-..
+            There's an interesting problem I recently solved on leetcode based on dynamic programming. My <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github</a> repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution...
       </div>
   <br>
   <p>
@@ -695,7 +683,10 @@ Given an integer array nums, find the contiguous subarray (containing at least o
 <p>Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>. The new list should be made by splicing together the nodes of the first two lists.</p>
 
 It's an easy problem in Leetcode for practicing linked list. It's similar to the merge step of the Merge sort.
-..
+
+Brute force algorithm
+
+Merge the both list together and sort the returning list.  This will take complexitiy of  O(n + m) log(n + m) , where n & m are length of each two list...
       </div>
   <br>
   <p>
@@ -758,8 +749,13 @@ It's an easy problem in Leetcode for practicing linked list. It's similar to the
 
 Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.<sup><a href='#fn:1' rel='footnote'>1</a></sup>
 
+Brute force algorithm?
 
-..
+It has problems like it doesn't account for duplicate elements. Also it has complexity of **O(n3)** which is not optimal.
+
+More efficient solution?
+
+Using two pointer solution, we can acheive @L O(n2) @L time complexity...
       </div>
   <br>
   <p>

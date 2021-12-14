@@ -319,8 +319,6 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
 
 
-
-
   <small style="float:right; margin-top:5px;">Sun 12 Sep 2021</small>
   <a href="/blog/maximum-subarray">
     <h2>Maximum Subarray</h2>
@@ -331,11 +329,7 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
             
             
-            <p>There's an interesting problem I recently solved on leetcode based on dynamic programming. My <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github</a> repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution.</p>
-
-<p>Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. A subarray is a contiguous part of an array.<sup><a href="#fn:1" rel="footnote">1</a></sup></p>
-
-..
+            <p>There’s an interesting problem I recently solved on leetcode based on dynamic programming. My <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github</a> repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution...
       </div>
   <br>
   <p>
@@ -582,7 +576,9 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
             
             <p>Graph are data structures made of vertices &amp; edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.</p>
 
-<p>First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges)..
+<p>First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).</p>
+
+<p>Create a vertex? First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges)...
       </div>
   <br>
   <p>
@@ -647,7 +643,9 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
 <p><b>Problem Statement</b></p>
 
-<p>Given an input array, produce the following output array…..
+<p>Given an input array, produce the following output array. <code class="language-plaintext highlighter-rouge">input array = [10 8 1 7 1 2]</code> and <code class="language-plaintext highlighter-rouge">output array = [2 8 10 1 1 7]</code>.</p>
+
+<p>If you are unfamiliary with merge sort, we just break the array into sub parts and later combine them based on our criteria. Here, we will maintiain left and right pointer which keeps track of the end of the array. Initially, the left is equal to 0 and right equals to the last element of the array...
       </div>
   <br>
   <p>
@@ -709,8 +707,11 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
 <p>Merge two sorted linked lists and return it as a new list.<sup><a href="#fn:1" rel="footnote">1</a></sup>. The new list should be made by splicing together the nodes of the first two lists.</p>
 
-<p>It’s an easy problem in Leetcode for practicing linked list. It’s similar to the merge step of the Merge sort.
-..
+<p>It’s an easy problem in Leetcode for practicing linked list. It’s similar to the merge step of the Merge sort.</p>
+
+<p>Brute force algorithm</p>
+
+<p>Merge the both list together and sort the returning list.  This will take complexitiy of  O(n + m) log(n + m) , where n &amp; m are length of each two list...
       </div>
   <br>
   <p>
@@ -772,7 +773,13 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
 <p>Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.<sup><a href="#fn:1" rel="footnote">1</a></sup></p>
 
-..
+<p>Brute force algorithm?</p>
+
+<p>It has problems like it doesn’t account for duplicate elements. Also it has complexity of <strong>O(n3)</strong> which is not optimal.</p>
+
+<p>More efficient solution?</p>
+
+<p>Using two pointer solution, we can acheive @L O(n2) @L time complexity...
       </div>
   <br>
   <p>
