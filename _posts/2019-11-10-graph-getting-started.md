@@ -12,7 +12,9 @@ thumb: /img/noden.png
 
 <p>Graph are data structures made of vertices & edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.</p>
 
-First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges)<!-- truncate_here -->
+First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).
+
+Create a vertex? First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
