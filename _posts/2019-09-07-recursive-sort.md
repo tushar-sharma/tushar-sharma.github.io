@@ -28,7 +28,9 @@ thumb: /img/rec.png
 
 <P><b>Problem Statement</b></p>
 
-Given an input array, produce the following output array...<!-- truncate_here -->
+Given an input array, produce the following output array. `input array = [10 8 1 7 1 2]` and `output array = [2 8 10 1 1 7]`.
+
+If you are unfamiliary with merge sort, we just break the array into sub parts and later combine them based on our criteria. Here, we will maintiain left and right pointer which keeps track of the end of the array. Initially, the left is equal to 0 and right equals to the last element of the array.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <p>I recently came across a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort.
