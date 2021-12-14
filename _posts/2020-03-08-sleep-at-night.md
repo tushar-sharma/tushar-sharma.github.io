@@ -12,9 +12,7 @@ thumb: >-
 published: true
 ---
 
-It feels great to sleep at night. I have a small but a cozy room. It’s not lavish or splending. It doesn’t even hoard much furniture. However it’s as peaceful as it can get.
-
-I wonder about those unfortunate people who couldn’t sleep at night. Some of them are stuck in war-torn countries. Around 150 million people are homeless in the world. Astonishing 1.6 billion people don’t have proper housing. That’s 20 percent of the entire human population.<!-- truncate_here -->
+It feels great to sleep at night. I have a small but a cozy room. It’s not lavish or splending. It doesn’t even hoard much furniture. However it’s as peaceful as it can get.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 

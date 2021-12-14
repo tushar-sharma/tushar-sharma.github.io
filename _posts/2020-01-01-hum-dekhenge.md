@@ -15,11 +15,7 @@ name: hum-dekhenge
 thumb: https://img.youtube.com/vi/unOqa2tnzSM/0.jpg
 ---
 
-<p>India is currently witnessing multiple protests against the Citizenship Amendment Act (CAA) passed by the BJP (the ruling party of India). In a nutshell it fast tracks citizenship to few religiously persecuted refugees like Hindu, Sikh, Jain, Buddhist, Christian and Parsi from neighbouring countries.</p>
-
-Some argue this act brazenly violates secular structure of India by explicitly inserting religious clause in the constitution. Others are worried that CAA along with NPR & NRC could be used to disenfranchise poor Muslims who lack proper documentation. I will defer my opinion on this matter for another day. However I fail to understand how innocuous poem of Faiz, [Hum Dekhenge](https://en.wikipedia.org/wiki/Hum_Dekhenge), is mired in controversy.
-
-It all started when a video of a student in IIT Kanpur reciting Faiz's poem when viral on Twitter.<!-- truncate_here -->
+India is currently witnessing multiple protests against the Citizenship Amendment Act (CAA) passed by the BJP (the ruling party of India). In a nutshell it fast tracks citizenship to few religiously persecuted refugees like Hindu, Sikh, Jain, Buddhist, Christian and Parsi from neighbouring countries.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 

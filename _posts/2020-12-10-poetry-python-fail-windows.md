@@ -8,12 +8,10 @@ tags:
 - poetry
 - bug
 name: poetry-windows-fail
-thumb: /img/code.png
+thumb: https://i.imgur.com/ceIoDSn.jpeg
 ---
 
-<p>Poetry is a great dependency management tool in python. It's better than managing a flat file like `requirements.txt`. There are also other great tools like pipenv. However I found poetry much simpler in resolving dependencies. </p>
-
- Recently poetry has been crashing on my Windows machine. However, I have not encountered this issue in other platform like Linux. Folks who are unfamiliar with poetry, below is a quick refresher.<!-- truncate_here -->
+Poetry is a great dependency management tool in python. It's better than managing a flat file like `requirements.txt`. There are also other great tools like pipenv. However I found poetry much simpler in resolving dependencies.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
