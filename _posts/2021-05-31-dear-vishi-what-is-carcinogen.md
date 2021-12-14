@@ -13,11 +13,7 @@ thumb: >-
 published: true
 ---
 
-<p>If you are not living under a cave, you probably have already heard about carcinogens. News is often awash with headlines alerting perils of carcinogens. In a nutshell, these are substances that have the potential to cause cancer. Not all carcinogens cause cancer. Not all cancer is caused by carcinogens. Cancer is a complicated group of diseases. Of course, it’s not my forte to expound on the subject of cancer. However, we should try to understand how carcinogens are identified and what we should do to protect ourselves.</p>
-
-<p>Cancer is pathological mitosis. The cells go bonkers where they have an insatiable urge to proliferate. Carcinogens have the potential to alter the genetic material of the cell. This genetic mutation sometimes can develop into cancer.</p>
-
-How do we know if a substance is a carcinogen or not? Earlier scientists use to test the substance on animals like rodents for a year or more to see if cancer develops.<!-- truncate_here -->
+If you are not living under a cave, you probably have already heard about carcinogens. News is often awash with headlines alerting perils of carcinogens. In a nutshell, these are substances that have the potential to cause cancer. Not all carcinogens cause cancer. Not all cancer is caused by carcinogens. Cancer is a complicated group of diseases. Of course, it’s not my forte to expound on the subject of cancer. However, we should try to understand how carcinogens are identified and what we should do to protect ourselves.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 If you are not living under a cave, you probably have already heard about carcinogens. News is often awash with headlines alerting perils of carcinogens. In a nutshell, these are substances that have the potential to cause cancer. Not all carcinogens cause cancer. Not all cancer is caused by carcinogens. Cancer is a complicated group of diseases. Of course, it’s not my forte to expound on the subject of cancer. However, we should try to understand how carcinogens are identified and what we should do to protect ourselves.

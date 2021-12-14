@@ -12,9 +12,7 @@ thumb: >-
 published: true
 ---
 
-<p>Do you believe in ghosts? I did when I was a kid. I was infatuated with the paranormal. Sometimes I used to wander around desolate buildings with other kids concocting horror stories. I loquaciously gossiped about ghosts in school which earned me a sizeable audience. I was convinced that someday I would stumble upon an innocuous spirit that would instill some unearthly powers in me.</p>
-
-Vic Tandy, a British engineer, was working at Warwick Laboratory when he thought he saw a ghost. He later said, "I was sweating but cold, and the feeling of depression was noticeable – but there was also something else. It was as though something was in the room with me." He then claimed to have seen a spirit emerging in his peripheral vision, but when he turned to face the figure, it vanished". He later went home perplexed.<!-- truncate_here -->
+Do you believe in ghosts? I did when I was a kid. I was infatuated with the paranormal. Sometimes I used to wander around desolate buildings with other kids concocting horror stories. I loquaciously gossiped about ghosts in school which earned me a sizeable audience. I was convinced that someday I would stumble upon an innocuous spirit that would instill some unearthly powers in me.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <style>

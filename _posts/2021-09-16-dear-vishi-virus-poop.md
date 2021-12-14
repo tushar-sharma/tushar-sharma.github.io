@@ -11,11 +11,7 @@ thumb: https://www.connecticare.com/covid19/vaccine-information/vaccine-safety/w
 published: true
 ---
 
-<p>When the alarm clock breaks my slumber, I roll down on my bed, blindly crawling towards my alarm clock as if it was a bomb to diffuse it. After multiple snoozes, I relinquished my dreams and come to my senses. Gulping water after I wake up is my first activity. Next, I excuse myself to the bathroom for “nature call”. All living things from a simple bacteria to a giant dinosaur needs to perform two basic life function; eat and excrete.</p>
-
-<p>Our world has been ravaged by covid pandemic recently. So it would be apt to talk about viruses. As a child, my imagination often ran wild, wondering how viruses hijacked our bodies, and more importantly did they eat and poop like other microbes?</p>
-
-What's a virus? It’s a bundle of genetic material (RNA or DNA) wrapped in a protein capsule called capsids.<!-- truncate_here -->
+When the alarm clock breaks my slumber, I roll down on my bed, blindly crawling towards my alarm clock as if it was a bomb to diffuse it. After multiple snoozes, I relinquished my dreams and come to my senses. Gulping water after I wake up is my first activity. Next, I excuse myself to the bathroom for “nature call”. All living things from a simple bacteria to a giant dinosaur needs to perform two basic life function; eat and excrete.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 

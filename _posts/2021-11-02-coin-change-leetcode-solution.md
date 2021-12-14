@@ -11,11 +11,7 @@ name: coin-change
 thumb: https://i.imgur.com/LYeioqF.jpeg
 ---
 
-<p>It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.</p>
-
-<p>You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money. Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1. You may assume that you have an infinite number of each kind of coin.</p>
-
-My first instinct is to sort the coins array. Pick the largest coin first and then subtract the largest possible value from the amount.<!-- truncate_here -->
+It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>

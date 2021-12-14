@@ -14,11 +14,7 @@ toc_stick: true
 ---
 
 
-<p>Today I tried to meditate again. I used Insight Timer app for background sound. However I think I'll just stick to Youtube as it has more varieties. I struggled for 20 minutes sitting cross-legged as my mind wandered in the labyrinth of thoughts. I guess it will take more practice to hone my skill. Have you ever wondered how monks can meditate for countless hours or days?</p>
-
-There's a very famous picture of a Vietnamese monk called [Thích Quảng Đức](https://en.wikipedia.org/wiki/Th%C3%ADch_Qu%E1%BA%A3ng_%C4%90%E1%BB%A9c). He was protesting against the persecution of Buddhist. He self-immolated himself without making any fuss.
-
-David Halberstam, an American journalist was witness to self-immolation said-"As he burned he never moved a muscle, never uttered a sound, his outward composure in sharp contrast to the wailing people around him".<!-- truncate_here -->
+Today I tried to meditate again. I used Insight Timer app for background sound. However I think I'll just stick to Youtube as it has more varieties. I struggled for 20 minutes sitting cross-legged as my mind wandered in the labyrinth of thoughts. I guess it will take more practice to hone my skill. Have you ever wondered how monks can meditate for countless hours or days?<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
