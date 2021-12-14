@@ -14,11 +14,7 @@ thumb: 'https://d22e4d61ky6061.cloudfront.net/sites/default/files/Kerberos_1.png
 published: true
 ---
 
-<p>Jobs failed! Screamed an automatic failure alert in email inbox. Existing python scripts were failing in the server which fetched data from Oracle database. I wondered if the credentials had changed.</p>
-
-<p>After few emails back and forth with the Support team, I discoverd that the server had been upgraded with Kerberos authentication. I have to modify my scripts to support kerberos authentication. I have to dig up more to understand more about kerberos.</p>
-
-What's a Kerberos? Kerberos is a system for authenticating access to services. First, the caller to a service represent a  `principal` in the system. Second, the caller to a service has been granted right on behalf of a principal for a limited period of a time.<!-- truncate_here -->
+Jobs failed! Screamed an automatic failure alert in email inbox. Existing python scripts were failing in the server which fetched data from Oracle database. I wondered if the credentials had changed.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
