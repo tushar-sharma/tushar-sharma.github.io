@@ -11,7 +11,8 @@ h1,h2,h3,h4,h5,h6{color:#222;margin:0 0 20px}h2,h3{margin:0 0 14px}p,ul,ol,table
 
 .wrapper{width:100%;margin:0 auto;position:relative}blockquote{border-left:1px solid #e5e5e5;margin:0;padding:0 0 0 20px;font-style:italic}
 
-code,pre{font-family:Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal;
+code,pre{
+    font-family:Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal;
   color:#444;
   word-wrap:break-word
 }
@@ -99,7 +100,7 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     border: 1px solid #e5e5e5;
     overflow-x: auto;
     color: #444;
-    font: 12pt/1.5 'Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal';
+    font: 13pt/1.5 'Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal';
     word-wrap: break-word;
 }
 
@@ -153,3 +154,10 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 .listen{color:#39c;margin-bottom:7px}
 
 #player #waveform img{width:100%}#player audio{width:100%}
+
+.logo__cursor{display:inline-block;
+    width:10px;
+    height:1rem;
+    background: #39c;
+    margin-left:5px;border-radius:1px;animation:cursor 1s infinite;
+}@media(prefers-reduced-motion:reduce){.logo__cursor{animation:none}}@keyframes cursor{0%{opacity:0}50%{opacity:1}100%{opacity:0}}.menu{background:#fafafa;border-right:1px solid;margin-right:18px;z-index:9999}
