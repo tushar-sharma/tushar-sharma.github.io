@@ -11,13 +11,7 @@ name: ternary-string-codeforces
 thumb: https://i.imgur.com/ceIoDSn.jpeg
 ---
 
-<p>Ternary string is an interesting problem that could be solved using two pointers techniques. It's a convenient way to keep track of multiple indices. This helps in making decisions based on two values.</p>
-
-<p>You are given a string s such that each its character is either 1, 2, or 3. You have to choose the shortest contiguous substring of s such that it contains each of these three characters at least once. A contiguous substring of string s is a string that can be obtained from s by removing some (possibly zero) characters from the beginning of s and some (possibly zero) characters from the end of s.</p>
-
-The first line contains one integer t (1≤t≤20000) - the number of test cases.
-
-Each test case consists of one line containing the string s (1≤s≤200000).<!-- truncate_here -->
+Ternary string is an interesting problem that could be solved using two pointers techniques. It's a convenient way to keep track of multiple indices. This helps in making decisions based on two values.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>

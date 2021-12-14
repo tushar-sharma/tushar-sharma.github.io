@@ -17,14 +17,22 @@
   {% for post in blogposts %}
         <small style="float:right; margin-top:5px;">{{ post.date | date:'%a %d %b %Y' }}</small>
   <a href="{{ post.url }}">
-    <h2>{{ post.title }}</h2>
+    <h1 style="color:#39c;">{{ post.title }}</h1>
   </a>
       <div>
         <!-- this is for thumb images;  -->
-           <div style="background:url('{{ post.thumb }}') no-repeat; background-size: 100% 100%;" class="thumb"></div>
-            {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
-            {% if truncated_post != post.content %}
-            {{ truncated_post | append:".."}}
+
+
+
+        <a href="{{ post.url }}">
+          <div style="background:url('{{ post.thumb }}') no-repeat; background-size: 100% 100%;" class="thumb"></div>
+        </a>
+
+        <div style="clear:both; ">
+          {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
+          {% if truncated_post != post.content %}
+          {{ truncated_post | append:".."}}
+      </div>
       </div>
   <p>
     <a href="{{ post.url }}">
@@ -39,9 +47,9 @@
   {% else %}
       {% endif %}
   {% if post != blogposts.last %}
-    <br>
+    <br><br>
     <hr />
-    <br>
+    <br><br>
     {% endif %}
   {% endfor %}
 {% endif %}

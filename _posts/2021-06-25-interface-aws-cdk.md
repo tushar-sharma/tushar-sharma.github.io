@@ -31,11 +31,7 @@ th, td {
 
 </style>
 
-<a href="https://aws.amazon.com/cdk/" target="_bank">AWS CDK</a> is a great framework to programmatically deploy cloudformation stack. If you are unfamiliar with AWS CDK, I would recommend first to check out [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws). 
-
-<p>One of the pet peeves I have while designing <a href="https://aws.amazon.com/cloudformation/" target="_blank">cloudformation</a> template is redundancy. I have to manually copy-paste the same properties across multiple resources. I wanted to leverage AWS CDK to create an interface that would allow tto dynamically create cloudformation. For the interface, I harked back to the good old CSV file.</p>
-
-For a simple example, let's consider a simple cloudformation template. What if we have to maintain 100 parameters, resources, etc in our project.<!-- truncate_here -->
+<a href="https://aws.amazon.com/cdk/" target="_bank">AWS CDK</a> is a great framework to programmatically deploy cloudformation stack. If you are unfamiliar with AWS CDK, I would recommend first to check out [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws).<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <a href="https://aws.amazon.com/cdk/" target="_bank">AWS CDK</a> is a great framework to programmatically deploy cloudformation stack. If you are unfamiliar with AWS CDK, I would recommend first to check out [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws). 

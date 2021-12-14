@@ -10,11 +10,8 @@ thumb: >-
   https://www.irishtimes.com/polopoly_fs/1.3158018.1500311533!/image/image.jpg_gen/derivatives/box_620_330/image.jpg
 published: true
 ---
-<p>What’s a nationality? The idea of the nation-state is pretty modern. Ancient lands were usually under the suzerainty of kings & queens. While most emperors spilled blood to expand their kingdom, the common man was seldom concerned about borders.</p>
 
-[Peace of Westphalia](https://en.wikipedia.org/wiki/Peace_of_Westphalia) was a famous peace treaty in 1648 that ended [thirty years war](https://en.wikipedia.org/wiki/Thirty_Years'_War). Historians often cite this as an example of first nation state. It relied on a system of independent states refraining from interference in each other's domestic affairs and checking each other's ambitions through a general equilibrium of power.
-
-I was born in Dehradun, a valley crowned by the mountains of Mussoorie. "A town called Dehra" is a phrase immortalized by Ruskin Bond stories. Doon is a place that has nurtured us.<!-- truncate_here -->
+What’s a nationality? The idea of the nation-state is pretty modern. Ancient lands were usually under the suzerainty of kings & queens. While most emperors spilled blood to expand their kingdom, the common man was seldom concerned about borders.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 What’s a nationality? The idea of the nation-state is pretty modern. Ancient lands were usually under the suzerainty of kings & queens. While most emperors spilled blood to expand their kingdom, the common man was seldom concerned about borders.

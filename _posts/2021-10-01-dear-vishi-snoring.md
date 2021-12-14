@@ -16,9 +16,7 @@ image: https://i.imgur.com/Dos9r5p.jpeg
 author: Tushar Sharma
 ---
 
-<p>I was an intern working in <a href="https://en.wikipedia.org/wiki/Upstate_New_York" target="_blank">Upstate New York</a>. Public transport required hopping multiple trains & buses and was woefully tedious. I found some other interns who were willing to split the fare with me for Uber. Even a ride in Uber consumed more than two hours. Occasionally I used to steal a quick nap. After a siesta of a few hours, I had always woken up with a gaggle of laughter. My peers often pulled my leg, "You were snoring like a pig". However, I dismissed my faux pas as just a mere nuisance.</p>
-
-Recently I was listening to a clubhouse talk about snoring<sup><a href='#fn:1' rel='footnote'>1</a></sup>. I always believed that snoring was innocuous. However, I learned that snoring might be a symptom of a disorder like sleep apnea. Since most of us snore or are more likely to snore in the later part of our lives, it would be prudent to delve deeper into the understanding of snoring.<!-- truncate_here -->
+I was an intern working in <a href="https://en.wikipedia.org/wiki/Upstate_New_York" target="_blank">Upstate New York</a>. Public transport required hopping multiple trains & buses and was woefully tedious. I found some other interns who were willing to split the fare with me for Uber. Even a ride in Uber consumed more than two hours. Occasionally I used to steal a quick nap. After a siesta of a few hours, I had always woken up with a gaggle of laughter. My peers often pulled my leg, "You were snoring like a pig". However, I dismissed my faux pas as just a mere nuisance.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 {% include embed-audio.html src="/sounds/2021-10-01-dear-vishi-snoring.mp3" %}<br>
