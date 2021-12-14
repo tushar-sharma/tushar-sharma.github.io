@@ -15,14 +15,23 @@ thumb: https://i.imgur.com/nvegAOw.jpg
 
 <p>I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" because he never "<b>saw an ape turning into human being</b>".</p>
 
-How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary, he had a career of Police Commisioner of Mumbai.<!-- truncate_here -->
+How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary, he had a career of Police Commisioner of Mumbai.
+
+Panelist for the debate?
+
+The debate panelist include the following members viz,<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
 I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" because he never "<b>saw an ape turning into human being</b>".
 
+<p>
+<center>
 <a href="https://www.ndtv.com/video/news/the-buck-stops-here/darwin-s-theory-should-minister-s-views-be-dismissed-477172?yt" target="_blank"><img src="https://i.imgur.com/nvegAOw.jpg" title="source: ndtv.com" /></a>
+</center>
+</p>
+<br>
 
 
 How does he claim evolution is "scientifically wrong"? Does the said minister have a degree in biology or have published a paper that can be peer reviewed? On the contrary, he had a career of Police Commisioner of Mumbai.
@@ -47,8 +56,11 @@ Das Ratan Nigam is a lawyer by profession & is affiliated to RSS. He is known to
 
 In 1:19 minutes of the video, Das Ratan says the minister Saytapal Singh is only challenging Darwins's theory of evolution. He says that there are multiple theories of evolution. But he didn't elaborate on what other theories of evolutions he was alluding to. Maybe he meant botanist Carolus Linnaeu's theory who based his categorization of species on the theory of unchanging life created by God. Or George Louis Leclerc who believed that Earth was only 75,000 year old & men descendent from apes. Or Does he believe in Genesis or tales of Hiranyagarbha (golden embryo) mentioned in the Rig Vedas?
 
+<p>
+<center>
 <img src="https://media.giphy.com/media/BDz6tWBtXDL4Q/giphy.gif" alt="Charles Darwin" >
-
+</center>
+</p>
 
 However, he makes a straw man fallacy by claiming that Darwin himself didn't believe in his theory as there was a lack of fossil evidence. When confronted by the anchor that fossil evidence has been found, he retorts that "no fossil evidence has come for the incomplete species". This argument has always been used in popular media to discredit evolution. But missing link is now considered a non-scientific term. Copied verbatim from Wikipedia
 

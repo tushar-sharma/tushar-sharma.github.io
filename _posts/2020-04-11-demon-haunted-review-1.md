@@ -15,7 +15,11 @@ thumb: https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/0/2/5/5/10010040009
 
 <p>This is my Part 1 of the review of Carl Sagan's book, Demon-Haunted World. This is more of my commentary rather than a review of the book. </p>
 
-I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience & misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan. <!-- truncate_here -->
+<p>I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience & misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan.</p>
+
+<p>One day, Carl Sagan is received at the airport by his driver. On learning that he is a scientist, the driver is curious to ask lots of scientific questions? Are aliens (UFO) hiding in the Air Force Base? Was an advanced civilization living in an island Atlantis only to be destroyed by the flood? Are the prophecy of Nostradamus accurate?</p>
+
+Carl Sagan replied that the "evidence is crummy" for all these theories.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
