@@ -12,10 +12,7 @@ thumb: https://cdn-media-1.freecodecamp.org/images/NRiku0VLpjCZJtuf14-rhKFtFpHe2
 featuredPost: true
 ---
 
-<p> Dynamodb is a great NoSQL service by AWS. One of the most common use case is to export data to s3. There are multiple ways to export data to s3. For this tutorial we will leverage lambda function to achieve our goal.
-</p>
-
-First, let us review our use case. Our lambda function will read the entire dynamodb table. It will then export the data in JSON to s3.<!-- truncate_here -->
+Dynamodb is a great NoSQL service by AWS. One of the most common use case is to export data to s3. There are multiple ways to export data to s3. For this tutorial we will leverage lambda function to achieve our goal.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
