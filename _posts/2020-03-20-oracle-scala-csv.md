@@ -12,9 +12,7 @@ thumb: https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTg30prcSNXwDpUnRH
 published: true
 ---
 
-I was looking to write a scala script to fetch large data from Oracle database. I was earlier using the Alteryx software to fetch data (around 1 million rows) from oracle which took around 7 minutes. Licensed softwares like Alteryx or Informatica, etc are great, but I was looking for a free solution. 
-
-We need ojdbc6.jar to connect to the Oracle 12 c database. We will create a Scala script to fetch data from the oracle database & save it to the output file (CSV format).<!-- truncate_here -->
+I was looking to write a scala script to fetch large data from Oracle database. I was earlier using the Alteryx software to fetch data (around 1 million rows) from oracle which took around 7 minutes. Licensed softwares like Alteryx or Informatica, etc are great, but I was looking for a free solution.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
