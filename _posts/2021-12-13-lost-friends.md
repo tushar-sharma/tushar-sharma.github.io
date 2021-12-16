@@ -2,10 +2,10 @@
 layout: post
 title: Lost Friends
 category: blog
-tags: 
+tags:
 - poetry
 - friends
-name: romance-moon
+name: lost-friends
 thumb: https://i.imgur.com/imYXtDU.jpg
 summary: My musing in my solitude.
 image: https://i.imgur.com/imYXtDU.jpg
@@ -23,8 +23,8 @@ And I have walked all my life.<!-- truncate_here -->
 <!--begin_of_post -->
 
 <p>
- <img src="https://i.imgur.com/imYXtDU.jpg"  /> 
-</p> 
+ <img src="https://i.imgur.com/imYXtDU.jpg"  />
+</p>
 
 
 Today I walked a little further,<br>
