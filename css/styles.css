@@ -1,9 +1,14 @@
-.thumb{width:100%; 
+.thumb{width:100%;
     height: 437px;
     aspect-ratio: 4/3;
     margin:5px 30px 25px 0;
     -webkit-border-radius:10px;
     -khtml-border-radius:10px;-moz-border-radius:10px;border-radius:10px
+}
+
+.nvhead{
+    font-size:23px;
+	color: #39c;
 }
 
 .pure-g-r img{max-width:100%}.pure-u-1-2{display:inline-block;zoom:1;letter-spacing:normal;word-spacing:normal;vertical-align:top;text-rendering:auto}
@@ -14,7 +19,7 @@ body{
   font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;;
   color:#444
 }
-  
+
 h1,h2,h3,h4,h5,h6{color:#222;margin:0 0 20px}h2,h3{margin:0 0 14px}p,ul,ol,table,pre,dl{margin:0 0 20px}h1,h2,h3{line-height:1.1}h1{font-size:28px}.stalk_link{font-size:18px;display:inline}.me_blurb{margin:-15px 0 15px}.clear{width:100%;clear:both}h2{color:#393939}h3,h4,h5,h6{color:#494949}h2{font-size:21px}a{color:#39c;font-weight:400;text-decoration:none}a small{font-size:16px;color:#444;margin-top:-.6em;display:block}
 
 .wrapper{width:100%;margin:0 auto;position:relative}blockquote{border-left:1px solid #e5e5e5;margin:0;padding:0 0 0 20px;font-style:italic}
@@ -110,7 +115,8 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     border: 1px solid #e5e5e5;
     overflow-x: auto;
     color: #444;
-    font: 13pt/1.5 'Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal';
+    #font: 13pt/1.5 'Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal';
+	font-size:20px;
     word-wrap: break-word;
 }
 
@@ -133,7 +139,7 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     white-space: nowrap;
 }
 
-.katex .mtable .col-align-l>.vlist-t { 
+.katex .mtable .col-align-l>.vlist-t {
     text-align: left;
 }
 .katex .vlist-t {
