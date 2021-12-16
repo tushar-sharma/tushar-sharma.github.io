@@ -329,7 +329,7 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
             
             
-            <p>There’s an interesting problem I recently solved on leetcode based on dynamic programming. My <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github</a> repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution...
+            There's an interesting problem I recently solved on leetcode based on dynamic programming. My <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github</a> repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution...
       </div>
   <br>
   <p>
@@ -574,11 +574,11 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 
             
             
-            <p>Graph are data structures made of vertices &amp; edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.</p>
+            <p>Graph are data structures made of vertices & edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.</p>
 
-<p>First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).</p>
+First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).
 
-<p>Create a vertex? First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges)...
+Create a vertex? First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges)...
       </div>
   <br>
   <p>
@@ -630,22 +630,19 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 .mysubheading{font-family:"Lucida Grande", Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
 </style>
 
-<script type="text/javascript" src="/js/shCore.js"></script>
-
-<script type="text/javascript" src="/js/shBrushJava.js"></script>
-
-<link type="text/css" rel="stylesheet" href="/css/shCoreDefault.css" />
-
+<script type="text/javascript" src="{{ root_url }}/js/shCore.js"></script>
+<script type="text/javascript" src="{{ root_url }}/js/shBrushJava.js"></script>
+<link type="text/css" rel="stylesheet" href="{{ root_url }}/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
 <p>I recently came across a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort.
 </p>
 
-<p><b>Problem Statement</b></p>
+<P><b>Problem Statement</b></p>
 
-<p>Given an input array, produce the following output array. <code class="language-plaintext highlighter-rouge">input array = [10 8 1 7 1 2]</code> and <code class="language-plaintext highlighter-rouge">output array = [2 8 10 1 1 7]</code>.</p>
+Given an input array, produce the following output array. `input array = [10 8 1 7 1 2]` and `output array = [2 8 10 1 1 7]`.
 
-<p>If you are unfamiliary with merge sort, we just break the array into sub parts and later combine them based on our criteria. Here, we will maintiain left and right pointer which keeps track of the end of the array. Initially, the left is equal to 0 and right equals to the last element of the array...
+If you are unfamiliary with merge sort, we just break the array into sub parts and later combine them based on our criteria. Here, we will maintiain left and right pointer which keeps track of the end of the array. Initially, the left is equal to 0 and right equals to the last element of the array...
       </div>
   <br>
   <p>
@@ -705,13 +702,14 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 .mysubheading{font-family:"Lucida Grande", Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
 </style>
 
-<p>Merge two sorted linked lists and return it as a new list.<sup><a href="#fn:1" rel="footnote">1</a></sup>. The new list should be made by splicing together the nodes of the first two lists.</p>
 
-<p>It’s an easy problem in Leetcode for practicing linked list. It’s similar to the merge step of the Merge sort.</p>
+<p>Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>. The new list should be made by splicing together the nodes of the first two lists.</p>
 
-<p>Brute force algorithm</p>
+It's an easy problem in Leetcode for practicing linked list. It's similar to the merge step of the Merge sort.
 
-<p>Merge the both list together and sort the returning list.  This will take complexitiy of  O(n + m) log(n + m) , where n &amp; m are length of each two list...
+Brute force algorithm
+
+Merge the both list together and sort the returning list.  This will take complexitiy of  O(n + m) log(n + m) , where n & m are length of each two list...
       </div>
   <br>
   <p>
@@ -771,15 +769,16 @@ border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;te
 .mysubheading{font-family:"Lucida Grande", Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
 </style>
 
-<p>Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.<sup><a href="#fn:1" rel="footnote">1</a></sup></p>
 
-<p>Brute force algorithm?</p>
+Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.<sup><a href='#fn:1' rel='footnote'>1</a></sup>
 
-<p>It has problems like it doesn’t account for duplicate elements. Also it has complexity of <strong>O(n3)</strong> which is not optimal.</p>
+Brute force algorithm?
 
-<p>More efficient solution?</p>
+It has problems like it doesn't account for duplicate elements. Also it has complexity of **O(n3)** which is not optimal.
 
-<p>Using two pointer solution, we can acheive @L O(n2) @L time complexity...
+More efficient solution?
+
+Using two pointer solution, we can acheive @L O(n2) @L time complexity...
       </div>
   <br>
   <p>
@@ -902,12 +901,12 @@ MathJax.Hub.Config({
 });
 
 </script>
-
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 <p>Any deterministic general sorting algorithm  has average case time complexity @L \Omega(n\log{}n) @L . However, certain sorting algorithm can run faster in @L O(n) @L but with limitation. Instead of comparision-based sort, each element is looked individually by its value. Radix sort is one fine example of integer sorting.</p>
 
-<p>Suppose, we have large directory containing names of people in random order. The names need not be distinct. We need to sort the name in the ascending order. Also our algorithm should run in linear time. A sample of the input file is shown below...
+Suppose, we have large directory containing names of people in random order. The names need not be distinct. We need to sort the name in the ascending order. Also our algorithm should run in linear time. A sample of the input file is shown below...
       </div>
   <br>
   <p>
@@ -976,7 +975,7 @@ MathJax.Hub.Config({
             
             <p>Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms.  </p>
 
-<p>Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.While the universe is pretty old (3.7987 billion years and counting), it has been only few million years since the chapter of humans commenced. We had come a long way since...
+Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.While the universe is pretty old (3.7987 billion years and counting), it has been only few million years since the chapter of humans commenced. We had come a long way since...
       </div>
   <br>
   <p>
@@ -1049,7 +1048,7 @@ MathJax.Hub.Config({
             
             <p>I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. "It's easier this way.", he chuckled, "I can quickly find all the softwares I need.". I showed him my desktop which was spick and span."Doesn't it consumes time in finding the softwares you need?", he asked. </p>
 
-<p>I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. “You just use one software?”, he asked.”Mostly, yes”, I said. “What about <em>editing</em>, <em>browsing</em>, <em>music</em>, etc?”, he asked. “I do it all in emacs.”, I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs...
+I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. "You just use one software?", he asked."Mostly, yes", I said. "What about *editing*, *browsing*, *music*, etc?", he asked. "I do it all in emacs.", I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs...
       </div>
   <br>
   <p>
@@ -1094,7 +1093,7 @@ MathJax.Hub.Config({
             
             <p>It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle. Though I am a FOSS enthusiast, my first job landed me to just another India's IT company. I vividly remember the countless occasions when ViM saved my day.</p>
 
-<p>I mostly received rudimentary tasks in early days of my work. I received one such task just few days after my joining. I was slouching on my chair when I heard this commanding voice...
+I mostly received rudimentary tasks in early days of my work. I received one such task just few days after my joining. I was slouching on my chair when I heard this commanding voice...
       </div>
   <br>
   <p>
@@ -1139,7 +1138,7 @@ MathJax.Hub.Config({
             
             <p>Once a friend of mine asked if I could Hack. I asked him what he meant by hacking. Bemused at such a lame question he replied, "Don't you know what hacking is?". On insisting he reluctantly explained, "breaking into website or stealing passwords of Facebook, etc". I was crestfallen at the rampant misconception about hacking.</p>
 
-<p>Often we read news of hackers breaking into websites siphoning millions of dollars. Such news not only create pervasive fear of hacking but also glorify such malicious activities...
+Often we read news of hackers breaking into websites siphoning millions of dollars. Such news not only create pervasive fear of hacking but also glorify such malicious activities...
       </div>
   <br>
   <p>
@@ -1218,7 +1217,7 @@ MathJax.Hub.Config({
             
             <p>The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.</p>
 
-<p>I’ll be using <code class="language-plaintext highlighter-rouge">wvdial</code> to configure the internet. It’s likely that your system will have the package pre installed. Otherwise you can manyally download it from <a href="http://packages.debian.org/squeeze/wvdial" target="_blank">here</a>...
+I'll be using `wvdial` to configure the internet. It's likely that your system will have the package pre installed. Otherwise you can manyally download it from <a href="http://packages.debian.org/squeeze/wvdial" target="_blank">here</a>...
       </div>
   <br>
   <p>
@@ -1280,7 +1279,7 @@ MathJax.Hub.Config({
   `
   -->
   <div style="margin: 0 auto; text-align: center; font-size:large;">
-      <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>Tushar Sharma &copy; 2021 
+      <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>Tushar Sharma &copy; 2021
         <a title="Email" href="mailto:tushar@randomwits.com">
     <i class="icon-envelope-alt icon-large"></i> &nbsp;
   </a>
@@ -1335,16 +1334,10 @@ MathJax.Hub.Config({
 
 <!-- back to top scroll -->
 
-
-
-
-
 <br><br>
 <p id="back-top">
   <a href="#top"><span></span></a>
 </p>
-
-
 
 
       </footer>
