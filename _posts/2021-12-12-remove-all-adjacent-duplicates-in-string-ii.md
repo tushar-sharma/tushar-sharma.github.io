@@ -23,12 +23,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id egestas est. I
 <div class="tab-container">
   <ul>
     <li class="tab Java1"><a href="#Java1">Java</a></li>
+    <li class="tab Python1"><a href="#Python1">Python</a></li>
   </ul>
 
    <div class="codeSample Java1" id="Java1">
       <script src="https://gist.github.com/tushar-sharma/00bbaae23770cf2b451ed26151951e82.js"></script>
    </div>
 
-
+  <div class="codeSample Python1" id="Python1">
+    <script src="https://gist.github.com/tushar-sharma/a0d5fdd3ca5c8e4e0343a5cb5ec8ea48.js"></script>
+  </div>
 
 </div>
