@@ -12,6 +12,7 @@ author: Tushar Sharma
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id egestas est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed magna nisl, elementum a iaculis quis, rutrum quis justo. Fusce eget risus nibh. Donec sagittis ex eget viverra vehicula. Cras urna quam, dapibus vitae libero a, aliquam sagittis massa. Donec justo orci, malesuada vel magna non, fringilla dignissim ante. Nulla libero enim, gravida et est vel, pharetra gravida velit. Quisque a libero volutpat, iaculis elit non, consequat urna. Suspendisse vitae nunc sapien.<!-- truncate_here -->
+
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>
@@ -25,6 +26,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id egestas est. I
     <li class="tab Java1"><a href="#Java1">Java</a></li>
     <li class="tab Python1"><a href="#Python1">Python</a></li>
     <li class="tab Javascript1"><a href="#Javascript1">Javascript</a></li>
+    <li class="tab Scala1"><a href="#Scala1">S</a>Scala</li>
   </ul>
 
    <div class="codeSample Java1" id="Java1">
@@ -39,4 +41,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id egestas est. I
     <script src="https://gist.github.com/tushar-sharma/22450e5826eb5039af7d938b09028cb8.js"></script>
   </div>
 
+  <div class="codeSample Scala1" id="Scala1">
+    <script src="https://gist.github.com/tushar-sharma/0602de585280518b4f86fee090e916d6.js"></script>
+  </div>
 </div>
