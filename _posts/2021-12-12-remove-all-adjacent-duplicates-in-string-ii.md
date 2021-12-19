@@ -80,6 +80,14 @@ Output: "ps"
 
 Use a stack and store a pair of character and its count. Update the count of character if its adjacent. If the count equals to the value of `k` then remove the character. Iterate over the stack to generate the output string.
 
+For example for `Input: s = "deeedbbcccbdaa", k = 3`.
+
+<p> 
+<center>
+<img src="https://i.imgur.com/iZHiqyl.gif" alt="stack operation">
+</center>
+</p>
+
 # Solution
 
 
