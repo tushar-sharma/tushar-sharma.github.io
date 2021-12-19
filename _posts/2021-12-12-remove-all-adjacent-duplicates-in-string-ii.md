@@ -9,15 +9,15 @@ tags:
 - java
 - scala
 - javascript
-name: remove-string-ii
-thumb: https://esta-america.com/wp-content/uploads/2021/03/esta-application-pending.jpg
-summary: Homeopathy and pseudoscience
-image: https://esta-america.com/wp-content/uploads/2021/03/esta-application-pending.jpg
+name: remove-adjacent-string-ii
+thumb: https://i.imgur.com/kUneR4Y.jpeg
+summary: Remove all adjacent duplicates in string
+image: https://i.imgur.com/kUneR4Y.jpeg
 author: Tushar Sharma
 ---
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id egestas est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed magna nisl, elementum a iaculis quis, rutrum quis justo. Fusce eget risus nibh. Donec sagittis ex eget viverra vehicula. Cras urna quam, dapibus vitae libero a, aliquam sagittis massa. Donec justo orci, malesuada vel magna non, fringilla dignissim ante. Nulla libero enim, gravida et est vel, pharetra gravida velit. Quisque a libero volutpat, iaculis elit non, consequat urna. Suspendisse vitae nunc sapien.<!-- truncate_here -->
+You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
@@ -33,7 +33,7 @@ You are given a string s and an integer k, a k duplicate removal consists of cho
 
 We repeatedly make k duplicate removals on s until we no longer can.
 
-Return the final string after all such duplicate removals have been made. It is guaranteed that the answer is unique.
+Return the final string after all such duplicate removals have been made. It is guaranteed that the answer is unique<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
 
 <!-- disclaimer -->
 <div class="cl disclaimer">
@@ -114,6 +114,14 @@ Time Complexity: O(N).
    
 Space Complexity: O(N).
 
+<div class='footnotes'><h3>Footnotes</h3><hr />
+  <ol>
+    <li id='fn:1'>
+        <p><a href="https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/  " target="_blank">Remove All Adjacent Duplicates in String II</a></p>
+         <a href='#fnref:1' rev='footnote'>&#8617;</a>
+    </li>
+  </ol>
+</div>
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
