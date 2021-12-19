@@ -128,13 +128,10 @@ Space Complexity: O(1).
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
-
     <li id='fn:1'>
         <p><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/" target="_blank">Lowest Common Ancestor of a Binary Tree</a></p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
     </li>
-
-
   </ol>
 </div>
 
