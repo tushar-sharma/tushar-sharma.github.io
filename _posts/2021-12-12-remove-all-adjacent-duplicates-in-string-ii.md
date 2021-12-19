@@ -1,8 +1,14 @@
 ---
 layout: post
-title: Remove-all-adjacent-duplicates-in-string-ii
+title: Remove-all-adjacent-duplicates-in-string-ii Solution
 category: blog
 tags:
+- leetcode
+- stack
+- python 
+- java
+- scala
+- javascript
 name: remove-string-ii
 thumb: https://esta-america.com/wp-content/uploads/2021/03/esta-application-pending.jpg
 summary: Homeopathy and pseudoscience
@@ -16,17 +22,73 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id egestas est. I
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>
-
 <script src="{{ root_url }}/js/jquery.easytabs.min.js"></script>
-
 <script src="{{ root_url }}/js/multipleTab.js"></script>
+<link rel="stylesheet" href="{{ root_url }}/css/books.css" />
+
+# Problem Statement 
+
+
+You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together.
+
+We repeatedly make k duplicate removals on s until we no longer can.
+
+Return the final string after all such duplicate removals have been made. It is guaranteed that the answer is unique.
+
+<!-- disclaimer -->
+<div class="cl disclaimer">
+  <i class="icon-star"></i>
+    <span style="color:black"> &nbsp;&nbsp;All my solutions are uploaded to <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github repository</a>
+</span> 
+</div><br>
+
+# Testcase
+
+## Example 1
+
+```bash
+Input: s = "abcd", k = 2
+Output: "abcd"
+Explanation: There's nothing to delete.
+```
+
+## Example 2
+
+```bash
+Input: s = "deeedbbcccbdaa", k = 3
+Output: "aa"
+Explanation: 
+First delete "eee" and "ccc", get "ddbbbdaa"
+Then delete "bbb", get "dddaa"
+Finally delete "ddd", get "aa"
+```
+
+## Example 3 
+
+```bash
+Input: s = "pbbcggttciiippooaais", k = 2
+Output: "ps"
+```
+
+## Constraints:
+
+* 1 <= s.length <= 105
+* 2 <= k <= 104
+* s only contains lower case English letters.
+
+# Explanation
+
+Use a stack and store a pair of character and its count. Update the count of character if its adjacent. If the count equals to the value of `k` then remove the character. Iterate over the stack to generate the output string.
+
+# Solution
+
 
 <div class="tab-container">
   <ul>
     <li class="tab Java1"><a href="#Java1">Java</a></li>
     <li class="tab Python1"><a href="#Python1">Python</a></li>
     <li class="tab Javascript1"><a href="#Javascript1">Javascript</a></li>
-    <li class="tab Scala1"><a href="#Scala1">S</a>Scala</li>
+    <li class="tab Scala1"><a href="#Scala1">Scala</a></li>
   </ul>
 
    <div class="codeSample Java1" id="Java1">
@@ -45,3 +107,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id egestas est. I
     <script src="https://gist.github.com/tushar-sharma/0602de585280518b4f86fee090e916d6.js"></script>
   </div>
 </div>
+
+# Complexity
+
+Time Complexity: O(N).
+   
+Space Complexity: O(N).
+
+
+<nav class="pagination clear" style="padding-bottom:20px;">
+{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
+</nav>
