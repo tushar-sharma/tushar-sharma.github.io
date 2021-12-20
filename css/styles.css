@@ -182,11 +182,16 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 
 .navbar-nav{
     left: 0;
+    clear:both;
     top: 0;
     bottom: 0;
     width: 100%;
+    margin: 0 auto;
     text-transform: uppercase;
     background: white;
+    position: relative;
+    overflow-x: auto;
+    word-wrap: break-word;
 }
 
 /*https://codepen.io/tdevine33/pen/CnDyv */
@@ -195,11 +200,13 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     background: white;
     text-decoration: none;
     color: #fff;
+    position: relative;
+    float:left;
   }
 
   .main-nav a {
-    /*color: #DFDBD9;*/
-    font: 400 1.125em "Source Sans Pro", Helvetica, Arial, sans-serif;
+    color: #DFDBD9;
+    font: 300 1.125em "Source Sans Pro", Helvetica, Arial, sans-serif;
     text-align: center;
     text-transform: uppercase;
     padding:15px 30px;
@@ -255,6 +262,3 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     color: #fff;
   }
 
-
-  
-  
