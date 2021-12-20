@@ -115,8 +115,8 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     border: 1px solid #e5e5e5;
     overflow-x: auto;
     color: #444;
-    #font: 13pt/1.5 'Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal';
-	font-size:20px;
+    font: 13pt/1.5 'Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal';
+	font-size:23px;
     word-wrap: break-word;
 }
 
@@ -179,6 +179,7 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 }@media(prefers-reduced-motion:reduce){.logo__cursor{animation:none}}@keyframes cursor{0%{opacity:0}50%{opacity:1}100%{opacity:0}}.menu{background:#fafafa;border-right:1px solid;margin-right:18px;z-index:9999}
 
 
+
 .navbar-nav{
     left: 0;
     top: 0;
@@ -193,16 +194,17 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 .main-nav ul {
     background: white;
     text-decoration: none;
-
+    color: #fff;
   }
 
   .main-nav a {
-    color: #DFDBD9;
+    /*color: #DFDBD9;*/
     font: 400 1.125em "Source Sans Pro", Helvetica, Arial, sans-serif;
     text-align: center;
     text-transform: uppercase;
     padding:15px 30px;
     text-decoration: none;
+    color: #fff;
 
   }
   .main-nav a:hover {
@@ -212,21 +214,24 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
   .list-hover-slide li {
     position: relative;
     overflow: hidden;
-    line-height: 1.5;
-    padding-bottom: 50px;
-
+    line-height: 140%;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
   }
+
   .list-hover-slide a {
     display: block;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     transition: .35s ease color;
-    color:yellow;
     text-decoration: none;
     border-bottom: none !important;
-
-
+    color: #fff;
   }
+  .list-hover-slide a:hover {
+       color: #fff !important;
+   }
   .list-hover-slide a:before {
     content: '';
     display: block;
@@ -239,15 +244,15 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     border-right: solid 5px #39c;
     background: #39c;
     transition: .35s ease left;
-    color:yellow;
+    color: #fff;
 
+  }
+  .list-hover-slide a:hover:after {
+      color:white;
   }
   .list-hover-slide a.is-current:before, .list-hover-slide a:hover:before {
     left: 0;
     color: #fff;
-  }
-  .list-hover-slide a::after {
-      color:white;
   }
 
 

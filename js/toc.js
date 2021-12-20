@@ -97,8 +97,10 @@
     render[settings.showEffect]();
 
     var toc = document.getElementById("toc-block");
+    var toc_header = document.getElementById("toc-header");
 
     if (toc) {
+      toc_header.style.display="block";
 	    toc.style.display="block";
     }
 

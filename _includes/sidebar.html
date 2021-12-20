@@ -98,15 +98,18 @@ header li {
 </div>
 -->
 
+<br>
 <div class="navbar-nav">
-
 	<div class="nav-wrap">
 	  <nav class="main-nav" >
 		<ul class="unstyled list-hover-slide">
-		  <li><a href="#">About</a></li>
-		  <li><a href="#">Work</a></li>
-		  <li><a href="#">Contact</a></li>
-		  <li><a href="#">Blog</a></li>
+		  <li><a href="{{ root_url }}/tags">Tags</a></li>
+		  <li><a href="{{ root_url }}/books">Books</a></li>
+		  <li><a href="{{ root_url }}/quotes">Quotes</a></li>
+		  <li><a href="{{ root_url }}/habits">Habits</a></li>
+		  <li><a href="{{ root_url }}/resources">Resources</a></li>
+		  <li><a href="{{ root_url }}/about">About</a></li>
+		  <li><a href="{{ root_url }}/contact">Contact</a></li>
 		</ul>
 	  </nav>
 	</div>
@@ -116,12 +119,15 @@ header li {
 
 <!-- only if page is root page -->
 {% if page.url == '/' or  paginator.previous_page %}
+<h3>Popular Posts</h3> 
 <div class="highlight">
   {% include sidebar_wits.html %}
 </div>
 {% else %}
+<div id="toc-header" style="display: none;">
+  <h3>Table of Contents</h3>
+</div>
 <div id="toc-block" class="codeblock" style="display:none;">
-  <span style="font-size: 20px; " class="nv">$</span>&nbsp;<span style=" font-size: 20px;">table of contents</span>
   <div id="toc"></div>
 </div>
 {% endif %}

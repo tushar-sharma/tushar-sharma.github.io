@@ -14,11 +14,8 @@
     {% assign blogposts = site.categories.blog | where: 'featuredPost', true   %}
     
     <div class="codeblock">
-        <span style="font-size: 20px; " class="nv">$</span>&nbsp;<span style=" font-size: 20px;">popular wits</span>
-        <br>
-        <div style="padding-left:25px;">
+        <div>
             {% for post in blogposts %}
-    
             {% if post != blogposts.last %}
             ├── <span class="nv"><a href="{{ post.url }}">{{ post.title }}</a></span>
             <br>
