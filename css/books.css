@@ -9,7 +9,8 @@
     -webkit-border-radius: 9px;
 }
 
-.cl{ color: rgb(51, 153, 204); white-space: nowrap; overflow:hidden; display: inline-block; }
+.cl{ color: rgb(51, 153, 204); 
+     overflow:hidden; display: inline-block; }
 
 img.book {
     height: 150px;
@@ -66,6 +67,7 @@ nav#pagination span.prev {
    border: 2px solid rgb(51, 153, 204);
    padding: 20px;
    text-align: left;
+   word-wrap: break-word;
  }
 
  .alert {
