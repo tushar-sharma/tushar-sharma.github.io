@@ -36,11 +36,19 @@ pre{padding:8px 15px;
   overflow-x:auto
 }table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:5px 10px;border-bottom:1px solid #e5e5e5}dt{color:#444;font-weight:700}th{color:#444}img{max-width:100%}
 
-header{width:20%;height:100%;
-    float:left;position:relative;overflow:auto;
-    padding-left:10%; padding-right:5%;}
+header{
+    width:20%;
+    height:100%;
+    float:left;
+    position:relative;
+    overflow:auto;
+    padding-left:10%; 
+    padding-right:5%;
+}
 
-section{width:50%;float:left;padding-right:5%; padding-bottom:50px;}
+section{width:50%;float:left;padding-right:5%; 
+    max-width: 768px;
+    padding-bottom:50px;}
 
 small{font-size:16px;color:#888}
 
@@ -177,3 +185,41 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     background: #39c;
     margin-left:5px;border-radius:1px;animation:cursor 1s infinite;
 }@media(prefers-reduced-motion:reduce){.logo__cursor{animation:none}}@keyframes cursor{0%{opacity:0}50%{opacity:1}100%{opacity:0}}.menu{background:#fafafa;border-right:1px solid;margin-right:18px;z-index:9999}
+
+/**
+popular wits
+ */
+
+
+.td_module_6 {
+    padding-bottom: 26px;
+}
+
+.entry-title {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.item-details {
+    line-height: calc(1em + 0.625rem);
+    -webkit-font-smoothing: antialiased;
+}
+
+.td-module-thumb {
+    left: 0;
+    top: 0;
+    float:left;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-right: 16px;
+    padding-top: 0px;
+    color: #39c;
+    transform: translateY(5px) translateX(0px);
+    width: 20;
+    height: 20;
+    line-height: calc(1em + 0.625rem);
+    -webkit-font-smoothing: antialiased;
+    font-size: 19px;
+}
