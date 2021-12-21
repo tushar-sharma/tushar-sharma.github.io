@@ -5,22 +5,23 @@ category: blog
 tags:
 - graph
 - java
-- code
+- implementation
 name: graph-data-structure
-thumb: /img/noden.png
+thumb: https://i.imgur.com/KdU5gTZ.png
+author: Tushar Sharma
+image: https://i.imgur.com/KdU5gTZ.png
+summary: Graph Datastructure implementation
 ---
 
-<p>Graph are data structures made of vertices & edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.</p>
-
-First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).
-
-Create a vertex? First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).<!-- truncate_here -->
+Graph are data structures made of vertices & edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Graph are data structures made of vertices & edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.
 
 First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).
+
+| <img align="center" src="https://i.imgur.com/KdU5gTZ.png" alt="Graph image" /> |
 
 ## Create a vertex
 
@@ -237,3 +238,7 @@ public class Main {
 ## Conculsion
 
 It concludes Part 1 of graph series. Later series will cover much more operations on graph.
+
+<nav class="pagination clear" style="padding-bottom:20px;">
+{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
+</nav>
