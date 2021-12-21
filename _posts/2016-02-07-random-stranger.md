@@ -12,10 +12,7 @@ name: random-stranger
 thumb: /img/india-traffic.jpg
 ---
 
-<p>It was just another day in Bangalore. I caught the bus from the <i>Kormangala</i> bus depot. Amid exhausting heat & nudging elbows, I somehow managed to grab a seat in the bus. Securing a seat in the Indian bus during peak time is considered a fortune. This often attracts resentful eyes. However my Indian genes have made me immune to both pani puri & judgment.</p>
-
-
-If you are lucky, you could get a window seat. This saves you from claustrophobia of the overcrowded isles. And today was my lucky day. I happily slumped down into my seat and peeped out of my window catching some glimpse of just another life on just another `Indian road`.<!-- truncate_here -->
+It was just another day in Bangalore. I caught the bus from the /*Kormangala* bus depot. Amid exhausting heat & nudging elbows, I somehow managed to grab a seat in the bus. Securing a seat in the Indian bus during peak time is considered a fortune. This often attracts resentful eyes. However my Indian genes have made me immune to both pani puri & judgment.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 

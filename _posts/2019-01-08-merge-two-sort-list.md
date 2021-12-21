@@ -16,13 +16,7 @@ thumb: /img/heap_array.png
 </style>
 
 
-<p>Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>. The new list should be made by splicing together the nodes of the first two lists.</p>
-
-It's an easy problem in Leetcode for practicing linked list. It's similar to the merge step of the Merge sort.
-
-Brute force algorithm
-
-Merge the both list together and sort the returning list.  This will take complexitiy of  O(n + m) log(n + m) , where n & m are length of each two list.<!-- truncate_here -->
+Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
