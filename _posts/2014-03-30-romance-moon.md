@@ -11,15 +11,10 @@ author: Tushar Sharma
 featuredPost: true
 ---
 
-<p>Often we meet,<br>
+Often we meet,<br>
 Avoiding prying eyes secretly,<br>
 In between stretches a velvet sky,<br>
-Only gulf in between us apparently.<br></p>
-
-High tides doth comes,<br>
-As she tries approaching me,<br>
-And sweeps the earth below,<br>
-Posing as the one, only she could be.<br><!-- truncate_here -->
+Only gulf in between us apparently.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
