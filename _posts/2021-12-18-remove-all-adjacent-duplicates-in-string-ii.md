@@ -103,19 +103,19 @@ For example for `Input: s = "deeedbbcccbdaa", k = 3`.
   </ul>
 
    <div class="codeSample Java1" id="Java1">
-      <script src="https://gist.github.com/tushar-sharma/00bbaae23770cf2b451ed26151951e82.js"></script>
+      <script src="https://gist.github.com/tushar-sharma/00bbaae23770cf2b451ed26151951e82.js?file=RemoveDuplicates.java"></script>
    </div>
 
   <div class="codeSample Python1" id="Python1">
-    <script src="https://gist.github.com/tushar-sharma/a0d5fdd3ca5c8e4e0343a5cb5ec8ea48.js"></script>
+      <script src="https://gist.github.com/tushar-sharma/00bbaae23770cf2b451ed26151951e82.js?file=remove_duplicates.py"></script>
   </div>
 
   <div class="codeSample Javascript1" id="Javascript1">
-    <script src="https://gist.github.com/tushar-sharma/22450e5826eb5039af7d938b09028cb8.js"></script>
+      <script src="https://gist.github.com/tushar-sharma/00bbaae23770cf2b451ed26151951e82.js?file=removeDuplicates.js"></script>
   </div>
 
   <div class="codeSample Scala1" id="Scala1">
-    <script src="https://gist.github.com/tushar-sharma/0602de585280518b4f86fee090e916d6.js"></script>
+      <script src="https://gist.github.com/tushar-sharma/00bbaae23770cf2b451ed26151951e82.js?file=RemoveDuplicates.scala"></script>
   </div>
 </div>
 
