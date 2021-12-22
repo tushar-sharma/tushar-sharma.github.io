@@ -96,7 +96,8 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     width:108px;display:block;text-align:center;font:11px/100% Arial,Helvetica,sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}
 
 #back-top a:hover{color:#000}
-#back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat;background-color:rgba(255,255,255,1);display:block;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}#back-top a:hover span{background-color:#777}.pagination{border-top:1px dotted #ccc;margin:20px 0;padding:10px 0}
+#back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat;background-color:rgba(255,255,255,1);display:block;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}#back-top a:hover span{background-color:#777}
+.pagination{margin:20px 0;padding:10px 0}
 
 .pagination a{width:50%}
 
@@ -178,6 +179,7 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     margin-left:5px;border-radius:1px;animation:cursor 1s infinite;
 }@media(prefers-reduced-motion:reduce){.logo__cursor{animation:none}}@keyframes cursor{0%{opacity:0}50%{opacity:1}100%{opacity:0}}.menu{background:#fafafa;border-right:1px solid;margin-right:18px;z-index:9999}
 
+/** pagination **/
 
 .pagination-wrapper {
     text-align: center;
@@ -210,7 +212,7 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
   }
   
   .pagination .active {
-    background: #ddd;
+    background: #39c;
     color: #fff;
   }
   
