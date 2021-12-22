@@ -201,8 +201,23 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
   
   a.pagination-step,
   span.pagination-step {
-    padding: 0 10px;
+    padding: 0 20px;
+    margin-right: 25px;
+    margin-left :25px;
     width: auto;
+  }
+
+  .pressed {
+    background: #ddd; 
+    font-size:20px;
+
+  }
+
+  .onpressed {
+    background: #39c; 
+    font-size:20px;
+    color:white;
+
   }
   
   .pagination-first,
