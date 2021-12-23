@@ -180,7 +180,12 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     margin-left:5px;border-radius:1px;animation:cursor 1s infinite;
 }@media(prefers-reduced-motion:reduce){.logo__cursor{animation:none}}@keyframes cursor{0%{opacity:0}50%{opacity:1}100%{opacity:0}}.menu{background:#fafafa;border-right:1px solid;margin-right:18px;z-index:9999}
 
-/** pagination **/
+/** pagination 
+courtesy ~ 
+https://www.amitmerchant.com/reverie/
+https://muffinman.io/blog/custom-jekyll-pagination/          
+
+**/
 .pagination-wrapper {
   text-align: center;
 }
@@ -190,6 +195,12 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
   margin: 0 0 2rem;
 }
 
+.pagination a:hover {
+  background: #ddd;
+  color: #fff;
+}
+
+
 .pagination a,
 .pagination span {
   border-radius: 3px;
@@ -197,11 +208,14 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
   height: 36px;
   line-height: 36px;
   width: 30px;
+  border: 1px solid #eee;
+  margin-left: -2px;
+  margin-right: -2px;
+  padding: 7px 18px;
 }
 
 a.pagination-step,
 span.pagination-step {
-  padding: 0 10px;
   width: auto;
 }
 
@@ -225,7 +239,6 @@ span.pagination-step {
 
   a.pagination-step,
   span.pagination-step {
-    padding: 0 15px;
     width: auto;
   }
 }
