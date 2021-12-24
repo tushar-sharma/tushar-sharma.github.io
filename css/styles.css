@@ -100,7 +100,8 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 #back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat;background-color:rgba(255,255,255,1);display:block;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}#back-top a:hover span{background-color:#777}
 .pagination{margin:20px 0;padding:10px 0}
 
-.pagination a{width:50%}
+.pagination a  {width:50% }
+.pagination a:hover {color:#39c; }
 
 .prev-item{float:left;text-align:left}
 
@@ -221,7 +222,7 @@ https://muffinman.io/blog/custom-jekyll-pagination/
 }
 
 
-.pagination a,
+.pagination-wrapper .pagination a,
 .pagination span {
   border-radius: 3px;
   float: left;
@@ -234,7 +235,7 @@ https://muffinman.io/blog/custom-jekyll-pagination/
   padding: 7px 18px;
 }
 
-a.pagination-step,
+.pagination-wrapper a.pagination-step,
 span.pagination-step {
   width: auto;
 }
