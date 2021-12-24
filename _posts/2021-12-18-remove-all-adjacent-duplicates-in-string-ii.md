@@ -128,7 +128,7 @@ Space Complexity: O(N).
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
     <li id='fn:1'>
-        <p><a href="https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/  " target="_blank">Remove All Adjacent Duplicates in String II</a></p>
+        <p><a href="https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/" target="_blank">Remove All Adjacent Duplicates in String II</a></p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
     </li>
   </ol>

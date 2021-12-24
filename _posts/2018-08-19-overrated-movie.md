@@ -9,9 +9,7 @@ name: rent-scam
 thumb: https://qph.fs.quoracdn.net/main-qimg-dffa472292c6abcb72370a93dbf0dd22
 ---
 
-<p>I might slip into a cesspool of hate in criticizing India’s most successful movie, Baahubali 2: The Conclusion. One of my Telugu colleague eyes beamed with pride when she told me how she watched first day first show & how this movie has propelled Telugu movies in the same league of Hollywood. </p>
-
-People in India often put actors and politicians in pedestal with overwhelming emotions which is why it is sometimes difficult to have bonafide criticism of more than real life people like Rajinikanth in Tamil Nadu or Salman Khan in UP or Bihar.<!-- truncate_here -->
+I might slip into a cesspool of hate in criticizing India’s most successful movie, Baahubali 2: The Conclusion. One of my Telugu colleague eyes beamed with pride when she told me how she watched first day first show & how this movie has propelled Telugu movies in the same league of Hollywood.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 

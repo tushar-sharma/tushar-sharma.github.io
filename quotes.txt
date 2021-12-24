@@ -446,3 +446,7 @@ Feed the masses, eat with the classes.
 "Who Controls the Past Controls the Future" - George Orwell, 1984.
 "A vision without a strategy remains an illusion" - Lee Bolman
 "Never make fun of someone is they mispronounce a word. It means they learned it by reading" - Anonymous
+"There are only two kinds of programming languages: those people always bitch about and those nobody uses" - Bjarne Stroustrup
+"Talk is cheap. Show me the code" - Linus Torvalds
+"If you optimize everything, you will always be unhappy" - Donald Knuth
+"It’s not a bug; it’s an undocumented feature" - Anonymous
