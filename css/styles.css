@@ -131,6 +131,10 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
   display: none !important;
 }
 
+.gist .blob-code-inner {
+  white-space: pre-wrap !important;
+}
+
 
 /* pastebin */
 .embedPastebin {
