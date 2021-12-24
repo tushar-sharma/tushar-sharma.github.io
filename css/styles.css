@@ -124,7 +124,22 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 
 
 /* Better styles for embedding GitHub Gists */
-.gist .blob-code-inner{ font-size:16px !important; }
+.gist .blob-code-inner{
+  word-wrap: break-word !important;
+  font-size:16px !important; 
+}
+.gist-meta {
+  display: none !important;
+}
+
+/* pastebin */
+.embedPastebin {
+  font-size: 18px !important;
+}
+
+.embedFooter {
+  display: none !important;
+}
 
 .latex-pseudo-code {
     border-top: 2px solid black;
