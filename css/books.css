@@ -9,7 +9,7 @@
     -webkit-border-radius: 9px;
 }
 
-.cl{ color: rgb(51, 153, 204); 
+.cl{ color: rgb(51, 153, 204);
      overflow:hidden; display: inline-block; }
 
 img.book {
@@ -98,7 +98,7 @@ nav#pagination span.prev {
 .book8 {width: 20%; }  /* evolution of physics */
 .book9 {width: 24%; }  /* eminent historians */
 .book10 {width: 9.45%; }  /* java 8 in action */
-.book11 {width: 30%; }  /* One, Two, Three...Infinity */
+.book11 {width: 42%; }  /* One, Two, Three...Infinity */
 .book12 {width: 10%; }  /* Mastering bitcoin */
 .tbd {width: 0%; }  /* TBD */
 /* end -  book progress*/
