@@ -13,9 +13,9 @@ author: Tushar Sharma
 ---
 
 Today I walked a little further,<br>
-Few more steps than yesterday,<br>
+further than yesterday,<br>
 For I love walking,<br>
-And I have walked all my life.<!-- truncate_here -->
+despite my aching toes pleading to stay.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
@@ -28,11 +28,15 @@ And I have walked all my life.<!-- truncate_here -->
 
 
 Today I walked a little further,<br>
-Few more steps than yesterday,<br>
-For I love walking,<br>
-And I have walked all my life.<br>
+further than yesterday,<br>
+For I love the thought of walking,<br>
+despite my aching toes pleading to stay.<br>
 
-My walk is not straight,<br>
+My walk is often crooked,<br>
+Not because of any lingering malice,<br>
+but since gait is pigeon-toed,<br>
+I often stray into dark alleys. <br>
+
 Often I stray from the path,<br>
 Lost in thoughts of wilderness,<br>
 Caged in the civilization of life.<br>
