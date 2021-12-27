@@ -1,0 +1,479 @@
+---
+layout: comments
+title: Travel
+published: true
+summary: Travel Bucket
+image: https://i.imgur.com/grb5Hjm.jpg
+author: Tushar Sharma
+---
+
+<link rel="stylesheet" href="{{ root_url }}/css/travel.css" />
+<!-- leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<!-- leaflet easybutton -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
+<script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
+<script src="https://use.fontawesome.com/e1f76e437e.js"></script>
+
+
+    <!-- content table beginning -->
+    <div id="contenttable">
+
+      <!-- header graphic -->
+      <div id="header"></div>
+
+
+      <!-- content beginning-->
+      <div class="content-place">
+
+          <h1>Travel Bucket List</h1>
+          <p>
+              Traveling is a huge part of my life. Those experiences had significant influences on my personality and decisions I made in life. For example, without the Work & Travel year in Australia I probably would have never gotten the idea to study Cartography.
+          </p>
+
+          <div class="legendResp">
+              <img src="{{ root_url}}/img/travel2.png" /> Places I visited (holiday)<br />
+              <img src="{{ root_url}}/img/bucket.png" />Places on my bucket list <br />
+              <img src="{{ root_url}}/img/home.png" />Places I lived & worked/studied<br />
+              <img src="{{ root_url }}/img/plan.png" />Places, that are planned to travel to<br />
+              <img src="{{ root_url }}/img/bycar.png" />Roundtrip by car (done/planned)<br />
+              <img src="{{ root_url }}/img/rect.png" />Region planned for next trip
+          </div>
+
+          <div id="map"></div>
+
+          <script>
+              var map = L.map('map', {
+                  scrollWheelZoom: false
+              }).setView([30, 5.5], 2);
+
+              var greyCartoDB = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+                  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+                  subdomains: 'abcd',
+                  maxZoom: 11
+              });
+              greyCartoDB.addTo(map);
+
+
+
+              /* own marker design */
+
+              var home = L.icon({
+                  iconUrl: '{{ root_url }}/img/home.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+
+              var travel = L.icon({
+                  iconUrl: '{{ root_url }}/img/travel2.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+
+              var plan = L.icon({
+                  iconUrl: '{{ root_url }}/img/plan.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+
+              var bucket = L.icon({
+                  iconUrl: '{{ root_url }}/img/bucket.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+
+      /*** markers ***/
+
+              /* home */
+
+             L.marker([48.196857, 16.370766], {
+                  icon: home
+              }).addTo(map).bindPopup("Vienna<br />2017");
+
+               L.marker([-21.90833014006328, 149.40908432006836], {
+                  icon: home
+              }).addTo(map).bindPopup("Carmila<br />2012").on('click', function(e) {
+                  map.fitBounds(ozline.getBounds());
+              });
+
+              L.marker([-37.81361100000001, 144.96305600000005], {
+                  icon: home
+              }).addTo(map).bindPopup("Melbourne <br /> 2011").on('click', function(e) {
+                  map.fitBounds(ozline.getBounds());
+              });
+
+              var germany = L.marker([51.165691, 10.451526000000058], {
+                  icon: home
+              }).bindPopup("<b>Germany</b><br />Suhl: 1992-2011<br>Leipzig: 2012-2013<br />Dresden: 2013-2016<br />Munich: 2016-2017<br />Dresden: 2017-2019<br />Leipzig: since 2019").addTo(map);
+
+
+              var dresden = L.marker([51.05040880000001,13.737262099999953], {icon: home}).bindPopup("Dresden<br />2013-2016<br />2017-2019");
+              var suhl = L.marker([50.6076846,10.68812550000007], {icon: home}).bindPopup("Suhl <br /> 1992-2011");
+               var leipzig = L.marker([51.3396955,12.373074699999961], {icon: home}).bindPopup("Leipzig<br />2012-2013<br />since 2019");
+              var munich = L.marker([48.1351253,11.581980599999952], {icon: home}).bindPopup("Munich <br />2016-2017");
+
+              var germanySpread = L.layerGroup([dresden, suhl, leipzig, munich]);
+              
+              map.on("zoomend", function(e){
+                  if(map.getZoom() < 5){
+                      if (map.hasLayer(germanySpread)) {
+                          germanySpread.remove();  
+                      }
+                      if (!map.hasLayer(germany)){
+                          germany.addTo(map);
+                      }
+                  } else {
+                      if (map.hasLayer(germany)) {
+                          germany.remove();  
+                      }
+                      if (!map.hasLayer(germanySpread)){
+                          germanySpread.addTo(map);
+                      }
+                  }
+              });
+
+              /* travel */
+              L.marker([48.858093, 2.294694], {
+                  icon: travel
+              }).addTo(map).bindPopup("Paris <br />1998");
+
+              L.marker([37.733795, -122.446747], {
+                  icon: travel
+              }).addTo(map).bindPopup("San Francisco <br /> 2010");
+
+              L.marker([51.508530, -0.076132], {
+                  icon: travel
+              }).addTo(map).bindPopup("London <br /> 2010, 2014");
+
+              L.marker([55.755826, 37.6173], {
+                  icon: travel
+              }).addTo(map).bindPopup("Moskow <br /> 2008");
+
+              L.marker([54.3872666, 35.18890940000006], {
+                  icon: travel
+              }).addTo(map).bindPopup("Kaluga <br /> 2008");
+
+              L.marker([36.4340533, 28.2176379], {
+                  icon: travel
+              }).addTo(map).bindPopup("Rhodos <br /> 2008");
+
+              L.marker([36.8968908, 30.713323299999956], {
+                  icon: travel
+              }).addTo(map).bindPopup("Antalya <br /> 2009");
+
+              L.marker([41.8724111, 12.48022489999994], {
+                  icon: travel
+              }).addTo(map).bindPopup("Rome <br /> 2016");
+
+              L.marker([30.4277547, -9.598107199999959], {
+                  icon: travel
+              }).addTo(map).bindPopup("Agadir <br /> 2000");
+
+              L.marker([-33.8688197, 151.20929550000005], {
+                  icon: travel
+              }).addTo(map).bindPopup("Sydney <br /> 2011").on('click', function(e) {
+                  map.fitBounds(ozline.getBounds());
+              });
+
+              L.marker([-12.4634403, 130.84564180000007], {
+                  icon: travel
+              }).addTo(map).bindPopup("Darwin <br /> 2012").on('click', function(e) {
+                  map.fitBounds(ozline.getBounds());
+              });
+
+              L.marker([-25.3444277, 131.03688220000004], {
+                  icon: travel
+              }).addTo(map).bindPopup("Ayers Rock <br /> 2012").on('click', function(e) {
+                  map.fitBounds(ozline.getBounds());
+              });
+
+              L.marker([-34.92849890000001, 138.60074559999998], {
+                  icon: travel
+              }).addTo(map).bindPopup("Adelaide <br /> 2012").on('click', function(e) {
+                  map.fitBounds(ozline.getBounds());
+              });
+
+              L.marker([-27.4697707, 153.02512350000006], {
+                  icon: travel
+              }).addTo(map).bindPopup("Brisbane <br /> 2012").on('click', function(e) {
+                  map.fitBounds(ozline.getBounds());
+              });
+
+              L.marker([23.1135925, -82.36659559999998], {
+                  icon: travel
+              }).addTo(map).bindPopup("Cuba Round Trip <br /> 2014").on('click', function(e) {
+                  map.fitBounds(cubaline.getBounds());
+              });
+
+              L.marker([50.0755381, 14.43780049999998], {
+                  icon: travel
+              }).addTo(map).bindPopup("Prague <br /> 2013");
+
+              L.marker([45.1, 15.2], {
+                  icon: travel
+              }).addTo(map).bindPopup("Crotia <br /> 2008");
+
+              L.marker([27.9202202, -15.547437299999956], {
+                  icon: travel
+              }).addTo(map).bindPopup("Gran Canaria <br /> 2005");
+
+              L.marker([47.63633769999999, 9.389244500000018], {
+                  icon: travel
+              }).addTo(map).bindPopup("<center><b>Lake Constance</b><br /> August/September 2017</center>");
+
+              L.marker([59.4369607, 24.7535746], {
+                  icon: travel
+              }).addTo(map).bindPopup("Tallinn<br /> Dec 2017");
+
+              L.marker([52.3702157, 4.8951678], {
+                  icon: travel
+              }).addTo(map).bindPopup("Amsterdam<br /> 2018");
+
+              L.marker([55.6867243, 12.5700724], {
+                  icon: travel
+              }).addTo(map).bindPopup("Copenhagen<br /> 2008");
+
+              L.marker([54.1779039, 12.0812875], {
+                  icon: travel
+              }).addTo(map).bindPopup("Warnemünde<br /> many summers");
+
+              L.marker([52.37068639527179, 12.915649372384678], {
+                  icon: travel
+              }).addTo(map).bindPopup("Werder (Havel)<br /> 2018");
+
+              L.marker([59.4372155, 24.7453688], {
+                  icon: travel
+              }).addTo(map).bindPopup("Tallinn<br /> 2017");
+
+              L.marker([45.8771379, 10.764763631265], {
+                  icon: travel
+              }).addTo(map).bindPopup("Lake Garda<br /> 2019");
+
+              /* planned trips */
+
+              var nz = L.circle([-41.500083, 172.8344077], {
+                  color: '#eb5c37',
+                  fillColor: '#eb5c37',
+                  fillOpacity: 0.2,
+                  radius: 1000000
+              }).addTo(map);
+
+              L.marker([-41.500083, 172.8344077], {
+                  icon: plan
+              }).addTo(map).bindPopup("<center><b>New Zealand</b></center>").on('click', function(e) {
+                  map.fitBounds(nz.getBounds());
+              });
+
+              /* bucket */
+
+              L.marker([64.963051, -19.020835000000034], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Iceland");
+
+              L.marker([53.41291, -8.243889999999965], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Ireland");
+
+              L.marker([-38.416097, -63.616671999999994], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Argentinia");
+
+              L.marker([36.204824, 138.252924], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Japan");
+
+              L.marker([19.8967662, -155.58278180000002], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Hawaii");
+
+              L.marker([-22.95764, 18.490409999999997], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Namibia");
+
+              L.marker([15.870032, 100.99254100000007], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Thailand");
+
+              L.marker([-6.5247123, 35.7878438], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Tanzania");
+
+              /** round trips **/
+
+              var cubatrip = [
+                  [22.6188131, -83.7066289],
+                  [23.1135925, -82.36659559999998],
+                  [23.179858, -81.18852930000003],
+                  [22.424398, -79.9416549],
+                  [22.1599753, -80.44377810000003],
+                  [21.7960343, -79.98081430000002],
+                  [21.3926035, -77.90531820000001],
+                  [20.01693, -75.83015369999998]
+              ];
+
+              var cubaline = L.polyline(cubatrip, {
+                  color: '#56832f'
+              }).addTo(map);
+
+              var oztripcar = [
+                  [-33.8688197, 151.20929550000005],
+                  [-32.92833299999999, 151.78166699999997],
+                  [-31.440614816907722, 152.9022216796875],
+                  [-30.298440690448423, 153.13430786132812],
+                  [-28.652271596973495, 153.60809326171875],
+                  [-27.4697707, 153.02512350000006],
+                  [-27.3462945, 153.42360069999995],
+                  [-27.4697707, 153.02512350000006],
+                  [-24.869243880979464, 152.34466552734375],
+                  [-23.844645277930876, 151.25839233398438],
+                  [-23.36772368046494, 150.52642822265625],
+                  [-21.92928803370895, 149.4140625],
+                  [-21.151371759106546, 149.16824340820312],
+                  [-19.288072735198604, 146.76910400390625],
+                  [-17.266990359738266, 145.47958374023438],
+                  [-16.932281871996253, 145.75286865234375],
+                  [-17.76124434620424, 141.097412109375],
+                  [-16.121820834009004, 136.329345703125],
+                  [-16.280071538845558, 133.41796875],
+                  [-14.500637508501296, 132.330322265625],
+                  [-12.696078579780144, 132.857666015625],
+                  [-12.481634563854522, 130.858154296875],
+                  [-14.500637508501296, 132.330322265625],
+                  [-16.280071538845558, 133.41796875],
+                  [-19.499737441220308, 134.219970703125],
+                  [-23.71696717939017, 133.934326171875],
+                  [-23.696848705100226, 132.440185546875],
+                  [-24.319069572118238, 133.472900390625],
+                  [-25.276492369052995, 133.2421875],
+                  [-25.31622375174437, 130.968017578125],
+                  [-25.276492369052995, 133.2421875],
+                  [-29.077297405752212, 134.769287109375],
+                  [-29.684235927171855, 138.09814453125],
+                  [-31.377089060550468, 138.5980224609375],
+                  [-34.93638352447659, 138.614501953125]
+              ];
+
+              var ozline = L.polyline(oztripcar, {
+                  color: '#56832f'
+              }).addTo(map);
+
+                var oztripfly = [
+                     [-37.81361100000001,144.96305600000005],
+                    [-27.4697707,153.02512350000006],
+                    [-33.8688197,151.20929550000005]
+                ];
+                
+                var ozflyline = L.polyline(oztripfly, {color: '#9ab973'}).addTo(map);
+
+              var scotland = [
+                  [55.953252, -3.188266999999996],
+                  [56.09287866625323, -3.922119140625],
+                  [56.379851997896644, -3.4112548828125],
+                  [57.05208442657351, -4.1033935546875],
+                  [57.46208974669117, -4.21875],
+                  [57.126699402171425, -4.6636962890625],
+                  [57.46208974669117, -4.21875],
+                  [57.87923227515328, -4.0045166015625],
+                  [58.285817920594006, -3.27392578125],
+                  [58.464400756786496, -4.405517578125],
+                  [58.01624577763747, -5.361328125],
+                  [57.46208974669117, -4.21875]
+              ];
+
+              var scotlandline = L.polyline(scotland, {
+                  color: '#56832f'
+              }).addTo(map);
+
+              L.marker([57.46208974669117, -4.21875], {
+                  icon: travel
+              }).addTo(map).bindPopup("<center><b>Scotland Round Trip</b><br /> May 2017</center>").on('click', function(e) {
+                  map.fitBounds(scotland.getBounds());
+              });
+
+
+              var westcoastTrip = [
+                  [40.741895, -73.989308], //NYC
+                  [39.9525839, -75.1652215], //Philly
+                  [38.9071923, -77.0368707], //Washington
+                  [40.741895, -73.989308], //NYC
+                  [45.4215296, -75.697193], //Otawa
+                  [45.5016889, -73.5672559], //Montreal
+                  [42.3600825, -71.05888] //Boston
+              ];
+
+              var WCline = L.polyline(westcoastTrip, {
+                  color: '#56832f'
+              }).addTo(map);
+
+              L.marker([40.741895, -73.989308], {
+                  icon: travel
+              }).addTo(map).bindPopup("New York City <br /> 2017").on('click', function(e) {
+                  map.fitBounds(WCline.getBounds());
+              });
+
+              L.marker([39.9525839, -75.1652215], {
+                  icon: travel
+              }).addTo(map).bindPopup("Philadelphia<br /> 2017").on('click', function(e) {
+                  map.fitBounds(WCline.getBounds());
+              });
+
+              L.marker([38.9071923, -77.0368707], {
+                  icon: travel
+              }).addTo(map).bindPopup("Washington DC<br /> 2017").on('click', function(e) {
+                  map.fitBounds(WCline.getBounds());
+              });
+
+              L.marker([45.4215296, -75.697193], {
+                  icon: travel
+              }).addTo(map).bindPopup("Ottawa<br /> 2017").on('click', function(e) {
+                  map.fitBounds(WCline.getBounds());
+              });
+
+              L.marker([45.5016889, -73.5672559], {
+                  icon: travel
+              }).addTo(map).bindPopup("Montreal<br /> 2017").on('click', function(e) {
+                  map.fitBounds(WCline.getBounds());
+              });
+
+              L.marker([42.3600825, -71.05888], {
+                  icon: travel
+              }).addTo(map).bindPopup("Boston<br /> 2017").on('click', function(e) {
+                  map.fitBounds(WCline.getBounds());
+              });
+
+
+
+
+              /** legend **/
+
+              var legend = L.control({
+                  position: 'topright'
+              });
+
+              legend.onAdd = function(map) {
+
+                  var div = L.DomUtil.create('div', 'legend');
+                  div.innerHTML += '<img src="{{ root_url }}/img/travel2.png"/> Places I visited (holiday)<br /><img src="{{ root_url }}/img/bucket.png"/>Places on my bucket list <br /><img src="{{ root_url }}/img/home.png"/>Places I lived & worked/studied<br /><img src="{{ root_url }}/img/plan.png"/>Places, that are already planned to travel to<br /><img src="{{ root_url }}/img/bycar.png"/>Roundtrip by car (done/planned)<br /><img src="{{ root_url }}/img/rect.png"/>Region planned for next trip';
+                  return div;
+              };
+
+
+              legend.addTo(map);
+
+
+              /** reset zoom button **/
+
+              L.easyButton('fa fa-globe fa-lg', function() {
+                  map.setView([30, 5.5], 2);
+              }).addTo(map);
+
+          </script>
+
+
+      </div>
+      <!--content ending-->
+
+      <!-- footer for futer links (disclaimer, contact, etc)-->
+      <div id="footer"></div>
+  </div>

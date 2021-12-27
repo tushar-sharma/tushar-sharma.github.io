@@ -1,0 +1,181 @@
+/**** reset 
+
+/**  Display:inline-block; für bilder in grid structure **/
+
+/**** page layout ***/
+
+
+#contenttable {
+    padding: 0 0 5px 5px;
+    width: 960px;
+    margin: 0 auto;
+    /*margin-top: 35px;*/
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+
+#header {
+    padding: 10px;
+    height: 50px;
+    background: url(../img/suhl-trans.png) no-repeat center;
+    /*  border-bottom: 1px solid #f05c36;
+    margin-left: 0 -5px;*/
+}
+
+
+#content {
+    width: 600px;
+    float: right;
+    padding: 10px;
+}
+
+#footer {
+    clear: both;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+i {}
+
+/**** links ****/
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #f05c36;
+}
+
+/**** content boxes classes ****/
+
+.content-place {
+    margin-left: 5px;
+    padding: 5px 5px 5px 0;
+}
+
+
+/*** leaflet ***/
+
+#map {
+    height: 470px;
+    margin: 5px 5px 25px 0;
+}
+
+.legend {
+    padding: 5px;
+    background-color: #efefef;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 260px;
+    line-height: 23px;
+}
+
+.legend img {
+    vertical-align: middle;
+    width: 20px;
+    margin-right: 5px;
+
+}
+
+.legendResp {
+    padding: 5px;
+    background-color: #efefef;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 260px;
+    line-height: 23px;
+    display: none;
+}
+
+.legendResp img {
+    vertical-align: middle;
+    width: 20px;
+    margin-right: 5px;
+}
+
+/***************** responsive *******************/
+
+/* cannot test any widescreen, 
+so it is hard to decide what would look good */
+
+/* for 980px or less */
+
+@media screen and (max-width: 980px) {
+
+    #contenttable {
+        width: 94%;
+    }
+    #content {
+        width: 65%;
+        box-sizing: border-box;
+    }
+}
+
+/* for 700px or less */
+
+@media screen and (max-width: 700px) {
+
+    #content {
+        width: auto;
+        float: none;
+    }
+
+}
+
+
+/* for 480px or less */
+
+@media screen and (max-width: 480px) {
+
+    #header {
+        height: auto;
+    }
+
+    #contenttable {
+        width: auto;
+        margin-top: 0;
+    }
+
+
+    .legend {
+        padding: 5px;
+        background-color: #efefef;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        width: 260px;
+        line-height: 23px;
+        display: none;
+    }
+
+    .legend img {
+        vertical-align: middle;
+        width: 20px;
+        margin-right: 5px;
+
+    }
+
+    .legendResp {
+        padding: 5px;
+        background-color: #efefef;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        width: auto;
+        line-height: 23px;
+        display: block;
+        margin-right: 5px;
+    }
+
+    .legendResp img {
+        vertical-align: middle;
+        width: 20px;
+        margin-right: 5px;
+    }
+
+
+}
