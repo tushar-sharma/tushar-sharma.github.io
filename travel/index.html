@@ -9,8 +9,8 @@ author: Tushar Sharma
 
 <link rel="stylesheet" href="{{ root_url }}/css/travel.css" />
 <!-- leaflet -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <!-- leaflet easybutton -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
 <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
@@ -138,9 +138,9 @@ author: Tushar Sharma
                   icon: travel
               }).addTo(map).bindPopup("Paris <br />1998");
 
-              L.marker([19.432608, -99.133209], {
+              L.marker([41.825226, -71.418884], {
                   icon: travel
-              }).addTo(map).bindPopup("Mexico city <br /> 2021");
+              }).addTo(map).bindPopup("Providence, RI,<br /> 2021");
 
               L.marker([51.508530, -0.076132], {
                   icon: travel
@@ -275,10 +275,6 @@ author: Tushar Sharma
                   icon: bucket
               }).addTo(map).bindPopup("Ireland");
 
-              L.marker([-38.416097, -63.616671999999994], {
-                  icon: bucket
-              }).addTo(map).bindPopup("Argentinia");
-
               L.marker([36.204824, 138.252924], {
                   icon: bucket
               }).addTo(map).bindPopup("Japan");
@@ -287,17 +283,9 @@ author: Tushar Sharma
                   icon: bucket
               }).addTo(map).bindPopup("Hawaii");
 
-              L.marker([-22.95764, 18.490409999999997], {
-                  icon: bucket
-              }).addTo(map).bindPopup("Namibia");
-
               L.marker([15.870032, 100.99254100000007], {
                   icon: bucket
               }).addTo(map).bindPopup("Thailand");
-
-              L.marker([-6.5247123, 35.7878438], {
-                  icon: bucket
-              }).addTo(map).bindPopup("Tanzania");
 
               /** round trips **/
 
