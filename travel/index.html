@@ -87,21 +87,19 @@ author: Tushar Sharma
 
               /* home */
 
-             L.marker([48.196857, 16.370766], {
+             L.marker([30.3165, 78.0322], {
                   icon: home
-              }).addTo(map).bindPopup("Vienna<br />2017");
+              }).addTo(map).bindPopup("Dehradun<br />1998-2008");
 
-               L.marker([-21.90833014006328, 149.40908432006836], {
+               L.marker([12.9716, 77.5946], {
                   icon: home
-              }).addTo(map).bindPopup("Carmila<br />2012").on('click', function(e) {
-                  map.fitBounds(ozline.getBounds());
-              });
+                }).addTo(map).bindPopup("Bangalore<br />2013-2015");
 
-              L.marker([-37.81361100000001, 144.96305600000005], {
+                L.marker([25.18254, 75.83907], {
                   icon: home
-              }).addTo(map).bindPopup("Melbourne <br /> 2011").on('click', function(e) {
-                  map.fitBounds(ozline.getBounds());
-              });
+                }).addTo(map).bindPopup("Kota<br />2008-2009");
+
+
 
               var germany = L.marker([51.165691, 10.451526000000058], {
                   icon: home
@@ -287,6 +285,11 @@ author: Tushar Sharma
               L.marker([15.870032, 100.99254100000007], {
                   icon: bucket
               }).addTo(map).bindPopup("Thailand");
+            
+
+              L.marker([12.8797, 121.7740], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Philippines");
 
               /** round trips **/
 
