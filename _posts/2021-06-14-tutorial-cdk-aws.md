@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gettting Started with AWS CDK 
+title: Getting Started with AWS CDK 
 category: blog
 tags:
 - aws
