@@ -29,7 +29,7 @@ author: Tushar Sharma
 
           <h1>Travel Bucket List</h1>
           <p>
-            "Wherever you go becomes a part of you somehow" - Anita Desai. 
+              Traveling is a huge part of my life. Those experiences had significant influences on my personality and decisions I made in life. For example, without the Work & Travel year in Australia I probably would have never gotten the idea to study Cartography.
           </p>
 
           <div class="legendResp">
@@ -85,27 +85,26 @@ author: Tushar Sharma
 
       /*** markers ***/
 
-        /* home */
+              /* home */
 
-        L.marker([30.3165, 78.0322], {
-             icon: home
-         }).addTo(map).bindPopup("Dehradun")
+             L.marker([30.3165, 78.0322], {
+                  icon: home
+              }).addTo(map).bindPopup("Dehradun<br />1998-2008");
 
-        L.marker([12.9716, 77.5946], {
-             icon: home
-        }).addTo(map).bindPopup("Bangalore")
-           
-        L.marker([25.18254, 75.83907], {
-             icon: home
-        }).addTo(map).bindPopup("Kota");
+               L.marker([12.9716, 77.5946], {
+                  icon: home
+                }).addTo(map).bindPopup("Bangalore<br />2013-2015");
 
-        L.marker([28.481216, 77.019135], {
-             icon: home
-        }).addTo(map).bindPopup("Gurugram");
+                L.marker([25.18254, 75.83907], {
+                  icon: home
+                }).addTo(map).bindPopup("Kota<br />2008-2009");
 
-        L.marker([31.0079, 77.0881], {
-             icon: home
-        }).addTo(map).bindPopup("Waknaghat");
+
+
+              var germany = L.marker([51.165691, 10.451526000000058], {
+                  icon: home
+              }).bindPopup("<b>Germany</b><br />Suhl: 1992-2011<br>Leipzig: 2012-2013<br />Dresden: 2013-2016<br />Munich: 2016-2017<br />Dresden: 2017-2019<br />Leipzig: since 2019").addTo(map);
+
 
               var dresden = L.marker([51.05040880000001,13.737262099999953], {icon: home}).bindPopup("Dresden<br />2013-2016<br />2017-2019");
               var suhl = L.marker([50.6076846,10.68812550000007], {icon: home}).bindPopup("Suhl <br /> 1992-2011");
@@ -149,11 +148,25 @@ author: Tushar Sharma
                   icon: travel
               }).addTo(map).bindPopup("Moskow <br /> 2008");
 
+              L.marker([54.3872666, 35.18890940000006], {
+                  icon: travel
+              }).addTo(map).bindPopup("Kaluga <br /> 2008");
+
+              L.marker([36.4340533, 28.2176379], {
+                  icon: travel
+              }).addTo(map).bindPopup("Rhodos <br /> 2008");
+
+              L.marker([36.8968908, 30.713323299999956], {
+                  icon: travel
+              }).addTo(map).bindPopup("Antalya <br /> 2009");
+
               L.marker([41.8724111, 12.48022489999994], {
                   icon: travel
               }).addTo(map).bindPopup("Rome <br /> 2016");
 
-
+              L.marker([30.4277547, -9.598107199999959], {
+                  icon: travel
+              }).addTo(map).bindPopup("Agadir <br /> 2000");
 
               L.marker([-33.8688197, 151.20929550000005], {
                   icon: travel
@@ -198,6 +211,10 @@ author: Tushar Sharma
               L.marker([45.1, 15.2], {
                   icon: travel
               }).addTo(map).bindPopup("Crotia <br /> 2008");
+
+              L.marker([27.9202202, -15.547437299999956], {
+                  icon: travel
+              }).addTo(map).bindPopup("Gran Canaria <br /> 2005");
 
               L.marker([47.63633769999999, 9.389244500000018], {
                   icon: travel
