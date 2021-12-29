@@ -35,7 +35,7 @@ Just a quick referesher to few concepts before we delve into AWS CDK
 
 2. **Constructs** are the basic building blocks of AWS CDK apps.
 
-3. **L1 construct** are named CfnXyz, where Xyz is name of the resource. They are low-level construct which directly represent cloudformatoin resources. 
+3. **L1 construct** are named CfnXyz, where Xyz is name of the resource. They are low-level construct which directly represent cloudformation resources. 
 
 4. **L2 construct** provide common boilerplates and glue logic. These will come with convenient defaults and reduces the amount of knowledge you need to know about them. 
 
