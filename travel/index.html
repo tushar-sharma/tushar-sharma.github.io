@@ -194,11 +194,6 @@ author: Tushar Sharma
                   map.fitBounds(ozline.getBounds());
               });
 
-              L.marker([23.1135925, -82.36659559999998], {
-                  icon: travel
-              }).addTo(map).bindPopup("Cuba Round Trip <br /> 2014").on('click', function(e) {
-                  map.fitBounds(cubaline.getBounds());
-              });
 
               L.marker([50.0755381, 14.43780049999998], {
                   icon: travel
@@ -292,21 +287,6 @@ author: Tushar Sharma
               }).addTo(map).bindPopup("Philippines");
 
               /** round trips **/
-
-              var cubatrip = [
-                  [22.6188131, -83.7066289],
-                  [23.1135925, -82.36659559999998],
-                  [23.179858, -81.18852930000003],
-                  [22.424398, -79.9416549],
-                  [22.1599753, -80.44377810000003],
-                  [21.7960343, -79.98081430000002],
-                  [21.3926035, -77.90531820000001],
-                  [20.01693, -75.83015369999998]
-              ];
-
-              var cubaline = L.polyline(cubatrip, {
-                  color: '#56832f'
-              }).addTo(map);
 
               var oztripcar = [
                   [-33.8688197, 151.20929550000005],
