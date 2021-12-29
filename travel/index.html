@@ -115,37 +115,6 @@ author: Tushar Sharma
                 }).addTo(map).bindPopup("Kota");
 
 
-
-              var germany = L.marker([51.165691, 10.451526000000058], {
-                  icon: home
-              }).bindPopup("<b>Germany</b><br />Suhl: 1992-2011<br>Leipzig: 2012-2013<br />Dresden: 2013-2016<br />Munich: 2016-2017<br />Dresden: 2017-2019<br />Leipzig: since 2019").addTo(map);
-
-
-              var dresden = L.marker([51.05040880000001,13.737262099999953], {icon: home}).bindPopup("Dresden<br />2013-2016<br />2017-2019");
-              var suhl = L.marker([50.6076846,10.68812550000007], {icon: home}).bindPopup("Suhl <br /> 1992-2011");
-               var leipzig = L.marker([51.3396955,12.373074699999961], {icon: home}).bindPopup("Leipzig<br />2012-2013<br />since 2019");
-              var munich = L.marker([48.1351253,11.581980599999952], {icon: home}).bindPopup("Munich <br />2016-2017");
-
-              var germanySpread = L.layerGroup([dresden, suhl, leipzig, munich]);
-              
-              map.on("zoomend", function(e){
-                  if(map.getZoom() < 5){
-                      if (map.hasLayer(germanySpread)) {
-                          germanySpread.remove();  
-                      }
-                      if (!map.hasLayer(germany)){
-                          germany.addTo(map);
-                      }
-                  } else {
-                      if (map.hasLayer(germany)) {
-                          germany.remove();  
-                      }
-                      if (!map.hasLayer(germanySpread)){
-                          germanySpread.addTo(map);
-                      }
-                  }
-              });
-
               /* travel */
 
               L.marker([19.432608, -99.133209], {
@@ -158,7 +127,7 @@ author: Tushar Sharma
 
               L.marker([41.8724111, 12.48022489999994], {
                   icon: bucket
-              }).addTo(map).bindPopup("Rome <br /> 2016");
+              }).addTo(map).bindPopup("Rome");
 
 
 
@@ -218,8 +187,20 @@ author: Tushar Sharma
                   [41.825226, -71.418884], //Providence RI
                   [42.361145, -71.057083] //Boston
               ]
+              var moodysTrip = [
+                  [40.883884, -74.055984], // Hackensack, NJ
+                  [35.227085, -80.843124] // Charlotte, NC
+              ]
 
               var brownLine = L.polyline(brownTrip, {
+                  color: '#56832f',
+                  weight: 3,
+                  opacity: 0.5,
+                  smoothFactor:1,
+              }).addTo(map);
+
+
+              var moodysLine = L.polyline(moodysTrip, {
                   color: '#56832f',
                   weight: 3,
                   opacity: 0.5,
@@ -244,6 +225,19 @@ author: Tushar Sharma
                   icon: car
               }).addTo(map).bindPopup("Boston").on('click', function(e) {
                   map.fitBounds(brownLine.getBounds());
+              });
+
+              L.marker([40.883884, -74.0435], {
+                  icon: car
+              }).addTo(map).bindPopup("Hackensack").on('click', function(e) {
+                  map.fitBounds(moodysLine.getBounds());
+              });
+
+
+              L.marker([35.227085, -80.843124], {
+                  icon: car
+              }).addTo(map).bindPopup("Charlotte").on('click', function(e) {
+                  map.fitBounds(moodysLine.getBounds());
               });
 
               /** legend **/
