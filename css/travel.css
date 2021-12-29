@@ -60,7 +60,7 @@ a:hover {
 /*** leaflet ***/
 
 #map {
-    height: 470px;
+    height: 670px; /*470  */
     margin: 5px 5px 25px 0;
 }
 

@@ -38,7 +38,6 @@ author: Tushar Sharma
               <img src="{{ root_url}}/img/home.png" />Places I lived & worked/studied<br />
               <img src="{{ root_url }}/img/plan.png" />Places, that are planned to travel to<br />
               <img src="{{ root_url }}/img/car.png" />Roundtrip by car (done/planned)<br />
-              <img src="{{ root_url }}/img/rect.png" />Region planned for next trip
           </div>
 
           <div id="map"></div>
@@ -158,53 +157,10 @@ author: Tushar Sharma
               }).addTo(map).bindPopup("Activity<br>skydiving at Sussex, NJ");
 
               L.marker([41.8724111, 12.48022489999994], {
-                  icon: travel
+                  icon: bucket
               }).addTo(map).bindPopup("Rome <br /> 2016");
 
-              L.marker([-33.8688197, 151.20929550000005], {
-                  icon: travel
-              }).addTo(map).bindPopup("Sydney <br /> 2011").on('click', function(e) {
-                  map.fitBounds(ozline.getBounds());
-              });
 
-              L.marker([-12.4634403, 130.84564180000007], {
-                  icon: travel
-              }).addTo(map).bindPopup("Darwin <br /> 2012").on('click', function(e) {
-                  map.fitBounds(ozline.getBounds());
-              });
-
-              L.marker([-25.3444277, 131.03688220000004], {
-                  icon: travel
-              }).addTo(map).bindPopup("Ayers Rock <br /> 2012").on('click', function(e) {
-                  map.fitBounds(ozline.getBounds());
-              });
-
-              L.marker([-34.92849890000001, 138.60074559999998], {
-                  icon: travel
-              }).addTo(map).bindPopup("Adelaide <br /> 2012").on('click', function(e) {
-                  map.fitBounds(ozline.getBounds());
-              });
-
-              L.marker([-27.4697707, 153.02512350000006], {
-                  icon: travel
-              }).addTo(map).bindPopup("Brisbane <br /> 2012").on('click', function(e) {
-                  map.fitBounds(ozline.getBounds());
-              });
-
-              /* planned trips */
-
-              var nz = L.circle([-41.500083, 172.8344077], {
-                  color: '#eb5c37',
-                  fillColor: '#eb5c37',
-                  fillOpacity: 0.2,
-                  radius: 1000000
-              }).addTo(map);
-
-              L.marker([-41.500083, 172.8344077], {
-                  icon: plan
-              }).addTo(map).bindPopup("<center><b>New Zealand</b></center>").on('click', function(e) {
-                  map.fitBounds(nz.getBounds());
-              });
 
               /* bucket */
 
@@ -244,57 +200,6 @@ author: Tushar Sharma
               }).addTo(map).bindPopup("Philippines");
 
               /** round trips **/
-
-              var oztripcar = [
-                  [-33.8688197, 151.20929550000005],
-                  [-32.92833299999999, 151.78166699999997],
-                  [-31.440614816907722, 152.9022216796875],
-                  [-30.298440690448423, 153.13430786132812],
-                  [-28.652271596973495, 153.60809326171875],
-                  [-27.4697707, 153.02512350000006],
-                  [-27.3462945, 153.42360069999995],
-                  [-27.4697707, 153.02512350000006],
-                  [-24.869243880979464, 152.34466552734375],
-                  [-23.844645277930876, 151.25839233398438],
-                  [-23.36772368046494, 150.52642822265625],
-                  [-21.92928803370895, 149.4140625],
-                  [-21.151371759106546, 149.16824340820312],
-                  [-19.288072735198604, 146.76910400390625],
-                  [-17.266990359738266, 145.47958374023438],
-                  [-16.932281871996253, 145.75286865234375],
-                  [-17.76124434620424, 141.097412109375],
-                  [-16.121820834009004, 136.329345703125],
-                  [-16.280071538845558, 133.41796875],
-                  [-14.500637508501296, 132.330322265625],
-                  [-12.696078579780144, 132.857666015625],
-                  [-12.481634563854522, 130.858154296875],
-                  [-14.500637508501296, 132.330322265625],
-                  [-16.280071538845558, 133.41796875],
-                  [-19.499737441220308, 134.219970703125],
-                  [-23.71696717939017, 133.934326171875],
-                  [-23.696848705100226, 132.440185546875],
-                  [-24.319069572118238, 133.472900390625],
-                  [-25.276492369052995, 133.2421875],
-                  [-25.31622375174437, 130.968017578125],
-                  [-25.276492369052995, 133.2421875],
-                  [-29.077297405752212, 134.769287109375],
-                  [-29.684235927171855, 138.09814453125],
-                  [-31.377089060550468, 138.5980224609375],
-                  [-34.93638352447659, 138.614501953125]
-              ];
-
-              var ozline = L.polyline(oztripcar, {
-                  color: '#56832f'
-              }).addTo(map);
-
-                var oztripfly = [
-                     [-37.81361100000001,144.96305600000005],
-                    [-27.4697707,153.02512350000006],
-                    [-33.8688197,151.20929550000005]
-                ];
-                
-                var ozflyline = L.polyline(oztripfly, {color: '#9ab973'}).addTo(map);
- 
               //courtesy ~ https://www.latlong.net/place/ohio-usa-5522.html
 
 
@@ -350,7 +255,7 @@ author: Tushar Sharma
               legend.onAdd = function(map) {
 
                   var div = L.DomUtil.create('div', 'legend');
-                  div.innerHTML += '<img src="{{ root_url }}/img/plane.png"/> Places I visited<br /><img src="{{ root_url }}/img/bucket.png"/>Places on my bucket list <br /><img src="{{ root_url }}/img/home.png"/>Places I lived & worked/studied<br /><img src="{{ root_url }}/img/plan.png"/>Places, that are already planned to travel to<br /><img src="{{ root_url }}/img/activities.png"/>Activities<br><img src="{{ root_url }}/img/car.png"/>Trip by car<br /><img src="{{ root_url }}/img/rect.png"/>Region planned for next trip';
+                  div.innerHTML += '<img src="{{ root_url }}/img/plane.png"/> Places I visited<br /><img src="{{ root_url }}/img/bucket.png"/>Places on my bucket list <br /><img src="{{ root_url }}/img/home.png"/>Places I lived & worked/studied<br /><img src="{{ root_url }}/img/plan.png"/>Places, that are already planned to travel to<br /><img src="{{ root_url }}/img/activities.png"/>Activities<br><img src="{{ root_url }}/img/car.png"/>Trip by car';
                   return div;
               };
 
