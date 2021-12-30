@@ -5,10 +5,10 @@ category: blog
 tags:
 - physics
 - electron
-name: suicide-electron
-thumb: https://i.imgur.com/yDzIeWz.jpg
+name: wild-marriage
+thumb: https://i.imgur.com/DfhLqvA.jpg
 summary: Mutual Suicide of Electron
-image: https://i.imgur.com/yDzIeWz.jpg
+image: https://i.imgur.com/DfhLqvA.jpg
 author: Tushar Sharma
 ---
 
@@ -18,6 +18,9 @@ There are a total of numCourses courses you have to take, labeled from 0 to numC
 
 <!--begin_of_post -->
 
+<center>
+<img src="https://i.imgur.com/DfhLqvA.jpg" alt="marriage photo"/>
+</center>
 
 Interesting thing about atom. It consist of nucleus in the center. The electrons are revolving around the nucleus. The nucleus is made of protons and neutrons. Protons are positively charged. Neutrons are neutral. Electrons have negative charge. 
 
@@ -34,8 +37,11 @@ Is there a negative proton can exist?
 what happens when an electron collide with an positron. It result in their annihilation and give birth to an intensive electromagnetic radition (gamma rays which carry energy of both particles)
 
 <!--end_of_post -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-
+<script>
+alert('test');
+</script>
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
