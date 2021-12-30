@@ -12,36 +12,26 @@ image: https://i.imgur.com/DfhLqvA.jpg
 author: Tushar Sharma
 ---
 
-There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [a<sub>i</sub>, b<sub>i</sub>] indicates that you must take course b<sub>i</sub> first if you want to take course a<sub>i</sub>.<!-- truncate_here -->
+"All marriages are made in heaven" is a old adage that is quite prevalent atleast among the happy couples. Whether or not god feign interest in our lives, is still unfathomable. However heaven rarely erupts in fury to consummate a marriage, albeit sometimes it does.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <!--begin_of_post -->
 
+"All marriages are made in heaven" is a old adage that is quite prevalent atleast among the happy couples. Whether or not god feign interest in our lives, is still unfathomable. However heaven rarely erupts in fury to consummate a marriage, albeit sometimes it does.
+
 <center>
 <img src="https://i.imgur.com/DfhLqvA.jpg" alt="marriage photo"/>
-</center>
-
-Interesting thing about atom. It consist of nucleus in the center. The electrons are revolving around the nucleus. The nucleus is made of protons and neutrons. Protons are positively charged. Neutrons are neutral. Electrons have negative charge. 
-
-Now protons and neutrons are not fundamental particle unlike electron. Proton can lose positive charge and become neutron. Also neutron can acquire positive charge to become protons. How does proton change into neutron and vice versa? 
+</center><br>
 
 
-? Why cant neutron become an electron  ?
+What's a marriage? A legal binding or a union of two souls. Some animals are monogamous for life like gibbons without the need of institution of marriage. A pair is formed in a marriage amidst pomp and rejuvenation. Ironically some marriages annihilates a pair with equal scintillation.
 
-Protons and neutrons are made of more fundamental particle called quarks. The quarks are glue together by Gluon. 
-
-what is a positive electron? similar to negative electron except sign of their charge. 
-Is there a negative proton can exist? 
-
-what happens when an electron collide with an positron. It result in their annihilation and give birth to an intensive electromagnetic radition (gamma rays which carry energy of both particles)
+**Wild marriage** was coined by Max Born in his book Atomic Physics<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
 
 <!--end_of_post -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<script>
-alert('test');
-</script>
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
