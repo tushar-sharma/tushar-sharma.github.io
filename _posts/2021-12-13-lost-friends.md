@@ -12,10 +12,10 @@ image: https://i.imgur.com/imYXtDU.jpg
 author: Tushar Sharma
 ---
 
-Today I walked a little further,<br>
-Few more steps than yesterday,<br>
-For I love walking,<br>
-And I have walked all my life.<!-- truncate_here -->
+Today I walked a little further, <br>
+further than yesterday.<br>
+while my feet ache and plead,<br>
+I dragged 'em without paying any heed.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
@@ -26,40 +26,32 @@ And I have walked all my life.<!-- truncate_here -->
  <img src="https://i.imgur.com/imYXtDU.jpg"  />
 </p>
 
+Today I walked a little further, <br>
+further than yesterday.<br>
+while my feet ache and plead,<br>
+I dragged 'em without paying any heed.<br>
 
-Today I walked a little further,<br>
-Few more steps than yesterday,<br>
-For I love walking,<br>
-And I have walked all my life.<br>
-
-My walk is not straight,<br>
-Often I stray from the path,<br>
 Lost in thoughts of wilderness,<br>
 Caged in the civilization of life.<br>
+I often stray away from a well-beaten path,<br>
+only to invite a flury of ridicule and wrath.<br>
 
-Today I walked a little further,<br>
-Few more steps than yesterday,<br>
-For the people that I have met,<br>
-Mostly I have lost them in the way.<br>
+Sometimes I have a urge to pause, <br>
+To glance over my shoulders, <br>
+spot silhouettes of old friends,<br>
+waiting to animate to make amend.<br>
 
-Often I have a urge to pause,<br>
-To glance over my shoulders,<br>
-Only if my eyes could greet,<br>
-Some old friend miles yonder.<br>
+Like an irreversible arrow of time,<br>
+Aging sucks memories into oblivion,<br>
+While the clock’s hand marches ahead, <br>
+it obliterates lost friends and words unsaid.<br> 
 
-But the current of life seldom leaves,<br>
-Footprints of yesteryears,<br>
-And all those people I knew,<br>
-Dissolved into the mist of memories.<br>
-
-As the clock's hand marches ahead,<br>
-and the fountain of youth dissipates, <br>
-brings blight on head's harvest,<br>
-Spilling the fountain of youth<br>
-Of those, lost friends and words unsaid,<br>
-memories begin to dwindle under a spell of long  <br>
-
+Supernova is an epitaph of a dying star,<br>
+For it has splendid quanity of fuel to squander,<br>
+Since I am too poor to afford a grandeur farewell,<br>
+hope my lost friends still harbour my memories well.<br>
 <!--end_of_post -->
+
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
 </nav>
