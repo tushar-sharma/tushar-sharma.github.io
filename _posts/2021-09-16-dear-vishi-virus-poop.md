@@ -14,6 +14,10 @@ published: true
 When the alarm clock breaks my slumber, I roll down on my bed, blindly crawling towards my alarm clock as if it was a bomb to diffuse it. After multiple snoozes, I relinquished my dreams and come to my senses. Gulping water after I wake up is my first activity. Next, I excuse myself to the bathroom for “nature call”. All living things from a simple bacteria to a giant dinosaur needs to perform two basic life function; eat and excrete.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
+{% include embed-audio.html src="/sounds/2021-09-16-dear-vishi-virus-poop.mp3" %}<br>
+
+<!--begin_of_post -->
+
 
 When the alarm clock breaks my slumber, I roll down on my bed, blindly crawling towards my alarm clock as if it was a bomb to diffuse it. After multiple snoozes, I relinquished my dreams and come to my senses. Gulping water after I wake up is my first activity. Next, I excuse myself to the bathroom for “nature call”. All living things from a simple bacteria to a giant dinosaur needs to perform two basic life function; eat and excrete.
 
@@ -25,15 +29,12 @@ It’s a bundle of genetic material (RNA or DNA) wrapped in a protein capsule ca
 
 [Van Leeuwenhoek](https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek) is often noted as **"father of microbiology"**. He was able to observe many microbes like bacteria around 1676 using single-lensed microscope. However viruses are 100 times smaller than bacteria usually in the range of 100 nanometer. Visible light has a wavelength of 400-700 nanometer. So we cannot see any object less than half of the wavelength of light. So anything smaller than 200-350 nanometer is not visible under optical microscope. Hence electron microscope are used to probe the structure of a virus. 
 
-
-
 <br>
 <p>
 <center>
 <img src="https://www.researchgate.net/profile/Pedro-Junger/publication/344394476/figure/fig1/AS:940202503725056@1601173153039/Viruses-are-extremely-small-20-200-nm-smaller-than-bacterial-cells-1000-nm-which.png" alt="breathing image">
 </center>
 </p>
-
 
 
 
@@ -67,6 +68,8 @@ Viruses are the most sophisticated parasites that infects all living things. How
 Science has enabled humans to escape the perilous life of the cave and settle into modern human civilization. The comforts of modern human civilization offer us protection from predators like lions or wolves. Humans in modern cities no longer fear being devoured by giant predators but are vulnerable from invisible minuscule cellular and acellular microorganisms. Winning an **arm race** against viruses for humans still appears to be a far-fetched dream.
 
   
+<!--end_of_post -->
+
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
 </nav>
