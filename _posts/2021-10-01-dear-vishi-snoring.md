@@ -8,6 +8,7 @@ tags:
   - apnea
   - diary
   - rambling
+  - audio
 name: snoring
 thumb: https://i.imgur.com/Dos9r5p.jpeg
 published: true
