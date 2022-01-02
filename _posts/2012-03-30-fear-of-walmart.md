@@ -2,7 +2,7 @@
 layout: post
 title: Fear of Walmart
 category: blog
-tags: Walmart FDI
+tags: Walmart FDI India
 name: fear-of-walmart
 summary: Fear of Wallmart due to increase in FDI.
 image: https://i.imgur.com/yXNTzgN.jpg
@@ -18,7 +18,7 @@ After a ruckus the government agreed to roll back the proposed decision to incre
 
 <p>
 <center>
-<img src="{{ root_url }}/img/walmart.jpg" >
+<img alt="Image of retail shop" src="https://i.imgur.com/yXNTzgN.jpg" >
 </center>
 </p>
 
