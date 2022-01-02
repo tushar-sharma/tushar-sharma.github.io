@@ -2,7 +2,7 @@
 layout: post
 title: Romance with Moon
 category: blog
-tags: poetry romance moon
+tags: poetry romance moon audio
 name: romance-moon
 thumb: /img/moon.jpg
 summary: My musing in my solitude.

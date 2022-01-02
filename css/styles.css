@@ -263,3 +263,23 @@ span.pagination-step {
     width: auto;
   }
 }
+
+/** audio **/
+/* Courtesy : https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
+*/
+.icon {
+  display: inline-flex;
+  align-self: center;
+  color:#39c;
+}
+
+.icon svg, .icon img {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+.icon.baseline svg, .icon img {
+  top: .125em;
+  position: relative;
+}
