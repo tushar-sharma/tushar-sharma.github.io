@@ -4,24 +4,27 @@ title: Demon Haunted World's review part 1
 category: blog
 tags:
 - pseudoscience
-- carl sagan
 - books
 - review
-- cfc
 - religion
 name: demon-haunted-1
-thumb: https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/0/2/5/5/1001004000945520.jpg
+thumb: https://i.imgur.com/jqKRwJx.jpg
+image: https://i.imgur.com/jqKRwJx.jpg
 ---
 
 <p>This is my Part 1 of the review of Carl Sagan's book, Demon-Haunted World. This is more of my commentary rather than a review of the book.</p>
 
-I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience & misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan.<!-- truncate_here -->
+I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience and misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 This is my Part 1 of the review of Carl Sagan's book, Demon-Haunted World. This is more of my commentary rather than a review of the book.
 
-I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience & misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan.
+<center>
+<img src="https://i.imgur.com/jqKRwJx.jpg" alt="Book cover image"/>
+</center><br>
+
+I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience and misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan.
 
 One day, Carl Sagan is received at the airport by his driver. On learning that he is a scientist, the driver is curious to ask lots of scientific questions? Are aliens (UFO) hiding in the Air Force Base? Was an advanced civilization living in an island Atlantis only to be destroyed by the flood? Are the prophecy of Nostradamus accurate?
 
