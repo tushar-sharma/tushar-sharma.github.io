@@ -4,10 +4,10 @@ title: Fear of Walmart
 category: blog
 tags: Walmart FDI
 name: fear-of-walmart
-thumb: /img/walmart.jpg
 summary: Fear of Wallmart due to increase in FDI.
-image: /img/walmart.jpg
+image: https://i.imgur.com/yXNTzgN.jpg
 author: Tushar Sharma
+thumb: https://i.imgur.com/yXNTzgN.jpg
 ---
 
 After a ruckus the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart.<!-- truncate_here -->
