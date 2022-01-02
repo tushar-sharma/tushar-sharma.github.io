@@ -5,6 +5,7 @@ category: blog
 tags:
 - poetry
 - friends
+- audio
 name: lost-friends
 thumb: https://i.imgur.com/imYXtDU.jpg
 summary: My musing in my solitude.

@@ -6,6 +6,7 @@ tags:
   - virus
   - diary
   - rambling
+  - audio
 name: virus-poop
 thumb: https://www.connecticare.com/covid19/vaccine-information/vaccine-safety/what-is-a-virus/_jcr_content/root/responsivegrid/article_header/hero-image.coreimg.jpeg/1613067254150/covid-vaccine-images-4.jpeg
 published: true
