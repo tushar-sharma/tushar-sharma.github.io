@@ -9,7 +9,10 @@ tags:
 - bangalore
 - sci-fi
 name: random-stranger
-thumb: /img/india-traffic.jpg
+thumb: https://i.imgur.com/VqSSlqD.jpg
+author: Tushar Sharma
+image: https://i.imgur.com/VqSSlqD.jpg
+summary: A lonely day in Bangalore.
 ---
 
 It was just another day in Bangalore. I caught the bus from the /*Kormangala* bus depot. Amid exhausting heat & nudging elbows, I somehow managed to grab a seat in the bus. Securing a seat in the Indian bus during peak time is considered a fortune. This often attracts resentful eyes. However my Indian genes have made me immune to both pani puri & judgment.<!-- truncate_here -->
@@ -18,13 +21,17 @@ It was just another day in Bangalore. I caught the bus from the /*Kormangala* bu
 
 It was just another day in Bangalore. I caught the bus from the *Kormangala* bus depot. Amid exhausting heat & nudging elbows, I somehow managed to grab a seat in the bus. Securing a seat in the Indian bus during peak time is considered a fortune. This often attracts resentful eyes. However my Indian genes have made me immune to both [pani puri](https://en.wikipedia.org/wiki/Panipuri) & judgment. 
 
+<center>
+<img src="https://i.imgur.com/VqSSlqD.jpg" alt="Random stranger" />
+</center><br>
+
 If you are lucky, you could get a window seat. This saves you from claustrophobia of the overcrowded isles. And today was my lucky day. I happily slumped down into my seat and peeped out of my window catching some glimpse of just another life on just another `Indian road`.
 
 For outside world, India is chaotic. They imagine cars driving in zigzag manner on roads, performing dangerous maneuver to escape potholes, honking relentlessly with drivers eager to engage in fights with each other. It is remnant image of [Slumdog Millionaire](https://en.wikipedia.org/wiki/Slumdog_Millionaire) where city is ripe with frantic traffic, begging children & ostentatious few rich. Though I resent stereotypes, however sometimes this is true.
 
-<p> 
+<center> 
 <img src="{{ root_url }}/img/india-traffic.jpg" >
-</p>
+</center><br>
 
 Traffic in India at times do turn messy. Traffic overflows into pavements leading the vehicles to compete with the pedestrians for space. However pedestrians in India are `second class` citizen still struggling to get their rights. They are always honked at disdainfully by the drivers. Zebra crossing is often a `piece of art` designed for foreigners to make them feel at home. [Richard Stallman](https://en.wikipedia.org/wiki/Richard_Stallman), eminent computer programmer, has boasted in his [speaking condition](https://github.com/ddol/rre-rms/blob/master/rider.txt), "I have crossed streets without assistance even in the chaotic traffic of Bangalore and Delhi. Please just leave me alone when I cross streets."
 
