@@ -5,9 +5,10 @@ category: blog
 tags: 
 - emacs
 - editor
-- code
 name: never-close-emacs
 thumb: /img/emacs.png
+image: /img/emacs.png
+summary: Tips and tricks in Emacs.
 featuredPost: true
 ---
 
