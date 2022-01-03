@@ -142,7 +142,7 @@ If you love *LaTeX*, then there are more reasons to love `org mode`. You could i
 
 If you happen to maintain a personal diary, you must be paranoid about it's secrecy. Emacs could be used to store your personal information. It uses `GNU GPG` to save the file. Open any file in emacs with `gpg` extension.To save it, press `C-s` which asks for which type of encryption method to use. Just use the default and press OK. This would prompt for a passphrase for saving. 
 
-![secretGPG](/img/secretGPG.png "GPGa")
+![secretGPG](/img/secretGPG.png "GPG")
 
 #### Emacs for Playing Music
 
