@@ -32,7 +32,7 @@ author: Tushar Sharma
      /* get the quotes */
      var textQuote = "";
      if (typeof quoteArr[1] !== 'undefined') {
-       textQuote = '"' + quoteArr[1] + '"';
+       textQuote = '"' + quoteArr[1].replace(/\<br\>/g,"\n")  + '"';
      }
 
      /* get the author */
