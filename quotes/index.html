@@ -9,8 +9,16 @@ author: Tushar Sharma
 
 <script src="{{ root_url}}/js/jquery.text-effects.js"></script>
 <script type="text/javascript">
+  var timer;
+
+  function quotesGet(defaultValue) {
+
   /* read quotes from file */
   jQuery.get('/../quotes.txt', function(data) {
+
+    document.getElementById("quote").innerHTML = "";
+    clearInterval(timer);
+
     var quotes = data.split("\n");
     //pick a random quote
     var idx;
@@ -43,7 +51,10 @@ author: Tushar Sharma
       $('.twitter-button').attr("href", 'https://twitter.com/intent/tweet?text=' + tweetText);
 
     });
-
+  }
+$(document).ready(function() {
+    quotesGet();
+});
 </script>
 
 
@@ -53,7 +64,7 @@ author: Tushar Sharma
 <div style="white-space:pre-wrap;overflow-x: hidden;border-top: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;">
 <div class="cl" id="quote"></div>
     <div style="float:right;">
-        &nbsp;<a class="mytag" style="font-size:18px;" onclick="window.location.reload();return false;" href="#">next</a>&nbsp;&nbsp;&nbsp;<a class="twitter-button mytag" target="_blank" style="font-size:18px" href="https://twitter.com/intent/tweet?text=">tweet</a>
+        &nbsp;<a class="mytag" style="font-size:18px;" href="javascript:quotesGet();">next</a>&nbsp;&nbsp;&nbsp;<a class="twitter-button mytag" target="_blank" style="font-size:18px" href="https://twitter.com/intent/tweet?text=">tweet</a>
     </div>
 </div>
 

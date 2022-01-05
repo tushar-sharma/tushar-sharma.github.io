@@ -45,10 +45,10 @@
     };
     
     $.fn.typewriter = function() {
-        this.each(function() {
+        this.each(function() {  
             var $ele = $(this), str = $ele.text(), progress = 0;
             $ele.text('');
-            var timer = setInterval(function() {
+            timer = setInterval(function() {
                 $ele.text(str.substring(0, progress++) + (progress & 1 ? '_' : ''));
                 if (progress >= str.length) clearInterval(timer);
             }, 50);
