@@ -6,6 +6,7 @@ image: https://i.imgur.com/RwZdX35.jpg
 author: Tushar Sharma
 ---
 
+
 <script src="{{ root_url}}/js/jquery.text-effects.js"></script>
 <script type="text/javascript">
   /* read quotes from file */
@@ -23,7 +24,7 @@ author: Tushar Sharma
      /* get the quotes */
      var textQuote = "";
      if (typeof quoteArr[1] !== 'undefined') {
-       textQuote = "<i class=\"cl icon-quote-left\"></i>" + quoteArr[1] + "<i class=\"cl icon-quote-right\"></i>";
+       textQuote = '"' + quoteArr[1] + '"';
      }
 
      /* get the author */
@@ -46,11 +47,13 @@ author: Tushar Sharma
 </script>
 
 
+<h2 class="entry-title">Random Quotes</h2>
+<br>
+<br>
+<div style="white-space:pre-wrap;overflow-x: hidden;border-top: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;">
+<div class="cl" id="quote"></div>
+    <div style="float:right;">
+        &nbsp;<a class="mytag" style="font-size:18px;" onclick="window.location.reload();return false;" href="#">next</a>&nbsp;&nbsp;&nbsp;<a class="twitter-button mytag" style="font-size:18px" href="https://twitter.com/intent/tweet?text=">tweet</a>
+    </div>
+</div>
 
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-      <td width="128" align="left" valign="top"><img src="img/imageSmall2.png" width="80" height="80" /></td>
-      <td class="cl" id="quote"><header><h2>&quot;Innocence experiences quantum creativity&quot;&nbsp;&nbsp;</h2></header></td>
-  </tr>
-</table>
-&nbsp;<a class="mytag" style="font-size:14px" onclick="window.location.reload();return false;" href="#">next</a>&nbsp;&nbsp;&nbsp;<a class="twitter-button mytag" style="font-size:14px" href="https://twitter.com/intent/tweet?text=">tweet</a>
