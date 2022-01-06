@@ -416,7 +416,7 @@ Feed the masses, eat with the classes.
 "When you light a candle, you also cast a shadow" - Ursula K. Le Guin
 "Light is the left hand of darkness, and darkness the right hand of light. Two are one, life and death, lying, together like lovers in kemmer, like hands joined together, like the end and the way" -  Ursula K. Le Guin, The Left Hand of Darkness
 "In God we trust, all others must bring data" - W. Edwards Deming
-"dil nā-umīd to nahīñ,<br>nākām hī to hai,<br>lambī hai ġham kī shaam,<br>magar shaam hī to hai" - Faiz Ahmed Faiz (Traslation: I haven't lost hope,<br>but just a fight,<br>that's all;<br>the night of suffering lengthens,<br>but it is just a night, that’s all)
+"dil nā-umīd to nahīñ,<br>nākām hī to hai,<br>lambī hai ġham kī shaam,<br>magar shaam hī to hai" - Faiz Ahmed Faiz <br>(Translation: I haven't lost hope,<br>but just a fight,<br>that's all;<br>the night of suffering lengthens,<br>but it is just a night, that’s all)
 "What's in a name? that which we call a rose By any other name would smell as sweet" - William Shakespeare
 "All photographs are accurate. None of them is the truth" - Richard Avedon
 "They see only their own shadows, or the shadows of one another, which the fire throws on the opposite wall of the cave?" - Plato
