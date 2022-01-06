@@ -217,7 +217,7 @@ https://muffinman.io/blog/custom-jekyll-pagination/
 }
 
 .pagination a:hover {
-  background: #ddd;
+  background: #39c;
   color: #fff;
 }
 
@@ -247,7 +247,7 @@ span.pagination-step {
 }
 
 .pagination .active {
-  background: #ddd;
+  background: #39c;
   color: #fff;
 }
 
