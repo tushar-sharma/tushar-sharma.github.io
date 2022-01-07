@@ -4,7 +4,7 @@ title: Dear Vishi, have you seen a ghost?
 category: blog
 tags:
   - diary
-  - rambling
+  - letters
   - infrasound
 name: dear-vishi
 thumb: >-
