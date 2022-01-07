@@ -41,7 +41,9 @@ header{width:20%;height:100%;
     float:left;position:relative;overflow:auto;
     padding-left:10%; padding-right:5%;}
 
-section{width:50%;float:left;padding-right:5%; padding-bottom:50px;}
+section{width:50%;float:left;padding-right:5%; padding-bottom:50px;
+	max-width: 800px;
+}
 
 small{font-size:16px;color:#888}
 
@@ -58,24 +60,13 @@ header ul{
     width:240px;
 }
 
-header li{width:89px;float:left;border-right:1px solid #d2d2d2;height:40px}
-
-header ul a{line-height:1;font-size:16px;color:#999;display:block;text-align:center;padding-top:6px;height:40px}
-
-strong{color:#222;font-weight:700}
-
-header ul li + li{width:88px;border-left:1px solid #fff}
-
-header ul li + li + li{border-right:none;width:89px}
-
-header ul a strong{font-size:13px;display:block;color:#222}
-
 
 hr{border:0;background:#e5e5e5;height:1px;margin:0 0 20px}footer{bottom:0}@media print,screen and (max-width: 960px){div.wrapper{width:auto;margin:0}
 
 header,section,footer{float:none;position:static;width:auto}section{border:1px solid #e5e5e5;border-width:1px 0;padding:20px 0;margin:0 0 20px}
 
-header a small{display:inline}header ul{position:absolute;right:50px;top:52px}}@media print,screen and (max-width: 600px){body{word-wrap:break-word}header{padding:0}
+header a small{display:inline}
+header ul{position:absolute;right:50px;top:52px}}@media print,screen and (max-width: 600px){body{word-wrap:break-word}header{padding:0}
 
 header ul,header p.view{position:static}pre,code{word-wrap:break-word}}@media print{body{padding:15px;font-size:16pt;color:#444}}
 
@@ -126,7 +117,7 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 
 /* Better styles for embedding GitHub Gists */
 .gist .blob-code-inner{
-  font-size:16px !important; 
+  font-size:16px !important;
 }
 .gist-meta {
   display: none !important;
@@ -201,10 +192,10 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     margin-left:5px;border-radius:1px;animation:cursor 1s infinite;
 }@media(prefers-reduced-motion:reduce){.logo__cursor{animation:none}}@keyframes cursor{0%{opacity:0}50%{opacity:1}100%{opacity:0}}.menu{background:#fafafa;border-right:1px solid;margin-right:18px;z-index:9999}
 
-/** pagination 
-courtesy ~ 
+/** pagination
+courtesy ~
 https://www.amitmerchant.com/reverie/
-https://muffinman.io/blog/custom-jekyll-pagination/          
+https://muffinman.io/blog/custom-jekyll-pagination/
 
 **/
 .pagination-wrapper {
@@ -247,7 +238,7 @@ span.pagination-step {
 }
 
 .pagination .active {
-  background: #ddd;
+  background: #39c;
   color: #fff;
 }
 
@@ -285,3 +276,88 @@ span.pagination-step {
 }
 
 .cl{ color: rgb(51, 153, 204);}
+
+/* navbar */
+
+
+.navbar-nav{
+    left: 0;
+    clear:both;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    background: white;
+    color: #39c;
+    position: relative;
+    overflow-x: auto;
+    word-wrap: break-word;
+}
+
+/*https://codepen.io/tdevine33/pen/CnDyv */
+
+.main-nav ul {
+    background: white;
+    text-decoration: none;
+    color: #000;
+    float:left;
+  }
+
+  .main-nav a {
+    color: #DFDBD9;
+    font: 300 1.125em "Source Sans Pro", Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    padding:15px 30px;
+    text-decoration: none;
+    color: #000;
+
+  }
+  .main-nav a:hover {
+    color: #000;
+  }
+
+  .list-hover-slide li {
+    position: relative;
+    overflow: hidden;
+    line-height: 140%;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    color: #000;
+  }
+
+  .list-hover-slide a {
+    display: block;
+    position: relative;
+    z-index: 0;
+    transition: .35s ease color;
+    text-decoration: none;
+    border-bottom: none !important;
+    color: #000;
+  }
+  .list-hover-slide a:hover {
+       color: #ddd !important;
+   }
+  .list-hover-slide a:before {
+    content: '';
+    display: block;
+    z-index: -1;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-right: solid 5px #39c;
+    background: #39c;
+    transition: .35s ease left;
+    color: #fff;
+
+  }
+  .list-hover-slide a:hover:after {
+      color:white;
+      width:100%;
+  }
+  .list-hover-slide a.is-current:before, .list-hover-slide a:hover:before {
+    left: 0;
+    color: #fff;
+  }
