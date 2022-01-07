@@ -276,3 +276,88 @@ span.pagination-step {
 }
 
 .cl{ color: rgb(51, 153, 204);}
+
+/* navbar */
+
+
+.navbar-nav{
+    left: 0;
+    clear:both;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    background: white;
+    color: #39c;
+    position: relative;
+    overflow-x: auto;
+    word-wrap: break-word;
+}
+
+/*https://codepen.io/tdevine33/pen/CnDyv */
+
+.main-nav ul {
+    background: white;
+    text-decoration: none;
+    color: #000;
+    float:left;
+  }
+
+  .main-nav a {
+    color: #DFDBD9;
+    font: 300 1.125em "Source Sans Pro", Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    padding:15px 30px;
+    text-decoration: none;
+    color: #000;
+
+  }
+  .main-nav a:hover {
+    color: #000;
+  }
+
+  .list-hover-slide li {
+    position: relative;
+    overflow: hidden;
+    line-height: 140%;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    color: #000;
+  }
+
+  .list-hover-slide a {
+    display: block;
+    position: relative;
+    z-index: 0;
+    transition: .35s ease color;
+    text-decoration: none;
+    border-bottom: none !important;
+    color: #000;
+  }
+  .list-hover-slide a:hover {
+       color: #ddd !important;
+   }
+  .list-hover-slide a:before {
+    content: '';
+    display: block;
+    z-index: -1;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-right: solid 5px #39c;
+    background: #39c;
+    transition: .35s ease left;
+    color: #fff;
+
+  }
+  .list-hover-slide a:hover:after {
+      color:white;
+      width:100%;
+  }
+  .list-hover-slide a.is-current:before, .list-hover-slide a:hover:before {
+    left: 0;
+    color: #fff;
+  }
