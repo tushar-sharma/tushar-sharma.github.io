@@ -25,58 +25,6 @@ h1,h2,h3,h4,h5,h6{color:#222;margin:0 0 20px}h2,h3{margin:0 0 14px}p,ul,ol,table
 
 .wrapper{width:100%;margin:0 auto;position:relative}blockquote{border-left:1px solid #e5e5e5;margin:0;padding:0 0 0 20px;font-style:italic}
 
-.highlight {
-  color: #ffffff;
-  background-color: #272822;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-}
-
-/* Name */
-.highlight .n {
-	color: #ffffff;
-}
-.highlight .py, .highlight .nx {
-  color: #ffffff;
-  /* no need background color */
-  /*background-color: #272822;*/
-}
-.highlight .ow {
-  color: #f92672;
-}
-.highlight .nt {
-  color: #f92672;
-}
-.highlight .k, .highlight .kv {
-  color: #f92672;
-}
-.highlight .kn {
-  color: #f92672;
-}
-.highlight .kp {
-  color: #f92672;
-}
-.highlight .o {
-  color: #f92672;
-}
-/* brace */
-.highlight .p, .highlight .pi {
-  color: #fbf1c7;
-}
-code {
-    font-family: 'Roboto Mono', Consolas, Courier, monospace,'Microsoft Yahei',sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    white-space: pre;
-    border: none;
-    background: transparent;
-}
-
 code,pre{
     font-family:Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal;
   color:#444;
@@ -93,13 +41,7 @@ header{width:20%;height:100%;
     float:left;position:relative;overflow:auto;
     padding-left:10%; padding-right:5%;}
 
-/* content of blog */
-section
-{
-	width:50%;
-	float:left;
-	padding-right:5%;
-	padding-bottom:50px;
+section{width:50%;float:left;padding-right:5%; padding-bottom:50px;
 	max-width: 800px;
 }
 
@@ -182,7 +124,6 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 	font-size:20px;
     word-wrap: break-word;
 }
-
 
 
 /* Better styles for embedding GitHub Gists */
