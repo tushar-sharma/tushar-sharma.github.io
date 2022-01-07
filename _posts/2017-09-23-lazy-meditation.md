@@ -3,8 +3,8 @@ layout: post
 title:  Lazy Meditation 
 category: blog
 tags:
-- lazy 
 - meditation
+- rambling
 name: lazy-meditation
 thumb: /img/bhudda_st.jpg
 ---

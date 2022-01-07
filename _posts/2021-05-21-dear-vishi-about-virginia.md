@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Dear Vishi, do you know about Virginia?
+title: Dear Vishi, have you travelled to Virginia?
 category: blog
 tags:
   - diary
-  - rambling
+  - letters
 name: dear-vishi
-thumb: >-
-  https://www.irishtimes.com/polopoly_fs/1.3158018.1500311533!/image/image.jpg_gen/derivatives/box_620_330/image.jpg
+thumb: https://cdn.geekwire.com/wp-content/uploads/2016/02/virginia-shutterstock_364806335.jpg
 published: true
 ---
 
