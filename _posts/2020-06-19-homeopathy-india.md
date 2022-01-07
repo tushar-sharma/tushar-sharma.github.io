@@ -7,6 +7,7 @@ tags:
 - homeopathy
 - ayurveda
 - india
+- audio
 name: homeopathy-india
 thumb: https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg
 summary: Homeopathy and pseudoscience

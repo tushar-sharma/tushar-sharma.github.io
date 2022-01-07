@@ -228,11 +228,11 @@ https://muffinman.io/blog/custom-jekyll-pagination/
   float: left;
   height: 20px;
   line-height: 20px;
-  width: 20px;
+  width: 30px;
   border: 1px solid #eee;
-  margin-left: -2px;
-  margin-right: -2px;
   padding: 7px 18px;
+  list-style-position: inside;
+
 }
 
 .pagination-wrapper a.pagination-step,
@@ -263,3 +263,25 @@ span.pagination-step {
     width: auto;
   }
 }
+
+/** audio **/
+/* Courtesy : https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
+*/
+.icon {
+  display: inline-flex;
+  align-self: center;
+  color:#39c;
+}
+
+.icon svg, .icon img {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+.icon.baseline svg, .icon img {
+  top: .125em;
+  position: relative;
+}
+
+.cl{ color: rgb(51, 153, 204);}

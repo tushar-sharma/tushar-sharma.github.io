@@ -3,10 +3,10 @@ layout: post
 title: Maximum Subarray
 category: blog
 tags:
-- programming
 - leetcode
-- code
 - dp
+- java
+- python
 name: maximum-subarray
 thumb: https://www.hrccu.org/wp-content/uploads/2020/05/hackers.jpg
 ---

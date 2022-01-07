@@ -2,11 +2,14 @@
 layout: post
 title: Huawei Usb Modem in Debian
 category: blog
-tags: debian huawei usb modem code
+tags: 
+- debian
+- usb
+- modem 
 name: huawei-modem 
-thumb: /img/debian.png
+thumb: https://i.imgur.com/y6rUbX9.jpg
 summary: Huawei Usb Modem in Debian
-image: /img/debian.png
+image: https://i.imgur.com/y6rUbX9.jpg
 author: Tushar Sharma
 ---
 
@@ -17,7 +20,9 @@ The Debian claimed to be the Universal Operating System. Impressed by the stabil
 
 The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.
 
-<img src="{{ root_url }}/img/debian.png" >
+<center>
+<img alt="usb Modem image" src="https://i.imgur.com/y6rUbX9.jpg" >
+</center>
 
 I'll be using `wvdial` to configure the internet. It's likely that your system will have the package pre installed. Otherwise you can manyally download it from <a href="http://packages.debian.org/squeeze/wvdial" target="_blank">here</a>. 
 
