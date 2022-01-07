@@ -60,7 +60,6 @@ header ul{
     width:240px;
 }
 
-
 hr{border:0;background:#e5e5e5;height:1px;margin:0 0 20px}footer{bottom:0}@media print,screen and (max-width: 960px){div.wrapper{width:auto;margin:0}
 
 header,section,footer{float:none;position:static;width:auto}section{border:1px solid #e5e5e5;border-width:1px 0;padding:20px 0;margin:0 0 20px}
@@ -88,7 +87,7 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     width:108px;display:block;text-align:center;font:11px/100% Arial,Helvetica,sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}
 
 #back-top a:hover{color:#000}
-#back-top span{width:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat;background-color:rgba(255,255,255,1);display:block;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}#back-top a:hover span{background-color:#777}
+#back-top span{widthhover:28px;height:28px;background:url(/../img/blue_arrow.png) no-repeat;background-color:rgba(255,255,255,1);display:block;cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px}#back-top a:hover span{background-color:#777}
 .pagination{margin:20px 0;padding:10px 0}
 
 .pagination a  {width:50% }
@@ -104,7 +103,6 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 
 .codeblock{
     padding: 8px 15px;
-    background: #f8f8f8;
     border-radius: 5px;
     border: 1px solid #e5e5e5;
     overflow-x: auto;
