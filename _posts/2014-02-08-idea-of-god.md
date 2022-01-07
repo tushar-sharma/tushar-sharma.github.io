@@ -7,7 +7,9 @@ tags:
 - god
 - religion
 - science
-thumb: /img/the-thinker.jpg 
+- audio
+thumb: https://i.imgur.com/7iVRKen.jpg
+image: https://i.imgur.com/7iVRKen.jpg
 featuredPost: true
 ---
 
@@ -22,7 +24,7 @@ I was lying around on a secluded meadow. Under the open sky I gazed at the cloud
 
 <p> 
 <center>
-<img src="{{ root_url }}/img/the-thinker.jpg" alt="Thinking man">
+<img src="https://i.imgur.com/7iVRKen.jpg" alt="Thinking man">
 </center>
 </p>
 

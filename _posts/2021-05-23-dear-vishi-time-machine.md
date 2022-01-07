@@ -3,16 +3,18 @@ layout: post
 title: Dear Vishi, is there a time machine?
 category: blog
 tags:
+  - time
   - diary
-  - rambling
+  - letters
 name: dear-vishi
-thumb: >-
-  https://www.irishtimes.com/polopoly_fs/1.3158018.1500311533!/image/image.jpg_gen/derivatives/box_620_330/image.jpg
+thumb: https://i.imgur.com/EK6Lu1I.jpg
 published: true
 ---
 
 Did you remember we watched The Time Machine movie together? The protagonist loses his fiancée when a mugger kills her. He then builds a time machine to travel back in time to save her. Of course multiple movies have been made romanticizing the concept of time machine.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
+
+<!--begin_of_post -->
 
 <p>Did you remember we watched The Time Machine movie together? The protagonist loses his fiancée when a mugger kills her. He then builds a time machine to travel back in time to save her. Of course multiple movies have been made romanticizing the concept of time machine.</p>
 
@@ -60,6 +62,8 @@ Below is the snapshot of my treadmill activity. I still need to improve my [vita
 Today I solved a problem on Binary Tree, [All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/). I've created a repository in [Github](https://github.com/tushar-sharma/prep-coding) to track my progress on problem solving.
 
 I would recommend you to create a Github repository to keep track your progress of SQL problems. This will help you to stay motivated.
+
+<!--end_of_post -->
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}

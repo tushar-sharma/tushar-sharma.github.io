@@ -4,12 +4,12 @@ title: Dear Vishi, what's a carcinogen?
 category: blog
 tags:
   - diary
-  - rambling
+  - letters
   - carcinogen
   - meditation
-name: dear-vishi
-thumb: >-
-  https://www.irishtimes.com/polopoly_fs/1.3158018.1500311533!/image/image.jpg_gen/derivatives/box_620_330/image.jpg
+name: diary-carcinogen
+thumb: https://i.imgur.com/rVIAbeu.jpg
+image: https://i.imgur.com/rVIAbeu.jpg
 published: true
 ---
 
