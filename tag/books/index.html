@@ -51,7 +51,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Posts Tagged “books”" />
 <script type="application/ld+json">
-{"@type":"WebPage","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Posts Tagged “books”","description":"Welcome to Randomwits, my digital nest.","url":"https://randomwits.com/tag/books/","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"https://randomwits.com/tag/books/","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Welcome to Randomwits, my digital nest.","headline":"Posts Tagged “books”","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -68,6 +68,7 @@
 <link rel="stylesheet" href="/css/toc.css" >
 <link rel="stylesheet" href="/css/textAnimation.css" >
 <script src="/js/toc.js" type="text/javascript"></script>
+<script src="/js/scrambler.min.js" type="text/javascript"></script>
 
 
 <style type="text/css">
@@ -80,7 +81,17 @@ h1.heading { font-family: Myfont;
 .top{color: rgb(68, 68, 68);}
 .sub{font-family:Somefont;}
 
-aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline} aside{display:block} aside#logo{background-color:white}aside#logo.clearfix{background-color:white}aside#logo div a{height:100px;width:100px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}aside#logo{background-color:black}aside#logo div{background-color:white}aside#logo div a{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;background:#000 url("https://s.gravatar.com/avatar/16f5b7d6faaa9931fa728ac7ff579087?size=200") center center no-repeat;background-size:100% 100%;height:100px !important;width:100px !important} aside#logo{position:relative;display:block;width:110px;height:110px;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;margin-left:0px;margin-top:0px}aside#logo div{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;width:90px;height:90px;text-indent:-9999px;;margin-top:10px;clear:both}aside#logo div a{display:block;clear:both;width:78px;height:78px;margin-top:6px}aside#logo{width:150px;height:130px}aside#logo div{width:135px;height:135px;margin-top:15px}aside#logo div a{width:117px;height:117px;margin-top:9px}aside#logo{position:relative;left:auto;right:auto;margin-top:0px;margin-bottom:0}
+aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline} 
+aside{display:block} 
+aside#logo{background-color:white}
+aside#logo.clearfix{background-color:white}
+aside#logo div a{height:100px;width:100px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}
+aside#logo{background-color:black}aside#logo div{background-color:white}
+aside#logo div a{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;
+  background: url("/img/logo.png?size=200") center center no-repeat;
+  } aside#logo{position:relative;display:block;width:110px;height:110px;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;margin-left:0px;margin-top:0px}
+aside#logo div{border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;width:90px;height:90px;text-indent:-9999px;;margin-top:10px;clear:both}aside#logo div a{display:block;clear:both;width:78px;height:78px;margin-top:6px}aside#logo{width:150px;height:130px}aside#logo div{width:135px;height:135px;margin-top:15px}
+aside#logo div a{width:117px;height:117px;margin-top:9px}aside#logo{position:relative;left:auto;right:auto;margin-top:0px;margin-bottom:0}
 
 /* for the toc */
 header ul  {
@@ -134,10 +145,22 @@ header li {
     <a href="/">Tushar Sharma</a> <p style="float:right;"> </p>
   </div>
 </aside>
+<br>
+<div style="clear:both;"></div>
+
+<div class="top" id="random">
+  <h1>
+  <a href="/">
+
+  <span  data-title-scrambler data-scramble-text="">R<b>a</b>nd<b>o</b><b>m</b></span>
+  <span  data-title-scrambler data-scramble-text="wits" id="second-rand"></span>
+  </a>
+  </h1>
+</div>
+
 
 <div style="clear:both;"></div>
 <div>
-     <h1  class="heading"><span class="top"><a href="/"><i>Random Wits</i></a></span></h1>
   <p class="me_blurb">
   <div class="sub">
     <!-- <span id="textAnimation"></span>-->
@@ -147,6 +170,38 @@ header li {
 
 </div>
 
+
+<script type="text/javascript">
+  function changeWord() {
+      var box = $('#second-rand');
+      var arr = [
+          "life",
+          "diary",
+          "blog",
+          "hack",
+          "universe",
+          "nest",
+          "random",
+          "@!#?@!",
+      ];
+      var rand = Math.floor(Math.random() * arr.length);
+      console.log(arr[rand]);
+      $(box).attr('data-scramble-text', arr[rand]);
+  }
+  Scrambler({
+    target: '[data-title-scrambler]',
+    random: [1000, 3500],
+    speed: 100
+  });
+  setInterval(function(){
+      Scrambler({
+        target: '#second-rand',
+        random: [500,1500],
+        speed: 100
+      });
+      changeWord();
+  },2000);
+</script>
 
 <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
 <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
@@ -225,11 +280,6 @@ header li {
       $('#toc').toc();
   });
 </script>
-
-
-
-
-
       </header>
       <section>
         <h1 style="color: rgb(51, 153, 204);">Posts Tagged &ldquo;books&rdquo;</h1>
@@ -477,19 +527,27 @@ header li {
 
 
 
+
+
+
+
+
+
+
+
   <small style="float:right; margin-top:5px;">Sat 11 Apr 2020</small>
   <a href="/blog/demon-haunted-review-1">
     <h2>Demon Haunted World's review part 1</h2>
   </a>
       <div>
             <!-- this is for thumb images;  -->
-	    <div style="background:url('https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/0/2/5/5/1001004000945520.jpg') no-repeat;background-size:100% auto;" class="thumb"></div>
+	    <div style="background:url('https://i.imgur.com/jqKRwJx.jpg') no-repeat;background-size:100% auto;" class="thumb"></div>
 
             
             
             <p>This is my Part 1 of the review of Carl Sagan's book, Demon-Haunted World. This is more of my commentary rather than a review of the book.</p>
 
-I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience & misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan...
+I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience and misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan...
       </div>
   <br>
   <p>
@@ -500,15 +558,13 @@ I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseud
     
     <a class="mytag" href="/tag/pseudoscience">pseudoscience </a>
     
-    <a class="mytag" href="/tag/carl sagan">carl sagan </a>
-    
     <a class="mytag" href="/tag/books">books </a>
     
     <a class="mytag" href="/tag/review">review </a>
     
-    <a class="mytag" href="/tag/cfc">cfc </a>
-    
     <a class="mytag" href="/tag/religion">religion </a>
+    
+    <a class="mytag" href="/tag/audio">audio </a>
     
   </span>
 </p>
@@ -859,7 +915,7 @@ I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseud
 
     <div class="wrapper">
       <footer>
-        <!-- <p><small>Tushar Sharma &copy; 2021</small></p> -->
+        <!-- <p><small>Tushar Sharma &copy; 2022</small></p> -->
 <link rel="stylesheet" href="/css/font-awesome.css" />
 <script src="/js/scroll_top.js" type="text/javascript"></script>
 <script src="/js/scroll_top.js" type="text/javascript"></script>
@@ -875,7 +931,7 @@ I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseud
   `
   -->
   <div style="margin: 0 auto; text-align: center; font-size:large;">
-      <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>Tushar Sharma &copy; 2021
+      <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>Tushar Sharma &copy; 2022
         <a title="Email" href="mailto:tushar@randomwits.com">
     <i class="icon-envelope-alt icon-large"></i> &nbsp;
   </a>

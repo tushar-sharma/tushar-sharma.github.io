@@ -4,7 +4,7 @@ title: Dear Vishi, what if Dehradun was in Nepal?
 category: blog
 tags:
   - diary
-  - rambling
+  - letters
 name: dehradun-nepal
 thumb: >-
   https://www.irishtimes.com/polopoly_fs/1.3158018.1500311533!/image/image.jpg_gen/derivatives/box_620_330/image.jpg

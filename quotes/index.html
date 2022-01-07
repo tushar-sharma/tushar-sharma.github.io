@@ -1,84 +1,63 @@
 ---
-layout: default
+layout: comments
 title: Random Quotes
 summary: Random Quotes
 image: https://i.imgur.com/RwZdX35.jpg
 author: Tushar Sharma
 ---
 
-<style type="text/css">
-.txt{ padding-top: 5px; }
-.cl{ color: rgb(51, 153, 204);}
- li.txt {list-style: none outside none; }
-.btn {cursor: pointer;
-border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
-}
-.mainQuotes {
-  position: absolute;
-  margin-top: 200px;
-  margin: 3em auto 5em auto;
-  max-width: 800px;
-  width: 100%;
-  min-height: 400px
-}
-</style>
 
+<script src="{{ root_url}}/js/jquery.text-effects.js"></script>
 <script type="text/javascript">
-/* generate a random number */
-function quotesGet(defaultValue) {
-  jQuery.get('/../quotes.txt', function(data) {
-     var quotes = data.split("\n");
+  var timer;
 
-     var idx;
+  function quotesGet(defaultValue) {
+
+  /* read quotes from file */
+  jQuery.get('/../quotes.txt', function(data) {
+
+    document.getElementById("quote").innerHTML = "";
+    clearInterval(timer);
+
+    var quotes = data.split("\n");
+    //pick a random quote
+    var idx;
      if (typeof defaultValue !== 'undefined') {
          idx = defaultValue;
-     } else {         idx = Math.floor((quotes.length - 1) * Math.random());
+     } else {         
+       idx = Math.floor((quotes.length - 1) * Math.random());
      }
-              /*term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", {
-                  raw: function(div) { }
-               });
-            */
-     var quoteArr = quotes[idx].split('"');
+
      /* get the quotes */
-     if (typeof quoteArr[1] !== 'undefined') {
-       document.getElementById("myquotes").innerHTML = quoteArr[1];
+     var textQuote = "";
+     if (typeof quotes[idx] !== 'undefined') {
+       textQuote = quotes[idx].replace(/\<br\>/g,"\n") + " ";
      }
 
-     /* get the author */
-     if (typeof quoteArr[2] !== 'undefined') {
-       document.getElementById("author").innerHTML = quoteArr[2];
-     }
+     document.getElementById("quote").innerHTML = textQuote; 
 
-     /* add tweets*/
-     var tweetText = '"' + quoteArr[1].replace(/\<br\>/g,"")  + '"' + quoteArr[2].replace(/\<br\>/g,"") + " %23quotes https://randomwits.com/quotes/";
+     
+     $("#quote").typewriter(); 
 
+     var tweetText = quotes[idx] + " %23quotes https://randomwits.com/quotes/";
+  
      $('.twitter-button').attr("href", 'https://twitter.com/intent/tweet?text=' + tweetText);
 
-  });
-}
+    });
+  }
 $(document).ready(function() {
     quotesGet();
 });
-
-/* send the default quote number 66 */
-/* omit it ; as i need to display random quotes
-$(document).ready(function() {
-  var defaultValue = 65;
-  quotesGet(defaultValue);
-});
-*/
-
 </script>
 
-<!-- heading -->
+
 <h2 class="entry-title">Random Quotes</h2>
-
-<br><br>
-
-<div id="mainQuotes">
-    <div style="white-space:pre-wrap;overflow-x: hidden;border-top: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;">
-  <i class="cl icon-quote-left"></i>&nbsp;<span class="cl" id="myquotes"></span>&nbsp;<i class="icon-quote-right cl"></i>&nbsp;&nbsp; <span style="color:black;"><span id="author"></span></span>
-   <div style="float:right;">
-    &nbsp;<a class="mytag" style="font-size:14px" href="javascript:quotesGet();">next</a>&nbsp;&nbsp;&nbsp;<a class="twitter-button mytag" style="font-size:14px" href="https://twitter.com/intent/tweet?text=">tweet</a>
-  </div>
+<br>
+<br>
+<div style="white-space:pre-wrap;overflow-x: hidden;border-top: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;">
+<div class="cl" id="quote"></div>
+    <div style="float:right;">
+        &nbsp;<a class="mytag" style="font-size:18px;" href="javascript:quotesGet();">next</a>&nbsp;&nbsp;&nbsp;<a class="twitter-button mytag" target="_blank" style="font-size:18px" href="https://twitter.com/intent/tweet?text=">tweet</a>
+    </div>
 </div>
+
