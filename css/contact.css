@@ -44,6 +44,7 @@ table{max-width:100%;background-color:transparent;border-collapse:collapse;borde
     font-size: 1rem;
     border-radius: 0.25rem;
     margin: 0 auto;   
+    background-color: #39c !important;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
   
