@@ -34,6 +34,28 @@
     
         
     </div>
+
+
+    <ul>                                                                    
+        <li>                                                                
+            <a class="{% unless paginator.channel %} active {% endunless %}" href="/engineering/">Tag cloud</a>
+        </li>                                                               
+        <li>                                                                
+            <a class="{% if paginator.channel == "development" %} active{% endif %}" href="/engineering/development/">Bookshelf</a>
+        </li>                                                               
+        <li>                                                                
+            <a class="{% if paginator.channel == "sysadmin" %} active{% endif %}" href="/engineering/sysadmin/">Sysadmin</a>
+        </li>                                                               
+        <li>                                                                
+            <a class="{% if paginator.channel == "design" %} active{% endif %}" href="/engineering/design/">Design</a>
+        </li>                                                               
+        <li>                                                                
+            <a class="{% if paginator.channel == "evangelism" %} active{% endif %}" href="/engineering/evangelism/">Evangelism</a>
+        </li>                                                               
+        <li>                                                                
+            <a class="{% if paginator.channel == "opinion" %} active{% endif %}" href="/engineering/opinion/">Opinion</a>
+        </li>                                                               
+    </ul>  
        
        
     
