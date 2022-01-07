@@ -4,7 +4,7 @@ title: Dear Vishi, what's a carcinogen?
 category: blog
 tags:
   - diary
-  - rambling
+  - letters
   - carcinogen
   - meditation
 name: diary-carcinogen

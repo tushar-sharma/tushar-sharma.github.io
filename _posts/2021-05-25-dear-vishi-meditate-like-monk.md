@@ -4,10 +4,9 @@ title: 'Dear Vishi, can you meditate like a monk?'
 category: blog
 tags:
   - diary
-  - rambling
+  - letters
 name: dear-vishi
-thumb: >-
-  https://www.irishtimes.com/polopoly_fs/1.3158018.1500311533!/image/image.jpg_gen/derivatives/box_620_330/image.jpg
+thumb: https://i.imgur.com/dK8WygX.jpg
 published: true
 toc: true
 toc_stick: true
@@ -16,8 +15,6 @@ toc_stick: true
 
 Today I tried to meditate again. I used Insight Timer app for background sound. However I think I'll just stick to Youtube as it has more varieties. I struggled for 20 minutes sitting cross-legged as my mind wandered in the labyrinth of thoughts. I guess it will take more practice to hone my skill. Have you ever wondered how monks can meditate for countless hours or days?<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script type="text/javascript">
 function changeImage(elem) {
