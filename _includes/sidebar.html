@@ -28,11 +28,11 @@ header ul  {
 }
 header ul a {
   padding-top: none !important;
-  color: #37c !important;
+  color: #39c !important;
   border-right: 0px solid !important;
   display: inline !important;
   padding: 0.5rem 1rem !important;
-  border-bottom: 1px solid #37c !important;
+  border-bottom: 1px solid #39c !important;
 }
 header li {
   width: auto !important;
@@ -104,7 +104,7 @@ header li {
 
 <!-- only if page is root page -->
 {% if page.url == '/' or  paginator.previous_page %}
-<h3>Popular Posts</h3> 
+<h1>Most popular</h1> 
 <div class="highlight">
   {% include sidebar_wits.html %}
 </div>
@@ -116,6 +116,7 @@ header li {
   <div id="toc"></div>
 </div>
 {% endif %}
+
 
 <!-- toc page -->
 
