@@ -7,18 +7,22 @@ tags:
 - annihilation
 - matter
 - antimatter
+- audio
 name: wild-marriage
 thumb: https://i.imgur.com/DfhLqvA.jpg
-summary: Mutual Suicide of Electron
+summary: Mutual Suicide of an Electron
 image: https://i.imgur.com/DfhLqvA.jpg
 author: Tushar Sharma
 ---
 
-"Marriages are made in heaven" is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However there is a rare marriage that not only invites heaven's fury but also is consummated by mutual suicide.<!-- truncate_here -->
+"Marriages are made in heaven" is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However, there is a rare marriage that not only invites heaven's fury but also is consummated by mutual suicide.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+<link rel="stylesheet" type="text/css" href="{{ root_url }}/css/chat.css">
+{% include embed-audio.html src="/sounds/2021-12-24-wild-marriage.mp3" %}<br>
 
 <!--begin_of_post -->
 
@@ -47,7 +51,7 @@ author: Tushar Sharma
 </p>
 </figure>
 
-# Annihilation
+# Conservation of energy
 
 Antimatter is the same as ordinary matter except that it has the opposite electric charge. Positron is an antimatter equivalent for an electron. They have equal mass but opposite charges. Thanks to Einstein's equation, **E=mc<sup>2</sup>**, there's an equivalence between energy and mass. So a colliding positron and electron converts their rest mass to pure energy in form of two oppositely directed 0.511 MeV photons.
 
@@ -57,17 +61,34 @@ $$
 \end{align}
 $$
 
-# Dirac Sea
+# Prediction of antimatter
 
-There is an old Hindu story : A fish went to the Queen fish and asked: "I have always heard about the sea, but what is the sea? Where is it?" The Queen fish replied: "You live, move, and have your being in the sea. The sea is within you and without you, and you are made of sea and you will end in sea. The sea surrounds you as your own being"<sup><a href='#fn:2' rel='footnote'>2</a></sup>.
+Paul Dirac had postulated that an infinitely dense totally homogeneous sea of these electrons was present everywhere in the universe called Dirac sea. If a light collides with a negative electron it can convert into positive energy state. The hole it leaves behind is called a Dirac hole. So the whole was called positron. 
 
-# Philosophical Musing 
+The homogeneous sea of electron can be described as an old Hindu story. A fish went to the Queen fish and asked: "I have always heard about the sea, but what is the sea? Where is it?" The Queen fish replied: "You live, move, and have your being in the sea. The sea is within you and without you, and you are made of sea and you will end in sea. The sea surrounds 
+you as your own being"<sup><a href='#fn:2' rel='footnote'>2</a></sup>
 
-Marriage as an institution is unique to humans. It's a legal contract with bells and whistles depending upon the jurisdiction. Dissolving a friendship has no legal consequences but dissolving a marriage requires an acquiesce of the court.
+# Feynman's interpretation
+
+Feynman described annihilation as an electron is travelling along from the lower right, interacts with some light energy and starts travelling backwards in time. An electron travelling backwards in time is what we call a positron. So antimatter behaves mathematically equivalent to normal matter simply traveling backwards in time.
+
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Feynman_EP_Annihilation.svg" >
+</figure>
 
 
-Matter and anti matter are mostly identical twins differing in charges. Our universe owes its existence to the deficiency of anti matter else it would have been annihilated. Early universe probably had copious quantities of both matter and anti-matter. However the cards were dealt in favor of matter thus creating our universe.
+<div class="attention">
+"It is as though a bombardier flying low over a road suddenly sees three roads and it is only when two of them come together and disappear again that he realizes that he has simply passed over a long switchback in a single road" - Richard Feynman</div>
+<br>
 
+# Deficiency of anti-matter
+
+
+Marriage as an institution is unique in humans. It's a legal contract with bells and whistles depending upon the jurisdiction. Dissolving a friendship has no legal consequences but dissolving a marriage requires an acquiesce of the court.
+
+The marriage of particle and anti-particle is an spectacular event in microscopic world. However future generation might be able to harvest this energy. 2 kilograms of antimatter would contains 85.92 megatons of destructive force. This is more yield than the most powerful H-bomb exploded to date<sup><a href='#fn:3' rel='footnote'>3</a></sup>. However the storage and generation of anti-matter is not feasible by our current technology. 
+
+Matter and anti matter are mostly identical twins mostly differing in electric charge and other differences in quantum numbers. Our universe owes its existence to the deficiency of anti matter else it would have been annihilated. Early universe probably had copious quantities of both matter and anti-matter. However the cards were dealt in favor of matter probably by a hand of God in favor of our universe.
 
 <!--end_of_post -->
 
@@ -85,6 +106,10 @@ Matter and anti matter are mostly identical twins differing in charges. Our univ
          <a href='#fnref:2' rev='footnote'>&#8617;</a>
     </li>
 
+    <li id='fn:3'>
+         <p><a target="_blank" href="https://www.edwardmuller.com/index.php#calculator">Anti matter calculator</a></p>
+         <a href='#fnref:3' rev='footnote'>&#8617;</a>
+    </li>
     
   </ol>
 </div>
