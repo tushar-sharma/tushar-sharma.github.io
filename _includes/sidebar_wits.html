@@ -1,39 +1,15 @@
-<style type="text/css">
-    .txt{ padding-top: 5px; }
-    .newcl{color: black; white-space: initial;}
-     li.txt {list-style: none outside none; }
-    .btn {cursor: pointer;
-    border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
-    }
+{% assign blogposts = site.categories.blog | where: 'featuredPost', true   %}
     
-    
-    </style>
-    
-    <!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="{{ root_url }}/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="{{ root_url }}/about">about me</a></span>
-    -->
-    {% assign blogposts = site.categories.blog | where: 'featuredPost', true   %}
-    
-    <div class="codeblock">
-        <span style="font-size: 20px; " class="nv">$</span>&nbsp;<span style=" font-size: 20px;">popular wits</span>
-        <br>
-        <div style="padding-left:25px;">
-            {% for post in blogposts %}
-    
-            {% if post != blogposts.last %}
-            ├── <span class="nv"><a href="{{ post.url }}">{{ post.title }}</a></span>
-            <br>
-            │
-            <br>
-            {% else %}
-            └── <span class="nv"><a href="{{ post.url }}">{{ post.title }}</a></span>
-            {% endif %}
-    
-    
-            {% endfor %} 
-        </div>
-    
-        
-    </div>
-       
-       
-    
+<div style="clear:both;float:left;" class="navbar-nav">
+    <nav class="main-nav" >
+        <ul class="unstyled list-hover-slide">
+        {% for post in blogposts %}
+        {% if post != blogposts.last %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% else %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+        {% endfor %} 
+        </ul>
+    </nav>
+</div>

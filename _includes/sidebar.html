@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{ root_url }}/css/textAnimation.css" >
 <script src="{{ root_url }}/js/toc.js" type="text/javascript"></script>
 <script src="{{ root_url }}/js/scrambler.min.js" type="text/javascript"></script>
+<script src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
 
 
 <style type="text/css">
@@ -15,8 +16,8 @@ h1.heading { font-family: Myfont;
 .top{color: rgb(68, 68, 68);}
 .sub{font-family:Somefont;}
 
-aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline} 
-aside{display:block} 
+aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}
+aside{display:block}
 aside#logo{background-color:white}
 aside#logo.clearfix{background-color:white}
 aside#logo div a{height:100px;width:100px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}
@@ -39,18 +40,12 @@ header ul  {
 }
 header ul a {
   padding-top: none !important;
-  color: #37c !important;
+  color: #39c !important;
   border-right: 0px solid !important;
   display: inline !important;
   padding: 0.5rem 1rem !important;
-  border-bottom: 1px solid #37c !important;
+  border-bottom: 1px solid #39c !important;
 }
-header li {
-  width: auto !important;
-  border-right: 0px solid !important;
-  margin: 10px 0 !important;
-}
-
 
 .nv {
   color: #008080 !important;
@@ -70,6 +65,10 @@ header li {
 header li {
   height : auto !important;
   float: none !important;
+  line-height: 140% !important;
+  margin: 10px 0 !important;
+  border-right: 0px solid !important;
+
 }
 
 </style>
@@ -104,18 +103,18 @@ header li {
 
 </div>
 
-
 <script type="text/javascript">
   function changeWord() {
       var box = $('#second-rand');
       var arr = [
+          "wits",
           "life",
           "diary",
           "blog",
           "hack",
           "universe",
           "nest",
-          "random",
+          "ness",
           "@!#?@!",
       ];
       var rand = Math.floor(Math.random() * arr.length);
@@ -162,12 +161,17 @@ header li {
 
 <!-- only if page is root page -->
 {% if page.url == '/' or  paginator.previous_page %}
+<h1>Most popular</h1> 
 <div class="highlight">
   {% include sidebar_wits.html %}
 </div>
 {% else %}
+<h1>Most popular</h1> 
+<div class="highlight">
+  {% include sidebar_wits.html %}
+</div> <br>
 <div id="toc-block" class="codeblock" style="display:none;">
-  <span style="font-size: 20px; " class="nv">$</span>&nbsp;<span style=" font-size: 20px;">table of contents</span>
+  <h1>Table of content</h1> 
   <div id="toc"></div>
 </div>
 {% endif %}
