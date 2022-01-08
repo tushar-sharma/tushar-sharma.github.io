@@ -30,7 +30,7 @@ author: Tushar Sharma
 <img src="https://i.imgur.com/DfhLqvA.jpg" alt="marriage photo"/>
 </center><br>
 
-"Marriages are made in heaven" is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However there is a rare marriage that not only invites heaven's fury but also is consummated by mutual suicide. 
+"Marriages are made in heaven" is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However there is a rare marriage that not only invites heaven's fury but also is consummated by mutual suicide.
 
 "Wild marriage" was coined by Max Born in his book Atomic Physics. The phenomenon describes an encounter of a positron and an electron. Both particles will cease to exist and will annihilate each other by releasing intensive electromagnetic radiation (gamma [γ] rays).
 
@@ -42,8 +42,8 @@ author: Tushar Sharma
           <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
 <!-- movie assets *other movie type that works with Chrome* -->
             <source type="video/mp4" src="{{ root_url }}/img/a000182.mp4" />
-<!-- WebM/VP8 for Firefox4, Opera, and Chrome --> 
-            <source type="video/webm" src="{{ root_url }}/img/a000182.webmhd.webm" /> 
+<!-- WebM/VP8 for Firefox4, Opera, and Chrome -->
+            <source type="video/webm" src="{{ root_url }}/img/a000182.webmhd.webm" />
 
               Your browser does not support HTML video.
 </video><br>
@@ -63,14 +63,14 @@ $$
 
 # Prediction of antimatter
 
-Paul Dirac had postulated that an infinitely dense totally homogeneous sea of these electrons was present everywhere in the universe called Dirac sea. If a light collides with a negative electron it can convert into positive energy state. The hole it leaves behind is called a Dirac hole. So the whole was called positron. 
+Paul Dirac had postulated that an infinitely dense totally homogeneous sea of these electrons was present everywhere in the universe called Dirac sea. If a light collides with a negative electron it can convert into positive energy state. The hole it leaves behind is called a Dirac hole. So the whole was called positron.
 
-The homogeneous sea of electron can be described as an old Hindu story. A fish went to the Queen fish and asked: "I have always heard about the sea, but what is the sea? Where is it?" The Queen fish replied: "You live, move, and have your being in the sea. The sea is within you and without you, and you are made of sea and you will end in sea. The sea surrounds 
+The homogeneous sea of electron can be described as an old Hindu story. A fish went to the Queen fish and asked: "I have always heard about the sea, but what is the sea? Where is it?" The Queen fish replied: "You live, move, and have your being in the sea. The sea is within you and without you, and you are made of sea and you will end in sea. The sea surrounds
 you as your own being"<sup><a href='#fn:2' rel='footnote'>2</a></sup>
 
 # Feynman's interpretation
 
-Feynman described annihilation as an electron is travelling along from the lower right, interacts with some light energy and starts travelling backwards in time. An electron travelling backwards in time is what we call a positron. So antimatter behaves mathematically equivalent to normal matter simply traveling backwards in time.
+Feynman described annihilation like an electron travelling forward interacts with some light energy and starts travelling backwards in time. So a positron is just an electron travelling backwards in time. Antimatter behaves mathematically equivalent to normal matter simply traveling backwards in time.
 
 <figure>
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Feynman_EP_Annihilation.svg" >
@@ -86,7 +86,7 @@ Feynman described annihilation as an electron is travelling along from the lower
 
 Marriage as an institution is unique in humans. It's a legal contract with bells and whistles depending upon the jurisdiction. Dissolving a friendship has no legal consequences but dissolving a marriage requires an acquiesce of the court.
 
-The marriage of particle and anti-particle is an spectacular event in microscopic world. However future generation might be able to harvest this energy. 2 kilograms of antimatter would contains 85.92 megatons of destructive force. This is more yield than the most powerful H-bomb exploded to date<sup><a href='#fn:3' rel='footnote'>3</a></sup>. However the storage and generation of anti-matter is not feasible by our current technology. 
+The marriage of particle and anti-particle is an spectacular event in microscopic world. However future generation might be able to harvest this energy. 2 kilograms of antimatter would contains 85.92 megatons of destructive force. This is more yield than the most powerful H-bomb exploded to date<sup><a href='#fn:3' rel='footnote'>3</a></sup>. However the storage and generation of anti-matter is not feasible by our current technology.
 
 Matter and anti matter are mostly identical twins mostly differing in electric charge and other differences in quantum numbers. Our universe owes its existence to the deficiency of anti matter else it would have been annihilated. Early universe probably had copious quantities of both matter and anti-matter. However the cards were dealt in favor of matter probably by a hand of God in favor of our universe.
 
@@ -95,7 +95,7 @@ Matter and anti matter are mostly identical twins mostly differing in electric c
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
-   
+
     <li id='fn:1'>
          <p> NASA/Goddard Space Flight Center Scientific Visualization Studio </p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
@@ -110,7 +110,7 @@ Matter and anti matter are mostly identical twins mostly differing in electric c
          <p><a target="_blank" href="https://www.edwardmuller.com/index.php#calculator">Anti matter calculator</a></p>
          <a href='#fnref:3' rev='footnote'>&#8617;</a>
     </li>
-    
+
   </ol>
 </div>
 
