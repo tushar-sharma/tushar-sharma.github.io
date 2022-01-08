@@ -15,7 +15,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta property="og:site_name" content="Tushar Sharma"/>
 <title>Posts Tagged &ldquo;vigilantism&rdquo;</title>
-<link rel="icon" type="image/png" href="/img/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
 <link rel="stylesheet" href=" /css/pygment_trac.css ">
 <link rel="stylesheet" href=" /css/font-awesome.css ">
 <link rel="stylesheet" href=" /css/styles.css ">
@@ -69,6 +70,7 @@
 <link rel="stylesheet" href="/css/textAnimation.css" >
 <script src="/js/toc.js" type="text/javascript"></script>
 <script src="/js/scrambler.min.js" type="text/javascript"></script>
+<script src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
 
 
 <style type="text/css">
@@ -81,8 +83,8 @@ h1.heading { font-family: Myfont;
 .top{color: rgb(68, 68, 68);}
 .sub{font-family:Somefont;}
 
-aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline} 
-aside{display:block} 
+aside{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}
+aside{display:block}
 aside#logo{background-color:white}
 aside#logo.clearfix{background-color:white}
 aside#logo div a{height:100px;width:100px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}
@@ -105,18 +107,12 @@ header ul  {
 }
 header ul a {
   padding-top: none !important;
-  color: #37c !important;
+  color: #39c !important;
   border-right: 0px solid !important;
   display: inline !important;
   padding: 0.5rem 1rem !important;
-  border-bottom: 1px solid #37c !important;
+  border-bottom: 1px solid #39c !important;
 }
-header li {
-  width: auto !important;
-  border-right: 0px solid !important;
-  margin: 10px 0 !important;
-}
-
 
 .nv {
   color: #008080 !important;
@@ -136,6 +132,10 @@ header li {
 header li {
   height : auto !important;
   float: none !important;
+  line-height: 140% !important;
+  margin: 10px 0 !important;
+  border-right: 0px solid !important;
+
 }
 
 </style>
@@ -170,18 +170,18 @@ header li {
 
 </div>
 
-
 <script type="text/javascript">
   function changeWord() {
       var box = $('#second-rand');
       var arr = [
+          "wits",
           "life",
           "diary",
           "blog",
           "hack",
           "universe",
           "nest",
-          "random",
+          "ness",
           "@!#?@!",
       ];
       var rand = Math.floor(Math.random() * arr.length);
@@ -223,38 +223,23 @@ header li {
 -->
 
 <div class="highlight">
-  <style type="text/css">
-    .txt{ padding-top: 5px; }
-    .newcl{color: black; white-space: initial;}
-     li.txt {list-style: none outside none; }
-    .btn {cursor: pointer;
-    border-radius:3px;color:#fff;font-size:10px;font-weight:700;position:relative;text-transform:uppercase;top:-1px;background-color:#4183C4;-webkit-font-smoothing:antialiased;margin:5px;padding:2px 5px;
-    }
-    </style>
-    
+  
     <!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="/about">about me</a></span>
     -->
-    
-    <div class="codeblock">
-        <span style="font-size: 20px; " class="nv">$</span>&nbsp;<span style=" font-size: 20px;"><a href="/">home</a></span>
-        <br>
-        <div style="padding-left:25px;">
-            ├── <span class="nv"><a href="/tags">tags</a></span> <br>
-            │<br>
-            ├── <span class="nv"><a href="/books">books</a></span><br>
-            │<br>
-            ├── <span class="nv"><a href="/resources">resources</a></span><br>
-            │<br>
-            ├── <span class="nv"><a href="/quotes">quotes</a></span><br>
-            │<br>
-            ├── <span class="nv"><a href="/habits">habits</a></span><br>
-            │<br>
-            └── <span class="nv"><a href="/about">about</a></span><br>
-            <div style="float:right;">+&nbsp;<a href="#"><a href="/contact/">say Hello</a></a></div><div id="showQuote" style="display:none;"></div>
-            
+    <div style="clear:both;float:left;" class="navbar-nav">
+        <div class="nav-wrap">
+          <nav class="main-nav" >
+            <ul class="unstyled list-hover-slide">
+              <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+              <li><a href="/books"><i class="fas fa-book-open"></i> Books</a></li>
+              <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+              <li><a href="/habits"><i class="fas fa-tasks"></i> Habits</a></li>
+              <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+              <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+              <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+            </ul>
+          </nav>
         </div>
-    
-        
     </div>
     
     
@@ -265,8 +250,48 @@ header li {
 
 <!-- only if page is root page -->
 
+<h1>Most popular</h1> 
+<div class="highlight">
+  
+    
+<div style="clear:both;float:left;" class="navbar-nav">
+    <nav class="main-nav" >
+        <ul class="unstyled list-hover-slide">
+        
+        
+        <li><a href="/blog/tutorial-cdk-aws">Getting Started with AWS CDK</a></li>
+        
+        
+        
+        <li><a href="/blog/export-dynamodb-s3">Export DynamoDB Table to S3 Bucket Using Lambda Function</a></li>
+        
+        
+        
+        <li><a href="/blog/homeopathy-india">Why homeopathy is so popular in India?</a></li>
+        
+        
+        
+        <li><a href="/blog/rent-scam">How I almost fell for rent scam?</a></li>
+        
+        
+        
+        <li><a href="/blog/romance-moon">Romance with Moon</a></li>
+        
+        
+        
+        <li><a href="/blog/idea-of-god">Idea of God</a></li>
+        
+        
+        
+        <li><a href="/blog/why-i-never-close-emacs">Why I never close Emacs</a></li>
+        
+         
+        </ul>
+    </nav>
+</div>
+</div> <br>
 <div id="toc-block" class="codeblock" style="display:none;">
-  <span style="font-size: 20px; " class="nv">$</span>&nbsp;<span style=" font-size: 20px;">table of contents</span>
+  <h1>Table of content</h1> 
   <div id="toc"></div>
 </div>
 
@@ -280,6 +305,7 @@ header li {
       $('#toc').toc();
   });
 </script>
+
       </header>
       <section>
         <h1 style="color: rgb(51, 153, 204);">Posts Tagged &ldquo;vigilantism&rdquo;</h1>

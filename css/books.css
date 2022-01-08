@@ -68,6 +68,7 @@ nav#pagination span.prev {
    padding: 20px;
    text-align: left;
    word-wrap: break-word;
+   width: 100%;
  }
 
  .alert {
