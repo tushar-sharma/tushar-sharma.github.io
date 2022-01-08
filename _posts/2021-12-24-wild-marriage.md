@@ -63,7 +63,7 @@ $$
 
 # Prediction of antimatter
 
-Paul Dirac had postulated that an infinitely dense totally homogeneous sea of these electrons was present everywhere in the universe called Dirac sea. If a light collides with a negative electron it can convert into positive energy state. The hole it leaves behind is called a Dirac hole. So the whole was called positron.
+Paul Dirac had postulated that an infinitely dense totally homogeneous sea of these electrons was present everywhere in the universe called Dirac sea. If a light collides with a negative electron it can convert into positive energy state. The hole it leaves behind is called a Dirac hole. So the hole was called positron.
 
 The homogeneous sea of electron can be described as an old Hindu story. A fish went to the Queen fish and asked: "I have always heard about the sea, but what is the sea? Where is it?" The Queen fish replied: "You live, move, and have your being in the sea. The sea is within you and without you, and you are made of sea and you will end in sea. The sea surrounds
 you as your own being"<sup><a href='#fn:2' rel='footnote'>2</a></sup>
