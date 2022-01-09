@@ -20,6 +20,9 @@ root: true
       <div>
             <!-- this is for thumb images;  -->
 	    <div style="background:url('{{ post.thumb }}') no-repeat;background-size:100% auto;" class="thumb"></div>
+            <a href="{{ post.url }}">
+              <img src="{{ post.thumb }}" class="thumb" />
+            </a>
 
             {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
             {% if truncated_post != post.content %}
