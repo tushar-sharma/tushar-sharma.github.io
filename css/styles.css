@@ -79,18 +79,23 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     font-family:Somefont
 }
 
+/* scroll */
+
 #back-top{position:fixed;}
 
 #back-top a{
     position: fixed;
+    font-size: 25px !important;
+    text-align: center;
     bottom: 30px;
-    left: 30px;
-    width:40px;display:block;text-align:center;font:11px/100% Arial,Helvetica,sans-serif;text-transform:uppercase;text-decoration:none;color:#bbb;-webkit-transition:1s;-moz-transition:1s;transition:1s}
+    right: 30px;
+    width:40px;display:block;text-align:center;font:11px/100% Arial,Helvetica,sans-serif;text-transform:uppercase;text-decoration:none;
+    color:#39c;-webkit-transition:1s;-moz-transition:1s;transition:1s}
 
 #back-top span{
   height:28px;
-
-  background:url(/../img/blue_arrow.png) center center no-repeat;
+  
+  /*background:url(/../img/blue_arrow.png) center center no-repeat;*/
   display:block;
   cursor:pointer;-webkit-border-radius:10em;-moz-border-radius:10em;border-radius:10em;margin:-8px 0 0 6px
 }
