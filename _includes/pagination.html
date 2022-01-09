@@ -23,11 +23,11 @@
     <div class="pagination">
       {% if paginator.previous_page %}
         <a class="pagination-step" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-          &laquo; Previous
+          &laquo;
         </a>
       {% else %}
         <span class="pagination-step">
-          &laquo; Previous
+          &laquo;
         </span>
       {% endif %}
 
@@ -53,11 +53,11 @@
 
       {% if paginator.next_page %}
         <a class="pagination-step" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-          Next &raquo;
+           &raquo;
         </a>
       {% else %}
         <span class="pagination-step">
-          Next &raquo;
+           &raquo;
         </span>
       {% endif %}
     </div>
