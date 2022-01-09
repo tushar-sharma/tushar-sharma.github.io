@@ -21,7 +21,11 @@ I recently came across a Youtube video of a famous Indian actress Genelia Deshmu
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
-{% include embed-audio.html src="/sounds/2020-06-19-homeopathy-india.mp3" %}<br>
+{% capture audio_url %}
+{{ root_url }}/sounds/{{ page.path | split:'/'  | last | replace: '.md' '' }}.mp3
+{% endcapture %}
+{% include embed-audio.html src=audio_url %}
+<br>
 <!--begin_of_post -->
 
 <p> I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.</p>
