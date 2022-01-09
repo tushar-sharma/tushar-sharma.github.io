@@ -3,6 +3,7 @@ layout: default
 title: Podcast
 paginate: true
 categories: blog
+published: false
 ---
 
 <link rel="stylesheet" href="{{ root_url }}/css/styles.css" />
@@ -28,7 +29,9 @@ categories: blog
       <div>
             {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
             {% if truncated_post != post.content %}
-            {{ truncated_post | append:".."}}
+            <a href="{{ post.url }}">
+              <img src="{{ post.thumb }}" class="thumb" />
+            </a>     
             {% capture audio_url %}{{ root_url }}/sounds/{{ post.path | split:'/'  | last | replace: '.md' '' }}.mp3{% endcapture %}
             {% include embed-audio.html src=audio_url %}
 
