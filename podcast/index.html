@@ -1,0 +1,56 @@
+---
+layout: default
+title: Podcast
+paginate: true
+categories: blog
+published: false
+---
+
+<link rel="stylesheet" href="{{ root_url }}/css/styles.css" />
+<link rel="stylesheet" href="{{ root_url }}/css/font-awesome.css" />
+<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
+
+<div id="blog" style="padding-top:30px; margin-top:-23px;">
+<div style="padding-bottom:60px; padding-top:20px;">
+  <form style="float:right;" action="{{ root_url }}/search/?">
+    <input type="search" name="q" placeholder="Search">
+  </form>
+</div>
+
+{% assign blogposts = site.categories.blog %}
+<div class="pure-u-1-2">
+<div style="padding-right:10px; padding-left:10px;">
+{% for post in blogposts %}
+{% if post.tags contains 'audio' %}
+  <small style="float:right; margin-top:5px;">{{ post.date | date:'%a %d %b %Y' }}</small>
+  <a href="{{ post.url }}">
+    <h2>{{ post.title }}</h2>
+  </a>
+      <div>
+            {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
+            {% if truncated_post != post.content %}
+            <a href="{{ post.url }}">
+              <img src="{{ post.thumb }}" class="thumb" />
+            </a>     
+            {% capture audio_url %}{{ root_url }}/sounds/{{ post.path | split:'/'  | last | replace: '.md' '' }}.mp3{% endcapture %}
+            {% include embed-audio.html src=audio_url %}
+
+      </div>
+  <p>
+
+     <span style="float:right;"><i class="icon-tags"></i> Tags :
+      {% for tag in post.tags %}
+          <a class="mytag" href="/tag/{{ tag }}"> {{ tag }} </a>
+      {% endfor %}
+     </span>
+  </p>
+  {% else %}
+      {% endif %}
+  {% if post != blogposts.last %}
+    <br>
+    <hr />
+    <br>
+    {% endif %}
+{% endif %}
+{% endfor %}
+</div>
