@@ -22,8 +22,11 @@ author: Tushar Sharma
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
 <link rel="stylesheet" type="text/css" href="{{ root_url }}/css/chat.css">
-{% include embed-audio.html src="/sounds/2021-12-24-wild-marriage.mp3" %}<br>
-
+{% capture audio_url %}
+{{ root_url }}/sounds/{{ page.path | split:'/'  | last | replace: '.md' '' }}.mp3
+{% endcapture %}
+{% include embed-audio.html src=audio_url %}
+<br>
 <!--begin_of_post -->
 
 <center>
