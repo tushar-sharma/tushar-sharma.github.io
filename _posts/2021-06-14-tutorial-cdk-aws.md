@@ -9,10 +9,10 @@ tags:
 - typescript
 - python
 name: aws-cdk
-thumb: https://i.imgur.com/DOFlgaf.jpg
+thumb: https://unsplash.com/photos/0Fws0jyIt9s/download?w=437
 summary: AWS CDK tutorial
 author: Tushar Sharma
-image : https://i.imgur.com/DOFlgaf.jpg
+image : https://unsplash.com/photos/0Fws0jyIt9s/download?w=437
 featuredPost: true
 ---
 
