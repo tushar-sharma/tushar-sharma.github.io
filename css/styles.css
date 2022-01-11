@@ -117,10 +117,9 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 .codeblock{
     padding: 8px 15px;
     border-radius: 5px;
-    border: 1px solid #e5e5e5;
     overflow-x: auto;
     color: #444;
-    #font: 13pt/1.5 'Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal';
+    font: 300 1.125em "Source Sans Pro", Helvetica, Arial, sans-serif;
 	font-size:20px;
     word-wrap: break-word;
 }
