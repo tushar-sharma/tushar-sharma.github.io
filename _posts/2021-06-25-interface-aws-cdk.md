@@ -9,7 +9,8 @@ tags:
 - typescript
 - tutorial
 name: interface-aws-cdk
-thumb: https://cdkworkshop.com/images/new-cdk-logo.png
+thumb: https://unsplash.com/photos/hfiym43qBpk/download?w=437
+image: https://unsplash.com/photos/hfiym43qBpk/download?w=437
 ---
 
 
