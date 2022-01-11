@@ -9,9 +9,9 @@ tags:
 - javascript
 - scala
 name: lca-binary-tree
-thumb: https://i.imgur.com/4YDq7FT.jpg
+thumb: https://unsplash.com/photos/CJO9xWDVGXU/download?w=437
 summary: Finding lowest common ancestor of a binary tree
-image: https://i.imgur.com/4YDq7FT.jpg
+image: https://unsplash.com/photos/CJO9xWDVGXU/download?w=437
 author: Tushar Sharma
 ---
 
