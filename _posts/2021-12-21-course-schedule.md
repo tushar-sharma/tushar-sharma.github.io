@@ -9,9 +9,9 @@ tags:
 - java
 - python
 name: course-schedule
-thumb: https://i.imgur.com/t4KbRpA.jpg
+thumb: https://unsplash.com/photos/Fi-GJaLRGKc/download?w=437
 summary: Course Schedule Leetcode Solution
-image: https://i.imgur.com/t4KbRpA.jpg
+image: https://unsplash.com/photos/Fi-GJaLRGKc/download?w=437
 author: Tushar Sharma
 ---
 

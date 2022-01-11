@@ -8,8 +8,8 @@ tags:
   - carcinogen
   - meditation
 name: diary-carcinogen
-thumb: https://i.imgur.com/rVIAbeu.jpg
-image: https://i.imgur.com/rVIAbeu.jpg
+thumb: https://unsplash.com/photos/L7en7Lb-Ovc/download?w=437
+image: https://unsplash.com/photos/L7en7Lb-Ovc/download?w=437
 published: true
 ---
 
