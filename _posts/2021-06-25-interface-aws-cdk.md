@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamically create cloudformation stack using AWS CDK
+title: Automate creation of AWS Stack
 category: blog
 tags:
 - aws
