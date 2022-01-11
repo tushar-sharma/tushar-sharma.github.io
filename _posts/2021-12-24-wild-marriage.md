@@ -9,9 +9,9 @@ tags:
 - antimatter
 - audio
 name: wild-marriage
-thumb: https://i.imgur.com/DfhLqvA.jpg
+thumb: https://unsplash.com/photos/hBzrr6m6-pc/download?w=437
 summary: Mutual Suicide of an Electron
-image: https://i.imgur.com/DfhLqvA.jpg
+image: https://unsplash.com/photos/hBzrr6m6-pc/download?w=437
 author: Tushar Sharma
 ---
 
@@ -30,7 +30,7 @@ author: Tushar Sharma
 <!--begin_of_post -->
 
 <center>
-<img src="https://i.imgur.com/DfhLqvA.jpg" alt="marriage photo"/>
+<img src="https://unsplash.com/photos/hBzrr6m6-pc/download" alt="marriage photo"/>
 </center><br>
 
 "Marriages are made in heaven" is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However there is a rare marriage that not only invites heaven's fury but also is consummated by mutual suicide.
