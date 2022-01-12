@@ -21,6 +21,8 @@ I recently came across a Youtube video of a famous Indian actress Genelia Deshmu
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
+<meta property="og:image" content="https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg">
+
 {% capture audio_url %}
 {{ root_url }}/sounds/{{ page.path | split:'/'  | last | replace: '.md' '' }}.mp3
 {% endcapture %}
