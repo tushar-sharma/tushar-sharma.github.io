@@ -151,27 +151,25 @@ header li {
   <pre style="overflow: hidden; overflow-y: hidden;">{% include sidebar_projects.html %}</pre>
 </div>
 -->
-<br><br>
 <div class="highlight">
   {% include sidebar_links.html %}
 </div>
 
 
-<br><br><br>
 
 <!-- only if page is root page -->
 {% if page.url == '/' or  paginator.previous_page %}
-<h1>Most popular</h1> 
+<h1>Most popular</h1>
 <div class="highlight">
   {% include sidebar_wits.html %}
 </div>
 {% else %}
-<h1>Most popular</h1> 
+<h1>Most popular</h1>
 <div class="highlight">
   {% include sidebar_wits.html %}
 </div> <br>
 <div id="toc-block" class="codeblock" style="display:none;">
-  <h1>Table of content</h1> 
+  <h1>Table of content</h1>
   <div id="toc"></div>
 </div>
 {% endif %}
