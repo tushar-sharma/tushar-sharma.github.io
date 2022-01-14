@@ -463,7 +463,7 @@ Feed the masses, eat with the classes.
 "True science teaches us to doubt and, in ignorance, to refrain " - Claude Bernard (1813-78) French physiologist
 "Scientists are explorers. Philosophers are tourists " - Richard Feynman
 "Genius is one percent inspiration and ninety-nine percent perspiration" - Thomas Alva Edison
-"Chance favors the prepared mind" - Louis Pasteur 
+"Chance favors the prepared mind" - Louis Pasteur
 "Science is the record of dead religions" - Oscar Wilde (Oscar Fingal O'Flahertie Wills)
 "There are no creeds in mathematics" - Peter F. Drucker
 "The word god is for me nothing more than the expression and product of human weaknesses, the Bible a collection of honourable, but still primitive legends which are nevertheless childish" - Albert Einstein, in a 1954 letter to philosopher Eric Gutkind
@@ -475,3 +475,4 @@ Feed the masses, eat with the classes.
 "When people talk of the freedom of writing, speaking or thinking I cannot choose but laugh. No such thing ever existed. No such thing now exists; but I hope it will exist. But it must be hundreds of years after you and I shall write and speak no more" - John Adams, Letter to Thomas Jefferson
 "History is the sum total of things that could have been avoided" - Konrad Adenauer
 "log log log x goes to infinity with great dignity" - Daniel Shanks
+"Wherever you go becomes a part of you somehow" - Anita Desai
