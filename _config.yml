@@ -13,6 +13,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-zopfli
 kramdown:
   math_engine: mathjax
   input: GFM
