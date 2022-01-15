@@ -33,11 +33,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: none;
-    color: #f05c36;
-}
-
 /**** content boxes classes ****/
 
 .content-place {
