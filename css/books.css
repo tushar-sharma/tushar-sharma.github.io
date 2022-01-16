@@ -1,1 +1,118 @@
-#progress-outer{background:#333;-webkit-border-radius:13px;height:12px;width:70px}#progress-inner{background:#39c;height:100%;-webkit-border-radius:9px}.cl{color:#39c;overflow:hidden;display:inline-block}img.book{height:150px;padding:15px 15px 15px 0;max-width:100px}img.book_p{height:250px;padding:15px 15px 15px 0;max-width:250px}.rating{width:150px}.rating2{width:200px}h2.entry-title{color:black;text-decoration:none;font-family:"Rokkitt",serif;font-size:22px;line-height:32px;font-weight:700;-webkit-font-smoothing:antialiased}nav#pagination span.next a,nav#pagination span.prev a{padding:10px;padding-left:20px;padding-right:20px;border-radius:30px;-moz-border-radius:30px;-webkit-border-radius:30px;font-weight:700;text-transform:uppercase;border:3px solid}nav a,nav a:visited{color:#080808;text-decoration:none;outline:0}nav#pagination span.next{display:block;float:right}nav#pagination span.prev{display:block;float:left}.disclaimer{border-radius:25px;border:2px solid #39c;padding:20px;text-align:left;word-wrap:break-word;width:100%}.alert{padding:20px;background-color:#f44336;color:white;opacity:1;transition:opacity .6s;margin-bottom:15px}.alert.success{background-color:#4caf50}td{line-height:1.4;color:#667;letter-spacing:.015em;hyphens:none}select{font-size:1rem;margin-left:10px;line-height:1.5;color:#495057;font-size:20px!important;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}.book1{width:25%}.book3{width:0}.book4{width:27%}.book5{width:10%}.book6{width:48.71%}.book7{width:45%}.book8{width:20%}.book9{width:24%}.book10{width:9.45%}.book11{width:59%}.book12{width:10%}.tbd{width:0}
+#progress-outer { background: #333;
+    -webkit-border-radius: 13px;
+    height: 12px;
+    width: 70px;
+}
+#progress-inner {
+    background: rgb(51, 153, 204);
+      height: 100%;
+    -webkit-border-radius: 9px;
+}
+
+.cl{ color: rgb(51, 153, 204);
+     overflow:hidden; display: inline-block; }
+
+img.book {
+    height: 150px;
+    padding: 15px 15px 15px 0px;
+    max-width: 100px;
+}
+img.book_p {
+    height: 250px;
+    padding: 15px 15px 15px 0px;
+    max-width: 250px;
+}
+.rating{
+    width: 150px;
+}
+.rating2{
+    width: 200px;
+}
+h2.entry-title{
+    color: black;
+    text-decoration: none;
+    font-family: "Rokkitt", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+nav#pagination span.next a, nav#pagination span.prev a {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid;
+}
+nav a, nav a:visited {
+    color: #080808;
+    text-decoration: none;
+    outline: 0;
+}
+nav#pagination span.next {
+    display: block;
+    float: right;
+}
+nav#pagination span.prev {
+    display: block;
+    float: left;
+}
+
+.disclaimer{
+   border-radius: 25px;
+   border: 2px solid rgb(51, 153, 204);
+   padding: 20px;
+   text-align: left;
+   word-wrap: break-word;
+   width: 100%;
+ }
+
+ .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+  }
+
+ .alert.success {background-color: #4CAF50;}
+
+ td{
+    line-height: 1.4;
+    color: #667;
+    letter-spacing: 0.015em;
+    hyphens: none;
+}
+
+select {
+    font-size: 1rem;
+    margin-left: 10px;
+    line-height: 1.5;
+    color: #495057;
+    font-size: 20px !important;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* begin - books progress*/
+.book1 {width: 25%; }    /*Possible world 44 pages out of  200 */
+.book3 {width: 0%; }    /* other  */
+.book4 {width: 27%; }    /* Kafka : The Definite Guide  has 11 chapters */
+.book5 {width: 10%; }    /* technical analysis */
+.book6 {width: 48.71%; }  /* Glimpse of the world  page : 525 / 1129 */
+.book7 {width: 45%; }  /* Hackers */
+.book8 {width: 20%; }  /* evolution of physics */
+.book9 {width: 24%; }  /* eminent historians */
+.book10 {width: 9.45%; }  /* java 8 in action */
+.book11 {width: 59%; }  /* One, Two, Three...Infinity */
+.book12 {width: 10%; }  /* Mastering bitcoin */
+.tbd {width: 0%; }  /* TBD */
+/* end -  book progress*/

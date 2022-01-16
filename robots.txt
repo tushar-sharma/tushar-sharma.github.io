@@ -1,1 +1,2 @@
-User-agent: * Sitemap: https://randomwits.com/sitemap.xml
+User-agent: *
+Sitemap: https://randomwits.com/sitemap.xml
