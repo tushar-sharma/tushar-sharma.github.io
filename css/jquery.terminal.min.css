@@ -290,7 +290,7 @@
  .terminal .terminal-output .fa span,
  .terminal .terminal-output .fas span {
      clip: rect(1px, 1px, 1px, 1px);
-     a: transparent !important;
+     background: transparent !important;
      color: transparent !important;
      position: absolute;
  }
