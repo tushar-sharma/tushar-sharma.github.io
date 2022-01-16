@@ -1,0 +1,58 @@
+/**
+ * CSS to support multiple languages in  a tab 
+ */
+
+.tab {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    border: 1px solid #E7E7E7;
+}
+
+.tab-container > ul > li:first-child {
+    border-radius: 0.3em 0em 0em 0.3em;
+}
+
+.tab-container > ul > li:last-child {
+    border-radius: 0em 0.3em 0.3em 0em;
+}
+
+.tab a {
+    font-size: 20px;
+    line-height: 2em;
+    display: block;
+    padding: 0 10px;
+    outline: none;
+    text-decoration: none;
+}
+
+.tab a:hover {
+    font-weight: bold;
+}
+
+.tab a.active {
+    font-weight: bold;
+    color: #0057A0;
+}
+
+.tab a:visited {
+    color: #0057A0;
+}
+
+.tab.active {
+    position: relative;
+}
+
+.tab:not(.active) a {
+    color: grey;
+}
+
+.tab-container > ul {
+    padding-left: 0px;
+    margin: 0px 0px;
+    padding-bottom: 5px;
+}
+
+li > div.tab-container {
+    padding-top: 15px;
+}
