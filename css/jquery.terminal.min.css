@@ -141,8 +141,8 @@
  .cmd.cmd.cmd .inverted,
  .terminal .inverted,
  .terminal .terminal-inverted {
-     background-color: #aaa !important;
-     color: #000 !important;
+     background-color: #000 !important;
+     color: #fff !important;
  }
  .cmd a[href],
  .terminal .terminal-output > :not(.raw) a[href] {
@@ -157,14 +157,14 @@
  }
  .terminal .terminal-output > :not(.raw) a[href].terminal-inverted {
      background: var(--color, #ccc);
-     text-shadow: 0 0 calc(var(--glow) * 5px) var(--background, #000);
+     text-shadow: 0 0 calc(var(--glow) * 5px) var(--background, #fff);
  }
  .cmd a[href]:hover,
  .terminal .terminal-output > :not(.raw) a[href]:hover {
      background-color: #37f;
      background-color: var(--link-color, #37f) !important;
-     color: #000;
-     color: var(--background, #000) !important;
+     color: #fff;
+     color: var(--background, #fff) !important;
      text-decoration: none;
  }
  .cmd a[href] span,
@@ -178,8 +178,8 @@
  .terminal .terminal-output > :not(.raw) a[href]:hover span {
      background-color: #37f !important;
      background-color: var(--link-color, #37f) !important;
-     color: #000 !important;
-     color: var(--background, #000) !important;
+     color: #fff !important;
+     color: var(--background, #fff) !important;
      text-decoration: none;
  }
  .cmd .cmd-cursor,
@@ -200,8 +200,8 @@
  }
  .bar.cmd .cmd-inverted,
  .bar.terminal .inverted {
-     box-shadow: -2px 0 0 -1px #aaa;
-     box-shadow: -2px 0 0 -1px var(--original-color, #aaa);
+     box-shadow: -2px 0 0 -1px #000;
+     box-shadow: -2px 0 0 -1px var(--original-color, #000);
  }
  .cmd .cmd-prompt,
  .terminal,
@@ -260,8 +260,8 @@
  .cmd span[data-text]:not(.cmd-inverted):not(.token):not(.emoji),
  .terminal,
  terminal-output > div:not(.raw) div > span:not(.token):not(.inverted):not(.terminal-inverted):not(.cmd-inverted):not(.terminal-error):not(.emoji) {
-     background-color: #000;
-     color: #aaa;
+     background-color: #fff;
+     color: #000;
  }
  .cmd span[data-text] span,
  .terminal span[data-text] span {
@@ -354,7 +354,7 @@
      border-collapse: collapse;
  }
  .terminal td {
-     border: 1px solid #aaa;
+     border: 1px solid #000;
  }
  .cmd span[data-text]:not(.emoji):not(.fa):not(.fas):not(.far) span {
      background-color: inherit;
@@ -372,7 +372,7 @@
      overflow: hidden;
  }
  .cmd {
-     --original-color: var(--color, #aaa);
+     --original-color: var(--color, #000);
  }
  .cmd a[href] {
      --original-color: var(--link-color, #37f);
@@ -380,46 +380,46 @@
  @-webkit-keyframes terminal-blink {
      0%,
      50% {
-         background-color: #aaa;
-         background-color: var(--original-color, #aaa);
-         -webkit-box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #aaa);
-         box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #aaa);
-         color: #000;
-         color: var(--background, #000);
+         background-color: #000;
+         background-color: var(--original-color, #000);
+         -webkit-box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #000);
+         box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #000);
+         color: #fff;
+         color: var(--background, #fff);
      }
      50.1%,
      to {
          background-color: inherit;
          color: inherit;
-         color: var(--original-background, var(--original-color, #aaa));
+         color: var(--original-background, var(--original-color, #000));
      }
  }
  @-moz-keyframes terminal-blink {
      0%,
      50% {
-         background-color: #aaa;
-         background-color: var(--original-color, #aaa);
-         -webkit-box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #aaa);
-         box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #aaa);
-         color: #000;
-         color: var(--background, #000);
+         background-color: #000;
+         background-color: var(--original-color, #000);
+         -webkit-box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #000);
+         box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #000);
+         color: #fff;
+         color: var(--background, #fff);
      }
      50.1%,
      to {
          background-color: inherit;
          color: inherit;
-         color: var(--original-background, var(--original-color, #aaa));
+         color: var(--original-background, var(--original-color, #000));
      }
  }
  @keyframes terminal-blink {
      0%,
      50% {
-         background-color: #aaa;
-         background-color: var(--original-color, #aaa);
-         -webkit-box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #aaa);
-         box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #aaa);
-         color: #000;
-         color: var(--background, #000);
+         background-color: #000;
+         background-color: var(--original-color, #000);
+         -webkit-box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #000);
+         box-shadow: 0 0 calc(var(--glow) * 3px) var(--color, #000);
+         color: #fff;
+         color: var(--background, #fff);
      }
      50.1%,
      to {
@@ -427,19 +427,19 @@
          -webkit-box-shadow: none;
          box-shadow: none;
          color: inherit;
-         color: var(--original-background, var(--original-color, #aaa));
+         color: var(--original-background, var(--original-color, #000));
      }
  }
  @-webkit-keyframes terminal-glow {
      0%,
      50% {
-         background-color: #aaa;
-         background-color: var(--original-color, #aaa);
-         box-shadow: 0 0 3px #aaa;
-         -webkit-box-shadow: 0 0 3px var(--color, #aaa);
-         box-shadow: 0 0 3px var(--color, #aaa);
-         color: #000;
-         color: var(--background, #000);
+         background-color: #000;
+         background-color: var(--original-color, #000);
+         box-shadow: 0 0 3px #000;
+         -webkit-box-shadow: 0 0 3px var(--color, #000);
+         box-shadow: 0 0 3px var(--color, #000);
+         color: #fff;
+         color: var(--background, #fff);
      }
      50.1%,
      to {
@@ -452,13 +452,13 @@
  @-moz-keyframes terminal-glow {
      0%,
      50% {
-         background-color: #aaa;
-         background-color: var(--original-color, #aaa);
-         box-shadow: 0 0 3px #aaa;
-         -moz-box-shadow: 0 0 3px var(--color, #aaa);
-         box-shadow: 0 0 3px var(--color, #aaa);
-         color: #000;
-         color: var(--background, #000);
+         background-color: #000;
+         background-color: var(--original-color, #000);
+         box-shadow: 0 0 3px #000;
+         -moz-box-shadow: 0 0 3px var(--color, #000);
+         box-shadow: 0 0 3px var(--color, #000);
+         color: #fff;
+         color: var(--background, #fff);
      }
      50.1%,
      to {
@@ -471,12 +471,12 @@
  @keyframes terminal-glow {
      0%,
      50% {
-         background-color: #aaa;
-         background-color: var(--original-color, #aaa);
-         box-shadow: 0 0 3px #aaa;
-         box-shadow: 0 0 3px var(--color, #aaa);
-         color: #000;
-         color: var(--background, #000);
+         background-color: #000;
+         background-color: var(--original-color, #000);
+         box-shadow: 0 0 3px #000;
+         box-shadow: 0 0 3px var(--color, #000);
+         color: #fff;
+         color: var(--background, #fff);
      }
      50.1%,
      to {
@@ -488,8 +488,8 @@
  @-webkit-keyframes terminal-bar {
      0%,
      50% {
-         box-shadow: -2px 0 0 -1px #aaa;
-         box-shadow: -2px 0 0 -1px var(--original-color, #aaa);
+         box-shadow: -2px 0 0 -1px #000;
+         box-shadow: -2px 0 0 -1px var(--original-color, #000);
      }
      50.1%,
      to {
@@ -499,8 +499,8 @@
  @-moz-keyframes terminal-bar {
      0%,
      50% {
-         box-shadow: -2px 0 0 -1px #aaa;
-         box-shadow: -2px 0 0 -1px var(--original-color, #aaa);
+         box-shadow: -2px 0 0 -1px #000;
+         box-shadow: -2px 0 0 -1px var(--original-color, #000);
      }
      50.1%,
      to {
@@ -510,8 +510,8 @@
  @keyframes terminal-bar {
      0%,
      50% {
-         box-shadow: -2px 0 0 -1px #aaa;
-         box-shadow: -2px 0 0 -1px var(--original-color, #aaa);
+         box-shadow: -2px 0 0 -1px #000;
+         box-shadow: -2px 0 0 -1px var(--original-color, #000);
      }
      50.1%,
      to {
@@ -521,8 +521,8 @@
  @-webkit-keyframes terminal-underline {
      0%,
      50% {
-         box-shadow: 0 2px 0 #aaa;
-         box-shadow: 0 2px 0 var(--original-color, #aaa);
+         box-shadow: 0 2px 0 #000;
+         box-shadow: 0 2px 0 var(--original-color, #000);
      }
      50.1%,
      to {
@@ -532,8 +532,8 @@
  @-moz-keyframes terminal-underline {
      0%,
      50% {
-         box-shadow: 0 2px 0 #aaa;
-         box-shadow: 0 2px 0 var(--original-color, #aaa);
+         box-shadow: 0 2px 0 #000;
+         box-shadow: 0 2px 0 var(--original-color, #000);
      }
      50.1%,
      to {
@@ -543,8 +543,8 @@
  @keyframes terminal-underline {
      0%,
      50% {
-         box-shadow: 0 2px 0 #aaa;
-         box-shadow: 0 2px 0 var(--original-color, #aaa);
+         box-shadow: 0 2px 0 #000;
+         box-shadow: 0 2px 0 var(--original-color, #000);
      }
      50.1%,
      to {
@@ -591,35 +591,35 @@
      @keyframes terminal-blink {
          0%,
          50% {
-             background-color: var(--original-color, #aaa);
-             color: var(--background, #000);
+             background-color: var(--original-color, #000);
+             color: var(--background, #fff);
          }
          50.1%,
          to {
-             background-color: var(--background, #000);
-             color: var(--original-color, #aaa);
+             background-color: var(--background, #fff);
+             color: var(--original-color, #000);
          }
      }
      @keyframes terminal-bar {
          0%,
          50% {
-             border-left-color: var(--color, #aaa);
+             border-left-color: var(--color, #000);
          }
          50.1%,
          to {
-             border-left-color: var(--background, #000);
+             border-left-color: var(--background, #fff);
          }
      }
      @keyframes terminal-underline {
          0%,
          50% {
-             border-bottom-color: var(--color, #aaa);
+             border-bottom-color: var(--color, #000);
              line-height: 12px;
              line-height: calc(var(--size, 1) * 12px);
          }
          50.1%,
          to {
-             border-bottom-color: var(--background, #000);
+             border-bottom-color: var(--background, #fff);
              line-height: 12px;
              line-height: calc(var(--size, 1) * 12px);
          }
@@ -635,13 +635,13 @@
      @-ms-keyframes terminal-blink {
          0%,
          50% {
-             background-color: #aaa;
-             color: #000;
+             background-color: #000;
+             color: #fff;
          }
          50.1%,
          to {
-             background-color: #000;
-             color: #aaa;
+             background-color: #fff;
+             color: #000;
          }
      }
  }
@@ -661,8 +661,8 @@
  .terminal h6::-moz-selection,
  .terminal pre::-moz-selection,
  .terminal td::-moz-selection {
-     background-color: #aaa;
-     color: #000;
+     background-color: #000;
+     color: #fff;
  }
  .cmd span[data-text]:not(.far):not(.fa):not(.fas) span::selection,
  .terminal .terminal-output .raw div::selection,
@@ -680,7 +680,7 @@
  .terminal pre::selection,
  .terminal td::selection {
      background-color: hsla(0, 0%, 67%, 0.99);
-     color: #000;
+     color: #fff;
  }
  .cmd .emoji::-moz-selection,
  .cmd .emoji span::-moz-selection,
@@ -765,8 +765,8 @@
      .terminal-output > :not(.raw) a,
      .terminal-output > :not(.raw) div,
      .terminal-output > :not(.raw) span[data-text]:not(.token):not(.inverted):not(.terminal-inverted):not(.cmd-inverted):not(.terminal-error):not(.emoji) {
-         background-color: var(--background, #000);
-         color: var(--color, #aaa);
+         background-color: var(--background, #fff);
+         color: var(--color, #000);
          text-shadow: 0 0 calc(var(--glow) * 5px) var(--color, #ccc);
      }
      .terminal span[style*="--length"] {
@@ -792,12 +792,12 @@
      .cmd.cmd.cmd .cmd-inverted,
      .cmd.cmd.cmd .inverted,
      .terminal .inverted {
-         background-color: var(--color, #aaa) !important;
-         color: var(--background, #000) !important;
+         background-color: var(--color, #000) !important;
+         color: var(--background, #fff) !important;
      }
      .cmd .cmd-cursor.cmd-blink {
-         background-color: var(--background, #000);
-         color: var(--color, #aaa);
+         background-color: var(--background, #fff);
+         color: var(--color, #000);
      }
      .cmd .cmd-cursor.cmd-blink .emoji,
      .cmd .cmd-cursor.cmd-blink .fa,
@@ -830,12 +830,12 @@
      .terminal h6::-moz-selection,
      .terminal pre::-moz-selection,
      .terminal td::-moz-selection {
-         background-color: var(--color, #aaa);
-         color: var(--background, #000);
+         background-color: var(--color, #000);
+         color: var(--background, #fff);
      }
      .terminal .terminal-output div div a::-moz-selection {
          background-color: var(--link-color, rgba(15, 96, 255, 0.99)) !important;
-         color: var(--background, #000) !important;
+         color: var(--background, #fff) !important;
      }
      .terminal .terminal-output div div a:hover::-moz-selection {
          background-color: var(--link-color, rgba(2, 50, 144, 0.99)) !important;
@@ -856,11 +856,11 @@
      .terminal pre::selection,
      .terminal td::selection {
          background-color: var(--color, hsla(0, 0%, 67%, 0.99)) !important;
-         color: var(--background, #000) !important;
+         color: var(--background, #fff) !important;
      }
      .terminal .terminal-output div div a::selection {
          background-color: var(--link-color, rgba(15, 96, 255, 0.99)) !important;
-         color: var(--background, #000) !important;
+         color: var(--background, #fff) !important;
      }
      .terminal .terminal-output div div a:hover::selection {
          background-color: var(--link-color, rgba(2, 50, 144, 0.99)) !important;
@@ -879,7 +879,7 @@
      .terminal pre::selection,
      .terminal td::selection {
          background-color: hsla(0, 0%, 67%, 0.99);
-         color: #000;
+         color: #fff;
      }
  }
  .cmd .style .token.string,
@@ -912,8 +912,8 @@
      white-space: nowrap;
  }
  .cmd .cursor-wrapper li:hover {
-     background: #aaa;
-     color: #000;
+     background: #000;
+     color: #fff;
  }
  .cursor-wrapper {
      position: relative;
@@ -993,17 +993,17 @@
      z-index: 500;
  }
  .terminal::-webkit-scrollbar {
-     background: var(--background, #000);
+     background: var(--background, #fff);
      height: 6px;
      width: 6px;
  }
  .terminal::-webkit-scrollbar-thumb,
  .terminal::-webkit-scrollbar-thumb:hover {
-     background: var(--color, #aaa);
+     background: var(--color, #000);
  }
  .terminal {
-     scrollbar-color: #aaa #000;
-     scrollbar-color: var(--color, #aaa) var(--background, #000);
+     scrollbar-color: #000 #fff;
+     scrollbar-color: var(--color, #000) var(--background, #fff);
      scrollbar-width: thin;
  }
  .cmd .token {
@@ -1025,4 +1025,122 @@
      }
  }
  /*# sourceMappingURL=jquery.terminal.min.css.map */
+ .terminal .terminal-output .format, .terminal .cmd .format,
+ .terminal .cmd .prompt, .terminal .cmd .prompt div, .terminal .terminal-output div div{
+     display: inline-block;
+ }
+ .terminal .clipboard {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     opacity: 0.01;
+     filter: alpha(opacity = 0.01);
+     filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.01);
+     width: 2px;
+ }
+ .cmd $ .clipboard {
+     position: fixed;
+ }
+ .terminal {
+     padding: 10px;
+     position: relative;
+     overflow: hidden;
+ }
+ .cmd {
+     padding: 0;
+     margin: 0;
+     height: 1.3em;
+     /*margin-top: 3px; */
+ }
+ .terminal .terminal-output div div, .terminal .prompt {
+     display: block;
+     line-height: 14px;
+     height: auto;
+ }
+ .terminal .prompt {
+     float: left;
+ }
  
+ .terminal {
+     font-family: FreeMono, monospace;
+     /*color: #000;
+     background-color: #fff;*/
+     font-size: 12px;
+     line-height: 14px;
+     /*starting pre */
+     padding:8px 15px;
+     background: #fff;
+     border-radius:5px;
+     border:1px solid #e5e5e5;
+     overflow-x: auto;
+ }
+ .terminal-output > div {
+     /*padding-top: 3px;*/
+     /*color: rgb(51, 153, 204);*/
+ }
+ .terminal .terminal-output div span {
+     display: inline-block;
+ }
+ .terminal .cmd span {
+     float: left;
+     /*display: inline-block; */
+ }
+ .terminal .cmd span.inverted {
+     background-color: #000;
+     color: #fff;
+ }
+ .terminal .terminal-output div div::-moz-selection,
+ .terminal .terminal-output div span::-moz-selection,
+ .terminal .terminal-output div div a::-moz-selection {
+     background-color: #000;
+     color: #fff;
+ }
+ .terminal .terminal-output div div::selection,
+ .terminal .terminal-output div div a::selection,
+ .terminal .terminal-output div span::selection,
+ /*.terminal .cmd > span::selection,*/
+ .terminal .prompt span::selection {
+     background-color: #000;
+     color: #fff;
+ }
+ .terminal .terminal-output div.error, .terminal .terminal-output div.error div {
+     color: red;
+ }
+ .tilda {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 1100;
+ }
+ .clear {
+     clear: both;
+ }
+ .terminal a {
+     color: #0F60FF;
+ }
+ .terminal a:hover {
+     color: red;
+ }
+ 
+ /*
+      FILE ARCHIVED ON 03:42:58 Dec 24, 2014 AND RETRIEVED FROM THE
+      INTERNET ARCHIVE ON 22:43:36 Jan 16, 2022.
+      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+ 
+      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+      SECTION 108(a)(3)).
+ */
+ /*
+ playback timings (ms):
+   captures_list: 1146.191
+   exclusion.robots: 0.177
+   exclusion.robots.policy: 0.164
+   cdx.remote: 0.119
+   esindex: 0.013
+   LoadShardBlock: 944.219 (3)
+   PetaboxLoader3.datanode: 1296.847 (4)
+   CDXLines.iter: 20.88 (3)
+   load_resource: 702.134
+   PetaboxLoader3.resolve: 148.619
+ */
