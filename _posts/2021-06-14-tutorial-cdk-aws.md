@@ -9,10 +9,10 @@ tags:
 - typescript
 - python
 name: aws-cdk
-thumb: https://unsplash.com/photos/DUmFLtMeAbQ/download?w=437
+thumb: https://unsplash.com/photos/HpWwEURimK8/download?w=437
 summary: AWS CDK tutorial
 author: Tushar Sharma
-image : https://unsplash.com/photos/DUmFLtMeAbQ/download?w=437
+image : https://unsplash.com/photos/HpWwEURimK8/download?w=437
 featuredPost: true
 ---
 
@@ -78,7 +78,7 @@ Then you can verify
 <script src="https://gist.github.com/tushar-sharma/167a194b3e9258d39e176905a6788d9b.js?file=cdk-doctor.sh"></script><br>
 
 
-For our first use case, will add Parameters to our cloudformation. We need to edit file **lib\test-cdk-stack.ts** for typescript or **lib\test_cdk_stack.py** for python.
+For our first use case, will add Parameters to our cloudformation. We need to edit file `lib\test-cdk-stack.ts` for typescript or `lib\test_cdk_stack.py` for python.
 
 <div class="tab-container">
   <ul>
@@ -121,7 +121,7 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a saf
 
 ## Stepfunction
 
-The cloudformation template needs at least one resource to validate. We will add a `stepfunction` to our cloudformation. We will define our stepfunction inside a json file, **helloworld.asl.json**
+The cloudformation template needs at least one resource to validate. We will add a `stepfunction` to our cloudformation. We will define our stepfunction inside a json file, `helloworld.asl.json`
 
 ```json
 {
@@ -148,7 +148,7 @@ If you are not familiar with Stepfunction, AWS Stepfunction console has a nice v
 <img src="https://docs.aws.amazon.com/step-functions/latest/dg/images/tutorial-getting-started-visual-pane-render.png" alt="stepfunction image">
 </center><br>
 
-Next we need to upload the **helloworld.asl.json** to s3 bucket. We also need to define a mapping to access this `json` file.
+Next we need to upload the `helloworld.asl.json` to s3 bucket. We also need to define a mapping to access this `json` file.
 
 
 <div class="tab-container">
