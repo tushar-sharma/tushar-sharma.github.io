@@ -29,10 +29,6 @@ author: Tushar Sharma
 <br>
 <!--begin_of_post -->
 
-<center>
-<img src="https://unsplash.com/photos/hBzrr6m6-pc/download" alt="marriage photo"/>
-</center><br>
-
 "Marriages are made in heaven" is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However there is a rare marriage that not only invites heaven's fury but also is consummated by mutual suicide.
 
 "Wild marriage" was coined by Max Born in his book Atomic Physics. The phenomenon describes an encounter of a positron and an electron. Both particles will cease to exist and will annihilate each other by releasing intensive electromagnetic radiation (gamma [γ] rays).
