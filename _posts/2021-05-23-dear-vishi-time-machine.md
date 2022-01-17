@@ -7,7 +7,7 @@ tags:
   - diary
   - letters
 name: dear-vishi
-thumb: https://unsplash.com/photos/f2tUvySJYr4/download?w=437
+thumb: https://unsplash.com/photos/BXOXnQ26B7o/download?w=437
 published: true
 ---
 
