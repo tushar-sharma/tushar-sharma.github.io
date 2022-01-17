@@ -7,9 +7,9 @@ tags:
 - friends
 - audio
 name: lost-friends
-thumb: https://i.imgur.com/imYXtDU.jpg
+thumb: https://unsplash.com/photos/lSegRSDBMLw/download?w=437
 summary: My musing in my solitude.
-image: https://i.imgur.com/imYXtDU.jpg
+image: https://unsplash.com/photos/lSegRSDBMLw/download?w=437
 author: Tushar Sharma
 ---
 
