@@ -3,7 +3,7 @@ build:
 	cp CNAME _site/
 	touch _site/.nojekyll
 serve:
-	JEKYLL_ENV=production bundle exec jekyll serve > /dev/null 2>&1 &
+	JEKYLL_ENV=production bundle exec jekyll serve
 clean:
 	rm -fr tag
 	cp -r _site/tag .
