@@ -7,6 +7,87 @@
     
       
         <item>
+          <title>Debugging Spark Application using remote container</title>
+          <description>&lt;p&gt;One of the nifty feature in any code development is the ability to debug your application using break points. Submitting a Spark job while waiting for it to complete will waste a lot of time debugging. Spark jobs can be debugging with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;break points&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step over&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step into&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step out&lt;/code&gt; commands.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/spark&quot; title=&quot;View posts tagged with &amp;quot;spark&amp;quot;&quot;&gt;spark&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/pyspark&quot; title=&quot;View posts tagged with &amp;quot;pyspark&amp;quot;&quot;&gt;pyspark&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/docker&quot; title=&quot;View posts tagged with &amp;quot;docker&amp;quot;&quot;&gt;docker&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/vscode&quot; title=&quot;View posts tagged with &amp;quot;vscode&amp;quot;&quot;&gt;vscode&lt;/a&gt;   &lt;/p&gt;
+
+&lt;p&gt;One of the nifty feature in any code development is the ability to debug your application using break points. Submitting a Spark job while waiting for it to complete will waste a lot of time debugging. Spark jobs can be debugging with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;break points&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step over&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step into&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step out&lt;/code&gt; commands.&lt;/p&gt;
+
+&lt;h1 id=&quot;requirements&quot;&gt;Requirements&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VS Code&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+
+&lt;p&gt;Lets create our project.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;SparkDemo &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;SparkDemo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We will create a file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.devcontainer/devcontainer.json&lt;/code&gt;. &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VS Code&lt;/a&gt; will use this file to access (or create) a development container with a well-defined tool and runtime stack.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir .devcontainer
+$ touch .devcontainer/devcontainer.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;devconainter.json&lt;/code&gt; will look like this:&lt;br /&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/318bf60d15f03b0afe154f63589c2b84.js?file=devcontainer.json&quot;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;We will need to add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; to our project. This file will be used to build the container.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/318bf60d15f03b0afe154f63589c2b84.js?file=Dockerfile&quot;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lastly, we need to create a simple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pyspark&lt;/code&gt; script. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/318bf60d15f03b0afe154f63589c2b84.js?file=spark_demo.py&quot;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;running-the-container&quot;&gt;Running the container&lt;/h1&gt;
+
+&lt;p&gt;Currently your project structure should look like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SparkDemo
+___ .devcontainer
+___ ___ devcontainer.json
+___ Dockerfile
+___ spark_demo.py
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, we need to open the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SparkDemo&lt;/code&gt; in VS Code.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;SparkDemo
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;code &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To run the remote-container, you can click on the green button in the bottom left corner of the VS Code window.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/remote-dev-status-bar.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;demo&quot;&gt;Demo&lt;/h1&gt;
+
+&lt;iframe height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/hQNbEGFpbOI&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;position: relative;  width: 100%;&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+</description>
+          <pubDate>2022-01-16T19:28:00-05:00</pubDate>
+          <link>https://randomwits.com/debugging-spark-application-using-remote-container</link>
+          <guid isPermaLink="true">https://randomwits.com/debugging-spark-application-using-remote-container</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Wild Marriage</title>
           <description>&lt;p&gt;“Marriages are made in heaven” is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However, there is a rare marriage that not only invites heaven’s fury but also is consummated by mutual suicide.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -114,7 +195,7 @@ you as your own being”&lt;sup&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footno
 &lt;/div&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/course-schedule&quot; title=&quot;Previous Post: Course Schedule Leetcode Solution&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/course-schedule&quot; title=&quot;Previous Post: Course Schedule Leetcode Solution&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/debugging-spark-application-using-remote-container&quot; title=&quot;Next Post: Debugging Spark Application using remote container&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
           <pubDate>2021-12-24T00:00:00-05:00</pubDate>
