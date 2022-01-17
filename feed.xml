@@ -1712,7 +1712,7 @@ For this tutorial, we will use L1 construct. However same concept can be used fo
 &lt;script src=&quot;https://gist.github.com/tushar-sharma/167a194b3e9258d39e176905a6788d9b.js?file=cdk-doctor.sh&quot;&gt;&lt;/script&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;For our first use case, will add Parameters to our cloudformation. We need to edit file &lt;strong&gt;lib\test-cdk-stack.ts&lt;/strong&gt; for typescript or &lt;strong&gt;lib\test_cdk_stack.py&lt;/strong&gt; for python.&lt;/p&gt;
+&lt;p&gt;For our first use case, will add Parameters to our cloudformation. We need to edit file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lib\test-cdk-stack.ts&lt;/code&gt; for typescript or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lib\test_cdk_stack.py&lt;/code&gt; for python.&lt;/p&gt;
 
 &lt;div class=&quot;tab-container&quot;&gt;
   &lt;ul&gt;
@@ -1753,7 +1753,7 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a saf
 
 &lt;h2 id=&quot;stepfunction&quot;&gt;Stepfunction&lt;/h2&gt;
 
-&lt;p&gt;The cloudformation template needs at least one resource to validate. We will add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stepfunction&lt;/code&gt; to our cloudformation. We will define our stepfunction inside a json file, &lt;strong&gt;helloworld.asl.json&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The cloudformation template needs at least one resource to validate. We will add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stepfunction&lt;/code&gt; to our cloudformation. We will define our stepfunction inside a json file, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;helloworld.asl.json&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;Comment&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;A very very simple StepFunction&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -1779,7 +1779,7 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a saf
 &lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Next we need to upload the &lt;strong&gt;helloworld.asl.json&lt;/strong&gt; to s3 bucket. We also need to define a mapping to access this &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;Next we need to upload the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;helloworld.asl.json&lt;/code&gt; to s3 bucket. We also need to define a mapping to access this &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt; file.&lt;/p&gt;
 
 &lt;div class=&quot;tab-container&quot;&gt;
   &lt;ul&gt;

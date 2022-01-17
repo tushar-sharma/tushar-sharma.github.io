@@ -1,4 +1,3 @@
-Creating virtualenv scripts in /home/tsharma/myFiles/project/tushar-sharma.github.io/scripts/.venv
 Traceback (most recent call last):
   File "updateHabits.py", line 2, in <module>
     import gspread
