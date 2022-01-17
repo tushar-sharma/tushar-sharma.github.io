@@ -6,8 +6,8 @@ tags:
   - diary
   - letters
 name: dear-vishi
-thumb: >-
-  https://www.irishtimes.com/polopoly_fs/1.3158018.1500311533!/image/image.jpg_gen/derivatives/box_620_330/image.jpg
+thumb: https://unsplash.com/photos/npjP0dCtoxo/download?w=437
+image: https://unsplash.com/photos/npjP0dCtoxo/download?w=437
 published: true
 ---
 
