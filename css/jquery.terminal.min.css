@@ -249,7 +249,7 @@
  }
  .cmd,
  .terminal {
-     font-size: 12px;
+     font-size: 16px;
  }
  .terminal-output > div:not(.raw) div:before {
      content: "\0200B";
