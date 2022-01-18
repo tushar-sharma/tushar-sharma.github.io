@@ -50,7 +50,7 @@
 }
 
 /*attention */
-.info, .error, .success, .attention { 
+.info, .error, .success, .attention , .blue-attention{ 
      display: block;
      padding: 20px;
      margin: 10px; 
@@ -70,4 +70,10 @@
 .attention{
       background: #ffffb3;
       border-left: 10px solid orange;
+}
+
+.blue-attention{
+    color: #39c;
+    border-left: 10px solid #39c;
+
 }
