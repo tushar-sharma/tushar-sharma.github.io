@@ -6,9 +6,14 @@ image: https://randomwits.com/img/little_world.png
 author: Tushar Sharma
 ---
 
+<link rel="stylesheet" href="{{ root_url }}/css/chat.css" />
+
+
+    
 <!-- dummy box begins -->
 <div style="padding-bottom:60px; padding-top:20px; background : white;">
 </div>
+
 
 <link rel="stylesheet" href="{{ root_url }}/css/travel.css" />
 <!-- leaflet -->
@@ -29,7 +34,11 @@ author: Tushar Sharma
        <br>
         <h1 class="me_blurb">
          Travel log
-         </h1>
+         </h1><br>
+
+         <div class="blue-attention">
+            "Wherever you go becomes a part of you somehow" - Anita Desai
+        </div><br>    
 
           <div id="map"></div>
 
@@ -98,40 +107,40 @@ author: Tushar Sharma
 
              L.marker([30.49921310, 77.86223141], {
                   icon: home
-              }).addTo(map).bindPopup("Dehradun, UK");
+              }).addTo(map).bindPopup("Dehradun");
 
                L.marker([12.98883395, 77.62227731], {
                   icon: home
-                }).addTo(map).bindPopup("Bangalore, KA");
+                }).addTo(map).bindPopup("Bangalore");
 
                 L.marker([25.17370190, 75.85741940], {
                   icon: home
-                }).addTo(map).bindPopup("Kota, RJ");
+                }).addTo(map).bindPopup("Kota");
 
                 L.marker([29.65196840, -82.32498460 ], {
                   icon: home
-                }).addTo(map).bindPopup("Gainesville, FL");
+                }).addTo(map).bindPopup("Gainesville");
 
                 L.marker([40.76843420, -74.14542140 ], {
                   icon: home
-                }).addTo(map).bindPopup("Harrison, NJ");
+                }).addTo(map).bindPopup("Harrison");
 
                 L.marker([35.227085, -80.843124], {
                   icon: home
-                }).addTo(map).bindPopup("Charlotte, NC");
+                }).addTo(map).bindPopup("Charlotte");
 
                 L.marker([41.05538850, -74.00737637], {
                   icon: home
-                }).addTo(map).bindPopup("Pearl River, NY");
+                }).addTo(map).bindPopup("Pearl River");
 
                 L.marker([31.00999600, 77.09153160], {
                   icon: home
-                }).addTo(map).bindPopup("Waknaghat, HP");
+                }).addTo(map).bindPopup("Waknaghat");
               /* travel */
 
               L.marker([19.432608, -99.133209], {
                   icon: travel
-              }).addTo(map).bindPopup("Mexico city");
+              }).addTo(map).bindPopup("<a target=\"_blank\" href=\"{{ root_url }}/tag/mexico/\">Mexico city</a>");
 
               L.marker([42.31271390, -71.06384893], {
                   icon: travel
