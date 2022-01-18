@@ -1,6 +1,9 @@
 tushar-sharma.github.io
 =======================
 
+![Build](https://github.com/tushar-sharma/tushar-sharma.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+
+
 ## About 
 
 This is my [personal website](https://randomwits.com). It is supported by [Jekyll](https://github.com/mojombo/jekyll) platform.
