@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Debugging Spark Application using remote container
+title: Debugging Spark Application Locally using remote container
 date: 2022-01-16 19:28 -0500
 tags:
 - spark
