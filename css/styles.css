@@ -86,7 +86,11 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 
 /* scroll */
 
-#back-top{position:fixed;}
+#back-top{
+  position:fixed;
+  background:--accent-gradient-20: linear-gradient(132deg,var(--accent-top-20) 0%,var(--accent-bottom-20) 100%);
+}
+
 
 #back-top a{
     position: fixed;
@@ -106,6 +110,7 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 }
 #back-top a:hover span{background-color:#777}
 
+/* end scroll */
 .pagination{margin:20px 0;padding:10px 0}
 
 .pagination a  {width:50% }
