@@ -99,7 +99,7 @@ Notice that the answer must be a substring,
 &lt;p&gt;Time Complexity is &lt;strong&gt;\(\mathcal{O}(n)\)&lt;/strong&gt;, Space complexity is &lt;strong&gt;\(\mathcal{O}(1)\)&lt;/strong&gt;&lt;/p&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/debugging-spark-application-using-remote-container&quot; title=&quot;Previous Post: Debugging Spark Application using remote container&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/debugging-spark-application-using-remote-container&quot; title=&quot;Previous Post: Debugging Spark Application Locally using remote container&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
 &lt;/nav&gt;
 </description>
           <pubDate>2022-01-17T21:07:00-05:00</pubDate>
@@ -110,7 +110,7 @@ Notice that the answer must be a substring,
     
       
         <item>
-          <title>Debugging Spark Application using remote container</title>
+          <title>Debugging Spark Application Locally using remote container</title>
           <description>&lt;p&gt;One of the nifty feature in any code development is the ability to debug your application using break points. Submitting a Spark job while waiting for it to complete will waste a lot of time debugging. Spark jobs can be debugging with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;break points&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step over&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step into&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step out&lt;/code&gt; commands.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/spark&quot; title=&quot;View posts tagged with &amp;quot;spark&amp;quot;&quot;&gt;spark&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/pyspark&quot; title=&quot;View posts tagged with &amp;quot;pyspark&amp;quot;&quot;&gt;pyspark&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/docker&quot; title=&quot;View posts tagged with &amp;quot;docker&amp;quot;&quot;&gt;docker&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/vscode&quot; title=&quot;View posts tagged with &amp;quot;vscode&amp;quot;&quot;&gt;vscode&lt;/a&gt;   &lt;/p&gt;
@@ -293,7 +293,7 @@ you as your own being”&lt;sup&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footno
 &lt;/div&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/course-schedule&quot; title=&quot;Previous Post: Course Schedule Leetcode Solution&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/debugging-spark-application-using-remote-container&quot; title=&quot;Next Post: Debugging Spark Application using remote container&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/course-schedule&quot; title=&quot;Previous Post: Course Schedule Leetcode Solution&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/debugging-spark-application-using-remote-container&quot; title=&quot;Next Post: Debugging Spark Application Locally using remote container&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
           <pubDate>2021-12-24T00:00:00-05:00</pubDate>
