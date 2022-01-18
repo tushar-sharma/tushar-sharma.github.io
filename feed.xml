@@ -7,6 +7,109 @@
     
       
         <item>
+          <title>Leetcode - Longest Substring Without Repeating Characters</title>
+          <description>&lt;p&gt;In this &lt;a href=&quot;https://leetcode.com/problems/longest-substring-without-repeating-characters/&quot;&gt;leetcode&lt;/a&gt; problem,  we’re asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abcabcbb&lt;/code&gt; the longest substring without repeating characters is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abc&lt;/code&gt; (with a length of 3).&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/two pointers&quot; title=&quot;View posts tagged with &amp;quot;two pointers&amp;quot;&quot;&gt;two pointers&lt;/a&gt;    &lt;/p&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
+
+&lt;script src=&quot;/js/jquery.easytabs.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/js/multipleTab.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;In this &lt;a href=&quot;https://leetcode.com/problems/longest-substring-without-repeating-characters/&quot;&gt;leetcode&lt;/a&gt; problem,  we’re asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abcabcbb&lt;/code&gt; the longest substring without repeating characters is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abc&lt;/code&gt; (with a length of 3).&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-statement&quot;&gt;Problem Statement&lt;/h2&gt;
+
+&lt;p&gt;Given a string s, find the length of the longest substring without repeating characters.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-1&quot;&gt;Example 1&lt;/h3&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: s &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;abcabcbb&quot;&lt;/span&gt;
+Output: 3
+Explanation: The answer is &lt;span class=&quot;s2&quot;&gt;&quot;abc&quot;&lt;/span&gt;, with the length of 3.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;example-2&quot;&gt;Example 2&lt;/h3&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: s &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;bbbbb&quot;&lt;/span&gt;
+Output: 1
+Explanation: The answer is &lt;span class=&quot;s2&quot;&gt;&quot;b&quot;&lt;/span&gt;, with the length of 1.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;example-3&quot;&gt;Example 3&lt;/h3&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: s &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;pwwkew&quot;&lt;/span&gt;
+Output: 3
+Explanation: The answer is &lt;span class=&quot;s2&quot;&gt;&quot;wke&quot;&lt;/span&gt;, with the length of 3.
+Notice that the answer must be a substring, 
+&lt;span class=&quot;s2&quot;&gt;&quot;pwke&quot;&lt;/span&gt; is a subsequence and not a substring.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;explanation&quot;&gt;Explanation&lt;/h2&gt;
+
+&lt;p&gt;We can use two pointers to solve this problem.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Assign &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; = 0 and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left&lt;/code&gt; = 0.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;set&lt;/code&gt; to keep track of characters in the substring.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Loop through the string&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the character at index &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; is not in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;set&lt;/code&gt;, we add it to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;set&lt;/code&gt; and increment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; pointer.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the character at index &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; is in the set, then we have found a new substring. We remove the character at index &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left&lt;/code&gt; from the set and increment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left&lt;/code&gt; pointer.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/longest_substring.gif&quot; alt=&quot;Longest substring image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;tab Java1&quot;&gt;&lt;a href=&quot;#Java1&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;tab Python1&quot;&gt;&lt;a href=&quot;#Python1&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+   &lt;div class=&quot;codeSample Java1&quot; id=&quot;Java1&quot;&gt;
+    &lt;script src=&quot;https://gist.github.com/tushar-sharma/83cc247e2832e0a381556d57a6ef8ce3.js?file=LengthOfLongestSubstring.java&quot;&gt;&lt;/script&gt;
+
+   &lt;/div&gt;
+
+   &lt;div class=&quot;codeSample Python1&quot; id=&quot;Python1&quot;&gt;
+    &lt;script src=&quot;https://gist.github.com/tushar-sharma/83cc247e2832e0a381556d57a6ef8ce3.js?file=length_of_longest_substring.py&quot;&gt;&lt;/script&gt;   
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;complexity&quot;&gt;Complexity&lt;/h2&gt;
+
+&lt;p&gt;Time Complexity is &lt;strong&gt;\(\mathcal{O}(n)\)&lt;/strong&gt;, Space complexity is &lt;strong&gt;\(\mathcal{O}(1)\)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/debugging-spark-application-using-remote-container&quot; title=&quot;Previous Post: Debugging Spark Application using remote container&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;/nav&gt;
+</description>
+          <pubDate>2022-01-17T21:07:00-05:00</pubDate>
+          <link>https://randomwits.com/leetcode-longest-substring-without-repeating-characters</link>
+          <guid isPermaLink="true">https://randomwits.com/leetcode-longest-substring-without-repeating-characters</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Debugging Spark Application using remote container</title>
           <description>&lt;p&gt;One of the nifty feature in any code development is the ability to debug your application using break points. Submitting a Spark job while waiting for it to complete will waste a lot of time debugging. Spark jobs can be debugging with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;break points&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step over&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step into&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step out&lt;/code&gt; commands.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
