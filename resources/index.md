@@ -538,10 +538,9 @@ a good online resource which goes through design fundamentals
 * [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
 * [mid-1980's textfiles](http://www.textfiles.com/)
 
-## SEO 
+## SEO
 
-1. [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly)
-
-2. [Ubersuggest](https://neilpatel.com/ubersuggest/)
-
-3. [Serpstat](https://serpstat.com/)
+* [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly)
+* [Ubersuggest](https://neilpatel.com/ubersuggest/)
+* [Serpstat](https://serpstat.com/)
+* [Google keyword planner](https://ads.google.com/home/tools/keyword-planner/)
