@@ -1,5 +1,6 @@
 ---
 layout: post
+category: blog
 title: Leetcode - Longest Substring Without Repeating Characters
 date: 2022-01-17 21:07 -0500
 name: coin-change
