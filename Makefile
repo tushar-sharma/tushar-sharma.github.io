@@ -13,5 +13,5 @@ add:
 	git add sitemap.xml
 copy:
 	cp -r sitemap.xml _site/
-	cp -r sitemap.xml _site/
+	cp -r CNAME _site/
 	cp .nojekyll _site/
