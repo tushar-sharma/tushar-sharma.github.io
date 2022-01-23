@@ -1,16 +1,6 @@
 version: "3.9"  # optional since v1.27.0
 services:
-  build:
-    image: jekyll/jekyll:3.8
-    command:  jekyll build
-    environment:
-      - JEKYLL_ENV=production
-    ports:
-      - 4000:4000
-      - 35729:35729
-    volumes:
-      - .:/srv/jekyll
-  serve:
+  jekyll:
     image: jekyll/jekyll:3.8
     command: jekyll serve --livereload --drafts
     environment:
@@ -19,4 +9,5 @@ services:
       - 4000:4000
       - 35729:35729
     volumes:
-      - .:/srv/jekyll
+      - .:/srv/jekyll:rw
+      - ./vendor/bundle:/usr/local/bundle:cached
