@@ -23,19 +23,28 @@ body{
   color:#444
 }
 
+.blue {
+  color: #39c;
+}
 h1,h2,h3,h4,h5,h6{color:#222;margin:0 0 20px}
 
 h2,h3{margin:0 0 14px}p,ul,ol,table,pre,dl{margin:0 0 20px}
 
-h1,h2,h3{line-height:1.1}h1{font-size:28px}
+h1,h2,h3{line-height:1.1}
 
 .stalk_link{font-size:18px;display:inline}
 
-.me_blurb{margin:-15px 0 15px}.clear{width:100%;clear:both}h2{color:#393939}h3,h4,h5,h6{color:#494949}h2{font-size:21px}a{color:#39c;font-weight:400;text-decoration:none}a small{font-size:16px;color:#444;margin-top:-.6em;display:block}
+.me_blurb{margin:-15px 0 15px}.clear{width:100%;clear:both}
+h3,h4,h5,h6{color:#494949}
+a{color:#39c;font-weight:400;text-decoration:none}a small{font-size:16px;color:#444;margin-top:-.6em;display:block}
+
+
 
 .wrapper{width:100%;margin:0 auto;position:relative}blockquote{border-left:1px solid #e5e5e5;margin:0;padding:0 0 0 20px;font-style:italic}
 
-p code{
+
+
+p code, code{
     color: #323a45;
     background: #f7f7f7;
     padding: 3px;
@@ -43,13 +52,16 @@ p code{
     border: 1px solid #aeb0b5;
     font-size: 1rem;
     word-wrap: break-word;
+    white-space: pre-wrap;
+
 
 }
 
 pre{padding:8px 15px;
   background:#f8f8f8;
   border-radius:5px;border:1px solid #e5e5e5;
-  overflow-x:auto
+  overflow-x:auto;
+  white-space: pre-wrap;
 }table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:5px 10px;border-bottom:1px solid #e5e5e5}dt{color:#444;font-weight:700}th{color:#444}img{max-width:100%}
 
 header{width:20%;height:100%;
@@ -143,6 +155,9 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
     word-wrap: break-word;
 }
 
+.entry-title{
+  font-size: 36px;  
+}
 
 /* Better styles for embedding GitHub Gists */
 .gist .blob-code-inner{
