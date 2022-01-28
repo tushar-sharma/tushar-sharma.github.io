@@ -102,7 +102,7 @@ Notice that the answer must be a substring,
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/debugging-spark-application-using-remote-container&quot; title=&quot;Previous Post: Debugging Spark Application Locally using remote container&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
 &lt;/nav&gt;
 </description>
-          <pubDate>2022-01-17T20:07:00-06:00</pubDate>
+          <pubDate>2022-01-17T21:07:00-05:00</pubDate>
           <link>https://randomwits.com/blog/leetcode-longest-substring-without-repeating-characters</link>
           <guid isPermaLink="true">https://randomwits.com/blog/leetcode-longest-substring-without-repeating-characters</guid>
         </item>
@@ -183,7 +183,7 @@ ___ spark_demo.py
 &lt;iframe height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/hQNbEGFpbOI&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;position: relative;  width: 100%;&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 </description>
-          <pubDate>2022-01-16T18:28:00-06:00</pubDate>
+          <pubDate>2022-01-16T19:28:00-05:00</pubDate>
           <link>https://randomwits.com/blog/debugging-spark-application-using-remote-container</link>
           <guid isPermaLink="true">https://randomwits.com/blog/debugging-spark-application-using-remote-container</guid>
         </item>
@@ -296,7 +296,7 @@ you as your own being”&lt;sup&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footno
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/course-schedule&quot; title=&quot;Previous Post: Course Schedule Leetcode Solution&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/debugging-spark-application-using-remote-container&quot; title=&quot;Next Post: Debugging Spark Application Locally using remote container&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-12-24T00:00:00-06:00</pubDate>
+          <pubDate>2021-12-24T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/wild-marriage</link>
           <guid isPermaLink="true">https://randomwits.com/blog/wild-marriage</guid>
         </item>
@@ -419,7 +419,7 @@ prerequisites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quo
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/remove-all-adjacent-duplicates-in-string-ii&quot; title=&quot;Previous Post: Remove-all-adjacent-duplicates-in-string-ii Solution&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/wild-marriage&quot; title=&quot;Next Post: Wild Marriage&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-12-21T00:00:00-06:00</pubDate>
+          <pubDate>2021-12-21T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/course-schedule</link>
           <guid isPermaLink="true">https://randomwits.com/blog/course-schedule</guid>
         </item>
@@ -552,7 +552,7 @@ Output: &lt;span class=&quot;s2&quot;&gt;&quot;ps&quot;&lt;/span&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/lost-friends&quot; title=&quot;Previous Post: Lost Friends&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/course-schedule&quot; title=&quot;Next Post: Course Schedule Leetcode Solution&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-12-18T00:00:00-06:00</pubDate>
+          <pubDate>2021-12-18T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/remove-all-adjacent-duplicates-in-string-ii</link>
           <guid isPermaLink="true">https://randomwits.com/blog/remove-all-adjacent-duplicates-in-string-ii</guid>
         </item>
@@ -615,7 +615,7 @@ hope my lost friends still harbour my memories well.&lt;br /&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/leetcode-lca-binary-tree&quot; title=&quot;Previous Post: Lowest Common Ancestor of a Binary Tree&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/remove-all-adjacent-duplicates-in-string-ii&quot; title=&quot;Next Post: Remove-all-adjacent-duplicates-in-string-ii Solution&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-12-13T00:00:00-06:00</pubDate>
+          <pubDate>2021-12-13T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/lost-friends</link>
           <guid isPermaLink="true">https://randomwits.com/blog/lost-friends</guid>
         </item>
@@ -753,7 +753,7 @@ Output: 1
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/ternary-string-codeforces-solution&quot; title=&quot;Previous Post: Ternary String solution Codeforces - 1354B&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/lost-friends&quot; title=&quot;Next Post: Lost Friends&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-12-08T00:00:00-06:00</pubDate>
+          <pubDate>2021-12-08T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/leetcode-lca-binary-tree</link>
           <guid isPermaLink="true">https://randomwits.com/blog/leetcode-lca-binary-tree</guid>
         </item>
@@ -853,7 +853,7 @@ A contiguous substring of string s is a string that can be obtained from s by re
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/coin-change-leetcode-solution&quot; title=&quot;Previous Post: Coin Change solution leetcode&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/leetcode-lca-binary-tree&quot; title=&quot;Next Post: Lowest Common Ancestor of a Binary Tree&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-11-04T00:00:00-05:00</pubDate>
+          <pubDate>2021-11-04T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/ternary-string-codeforces-solution</link>
           <guid isPermaLink="true">https://randomwits.com/blog/ternary-string-codeforces-solution</guid>
         </item>
@@ -1151,7 +1151,7 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dear-vishi-snoring&quot; title=&quot;Previous Post: Dear Vishi, is snoring innocuous?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/ternary-string-codeforces-solution&quot; title=&quot;Next Post: Ternary String solution Codeforces - 1354B&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-11-02T00:00:00-05:00</pubDate>
+          <pubDate>2021-11-02T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/coin-change-leetcode-solution</link>
           <guid isPermaLink="true">https://randomwits.com/blog/coin-change-leetcode-solution</guid>
         </item>
@@ -1246,7 +1246,7 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dear-vishi-virus-poop&quot; title=&quot;Previous Post: Dear Vishi, does a virus poop?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/coin-change-leetcode-solution&quot; title=&quot;Next Post: Coin Change solution leetcode&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-10-01T00:00:00-05:00</pubDate>
+          <pubDate>2021-10-01T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/dear-vishi-snoring</link>
           <guid isPermaLink="true">https://randomwits.com/blog/dear-vishi-snoring</guid>
         </item>
@@ -1321,7 +1321,7 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/maximum-subarray&quot; title=&quot;Previous Post: Maximum Subarray&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/dear-vishi-snoring&quot; title=&quot;Next Post: Dear Vishi, is snoring innocuous?&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-09-16T00:00:00-05:00</pubDate>
+          <pubDate>2021-09-16T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/dear-vishi-virus-poop</link>
           <guid isPermaLink="true">https://randomwits.com/blog/dear-vishi-virus-poop</guid>
         </item>
@@ -1406,7 +1406,7 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/bike-ride-mexico-city&quot; title=&quot;Previous Post: Bike Ride in Mexico City&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/dear-vishi-virus-poop&quot; title=&quot;Next Post: Dear Vishi, does a virus poop?&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-09-12T00:00:00-05:00</pubDate>
+          <pubDate>2021-09-12T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/maximum-subarray</link>
           <guid isPermaLink="true">https://randomwits.com/blog/maximum-subarray</guid>
         </item>
@@ -1462,7 +1462,7 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dear-vishi-have-you-seen-ghost&quot; title=&quot;Previous Post: Dear Vishi, have you seen a ghost?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/maximum-subarray&quot; title=&quot;Next Post: Maximum Subarray&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-07-23T00:00:00-05:00</pubDate>
+          <pubDate>2021-07-23T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/bike-ride-mexico-city</link>
           <guid isPermaLink="true">https://randomwits.com/blog/bike-ride-mexico-city</guid>
         </item>
@@ -1611,7 +1611,7 @@ th, td {
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/interface-aws-cdk&quot; title=&quot;Previous Post: Automate creation of AWS Stack&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/bike-ride-mexico-city&quot; title=&quot;Next Post: Bike Ride in Mexico City&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-06-27T00:00:00-05:00</pubDate>
+          <pubDate>2021-06-27T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/dear-vishi-have-you-seen-ghost</link>
           <guid isPermaLink="true">https://randomwits.com/blog/dear-vishi-have-you-seen-ghost</guid>
         </item>
@@ -1734,7 +1734,7 @@ th, td {
 
 &lt;p&gt;In the next article, we will update our code to add additional classes to handle &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resources&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output&lt;/code&gt;, etc for our cloudformation template.&lt;/p&gt;
 </description>
-          <pubDate>2021-06-25T00:00:00-05:00</pubDate>
+          <pubDate>2021-06-25T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/interface-aws-cdk</link>
           <guid isPermaLink="true">https://randomwits.com/blog/interface-aws-cdk</guid>
         </item>
@@ -1949,7 +1949,7 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a saf
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dear-vishi-dehradun-nepal&quot; title=&quot;Previous Post: Dear Vishi, what if Dehradun was in Nepal?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/interface-aws-cdk&quot; title=&quot;Next Post: Automate creation of AWS Stack&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-06-14T00:00:00-05:00</pubDate>
+          <pubDate>2021-06-14T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/tutorial-cdk-aws</link>
           <guid isPermaLink="true">https://randomwits.com/blog/tutorial-cdk-aws</guid>
         </item>
@@ -1988,7 +1988,7 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a saf
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dear-vishi-what-is-carcinogen&quot; title=&quot;Previous Post: Dear Vishi, what's a carcinogen?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/tutorial-cdk-aws&quot; title=&quot;Next Post: Getting Started with AWS CDK&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-06-11T00:00:00-05:00</pubDate>
+          <pubDate>2021-06-11T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/dear-vishi-dehradun-nepal</link>
           <guid isPermaLink="true">https://randomwits.com/blog/dear-vishi-dehradun-nepal</guid>
         </item>
@@ -2066,7 +2066,7 @@ Om Peace, peace, peace.&lt;/p&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dear-vishi-meditate-like-monk&quot; title=&quot;Previous Post: Dear Vishi, can you meditate like a monk?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/dear-vishi-dehradun-nepal&quot; title=&quot;Next Post: Dear Vishi, what if Dehradun was in Nepal?&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-05-31T00:00:00-05:00</pubDate>
+          <pubDate>2021-05-31T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/dear-vishi-what-is-carcinogen</link>
           <guid isPermaLink="true">https://randomwits.com/blog/dear-vishi-what-is-carcinogen</guid>
         </item>
@@ -2129,7 +2129,7 @@ However Nehru was critical of Aurangzeb, who was the last ruler of the Mughal Em
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dear-vishi-time-machine&quot; title=&quot;Previous Post: Dear Vishi, is there a time machine?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/dear-vishi-what-is-carcinogen&quot; title=&quot;Next Post: Dear Vishi, what's a carcinogen?&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-05-25T00:00:00-05:00</pubDate>
+          <pubDate>2021-05-25T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/dear-vishi-meditate-like-monk</link>
           <guid isPermaLink="true">https://randomwits.com/blog/dear-vishi-meditate-like-monk</guid>
         </item>
@@ -2195,7 +2195,7 @@ However Nehru was critical of Aurangzeb, who was the last ruler of the Mughal Em
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dear-vishi-mix-covid-vaccine&quot; title=&quot;Previous Post: Dear Vishi, can you mix Covid Vaccine?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/dear-vishi-meditate-like-monk&quot; title=&quot;Next Post: Dear Vishi, can you meditate like a monk?&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-05-23T00:00:00-05:00</pubDate>
+          <pubDate>2021-05-23T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/dear-vishi-time-machine</link>
           <guid isPermaLink="true">https://randomwits.com/blog/dear-vishi-time-machine</guid>
         </item>
@@ -2290,7 +2290,7 @@ Poetry version 1.1.4
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dear-vishi-about-virginia&quot; title=&quot;Previous Post: Dear Vishi, have you travelled to Virginia?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/dear-vishi-time-machine&quot; title=&quot;Next Post: Dear Vishi, is there a time machine?&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-05-22T00:00:00-05:00</pubDate>
+          <pubDate>2021-05-22T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/dear-vishi-mix-covid-vaccine</link>
           <guid isPermaLink="true">https://randomwits.com/blog/dear-vishi-mix-covid-vaccine</guid>
         </item>
@@ -2345,7 +2345,7 @@ Poetry version 1.1.4
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2021-05-21T00:00:00-05:00</pubDate>
+          <pubDate>2021-05-21T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/dear-vishi-about-virginia</link>
           <guid isPermaLink="true">https://randomwits.com/blog/dear-vishi-about-virginia</guid>
         </item>
@@ -2488,7 +2488,7 @@ msft,0,0,230,0
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/breach-of-trust-cancer&quot; title=&quot;Previous Post: Famous breach of Trust in Cancer&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/dear-vishi-about-virginia&quot; title=&quot;Next Post: Dear Vishi, have you travelled to Virginia?&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-04-08T00:00:00-05:00</pubDate>
+          <pubDate>2021-04-08T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/make-money-stock1</link>
           <guid isPermaLink="true">https://randomwits.com/blog/make-money-stock1</guid>
         </item>
@@ -2570,7 +2570,7 @@ msft,0,0,230,0
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/poetry-python-fail-windows&quot; title=&quot;Previous Post: EnvCommandError in Windows using Poetry&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/make-money-stock1&quot; title=&quot;Next Post: How to Make(Or Lose) Money in Stocks Part1&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2021-03-03T00:00:00-06:00</pubDate>
+          <pubDate>2021-03-03T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/breach-of-trust-cancer</link>
           <guid isPermaLink="true">https://randomwits.com/blog/breach-of-trust-cancer</guid>
         </item>
@@ -2655,7 +2655,7 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/export-dynamodb-s3&quot; title=&quot;Previous Post: Export DynamoDB Table to S3 Bucket Using Lambda Function&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/breach-of-trust-cancer&quot; title=&quot;Next Post: Famous breach of Trust in Cancer&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2020-12-10T00:00:00-06:00</pubDate>
+          <pubDate>2020-12-10T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/poetry-python-fail-windows</link>
           <guid isPermaLink="true">https://randomwits.com/blog/poetry-python-fail-windows</guid>
         </item>
@@ -2719,7 +2719,7 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/homeopathy-india&quot; title=&quot;Previous Post: Why homeopathy is so popular in India?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/poetry-python-fail-windows&quot; title=&quot;Next Post: EnvCommandError in Windows using Poetry&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2020-10-23T00:00:00-05:00</pubDate>
+          <pubDate>2020-10-23T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/export-dynamodb-s3</link>
           <guid isPermaLink="true">https://randomwits.com/blog/export-dynamodb-s3</guid>
         </item>
@@ -2982,7 +2982,7 @@ Claims that homeopathy can cure genetic disorders
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/demon-haunted-review-1&quot; title=&quot;Previous Post: Demon Haunted World's review part 1&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/export-dynamodb-s3&quot; title=&quot;Next Post: Export DynamoDB Table to S3 Bucket Using Lambda Function&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2020-06-19T00:00:00-05:00</pubDate>
+          <pubDate>2020-06-19T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/homeopathy-india</link>
           <guid isPermaLink="true">https://randomwits.com/blog/homeopathy-india</guid>
         </item>
@@ -3083,7 +3083,7 @@ Religion is the opium of the masses - Karl Marx
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/oracle-scala-csv&quot; title=&quot;Previous Post: Connecting to Oracle database form Scala using JDBC for large data&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/homeopathy-india&quot; title=&quot;Next Post: Why homeopathy is so popular in India?&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2020-04-11T00:00:00-05:00</pubDate>
+          <pubDate>2020-04-11T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/demon-haunted-review-1</link>
           <guid isPermaLink="true">https://randomwits.com/blog/demon-haunted-review-1</guid>
         </item>
@@ -3133,7 +3133,7 @@ libraryDependencies +&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; “au.com.by
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/sleep-at-night&quot; title=&quot;Previous Post: Sleeping At Night&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/demon-haunted-review-1&quot; title=&quot;Next Post: Demon Haunted World's review part 1&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2020-03-20T00:00:00-05:00</pubDate>
+          <pubDate>2020-03-20T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/oracle-scala-csv</link>
           <guid isPermaLink="true">https://randomwits.com/blog/oracle-scala-csv</guid>
         </item>
@@ -3167,7 +3167,7 @@ libraryDependencies +&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; “au.com.by
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/python-oracle-kerberos&quot; title=&quot;Previous Post: Connect to an Oracle Database using kerberos with python&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/oracle-scala-csv&quot; title=&quot;Next Post: Connecting to Oracle database form Scala using JDBC for large data&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2020-03-08T00:00:00-06:00</pubDate>
+          <pubDate>2020-03-08T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/sleep-at-night</link>
           <guid isPermaLink="true">https://randomwits.com/blog/sleep-at-night</guid>
         </item>
@@ -3347,7 +3347,7 @@ wkt username.keytab
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/hum-dekhenge&quot; title=&quot;Previous Post: Unwarranted Controversy - Hum Dekhenge&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/sleep-at-night&quot; title=&quot;Next Post: Sleeping At Night&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2020-01-10T00:00:00-06:00</pubDate>
+          <pubDate>2020-01-10T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/python-oracle-kerberos</link>
           <guid isPermaLink="true">https://randomwits.com/blog/python-oracle-kerberos</guid>
         </item>
@@ -3424,7 +3424,7 @@ Only Allah  name will survive&lt;br /&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/graph-getting-started&quot; title=&quot;Previous Post: Getting started with Graph Part 1&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/python-oracle-kerberos&quot; title=&quot;Next Post: Connect to an Oracle Database using kerberos with python&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2020-01-01T00:00:00-06:00</pubDate>
+          <pubDate>2020-01-01T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/hum-dekhenge</link>
           <guid isPermaLink="true">https://randomwits.com/blog/hum-dekhenge</guid>
         </item>
@@ -3763,7 +3763,7 @@ Only Allah  name will survive&lt;br /&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/recursive-sort&quot; title=&quot;Previous Post: Recursively sort a array&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/hum-dekhenge&quot; title=&quot;Next Post: Unwarranted Controversy - Hum Dekhenge&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2019-11-10T00:00:00-06:00</pubDate>
+          <pubDate>2019-11-10T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/graph-getting-started</link>
           <guid isPermaLink="true">https://randomwits.com/blog/graph-getting-started</guid>
         </item>
@@ -3928,7 +3928,7 @@ output array = [2 8 10 1 1 7]
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/red-queen-race&quot; title=&quot;Previous Post: Red Queen Race&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/graph-getting-started&quot; title=&quot;Next Post: Getting started with Graph Part 1&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2019-09-07T00:00:00-05:00</pubDate>
+          <pubDate>2019-09-07T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/recursive-sort</link>
           <guid isPermaLink="true">https://randomwits.com/blog/recursive-sort</guid>
         </item>
@@ -4014,7 +4014,7 @@ With ravine, shriek'd against his creed&lt;br /&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/merge-two-sort-list&quot; title=&quot;Previous Post: Merge Two Sorted Lists&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/recursive-sort&quot; title=&quot;Next Post: Recursively sort a array&quot;&gt;Next&amp;rarr;&lt;/a&gt; 	
 &lt;/nav&gt;
 </description>
-          <pubDate>2019-05-08T00:00:00-05:00</pubDate>
+          <pubDate>2019-05-08T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/red-queen-race</link>
           <guid isPermaLink="true">https://randomwits.com/blog/red-queen-race</guid>
         </item>
@@ -4101,7 +4101,7 @@ With ravine, shriek'd against his creed&lt;br /&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/decoding-ndtv-dawin-theory&quot; title=&quot;Previous Post: Decoding ndtv darwin's theory debate&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/red-queen-race&quot; title=&quot;Next Post: Red Queen Race&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2019-01-08T00:00:00-06:00</pubDate>
+          <pubDate>2019-01-08T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/merge-two-sort-list</link>
           <guid isPermaLink="true">https://randomwits.com/blog/merge-two-sort-list</guid>
         </item>
@@ -4293,7 +4293,7 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/three-sum&quot; title=&quot;Previous Post: Three Sum Problem Leetcode Solution&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/merge-two-sort-list&quot; title=&quot;Next Post: Merge Two Sorted Lists&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2018-12-20T00:00:00-06:00</pubDate>
+          <pubDate>2018-12-20T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/decoding-ndtv-dawin-theory</link>
           <guid isPermaLink="true">https://randomwits.com/blog/decoding-ndtv-dawin-theory</guid>
         </item>
@@ -4333,7 +4333,7 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/overrated-movie&quot; title=&quot;Previous Post: Why Baahubali is not worthy of high rating?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/decoding-ndtv-dawin-theory&quot; title=&quot;Next Post: Decoding ndtv darwin's theory debate&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2018-11-13T00:00:00-06:00</pubDate>
+          <pubDate>2018-11-13T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/three-sum</link>
           <guid isPermaLink="true">https://randomwits.com/blog/three-sum</guid>
         </item>
@@ -4390,7 +4390,7 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2018-08-19T00:00:00-05:00</pubDate>
+          <pubDate>2018-08-19T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/overrated-movie</link>
           <guid isPermaLink="true">https://randomwits.com/blog/overrated-movie</guid>
         </item>
@@ -4688,7 +4688,7 @@ The best remedy against any scam is knowledge. And I would have probably fallen 
 &lt;br /&gt;
 &lt;/p&gt;
 </description>
-          <pubDate>2018-05-27T00:00:00-05:00</pubDate>
+          <pubDate>2018-05-27T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/rent-scam</link>
           <guid isPermaLink="true">https://randomwits.com/blog/rent-scam</guid>
         </item>
@@ -4775,7 +4775,7 @@ The best remedy against any scam is knowledge. And I would have probably fallen 
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-          <pubDate>2017-09-23T00:00:00-05:00</pubDate>
+          <pubDate>2017-09-23T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/lazy-meditation</link>
           <guid isPermaLink="true">https://randomwits.com/blog/lazy-meditation</guid>
         </item>
@@ -4832,7 +4832,7 @@ And therein lies your real fear.&quot;
  &lt;a class=&quot;prev-item&quot; href=&quot;/projects/k-largest&quot; title=&quot;Previous Post: Find kth largest element in an array&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/lazy-meditation&quot; title=&quot;Next Post: Lazy Meditation&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2017-04-26T00:00:00-05:00</pubDate>
+          <pubDate>2017-04-26T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/india-pak</link>
           <guid isPermaLink="true">https://randomwits.com/blog/india-pak</guid>
         </item>
@@ -4958,7 +4958,7 @@ And therein lies your real fear.&quot;
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2016-03-20T00:00:00-05:00</pubDate>
+          <pubDate>2016-03-20T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/projects/k-largest</link>
           <guid isPermaLink="true">https://randomwits.com/projects/k-largest</guid>
         </item>
@@ -5077,7 +5077,7 @@ Image credit ~ &lt;a href=&quot;https://xkcd.com/1240/&quot;&gt;xckd&lt;/a&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/get-post-requests&quot; title=&quot;Previous Post: Get all GET and POST requests using tshark&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/projects/k-largest&quot; title=&quot;Next Post: Find kth largest element in an array&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2016-02-07T00:00:00-06:00</pubDate>
+          <pubDate>2016-02-07T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/random-stranger</link>
           <guid isPermaLink="true">https://randomwits.com/blog/random-stranger</guid>
         </item>
@@ -5170,7 +5170,7 @@ tcp[((tcp[12:1] &amp;amp; 0xf0) &amp;gt;&amp;gt; 2):4] = 0x47455420)' -w ~/out.n
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2016-01-14T00:00:00-06:00</pubDate>
+          <pubDate>2016-01-14T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/get-post-requests</link>
           <guid isPermaLink="true">https://randomwits.com/blog/get-post-requests</guid>
         </item>
@@ -5635,7 +5635,7 @@ en_US ISO-8859-1
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2015-12-26T00:00:00-06:00</pubDate>
+          <pubDate>2015-12-26T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/arch-linux</link>
           <guid isPermaLink="true">https://randomwits.com/blog/arch-linux</guid>
         </item>
@@ -5983,7 +5983,7 @@ printToFile(char S[][k], string filename, int indexP[])
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2015-11-20T00:00:00-06:00</pubDate>
+          <pubDate>2015-11-20T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/lsd</link>
           <guid isPermaLink="true">https://randomwits.com/blog/lsd</guid>
         </item>
@@ -6084,7 +6084,7 @@ with its own four-letter name.
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2015-08-22T00:00:00-05:00</pubDate>
+          <pubDate>2015-08-22T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/people-programming</link>
           <guid isPermaLink="true">https://randomwits.com/blog/people-programming</guid>
         </item>
@@ -6165,7 +6165,7 @@ with its own four-letter name.
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2015-03-22T00:00:00-05:00</pubDate>
+          <pubDate>2015-03-22T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/protect-privacy</link>
           <guid isPermaLink="true">https://randomwits.com/blog/protect-privacy</guid>
         </item>
@@ -6308,7 +6308,7 @@ with its own four-letter name.
 
 &lt;/div&gt;
 </description>
-          <pubDate>2015-03-08T00:00:00-06:00</pubDate>
+          <pubDate>2015-03-08T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/shooting-messenger</link>
           <guid isPermaLink="true">https://randomwits.com/blog/shooting-messenger</guid>
         </item>
@@ -6424,7 +6424,7 @@ where as resultant cipher is written in capital letters.
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2014-05-04T00:00:00-05:00</pubDate>
+          <pubDate>2014-05-04T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/digging-secret-codes-past</link>
           <guid isPermaLink="true">https://randomwits.com/blog/digging-secret-codes-past</guid>
         </item>
@@ -6507,7 +6507,7 @@ Or our love will be a mournful chime? &lt;br /&gt;&lt;/p&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/idea-of-god&quot; title=&quot;Previous Post: Idea of God&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/digging-secret-codes-past&quot; title=&quot;Next Post: Digging on the codes of the Past&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2014-03-30T00:00:00-05:00</pubDate>
+          <pubDate>2014-03-30T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/romance-moon</link>
           <guid isPermaLink="true">https://randomwits.com/blog/romance-moon</guid>
         </item>
@@ -6678,7 +6678,7 @@ As so many rivers, having their source in different mountains, roll down, crooke
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-          <pubDate>2014-02-08T00:00:00-06:00</pubDate>
+          <pubDate>2014-02-08T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/idea-of-god</link>
           <guid isPermaLink="true">https://randomwits.com/blog/idea-of-god</guid>
         </item>
@@ -6719,7 +6719,7 @@ my faith before I finally rest, &lt;br /&gt;
 Only God knows if I could ever harvest, &lt;br /&gt;
 the crop of happiness without remorse or pest &lt;br /&gt;&lt;/p&gt;
 </description>
-          <pubDate>2013-12-24T00:00:00-06:00</pubDate>
+          <pubDate>2013-12-24T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/happiness</link>
           <guid isPermaLink="true">https://randomwits.com/blog/happiness</guid>
         </item>
@@ -6934,7 +6934,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2013-11-06T00:00:00-06:00</pubDate>
+          <pubDate>2013-11-06T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/why-i-never-close-emacs</link>
           <guid isPermaLink="true">https://randomwits.com/blog/why-i-never-close-emacs</guid>
         </item>
@@ -7070,7 +7070,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-          <pubDate>2013-10-18T00:00:00-05:00</pubDate>
+          <pubDate>2013-10-18T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/how-vim-saved-my-day</link>
           <guid isPermaLink="true">https://randomwits.com/blog/how-vim-saved-my-day</guid>
         </item>
@@ -7155,7 +7155,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-          <pubDate>2013-09-10T00:00:00-05:00</pubDate>
+          <pubDate>2013-09-10T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/why-hacking-is-good</link>
           <guid isPermaLink="true">https://randomwits.com/blog/why-hacking-is-good</guid>
         </item>
@@ -7196,7 +7196,7 @@ the dark murky clouds away through the cleft.&lt;/p&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/projects/encrypt-files&quot; title=&quot;Previous Post: Encrypted Files in Minix 3&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/why-hacking-is-good&quot; title=&quot;Next Post: Why hacking is good&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2013-09-07T00:00:00-05:00</pubDate>
+          <pubDate>2013-09-07T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/sleep</link>
           <guid isPermaLink="true">https://randomwits.com/blog/sleep</guid>
         </item>
@@ -7231,7 +7231,7 @@ the dark murky clouds away through the cleft.&lt;/p&gt;
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2013-04-16T00:00:00-05:00</pubDate>
+          <pubDate>2013-04-16T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/projects/encrypt-files</link>
           <guid isPermaLink="true">https://randomwits.com/projects/encrypt-files</guid>
         </item>
@@ -7280,7 +7280,7 @@ the dark murky clouds away through the cleft.&lt;/p&gt;
 &lt;/div&gt;
 
 </description>
-          <pubDate>2013-03-28T00:00:00-05:00</pubDate>
+          <pubDate>2013-03-28T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/projects/binary-semaphore</link>
           <guid isPermaLink="true">https://randomwits.com/projects/binary-semaphore</guid>
         </item>
@@ -7513,7 +7513,7 @@ the dark murky clouds away through the cleft.&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-          <pubDate>2012-11-02T00:00:00-05:00</pubDate>
+          <pubDate>2012-11-02T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/projects/aes</link>
           <guid isPermaLink="true">https://randomwits.com/projects/aes</guid>
         </item>
@@ -7580,7 +7580,7 @@ R&lt;sub&gt;i&lt;/sub&gt; = L&lt;sub&gt;i - 1&lt;/sub&gt; &amp;oplus; f(R&lt;sub
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-          <pubDate>2012-08-21T00:00:00-05:00</pubDate>
+          <pubDate>2012-08-21T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/projects/des</link>
           <guid isPermaLink="true">https://randomwits.com/projects/des</guid>
         </item>
@@ -7646,7 +7646,7 @@ Stupid Mode = 1
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/fear-of-walmart&quot; title=&quot;Previous Post: Fear of Walmart&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/projects/des&quot; title=&quot;Next Post: Data Encryption Standard (DES)&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
-          <pubDate>2012-07-04T00:00:00-05:00</pubDate>
+          <pubDate>2012-07-04T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/huawei-usb-modem-in-debian</link>
           <guid isPermaLink="true">https://randomwits.com/blog/huawei-usb-modem-in-debian</guid>
         </item>
@@ -7678,7 +7678,7 @@ Stupid Mode = 1
 &lt;/nav&gt;
 
 </description>
-          <pubDate>2012-03-30T00:00:00-05:00</pubDate>
+          <pubDate>2012-03-30T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/fear-of-walmart</link>
           <guid isPermaLink="true">https://randomwits.com/blog/fear-of-walmart</guid>
         </item>

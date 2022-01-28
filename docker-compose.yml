@@ -9,5 +9,4 @@ services:
       - 4000:4000
       - 35729:35729
     volumes:
-      - .:/srv/jekyll:rw
-      - ./vendor/bundle:/usr/local/bundle:cached
+      - .:/srv/jekyll
