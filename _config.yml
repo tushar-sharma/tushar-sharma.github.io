@@ -16,6 +16,7 @@ plugins:
   - jekyll-paginate
   - jekyll-gzip
   - jekyll-minifier
+  - jekyll-include-cache
 jekyll-minifier:
   uglifier_args:
     harmony: true

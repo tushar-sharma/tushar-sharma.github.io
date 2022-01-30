@@ -38,6 +38,8 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-gzip (2.5.1)
       jekyll (>= 3.0, < 5.0)
+    jekyll-include-cache (0.2.1)
+      jekyll (>= 3.7, < 5.0)
     jekyll-minifier (0.1.10)
       cssminify2 (~> 2.0)
       htmlcompressor (~> 0.4)
@@ -61,6 +63,8 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.3)
+    liquid-c (4.0.0)
+      liquid (>= 3.0.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -98,12 +102,14 @@ DEPENDENCIES
   jekyll (>= 3.6.3)
   jekyll-compose
   jekyll-gzip
+  jekyll-include-cache
   jekyll-minifier
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
   kramdown (>= 2.3.1)
   liquid (>= 3.0)
+  liquid-c
   maruku (= 0.6.0)
   rdiscount (= 1.6.8)
   redcarpet (>= 3.5.1)
