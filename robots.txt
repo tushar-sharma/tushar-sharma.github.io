@@ -1,2 +1,5 @@
+---
+layout: none
+---
 User-agent: *
-Sitemap: https://randomwits.com/sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml
