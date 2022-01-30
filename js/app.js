@@ -1,1 +1,304 @@
-var song;(function(){var t,i,e,n,s,r,h,o,u,l,d,c=Object.prototype.hasOwnProperty,f=function(t,i){return function(){return t.apply(i,arguments)}};for(s in n=1e3,h=30,l={mozilla:"moz",webkit:"webkit",opera:"o",msie:""},d=$.browser)c.call(d,s)&&(d[s],null!=l[s]&&(r=l[s]));u="-"+r+"-transform",o=$.camelCase(u),t={init:function(){var t,n,s,r;for($(window).bind("resize",f(function(){return this.resize()},this)),this.resize(),$(document.body).bind("click",f(function(t){return this.jump(t)},this)).bind("touchend",f(function(t){return this.jump(t)},this)),this.nodes=$(".cloud > ul > li"),this.positions=[],this.velocity=-10,this.camera=math.vec.create(0,0,0),this.target=math.vec.clone(this.camera),this.angle=0,n=0,s=(r=this.nodes).length;n<s;n++)t=r[n],this.reset($(t));return this.search=e.init(),this.search.field.bind("keyup",f(function(){return this.find()},this)).bind("focus",f(function(){return this.focus(this.search.node)},this)),this.filters=i.init(),this.filters.nodes.click(f(function(t){return this.toggle(t)},this)),this.diff=1,this.update().start(),this},start:function(){var t;return this.timer||(t=f(function(){return this.update()},this),this.timer=setInterval(t,20)),this},stop:function(){return clearInterval(this.timer),this.timer=null,this},jump:function(t){return t.target===t.currentTarget&&(this.target.z+=300),this},toggle:function(t){var i;return i=$(t.currentTarget).children(".checkbox").data("value"),void 0===song?jQuery.get("/../links.txt",function(t){links=t.split("\n"),idx=Math.floor((links.length-1)*Math.random()),url=links[idx].substring(0,links[idx].indexOf(",")),"boolean"==typeof(song=new Audio(url)).loop?song.loop=!0:song.addEventListener("ended",function(){a,this.currentTime=0,this.play()},!1),song.play()}):song.paused?(song="",jQuery.get("/../links.txt",function(t){links=t.split("\n"),idx=Math.floor((links.length-1)*Math.random()),"boolean"==typeof(song=new Audio(links[idx])).loop?song.loop=!0:song.addEventListener("ended",function(){a,this.currentTime=0,this.play()},!1),song.play()})):song.pause(),this.nodes.filter("."+i+" li").toggle()},focus:function(t){var i,e;return i=this.nodes.index(t),e=this.positions[i],this.target=math.vec.clone(e),this},find:function(){var t,i,e,n,s,r,h,o,a;for(s=this.search.field.val().toLowerCase(),n=0,h=0,o=(a=this.nodes).length;h<o;h++)e=a[h],(t=$(e).find("a").first()).length&&((i=(r=t.attr("title")).toLowerCase().indexOf(s))>-1&&!this.search.empty()?(t.html([r.substr(0,i),"<span>",r.substr(i,s.length),"</span>",r.substr(i+s.length,r.length)].join("")),n++):t.html(r));return this.search.setResult(n),this},reset:function(t){var i,e,s,r,h,o,a,u,l,d;if(e=this.nodes.index(t),(s=!this.positions[e])||this.appear(t),h=math.random(this.width)-this.width/2,o=math.random(this.height)-this.height/2,a=math.random(n,5*n),s){for(a=math.random(-n,5*n),u=0,l=(d=t.find("a")).length;u<l;u++)i=d[u],$(i).attr("title",$(i).html());t.bind("mouseenter",f(function(){return this.mouseenter(t)},this)).bind("mouseleave",f(function(){return this.mouseleave(t)},this))}return r=math.vec.create(h,o,a),math.vec.add(r,this.camera),this.positions[e]=r,t},appear:function(t){var i;return t.removeClass("animated").addClass("hidden"),i=function(){return t.removeClass("hidden")},setTimeout(function(){return t.addClass("animated")},1),setTimeout(i,2),this},render:function(t){var i,e,s,r,h;return i=this.nodes.index(t),e=this.positions[i],(r=n+e.z-this.camera.z)>.05*n?(s=n/r,(h=t.get(0)).style.left=(e.x-this.camera.x)*s+"px",h.style.top=(e.y-this.camera.y)*s+"px",h.style.zIndex=Math.floor(math.map(e.z,this.camera.z+10*n,this.camera.z-10*n,0,1e3)),h.style[o]=["scale("+s+")"].join(""),t.hasClass("hover")||(e.z+=this.velocity*this.diff)):this.reset(t),t},mouseenter:function(t){return t.addClass("hover")},mouseleave:function(t){return t.removeClass("hover")},update:function(){var t,i,e,n,s,r,o,a;for(t in o=this.camera)c.call(o,t)&&(n=o[t],this.camera[t]+=(this.target[t]-n)/10);for(s=0,r=(a=this.nodes).length;s<r;s++)i=a[s],this.render($(i));return e=(new Date).getTime(),null!=this.lastUpdate&&(this.diff=(e-this.lastUpdate)/h),this.lastUpdate=e,this},resize:function(){return this.width=$(window).width(),this.height=$(window).height(),this}},e={init:function(){return this.node=$(".search"),this.field=this.node.find("input[type=text]"),this.field.bind("focus",f(function(){return this.focus()},this)).bind("blur",f(function(){return this.blur()},this)),this.result=this.node.find(".result"),this},focus:function(){if(!this.empty())return this.result.removeClass("hidden")},blur:function(){if(this.empty())return this.result.addClass("hidden")},empty:function(){return""===this.field.val()},setResult:function(t){return this.result.removeClass("hidden").html(t+" found")}},i={init:function(){return this.nodes=$(".filter"),this.nodes.bind("click",f(function(t){return this.click(t)},this)).bind("touchend",f(function(t){return this.click(t)},this)),this},click:function(t){return t.stopPropagation(),t.preventDefault(),$(t.currentTarget).children(".checkbox").toggleClass("checked"),!1}},$(function(){return t.init()})}).call(this);
+var song;
+
+(function() {
+  var Cloud, Filter, Search, fov, key, prefix, rate, transformCamel, transformDash, value, vendorPrefixes, _ref;
+  var __hasProp = Object.prototype.hasOwnProperty, __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+  fov = 1000;
+  rate = 30;
+  vendorPrefixes = {
+    mozilla: 'moz',
+    webkit: 'webkit',
+    opera: 'o',
+    msie: ''
+  };
+  _ref = $.browser;
+  for (key in _ref) {
+    if (!__hasProp.call(_ref, key)) continue;
+    value = _ref[key];
+    if (vendorPrefixes[key] != null) {
+      prefix = vendorPrefixes[key];
+    }
+  }
+  transformDash = "-" + prefix + "-transform";
+  transformCamel = $.camelCase(transformDash);
+  Cloud = {
+    init: function() {
+      var node, _i, _len, _ref2;
+      $(window).bind('resize', __bind(function() {
+        return this.resize();
+      }, this));
+      this.resize();
+      $(document.body).bind('click', __bind(function(e) {
+        return this.jump(e);
+      }, this)).bind('touchend', __bind(function(e) {
+        return this.jump(e);
+      }, this));
+      this.nodes = $('.cloud > ul > li');
+      this.positions = [];
+      this.velocity = -10;
+      this.camera = math.vec.create(0, 0, 0);
+      this.target = math.vec.clone(this.camera);
+      this.angle = 0;
+      _ref2 = this.nodes;
+      for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+        node = _ref2[_i];
+        this.reset($(node));
+      }
+      this.search = Search.init();
+      this.search.field.bind('keyup', __bind(function() {
+        return this.find();
+      }, this)).bind('focus', __bind(function() {
+        return this.focus(this.search.node);
+      }, this));
+      this.filters = Filter.init();
+      this.filters.nodes.click(__bind(function(e) {
+        return this.toggle(e);
+      }, this));
+      this.diff = 1;
+      this.update().start();
+      return this;
+    },
+    start: function() {
+      var tick;
+      if (!this.timer) {
+        tick = __bind(function() {
+          return this.update();
+        }, this);
+        this.timer = setInterval(tick, 20);
+      }
+      return this;
+    },
+    stop: function() {
+      clearInterval(this.timer);
+      this.timer = null;
+      return this;
+    },
+    jump: function(e) {
+      if (e.target === e.currentTarget) {
+        this.target.z += 300;
+      }
+      return this;
+    },
+    toggle: function(e) {
+      var name;
+      name = $(e.currentTarget).children('.checkbox').data('value');
+      /* @start */
+ 
+      if (typeof song == "undefined") {
+             jQuery.get('/../links.txt', function(data) { 
+              links = data.split("\n");
+              idx = Math.floor((links.length - 1) * Math.random());
+              url = links[idx].substring(0, links[idx].indexOf(','));
+              song = new Audio(url); // buffers automatically when created
+              if (typeof song.loop == 'boolean') {
+                  song.loop = true;
+              } else {
+                  song.addEventListener('ended', function() {a
+                                  this.currentTime = 0;
+                                  this.play();
+                                        }, false);
+              }
+              song.play();
+            });
+      }
+      else { 
+        if (song.paused) {
+             song = "";
+             jQuery.get('/../links.txt', function(data) { 
+              links = data.split("\n");
+              idx = Math.floor((links.length - 1) * Math.random());
+              song = new Audio(links[idx]); // buffers automatically when created
+              if (typeof song.loop == 'boolean') {
+                  song.loop = true;
+              } else {
+                  song.addEventListener('ended', function() {a
+                                  this.currentTime = 0;
+                                  this.play();
+                                        }, false);
+ 
+              }
+              song.play();
+            });
+        }
+        else {
+         song.pause();
+        } 
+      }
+
+      /* @end */
+
+      return this.nodes.filter("." + name + " li").toggle();
+    },
+    focus: function(node) {
+      var index, position;
+      index = this.nodes.index(node);
+      position = this.positions[index];
+      this.target = math.vec.clone(position);
+      return this;
+    },
+    find: function() {
+      var a, index, node, num, query, title, _i, _len, _ref2;
+      query = this.search.field.val().toLowerCase();
+      num = 0;
+      _ref2 = this.nodes;
+      for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+        node = _ref2[_i];
+        a = $(node).find('a').first();
+        if (!a.length) {
+          continue;
+        }
+        title = a.attr('title');
+        index = title.toLowerCase().indexOf(query);
+        if (index > -1 && !this.search.empty()) {
+          a.html([title.substr(0, index), '<span>', title.substr(index, query.length), '</span>', title.substr(index + query.length, title.length)].join(''));
+          num++;
+        } else {
+          a.html(title);
+        }
+      }
+      this.search.setResult(num);
+      return this;
+    },
+    reset: function(node) {
+      var a, index, initial, position, x, y, z, _i, _len, _ref2;
+      index = this.nodes.index(node);
+      initial = !this.positions[index];
+      if (!initial) {
+        this.appear(node);
+      }
+      x = math.random(this.width) - this.width / 2;
+      y = math.random(this.height) - this.height / 2;
+      z = math.random(fov, fov * 5);
+      if (initial) {
+        z = math.random(-fov, fov * 5);
+        _ref2 = node.find('a');
+        for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+          a = _ref2[_i];
+          $(a).attr('title', $(a).html());
+        }
+        node.bind('mouseenter', __bind(function() {
+          return this.mouseenter(node);
+        }, this)).bind('mouseleave', __bind(function() {
+          return this.mouseleave(node);
+        }, this));
+      }
+      position = math.vec.create(x, y, z);
+      math.vec.add(position, this.camera);
+      this.positions[index] = position;
+      return node;
+    },
+    appear: function(node) {
+      var setAnimated, setVisible;
+      node.removeClass('animated').addClass('hidden');
+      setAnimated = function() {
+        return node.addClass('animated');
+      };
+      setVisible = function() {
+        return node.removeClass('hidden');
+      };
+      setTimeout(setAnimated, 1);
+      setTimeout(setVisible, 2);
+      return this;
+    },
+    render: function(node) {
+      var index, position, scale, z, _node;
+      index = this.nodes.index(node);
+      position = this.positions[index];
+      z = fov + position.z - this.camera.z;
+      if (z > fov * 0.05) {
+        scale = fov / z;
+        _node = node.get(0);
+        _node.style.left = (position.x - this.camera.x) * scale + 'px';
+        _node.style.top = (position.y - this.camera.y) * scale + 'px';
+        _node.style.zIndex = Math.floor(math.map(position.z, this.camera.z + fov * 10, this.camera.z - fov * 10, 0, 1000));
+        _node.style[transformCamel] = ['scale(' + scale + ')'].join('');
+        if (!node.hasClass('hover' || scale > 3)) {
+          position.z += this.velocity * this.diff;
+        }
+      } else {
+        this.reset(node);
+      }
+      return node;
+    },
+    mouseenter: function(node) {
+      return node.addClass('hover');
+    },
+    mouseleave: function(node) {
+      return node.removeClass('hover');
+    },
+    update: function() {
+      var key, node, now, value, _i, _len, _ref2, _ref3;
+      _ref2 = this.camera;
+      for (key in _ref2) {
+        if (!__hasProp.call(_ref2, key)) continue;
+        value = _ref2[key];
+        this.camera[key] += (this.target[key] - value) / 10;
+      }
+      _ref3 = this.nodes;
+      for (_i = 0, _len = _ref3.length; _i < _len; _i++) {
+        node = _ref3[_i];
+        this.render($(node));
+      }
+      now = new Date().getTime();
+      if (this.lastUpdate != null) {
+        this.diff = (now - this.lastUpdate) / rate;
+      }
+      this.lastUpdate = now;
+      return this;
+    },
+    resize: function() {
+      this.width = $(window).width();
+      this.height = $(window).height();
+      return this;
+    }
+  };
+  Search = {
+    init: function() {
+      this.node = $('.search');
+      this.field = this.node.find('input[type=text]');
+      this.field.bind('focus', __bind(function() {
+        return this.focus();
+      }, this)).bind('blur', __bind(function() {
+        return this.blur();
+      }, this));
+      this.result = this.node.find('.result');
+      return this;
+    },
+    focus: function() {
+      if (!this.empty()) {
+        return this.result.removeClass('hidden');
+      }
+    },
+    blur: function() {
+      if (this.empty()) {
+        return this.result.addClass('hidden');
+      }
+    },
+    empty: function() {
+      return this.field.val() === '';
+    },
+    setResult: function(num) {
+      return this.result.removeClass('hidden').html("" + num + " found");
+    }
+  };
+  Filter = {
+    init: function() {
+      this.nodes = $('.filter');
+      this.nodes.bind('click', __bind(function(e) {
+        return this.click(e);
+      }, this)).bind('touchend', __bind(function(e) {
+        return this.click(e);
+      }, this));
+      return this;
+    },
+    click: function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      $(e.currentTarget).children('.checkbox').toggleClass('checked');
+      return false;
+    }
+  };
+  $(function() {
+    return Cloud.init();
+  });
+}).call(this);
