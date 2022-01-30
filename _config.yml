@@ -15,11 +15,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-gzip
-  - jekyll-minifier
   - jekyll-include-cache
-jekyll-minifier:
-  uglifier_args:
-    harmony: true
+
 kramdown:
   math_engine: mathjax
   input: GFM
