@@ -13,6 +13,7 @@ gem "ffi", ">= 1.9.24"
 gem "addressable", ">= 2.8.0"
 gem 'jekyll-seo-tag'
 gem 'jekyll-sitemap'
+gem 'jekyll-minifier'
 gem 'jekyll-compose', group: [:jekyll_plugins]
 group :jekyll_plugins do
     gem 'jekyll-gzip'
