@@ -12,7 +12,7 @@ services:
       - .:/srv/jekyll
   build:
     image: jekyll/jekyll:3.8
-    command: jekyll build
+    command: jekyll build --trace
     environment:
       - JEKYLL_ENV=production
     ports:
