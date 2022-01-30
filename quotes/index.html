@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link rel="alternate" type="application/rss+xml" title="Bakery Store RSS" href="/feed.xml">
+<meta charset="utf-8"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <link rel="alternate" type="application/rss+xml" title="Bakery Store RSS" href="/feed.xml">
     <meta charset="UTF-8">
 <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -37,10 +40,7 @@
 <meta property="og:image" content="https://i.imgur.com/RwZdX35.jpg">
 
 <!-- end of Twitter cards -->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Random Quotes | Random Wits</title>
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Random Quotes" />
@@ -85,13 +85,13 @@
 
 @font-face {
   font-family: "King Basil";
-  src: url("./font/King-Basil.ttf");
+  src: url("/font/King-Basil.ttf");
 }
 
   @font-face {
   font-weight: normal;
   font-family: "Baskerville";
-  src: url("./font/LibreBaskerville-Regular.ttf");
+  src: url("/font/LibreBaskerville-Regular.ttf");
 }
 
 .king-basil {
@@ -298,7 +298,7 @@ header li {
     var idx;
      if (typeof defaultValue !== 'undefined') {
          idx = defaultValue;
-     } else {         
+     } else {
        idx = Math.floor((quotes.length - 1) * Math.random());
      }
 
@@ -308,13 +308,13 @@ header li {
        textQuote = quotes[idx].replace(/\<br\>/g,"\n") + " ";
      }
 
-     document.getElementById("quote").innerHTML = textQuote; 
+     document.getElementById("quote").innerHTML = textQuote;
 
-     
-     $("#quote").typewriter(); 
+
+     $("#quote").typewriter();
 
      var tweetText = quotes[idx] + " %23quotes https://randomwits.com/quotes/";
-  
+
      $('.twitter-button').attr("href", 'https://twitter.com/intent/tweet?text=' + tweetText);
 
     });
@@ -337,27 +337,6 @@ $(document).ready(function() {
         &nbsp;<a class="mytag" style="font-size:18px;" href="javascript:quotesGet();">next</a>&nbsp;&nbsp;&nbsp;<a class="twitter-button mytag" target="_blank" style="font-size:18px" href="https://twitter.com/intent/tweet?text=">tweet</a>
     </div>
 </div>
-
-
-        <hr>
-        
-
-  <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
-        var disqus_identifier = '/quotes/';
-	    var disqus_url = 'http://tushar-sharma.github.io/quotes/';
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
       </section>
