@@ -42,11 +42,14 @@ Just a quick referesher to few concepts before we delve into AWS CDK
 
 5. **L3 construct** are called high-level patterns. These constructs are designed to help you complete common tasks in AWS, often involving multiple kinds of resources. 
 
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+
+<blockquote class="attention">
+<i style="color: red; " class="fas fa-exclamation"></i>
 For this tutorial, we will use L1 construct. However same concept can be used for L2 construct.
-</div>
+</blockquote>
+
 <br>
+
 ## Installation
 
 First, install the AWS CDK CLI from command line using
@@ -113,11 +116,10 @@ The output is
 <script src="https://gist.github.com/tushar-sharma/167a194b3e9258d39e176905a6788d9b.js?file=synth_output1.yaml"></script>
 
 
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+<blockquote class="attention">
+<i style="color: red; " class="fas fa-exclamation"></i>
 For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a safety check, to verify that the bootstrap stack in the target environment meets the minimum requirements of the current stack<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
-</div>
-<br>
+</blockquote>
 
 ## Stepfunction
 
