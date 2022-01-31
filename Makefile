@@ -1,4 +1,4 @@
-serve:
+oldserve:
 	JEKYLL_ENV=production bundle exec jekyll serve
 clean:
 	rm -fr tag
@@ -7,6 +7,8 @@ clean:
 add:
 	git add tag
 	git add sitemap.xml
+oldbuild:
+	JEKYLL_ENV=production bundle exec jekyll build
 build:
 	chmod -R 777 *
 	docker-compose up build
