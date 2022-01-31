@@ -10,6 +10,7 @@ add:
 build:
 	chmod -R 777 *
 	docker-compose up build
+copy:
 	cp -r sitemap.xml _site/
 	cp -r CNAME _site/
 	cp .nojekyll _site/
