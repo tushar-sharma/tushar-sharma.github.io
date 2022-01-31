@@ -257,9 +257,9 @@ you as your own being”&lt;sup&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footno
 &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/b/ba/Feynman_EP_Annihilation.svg&quot; /&gt;
 &lt;/figure&gt;
 
-&lt;div class=&quot;attention&quot;&gt;
-&quot;It is as though a bombardier flying low over a road suddenly sees three roads and it is only when two of them come together and disappear again that he realizes that he has simply passed over a long switchback in a single road&quot; - Richard Feynman&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote class=&quot;attention&quot;&gt;
+&quot;It is as though a bombardier flying low over a road suddenly sees three roads and it is only when two of them come together and disappear again that he realizes that he has simply passed over a long switchback in a single road&quot; - Richard Feynman
+&lt;/blockquote&gt;
 
 &lt;h1 id=&quot;deficiency-of-anti-matter&quot;&gt;Deficiency of anti-matter&lt;/h1&gt;
 
@@ -1851,7 +1851,6 @@ For this tutorial, we will use L1 construct. However same concept can be used fo
 &lt;script src=&quot;https://gist.github.com/tushar-sharma/167a194b3e9258d39e176905a6788d9b.js?file=synth_output1.yaml&quot;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&quot;attention&quot;&gt;
-&lt;i style=&quot;color: red; &quot; class=&quot;fas fa-exclamation&quot;&gt;&lt;/i&gt;
 For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a safety check, to verify that the bootstrap stack in the target environment meets the minimum requirements of the current stack&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.
 &lt;/blockquote&gt;
 
