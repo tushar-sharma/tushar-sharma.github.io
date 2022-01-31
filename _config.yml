@@ -4,16 +4,19 @@ lsi: false
 permalink: /:categories/:title
 url: https://randomwits.com
 markdown: kramdown
-title: Random Wits
+title: RandomWits
 port: 4000
 future: false
 mod: "%"
 encoding: "utf-8"
+tagline: increasing entropy of the universe
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-gzip
+  - jekyll-include-cache
+
 kramdown:
   math_engine: mathjax
   input: GFM
@@ -26,6 +29,7 @@ exclude:
 - Gemfile.lock
 - branch.txt
 - .gitignore
+- .jekyll-cache
 gems: [jekyll-paginate]
 paginate: 3
 not_paginated_categories:
