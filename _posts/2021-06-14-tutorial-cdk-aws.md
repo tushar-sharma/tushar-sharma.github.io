@@ -117,7 +117,6 @@ The output is
 
 
 <blockquote class="attention">
-<i style="color: red; " class="fas fa-exclamation"></i>
 For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a safety check, to verify that the bootstrap stack in the target environment meets the minimum requirements of the current stack<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
 </blockquote>
 
