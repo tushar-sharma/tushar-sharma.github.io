@@ -75,10 +75,10 @@ Feynman described annihilation like an electron travelling forward interacts wit
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Feynman_EP_Annihilation.svg" >
 </figure>
 
+<blockquote class="attention">
+"It is as though a bombardier flying low over a road suddenly sees three roads and it is only when two of them come together and disappear again that he realizes that he has simply passed over a long switchback in a single road" - Richard Feynman
+</blockquote>
 
-<div class="attention">
-"It is as though a bombardier flying low over a road suddenly sees three roads and it is only when two of them come together and disappear again that he realizes that he has simply passed over a long switchback in a single road" - Richard Feynman</div>
-<br>
 
 # Deficiency of anti-matter
 
