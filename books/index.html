@@ -10,12 +10,15 @@ author: Tushar Sharma
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <link rel="stylesheet" href="{{ root_url }}/css/books.css" />
 <link rel="stylesheet" href="{{ root_url }}/css/search.css" />
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" type="text/css" href="{{ root_ulr }}/css/jquery.dataTables.min.css" />
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 <style>
-  .cl {
+.cl {
     white-space: nowrap !important;
   }
+.dataTables_filter {
+    float: right !important;
+}
 </style>
 <!-- end heading -->
 <script  type="text/javascript">
@@ -523,12 +526,12 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 
   {% for i in (1..4) %}
     <span class="fa fa-star checked"></span>
-  {% endfor %}  
+  {% endfor %}
   <span style="color:black">&nbsp;&nbsp;Liked well enough to recommend to others</span> <br>
 
   {% for i in (1..5) %}
     <span class="fa fa-star checked"></span>
-  {% endfor %}   
+  {% endfor %}
   <span style="color:black">&nbsp;&nbsp;Liked well enough to reread and recommend enthusiastically to other</span> <br>
 
 </div>
