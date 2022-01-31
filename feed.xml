@@ -1780,11 +1780,13 @@ th, td {
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;attention&quot;&gt;
-&lt;i style=&quot;color: orange;&quot; class=&quot;fas fa-exclamation-circle&quot;&gt; &lt;/i&gt;
+&lt;blockquote class=&quot;attention&quot;&gt;
+&lt;i style=&quot;color: red; &quot; class=&quot;fas fa-exclamation&quot;&gt;&lt;/i&gt;
 For this tutorial, we will use L1 construct. However same concept can be used for L2 construct.
-&lt;/div&gt;
+&lt;/blockquote&gt;
+
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
 
 &lt;p&gt;First, install the AWS CDK CLI from command line using&lt;/p&gt;
@@ -1848,11 +1850,10 @@ For this tutorial, we will use L1 construct. However same concept can be used fo
 
 &lt;script src=&quot;https://gist.github.com/tushar-sharma/167a194b3e9258d39e176905a6788d9b.js?file=synth_output1.yaml&quot;&gt;&lt;/script&gt;
 
-&lt;div class=&quot;attention&quot;&gt;
-&lt;i style=&quot;color: orange;&quot; class=&quot;fas fa-exclamation-circle&quot;&gt; &lt;/i&gt;
+&lt;blockquote class=&quot;attention&quot;&gt;
+&lt;i style=&quot;color: red; &quot; class=&quot;fas fa-exclamation&quot;&gt;&lt;/i&gt;
 For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a safety check, to verify that the bootstrap stack in the target environment meets the minimum requirements of the current stack&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.
-&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;stepfunction&quot;&gt;Stepfunction&lt;/h2&gt;
 
