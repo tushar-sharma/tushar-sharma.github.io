@@ -40,8 +40,17 @@ a{color:#39c;font-weight:400;text-decoration:none}a small{font-size:16px;color:#
 
 
 
-.wrapper{width:100%;margin:0 auto;position:relative}blockquote{border-left:1px solid #e5e5e5;margin:0;padding:0 0 0 20px;font-style:italic}
+.wrapper{width:100%;margin:0 auto;position:relative}
 
+blockquote{
+  border-left:1px solid #e5e5e5;margin:0;padding:20px 20px 20px 20px;font-style:italic;
+  margin-bottom: 15px;
+}
+
+.attention{
+  background: #ffffb3;
+  border-left: 10px solid orange;
+}
 
 
 p code, code{
