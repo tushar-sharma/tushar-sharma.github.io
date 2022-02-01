@@ -12,6 +12,9 @@ oldbuild:
 build:
 	chmod -R 777 *
 	docker-compose up build
+serve:
+	chmod -R 777 *
+	docker-compose up serve
 copy:
 	cp -r sitemap.xml _site/
 	cp -r CNAME _site/
