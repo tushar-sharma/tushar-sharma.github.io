@@ -7384,9 +7384,7 @@ the dark murky clouds away through the cleft.&lt;/p&gt;
       
         <item>
           <title>Advanced Encryption Standard (AES)</title>
-          <description>&lt;p&gt;Advanced Encryption Standard, a symmetric key algorithm, implemented in C++. All the parties use the same key for encryption and decryption. It has superseded DES, another symmetric key algorithms.&lt;/p&gt;
-
-&lt;p&gt;Rijndael was selected by NIST (National Institute of Standards and Technology) as AES. Unlike Rijndael in which block length and key length can be specified to any multiple of 32 bits, AES fixes block length to 128 bits and key length to (128 or 192 or 256) bits.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+          <description>&lt;p&gt;Advanced Encryption Standard, a symmetric key algorithm, implemented in C++. All the parties use the same key for encryption and decryption. It has superseded DES, another symmetric key algorithms.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -7594,6 +7592,9 @@ the dark murky clouds away through the cleft.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.scribd.com/doc/164002353/Study-and-Implementation-of-various-Cryptographic-techniques#page=42&quot;&gt;details&lt;/a&gt; — &lt;a href=&quot;https://github.com/tushar-sharma/aes&quot;&gt;code&lt;/a&gt;&lt;/p&gt;
 
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/projects/des&quot; title=&quot;Previous Post: Data Encryption Standard (DES)&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/projects/binary-semaphore&quot; title=&quot;Next Post: Binary Sempahore&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
+&lt;/nav&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:bytesub&quot; role=&quot;doc-endnote&quot;&gt;
