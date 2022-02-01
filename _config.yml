@@ -16,7 +16,7 @@ plugins:
   - jekyll-paginate
   - jekyll-gzip
   - jekyll-include-cache
-
+  - jekyll-spaceship
 kramdown:
   math_engine: mathjax
   input: GFM
