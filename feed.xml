@@ -7,6 +7,48 @@
     
       
         <item>
+          <title>Learning Tennis</title>
+          <description>&lt;p&gt;Badminton sport has a low learning curve unlike tennis. Even your granny can hit a birdie. I grew up playing tennis but decided to try my luck with tennis. “Playing tennis would be a cakewalk”, I thought. However my hubris was soon deflated.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/tennis&quot; title=&quot;View posts tagged with &amp;quot;tennis&amp;quot;&quot;&gt;tennis&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/recreation&quot; title=&quot;View posts tagged with &amp;quot;recreation&amp;quot;&quot;&gt;recreation&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/badminton&quot; title=&quot;View posts tagged with &amp;quot;badminton&amp;quot;&quot;&gt;badminton&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sports&quot; title=&quot;View posts tagged with &amp;quot;sports&amp;quot;&quot;&gt;sports&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Badminton sport has a low learning curve unlike tennis. Even your granny can hit a birdie. I grew up playing tennis but decided to try my luck with tennis. “Playing tennis would be a cakewalk”, I thought. However my hubris was soon deflated.&lt;/p&gt;
+
+&lt;p&gt;Badminton is a game of reflex and agility. One of my most favourite technique in badminton you can use your full strength to smash the shuttlecock across your opponent. Since the shuttlecock is made of leather, you can easily control its trajectory.&lt;/p&gt;
+
+&lt;div style=&quot;position:relative; padding-bottom:calc(57.50% + 44px)&quot;&gt;&lt;iframe src=&quot;https://gfycat.com/ifr/PreciousPeriodicAlpinegoat&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot;position:absolute;top:0;left:0;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;However badminton skills are not directly transferable to tennis. On my first day playing tennis, I was hitting tennis ball all over the place.  So I had to learn forehand&lt;sup id=&quot;fnref:forehand&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:forehand&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; technique to properly hit the ball.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.youtube.com/watch?v=JCD6_j7W2Vk&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Currently my tennis rating is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.5&lt;/code&gt;&lt;sup id=&quot;fnref:rating&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:rating&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Tennis is often dubbed as a sport for anyone between 4 and 94 years of age. Luckily I little younger than 94, so I can continue to improve and enjoy game of tennis.&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/leetcode-longest-substring-without-repeating-characters&quot; title=&quot;Previous Post: Leetcode - Longest Substring Without Repeating Characters&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;/nav&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:forehand&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Forehand&quot;&gt;Forehand&lt;/a&gt; &lt;a href=&quot;#fnref:forehand&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:rating&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.usta.com/content/dam/usta/pdfs/10013_experience_player_ntrp_guidelines.pdf&quot;&gt;Ratings&lt;/a&gt; &lt;a href=&quot;#fnref:rating&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2022-01-31T00:00:00-06:00</pubDate>
+          <link>https://randomwits.com/blog/learning-tennis</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/learning-tennis</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Leetcode - Longest Substring Without Repeating Characters</title>
           <description>&lt;p&gt;In this &lt;a href=&quot;https://leetcode.com/problems/longest-substring-without-repeating-characters/&quot;&gt;leetcode&lt;/a&gt; problem,  we’re asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abcabcbb&lt;/code&gt; the longest substring without repeating characters is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abc&lt;/code&gt; (with a length of 3).&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/two pointers&quot; title=&quot;View posts tagged with &amp;quot;two pointers&amp;quot;&quot;&gt;two pointers&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/set&quot; title=&quot;View posts tagged with &amp;quot;set&amp;quot;&quot;&gt;set&lt;/a&gt;    &lt;/p&gt;
@@ -96,10 +138,10 @@ Notice that the answer must be a substring,
 
 &lt;h2 id=&quot;complexity&quot;&gt;Complexity&lt;/h2&gt;
 
-&lt;p&gt;Time Complexity is &lt;strong&gt;\(\mathcal{O}(n)\)&lt;/strong&gt;, Space complexity is &lt;strong&gt;\(\mathcal{O}(1)\)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Time Complexity is &lt;strong&gt;$$\mathcal{O}(n)$$&lt;/strong&gt;, Space complexity is &lt;strong&gt;$$\mathcal{O}(1)$$&lt;/strong&gt;&lt;/p&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/debugging-spark-application-using-remote-container&quot; title=&quot;Previous Post: Debugging Spark Application Locally using remote container&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/debugging-spark-application-using-remote-container&quot; title=&quot;Previous Post: Debugging Spark Application Locally using remote container&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/learning-tennis&quot; title=&quot;Next Post: Learning Tennis&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
           <pubDate>2022-01-17T20:07:00-06:00</pubDate>
@@ -238,9 +280,11 @@ ___ spark_demo.py
 
 &lt;p&gt;Antimatter is the same as ordinary matter except that it has the opposite electric charge. Positron is an antimatter equivalent for an electron. They have equal mass but opposite charges. Thanks to Einstein’s equation, &lt;strong&gt;E=mc&lt;sup&gt;2&lt;/sup&gt;&lt;/strong&gt;, there’s an equivalence between energy and mass. So a colliding positron and electron converts their rest mass to pure energy in form of two oppositely directed 0.511 MeV photons.&lt;/p&gt;
 
-\[\begin{align}
+&lt;p&gt;$$
+\begin{align}
   e− + e+ → γ + γ (2x 0.511 MeV)
-\end{align}\]
+\end{align}
+$$&lt;/p&gt;
 
 &lt;h1 id=&quot;prediction-of-antimatter&quot;&gt;Prediction of antimatter&lt;/h1&gt;
 
@@ -402,7 +446,7 @@ prerequisites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quo
 
 &lt;h1 id=&quot;complexity&quot;&gt;Complexity&lt;/h1&gt;
 
-&lt;p&gt;Time complexity:  \(\mid V \mid  + \mid E \mid\).&lt;/p&gt;
+&lt;p&gt;Time complexity:  $$\mid V \mid  + \mid E \mid$$.&lt;/p&gt;
 
 &lt;p&gt;V : numCourses &amp;amp; E : prerequisites&lt;/p&gt;
 
@@ -838,7 +882,7 @@ A contiguous substring of string s is a string that can be obtained from s by re
 
 &lt;h2 id=&quot;complexity&quot;&gt;Complexity&lt;/h2&gt;
 
-&lt;p&gt;Time Complexity is &lt;strong&gt;\(\theta(n)\)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Time Complexity is &lt;strong&gt;$$\theta(n)$$&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;&lt;h4&gt;Footnotes&lt;/h4&gt;&lt;hr /&gt;
   &lt;ol&gt;
@@ -929,18 +973,18 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;0&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;1&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;2&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;3&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;4&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;5&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;6&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;7&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;8&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;9&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;10&lt;/em&gt;&lt;/th&gt;
-      &lt;th&gt;&lt;em&gt;11&lt;/em&gt;&lt;/th&gt;
+      &lt;th&gt;*0*&lt;/th&gt;
+      &lt;th&gt;*1*&lt;/th&gt;
+      &lt;th&gt;*2*&lt;/th&gt;
+      &lt;th&gt;*3*&lt;/th&gt;
+      &lt;th&gt;*4*&lt;/th&gt;
+      &lt;th&gt;*5*&lt;/th&gt;
+      &lt;th&gt;*6*&lt;/th&gt;
+      &lt;th&gt;*7*&lt;/th&gt;
+      &lt;th&gt;*8*&lt;/th&gt;
+      &lt;th&gt;*9*&lt;/th&gt;
+      &lt;th&gt;*10*&lt;/th&gt;
+      &lt;th&gt;*11*&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -1145,7 +1189,7 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
 
 &lt;h2 id=&quot;complexity&quot;&gt;Complexity&lt;/h2&gt;
 
-&lt;p&gt;Time Complexity is &lt;strong&gt;\(\theta(n * m)\)&lt;/strong&gt;, Space complexity is &lt;strong&gt;\(\theta(n)\)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Time Complexity is &lt;strong&gt;$$\theta(n * m)$$&lt;/strong&gt;, Space complexity is &lt;strong&gt;$$\theta(n)$$&lt;/strong&gt;&lt;/p&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
  &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dear-vishi-snoring&quot; title=&quot;Previous Post: Dear Vishi, is snoring innocuous?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/ternary-string-codeforces-solution&quot; title=&quot;Next Post: Ternary String solution Codeforces - 1354B&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
@@ -2432,7 +2476,7 @@ msft,0,0,230,0
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;/img/st1.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;/img/st1.png&quot; alt=&quot;&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2442,7 +2486,7 @@ msft,0,0,230,0
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;/img/st2.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;/img/st2.png&quot; alt=&quot;&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2477,7 +2521,7 @@ msft,0,0,230,0
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;/img/st3.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;/img/st3.png&quot; alt=&quot;&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2510,7 +2554,7 @@ msft,0,0,230,0
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;https://medsurgeindia.com/wp-content/uploads/2020/07/bone-marrow-transplants-in-india.jpeg&quot; alt=&quot;bone marrow image&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;https://medsurgeindia.com/wp-content/uploads/2020/07/bone-marrow-transplants-in-india.jpeg&quot; alt=&quot;bone marrow image&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2675,7 +2719,7 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;/img/dynamodbexport.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;/img/dynamodbexport.png&quot; alt=&quot;&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -3140,7 +3184,7 @@ libraryDependencies +&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; “au.com.by
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/10/p-1-army-sleep.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/10/p-1-army-sleep.jpg&quot; alt=&quot;&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -3430,7 +3474,7 @@ Only Allah  name will survive&lt;br /&gt;
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;https://i.imgur.com/KdU5gTZ.png&quot; alt=&quot;Graph image&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;https://i.imgur.com/KdU5gTZ.png&quot; alt=&quot;Graph image&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -3463,7 +3507,7 @@ Only Allah  name will survive&lt;br /&gt;
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;/img/noden.png&quot; alt=&quot;one node in a graph&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;/img/noden.png&quot; alt=&quot;one node in a graph&quot;  /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -3476,36 +3520,36 @@ Only Allah  name will survive&lt;br /&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;4&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;6&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;7&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**1**&lt;/td&gt;
+      &lt;td&gt;**2**&lt;/td&gt;
+      &lt;td&gt;**3**&lt;/td&gt;
+      &lt;td&gt;**4**&lt;/td&gt;
+      &lt;td&gt;**5**&lt;/td&gt;
+      &lt;td&gt;**6**&lt;/td&gt;
+      &lt;td&gt;**7**&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**1**&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**2**&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;**3**&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
@@ -3515,17 +3559,7 @@ Only Allah  name will survive&lt;br /&gt;
       &lt;td&gt;0&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;4&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**4**&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
@@ -3535,7 +3569,17 @@ Only Allah  name will survive&lt;br /&gt;
       &lt;td&gt;1&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;6&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**5**&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;**6**&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
@@ -3545,7 +3589,7 @@ Only Allah  name will survive&lt;br /&gt;
       &lt;td&gt;1&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;7&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**7**&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
       &lt;td&gt;0&lt;/td&gt;
@@ -3564,25 +3608,25 @@ Only Allah  name will survive&lt;br /&gt;
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;1&lt;/strong&gt; → 2, 3&lt;/td&gt;
+      &lt;td&gt;**1** → 2, 3&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;2&lt;/strong&gt; →  4, 5&lt;/td&gt;
+      &lt;td&gt;**2** →  4, 5&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;3&lt;/strong&gt; →  6&lt;/td&gt;
+      &lt;td&gt;**3** →  6&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;4&lt;/strong&gt; → 7&lt;/td&gt;
+      &lt;td&gt;**4** → 7&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;5&lt;/strong&gt; → 7&lt;/td&gt;
+      &lt;td&gt;**5** → 7&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;6&lt;/strong&gt; → 5 , 7&lt;/td&gt;
+      &lt;td&gt;**6** → 5 , 7&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;7&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**7**&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -3931,7 +3975,7 @@ output array = [2 8 10 1 1 7]
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg&quot; alt=&quot;&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -3953,7 +3997,7 @@ With ravine, shriek'd against his creed&lt;br /&gt;
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;https://news.nationalgeographic.com/content/dam/news/2015/12/cavefish.ngsversion.1441823512384.adapt.1900.1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;https://news.nationalgeographic.com/content/dam/news/2015/12/cavefish.ngsversion.1441823512384.adapt.1900.1.jpg&quot; alt=&quot;&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -4337,7 +4381,7 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;https://qph.fs.quoracdn.net/main-qimg-dffa472292c6abcb72370a93dbf0dd22&quot; alt=&quot;Photo of Baahubali&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;https://qph.fs.quoracdn.net/main-qimg-dffa472292c6abcb72370a93dbf0dd22&quot; alt=&quot;Photo of Baahubali&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -4347,7 +4391,7 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;https://qph.fs.quoracdn.net/main-qimg-59f030e90459b563466ef15d7bef694a&quot; alt=&quot;Photo of Baahubali&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;https://qph.fs.quoracdn.net/main-qimg-59f030e90459b563466ef15d7bef694a&quot; alt=&quot;Photo of Baahubali&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -4798,7 +4842,7 @@ Goodbye
 &lt;p&gt;The sun’s rays had already crept through my window &amp;amp; drenched my room with light. Sleep taste sweetest when you resist it. It is but with a heavy heart that I relinquish my sleep &amp;amp; pull myself together. But not today! It was a weekend that brought me few more drops of honey as I extended my sleep while a statue of abstemious Buddha, which I recently bought, wandered at the petty cumberworld outgrowing in both time &amp;amp; stupidity.&lt;/p&gt;
 
 &lt;center&gt;
-| &lt;img src=&quot;/img/bhudda_st.jpg&quot; alt=&quot;&quot; /&gt; |
+| &amp;lt;img src=\&quot;/img/bhudda\_st.jpg\&quot; alt=\&quot;\&quot; /&amp;gt; |
 &lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -4813,7 +4857,7 @@ Goodbye
 &lt;p&gt;I pulled up a meditation lesson by “Ravi Ravi Shankar”. His photo with long hair while smiling profusely, instilled unparalleled motivation in me. “I could be next Vivekananda”, I quipped, though the Buddha statue in my room chuckled mischievously. I have seen American do challenging “yoga” while as an Indian I felt the embarrassment on failing to properly sit cross legs. Since I needed a scapegoat to blame for my flaws, I blame western culture &amp;amp; modernity. (A common phrase used India to blame for our woes&lt;sup&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, though such reasons are as much genuine as my rambling).&lt;/p&gt;
 
 &lt;center&gt;
-| &lt;img src=&quot;/img/dog_yoga.jpg&quot; alt=&quot;&quot; /&gt; |
+| &amp;lt;img  src=\&quot;/img/dog\_yoga.jpg\&quot; alt=\&quot;\&quot; /&amp;gt; |
 &lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -4831,7 +4875,7 @@ Goodbye
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;/img/gita.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;/img/gita.jpg&quot; alt=&quot;&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -4894,7 +4938,7 @@ Goodbye
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img align=&quot;center&quot; src=&quot;/img/cow.jpg&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; src=&quot;/img/cow.jpg&quot; alt=&quot;&quot; /&amp;gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Image courtesy ~ Global Look Press&lt;/td&gt;
@@ -5031,18 +5075,18 @@ And therein lies your real fear.&quot;
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;Using&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Worst Case&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**Using**&lt;/td&gt;
+      &lt;td&gt;**Worst Case**&lt;/td&gt;
+      &lt;td&gt;**Description**&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Sort&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;O(n log(n)) + O(1)&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**O(n log(n)) + O(1)**&lt;/td&gt;
       &lt;td&gt;Sorting the array + accessing the element&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Heap&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;O(n) + O(k log(n))&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**O(n) + O(k log(n))**&lt;/td&gt;
       &lt;td&gt;Building heap + extracting maximum element&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -5763,7 +5807,7 @@ MathJax.Hub.Config({
 
 &lt;script type=&quot;text/javascript&quot;&gt;SyntaxHighlighter.all();&lt;/script&gt;
 
-&lt;p&gt;Any deterministic general sorting algorithm  has average case time complexity \(\Omega(n\log{}n)\) . However, certain sorting algorithm can run faster in \(O(n)\) but with limitation&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Instead of comparision-based sort, each element is looked individually by its value. Radix sort is one fine example of integer sorting.&lt;/p&gt;
+&lt;p&gt;Any deterministic general sorting algorithm  has average case time complexity $$ \Omega(n\log{}n) $$ . However, certain sorting algorithm can run faster in $$ O(n) $$ but with limitation&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Instead of comparision-based sort, each element is looked individually by its value. Radix sort is one fine example of integer sorting.&lt;/p&gt;
 
 &lt;center&gt;
 &lt;img src=&quot;/img/alphabet.jpg&quot; /&gt;
@@ -5962,7 +6006,7 @@ printToFile(char S[][k], string filename, int indexP[])
     int tempP[n];
     memset(tempP, 0, sizeof(int) * n);
 
-    fo.open(filename.c_str(), ios::out | ios::binary);
+    fo.open\(filename.c\_str\(), ios::out | ios::binary);
     if (!fo) {
         cout&amp;lt;&amp;lt;&quot;Error opening the file\n&quot;;
         exit(-1);
@@ -5984,9 +6028,9 @@ printToFile(char S[][k], string filename, int indexP[])
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;n&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;k&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;time (s)&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**n**&lt;/td&gt;
+      &lt;td&gt;**k**&lt;/td&gt;
+      &lt;td&gt;**time (s)**&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;8&lt;/td&gt;
