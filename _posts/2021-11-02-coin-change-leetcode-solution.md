@@ -8,6 +8,7 @@ tags:
 - java
 - python
 name: coin-change
+featuredPost: true
 thumb: https://i.imgur.com/LYeioqF.jpeg
 ---
 
