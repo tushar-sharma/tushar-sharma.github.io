@@ -16,6 +16,8 @@ gem 'jekyll-spaceship'
 
 gem 'jekyll-compose', group: [:jekyll_plugins]
 group :jekyll_plugins do
+    gem "jekyll-mentions", "1.6.0"
+    gem "webrick"
     gem 'jekyll-gzip'
     gem 'jekyll-seo-tag'
     gem 'jekyll-sitemap'
