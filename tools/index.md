@@ -21,8 +21,43 @@ toc_icon: "cog"
 |         |         | [Adblock Plus](https://addons.mozilla.org/en-CA/firefox/addon/adblock-plus/) | Add blocker |
 |         |         | [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) | Add blocker  |
 |         |         | [Soda Pdf Viewer](https://addons.mozilla.org/en-US/firefox/addon/soda-pdf-viewer/) | | 
+| [Chrome](https://www.google.com/chrome/)  | browser  | [Checkbot](https://chrome.google.com/webstore/detail/checkbot-seo-web-speed-se/dagohlmlhagincbfilmkadjgmdnkjinl) | SEO tool |
+|         |         | [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) | | 
+|         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | | 
 | [VsCode](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
-| [Cygwin](https://www.cygwin.com/)  | Terminal |		bash-completion,		fzf-zsh,		fzf-zsh-completion,		curl,		tmux,		vim,		make,		perl,		tar,		tig,		unzip,		wget,		zip,                   zsh,                  git ,                 chere ,                 gcc-core,                 gdb ,                 libboost-devel,                 gcc-g++ |  |
- 
+| [Cygwin](https://www.cygwin.com/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
+
+
+## Details
+
+### <span id='fn:1'>Cygwin <a href='#fnref:1' rev='footnote'>&#8617;</a></span>
+
+```bash
+# Edit /etc/nsswitch.conf
+db_shell: /bin/zsh
+db_home: /%H
+$ chere -i -t mintty
+# Select following packages
+bash-completion
+fzf-zsh
+fzf-zsh-completion
+curl
+tmux
+vim
+make
+perl
+tar
+tig
+unzip
+wget
+zip
+zsh
+git 
+chere 
+gcc-core
+gdb 
+libboost-devel
+gcc-g++
+```
