@@ -13,3 +13,11 @@ toc_icon: "cog"
 </div>
 
 <h2 class="entry-title">Tools</h2>
+
+# Browsers
+
+## Firefox Addons
+
+| [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)| Vim like browser|
+| [WooRank](https://addons.mozilla.org/en-US/firefox/addon/seo-website-analysis/) | SEO tool |
+| [Adblock Plus](https://addons.mozilla.org/en-CA/firefox/addon/adblock-plus/) | Add blocker |
