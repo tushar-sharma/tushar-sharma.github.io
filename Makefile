@@ -1,5 +1,5 @@
 oldserve:
-	JEKYLL_ENV=production bundle exec jekyll serve
+	JEKYLL_ENV=production bundle exec jekyll serve --trace
 clean:
 	rm -fr tag
 	cp -r _site/tag .
@@ -20,3 +20,4 @@ copy:
 	cp -r CNAME _site/
 	cp .nojekyll _site/
 	cp robots.txt _site/
+	cp loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt _site/

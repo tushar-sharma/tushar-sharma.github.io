@@ -7,6 +7,101 @@
     
       
         <item>
+          <title>Leetcode - All Divisions With the Highest Score of a Binary Array</title>
+          <description>&lt;p&gt;You are given a &lt;strong&gt;0-indexed&lt;/strong&gt; binary array &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt; of length &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt; can be divided at index &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; (where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0 &amp;lt;= i &amp;lt;= n&lt;/code&gt;) into two arrays (possibly empty) nums&lt;sub&gt;left&lt;/sub&gt; and nums&lt;sub&gt;right&lt;/sub&gt;&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/hashmap&quot; title=&quot;View posts tagged with &amp;quot;hashmap&amp;quot;&quot;&gt;hashmap&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/array&quot; title=&quot;View posts tagged with &amp;quot;array&amp;quot;&quot;&gt;array&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
+
+&lt;script src=&quot;/js/jquery.easytabs.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/js/multipleTab.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;problem-statement&quot;&gt;Problem Statement&lt;/h2&gt;
+
+&lt;p&gt;You are given a &lt;strong&gt;0-indexed&lt;/strong&gt; binary array &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt; of length &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt; can be divided at index &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; (where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0 &amp;lt;= i &amp;lt;= n&lt;/code&gt;) into two arrays (possibly empty) nums&lt;sub&gt;left&lt;/sub&gt; and nums&lt;sub&gt;right&lt;/sub&gt;:&lt;/p&gt;
+
+&lt;p&gt;nums&lt;sub&gt;left&lt;/sub&gt; has all the elements of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt; between index &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i - 1&lt;/code&gt; (&lt;strong&gt;inclusive&lt;/strong&gt;), while numsright has all the elements of nums between index &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n - 1&lt;/code&gt; (&lt;strong&gt;inclusive&lt;/strong&gt;).
+If i == 0, nums&lt;sub&gt;left&lt;/sub&gt; is empty, while nums&lt;sub&gt;right&lt;/sub&gt; has all the elements of nums.
+If i == n, nums&lt;sub&gt;left&lt;/sub&gt; has all the elements of nums, while nums&lt;sub&gt;right&lt;/sub&gt; is empty.
+The division score of an index i is the sum of the number of 0’s in nums&lt;sub&gt;left&lt;/sub&gt; and the number of 1’s in nums&lt;sub&gt;right&lt;/sub&gt;.&lt;/p&gt;
+
+&lt;p&gt;Return all distinct indices that have the highest possible division score. You may return the answer in any orde&lt;/p&gt;
+
+&lt;h3 id=&quot;example-1&quot;&gt;Example 1&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: nums = [0,0,1,0]
+Output: [2,4]
+Explanation: Division at index
+- 0: numsleft is []. numsright is [0,0,1,0]. The score is 0 + 1 = 1.
+- 1: numsleft is [0]. numsright is [0,1,0]. The score is 1 + 1 = 2.
+- 2: numsleft is [0,0]. numsright is [1,0]. The score is 2 + 1 = 3.
+- 3: numsleft is [0,0,1]. numsright is [0]. The score is 2 + 0 = 2.
+- 4: numsleft is [0,0,1,0]. numsright is []. The score is 3 + 0 = 3.
+Indices 2 and 4 both have the highest possible division score 3.
+Note the answer [4,2] would also be accepted.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;example-2&quot;&gt;Example 2&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: nums &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0,0,0]
+Output: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;3]
+Explanation: Division at index
+- 0: numsleft is &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; numsright is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0,0,0]. The score is 0 + 0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0.
+- 1: numsleft is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]. numsright is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0,0]. The score is 1 + 0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1.
+- 2: numsleft is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0,0]. numsright is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]. The score is 2 + 0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2.
+- 3: numsleft is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0,0,0]. numsright is &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; The score is 3 + 0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 3.
+Only index 3 has the highest possible division score 3.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;example-3&quot;&gt;Example 3&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: nums &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,1]
+Output: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]
+Explanation: Division at index
+- 0: numsleft is &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; numsright is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,1]. The score is 0 + 2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2.
+- 1: numsleft is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1]. numsright is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1]. The score is 0 + 1 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1.
+- 2: numsleft is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,1]. numsright is &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; The score is 0 + 0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0.
+Only index 0 has the highest possible division score 2.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;explanation&quot;&gt;Explanation&lt;/h2&gt;
+
+&lt;p&gt;We can maintain two window &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left&lt;/code&gt; with size 0 and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right&lt;/code&gt; with full length of array. For each iteration, we will increase the length of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left&lt;/code&gt; window and reduce the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right&lt;/code&gt; window. We will also keep track of number of zeros in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left&lt;/code&gt; window and number of ones in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right&lt;/code&gt; window. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maximum sum&lt;/code&gt; of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left + right&lt;/code&gt; will contain the highest score.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;mermaid&quot; src=&quot;https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcbkFbXCJbMCwgMCwgMSwgMF1cIl0gLS0-IEJbXCJbIF1cIl1cbkFbXCJbMCwgMCwgMSwgMF1cIl0gLS0-IENbXCJbMCwgMCwgMSwgMF1cIl1cbiUlLVxuQltcIlsgXVwiXSAtLT4gRFtcIlswXVwiXVxuQ1tcIlswLCAwLCAxLCAwXVwiXSAtLT4gIEVbXCJbMCwgMSwgMF1cIl1cbiUlLVxuRFtcIlswXVwiXSAtLT4gRltcIlswLCAwXVwiXVxuRVtcIlswLCAxLCAwXVwiXSAtLT4gIEdbXCJbMSwgMF1cIl1cbiUlLVxuRltcIlswLCAwXVwiXSAtLT4gSFtcIlswLCAwLCAxXVwiXVxuR1tcIlsxLCAwXVwiXSAtLT4gIElbXCJbMF1cIl1cbiUlLVxuSFtcIlswLCAwLCAxXVwiXSAtLT4gSltcIlswLCAwLCAxLCAwXVwiXVxuSVtcIlswXVwiXSAtLT4gIEtbXCJbIF1cIl0iLCJtZXJtYWlkIjpudWxsfQ&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The maxium key in &lt;strong&gt;hashmap&lt;/strong&gt; will contain the list of indices with the highest score.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;tab Java1&quot;&gt;&lt;a href=&quot;#Java1&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;tab Python1&quot;&gt;&lt;a href=&quot;#Python1&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+   &lt;div class=&quot;codeSample Java1&quot; id=&quot;Java1&quot;&gt;
+     &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa433cb7d3f266f5853854805134c543.js?file=MaxScoreIndices.java&quot;&gt;&lt;/script&gt;
+   &lt;/div&gt;
+
+   &lt;div class=&quot;codeSample Python1&quot; id=&quot;Python1&quot;&gt;
+     &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa433cb7d3f266f5853854805134c543.js?file=max_score_indices.py&quot;&gt;&lt;/script&gt;
+   &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/learning-tennis&quot; title=&quot;Previous Post: Learning Tennis&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;/nav&gt;
+</description>
+          <pubDate>2022-02-05T00:00:00-06:00</pubDate>
+          <link>https://randomwits.com/blog/all-divisions-with-the-highest-score-of-a-binary-array</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/all-divisions-with-the-highest-score-of-a-binary-array</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Learning Tennis</title>
           <description>&lt;p&gt;Badminton sport has a low learning curve unlike tennis. Even your granny can hit a birdie. I grew up playing badminton but decided to try my luck with tennis. “Playing tennis would be a cakewalk”, I thought. However my hubris was soon deflated.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -36,7 +131,7 @@
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/leetcode-longest-substring-without-repeating-characters&quot; title=&quot;Previous Post: Leetcode - Longest Substring Without Repeating Characters&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/leetcode-longest-substring-without-repeating-characters&quot; title=&quot;Previous Post: Leetcode - Longest Substring Without Repeating Characters&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/all-divisions-with-the-highest-score-of-a-binary-array&quot; title=&quot;Next Post: Leetcode - All Divisions With the Highest Score of a Binary Array&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
@@ -922,8 +1017,6 @@ A contiguous substring of string s is a string that can be obtained from s by re
 &lt;script src=&quot;/js/jquery.easytabs.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;script src=&quot;/js/multipleTab.js&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.&lt;/p&gt;
 
