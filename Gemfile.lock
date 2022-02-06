@@ -77,10 +77,8 @@ GEM
     maruku (0.6.0)
       syntax (>= 1.0.0)
     mercenary (0.4.0)
-    mini_portile2 (2.7.1)
     minitest (5.15.0)
-    nokogiri (1.13.1)
-      mini_portile2 (~> 2.7.0)
+    nokogiri (1.13.1-x86_64-linux)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -107,7 +105,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   RedCloth (~> 4.3, >= 4.3.2)
@@ -132,4 +130,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.0.2
+   2.3.6
