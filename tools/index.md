@@ -20,11 +20,16 @@ toc_icon: "cog"
 |         |         | [WooRank](https://addons.mozilla.org/en-US/firefox/addon/seo-website-analysis/) | SEO tool |
 |         |         | [Adblock Plus](https://addons.mozilla.org/en-CA/firefox/addon/adblock-plus/) | Add blocker |
 |         |         | [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) | Add blocker  |
-|         |         | [Soda Pdf Viewer](https://addons.mozilla.org/en-US/firefox/addon/soda-pdf-viewer/) | | 
+|         |         | [Soda Pdf Viewer](https://addons.mozilla.org/en-US/firefox/addon/soda-pdf-viewer/) | |
+|         |         | [Unpaywall](https://addons.mozilla.org/en-US/firefox/addon/unpaywall/) | Read free research papers | 
+|         |         | [Wappalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/)  | Detect websitestack | 
+|         |         | [NoScript](https://addons.mozilla.org/en-US/firefox/addon/noscript/) | |
 | [Chrome](https://www.google.com/chrome/)  | browser  | [Checkbot](https://chrome.google.com/webstore/detail/checkbot-seo-web-speed-se/dagohlmlhagincbfilmkadjgmdnkjinl) | SEO tool |
 |         |         | [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) | | 
 |         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | | 
+|         |         | [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) | | 
 | [VsCode](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
+|                                           |         | Github Copilot |  |
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
 | [Cygwin](https://www.cygwin.com/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
