@@ -4,7 +4,7 @@ category: blog
 layout: post
 tags:
 - jekyll
-name: fast-jkeyll-sites
+name: fast-jeykll-sites
 published: false
 featuredPost: false
 image: https://unsplash.com/photos/uXLgmicKSi4/download?w=800
@@ -16,7 +16,7 @@ thumb: https://unsplash.com/photos/uXLgmicKSi4/download?w=800
 
 ## jekyll-include-cache
 
-Modify `Gemfile` like 
+Modify `Gemfile` like
 
 ```sh
 group :jekyll_plugings do
@@ -24,19 +24,19 @@ group :jekyll_plugings do
 end
 ```
 
-Add in your `_config.yml` like 
+Add in your `_config.yml` like
 
 ```sh
 plugings:
   - jkeyll-include-cache
 ```
 
-Replace 
+Replace
 ```sh
 {\% include foo.html \%}
 ```
 
-With 
+With
 
 ```sh
 {\% include_cached foo.html \%}
