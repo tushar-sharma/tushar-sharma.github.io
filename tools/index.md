@@ -28,8 +28,9 @@ toc_icon: "cog"
 |         |         | [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) | | 
 |         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | | 
 |         |         | [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) | | 
-| [VsCode](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
+| [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
 |                                           |         | Github Copilot |  |
+| [Winmerge](https://winmerge.org/)  | Diff  |  [Dotfiles](https://github.com/tushar-sharma/dotfiles)   |  |
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
 | [Cygwin](https://www.cygwin.com/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
