@@ -19,11 +19,13 @@ $(document).ready(function(){
       DarkReader.enable();
       localStorage.setItem('dark-mode', 'true');
       document.getElementById('dark-text').innerText = "Lightmode";
+      document.getElementById('icon-dark').className = "fa fa-sun";
     }
     function disable() {
       DarkReader.disable();
       localStorage.setItem('dark-mode', 'false');
       document.getElementById('dark-text').innerText = "Darkmode";
+      document.getElementById('icon-dark').className = "fa fa-moon";
     }
     function darkmode() {
       if (localStorage.getItem('dark-mode') === 'false') { 
