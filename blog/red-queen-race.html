@@ -57,7 +57,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Red Queen Race">
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://randomwits.com/blog/red-queen-race","headline":"Red Queen Race","dateModified":"2019-05-08T00:00:00-04:00","datePublished":"2019-05-08T00:00:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/red-queen-race"},"author":{"@type":"Person","name":"Tushar Sharma"},"description":"When I was a kid, I was perturbed at the outbreaks of new diseases. There was no Swine Flue before twenty first century or HIV before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime humans make progress in science? Tags: biology evolution antibiotics","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://randomwits.com/blog/red-queen-race","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Red Queen Race","dateModified":"2019-05-08T00:00:00-04:00","datePublished":"2019-05-08T00:00:00-04:00","description":"When I was a kid, I was perturbed at the outbreaks of new diseases. There was no Swine Flue before twenty first century or HIV before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime humans make progress in science? Tags: biology evolution antibiotics","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/red-queen-race"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -89,6 +89,10 @@
   font-family: "King Basil";
   src: url("/font/King-Basil.ttf");
   font-display: swap;
+}
+
+.king-basil {
+  font-family: "King Basil";
 }
 
 
@@ -125,25 +129,26 @@ header li {
   border-right: 0px solid !important;
 
 }
+
 </style>
 
-
-<div style="display: flex; justify-content: space-between;white-space: nowrap;">
-  <div style="width: 45%;float:left;">
-    <a class="top king-basil" href="/">
-      RandomWits
-     </a>  
+<div id="random" class="top king-basil" style="font-size: 36px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+ <a href="/">
+  RandomWits
+ </a>
 </div>
 
-  <div style="width: 50%; padding-left:5%; float: left;">
-    <a href="javascript:void" class="DarkReader_Button"><i id="tgl" class="fas fa-adjust"></i>
-  </a>
+<div style="clear:both;"></div>
+<div>
+  <p class="me_blurb">
+  </p>
+<div class="sub">
+    <!-- <span id="textAnimation"></span>-->
+    increasing entropy of the universe
+    </div>
+  
+
 </div>
-
-
-</div>
-
-
 
 <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
 <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
@@ -169,6 +174,7 @@ header li {
         <div class="nav-wrap">
           <nav class="main-nav">
             <ul class="unstyled list-hover-slide">
+              <li><a class="DarkReader_Button" href="javascript:void" chref="/tags"><i class="fa fa-adjust"></i> Darkmode</a></li>
               <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
               <li><a href="/books"><i class="fas fa-book-open"></i> Books</a></li>
               <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
@@ -176,8 +182,8 @@ header li {
               <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
               <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
               <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
-              <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
               <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+              <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
             </ul>
           </nav>
         </div>
