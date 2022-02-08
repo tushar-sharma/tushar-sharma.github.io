@@ -19,10 +19,6 @@
   font-display: swap;
 }
 
-.king-basil {
-  font-family: "King Basil";
-}
-
 
 h1.heading { font-family: Myfont;
   color: rgb(51, 153, 204);}
@@ -59,13 +55,20 @@ header li {
 }
 </style>
 
-<div id="random" class="top king-basil" id="product" style="font-size: 28px; color: rgb(81, 170, 232); margin-bottom: 10px;">
- <a style="float:left; width:50%;" href="/">
-  {{ site.title }}
- </a>
- <a href="javascript:void" style="float: left; width:50%;" class="DarkReader_Button" ><i id="tgl" class="fas fa-adjust"></i></i></span>
+
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 50%;">
+    <a class="top king-basil"  style="float:left; width:50%;" href="/">
+      {{ site.title }}
+     </a>  
 </div>
 
+  <div style="width: 50%;">
+    <a href="javascript:void" style="float: left; width:50%;" class="DarkReader_Button" ><i id="tgl" class="fas fa-adjust"></i></i></span>
+  </div>
+
+
+</div>
 
 
 
