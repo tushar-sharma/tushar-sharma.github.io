@@ -19,6 +19,10 @@
   font-display: swap;
 }
 
+.king-basil {
+  font-family: "King Basil";
+}
+
 
 h1.heading { font-family: Myfont;
   color: rgb(51, 153, 204);}
@@ -53,24 +57,25 @@ header li {
   border-right: 0px solid !important;
 
 }
+
 </style>
 
-
-<div style="display: flex; justify-content: space-between;white-space: nowrap;">
-  <div style="width: 45%;float:left;">
-    <a class="top king-basil" href="/">
-      {{ site.title }}
-     </a>  
+<div id="random" class="top king-basil" id="product" style="font-size: 36px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+ <a href="/">
+  {{ site.title }}
+ </a>
 </div>
 
-  <div style="width: 50%; padding-left:5%; float: left;">
-    <a href="javascript:void" class="DarkReader_Button" ><i id="tgl" class="fas fa-adjust"></i></i></span>
-  </div>
-
+<div style="clear:both;"></div>
+<div>
+  <p class="me_blurb">
+  <div class="sub">
+    <!-- <span id="textAnimation"></span>-->
+    {{ site.tagline }}
+    </div>
+  </p>
 
 </div>
-
-
 
 <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
 <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
