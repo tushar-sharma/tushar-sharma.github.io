@@ -3,6 +3,7 @@
 <script defer src="{{ root_url }}/js/toc.js" type="text/javascript"></script>
 <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
 <script async src="{{ root_url }}/js/darkreader.js" crossorigin="anonymous"></script>
+<script async src="{{ root_url }}/js/dark_wrapper.js" crossorigin="anonymous"></script>
 
 <style type="text/css">
 @font-face {font-family: 'Somefont';
@@ -56,58 +57,17 @@ header li {
   border-right: 0px solid !important;
 
 }
-
 </style>
 
-<div id="random" class="top king-basil" id="product" style="font-size: 36px; color: rgb(81, 170, 232); margin-bottom: 10px;">
- <a href="/">
+<div id="random" class="top king-basil" id="product" style="font-size: 28px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+ <a float="left; widht:50%;" href="/">
   {{ site.title }}
  </a>
- <button class="DarkReader_Button"><i class="fas fa-adjust"></i></button>
+ <a href="javascript:void" style="width:30%; float:right;" class="DarkReader_Button" ><i id="tgl" class="fas fa-adjust"></i></i></span>
 </div>
 
-<script>
-  document.getElementsByClassName('DarkReader_Button')[0].onclick = function() { 
-    darkmode()  
-  }
 
-  let enabled = localStorage.getItem('dark-mode')
 
-  if (enabled === null) {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        enable();
-    }
-  } else if (enabled === 'true') {
-    enable()
-  }
-  
-  function enable()  {
-    DarkReader.enable();
-    localStorage.setItem('dark-mode', 'true');
-  }
-  function disable() {
-  DarkReader.disable();
-    localStorage.setItem('dark-mode', 'false')
-  }
-  function darkmode() {
-    if (localStorage.getItem('dark-mode') === 'false') { 
-        enable(); 
-    } else { 
-        disable();
-    }
-  }
-</script>
-
-<div style="clear:both;"></div>
-<div>
-  <p class="me_blurb">
-  <div class="sub">
-    <!-- <span id="textAnimation"></span>-->
-    {{ site.tagline }}
-    </div>
-  </p>
-
-</div>
 
 <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
 <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
