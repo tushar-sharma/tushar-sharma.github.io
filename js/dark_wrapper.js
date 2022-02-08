@@ -18,11 +18,12 @@ $(document).ready(function(){
       DarkReader.setFetchMethod(window.fetch)
       DarkReader.enable();
       localStorage.setItem('dark-mode', 'true');
-      toggle.className = "";
+      document.getElementById('dark-text').innerText = "Lightmode";
     }
     function disable() {
       DarkReader.disable();
       localStorage.setItem('dark-mode', 'false');
+      document.getElementById('dark-text').innerText = "Darkmode";
     }
     function darkmode() {
       if (localStorage.getItem('dark-mode') === 'false') { 
