@@ -122,6 +122,11 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
   background:--accent-gradient-20: linear-gradient(132deg,var(--accent-top-20) 0%,var(--accent-bottom-20) 100%);
 }
 
+.king-basil {
+  font-family: "King Basil";
+  font-size: 28px; color: rgb(81, 170, 232);
+}
+
 
 #back-top a{
     position: fixed;
