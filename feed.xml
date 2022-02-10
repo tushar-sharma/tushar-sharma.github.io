@@ -7,7 +7,7 @@
     
       
         <item>
-          <title>Implementing Dark Mode to Your Jekyll Site learning CSS</title>
+          <title>Implementing Dark Mode to Your Jekyll Site without learning CSS</title>
           <description>&lt;p&gt;Lots of website have added &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dark themes&lt;/code&gt; to their platform. &lt;a href=&quot;https://twitter.com/&quot;&gt;Twitter&lt;/a&gt; also has a dark mode which I really love while reading at night. Also there are &lt;a href=&quot;https://www.healthline.com/health/is-dark-mode-better-for-your-eyes#benefits-of-dark-mode&quot;&gt;benefits&lt;/a&gt; of using dark mode for the eyes.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/jekyll&quot; title=&quot;View posts tagged with &amp;quot;jekyll&amp;quot;&quot;&gt;jekyll&lt;/a&gt;   &lt;/p&gt;
@@ -176,7 +176,7 @@ Only index 0 has the highest possible division score 2.
 &lt;/div&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/learning-tennis&quot; title=&quot;Previous Post: Learning Tennis&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/dark-mode-jekyll&quot; title=&quot;Next Post: Implementing Dark Mode to Your Jekyll Site learning CSS&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/learning-tennis&quot; title=&quot;Previous Post: Learning Tennis&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/dark-mode-jekyll&quot; title=&quot;Next Post: Implementing Dark Mode to Your Jekyll Site without learning CSS&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
           <pubDate>2022-02-05T00:00:00-05:00</pubDate>
