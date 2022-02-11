@@ -1,5 +1,5 @@
 ---
-title: Implementing Dark Mode to Your Jekyll Site learning CSS
+title: Implementing Dark Mode to Your Jekyll Site without learning CSS
 category: blog
 layout: post
 tags:
