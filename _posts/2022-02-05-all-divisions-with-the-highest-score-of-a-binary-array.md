@@ -49,7 +49,7 @@ Note the answer [4,2] would also be accepted.
 ```
 ### Example 2
 
-```bash
+```
 Input: nums = [0,0,0]
 Output: [3]
 Explanation: Division at index
@@ -62,7 +62,7 @@ Only index 3 has the highest possible division score 3.
 
 ### Example 3
 
-```bash
+```
 Input: nums = [1,1]
 Output: [0]
 Explanation: Division at index
