@@ -30,7 +30,8 @@ toc_icon: "cog"
 |         |         | [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) | | 
 |         |         | [HeadingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi) | Browse the headings structure of a websiteSS |
 | [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
-|                                           |         | Github Copilot |  |
+|                                           |          | Github Copilot |  |
+|                                           |          | Git Graph      |  | 
 | [Winmerge](https://winmerge.org/)  | Diff  |  [Dotfiles](https://github.com/tushar-sharma/dotfiles)   |  |
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
