@@ -12,7 +12,7 @@ tags:
 - set
 ---
 
-In this [leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/) problem,  we’re asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string `abcabcbb` the longest substring without repeating characters is `abc` (with a length of 3).<!-- truncate_here -->
+In this [leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/) problem, we are asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string `abcabcbb` the longest substring without repeating characters is `abc` (with a length of 3).<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
@@ -22,9 +22,8 @@ In this [leetcode](https://leetcode.com/problems/longest-substring-without-repea
 
 <script src="{{ root_url }}/js/multipleTab.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
-In this [leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/) problem,  we’re asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string `abcabcbb` the longest substring without repeating characters is `abc` (with a length of 3).
+In this [leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/) problem, we are asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string `abcabcbb` the longest substring without repeating characters is `abc` (with a length of 3).
 
 ## Problem Statement
 
@@ -52,13 +51,13 @@ Explanation: The answer is "b", with the length of 1.
 Input: s = "pwwkew"
 Output: 3
 Explanation: The answer is "wke", with the length of 3.
-Notice that the answer must be a substring, 
+Notice that the answer must be a substring,
 "pwke" is a subsequence and not a substring.
 ```
 
 ## Explanation
 
-We can use two pointers to solve this problem. 
+We can use two pointers to solve this problem.
 
 1. Assign `i` = 0 and `left` = 0.
 
@@ -72,7 +71,7 @@ We can use two pointers to solve this problem.
 
 <img src="{{ root_url }}/img/longest_substring.gif" alt="Longest substring image">
 
-## Solution 
+## Solution
 
 <div class="tab-container">
   <ul>
@@ -86,7 +85,7 @@ We can use two pointers to solve this problem.
    </div>
 
    <div class="codeSample Python1" id="Python1">
-    <script src="https://gist.github.com/tushar-sharma/83cc247e2832e0a381556d57a6ef8ce3.js?file=length_of_longest_substring.py"></script>   
+    <script src="https://gist.github.com/tushar-sharma/83cc247e2832e0a381556d57a6ef8ce3.js?file=length_of_longest_substring.py"></script>
     </div>
 
 </div>
