@@ -28,6 +28,7 @@ toc_icon: "cog"
 |         |         | [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) | | 
 |         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | | 
 |         |         | [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) | | 
+|         |         | [HeadingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi) | To show, browse and audit (for accessibility and SEO) the headings structure |
 | [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
 |                                           |         | Github Copilot |  |
 | [Winmerge](https://winmerge.org/)  | Diff  |  [Dotfiles](https://github.com/tushar-sharma/dotfiles)   |  |
