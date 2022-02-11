@@ -128,24 +128,24 @@ Note the answer [4,2] would also be accepted.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&quot;example-2&quot;&gt;Example 2&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: nums &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0,0,0]
-Output: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;3]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: nums = [0,0,0]
+Output: [3]
 Explanation: Division at index
-- 0: numsleft is &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; numsright is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0,0,0]. The score is 0 + 0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0.
-- 1: numsleft is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]. numsright is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0,0]. The score is 1 + 0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1.
-- 2: numsleft is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0,0]. numsright is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]. The score is 2 + 0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2.
-- 3: numsleft is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0,0,0]. numsright is &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; The score is 3 + 0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 3.
+- 0: numsleft is []. numsright is [0,0,0]. The score is 0 + 0 = 0.
+- 1: numsleft is [0]. numsright is [0,0]. The score is 1 + 0 = 1.
+- 2: numsleft is [0,0]. numsright is [0]. The score is 2 + 0 = 2.
+- 3: numsleft is [0,0,0]. numsright is []. The score is 3 + 0 = 3.
 Only index 3 has the highest possible division score 3.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;example-3&quot;&gt;Example 3&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: nums &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,1]
-Output: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;0]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: nums = [1,1]
+Output: [0]
 Explanation: Division at index
-- 0: numsleft is &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; numsright is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,1]. The score is 0 + 2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2.
-- 1: numsleft is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1]. numsright is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1]. The score is 0 + 1 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1.
-- 2: numsleft is &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1,1]. numsright is &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; The score is 0 + 0 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0.
+- 0: numsleft is []. numsright is [1,1]. The score is 0 + 2 = 2.
+- 1: numsleft is [1]. numsright is [1]. The score is 0 + 1 = 1.
+- 2: numsleft is [1,1]. numsright is []. The score is 0 + 0 = 0.
 Only index 0 has the highest possible division score 2.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
