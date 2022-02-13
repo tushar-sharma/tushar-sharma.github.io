@@ -54,7 +54,6 @@ The `localStorage` object allows you to save key/value pairs in the browser. Thi
 
 
 ```javascript
-
 function darkmode() {
   let enabled = localStorage.getItem('dark-mode')
 
