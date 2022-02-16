@@ -16,7 +16,7 @@ toc_icon: "cog"
 
 |  Tools  | Type    | Customization | Description |
 |---------+---------+--------------+--------------|
-| [Firefox](https://www.mozilla.org/en-US/firefox/new/) | browser | [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)| Vim like browser|
+| [Firefox](https://www.mozilla.org/en-US/firefox/new/) | browser | [Vimimum](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/)| Vim like browser|
 |         |         | [WooRank](https://addons.mozilla.org/en-US/firefox/addon/seo-website-analysis/) | SEO tool |
 |         |         | [Adblock Plus](https://addons.mozilla.org/en-CA/firefox/addon/adblock-plus/) | Add blocker |
 |         |         | [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) | Add blocker  |
