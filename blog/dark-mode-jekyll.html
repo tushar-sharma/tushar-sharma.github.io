@@ -273,8 +273,7 @@ header li {
 
 <p>The <code class="language-plaintext highlighter-rouge">localStorage</code> object allows you to save key/value pairs in the browser. This is useful to save the state of your application between page loads.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="kd">function</span> <span class="nx">darkmode</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">darkmode</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">enabled</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode</span><span class="dl">'</span><span class="p">)</span>
 
   <span class="k">if</span> <span class="p">(</span><span class="nx">enabled</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
