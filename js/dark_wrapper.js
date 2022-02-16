@@ -18,14 +18,12 @@ $(document).ready(function(){
       DarkReader.setFetchMethod(window.fetch)
       DarkReader.enable();
       localStorage.setItem('dark-mode', 'true');
-      document.getElementById('dark-text').innerText = "Sunrise";
       document.getElementById('icon-dark').className = "fa fa-sun";
     }
     function disable() {
       DarkReader.disable();
       localStorage.setItem('dark-mode', 'false');
-      document.getElementById('dark-text').innerText = "Sunset";
-      document.getElementById('icon-dark').className = "fa fa-moon";
+      document.getElementById('icon-dark').className = "fa fa-cloud-moon";
     }
     function darkmode() {
       if (localStorage.getItem('dark-mode') === 'false') {
