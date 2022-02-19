@@ -9,7 +9,7 @@ port: 4000
 future: false
 mod: "%"
 encoding: "utf-8"
-tagline: increasing entropy of the universe
+tagline: life is too short for a diary
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
