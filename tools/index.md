@@ -28,6 +28,8 @@ toc_icon: "cog"
 |         |         | [Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/) | |
 |         |         | [Cookie AutoDelete](https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/) | |
 |         |         | [HTTPS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/) | |
+|         |         | [Textmarker](https://addons.mozilla.org/en-US/firefox/addon/textmarkerpro/) | |
+|         |         | [OneTab](https://addons.mozilla.org/en-US/firefox/addon/onetab/) | |
 | [Chrome](https://www.google.com/chrome/)  | browser  | [Checkbot](https://chrome.google.com/webstore/detail/checkbot-seo-web-speed-se/dagohlmlhagincbfilmkadjgmdnkjinl) | SEO tool |
 |         |         | [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) | | 
 |         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | | 
@@ -40,7 +42,7 @@ toc_icon: "cog"
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
 | [Cygwin](https://www.cygwin.com/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
-
+| [Scoop](https://scoop.sh/)  | A command-line installer for Windows | Details<sup><a href='#fn:2' rel='footnote'>2</a></sup> | |
 
 ## Details
 
@@ -72,4 +74,14 @@ gcc-core
 gdb 
 libboost-devel
 gcc-g++
+```
+
+
+### <span id='fn:2'>Scoop <a href='#fnref:2' rev='footnote'>&#8617;</a></span>
+
+```bash
+# Open Powershell 
+> Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+# install neovim
+> scoop install neovim
 ```
