@@ -24,6 +24,7 @@ toc_icon: "cog"
 |         |         | [Unpaywall](https://addons.mozilla.org/en-US/firefox/addon/unpaywall/) | Read free research papers | 
 |         |         | [Wappalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/)  | Detect websitestack | 
 |         |         | [NoScript](https://addons.mozilla.org/en-US/firefox/addon/noscript/) | |
+|         |         | [Ghostery](https://addons.mozilla.org/en-US/firefox/addon/ghostery/) | |
 | [Chrome](https://www.google.com/chrome/)  | browser  | [Checkbot](https://chrome.google.com/webstore/detail/checkbot-seo-web-speed-se/dagohlmlhagincbfilmkadjgmdnkjinl) | SEO tool |
 |         |         | [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) | | 
 |         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | | 
