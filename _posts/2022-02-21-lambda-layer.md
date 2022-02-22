@@ -15,6 +15,8 @@ $ cd my-lambda-layer
 $ touch `requirements.txt`
 $ mkdir -p python/lib/python3.7/site-packages
 $ docker run -v "$(pwd):/var/task" "lambci/lambda:build-python3.7" /bin/sh -c "pip install -r requirements.txt -t python/lib/python3.7/site-packages/; exit"
+$ docker run -v "$(pwd):/var/task" "public.ecr.aws/sam/build-python3.7" /bin/sh -c "pip install -r requirements.txt -t python/lib/python3.7/site-packages/; exit"
+
 
 
 ## Shrink it (Optional)
