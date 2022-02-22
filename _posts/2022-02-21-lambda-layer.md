@@ -30,3 +30,4 @@ $ zip -r my-lambda-layer.zip python
 
 ## References
 https://dev.to/matthewvielkind/creating-python-aws-lambda-layers-with-docker-4376
+https://aws.amazon.com/premiumsupport/knowledge-center/lambda-layer-simulated-docker/
