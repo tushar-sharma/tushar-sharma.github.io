@@ -4,6 +4,12 @@ published: false
 
 Create a lambda layer 
 
+tags:
+- docker
+- lambda layer
+- aws
+- lambda function
+
 $ mkdir my-lambda-layer
 $ cd my-lambda-layer
 $ touch `requirements.txt`
