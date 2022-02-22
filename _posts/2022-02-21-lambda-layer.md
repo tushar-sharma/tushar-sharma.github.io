@@ -27,3 +27,6 @@ $ find -name "__pycache__" -type d | xargs rm -rf
 
 $ chmod -R 777 python/
 $ zip -r my-lambda-layer.zip python
+
+## References
+https://dev.to/matthewvielkind/creating-python-aws-lambda-layers-with-docker-4376
