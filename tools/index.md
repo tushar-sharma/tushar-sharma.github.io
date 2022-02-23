@@ -38,7 +38,7 @@ toc_icon: cog
 | [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
 |                                           |          | Github Copilot |  |
 |                                           |          | Git Graph      |  | 
-| [Neovim](https://github.com/neovim/neovim)  | editor  |  | Details<sup><a href='#fn:2' rel='footnote'>2</a></sup>  |
+| [Neovim](https://github.com/neovim/neovim)  | editor  |  | Details<sup><a href='#fn:2' rel='footnote'>2</a></sup> for Windows  |
 | [Winmerge](https://winmerge.org/)  | Diff  |  [Dotfiles](https://github.com/tushar-sharma/dotfiles)   |  |
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
@@ -77,7 +77,7 @@ gcc-g++
 ```
 
 
-### <span id='fn:2'>Scoop <a href='#fnref:2' rev='footnote'>&#8617;</a></span>
+### <span id='fn:2'>Neovim on Windows <a href='#fnref:2' rev='footnote'>&#8617;</a></span>
 
 ```bash
 # Open Powershell 
@@ -88,4 +88,9 @@ gcc-g++
 # install
 > iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni $HOME/vimfiles/autoload/plug.vim -Force
+# Open cygwin
+$ cd $LOCALAPPDATA/nvim
+$ git clone https://github.com/neoclide/coc.nvim.git && cd coc.nvim
+$ yarn install  && yarn build
+$ cp -r build ~/.local/share/nvim/plugged
 ```
