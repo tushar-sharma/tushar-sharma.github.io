@@ -85,7 +85,7 @@ gcc-g++
 > Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 # install neovim
 > scoop install neovim
-# install
+# install vim-plug
 > iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni $HOME/vimfiles/autoload/plug.vim -Force
 # Open cygwin
