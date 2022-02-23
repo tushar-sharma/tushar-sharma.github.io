@@ -90,6 +90,7 @@ gcc-g++
     ni $HOME/vimfiles/autoload/plug.vim -Force
 # Open cygwin
 $ cd $LOCALAPPDATA/nvim
+$ wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/nvim/init.vim
 $ git clone https://github.com/neoclide/coc.nvim.git && cd coc.nvim
 $ yarn install  && yarn build
 $ cp -r build ~/.local/share/nvim/plugged
