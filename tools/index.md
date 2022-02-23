@@ -3,8 +3,8 @@ layout: comments
 title: Tools
 published: true
 toc: true
-toc_label: "My Table of Contents"
-toc_icon: "cog"
+toc_label: My Table of Contents
+toc_icon: cog
 ---
 
 
@@ -38,11 +38,11 @@ toc_icon: "cog"
 | [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
 |                                           |          | Github Copilot |  |
 |                                           |          | Git Graph      |  | 
+| [Neovim](https://github.com/neovim/neovim)  | editor  |  | Details<sup><a href='#fn:2' rel='footnote'>2</a></sup>  |
 | [Winmerge](https://winmerge.org/)  | Diff  |  [Dotfiles](https://github.com/tushar-sharma/dotfiles)   |  |
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
 | [Cygwin](https://www.cygwin.com/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
-| [Scoop](https://scoop.sh/)  | A command-line installer for Windows | Details<sup><a href='#fn:2' rel='footnote'>2</a></sup> | |
 
 ## Details
 
@@ -81,7 +81,11 @@ gcc-g++
 
 ```bash
 # Open Powershell 
+# install scoop
 > Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 # install neovim
 > scoop install neovim
+# install
+> iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni $HOME/vimfiles/autoload/plug.vim -Force
 ```
