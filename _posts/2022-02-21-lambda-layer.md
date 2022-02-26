@@ -1,20 +1,24 @@
 ---
-published: false
----
-
-Create a lambda layer 
-
+title: Creating Python AWS lambda layer with Docker
+category: blog
+layout: post
 tags:
 - docker
-- lambda layer
 - aws
-- lambda function
+- python
+featuredPost: false
+image: https://unsplash.com/photos/Z895fnYRbog/download?w=800
+thumb: https://unsplash.com/photos/Z895fnYRbog/download?w=800
+---
 
+
+```bash
 $ mkdir my-lambda-layer
 $ cd my-lambda-layer
 $ touch `requirements.txt`
 $ mkdir -p python/lib/python3.7/site-packages
 $ docker run -v "$(pwd):/var/task" "lambci/lambda:build-python3.7" /bin/sh -c "pip install -r requirements.txt -t python/lib/python3.7/site-packages/; exit"
+```
 
 ## Shrink it (Optional)
 
@@ -25,8 +29,10 @@ $ find -name "tests" -type d | xargs rm -rf
 
 ## Zip it
 
+```bash
 $ chmod -R 777 python/
 $ zip -r my-lambda-layer.zip python
+```
 
 ## References
 https://dev.to/matthewvielkind/creating-python-aws-lambda-layers-with-docker-4376
