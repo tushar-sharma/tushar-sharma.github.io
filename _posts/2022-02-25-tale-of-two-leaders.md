@@ -33,12 +33,16 @@ However wars, though most unfortunate, is a perfect platform to test a leader. A
 
 When the Taliban was advancing its onslaught against the Afghanistan army, Ashraf Ghani panicked and fled the country. 
 
+<center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Former Afghan President Ashraf Ghani, who fled Kabul as Taliban forces reached the outskirts of the city last month, apologized for the abrupt fall of his government but denied that he had taken millions of dollars with him <a href="https://t.co/kBcLdbvvg0">https://t.co/kBcLdbvvg0</a> <a href="https://t.co/AdqgYqgPFJ">pic.twitter.com/AdqgYqgPFJ</a></p>&mdash; Reuters (@Reuters) <a href="https://twitter.com/Reuters/status/1435835356583276552?ref_src=twsrc%5Etfw">September 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
 
 However, Volodymyr Zelenskyy has refused to be evacuated and continues to lead against the Russian onslaught. 
 
-
+<center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🇺🇦 Ukrainian President Volodymyr Zelenskyy and other government leaders vow to stay and defend Kyiv as Russia continues to pound Ukraine with airstrikes. <a href="https://twitter.com/hashtag/UkraineRussia?src=hash&amp;ref_src=twsrc%5Etfw">#UkraineRussia</a> <a href="https://t.co/aFUcP871HR">pic.twitter.com/aFUcP871HR</a></p>&mdash; euronews (@euronews) <a href="https://twitter.com/euronews/status/1497267140306829312?ref_src=twsrc%5Etfw">February 25, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+
 
 Numerical strength or a huge stash of weapons alone doesn't guarantee success in a war. The psyche of the armed forces is affected by the response of their leaders. Afghanistan army had fought valiantly against the Taliban on multiple occassions. However post withdrawl of United States army and lack of political will of Afghan politicians, Afghanistan army began to lose morale and some of their forces started to flee without fighting the Taliban.
 
@@ -50,7 +54,9 @@ Numerical strength or a huge stash of weapons alone doesn't guarantee success in
 
 In contrast, Ukrainian border guards at Snake Island, refused to surrender to a Russian warship despite knowing inevitable decimation.
 
+<center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ukraine&#39;s President Volodymyr Zelenskyy said he would posthumously honor the Ukrainian border guards at Snake Island, whose voice recording refusing to surrender to a Russian warship went viral. <a href="https://t.co/E5vnjYAyJw">pic.twitter.com/E5vnjYAyJw</a></p>&mdash; DW News (@dwnews) <a href="https://twitter.com/dwnews/status/1497341615580581888?ref_src=twsrc%5Etfw">February 25, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
 
 
 Life has been on a roller coaster ride since the Covid-19 pandemic. The only likely event that is yet to unfurled is a full-blown alien invasion. However, with the maddening sequence of events on earth, aliens would most likely change their trajectory away from earth.
