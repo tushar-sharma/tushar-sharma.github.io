@@ -4,7 +4,7 @@ category: blog
 layout: post
 tags:
 - ukraine
-- afghanistan 
+- afghanistan
 - russia
 - war
 featuredPost: false
@@ -23,21 +23,21 @@ After the outbreak of <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" 
 </figure>
 </center>
 
-Wars is a terrible tragedy with no winners. United States has spent more than $8 trillion dollars on the post-9/11 wars in Afghanistan, Pakistan, Iraq, and elsewhere[^usa-cost]. The Soviet Union had to splurge more than $50 billion in continuing the protracted war in Afghanistan[^soviet-cost]. Wars drag countries back for decades due to insurmountable economic loss. 
+Wars is a terrible tragedy with no winners. United States has spent more than $8 trillion dollars on the post-9/11 wars in Afghanistan, Pakistan, Iraq, and elsewhere[^usa-cost]. The Soviet Union had to splurge more than $50 billion in continuing the protracted war in Afghanistan[^soviet-cost]. Wars drag countries back for decades due to insurmountable economic loss.
 
 <blockquote class="attention">
-"Older men declare war. But it is youth that must fight and die" Herbert Hoover 
+"Older men declare war. But it is youth that must fight and die" Herbert Hoover
 </blockquote>
 
 However wars, though most unfortunate, is a perfect platform to test a leader. Adversity is the tool that separates the chaff from the wheat. I could not help but compare [Ashraf Ghani](https://en.wikipedia.org/wiki/Ashraf_Ghani), the former President of Afghanistan, with [Volodymyr Zelenskyy](https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy), the current President of Ukraine.
 
-When the Taliban was advancing its onslaught against the Afghanistan army, Ashraf Ghani panicked and fled the country. 
+When the Taliban was advancing its onslaught against the Afghanistan army, Ashraf Ghani panicked and fled the country.
 
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Former Afghan President Ashraf Ghani, who fled Kabul as Taliban forces reached the outskirts of the city last month, apologized for the abrupt fall of his government but denied that he had taken millions of dollars with him <a href="https://t.co/kBcLdbvvg0">https://t.co/kBcLdbvvg0</a> <a href="https://t.co/AdqgYqgPFJ">pic.twitter.com/AdqgYqgPFJ</a></p>&mdash; Reuters (@Reuters) <a href="https://twitter.com/Reuters/status/1435835356583276552?ref_src=twsrc%5Etfw">September 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
 
-However, Volodymyr Zelenskyy has refused to be evacuated and continues to lead against the Russian onslaught. 
+However, Volodymyr Zelenskyy has refused to be evacuated and continues to lead against the Russian onslaught.
 
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🇺🇦 Ukrainian President Volodymyr Zelenskyy and other government leaders vow to stay and defend Kyiv as Russia continues to pound Ukraine with airstrikes. <a href="https://twitter.com/hashtag/UkraineRussia?src=hash&amp;ref_src=twsrc%5Etfw">#UkraineRussia</a> <a href="https://t.co/aFUcP871HR">pic.twitter.com/aFUcP871HR</a></p>&mdash; euronews (@euronews) <a href="https://twitter.com/euronews/status/1497267140306829312?ref_src=twsrc%5Etfw">February 25, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -59,7 +59,7 @@ In contrast, Ukrainian border guards at Snake Island, refused to surrender to a 
 </center>
 
 
-Life has been on a roller coaster ride since the Covid-19 pandemic. The only likely event that is yet to unfurled is a full-blown alien invasion. However, with the maddening sequence of events on earth, aliens would most likely change their trajectory away from earth.
+Life has been on a roller coaster ride since the Covid-19 pandemic. The only likely event that is yet to unfurl is a full-blown alien invasion. However, with the maddening sequence of events on earth, aliens would most likely change their trajectory away from earth.
 
 ### References
 
