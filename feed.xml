@@ -58,7 +58,7 @@
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/why-i-like-broccoli&quot; title=&quot;Previous Post: Why I like Broccoli&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/lambda-layer&quot; title=&quot;Previous Post: Creating Python AWS lambda layer with Docker&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
 &lt;/nav&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
@@ -74,34 +74,6 @@
           <pubDate>2022-02-25T00:00:00-06:00</pubDate>
           <link>https://randomwits.com/blog/tale-of-two-leaders</link>
           <guid isPermaLink="true">https://randomwits.com/blog/tale-of-two-leaders</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Why I like Broccoli</title>
-          <description>&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;I always liked broccolli since childhood&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Taste is subjective&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I bought Phenylthiourea (PTC) Paper Strips and I taste nothing.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;TAS2R38 gene encodes a serven-transmembrane G protien-copuled receptor that controls the ability to taste glucosinolates, a family of bitter-tasting compounds found in plants Brasssica.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;TAS2R bitter receptors are thought to have evolved to detect toxins in plant and foods and to modulate ingestion of them.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-          <pubDate>2022-02-24T00:00:00-06:00</pubDate>
-          <link>https://randomwits.com/why-i-like-broccoli</link>
-          <guid isPermaLink="true">https://randomwits.com/why-i-like-broccoli</guid>
         </item>
       
     
@@ -169,7 +141,7 @@ This will create lambda layer for python runtime `3.7`. However you can use a di
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dark-mode-jekyll&quot; title=&quot;Previous Post: Implementing Dark Mode to Your Jekyll Site without learning CSS&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/why-i-like-broccoli&quot; title=&quot;Next Post: Why I like Broccoli&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/dark-mode-jekyll&quot; title=&quot;Previous Post: Implementing Dark Mode to Your Jekyll Site without learning CSS&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/tale-of-two-leaders&quot; title=&quot;Next Post: A tale of Two leaders&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
