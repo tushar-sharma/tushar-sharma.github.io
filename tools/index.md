@@ -1,7 +1,7 @@
 ---
 layout: comments
 title: Tools
-published: false
+published: true
 toc: true
 toc_label: My Table of Contents
 toc_icon: cog
@@ -21,8 +21,8 @@ toc_icon: cog
 |         |         | [Adblock Plus](https://addons.mozilla.org/en-CA/firefox/addon/adblock-plus/) | Add blocker |
 |         |         | [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) | Add blocker  |
 |         |         | [Soda Pdf Viewer](https://addons.mozilla.org/en-US/firefox/addon/soda-pdf-viewer/) | |
-|         |         | [Unpaywall](https://addons.mozilla.org/en-US/firefox/addon/unpaywall/) | Read free research papers | 
-|         |         | [Wappalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/)  | Detect websitestack | 
+|         |         | [Unpaywall](https://addons.mozilla.org/en-US/firefox/addon/unpaywall/) | Read free research papers |
+|         |         | [Wappalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/)  | Detect websitestack |
 |         |         | [NoScript](https://addons.mozilla.org/en-US/firefox/addon/noscript/) | |
 |         |         | [Ghostery](https://addons.mozilla.org/en-US/firefox/addon/ghostery/) | |
 |         |         | [Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/) | |
@@ -31,18 +31,19 @@ toc_icon: cog
 |         |         | [Textmarker](https://addons.mozilla.org/en-US/firefox/addon/textmarkerpro/) | |
 |         |         | [OneTab](https://addons.mozilla.org/en-US/firefox/addon/onetab/) | |
 | [Chrome](https://www.google.com/chrome/)  | browser  | [Checkbot](https://chrome.google.com/webstore/detail/checkbot-seo-web-speed-se/dagohlmlhagincbfilmkadjgmdnkjinl) | SEO tool |
-|         |         | [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) | | 
-|         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | | 
-|         |         | [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) | | 
+|         |         | [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) | |
+|         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | |
+|         |         | [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) | |
 |         |         | [HeadingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi) | Browse the headings structure of a websiteSS |
 | [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
 |                                           |          | Github Copilot |  |
-|                                           |          | Git Graph      |  | 
+|                                           |          | Git Graph      |  |
 | [Neovim](https://github.com/neovim/neovim)  | editor  |  | Details<sup><a href='#fn:2' rel='footnote'>2</a></sup> for Windows  |
 | [Winmerge](https://winmerge.org/)  | Diff  |  [Dotfiles](https://github.com/tushar-sharma/dotfiles)   |  |
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
 | [Cygwin](https://www.cygwin.com/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
+| [qBittorrent](https://www.qbittorrent.org/)  | BitTorrent | | |
 
 ## Details
 
@@ -68,10 +69,10 @@ unzip
 wget
 zip
 zsh
-git 
-chere 
+git
+chere
 gcc-core
-gdb 
+gdb
 libboost-devel
 gcc-g++
 ```
@@ -80,7 +81,7 @@ gcc-g++
 ### <span id='fn:2'>Neovim on Windows <a href='#fnref:2' rev='footnote'>&#8617;</a></span>
 
 ```bash
-# Open Powershell 
+# Open Powershell
 # install scoop
 > Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 # install neovim
