@@ -1,0 +1,3069 @@
+* 44518e0ef updated lambda layer post
+* 3ffa25760 post added
+* 25a412bd9 added quote
+* 49e4f278f Update index.md
+* f1dfff462 Update index.md
+* 62ef73d38 Update index.md
+* ef9b7ea6b Update index.md
+* 0080ae2d3 Update index.md
+* 7cb807d56 created draft post
+* 1410c3196 created draft post
+* 598df60a3 created draft post
+* 557ef8176 created draft post
+* 96d2b1db9 created draft post
+* 5b37d1cd5 created draft post
+* 67998ae66 created draft post
+* 7dc63ae80 created draft post
+* 6db31f45a created draft post
+* bd1828fb1 created draft post
+* 1b53e010b created draft post
+* 8b160fb92 created draft post
+* 91bede107 created draft post
+* f795b38f8 created draft post
+* c217eaf0f created draft post
+* 15376bee8 created draft post
+* 5bb5ef22b created draft post
+* f4678e071 tools added
+* eeba1be4d tools added
+* 048e22d2d tools added
+* 35423f941 changed about me
+* 3a1591fcb changed tagline
+* 555233652 added quotes
+* e2c730e46 font decreased
+* c48e3db1d firefox addon
+* 22f10999c js async
+* 0b9142268 dark mode
+* 4ebd8385b serach fixed
+* 47baee873 fixed space
+* 6bff5b07f fix pagination
+* 89eb56862 fix pagination
+* 601fbea1a added tools
+* b8ef60a46 added tools
+* cd24ea319 added tools
+* bcbe8288a added tools
+* 9623c9cab added tools
+* 3dda729ab changed css
+* f214a3974 added post
+* 4e675060e added post
+* dbfbdebce updated image
+* 1161ca03a fixed path
+* 38bcdb89d added dark mode
+* 45ddb9d31 added dark mode
+* 9d63ae19a added dark mode
+* 20f767235 added dark mode
+* b1a6f9f4a added dark mode
+* 631364f4c added dark mode
+* c062b5ee7 added dark mode
+* 2ef1c3818 added dark mode
+* 6c8747767 added dark mode
+* c3d919276 added dark mode
+* 4d1ae184e added dark mode
+* 791df049f minor spacing
+* 45e413bd3 updated darkmode
+* 5818aed28 added darkmode
+* eea765b9b updated tool
+* ba9c2cfef updated
+* d254aaf6b updated post
+* b786c8e4b updated cached
+* 309b7689f updated gitpod
+* aa1a1e080 updated post
+* 54fce5864 modified makefile
+* 7b8f75bda added test load
+* 4e053ebd5 updated quotes
+* 6acd50b7e added a quote
+* 3305319e3 updated tools
+* c8616ef95 modified gem cached
+* 28271844b updated tool
+* 3aa2ce2a1 tools added
+* 5ed07759e tools added
+* b804b1ba9 decrease font
+* 073fb480d updated tools
+* 2c5a15e06 updated post
+* 11aedbe26 removed commit soons
+* cf1dfd5af updated post
+* f28f6c085 updated
+* c69d43946 updated tags
+* e7459165f updated
+* d1bc188c9 tag updated
+* 8d3590388 updated
+* d7c433dea updated
+* c3987add6 updated
+* 3a0c839e0 updated
+* 8901e3e4a updated post
+* d53a77bb3 updated post
+* 9c2d78389 added post
+* fe4fcfc34 updated post
+* f009a70a4 blockquote fixed
+* 171d6fac9 fixed code syntax
+* 26f9495dd fixed code syntax
+* 949891180 fixed code syntax
+* 532da04f9 updated post
+* 3fd391d80 modifed post
+*   d2d46fcd8 Merge branch 'master' of github.com:tushar-sharma/tushar-sharma.github.io
+|\  
+| * 916bf6f87 updated css search
+| * 828207a6a updated script
+| * 96cf15b3a updated makefile
+| * cc03233c0 font display added
+| * 97b9bb5d6 removed log
+| * 811b98081 made async js
+| * 1d8ad6039 updated git
+| * 40c3b471f removed minifier
+| * 2bb5b2f93 updated book
+| * 099357418 jekyll cache added
+| * 2d65d99aa updated the minify
+| * 24a797db3 fixed search issue
+| * 95bd44b63 updated copy command
+| * 51efe210c fixed font issue
+| * ac73cdb14 updated posts
+| * eed050298 updated search bar books
+| * 02241d772 updated fonts
+| * 721294acf updated font
+| * d38ef5f33 added build service
+* | 35cd4e875 Merge branch 'master' of github.com:tushar-sharma/tushar-sharma.github.io
+|\| 
+| * 57a3e1912 updated build
+| * 261578ac8 updated makefile
+| * da5d08a10 updated build
+| * 2c155c1fe updated build
+| * 5d53d2129 updated build
+| * c8930bafa added docker compose
+* | 6fc318bff updated styles
+|/  
+* 5f2afd7ef updated style
+* f843be399 updated style
+* 7e56bc881 added resource
+* 14244fcd3 added resource
+* 8179d496a added blog
+* bad5721ce added blog
+* 2f949f504 added blog
+* f7744711f added toc
+* 33dee21f4 updated travel
+* d22e30b7a updated books
+* dfcc9cddd updated design
+* 8604c9e81 updated design
+* 9902c1a03 updated post
+* 862a49786 updated post
+* a2495952a added plugin
+* f9ae03279 added plugin
+| * a32df8ac7 tools added
+| * 607e9407f changed about me
+| * 16e1458ad font decreased
+| * d6e7fb1e1 firefox addon
+| * 45a4f6b09 js async
+| * 1171ed3d0 dark mode
+| * d25d31fb7 serach fixed
+| * 92a3b8246 fix pagination
+| * effecc0b9 fix pagination
+| * 4d0f5061f added tools
+| * b1c62fe6b added tools
+| * 31eb99811 added tools
+| * d73bd5fbe added tools
+| * 65cbad8b0 added post
+| * b5d3ed8ae added post
+| * fe9caa5c0 updated image
+| * 83906de63 fixed path
+| * 1cfb277ad added dark mode
+| * 66be89074 added dark mode
+| * 698e063d7 added dark mode
+| * 458aabfe2 added dark mode
+| * dc8627f1d added dark mode
+| * 67d644c88 added dark mode
+| * e6000bca4 added dark mode
+| * c1617362e added dark mode
+| * 9066c01e9 added dark mode
+| * 539f73fd4 added dark mode
+| * 632d4c19b added dark mode
+| * e0d658513 updated
+| * 5d6be4d9c updated post
+| * 3c7185c99 added test load
+| * 5fb23a59c added tools
+| * 3e11f540a updated
+| * c78c16430 updated
+| * f73a1d36b updated
+| * 931695bb6 updated
+| * a6e95c1e6 updated
+| * fbe6a87c7 updated
+| * 34c01b7f0 updated
+| * 63174e65f updated
+| * 38f629f10 updated
+| * d7fa6f14c updated
+| * 340fa1df2 updated
+| * ff4c48a61 updated react intro
+| * d5602faf2 updated react intro
+| * c95a99b1b updated post
+| * 94749105a updated post
+| * c19bf7ebb updated site
+| * 7bfa799a5 updated blockquote
+| * 8a2f315b2 fixed code syntax
+| * b5303ebf8 fixed code syntax
+| * c7588c3d1 fixed code syntax
+| * 1f4a5ace8 updated post
+| * 2af330a4c updated post
+| * a993fc157 revert changes
+| * 99ef90470 minify
+| * 319842e99 updated post
+| * 1ca28a483 updated site
+| * c70f3c909 updated script async
+| * afe52efe1 updated post
+| * baa41719f removed logo
+| * b39327c6e changed async js
+| * 356e55555 updated post
+| * 1245cd7d3 updated book
+| * 039e735b5 minify css
+| * 9ca723fd4 fixed search issue
+| * 74dd270a8 updated robots.txt
+| * 92342a63f updated font issue
+| * 1dc94e8c0 updated font
+| * 394f7e19f pushed no jekyll
+| * e41327b22 pushed no jekyll
+| * f5fed4444 updated post
+| * 54a8740f4 updated animation
+| * 99dcb0350 updated
+| * caa98aa36 updated
+| * 3ddf77e6e updated build
+| * 1443a10b4 updated build
+| * 3241654c5 added blog
+| * 330dba00c added blog
+| * 0c56de6c4 added blog
+| * 8948a879d added blog
+| * c464ef991 added blog
+| * 30b2e98a1 added toc
+| * 1ad613e27 added tag
+| * c92a0972a updated post
+| * 2aa26d63a updated travel
+| * fe673ecc5 book updated
+| * 4cc73af5f updated books
+| * 30bfb7570 updated books
+| * d35e034a0 updated design
+| * 5a17bb993 updated design
+| * ce7359ddb updated design
+| * 58c97e526 updated design
+| * 23f5b838b updated post
+| * ecce885fc updated post
+| * df3f1db00 revert to gzip
+| * bae7e86c8 revert minify
+| * c272b3b22 minifer added
+| * 630ee5b41 Deploying build
+| * 5f63b122e Deploying build
+| * 706aea67a Deploying build
+| * 244fdfe69 Deploying build
+| * 6c14d4686 Deploying build
+| * 186a71ab2 Deploying build
+| * 2e9065dd0 Deploying build
+| * e46af7888 Deploying build
+| * 85c1110a7 removed all files
+| | * 2d2b3f453 css v3
+| |/  
+|/|   
+* | a2eb46e7c css v3
+* | 487414ace css v2
+* | 2ce1b5db1 css v2
+* | b624f7e39 about
+* | 82ab2fbbf build script updated
+|/  
+* 0fdf1142f updated reset
+* de9e4b2c0 updated file
+*   b47d20080 Merge pull request #28 from tushar-sharma/design_compress
+|\  
+| * 9b4517659 updated gemfile
+| * 513e29232 updated gemfile
+| * fc99488e9 updated travel
+| * d553e307e updated Gemfile
+|/  
+* 4521449bc sidebar updated
+* ed320d066 sidebar updated
+* a50004b8f sidebar updated
+* 72de994ed sidebar updated
+* cae440b1d travel updated
+* da1468422 travel updated
+* 52c453617 travel updated
+*   b06ff012f Merge pull request #27 from tushar-sharma/design_about
+|\  
+| * e53d9351c travel updated
+| * 4fede8f40 updated quotes
+| * 15ae9ed24 updated design
+|/  
+* e0879aac3 updated post
+* cc50de793 updated post
+* eb44e5add updated post
+* 36a721e88 updated post
+* 9f278d666 updated post
+* 64398ba47 updated post
+* f287fe882 updated post
+| * f2f3c2906 updated post
+| * 44c48f8a3 updated post
+|/  
+* 7f2d46aa0 updated post
+* 8139c31fb updated post
+* 823fce021 updated post
+* 9d73ca7a7 updated post
+* 4c92874e3 updated post
+* 7dc55b917 updated post
+* 55fdbe23a updated post
+* 76c100a60 updated post
+* 7de4c5d00 updated post
+* b4661902b Create spark-cast.scala
+* 28e11dcd7 updated post
+* a9c9bc061 updated post
+* ae16d2439 updated post
+* 29efc8dfc updated post
+* 49bf49a87 updated post
+*   7edebeb26 Merge pull request #25 from tushar-sharma/design_podcast
+|\  
+| * 912aca71f updated podcast
+| * b285f7540 updated podcast
+| * f8f23345c updated podcast
+|/  
+* 46ea7c356 updated tags
+* 1ae06be9b updated tags
+*   1870f6abc Merge pull request #24 from tushar-sharma/design
+|\  
+| * f97592ddf updated scroll
+| * b5bbb44fb pagination updated
+|/  
+* f4505874e updated post
+* 859bf2715 updated post
+* 1058d3b31 updated post
+* 2a15ca4e0 updated post
+* a5f930df5 updated post
+* e8d799fee updated post
+* 7edb61f53 updated post
+*   70531f285 Merge pull request #20 from tushar-sharma/post_mutual_suicide_electron
+|\  
+| * 517dcbaf7 updated post
+| * ad7b90a4b update post
+| *   995ad4e89 Merge branch 'master' into post_mutual_suicide_electron
+| |\  
+| |/  
+|/|   
+| *   8f8df9e94 Merge branch 'master' into post_mutual_suicide_electron
+| |\  
+| * | fe135b66a updated post
+| * | bc9b01aa4 updated post
+| * | 614e594a5 updated post
+| * | 43d9aeaa4 updated post
+| | | * cf84576ba updated quotes
+| |_|/  
+|/| |   
+* | | da37bbab3 update svg
+* | | b29bf7837 update svg
+* | | c8604779c update favicon
+* | | 674e425a7 reduced width
+* | | b2985732f reduced width
+* | | a7b5a1364 reduced width
+* | |   f622e192c Merge pull request #23 from tushar-sharma/design_scroll
+|\ \ \  
+| * | | 937d7e1bc reduced background span scroll
+|/ / /  
+* | | b1e239bd0 updated tags
+* | | f383dc3ab updated tags
+* | | 3a8b2dc5e updated tags
+* | |   91e045e29 Merge pull request #21 from tushar-sharma/design
+|\ \ \  
+| * | | 387358b6f navbar updated
+| * | | c8bb14090 navbar updated
+| * | | 7bc43c18c updated sidebar
+| * | | c8371b25c witdh fixed
+| * | | 1d339ba17 witdh fixed
+| * | | e8318f490 witdh fixed
+|/ / /  
+* | / 46f5ec1a8 added text sidebar
+| |/  
+|/|   
+| | * b1181cd85 navbar updated
+| | * 00b0225e5 navbar updated
+| | * 857d2db73 navbar updated
+| | * e96cece58 updated
+| | * ed70aeb51 added navbar
+| | * 34fdd4ec8 renamed link
+| | | * 8bc1eb0c8 added post
+| |_|/  
+|/| |   
+* | | 22ffe01af tags updated
+* | | a2287a063 updated tags
+* | | f58944db8 updated logo
+* | | da109e84d updated logo
+* | |   2571c399b Merge pull request #18 from tushar-sharma/design_logo
+|\ \ \  
+| * | | 9ccc7ae47 updated logo
+| * | | 452ffe26f updated logo
+|/ / /  
+* | | f70b2c970 updated quotes
+* | | ed9e11dd2 updated quotes
+* | | edd356eff updated quotes
+* | | 834663dff updated quotes
+* | |   5fcda94b0 Merge pull request #17 from tushar-sharma/design_logo
+|\ \ \  
+| * | | 6a4400ee0 updated quotes
+| * | | 411f7b835 updated quotes
+| * | | 296da67fa quotes added
+| * | | b6bc4fc45 quotes added
+| * | | c6519bd62 revert color pagination
+| * | | e70fd2e0b updated color pagination
+| * | | 18a4765d2 changed logo
+|/ / /  
+* | |   4eda754ab Merge pull request #16 from tushar-sharma/design_quotes
+|\ \ \  
+| * | | ee6b5bf78 new quotes added
+| * | | 9adf1170f new quotes added
+| * | | 9f062d646 quotes added
+|/ / /  
+* | |   616763eca Merge pull request #15 from tushar-sharma/post_quotes
+|\ \ \  
+| * | | 6a2ab7501 added quotes
+| * | | de2c0348d added quotes
+| * | | d8031833f added quotes
+| * | | a21ae700b added quotes
+|/ / /  
+* | | b38190d70 fixed breaking lines
+* | | b182e6db2 modified dynamic quotes
+* | | 3ceeb6f99 modified dynamic quotes
+* | | f105478db modified dynamic quotes
+* | |   fb0924703 Merge pull request #14 from tushar-sharma/design_quotes
+|\ \ \  
+| * | | 5150e50cd modified dynamic quotes
+| * | | a14277438 modified dynamic quotes
+| * | | b8adb62a6 modified dynamic quotes
+| * | | c42f49062 modified dynamic quotes
+| * | | 8a491cbdd modified dynamic quotes
+| * | | caf2b1f17 modified dynamic quotes
+| * | | cce7f2f2c modified dynamic quotes
+| * | | 6b39b1e1a modified dynamic quotes
+| * | | b0800c306 modified dynamic quotes
+| * | | 2f5df6c14 modified dynamic quotes
+| * | | 16c422d56 modified dynamic quotes
+| * | | 77b03d831 modified dynamic quotes
+| * | | f21db6c75 modified dynamic quotes
+|/ / /  
+* | | 28c9eeaf7 updated post
+* | | dcd5b048b updated post
+* | | b98f365b3 updated post
+* | | 61ff36ece updated post
+* | | b779cf498 updated post
+* | | ac270ff99 updated post
+* | | 70fd59b23 updated post
+* | | 962a77448 updated post
+* | | de735934b updated post
+* | | c9a87eaba updated post
+* | | 4c81e50f5 updated post
+* | | 14ebca779 updated post
+* | | 38e2589e7 updated post
+* | | 5a8e88202 updated post
+* | | ce48ab2aa updated post
+* | | f8e2f4ea7 updated post
+* | |   ccb9a6eca Merge pull request #13 from tushar-sharma/post_lost_friends
+|\ \ \  
+| * | | 07b759aa3 updated post
+| * | | f94837c13 updated post
+| * | | ae6731a57 updated post
+* | | | 3ff70f3c4 updated post
+* | | | e45e7b34a updated post
+* | | | 4b0567ad1 updated post
+* | | | 2674a7f59 updated post
+* | | | 10c16bf70 updated post
+* | | | 1393b33ef updated post
+* | | | 65240a124 updated post
+* | | | 2a4aee7c9 updated post
+* | | | 25624733c updated tags
+* | | | c5c3546af pagination box removed margins
+|/ / /  
+* | | c2b43a307 updated book
+* | | 70dfd389d updated book
+* | | e94d4bc19 updated book progress
+| | | * 9db899e80 updated post
+| | | * 3e11d6e50 updated travel
+| | | * b77423381 updated travel
+| | | * 0a0fc7004 updated travel
+| | | * 26dd11893 updated travel
+| | | * 1c353610e updated travel
+| | | * 46447f88e updated travel
+| | | * ed47c41d7 updated travel
+| | | * 534656775 updated travel
+| | | * b0a64e934 update travel
+| | | * 3e34689be updated travel
+| | | * d87adfc82 updated
+| | | * f4261174a updated travel list
+| | | * b412e2340 updated travel list
+| | | * f2ca44203 updated travel list
+| | | * 3809cac46 added mexico city
+| | | * 68055e7ab updated travel
+| | | * dd9377a3b updated travel
+| |_|/  
+|/| |   
+* | | 41f8fded7 updated book
+| | | * 1371e20f5 updated post
+| |_|/  
+|/| |   
+| | | * 0768e86a6 updated post
+| | | * 9f233a3f2 updated post
+| |_|/  
+|/| |   
+* | | 53a01e88f updated book
+* | | 8ec33c000 updated book
+| | | * 7395a2c58 updated post
+| |_|/  
+|/| |   
+* | | 1781e5174 fixed design
+* | | 200c42052 updated design
+|/ /  
+* |   49dae3ac6 Merge pull request #12 from tushar-sharma/post_leetcode_courses
+|\ \  
+| * | 73bcdfd1f updated a new post
+| * | d46621cab updated a new post
+| * | 674466d5c updated pagination widht
+| * | ea4274510 updated gist
+| * | 1678f8e8d updated quotes
+| * | f936bf663 updated css
+| * | 9aa4b3747 updated posts
+| * | 0890d8fd4 updated posts
+| * | f448cad41 resized image and added Post
+|/ /  
+* | a05aa8da1 updated gist
+* | d1924be83 updated design
+* | abb235a48 updated posts
+* | 5c6e8fc55 updated posts
+* |   420023a34 Merge pull request #11 from tushar-sharma/design_pagination
+|\ \  
+| * | f74f369e2 updated posts
+| * | 9d0ca0ee5 updated posts
+| * | 71cc1c69f updated pagination
+| * | c904a09b6 updated pagination
+|/ /  
+* |   b0347eb9f Merge pull request #10 from tushar-sharma/design_font
+|\ \  
+| * | e0680590c updated font size
+|/ /  
+* |   a7139366e Merge pull request #9 from tushar-sharma/design_graph
+|\ \  
+| * | 3c051adba updated posts
+| * | 23c4613f6 updated tags
+| * | 06fa88400 updated post
+|/ /  
+| | * 03d802ffa updated spacing
+| |/  
+|/|   
+* |   7cad8ccb0 Merge pull request #8 from tushar-sharma/contact_form
+|\ \  
+| |/  
+|/|   
+| * 700582195 updated contact form
+|/  
+*   f2b1f595f Merge pull request #7 from tushar-sharma/design_minor
+|\  
+| * b793db0ca renamed link
+* |   8649bd81c Merge pull request #6 from tushar-sharma/design_wrap_text
+|\ \  
+| |/  
+|/|   
+| * a87508f22 made responsive
+|/  
+* a5c7f3244 tag updated
+| * db93cc957 updated thumbnail
+|/  
+*   038b719d8 Merge pull request #5 from tushar-sharma/design_change_photo
+|\  
+| * e7aab5d19 updated thumbnail
+|/  
+* 207951b53 Update from Forestry.io - Updated Forestry configuration
+*   b7b7c7010 Merge pull request #4 from tushar-sharma/post_leetcode_remove_all_adjancent_duplicate_strings_ii
+|\  
+| * 8722ea050 updated post
+| * 607103d39 updated post
+| * 2f85155d5 updated post
+| * d5c1cb649 updated post
+| * 371005fde updated post
+| * bd50d20cf updated post
+| * a3f091eb9 updated scala
+| * 939103ff3 updated js code
+| * 22560ba99 updated python code
+| * 025f65794 updated initial post
+|/  
+*   ae59d06c3 Merge pull request #3 from tushar-sharma/enhancement_multiple_tab
+|\  
+| * 41ceb984d updated font size
+|/  
+* 351006aa4 revert changes
+* 33afa5845 font changed with color
+* d1f503b6f scoll to top enabled on all pages
+* 28e9e9c71 scoll to top enabled on all pages
+* 48e15a1cb updated blog
+* 7074d12d7 updated blog
+* eb5977a14 updated layout
+* c320fd2a1 updated layout
+* c806493e2 updated layout
+* 9260e2dd3 layout changed image
+* ef1694d0b layout changed image
+* 2f576690b layout changed image
+* 396846c45 layout changed image
+* a4fd93ce5 layout changed image
+* 04f85c784 updated cursor
+* b28d0d742 added post
+* 6835f691e added post
+* 83d945b45 updated sound
+* 7a6dc64db updated sound
+* e19e0ead3 updated post
+* 5c096a2b0 updated post
+* 859d7c2ab updated post
+* c31c877b7 updated sound in a post
+* cf6002203 updated script
+* 444a05151 updated post
+* 6b7900144 updated post
+* 8ef32ebf9 updated post
+* 9b78f67db updated post
+* fedf84896 updated post
+* be29bcb2e updated sound
+* 895889b05 updated sound file
+* 600946799 updated sound file
+* 1e34a0b2c updated sound file
+* 7c27a481c updated audio post
+* c9a1b6c60 updated audio post
+* 576a24430 updated audio post
+* 6953425e2 updated audio post
+* 8b7025c83 updated post, layout, font
+* be7d30548 updated post, layout, font
+* 2d9d2d0bb updated post, layout, font
+* cbc80cd1d updated
+* ad63bb116 updated
+* af9bcea89 typo fixed
+* d70af3a48 typo fixed
+* e9eb97e19 updated post
+* 44b6d217a updated post
+* 401451eb0 updated post
+* 9c173a0b0 updated post
+* 03c971e7d thumbnail updated
+* afef14264 updated post
+* ea3f8ba7d updated post
+* e852f7762 rent scam updated
+* 7bf3dedd2 updated tweet head
+* 536ed7f65 updated tweet head
+* fbdb7d4d0 updated tweet head
+* 76fa7d100 updated tweet head
+* 9e08e7cc0 updated tweet head
+* 8fc176365 updated makefile
+* ce10fb057 updated stocks
+* 5406deee2 quote added
+* e33690502 font size update
+* 36b924179 book updated
+* f7708cb70 added quotes
+* f208c5e1c udpated book
+* 29cf7f7cc updated docs
+* eca25d3c6 updated css
+* f0124515d updated resoruce
+* 99181cea8 updated resources
+* 6de269b32 updated book
+* 5db579e5f updated posts
+* 0b74bb0e4 Update books.css
+* bcef4c4d4 book updated
+* 4f6387380 updated 404
+* c7640818e updated 404
+* 5c2b273d0 404 added
+* ead3c8458 updated 404
+* 90fb6d6e9 updated 404
+* 832972019 updated 404
+* 62eae6f5b updated 404
+* 9735a72d1 updated 404
+* c364b5d2c updated 404
+* 185abbae3 updated 404 page
+* 2666acf55 updated 404 page
+* 669985e17 updated 404 page
+* 7efc5a5c0 updated 404 page
+* 0f4920410 404 page updated
+* 8499a9d4f changed display
+* ccb523c3a updated 404
+* 055160246 404 added
+* c13d3b457 404 changed
+* 11538213e updated book
+* 210f0120d 404 changed
+* e757ebd3c quotes updated
+* b2f1ce601 updated about me
+* 215373dbf book css refactored
+* dda90b4a2 book css refactored
+* 1399b293c image tag added
+* 8dfaa2be1 featured post
+* 48d74c4b2 post updated new codeforces
+* f01c0d46a updated grammar in post
+* baacf1eff changed position topbar scroll
+* ebc4891d3 tags updated
+* bdc81825a updated posts
+* a0d77997c updated typo
+* 9c9e3659f updated typo
+* 09e0943a6 updated typo
+* b7ccd0bea font increased gists
+* 89ca7ebc6 font increased gists
+* ad7d18727 updated fotnsize gists
+* 2dd1bd560 updated plugin
+* f7a46c792 updated tags
+* fb2fca249 added seo
+* bb81f4329 book added
+* 5eb1b18b4 changed stylesheet type removed
+* 78751094c post added leetcode solution coin change
+* f4af2a090 post added leetcode solution coin change
+* e99dc73bf post added leetcode solution coin change
+* ee8084bbd post added leetcode solution coin change
+* 025bdcc70 added missing file
+* 8a823b861 updated post's tag
+* abece9b5b updated post
+* 30a86b3e5 Update README.md
+* 0ce38a7e0 updated the post image
+* 192b938c6 limited animation to main page
+* 6d960294d limited animation to main page
+* 726bc02c1 limited animation to main page
+* 29344b38c changed animation
+* 53730af1e css text updated
+* 79adee505 css text updated
+* dd23cd7be refactor for safari animation
+* b9f9616a4 revert resume
+* 88190f15a revert resume
+* 5b10cf221 resume updated
+* e0b324c33 resume added
+* 95e2a3757 comments added courtesy
+* c4cd9a702 added vertical spacing root page
+* a3e0a2d1f added vertical spacing root page
+* 1772bac8b spacing added
+* 61bf81df3 scroll bar fixed
+* ef4a44c88 changed sidebar display
+* 8a02c2dd3 changed about display
+* a8073375e changed about display
+* 9a8487de1 font size decreased
+* 401e380e2 font size decreased
+* 1223c0faf font decreased footer
+* 07a94041c font decreased footer
+* 365a87aad font decreased footer
+* a3fb23000 tags spacing increased
+* 877830158 chat width fixed
+* 2a579af84 updated the post image
+* ab34cecc1 updated the post image
+* f63ad532f updated the post image
+* 3af365ad1 revert back top
+* 0fd3ce880 revert back top
+* 5c71d3444 revert back top
+* b22e0a6af revert back top
+* b84fe4a77 back top removed from front
+* 5a281040c back top removed from front
+* 768e58daf back top removed from front
+* e1a3479fb scroll bar top fixed
+* 3cc3e4234 scroll bar top fixed
+* e131ef0a1 changed post
+* 1432751c4 changed post
+* 96b73de89 changed font
+* d301ca9e7 changed font
+* b7641e0c9 updated posts
+* 3e2afa093 updated posts
+* 006f93b30 updated date size
+* b957a9c2f updated date size
+* 345987f19 font increased
+* 7ae0b8af7 about page changed
+* f6093a1d7 about page changed
+* d7957d980 about page changed
+* 81b3dedb6 about page changed
+* e91bf8f65 about page changed
+* 80d59db04 changed sidebar text
+* bd4df98ff changed sidebar text
+* b83a22be2 text added to format blog post
+* 7c3c0c482 text added to format blog post
+* 7b0f38310 text added to format blog post
+* 3204eed4e text added to format blog post
+* 8d6d556da text added to format blog post
+* 2f84c3132 text added to format blog post
+* 9e40be50b text added to format blog post
+* 9f7143e55 text added to format blog post
+* c07e6d908 text added to format blog post
+* 0ecb2e513 text added to format blog post
+* a8ef939c7 text added to format blog post
+* 46573a778 resized image
+* 9bdd83b93 added featured post
+* 081550fcb increase tags font
+* 8be18f416 increase tags font
+* e20f4a50e increase page title font
+* 5a833d27e increase page title font
+* 252794095 increase page title font
+* 505f0d4da increase page title font
+* 191c255cf increase page title font
+* afe7595a8 updated footer
+* bb1f44eb3 pagination show sidebar
+* 170bcd9e7 updated headings in blog post
+* fe77e9a7f increase header toc
+* 1452631f0 increase header toc
+* 982a1f6c6 increase header toc
+* cfedfefa4 post updated blog
+* d440a4dbe updated post blog
+* 46e9334fb resources added
+* 76500f2af resources added
+* eeee53fad README updated
+* b7782e2ba https changes
+* edf328b9c updated quotes
+* 6b58bd6a7 added quotes
+* eca4bda4e padding issue
+* 598572d10 removed padding bottom
+* 32de17a73 removed toc from markdown
+* 49163e40b post layout removed section
+* 966e6eecb revert Gemfile
+* 0e4566f93 percent resolution
+* 09b73a1fd resolution changed
+* 4f8b81fc3 tags updated
+* 2d10898ed resolution changed
+* 37b9f46db changed gravatar
+* a8c27b541 updated tags
+* 250de2bad made a post featured
+* 32c9270b8 toc color updated
+* 2e3254da7 updated js
+* 48f3e281b updated toc js
+* d317045d2 toc changed background
+* 3eaf197c9 updated resources
+* d31a681f4 resource added
+* 472802087 fixed toc in post
+* f7a89ba96 fixed toc in post
+* 714afd7c0 fixed toc in post
+* 4c489aa5c fixed toc in post
+* 45f1e1c12 fixed toc in post
+* fce93b060 removed toc from the post
+* a339c8979 removed toc from the post
+* 3918f5d83 removed toc from the post
+* 5b55cef0e removed toc from the post
+* 61de7c338 removed toc from the post
+* 654fbba45 toc moved to sidebar
+* 7879fac0e changed font size
+* 6a5e53150 revert width of website
+* 6c99e0892 jquery fixing issue
+* 0e27a2afd jquery added
+* ba6b6de7c removed jquery
+* 6ad4957ec removed absolute path stylesheet
+* d7123821c removed old jquery
+* 902df2eb5 tags updated to fix relative path
+* 7412b6a4d relative links fixed
+* 916cdf5cb update tag
+* cf57e2c57 updated sidebar
+* 53742b547 back to top scroll removed text
+* 72eaf0f0b mathjax lib only applied for local post
+* dce319b1e next prev button change display
+* e72c3ffb1 updated sidebar
+* 5fcf4b285 updated post
+* 936d25303 updated sidebar
+* 2740ae493 updated sidebar
+* 89eb048f3 updated post
+* 92a1778fa added space design
+* a39d958a9 added space design
+* f00d2c5b9 updated blog
+* 97bd812e5 added file
+* b51b233aa updated sidebar
+* 68f93bb64 Update 2021-06-14-tutorial-cdk-aws.md
+* 7604f4e19 updated book
+* 22b86c53e updated quotes
+* 279704985 book added progress
+* c172e1bd7 updated book
+* 313706dc6 updated book
+* bb03cc421 updated posts
+* 28b4f707f updated contact with captcha
+* 8e205ddb3 post updated
+* 7e06008cd updated quotes
+* c594fa28b post upated
+* da3e7aff4 updated snoring post
+* b91081cad updated post
+* c97e343d4 updated habits
+* 650c8783b updated circle habits
+* b64b7aafd updated habits circle
+* 31f59c196 updated book
+* a8fc618f4 updated script
+* 7008167f1 update script
+* ac9927e14 update randomwits
+* 58dcd7492 updated sidebar
+* b3ab1508f updated sidebar
+* 2068ded3e updated habits
+* 6d205b82e updated post
+* b3fc0915a updated post
+* 54143235f revert head
+* d89ff5070 changed heading
+* e2a04020d updated resources
+* 6545c53e6 updated contact page
+* ecb3bee74 updated python
+* 24f25eca8 updaetd bash
+* 8e379b749 updated resources
+* e59ef7206 python resources
+* 21e5ad660 updated resources
+* fdef4c28b updated resources
+* 15399847f updated contact site
+* 33d49c6dc updated error
+* f7efa0ab3 fail added
+* cc8bfac02 updated tags
+* 3e7a8b91d updated quotes
+* cb81569ae updated quotes
+* 9ed854a98 updated book
+* 4c02ed4d0 update script
+* df040ee0d updated post
+* 36f076ec8 tags updated
+* bc081ae4b updated post
+* 7a66454c3 updated post
+* b7f6251db updated post
+* 35a05d6e1 updated posts
+* 49d967812 updated post
+* 32ef7540f updated habits
+* 8e12267f4 updated habits
+* 5cf2a7b5d updated gemfile
+* 16a7f40ad updated gemfile
+* b5395dcce updated habits
+* 2554b6788 quote added
+* c24d52a3c updated post
+* 500693a18 updated post
+* 6ea3de035 updated dependencies
+* 2be156a3e Update CNAME
+* bbc580289 Update CNAME
+* 6c18c7c9c book added
+* 01b556f7d updated book progress
+* aca273298 updated post
+* ef436c459 posts added
+* 7f9f9cc3a maslow quote
+* 08431b302 maslow quote
+* 2c48d8acd updated quotes
+* 9d65679a3 book progress updated
+* fa20a4c3c updated
+* 5503556be updated book
+* 461369e58 book added
+* 167f592c5 updated post
+* ba50fe71c updated post
+* 3074c9b7d updated post
+* cfa1a788b updated post
+* cd3a159fe Create 2021-06-27-dear-vishi-2021-06-27.md
+* d987e8805 updated posts
+* ea5ed3e2a Update 2021-06-25-interface-aws-cdk.md
+* eeeb16d46 updated post
+* ad7e57976 Update 2021-06-25-interface-aws-cdk.md
+* d5fae6758 updated posts
+* 86821e6f7 Update 2021-06-25-interface-aws-cdk.md
+* 160aee4f2 updated posts
+* e554eec22 Create 2021-06-25-interface-aws-cdk.md
+* 88d19dd9b Create 2021-06-25-interface-aws-cdk.md
+* e954012a6 updated script
+* fc7382716 updated script
+* ec7e92f4a updated
+* 3f9794911 book progress
+* bd30f5368 book added
+* c3454a23e updated quotes
+* 1222da840 updated posts
+* dc464c10c updated posts
+* 6147dff06 updated posts
+* bde607ba4 updated posts
+* c105ad08c Update 2021-06-14-tutorial-cdk-aws.md
+* 24bf5f629 Update 2021-06-14-tutorial-cdk-aws.md
+* 49a0fa6f4 Update 2021-06-14-tutorial-cdk-aws.md
+* 8b195ff1d Update 2021-06-14-tutorial-cdk-aws.md
+* c07796418 Update 2021-06-14-tutorial-cdk-aws.md
+* 57942ab6f Update 2021-06-14-tutorial-cdk-aws.md
+* c11000e8c Update 2021-06-14-tutorial-cdk-aws.md
+* eb257ef47 Update 2021-06-14-tutorial-cdk-aws.md
+* 0a565375d Update 2021-06-14-tutorial-cdk-aws.md
+* 9355f266d Update 2021-06-14-tutorial-cdk-aws.md
+* 898566f26 Update 2021-06-14-tutorial-cdk-aws.md
+* c0a96219e Update 2021-06-14-tutorial-cdk-aws.md
+* c165874d3 Update 2021-06-14-tutorial-cdk-aws.md
+* d6de9af12 Update 2021-06-14-tutorial-cdk-aws.md
+* 7bae7e5b7 Update 2021-06-14-tutorial-cdk-aws.md
+* 12e02380a Update 2021-06-14-tutorial-cdk-aws.md
+* 3a78fdd10 Create 2021-06-14-tutorial-cdk-aws.md
+* bb458e654 Create 2021-06-14-tutorial-cdk-aws.md
+* 97af0c342 Create 2021-06-14-tutorial-cdk-aws.md
+* 21f6eafb2 book updated
+* 95eff89b8 poem added
+* 34efaa5f5 typo fixed
+* b1de37352 book added progress
+* f6d32469c add more calendar days habits
+* 3fed2176a updated css
+* 4f36a8f24 updated css
+* b84e0726d updated css
+* 1d4698caf updated css
+* dcebe335f updated book
+* 4093bb28e habit updated
+* 206b6ab03 updated posts
+* ac1ee32d8 Create 2021-06-11-dear-vishi-2021-06-11.md
+* 155720689 updated
+* 70caed4cc changed width
+* 28ed13769 habits added
+* 2594cd82e habits added
+* f8b122b03 habits added
+* f07230266 habits added
+* 02e3a00d0 habits added
+* 4b3701847 updated
+* 4c5862caf updated
+* 4b24480ff updated
+* 066d220f1 Create 2021-06-04-dear-vishi-2021-06-04.md
+* 18e44f409 Create 2021-06-04-dear-vishi-2021-06-04.md
+* e219f3dea updated book
+* c933d248a updated
+* 3efb2f6e1 updated
+* aa9750c10 book updated
+* a1d3d46af post added
+* 97850bda0 post added
+* 19746db6e post added
+* f314888aa post added
+* 059d95d9e post added
+* 433317bb6 post added
+* bb6dee199 post added
+* 2234b8393 post added
+* a7ca63ec1 post added
+* 7960d3114 post added
+* 0699e87ec post adde
+* b8633d668 updated post
+* fa1a35370 updated post
+* a863b73f1 updated post
+* bdf5b605c updated post
+* 17576161e updated post
+* 0729c737e updated post
+* e108d2c28 updated post
+* 655febf3b updated post
+* 503054332 updated
+* 7ac3c6811 updated
+* a7427c573 updated
+* 18eccc1f8 Create 2021-05-28-dear-vishi-2021-05-28-.md
+* 19a86feeb Create 2021-05-28-dear-vishi-2021-05-28-.md
+* 0265c1819 Create 2021-05-28-dear-vishi-2021-05-28-.md
+* dc63bfc49 Create 2021-05-28-dear-vishi-2021-05-28-.md
+* f6c7c7e09 Create 2021-05-28-dear-vishi-2021-05-28-.md
+* 19ddf53ed post updated
+* bd68b4607 post updated
+* ba7210486 tag updated
+* 1d964c44e tag updated
+* 24c118141 tag updated
+* 77be6c693 updated gemfile
+* 73833f167 updated gemfile
+* 4a5b1a6ad Update 2021-05-25-dear-vishi-2021-05-25.md
+* ea5d2e3b5 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 5a90706d7 Update 2021-05-25-dear-vishi-2021-05-25.md
+* f70080b1a Update 2021-05-25-dear-vishi-2021-05-25.md
+* c52667c18 Update 2021-05-25-dear-vishi-2021-05-25.md
+* f8a903eeb Update 2021-05-25-dear-vishi-2021-05-25.md
+* df5b9c347 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 97c3e3ee2 Update 2021-05-25-dear-vishi-2021-05-25.md
+* ba11ac3db Update 2021-05-25-dear-vishi-2021-05-25.md
+* db6a05bd1 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 0eed710ac Update 2021-05-25-dear-vishi-2021-05-25.md
+* 80b99beba Update 2021-05-25-dear-vishi-2021-05-25.md
+* 198cc47e3 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 6e39148a8 Update 2021-05-25-dear-vishi-2021-05-25.md
+* e5fecb0f4 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 935b4d7bc Update 2021-05-25-dear-vishi-2021-05-25.md
+* 99e90cf90 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 8871bfcbf Update 2021-05-25-dear-vishi-2021-05-25.md
+* 9df228fe3 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 104bb847e Update 2021-05-25-dear-vishi-2021-05-25.md
+* b8f066092 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 2ecb12090 Update 2021-05-25-dear-vishi-2021-05-25.md
+* df6345f22 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 5ce24dac4 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 5a1263057 Update 2021-05-25-dear-vishi-2021-05-25.md
+* bc4c00b5f Update 2021-05-25-dear-vishi-2021-05-25.md
+* f5ced09ed Update 2021-05-25-dear-vishi-2021-05-25.md
+* 09a259a65 Update 2021-05-25-dear-vishi-2021-05-25.md
+* a039c1351 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 16d5daa4d Update 2021-05-25-dear-vishi-2021-05-25.md
+* 6ec9226f3 Update 2021-05-25-dear-vishi-2021-05-25.md
+* ff4f9b22a Update 2021-05-25-dear-vishi-2021-05-25.md
+* 16aa568a2 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 39131f6b7 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 7aabfa07b Update 2021-05-25-dear-vishi-2021-05-25.md
+* 0804e2ca5 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 87c5b6c1d Update 2021-05-25-dear-vishi-2021-05-25.md
+* a3ec26620 Update 2021-05-25-dear-vishi-2021-05-25.md
+* 5a883d61d Update 2021-05-25-dear-vishi-2021-05-25.md
+* b99ef298c Update 2021-05-25-dear-vishi-2021-05-25.md
+* 9d9a098ce Create 2021-05-25-dear-vishi-2021-05-25.md
+* dd76c28f5 Create 2021-05-25-dear-vishi-2021-05-25.md
+* 7e6d47556 Update books.css
+* 387454afc Delete 2021-05-24-politician-science-literate.md
+* e49071deb Update 2021-05-24-politician-science-literacy.md
+* 39185a4c3 Update 2021-05-24-politician-science-literate.md
+* b8531e8f7 Update 2021-05-24-politician-science-literate.md
+* 915e8a1ad Update 2021-05-24-politician-science-literate.md
+* 136ae9ee4 Create 2021-05-24-politician-science-literate.md
+* d6bbd7db1 Create 2021-05-24-politician-science-literate.md
+* 3913d8ee3 Create 2021-05-24-politician-science-literate.md
+* c65aea025 Create 2021-05-24-politician-science-literate.md
+* 31e8965e3 Create 2021-05-24-politician-science-literate.md
+* 7392e1bd3 Update 2021-05-22-dear-vishi-2021-05-22.md
+* cd4651ff5 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 7ec460360 Update 2021-05-23-dear-vishi-2021-05-23.md
+* af249068e Update 2021-05-23-dear-vishi-2021-05-23.md
+* d41288578 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 3bb7a701e Update 2021-05-23-dear-vishi-2021-05-23.md
+* 05d96d701 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 29b51c440 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 7a9bf2d65 Update 2021-05-21-dear-vishi-2021-05-21.md
+* f20f60bcb Update 2021-05-23-dear-vishi-2021-05-23.md
+* aee8f579b Update 2021-05-23-dear-vishi-2021-05-23.md
+* 24723cf8e Update 2021-05-23-dear-vishi-2021-05-23.md
+* c90a0f2ca Update 2021-05-23-dear-vishi-2021-05-23.md
+* afd0bc028 Update 2021-05-23-dear-vishi-2021-05-23.md
+* fcb441a00 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 71af19ed8 Update 2021-05-23-dear-vishi-2021-05-23.md
+* bd77ea5a5 Update 2021-05-23-dear-vishi-2021-05-23.md
+* be0eefef3 Update 2021-05-23-dear-vishi-2021-05-23.md
+* c816dde01 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 80603b7ad Update 2021-05-23-dear-vishi-2021-05-23.md
+* b66947077 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 36b3b1ef8 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 81ecf8516 Update 2021-05-23-dear-vishi-2021-05-23.md
+* f29625e2b Update 2021-05-23-dear-vishi-2021-05-23.md
+* 464f63be3 Update 2021-05-23-dear-vishi-2021-05-23.md
+* a2b2f7529 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 1d175e5e7 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 5e946ed4b Update 2021-05-23-dear-vishi-2021-05-23.md
+* b58b3826b Update 2021-05-23-dear-vishi-2021-05-23.md
+* 2d32e3264 Update 2021-05-23-dear-vishi-2021-05-23.md
+* bf1225035 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 54ecfd153 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 1d7d2a46b Update 2021-05-23-dear-vishi-2021-05-23.md
+* d05974d3c Update 2021-05-23-dear-vishi-2021-05-23.md
+* ac6b46711 Update 2021-05-23-dear-vishi-2021-05-23.md
+* 11979121f Update 2021-05-23-dear-vishi-2021-05-23.md
+* 74ccd63ae Update 2021-05-21-dear-vishi-2021-05-21.md
+* 7b8d323a0 Update 2021-05-21-dear-vishi-2021-05-21.md
+* 11f06ef7e Update 2021-05-21-dear-vishi-2021-05-21.md
+* bb2d16499 Update 2021-05-21-dear-vishi-2021-05-21.md
+* d5e1afca6 Update 2021-05-23-dear-vishi-2021-05-23.md
+* af6404a6e Update 2021-05-23-dear-vishi-2021-05-23.md
+* 49ad5b5cb Update 2021-05-22-dear-vishi-2021-05-22.md
+* ed061d3ee Create 2021-05-23-dear-vishi-2021-05-23.md
+* 4e2c42498 Create 2021-05-23-dear-vishi-2021-05-23.md
+* f9664c55c Create 2021-05-23-dear-vishi-2021-05-23.md
+* 2be219f7d Create 2021-05-23-dear-vishi-2021-05-23.md
+* 47e354019 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 041e11f0c Update 2021-05-22-dear-vishi-2021-05-22.md
+* a160a4ba4 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 37e00f84c Update 2021-05-22-dear-vishi-2021-05-22.md
+* 07b74d8cf Update 2021-05-22-dear-vishi-2021-05-22.md
+* 21a1b10c0 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 9c76117c5 Update 2021-05-22-dear-vishi-2021-05-22.md
+* eac87c0da Update sidebar.html
+* a9379ef8b Update sidebar.html
+* 44bb8eb82 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 26c2c17e8 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 9de9d9168 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 3c0023ab8 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 3e8b13c97 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 9142aaa47 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 4cef6979d Update 2021-05-22-dear-vishi-2021-05-22.md
+* b2e2290ea Update 2021-05-22-dear-vishi-2021-05-22.md
+* 8208533cd Update 2021-05-22-dear-vishi-2021-05-22.md
+* b617043f3 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 5020a2c9f Update 2021-05-22-dear-vishi-2021-05-22.md
+* 61c8995e3 Update 2021-05-22-dear-vishi-2021-05-22.md
+* 5f37b717c Update 2021-05-22-dear-vishi-2021-05-22.md
+* 77c51da3f Update 2021-05-22-dear-vishi-2021-05-22.md
+* 65b35051d Update 2021-05-21-dear-vishi-2021-05-21.md
+* 933f61494 Delete 2021-05-22-dear-kitty-2021-05-22.md
+* e68900e8b Update 2021-05-22-dear-vishi-2021-05-22.md
+* 182e5467e Update and rename 2021-05-21-dear-kitty-2021-05-21.md to 2021-05-21-dear-vishi-2021-05-21.md
+* 41f11097f Update 2021-05-22-dear-kitty-2021-05-22.md
+* f112ec1ef Update 2021-05-22-dear-kitty-2021-05-22.md
+* df158e374 Update 2021-05-22-dear-kitty-2021-05-22.md
+* c25328368 Update 2021-05-22-dear-kitty-2021-05-22.md
+* 35e87f44c Update 2021-05-22-dear-kitty-2021-05-22.md
+* 7974afc16 Update 2021-05-22-dear-kitty-2021-05-22.md
+* e5aadcb19 Update 2021-05-22-dear-kitty-2021-05-22.md
+* 482fad474 Update 2021-05-22-dear-kitty-2021-05-22.md
+* 9c8f4b62f Update 2021-05-22-dear-kitty-2021-05-22.md
+* b9fac83bf Update 2021-05-22-dear-kitty-2021-05-22.md
+* 3936ea3ce Create 2021-05-22-dear-kitty-2021-05-22.md
+* 804e738f3 Create 2021-05-22-dear-kitty-2021-05-22.md
+* d00d235a9 Create 2021-05-22-dear-kitty-2021-05-22.md
+* 750f07cfd Create 2021-05-22-dear-kitty-2021-05-22.md
+* 71d1c9264 Create 2021-05-22-dear-kitty-2021-05-22.md
+* 587c712bf Create 2021-05-22-dear-kitty-2021-05-22.md
+* 64780e106 Create 2021-05-22-dear-kitty-2021-05-22.md
+* 275f2704c Update 2021-05-21-dear-kitty-2021-05-21.md
+* 139be21ee Update 2021-05-21-dear-kitty-2021-05-21.md
+* 7371811f3 Update 2021-05-21-dear-kitty-2021-05-21.md
+* 83234f2fc Update 2021-05-21-dear-kitty-2021-05-21.md
+* 25c443758 Update 2021-05-21-dear-kitty-2021-05-21.md
+* 1d5e24bb1 Update 2021-05-21-dear-kitty-2021-05-21.md
+* 868e88540 Update 2021-05-21-dear-kitty-2021-05-21.md
+* 8365a2016 Update 2021-05-21-dear-kitty-2021-05-21.md
+* 784b1573b Update 2021-05-21-dear-kitty-2021-05-21.md
+* 6705e3617 Update and rename 2021-05-21-dear-kitty.md to 2021-05-21-dear-kitty-2021-05-21.md
+* 9446b20e6 Update 2021-05-21-dear-kitty.md
+* 18b0298e1 Update 2021-05-21-dear-kitty.md
+* b8a204526 Update 2021-05-21-dear-kitty.md
+* 1d7b8d00f Update 2021-05-21-dear-kitty.md
+* 1929cf915 Update 2021-05-21-dear-kitty.md
+* c14ce1b62 Update 2021-05-21-dear-kitty.md
+* f027eb604 Update 2021-05-21-dear-kitty.md
+* 5bf133cce Update 2021-05-21-dear-kitty.md
+* 58870043b Update 2021-05-21-dear-kitty.md
+* 35d98a5ee Update 2021-05-21-dear-kitty.md
+* 1bb2a7f3b Update 2021-05-21-dear-kitty.md
+* 2df9b14fb Update 2021-05-21-dear-kitty.md
+* 296de3c18 Update 2021-05-21-dear-kitty.md
+* 6d54b1ced Update 2021-05-21-dear-kitty.md
+* 44d3b911c Update tags.md
+* 278261113 Update tags.md
+* ba8622c17 Update 2021-05-21-dear-kitty.md
+* f5c0bf3b2 Update 2021-05-21-dear-kitty.md
+* c0e32dcfd Update 2021-05-21-dear-kitty.md
+* 0769bfcd1 Create 2021-05-21-dear-kitty.md
+* 8ebd8c30a Create tags.md
+* b5e106284 updated progress
+* 77b93be64 bookshelf
+* c6839aeaf bookshelf
+* b7c3df31d bookshelf
+* 5b9028120 bookshelf
+* af2c1608b bookshelf
+* 960046877 bookshelf
+* 7b03927d7 bookshelf
+* 82d68b165 bookshelf
+* 3c4cb5576 bookshelf
+* 0ee6e55a3 Update index.html
+* b16ff4eb2 Update index.html
+* f4dad9bbf Update index.html
+* caf8052a8 Update index.html
+* 7f0d94740 Update index.html
+* b9a32a047 Update index.html
+* fb648ca81 Update index.html
+* 004766646 Update index.html
+* 05c2e5422 Update index.html
+* 000862435 Update index.html
+* e6f8f26a7 Update index.html
+* 9d7f32e65 Update index.html
+* df450be09 Update index.html
+* 824536ec8 Update index.html
+* 11c4e3122 Update index.html
+* d8a4b84d2 Update index.html
+* f47df9652 Update index.html
+* 2d82e05ec Update index.html
+* a0bb0ebca Update books.css
+* 69720af92 updated
+* 58979955b Update books.css
+* c7011756d book progress added
+* f5fde81f6 book progress added
+* 62f2b4d4d book progress added
+* b6b28dfaf book progress added
+* 18f41f256 book progress updated
+* a793604e6 book progress addded
+* 26b3f3ea7 tags moved
+* 06dfcedd8 twitter removed
+* f42fc4d92 twitter removed
+* 7e536acd2 twitter removed
+* d4b6ec025 updated book progress
+* 7925a28b4 updated book progress
+* d67c62897 updated
+* ab4152548 updated
+* 1199675ea updated
+* c1e9fe557 updated
+* c5afd614e updated
+* dfbc23a2d updated
+* 70935900c updated
+* 8bbb4285e updated
+* b0eb3c0dd updated
+* 7c51e4a36 updated
+* 22b01a24d updated
+* d211df648 updated
+* 1da12a1c3 updated
+* 439f99a9a redirect
+* 4423f353c post updated
+* e759c210c post updated
+* 36e875042 post updated
+* bed6a709a book updated
+* d67200876 book finished
+* 804c1c3fa book finished
+* eb68a3c9b book finished
+* 806c44c89 book finished
+* 5dd53dce9 updated repo
+* 87c6312bf updated
+* 804c24bc5 updated
+* 1a6424fee updated
+* 7de32c698 updated
+* e72a863e9 updated
+* 5e97ab145 updated
+* 445887561 quotes added
+* c512a2f61 quotes added
+* bfe2944d5 quotes added
+* 7757b9a2a updated book progress
+* 2e847daf2 quotes added
+* 266eb8d90 quotes added
+* a14145974 quotes added
+* 8929067f5 updated book progress
+* 91662ae4d updated
+* 903e9e855 updated book
+* 9c691af94 updated
+* f26c555b9 updated
+* 2532f4d37 updated
+* e484ee117 updated
+* b501be1af updated footer
+* 5acd0479a updated quotes
+* 1baf98998 updated quotes
+* 3b17a50dd updated
+* fc9b81d8d updated
+* db7cc0768 updated
+* e9bed385c updated
+* f893c77c1 updated
+* 115b547eb updated
+* 230ebf171 updated
+* eaccc5ddc updated
+* 69985a483 updated
+* 59d7129ed added quotes
+* 892f903aa updated
+* fb30c4324 updated
+* 4197797e3 updated
+* 0c22ea07f updated
+* a15a0f050 updated
+* 6c221d780 updated
+* 68bc6be61 updated
+* 0b594db5f updated
+* e6aebb376 updated
+* 40c8c066c updated
+* 5bc7ebc05 updated
+* ac58d1b9a updated
+* 47a47bbe5 updated
+* 93c91321f book added
+* d87f40b65 updated
+* 61289ef88 updated
+* 6f1761cd8 updated
+* 4f72717a1 Update quotes.txt
+* 655834ea4 Update books.css
+* 24d35a5e7 updated book
+* d92f46c46 updated quotes
+* 3dd2421cf quotes added
+* c80b5e8ca updated book
+* 7eb8a6162 updated book
+* d6d6e7710 updated backup file
+* 88db49ba2 updated quotes
+* 9d7e88d62 updated posts
+* 83c549ee8 updated quotes
+* 0ce862917 updated book
+* ee3a1655b updated book
+* c53b7e2b3 book progress
+* 751d42b87 footer updated
+* b9202324f book added progress
+* 825c6c772 Update books.css
+* 83d3d8fda Update books.css
+* 768462f75 book progress added
+* d3eee3931 updated book
+* 42761c013 tweets added
+* 2da80eda8 added twitter
+* e0df2a76e iframe added
+* bc0b94672 updated css
+* b582f1cd6 Update books.css
+* 8f32f54ab book progress addded
+* 7d64d66c2 book progress addded
+* 71bd7b87f book progress addded
+* b5ce3f99f book progress addded
+* d2b0fa36e book progress addded
+* 577526ee2 book progress addded
+* e9cf15b16 book progress
+* 82e3af9f2 book progress addded
+* f985eb3e0 book added
+* c7307246c books progress added
+* acd068c04 updated post
+* 4b120eba5 posts added
+* a41b77518 book progress addded
+* ce91c2aa2 book progress addded
+* f2b405a76 updated book
+* da6fb2537 updated book
+* a1b4bb205 updated books progress
+* 2812af0ed updated dependencies gem
+* f6f327cc7 book added
+* a68a83f5b reset changes
+* 039f85b81 Update Gemfile
+* 34e5a5887 Update books.css
+* 7cd930009 Update books.css
+* c620b3f0b book's progress updated
+* bd2fd4de7 book progress added
+* c9bbdb06c book progress added
+* baa5ffd3a book added
+* 0bee8d93d book added
+* 1f0544965 book added
+* d7845f1b2 book added progress
+* 81d5d5f3b updated
+* 0b893fb02 book added
+* 9e0636317 quotes added
+* 44241ee01 book added
+* f2bcc1ed0 book added
+* 47c7966c1 added ref
+* 190d40226 added rambling
+* 88598aa9d book added
+* 335828e62 book added
+* 075c0866c book added
+* a7599bd47 book progress added
+* 34722b108 book added
+* c71f236f0 book added
+* 628d7bdb4 book added
+* 7fdfd27a4 updated
+* 7be7f91cb updated book progress
+* 8d0b93e54 Update books.css
+* 4b6ccbd0a Update beta_the_gene_review.md
+* 874a1b79c Create beta_the_gene_review.md
+* 9b73e2839 midnight children's progress updated
+* d21366f0f book progress added
+* 83fdb3f2c book progress added
+* 50a3407b0 book progress added
+* cdffb1d2c midnight children's progress updated
+* 0ba22c276 Updated
+* 26e36ea23 Updated
+* ca6bb2c44 Updated
+* 685256b80 Updated
+* 3314952d4 Updated
+* 2e3f73470 Updated
+* a3addbba6 Update index.html
+* 22da89716 Update index.html
+* d0b31ff51 Updated
+* 10da2096d Update index.html
+* d1f6042c2 Update books.css
+* ea76fba98 updated
+* 37494ba36 Updated
+* 0bef50b0b Updated
+* 3a6b09eb4 book reordered
+* 300f672b7 book progress added
+* 13098a9fb Update books.css
+* 4216079c1 Updated
+* 5b7e3ab0f updated
+* 12a3f9b6c updated
+* f93e32f6a book updated progress
+* 43d1ba657 book updated
+* b8a052e53 post updated
+* 1ab85126b Updated
+* 9cf7ee58e Updated
+* a0a2ad827 Updated
+* 9438c76f2 Updated
+* 778e2a408 Updated
+* 806cc6e89 Updated
+* 93619e32a Updated
+* 424a9c074 updated book
+* 9b1f6f1d8 updated book
+* 2e6d4a88e tag updated
+* 4cd1e90a4 updated sidebar
+* 8581b33c2 updated sidebar
+* c2a5a8319 updated sidebar
+* 296b0abb9 tag added
+* 3def457dc updated project
+* 08c67a510 updated book
+* 9518c43c7 Updated
+* 2698934f3 updated book
+* 09cbec496 updated book
+* d197e60ab Updated
+* 00f7a809c updated book
+* f1288502f Updated
+* 8916e2128 Updated
+* 024b84d00 Updated
+* 5c6abf497 Updated
+* 6db3a9f55 Updated
+* 41a38764e Updated
+* 423e92409 Updated
+* 8284fd9d8 Updated
+* 8d201f1bc Updated
+* 4e89b1f15 Updated
+* 246db56a1 Updated
+* 87fab7157 Updated
+* 1a2041640 Updated
+* a4e90cae7 Updated
+* 0f20e0e02 Updated
+* 390228418 Updated
+* 3402e17c0 Updated
+* 72abaaaaf Updated
+* a220a19f0 Updated
+* 963f37885 Updated
+* 70205cb84 Updated
+* 6680f6da7 Updated
+* c53c4fa40 Updated
+* 779877af5 Updated
+* 6166b9070 Updated
+* a2fe7d695 Updated
+* a8a151af4 Updated
+* 4f2f64022 Updated
+* 88e5ea380 Updated
+* b65dc1cf2 blog updated
+* 6451381fb blog updated
+* 882aaecbc blog updated
+* 455bec131 blog updated
+* 6ba434776 blog updated
+* 5ee530d53 blog updated
+* dd90e6392 tag added
+* 35ffeec4d updated book
+* 5514a9e42 added posts
+* 9383c8209 Updated
+* 81cf595cf book progress added
+* 44c0cc83e book progress added
+* 34f716c59 book progress added
+* 820ed5bce book progress added
+* bccd9b6e6 book progress added
+* e21dd4bf5 book progress added
+* 9cc7b1aa2 book progress added
+* 19c7b609c Update index.html
+* 0c4739baa Update index.html
+* 63c1fc3f6 Update index.html
+* 2e23361e1 updated author name
+* 5890b4428 book added
+* f8f2e201e book added
+* 38f8ff31d book added
+* be6935a50 book added
+* b3c185c33 book added
+* 06060cf86 book typo fixed
+* b307d6d89 book progress added
+* 47438b00b book progress added
+* b0155d99e book progress added
+* e1e7806d8 book progress added
+* f752ce579 updated
+* 3f4f8c460 updated
+* 3039b0792 updated..
+* 1411a2003 updated..
+* 672a12c92 updated
+* 37d22e5b7 updated
+* 454c81a99 updated
+* 512f62b30 changed book position
+* 6b8ea77ba updated
+* 4c1f9fc7f book progress added
+* 54d01c3e6 book progress added
+* c090b8a3a book progress added
+* 70a618a9a book progress added
+* a3d75f245 updated
+* 0375e2050 updated
+* 7aeb439a5 book progress added
+* 2e3051f93 updated oxygen
+* 8e949b723 updated book's progress
+* 06f5e320a updated book
+* 7cb4855d2 updated progress
+* 12d197e40 updated beta posts
+* 597f961cd created beta posts
+* d7b36c64d created beta posts
+* 6f6883af4 book progres
+* 57e44023c book progress
+* eeea6d091 updated beta post
+* ca8dee0ea added books
+* f4eae0292 created beta posts  how to log to remove server
+* 914de483a updated gemfile
+* 47d8ba783 updated progress book
+* 5958329a9 added beta testing dockerimage in aws
+* 27b5f26f0 beta post  threading python
+* aa8018cce Updated
+* 583039ed2 Updated
+* 9d854d392 Updated
+* 75a7d2c39 Updated
+* fdf70a1a2 Updated
+* 7bf76097e Updated
+* 69f9fd292 Updated
+* 3b29185aa Updated
+* 47724e933 Updated
+* 91ccc93f2 Updated
+* b6bf0a66d Updated
+* 3ef5110fe Updated
+* c54e36be2 Updated
+* 015d8412b updated
+* 4acca43e1 tags added
+* a6a52f805 books added
+* 8dc5a6fb0 books added
+* bbe1678bc books added
+* 7b765e3ea books added
+* 5fa75d6a1 added novel mayor of casterbridege
+* 9003c9c83 book added
+* be623a710 book added
+* 025e68d71 posts added
+* 59141710b posts added
+* 277d8b3cc posts added
+* 4b6a45145 posts added
+* 14b355cb5 posts added
+* 12c987b47 posts added
+* f6869370b posts added
+* df9dd2fa6 posts added
+* 0e0e49e1c posts added
+* 4740cf501 posts added
+* 48b64d7e6 posts added
+* f8ddb6aaa posts added
+* c33d67d1b posts added
+* c5e9c559f posts added
+* a18fb481d posts added
+* 2310dd177 posts added
+* aad969de4 posts added
+* f8ec0c258 posts added
+* 6a04f3d66 posts added
+* c22da8fd8 posts added
+* 8469781f4 posts added
+* b61c6d036 posts added
+* 711e9b256 posts added
+* 79ac1e233 book added
+* 34be00b7b book added
+* c770e69a6 typo fixed blog post
+* 1be3c89cd typo fixed
+* 1890df9d6 updated post
+* caef279b3 typo fixed
+* f9ec6b4c4 added github gists
+* b4febe475 oracle scala post added
+* e0dba922c added para ; typo fixed
+* db516267d books added
+* 30b02e583 deleted posts
+* 9ef95a780 posts modified
+* 8221596f3 post added
+* bb66fe9ee books added
+* 5a3e62a2b books updated
+* b09a64fb8 books updated
+* 2534c251e book added
+* 0be7c7416 books added
+* 4f0231594 books added
+* 21156dad4 Update 2020-01-10-python-oracle-kerberos.md
+* 2dd8efe8d Update 2020-01-10-python-oracle-kerberos.md
+* a301ef294 added resources
+* ad2230fb6 updated typo
+* 5115f9f36 Update 2020-01-10-python-oracle-kerberos.md
+* 3d1e66361 Update 2020-01-10-python-oracle-kerberos.md
+* 1d9f72816 typo updated
+* a21d069fb posts updated typo
+* ce221ba49 updated kerberos post docker command
+* bed4eda09 Update 2020-01-10-python-oracle-kerberos.md
+* 052e991a2 Update 2020-01-10-python-oracle-kerberos.md
+* 69f6155fb black cloud book added
+* 3243a4de0 updated dockerfile
+* 31b2b63a2 updated syntax highlight
+* 3932e09be updated syntax highlight
+* b46f8bb2f updated syntax highlight
+* 329af0dbf updated syntax highlight
+* 8e669dff9 updated syntax highlight
+* d6816302d Update 2020-01-10-python-oracle-kerberos.md
+* 64645b185 python syntax highlight added
+* d8c72673f posts updated with navigation
+* 3561b56c3 book added
+* 847461c4c removed whitespaces
+* 7d28dab40 tags added
+* db3c425e8 post added
+* 83508dc98 book added
+* 6584812b4 book added
+* aeb1f1f81 book updated
+* 96d7a0a68 updated post photo
+* 223e16049 updated posts
+* c55c8b5b4 updated posts typo
+* cd512f4a2 updated post hum dekhenge
+* 4557993b8 Delete 2020-01-10-your-filename.md
+* e4b5beef6 updated oracle
+* f83be074e Create 2020-01-10-your-filename.md
+* 55807a69d Create 2020-01-10-your-filename.md
+* 0de6667c0 Create 2020-01-10-your-filename.md
+* de9063b06 Create 2020-01-10-your-filename.md
+* 18a0f0525 Create 2020-01-10-your-filename.md
+* 7f2a2b75b Create 2020-01-10-your-filename.md
+* e1b7da071 Create 2020-01-10-your-filename.md
+* ea5679fd6 Create 2020-01-10-your-filename.md
+* 7205c60c9 Create 2020-01-10-your-filename.md
+* 1e17899cf Create 2020-01-10-your-filename.md
+* 7ecf09e42 Create 2020-01-10-your-filename.md
+* e4fab35ba Create 2020-01-10-your-filename.md
+* 2ad818df6 Create 2020-01-10-your-filename.md
+* b88567223 Create 2020-01-10-your-filename.md
+* adb0ff0a6 Create 2020-01-10-your-filename.md
+* dcf00e44e Create 2020-01-10-your-filename.md
+* b432296a5 Create 2020-01-10-your-filename.md
+* 8ef4f93c4 Create 2020-01-10-your-filename.md
+* 91986aa16 Create 2020-01-10-your-filename.md
+* 247511d50 Create 2020-01-10-your-filename.md
+* 1dced0d7c Create 2020-01-10-your-filename.md
+* 7552c48d7 Create 2020-01-10-your-filename.md
+* 24569e28d Create 2020-01-10-your-filename.md
+* 761c7ef0f Create 2020-01-10-your-filename.md
+* be5557fb4 Create 2020-01-10-your-filename.md
+* 68cbbba4f draft added
+* 0cb8d1a18 updated draft
+* 3013da6a8 draft updated
+* b601f3d27 Delete thoughts/ramblings/hunger.md
+* 6f33b854c book added
+* 9ec592c1e book added
+* ab468fab6 book added
+* d9307786e sidebar revert
+* 8f9812faf book added
+* 0a4a0cbe7 book added
+* 808dab77e progress added
+* 3e4a153b9 book added
+* 336ac0032 book added
+* b20f3818d book added
+* 11b113c0a book added
+* 8bc61e7e8 added book
+* d8aea7176 comments modified
+* 1c620d6c0 comments modified
+* e245bb221 comments modified
+* 5b54ba4fd comments modified
+* 3f283dcbc comments updated
+* 2521d8fee comments modified
+* 99c1f803c posts updated
+* b0e06f467 deleted files
+* 49a6ec27d Delete todos/index.html
+* 63d78ce97 Delete todos/.index.html.un~
+* 5faa32d12 removed google analytics
+* dc709a56f update yandex meta
+* cf8a8e6b6 modified posts
+* 95dbde58c added new posts; modified tags
+* dd3830019 books added
+* 4d3a6e977 book added
+* 7d0cb6363 book added
+* 0fc964ccb book added
+* 6bf07b46d book added
+* be4a0ad54 book added
+* c81284360 book added
+* 9bfa1a829 book added
+* 0c4162761 book added
+* f01eddc78 book added
+* ab87bdac0 book added
+* da0ecdcb5 book added
+* c3cbab6a4 book added
+* 3bf189028 book added
+* f2549d54a books added
+* 56a9cfd0f book added
+* 7da1592a0 books added
+* fb8845400 books added
+* c8908df71 books added
+* a95e38d58 book added
+* 7b4dce3cf book added
+* 8e95982a9 book added
+* 26174d3e3 book added
+* a633d0a66 book added
+* 605fff76b book added
+* 734eacf66 book added
+* 0230c2043 book added
+* 4ca26e677 book added
+* 912dfb3a5 book added
+* add49171d book added
+* 010c89f79 book added
+* 7d47cb01b book added
+* 8c662149e book added
+* be360555e book added
+* 22c83c005 book added
+* 249d7993a book added
+* befb4ae03 book added
+* 79524ed01 book added
+* 843c94b95 book added
+* 42425a3e2 book added
+* d2addb629 book added
+* e7f1999ec book added
+* 8dc2675bc book added
+* 66d447646 book added
+* 15cf3e3fe book added
+* 1d6a89936 book added
+* 55a7e4652 book added
+* 6e20bf8a8 book added
+* fd25c88a8 book added
+* 42aeb8c99 book added
+* 06714a511 book added
+* 93ef022e5 book added
+* bace9c20e book added
+* 8afce0c5a book added
+* 2f262a0a9 book progress added
+* d24738777 book added
+* d7c897654 book added
+* 7ae7720c4 book added
+* 3ed0be250 book added
+* 0ca10678d book added
+* 03baf6e09 book added
+* 4ecb1cea6 book added
+* 5b7aaf4ff book added
+* be0bb7700 book added
+* a7ed836ee book added
+* ee46a199e book added
+* 6e2a204d0 books added
+* d75a4b8a5 books added
+* 5b00079c6 book added
+* 0955224a1 book added
+* 4bc761102 book added
+* 5d3288c7b book added
+* e2dde61fa book added
+* 69edefe64 book added
+| * 9cf1938e3 updated
+|/  
+| * 31d697d9a Create 2019-09-17-your-filename.md
+|/  
+* 68d3d70d9 book updated progress
+* af2a17f4a quote added
+* f341a0968 quote added
+* e0e9ae469 book added
+* 125274f47 updated book
+* 3c8586dda updated post
+* e99fcc634 updated post
+* 3cf28fa93 tag updated
+* 0bee6df63 tag updated
+* 42b5f7344 tag updated
+* 7336be946 post updated
+* b954c7528 post updated
+* 984eca57e post updated
+* 8f19c3bee post updated
+* 88af9130c post updated
+* cc91c915f post updated
+* 3b08998c2 post updated
+* 26009758e post updated
+* c5a1b733f updated post
+* 4d024c4cc post updated
+* e2a35ccc5 updated post
+* 92f5a545f updated post
+* 8b2cd806c Update 2019-09-07-recursive-sort.md
+* 01af0a2a9 updated post
+* 85c6f1d23 added post
+* 5bac7a14e Create rec.png
+* f1c7018cf Create 2019-09-07-recursive-sort.md
+* 17401b4a4 Create 2019-09-07-recursive-sort.md
+* abfacf564 Create 2019-09-07-recursive-sort.md
+* 19ae13652 book added
+* 677ffe6de book added
+* ee8e45a6d book added
+* 5c5094d4d book added
+* 999c7cefa book added
+* 93eeac7d2 book added
+* 9cac8bcb4 book added
+* 625d1e469 book added
+* 673e2164e book added
+* 406f89d93 book added
+* 26d4fbb81 book added
+* b14d8121c books added
+* bfce9d350 book added
+* 56c379ffe book added
+* 1eefc784c book added
+* e2572a373 book added
+* 5ea5dc539 book added
+* dd74f607f books added
+* f046806d8 book added
+* d21c8b8f1 book added
+* abb8f841d book added
+* 3dd9f3840 book added
+* d4dc91aa2 book added
+* 52bac7207 book added
+* 7a9edf2ec book added
+* 1a55d88f5 book added
+* 1663c069c book added
+* cd8ffe4ea book added
+* f4b8a8bc3 book added
+* 7ae7b7f05 book added
+* dbefb0f54 book added
+* 5e35f1d8f book added
+* 193794c38 book added
+* a4f26f329 book added
+* 24835b54e book added
+* dbef32bc9 book added
+* b57784e30 book added
+* 4c95328a8 book added
+* ebfa3c011 book added
+* 2087f6e4e book added
+* 2a421cc6e book added
+* 4703cfe96 book added
+* d5dbdc3c9 book added
+* 07fab253d book added
+* a03220b7e book added
+* bd10886cb book added
+* 432aae74f utf 8 added
+* a0fde3591 utf 8 added
+* a5e230178 utf 8 added
+* efeb056ba utf 8 added
+* 2b811578f utf 8 added
+* a39e56771 utf 8 added
+* 3149c0ab0 utf 8 added
+* ad4dc7441 utf 8 added
+* 2b63fa2f2 utf 8 added
+* f2d6773dc utf 8 added
+* 7dd7d7ea7 config updated
+* 8b4c7c046 config updated
+* 4c3ac4897 book added
+* 332d43b0e book added
+* 509c6c4cf book added
+* 52789022e book added
+* 84833cf3d book added
+* 06fffa3a7 book added
+* d6b2e1ebe book added
+* 7a6090483 book updated
+* 58804e55a book progress added
+* e551bd46c book added
+* e2b3f11d9 book added
+* 518993645 book added
+* 8cc3f8a65 book added
+* f3558b478 book added
+* 9c9f12510 book added
+* 3b83e71b1 book added
+* c466b390e book added
+* f7df54841 book added
+* 0a444342b book added
+* 990421c15 book added
+* 82ba65d72 book added
+* e61ad16a1 book added
+* 650dc5308 book added
+* a82f00eca book added
+* 7c4745df7 book added
+* 6c1df6ce0 book added
+* 5d7052789 book added
+* 43bc45e1c book added
+* 2a385d229 book added
+* 7be653a99 book added
+* af16a0061 book added
+* a1bfcb30a book added
+* e8443a2c1 book reshuffled
+* ba5319a86 book added
+* f8430ee7f book added
+* 0b82c8c7d book added
+* f0539fb1d book added
+* 5f3aa17ea book added
+* 1e5294ddc book added
+* cc9188256 book added
+* 47832f140 book added
+* d4237489c book added
+* 51ae08512 book added
+* 8587f48b6 book added
+* 98676062d book added
+* 7cd5bd1df book added
+* eff24fae8 books added
+* 7b39e3ac8 books added
+* 85076bf42 config updated
+* dad08457f encoding added
+* fcf767f4f book added
+* b67aa10ed book added
+* aa298df2f book added
+* 6b59ae8f8 book added
+* 81805be81 book added
+* 7ff52358e book added
+* fe0f1a271 book added
+* c6dc94c75 book added
+* 408791ede book added
+* 0e2d3ecd1 book added
+* e4357738f book added
+* 94e571893 book added
+* 88b58b002 book added
+* 280cec4c2 book added
+* 6fa3cd056 book added
+* d50889e5c book added
+* f032b1c27 book added
+* eb88e7b67 book added
+* 5ea12b3d1 book added
+* a09e82be2 book added
+* b4a6adc7a book added
+* 4de49b0f8 book added
+* 409096e54 book added
+* f0779a127 books added
+* a6a8d15ed book progress added
+* f61151d49 book added
+* 122737cfa book added
+* a2d78625e book added
+* cbf5367c3 book added
+* 001c0d66f book added
+* 69e54d158 book added
+* c298cddc4 book added
+* ebb42f8ff book added
+* 8d25caca3 book disclaimer updated
+* c81030c19 books added
+* 0365d5762 book added
+* 5fa1651fd book added
+* dc75ae8d7 book added
+* 5fa82456c book added
+* 93a34499b book added
+* d1c88c167 tag modified
+* 1c0c6753e book added
+* d874c0a1c tag removed
+* 8ca953acb post added
+* f2c7da8f6 book added
+* 7e4d795a8 book added
+* 648752a7f book added
+* b5b2e78bc book added
+* b30a82e14 book added
+* 35a7f4b0b book added
+* b0d8112f7 book added
+* f8b5d3bf4 book added
+* b6c539cef book added
+* b985fbd9c book added
+* 2c8f05c1b book added
+* 1733d9f0d book added
+* c39e47b73 book added
+* 019893b28 books added
+* 9f4a41d65 books added
+* f19f004f0 books added
+* a1025b132 book added
+* edb9cbfc0 book added
+* 75928034d spaces added
+* 6b4c5ae0a spaces added
+* 306088dc7 css box added
+* 9a4784d8c css box added
+* 8ba42ab81 css box added
+* d10a5fdb6 css box added
+* 0f68240ba css box added
+* 902294632 css box added
+* 96c7151a3 book added
+* 73d286a7f book added
+* c855f02f4 book added
+* ee4366506 book added
+* f04c7015a book added
+* 064832cc7 book added
+* 25bfeff9e book added
+* 791f2ccf8 book added
+* cbd92f112 books added
+* 49d8c4bb9 book added
+* e32dceea3 book added
+* 1a93edda9 book added
+* 8673345b3 book added
+* f11f1f2c2 book added
+* ab916a411 book added
+* 8e1b64b1a book added
+* 7eb12c615 book added
+* 277c3f710 book added
+* 20153ba0d book added
+* fc713f4da book added
+* bacd18461 book added
+* cdc29b4da cleanup
+* f76c381cc cleanup
+* 3e6158810 cleanup
+* 9a002874b books added + thoughs
+* ae509b214 cleanup
+* d6331ddc2 book added
+* a77f0b825 book added
+* a996dc8d4 book added
+* c2f12ecfd book added
+* 5c9f79c17 books added progress
+* fe510b355 quotes added
+* 650bb9b0b quotes added
+* 387da5e1a books added
+* cea9756dd books added
+* ce519bbd7 books added
+* 8071ce2b7 book added
+* 9b94603c6 book added
+* 4bc4a2eb5 books added
+* dde88e6df books added
+* 382ab6017 books added
+* bf549932e books added
+* 5616e9667 books added
+* d2011bbee books added
+* 300e13ae6 books added
+* 63c70e4ef books added
+* ec166f36e books added
+* 07011dbaa books added
+* 10efb9e7a books added
+* 83278c8e4 books added
+* 1762d312e books added
+* 6c7fafb10 books added
+* 7e2d633bc books added
+* 8cca5306b books added
+* b633fdd8b books added
+* 54f669c67 book added
+* befa87fb5 book added
+* 38c55ab29 temporary added files
+* 808f47cd9 books added
+* cf862dbb5 books added
+* 059e9fef4 books added
+* 450ba1390 books added
+* 06998617d typo fixed
+* 22e44b3ce rows listing decreased
+* 01fd889a4 books added
+* da84a93b5 book added
+* 4d6b2675e books page updated
+* 301d8eebb books page updated
+* 84c11ab01 books page updated
+* c48c969dc boook added
+* fc399d636 boook added
+* 55a90ccbe boook added
+* ac62f4a03 boook added
+* 20cf97614 boook added
+* f254b8f85 boook added
+* 627e56178 books added
+* 47051b569 rought draft saved
+* 2a5be8a0c books added
+* f3bdb063d rought draft added
+* 2589809b2 books added
+* f1d5a9a00 books added
+* ba197b705 books added
+* 5adef9933 books added
+* 66db6eb96 books progress updated
+* 32255da63 books added
+* 8cabee9b4 books added
+* d8fc643d1 books added
+* f218661d9 books added
+* ba5bfded0 books added
+* 59952a9c7 books added
+* 9fb4c56b4 books added
+* 36b515e90 books added
+* f51388fb0 books added
+* e93210166 post updated
+* c7e578729 books added
+* dc88bd688 books added
+* 864693e76 books added
+* 42902b032 books added
+* abd0aff31 books added
+* c0fde16c8 books added
+* e7882ade5 books added
+* 8c5ce6c8d books added
+* f08e9a41e books added:
+* f488baf57 books added
+* c97fb67e4 book added progress
+* 130646411 book added
+* 7d4ba9169 book progress added
+* 6351eacf0 book added
+* bf35d2d32 books added
+* 06de9fd59 rework
+* 2adfd373b rework
+* cb96a4c38 rework
+* 302962289 rework
+* 3e6cb54f4 rework
+* 36c23ef1c books added
+* 704178f26 books added
+* 84f462df9 books added
+* 892a2239b books added
+* df1728ebb gemfile updated
+* eaba8958f Gemfile updated
+* 0ac98c112 gemlock updated
+* 9ad8f5ef5 updated article
+* 9b64a9101 post added red queen race
+* 10054b7b4 post added red queen race
+* 787123af8 post added red queen race
+* 8f8642510 tags updated
+* be3a41db3 post added red queen race
+* a3a2ee196 tag updated
+* 8384fcb99 post added red queen race
+* a35c36e35 post added red queen race
+* 3a5ec0ba9 book added progress
+* 9ed4b202b post added red queen race
+* a2c1b98e9 post added red queen race
+* 0850564fa post added red queen race
+* 5c2247a07 post added red queen race
+* c8dab993e post added red queen race
+* dd1d6c7b5 post added red queen race
+* 2dde8ca6a post added red queen race
+* 1b35c4334 post added red queen race
+* 7d6f24320 post added red queen race
+* 32263461b post added red queen race
+* d8f649c0b post added red queen race
+* 0e952c437 post added red queen race
+* cc3d5c873 post added red queen race
+* 496672bcc post added red queen race
+* 554c33c43 post added red queen race
+* 3ee3c83fa books added
+* abf25bc6b books added
+* a05f00c03 book added
+* b8d6d815f book added
+* 211d6889e books added
+* 74fd67353 book added
+* 290dde596 book updated progress
+* 5507937dd books updated
+* cd5eddba4 book read
+* de28f0ec3 progress added
+* a07acc299 books edited
+* be4bc3cfd book added
+* 3af6498df book added
+* f4f43e1ff book added
+* 728bcbd09 books added
+* 0ee91b08c books added
+* 31a26c904 books added
+* f6bcb9efa book added
+* 7eac78adf book added
+* 6166190b5 books added
+* 09f758ba1 book added
+* e725f71ff books added
+* 356b4c210 books changed
+* 69ca277eb books added
+* 1177fffd1 books added
+* 215a2a72b added book progress
+* 8e2548795 books progress added
+* 7980d16f5 resource added
+* 4a27469be resource added
+* be54a3c5a books added
+* a5f8b6f27 books added
+* ce125cc47 books added
+* f5e6a282a books added
+* 12e59038d book added
+* eb42b0a5b book added
+* 236d52ac0 books added
+* 789aa9ad8 books progress added
+* 13a91d9fc books progress added
+* f6c5746b2 books added
+* 05f2a2e83 quotes added
+* 8eb1f5d6c books progress added
+* 34288215b book added
+* 1fe1d9ab5 books progress added
+* 00e73a97f books added
+* 5fb53d00d books added
+* 294bbfe5f books added
+* 187276135 books added
+* a52997a80 books added
+* 5340e2a67 book added
+* b8c46d6b8 merge added
+* eb695c3ee image added
+* 4ea105392 image added
+* 9e0d0e191 tags added
+* 31333124c post updated
+* 17426c514 post added
+* 250192c0f posts added
+* 47557bdec books added
+* 9d37c85be books added
+* 25af639e2 books progress added
+* 2a90a02d2 books added
+* 550078b6e books added
+* c6b716799 books added
+* 1709c2095 books added
+* e93aa91ab books added
+* 5a7328469 books added
+* 6abfb4e29 books added
+* 2e12078a6 books added
+* 228976345 book added
+* 799242453 books added
+* 6073eda8a books typo edited
+* 02ee09d66 recommendation added
+* 7b2f27391 books added
+* a07955d20 books added
+* 9cfbddc34 books added
+* 3c366691c books added
+* 310b1fd2f books added
+* 2bf726ba6 books added
+* 174d0d7c6 books added
+* 2137566df books added
+* 520f40128 books added
+* 22a810a5c book reordered
+* b22af9964 book reordered
+* 7f18b9df9 books added
+* 27023e042 books added
+* f5f480ad6 book reordered
+* 7d9ae3862 book progress added
+* 5924cf60a book reorder
+* 548a4faf9 book added
+* 713886b3b book added progress
+* 1b8ddcb87 book progress added
+* a615967e2 reorder books
+* da656633d book progress added
+* 0ae5eb348 reorder books
+*   b67908d14 Merge branch 'master' of https://github.com/tushar-sharma/tushar-sharma.github.io
+|\  
+| * c3f8fbd53 book progress updated
+* | 2996411c3 books added
+|/  
+* d765477d2 books added
+* e965172a3 book added
+* d04c62eee book progress added
+* f4afc30b3 book added
+* 54c34957e book added
+* d7851449d book progress added
+* bf0b1668b book added
+* ec8466dcb book added
+* cbb7fb1a0 books added
+* 987270242 post updated
+* d08cc95b4 post updated
+* d3e3daeef post edited
+* 4c19f56c4 books added
+* 0ddf9cee3 progress added
+* 818c28373 book added
+* 8a3be1b75 book added
+* 25c84fe59 post updated
+* 8002d86c2 book progress added
+* cf09fa90c book added
+* 7c06eb9ea book added
+* c4ab894aa posts updated
+* 6eba91275 posts updated
+* afa57e54f posts updated
+* 8df8b3805 posts updated
+* e9436c8fb posts updated
+* 59465afa3 posts updated
+* 09957a688 posts updated
+* a4a1cbaba posts updated
+* e54f581d0 posts updated
+* 070a12b6a posts updated
+* e9eb69637 posts updated
+* 7f6cdb4a0 posts updated
+* 63cc22d2b updated post
+* 762e55572 updated post
+* 3a8b8abb8 posts updated
+* 1c55afd1d tag added
+* b66afee71 tags added
+* 51169bf0e post updated
+* 08deba8c8 post updated
+* 5e3ca5f89 post updated
+* 5b7e43cc8 post updated
+* 1ba9b3799 post updated
+* d1ac7ccc8 post updated
+* 46c396b15 post updated
+* 2d8024a05 post updated
+* 3bde26193 post updated
+* 25615e79e post updated
+* da6f6fc2f post updated
+* 8927f3611 post updated
+* 7ef845a5b post updated
+* fdf64f429 post updated
+* 73a9f03fe post updated
+* ee2a4f30e post updated
+* d90fd3ba0 post updated
+* 7c2f238df post updated
+* d1fb5631d post updated
+* ca9f93bc4 post updated
+* f831d64bc post updated
+* d93a9fe0b post updated
+* 6046ec88e post updated
+* 67b04bf0e post updated
+* 09de4a124 post updated
+* 2c640721d post updated
+* 5b4544f91 post updated
+* 450c9c6e8 post updated
+* 2b3a46ede post updated
+* 69f8073ac post updated
+* d31bc0572 post updated
+* cca304a85 post updated
+* f2b181bfa post updated
+* 9f3c5bc66 post updated
+* b16c7d4d3 post updated
+* 789a83dcc post updated
+* ace855557 post updated
+* 0e9eca15d post updated
+* 7dd43e860 post updated
+* 77c9ad88a post updated
+* 37ee96ea2 post updated
+* cebf30417 article added
+* eb4e9e45a gemfile updated
+* a93443ad9 posts deleted
+* 222f1397a updated review
+* 07a3b8714 book status updated
+* ef55f2da4 book status updated
+* 637e43f1b book added
+* 84eda5fee book added; progress updated
+* 8f6f6c24a book added
+* 5669fd422 book added
+* 0963c0722 book progress added
+* 2d31bfcb7 book added
+* 09139833a books updated
+* a525510a4 progress added
+* 3f1b90710 updated progress books
+* bf0acfb9b book  added
+* c7c066120 book added
+* 06dbb0842 updated progress
+* 49e87ebd0 books added
+* 7240c265d book progress updated
+* 700252178 book added
+* e3bb25f5a book added
+* db5ede163 three sum added
+* 37816df51 post updated
+* 2ce3af290 post modified
+* 39d8586a5 three sum modified
+* bf5dc0913 post added
+* aa2858d59 three sum added post
+* d8d09caea book added
+*   b6f187867 Merge branch 'master' of https://github.com/tushar-sharma/tushar-sharma.github.io
+|\  
+| * f56327911 book updated
+| * ceae371b9 book updated
+| * 6fb4797f5 book added
+| * 121ded654 remove bk files
+* | b97518868 blog post updated
+|/  
+* b248c0726 updated book
+* 096c4521f updated book
+* c8a6fa24c book updated
+* d529ae729 progress fixed
+* bc72cbefe book added
+* bc09b0119 book added
+* 2b12e1a38 courses added
+* ff7034d26 books added
+* b94e1b110 book updated
+* 2e293a5e5 books updated
+* 7c299f85a boook progress updated
+* 5a09060df added book progress
+* 7fe1527cc books added
+* 53a8fbaca book added
+* 43474e535 updated book
+* 8c767a7fd books added
+* 059e22ab7 books page added
+* 9f79a4f6f books updated
+* a27f104c4 updated progress
+* 9cf0185a7 course added
+* 870eb19ff book added
+* 9e094880c book progress updated
+* 52c71389e books added
+* f48eb7eed book updated
+* 68a69392e revert javascript removed
+* a892cf773 javascritp removed lib
+* 744b9390a images removed
+* 2ca15156c books added
+* d3c644d61 quotes added
+* 38f073efc books added
+* aa6164d19 books added
+* 7777cfffa book progress updated
+* c24afaa90 book progress added
+* e55ca896c book progress updated
+* ddda55c2a book progress updated
+* d32b85d23 books progress updated
+* 2255f830c books progress updated
+* 6bfcf8642 book progress updated
+* c9f1334f8 book progress updated
+* 36e82f3c9 book progress updated
+* 9da1f40e7 book progress updated
+* 0ff32ede2 book progress updated
+* deb12248d book progress updated
+* 0ea2a653c book edited
+* a6fa4218b book edited
+* f825aa970 book edited
+* d21744418 book edited
+* eb4fe58ea book added
+* 556050542 quotes updated
+*   272508a5c Merge branch 'master' of https://github.com/tushar-sharma/tushar-sharma.github.io
+|\  
+| * d0e8630d6 quote added
+* | 960e25ec7 quotes formatting changed
+|/  
+* e8e2b0616 goodies sidebar removed
+*   b247ba79f Merge branch 'master' of https://github.com/tushar-sharma/tushar-sharma.github.io
+|\  
+| * b25f81c1f book updated
+| * c104ac7a6 resources added
+| *   32857b6bd Merge branch 'master' of https://github.com/tushar-sharma/tushar-sharma.github.io
+| |\  
+| | * 623bab7da resources added
+| * | d3c528564 resources added
+| |/  
+| * 1c2afc6ad resources added
+| * b8295ded1 updated book, post renamed
+* | fd8590d0c quotes added
+|/  
+*   501d3d2ce Merge branch 'master' of https://github.com/tushar-sharma/tushar-sharma.github.io
+|\  
+| *   a55ea2e81 Merge branch 'master' of https://github.com/tushar-sharma/tushar-sharma.github.io
+| |\  
+| | * 5465f7f98 progress: 15 %
+| * | 63a6166ae resources added mr
+| |/  
+| * a7856124d updated resources, books updated
+| * 05fbe3ae6 resources added
+| * 4b957d484 progress added books
+| * fb6beea7a layout changed books
+| * 198dfef8f book added
+| * a8b05c484 resource added
+| * 3469b05b7 resources added?
+* | cb6a40865 article added
+|/  
+*   38d9a2f40 Merge branch 'master' of https://github.com/tushar-sharma/tushar-sharma.github.io
+|\  
+| * c4b420c5f added resources
+| * b12d68625 resource added
+| * f272152e4 resource added
+| * bc7fc29c0 resource added
+| * 7bc1c1af9 resource added
+| * cf2555eb5 added resource
+| * 5519ba395 resources added
+| * 6e2494c76 IT disk partition added
+| * 69206e45f resource added database
+* | 39a3a332a left hand darkness added
+|/  
+* 78f36abd7 resources added
+* c9207a48c resources added
+* 021a1559f resources added
+* a995f6317 resources added
+* ce51a34ce resources added
+* 96a896000 resources added graph
+* d5dd8fea9 resources added graph
+* 235b897da typo changed
+* 279f7f9d5 resources added
+* 881770099 rent post updated
+* 4c707c5dc post updated
+* 8f40dd00a post updated
+* 05c02162f images added scam rent
+* 4f0332be7 rent updated post
+* 4dc6b613f rent updated post
+* d5eab0f0b picture changed rent scam
+* 03db33532 post - rent scam added
+* c4677a061 trie resource added
+* 9151bf962 trie resource added
+* 8a7ae4df2 gpg, bitcoin added
+* 40b954fb6 resources added
+* 7ef2c5f42 resources added
+* d288c661a resources added
+* 36e6e3ba8 resources added
+* 475d98ab3 resources added
+* db4b9c35d typo fixed resources
+* 44a397971 bash resources added
+* 35038f4b3 quicksort resource added
+* 33c7dcb34 resources added
+* 7e6b1a5ad resources added
+* d8dee816e resources added
+* 220bc4703 template deleted
+* 4a6f05259 template added
+* dfc3d3464 typo updated
+* 255081dae width decreased rating
+* 7b51d8c14 width decreased rating
+* 7724d2552 books comments added
+* 6a8ddcb25 ruskin bond added
+* 11c496459 macbeth added
+* 5b468067f book added - plato and a platupus
+* 274299685 quotes added latin
+* 342212cf0 book updated
+* cf33cb583 book updated
+* e7e3775bb book added
+* 78005ea7c book added
+* 9f8eb25ce book updated
+* afbef0366 quote added
+* e6110b716 fixed new book search
+* db266ab9e book progress updated
+* d9706e4be hindu way of life updated
+* 301b0a658 Hindu way of life added
+* 698a518ed books updated
+* 4745a33b7 book progress added
+* 955c4dbd5 resource added
+* 4aca8b792 resource added
+* 3c6bf5c5b resource added
+* 8b86f84f9 courses added
+* 1b08346f1 courses added
+* adf786f5c courses added
+* e7cbcf3aa removed mining
+* 126b90153 minining added
+* 4828f0fe0 revert config
+* e6d6d3642 config syntax fixed
+* 8ce4d3b4a modified config
+* 5fb699065 updated meditation
+* 2be7e1983 meditation updated
+* cbb5a901c meditation updated
+* f871cfc9b meditation updated
+* 3e0e3d2da post updated
+* 7edd42d3a post updated
+* d44cf8c95 addsense added
+* 5322b71dd post updated
+* a37ee2c2d updated lazy meditation
+* 8402da643 updated lazy meditation
+* 780b66d67 updated lazy meditation
+* acfdcd38a updated lazy meditation
+* c2254e3c5 updated lazy meditation
+* f58345ad4 updated lazy meditation
+* 79c18a64f updated lazy meditation
+* 921f5c04b updated lazy meditation
+* 7d931b4ae updated lazy meditation
+* 9a9117496 corrected vocab lazy meditation
+* e746758b8 bhuddha statue changed
+* d1e27cee8 dog image updated
+* 27eda78a0 dog image added
+* 148cf3505 ravi shankar added image
+* 872f30453 added lazy meditation
+* 679dd94b8 thoughts added
+* b4579958d latex symbols restored
+* 8694f28df article updated
+* 7e8f29348 article updated
+* b73f1b5d0 article updated
+* b617e56b9 article updated
+* 5e7e081c0 article updated
+* 79e560459 article updated
+* b3673600e article updated
+* 60cf77635 article updated
+* 0d50c21ba post cow vigilantism added
+* c30151a4b resources added
+* a1bd2d93e fixed unicode on sidebar
+* 8c4ef2af4 Post - tags updated
+* 07c0bb49a Post - lost-friends deleted
+* 987bac5ed books progress updated
+* 62dafa83f books pagination widened
+* a077b95e5 book page made searchable
+* 1ca7ed738 books updated
+* 1a1e6ecf7 books progress added
+* c6d71de55 updated quotes.txt
+* 092ad9b07 resources added
+* aeb9937a5 resources added
+* 421dd6ddf comments added in book page
+* 71059944c comments added
+* cb76616ec comments added in resources
+* 791030121 typo corrected
+* 37237a71f resources added
+* caa4d8988 resources added
+* adb01ba65 resources added
+* 2a77ecd5d resources added
+* 6ce8420c1 resources added
+* 6d4acb905 resources added
+* aadf831d3 resources added
+* dcd273696 Created 2016-12-10-twitter-hacked-email.md
+* 4e54cde2e resources added
+* d4cf1e346 Update index.md
+* e58b57332 typo corrected in resources
+* 77b372c85 resources added
+* faa15b79a Update index.md
+* d69e34360 toc css added
+* ffe61071b toc changed
+*   604d71512 Merge branch 'markup_resources'
+|\  
+| * 3b48c30d7 jekyll rss added
+* | ac7aaed63 rss added
+* | 99ad4900d Merge branch 'markup_resources'
+|\| 
+| * 080195065 spark installation resource added
+* | 9607f4b47 link updated
+* | 1435a412c footer modified
+* | 2424d3c35 Merge branch 'markup_resources'
+|\| 
+| * 28914fd4e resources added
+* | a2e9131e1 deleted swap files
+* | db6ba6d19 added resources
+|\| 
+| * f8af0fdd4 added resources
+* | cf6b994c3 minor fix in url
+|/  
+* 3c3d89433 resources added
+*   05a41e7cb search box added to search and posts page
+|\  
+| * a1b478547 search box added in search & posts
+* | 40be61eed index updated
+|/  
+* 94431c0f6 tags updated
+* e628b63d8 Twitter feed removed
+* ede12cba2 Todo added
+* 815a1852e adds removed
+* d4f3b5820 adds removed
+* 4a05a61e2 disable quotes in sidebar
+* 1b5710d84 rouge added as highlighter
+* db529eb95 tweets reduce to 2
+* 3f79f7287 tags added
+* 3b55b7c6a Lost friends poetry added
+* ad3b21965 Argumentative India added
+* ae9d20a8c conclusion added to post : heap
+* 6743c5d74 added max heap post
+* ca927d43c typos corrected in k-largest
+* 82cbf6ff3 added max heap post
+* 13f7fa202 typos corrected in random stranger
+* a55480462 delete old post
+* 9facf43bc Link updated for personal website
+* 375b021ad changed typo
+* bd7f797e0 typo corrected
+* b6398404f typo corrected
+* 0929989da typo corrected
+* d1a5d6c52 typo corrected
+* 1bcd93c92 typo corrected
+* 8a27b3e08 typo corrected
+* ef8550410 typo corrected
+* 6d1854d6f random stranger edited
+* ad01144c1 typo corrected : post random
+* d5b7a76e5 image added
+* cca15e130 updated random stranger
+* f9074f43e typo corrected in localhost mac post
+* f27b4b693 localhost mac post added
+* 49a7bace7 tags folder updated
+* f883aa9a6 arch linux post edited
+* 69ebdc7db random post edited typo
+* e60d2af2c tags edited
+* f0622acd8 tags edited
+* 6802fee24 random stranger added
+* 64edfa6f9 typo corrected in post get-post-http
+* c7f7eb0de HTTP Post added
+* 0d0d297df fixed quote color, arch post added images
+* 2f7bcbd5c typo corrected in linux arch post
+* f6fffc211 typo updated
+* 8209d3302 changed sidebar
+* c7ce399f1 linux post typo corrected
+* 5ba3fffc7 arch linux post updated
+* cbb871d94 website updated
+* 9f3560f05 arch linux blog updated
+* 9354db268 arch linux added ; changed layout
+* 27aa2c6e0 added async to math.js
+* b10f09131 posts formated
+* 884e5f5c2 posts formatted
+* 3ad4b1cc4 tag added
+* 6727ececf jekyll updated; toc added
+* 58ee5ae58 name updated for lsd post
+* ac283351a post added on LSD
+* 796aad68b type error
+* 619f96483 tags added
+* b191709d4 post added : why people like programming
+* d70fdebab footntote removed from intro post
+* 1ae9c188b updated layout
+* 72297a8e7 thumnail updated
+* 68ff92dbb update
+* 2605a8f0b adds added
+* 15a2d29c7 thumbnail added
+* 3a55bf6f8 book progress added
+* 8b65cb9c8 quotes randomized
+* d7010be02 updated quotes
+* 70d533da6 tags updated, changed sidebar, changed about me
+* 41258e8bd updated page
+* 071ff8163 adds removed
+* 0cff933c4 adds removed
+* a6bef20ae updaed books, quotes
+* 25b28c3b8 midnight children's progress added
+* d9fbef5a4 adds updated
+* a17a68a08 adsense added
+* 300e84519 some quotes fixed
+* a3069b857 midnight children's status updated
+* 151f58c84 book progress added and quotes updated
+* 1caaddabd ie warning removed
+* ea02111db title added in about me page
+* a3c2c129a a new book added
+* 8bf45351b edited about page
+* 8e8b31d43 new post, about page updated
+* 0198dd873 files updated
+* 5183b915d syntax highlighter added
+* acfed1adc quotes added
+* 6ea72e403 changed default layout of about page and blog
+* b6eeb4107 quotes modified
+* 5505ded27 quotes added to about page
+* f771d901f about page edited
+* 30e7ef7fe about page edited
+* d46a95713 tags added
+* 7c6e652ab updated about page
+* 3ba42514f about me page edited
+* 6387a7db1 removed unnecessary redirection
+* c2ac3bfaf image removed from tags
+* 01c383b54 redirected removed
+* 22b58b362 scroll js made async
+* 75b8b769b images removed to make site faster
+* 31e0914a0 typos corrected
+* 805eb973b typo corrected in post
+* c2e5e9a80 edited post
+* 83e0dfaa2 edited post
+* 997bce1f4 added new post
+* c764cb113 site updated
+* 288ed3f1a tags added
+* b53a633d8 posts modified
+* e06e5d8e0 changed category
+* 4af6426e5 config file changed
+* c46116ff4 changes to home page
+* ecc25c037 changed homepage
+* 6710b8cc8 remove about me picture
+| * e86a16b18 updated changes
+| * 4ff673862 updated posts
+| * 92a7d4ee1 temporary removed projects
+| * 1b550a175 updated
+| * 32740ae63 updated config file
+| * f70a70051 ran jekyll serve
+| * 8e424c64e tag updated
+| * 56521a266 rework in website interface
+|/  
+* 3731bcf69 CNAME updated
+* a907a9a9b CNAME updated
+* 643195981 CNAME update
+* c6744d510 CNAME update
+* 0193f1e22 CNAME update
+* 5329a08f8 CNAME update
+* a97ef63ed CNAME update
+* 130938ddd CNAME update
+* 98dfcf9dd updated quotes
+* 4ba8a2c3f rename thesis
+* 64b75414f Added thesis on cryptography
+* 31d2293e0 Updated book
+* 69cfb9bab Updated book
+* babe74367 Quotes added. Book added
+* e58313df1 console error resolved
+* 51bede5f8 javascript made async
+* 45720c8f3 updated about page, changed quote keyword
+* f61f220ae update
+* 39e01c0e0 changed terminal setting, book page, quotes
+* c0a9c968b README updated
+* fec0e01c2 README updated
+* 7762844b2 update layouts, blog, quotes, css
+* b615daab5 article modified
+* 27bcbce08 tag modified
+* 8233dd81c tags added
+* 954ad9102 file added
+* 2faeb1cf2 image added
+* 29eb190a2 updated
+* 129e4a4b7 image added
+* 2fa8db987 udpate
+* ab8dac84b Update
+* 960c585cc books css changed
+* e25839670 quotes added
+* ee3a88e7b update
+* 2580a0dea Post updated
+* c849cbf60 Article added on mlecchita vikalpa
+* b40be3749 changed licensed
+* 6068d3245 quotes added
+* 98c46f60e quotes added
+* d38a1f396 updated css
+* bd9c3db1d added book
+* f32e91a57 fixed footnotes of personal page
+* d82d0943d changed about me page
+* ae09eda76 added changes in footer
+* 7a4aae522 update
+* 5a6ac463f tags modified
+* 88a3fdfc8 footer changed
+* de34fa66d updated
+* 50de80fe7 update
+* 6e4ab73d4 update
+* a5d414676 about me page updated
+* 22b0ed0ee romance moon poem added
+* 76af725ac happiness poem added
+* c0fdb4114 sleep poem added
+* 8a3a792d7 footer updated
+* f07a9d47b updated
+* 92577eff3 book's progress updated
+* b5628e658 tags updated
+* 48f2f123e updated
+* 0ed67a202 footer modified
+* 6a08c12d7 tags updated
+* c596e55c7 about me page updated
+* 45e8227a3 footer updated
+* a98f97246 tags modified
+* 2f9b193b1 about page modified
+* d3f103533 footer modified
+* e954fa0b1 romance poem added
+* 888d1cbff update
+* f0daaa9ed changed index page
+* f7d373b8d update quotes
+* 88e771b60 update
+* dfac49e53 update
+* 5e4d97372 poems added
+* 93091eb69 links updated in about me page
+* 5c428e2c3 quotes added
+* 58c904573 progress added
+* f1db39a34 poems added
+* 94b8e7b5f help bug fixed
+* 590777aa8 changed search box
+* 162b31bce update logo
+* d787b3971 added search box
+* c98e84d63 update
+* 68318b465 update
+* 2501569e2 update sidebar
+* d744cd6c8 update about me page
+* f2baa9ff3 updated website
+* c9ae6865d update
+* d95e70121 update
+* 246ce4c1e update
+* 98b501101 update
+* 990fb00c2 update article : idea of god
+* e7f07c9fe update article: idea of god
+* 2abd454b7 added blog: idea of god
+* f89e751fd update website
+* 180827ede update
+* ca606b2ae update
+* 05dcf30c5 update
+* 4b0dda00f update
+* ff6d87e03 update
+* 3505a7268 update
+* ae4303315 update website
+* 8e4071952 updated about page
+* 83adfc1ab update
+* a04077cbc changed personal and book page
+* 07fb76514 changes in about, book page
+* 895bec1bb changes in about, book page
+* ba55ba788 changes in about, book page
+* ec6ddabc1 changes in about, book page
+* 23cf87249 changes in about, book page
+* 4eb51ff5c changes in about, book page
+* 99f879585 added quotes, fixed typos
+* 5662a93d2 quotes added
+* 90fa5299a added tags
+* f44da6b59 added quotes
+* c66da4a44 added quotes
+* d6051a346 update quotes, posts
+* 9e8ec5312 Replaced snake image with that of doctor
+* f4cf363bf update
+* 6f3594518 update
+* 68404bb20 update
+* 9ab06d7cd update
+* c48c51b1d update
+* fafc8d314 update
+* 9f3c5f91f update
+* ca412cd78 update
+* f5a748d50 update
+* 33c259c61 update
+* 0aee84d18 update
+* a1db9170d update
+* e71beae22 update
+* 06bf2106c update
+* b92f47630 update
+* 5345ee629 update
+* 5a1cfa3a8 update
+* 5a86faf5b update
+* 4bbb4cdd1 update
+* 0b8ab639c update
+* 28721ae15 update
+* c5cc320e7 update
+* c8f0db396 update
+* 571d248be update
+* 8f38ffed2 update
+* faf87a30b update
+* 03f37dd2e update
+* 11050f651 update
+* 5f738fcc0 update
+* 9fad65760 update
+* 65855ffd0 update
+* bd330f279 update
+* 0f1b4a060 update
+* fc347850c update
+* a3ea1a4f6 update
+* 4c16e8959 update
+* 734cc84eb update
+* 04bc495b0 update
+* 2be977b3d update
+* 1bb73d41d update
+* f6b83b6a2 update
+* e447c620c update
+* cb1c7dab1 update
+* 10dfa7aec update
+* fb96f0d68 update
+* b9507faaa update
+* 8ed644ff5 update
+* 3dcc555a8 update
+* 6c40b037e update
+* 97bf8b8d7 update
+* 96b0d5afb update
+* 2df858aa0 update
+* 0a88a5e71 update
+* 295cc8531 update
+* 1527e97c4 update
+* b47acc7b2 update
+* 315191250 update
+* 67f305aa9 update
+* 8073c4636 update
+* 74963782f update
+* ecc976de4 update
+* a771c6860 update
+* 5710882fb update
+* 6f960b7a1 update
+* 3f1a95c3d update
+* cf8d29143 update
+* 175804d66 update
+* 5ef3cf33c update
+* 63912efa7 update
+* a7a5795cb update
+* 1fad50d56 updated
+* bda6c4a75 Update
+* 5cdcbf6c1 Convert to flat HTML files
+* 99b98c3cd Convert to flate HTML files
+* 4fefdb356 update
+* dd220fcc8 update
+* 6d3741595 update
+* 40a4ac5a7 update
+* a6da4a004 update links
+* 113c7045d update
+* bbab4b76d update
+* c19c1d879 update
+* a786e4a3a update
+* df955e551 update
+* ab5e5b0a8 update
+* 45a381cdf update
+* ae6a5b513 update
+* 18ca0559e update
+* 5677f5608 update
+* 428401d1f update
+* 7b1efbb04 update
+* 71850b0c4 update
+* ae1b32bb4 update
+* 68f81d8ff update
+* b1dbae4e5 update
+* 87526c63b update
+* 96a0dd8a9 update
+* 980a2e71e update
+* 546020251 update
+* 317a89cba update
+* 49c263a9e update links
+* a96932401 update
+* 6fed06578 update
+* dae19cd63 update quotes
+* 31a6e8d03 update
+* 865fa42f1 updated preview
+* d7e9058e3 update
+* 4fcb5c493 update quotes
+* 5fa00e6ab update quotes
+* badcaecd5 quotes updated
+* ed9367ce4 update
+* c98b0409d update
+* 85ceb51a9 update
+* eb25f0aa1 update contact
+* a6db608f5 updated
+* 45dc18eee update books
+* 5b6605a90 update
+* 69bfa80e2 update
+* 6d90c7fe6 custom domain
+* 7088198d5 update
+* 50ca11eaa customized domain name
+* 5662de636 update
+* 1ad4af1cd update
+* 77c6bc404 update about me page
+* dff0c40e2 update
+* 4af887af2 update
+* 7bbb5fa0a update tux
+* 0b0606038 update
+* a3018aef0 update
+* 47d862631 update
+* 50b6997ac Update
+* d203c264f update
+* 37e964d7e update
+* 4e9ae507e update
+* 27a553953 update
+* 834f25915 update
+* 6d0f20e8e update
+* 25fea00f7 update
+* e567f3ed4 update
+* c7315d418 update
+* 6a4c93528 update
+* a48881ba5 update
+* 5a79b89f7 update
+* ac80d9dd6 update
+* 0ae8d3eb2 update
+* 354d89df1 update
+* 9a8e80eeb update
+* b15df7d86 update timeline
+* 9e915101f update
+* 4d90a680b update
+* daaad8530 update terminal
+* bcd709869 update
+* 678750544 update
+* ae888e6da update
+* d1d573d12 update
+* 0ced94cf5 update quote
+* 723b67549 update about me
+* 408b60456 update
+* 4b8d91505 update
+* f90f916a3 update
+* 63d5fb7ac update book page
+* a5f24a1b0 update
+* 8879ece27 update
+* 7de18b37e update
+* 38d5d021a update
+* ad3feff0e book page updated
+* a94c402e5 update
+* bd63aa979 update
+* 525e10e80 update book page
+* a4f88c778 added books
+* eef4a2ee5 books shelf added
+* 06d0c0c97 updated
+* 2d99b971f update quote
+* 2484b3d08 update quotes
+* ee4299211 updated contact page
+* fa13d70f4 update page
+* 33932c765 updated about page
+* 5a434d2da update about
+* 818cb35c1 updated about page
+* 1bfa8f3e1 update
+* 8f58cb0d8 update
+* bdd223fba updated
+* b334e0db2 update quotes
+* 65e88ce95 update
+* c68ea1856 update
+* 4e76806b7 update
+* 6d107a174 terminal added
+* d2313bfbd update
+* df842cafb update
+* 4e43b3bc1 update
+* 296dd55eb update
+* 73417c1ec updated
+* 7a8a42372 updated
+* 6e6aef494 updated
+* 1300da05e update
+* 317d64fac updated
+* 5cb1e2d19 update
+* d6c979353 update
+* 136cf476b update
+* ea636616b update more
+* 4f96f7a9a update
+* dade60071 update about me
+* 4c10f0659 updated about me
+* ab774bbbb computer updated
+* c14de65b5 computer updated
+* 1554c8b8e update computer page
+* 7c2a3bca9 updated about me
+* 96f116638 updated about me
+* a32daf2e4 updated about me
+* 5fc61f2ee new project
+* f2150233d updated
+* 84dbff4f8 updated
+* 8a47a379c updated
+* c9e503495 updated
+* 285f8bc63 updated
+* e03cac235 added semaphore
+* ae8b17019 update
+* 237826301 update
+* de99dea32 update
+* 599581102 update project 3
+* 321b882b0 updated aes
+* 463e654e6 projects 0.6
+* b4d2705ce project 0.6
+* 531b14e80 project 0.4
+* 9e3bc504e project 0.3
+* b71ffdaf4 project 0.2
+* 6fa4b247d project 0.1
+* 47f7b1dc3 update resume
+* c41df4e20 updated resume
+* b684a276b updated
+* 4666dce51 updated
+* 151055ea4 updated
+* f5b852ae5 feedback added
+* 34b505180 update README
+* fed6891a2 config.yml
+* fc897817d updated
+* 7427bc724 updated
+* cfe699239 updated
+* bb6a090dd updated 2.0
+* 0293b9008 updated 0.1
+* 7152c2bd9 updated
+* 15cd8b46a updated
+* 17f761246 update
+* cebe6c1df update
+* 391d67d6f update
+* 1897a0263 update
+* 7fb72f94c first commit
+* 27274a0aa first commit
+* dbbadfae4 first commit
+* 21fe2ecc7 Replace master branch with page content via GitHub
