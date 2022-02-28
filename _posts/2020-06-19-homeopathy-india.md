@@ -16,8 +16,6 @@ author: Tushar Sharma
 featuredPost: true
 ---
 
-<meta property="og:image" content="https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg">
-
 I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
@@ -53,7 +51,7 @@ Other was alternative medicine, which is an umbrella term for Ayurveda, homeopat
 
 It was developed by Samuel Hahnemann in 1796. During this time modern germ theory of disease was not prevalent. Most scientist believed in miasma theory of disease. Also unconventional methods like bloodletting was also prevalent.
 
-Homeopathy in a nutshell has two main concepts i.e. 
+Homeopathy in a nutshell has two main concepts i.e.
 
 1. **Like cures Like**: the notion that a disease can be cured by a substance that produces similar symptoms in healthy people
 
