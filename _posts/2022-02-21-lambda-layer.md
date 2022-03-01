@@ -40,7 +40,7 @@ $ mkdir -p python/lib/python3.7/site-packages
 $ docker run -v "$(pwd):/var/task" "lambci/lambda:build-python3.7" /bin/sh -c "pip install -r requirements.txt -t python/lib/python3.7/site-packages/; exit"
 ```
 
-<blockquote class="attention">
+<blockquote class="attention" markdown="1">
 This will create lambda layer for python runtime `3.7`. However you can use a different `runtime` by choosing a different `version` like  `3.6`, `3.8`, etc
 </blockquote>
 
