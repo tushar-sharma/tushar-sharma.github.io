@@ -57,7 +57,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="EnvCommandError in Windows using Poetry">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2020-12-10T00:00:00-05:00","url":"https://randomwits.com/blog/poetry-python-fail-windows","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/poetry-python-fail-windows"},"headline":"EnvCommandError in Windows using Poetry","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Poetry is a great dependency management tool in python. It’s better than managing a flat file like requirements.txt. There are also other great tools like pipenv. However I found poetry much simpler in resolving dependencies.","dateModified":"2020-12-10T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://randomwits.com/blog/poetry-python-fail-windows","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"EnvCommandError in Windows using Poetry","dateModified":"2020-12-10T00:00:00-05:00","datePublished":"2020-12-10T00:00:00-05:00","description":"Poetry is a great dependency management tool in python. It’s better than managing a flat file like requirements.txt. There are also other great tools like pipenv. However I found poetry much simpler in resolving dependencies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/poetry-python-fail-windows"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -245,28 +245,60 @@ header li {
 
 <p>In cygwin, install poetry</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">-sSL</span> https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>curl <span class="nt">-sSL</span> https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Check the curent version</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry <span class="nt">-version</span> 
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>poetry <span class="nt">-version</span> 
 1.0.5
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Initialize poetry by creating a <code class="language-plaintext highlighter-rouge">pyproject.toml</code> file.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry init
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>poetry init
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Now add some library like <code class="language-plaintext highlighter-rouge">pandas</code></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry add pandas
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>poetry add pandas
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>However this command is causing the poetry to crash</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Creating virtualenv myproject-xkRwmYf0-py3.7 <span class="k">in</span> .venv
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td>
+<td class="rouge-code"><pre>Creating virtualenv myproject-xkRwmYf0-py3.7 <span class="k">in</span> .venv
 
 <span class="o">[</span>Env CommandError]
 Command <span class="o">[</span><span class="s1">'.venv\\myproject\\Scripts\\python.exe'</span>, <span class="s1">'-'</span><span class="o">]</span> errored with the follwiong <span class="k">return </span>code 1, and output:
@@ -279,31 +311,52 @@ is hasattr<span class="o">(</span>sys, <span class="s2">"real_prefix"</span><spa
     print<span class="o">(</span>sys.base_prefix<span class="o">)</span>
 <span class="k">else</span>:
     print<span class="o">(</span>sys.prefix<span class="o">)</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Since poetry tries to create virtualenv under <code class="language-plaintext highlighter-rouge">.venv</code> folder, there’s a quick workaround by removing <code class="language-plaintext highlighter-rouge">carriage return</code> from activate Scripts</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>perl <span class="nt">-pe</span> <span class="s1">'s/\r$//'</span> &lt; .venv/myproject-xkRwmYf0-py3.7/Scripts/activate <span class="o">&gt;</span> activate
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>perl <span class="nt">-pe</span> <span class="s1">'s/\r$//'</span> &lt; .venv/myproject-xkRwmYf0-py3.7/Scripts/activate <span class="o">&gt;</span> activate
 <span class="nv">$ </span><span class="nb">mv </span>activate .venv/myproject-xkRwmYf0-py3.7/Scripts/activate 
 
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Then you can manually activate the virtualenv like this</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">.</span> .venv/myproject-xkRwmYf0-py3.7/Scripts/activate 
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">.</span> .venv/myproject-xkRwmYf0-py3.7/Scripts/activate 
 <span class="o">(</span>myproject-xkRwmYf0-py3.7<span class="o">)</span> <span class="nv">$ </span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Then you can simply install dependencies like</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>myproject-xkRwmYf0-py3.7<span class="o">)</span> <span class="nv">$ </span> poetry add pandas
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="o">(</span>myproject-xkRwmYf0-py3.7<span class="o">)</span> <span class="nv">$ </span> poetry add pandas
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Lastly , you can deactive the virtualenv like</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>myproject-xkRwmYf0-py3.7<span class="o">)</span> <span class="nv">$ </span>deactivate
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="o">(</span>myproject-xkRwmYf0-py3.7<span class="o">)</span> <span class="nv">$ </span>deactivate
 <span class="nv">$ </span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>This manual method may not be the best solution. May be future updates of poetry fixes this issue on Windows.</p>
 

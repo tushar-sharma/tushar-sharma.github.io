@@ -59,7 +59,7 @@
 <meta property="twitter:image" content="https://unsplash.com/photos/842ofHC6MaI/download?w=437">
 <meta property="twitter:title" content="Remove-all-adjacent-duplicates-in-string-ii Solution">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2021-12-18T00:00:00-05:00","url":"https://randomwits.com/blog/remove-all-adjacent-duplicates-in-string-ii","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/remove-all-adjacent-duplicates-in-string-ii"},"headline":"Remove-all-adjacent-duplicates-in-string-ii Solution","image":"https://unsplash.com/photos/842ofHC6MaI/download?w=437","author":{"@type":"Person","name":"Tushar Sharma"},"description":"You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together.","dateModified":"2021-12-18T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","image":"https://unsplash.com/photos/842ofHC6MaI/download?w=437","url":"https://randomwits.com/blog/remove-all-adjacent-duplicates-in-string-ii","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Remove-all-adjacent-duplicates-in-string-ii Solution","dateModified":"2021-12-18T00:00:00-05:00","datePublished":"2021-12-18T00:00:00-05:00","description":"You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together.","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/remove-all-adjacent-duplicates-in-string-ii"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -269,26 +269,46 @@ header li {
 
 <h2 id="example-1">Example 1</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: s <span class="o">=</span> <span class="s2">"abcd"</span>, k <span class="o">=</span> 2
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>Input: s <span class="o">=</span> <span class="s2">"abcd"</span>, k <span class="o">=</span> 2
 Output: <span class="s2">"abcd"</span>
 Explanation: There<span class="s1">'s nothing to delete.
-</span></code></pre></div></div>
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="example-2">Example 2</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: s <span class="o">=</span> <span class="s2">"deeedbbcccbdaa"</span>, k <span class="o">=</span> 3
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre>Input: s <span class="o">=</span> <span class="s2">"deeedbbcccbdaa"</span>, k <span class="o">=</span> 3
 Output: <span class="s2">"aa"</span>
 Explanation: 
 First delete <span class="s2">"eee"</span> and <span class="s2">"ccc"</span>, get <span class="s2">"ddbbbdaa"</span>
 Then delete <span class="s2">"bbb"</span>, get <span class="s2">"dddaa"</span>
 Finally delete <span class="s2">"ddd"</span>, get <span class="s2">"aa"</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="example-3">Example 3</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: s <span class="o">=</span> <span class="s2">"pbbcggttciiippooaais"</span>, k <span class="o">=</span> 2
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>Input: s <span class="o">=</span> <span class="s2">"pbbcggttciiippooaais"</span>, k <span class="o">=</span> 2
 Output: <span class="s2">"ps"</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="constraints">Constraints:</h2>
 

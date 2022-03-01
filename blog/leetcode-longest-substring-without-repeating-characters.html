@@ -59,7 +59,7 @@
 <meta property="twitter:image" content="https://unsplash.com/photos/YK0HPwWDJ1I/download?w=800">
 <meta property="twitter:title" content="Leetcode - Longest Substring Without Repeating Characters">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2022-01-17T21:07:00-05:00","url":"https://randomwits.com/blog/leetcode-longest-substring-without-repeating-characters","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/leetcode-longest-substring-without-repeating-characters"},"headline":"Leetcode - Longest Substring Without Repeating Characters","image":"https://unsplash.com/photos/YK0HPwWDJ1I/download?w=800","author":{"@type":"Person","name":"Tushar Sharma"},"description":"In this leetcode problem, we are asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string abcabcbb the longest substring without repeating characters is abc (with a length of 3). Tags: leetcode two pointers set","dateModified":"2022-01-17T21:07:00-05:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","image":"https://unsplash.com/photos/YK0HPwWDJ1I/download?w=800","url":"https://randomwits.com/blog/leetcode-longest-substring-without-repeating-characters","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Leetcode - Longest Substring Without Repeating Characters","dateModified":"2022-01-17T21:07:00-05:00","datePublished":"2022-01-17T21:07:00-05:00","description":"In this leetcode problem, we are asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string abcabcbb the longest substring without repeating characters is abc (with a length of 3). Tags: leetcode two pointers set","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/leetcode-longest-substring-without-repeating-characters"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -255,26 +255,46 @@ header li {
 
 <h3 id="example-1">Example 1</h3>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: s <span class="o">=</span> <span class="s2">"abcabcbb"</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>Input: s <span class="o">=</span> <span class="s2">"abcabcbb"</span>
 Output: 3
 Explanation: The answer is <span class="s2">"abc"</span>, with the length of 3.
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h3 id="example-2">Example 2</h3>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: s <span class="o">=</span> <span class="s2">"bbbbb"</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>Input: s <span class="o">=</span> <span class="s2">"bbbbb"</span>
 Output: 1
 Explanation: The answer is <span class="s2">"b"</span>, with the length of 1.
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h3 id="example-3">Example 3</h3>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: s <span class="o">=</span> <span class="s2">"pwwkew"</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre>Input: s <span class="o">=</span> <span class="s2">"pwwkew"</span>
 Output: 3
 Explanation: The answer is <span class="s2">"wke"</span>, with the length of 3.
 Notice that the answer must be a substring,
 <span class="s2">"pwke"</span> is a subsequence and not a substring.
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="explanation">Explanation</h2>
 

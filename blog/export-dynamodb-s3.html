@@ -57,7 +57,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Export DynamoDB Table to S3 Bucket Using Lambda Function">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2020-10-23T00:00:00-04:00","url":"https://randomwits.com/blog/export-dynamodb-s3","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/export-dynamodb-s3"},"headline":"Export DynamoDB Table to S3 Bucket Using Lambda Function","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Dynamodb is a great NoSQL service by AWS. One of the most common use case is to export data to s3. There are multiple ways to export data to s3. For this tutorial we will leverage lambda function to achieve our goal.","dateModified":"2020-10-23T00:00:00-04:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://randomwits.com/blog/export-dynamodb-s3","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Export DynamoDB Table to S3 Bucket Using Lambda Function","dateModified":"2020-10-23T00:00:00-04:00","datePublished":"2020-10-23T00:00:00-04:00","description":"Dynamodb is a great NoSQL service by AWS. One of the most common use case is to export data to s3. There are multiple ways to export data to s3. For this tutorial we will leverage lambda function to achieve our goal.","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/export-dynamodb-s3"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -259,18 +259,31 @@ header li {
 
 <p>We can create a payload to test our lambda function</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td>
+<td class="rouge-code"><pre>{
    "TableName": "DynamoDB_Table_name",
    "s3_bucket": "s3_bucket_name",
    "s3_object": "s3_object_name",
    "filename": "output.json"
 }
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>However, sometimes we might encounter errors for certain values in DynamoDB.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TypeError: Object of <span class="nb">type </span>Decimal is not JSON serializable. 
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>TypeError: Object of <span class="nb">type </span>Decimal is not JSON serializable. 
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>We can use a JSONEncoder class to update our lamda function.</p>
 

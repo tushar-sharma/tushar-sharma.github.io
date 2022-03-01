@@ -57,7 +57,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="How ViM Saved My Day">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2013-10-18T00:00:00-04:00","url":"https://randomwits.com/blog/how-vim-saved-my-day","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/how-vim-saved-my-day"},"headline":"How ViM Saved My Day","author":{"@type":"Person","name":"Tushar Sharma"},"description":"It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle. Though I am a FOSS enthusiast, my first job landed me to just another India’s IT company. I vividly remember the countless occasions when ViM saved my day.","dateModified":"2013-10-18T00:00:00-04:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://randomwits.com/blog/how-vim-saved-my-day","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"How ViM Saved My Day","dateModified":"2013-10-18T00:00:00-04:00","datePublished":"2013-10-18T00:00:00-04:00","description":"It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle. Though I am a FOSS enthusiast, my first job landed me to just another India’s IT company. I vividly remember the countless occasions when ViM saved my day.","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/how-vim-saved-my-day"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -327,20 +327,34 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 
 <p>Imagine if you have to repeat this task again and again. It’s cumbersome to write the same macro again and again after you switch off your machine. There’s a way to store macro so that you don’t need to remember them. First copy the value of your macro. To see your macro’s value type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:anew
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>:anew
 
 :"ap
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>And copy paste this value of macro in your <code class="language-plaintext highlighter-rouge">.vimrc</code> file</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let @a = 'MACRO_VALUE'
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>let @a = 'MACRO_VALUE'
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Just replace MACRO_VALUE with the value of your own macro. Here’s value of my own macro</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0/,^Mnnlv$hd0i ^[p^[0^[lu^[uuuuuuuuuuuuuuu
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>0/,^Mnnlv$hd0i ^[p^[0^[lu^[uuuuuuuuuuuuuuu
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>And Voila! Your Macro is saved.</p>
 

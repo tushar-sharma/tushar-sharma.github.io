@@ -59,7 +59,7 @@
 <meta property="twitter:image" content="https://unsplash.com/photos/HpWwEURimK8/download?w=437">
 <meta property="twitter:title" content="Getting Started with AWS CDK">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2021-06-14T00:00:00-04:00","url":"https://randomwits.com/blog/tutorial-cdk-aws","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/tutorial-cdk-aws"},"headline":"Getting Started with AWS CDK","image":"https://unsplash.com/photos/HpWwEURimK8/download?w=437","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Cloudformation service in AWS allows you to describe an entire set of resources required to make a pipeline. The cloudformation template can be described in JSON or YAML format. Updating the cloudformation template was not a pleasant experience. I wanted to discover alternative ways to generate cloudformation template programmatically. Tags: aws cdk cloudformation typescript python","dateModified":"2021-06-14T00:00:00-04:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","image":"https://unsplash.com/photos/HpWwEURimK8/download?w=437","url":"https://randomwits.com/blog/tutorial-cdk-aws","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Getting Started with AWS CDK","dateModified":"2021-06-14T00:00:00-04:00","datePublished":"2021-06-14T00:00:00-04:00","description":"Cloudformation service in AWS allows you to describe an entire set of resources required to make a pipeline. The cloudformation template can be described in JSON or YAML format. Updating the cloudformation template was not a pleasant experience. I wanted to discover alternative ways to generate cloudformation template programmatically. Tags: aws cdk cloudformation typescript python","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/tutorial-cdk-aws"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -285,8 +285,12 @@ For this tutorial, we will use L1 construct. However same concept can be used fo
 
 <p>First, install the AWS CDK CLI from command line using</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm i <span class="nt">-g</span> aws-cdk@latest
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>npm i <span class="nt">-g</span> aws-cdk@latest
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Let’s create a project</p>
 
@@ -332,13 +336,21 @@ For this tutorial, we will use L1 construct. However same concept can be used fo
 
 <p>We can see the output of the cloudformation template by using the following command</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cdk synth
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>cdk synth
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>If you want to generate cloudformation template without metadata</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cdk synth <span class="nt">--version-reporting</span> <span class="nb">false</span> <span class="nt">--path-metadata</span> <span class="nb">false</span> 
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>cdk synth <span class="nt">--version-reporting</span> <span class="nb">false</span> <span class="nt">--path-metadata</span> <span class="nb">false</span> 
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>The output is</p>
 
@@ -352,7 +364,24 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a saf
 
 <p>The cloudformation template needs at least one resource to validate. We will add a <code class="language-plaintext highlighter-rouge">stepfunction</code> to our cloudformation. We will define our stepfunction inside a json file, <code class="language-plaintext highlighter-rouge">helloworld.asl.json</code></p>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td>
+<td class="rouge-code"><pre><span class="p">{</span><span class="w">
   </span><span class="nl">"Comment"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"A very very simple StepFunction"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"StartAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello"</span><span class="p">,</span><span class="w"> 
   </span><span class="nl">"States"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -367,7 +396,8 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a saf
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+</span></pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>If you are not familiar with Stepfunction, AWS Stepfunction console has a nice visualization</p>
 
@@ -419,16 +449,27 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a saf
 
 <p>The cloudformation template is generated under</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># for typescript
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre><span class="c1"># for typescript
 </span><span class="n">cdk</span><span class="p">.</span><span class="n">out</span>\<span class="n">TestCdkStack</span><span class="p">.</span><span class="n">template</span><span class="p">.</span><span class="n">json</span>
 <span class="c1"># for python 
 </span><span class="n">cdk</span><span class="p">.</span><span class="n">out</span>\<span class="n">test_cdk</span><span class="p">.</span><span class="n">template</span><span class="p">.</span><span class="n">json</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Or you can simply deploy it using</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cdk deploy
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>cdk deploy
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <div class="footnotes">
 <h4>Footnotes</h4>

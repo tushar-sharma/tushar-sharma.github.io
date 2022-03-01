@@ -57,7 +57,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Guide to install Arch Linux">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2015-12-26T00:00:00-05:00","url":"https://randomwits.com/blog/arch-linux","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/arch-linux"},"headline":"Guide to install Arch Linux","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Welcome to Randomwits, my digital nest.","dateModified":"2015-12-26T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://randomwits.com/blog/arch-linux","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Guide to install Arch Linux","dateModified":"2015-12-26T00:00:00-05:00","datePublished":"2015-12-26T00:00:00-05:00","description":"Welcome to Randomwits, my digital nest.","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/arch-linux"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -280,8 +280,12 @@ header li {
 
 <p>I’m assuming that you have createa a bootable medium (CD or usb)  for Arch Linux. If you are on a Unix like system, you can type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo dd if=/path/to/arch.iso  of=/dev/sdX bs=4m &amp;&amp; sync
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>$ sudo dd if=/path/to/arch.iso  of=/dev/sdX bs=4m &amp;&amp; sync
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>If you are using Windows, you can find many bootable software like Unetbootin.</p>
 
@@ -297,8 +301,12 @@ header li {
 
 <p>Check all the available <strong>sysfs filesystem</strong> on the system. We only have one primary hard drive <code class="language-plaintext highlighter-rouge">/dev/sda</code>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># lsblk
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># lsblk
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p> 
 <img src="/img/arch_lsblk.png">
@@ -320,8 +328,12 @@ header li {
 
 <p>To use <strong>GPT partition</strong>, type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># gdisk /dev/sda
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># gdisk /dev/sda
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p> 
 <img src="/img/arch_gdisk.png">
@@ -450,8 +462,12 @@ header li {
 
 <p>You can also see your final filesystem, by typing</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># fdisk -l  
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># fdisk -l  
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p> 
 <img src="/img/arch_fdisk.png">
@@ -459,20 +475,34 @@ header li {
 
 <p>Next we need to format our partitons before we install Arch Linux. However don’t format the first partition i.e. <code class="language-plaintext highlighter-rouge">/dev/sda1</code>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mkfs -t ext4 /dev/sda2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre># mkfs -t ext4 /dev/sda2
 
 # mkfs -t ext4 /dev/sda4
 
 # mkfs -t ext4 /dev/sda5
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p> 
 Also format the swap space and switch it on.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mkswap /dev/sda3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre># mkswap /dev/sda3
 
 # swapon /dev/sda3
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="step-3--build-the-walls">Step 3 : Build the walls</h1>
 
@@ -481,32 +511,55 @@ Also format the swap space and switch it on.</p>
 
 <p>Linux follows the root hierarchy. So we need to mount the root partition first i.e. <code class="language-plaintext highlighter-rouge">/dev/sda4</code>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mount /dev/sda4 /mnt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre># mount /dev/sda4 /mnt
 
 # cd /mnt
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Next we need to mount partition for bootloader and home on root partition.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mkdir boot home
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre># mkdir boot home
 
 # mount /dev/sda2 boot
 
 # mount /dev/sda5 home
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Now we are ready to install Arch Linux on our system. Type the following command and sit back for few minutes before everything is loaded</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># pacstrap /mnt base base-devel
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># pacstrap /mnt base base-devel
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>After this we need to install bootloader. When a computer loads up, it needs bootloader to find and load an operating system. There are many bootloaders to install like syslinux, grub, LILO, etc but we’ll be using GRUB for this guide.</p>
 
 <p>Local and remote filesystem mounts a special file <code class="language-plaintext highlighter-rouge">/etc/fstab</code> which contains instructions on starting up all your Linux system’s various partitions. To generate <code class="language-plaintext highlighter-rouge">fstab</code> file type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#  genfstab -p /mnt &gt;&gt; /mnt/etc/fstab
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>#  genfstab -p /mnt &gt;&gt; /mnt/etc/fstab
 #  nano /mnt/etc/fstab 
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p> 
 <img src="/img/arch_fstab.png">
@@ -518,14 +571,23 @@ Also format the swap space and switch it on.</p>
 
 <h2 id="install-grub-on-non-efi-system">Install Grub on non-efi system</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># pacstrap /mnt grub
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># pacstrap /mnt grub
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Next you need to login to your system without rebooting. Type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># arch-chroot /mnt /bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre># arch-chroot /mnt /bin/bash
 # grub-install --no-floppy /dev/sda
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p> 
 <img src="/img/arch_grub_install.png">
@@ -533,8 +595,12 @@ Also format the swap space and switch it on.</p>
 
 <p>Lastly, generate the configuration file for the <code class="language-plaintext highlighter-rouge">grub</code>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># grub-mkconfig -o /boot/grub/grub.cfg
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p><strong>Note</strong>: If you are dual booting on efi system, installing grub would be slightly different. You could follow this <a href="https://github.com/pandeiro/arch-on-air">blog</a></p>
 
@@ -546,59 +612,104 @@ Also format the swap space and switch it on.</p>
 
 <p>First we’ll edit <code class="language-plaintext highlighter-rouge">/etc/locale.gen</code>. type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># nano /etc/locale.gen 
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># nano /etc/locale.gen 
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>And uncomment the following two lines by removing the <code class="language-plaintext highlighter-rouge">#</code> from the front</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>en_US.UTF-8 UTF-8
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>en_US.UTF-8 UTF-8
 en_US ISO-8859-1
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Generate the updated file by typing</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># locale.gen
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># locale.gen
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Change the hostname and enter the <code class="language-plaintext highlighter-rouge">hostname</code></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># nano /etc/hostname
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># nano /etc/hostname
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Change the time zone to your location</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ln -s /usr/share/zoneinfo/America/New\_York /etc/localtime
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># ln -s /usr/share/zoneinfo/America/New\_York /etc/localtime
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>We need to tell the computer to connect to the internet. We need to run the following command</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># dhcpcd
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># dhcpcd
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>To permanently make this changes, type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># systemctl enable dhcpcd 
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># systemctl enable dhcpcd 
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>You dont want to forever live with the terminal. Legacy operating system usually come preinstalled with Windowing Environment. For Unix like OS we need to install Window Manger to manage graphical user interface. X11 is a windowing protocol which provides basic user interface. To install X11, type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># sudo pacman -S xorg-twm xorg-xclock xterm
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># sudo pacman -S xorg-twm xorg-xclock xterm
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Well we also need to install a destop environment. Destop environment uses X11 to provide better user interface. Popular examples are GNOME, KDE, etc. I like tiling window environment which is suited for people who like tinkering &amp; since you’re installing Arch Linux, I reckon i3 would appeal to you. To install i3, type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># sudo pacman -S i3
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># sudo pacman -S i3
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Now, once you have .i3 installed, just go to your ~/.xinitrc and add:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exec i3
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>exec i3
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Customize GTK</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo pacman -S lxappearance 
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>$ sudo pacman -S lxappearance 
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Sometimes we need to <code class="language-plaintext highlighter-rouge">ssh</code> into the virtual box. First select your virtual machine &amp; click <code class="language-plaintext highlighter-rouge">Settings-&gt;Network-&gt;Advanced-&gt;Port Forwarding</code></p>
 
@@ -616,28 +727,48 @@ en_US ISO-8859-1
 
 <p>Now we need to login into virtual box, &amp; install <code class="language-plaintext highlighter-rouge">openssh</code></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo pacman -S openssh 
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>$ sudo pacman -S openssh 
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Generate your <code class="language-plaintext highlighter-rouge">ssh-key</code></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh-keygen 
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>$ ssh-keygen 
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Start <code class="language-plaintext highlighter-rouge">ssh daemon</code> at the login time</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo systemctl enable sshd.socket
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>$ sudo systemctl enable sshd.socket
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Finally on your Host computer, type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh -p 3333 username@127.0.0.1 
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>$ ssh -p 3333 username@127.0.0.1 
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>And finally :)</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># reboot
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre># reboot
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <!--break-->
 
@@ -653,8 +784,12 @@ en_US ISO-8859-1
 
 <p>To start the Window Enviroment, type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ startx 
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre>$ startx 
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p> 
 <img src="/img/arch_i3.png">

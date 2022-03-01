@@ -59,7 +59,7 @@
 <meta property="twitter:image" content="https://i.imgur.com/KdU5gTZ.png">
 <meta property="twitter:title" content="Getting started with Graph Part 1">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2019-11-10T00:00:00-05:00","url":"https://randomwits.com/blog/graph-getting-started","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/graph-getting-started"},"headline":"Getting started with Graph Part 1","image":"https://i.imgur.com/KdU5gTZ.png","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Graph are data structures made of vertices &amp; edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.","dateModified":"2019-11-10T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","image":"https://i.imgur.com/KdU5gTZ.png","url":"https://randomwits.com/blog/graph-getting-started","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Getting started with Graph Part 1","dateModified":"2019-11-10T00:00:00-05:00","datePublished":"2019-11-10T00:00:00-05:00","description":"Graph are data structures made of vertices &amp; edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/graph-getting-started"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -257,7 +257,17 @@ header li {
 
 <p>First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
 
     <span class="nc">String</span> <span class="n">label</span><span class="o">;</span>
 
@@ -265,7 +275,8 @@ header li {
         <span class="k">this</span><span class="o">.</span><span class="na">label</span> <span class="o">=</span> <span class="n">label</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="represent-a-graph">Represent a graph</h2>
 
@@ -411,7 +422,23 @@ header li {
   </tbody>
 </table>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
 
     <span class="nc">String</span> <span class="n">label</span><span class="o">;</span>
 
@@ -425,11 +452,45 @@ header li {
     <span class="kd">private</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">adjList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
 <span class="o">}</span>
 
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <h2 id="add-lots-of-vertex-or-vertices">Add lots of vertex (or vertices)</h2>
 
 <p>We now need to add add vertex (if it doesn’t exist) to our graph using method <code class="language-plaintext highlighter-rouge">addVertex</code></p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
 
     <span class="nc">String</span> <span class="n">label</span><span class="o">;</span>
 
@@ -460,13 +521,37 @@ header li {
     <span class="o">}</span>
 <span class="o">}</span>
 
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="add-edges">Add Edges</h2>
 
 <p>We need to add edges between two vertex (if not already existing)</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td>
+<td class="rouge-code"><pre>
 <span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
     <span class="o">...</span>
     <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getKey</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">label</span><span class="o">;</span> <span class="o">}</span>
@@ -487,13 +572,86 @@ header li {
    <span class="o">}</span>
 
 <span class="o">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="is-that-it">Is that it?</h2>
 
 <p>Yup. It’s a basic template for a simple graph. Below is the full code</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+</pre></td>
+<td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
 
     <span class="nc">String</span> <span class="n">label</span><span class="o">;</span>
 
@@ -563,7 +721,8 @@ header li {
         <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"6"</span><span class="o">,</span> <span class="s">"7"</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="conculsion">Conculsion</h2>
 

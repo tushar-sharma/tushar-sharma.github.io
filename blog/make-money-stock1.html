@@ -57,7 +57,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="How to Make(Or Lose) Money in Stocks Part1">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2021-04-08T00:00:00-04:00","url":"https://randomwits.com/blog/make-money-stock1","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/make-money-stock1"},"headline":"How to Make(Or Lose) Money in Stocks Part1","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Recently I finished watching web-series Scam 1992. It’s based on story of Harshad Mehta, a famous Indian stockbrocker who made fortunes in stocks. Despite his iconic success &amp; failure, the series rekindled my interest in world of “stocks”. I guess the famous dialogue “Risk Hai Toh Ishq Hai” has stuck with me.","dateModified":"2021-04-08T00:00:00-04:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://randomwits.com/blog/make-money-stock1","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"How to Make(Or Lose) Money in Stocks Part1","dateModified":"2021-04-08T00:00:00-04:00","datePublished":"2021-04-08T00:00:00-04:00","description":"Recently I finished watching web-series Scam 1992. It’s based on story of Harshad Mehta, a famous Indian stockbrocker who made fortunes in stocks. Despite his iconic success &amp; failure, the series rekindled my interest in world of “stocks”. I guess the famous dialogue “Risk Hai Toh Ishq Hai” has stuck with me.","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/make-money-stock1"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -249,23 +249,38 @@ header li {
 
 <p>Open your favourite terminal to create directory</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir</span> <span class="nv">$stocks</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">mkdir</span> <span class="nv">$stocks</span>
 <span class="nv">$ </span><span class="nb">cd</span> <span class="nv">$_</span>
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>We will be using <code class="language-plaintext highlighter-rouge">poetry</code> to manage our library depedencies. Create a default <code class="language-plaintext highlighter-rouge">pyproject.toml</code> file like this</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry init
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>poetry init
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Keep pressing enter to keep the defualt configuration</p>
 
 <p>Next we will create a text file,  <code class="language-plaintext highlighter-rouge">stocks.csv</code>. This will list all the stocks that we need to track. For this example I am using aaple and microsoft.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ticker,sell,sell,buy
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>ticker,sell,sell,buy
 aapl,0,125,0,0
 msft,0,0,230,0
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Here let me briefly expalin the columns:</p>
 
@@ -289,7 +304,26 @@ msft,0,0,230,0
 
 <p>Next create python file, <code class="language-plaintext highlighter-rouge">stocks/main.py</code></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td>
+<td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
 <span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
 <span class="kn">from</span> <span class="nn">reportlab.platypus</span> <span class="kn">import</span> <span class="n">SimpleDocTemplate</span><span class="p">,</span> <span class="n">Paragraph</span><span class="p">,</span> <span class="n">PageBreak</span>
 <span class="kn">from</span> <span class="nn">reportlab.lib.styles</span> <span class="kn">import</span> <span class="n">getSampleStyleSheet</span><span class="p">,</span> <span class="n">ParagraphStyle</span>
@@ -306,7 +340,8 @@ msft,0,0,230,0
 <span class="kn">from</span> <span class="nn">reportlab.platypus</span> <span class="kn">import</span> <span class="n">Image</span> <span class="k">as</span> <span class="n">Image2</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p>Next we will open our favourite Web browser to type <code class="language-plaintext highlighter-rouge">aapl stocks</code></p>
 
@@ -348,8 +383,12 @@ msft,0,0,230,0
 
 <p>Run this command using</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry run python stock/main.py
-</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="rouge-code"><pre><span class="nv">$ </span>poetry run python stock/main.py
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <script src="https://gist.github.com/tushar-sharma/7e84b10f862999d6a2c802cd6e1cc036.js"></script>
 

@@ -59,7 +59,7 @@
 <meta property="twitter:image" content="https://unsplash.com/photos/CJO9xWDVGXU/download?w=437">
 <meta property="twitter:title" content="Lowest Common Ancestor of a Binary Tree">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2021-12-08T00:00:00-05:00","url":"https://randomwits.com/blog/leetcode-lca-binary-tree","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/leetcode-lca-binary-tree"},"headline":"Lowest Common Ancestor of a Binary Tree","image":"https://unsplash.com/photos/CJO9xWDVGXU/download?w=437","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Questions involving the binary tree data structure are very popular in tech interviews, and can be challenging and varied! A binary tree is a data structure consisting of a collection of nodes (starting at a root node), where each node consists of a value (data), together with a directed edges to at most two nodes (the “left child” and “right child”), with the additional conditions that no two edges point to the same node and no edge points to the root. I recently solved an interesting problem on binary tree.","dateModified":"2021-12-08T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","image":"https://unsplash.com/photos/CJO9xWDVGXU/download?w=437","url":"https://randomwits.com/blog/leetcode-lca-binary-tree","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Lowest Common Ancestor of a Binary Tree","dateModified":"2021-12-08T00:00:00-05:00","datePublished":"2021-12-08T00:00:00-05:00","description":"Questions involving the binary tree data structure are very popular in tech interviews, and can be challenging and varied! A binary tree is a data structure consisting of a collection of nodes (starting at a root node), where each node consists of a value (data), together with a directed edges to at most two nodes (the “left child” and “right child”), with the additional conditions that no two edges point to the same node and no edge points to the root. I recently solved an interesting problem on binary tree.","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/leetcode-lca-binary-tree"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -270,24 +270,42 @@ header li {
 
 <h2 id="example-1">Example 1</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: root <span class="o">=</span> <span class="o">[</span>3,5,1,6,2,0,8,null,null,7,4], p <span class="o">=</span> 5, q <span class="o">=</span> 1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre>Input: root <span class="o">=</span> <span class="o">[</span>3,5,1,6,2,0,8,null,null,7,4], p <span class="o">=</span> 5, q <span class="o">=</span> 1
 Output: 3
 Explanation: The LCA of nodes 5 and 1 is 3.
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="example-2">Example 2</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: root <span class="o">=</span> <span class="o">[</span>3,5,1,6,2,0,8,null,null,7,4], p <span class="o">=</span> 5, q <span class="o">=</span> 4
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td>
+<td class="rouge-code"><pre>Input: root <span class="o">=</span> <span class="o">[</span>3,5,1,6,2,0,8,null,null,7,4], p <span class="o">=</span> 5, q <span class="o">=</span> 4
 Output: 5
 Explanation: The LCA of nodes 5 and 4 is 5, 
 since a node can be a descendant of itself according to the LCA definition.
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h3 id="example-3">Example 3</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: root <span class="o">=</span> <span class="o">[</span>1,2], p <span class="o">=</span> 1, q <span class="o">=</span> 2
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>Input: root <span class="o">=</span> <span class="o">[</span>1,2], p <span class="o">=</span> 1, q <span class="o">=</span> 2
 Output: 1
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="constraints">Constraints:</h2>
 

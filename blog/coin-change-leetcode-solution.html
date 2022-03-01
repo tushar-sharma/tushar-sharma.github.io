@@ -57,7 +57,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Coin Change solution leetcode">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2021-11-02T00:00:00-04:00","url":"https://randomwits.com/blog/coin-change-leetcode-solution","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/coin-change-leetcode-solution"},"headline":"Coin Change solution leetcode","author":{"@type":"Person","name":"Tushar Sharma"},"description":"It’s one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution. Tags: leetcode dp java python","dateModified":"2021-11-02T00:00:00-04:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://randomwits.com/blog/coin-change-leetcode-solution","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Coin Change solution leetcode","dateModified":"2021-11-02T00:00:00-04:00","datePublished":"2021-11-02T00:00:00-04:00","description":"It’s one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution. Tags: leetcode dp java python","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/coin-change-leetcode-solution"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -273,12 +273,20 @@ header li {
 
 <p><strong>However this solution fails the following test case as the minimum sequence is [8, 4]</strong></p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>coins <span class="o">=</span> <span class="o">[</span>1, 2, 4, 8, 9]
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre>coins <span class="o">=</span> <span class="o">[</span>1, 2, 4, 8, 9]
 amount <span class="o">=</span> 12
 
 Output : 3
 Expected: 2
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h2 id="dynamic-programming">Dynamic Programming</h2>
 
@@ -292,9 +300,14 @@ Dp(n) = \min_{j=0}^{d_j&lt;=n} Dp(n - D_j) + 1
 
 <p>Let us proceed with following test case</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>coins <span class="o">=</span> <span class="o">[</span>1, 2, 5]
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td>
+<td class="rouge-code"><pre>coins <span class="o">=</span> <span class="o">[</span>1, 2, 5]
 amount <span class="o">=</span> 11
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 <p>We can vary the amount as i from 0 to amount. The value of Dp[i] for each iteration becomes</p>
 
 <table>

@@ -57,7 +57,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Quickly sort large file in linear time">
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2015-11-20T00:00:00-05:00","url":"https://randomwits.com/blog/lsd","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/lsd"},"headline":"Quickly sort large file in linear time","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Any deterministic general sorting algorithm has average case time complexity O(nlogn) . However, certain sorting algorithm can run faster in O(n) but with limitation. Instead of comparision-based sort, each element is looked individually by its value. Radix sort is one fine example of integer sorting.","dateModified":"2015-11-20T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://randomwits.com/blog/lsd","author":{"@type":"Person","name":"Tushar Sharma"},"headline":"Quickly sort large file in linear time","dateModified":"2015-11-20T00:00:00-05:00","datePublished":"2015-11-20T00:00:00-05:00","description":"Any deterministic general sorting algorithm has average case time complexity O(nlogn) . However, certain sorting algorithm can run faster in O(n) but with limitation. Instead of comparision-based sort, each element is looked individually by its value. Radix sort is one fine example of integer sorting.","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/lsd"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -270,7 +270,25 @@ MathJax.Hub.Config({
 
 <p>Suppose, we have large directory containing names of people in random order. The names need not be distinct. We need to sort the name in the ascending order. Also our algorithm should run in linear time. A sample of the input file is shown below<sup><a href="#fn:2" rel="footnote">2</a></sup></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>JAMES          1.664  1.664      1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="rouge-code"><pre>JAMES          1.664  1.664      1
 TUSHARSHARMATUSHARSHARMA   1.99 3
 JOHN           1.642  3.305      2
 ROBERT         1.576  4.881      3
@@ -286,13 +304,30 @@ PATRICIA       0.539 13.486     12
 CHRISTOPHER    0.519 14.005     13
 LINDA          0.518 14.523     14
 BARBARA        0.490 15.013     15
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <h1 id="desired-output">Desired Output</h1>
 
 <p>The output file contains the names read from the file and sort them alphabetically.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AARON
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td>
+<td class="rouge-code"><pre>AARON
 ABBEY
 ABBIE
 ABBY
@@ -306,7 +341,8 @@ ADA
 ADAH
 ADALBERTO
 ADALINE
-</code></pre></div></div>
+</pre></td>
+</tr></tbody></table></code></pre></div></div>
 
 <p><strong>NOTE</strong>: Each line is read upto k = 21 characters (arbitrary). Any character after 21st position is truncated.</p>
 
