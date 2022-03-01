@@ -274,12 +274,8 @@ I once complained to my friend of his desktop on his computer. His desktop was a
 
 <p>Emacs can handle pretty much any type of file. Just type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre>$ emacs myFile.ext
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ emacs myFile.ext
+</code></pre></div></div>
 
 <p>Emacs also does syntax highlighting and indentation. It usually follows GNU style of indentation. The best thing about emacs is that you can customize it the way you want. I usually like <a href="http://en.wikipedia.org/wiki/Indent_style#Allman_style">Allman</a> indentation when editing <code class="language-plaintext highlighter-rouge">C</code> code with <code class="language-plaintext highlighter-rouge">4 spaces</code>. To change it, add this to your <code class="language-plaintext highlighter-rouge">~/.emacs</code> file.</p>
 
@@ -329,14 +325,9 @@ I once complained to my friend of his desktop on his computer. His desktop was a
 
 <p>Replace user with you’re gmail username.Also add this to your <code class="language-plaintext highlighter-rouge">~/.authinfo</code> file</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td>
-<td class="rouge-code"><pre>machine imap.gmail.com login user@gmail.com password secret port 993
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>machine imap.gmail.com login user@gmail.com password secret port 993
 machine smtp.gmail.com login user@gmail.com password secret port 587
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>The password field is optional. Type <code class="language-plaintext highlighter-rouge">M-x gnus</code> to start GNUS. To compose email, type <code class="language-plaintext highlighter-rouge">m</code>. Press <code class="language-plaintext highlighter-rouge">C-c C-c</code> to send mail.</p>
 
@@ -376,39 +367,23 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
 
 <p>In Linux (Ubuntu/Debian) try</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre>$ sudo apt-get install mplayer
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install mplayer
+</code></pre></div></div>
 
 <p>In Mac try</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre>$ brew install mplayer
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew install mplayer
+</code></pre></div></div>
 
 <p>Clone <code class="language-plaintext highlighter-rouge">emms</code></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre> $ git clone git://git.sv.gnu.org/emms.git
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone git://git.sv.gnu.org/emms.git
+</code></pre></div></div>
 
 <p>If it fails try this</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre> $ git clone git://git.sv.gnu.org/r/emms.git
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone git://git.sv.gnu.org/r/emms.git
+</code></pre></div></div>
 
 <p>It will clone the folder emms. Inside the folder, there are <code class="language-plaintext highlighter-rouge">*el</code> file inside <code class="language-plaintext highlighter-rouge">lisp</code>. Copy them all to <code class="language-plaintext highlighter-rouge">~/.emacs.d/site-lisp/emms</code>. Find the executable of <code class="language-plaintext highlighter-rouge">mplayer</code> which is usually in <code class="language-plaintext highlighter-rouge">/usr/local/bin/</code>. Then add this to your <code class="language-plaintext highlighter-rouge">~/.emacs</code></p>
 

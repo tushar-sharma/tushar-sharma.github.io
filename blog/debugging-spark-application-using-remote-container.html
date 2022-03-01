@@ -258,23 +258,14 @@ header li {
 
 <p>Lets create our project.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">mkdir </span>SparkDemo <span class="o">&amp;&amp;</span> <span class="nb">cd </span>SparkDemo
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>SparkDemo <span class="o">&amp;&amp;</span> <span class="nb">cd </span>SparkDemo
+</code></pre></div></div>
 
 <p>We will create a file <code class="language-plaintext highlighter-rouge">.devcontainer/devcontainer.json</code>. <a href="https://code.visualstudio.com/">VS Code</a> will use this file to access (or create) a development container with a well-defined tool and runtime stack.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td>
-<td class="rouge-code"><pre>$ mkdir .devcontainer
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir .devcontainer
 $ touch .devcontainer/devcontainer.json
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">devconainter.json</code> will look like this:<br></p>
 
@@ -295,33 +286,19 @@ $ touch .devcontainer/devcontainer.json
 
 <p>Currently your project structure should look like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td>
-<td class="rouge-code"><pre>SparkDemo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SparkDemo
 ___ .devcontainer
 ___ ___ devcontainer.json
 ___ Dockerfile
 ___ spark_demo.py
 
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Next, we need to open the <code class="language-plaintext highlighter-rouge">SparkDemo</code> in VS Code.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">cd </span>SparkDemo
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>SparkDemo
 <span class="nv">$ </span>code <span class="nb">.</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>To run the remote-container, you can click on the green button in the bottom left corner of the VS Code window.</p>
 

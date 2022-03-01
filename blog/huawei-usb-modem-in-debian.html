@@ -251,69 +251,42 @@ header li {
 
 <p>Now connect the modem and run lsusb to see the modem connected to the usb:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre>$ lusub
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lusub
+</code></pre></div></div>
 
 <p><img src="/img/w4.png" alt="w4" title="w4"></p>
 
 <p>Here we see Huawie usb is visible as Huawei Wireless Data Modem. Become a super user by typing <code class="language-plaintext highlighter-rouge">sudo su</code>. Now for detecting the modem run:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre># wvdial /etc/wvdial.conf 
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># wvdial /etc/wvdial.conf 
+</code></pre></div></div>
 
 <p><img src="/img/w1.png" alt="w1" title="w1"></p>
 
 <p>This scans the usb port for modem. In my case the modem was detected in ttyUSB0. Now edit the wvdial.conf file. I am accustomed to use vi editor. But you can use any editor like gedit, nano, etc. Just replace vi with the name of your editor</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre># vi /etc/wvdial.conf
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># vi /etc/wvdial.conf
+</code></pre></div></div>
 
 <p><img src="/img/w3.png" alt="w3" title="w3"></p>
 
 <p>Remove the semicolons &amp; change the following values:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td>
-<td class="rouge-code"><pre>Username: internet
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Username: internet
 Password: internet
 Phone   : #777
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Also add the following lines to wvdial.conf</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td>
-<td class="rouge-code"><pre>Init3 = AT+CRM=1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Init3 = AT+CRM=1
 Stupid Mode = 1
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Now run the following command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre># wvdial
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># wvdial
+</code></pre></div></div>
 
 <p>Bravo! It connects to the internet. Press <b>Ctrl + C</b> anytime to disconnect.</p>
 

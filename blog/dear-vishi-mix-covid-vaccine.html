@@ -284,44 +284,19 @@ header li {
 
 <p>I had a python project where I was trying to setup in a new laptop. I ran the following command</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>poetry <span class="nb">install</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry <span class="nb">install</span>
+</code></pre></div></div>
 <p>Poetry crashed with the following error</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td>
-<td class="rouge-code"><pre>Creating virtualenv usa <span class="k">in</span> /home/project/.venv    
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Creating virtualenv usa <span class="k">in</span> /home/project/.venv    
   ModuleNotFoundError  
   No module named <span class="s1">'virtualenv.seed.via_app_data'</span>
   at &lt;frozen importlib._bootstrap&gt;:973 <span class="k">in </span>_find_and_load_unlocked
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>My laptop has Ubuntu 20.04 LTS.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>poetry <span class="nb">env </span>info
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry <span class="nb">env </span>info
 
 Virtualenv
 Python:         3.8.5
@@ -333,26 +308,16 @@ Platform: linux
 OS:       posix
 Python:   /usr
 
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>poetry <span class="nt">--version</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry <span class="nt">--version</span>
 Poetry version 1.1.4
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>If you remove <code class="language-plaintext highlighter-rouge">python3-virtualenv</code> then <code class="language-plaintext highlighter-rouge">poetry</code> seems to work.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>apt remove <span class="nt">--purge</span> python3-virtualenv
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt remove <span class="nt">--purge</span> python3-virtualenv
+</code></pre></div></div>
 
 <nav class="pagination clear" style="padding-bottom:20px;">
  <a class="prev-item" href="/blog/dear-vishi-about-virginia" title="Previous Post: Dear Vishi, have you travelled to Virginia?">←Previous</a>     <a class="next-item" href="/blog/dear-vishi-time-machine" title="Next Post: Dear Vishi, is there a time machine?">Next→</a>         

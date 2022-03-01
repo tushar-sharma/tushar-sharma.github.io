@@ -249,25 +249,15 @@ header li {
 
 <p>Check your network interface by typing (Mac or Linux)</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre>$ ifconfig
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ifconfig
+</code></pre></div></div>
 
 <p>Capture all <code class="language-plaintext highlighter-rouge">GET</code> and <code class="language-plaintext highlighter-rouge">POST</code> request using tshark on the network interface &amp; save it to the file <code class="language-plaintext highlighter-rouge">~/out.ncap</code>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td>
-<td class="rouge-code"><pre>$ tshark -i en1 -f 'port 80 and 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tshark -i en1 -f 'port 80 and 
 (tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2):4] = 0x504F5354 or 
 tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2):4] = 0x47455420)' -w ~/out.ncap   
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>The above commands looks gibberish, however if you analyze closely, its plain easy. Lets read it line by line</p>
 
@@ -328,12 +318,8 @@ tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2):4] = 0x47455420)' -w ~/out.ncap
 
 <p>Now start surfing the web &amp; see the <code class="language-plaintext highlighter-rouge">POST</code> &amp; <code class="language-plaintext highlighter-rouge">GET</code> request by typing</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre>$ tail -f ~/out.ncap 
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tail -f ~/out.ncap 
+</code></pre></div></div>
 
 <nav class="pagination clear" style="padding-bottom:20px;">
  <a class="prev-item" href="/blog/arch-linux" title="Previous Post: Guide to install Arch Linux">←Previous</a>     <a class="next-item" href="/blog/random-stranger" title="Next Post: A random stranger">Next→</a>         

@@ -249,65 +249,29 @@ header li {
 
 <p>We can use <a href="https://fontawesome.com/">FontAwesome</a> to add <code class="language-plaintext highlighter-rouge">moon</code> icon for light mode and <code class="language-plaintext highlighter-rouge">sun</code> icon for dark mode.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td>
-<td class="rouge-code"><pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dark-mode-button"</span> <span class="nt">&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dark-mode-button"</span> <span class="nt">&gt;</span>
   <span class="nt">&lt;i</span> <span class="na">id=</span><span class="s">"icon-dark"</span> <span class="na">class=</span><span class="s">"fa fa-moon"</span><span class="nt">&gt;&lt;/i&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"dark-text"</span><span class="nt">&gt;</span>Sunset<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Next we need to add <code class="language-plaintext highlighter-rouge">darkreader.js</code> to our html file.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/darkreader@4.9.44/darkreader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/darkreader@4.9.44/darkreader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
 
 <h2 id="toggle-between-light-and-dark-mode">Toggle between light and dark mode</h2>
 
 <p>On clicking the button, we need to call the function <code class="language-plaintext highlighter-rouge">darkmode</code>.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td>
-<td class="rouge-code"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode-button</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode-button</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">darkmode</span><span class="p">()</span>
 <span class="p">}</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>The <code class="language-plaintext highlighter-rouge">localStorage</code> object allows you to save key/value pairs in the browser. This is useful to save the state of your application between page loads.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-</pre></td>
-<td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">darkmode</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">darkmode</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">let</span> <span class="nx">enabled</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode</span><span class="dl">'</span><span class="p">)</span>
 
   <span class="k">if</span> <span class="p">(</span><span class="nx">enabled</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
@@ -324,24 +288,11 @@ header li {
       <span class="nx">disable</span><span class="p">();</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Lastly we need to call <code class="language-plaintext highlighter-rouge">setFetchMethod</code> to check if the browser is using <code class="language-plaintext highlighter-rouge">darkmode</code> before enabling or disabling it.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-</pre></td>
-<td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">enable</span><span class="p">()</span>  <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">enable</span><span class="p">()</span>  <span class="p">{</span>
   <span class="nx">DarkReader</span><span class="p">.</span><span class="nx">setFetchMethod</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">fetch</span><span class="p">)</span>
   <span class="nx">DarkReader</span><span class="p">.</span><span class="nx">enable</span><span class="p">();</span>
   <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">true</span><span class="dl">'</span><span class="p">);</span>
@@ -351,8 +302,7 @@ header li {
   <span class="nx">DarkReader</span><span class="p">.</span><span class="nx">disable</span><span class="p">();</span>
   <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">false</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <h2 id="demo">Demo</h2>
 

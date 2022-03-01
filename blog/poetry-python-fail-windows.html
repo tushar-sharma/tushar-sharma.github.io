@@ -245,60 +245,28 @@ header li {
 
 <p>In cygwin, install poetry</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>curl <span class="nt">-sSL</span> https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">-sSL</span> https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+</code></pre></div></div>
 
 <p>Check the curent version</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>poetry <span class="nt">-version</span> 
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry <span class="nt">-version</span> 
 1.0.5
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Initialize poetry by creating a <code class="language-plaintext highlighter-rouge">pyproject.toml</code> file.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>poetry init
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry init
+</code></pre></div></div>
 
 <p>Now add some library like <code class="language-plaintext highlighter-rouge">pandas</code></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>poetry add pandas
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>poetry add pandas
+</code></pre></div></div>
 
 <p>However this command is causing the poetry to crash</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-</pre></td>
-<td class="rouge-code"><pre>Creating virtualenv myproject-xkRwmYf0-py3.7 <span class="k">in</span> .venv
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Creating virtualenv myproject-xkRwmYf0-py3.7 <span class="k">in</span> .venv
 
 <span class="o">[</span>Env CommandError]
 Command <span class="o">[</span><span class="s1">'.venv\\myproject\\Scripts\\python.exe'</span>, <span class="s1">'-'</span><span class="o">]</span> errored with the follwiong <span class="k">return </span>code 1, and output:
@@ -311,52 +279,31 @@ is hasattr<span class="o">(</span>sys, <span class="s2">"real_prefix"</span><spa
     print<span class="o">(</span>sys.base_prefix<span class="o">)</span>
 <span class="k">else</span>:
     print<span class="o">(</span>sys.prefix<span class="o">)</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Since poetry tries to create virtualenv under <code class="language-plaintext highlighter-rouge">.venv</code> folder, there’s a quick workaround by removing <code class="language-plaintext highlighter-rouge">carriage return</code> from activate Scripts</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>perl <span class="nt">-pe</span> <span class="s1">'s/\r$//'</span> &lt; .venv/myproject-xkRwmYf0-py3.7/Scripts/activate <span class="o">&gt;</span> activate
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>perl <span class="nt">-pe</span> <span class="s1">'s/\r$//'</span> &lt; .venv/myproject-xkRwmYf0-py3.7/Scripts/activate <span class="o">&gt;</span> activate
 <span class="nv">$ </span><span class="nb">mv </span>activate .venv/myproject-xkRwmYf0-py3.7/Scripts/activate 
 
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Then you can manually activate the virtualenv like this</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">.</span> .venv/myproject-xkRwmYf0-py3.7/Scripts/activate 
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">.</span> .venv/myproject-xkRwmYf0-py3.7/Scripts/activate 
 <span class="o">(</span>myproject-xkRwmYf0-py3.7<span class="o">)</span> <span class="nv">$ </span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Then you can simply install dependencies like</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="o">(</span>myproject-xkRwmYf0-py3.7<span class="o">)</span> <span class="nv">$ </span> poetry add pandas
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>myproject-xkRwmYf0-py3.7<span class="o">)</span> <span class="nv">$ </span> poetry add pandas
+</code></pre></div></div>
 
 <p>Lastly , you can deactive the virtualenv like</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td>
-<td class="rouge-code"><pre><span class="o">(</span>myproject-xkRwmYf0-py3.7<span class="o">)</span> <span class="nv">$ </span>deactivate
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>myproject-xkRwmYf0-py3.7<span class="o">)</span> <span class="nv">$ </span>deactivate
 <span class="nv">$ </span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>This manual method may not be the best solution. May be future updates of poetry fixes this issue on Windows.</p>
 

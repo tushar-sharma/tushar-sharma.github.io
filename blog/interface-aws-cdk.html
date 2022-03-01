@@ -246,23 +246,7 @@ header li {
 
 <p>For a simple example, let’s consider a simple cloudformation template</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-</pre></td>
-<td class="rouge-code"><pre>Parameters:
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Parameters:
   Environment:
     Type: String
     Default: dev
@@ -276,8 +260,7 @@ header li {
     Default: version
     Description: Enter your version
 
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+</code></pre></div></div>
 
 <p>What if we have to maintain 100 parameters, resources, etc in our project. Soon it will become tedious to maintain multiple resources. Instead, we create a class called <code class="language-plaintext highlighter-rouge">Parameter</code> that we instantiate multiple times using different parameters. Here is a class diagram for our <code class="language-plaintext highlighter-rouge">Parameter</code> class.</p>
 
@@ -323,12 +306,8 @@ header li {
 
 <p>First, we will read our <code class="language-plaintext highlighter-rouge">CSV</code> file into our project. We would need to install an additional library to read the file.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>npm i <span class="nt">--save</span> csvtojson
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm i <span class="nt">--save</span> csvtojson
+</code></pre></div></div>
 
 <p>We will edit the <code class="language-plaintext highlighter-rouge">lib/project_cdk-stack.ts</code> file.</p>
 
@@ -340,12 +319,8 @@ header li {
 
 <p>Our code till now will not generate any cloudformation. However, we can test it for any compile errors</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>cdk synth <span class="nt">--quiet</span>
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cdk synth <span class="nt">--quiet</span>
+</code></pre></div></div>
 
 <p>Next, we will implement our <code class="language-plaintext highlighter-rouge">generateTemplate</code> function.</p>
 
@@ -354,12 +329,8 @@ header li {
 
 <p>Lastly, we can deploy our cloudformation stack using</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr>
-<td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td>
-<td class="rouge-code"><pre><span class="nv">$ </span>cdk deploy
-</pre></td>
-</tr></tbody></table></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cdk deploy
+</code></pre></div></div>
 
 <p>In the next article, we will update our code to add additional classes to handle <code class="language-plaintext highlighter-rouge">resources</code>, <code class="language-plaintext highlighter-rouge">output</code>, etc for our cloudformation template.</p>
 
