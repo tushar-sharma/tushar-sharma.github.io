@@ -33,3 +33,4 @@ Outputs:
 ## References
 
 1. https://cloudkatha.com/create-dynamodb-table-using-cloudformation-template/
+2. https://bobbyhadz.com/blog/aws-cdk-dynamodb-table
