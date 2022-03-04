@@ -15,7 +15,7 @@ root: true
 <!-- search box ends -->
 <br>
 
-<small style="float:right; margin-top:5px;">{{ page.date | date:'%a %d %b %Y' }}</small>
+<small style="float:right; margin-top:5px;"><strong>{{ content | reading_time }}</strong></small>
 <h1>{{ page.title }}</h1>
 
 {% assign truncated_post = content | split:"<!-- truncate_here -->" %}
