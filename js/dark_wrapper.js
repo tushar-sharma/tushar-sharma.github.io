@@ -19,16 +19,17 @@ $(document).ready(function(){
       DarkReader.setFetchMethod(window.fetch)
       DarkReader.enable();
       localStorage.setItem('dark-mode', 'true');
-      document.getElementById('icon-dark').className = "fa fa-sun";
       audio.src = "../sounds/static_switch-on.mp3";
       audio.play();
+      document.getElementById('icon-dark').className = "fa fa-sun";
+
     }
     function disable() {
       DarkReader.disable();
       localStorage.setItem('dark-mode', 'false');
-      document.getElementById('icon-dark').className = "fa fa-cloud-moon";
-      audio.src = "../sounds/static_switch-off.mp3";
+       audio.src = "../sounds/static_switch-off.mp3";
       audio.play();
+     document.getElementById('icon-dark').className = "fa fa-cloud-moon";
     }
     function darkmode() {
       if (localStorage.getItem('dark-mode') === 'false') {
