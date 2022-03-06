@@ -259,7 +259,11 @@ header li {
 <p>Use docker to install libraries</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir</span> <span class="nt">-p</span> python/lib/python3.7/site-packages
-<span class="nv">$ </span>docker run <span class="nt">-v</span> <span class="s2">"</span><span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span><span class="s2">:/var/task"</span> <span class="s2">"lambci/lambda:build-python3.7"</span> /bin/sh <span class="nt">-c</span> <span class="s2">"pip install -r requirements.txt -t python/lib/python3.7/site-packages/; exit"</span>
+<span class="nv">$ </span>docker run <span class="se">\</span>
+  <span class="nt">-v</span> <span class="s2">"</span><span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span><span class="s2">:/var/task"</span> <span class="se">\</span>
+  <span class="s2">"lambci/lambda:build-python3.7"</span> <span class="se">\</span>
+  /bin/sh <span class="nt">-c</span> <span class="s2">"pip install -r requirements.txt </span><span class="se">\</span><span class="s2">
+  -t python/lib/python3.7/site-packages/; exit"</span>
 </code></pre></div></div>
 
 <blockquote class="attention">
