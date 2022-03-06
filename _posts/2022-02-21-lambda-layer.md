@@ -3,12 +3,13 @@ title: Creating Python AWS lambda layer with Docker
 category: blog
 layout: post
 tags:
-- docker
-- aws
-- python
+  - docker
+  - aws
+  - python
 featuredPost: false
-image: https://unsplash.com/photos/1pyqUh8Jx3E/download?w=800
-thumb: https://unsplash.com/photos/1pyqUh8Jx3E/download?w=800
+image: 'https://unsplash.com/photos/1pyqUh8Jx3E/download?w=800'
+thumb: 'https://unsplash.com/photos/1pyqUh8Jx3E/download?w=800'
+published: true
 ---
 
 When you develop AWS lambda functions, you might feel the need to install additional `python` libraries. This can be achieved using Lambda layers that can be included in any lambda function.<!-- truncate_here -->
@@ -37,7 +38,11 @@ Use docker to install libraries
 
 ```bash
 $ mkdir -p python/lib/python3.7/site-packages
-$ docker run -v "$(pwd):/var/task" "lambci/lambda:build-python3.7" /bin/sh -c "pip install -r requirements.txt -t python/lib/python3.7/site-packages/; exit"
+$ docker run \
+  -v "$(pwd):/var/task" \
+  "lambci/lambda:build-python3.7" \
+  /bin/sh -c "pip install -r requirements.txt \
+  -t python/lib/python3.7/site-packages/; exit"
 ```
 
 <blockquote class="attention" markdown="1">
