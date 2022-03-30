@@ -35,6 +35,7 @@ toc_icon: cog
 |         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | |
 |         |         | [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) | |
 |         |         | [HeadingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi) | Browse the headings structure of a websiteSS |
+| [Ubuntu](https://ubuntu.com/)  | Operating System  |  | Details<sup><href='#fn:3' rel='footnote'>3</sup> |
 | [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
 |                                           |          | Github Copilot |  |
 |                                           |          | Git Graph      |  |
@@ -95,4 +96,11 @@ $ wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/nvim/init
 $ git clone https://github.com/neoclide/coc.nvim.git && cd coc.nvim
 $ yarn install  && yarn build
 $ cp -r build ~/.local/share/nvim/plugged
+```
+
+### <span id='fn:3'>Ubuntu <a href='#fnref:3' rev='footnote'>&#8617;</a></span>
+
+```bash
+# Allow close lid with laptops
+$ sudo apt-get gnome-tweak-tool
 ```
