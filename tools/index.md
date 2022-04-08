@@ -77,6 +77,7 @@ gcc-core
 gdb
 libboost-devel
 gcc-g++
+dconf
 ```
 
 
