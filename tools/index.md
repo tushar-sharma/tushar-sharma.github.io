@@ -78,6 +78,7 @@ gdb
 libboost-devel
 gcc-g++
 dconf
+fontconfig
 ```
 
 
