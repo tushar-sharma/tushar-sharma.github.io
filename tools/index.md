@@ -14,6 +14,7 @@ toc_icon: cog
 
 <h2 class="blue entry-title"><i class="fas fa-hammer"></i> Tools</h2>
 
+
 |  Tools  | Type    | Customization | Description |
 |---------+---------+--------------+--------------|
 | [Firefox](https://www.mozilla.org/en-US/firefox/new/) | browser | [Vimimum](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/)| Vim like browser|
@@ -44,7 +45,8 @@ toc_icon: cog
 | [Winmerge](https://winmerge.org/)  | Diff  |  [Dotfiles](https://github.com/tushar-sharma/dotfiles)   |  |
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
-| [Cygwin](https://www.cygwin.com/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
+| [ConEmu ](https://conemu.github.io/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
+| [Cygwin](https://www.cygwin.com/)     | Terminal | Details<sup><a href='#fn:4' rel='footnote'>4</a></sup> | |
 | [qBittorrent](https://www.qbittorrent.org/)  | BitTorrent | | |
 
 ## Details
@@ -106,4 +108,18 @@ $ cp -r build ~/.local/share/nvim/plugged
 ```bash
 # Allow close lid with laptops
 $ sudo apt-get gnome-tweak-tool
+```
+
+### <span id='fn:4'>ConEmu<a href='#fnref:4' rev='footnote'>&#8617;</a></span>
+
+```bash
+# Install Fonts from here https://www.nerdfonts.com/font-downloads
+# For Windows, install Windows Compatible otf/ttf files
+# Fonts used
+## 3270 Nerd Font
+## Hack Nerd Font
+
+# Change following
+## Setting -> Fonts -> Hack NF
+## Setting ->  Startup -> Tasks -> {Bash::Cygwin Bash} -> Default shell
 ```
