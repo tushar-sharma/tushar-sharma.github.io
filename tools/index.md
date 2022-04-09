@@ -136,6 +136,5 @@ $ wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/.zshrc
 $ p10k configure
 
 # Change background image
-$ wget splash.com/photohttps://uns/uXU4Avx77UY
 $ Settings -> Background -> Path
 ```
