@@ -125,10 +125,17 @@ $ sudo apt-get gnome-tweak-tool
 
 # Install oh-my-zsh
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Get Oh-my-zsh theme
 $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 # get .zshrc from my dotfiles repo
 $ wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/.zshrc
+
 # configure it
 $ p10k configure
+
+# Change background image
+$ wget splash.com/photohttps://uns/uXU4Avx77UY
+$ Settings -> Background -> Path
 ```
