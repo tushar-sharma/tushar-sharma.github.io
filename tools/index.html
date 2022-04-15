@@ -347,6 +347,19 @@ header li {
       <td>Browse the headings structure of a websiteSS</td>
     </tr>
     <tr>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja">I dont care about cookies</a></td>
+      <td>Browse the headings structure of a websiteSS</td>
+    </tr>
+    <tr>
+      <td><a href="https://ubuntu.com/">Ubuntu</a></td>
+      <td>Operating System</td>
+      <td> </td>
+      <td>Details<sup>&lt;href=’#fn:3’ rel=’footnote’&gt;3</sup>
+</td>
+    </tr>
+    <tr>
       <td><a href="https://code.visualstudio.com/">VS Code</a></td>
       <td>editor</td>
       <td>Gitpod</td>
@@ -389,15 +402,28 @@ header li {
       <td> </td>
     </tr>
     <tr>
-      <td><a href="https://www.cygwin.com/">Cygwin</a></td>
+      <td><a href="https://conemu.github.io/">ConEmu </a></td>
       <td>Terminal</td>
       <td>Details<sup><a href="#fn:1" rel="footnote">1</a></sup>
 </td>
       <td> </td>
     </tr>
     <tr>
+      <td><a href="https://www.cygwin.com/">Cygwin</a></td>
+      <td>Terminal</td>
+      <td>Details<sup><a href="#fn:4" rel="footnote">4</a></sup>
+</td>
+      <td> </td>
+    </tr>
+    <tr>
       <td><a href="https://www.qbittorrent.org/">qBittorrent</a></td>
       <td>BitTorrent</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="https://www.expressvpn.com/">Expressvpn</a></td>
+      <td>VPN</td>
       <td> </td>
       <td> </td>
     </tr>
@@ -433,6 +459,8 @@ gcc-core
 gdb
 libboost-devel
 gcc-g++
+dconf
+fontconfig
 </code></pre></div></div>
 
 <h3 id="neovim-on-windows-"><span id="fn:2">Neovim on Windows <a href="#fnref:2" rev="footnote">↩</a></span></h3>
@@ -451,6 +479,40 @@ gcc-g++
 <span class="nv">$ </span>git clone https://github.com/neoclide/coc.nvim.git <span class="o">&amp;&amp;</span> <span class="nb">cd </span>coc.nvim
 <span class="nv">$ </span>yarn <span class="nb">install</span>  <span class="o">&amp;&amp;</span> yarn build
 <span class="nv">$ </span><span class="nb">cp</span> <span class="nt">-r</span> build ~/.local/share/nvim/plugged
+</code></pre></div></div>
+
+<h3 id="ubuntu-"><span id="fn:3">Ubuntu <a href="#fnref:3" rev="footnote">↩</a></span></h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Allow close lid with laptops</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get gnome-tweak-tool
+</code></pre></div></div>
+
+<h3 id="conemu"><span id="fn:4">ConEmu<a href="#fnref:4" rev="footnote">↩</a></span></h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install Fonts from here https://www.nerdfonts.com/font-downloads</span>
+<span class="c"># For Windows, install Windows Compatible otf/ttf files</span>
+<span class="c"># Fonts used</span>
+<span class="c">## 3270 Nerd Font</span>
+<span class="c">## Hack Nerd Font</span>
+
+<span class="c"># Change following</span>
+<span class="c">## Setting -&gt; Fonts -&gt; Hack NF</span>
+<span class="c">## Setting -&gt;  Startup -&gt; Tasks -&gt; {Bash::Cygwin Bash} -&gt; Default shell</span>
+
+<span class="c"># Install oh-my-zsh</span>
+<span class="nv">$ </span>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
+
+<span class="c"># Get Oh-my-zsh theme</span>
+<span class="nv">$ </span>git clone <span class="nt">--depth</span><span class="o">=</span>1 https://github.com/romkatv/powerlevel10k.git <span class="k">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.oh-my-zsh/custom</span><span class="k">}</span>/themes/powerlevel10k
+
+<span class="c"># get .zshrc from my dotfiles repo</span>
+<span class="nv">$ </span>wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/.zshrc
+
+<span class="c"># configure it</span>
+<span class="nv">$ </span>p10k configure
+
+<span class="c"># Change background image</span>
+<span class="nv">$ </span>Settings -&gt; Background -&gt; Path
 </code></pre></div></div>
 
         <hr>
