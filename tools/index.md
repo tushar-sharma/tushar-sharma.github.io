@@ -48,6 +48,8 @@ toc_icon: cog
 | [ConEmu ](https://conemu.github.io/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
 | [Cygwin](https://www.cygwin.com/)     | Terminal | Details<sup><a href='#fn:4' rel='footnote'>4</a></sup> | |
 | [qBittorrent](https://www.qbittorrent.org/)  | BitTorrent | | |
+| [Expressvpn](https://www.expressvpn.com/)  | VPN | | |
+
 
 ## Details
 
