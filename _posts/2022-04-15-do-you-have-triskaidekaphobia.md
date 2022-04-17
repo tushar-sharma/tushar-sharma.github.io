@@ -80,7 +80,7 @@ My first hunch was that maybe the construction company skipped their arithmetic 
 ></iframe><br>
 
 
-Why was the floor 13<sup>th</sup> missing? It's a purely a business decision. 13 percent of Americans in a 2007 Gallup poll said that it would bother them to stay in a room on 13 floors in a hotel[^usa-poll]. In 2015, an NYC housing data firm called CityReality released that only 9% of all apartment buildings in NYC had 13th floor[^nyc]. Airlines also don't have 13<sup>th</sup> row
+Why was the floor 13<sup>th</sup> missing? It's purely a business decision. 13 percent of Americans in a 2007 Gallup poll said that it would bother them to stay in a room on 13 floors in a hotel[^usa-poll]. In 2015, an NYC housing data firm called CityReality released that only 9% of all apartment buildings in NYC had 13th floor[^nyc]. Airlines also don't have 13<sup>th</sup> row
 
 There's also a rather cute word to describe a fear of number 13 called **triskaidekaphobia**. I am an empiricist. I believe that all hypotheses must be tested against observations. So for me to fear number 13 , I have to be convinced not by any religious book or folklore but by data buttressed with empirical evidence.
 
