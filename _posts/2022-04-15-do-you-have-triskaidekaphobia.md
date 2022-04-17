@@ -14,7 +14,7 @@ author: Tushar Sharma
 ---
 
 
-I grew up in India with a diet of basmati rice and superstition. I have seen pedestrians feezing at the sight of a black cat crossing their path for fear of bad luck. Lemon and chilis hang in front of vehicles to ward off bad spirits. I fondly remember numerous advertisements proclaiming protection from evil eyes. Recently I stumbled upon an ad that refreshed my memories.<!-- truncate_here -->
+I grew up in India with a diet of basmati rice and superstition. I have seen pedestrians freezing at the sight of a black cat crossing their path for fear of bad luck. Lemon and chilis hang in front of vehicles to ward off bad spirits. I fondly remember numerous advertisements proclaiming protection from evil eyes. Recently I stumbled upon an ad that refreshed my memories.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
 
@@ -25,7 +25,7 @@ I grew up in India with a diet of basmati rice and superstition. I have seen ped
 ### Tryst with Superstition
 
 
-I grew up in India with a diet of basmati rice and superstition. I have seen pedestrians feezing at the sight of a black cat crossing their path for fear of bad luck. Lemon and chilis hang in front of vehicles to ward off bad spirits. I fondly remember numerous advertisements proclaiming protection from evil eyes. Recently I stumbled upon an ad that refreshed my memories.
+I grew up in India with a diet of basmati rice and superstition. I have seen pedestrians freezing at the sight of a black cat crossing their path for fear of bad luck. Lemon and chilis hang in front of vehicles to ward off bad spirits. I fondly remember numerous advertisements proclaiming protection from evil eyes. Recently I stumbled upon an ad that refreshed my memories.
 
 
 <iframe
@@ -80,7 +80,7 @@ My first hunch was that maybe the construction company skipped their arithmetic 
 ></iframe><br>
 
 
-Why was the floor 13<sup>th</sup> missing? It's purely a business decision. 13 percent of Americans in a 2007 Gallup poll said that it would bother them to stay in a room on 13 floors in a hotel[^usa-poll]. In 2015, an NYC housing data firm called CityReality released that only 9% of all apartment buildings in NYC had 13th floor[^nyc]. Airlines also don't have 13<sup>th</sup> row
+Why was the floor 13<sup>th</sup> missing? It's purely a business decision. 13 percent of Americans in a 2007 Gallup poll said that it would bother them to stay in a room on 13 floors in a hotel[^usa-poll]. In 2015, an NYC housing data firm called CityReality released that only 9% of all apartment buildings in NYC had 13th floor[^nyc]. Many airlines like Air France, Lufthansa,Iberia and Ryanair are some of the airlines that don’t have row number 13[^airline].
 
 There's also a rather cute word to describe a fear of number 13 called **triskaidekaphobia**. I am an empiricist. I believe that all hypotheses must be tested against observations. So for me to fear number 13 , I have to be convinced not by any religious book or folklore but by data buttressed with empirical evidence.
 
@@ -168,8 +168,7 @@ If we only select dates on **13** and recompute our result.
 
 <img src="{{ root_url }}/img/number_post_4.png" >
 
-So 13<sup>th</sup> is not a worst date to fly as it's not causing major accidents. Feel free to play with the data to see if you find any interesting correlation.
-
+So flying on 13<sup>th</sup> doesn't have greatest number of aviation accidents.
 
 ### Conclusion
 
@@ -182,6 +181,7 @@ So 13<sup>th</sup> is not a worst date to fly as it's not causing major accident
 [^usa-poll]: [Gallop polll](https://news.gallup.com/poll/26887/thirteen-percent-americans-bothered-stay-hotels-13th-floor.aspx)
 [^nyc]: [Why no 13th floor in my buildings](https://streeteasy.com/blog/why-no-13th-floor-in-many-buildings/)
 [^air-safe]: [AirSafe.com](http://www.airsafe.com/analyze/ntsb.database.html)
+[^airline]: [Some planes skip row numbers 13, 14 and 17 for this reason](https://www.news.com.au/travel/travel-advice/flights/some-planes-skip-row-numbers-13-14-and-17-for-this-reason/news-story/779508d9d3088a631217ee02480b2023)
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
