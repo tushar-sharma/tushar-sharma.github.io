@@ -30,15 +30,17 @@ I recently came across a Youtube video of a famous Indian actress Genelia Deshmu
 
 <p> I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.</p>
 
-<p>
-<center>
-<figure>
-  <iframe height="500" src="https://www.youtube.com/embed/rFP0iF5toOg"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-</center>
-</p>
 
-<br>
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/rFP0iF5toOg&autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/rFP0iF5toOg?autoplay=1><img src=https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg ><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Homeopathy is the best friend for a Women's Health"
+></iframe><br>
 
 
 ## Allopathy vs Homeopathy
