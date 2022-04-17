@@ -19,9 +19,20 @@ After the outbreak of <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" 
 
 <center>
 <figure>
-  <iframe height="500" src="https://www.youtube.com/embed/mf6cWinJz9k"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe height="500" src="https://www.youtube.com/embed/"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 </center>
+
+<iframe
+  width="800"
+   height="500"
+  src="https://www.youtube.com/embed/mf6cWinJz9k&autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/mf6cWinJz9k?autoplay=1><img src=https://img.youtube.com/vi/mf6cWinJz9k/hqdefault.jpg alt='Video Russian President Putin announces military operation in Ukraine'><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Russian President Putin announces military operation in Ukraine"
+></iframe><br>
 
 Wars is a terrible tragedy with no winners. United States has spent more than $8 trillion dollars on the post-9/11 wars in Afghanistan, Pakistan, Iraq, and elsewhere[^usa-cost]. The Soviet Union had to splurge more than $50 billion in continuing the protracted war in Afghanistan[^soviet-cost]. Wars drag countries back for decades due to insurmountable economic loss.
 
