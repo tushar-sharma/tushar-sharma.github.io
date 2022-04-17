@@ -9,9 +9,11 @@ add:
 	git add sitemap.xml
 oldbuild:
 	JEKYLL_ENV=production bundle exec jekyll build
+	$(MAKE) copy
 build:
 	chmod -R 777 *
 	docker-compose up build
+	$(MAKE) copy
 serve:
 	chmod -R 777 *
 	docker-compose up serve
