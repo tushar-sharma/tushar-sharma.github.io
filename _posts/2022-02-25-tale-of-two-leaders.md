@@ -32,7 +32,7 @@ After the outbreak of <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" 
 Wars is a terrible tragedy with no winners. United States has spent more than $8 trillion dollars on the post-9/11 wars in Afghanistan, Pakistan, Iraq, and elsewhere[^usa-cost]. The Soviet Union had to splurge more than $50 billion in continuing the protracted war in Afghanistan[^soviet-cost]. Wars drag countries back for decades due to insurmountable economic loss.
 
 <blockquote class="attention">
-"Older men declare war. But it is youth that must fight and die" Herbert Hoover
+"Older men declare war. But it is youth that must fight and die" - Herbert Hoover
 </blockquote>
 
 However wars, though most unfortunate, is a perfect platform to test a leader. Adversity is the tool that separates the chaff from the wheat. I could not help but compare [Ashraf Ghani](https://en.wikipedia.org/wiki/Ashraf_Ghani), the former President of Afghanistan, with [Volodymyr Zelenskyy](https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy), the current President of Ukraine.

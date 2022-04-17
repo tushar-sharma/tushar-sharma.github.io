@@ -32,7 +32,7 @@ exclude:
 - .gitignore
 - .jekyll-cache
 reading_time:
-  words_per_minute: 300
+  words_per_minute: 250
   translations:
     about: 
     minute: min read
