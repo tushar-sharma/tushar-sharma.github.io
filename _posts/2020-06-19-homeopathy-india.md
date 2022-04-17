@@ -161,27 +161,33 @@ Mukesh Batra is recipient of Padma Shri award from the president of India. It’
 DD News is a Indian government funded news channel. It reports how homeopathy can treat respiratory problems
 </blockquote>
 
-<p>
-<center>
-<figure>
-  <iframe height="500"  src="https://www.youtube.com/embed/zhoDZrGj9Kc"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-</center>
-</p>
-
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/zhoDZrGj9Kc&autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/zhoDZrGj9Kc?autoplay=1><img src=https://img.youtube.com/vi/zhoDZrGj9Kc/hqdefault.jpg><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Homeopathy in treating respiratory problems (Hindi)"
+></iframe><br>
 
 
 <blockquote class="attention">
 Claims that homeopathy can cure genetic disorders
 </blockquote>
 
-<p>
-<center>
-<figure>
-  <iframe height="500"  src="https://www.youtube.com/embed/x4_HjgUgvp4"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-</center>
-</p>
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/x4_HjgUgvp4&autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/x4_HjgUgvp4?autoplay=1><img src=https://img.youtube.com/vi/x4_HjgUgvp4/hqdefault.jpg><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Genetic Disorders: Treating with homeopathy - Dr. Surekha Tiwari"
+></iframe><br>
+
 
 <div markdown="1">
 
