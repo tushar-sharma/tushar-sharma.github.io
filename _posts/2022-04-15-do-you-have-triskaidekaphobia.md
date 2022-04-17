@@ -178,7 +178,7 @@ So 13<sup>th</sup> is not a worst date to fly as it's not causing major accident
 
 ### References
 
-[^book]: [U.S. air travel safety record](Mastering Python Data Analysis by Luiz Felipe Martins)
+[^book]: Mastering Python Data Analysis by Luiz Felipe Martins
 [^usa-poll]: [Gallop polll](https://news.gallup.com/poll/26887/thirteen-percent-americans-bothered-stay-hotels-13th-floor.aspx)
 [^nyc]: [Why no 13th floor in my buildings](https://streeteasy.com/blog/why-no-13th-floor-in-many-buildings/)
 [^air-safe]: [AirSafe.com](http://www.airsafe.com/analyze/ntsb.database.html)
