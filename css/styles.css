@@ -1,8 +1,9 @@
 .thumb{
-    width: 100%;
-    height: auto;
+    width: 800px;
+    height: 437px;
     max-height: 437px;
     margin:5px 30px 25px 0;
+    aspect-ratio: 4/3;
     -webkit-border-radius:10px;
     -khtml-border-radius:10px;-moz-border-radius:10px;border-radius:10px
 }
