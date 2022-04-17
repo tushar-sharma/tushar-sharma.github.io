@@ -7,9 +7,9 @@ tags:
 - rationalism
 - python
 name: triskaidekaphobia
-thumb: https://unsplash.com/photos/qDY9ahp0Mto/download?w=800
+thumb: https://unsplash.com/photos/LUYD2b7MNrg/download?w=800
 summary: Homeopathy and pseudoscience
-image: https://unsplash.com/photos/qDY9ahp0Mto/download?w=800
+image: https://unsplash.com/photos/LUYD2b7MNrg/download?w=800
 author: Tushar Sharma
 ---
 
@@ -19,7 +19,7 @@ I grew up in India with a diet of basmati rice and superstition. I have seen ped
 
 
 <center>
-<img  class="thumb"  src="https://unsplash.com/photos/qDY9ahp0Mto/download?w=800" alt="13 number" >
+<img  class="thumb"  src="https://unsplash.com/photos/LUYD2b7MNrg/download?w=800" alt="13 number" >
 </center>
 
 ### Tryst with Superstition
@@ -29,7 +29,7 @@ I grew up in India with a diet of basmati rice and superstition. I have seen ped
 
 
 <iframe
-  width="800"
+  style="position: relative;  width: 100%;" 
    height="500"
   src="https://www.youtube.com/embed/3emy2HwSwuo&autoplay=1"
   srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/3emy2HwSwuo?autoplay=1><img src=https://img.youtube.com/vi/3emy2HwSwuo/hqdefault.jpg alt='Video Sidh Nazar Raksha Kavach '><span>▶</span></a>"
@@ -42,8 +42,8 @@ I grew up in India with a diet of basmati rice and superstition. I have seen ped
 Another gem is a video by Numerologist, Sanjay Sethi, for doling out remedies for protection from Evil eyes. "Take little raw milk on a Saturday or a Sunday and give 7 rounds of it around the affected person head and after that give that milk to a black dog to drink...(sic)".
 
 <iframe
-  width="800"
-   height="500"
+ style="position: relative;  width: 100%;"
+ height="500"
   src="https://www.youtube.com/embed/zsHsIoNr-JA&autoplay=1"
   srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/zsHsIoNr-JA?autoplay=1><img src=https://img.youtube.com/vi/zsHsIoNr-JA/hqdefault.jpg alt='Video How to protect yourself from Evil Eye'><span>▶</span></a>"
   frameborder="0"
@@ -69,7 +69,7 @@ My first hunch was that maybe the construction company skipped their arithmetic 
 <div class="js-lazytube" data-embed="" data-width="640"></div>
 
 <iframe
-  width="800"
+   style="position: relative;  width: 100%;" 
    height="500"
   src="https://www.youtube.com/embed/MTykayOv_XA&autoplay=1"
   srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/MTykayOv_XA?autoplay=1><img src=https://img.youtube.com/vi/MTykayOv_XA/hqdefault.jpg alt='Video The Sorceror Stone- Platform Nine and Three Quarters'><span>▶</span></a>"
