@@ -17,11 +17,6 @@ After the outbreak of <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" 
 
 After the outbreak of <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" target="#">Covid-19 pandemic</a> and <a href="https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)" target="_blank">Fall of Kabul</a>, year 2022 was supposed to instill normalcy back into the world. However world looks more topsy-turvy than before with the advent of war between Ukraine and Russia.
 
-<center>
-<figure>
-  <iframe height="500" src="https://www.youtube.com/embed/"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-</center>
 
 <iframe
   width="800"
