@@ -14,6 +14,7 @@ gem "ffi", ">= 1.9.24"
 gem "addressable", ">= 2.8.0"
 gem 'jekyll-spaceship'
 gem 'jekyll_reading_time', '~> 0.1.1'
+gem "nokogiri", ">= 1.13.4"
 
 
 gem 'jekyll-compose', group: [:jekyll_plugins]
