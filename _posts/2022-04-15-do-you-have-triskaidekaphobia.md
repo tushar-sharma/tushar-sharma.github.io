@@ -80,7 +80,7 @@ My first hunch was that maybe the construction company skipped their arithmetic 
 ></iframe><br>
 
 
-Why was the floor 13<sup>th</sup> missing? It's a pure business decision. 13 percent of Americans in a 2007 Gallup poll said that it would bother them to stay in a room on 13 floors in a hotel[^usa-poll]. In 2015, an NYC housing data firm called CityReality released that only 9% of all apartment buildings in NYC had 13th floor[^nyc]. Airlines also don't have 13<sup>th</sup> row 
+Why was the floor 13<sup>th</sup> missing? It's a purely a business decision. 13 percent of Americans in a 2007 Gallup poll said that it would bother them to stay in a room on 13 floors in a hotel[^usa-poll]. In 2015, an NYC housing data firm called CityReality released that only 9% of all apartment buildings in NYC had 13th floor[^nyc]. Airlines also don't have 13<sup>th</sup> row
 
 There's also a rather cute word to describe a fear of number 13 called **triskaidekaphobia**. I am an empiricist. I believe that all hypotheses must be tested against observations. So for me to fear number 13 , I have to be convinced not by any religious book or folklore but by data buttressed with empirical evidence.
 
@@ -100,7 +100,7 @@ So lets download `AviationData.txt` dataset and analyze aviation accident[^book]
 
 ```bash
 $ mkdir aviation
-$ cd $_ 
+$ cd $_
 $ wget http://www.airsafe.com/analyze/AviationData.txt
 
 ```
@@ -116,13 +116,13 @@ EOF
 
 Set up `python` project
 
-```bash 
+```bash
 $ poetry init
-$ cat requirements.txt | xargs poetry add 
+$ cat requirements.txt | xargs poetry add
 ```
 
 
-Creae a simple python file `job.py`. 
+Creae a simple python file `job.py`.
 
 <script src="https://gist.github.com/tushar-sharma/d5936bac5ff41e578895c13061f81fc3.js?file=ex2.py"></script>
 
@@ -136,7 +136,7 @@ This should print the following data.
 Remove dates which are empty.
 
 ```python
-selection = df['date'] != ' ' 
+selection = df['date'] != ' '
 df = df[selection]
 ```
 
@@ -168,7 +168,7 @@ If we only select dates on **13** and recompute our result.
 
 <img src="{{ root_url }}/img/number_post_4.png" >
 
-So 13<sup>th</sup> is not a worst date to fly as it's not causing major accidents. Feel free to play with the data to see if you find any interesting correlation. 
+So 13<sup>th</sup> is not a worst date to fly as it's not causing major accidents. Feel free to play with the data to see if you find any interesting correlation.
 
 
 ### Conclusion
