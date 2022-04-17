@@ -84,7 +84,10 @@ Why was the floor 13<sup>th</sup> missing? It's a pure business decision. 13 per
 
 There's also a rather cute word to describe a fear of number 13 called **triskaidekaphobia**. I am an empiricist. I believe that all hypotheses must be tested against observations. So for me to fear number 13 , I have to be convinced not by any religious book or folklore but by data buttressed with empirical evidence.
 
-> "The test of all knowledge is experiment. Experiment is the sole judge of scientific truth" - Richard Feynman
+
+<blockquote class="attention">
+"The test of all knowledge is experiment. Experiment is the sole judge of scientific truth" - Richard Feynman
+</blockquote>
 
 
 One of my worst nightmare is dying in a plane mishap. So I wanted to understand is there a correlation between aviation accident and number 13?
