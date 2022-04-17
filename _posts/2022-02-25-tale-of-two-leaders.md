@@ -46,11 +46,18 @@ However, Volodymyr Zelenskyy has refused to be evacuated and continues to lead a
 
 Numerical strength or a huge stash of weapons alone doesn't guarantee success in a war. The psyche of the armed forces is affected by the response of their leaders. Afghanistan army had fought valiantly against the Taliban on multiple occassions. However post withdrawl of United States army and lack of political will of Afghan politicians, Afghanistan army began to lose morale and some of their forces started to flee without fighting the Taliban.
 
-<center>
-<figure>
-  <iframe height="500" src="https://www.youtube.com/embed/4eeQKPZsz2E"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-</center>
+
+<iframe
+  width="800"
+   height="500"
+  src="https://www.youtube.com/embed/4eeQKPZsz2E&autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/4eeQKPZsz2E?autoplay=1><img src=https://img.youtube.com/vi/4eeQKPZsz2E/hqdefault.jpg alt='Afghan security forces flee without a fight as more districts fall to the Taliban'><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Afghan security forces flee without a fight as more districts fall to the Taliban"
+></iframe><br>
+
 
 In contrast, Ukrainian border guards at Snake Island, refused to surrender to a Russian warship despite knowing inevitable decimation.
 
