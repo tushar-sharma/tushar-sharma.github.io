@@ -15,3 +15,10 @@ Edit the `~/.gitconfig` file.
     st = status
 ```
 
+
+You can also create alias in shell, `vim ~/.bashrc`
+
+```bash
+alias g='git'
+
+```
