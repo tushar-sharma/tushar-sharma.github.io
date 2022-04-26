@@ -36,6 +36,7 @@ So you both the commands are equivalent.
 ```bash
 $ git status
 $ git st
+$ git co newBranch
 ```
 
 Sometimes its good to be lazy. You can further add aliases in your terminal. For bash, you can edit `$HOME/.bashrc`
