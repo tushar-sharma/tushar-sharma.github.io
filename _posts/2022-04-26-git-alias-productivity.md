@@ -6,6 +6,14 @@ published: false
 
 tags: git
 
+You can create shortcuts in git using `alias`. Git looks for `.gitconfig` file in $HOME directory. You can view location of the file 
+
+```bash
+$ git config --list --show-origin
+```
+
+
+
 Edit the `~/.gitconfig` file. 
 
 ```bash
