@@ -6,3 +6,12 @@ published: false
 
 tags: git
 
+Edit the `~/.gitconfig` file. 
+
+```bash
+[alias]
+    co = checkout
+    ci = commit 
+    st = status
+```
+
