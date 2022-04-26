@@ -20,6 +20,7 @@ Now edit this file, `.gitconfig` and add the following section
     co = checkout
     ci = commit 
     st = status
+    br = branch
     a = add
     au = add -u 
     p = pus
@@ -40,11 +41,17 @@ $ git st
 Sometimes its good to be lazy. You can further add aliases in your terminal. For bash, you can edit `$HOME/.bashrc`
 
 ```bash
-
+alias g='git'
 ci() { git commit -m "$1"; }
 
-alias g='git'
+```
 
+So now you can type like
+
+```bash
+g st
+g add file.txt
+ci "added new file"
 ```
 
 Feel free to downlaod my [DotFile](https://github.com/tushar-sharma/dotfiles)
