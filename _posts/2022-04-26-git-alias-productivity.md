@@ -29,3 +29,4 @@ alias g='git'
 
 ```
 https://blog.webdevsimplified.com/2021-10/advanced-git-commands/
+https://tekloon.dev/setup-git-alias-improve-productivity
