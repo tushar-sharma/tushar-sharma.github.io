@@ -2,11 +2,7 @@
 published: false
 ---
 
-## Composition Over Inheritance
+##  Use git alias for productivity
 
-> favor object composition over inheritance - A principle from the Gang of Four book
+tags: git
 
-```python
-
-
-```
