@@ -10,8 +10,12 @@ Edit the `~/.gitconfig` file.
 
 ```bash
 [alias]
-    co = checkout
-    ci = commit 
     st = status
 ```
 
+Now, we can do 
+
+```bash
+$ git status
+$ git st
+```
