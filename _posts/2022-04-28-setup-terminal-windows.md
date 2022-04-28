@@ -11,7 +11,21 @@ $ wsl --install -d Ubuntu
 
 3. Using Windows Terminal, go to `settings` and change default to `Ubuntu`.
 
-4. Install `exas` 
+4. Install `Oh-my-zsh`
+
+```bash
+$ sudo apt-get install git zsh -y
+$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+```
+5. Install `Powerlevel10k` theme
+
+```bash
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+$ Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
+```
+
+5. Install `exas` 
 
 ```bash
 # from the installation page https://the.exa.website/#installation
@@ -19,3 +33,4 @@ $ wget -c https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_6
 $ unzip exa-linux-x86_64-v0.10.0.zip
 $ sudo mv bin/exa /usr/local/bin/exa
 ```
+
