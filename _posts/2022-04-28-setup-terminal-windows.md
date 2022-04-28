@@ -107,3 +107,12 @@ alias lc='ll -schanged'       # Long format, newest status change (ctime) last
 $ wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/.vimrc
 ```
 
+# Set more alias in ~/.zsh 
+
+```bash
+$ alias g='git'
+# make git commit easy
+ci() { git commit -m "$1"; }
+
+```
+
