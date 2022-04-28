@@ -64,12 +64,18 @@ $ wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/.tmux.con
 $ tmux -u
 ```
 
-5. Install `exas` 
+5. Next Install `exas` 
 
 ```bash
 # from the installation page https://the.exa.website/#installation
 $ wget -c https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
 $ unzip exa-linux-x86_64-v0.10.0.zip
 $ sudo mv bin/exa /usr/local/bin/exa
+```
+
+Add following `alias` for exas in ~/.zshrc
+
+```bash
+
 ```
 
