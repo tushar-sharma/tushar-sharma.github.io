@@ -21,8 +21,9 @@ $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/instal
 5. Install `Powerlevel10k` theme
 
 ```bash
-$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 $ Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
+$ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
 
 5. Install `exas` 
