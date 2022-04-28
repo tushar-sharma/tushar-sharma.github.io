@@ -33,6 +33,15 @@ It will prompt powerlevel font setup. If not type
 $ p10k configure
 ```
 
+Open ~/.p10k.zsh to only show curernt directory
+
+```bash
+# change 
+typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
+# change it to 
+typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
+```
+
 Next I choose following options for the prompt
 
 ```bash
