@@ -93,4 +93,9 @@ alias lt='ll -smodified'      # Long format, newest modification time last
 alias lc='ll -schanged'       # Long format, newest status change (ctime) last
 
 ```
+# Add vim config
+
+```bash
+$ wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/.vimrc
+```
 
