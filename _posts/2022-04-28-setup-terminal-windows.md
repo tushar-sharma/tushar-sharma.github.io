@@ -145,3 +145,11 @@ next modify `/etc/resolv.conf`
 ```bash
 nameserver IP_ADDRESSS
 ```
+
+
+Login 
+
+``bash
+$ sudo apt-get install pipx
+$ python3 -m pipx ensurepath --force
+```
