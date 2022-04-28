@@ -9,6 +9,12 @@ published: false
 $ wsl --install -d Ubuntu
 ```
 
+If you want to change the username, run it from cmd
+
+```bash
+$  ubuntu run sudo usermod -l newUsername oldUsername
+```
+
 3. Using Windows Terminal, go to `settings` and change default to `Ubuntu`.
 
 4. Install `Oh-my-zsh`
