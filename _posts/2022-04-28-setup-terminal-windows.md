@@ -24,6 +24,36 @@ $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/instal
 $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 $ Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
 $ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+$ zsh 
+```
+
+It will prompt powerlevel font setup. If not type
+
+```bash
+$ p10k configure
+```
+
+Next I choose following options for the prompt
+
+```bash
+
+    To the first questions I choose yes, as all the icons appeared correctly.
+    Then I choose Rainbow style 
+    I then choose Unicode
+    And then 24-hour format
+    Angled Separator
+    Sharp separator to head
+    Choose flat to the tail
+    Two lines for prompt height
+    Prompt Connection: Disconnected
+    Prompt Frame: Left
+    Frame color: Light
+    Prompt space: Sparse
+    Icons: Many icons 
+    Prompt flow: Concise 
+    Enable Transient Prompt: Yes 
+    Instant Prompt: Verbose
+    Applied changes to ./zshrc
 ```
 
 5. Install `exas` 
