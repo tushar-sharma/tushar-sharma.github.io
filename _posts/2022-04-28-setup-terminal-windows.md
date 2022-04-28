@@ -56,6 +56,14 @@ Next I choose following options for the prompt
     Applied changes to ./zshrc
 ```
 
+Next Install `tmux`
+
+```bash
+$ sudo apt-get install tmux 
+$ wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/.tmux.conf
+$ tmux -u
+```
+
 5. Install `exas` 
 
 ```bash
