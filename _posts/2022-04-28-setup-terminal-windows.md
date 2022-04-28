@@ -122,3 +122,26 @@ ci() { git commit -m "$1"; }
 
 ```
 
+
+# to make intenet work 
+
+Open powershell
+
+```bash
+$ nslookup
+# copy the IPV4 address
+```
+
+Next modify `/etc/wsl.conf` file
+
+```bash
+[network]                                                                        
+generateResolvConf = false
+```
+
+next modify `/etc/resolv.conf`
+
+
+```bash
+nameserver IP_ADDRESSS
+```
