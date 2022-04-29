@@ -165,4 +165,9 @@ $ git clone https://github.com/neovim/neovim
 $ git co stable
 $ make CMAKE_BUILD_TYPE=Release
 $ sudo make install
+# install packer.nvim
+$ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.config/nvim/site/pack/packer/start/packer.nvim
+# https://www.jakewiesler.com/blog/getting-started-with-vim
+# https://mattermost.com/blog/turning-neovim-into-a-full-fledged-code-editor-with-lua/
 ```
