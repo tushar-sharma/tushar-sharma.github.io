@@ -164,12 +164,25 @@ $ sudo apt-get install gettext
 $ git clone https://github.com/neovim/neovim
 $ git co stable
 $ make CMAKE_BUILD_TYPE=Release
+# install fusion
+$ git clone git@gitlab.com:jirgn/tree-sitter-fusion.git 
+$ cd tree-sitter-fusion
+$ yarn iinstall 
 $ sudo make install
 # install packer.nvim
 $ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.config/nvim/site/pack/packer/start/packer.nvim
 # https://www.jakewiesler.com/blog/getting-started-with-vim
 # https://mattermost.com/blog/turning-neovim-into-a-full-fledged-code-editor-with-lua/
+```
+
+# install lunar vim
+
+```bash
+$ cd /tmp
+$ sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl
+$ bash < (curl -s https://raw.githubusercontent.com/ChristianChiarulli/LunarVim/rolling/utils/bin/install-latest-neovim)
+$ curl -s https://raw.githubusercontent.com/ChristianChiarulli/lunarvim/rolling/utils/installer/install.sh | LVBRANCH=rolling bash -s -- --overwrite
 ```
 
 https://www.reddit.com/r/neovim/comments/u5onwt/how_so_i_resolve_the_documentation_is_deprecated/
