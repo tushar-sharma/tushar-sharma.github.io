@@ -171,3 +171,5 @@ $ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 # https://www.jakewiesler.com/blog/getting-started-with-vim
 # https://mattermost.com/blog/turning-neovim-into-a-full-fledged-code-editor-with-lua/
 ```
+
+https://www.reddit.com/r/neovim/comments/u5onwt/how_so_i_resolve_the_documentation_is_deprecated/
