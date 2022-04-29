@@ -153,3 +153,16 @@ Login
 $ sudo apt-get install pipx
 $ python3 -m pipx ensurepath --force
 ```
+
+
+Install neovim 
+
+```
+$ sudo apt-get install libtool m4 automake cmake
+$ sudo apt-get install libtool-bin
+$ sudo apt-get install gettext
+$ git clone https://github.com/neovim/neovim
+$ git co stable
+$ make CMAKE_BUILD_TYPE=Release
+$ sudo make install
+```
