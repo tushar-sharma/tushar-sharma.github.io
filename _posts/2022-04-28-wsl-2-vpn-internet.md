@@ -7,16 +7,16 @@ tags:
 - wsl
 - windows
 name: wsl2-vpn-internet
-thumb: https://unsplash.com/photos/MHwsU2vPhwo/download?w=800
+thumb: https://unsplash.com/photos/0Fws0jyIt9s/download?w=800
 summary: How to fix WSL2 internet connection while on VPN 
-image: https://unsplash.com/photos/MHwsU2vPhwo/download?w=800
+image: https://unsplash.com/photos/0Fws0jyIt9s/download?w=800
 author: Tushar Sharma
 ---
 
-Windows Subsystem for Linux (WSL2) provides native Linux environment in Windows. It's great alternative to `cygwin` which can't run native Linux apps. However WSL2 doesn't have out-of-box connectivity with internet once you connect with vpn.<!-- truncate_here -->
+Windows Subsystem for Linux (WSL2) provides native Linux environment for Windows. It's great alternative to `cygwin` which can't run native Linux apps. However WSL2 doesn't have out-of-box connectivity with internet once you connect with `vpn`.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
-Windows Subsystem for Linux (WSL2) provides native Linux environment in Windows. It's great alternative to `cygwin` which can't run native Linux apps. However WSL2 doesn't have out-of-box connectivity with internet once you connect with vpn.
+Windows Subsystem for Linux (WSL2) provides native Linux environment for Windows. It's great alternative to `cygwin` which can't run native Linux apps. However WSL2 doesn't have out-of-box connectivity with internet once you connect with `vpn`.
 
 ## Solution
 
@@ -46,20 +46,21 @@ Open up wsl2, and run the following commands
 sudo unlink /etc/resolv.conf 
 
 
-# This config will prevent wsl2 from overwritting the resolve.conf file everytime
-# you start wsl2
-$ sudo nano /etc/wsl.conf
+# This config will prevent wsl2 from overwritting the resolve.conf file everytime you start wsl2
+$ sudo cat>>/etc/wsl.conf<<EOF
 [network]                                                                        
 generateResolvConf = false
+EOF
 
 $ sudo rm /etc/resolv.conf
 
-# modify the file
-$ sudo nano /etc/resolv.conf
+# Add nameserver and search domain
+$ sudo cat>>/etc/resolv.conf<<EOF
 nameserver 8.8.8.8
 nameserver 1.1.1.1
 nameserver 10.... # Get this value from Step 1
 search .com # Get this value from Step 2
+EOF
 
 # Make the new /etc/resolve.conf immutable
 sudo chattr +i /etc/resolv.conf 
@@ -71,7 +72,7 @@ Remove any nameserver that starts with 172.* or 192.
 
 ### Step 4 
 
-Restart wsl2 via powershell.
+Restart `wsl2` via powershell.
 
 ```powershell
 Restart-Service LxssManager
