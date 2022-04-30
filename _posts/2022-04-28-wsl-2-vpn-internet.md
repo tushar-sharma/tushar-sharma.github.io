@@ -1,26 +1,26 @@
 ---
-published: false
----
----
 layout: post
 title: Fix WSL2 internet connection while on VPN
 category: blog
 tags:
 - vpn
-- wsl2
+- wsl
 - windows
 name: wsl2-vpn-internet
-thumb: https://unsplash.com/photos/yHG6llFLjS0/download?w=800
+thumb: https://unsplash.com/photos/MHwsU2vPhwo/download?w=800
 summary: How to fix WSL2 internet connection while on VPN 
-image: https://unsplash.com/photos/yHG6llFLjS0/download?w=800
+image: https://unsplash.com/photos/MHwsU2vPhwo/download?w=800
 author: Tushar Sharma
 ---
 
-<!-- truncate_here -->
+Windows Subsystem for Linux (WSL2) provides native Linux environment in Windows. It's great alternative to `cygwin` which can't run native Linux apps. However WSL2 doesn't have out-of-box connectivity with internet once you connect with vpn.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
+Windows Subsystem for Linux (WSL2) provides native Linux environment in Windows. It's great alternative to `cygwin` which can't run native Linux apps. However WSL2 doesn't have out-of-box connectivity with internet once you connect with vpn.
 
-## Step 1
+## Solution
+
+### Step 1
 
 Open `powershell` and get the list of `nameservers`
 
@@ -28,7 +28,7 @@ Open `powershell` and get the list of `nameservers`
 Get-DnsClientServerAddress -AddressFamily IPv4 | Select-Object -ExpandProperty ServerAddresses
 ```
 
-## Step 2
+### Step 2
 
 Retrive search domains via powershell
 
@@ -36,8 +36,7 @@ Retrive search domains via powershell
 Get-DnsClientGlobalSetting | Select-Object -ExpandProperty SuffixSearchList
 ```
 
-
-## Step 3
+### Step 3
 
 Open up wsl2, and run the following commands
 
@@ -64,12 +63,13 @@ search .com # Get this value from Step 2
 
 # Make the new /etc/resolve.conf immutable
 sudo chattr +i /etc/resolv.conf 
-
 ```
 
-**Note**: Make sure there's no namerserver that starts with 172.* or 192.
+<blockquote class="attention" markdown="1">
+Remove any nameserver that starts with 172.* or 192.
+</blockquote>
 
-## Step 4 
+### Step 4 
 
 Restart wsl2 via powershell.
 
@@ -77,6 +77,7 @@ Restart wsl2 via powershell.
 Restart-Service LxssManager
 ```
 
+Finally you can connect to internet with <strong>vpn</strong>. To verify run the following command:
 
 ```bash
 $ nslook www.google.com
