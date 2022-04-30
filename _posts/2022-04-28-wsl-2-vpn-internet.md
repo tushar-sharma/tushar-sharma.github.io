@@ -63,7 +63,7 @@ search .com # Get this value from Step 2
 EOF
 
 # Make the new /etc/resolve.conf immutable
-sudo chattr +i /etc/resolv.conf 
+$ sudo chattr +i /etc/resolv.conf 
 ```
 
 <blockquote class="attention" markdown="1">
