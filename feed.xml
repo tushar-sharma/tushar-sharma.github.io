@@ -7,6 +7,84 @@
     
       
         <item>
+          <title>Fix WSL2 internet connection while on VPN</title>
+          <description>&lt;p&gt;Windows Subsystem for Linux (WSL2) provides native Linux environment for Windows. It’s great alternative to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cygwin&lt;/code&gt; which can’t run native Linux apps. However WSL2 doesn’t have out-of-box connectivity with internet once you connect with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vpn&lt;/code&gt;.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/vpn&quot; title=&quot;View posts tagged with &amp;quot;vpn&amp;quot;&quot;&gt;vpn&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/wsl&quot; title=&quot;View posts tagged with &amp;quot;wsl&amp;quot;&quot;&gt;wsl&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/windows&quot; title=&quot;View posts tagged with &amp;quot;windows&amp;quot;&quot;&gt;windows&lt;/a&gt;   &lt;/p&gt;
+
+&lt;p&gt;Windows Subsystem for Linux (WSL2) provides native Linux environment for Windows. It’s great alternative to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cygwin&lt;/code&gt; which can’t run native Linux apps. However WSL2 doesn’t have out-of-box connectivity with internet once you connect with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vpn&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;h3 id=&quot;step-1&quot;&gt;Step 1&lt;/h3&gt;
+
+&lt;p&gt;Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;powershell&lt;/code&gt; and get the list of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nameservers&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Get-DnsClientServerAddress&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-AddressFamily&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;IPv4&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Select-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ExpandProperty&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ServerAddresses&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-2&quot;&gt;Step 2&lt;/h3&gt;
+
+&lt;p&gt;Retrive search domains via powershell&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Get-DnsClientGlobalSetting | Select-Object -ExpandProperty SuffixSearchList
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-3&quot;&gt;Step 3&lt;/h3&gt;
+
+&lt;p&gt;Open up wsl2, and run the following commands&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# this will unlink the default wsl2 resolv.conf&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo unlink&lt;/span&gt; /etc/resolv.conf 
+
+
+&lt;span class=&quot;c&quot;&gt;# This config will prevent wsl2 from overwritting the resolve.conf file everytime you start wsl2&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo cat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;/etc/wsl.conf&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+[network]                                                                        
+generateResolvConf = false
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF
+
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo rm&lt;/span&gt; /etc/resolv.conf
+
+&lt;span class=&quot;c&quot;&gt;# Add nameserver and search domain&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo cat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;/etc/resolv.conf&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+nameserver 8.8.8.8
+nameserver 1.1.1.1
+nameserver 10.... # Get this value from Step 1
+search .com # Get this value from Step 2
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF
+
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Make the new /etc/resolve.conf immutable&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chattr +i /etc/resolv.conf 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote class=&quot;attention&quot;&gt;
+  &lt;p&gt;Remove any nameserver that starts with 172.* or 192.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;step-4&quot;&gt;Step 4&lt;/h3&gt;
+
+&lt;p&gt;Restart &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wsl2&lt;/code&gt; via powershell.&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Restart-Service&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;LxssManager&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally you can connect to internet with &lt;strong&gt;vpn&lt;/strong&gt;. To verify run the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;nslook www.google.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/do-you-have-triskaidekaphobia&quot; title=&quot;Previous Post: Do you have triskaidekaphobia?&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;/nav&gt;
+</description>
+          <pubDate>2022-04-28T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/wsl-2-vpn-internet</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/wsl-2-vpn-internet</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Do you have triskaidekaphobia?</title>
           <description>&lt;p&gt;I grew up in India with a diet of basmati rice and superstition. I have seen pedestrians freezing at the sight of a black cat crossing their path for fear of bad luck. Lemon and chilis hang in front of vehicles to ward off bad spirits. I fondly remember numerous advertisements proclaiming protection from evil eyes. Recently I stumbled upon an ad that refreshed my memories.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/superstition&quot; title=&quot;View posts tagged with &amp;quot;superstition&amp;quot;&quot;&gt;superstition&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/rationalism&quot; title=&quot;View posts tagged with &amp;quot;rationalism&amp;quot;&quot;&gt;rationalism&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;   &lt;/p&gt;
@@ -126,7 +204,7 @@ EOF
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/tale-of-two-leaders&quot; title=&quot;Previous Post: A tale of Two leaders&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/tale-of-two-leaders&quot; title=&quot;Previous Post: A tale of Two leaders&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/wsl-2-vpn-internet&quot; title=&quot;Next Post: Fix WSL2 internet connection while on VPN&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
