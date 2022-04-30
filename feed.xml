@@ -54,7 +54,7 @@ search .com # Get this value from Step 2
 &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF
 
 &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Make the new /etc/resolve.conf immutable&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chattr +i /etc/resolv.conf 
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chattr +i /etc/resolv.conf 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;blockquote class=&quot;attention&quot;&gt;
