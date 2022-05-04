@@ -7,3 +7,5 @@ https://medium.com/poka-techblog/cross-region-import-export-for-cloudformation-3
 
 https://www.youtube.com/watch?v=oXEfgo9AInY&ab_channel=AmazonWebServices
 
+
+https://github.com/PokaInc/cfn-cross-region-export
