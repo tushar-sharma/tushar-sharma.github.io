@@ -9,3 +9,5 @@ https://www.youtube.com/watch?v=oXEfgo9AInY&ab_channel=AmazonWebServices
 
 
 https://github.com/PokaInc/cfn-cross-region-export
+
+https://tusharsharma.dev/posts/aws-cfn-with-ssm-parameters
