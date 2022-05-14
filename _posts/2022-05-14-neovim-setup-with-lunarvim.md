@@ -36,10 +36,12 @@ $ make CMAKE_BUILD_TYPE=Release
 $ sudo make install
 ```
 
-You can start using `neovim` using 
+You can verify version of `neovim` 
 
 ```bash
-$ nvim
+$ nvim --version
+NVIM v0.7.0
+Build type: Release
 ```
 
 
