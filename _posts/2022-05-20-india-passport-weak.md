@@ -1,7 +1,14 @@
 ---
 published: false
 ---
-## Why Is India passport weak?
+
+## Why India passport is weaK?
+
+Recently I travelled to Mexico. I had booked `Air Canada` airline which had a connecting flight from Toronto. Since I already had a visa for Meixco, I assumed that I would not face any hurdle just to board a connecting flight in Canada. I had previously boarded a connecting flight from Dubai without any additional transit visa. But I called up the airline just to confirm only to fear the what's expected. 
+
+Many developing countries require `transit visa` from passport holders of poor or developing countries. Passport holder of rich countries are however exempted. It's understanble to have visa restriction for any international passenger who intends to leave the airport or enter the country. But what's the rationale for a visa for for a connecting flight?
+
+
 
 I booked my ticked via `Air Canada` for a trip to Mexico. It had a connecting flight from Toronto. I never realized that I needed a transit visa for connecting flight in Canada. I had a connecting flight from `Dubai` before but didnt not need visa for connecting flight. 
 
