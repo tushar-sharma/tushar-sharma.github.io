@@ -38,7 +38,7 @@ A simple solution would be that for each card, calculate the minimum length for 
   </ul>
 
    <div class="codeSample Java1" id="Java1">
-     <script src="https://gist.github.com/tushar-sharma/82d9dfdf52f92c4f38bfb559221c4b0f.js"></script>
+     <script src="https://gist.github.com/tushar-sharma/2b1119ca6114e81f29c156f7f8fc4fd2.js?filename=BruteMinimumCardPickUp.java"></script>
    </div>
 
    <div class="codeSample Python1" id="Python1">
@@ -48,18 +48,11 @@ A simple solution would be that for each card, calculate the minimum length for 
 </div>
 
  
-**However this solution fails the following test case as the minimum sequence is [8, 4]**
-
-```sh
-coins = [1, 2, 4, 8, 9]
-amount = 12
-
-Output : 3
-Expected: 2
-```
+**However this solution fails as the time limit exceeded**
 
 
-## Dynamic Programming
+
+## Using HashCode
 
 We have to find some subproblem that will help in solving coin-change problem. Given an amount n, we want to generate an exact change using the fewest number of coins of denominations d<sub>1</sub> < d<sub>2</sub> < ... < d<sub>m</sub>.
  
