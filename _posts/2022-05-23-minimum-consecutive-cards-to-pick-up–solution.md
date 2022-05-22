@@ -1,13 +1,12 @@
 ---
-title: Coin Change solution leetcode
+title: Minimum Consecutive Cards to Pick up solution leetcode
 category: blog
 layout: post
 tags:
 - leetcode
 - java
 - python
-name: minimum-pick
-featuredPost: true
+name: minimum-cards-pick-up
 thumb: https://i.imgur.com/LYeioqF.jpeg
 ---
 
