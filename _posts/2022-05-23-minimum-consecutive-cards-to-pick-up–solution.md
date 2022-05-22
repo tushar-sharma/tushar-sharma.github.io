@@ -22,12 +22,14 @@ It's one of the most popular questions on leetcode that seems very easy at first
 
 ## Problem Statement
 
-<p>You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money. Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1. You may assume that you have an infinite number of each kind of coin.</p>
+You are given an integer array cards where cards[i] represents the value of the ith card. A pair of cards are matching if the cards have the same value.
 
-## Greedy Solution
+Return the minimum number of consecutive cards you have to pick up to have a pair of matching cards among the picked cards. If it is impossible to have matching cards, return -1.
 
-My first instinct is to sort the coins array. Pick the largest coin first and then subtract the largest possible value from the amount. Subsequently, proceed with smaller denominations while keeping track of the count.
+ 
+## Brute force Solution
 
+A simple solution would be that for each card, calculate the minimum length for consecutive card. This would be **O(n^2)** time complexity.
 
 <div class="tab-container">
   <ul>
