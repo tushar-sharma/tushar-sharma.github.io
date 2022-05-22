@@ -7,7 +7,7 @@ tags:
 - java
 - python
 name: minimum-cards-pick-up
-thumb: https://i.imgur.com/O4nTgxWr5Sc.jpeg
+thumb: https://unsplash.com/photos/-2vD8lIhdnw/download?w=800
 ---
 
 It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.<!-- truncate_here -->
