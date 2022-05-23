@@ -90,7 +90,7 @@ Next we can create a `hashmap` to keep track of indices of a particular card.
 
 ## Complexity
 
-Time Complexity is **$$\theta(n * m)$$**, Space complexity is **$$\theta(n)$$**
+Time Complexity is **$$\theta(n * m)$$**.
 
 
 <nav class="pagination clear" style="padding-bottom:20px;">
