@@ -10,7 +10,7 @@ name: minimum-cards-pick-up
 thumb: https://unsplash.com/photos/-2vD8lIhdnw/download?w=800
 ---
 
-It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.<!-- truncate_here -->
+An interesting problem on leetcode to find minimum number of ways to pick up consecutive cards. We will start with a brute force algorithm that would exceed in time limit. Later we will improve upon this algorithm using hashmap.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
@@ -19,18 +19,17 @@ It's one of the most popular questions on leetcode that seems very easy at first
 <script src="{{ root_url }}/js/multipleTab.js"></script>
 
 
-<p>It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.</p>
+<p>An interesting problem on leetcode to find minimum number of ways to pick up consecutive cards. We will start with a brute force algorithm that would exceed in time limit. Later we will improve upon this algorithm using hashmap.</p>
 
 ## Problem Statement
 
-You are given an integer array cards where cards[i] represents the value of the ith card. A pair of cards are matching if the cards have the same value.
+You are given an integer array cards where cards[i] represents the value of the i<sup>th</sup> card. A pair of cards are matching if the cards have the same value.
 
 Return the minimum number of consecutive cards you have to pick up to have a pair of matching cards among the picked cards. If it is impossible to have matching cards, return -1.
-
  
 ## Brute force Solution
 
-A simple solution would be that for each card, calculate the minimum length for consecutive card. This would be **O(n^2)** time complexity.
+A simple intuitive solution would be to pick up a card, and then iterate over the remaining cards to find the minimum length. 
 
 <div class="tab-container">
   <ul>
@@ -47,10 +46,25 @@ A simple solution would be that for each card, calculate the minimum length for 
    </div>
 
 </div>
+
+
+<blockquote class="attention">
+This will fail as the time limit will exceed while submiting the solution to leetcode. This is because the time complexity of the solution is <strong>O(n<sup>2</sup>)</strong>.
+</blockquote>
+
  
-**However this solution fails as the time limit exceeded**
 
 ## Using HashMap
+
+Lets take an example with a use case of following input
+
+```bash
+cards = [3,4,2,3,4,7]
+```
+
+Next we can create a `hashmap` to keep track of indices of a particular card. 
+
+
 
 <div class="tab-container">
   <ul>
