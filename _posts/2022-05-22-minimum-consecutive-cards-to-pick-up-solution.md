@@ -65,6 +65,11 @@ cards = [3,4,2,3,4,7]
 Next we can create a `hashmap` to keep track of indices of a particular card. 
 
 
+<p> 
+<center>
+<img src="{{ root_url }}/img/min_ways_hashmap.png" alt="hash map picture">
+</center>
+</p>
 
 <div class="tab-container">
   <ul>
