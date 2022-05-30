@@ -31,6 +31,7 @@ toc_icon: cog
 |         |         | [HTTPS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/) | |
 |         |         | [Textmarker](https://addons.mozilla.org/en-US/firefox/addon/textmarkerpro/) | |
 |         |         | [OneTab](https://addons.mozilla.org/en-US/firefox/addon/onetab/) | |
+|         |         | [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/) | |
 | [Chrome](https://www.google.com/chrome/)  | browser  | [Checkbot](https://chrome.google.com/webstore/detail/checkbot-seo-web-speed-se/dagohlmlhagincbfilmkadjgmdnkjinl) | SEO tool |
 |         |         | [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) | |
 |         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | |
