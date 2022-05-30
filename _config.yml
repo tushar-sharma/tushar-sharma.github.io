@@ -17,7 +17,6 @@ plugins:
   - jekyll-gzip
   - jekyll-include-cache
   - jekyll-spaceship
-  - jekyll_reading_time
 kramdown:
   math_engine: mathjax
   input: GFM
@@ -31,12 +30,6 @@ exclude:
 - branch.txt
 - .gitignore
 - .jekyll-cache
-reading_time:
-  words_per_minute: 250
-  translations:
-    about: 
-    minute: min read
-    minutes: min read
 gems: [jekyll-paginate]
 paginate: 3
 not_paginated_categories:
