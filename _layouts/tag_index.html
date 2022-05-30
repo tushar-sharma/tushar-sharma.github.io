@@ -13,7 +13,7 @@ root: true
 {% for post in blogposts %}
 {% for tag in post.tags %}
 {% if tag == page.tag %}
-  <small style="float:right; margin-top:5px;"><strong>{{ post.content | reading_time }}</strong></small>
+  <small style="float:right; margin-top:5px;"><strong></strong></small>
   <a href="{{ post.url }}">
     <h2>{{ post.title }}</h2>
   </a>
