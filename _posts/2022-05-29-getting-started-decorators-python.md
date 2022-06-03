@@ -8,18 +8,18 @@ name: decorators-python
 thumb: https://unsplash.com/photos/Cl-OpYWFFm0/download?w=800
 ---
 
-In python, functions are first class citizens. They are basically objects which can be passed as arguments. A decorator is a function that receives a function and returns a function.<!-- truncate_here -->
+In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-In python, functions are first class citizens. They are basically objects which can be passed as arguments. A decorator is a function that receives a function and returns a function.
+In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.
 
 Let's say we have a simple function that multiples two numbers
 
 ```python
-def my_function(a, b):
+def multiply_me(a, b):
     return a * b
 
-my_function(3, 2)
+multiply_me(3, 2)
 ```
 
 This will print
@@ -28,7 +28,7 @@ This will print
 6
 ```
 
-Now if want to log the execution time of the function without modifying the existing function, we can create a `wrapper function`.
+Now if want to log the execution time of the function without modifying the existing function, we can create a `timeme` function which will receive our original function `multiply_me` as an argument. It will then execute it along with logging the time.
 
 ```python
 def timeme(func):
@@ -40,24 +40,23 @@ def timeme(func):
 
     return wrapper
 
-def my_function(a, b):
-    return a * b
+multiply_me = timeme(multiply_me)
 
-my_function = timeme(my_function)
-
-my_function(3, 2)
+multiply_me(3, 2)
 ```
 
+This will print
+
 ```bash
-my_function took 0.0 seconds
+multiply_me took 0.0 seconds
 6
 ```
 
-Or we can use syntactic sugar for decorators like
+We can repalce `multiply_me = timeme(multiply_me)` by using syntactic sugar for decorators like
 
 ```python
 @timeme
-def my_function(a, b):
+def multiply_me(a, b):
     return a * b
 
 ```
