@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "nokogiri", ">= 1.13.5"
+gem "nokogiri", ">= 1.13.6"
 gem "jekyll", ">= 3.6.3"
 gem 'jekyll-paginate'
 gem "kramdown", ">= 2.3.1"
