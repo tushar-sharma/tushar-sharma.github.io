@@ -3,14 +3,15 @@ layout: post
 title: Fix WSL2 internet connection while on VPN
 category: blog
 tags:
-- vpn
-- wsl
-- windows
+  - vpn
+  - wsl
+  - windows
 name: wsl2-vpn-internet
-thumb: https://unsplash.com/photos/0Fws0jyIt9s/download?w=800
-summary: How to fix WSL2 internet connection while on VPN 
-image: https://unsplash.com/photos/0Fws0jyIt9s/download?w=800
+thumb: 'https://unsplash.com/photos/0Fws0jyIt9s/download?w=800'
+summary: How to fix WSL2 internet connection while on VPN
+image: 'https://unsplash.com/photos/0Fws0jyIt9s/download?w=800'
 author: Tushar Sharma
+published: true
 ---
 
 Windows Subsystem for Linux (WSL2) provides native Linux environment for Windows. It's great alternative to `cygwin` which can't run native Linux apps. However WSL2 doesn't have out-of-box connectivity with internet once you connect with `vpn`.<!-- truncate_here -->
@@ -47,20 +48,18 @@ sudo unlink /etc/resolv.conf
 
 
 # This config will prevent wsl2 from overwritting the resolve.conf file everytime you start wsl2
-$ sudo cat>>/etc/wsl.conf<<EOF
-[network]                                                                        
-generateResolvConf = false
-EOF
+$ sudo bash -c 'echo "[network]" > /etc/wsl.conf'
+$ sudo bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf'
 
 $ sudo rm /etc/resolv.conf
 
 # Add nameserver and search domain
-$ sudo cat>>/etc/resolv.conf<<EOF
-nameserver 8.8.8.8
-nameserver 1.1.1.1
-nameserver 10.... # Get this value from Step 1
-search .com # Get this value from Step 2
-EOF
+$ sudo bash -c 'echo "nameserver 1.1.1.1" > /etc/resolv.conf'
+$ sudo bash -c 'echo "nameserver 8.8.8.8" >> /etc/resolv.conf'
+# Get following value from step 1
+$ sudo bash -c 'echo "nameserver x.x.x.x" >> /etc/resolv.conf' 
+# Get following value from step 2
+$ sudo bash -c 'echo "search .com" >> /etc/resolv.conf'
 
 # Make the new /etc/resolve.conf immutable
 $ sudo chattr +i /etc/resolv.conf 
