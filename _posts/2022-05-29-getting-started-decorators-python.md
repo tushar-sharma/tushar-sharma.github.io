@@ -6,6 +6,7 @@ tags:
 - python
 name: decorators-python
 thumb: https://unsplash.com/photos/Cl-OpYWFFm0/download?w=800
+image: https://unsplash.com/photos/Cl-OpYWFFm0/download?w=800
 ---
 
 In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.<!-- truncate_here -->
