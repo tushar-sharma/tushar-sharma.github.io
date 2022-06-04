@@ -13,7 +13,9 @@ In python, everything is an object. So functons are also objects which can be pa
 
 In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.
 
-### Without using decorators
+## Use case 1
+
+### Without using decorator
 
 Let's say we have two simple functions to add and multiply numbers.
 
@@ -72,7 +74,7 @@ add_me took 2.00509095192
 
 Here we are repeating our logic for logging execution time. This can be solved by using decorators. 
 
-### Using decorators
+### With using decorator
 
 Let's create a wrapper function called `timeme` that will do the following-
 
@@ -127,6 +129,90 @@ multiply_me took 2.00506806374
 add_me took 2.00509810448
 5
 ```
+
+## Use case 2
+### Without using decorator
+
+Lets define a function which depends on type of argument.
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class Dog:
+    bark : str
+
+def process_data(x):
+    if type(x) == str:
+        print("str executed %s" % x)
+    elif type(x) == int:
+        print("int executed %s" % x)
+    elif type(x) == list:
+        print("list executed %s" % x)
+    elif type(x) == Dog:
+        print("Dog executed %s" % x.bark)
+    else:
+        print("Default executed %s" % x)
+```
+
+We can invoke the function with different arguments. 
+
+```python
+process_data(set())
+
+process_data("string")
+
+process_data(123)
+
+process_data(Dog("bowbow"))
+```
+
+This will print
+
+```bash
+Default executed set()
+str executed string
+int executed 123
+Dog executed bowbow
+```
+### With using decorator
+
+This coding style becomes hard to read as the number of cases increases. We can use `singledispatch` decorator. 
+
+```python
+from functools import singledispatch
+
+@singledispatch
+def process_data(x):
+    print("Default executed %s" % x)
+
+@process_data.register(str)
+def _(x):
+    print("str executed %s" % x)
+
+@process_data.register(int)
+def _(x):
+    print("int executed %s" % x)
+
+@process_data.register(list)
+def _x(x):
+    print("list executed %s" % x)
+
+@process_data.register(Dog)
+def _x(x):
+    print("Dog executed %s" % x.bark)
+
+```
+
+This will print the same result
+
+```bash
+Default executed set()
+str executed string
+int executed 123
+Dog executed bowbow
+```
+
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
