@@ -54,12 +54,12 @@
 <meta property="og:site_name" content="RandomWits">
 <meta property="og:image" content="https://unsplash.com/photos/0Fws0jyIt9s/download?w=800">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2022-04-28T00:00:00+00:00">
+<meta property="article:published_time" content="2022-04-28T00:00:00+05:30">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="https://unsplash.com/photos/0Fws0jyIt9s/download?w=800">
 <meta property="twitter:title" content="Fix WSL2 internet connection while on VPN">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2022-04-28T00:00:00+00:00","datePublished":"2022-04-28T00:00:00+00:00","description":"Windows Subsystem for Linux (WSL2) provides native Linux environment for Windows. It’s great alternative to cygwin which can’t run native Linux apps. However WSL2 doesn’t have out-of-box connectivity with internet once you connect with vpn. Tags: vpn wsl windows","headline":"Fix WSL2 internet connection while on VPN","image":"https://unsplash.com/photos/0Fws0jyIt9s/download?w=800","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/wsl-2-vpn-internet"},"url":"https://randomwits.com/blog/wsl-2-vpn-internet"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2022-04-28T00:00:00+05:30","datePublished":"2022-04-28T00:00:00+05:30","description":"Windows Subsystem for Linux (WSL2) provides native Linux environment for Windows. It’s great alternative to cygwin which can’t run native Linux apps. However WSL2 doesn’t have out-of-box connectivity with internet once you connect with vpn. Tags: vpn wsl windows","headline":"Fix WSL2 internet connection while on VPN","image":"https://unsplash.com/photos/0Fws0jyIt9s/download?w=800","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/wsl-2-vpn-internet"},"url":"https://randomwits.com/blog/wsl-2-vpn-internet"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -267,22 +267,20 @@ header li {
 
 
 <span class="c"># This config will prevent wsl2 from overwritting the resolve.conf file everytime you start wsl2</span>
-<span class="nv">$ </span><span class="nb">sudo cat</span><span class="o">&gt;&gt;</span>/etc/wsl.conf<span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
-[network]                                                                        
-generateResolvConf = false
-</span><span class="no">EOF
+<span class="nv">$ </span><span class="nb">sudo </span>bash <span class="nt">-c</span> <span class="s1">'echo "[network]" &gt; /etc/wsl.conf'</span>
+<span class="nv">$ </span><span class="nb">sudo </span>bash <span class="nt">-c</span> <span class="s1">'echo "generateResolvConf = false" &gt;&gt; /etc/wsl.conf'</span>
 
-</span><span class="nv">$ </span><span class="nb">sudo rm</span> /etc/resolv.conf
+<span class="nv">$ </span><span class="nb">sudo rm</span> /etc/resolv.conf
 
 <span class="c"># Add nameserver and search domain</span>
-<span class="nv">$ </span><span class="nb">sudo cat</span><span class="o">&gt;&gt;</span>/etc/resolv.conf<span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
-nameserver 8.8.8.8
-nameserver 1.1.1.1
-nameserver 10.... # Get this value from Step 1
-search .com # Get this value from Step 2
-</span><span class="no">EOF
+<span class="nv">$ </span><span class="nb">sudo </span>bash <span class="nt">-c</span> <span class="s1">'echo "nameserver 1.1.1.1" &gt; /etc/resolv.conf'</span>
+<span class="nv">$ </span><span class="nb">sudo </span>bash <span class="nt">-c</span> <span class="s1">'echo "nameserver 8.8.8.8" &gt;&gt; /etc/resolv.conf'</span>
+<span class="c"># Get following value from step 1</span>
+<span class="nv">$ </span><span class="nb">sudo </span>bash <span class="nt">-c</span> <span class="s1">'echo "nameserver x.x.x.x" &gt;&gt; /etc/resolv.conf'</span> 
+<span class="c"># Get following value from step 2</span>
+<span class="nv">$ </span><span class="nb">sudo </span>bash <span class="nt">-c</span> <span class="s1">'echo "search .com" &gt;&gt; /etc/resolv.conf'</span>
 
-</span><span class="c"># Make the new /etc/resolve.conf immutable</span>
+<span class="c"># Make the new /etc/resolve.conf immutable</span>
 <span class="nv">$ </span><span class="nb">sudo </span>chattr +i /etc/resolv.conf 
 </code></pre></div></div>
 
