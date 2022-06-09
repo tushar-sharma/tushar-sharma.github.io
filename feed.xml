@@ -7,6 +7,80 @@
     
       
         <item>
+          <title>Create a Lambda Function to run SQL queries in Redshift Cluster</title>
+          <description>&lt;p&gt;Amazon Redshift is fully managed warehouse service provided by AWS. The Amazon Redshift engine is a SQL-compliant, massively-parallel, query processing and database management system designed to support analytics workload.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sql&quot; title=&quot;View posts tagged with &amp;quot;sql&amp;quot;&quot;&gt;sql&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/lambda function&quot; title=&quot;View posts tagged with &amp;quot;lambda function&amp;quot;&quot;&gt;lambda function&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/redshift&quot; title=&quot;View posts tagged with &amp;quot;redshift&amp;quot;&quot;&gt;redshift&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Amazon Redshift is fully managed warehouse service provided by AWS. The Amazon Redshift engine is a SQL-compliant, massively-parallel, query processing and database management system designed to support analytics workload.&lt;/p&gt;
+
+&lt;p&gt;An Amazon Redshift cluster is comprised of a leader node and one or more compute nodes. We also support a single-node design where leader and compute work is shared on a single node. The leader node accepts connections from client programs, parses requests, generates &amp;amp; compiles query plans for execution on the compute nodes, performs final aggregation of results when required, and coordinates serialization and state of transactions. The compute node(s) perform the heavy lifting inherent in both
+query processing and data manipulation against local data.[^redshift]&lt;/p&gt;
+
+&lt;p&gt;AWS GUI provides Query Editor to execute sql command. However it’s better to leverage APIs by using AWS Lambda function.&lt;/p&gt;
+
+&lt;h3 id=&quot;reqd-sql-queries&quot;&gt;Reqd SQL Queries&lt;/h3&gt;
+
+&lt;p&gt;Lets start with creating a flat file which would contain all our SQL commands that we want to execute in the Redshift Cluster. We will upload the flat file to the s3 bucket. The content for the file is&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/0ea44788e9afe78b3dcc94a026dc53c1.js?file=sql_file.sql&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Materialized views are useful in warehouses to increase the speed of queries on very large databases. They are a database object that stores the results of a query.&lt;/p&gt;
+
+&lt;h3 id=&quot;write-lambda-function&quot;&gt;Write Lambda Function&lt;/h3&gt;
+
+&lt;p&gt;Lets start by creating a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda function handler&lt;/code&gt; which would be invoked when the lambda function run.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/0ea44788e9afe78b3dcc94a026dc53c1.js?file=lambda_function1.py&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Its not a good practice to hard code cluster information or password in the code. We will this information from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS Secret Manger&lt;/code&gt;. I’ll assume that secret is already created. We will write a method to retrieve those values using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secret_name&lt;/code&gt; passed as an Environment variable. Other environment variables are&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;region e.g us-east-1&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;sql_bucket is the name of s3 bucket&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;sql_prefix is the prefix for the object stored on s3&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/0ea44788e9afe78b3dcc94a026dc53c1.js?file=lambda_function2.py&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Also we need to read the sql commands stored in s3 location.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/0ea44788e9afe78b3dcc94a026dc53c1.js?file=lambda_function3.py&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Lastly we will write our method exec_redshift that will do the following&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Retrieve cluster information from AWS Secret Manager&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Read content of the sql file stored on s3&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Execute sql commands sequentially in redshift cluster&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/0ea44788e9afe78b3dcc94a026dc53c1.js?file=lambda_function4.py&quot;&gt;&lt;/script&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/getting-started-decorators-python&quot; title=&quot;Previous Post: Getting Started with decorators in Python&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;/nav&gt;
+</description>
+          <pubDate>2022-06-08T00:00:00+05:30</pubDate>
+          <link>https://randomwits.com/blog/create-a-lambda-function-to-run-sql-queries-in-redshift-cluster</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/create-a-lambda-function-to-run-sql-queries-in-redshift-cluster</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Getting Started with decorators in Python</title>
           <description>&lt;p&gt;In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
@@ -201,7 +275,7 @@ Dog executed bowbow
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/minimum-consecutive-cards-to-pick-up-solution&quot; title=&quot;Previous Post: Minimum Consecutive Cards to Pick up solution leetcode&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/minimum-consecutive-cards-to-pick-up-solution&quot; title=&quot;Previous Post: Minimum Consecutive Cards to Pick up solution leetcode&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/create-a-lambda-function-to-run-sql-queries-in-redshift-cluster&quot; title=&quot;Next Post: Create a Lambda Function to run SQL queries in Redshift Cluster&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
           <pubDate>2022-05-29T00:00:00+05:30</pubDate>
