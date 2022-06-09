@@ -32,3 +32,17 @@ create materialized view my_view as
 select name
 from my_table;
 ```
+
+We will then create a function to read the sql file from s3
+
+```python
+def read_sql(bucket: str, prefix: str):
+    """
+    Read content of sql file stored on s3
+    :param bucket
+    :param prefix
+    """
+    client = boto3.client("s3")
+    obj = client.get_object(Bucket=bucket, Key=prefix)
+    return obj['Body'[.read().decode("utf-8")
+```
