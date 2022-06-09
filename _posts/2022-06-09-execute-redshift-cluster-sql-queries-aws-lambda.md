@@ -16,4 +16,16 @@ from my_table;
 We will then create a function to read the sql file from s3
 
 ```python
+import json 
+import boto3 
+import os
+import logging
+import botocore
+from datetime import datetime, timezone
+import traceback 
+import time
+import base64
+from botocore.exceptions import ClientError
+
+
 ```
