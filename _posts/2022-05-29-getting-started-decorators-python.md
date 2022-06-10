@@ -20,17 +20,7 @@ In python, everything is an object. So functons are also objects which can be pa
 
 Let's say we have two simple functions to add and multiply numbers.
 
-```python
-def multiply_me(a, b):
-    return a * b
-
-def add_me(a, b):
-    return a + b
-
-print(multiply_me(3, 2))
-
-print(add_me(3, 2))
-```
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex1.py"></script>
 
 This will print
 
@@ -41,28 +31,7 @@ This will print
 
 Now lets say we want to print `execution` time in both these functions. We could do something like this
 
-
-```python
-from time import time, sleep
-
-def multiply_me(a, b):
-    t = time()
-    res = a * b
-    sleep(2)
-    print("{} took {}".format(multiply_me.__name__, time() - t))
-    return res
-
-def add_me(a, b):
-    t = time() 
-    res = a + b
-    sleep(2)
-    print("{} took {}".format(add_me.__name__, time() - t))
-    return res
-
-print(multiply_me(3, 2))
-
-print(add_me(3, 2))
-```
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex2.py"></script>
 
 This will print
 
@@ -83,28 +52,12 @@ Let's create a wrapper function called `timeme` that will do the following-
 2. Execute the `function`
 3. Log the execution time
 
-```python
-def timeme(func):
-    def wrapper(*args, **kwargs):
-        t = time()
-        res = func(*args, **kwargs)
-        print("{} took {}".format(func.__name__, time() - t))
-        return res
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex3.py"></script>
 
-    return wrapper
-```
 
 Next we can `decorate` our functions using syntatic sugar like this 
 
-```python
-@timeme
-def multiply_me(a, b):
-    return a * b
-
-@timeme
-def add_me(a, b):
-    return a + b
-```
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex4.py"></script>
 
 This is similar to the following 
 
@@ -136,25 +89,9 @@ add_me took 2.00509810448
 
 Lets define a function which depends on type of argument.
 
-```python
-from dataclasses import dataclass
 
-@dataclass
-class Dog:
-    bark : str
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex5.py"></script>
 
-def process_data(x):
-    if type(x) == str:
-        print("str executed %s" % x)
-    elif type(x) == int:
-        print("int executed %s" % x)
-    elif type(x) == list:
-        print("list executed %s" % x)
-    elif type(x) == Dog:
-        print("Dog executed %s" % x.bark)
-    else:
-        print("Default executed %s" % x)
-```
 
 We can invoke the function with different arguments. 
 
@@ -180,30 +117,10 @@ Dog executed bowbow
 
 This coding style becomes hard to read as the number of cases increases. We can use `singledispatch` decorator. 
 
-```python
-from functools import singledispatch
 
-@singledispatch
-def process_data(x):
-    print("Default executed %s" % x)
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex6.py"></script>
 
-@process_data.register(str)
-def _(x):
-    print("str executed %s" % x)
 
-@process_data.register(int)
-def _(x):
-    print("int executed %s" % x)
-
-@process_data.register(list)
-def _x(x):
-    print("list executed %s" % x)
-
-@process_data.register(Dog)
-def _x(x):
-    print("Dog executed %s" % x.bark)
-
-```
 
 This will print the same result
 
