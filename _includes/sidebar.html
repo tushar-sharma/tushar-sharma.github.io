@@ -58,6 +58,7 @@ header li {
 
 }
 
+
 </style>
 
 <div id="random" class="top king-basil" id="product" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
@@ -120,3 +121,11 @@ header li {
       $('#toc').toc();
   });
 </script>
+
+<!-- Upvote next -->
+{% if page.url == '/' or  paginator.previous_page %}
+<h1>Upvote next</h1>
+
+<script type="text/javascript" charset="utf-8" id="hpoll_z47ePN" src="https://static.handypolls.com/e/v2/z47ePN/poll.js"></script><noscript><a href="https://handypolls.com/p/z47ePN">next?</a></noscript>
+
+{% endif %}
