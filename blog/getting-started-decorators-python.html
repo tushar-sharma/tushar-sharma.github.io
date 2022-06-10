@@ -132,6 +132,7 @@ header li {
 
 }
 
+
 </style>
 
 <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
@@ -217,6 +218,9 @@ header li {
       $('#toc').toc();
   });
 </script>
+
+<!-- Upvote next -->
+
       </header>
       <section>
         <link rel="stylesheet" href="/css/search.css">
@@ -248,16 +252,7 @@ header li {
 
 <p>Let’s say we have two simple functions to add and multiply numbers.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">multiply_me</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
-
-<span class="k">def</span> <span class="nf">add_me</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">multiply_me</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">add_me</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-</code></pre></div></div>
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex1.py"></script>
 
 <p>This will print</p>
 
@@ -267,26 +262,7 @@ header li {
 
 <p>Now lets say we want to print <code class="language-plaintext highlighter-rouge">execution</code> time in both these functions. We could do something like this</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span><span class="p">,</span> <span class="n">sleep</span>
-
-<span class="k">def</span> <span class="nf">multiply_me</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"{} took {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">multiply_me</span><span class="p">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">res</span>
-
-<span class="k">def</span> <span class="nf">add_me</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> 
-    <span class="n">res</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-    <span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"{} took {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">add_me</span><span class="p">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">res</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">multiply_me</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">add_me</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-</code></pre></div></div>
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex2.py"></script>
 
 <p>This will print</p>
 
@@ -309,26 +285,11 @@ header li {
   <li>Log the execution time</li>
 </ol>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">timeme</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"{} took {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">func</span><span class="p">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t</span><span class="p">))</span>
-        <span class="k">return</span> <span class="n">res</span>
-
-    <span class="k">return</span> <span class="n">wrapper</span>
-</code></pre></div></div>
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex3.py"></script>
 
 <p>Next we can <code class="language-plaintext highlighter-rouge">decorate</code> our functions using syntatic sugar like this</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">@</span><span class="n">timeme</span>
-<span class="k">def</span> <span class="nf">multiply_me</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
-
-<span class="o">@</span><span class="n">timeme</span>
-<span class="k">def</span> <span class="nf">add_me</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</code></pre></div></div>
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex4.py"></script>
 
 <p>This is similar to the following</p>
 
@@ -357,24 +318,7 @@ add_me took 2.00509810448
 
 <p>Lets define a function which depends on type of argument.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
-
-<span class="o">@</span><span class="n">dataclass</span>
-<span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
-    <span class="n">bark</span> <span class="p">:</span> <span class="nb">str</span>
-
-<span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"str executed %s"</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"int executed %s"</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"list executed %s"</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">Dog</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"Dog executed %s"</span> <span class="o">%</span> <span class="n">x</span><span class="p">.</span><span class="n">bark</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"Default executed %s"</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
-</code></pre></div></div>
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex5.py"></script>
 
 <p>We can invoke the function with different arguments.</p>
 
@@ -398,29 +342,7 @@ Dog executed bowbow
 
 <p>This coding style becomes hard to read as the number of cases increases. We can use <code class="language-plaintext highlighter-rouge">singledispatch</code> decorator.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">singledispatch</span>
-
-<span class="o">@</span><span class="n">singledispatch</span>
-<span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Default executed %s"</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
-
-<span class="o">@</span><span class="n">process_data</span><span class="p">.</span><span class="n">register</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"str executed %s"</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
-
-<span class="o">@</span><span class="n">process_data</span><span class="p">.</span><span class="n">register</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">_</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"int executed %s"</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
-
-<span class="o">@</span><span class="n">process_data</span><span class="p">.</span><span class="n">register</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">_x</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"list executed %s"</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
-
-<span class="o">@</span><span class="n">process_data</span><span class="p">.</span><span class="n">register</span><span class="p">(</span><span class="n">Dog</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">_x</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Dog executed %s"</span> <span class="o">%</span> <span class="n">x</span><span class="p">.</span><span class="n">bark</span><span class="p">)</span>
-
-</code></pre></div></div>
+<script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex6.py"></script>
 
 <p>This will print the same result</p>
 
