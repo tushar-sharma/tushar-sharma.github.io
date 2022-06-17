@@ -3,16 +3,17 @@ layout: post
 title: Create a Lambda Function to run SQL queries in Redshift Cluster
 category: blog
 tags:
-- python
-- sql
-- lambda function
-- aws
-- redshift
+  - python
+  - sql
+  - lambda function
+  - aws
+  - redshift
 featuredPost: true
 summary: check fraud
-image:  https://unsplash.com/photos/BjL7XCugMNY/download?w=800
-thumb: https://unsplash.com/photos/BjL7XCugMNY/download?w=800
+image: 'https://unsplash.com/photos/BjL7XCugMNY/download?w=800'
+thumb: 'https://unsplash.com/photos/BjL7XCugMNY/download?w=800'
 author: Tushar Sharma
+published: true
 ---
 
 Amazon Redshift is fully managed warehouse service provided by AWS. The Amazon Redshift engine is a SQL-compliant, massively-parallel, query processing and database management system designed to support analytics workload.<!-- truncate_here -->
@@ -26,7 +27,7 @@ query processing and data manipulation against local data.[^redshift]
 
 AWS GUI provides Query Editor to execute sql command. However it’s better to leverage APIs by using AWS Lambda function.
 
-### Reqd SQL Queries
+### Read SQL Queries
 
 Lets start with creating a flat file which would contain all our SQL commands that we want to execute in the Redshift Cluster. We will upload the flat file to the s3 bucket. The content for the file is
 
