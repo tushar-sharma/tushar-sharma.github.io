@@ -3,14 +3,15 @@ layout: post
 title: Neovim Setup with LunarVim
 category: blog
 tags:
-- vim
-- neovim
-- lunarvim
+  - vim
+  - neovim
+  - lunarvim
 name: neovim-setup-lunarvim
-thumb: https://unsplash.com/photos/8IJ5xNTv1QM/download?w=800
+thumb: 'https://unsplash.com/photos/8IJ5xNTv1QM/download?w=800'
 summary: Neovim Setup with LunarVim
-image: https://unsplash.com/photos/8IJ5xNTv1QM/download?w=800
+image: 'https://unsplash.com/photos/8IJ5xNTv1QM/download?w=800'
 author: Tushar Sharma
+published: true
 ---
 
 
@@ -85,6 +86,32 @@ You can start using `Lunarvim` using
 ```bash
 $ lvim
 ```
+
+### Enable 'Copy to Clipboard'
+
+If you are using `wsl` on Windows, copy to clipboard might not work automatically. To fix that - 
+
+1. Go to [https://github.com/equalsraf/win32yank]( Windows clipboard tool) and download the latest `Releases`, for example - 
+
+```bash
+$ curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
+$ unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
+$ chmod +x /tmp/win32yank.exe
+$ sudo mv /tmp/win32yank.exe /usr/local/bin/
+```
+
+2. Add the following line to the file `~/.local/share/lunarvim/lvim/init.lua`
+
+```bash
+$ vim.cmd("set clipboard=unnamedplus")
+```
+
+Now you can copy using the following command
+
+```bash
+"+y
+```
+
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
