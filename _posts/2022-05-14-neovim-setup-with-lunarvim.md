@@ -37,7 +37,7 @@ $ make CMAKE_BUILD_TYPE=Release
 $ sudo make install
 ```
 
-You can verify version of `neovim` 
+You can verify version of `neovim`
 
 ```bash
 $ nvim --version
@@ -81,7 +81,7 @@ Or by commandline
 $ lvim +LvimUpdate +q
 ```
 
-You can start using `Lunarvim` using 
+You can start using `Lunarvim` using
 
 ```bash
 $ lvim
@@ -89,9 +89,9 @@ $ lvim
 
 ### Enable 'Copy to Clipboard'
 
-If you are using `wsl` on Windows, copy to clipboard might not work automatically. To fix that - 
+If you are using `wsl` on Windows, copy to clipboard might not work automatically. To fix that -
 
-1. Go to [https://github.com/equalsraf/win32yank]( Windows clipboard tool) and download the latest `Releases`, for example - 
+1. Go to [https://github.com/equalsraf/win32yank]( Windows clipboard tool) and download the latest `Releases`, for example -
 
 ```bash
 $ curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
@@ -103,7 +103,7 @@ $ sudo mv /tmp/win32yank.exe /usr/local/bin/
 2. Add the following line to the file `~/.local/share/lunarvim/lvim/init.lua`
 
 ```bash
-$ vim.cmd("set clipboard=unnamedplus")
+vim.cmd("set clipboard=unnamedplus")
 ```
 
 Now you can copy using the following command
