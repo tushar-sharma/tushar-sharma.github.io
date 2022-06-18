@@ -6,6 +6,7 @@ tags:
 - leetcode
 - java
 - python
+- hashmap
 name: minimum-cards-pick-up
 thumb: https://unsplash.com/photos/-2vD8lIhdnw/download?w=800
 ---
@@ -26,10 +27,10 @@ An interesting problem on leetcode to find minimum number of ways to pick up con
 You are given an integer array cards where cards[i] represents the value of the i<sup>th</sup> card. A pair of cards are matching if the cards have the same value.
 
 Return the minimum number of consecutive cards you have to pick up to have a pair of matching cards among the picked cards. If it is impossible to have matching cards, return -1.
- 
+
 ## Brute force Solution
 
-A simple intuitive solution would be to pick up a card, and then iterate over the remaining cards to find the minimum length. 
+A simple intuitive solution would be to pick up a card, and then iterate over the remaining cards to find the minimum length.
 
 <div class="tab-container">
   <ul>
@@ -52,7 +53,7 @@ A simple intuitive solution would be to pick up a card, and then iterate over th
 This will fail as the time limit will exceed while submiting the solution to leetcode. This is because the time complexity of the solution is <strong>O(n<sup>2</sup>)</strong>.
 </blockquote>
 
- 
+
 
 ## Using HashMap
 
@@ -62,10 +63,10 @@ Lets take an example with a use case of following input
 cards = [3,4,2,3,4,7]
 ```
 
-Next we can create a `hashmap` to keep track of indices of a particular card. 
+Next we can create a `hashmap` to keep track of indices of a particular card.
 
 
-<p> 
+<p>
 <center>
 <img src="{{ root_url }}/img/min_ways_hashmap.png" alt="hash map picture">
 </center>
@@ -86,7 +87,7 @@ Next we can create a `hashmap` to keep track of indices of a particular card.
    </div>
 
 </div>
- 
+
 
 ## Complexity
 
