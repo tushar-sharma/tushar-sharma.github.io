@@ -206,7 +206,7 @@ Dog executed bowbow
         <item>
           <title>Minimum Consecutive Cards to Pick up solution leetcode</title>
           <description>&lt;p&gt;An interesting problem on leetcode to find minimum number of ways to pick up consecutive cards. We will start with a brute force algorithm that would exceed in time limit. Later we will improve upon this algorithm using hashmap.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/hashmap&quot; title=&quot;View posts tagged with &amp;quot;hashmap&amp;quot;&quot;&gt;hashmap&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
 
@@ -255,7 +255,7 @@ This will fail as the time limit will exceed while submiting the solution to lee
 
 &lt;p&gt;Next we can create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hashmap&lt;/code&gt; to keep track of indices of a particular card.&lt;/p&gt;
 
-&lt;p&gt; 
+&lt;p&gt;
 &lt;center&gt;
 &lt;img src=&quot;/img/min_ways_hashmap.png&quot; alt=&quot;hash map picture&quot; /&gt;
 &lt;/center&gt;
