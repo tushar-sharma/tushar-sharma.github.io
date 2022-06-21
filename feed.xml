@@ -7,6 +7,65 @@
     
       
         <item>
+          <title>Sort Characters By Frequency solution leetcode</title>
+          <description>&lt;p&gt;Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/heap&quot; title=&quot;View posts tagged with &amp;quot;heap&amp;quot;&quot;&gt;heap&lt;/a&gt;    &lt;/p&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
+
+&lt;script src=&quot;/js/jquery.easytabs.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;/js/multipleTab.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.&lt;/p&gt;
+
+&lt;p&gt;Return the sorted string. If there are multiple answers, return any of them&lt;/p&gt;
+
+&lt;h2 id=&quot;explanation&quot;&gt;Explanation&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hashmap&lt;/code&gt; to count the frequency of all characters in string&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Insert character &amp;amp; frequency pair into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Max Heap&lt;/code&gt; where frequency is used for ranking.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Extract Maximum from the heap and append it to the output string.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;tab Java2&quot;&gt;&lt;a href=&quot;#Java2&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;tab Python2&quot;&gt;&lt;a href=&quot;#Python2&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+   &lt;div class=&quot;codeSample Java2&quot; id=&quot;Java2&quot;&gt;
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/5b65da231be6d7d4de3ee4cc2a5e0d10.js?file=FrequencySort.java&quot;&gt;&lt;/script&gt;
+   &lt;/div&gt;
+
+   &lt;div class=&quot;codeSample Python2&quot; id=&quot;Python2&quot;&gt;
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/5b65da231be6d7d4de3ee4cc2a5e0d10.js?file=frequency_sort.py&quot;&gt;&lt;/script&gt;
+   &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/create-a-lambda-function-to-run-sql-queries-in-redshift-cluster&quot; title=&quot;Previous Post: Create a Lambda Function to run SQL queries in Redshift Cluster&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;/nav&gt;
+
+</description>
+          <pubDate>2022-06-19T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/sort-characters-by-frequency</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/sort-characters-by-frequency</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Create a Lambda Function to run SQL queries in Redshift Cluster</title>
           <description>&lt;p&gt;Amazon Redshift is fully managed warehouse service provided by AWS. The Amazon Redshift engine is a SQL-compliant, massively-parallel, query processing and database management system designed to support analytics workload.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -70,7 +129,7 @@ query processing and data manipulation against local data.[^redshift]&lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/tushar-sharma/0ea44788e9afe78b3dcc94a026dc53c1.js?file=lambda_function4.py&quot;&gt;&lt;/script&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/getting-started-decorators-python&quot; title=&quot;Previous Post: Getting Started with decorators in Python&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/getting-started-decorators-python&quot; title=&quot;Previous Post: Getting Started with decorators in Python&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/sort-characters-by-frequency&quot; title=&quot;Next Post: Sort Characters By Frequency solution leetcode&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
           <pubDate>2022-06-08T00:00:00-04:00</pubDate>
