@@ -483,3 +483,4 @@ Feed the masses, eat with the classes.
 "Science is the most reliable guide in life" - Mustafa Kemal Ataturk
 "The prison cannot be changed as long as the old basis of suppression and isolation is maintained" - Frank Tannenbaum
 "Our scientific power has outrun our spiritual power. We have guided missiles and misguided men" - Martin Luther King, Jr.
+"Prediction is very difficult, especially if it's about the future" - Niels Bohr
