@@ -486,3 +486,4 @@ Feed the masses, eat with the classes.
 "Prediction is very difficult, especially if it's about the future" - Niels Bohr
 "Brain cells create ideas. Stress kills brain cells. Stress is not a good idea." - Benjamin Franklin
 "Never interrupt an enemy when he is making a mistake." - Napoleon Bonaparte
+"Alice: How long is forever? White Rabbit: Sometimes, just one second." - Lewis Carrol
