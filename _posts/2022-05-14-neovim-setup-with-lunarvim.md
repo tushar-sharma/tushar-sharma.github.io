@@ -102,7 +102,7 @@ $ sudo mv /tmp/win32yank.exe /usr/local/bin/
 
 2. Add the following line to the file `~/.local/share/lunarvim/lvim/init.lua`
 
-```bash
+```lua
 vim.cmd("set clipboard=unnamedplus")
 ```
 
@@ -114,9 +114,9 @@ Now you can copy using the following command
 
 ### Additional tweeks 
 
-Add the following line to the file `~/.local/share/lunarvim/lvim/init.lua`
+1. Add the following line to the file `~/.local/share/lunarvim/lvim/init.lua`
 
-```bash
+```lua
 --stop auto indent
 vim.cmd("set indentexpr=")
 
@@ -124,6 +124,20 @@ vim.cmd("set indentexpr=")
 vim.cmd("noremap zz <c-w>_ \\| <c-w>\\|")
 vim.cmd("noremap zo <c-w>=")
 ```
+
+2. Supress `diagnostic warnings` by adding the following to `lua/lvim/lsp/handlers.lua`.
+
+```lua
+  local diagnostic_opts = {
+    underline = true,
+    virtual_text = false, -- this it what you're looking for
+    signs = false,
+    update_in_insert = true,
+  }
+  
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, diagnostic_opts)
+```
+
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
