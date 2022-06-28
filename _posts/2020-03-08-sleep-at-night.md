@@ -4,8 +4,7 @@ title: Sleeping At Night
 category: blog
 tags:
   - sleep
-  - rambling
-  - human rights
+  - opinion
 name: sleep-at-night
 thumb: >-
   https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/10/p-1-army-sleep.jpg
