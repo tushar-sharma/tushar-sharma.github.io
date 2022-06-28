@@ -3,13 +3,14 @@ layout: post
 title: Hypocrisy of Indian liberals
 category: blog
 tags:
-- opinion
-- india
+  - opinion
+  - india
 featuredPost: true
 summary: check fraud
-image: https://unsplash.com/photos/bm3L5PRAJCI/download?w=800
-thumb: https://unsplash.com/photos/bm3L5PRAJCI/download?w=800
+image: 'https://unsplash.com/photos/bm3L5PRAJCI/download?w=800'
+thumb: 'https://unsplash.com/photos/bm3L5PRAJCI/download?w=800'
 author: Tushar Sharma
+published: true
 ---
 
 Mahatma Gandhi said, "I like your Christ, I do not like your Christians. Your Christians are so unlike your Christ". This perfectly sums up my feelings about liberals in India. I like liberal values but not the liberals of India. They reeks of hypocrisy.<!-- truncate_here -->
@@ -44,7 +45,9 @@ In their own words, CPI(M)'s website says that the party has sought to independe
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">CPIM appeals to all Left, secular democratic forces to come together in order to isolate the BJP. The Congress party along with some other regional parties must set their houses in order &amp; decide on where they stand to safeguard the secular, democratic character of the republic.</p>&mdash; CPI (M) (@cpimspeak) <a href="https://twitter.com/cpimspeak/status/1511592040622026756?ref_src=twsrc%5Etfw">April 6, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
 
+### Conclusion 
 
+People wonder why right wing parties gain traction around the world. I have no love lost for the demise of liberals around the world, however I deeply cherish liberal values that should not be discarded for the sake of psuedo liberals.
 ### References
 
 
