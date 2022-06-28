@@ -4,7 +4,7 @@ title:  Lazy Meditation
 category: blog
 tags:
 - meditation
-- rambling
+- opinion
 name: lazy-meditation
 thumb: /img/dog_yoga.jpg
 image: /img/dog_yoga.jpg
@@ -17,9 +17,7 @@ The sun’s rays had already crept through my window & drenched my room with lig
 
 The sun’s rays had already crept through my window & drenched my room with light. Sleep taste sweetest when you resist it. It is but with a heavy heart that I relinquish my sleep & pull myself together. But not today! It was a weekend that brought me few more drops of honey as I extended my sleep while a statue of abstemious Buddha, which I recently bought, wandered at the petty cumberworld outgrowing in both time & stupidity.
 
-<center>
-| <img src="{{ root_url }}/img/bhudda_st.jpg" alt="" /> |
-</center><br>
+| <img align="center" src="{{ root_url }}/img/bhudda_st.jpg" alt="" /> |
 
 It seems like yesterday when I hit a wall & made a crazy resolution to indulge in meditation. Before some of the readers’ protest, I dispose with an earnestness that mediation is a very useful transcendental exercise. But being Indian, along with genes to eat pani puri & digest spicy food, I also have some false preconceptions about myself. Like billion Indians, I believe that meditation, like cricket, dancing, acting, etc comes naturally to Indians. I once joked with my American friend on how I would have played for Indian cricket team if not for the engineering. Also, I told him that India produces 1.5 million engineers a year which is twice the population of Iceland<sup><a href='#fn:1' rel='footnote'>1</a></sup>, which left him gaping at me.
 
@@ -34,9 +32,7 @@ Both arms of the clock had stopped graciously at 10 before the sound filled the 
 
 I pulled up a meditation lesson by “Ravi Ravi Shankar”. His photo with long hair while smiling profusely, instilled unparalleled motivation in me. “I could be next Vivekananda”, I quipped, though the Buddha statue in my room chuckled mischievously. I have seen American do challenging “yoga” while as an Indian I felt the embarrassment on failing to properly sit cross legs. Since I needed a scapegoat to blame for my flaws, I blame western culture & modernity. (A common phrase used India to blame for our woes<sup><a href='#fn:2' rel='footnote'>2</a></sup>, though such reasons are as much genuine as my rambling).
 
-<center>
-| <img  src="{{ root_url }}/img/dog_yoga.jpg" alt="" /> |
-</center><br>
+| <img align="center" src="{{ root_url }}/img/dog_yoga.jpg" alt="" /> |
 
 The meditation started with nice Sitars. And I really felt energized in midst of the meditation. It was all beautiful and I could feel the experience transcendence while inhaling & the exhaling. After a long time, I sheepishly opened my eye to keep track of the time. To my horror, it had only elapsed five minutes yet it appeared as eternity as if time froze. The clocks were taking revenge on me by dragging their feet slowly like a toy train, even slower than one which I took from Shimla to Kalka, jerking at regular intervals at the every junction of the seconds. With every minute I grew more uncomfortable. It seems my body had lost the capacity to comprehend stillness. And like a sponge I sat, marinating in my mediocrity.
 
