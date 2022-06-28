@@ -112,6 +112,18 @@ Now you can copy using the following command
 "+y
 ```
 
+### Additional tweeks 
+
+Add the following line to the file `~/.local/share/lunarvim/lvim/init.lua`
+
+```bash
+--stop auto indent
+vim.cmd("set indentexpr=")
+
+--zoom in and out
+vim.cmd("noremap zz <c-w>_ \\| <c-w>\\|")
+vim.cmd("noremap zo <c-w>=")
+```
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
