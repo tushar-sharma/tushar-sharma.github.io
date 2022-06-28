@@ -48,6 +48,7 @@ In their own words, CPI(M)'s website says that the party has sought to independe
 ### Conclusion 
 
 People wonder why right wing parties gain traction around the world. I have no love lost for the demise of liberals around the world, however I deeply cherish liberal values that should not be discarded for the sake of psuedo liberals.
+
 ### References
 
 
