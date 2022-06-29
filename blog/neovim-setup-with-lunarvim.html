@@ -324,13 +324,42 @@ Build <span class="nb">type</span>: Release
 </li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim.cmd<span class="o">(</span><span class="s2">"set clipboard=unnamedplus"</span><span class="o">)</span>
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set clipboard=unnamedplus"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Now you can copy using the following command</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"+y
 </span></code></pre></div></div>
+
+<h3 id="additional-tweeks">Additional tweeks</h3>
+
+<ol>
+  <li>Add the following line to the file <code class="language-plaintext highlighter-rouge">~/.local/share/lunarvim/lvim/init.lua</code>
+</li>
+</ol>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">--stop auto indent</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set indentexpr="</span><span class="p">)</span>
+
+<span class="c1">--zoom in and out</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"noremap zz &lt;c-w&gt;_ \\| &lt;c-w&gt;\\|"</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"noremap zo &lt;c-w&gt;="</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Supress <code class="language-plaintext highlighter-rouge">diagnostic warnings</code> by adding the following to <code class="language-plaintext highlighter-rouge">lua/lvim/lsp/handlers.lua</code>.</li>
+</ol>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">local</span> <span class="n">diagnostic_opts</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">underline</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="n">virtual_text</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">-- this it what you're looking for</span>
+    <span class="n">signs</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="n">update_in_insert</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="p">}</span>
+  
+    <span class="n">vim</span><span class="p">.</span><span class="n">lsp</span><span class="p">.</span><span class="n">handlers</span><span class="p">[</span><span class="s2">"textDocument/publishDiagnostics"</span><span class="p">]</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">lsp</span><span class="p">.</span><span class="n">with</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">lsp</span><span class="p">.</span><span class="n">diagnostic</span><span class="p">.</span><span class="n">on_publish_diagnostics</span><span class="p">,</span> <span class="n">diagnostic_opts</span><span class="p">)</span>
+</code></pre></div></div>
 
 <nav class="pagination clear" style="padding-bottom:20px;">
  <a class="prev-item" href="/blog/wsl-2-vpn-internet" title="Previous Post: Fix WSL2 internet connection while on VPN">←Previous</a>     <a class="next-item" href="/blog/minimum-consecutive-cards-to-pick-up-solution" title="Next Post: Minimum Consecutive Cards to Pick up solution leetcode">Next→</a>         
