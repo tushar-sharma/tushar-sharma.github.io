@@ -24,11 +24,11 @@ Note that all prices will contain at most 10 digits.
   </ul>
 
    <div class="codeSample Java2" id="Java2">
-<script src="https://gist.github.com/tushar-sharma/5b65da231be6d7d4de3ee4cc2a5e0d10.js?file=FrequencySort.java"></script>
+     <script src="https://gist.github.com/tushar-sharma/f34119b8638d8071aff8526f9c77b549.js?file=ApplyDiscount.java"></script>
    </div>
 
    <div class="codeSample Python2" id="Python2">
-<script src="https://gist.github.com/tushar-sharma/5b65da231be6d7d4de3ee4cc2a5e0d10.js?file=frequency_sort.py"></script>
+     <script src="https://gist.github.com/tushar-sharma/f34119b8638d8071aff8526f9c77b549.js?file=apply_discount.py"></script>
    </div>
 
 </div>
