@@ -22,17 +22,19 @@ Mahatma Gandhi said, "I like your Christ, I do not like your Christians. Your Ch
 
 The left-liberal quarters of India were up in arms against the controversial CAA (Citizenship Amendment Act). It's an Act passed in the Indian Parliament in 2019 which fastracks allotment of Indian citizenship to Hindu, Sikh, Buddhist, Jain, Parsi, and Christian refugees who fled from the neighboring Muslim majority countries of Pakistan, Bangladesh and Afghanistan before December 2014. Now the controversy is that it conveniently excludes Muslims refugees. How can a secular country like India not treat all religions equally?
 
-| <img align="center"  loading="lazy" src="https://i.imgur.com/3j6W3By.png" alt="Salman Soz tweet" /> |
-
+| <a href="https://twitter.com/salmansoz/status/1237354916705964033"><img align="center"  loading="lazy" src="https://i.imgur.com/3j6W3By.png" alt="Salman Soz tweet" /> </a>|
 
 Now I concede this a good liberal agument. Definition of religious persecuted communities could also include Muslims persecuted by other Muslims. Atheist, blashphemous, apostate also need to have sanctuary in a liberal democracy. Such crimes are no longer relevent in a modern civilized society. However same flock of liberals raise hue and cry about Uniform Civil Code. 
 
 
 India doesn't have uniform civil code unlike other modern liberal democracies. Every religion has its own personal law. So a Muslim girl in India can marry at the age of 16 [^high-court-muslim-age], where as age of marriage for Hindu girl is 18. Polygamy was outlawed for Hindus in 1955 however Muslims are still permitted to practice polygamy in India.
 
-Shouldn't all relgions be treated equally in a secular country? "No, Uniform Civil Code cannot be forced upon people", says Randeep Surjewala, member of Indian national Congress, a so called secular main opposition party in India [^national-herald-ucc]. Elamaram Kareem, member of CPI(M), gives notice to oppose Uniform Civil Code Bill [^tweet]. In their own words, CPI(M)'s website says that the party has sought to independently apply Marxism-Leninism to Indian conditions and to work out the strategy and tactics for a people's democratic revolution, which can transform the lives of the Indian people [^cpi]. Same democratic party opposes secular Uniform Civil Code. Ironically they want to protect India's secular fabric. 
+Shouldn't all relgions be treated equally in a secular country? "No, Uniform Civil Code cannot be forced upon people", says Randeep Surjewala, member of Indian national Congress, a so called secular main opposition party in India [^national-herald-ucc]. Elamaram Kareem, member of CPI(M), gives notice to oppose Uniform Civil Code Bill [^tweet]. In their own words, CPI(M)'s website says that the party has sought to independently apply Marxism-Leninism to Indian conditions and to work out the strategy and tactics for a people's democratic revolution, which can transform the lives of the Indian people [^cpi]. Same democratic party opposes secular Uniform Civil Code. Ironically they want to protect India's secular fabric and democracy by celebrating Joseph Stalin.
 
-| <img align="center"  loading="lazy" src="https://i.imgur.com/8Lqrwn1.png" alt="CPI(M) tweet" /> |
+| <a href="https://twitter.com/cpim_westbengal/status/1353897365023973377"><img align="center"  loading="lazy" src="https://i.imgur.com/2tlOB01.png" alt="CPI(M) West Bengal Tweet" /> </a>|
+
+
+| <a href="https://twitter.com/CPIM_WESTBENGAL/status/1499960422216404992"><img align="center"  loading="lazy" src="https://i.imgur.com/9wUPSR8.png" alt="CPI(M) West Bengal Tweet" /> </a>|
 
 ### Conclusion 
 
