@@ -39,3 +39,10 @@
 <meta property="og:image" content="{{ site.title_image }}">
 {% endif %}
 <!-- end of Twitter cards -->
+
+<!-- this is to allow mutiple tabs for code selection-->
+{% if page.mutipleTab %}
+<link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>
+<script src="{{ root_url }}/js/jquery.easytabs.min.js"></script>
+<script src="{{ root_url }}/js/multipleTab.js"></script>
+{% endif %}
