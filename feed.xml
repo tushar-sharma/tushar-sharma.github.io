@@ -7,6 +7,67 @@
     
       
         <item>
+          <title>Apply Discount To Prices leetcode solution</title>
+          <description>&lt;p&gt;A sentence is a string of single-space separated words where each word can contain digits, lowercase letters, and the dollar sign ‘$’. A word represents a price if it is a sequence of digits preceded by a dollar sign.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/string&quot; title=&quot;View posts tagged with &amp;quot;string&amp;quot;&quot;&gt;string&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;A sentence is a string of single-space separated words where each word can contain digits, lowercase letters, and the dollar sign ‘$’. A word represents a price if it is a sequence of digits preceded by a dollar sign.&lt;/p&gt;
+
+&lt;p&gt;For example, “&lt;span&gt;$&lt;/span&gt;100”, “&lt;span&gt;$&lt;/span&gt;23”, and “&lt;span&gt;$&lt;/span&gt;6” represent prices while “100”, “&lt;span&gt;$&lt;/span&gt;”, and “&lt;span&gt;$&lt;/span&gt;1e5” do not.&lt;/p&gt;
+
+&lt;p&gt;You are given a string sentence representing a sentence and an integer discount. For each word representing a price, apply a discount of discount% on the price and update the word in the sentence. All updated prices should be represented with exactly two decimal places.&lt;/p&gt;
+
+&lt;p&gt;Return a string representing the modified sentence.&lt;/p&gt;
+
+&lt;p&gt;Note that all prices will contain at most 10 digits.&lt;/p&gt;
+
+&lt;h2 id=&quot;explanation&quot;&gt;Explanation&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Split the &lt;strong&gt;string&lt;/strong&gt; by whitespaces&lt;/li&gt;
+  &lt;li&gt;For each string, apply discount only if it starts with ‘&lt;span&gt;$&lt;/span&gt;’ and is &lt;strong&gt;numeric&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Merge the &lt;strong&gt;string array&lt;/strong&gt; into a string and return it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;/img/apply_discount.png&quot; alt=&quot;Explanation of apply discount&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;tab Java2&quot;&gt;&lt;a href=&quot;#Java2&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;tab Python2&quot;&gt;&lt;a href=&quot;#Python2&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+   &lt;div class=&quot;codeSample Java2&quot; id=&quot;Java2&quot;&gt;
+     &lt;script src=&quot;https://gist.github.com/tushar-sharma/f34119b8638d8071aff8526f9c77b549.js?file=DiscountPrices.java&quot;&gt;&lt;/script&gt;
+   &lt;/div&gt;
+
+   &lt;div class=&quot;codeSample Python2&quot; id=&quot;Python2&quot;&gt;
+     &lt;script src=&quot;https://gist.github.com/tushar-sharma/f34119b8638d8071aff8526f9c77b549.js?file=discount_prices.py&quot;&gt;&lt;/script&gt;
+   &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/playing-rise-of-tomb-raider&quot; title=&quot;Previous Post: Playing Rise of Tomb Raider&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;/nav&gt;
+
+</description>
+          <pubDate>2022-07-03T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/apply-discount-to-prices-solution</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/apply-discount-to-prices-solution</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Playing Rise of Tomb Raider</title>
           <description>&lt;p&gt;I am an ardent fan of &lt;strong&gt;Tomb Raider&lt;/strong&gt; game series. I grew up falling in love with &lt;strong&gt;Tomb Raider III&lt;/strong&gt;. Much time swept away since I have tried any other game of this series. So finally I decided to try my hands on &lt;strong&gt;Rise of Tomb Raider&lt;/strong&gt;.
 &lt;!-- truncate_here --&gt;&lt;/p&gt;
@@ -29,7 +90,7 @@
 &lt;p&gt;Since I do not have the luxury of time, I prefer to play it on weekends. Honestly I had a crush on Lara Croft when I was in my adolescence. I think the infatuation is still there.&lt;/p&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/hypocrisy-of-indian-liberals&quot; title=&quot;Previous Post: Hypocrisy of Indian liberals&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/hypocrisy-of-indian-liberals&quot; title=&quot;Previous Post: Hypocrisy of Indian liberals&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/apply-discount-to-prices-solution&quot; title=&quot;Next Post: Apply Discount To Prices leetcode solution&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 </description>
           <pubDate>2022-07-02T00:00:00-04:00</pubDate>
@@ -119,12 +180,6 @@
           <title>Sort Characters By Frequency solution leetcode</title>
           <description>&lt;p&gt;Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/heap&quot; title=&quot;View posts tagged with &amp;quot;heap&amp;quot;&quot;&gt;heap&lt;/a&gt;    &lt;/p&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
-
-&lt;script src=&quot;/js/jquery.easytabs.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/js/multipleTab.js&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.&lt;/p&gt;
 
