@@ -9,16 +9,12 @@ tags:
 - heap
 thumb: https://i.imgur.com/XR4JjSOl.jpg
 image: https://i.imgur.com/XR4JjSOl.jpg
+mutipleTab: true
 ---
 
 
 Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
-
-
-<link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>
-<script src="{{ root_url }}/js/jquery.easytabs.min.js"></script>
-<script src="{{ root_url }}/js/multipleTab.js"></script>
 
 Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.
 

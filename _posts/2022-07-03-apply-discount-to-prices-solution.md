@@ -1,19 +1,39 @@
 ---
-published: false
+title: Apply Discount To Prices leetcode solution
+category: blog
+layout: post
+tags:
+- leetcode
+- java
+- python
+- string
+thumb: https://i.imgur.com/ZF5YvLD.jpg
+image: https://i.imgur.com/ZF5YvLD.jpg 
+mutipleTab: true
 ---
 
-## Problem Statement
+A sentence is a string of single-space separated words where each word can contain digits, lowercase letters, and the dollar sign '$'. A word represents a price if it is a sequence of digits preceded by a dollar sign.<!-- truncate_here -->
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 A sentence is a string of single-space separated words where each word can contain digits, lowercase letters, and the dollar sign '$'. A word represents a price if it is a sequence of digits preceded by a dollar sign.
 
 
-* For example, "$100", "$23", and "$6" represent prices while "100", "$", and "$1e5" do not.
+For example, "<span>$</span>100", "<span>$</span>23", and "<span>$</span>6" represent prices while "100", "<span>$</span>", and "<span>$</span>1e5" do not.
 
 You are given a string sentence representing a sentence and an integer discount. For each word representing a price, apply a discount of discount% on the price and update the word in the sentence. All updated prices should be represented with exactly two decimal places.
 
 Return a string representing the modified sentence.
 
 Note that all prices will contain at most 10 digits.
+
+## Explanation
+
+1. Split the **string** by whitespaces
+2. For each string, apply discount only if it starts with '<span>$</span>' and is **numeric**. 
+3. Merge the **string array** into a string and return it.
+
+| <img align="center"  loading="lazy" src="{{ root_url }}/img/apply_discount.png" alt="Explanation of apply discount" />|
+
 
 ## Solution
 
@@ -24,11 +44,11 @@ Note that all prices will contain at most 10 digits.
   </ul>
 
    <div class="codeSample Java2" id="Java2">
-     <script src="https://gist.github.com/tushar-sharma/f34119b8638d8071aff8526f9c77b549.js?file=ApplyDiscount.java"></script>
+     <script src="https://gist.github.com/tushar-sharma/f34119b8638d8071aff8526f9c77b549.js?file=DiscountPrices.java"></script>
    </div>
 
    <div class="codeSample Python2" id="Python2">
-     <script src="https://gist.github.com/tushar-sharma/f34119b8638d8071aff8526f9c77b549.js?file=apply_discount.py"></script>
+     <script src="https://gist.github.com/tushar-sharma/f34119b8638d8071aff8526f9c77b549.js?file=discount_prices.py"></script>
    </div>
 
 </div>
