@@ -6,7 +6,7 @@ tags:
   - opinion
   - india
 featuredPost: true
-summary: check fraud
+summary: Why liberal values are different than pseudo liberal
 image: 'https://unsplash.com/photos/bm3L5PRAJCI/download?w=800'
 thumb: 'https://unsplash.com/photos/bm3L5PRAJCI/download?w=800'
 author: Tushar Sharma
