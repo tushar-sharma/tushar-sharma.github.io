@@ -262,6 +262,8 @@ As of today (May 14, 2022), Lunarvim requires Neovim v0.7 or higher. So we will 
 <span class="nv">$ </span>git checkout stable
 <span class="nv">$ </span>make <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>Release
 <span class="nv">$ </span><span class="nb">sudo </span>make <span class="nb">install</span>
+<span class="c"># If  error on previous command</span>
+<span class="nv">$ </span>make distclean<span class="p">;</span> make
 </code></pre></div></div>
 
 <p>You can verify version of <code class="language-plaintext highlighter-rouge">neovim</code></p>
@@ -360,7 +362,7 @@ Build <span class="nb">type</span>: Release
     <span class="n">signs</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
     <span class="n">update_in_insert</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
   <span class="p">}</span>
-  
+
     <span class="n">vim</span><span class="p">.</span><span class="n">lsp</span><span class="p">.</span><span class="n">handlers</span><span class="p">[</span><span class="s2">"textDocument/publishDiagnostics"</span><span class="p">]</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">lsp</span><span class="p">.</span><span class="n">with</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">lsp</span><span class="p">.</span><span class="n">diagnostic</span><span class="p">.</span><span class="n">on_publish_diagnostics</span><span class="p">,</span> <span class="n">diagnostic_opts</span><span class="p">)</span>
 </code></pre></div></div>
 

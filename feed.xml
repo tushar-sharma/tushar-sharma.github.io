@@ -7,6 +7,108 @@
     
       
         <item>
+          <title>Dear Vishi, daily log on July 10, 2022</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for July 10, 2022.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for July 10, 2022.&lt;/p&gt;
+
+&lt;h2 id=&quot;kickboxing-class&quot;&gt;Kickboxing class&lt;/h2&gt;
+
+&lt;p&gt;I was supposed to go to a kickboxing class today. I have previously enjoyed these classes which are a mix of cardio and kickboxing. It helps me vent out any stress I have. If you remember in my childhood I had developed an uncanny habit of punching the brickwall barehand. I guess it much better punching the bag wearing the gloves to avoid unwanted injury.&lt;/p&gt;
+
+&lt;p&gt;It so happen that &lt;a href=&quot;https://en.wikipedia.org/wiki/Chitragupta&quot;&gt;Chitragupta&lt;/a&gt; had different plans for me. However before departing, I found to my horror that my house keys were missing. I frantically searched whole apartment but all in vain. I hoped that reading of Sherlock Holmes 🕵️ would aid me with in my pursuit. I reorganized my clothes, threw unwanted thrash, painstakingly searched every needle in the apartment, vacuumed the carpet yet it was a utter disappointment. The current of time never stops and I missed my class. Crestfallen I crept back to my bed to sleep again. However luck has its last revenge. The only place I didn’t search was my bedsheet. For all its worth, at least I spent some time cleaning my room.&lt;/p&gt;
+
+&lt;h2 id=&quot;2d-nested-list-in-python&quot;&gt;2d nested list in Python&lt;/h2&gt;
+
+&lt;p&gt;In python programming language, there’s an interesting concept about nested list&lt;/p&gt;
+
+&lt;p&gt;Lets say if you define a 2d list like&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you want to only update value at location at [0, 2]&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is incorrect as it updates value in all the remaining list. So the correct way to define 2d nested list in python is&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now if you update value at location at [0, 2]&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;reading-the-origin-of-species-by-charles-darwin&quot;&gt;Reading The Origin of Species by Charles Darwin&lt;/h2&gt;
+
+&lt;p&gt;There’s an interesting tidbit about pigeons in India during Mughal period. “Pigeons were much valued by Akber Khan in India, about the year 1600; never less than 20,000 pigeons were taken with the court (sic)”, Charles Darwin on &lt;a href=&quot;https://en.wikipedia.org/wiki/Akbar&quot;&gt;Akbar&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Interestingly Odisha Police still has a &lt;strong&gt;pigeon service&lt;/strong&gt; to communicate in remote areas with no wireless or telephone links. The messages, written on a piece of paper, are rolled and inserted into tiny plastic capsules and tied to the feet of the pigeons&lt;sup id=&quot;fnref:pigeon&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:pigeon&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/h3Z7jnCI7SE&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/h3Z7jnCI7SE?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/h3Z7jnCI7SE/hqdefault.jpg alt='Ranjha song'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Ranjha&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;eating-at-taco-bell&quot;&gt;Eating at Taco bell&lt;/h2&gt;
+
+&lt;p&gt;I usually dont like Taco bell. However lately I become fan of &lt;a href=&quot;https://www.tacobell.com/food/burritos/fiesta-veggie-burrito&quot;&gt;Fiesta Veggie Burrito&lt;/a&gt;. You can add &lt;strong&gt;Jalapeño Peppers&lt;/strong&gt; to the order which make it more crunchy. I guess I would be eating it often until my taste buds revolt.&lt;/p&gt;
+
+&lt;h2 id=&quot;top-five-songs-i-liked-today&quot;&gt;Top five songs I liked today&lt;/h2&gt;
+
+&lt;p&gt;You know I am a musicophile. Top five songs that I liked today&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/V7LwfY5U5WI&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/V7LwfY5U5WI?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/V7LwfY5U5WI/hqdefault.jpg alt='Ranjha song'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Ranjha&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/YVkUvmDQ3HY&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/YVkUvmDQ3HY?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/YVkUvmDQ3HY/hqdefault.jpg alt='Eminem Without me'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Eminem Without me&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/08NlhjpVFsU&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/08NlhjpVFsU?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/08NlhjpVFsU/hqdefault.jpg &amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/99j0zLuNhi8&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/99j0zLuNhi8?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/99j0zLuNhi8/hqdefault.jpg &amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/psuRGfAaju4&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/psuRGfAaju4?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/psuRGfAaju4/hqdefault.jpg &amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/apply-discount-to-prices-solution&quot; title=&quot;Previous Post: Apply Discount To Prices leetcode solution&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;/nav&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:pigeon&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.thebetterindia.com/138025/odisha-police-pigeon-service-india/&quot;&gt;Odissa Pigeon Police Service&lt;/a&gt; &lt;a href=&quot;#fnref:pigeon&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2022-07-10T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/daily-log-2022-07-10</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-log-2022-07-10</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Apply Discount To Prices leetcode solution</title>
           <description>&lt;p&gt;A sentence is a string of single-space separated words where each word can contain digits, lowercase letters, and the dollar sign ‘$’. A word represents a price if it is a sequence of digits preceded by a dollar sign.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/string&quot; title=&quot;View posts tagged with &amp;quot;string&amp;quot;&quot;&gt;string&lt;/a&gt;    &lt;/p&gt;
@@ -56,7 +158,7 @@
 &lt;/div&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/playing-rise-of-tomb-raider&quot; title=&quot;Previous Post: Playing Rise of Tomb Raider&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/playing-rise-of-tomb-raider&quot; title=&quot;Previous Post: Playing Rise of Tomb Raider&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/daily-log-2022-07-10&quot; title=&quot;Next Post: Dear Vishi, daily log on July 10, 2022&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 
 </description>
@@ -534,6 +636,8 @@ As of today (May 14, 2022), Lunarvim requires Neovim v0.7 or higher. So we will 
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout stable
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make &lt;span class=&quot;nv&quot;&gt;CMAKE_BUILD_TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Release
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# If  error on previous command&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make distclean&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; make
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You can verify version of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;neovim&lt;/code&gt;&lt;/p&gt;
@@ -627,7 +731,7 @@ Build &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;: Release
     &lt;span class=&quot;n&quot;&gt;signs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;update_in_insert&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  
+
     &lt;span class=&quot;n&quot;&gt;vim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lsp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;handlers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;textDocument/publishDiagnostics&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lsp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lsp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;diagnostic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;on_publish_diagnostics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;diagnostic_opts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -1249,7 +1353,7 @@ Only index 0 has the highest possible division score 2.
         <item>
           <title>Leetcode - Longest Substring Without Repeating Characters</title>
           <description>&lt;p&gt;In this &lt;a href=&quot;https://leetcode.com/problems/longest-substring-without-repeating-characters/&quot;&gt;leetcode&lt;/a&gt; problem, we are asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abcabcbb&lt;/code&gt; the longest substring without repeating characters is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abc&lt;/code&gt; (with a length of 3).&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/two pointers&quot; title=&quot;View posts tagged with &amp;quot;two pointers&amp;quot;&quot;&gt;two pointers&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/set&quot; title=&quot;View posts tagged with &amp;quot;set&amp;quot;&quot;&gt;set&lt;/a&gt;    &lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/two pointers&quot; title=&quot;View posts tagged with &amp;quot;two pointers&amp;quot;&quot;&gt;two pointers&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/set&quot; title=&quot;View posts tagged with &amp;quot;set&amp;quot;&quot;&gt;set&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/string&quot; title=&quot;View posts tagged with &amp;quot;string&amp;quot;&quot;&gt;string&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
 
@@ -2399,7 +2503,7 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
         <item>
           <title>Dear Vishi, is snoring innocuous?</title>
           <description>&lt;p&gt;I was an intern working in &lt;a href=&quot;https://en.wikipedia.org/wiki/Upstate_New_York&quot; target=&quot;_blank&quot;&gt;Upstate New York&lt;/a&gt;. Public transport required hopping multiple trains &amp;amp; buses and was woefully tedious. I found some other interns who were willing to split the fare with me for Uber. Even a ride in Uber consumed more than two hours. Occasionally I used to steal a quick nap. After a siesta of a few hours, I had always woken up with a gaggle of laughter. My peers often pulled my leg, “You were snoring like a pig”. However, I dismissed my faux pas as just a mere nuisance.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/snoring&quot; title=&quot;View posts tagged with &amp;quot;snoring&amp;quot;&quot;&gt;snoring&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sleep&quot; title=&quot;View posts tagged with &amp;quot;sleep&amp;quot;&quot;&gt;sleep&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/apnea&quot; title=&quot;View posts tagged with &amp;quot;apnea&amp;quot;&quot;&gt;apnea&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/lettetrs&quot; title=&quot;View posts tagged with &amp;quot;lettetrs&amp;quot;&quot;&gt;lettetrs&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/audio&quot; title=&quot;View posts tagged with &amp;quot;audio&amp;quot;&quot;&gt;audio&lt;/a&gt;    &lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/snoring&quot; title=&quot;View posts tagged with &amp;quot;snoring&amp;quot;&quot;&gt;snoring&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sleep&quot; title=&quot;View posts tagged with &amp;quot;sleep&amp;quot;&quot;&gt;sleep&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/apnea&quot; title=&quot;View posts tagged with &amp;quot;apnea&amp;quot;&quot;&gt;apnea&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/audio&quot; title=&quot;View posts tagged with &amp;quot;audio&amp;quot;&quot;&gt;audio&lt;/a&gt;    &lt;/p&gt;
 
 &lt;div id=&quot;player&quot;&gt;
 &lt;div class=&quot;listen&quot;&gt;Listen to this article&lt;/div&gt;
