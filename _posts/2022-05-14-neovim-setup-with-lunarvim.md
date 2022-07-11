@@ -35,6 +35,8 @@ $ cd neovim
 $ git checkout stable
 $ make CMAKE_BUILD_TYPE=Release
 $ sudo make install
+# If  error on previous command
+$ make distclean; make
 ```
 
 You can verify version of `neovim`
@@ -112,7 +114,7 @@ Now you can copy using the following command
 "+y
 ```
 
-### Additional tweeks 
+### Additional tweeks
 
 1. Add the following line to the file `~/.local/share/lunarvim/lvim/init.lua`
 
@@ -134,7 +136,7 @@ vim.cmd("noremap zo <c-w>=")
     signs = false,
     update_in_insert = true,
   }
-  
+
     vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, diagnostic_opts)
 ```
 
