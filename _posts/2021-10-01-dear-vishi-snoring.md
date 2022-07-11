@@ -7,7 +7,7 @@ tags:
   - sleep 
   - apnea
   - diary
-  - lettetrs
+  - letters
   - audio
 name: snoring
 thumb: https://i.imgur.com/Dos9r5p.jpeg
