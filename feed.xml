@@ -7,7 +7,110 @@
     
       
         <item>
-          <title>Dear Vishi, daily log on July 10, 2022</title>
+          <title>Dear Vishi, daily log on July 11, 2022</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for July 11, 2022.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for July 11, 2022.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-sleep-is-like-food&quot;&gt;Why sleep is like food&lt;/h2&gt;
+
+&lt;p&gt;Since we live in a fast-paced world, we sometimes underestimate the importance of sleep. Often we sleep less on weekdays thinking we might compensate it by sleeping more on weekends. This is a common misconception. Adults need 7 or more hours of sleep per night for the best health and well-being.&lt;/p&gt;
+
+&lt;p&gt;According to a &lt;a href=&quot;https://www.cdc.gov/sleep/data_statistics.html&quot;&gt;report&lt;/a&gt; by the CDC, people who get less than 7 hours of sleep per night have an increased risk of the following conditions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;obesity&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;heart disease&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;diabetes&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;stroke&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;depression&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;arthritis&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;kidney disease&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I know life has its complexities. Sometimes we might have to delay sleeping due to work, unwarranted chores, or might need to watch a newly released sitcom on Netflix. But remember sleep is like food, the body needs it for nourishment. Don’t sleep or eat like a hog on weekends too. The beauty lies in moderation for both food and sleep.&lt;/p&gt;
+
+&lt;h2 id=&quot;magic-methods-in-python&quot;&gt;Magic methods in Python&lt;/h2&gt;
+
+&lt;p&gt;Magic methods are methods that start with double underscores (eg &lt;strong&gt;init&lt;/strong&gt;, &lt;strong&gt;lt&lt;/strong&gt;). Today we are going to talk about &lt;strong&gt;__eq__&lt;/strong&gt; method. Lets say we have the following code&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;
+        
+&lt;span class=&quot;n&quot;&gt;person1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tushar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;person2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tushar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;person1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# prints False
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Both objects have same the name but different memory address. However if we want to override this behavior we can do&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__eq__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;isinstance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;person1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tushar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;person2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tushar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;person1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# prints True
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;top-five-songs-i-liked-today&quot;&gt;Top five songs I liked today&lt;/h2&gt;
+
+&lt;p&gt;Here’s the list of top five songs that I listened to today incessantly.&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/mehLx_Fjv_c&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/mehLx_Fjv_c?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/mehLx_Fjv_c/hqdefault.jpg alt=''&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/-05qe1MF5Pg&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/-05qe1MF5Pg?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/-05qe1MF5Pg/hqdefault.jpg alt=''&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/CvBfHwUxHIk&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/CvBfHwUxHIk?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/CvBfHwUxHIk/hqdefault.jpg alt=''&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/5Eqb_-j3FDA&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/5Eqb_-j3FDA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/5Eqb_-j3FDA/hqdefault.jpg alt=''&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/-rtJtGdWeak&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/-rtJtGdWeak?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/-rtJtGdWeak/hqdefault.jpg alt=''&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/daily-log-2022-07-10&quot; title=&quot;Previous Post: Dear Vishi, daily log on July 11, 2022&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+&lt;/nav&gt;
+</description>
+          <pubDate>2022-07-11T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/daily-log-2022-07-11</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-log-2022-07-11</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Dear Vishi, daily log on July 11, 2022</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for July 10, 2022.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
@@ -91,7 +194,7 @@
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/apply-discount-to-prices-solution&quot; title=&quot;Previous Post: Apply Discount To Prices leetcode solution&quot;&gt;&amp;larr;Previous&lt;/a&gt;     
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/apply-discount-to-prices-solution&quot; title=&quot;Previous Post: Apply Discount To Prices leetcode solution&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/daily-log-2022-07-11&quot; title=&quot;Next Post: Dear Vishi, daily log on July 11, 2022&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
@@ -158,7 +261,7 @@
 &lt;/div&gt;
 
 &lt;nav class=&quot;pagination clear&quot; style=&quot;padding-bottom:20px;&quot;&gt;
- &lt;a class=&quot;prev-item&quot; href=&quot;/blog/playing-rise-of-tomb-raider&quot; title=&quot;Previous Post: Playing Rise of Tomb Raider&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/daily-log-2022-07-10&quot; title=&quot;Next Post: Dear Vishi, daily log on July 10, 2022&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
+ &lt;a class=&quot;prev-item&quot; href=&quot;/blog/playing-rise-of-tomb-raider&quot; title=&quot;Previous Post: Playing Rise of Tomb Raider&quot;&gt;&amp;larr;Previous&lt;/a&gt;     &lt;a class=&quot;next-item&quot; href=&quot;/blog/daily-log-2022-07-10&quot; title=&quot;Next Post: Dear Vishi, daily log on July 11, 2022&quot;&gt;Next&amp;rarr;&lt;/a&gt;         
 &lt;/nav&gt;
 
 </description>
