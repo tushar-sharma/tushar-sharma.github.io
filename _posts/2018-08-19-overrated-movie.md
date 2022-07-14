@@ -40,7 +40,4 @@ India boast of being the largest producer of films in the world and second oldes
 
 The Ramayana or Mahabharata can easily dwarf likes of Iliad or Odyssey by Homer. India is replete with myriad art of story telling even without the advent of technology. It’s sad that with all the visual fireworks, Baahubali may be among India’s highest grossing film, but has fell short to become an epic pan Indian film like Mother India.
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>
-
+<

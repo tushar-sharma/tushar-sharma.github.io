@@ -81,8 +81,4 @@ Sati, an ancient Hindu tradition of wife being burned along with husband's pyres
 
 Supreme Court of India in the case titled Sunita Singh Versus State of Uttar Pradesh and Others said that **Caste is determined by birth and cannot be changed by marriage with a person of scheduled caste**. I believe that Supreme Court is indeed supreme but not infallible. This judgement is obstacle in creating fluid caste system. How can you annihilate caste system if you cant change it? There's an internal debate amoung Hindus about validity of **varna**, **caste**, **jaati**, etc in Hinduism. Some Hindus believe [varna](https://en.wikipedia.org/wiki/Varna_(Hinduism)) is just a divison of labor without caste rigidity. However there's a sad reality that people are still discriminated based on caste in India.
 
-I am not an expert to dwell upon a complex subject on a polytheistic religion like Hinduism. However as a cultural Hindu, I believe Hindus must not fall into trap by pseudo left in denigrating Hinduism. Hinduism most not shy itself from reforms and embracing scientific temperament while preserving its cultural heritage. 
-
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>
+I am not an expert to dwell upon a complex subject on a polytheistic religion like Hinduism. However as a cultural Hindu, I believe Hindus must not fall into trap by pseudo left in denigrating Hinduism. Hinduism most not shy itself from reforms and embracing scientific temperament while preserving its cultural heritage.

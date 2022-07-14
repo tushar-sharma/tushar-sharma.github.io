@@ -182,7 +182,3 @@ So flying on 13<sup>th</sup> doesn't have greatest number of aviation accidents.
 [^nyc]: [Why no 13th floor in my buildings](https://streeteasy.com/blog/why-no-13th-floor-in-many-buildings/)
 [^air-safe]: [AirSafe.com](http://www.airsafe.com/analyze/ntsb.database.html)
 [^airline]: [Some planes skip row numbers 13, 14 and 17 for this reason](https://www.news.com.au/travel/travel-advice/flights/some-planes-skip-row-numbers-13-14-and-17-for-this-reason/news-story/779508d9d3088a631217ee02480b2023)
-
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>
