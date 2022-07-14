@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Hindusim without caste
+title: Hinduism without caste
 category: blog
 tags:
   - hinduism
   - caste
 thumb: https://i.imgur.com/j7fHGlT.jpg
-summary: Hindusim without caste
+summary: Hinduism without caste
 image: https://i.imgur.com/j7fHGlT.jpg
 author: Tushar Sharma
 ---
@@ -32,9 +32,9 @@ On Islam he said,
 > "Islam is said to bind people together, but this is only a half-truth. For Islam divides as inexorably as it binds. Islam is a close corporation and the distinction that it makes between Muslims and non-Muslims is a very real, very positive and very alienating distinction. The brotherhood of Islam is not the universal brotherhood of man. It is the brotherhood of Muslims for Muslims only. There is a fraternity, but its benefit is confined to those within that corporation. For those who are outside the corporation, there is nothing but contempt and enmity. The second defeat of Islam is that it is a system of social self-government and is incompatible with local self-government because the allegiance of a Muslim does not rest on his domicile in the country which is his but on the faith to which he belongs. To the Muslim ibi bene ibi patria is unthinkable. Wherever there is the rule of Islam, there is his own country. In other words, Islam can never allow a true Muslim to adopt India as his motherland and regard a Hindu as his kith and kin. That is probably the reason why Maulana Mahomed Ali, a great Indian but a true Muslim, preferred to be buried in Jerusalem rather than in India." - Dr. BR Ambedkar in Pakistan or Partition of India.
 
 
-### Is caste intrinsic to Hindusim? 
+### Is caste intrinsic to hinduism? 
 
-What about caste? Can you be a Hindu without caste? The left ecosystem deliberately equates Hindusim with caste. Here are some of hindophobic tweets.
+What about caste? Can you be a Hindu without caste? The left ecosystem deliberately equates hinduism with caste. Here are some of hindophobic tweets.
 
 
 | <a href="https://twitter.com/Profdilipmandal/status/1358264946921005056"><img align="center"  loading="lazy" src="{{site.baseurl}}/img/tweet_mandal.jpg" alt="Tweet" /> </a>|
@@ -62,7 +62,7 @@ Nehru also believed Hinduism became more rigid and caste had developed after Mus
 To buttress Nehru's views, Hindus living in Fiji are casteless. Muslims and Christian also have caste in India. So isn't caste a geographical social pratice?
 
 
-In his book, the **Hindu View of Life**, Sarvepalli Radhakrishnan has its own interpretation of Hindusim
+In his book, the **Hindu View of Life**, Sarvepalli Radhakrishnan has its own interpretation of hinduism
 
 > At the onset, one is confronted by the difficulty of defining what Hinduism is. To many it seems to be a name without any content. Is it a museum of beliefs, a medley of rites, or a mere map, a geographical expression? 
 
