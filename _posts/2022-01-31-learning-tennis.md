@@ -45,7 +45,3 @@ Currently my tennis rating is `2.5`[^rating]. Tennis is often dubbed as a sport 
 [^rating]: [Ratings](https://www.usta.com/content/dam/usta/pdfs/10013_experience_player_ntrp_guidelines.pdf)
 [^forehand]: [Forehand](https://en.wikipedia.org/wiki/Forehand)
 [^old-sport]: [Telegraph- tennis good for body at any age](https://www.telegraph.co.uk/tennis/beginners/tennis-good-for-body-at-any-age/)
-
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

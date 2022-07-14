@@ -79,6 +79,3 @@ Life has been on a roller coaster ride since the Covid-19 pandemic. The only lik
 [^usa-cost]: [Cost of War ~ Brown University](https://watson.brown.edu/costsofwar/costs/economic)
 [^soviet-cost]: [Cost of War ~ Soviet Union](https://www.cia.gov/readingroom/docs/DOC_0000499320.pdf)
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

@@ -27,8 +27,3 @@ As a kid I once went with my father to a far relative to spend a few days. Their
 
 Currently I sleep in my apartment at night without the annoyance of traffic or train. Though I fear burglary, but not enough to lose my sleep. I believe sleeping without fear is a human right. It’s a privilege that I am grateful everyday.
 
-
-
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

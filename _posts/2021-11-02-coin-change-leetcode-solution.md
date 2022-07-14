@@ -113,7 +113,3 @@ We can vary the amount as i from 0 to amount. The value of Dp[i] for each iterat
 
 Time Complexity is **$$\theta(n * m)$$**, Space complexity is **$$\theta(n)$$**
 
-
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

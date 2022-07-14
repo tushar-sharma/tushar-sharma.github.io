@@ -46,8 +46,3 @@ So far I am enjoying the game. Not only I am enomored of the game mechanics, but
 ></iframe><br>
 
 Since I do not have the luxury of time, I prefer to play it on weekends. Honestly I had a crush on Lara Croft when I was in my adolescence. I think the infatuation is still there.  
-
-
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>
