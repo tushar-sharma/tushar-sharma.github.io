@@ -62,16 +62,16 @@ Nehru also believed Hinduism became more rigid and caste had developed after Mus
 To buttress Nehru's views, Hindus living in Fiji are casteless. Muslims and Christian also have caste in India. So isn't caste a geographical social pratice?
 
 
+In his book, the **Hindu View of Life**, Sarvepalli Radhakrishnan has its own interpretation of Hindusim
+
+> At the onset, one is confronted by the difficulty of defining what Hinduism is. To many it seems to be a name without any content. Is it a museum of beliefs, a medley of rites, or a mere map, a geographical expression? 
+
+
 ## The facade of Secularism in India
 
 It's not my expertise to dwell into theology of religion. I believe religion should be a personal matter between believers and God. Secularism should entail the separtion of religion and State like French's [**laicite**](https://en.wikipedia.org/wiki/Secularism_in_France).  
 
 In India, every party claim they are secular fighting against **fascism**, **nazism**, etc yet eschew secular liberal ideas. Self proclaimed secular parties have banned movies, books, curbed free speech, used blasphemy laws, used archaic sedition law, etc indiscriminately. Secularism in India has no definitive definition except feel-good notion of Sarva Dharma Sama Bhava.
-
-
-In his book, the **Hindu View of Life**, Sarvepalli Radhakrishnan has its own interpretation of Hindusim
-
-> At the onset, one is confronted by the difficulty of defining what Hinduism is. To many it seems to be a name without any content. Is it a museum of beliefs, a medley of rites, or a mere map, a geographical expression? 
 
 ## Reform not Annihilate
 
