@@ -3,25 +3,13 @@ published: false
 ---
 ## Import Tweets to Google Sheet Using Python
 
-First pass Twitter `username` that you need to downlaod tweets.
-
-```python
-import sys
-
-if __name__=="__main__":
-    try:
-        username = sys.argv[1]
-        get_tweets(username)
-    except:
-        traceback.format_exc()
-```.
-
 Lets implement `get_tweets` method.
 
 ```python
 import tweepy
 import csv
 import codecs
+import sys
 
 ## Fill this with your credentials
 consumer_key = "" # API key
@@ -29,7 +17,7 @@ consumer_secret = ""
 access_key = "301777598-" # access token
 access_secret = "" #acces token secret
 
-def get_tweets(username: str):
+def get_tweets(screen_name: str):
     ## authorize twitter
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_key, access_secret)
@@ -73,5 +61,13 @@ def get_tweets(username: str):
         writer = csv.writer(f)
         writer.writerow(["id","created_at","text"])
         writer.writerows(outtweets)
+        
+
+if __name__=="__main__":
+    try:
+        screen_name = sys.argv[1]
+        get_tweets(screen_name)
+    except:
+        traceback.format_exc()
 
 ```
