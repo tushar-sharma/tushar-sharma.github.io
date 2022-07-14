@@ -149,7 +149,7 @@ h1.heading{font-family:Myfont;color:#39c}.top{color:#444}
 /* end scroll */
 .pagination{margin:20px 0;padding:10px 0}
 
-.pagination a  {width:50% }
+.pagination a  {width:auto; }
 .pagination a:hover {color:#39c; }
 
 .prev-item{float:left;text-align:left}
