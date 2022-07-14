@@ -19,7 +19,7 @@ I came across this tweet on Hinduism.
 
 | <a href="https://twitter.com/kirubamunusamy/status/1307621960403300352?lang=en"><img align="center"  loading="lazy" src="{{site.baseurl}}/img/tweet_kiruba.jpg" alt="Tweet" /> </a>|
 
-The Left ecosystem in India usually quote [B. R. Ambedkar](https://en.wikipedia.org/wiki/B._R._Ambedkar) on Hinduism but is silent on his views on other religion. For Instance in the introduction to Buddha and His Dhamma, Ambedkar said
+The Left ecosystem in India usually quote [B. R. Ambedkar](https://en.wikipedia.org/wiki/B._R._Ambedkar) on Hinduism but is silent on his views on other religion. For Instance in the Introduction to Buddha and His Dhamma, Ambedkar said
 
 > The four Aryan Truths are a great stumbling block in the
 way of non-Buddhists accepting the gospel of Buddhism. For the four
@@ -29,7 +29,7 @@ gospel of the Buddha a **gospel of pessimism**.
 
 On Islam he said, 
 
-> "Islam can never allow a true Muslim to adopt India as his motherland & regard a Hindu as his kith & Kin." - Dr. BR Ambedkar in Pakistan or Partition of India, Pg, 325.
+> "Islam is said to bind people together, but this is only a half-truth. For Islam divides as inexorably as it binds. Islam is a close corporation and the distinction that it makes between Muslims and non-Muslims is a very real, very positive and very alienating distinction. The brotherhood of Islam is not the universal brotherhood of man. It is the brotherhood of Muslims for Muslims only. There is a fraternity, but its benefit is confined to those within that corporation. For those who are outside the corporation, there is nothing but contempt and enmity. The second defeat of Islam is that it is a system of social self-government and is incompatible with local self-government because the allegiance of a Muslim does not rest on his domicile in the country which is his but on the faith to which he belongs. To the Muslim ibi bene ibi patria is unthinkable. Wherever there is the rule of Islam, there is his own country. In other words, Islam can never allow a true Muslim to adopt India as his motherland and regard a Hindu as his kith and kin. That is probably the reason why Maulana Mahomed Ali, a great Indian but a true Muslim, preferred to be buried in Jerusalem rather than in India." - Dr. BR Ambedkar in Pakistan or Partition of India.
 
 
 ### Is caste intrinsic to Hindusim? 
@@ -81,7 +81,7 @@ Sati, an ancient Hindu tradition of wife being burned along with husband's pyres
 
 Supreme Court of India in the case titled Sunita Singh Versus State of Uttar Pradesh and Others said that **Caste is determined by birth and cannot be changed by marriage with a person of scheduled caste**. I believe that Supreme Court is indeed supreme but not infallible. This judgement is obstacle in creating fluid caste system. How can you annihilate caste system if you cant change it? There's an internal debate amoung Hindus about validity of **varna**, **caste**, **jaati**, etc in Hinduism. Some Hindus believe [varna](https://en.wikipedia.org/wiki/Varna_(Hinduism)) is just a divison of labor without caste rigidity. However there's a sad reality that people are still discriminated based on caste in India.
 
-I am not an expert to dwell upon a complex subject on a polytheistic religion like Hinduism. However as a cultural Hindu, I believe Hindus must not fall into trap by pseudo left in denigrating Hinduism. Hinduism most not shy itself from reforms and embracing scientific temperament while preserving their cultural heritage. 
+I am not an expert to dwell upon a complex subject on a polytheistic religion like Hinduism. However as a cultural Hindu, I believe Hindus must not fall into trap by pseudo left in denigrating Hinduism. Hinduism most not shy itself from reforms and embracing scientific temperament while preserving its cultural heritage. 
 
 <nav class="pagination clear" style="padding-bottom:20px;">
 {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
