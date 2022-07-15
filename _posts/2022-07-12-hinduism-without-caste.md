@@ -70,8 +70,9 @@ To buttress Nehru's views, Hindus living in Fiji are casteless. Muslims and Chri
 
 In his book, the **Hindu View of Life**, [Sarvepalli Radhakrishnan](https://en.wikipedia.org/wiki/Sarvepalli_Radhakrishnan) has its own interpretation of hinduism
 
-> At the onset, one is confronted by the difficulty of defining what Hinduism is. To many it seems to be a name without any content. Is it a museum of beliefs, a medley of rites, or a mere map, a geographical expression? 
-
+<blockquote class="dq">
+At the onset, one is confronted by the difficulty of defining what Hinduism is. To many it seems to be a name without any content. Is it a museum of beliefs, a medley of rites, or a mere map, a geographical expression? 
+<blockquote><br>
 
 ## The facade of Secularism in India
 
