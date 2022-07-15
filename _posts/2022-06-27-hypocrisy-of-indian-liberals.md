@@ -10,7 +10,7 @@ summary: Why liberal values are different than pseudo liberal
 image: 'https://unsplash.com/photos/bm3L5PRAJCI/download?w=800'
 thumb: 'https://unsplash.com/photos/bm3L5PRAJCI/download?w=800'
 author: Tushar Sharma
-published: true
+published: false
 ---
 
 Mahatma Gandhi said, "I like your Christ, I do not like your Christians. Your Christians are so unlike your Christ". This perfectly sums up my feelings about liberals in India. I like liberal values but not the liberals of India. They reeks of hypocrisy.<!-- truncate_here -->

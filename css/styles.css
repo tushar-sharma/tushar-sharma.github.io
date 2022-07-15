@@ -42,10 +42,40 @@ a{color:#39c;font-weight:400;text-decoration:none}a small{font-size:16px;color:#
 
 .wrapper{width:100%;margin:0 auto;position:relative}
 
-blockquote{
-  border-left:1px solid #e5e5e5;margin:0;padding:20px 20px 20px 20px;font-style:italic;
-  margin-bottom: 15px;
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+
+blockquote {
+  font-family: 'Special Elite', cursive;
+	font-weight: 100;
+	max-width: 600px;
+	line-height: 1.4;
+	position: relative;
+	margin: 0;
+	padding: .5rem;
 }
+
+.dq:before,
+.dq:after{
+	position: absolute;
+	color: #f1efe6;
+	font-size: 8rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+.dq:before {
+	content: '“';
+	left: -5rem;
+	top: -2rem;
+}
+
+.dq:after {
+	content: '”';
+	right: -5rem;
+	bottom: 1rem;
+}
+
 
 .attention{
   background: #ffffb3;

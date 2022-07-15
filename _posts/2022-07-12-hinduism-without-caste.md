@@ -9,6 +9,8 @@ thumb: https://i.imgur.com/j7fHGlT.jpg
 summary: Hinduism without caste
 image: https://i.imgur.com/j7fHGlT.jpg
 author: Tushar Sharma
+featuredPost: false
+
 ---
 
 I came across this tweet on Hinduism. "Hinduism is a veritable chambers of horrors<!-- truncate_here -->
@@ -21,15 +23,19 @@ I came across this tweet on Hinduism.
 
 The Left ecosystem in India usually quote [B. R. Ambedkar](https://en.wikipedia.org/wiki/B._R._Ambedkar) on Hinduism but is silent on his views on other religion. For Instance in the Introduction to Buddha and His Dhamma, Ambedkar said
 
-> The four Aryan Truths are a great stumbling block in the
+<blockquote class="dq">
+The four Aryan Truths are a great stumbling block in the
 way of non-Buddhists accepting the gospel of Buddhism. For the four
 Aryan Truths deny hope to man. The four Aryan Truths make the
-gospel of the Buddha a **gospel of pessimism**.
+gospel of the Buddha a <strong>gospel of pessimism</strong>
+</blockquote><br>
 
 
-On Islam he said, 
+On Islam, B. R Ambedkar said in his book, <strong>Pakistan or Partition of India</strong>  
 
-> "Islam is said to bind people together, but this is only a half-truth. For Islam divides as inexorably as it binds. Islam is a close corporation and the distinction that it makes between Muslims and non-Muslims is a very real, very positive and very alienating distinction. The brotherhood of Islam is not the universal brotherhood of man. It is the brotherhood of Muslims for Muslims only. There is a fraternity, but its benefit is confined to those within that corporation. For those who are outside the corporation, there is nothing but contempt and enmity. The second defeat of Islam is that it is a system of social self-government and is incompatible with local self-government because the allegiance of a Muslim does not rest on his domicile in the country which is his but on the faith to which he belongs. To the Muslim ibi bene ibi patria is unthinkable. Wherever there is the rule of Islam, there is his own country. In other words, Islam can never allow a true Muslim to adopt India as his motherland and regard a Hindu as his kith and kin. That is probably the reason why Maulana Mahomed Ali, a great Indian but a true Muslim, preferred to be buried in Jerusalem rather than in India." - Dr. BR Ambedkar in Pakistan or Partition of India.
+<blockquote class="dq">
+Islam is said to bind people together, but this is only a half-truth. For Islam divides as inexorably as it binds. Islam is a close corporation and the distinction that it makes between Muslims and non-Muslims is a very real, very positive and very alienating distinction. The brotherhood of Islam is not the universal brotherhood of man. It is the brotherhood of Muslims for Muslims only. There is a fraternity, but its benefit is confined to those within that corporation. For those who are outside the corporation, there is nothing but contempt and enmity. The second defeat of Islam is that it is a system of social self-government and is incompatible with local self-government because the allegiance of a Muslim does not rest on his domicile in the country which is his but on the faith to which he belongs. To the Muslim ibi bene ibi patria is unthinkable. Wherever there is the rule of Islam, there is his own country. In other words, Islam can never allow a true Muslim to adopt India as his motherland and regard a Hindu as his kith and kin. That is probably the reason why Maulana Mahomed Ali, a great Indian but a true Muslim, preferred to be buried in Jerusalem rather than in India.
+</blockquote><br>
 
 
 ### Is caste intrinsic to hinduism? 
@@ -62,7 +68,7 @@ Nehru also believed Hinduism became more rigid and caste had developed after Mus
 To buttress Nehru's views, Hindus living in Fiji are casteless. Muslims and Christian also have caste in India. So isn't caste a geographical social pratice?
 
 
-In his book, the **Hindu View of Life**, Sarvepalli Radhakrishnan has its own interpretation of hinduism
+In his book, the **Hindu View of Life**, [Sarvepalli Radhakrishnan](https://en.wikipedia.org/wiki/Sarvepalli_Radhakrishnan) has its own interpretation of hinduism
 
 > At the onset, one is confronted by the difficulty of defining what Hinduism is. To many it seems to be a name without any content. Is it a museum of beliefs, a medley of rites, or a mere map, a geographical expression? 
 
