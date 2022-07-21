@@ -6,7 +6,7 @@ If you have multiple cloudformations, delete the stack becomes tedious using con
 
 
 ```bash
-if aws cloudformation wait stack-exists --stack-name dev-nics-proxyservlet-svc --region us-west-2 &>/dev/null 
+if aws cloudformation wait stack-exists --stack-name ${params.StackName} --region ${params.Region}
     aws cloudformation delete-stack  \
         --stack-name ${params.StackName}} \
         --region ${params.Region}
