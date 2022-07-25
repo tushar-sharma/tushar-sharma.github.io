@@ -10,7 +10,7 @@ Basic operations are
 * `peek()` - return the top of the stack - O(1)
 * `isEmpty()`- return True if the stack is empty 
 
-For example
+### Implementation 
 
 ```python
 stack = []
