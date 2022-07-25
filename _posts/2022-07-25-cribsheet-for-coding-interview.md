@@ -58,4 +58,13 @@ print(len(stack))
 * https://leetcode.com/problems/longest-valid-parentheses
 
 ## Comparable
+
+## String
+
+Iterate it
+
+```python
+for i,c  in enumerate(s):
+    print(i, c)
+```
  
