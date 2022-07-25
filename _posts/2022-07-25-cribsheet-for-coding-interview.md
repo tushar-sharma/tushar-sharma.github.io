@@ -35,5 +35,7 @@ print(len(stack))
  
 ### Patterns
 
-1. If you see something with closing parenthesis '(' or ')', think stack. For example https://leetcode.com/problems/valid-parentheses/
+1. If you see something with closing parenthesis '(' or ')', think stack. For example https://leetcode.com/problems/valid-parentheses/. Try to insert characters in stack or their indices.
+
+2. You can push characters, integers, or even objects in a stack. Fr
  
