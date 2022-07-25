@@ -42,31 +42,5 @@ print(len(stack))
 
 1. If you see something with closing parenthesis '(' or ')', think stack. For example https://leetcode.com/problems/valid-parentheses/. Try to insert characters in stack or their indices.
 
-2. You can push characters, integers, or even objects in a stack. For example 
-
-```python
-stack = []
-
-class Node:
-    def __init__(self, name: str, age: int) -> None: 
-         self.name = name
-         self.age = age
-
-# insert element
-
-stack.append(Node("Tom", 42))
-stack.append(Node("Mathew", 55))
-stack.append(Node("Nancy", 5))
-
-# pop an element
-node = stack.pop()
-print(node.name, node.age)
-
-# peek
-node = stack[-1]
-print(node.name, node.age)
-
-# size of stack
-print(len(stack))
-```
+## Comparable
  
