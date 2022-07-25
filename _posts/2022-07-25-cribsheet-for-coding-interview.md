@@ -30,8 +30,12 @@ print(stack[-1])
 # prints  3
 
 # check if stack is empty
+print(len(stack) == 0)
+# False
+
+# size of the stack 
 print(len(stack))
-# prints 2
+# 2
 ```
  
 ### Patterns
