@@ -33,3 +33,7 @@ print(len(stack))
 # prints 2
 ```
  
+### Patterns
+
+1. If you see something with closing parenthesis '(' or ')', think stack. For example https://leetcode.com/problems/valid-parentheses/
+ 
