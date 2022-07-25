@@ -1,6 +1,17 @@
 ---
+title: Cribsheet for Coding Interview
+category: blog
+layout: post
+tags:
+- java
+- python
+- interview
+thumb: https://i.imgur.com/XR4JjSOl.jpg
+image: https://i.imgur.com/XR4JjSOl.jpg
+mutipleTab: true
 published: false
 ---
+
 ## Stacks
 
 Basic operations are
@@ -40,7 +51,11 @@ print(len(stack))
  
 ### Patterns
 
-1. If you see something with closing parenthesis '(' or ')', think stack. For example https://leetcode.com/problems/valid-parentheses/. Try to insert characters in stack or their indices.
+1. If you see something with closing parenthesis '(' or ')', think about using `stack`. Try to insert characters in stack or their indices. Problems for stacks
+
+* https://leetcode.com/problems/valid-parentheses/
+
+* https://leetcode.com/problems/longest-valid-parentheses
 
 ## Comparable
  
