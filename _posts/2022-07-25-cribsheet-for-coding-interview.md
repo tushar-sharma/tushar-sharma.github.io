@@ -3,11 +3,11 @@ title: Cribsheet for Coding Interview
 category: blog
 layout: post
 tags:
-- java
-- python
-- interview
-thumb: https://i.imgur.com/XR4JjSOl.jpg
-image: https://i.imgur.com/XR4JjSOl.jpg
+  - java
+  - python
+  - interview
+thumb: 'https://i.imgur.com/XR4JjSOl.jpg'
+image: 'https://i.imgur.com/XR4JjSOl.jpg'
 mutipleTab: true
 published: false
 ---
@@ -22,7 +22,7 @@ Basic operations are
 * `isEmpty()`- return True if the stack is empty - O(1) 
 * `size()` - return the number of elements in a stack - O(1)
 
-### Implementation 
+### Using Standard libraries 
 
 ```python
 stack = []
@@ -67,4 +67,3 @@ Iterate it
 for i,c  in enumerate(s):
     print(i, c)
 ```
- 
