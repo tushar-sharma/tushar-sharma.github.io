@@ -61,9 +61,18 @@ print(len(stack))
 
 ## String
 
-Iterate it
+### Iterate it
 
 ```python
 for i,c  in enumerate(s):
     print(i, c)
+```
+
+### Find a substring
+
+```java
+String s = "long string";
+p = s.substring(0, 2);
+System.out.println(p); 
+// prints lo
 ```
