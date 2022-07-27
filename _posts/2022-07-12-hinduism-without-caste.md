@@ -5,12 +5,12 @@ category: blog
 tags:
   - hinduism
   - caste
-thumb: https://i.imgur.com/j7fHGlT.jpg
+thumb: 'https://i.imgur.com/j7fHGlT.jpg'
 summary: Hinduism without caste
-image: https://i.imgur.com/j7fHGlT.jpg
+image: 'https://i.imgur.com/j7fHGlT.jpg'
 author: Tushar Sharma
 featuredPost: false
-
+published: true
 ---
 
 I came across this tweet on Hinduism. "Hinduism is a veritable chambers of horrors<!-- truncate_here -->
@@ -21,7 +21,9 @@ I came across this tweet on Hinduism.
 
 | <a href="https://twitter.com/kirubamunusamy/status/1307621960403300352?lang=en"><img align="center"  loading="lazy" src="{{site.baseurl}}/img/tweet_kiruba.jpg" alt="Tweet" /> </a>|
 
-The Left ecosystem in India usually quote [B. R. Ambedkar](https://en.wikipedia.org/wiki/B._R._Ambedkar) on Hinduism but is silent on his views on other religion. For Instance in the Introduction to Buddha and His Dhamma, Ambedkar said
+The Left ecosystem in India usually quote [B. R. Ambedkar](https://en.wikipedia.org/wiki/B._R._Ambedkar) on Hinduism but is silent on his views on other religion. 
+
+For Instance in the **Introduction to Buddha and His Dhamma**[^ref1], Ambedkar said
 
 <blockquote class="dq">
 The four Aryan Truths are a great stumbling block in the
@@ -89,3 +91,6 @@ Sati, an ancient Hindu tradition of wife being burned along with husband's pyres
 Supreme Court of India in the case titled Sunita Singh Versus State of Uttar Pradesh and Others said that **Caste is determined by birth and cannot be changed by marriage with a person of scheduled caste**. I believe that Supreme Court is indeed supreme but not infallible. This judgement is obstacle in creating fluid caste system. How can you annihilate caste system if you cant change it? There's an internal debate amoung Hindus about validity of **varna**, **caste**, **jaati**, etc in Hinduism. Some Hindus believe [varna](https://en.wikipedia.org/wiki/Varna_(Hinduism)) is just a divison of labor without caste rigidity. However there's a sad reality that people are still discriminated based on caste in India.
 
 I am not an expert to dwell upon a complex subject on a polytheistic religion like Hinduism. However as a cultural Hindu, I believe Hindus must not fall into trap by pseudo left in denigrating Hinduism. Hinduism most not shy itself from reforms and embracing scientific temperament while preserving its cultural heritage.
+
+[^ref1]: [The Buddha and His Dhamma by B. R. Ambedkar
+](http://www.columbia.edu/itc/mealac/pritchett/00ambedkar/ambedkar_buddha/00_intro.html)
