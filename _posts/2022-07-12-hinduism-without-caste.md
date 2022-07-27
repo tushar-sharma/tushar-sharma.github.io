@@ -17,7 +17,7 @@ I came across this tweet on Hinduism. "Hinduism is a veritable chambers of horro
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
-I came across this tweet on Hinduism.
+It's a just another day in twitter when you come across tweets disparaging Hindusim.  
 
 | <a href="https://twitter.com/kirubamunusamy/status/1307621960403300352?lang=en"><img align="center"  loading="lazy" src="{{site.baseurl}}/img/tweet_kiruba.jpg" alt="Tweet" /> </a>|
 
@@ -33,7 +33,7 @@ gospel of the Buddha a <strong>gospel of pessimism</strong>
 </blockquote><br>
 
 
-On Islam, B. R Ambedkar said in his book, <strong>Pakistan or Partition of India</strong>  
+On Islam, B. R Ambedkar said in his book, <strong>Pakistan or Partition of India</strong>[^ref2]
 
 <blockquote class="dq">
 Islam is said to bind people together, but this is only a half-truth. For Islam divides as inexorably as it binds. Islam is a close corporation and the distinction that it makes between Muslims and non-Muslims is a very real, very positive and very alienating distinction. The brotherhood of Islam is not the universal brotherhood of man. It is the brotherhood of Muslims for Muslims only. There is a fraternity, but its benefit is confined to those within that corporation. For those who are outside the corporation, there is nothing but contempt and enmity. The second defeat of Islam is that it is a system of social self-government and is incompatible with local self-government because the allegiance of a Muslim does not rest on his domicile in the country which is his but on the faith to which he belongs. To the Muslim ibi bene ibi patria is unthinkable. Wherever there is the rule of Islam, there is his own country. In other words, Islam can never allow a true Muslim to adopt India as his motherland and regard a Hindu as his kith and kin. That is probably the reason why Maulana Mahomed Ali, a great Indian but a true Muslim, preferred to be buried in Jerusalem rather than in India.
@@ -42,7 +42,7 @@ Islam is said to bind people together, but this is only a half-truth. For Islam 
 
 ### Is caste intrinsic to hinduism? 
 
-What about caste? Can you be a Hindu without caste? The left ecosystem deliberately equates hinduism with caste. Here are some of hindophobic tweets.
+What about caste? Can you be a Hindu without caste? The left ecosystem deliberately equates hinduism with caste. 
 
 
 | <a href="https://twitter.com/Profdilipmandal/status/1358264946921005056"><img align="center"  loading="lazy" src="{{site.baseurl}}/img/tweet_mandal.jpg" alt="Tweet" /> </a>|
@@ -92,5 +92,8 @@ Supreme Court of India in the case titled Sunita Singh Versus State of Uttar Pra
 
 I am not an expert to dwell upon a complex subject on a polytheistic religion like Hinduism. However as a cultural Hindu, I believe Hindus must not fall into trap by pseudo left in denigrating Hinduism. Hinduism most not shy itself from reforms and embracing scientific temperament while preserving its cultural heritage.
 
+## References 
+
 [^ref1]: [The Buddha and His Dhamma by B. R. Ambedkar
 ](http://www.columbia.edu/itc/mealac/pritchett/00ambedkar/ambedkar_buddha/00_intro.html)
+[^ref2]: [Pakistan or Partition of India by B. R. Ambedkar](http://www.columbia.edu/itc/mealac/pritchett/00ambedkar/ambedkar_partition/412d.html)
