@@ -3,19 +3,19 @@ published: false
 ---
 ## The perils of not sleeping
 
-I have a confession to make. A confession pulled from the chancel of my heart. Occassionally I indulge in all-nighters. 
+I have a confession to make. A confession pulled from the chancel of my heart. It's not something that would invoke any ire of the law nor would it merit in getting any attention from society. It concerns me and me alone. It on of my vices in indulging in all-nighers.
 
-When I was in my 20s I rarely reflected how this would affect my health. However since I descended in my early 30s and have been betrayed by both my grey hair and slow metabolism, I thought I must pause and reflect how important sleep was. 
+Why can't I sleep ? Is it because I bingewatch Netflix? Or a nerve wrecking novel of Sherlocks Holmes arrested my sleep? May be I fathom about the purpose of life staring at the dark pit of hopelessness. Or may be the Capitalist society expects me to meet your work commitments?  
 
-Why do we sleep? It doesn't make sense to me. For evolutionary purpose, it seems counter productive. Cro Magnans were more suspectible to predators during sleep. We spent almost one third of our lives sleeping. When I am hungry my stomach grumbles and when I sleepy I yawn and feel lethargic. So our bodies are designed to demand sleep. 
- 
- Scientific evidence suggest that sleeps helps in flugins out beta amyloid protein from the brain. This is a metabolic waste. Accumulation of small clusters of beta amoloid may lead to dementia or Alzheimers. 
- 
-   
- 
- Its seems like sleep is not at all futile. Infact if you dont sleep for 24 hours, your mental performance is equivalent of that of someone that has blood alcohol content(BAC) of .10%. In US, if you have BAC of 0.08% you can be arrested for DUI. So next time you pull all-nighters, dont drive. 
- 
-Also there's evidence that sleep protects in flusing out beta amyloid protein from the brain. This may protec against Alzheirmrs and dementia. 
+Either way, I rarely reflected on my sleep pattern on my 20s. However I grew tired of revolving aroudn the sun on my thirtieth birthday. The elix of youth was robbed of me. My grey hair and slow metabolism was a bad omen that made me to pause and reflect that I needed good sleep. \
+
+Before I decide a good sleep pattern, I wanted to quelch my curiosity as to why we sleep. My forefathers were descendent from apes and lived in the savannah of the Africa. With such high evolutionary pressure to survice, I wonder why sleep has evolved to become almost a necessity. If you spend one third of your life sleeping, when would you find time to hunt for food and procreate. Also you are susceptible to predators during sleep. So there must be a very high evolutionary purpose of sleep to outweights all the risks. 
+
+There are numerous studies on importance of sleep. Sleep helps flusing out beta amoloid from the brain. Accumulation small clusters of this protein may lead to dementia or Alzheirmrs disease. 
+
+If you dont sleep  for 24 horus, your mental performance falls to that some who is intoxicated with alcohol with blood alcohol content (BACX) of .10%. In U.S, you can be arrested if you have BAC limit of more than 0.08%. So sleep deprived person is as impaired as a drunk person.
+
+
 
 It's just not sleeping but sound sleep which is impotant. Quality sleep is must. Unless you are attacked by aliens or facing an apoclapsye. 
 
