@@ -15,9 +15,19 @@ There are numerous studies on importance of sleep. Sleep helps flusing out beta 
 
 If you dont sleep  for 24 horus, your mental performance falls to that some who is intoxicated with alcohol with blood alcohol content (BACX) of .10%. In U.S, you can be arrested if you have BAC limit of more than 0.08%. So sleep deprived person is as impaired as a drunk person.
 
+So how much should we sleep, I took this data from Natioanl Sleep Foundation
 
 
-It's just not sleeping but sound sleep which is impotant. Quality sleep is must. Unless you are attacked by aliens or facing an apoclapsye. 
+| Toddlers         | 11 and 14 hours 
+| Children (3-5)  |  should get 10 to 13 hours
+| children (6-13) | 11 
+| teenagers       | 10 
+| adults          | 7 to 9 years
+
+I guess life is unpredictable. Sometimes we have to sacrifice sleep to finish work. However there's ample scientific evidence that throws light on the significance of sleep. We must strive to prioritize sleep as we prioritize food. 
+
 
   [^alzhemirs]: https://www.science.org/doi/10.1126/science.aav2546
   [2]: https://www.pnas.org/doi/10.1073/pnas.1721694115#:~:text=Beta%2Damyloid%20(A%CE%B2)%20is,in%20A%CE%B2%20clearance%20(3).
+
+https://www.thensf.org/how-many-hours-of-sleep-do-you-really-need/
