@@ -1,8 +1,13 @@
 ---
 published: false
 ---
-  
-  I have a confession to make. A confession pulled from the chancel of my heart. I have been guilty of countless of a sin. A sin that I must atone. As a young man, I unabashedly indulged in all-nighters.
+I have a confession to make. A confession pulled from the chancel of my heart. Occassionally I indulge in all-nighters. 
+
+When I was in my 20s I rarely reflected how this would affect my health. However since I descended in my early 30s and have been betrayed by both my grey hair and slow metabolism, I thought I must pause and reflect how important sleep was. 
+ 
+ 
+ 
+A confession pulled from the chancel of my heart. I have been guilty of countless of a sin. A sin that I must atone. As a young man, I unabashedly indulged in all-nighters.
   
  I am not longer a young man. My grey hair have betrayed my elixir of youth.  Our metabolism slows down by 10 percent every decade. And we continue to gain weight if we dont exercise regularly. Sleep apnea is common for people who are overweight. You experience morning headaches as your sleep nostils are partially blocked due to fat. 
 
