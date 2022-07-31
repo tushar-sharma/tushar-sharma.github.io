@@ -13,7 +13,7 @@ featuredPost: false
 published: true
 ---
 
-I came across this tweet on Hinduism. "Hinduism is a veritable chambers of horrors<!-- truncate_here -->
+It's a just another day in twitter when you come across tweets disparaging Hindusim. "Hinduism is a veritable chambers of horrors<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
@@ -33,7 +33,7 @@ gospel of the Buddha a <strong>gospel of pessimism</strong>
 </blockquote><br>
 
 
-On Islam, B. R Ambedkar said in his book, <strong>Pakistan or Partition of India</strong>[^ref2]
+On Islam, B. R Ambedkar said in his book, **Pakistan or Partition of India**[^ref2]
 
 <blockquote class="dq">
 Islam is said to bind people together, but this is only a half-truth. For Islam divides as inexorably as it binds. Islam is a close corporation and the distinction that it makes between Muslims and non-Muslims is a very real, very positive and very alienating distinction. The brotherhood of Islam is not the universal brotherhood of man. It is the brotherhood of Muslims for Muslims only. There is a fraternity, but its benefit is confined to those within that corporation. For those who are outside the corporation, there is nothing but contempt and enmity. The second defeat of Islam is that it is a system of social self-government and is incompatible with local self-government because the allegiance of a Muslim does not rest on his domicile in the country which is his but on the faith to which he belongs. To the Muslim ibi bene ibi patria is unthinkable. Wherever there is the rule of Islam, there is his own country. In other words, Islam can never allow a true Muslim to adopt India as his motherland and regard a Hindu as his kith and kin. That is probably the reason why Maulana Mahomed Ali, a great Indian but a true Muslim, preferred to be buried in Jerusalem rather than in India.
