@@ -1,5 +1,5 @@
 ---
-title: Serialize and Deserialize Binary Tree
+title: Serialize and Deserialize Binary Tree Leetcode solution
 category: blog
 layout: post
 tags:
