@@ -13,11 +13,11 @@ featuredPost: false
 published: true
 ---
 
-It's a just another day in twitter when you come across tweets disparaging Hindusim. "Hinduism is a veritable chambers of horrors<!-- truncate_here -->
+It's a just another day in twitter when you come across tweets disparaging Hinduism. "Hinduism is a veritable chambers of horrors<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
-It's a just another day in twitter when you come across tweets disparaging Hindusim.  
+It's a just another day in twitter when you come across tweets disparaging Hinduism.  
 
 | <a href="https://twitter.com/kirubamunusamy/status/1307621960403300352?lang=en"><img align="center"  loading="lazy" src="{{site.baseurl}}/img/tweet_kiruba.jpg" alt="Tweet" /> </a>|
 
