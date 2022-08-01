@@ -47,6 +47,8 @@ print(len(stack) == 0)
 # size of the stack 
 print(len(stack))
 # 2
+
+## Iterate a stack
 ```
  
 ### Patterns
