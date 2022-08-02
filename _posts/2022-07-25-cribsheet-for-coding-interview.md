@@ -12,7 +12,8 @@ mutipleTab: true
 published: false
 ---
 
-## Stacks
+### Data structure
+### Stacks
 
 Basic operations are
 
@@ -23,7 +24,7 @@ Basic operations are
 * `size()` - return the number of elements in a stack - O(1)
 * `remove()` - delete the element in a stack - O(n)
 
-### Using Standard libraries 
+#### Using Standard libraries 
 
 <div class="tab-container">
   <ul>
@@ -40,7 +41,16 @@ Basic operations are
 
 </div>
 
- 
+### Queue
+
+* `add(item)` - add an item to the end of the list - O(1)
+* `remove()` - remove the first item in the list - O(1)
+* `peek()` - return the front of the queue
+* `isEmpty()` - return true if the queue is empty
+
+#### Using Standard libraries 
+
+
 ### Patterns
 
 1. If you see opeartions like '(', ')', '*', think about using `stack`. Try to insert characters in stack or their indices. Problems for stacks
@@ -53,7 +63,10 @@ Basic operations are
 
 ## String
 
-### Iterate it
+### Iterate itadd(item) - add an item to the end of the list - O(1)
+remove() - remove the first item in the list - O(1)
+peek() - return the front of the queue
+isEmpty() - return true if the queue is empty
 
 ```python
 for i,c  in enumerate(s):
