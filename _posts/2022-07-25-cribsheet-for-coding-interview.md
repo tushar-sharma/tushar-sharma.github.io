@@ -21,6 +21,7 @@ Basic operations are
 * `peek()` - return the top of the stack - O(1)
 * `isEmpty()`- return True if the stack is empty - O(1) 
 * `size()` - return the number of elements in a stack - O(1)
+* `remove()` - delete the element in a stack - O(n)
 
 ### Using Standard libraries 
 
