@@ -94,7 +94,6 @@ I am not an expert to dwell upon a complex subject on a polytheistic religion li
 
 ## References 
 
-[^ref1]: [The Buddha and His Dhamma by B. R. Ambedkar
-](http://www.columbia.edu/itc/mealac/pritchett/00ambedkar/ambedkar_buddha/00_intro.html)
+[^ref1]: [The Buddha and His Dhamma by B. R. Ambedkar](http://www.columbia.edu/itc/mealac/pritchett/00ambedkar/ambedkar_buddha/00_intro.html)
 
 [^ref2]: [Pakistan or Partition of India by B. R. Ambedkar](http://www.columbia.edu/itc/mealac/pritchett/00ambedkar/ambedkar_partition/412d.html)
