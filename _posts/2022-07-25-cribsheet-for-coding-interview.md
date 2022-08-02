@@ -24,36 +24,25 @@ Basic operations are
 
 ### Using Standard libraries 
 
-```python
-stack = []
-# push elements to stack 
-stack.append(5)
-stack.append(3)
-stack.append(-1)
+<div class="tab-container">
+  <ul>
+    <li class="tab Java1"><a href="#Java1">Java</a></li>
+    <li class="tab Python1"><a href="#Python1">Python</a></li>
+  </ul>
 
-# pop element
-top =- stack.pop() 
-print(top)  
-# prints -1
+   <div class="codeSample Java1" id="Java1">
+<script src="https://gist.github.com/tushar-sharma/34b1612faf0771608b476b205d2e35a2.js?file=Stack.java"></script>
+   </div>
 
-# peek at the top of the stack 
-print(stack[-1]) 
-# prints  3
+   <div class="codeSample Python1" id="Python1">
+<script src="https://gist.github.com/tushar-sharma/34b1612faf0771608b476b205d2e35a2.js?file=stack.py"></script>    </div>
 
-# check if stack is empty
-print(len(stack) == 0)
-# False
+</div>
 
-# size of the stack 
-print(len(stack))
-# 2
-
-## Iterate a stack
-```
  
 ### Patterns
 
-1. If you see something with closing parenthesis '(' or ')', think about using `stack`. Try to insert characters in stack or their indices. Problems for stacks
+1. If you see opeartions like '(', ')', '*', think about using `stack`. Try to insert characters in stack or their indices. Problems for stacks
 
 * https://leetcode.com/problems/valid-parentheses/
 
