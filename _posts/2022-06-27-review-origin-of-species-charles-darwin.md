@@ -14,4 +14,6 @@ Most scientists believed before Darwin that species were immutable. It was a rad
 
 How do we know whether a form should be ranked as a species or a variety? If Neathrethals were alive, were they consider to be another species or just a variation? Neatherthals would have looked same as we humans? First we must understand what we mean with species? Individuals of two species cannot mate and reproduce. For humans and neatherthals, we have evidence of their mating. So definately Neantherthals were not different species. May be a sub species or variation. 
 
+But what about interbreeding? We know mule is produced by mating horse and donkey. Of course mule is sterile. Donkey and Horse are different species and can interbreed but this offspring will be sterile.
+
 Charles Darwin was at Galapagos islands in Ecuador. Mr Wallace was on islands of Malayan archipelego. 
