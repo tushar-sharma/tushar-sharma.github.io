@@ -11,3 +11,7 @@ Most scientists believed before Darwin that species were immutable. It was a rad
 ## Why species had variablity? 
 
 "It seems clear that organic beings must be exposed during serveral generations to new conditions to cause any great amount of variation"
+
+How do we know whether a form should be ranked as a species or a variety? 
+
+Charles Darwin was at Galapagos islands in Ecuador. Mr Wallace was on islands of Malayan archipelego. 
