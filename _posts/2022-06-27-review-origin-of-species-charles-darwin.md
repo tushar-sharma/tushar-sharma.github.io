@@ -12,6 +12,6 @@ Most scientists believed before Darwin that species were immutable. It was a rad
 
 "It seems clear that organic beings must be exposed during serveral generations to new conditions to cause any great amount of variation"
 
-How do we know whether a form should be ranked as a species or a variety? 
+How do we know whether a form should be ranked as a species or a variety? If Neathrethals were alive, were they consider to be another species or just a variation? Neatherthals would have looked same as we humans? First we must understand what we mean with species? Individuals of two species cannot mate and reproduce. For humans and neatherthals, we have evidence of their mating. So definately Neantherthals were not different species. May be a sub species or variation. 
 
 Charles Darwin was at Galapagos islands in Ecuador. Mr Wallace was on islands of Malayan archipelego. 
