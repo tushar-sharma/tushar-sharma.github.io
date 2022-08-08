@@ -13,6 +13,19 @@ published: false
 ---
 
 ### Data structure
+
+### ArrayList
+
+<div class="tab-container">
+  <ul>
+    <li class="tab Java3"><a href="#Java3">Java</a></li>
+  </ul>
+
+   <div class="codeSample Java3" id="Java3">
+<script src="https://gist.github.com/tushar-sharma/34b1612faf0771608b476b205d2e35a2.js?file=ArrayList.java"></script>
+   </div>
+</div>
+
 ### Stacks
 
 Basic operations are
@@ -50,56 +63,26 @@ Basic operations are
 
 #### Using Standard libraries 
 
+## Comparable
+
+<div class="tab-container">
+  <ul>
+    <li class="tab Java2"><a href="#Java2">Java</a></li>
+  </ul>
+
+   <div class="codeSample Java2" id="Java2">
+<script src="https://gist.github.com/tushar-sharma/34b1612faf0771608b476b205d2e35a2.js?file=Comparable.java"></script>
+   </div>
+</div>
+
+
 
 ### Patterns
 
-1. If you see opeartions like '(', ')', '*', think about using `stack`. Try to insert characters in stack or their indices. Problems for stacks
+1. If you see opeartions like '(', ')', '*', think about using `stack`. Try to insert characters in stack or their indices. 
 
-* https://leetcode.com/problems/valid-parentheses/
+2. If you see **pairs** like [[1, 2], [2, 3]], think about using **adjacency list**.
 
-* https://leetcode.com/problems/longest-valid-parentheses
-
-## Comparable
-
-```java
-import java.util.Collections;
-import java.util.List;
-import java.util.ArrayList;
-
-class Node implements Comparable<Node>{
-  int age;
-  
-   public Node(int age){
-       this.age = age;
-   }
-  
-  public int getAge() {
-      return age;
-  }
-  
-  @Override
-  public int compareTo(Node other){
-      return Integer.compare(this.age, other.age);
-  }
-}
-
-class HelloWorld {
-    public static void main(String[] args) {
-    
-        List<Node> list = new ArrayList<>();
-        
-        list.add(new Node(99));
-        list.add(new Node(5));
-        list.add(new Node(102));
-        
-        Collections.sort(list);
-        
-        for (Node node : list){
-            System.out.println(node.getAge() + "\n");
-        }
-    }
-}
-```
 
 ## String
 
