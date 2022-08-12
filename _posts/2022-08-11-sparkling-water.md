@@ -11,3 +11,5 @@ I have some concerns with drinking carbonated water. They are
 2. There might be some loss of calcium
 
 3. Acidity in stomach. 
+
+Though It's definately better choice than sugare infused drinks.
