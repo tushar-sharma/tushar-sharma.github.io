@@ -6,7 +6,7 @@ published: false
 
 2. Isn't CO2 bad for you since we exhale CO2 gas. 
 
-3. According to American Herat Associate (AHA), human body doesnot need any additional sugar to function healthily. So taking any additional sugar is futile. 
+3. According to American Herat Associate (AHA), human body does not need any additional sugar to function healthily. So taking any additional sugar is futile. 
 
 4. CO 2 reacts with water to create weak carbonic acid. 
 
@@ -14,9 +14,9 @@ published: false
 
 6. Does it effect enamel ?
 
-7. Is there loss of calcium ? 
+7. Is there loss of calcium ? So the theory is that phosphate (phosphoric) acid used to enhance flavor of carbonated drinks interferes with the bone metabolism. However I haven't found any study that conclusively proves this theory.
 
-8. One study on mice shows that carbonated water increase hunger hormone grehlin. [^hunger]
+8. One study on mice shows that carbonated water increase hunger hormone grehlin. [^hunger]. However sample size of study was small..
 
 
 I guess moderation in anything is the mantra.
