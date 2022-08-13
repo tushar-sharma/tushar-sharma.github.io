@@ -16,4 +16,9 @@ published: false
 
 7. Is there loss of calcium ? 
 
+8. One study on mice shows that carbonated water increase hunger hormone grehlin. [^hunger]
+
+
 I guess moderation in anything is the mantra.
+
+[^hunger]: https://pubmed.ncbi.nlm.nih.gov/28228348/
