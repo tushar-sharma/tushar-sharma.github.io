@@ -5,9 +5,9 @@ category: blog
 tags:
   - health
   - drinks
-thumb: https://unsplash.com/photos/PC5kB3fC1bM/download?w=800
+thumb: https://unsplash.com/photos/PC_lbSSxCZE/download?w=800
 summary: Fizz up with carbonated water
-image: https://unsplash.com/photos/PC5kB3fC1bM/download?w=800
+image: https://unsplash.com/photos/PC_lbSSxCZE/download?w=800
 author: Tushar Sharma
 featuredPost: false
 published: true
