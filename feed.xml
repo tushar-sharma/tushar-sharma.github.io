@@ -7,6 +7,32 @@
     
       
         <item>
+          <title>Cross Region AWS Glue Data Catalog access with Glue ETL</title>
+          <description>&lt;p&gt;AWS Glue job are fully managed ETL service. Glue job uses hive-compatible metastore called Glue Data catalog.
+&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/glue&quot; title=&quot;View posts tagged with &amp;quot;glue&amp;quot;&quot;&gt;glue&lt;/a&gt;   &lt;/p&gt;
+
+&lt;p&gt;AWS Glue job are fully managed ETL service. Glue job uses hive-compatible metastore called Glue Data catalog.&lt;/p&gt;
+
+&lt;p&gt;So one way to create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dynamic frame&lt;/code&gt; in AWS Glue (Pyspark) is&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/5ef39040eafc230490131e037c4fb1a1.js?file=spark_job1.py&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;This Glue job reads Glue &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;database&lt;/code&gt; defined in same region. As if now, there’s no way to access cross-region database in Glue catalog.&lt;/p&gt;
+
+&lt;p&gt;However, if the s3 bucket is global, you can directly create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dataframe&lt;/code&gt; from s3 bucket.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/5ef39040eafc230490131e037c4fb1a1.js?file=spark_job2.py&quot;&gt;&lt;/script&gt;
+
+</description>
+          <pubDate>2022-08-19T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/cross-region-aws-glue-data-catalog-access-with-glue-etl</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/cross-region-aws-glue-data-catalog-access-with-glue-etl</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Fizz up with carbonated water</title>
           <description>&lt;p&gt;As I was walking down the aisle of a food mart, I was consumed with guilt about whether or not to buy a large can of coke. My waist is competing with inflation as both refused to halt their progress. I have thrown my weighing machine in the thrash as she refuses to lie at least once about my weight.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/health&quot; title=&quot;View posts tagged with &amp;quot;health&amp;quot;&quot;&gt;health&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/drinks&quot; title=&quot;View posts tagged with &amp;quot;drinks&amp;quot;&quot;&gt;drinks&lt;/a&gt;   &lt;/p&gt;
