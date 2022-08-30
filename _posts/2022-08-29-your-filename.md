@@ -26,6 +26,12 @@ I want to introduce you two new words in English language
 
 I am taking Vitamin D3 (every alternative day) with a dose of 125 mcg. I think its better to take Vitamin D from supplemments than the sun. According to this study in Yale [^yale], consuming Vitamin D from either food, supplements or Sun is same. Another problem with taking vitamin D from the sun is that there are  ultraviolet (UV) rays that can damage to the skin, eyes, and immune system. 
 
+However there's another study that says that says that Vitamin D supplements [^supp] have not absorbed adequatelty by human body. In another research, Richard Weller of the University of Edinborough Medical School, found that exposing volunteers in 2010 to 30 minutes of sunlight, without sunscreen, raised their levels of nitric oxide, which in turn brought their blood pressure down.
+
+So is sunlight good or bad for us? I guess like I always moderation is the mantra. If you stay for extended time in the sunlight, use a good sunscream with SPF number of atlest 30. 
+
+
+
 ### Java
 
 Today I want to talk about sorting arrays in java. Lets say if you have an array of integer and we want to sort it, we can do this way
@@ -100,3 +106,4 @@ hello
 ```
 
 [^yale]: https://www.yalemedicine.org/news/vitamin-d-myths-debunked
+[^supp]: https://archive.nytimes.com/well.blogs.nytimes.com/2013/12/11/limits-of-vitamin-d-supplements/
