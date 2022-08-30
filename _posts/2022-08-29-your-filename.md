@@ -24,6 +24,8 @@ I want to introduce you two new words in English language
 
 ### Vitamins
 
+I am taking Vitamin D3 (every alternative day) with a dose of 125 mcg. I think its better to take Vitamin D from supplemments than the sun. According to this study in Yale [^yale]
+
 ### Java
 
 Today I want to talk about sorting arrays in java. Lets say if you have an array of integer and we want to sort it, we can do this way
@@ -96,3 +98,5 @@ si
 bye
 hello
 ```
+
+[^yale]: https://www.yalemedicine.org/news/vitamin-d-myths-debunked
