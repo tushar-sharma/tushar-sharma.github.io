@@ -12,8 +12,6 @@ Today I want to talk about sorting arrays in java. Lets say if you have an array
 ```java
 int[] testArray = {11, 234, 45, 1, -30};
 
-
-//Sort an array
 Arrays.sort(testArray); 
 
 for (int i : testArray) {
@@ -21,7 +19,7 @@ for (int i : testArray) {
 }
 ```
 
-This will print the following 
+This will print the following output in ascending order
 
 ```java
 -30
