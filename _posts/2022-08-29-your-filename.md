@@ -52,7 +52,7 @@ hello
 si
 ```
 
-However if we want to change the order of sorting, we can use `Comparator`. Like we want to sort the array based on length of strings. Comparators in java are object that can be used to compare two objects.
+However if we want to change the order of sorting, we can use `Comparator`. Like we want to sort the array based on length of strings. Comparators in java are objects that can be used to compare two objects.
 
 ```java
 String[] testArray = {"hello", "bye", "si"};
