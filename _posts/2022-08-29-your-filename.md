@@ -7,7 +7,7 @@ Dear Vishi, this is my daily log for Aug 29, 2022
 
 ### Java
 
-Today I want to talk about sorting arrays in java. Lets say if you have an array of integer 
+Today I want to talk about sorting arrays in java. Lets say if you have an array of integer and we want to sort it, we can do this way
 
 ```java
 int[] testArray = {11, 234, 45, 1, -30};
