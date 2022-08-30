@@ -8,14 +8,19 @@ Dear Vishi, this is my daily log for Aug 29, 2022
 
 ### Reading `Origin of Species`
 
+Charles Darwin coined the term called `Natural Selection`. In his own words, "Owing to this struggle for life, any variation, however slight and from whatever cause proceeding, if it be in any degree profitable to an individual of any species, in its infinitely complex relations to other organic beings and to external nature, will tend to the preservation of that individual, and will generally be inherited by its offspring.The offspring, also, will thus have a better chance of surviving, for, of the many individuals of any species which are periodically born, but a small number can survive. I have called this principle, by which each slight variation, if useful, is preserved, by the term of Natural Selection, in order to mark its relation to man's power of selection."
 
-### Words of the day
+So variation in organism that are suited for their environemnt are "naturally selected" to survive and become more common. It's the foundation of modern theory of evolution.
 
-1. Sagacious
 
-2. Concur
+## Words of the day
 
-He concur in my view
+I want to introduce you two new words in English language
+
+1. Sagacious: Somebody who has sound judgement. Like he was sagacious enough to pay his taxes on time. 
+
+2. Concur: Agree. Like he concurred with my views.
+
 
 ### Vitamins
 
