@@ -24,7 +24,7 @@ I want to introduce you two new words in English language
 
 ### Vitamins
 
-I am taking Vitamin D3 (every alternative day) with a dose of 125 mcg. I think its better to take Vitamin D from supplemments than the sun. According to this study in Yale [^yale]
+I am taking Vitamin D3 (every alternative day) with a dose of 125 mcg. I think its better to take Vitamin D from supplemments than the sun. According to this study in Yale [^yale], consuming Vitamin D from either food, supplements or Sun is same. Another problem with taking vitamin D from the sun is that there are  ultraviolet (UV) rays that can damage to the skin, eyes, and immune system. 
 
 ### Java
 
