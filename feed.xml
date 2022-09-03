@@ -7,6 +7,54 @@
     
       
         <item>
+          <title>How to play Super Mario Odyssey on PC (Yuzu Emulator)</title>
+          <description>&lt;p&gt;Super Mario Odyssey is a 2017 video game has been voted as the one of the best Mario game ever made. The game is only available for Nitendo Switch. Luckily I end up plaing the game on Windows nonetheless.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/game&quot; title=&quot;View posts tagged with &amp;quot;game&amp;quot;&quot;&gt;game&lt;/a&gt;   &lt;/p&gt;
+
+&lt;p&gt;Super Mario Odyssey is a 2017 video game has been voted as the one of the best Mario game ever made. The game is only available for Nitendo Switch. Luckily I end up plaing the game on Windows nonetheless.&lt;/p&gt;
+
+&lt;p&gt;We need to download &lt;a href=&quot;https://yuzu-emu.org/downloads/&quot;&gt;yuzu&lt;/a&gt; emulator. Follow the instructions to install it on Windows. First download and install Microsoft Visual C++ redistributable. Next download &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yuzu_install.exe&lt;/code&gt;.&lt;/p&gt;
+
+&lt;blockquote class=&quot;attention&quot;&gt;
+If you get error, yuzu encryption keys are missing. &lt;br /&gt;&lt;br /&gt;
+Fix: Download the &lt;a href=&quot;https://raw.githubusercontent.com/icosaswitch/Yuzu-NAND/master/prod.keys&quot;&gt;prod&lt;/a&gt; file.&lt;br /&gt;&lt;br /&gt; 
+On Yuzu Windows -&amp;gt; Go to File -&amp;gt; Open Yuzu folder &lt;br /&gt;&lt;br /&gt;
+Save the file under `keys` folder.
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I am assuming that you already download the game in a NSP package. Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yuzu&lt;/code&gt; emulator  and click on plus sign (Add new Game directory). Navigate to the game directory.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;/img/yuzu1.png&quot;  /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;If you dont have joystick, you might want to configure keyboard with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yuzu&lt;/code&gt; emulator. Download &lt;a href=&quot;https://drive.google.com/file/d/1IwMqMr8E0L_crNhhaWnYqSShTCqliRN8/view?usp=sharing&quot;&gt;input.zip&lt;/a&gt;. Extract the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zip&lt;/code&gt; file under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Yuzu -&amp;gt; config -&amp;gt; input&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;You can got &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Emulation -&amp;gt; configure -&amp;gt; Control&lt;/code&gt; and see the connect controller indicated in green color.&lt;/p&gt;
+
+&lt;p&gt;You can launch the game by clicking the game icon.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;/img/yuzu2.png&quot;  /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+          <pubDate>2022-09-01T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/How-to-play-Super-Mario-Odyssey-on-PC-(Yuzu-Emulator)</link>
+          <guid isPermaLink="true">https://randomwits.com/How-to-play-Super-Mario-Odyssey-on-PC-(Yuzu-Emulator)</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Dear Vishi, daily log on Aug 30, 2022</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log on Aug 30, 2022.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
