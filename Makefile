@@ -1,4 +1,4 @@
-oldserve:
+serve:
 	JEKYLL_ENV=production bundle exec jekyll serve --trace
 clean:
 	rm -fr tag
@@ -7,16 +7,9 @@ clean:
 add:
 	git add tag
 	git add sitemap.xml
-oldbuild:
+build:
 	JEKYLL_ENV=production bundle exec jekyll build
 	$(MAKE) copy
-build:
-	chmod -R 777 *
-	docker-compose up build
-	$(MAKE) copy
-serve:
-	chmod -R 777 *
-	docker-compose up serve
 copy:
 	cp -r sitemap.xml _site/
 	cp -r CNAME _site/
