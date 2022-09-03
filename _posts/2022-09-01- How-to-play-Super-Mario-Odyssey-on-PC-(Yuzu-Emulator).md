@@ -1,22 +1,38 @@
 ---
-published: false
+layout: post
+title: How to play Super Mario Odyssey on PC (Yuzu Emulator)
+tags:
+  - game
+thumb: https://unsplash.com/photos/_R95VMWyn7A/download?w=800"
+summary: How to play Super Mario Odyssey on PC (Yuzu Emulator)
+image: https://unsplash.com/photos/_R95VMWyn7A/download?w=800"
+author: Tushar Sharma
 ---
-##   How to play Super Mario Odyssey on PC (Yuzu Emulator)
 
-1. Download instructus for yuzu installer 
-https://yuzu-emu.org/downloads/
+Super Mario Odyssey is a 2017 video game has been voted as the one of the best Mario game ever made. The game is only available for Nitendo Switch. Luckily I end up plaing the game on Windows nonetheless.<!-- truncate_here -->
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
-2. Got error: yuzu encryption keys are missing
-Fix: 
-Get prod keys from here https://raw.githubusercontent.com/icosaswitch/Yuzu-NAND/master/prod.keys
+Super Mario Odyssey is a 2017 video game has been voted as the one of the best Mario game ever made. The game is only available for Nitendo Switch. Luckily I end up plaing the game on Windows nonetheless.
 
-on yuzu window -> File -> Open yuzu Folder 
+We need to download [yuzu](https://yuzu-emu.org/downloads/) emulator. Follow the instructions to install it on Windows. First download and install Microsoft Visual C++ redistributable. Next download `yuzu_install.exe`.
 
-Navigate to keys folder and paste this key
+<blockquote class="attention">
+If you get error, yuzu encryption keys are missing. <br><br>
+Fix: Download the <a href="https://raw.githubusercontent.com/icosaswitch/Yuzu-NAND/master/prod.keys">prod</a> file.<br><br> 
+On Yuzu Windows -> Go to File -> Open Yuzu folder <br><br>
+Save the file under `keys` folder.
+</blockquote><br>
 
-3. There's a plus sign (Add new Game directory). 
-Navigate to the folder where you downloaded super mario odyssey. It will be containing NSP files. 
 
-4. If you dont have joystick, you might want to configure keyboard to work with yuzu emulator.
-Download input.zip from https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0ZlUkZ6cVhZN2ZJaGl0YTUyRVAwVGhYbmEzd3xBQ3Jtc0tuSmFQemY0Q0VBR0syaHBBcjFlTGhFZmtuVklGMWtVTG04TnByTjdpWm43alVhaG5fa0s1eEprbU1rVWQ1NlduMmJCb0RSYURKaEZOTzBsWGRUR25fYnRHd0M5MnZnWVV2ZVZZMnktdVJDXzdsUXBpVQ&q=https%3A%2F%2Fbit.ly%2F3rT4JWc&v=3G597nwOLDI
+I am assuming that you already download the game in a NSP package. Open `yuzu` emulator  and click on plus sign (Add new Game directory). Navigate to the game directory. 
 
+| <img align="center"  loading="lazy" src="{{ root_url }}/img/yuzu1.png"  />|
+
+
+If you dont have joystick, you might want to configure keyboard with `yuzu` emulator. Download [input.zip](https://drive.google.com/file/d/1IwMqMr8E0L_crNhhaWnYqSShTCqliRN8/view?usp=sharing). Extract the `zip` file under `Yuzu -> config -> input` folder.
+
+You can got `Emulation -> configure -> Control` and see the connect controller indicated in green color.
+
+You can launch the game by clicking the game icon.
+
+| <img align="center"  loading="lazy" src="{{ root_url }}/img/yuzu2.png"  />|
