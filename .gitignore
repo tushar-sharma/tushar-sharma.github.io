@@ -29,6 +29,10 @@ _site/
 *.log
 *.sql
 *.sqlite
+ 
+# Python #
+######################
+.venv
 
 # OS generated files #
 ######################
