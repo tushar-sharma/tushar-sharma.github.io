@@ -29,7 +29,7 @@ I am assuming that you already download the game in a NSP package. Open `yuzu` e
 | <img align="center"  loading="lazy" src="{{ root_url }}/img/yuzu1.png"  />|
 
 
-If you dont have joystick, you might want to configure keyboard with `yuzu` emulator. Download [input.zip](https://drive.google.com/file/d/1IwMqMr8E0L_crNhhaWnYqSShTCqliRN8/view?usp=sharing). Extract the `zip` file under `Yuzu -> config -> input` folder.
+If you don't have joystick, you might want to configure keyboard with `yuzu` emulator. Download [input.zip](https://drive.google.com/file/d/1IwMqMr8E0L_crNhhaWnYqSShTCqliRN8/view?usp=sharing). Extract the `zip` file under `Yuzu -> config -> input` folder.
 
 You can got `Emulation -> configure -> Control` and see the connect controller indicated in green color.
 
