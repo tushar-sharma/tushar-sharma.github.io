@@ -2,7 +2,7 @@
 layout: post
 title: Ping Pong at Pig Pounder Brewery
 tags:
-  - north Carolina
+  - north carolina
 thumb: https://unsplash.com/photos/7sqf2m4srqs/download?w=800"
 summary: Ping Pong at Pig Pounder Brewery
 image: https://unsplash.com/photos/7sqf2m4srqs/download?w=800"
