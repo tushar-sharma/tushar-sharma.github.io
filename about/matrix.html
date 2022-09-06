@@ -114,7 +114,7 @@ $(function() {
     $('#foo').terminal(function(cmd, term) {
         var finish = false;
 
-        var msg = "\nHi " + cmd + "! Feel free to explore my site...\n";
+        var msg = "\nWake up, " + cmd + "The Matrix has you...type help to escape\n";
         term.set_prompt('$ ');
 
         /*typed_message(term, msg, 100, function() {
@@ -126,7 +126,7 @@ $(function() {
 
         if (aOnce == true) {  //only once
             aOnce = false;
-		term.echo("<br><br>Hi " + cmd + "! Type help to explore...\n\n<br><br>" + "\n<div class=\"like-pre\">" + "\n\n</div>" , {
+		term.echo("<br><br>Wake up, " + cmd + ". The Matrix has you...type help to escape\n\n<br><br>" + "\n<div class=\"like-pre\">" + "\n\n</div>" , {
               raw: function(div) { }
             });
         } else if (cmd == "help") {
@@ -270,7 +270,7 @@ $(function() {
         greetings: greetTxt,
         onInit: function(term) {
             // first question
-            var msg = "Wake up, Neo...The Matrix has you...\n";
+            var msg = "\n";
             typed_message(term, msg, 100, function() {
                 typed_prompt(term, "What's your name? :", 100, function() {});
             });
