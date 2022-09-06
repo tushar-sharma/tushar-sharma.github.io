@@ -131,7 +131,7 @@ $(function() {
             });
         } else if (cmd == "help") {
 
-            mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">ls</span> List directory content.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">projects</span> Open my projects.<br><span class=\"cl\">books</span> Books on my shelf.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
+            mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">ls</span> List directory content.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">songs</span> Recommend me a song.<br><span class=\"cl\">books</span> Books on my shelf.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
 
             term.echo(mystr, {
               raw: function(div) {
@@ -223,6 +223,29 @@ $(function() {
                div.css("color", "rgb(51, 153, 204)");
              }
           });*/
+
+        } else if (cmd == "songs") {
+            jQuery.get('/../songs.txt', function(data) {
+              let songs = data.split("\n");
+              idx = Math.floor((songs.length - 1) * Math.random());
+	      let song = songs[idx];
+
+              let video = `<iframe
+  style="position: relative;  width: 100%;"
+   height="500"
+	   src="https://www.youtube.com/embed/${song}&autoplay=1"
+		srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/${song}?autoplay=1><img src=https://img.youtube.com/vi/${song}/hqdefault.jpg alt='Sample'><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Sample"
+></iframe>`
+              term.echo("<span style=\"color: rgb(51, 153, 204); \">" + video + "</span>", {
+                  raw: function(div) { }
+               });
+
+            });
+
         } else  {
           if (aOnce == false) {
             term.echo("Unknown command <span class=\"cl2\">" + cmd + "</span>. Please type <span class=\"cl2\">help</span>.", {
