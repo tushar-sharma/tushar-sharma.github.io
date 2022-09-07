@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
+<meta charset="utf-8"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
@@ -12,9 +11,9 @@
 <meta name="author" content="Tushar Sharma">
 <meta name="description" content="Random Wits, my digital footprint.">
 <meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta property="og:site_name" content="Tushar Sharma">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta property="og:site_name" content="Tushar Sharma"/>
 <title>Review Ilios Crafted Greek Restaurant</title>
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 <link rel="icon" type="image/png" href="/img/favicon.png">
@@ -27,18 +26,18 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <!-- Twitter cards -->
-<meta name="twitter:site" content="@tshrocks">
+<meta name="twitter:site"    content="@tshrocks">
 <meta name="twitter:creator" content="@Tushar Sharma">
-<meta name="twitter:title" content="Review Ilios Crafted Greek Restaurant">
+<meta name="twitter:title"   content="Review Ilios Crafted Greek Restaurant">
 
 
 <meta name="twitter:description" content="Review Ilios Crafted Greek Restaurant">
 
 
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://unsplash.com/photos/pUCck5WyUH4/download?w=800">
-<meta property="og:image" content="https://unsplash.com/photos/pUCck5WyUH4/download?w=800">
+<meta name="twitter:card"  content="summary_large_image">
+<meta name="twitter:image" content="https://unsplash.com/photos/pUCck5WyUH4/download?w=800"">
+<meta property="og:image" content="https://unsplash.com/photos/pUCck5WyUH4/download?w=800"">
 
 <!-- end of Twitter cards -->
 
@@ -46,23 +45,23 @@
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Review Ilios Crafted Greek Restaurant | RandomWits</title>
-<meta name="generator" content="Jekyll v4.2.2">
-<meta property="og:title" content="Review Ilios Crafted Greek Restaurant">
-<meta name="author" content="Tushar Sharma">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. Tags: north carolina food I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. The restaurant is located at 1514 S Church St, Charlotte, NC 28203. I am familiar with Greek cuisine. I ordered a chicken gyro (traditional) with an option of a side. I choose Chicken soup as a side. They were also an option to add fries on the gyro but that was for another day. Order service was quick. Gyro was good but the Chicken soup was bit salty for my taste. Quantity was decent enough for a meal. I spent around $13.58 including the tip. I would return to this restaurant to try another meal.">
-<meta property="og:description" content="I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. Tags: north carolina food I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. The restaurant is located at 1514 S Church St, Charlotte, NC 28203. I am familiar with Greek cuisine. I ordered a chicken gyro (traditional) with an option of a side. I choose Chicken soup as a side. They were also an option to add fries on the gyro but that was for another day. Order service was quick. Gyro was good but the Chicken soup was bit salty for my taste. Quantity was decent enough for a meal. I spent around $13.58 including the tip. I would return to this restaurant to try another meal.">
-<link rel="canonical" href="https://randomwits.com/review-ilios-crafted-greek-restaurant">
-<meta property="og:url" content="https://randomwits.com/review-ilios-crafted-greek-restaurant">
-<meta property="og:site_name" content="RandomWits">
-<meta property="og:image" content="https://unsplash.com/photos/pUCck5WyUH4/download?w=800%22">
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="2022-09-06T00:00:00-04:00">
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="https://unsplash.com/photos/pUCck5WyUH4/download?w=800%22">
-<meta property="twitter:title" content="Review Ilios Crafted Greek Restaurant">
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Review Ilios Crafted Greek Restaurant" />
+<meta name="author" content="Tushar Sharma" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. Tags: north carolina food I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. The restaurant is located at 1514 S Church St, Charlotte, NC 28203. I am familiar with Greek cuisine. I ordered a chicken gyro (traditional) with an option of a side. I choose Chicken soup as a side. They were also an option to add fries on the gyro but that was for another day. Order service was quick. Gyro was good but the Chicken soup was bit salty for my taste. Quantity was decent enough for a meal. I spent around $13.58 including the tip. I would return to this restaurnt to try another meal." />
+<meta property="og:description" content="I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. Tags: north carolina food I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. The restaurant is located at 1514 S Church St, Charlotte, NC 28203. I am familiar with Greek cuisine. I ordered a chicken gyro (traditional) with an option of a side. I choose Chicken soup as a side. They were also an option to add fries on the gyro but that was for another day. Order service was quick. Gyro was good but the Chicken soup was bit salty for my taste. Quantity was decent enough for a meal. I spent around $13.58 including the tip. I would return to this restaurnt to try another meal." />
+<link rel="canonical" href="https://randomwits.com/review-ilios-crafted-greek-restaurant.md" />
+<meta property="og:url" content="https://randomwits.com/review-ilios-crafted-greek-restaurant.md" />
+<meta property="og:site_name" content="RandomWits" />
+<meta property="og:image" content="https://unsplash.com/photos/pUCck5WyUH4/download?w=800%22" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-06T00:00:00-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://unsplash.com/photos/pUCck5WyUH4/download?w=800%22" />
+<meta property="twitter:title" content="Review Ilios Crafted Greek Restaurant" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2022-09-06T00:00:00-04:00","datePublished":"2022-09-06T00:00:00-04:00","description":"I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. Tags: north carolina food I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. The restaurant is located at 1514 S Church St, Charlotte, NC 28203. I am familiar with Greek cuisine. I ordered a chicken gyro (traditional) with an option of a side. I choose Chicken soup as a side. They were also an option to add fries on the gyro but that was for another day. Order service was quick. Gyro was good but the Chicken soup was bit salty for my taste. Quantity was decent enough for a meal. I spent around $13.58 including the tip. I would return to this restaurant to try another meal.","headline":"Review Ilios Crafted Greek Restaurant","image":"https://unsplash.com/photos/pUCck5WyUH4/download?w=800%22","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/review-ilios-crafted-greek-restaurant"},"url":"https://randomwits.com/review-ilios-crafted-greek-restaurant"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2022-09-06T00:00:00-04:00","datePublished":"2022-09-06T00:00:00-04:00","description":"I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. Tags: north carolina food I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. The restaurant is located at 1514 S Church St, Charlotte, NC 28203. I am familiar with Greek cuisine. I ordered a chicken gyro (traditional) with an option of a side. I choose Chicken soup as a side. They were also an option to add fries on the gyro but that was for another day. Order service was quick. Gyro was good but the Chicken soup was bit salty for my taste. Quantity was decent enough for a meal. I spent around $13.58 including the tip. I would return to this restaurnt to try another meal.","headline":"Review Ilios Crafted Greek Restaurant","image":"https://unsplash.com/photos/pUCck5WyUH4/download?w=800%22","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/review-ilios-crafted-greek-restaurant.md"},"url":"https://randomwits.com/review-ilios-crafted-greek-restaurant.md"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -75,8 +74,8 @@
 
     <div class="wrapper">
       <header>
-        <link rel="stylesheet" href="/css/styles.css">
-<link rel="stylesheet" href="/css/toc.css">
+        <link rel="stylesheet" href="/css/styles.css" >
+<link rel="stylesheet" href="/css/toc.css" >
 <script defer src="/js/toc.js" type="text/javascript"></script>
 <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
 <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
@@ -138,11 +137,11 @@ header li {
 
 </style>
 
-<div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+<div id="random" class="top king-basil" id="product" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
  <a href="/">
   RandomWits
  </a>
- <a style="cursor:pointer;" class="DarkReader_Button">
+ <a style="cursor:pointer;" class="DarkReader_Button" >
   <i id="icon-dark" class="fa fa-cloud-moon"></i>
   </a>
 </div>
@@ -150,12 +149,11 @@ header li {
 <div style="clear:both;"></div>
 <div>
   <p class="me_blurb">
-  </p>
-<div class="sub">
+  <div class="sub">
     <!-- <span id="textAnimation"></span>-->
     life is too short for a diary
     </div>
-  
+  </p>
 
 </div>
 
@@ -181,7 +179,7 @@ header li {
     -->
     <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
         <div class="nav-wrap">
-          <nav class="main-nav">
+          <nav class="main-nav" >
             <ul class="unstyled list-hover-slide">
 
               <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
@@ -204,11 +202,9 @@ header li {
 <!-- only if page is root page -->
 
 <div id="toc-block" class="codeblock" style="display:none;">
-  <h3 style="color:#39c;">
-<i class="far fa-bookmark"></i> On This Page</h3>
+  <h3 style="color:#39c;"><i class="far fa-bookmark"></i> On This Page</h3>
   <div id="toc"></div>
-</div>
-<br>
+</div><br>
 
 
 
@@ -226,8 +222,8 @@ header li {
 
       </header>
       <section>
-        <link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/toc.css">
+        <link rel="stylesheet" href="/css/search.css" />
+<link rel="stylesheet" href="/css/toc.css" />
 
 
 <!-- search box begins -->
@@ -245,21 +241,20 @@ header li {
 
 
   
-<p>Tags:  <a class="mytag" href="/tag/north%20carolina" title='View posts tagged with "north carolina"'>north carolina</a>    <a class="mytag" href="/tag/food" title='View posts tagged with "food"'>food</a>   </p>
+<p>Tags:  <a class="mytag" href="/tag/north carolina" title="View posts tagged with &quot;north carolina&quot;">north carolina</a>    <a class="mytag" href="/tag/food" title="View posts tagged with &quot;food&quot;">food</a>   </p>
+ 
+I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. The restaurant is located at 1514 S Church St, Charlotte, NC 28203.
 
-<p>I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. The restaurant is located at 1514 S Church St, Charlotte, NC 28203.</p>
+I am familiar with Greek cuisine. I ordered a chicken gyro (traditional) with an option of a side. I choose Chicken soup as a side. They were also an option to add fries on the gyro but that was for another day.
 
-<p>I am familiar with Greek cuisine. I ordered a chicken gyro (traditional) with an option of a side. I choose Chicken soup as a side. They were also an option to add fries on the gyro but that was for another day.</p>
+Order service was quick. Gyro was good but the Chicken soup was bit salty for my taste. Quantity was decent enough for a meal. I spent around $13.58 including the tip.
 
-<p>Order service was quick. Gyro was good but the Chicken soup was bit salty for my taste. Quantity was decent enough for a meal. I spent around $13.58 including the tip.</p>
-
-<p>I would return to this restaurant to try another meal.</p>
-
+I would return to this restaurnt to try another meal.
 
 
 <!-- this is for pagination -->
 <nav class="pagination clear" style="padding-bottom:20px;">
-   <a class="prev-item" href="/ping-pong-at-pig-pounder" title="Previous Post: Ping Pong at Pig Pounder Brewery">←Previous</a>     <a class="next-item" href="/review-ilios-crafted-greek-restaurant.md" title="Next Post: Review Ilios Crafted Greek Restaurant">Next→</a>         
+   <a class="prev-item" href="/review-ilios-crafted-greek-restaurant" title="Previous Post: Review Ilios Crafted Greek Restaurant">&larr;Previous</a>     
 </nav>  
 
 <hr>
@@ -269,8 +264,8 @@ header li {
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
-        var disqus_identifier = '/review-ilios-crafted-greek-restaurant';
-	    var disqus_url = 'http://tushar-sharma.github.io/review-ilios-crafted-greek-restaurant';
+        var disqus_identifier = '/review-ilios-crafted-greek-restaurant.md';
+	    var disqus_url = 'http://tushar-sharma.github.io/review-ilios-crafted-greek-restaurant.md';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
@@ -279,8 +274,7 @@ header li {
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
@@ -292,7 +286,7 @@ header li {
     <div class="wrapper">
       <footer>
         <!-- <p><small>Tushar Sharma &copy; 2022</small></p> -->
-<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/font-awesome.css" />
 <script src="/js/scroll_top.js" type="text/javascript"></script>
 <script src="/js/scroll_top.js" type="text/javascript"></script>
 
@@ -307,9 +301,9 @@ header li {
   `
   -->
   <div style="margin: 0 auto; text-align: center; font-size:large;">
-      <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>Tushar Sharma © 2022
+      <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> & help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>Tushar Sharma &copy; 2022
         <a title="Email" href="mailto:tushar@randomwits.com">
-    <i class="icon-envelope-alt icon-large"></i>  
+    <i class="icon-envelope-alt icon-large"></i> &nbsp;
   </a>
   <!--
   <a href="/contact/">
@@ -319,25 +313,25 @@ header li {
     <i class="icon-key"></i> &nbsp;
   </a>
   -->
-  <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
-    <i class="icon-github icon-large"></i>   
+  <a  title="Github" href="https://github.com/tushar-sharma" target="_blank">
+    <i class="icon-github icon-large"></i>  &nbsp;
 
   </a>
-  <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
-    <i class="icon-linkedin icon-large"></i>  
+  <a  title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+    <i class="icon-linkedin icon-large"></i> &nbsp;
 
   </a>
   <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
-    <i class="icon-twitter icon-large"></i>  
+    <i class="icon-twitter icon-large"></i> &nbsp;
 
 
   </a>
-  <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
-    <i class="icon-facebook icon-large"></i>  
+  <a  title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+    <i class="icon-facebook icon-large"></i> &nbsp;
 
   </a>
 
-  <a title="RSS" href="/feed.xml">
+  <a  title="RSS" href="/feed.xml" >
     <i class="icon-rss icon-large"></i>
   </a>
 
@@ -371,9 +365,7 @@ header li {
     </span>
   </a>
 </p>
-      
+      </footer>
     </div>
-  </footer>
-</div>
-</body>
+  </body>
 </html>
