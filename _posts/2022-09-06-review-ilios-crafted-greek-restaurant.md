@@ -10,8 +10,7 @@ image: https://unsplash.com/photos/pUCck5WyUH4/download?w=800"
 author: Tushar Sharma
 ---
 
-I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. 
-<!-- truncate_here -->
+I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
  
 I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it. The restaurant is located at 1514 S Church St, Charlotte, NC 28203.
