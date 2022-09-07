@@ -19,4 +19,4 @@ I am familiar with Greek cuisine. I ordered a chicken gyro (traditional) with an
 
 Order service was quick. Gyro was good but the Chicken soup was bit salty for my taste. Quantity was decent enough for a meal. I spent around $13.58 including the tip.
 
-I would return to this restaurnt to try another meal.
+I would return to this restaurant to try another meal.
