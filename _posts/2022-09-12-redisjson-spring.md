@@ -42,3 +42,9 @@ buildRedisOptional
      operations
      .execute()
 ```
+
+I am getting issues here.
+
+### Using `execute` method
+
+
