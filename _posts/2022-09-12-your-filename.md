@@ -1,6 +1,15 @@
 ---
 published: false
 ---
-## A New Post
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+
+1. POST endpoint that request a JSON
+
+2. Save payload to redis in REDIS data type
+
+3. Current implementation has String datatype
+
+## Brainstorm
+
+
+
