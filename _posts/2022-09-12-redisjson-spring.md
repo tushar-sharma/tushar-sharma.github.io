@@ -45,6 +45,13 @@ buildRedisOptional
 
 I am getting issues here.
 
-### Using `execute` method
+### Using `lettucemod` module
+
+We are using `lettuce` as a connection module. there'a library called [lettucemod](https://github.com/redis-developer/lettucemod).
+
+
+
+
+
 
 
