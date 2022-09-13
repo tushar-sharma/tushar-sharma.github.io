@@ -53,7 +53,8 @@ I can use `execute` method in `buildRedisOptional` like
 
 ```
 
-I am getting issues here.
+But it's failing.
+
 
 ### Using `lettucemod` module
 
