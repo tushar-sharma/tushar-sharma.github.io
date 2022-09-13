@@ -32,3 +32,12 @@ buildRedisOptional
                 });
      
 ```
+
+I can use `execute` method in `buildRedisOptional` like
+
+```java
+buildRedisOptional
+.map(operations -> 
+     operations
+     .execute()
+```
