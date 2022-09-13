@@ -37,20 +37,27 @@ buildRedisOptional
 I can use `execute` method in `buildRedisOptional` like
 
 ```java
-buildRedisOptional
-.map(operations -> 
-     operations
-     .execute()
+        RedisScript script = new DefaultRedisScript("redis.call(JSON.get key)");
+
+        return buildRedisOptional.map(redisBuildOperations ->
+                        redisBuildOperations
+                                .execute(script)
+                                .onErrorResume(Exception.class, ex -> {
+                                    log.warn(Constants.LOG_REDIS_ERROR_IGNORING, ex);
+                                    return Flux.empty();
+                                }))
+                .orElseGet(() -> {
+                    log.warn(Constants.LOG_REDIS_UNAVAILABLE_SKIPPING);
+                    return Flux.empty();
+                });
+
 ```
 
 I am getting issues here.
 
 ### Using `lettucemod` module
 
-We are using `lettuce` as a connection module. there'a library called [lettucemod](https://github.com/redis-developer/lettucemod).
-
-
-
+We are using `lettuce` as a connection module. there'a library called [lettucemod](https://github.com/redis-developer/lettucemod
 
 
 
