@@ -43,3 +43,25 @@ $ poetry run python tweets.py tshrocks
 ```
 
 We haven't implemented anything, so it will just ouput `Get tweets for the tshrocks` to the console.
+
+
+Next we need to authenticate with twitter
+
+
+```python
+def setup_auth() -> tweepy:
+    """
+    Set up authentication with twitter
+    """
+    consumer_key = ""
+    consumer_secret = ""
+    access_key = "" 
+    access_secret = ""
+
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_key, access_secret)
+    api = tweepy.API(auth)
+    
+    return api
+
+```
