@@ -20,15 +20,23 @@ import csv
 import codecs
 import sys
 
-def get_tweets_by_profile(profile_name: str) -> None
+def get_tweets_by_profile(profile_name: str) -> None:
     """
     Get all tweets of a profile
     """
-    
+
     print(f"Get tweets for the {profile_name}")
 
-if __name__ == "__main__:
+if __name__=="__main__":
     profile_name = sys.argv[1]
-    
+
     get_tweets_by_profile(profile_name)
+```
+
+
+Now lets create default `poetry` profile
+
+```bash
+$ poetry init
+$ 
 ```
