@@ -34,10 +34,12 @@ if __name__=="__main__":
 ```
 
 
-Now lets create default `poetry` profile
+Now lets create default `poetry` profile.
 
 ```bash
 $ poetry init
 $ poetry add tweepy
 $ poetry run python tweets.py tshrocks
 ```
+
+We haven't implemented anything, so it will just ouput `Get tweets for the tshrocks` to the console.
