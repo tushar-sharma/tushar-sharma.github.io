@@ -40,4 +40,25 @@ Lastly, here's the full code.
 
 <script src="https://gist.github.com/tushar-sharma/ac2739f5e0282add422a1430988a4a3d.js?file=get-tweets.py"></script>
 
+We can get tweets by running
+
+```bash
+$ poetry run python get-tweets tshrocks
+Get tweets for the tshrocks
+getting tweets before 1284662084169596930
+...389 tweets downloaded so far
+getting tweets before 1030303523794288639
+...571 tweets downloaded so far
+getting tweets before 909242746770247681
+...771 tweets downloaded so far
+getting tweets before 312978397368291328
+...963 tweets downloaded so far
+getting tweets before 153814759517585407
+...1157 tweets downloaded so far
+getting tweets before 99546946154409983
+...1177 tweets downloaded so far
+getting tweets before 83587008219447295
+...1177 tweets downloaded so far
+```
+
 We can open our `csv` file with any editor or excel. 
