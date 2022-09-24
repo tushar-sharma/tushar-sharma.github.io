@@ -38,5 +38,5 @@ Now lets create default `poetry` profile
 
 ```bash
 $ poetry init
-$ 
+$ poetry add tweepy
 ```
