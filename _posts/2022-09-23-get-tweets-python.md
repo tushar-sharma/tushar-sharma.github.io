@@ -24,6 +24,8 @@ def get_tweets_by_profile(profile_name: str) -> None
     """
     Get all tweets of a profile
     """
+    
+    print(f"Get tweets for the {profile_name}")
 
 if __name__ == "__main__:
     profile_name = sys.argv[1]
