@@ -7,6 +7,46 @@
     
       
         <item>
+          <title>Extract tweets from Twitter using Python</title>
+          <description>&lt;p&gt;In this tutorial, we will extract tweets from Twitter using python.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
+&lt;p&gt;In this tutorial, we will extract tweets from Twitter using python.&lt;/p&gt;
+
+&lt;p&gt;First lets create a project-&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;get-tweets
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;get-tweets
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;touch &lt;/span&gt;tweets.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We will use &lt;a href=&quot;https://python-poetry.org/&quot;&gt;poetry&lt;/a&gt; for managing our dependencies.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;poetry init
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;poetry add tweepy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We haven’t implemented anything, so it will just ouput &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Get tweets for the tshrocks&lt;/code&gt; to the console. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tshrocks&lt;/code&gt; is my twitter profile username&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/ac2739f5e0282add422a1430988a4a3d.js?file=get-tweets1.py&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Next we need to authenticate with twitter, where we need access and consumer keys from twitter. You can go to &lt;a href=&quot;https://developer.twitter.com/en/apps&quot;&gt;developer page&lt;/a&gt; and create an app to get your keys.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/ac2739f5e0282add422a1430988a4a3d.js?file=get-tweets2.py&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Lastly, here’s the full code.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/ac2739f5e0282add422a1430988a4a3d.js?file=get-tweets.py&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;We can open our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;csv&lt;/code&gt; file with any editor or excel.&lt;/p&gt;
+</description>
+          <pubDate>2022-09-23T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/get-tweets-python</link>
+          <guid isPermaLink="true">https://randomwits.com/get-tweets-python</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Review Ilios Crafted Greek Restaurant</title>
           <description>&lt;p&gt;I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/north carolina&quot; title=&quot;View posts tagged with &amp;quot;north carolina&amp;quot;&quot;&gt;north carolina&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/food&quot; title=&quot;View posts tagged with &amp;quot;food&amp;quot;&quot;&gt;food&lt;/a&gt;   &lt;/p&gt;
@@ -37,7 +77,7 @@
 
 &lt;p&gt;There was also a live music event at the venue by Banjo Earth. Interestingly, one the singer of the band visited Kashmir, India and composed the song, Nights in Kashmir.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/opMiJZ0fkcs&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/opMiJZ0fkcs?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/opMiJZ0fkcs/hqdefault.jpg alt='Nights in Kashmir'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Nights in Kashmir&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/opMiJZ0fkcs&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/opMiJZ0fkcs?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/opMiJZ0fkcs/hqdefault.jpg alt=&apos;Nights in Kashmir&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Nights in Kashmir&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 </description>
@@ -117,8 +157,8 @@ Save the file under `keys` folder.
 
 &lt;p&gt;Today I want to talk about Ted Williams who was begging and living on the streets of the US state of Ohio. However, he had a unique voice of a radio jockey. It’s amazing how a viral video can sometime change fortune.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/TWmPhDyjY8Y&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/TWmPhDyjY8Y?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/TWmPhDyjY8Y/hqdefault.jpg alt='US beggar's priceless gift
-'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;US beggar's priceless gift
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/TWmPhDyjY8Y&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/TWmPhDyjY8Y?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/TWmPhDyjY8Y/hqdefault.jpg alt=&apos;US beggar&apos;s priceless gift
+&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;US beggar&apos;s priceless gift
 &quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -126,7 +166,7 @@ Save the file under `keys` folder.
 
 &lt;p&gt;I played &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ping pong&lt;/code&gt; today. I still have to learn to master &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spin&lt;/code&gt; while serving. Most corporate office have table tennis table. It’s a great stress buster. I’ll share a video of how difficult it is to return a pro table tennis serve.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/K9hnwZmTLGA&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/K9hnwZmTLGA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/K9hnwZmTLGA/hqdefault.jpg alt='Return My Serve, Win $100'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Return My Serve, Win $100&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/K9hnwZmTLGA&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/K9hnwZmTLGA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/K9hnwZmTLGA/hqdefault.jpg alt=&apos;Return My Serve, Win $100&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Return My Serve, Win $100&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
@@ -250,13 +290,13 @@ hello
 
 &lt;p&gt;Lastly I leave you with some of the news songs that I listened today&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/V7LwfY5aRoMeNr1mMQU5WI&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/aRoMeNr1mMQ?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/aRoMeNr1mMQ/hqdefault.jpg alt='Har Har Shambhu Shiv Mahadeva'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Har Har Shambhu Shiv Mahadeva&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/V7LwfY5aRoMeNr1mMQU5WI&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/aRoMeNr1mMQ?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/aRoMeNr1mMQ/hqdefault.jpg alt=&apos;Har Har Shambhu Shiv Mahadeva&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Har Har Shambhu Shiv Mahadeva&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/bhbwzHA9vN4&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/bhbwzHA9vN4?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/bhbwzHA9vN4/hqdefault.jpg alt=' Dancing in the moonlight'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Dancing in the moonlight&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/bhbwzHA9vN4&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/bhbwzHA9vN4?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/bhbwzHA9vN4/hqdefault.jpg alt=&apos; Dancing in the moonlight&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Dancing in the moonlight&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/lFsIwK_gU5o&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/lFsIwK_gU5o?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/lFsIwK_gU5o/hqdefault.jpg alt='Ohdi Shreaam'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Ohdi Shreaam &quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/lFsIwK_gU5o&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/lFsIwK_gU5o?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/lFsIwK_gU5o/hqdefault.jpg alt=&apos;Ohdi Shreaam&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Ohdi Shreaam &quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
@@ -331,12 +371,12 @@ What are you drinking?
 &lt;/li&gt;
 
 &lt;li class=&quot;shared received&quot;&gt;
-I am drinking Sparkling water. It's just water infused with carbon dioxide (CO&lt;sub&gt;2&lt;/sub&gt;) under pressure. It has no calories but a fizzy texture that feels like you are drinking coke.
+I am drinking Sparkling water. It&apos;s just water infused with carbon dioxide (CO&lt;sub&gt;2&lt;/sub&gt;) under pressure. It has no calories but a fizzy texture that feels like you are drinking coke.
 &lt;/li&gt;
 
 
 &lt;li class=&quot;shared sent&quot;&gt;
-Beta, but why are you drinking CO2? Isn't it bad? Don't we exhale CO&lt;sub&gt;2&lt;/sub&gt; from our bodies? 
+Beta, but why are you drinking CO2? Isn&apos;t it bad? Don&apos;t we exhale CO&lt;sub&gt;2&lt;/sub&gt; from our bodies? 
 &lt;/li&gt;
 
 &lt;/ul&gt;
@@ -373,15 +413,15 @@ Beta, but why are you drinking CO2? Isn't it bad? Don't we exhale CO&lt;sub&gt;2
   
   
   &lt;li class=&quot;shared received&quot;&gt;
-  CO&lt;sub&gt;2&lt;/sub&gt; dissolved with rainfall due to pollution can cause breaking of walls called weathering. So carbonic acid might have some effect on enamel. However, I haven't found any website that say conclusively that it's bad for teeth.
+  CO&lt;sub&gt;2&lt;/sub&gt; dissolved with rainfall due to pollution can cause breaking of walls called weathering. So carbonic acid might have some effect on enamel. However, I haven&apos;t found any website that say conclusively that it&apos;s bad for teeth.
   &lt;/li&gt;
 
   &lt;li class=&quot;shared sent&quot;&gt;
-   Don't drink it too much then?
+   Don&apos;t drink it too much then?
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
-  Moderation is the mantra. I think other sugar drinks have far more adverse effect on teeth and bones. The phosphoric acid in the drinks can interfere in the bone metabolism. Plain sparkling water doesn't have phosphate.
+  Moderation is the mantra. I think other sugar drinks have far more adverse effect on teeth and bones. The phosphoric acid in the drinks can interfere in the bone metabolism. Plain sparkling water doesn&apos;t have phosphate.
   &lt;/li&gt;
   
   &lt;li class=&quot;shared sent&quot;&gt;
@@ -393,11 +433,11 @@ Beta, but why are you drinking CO2? Isn't it bad? Don't we exhale CO&lt;sub&gt;2
   &lt;/li&gt;
 
   &lt;li class=&quot;shared sent&quot;&gt;
-  Don't become too fat. And find some time to do Yoga.
+  Don&apos;t become too fat. And find some time to do Yoga.
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
-  okay i'll go and do some &lt;a href=&quot;https://en.wikipedia.org/wiki/Shavasana&quot;&gt;Shavasana&lt;/a&gt;.
+  okay i&apos;ll go and do some &lt;a href=&quot;https://en.wikipedia.org/wiki/Shavasana&quot;&gt;Shavasana&lt;/a&gt;.
 
   &lt;img width=&quot;300&quot; height=&quot;150&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/9/9f/Shavasana.jpg&quot; alt=&quot;Shavasana&quot; /&gt;
   &lt;/li&gt;
@@ -407,7 +447,7 @@ Beta, but why are you drinking CO2? Isn't it bad? Don't we exhale CO&lt;sub&gt;2
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
-   Okay, I'll do Yoga in the morning.
+   Okay, I&apos;ll do Yoga in the morning.
    &lt;/li&gt;
 
   &lt;li class=&quot;shared sent&quot;&gt;
@@ -694,19 +734,19 @@ At the onset, one is confronted by the difficulty of defining what Hinduism is. 
 
 &lt;p&gt;Here’s the list of top five songs that I listened to today incessantly.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/mehLx_Fjv_c&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/mehLx_Fjv_c?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/mehLx_Fjv_c/hqdefault.jpg alt=''&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/mehLx_Fjv_c&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/mehLx_Fjv_c?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/mehLx_Fjv_c/hqdefault.jpg alt=&apos;&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/-05qe1MF5Pg&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/-05qe1MF5Pg?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/-05qe1MF5Pg/hqdefault.jpg alt=''&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/-05qe1MF5Pg&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/-05qe1MF5Pg?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/-05qe1MF5Pg/hqdefault.jpg alt=&apos;&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/CvBfHwUxHIk&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/CvBfHwUxHIk?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/CvBfHwUxHIk/hqdefault.jpg alt=''&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/CvBfHwUxHIk&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/CvBfHwUxHIk?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/CvBfHwUxHIk/hqdefault.jpg alt=&apos;&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/5Eqb_-j3FDA&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/5Eqb_-j3FDA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/5Eqb_-j3FDA/hqdefault.jpg alt=''&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/5Eqb_-j3FDA&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/5Eqb_-j3FDA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/5Eqb_-j3FDA/hqdefault.jpg alt=&apos;&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/-rtJtGdWeak&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/-rtJtGdWeak?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/-rtJtGdWeak/hqdefault.jpg alt=''&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/-rtJtGdWeak&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/-rtJtGdWeak?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/-rtJtGdWeak/hqdefault.jpg alt=&apos;&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 </description>
           <pubDate>2022-07-11T00:00:00-04:00</pubDate>
@@ -772,7 +812,7 @@ At the onset, one is confronted by the difficulty of defining what Hinduism is. 
 
 &lt;p&gt;Interestingly Odisha Police still has a &lt;strong&gt;pigeon service&lt;/strong&gt; to communicate in remote areas with no wireless or telephone links. The messages, written on a piece of paper, are rolled and inserted into tiny plastic capsules and tied to the feet of the pigeons&lt;sup id=&quot;fnref:pigeon&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:pigeon&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/h3Z7jnCI7SE&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/h3Z7jnCI7SE?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/h3Z7jnCI7SE/hqdefault.jpg alt='Ranjha song'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Ranjha&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/h3Z7jnCI7SE&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/h3Z7jnCI7SE?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/h3Z7jnCI7SE/hqdefault.jpg alt=&apos;Ranjha song&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Ranjha&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;eating-at-taco-bell&quot;&gt;Eating at Taco bell&lt;/h2&gt;
@@ -783,10 +823,10 @@ At the onset, one is confronted by the difficulty of defining what Hinduism is. 
 
 &lt;p&gt;You know I am a musicophile. Top five songs that I liked today&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/V7LwfY5U5WI&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/V7LwfY5U5WI?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/V7LwfY5U5WI/hqdefault.jpg alt='Ranjha song'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Ranjha&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/V7LwfY5U5WI&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/V7LwfY5U5WI?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/V7LwfY5U5WI/hqdefault.jpg alt=&apos;Ranjha song&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Ranjha&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/YVkUvmDQ3HY&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/YVkUvmDQ3HY?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/YVkUvmDQ3HY/hqdefault.jpg alt='Eminem Without me'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Eminem Without me&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/YVkUvmDQ3HY&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/YVkUvmDQ3HY?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/YVkUvmDQ3HY/hqdefault.jpg alt=&apos;Eminem Without me&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Eminem Without me&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/08NlhjpVFsU&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/08NlhjpVFsU?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/08NlhjpVFsU/hqdefault.jpg &amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
@@ -884,12 +924,12 @@ At the onset, one is confronted by the difficulty of defining what Hinduism is. 
 
 &lt;p&gt;Currently &lt;strong&gt;Rise of Tomb Raider&lt;/strong&gt; has a rating of 9 / 10 on &lt;strong&gt;Stream&lt;/strong&gt;. Below is the short video of the gameplay.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/WGHGG0660EY&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/WGHGG0660EY?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/WGHGG0660EY/hqdefault.jpg alt='Video Russian President Putin announces military operation in Ukraine'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Russian President Putin announces military operation in Ukraine&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/WGHGG0660EY&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/WGHGG0660EY?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/WGHGG0660EY/hqdefault.jpg alt=&apos;Video Russian President Putin announces military operation in Ukraine&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Russian President Putin announces military operation in Ukraine&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;So far I am enjoying the game. Not only I am enomored of the game mechanics, but the background music is spot on to infuse thrill. Music stimulates both psychological mood and physiological changes including heart rate and breathing. Below is the soundtrack of &lt;strong&gt;“Whispers in the Dark”&lt;/strong&gt; used in the game.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;300&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/231728401&amp;amp;color=%23ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;show_teaser=true&amp;amp;visual=true&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/231728401&amp;amp;color=%23ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=false&amp;amp;show_user=false&amp;amp;show_reposts=false&amp;amp;show_teaser=false&amp;amp;visual=false&amp;gt;&amp;lt;img src=https://i1.sndcdn.com/artworks-000135188521-dw8xae-t500x500.jpg alt=' Rise of Tomb Raider'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Rise of Tomb Raider Soundtrack&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;300&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/231728401&amp;amp;color=%23ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;show_teaser=true&amp;amp;visual=true&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/231728401&amp;amp;color=%23ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=false&amp;amp;show_user=false&amp;amp;show_reposts=false&amp;amp;show_teaser=false&amp;amp;visual=false&amp;gt;&amp;lt;img src=https://i1.sndcdn.com/artworks-000135188521-dw8xae-t500x500.jpg alt=&apos; Rise of Tomb Raider&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Rise of Tomb Raider Soundtrack&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Since I do not have the luxury of time, I prefer to play it on weekends. Honestly I had a crush on Lara Croft when I was in my adolescence. I think the infatuation is still there.&lt;/p&gt;
@@ -1336,7 +1376,7 @@ Build &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;: Release
 
 &lt;div class=&quot;language-lua highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;diagnostic_opts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;underline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;virtual_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;-- this it what you're looking for&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;virtual_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;-- this it what you&apos;re looking for&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;signs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;update_in_insert&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -1383,18 +1423,18 @@ Build &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;: Release
 
 
 &lt;span class=&quot;c&quot;&gt;# This config will prevent wsl2 from overwritting the resolve.conf file everytime you start wsl2&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'echo &quot;[network]&quot; &amp;gt; /etc/wsl.conf'&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'echo &quot;generateResolvConf = false&quot; &amp;gt;&amp;gt; /etc/wsl.conf'&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;echo &quot;[network]&quot; &amp;gt; /etc/wsl.conf&apos;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;echo &quot;generateResolvConf = false&quot; &amp;gt;&amp;gt; /etc/wsl.conf&apos;&lt;/span&gt;
 
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo rm&lt;/span&gt; /etc/resolv.conf
 
 &lt;span class=&quot;c&quot;&gt;# Add nameserver and search domain&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'echo &quot;nameserver 1.1.1.1&quot; &amp;gt; /etc/resolv.conf'&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'echo &quot;nameserver 8.8.8.8&quot; &amp;gt;&amp;gt; /etc/resolv.conf'&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;echo &quot;nameserver 1.1.1.1&quot; &amp;gt; /etc/resolv.conf&apos;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;echo &quot;nameserver 8.8.8.8&quot; &amp;gt;&amp;gt; /etc/resolv.conf&apos;&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# Get following value from step 1&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'echo &quot;nameserver x.x.x.x&quot; &amp;gt;&amp;gt; /etc/resolv.conf'&lt;/span&gt; 
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;echo &quot;nameserver x.x.x.x&quot; &amp;gt;&amp;gt; /etc/resolv.conf&apos;&lt;/span&gt; 
 &lt;span class=&quot;c&quot;&gt;# Get following value from step 2&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'echo &quot;search .com&quot; &amp;gt;&amp;gt; /etc/resolv.conf'&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;echo &quot;search .com&quot; &amp;gt;&amp;gt; /etc/resolv.conf&apos;&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# Make the new /etc/resolve.conf immutable&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chattr +i /etc/resolv.conf 
@@ -1436,12 +1476,12 @@ Build &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;: Release
 
 &lt;p&gt;I grew up in India with a diet of basmati rice and superstition. I have seen pedestrians freezing at the sight of a black cat crossing their path for fear of bad luck. Lemon and chilis hang in front of vehicles to ward off bad spirits. I fondly remember numerous advertisements proclaiming protection from evil eyes. Recently I stumbled upon an ad that refreshed my memories.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/3emy2HwSwuo&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/3emy2HwSwuo?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/3emy2HwSwuo/hqdefault.jpg alt='Video Sidh Nazar Raksha Kavach '&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sidh Nazar Raksha Kavach &quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/3emy2HwSwuo&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/3emy2HwSwuo?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/3emy2HwSwuo/hqdefault.jpg alt=&apos;Video Sidh Nazar Raksha Kavach &apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sidh Nazar Raksha Kavach &quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Another gem is a video by Numerologist, Sanjay Sethi, for doling out remedies for protection from Evil eyes. “Take little raw milk on a Saturday or a Sunday and give 7 rounds of it around the affected person head and after that give that milk to a black dog to drink…(sic)”.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/zsHsIoNr-JA&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/zsHsIoNr-JA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/zsHsIoNr-JA/hqdefault.jpg alt='Video How to protect yourself from Evil Eye'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;How to protect yourself from Evil Eye &quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/zsHsIoNr-JA&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/zsHsIoNr-JA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/zsHsIoNr-JA/hqdefault.jpg alt=&apos;Video How to protect yourself from Evil Eye&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;How to protect yourself from Evil Eye &quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;When I moved to the United States, I believed I left behind the ghost of superstition. A society not plagued with superstition and has a knack for scientific temperament. But my beliefs were shattered when I took an elevator to my new apartment. Why was floor 13&lt;sup&gt;th&lt;/sup&gt; missing in the elevator?&lt;/p&gt;
@@ -1455,7 +1495,7 @@ Build &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;: Release
 
 &lt;div class=&quot;js-lazytube&quot; data-embed=&quot;&quot; data-width=&quot;640&quot;&gt;&lt;/div&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/MTykayOv_XA&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/MTykayOv_XA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/MTykayOv_XA/hqdefault.jpg alt='Video The Sorceror Stone- Platform Nine and Three Quarters'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;The Sorceror Stone- Platform Nine and Three Quarters&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/MTykayOv_XA&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/MTykayOv_XA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/MTykayOv_XA/hqdefault.jpg alt=&apos;Video The Sorceror Stone- Platform Nine and Three Quarters&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;The Sorceror Stone- Platform Nine and Three Quarters&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Why was the floor 13&lt;sup&gt;th&lt;/sup&gt; missing? It’s purely a business decision. 13 percent of Americans in a 2007 Gallup poll said that it would bother them to stay in a room on 13 floors in a hotel&lt;sup id=&quot;fnref:usa-poll&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:usa-poll&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. In 2015, an NYC housing data firm called CityReality released that only 9% of all apartment buildings in NYC had 13th floor&lt;sup id=&quot;fnref:nyc&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:nyc&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Many airlines like Air France, Lufthansa, Iberia and Ryanair are some of the airlines that don’t have row number 13&lt;sup id=&quot;fnref:airline&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:airline&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
@@ -1504,7 +1544,7 @@ EOF
 
 &lt;p&gt;Remove dates which are empty.&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'date'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;selection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;date&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos; &apos;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -1576,7 +1616,7 @@ EOF
 
 &lt;p&gt;After the outbreak of &lt;a href=&quot;https://en.wikipedia.org/wiki/COVID-19_pandemic&quot; target=&quot;#&quot;&gt;Covid-19 pandemic&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)&quot; target=&quot;_blank&quot;&gt;Fall of Kabul&lt;/a&gt;, year 2022 was supposed to instill normalcy back into the world. However world looks more topsy-turvy than before with the advent of war between Ukraine and Russia.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/mf6cWinJz9k&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/mf6cWinJz9k?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/mf6cWinJz9k/hqdefault.jpg alt='Video Russian President Putin announces military operation in Ukraine'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Russian President Putin announces military operation in Ukraine&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/mf6cWinJz9k&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/mf6cWinJz9k?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/mf6cWinJz9k/hqdefault.jpg alt=&apos;Video Russian President Putin announces military operation in Ukraine&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Russian President Putin announces military operation in Ukraine&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wars is a terrible tragedy with no winners. United States has spent more than $8 trillion dollars on the post-9/11 wars in Afghanistan, Pakistan, Iraq, and elsewhere&lt;sup id=&quot;fnref:usa-cost&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:usa-cost&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. The Soviet Union had to splurge more than $50 billion in continuing the protracted war in Afghanistan&lt;sup id=&quot;fnref:soviet-cost&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:soviet-cost&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Wars drag countries back for decades due to insurmountable economic loss.&lt;/p&gt;
@@ -1601,7 +1641,7 @@ EOF
 
 &lt;p&gt;Numerical strength or a huge stash of weapons alone doesn’t guarantee success in a war. The psyche of the armed forces is affected by the response of their leaders. Afghanistan army had fought valiantly against the Taliban on multiple occassions. However post withdrawl of United States army and lack of political will of Afghan politicians, Afghanistan army began to lose morale and some of their forces started to flee without fighting the Taliban.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/4eeQKPZsz2E&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/4eeQKPZsz2E?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/4eeQKPZsz2E/hqdefault.jpg alt='Afghan security forces flee without a fight as more districts fall to the Taliban'&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Afghan security forces flee without a fight as more districts fall to the Taliban&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/4eeQKPZsz2E&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/4eeQKPZsz2E?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/4eeQKPZsz2E/hqdefault.jpg alt=&apos;Afghan security forces flee without a fight as more districts fall to the Taliban&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Afghan security forces flee without a fight as more districts fall to the Taliban&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;In contrast, Ukrainian border guards at Snake Island, refused to surrender to a Russian warship despite knowing inevitable decimation.&lt;/p&gt;
@@ -1681,7 +1721,7 @@ EOF
 &lt;p&gt;Sometimes you might want to reduce the size of the lambda layer since there is a size quota in AWS&lt;sup id=&quot;fnref:quota&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:quota&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;__pycache__&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-type&lt;/span&gt; d | xargs &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find ./ &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*.pyc'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-type&lt;/span&gt; f &lt;span class=&quot;nt&quot;&gt;-delete&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find ./ &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;*.pyc&apos;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-type&lt;/span&gt; f &lt;span class=&quot;nt&quot;&gt;-delete&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;tests&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-type&lt;/span&gt; d | xargs &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -1742,7 +1782,7 @@ EOF
 
 &lt;p&gt;On clicking the button, we need to call the function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darkmode&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByClassName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dark-mode-button&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onclick&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByClassName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dark-mode-button&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onclick&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;darkmode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1750,17 +1790,17 @@ EOF
 &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localStorage&lt;/code&gt; object allows you to save key/value pairs in the browser. This is useful to save the state of your application between page loads.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;darkmode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dark-mode&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dark-mode&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchMedia&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchMedia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;(prefers-color-scheme: dark)&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchMedia&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matchMedia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;(prefers-color-scheme: dark)&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;enable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;enable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dark-mode&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dark-mode&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;nx&quot;&gt;enable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;nx&quot;&gt;disable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
@@ -1773,12 +1813,12 @@ EOF
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;enable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;DarkReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setFetchMethod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;DarkReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dark-mode&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dark-mode&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;disable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;DarkReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;disable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dark-mode&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;localStorage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dark-mode&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -2380,7 +2420,7 @@ prerequisites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quo
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Input: s &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;abcd&quot;&lt;/span&gt;, k &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2
 Output: &lt;span class=&quot;s2&quot;&gt;&quot;abcd&quot;&lt;/span&gt;
-Explanation: There&lt;span class=&quot;s1&quot;&gt;'s nothing to delete.
+Explanation: There&lt;span class=&quot;s1&quot;&gt;&apos;s nothing to delete.
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;example-2&quot;&gt;Example 2&lt;/h2&gt;
@@ -2777,7 +2817,7 @@ A contiguous substring of string s is a string that can be obtained from s by re
 
 &lt;script src=&quot;/js/multipleTab.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.&lt;/p&gt;
+&lt;p&gt;It&apos;s one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.&lt;/p&gt;
 
 &lt;h2 id=&quot;problem-statement&quot;&gt;Problem Statement&lt;/h2&gt;
 
@@ -3233,7 +3273,7 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
 
 &lt;script src=&quot;/js/multipleTab.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;There's an interesting problem I recently solved on leetcode based on dynamic programming. My &lt;a href=&quot;https://github.com/tushar-sharma/prep-coding&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt; repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution.&lt;/p&gt;
+&lt;p&gt;There&apos;s an interesting problem I recently solved on leetcode based on dynamic programming. My &lt;a href=&quot;https://github.com/tushar-sharma/prep-coding&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt; repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution.&lt;/p&gt;
 
 &lt;p&gt;Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. A subarray is a contiguous part of an array.&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -3735,7 +3775,7 @@ For this tutorial, we will use L1 construct. However same concept can be used fo
 &lt;script src=&quot;https://gist.github.com/tushar-sharma/167a194b3e9258d39e176905a6788d9b.js?file=synth_output1.yaml&quot;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&quot;attention&quot;&gt;
-For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a safety check, to verify that the bootstrap stack in the target environment meets the minimum requirements of the current stack&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.
+For CDK v2, CheckBootstrapVersion rule is added to the Stack&apos;s template as a safety check, to verify that the bootstrap stack in the target environment meets the minimum requirements of the current stack&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;stepfunction&quot;&gt;Stepfunction&lt;/h2&gt;
@@ -3844,7 +3884,7 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a saf
 
 &lt;p&gt;What’s a nationality? The idea of the nation-state is pretty modern. Ancient lands were usually under the suzerainty of kings &amp;amp; queens. While most emperors spilled blood to expand their kingdom, the common man was seldom concerned about borders.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Peace_of_Westphalia&quot;&gt;Peace of Westphalia&lt;/a&gt; was a famous peace treaty in 1648 that ended &lt;a href=&quot;https://en.wikipedia.org/wiki/Thirty_Years'_War&quot;&gt;thirty years war&lt;/a&gt;. Historians often cite this as an example of first nation state. It relied on a system of independent states refraining from interference in each other’s domestic affairs and checking each other’s ambitions through a general equilibrium of power.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Peace_of_Westphalia&quot;&gt;Peace of Westphalia&lt;/a&gt; was a famous peace treaty in 1648 that ended &lt;a href=&quot;https://en.wikipedia.org/wiki/Thirty_Years&apos;_War&quot;&gt;thirty years war&lt;/a&gt;. Historians often cite this as an example of first nation state. It relied on a system of independent states refraining from interference in each other’s domestic affairs and checking each other’s ambitions through a general equilibrium of power.&lt;/p&gt;
 
 &lt;p&gt;I was born in Dehradun, a valley crowned by the mountains of Mussoorie. “A town called Dehra” is a phrase immortalized by Ruskin Bond stories. Doon is a place that has nurtured us. We love Dehradun because we were born there &amp;amp; it dwells in our memories. Were we born in Albania, we would probably be romanticizing the streets of Albania.&lt;/p&gt;
 
@@ -3874,7 +3914,7 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a saf
     
       
         <item>
-          <title>Dear Vishi, what's a carcinogen?</title>
+          <title>Dear Vishi, what&apos;s a carcinogen?</title>
           <description>&lt;p&gt;If you are not living under a cave, you probably have already heard about carcinogens. News is often awash with headlines alerting perils of carcinogens. In a nutshell, these are substances that have the potential to cause cancer. Not all carcinogens cause cancer. Not all cancer is caused by carcinogens. Cancer is a complicated group of diseases. Of course, it’s not my forte to expound on the subject of cancer. However, we should try to understand how carcinogens are identified and what we should do to protect ourselves.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/carcinogen&quot; title=&quot;View posts tagged with &amp;quot;carcinogen&amp;quot;&quot;&gt;carcinogen&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/meditation&quot; title=&quot;View posts tagged with &amp;quot;meditation&amp;quot;&quot;&gt;meditation&lt;/a&gt;    &lt;/p&gt;
 
@@ -3955,15 +3995,15 @@ Om Peace, peace, peace.&lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot;&gt;
 function changeImage(elem) {
-  var imageUrl = elem.getAttribute('image');
-  document.getElementById('imgview').setAttribute('src', imageUrl);
+  var imageUrl = elem.getAttribute(&apos;image&apos;);
+  document.getElementById(&apos;imgview&apos;).setAttribute(&apos;src&apos;, imageUrl);
 }
-document.querySelector('[value=&quot;one&quot;]').click();
+document.querySelector(&apos;[value=&quot;one&quot;]&apos;).click();
 &lt;/script&gt;
 
 &lt;h2 id=&quot;meditation&quot;&gt;Meditation&lt;/h2&gt;
 
-&lt;p&gt;Today I tried to meditate again. I used Insight Timer app for background sound. However I think I'll just stick to Youtube as it has more varieties. I struggled for 20 minutes sitting cross-legged as my mind wandered in the labyrinth of thoughts. I guess it will take more practice to hone my skill. Have you ever wondered how monks can meditate for countless hours or days?&lt;/p&gt;
+&lt;p&gt;Today I tried to meditate again. I used Insight Timer app for background sound. However I think I&apos;ll just stick to Youtube as it has more varieties. I struggled for 20 minutes sitting cross-legged as my mind wandered in the labyrinth of thoughts. I guess it will take more practice to hone my skill. Have you ever wondered how monks can meditate for countless hours or days?&lt;/p&gt;
 
 &lt;p&gt;There’s a very famous picture of a Vietnamese monk called &lt;a href=&quot;https://en.wikipedia.org/wiki/Th%C3%ADch_Qu%E1%BA%A3ng_%C4%90%E1%BB%A9c&quot;&gt;Thích Quảng Đức&lt;/a&gt;. He was protesting against the persecution of Buddhist. He self-immolated himself without making any fuss. I apologize if you find following image disturbing.&lt;/p&gt;
 
@@ -4126,7 +4166,7 @@ However Nehru was critical of Aurangzeb, who was the last ruler of the Mughal Em
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Creating virtualenv usa &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; /home/project/.venv    
   ModuleNotFoundError  
-  No module named &lt;span class=&quot;s1&quot;&gt;'virtualenv.seed.via_app_data'&lt;/span&gt;
+  No module named &lt;span class=&quot;s1&quot;&gt;&apos;virtualenv.seed.via_app_data&apos;&lt;/span&gt;
   at &amp;lt;frozen importlib._bootstrap&amp;gt;:973 &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;_find_and_load_unlocked
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -4437,7 +4477,7 @@ msft,0,0,230,0
 
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/windows&quot; title=&quot;View posts tagged with &amp;quot;windows&amp;quot;&quot;&gt;windows&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/poetry&quot; title=&quot;View posts tagged with &amp;quot;poetry&amp;quot;&quot;&gt;poetry&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/bug&quot; title=&quot;View posts tagged with &amp;quot;bug&amp;quot;&quot;&gt;bug&lt;/a&gt;    &lt;/p&gt;
 
-&lt;p&gt;Poetry is a great dependency management tool in python. It's better than managing a flat file like `requirements.txt`. There are also other great tools like pipenv. However I found poetry much simpler in resolving dependencies. &lt;/p&gt;
+&lt;p&gt;Poetry is a great dependency management tool in python. It&apos;s better than managing a flat file like `requirements.txt`. There are also other great tools like pipenv. However I found poetry much simpler in resolving dependencies. &lt;/p&gt;
 
 &lt;p&gt;Recently poetry has been crashing on my Windows machine. However, I have not encountered this issue in other platform like Linux. Folks who are unfamiliar with poetry, below is a quick refresher.&lt;/p&gt;
 
@@ -4467,7 +4507,7 @@ msft,0,0,230,0
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Creating virtualenv myproject-xkRwmYf0-py3.7 &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; .venv
 
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Env CommandError]
-Command &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.venv\\myproject\\Scripts\\python.exe'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'-'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; errored with the follwiong &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;code 1, and output:
+Command &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;.venv\\myproject\\Scripts\\python.exe&apos;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;&apos;-&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; errored with the follwiong &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;code 1, and output:
 The system cannot find the path specified
 input was : import sys
 
@@ -4481,7 +4521,7 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
 
 &lt;p&gt;Since poetry tries to create virtualenv under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.venv&lt;/code&gt; folder, there’s a quick workaround by removing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;carriage return&lt;/code&gt; from activate Scripts&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;perl &lt;span class=&quot;nt&quot;&gt;-pe&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/\r$//'&lt;/span&gt; &amp;lt; .venv/myproject-xkRwmYf0-py3.7/Scripts/activate &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; activate
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;perl &lt;span class=&quot;nt&quot;&gt;-pe&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/\r$//&apos;&lt;/span&gt; &amp;lt; .venv/myproject-xkRwmYf0-py3.7/Scripts/activate &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; activate
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;activate .venv/myproject-xkRwmYf0-py3.7/Scripts/activate 
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -4597,7 +4637,7 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
 
 &lt;p&gt; I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/rFP0iF5toOg&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/rFP0iF5toOg?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg &amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Homeopathy is the best friend for a Women's Health&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/rFP0iF5toOg&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/rFP0iF5toOg?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg &amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Homeopathy is the best friend for a Women&apos;s Health&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;allopathy-vs-homeopathy&quot;&gt;Allopathy vs Homeopathy&lt;/h2&gt;
@@ -4774,7 +4814,7 @@ Claims that homeopathy can cure genetic disorders
 
 
     &lt;li id=&quot;fn:10&quot;&gt;
-             &lt;p&gt;&lt;a href=&quot;https://www.reuters.com/article/us-india-ganges/indias-federal-auditor-slams-modis-slow-ganges-clean-up-idUSKBN1EN0LL&quot; target=&quot;_blank&quot;&gt;India's federal auditor slams Modi's slow Ganges clean-up&lt;/a&gt;&lt;/p&gt;
+             &lt;p&gt;&lt;a href=&quot;https://www.reuters.com/article/us-india-ganges/indias-federal-auditor-slams-modis-slow-ganges-clean-up-idUSKBN1EN0LL&quot; target=&quot;_blank&quot;&gt;India&apos;s federal auditor slams Modi&apos;s slow Ganges clean-up&lt;/a&gt;&lt;/p&gt;
          &lt;a href=&quot;#fnref:10&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;
     &lt;/li&gt;
 
@@ -4790,8 +4830,8 @@ Claims that homeopathy can cure genetic disorders
     
       
         <item>
-          <title>Demon Haunted World's review part 1</title>
-          <description>&lt;p&gt;This is my Part 1 of the review of Carl Sagan's book, Demon-Haunted World. This is more of my commentary rather than a review of the book.&lt;/p&gt;
+          <title>Demon Haunted World&apos;s review part 1</title>
+          <description>&lt;p&gt;This is my Part 1 of the review of Carl Sagan&apos;s book, Demon-Haunted World. This is more of my commentary rather than a review of the book.&lt;/p&gt;
 
 &lt;p&gt;I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience and misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical &amp;amp; skeptical thinking from a famous astrophysicist, Carl Sagan.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -5726,15 +5766,15 @@ output array = [2 8 10 1 1 7]
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Naively I belived that new diseases were nature's way of pushing against human's advancement in science. Nature had to ensure that human's dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) &amp;amp; karma (accumulated effects of good and bad actions) somehow illusioned to maintain harmony in the world. But evolution shattered my perception of reality.&lt;/p&gt;
+&lt;p&gt;Naively I belived that new diseases were nature&apos;s way of pushing against human&apos;s advancement in science. Nature had to ensure that human&apos;s dont overflow the planet. I belived in Rita (Sanskrit ṛta ), a cosmic order of the universe. The wheel of dharma(duty) &amp;amp; karma (accumulated effects of good and bad actions) somehow illusioned to maintain harmony in the world. But evolution shattered my perception of reality.&lt;/p&gt;
 
 &lt;p&gt;A famous poem “In Memorial A.H.H” by Lord Alfred Tennyson tries to reconcile with the violent natural world&lt;/p&gt;
 
 &lt;blockquote&gt;
 Who trusted God was love indeed&lt;br /&gt;
-And love Creation's final law&lt;br /&gt;
-Tho' Nature, red in tooth and claw&lt;br /&gt;
-With ravine, shriek'd against his creed&lt;br /&gt;
+And love Creation&apos;s final law&lt;br /&gt;
+Tho&apos; Nature, red in tooth and claw&lt;br /&gt;
+With ravine, shriek&apos;d against his creed&lt;br /&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -5755,7 +5795,7 @@ With ravine, shriek'd against his creed&lt;br /&gt;
 &lt;p&gt;Lewis Caroll was not only a world famous children’s writer but also a mathematician. Hence it’s not surprising to find intriguing logics in his writings. One such writing that I stumbled upon was an incident that appears in Lewis Carroll’s Through the Looking-Glass.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&quot;Well, in our country,&quot; said Alice, still panting a little, &quot;you'd generally get to somewhere else—if you run very fast for a long time, as we've been doing.&quot;&lt;br /&gt;&lt;br /&gt;
+&quot;Well, in our country,&quot; said Alice, still panting a little, &quot;you&apos;d generally get to somewhere else—if you run very fast for a long time, as we&apos;ve been doing.&quot;&lt;br /&gt;&lt;br /&gt;
 &quot;A slow sort of country!&quot; said the Queen. &quot;Now, here, you see, it takes all the running you can do, to keep in the same place. If you want to get somewhere else, you must run at least twice as fast as that!&quot;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -5878,7 +5918,7 @@ With ravine, shriek'd against his creed&lt;br /&gt;
     
       
         <item>
-          <title>Decoding ndtv darwin's theory debate</title>
+          <title>Decoding ndtv darwin&apos;s theory debate</title>
           <description>&lt;p&gt;I wanted to decode an old debate that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India’s Minister of State for Human Resource Development. He had claimed that evolution is “scientifically wrong” because he never &lt;strong&gt;saw an ape turning into human being&lt;/strong&gt;.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/pseudoscience&quot; title=&quot;View posts tagged with &amp;quot;pseudoscience&amp;quot;&quot;&gt;pseudoscience&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/evolution&quot; title=&quot;View posts tagged with &amp;quot;evolution&amp;quot;&quot;&gt;evolution&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/india&quot; title=&quot;View posts tagged with &amp;quot;india&amp;quot;&quot;&gt;india&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/ndtv&quot; title=&quot;View posts tagged with &amp;quot;ndtv&amp;quot;&quot;&gt;ndtv&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/news&quot; title=&quot;View posts tagged with &amp;quot;news&amp;quot;&quot;&gt;news&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/debate&quot; title=&quot;View posts tagged with &amp;quot;debate&amp;quot;&quot;&gt;debate&lt;/a&gt;    &lt;/p&gt;
@@ -5995,7 +6035,7 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
         &lt;/li&gt;
 
 	   &lt;li id=&quot;fn:2&quot;&gt;
-         &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xppn7ITteZw&quot; target=&quot;_blank&quot;&gt;Amitabh Joshi's Youtube video&lt;/a&gt;&lt;/p&gt;
+         &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xppn7ITteZw&quot; target=&quot;_blank&quot;&gt;Amitabh Joshi&apos;s Youtube video&lt;/a&gt;&lt;/p&gt;
          &lt;a href=&quot;#fnref:2&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;
        &lt;/li&gt;
 
@@ -6140,7 +6180,7 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
 &lt;p&gt;The flourishing godmen in Indian who have been accused of terrorism, rape , etc have still have hordes of people rallying for them. India probably has the only constitution in the world which explicitly promotes scientific temper.&lt;/p&gt;
 
 &lt;blockquote&gt;
-'To develop scientific temper, humanism and the spirit of inquiry and reform' is one of the fundamental duties of the people of the Republic of India, according to the Constitution of India.
+&apos;To develop scientific temper, humanism and the spirit of inquiry and reform&apos; is one of the fundamental duties of the people of the Republic of India, according to the Constitution of India.
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -6179,7 +6219,7 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
 &lt;ul class=&quot;chatlist &quot;&gt;
 
 &lt;li class=&quot;shared received&quot;&gt;
-Good morning Tushar, My name is Upeksa and I'm a professional, single and decent. I find your ads on Sulekha interesting and meets my specification, can you please respond back as I'm very serious about renting this unit
+Good morning Tushar, My name is Upeksa and I&apos;m a professional, single and decent. I find your ads on Sulekha interesting and meets my specification, can you please respond back as I&apos;m very serious about renting this unit
 &lt;/li&gt;
 
 &lt;li class=&quot;shared sent&quot;&gt;
@@ -6187,13 +6227,13 @@ Hi Upeksa. How are you? If you are interested, you can call me on my number so t
 &lt;/li&gt;
 
 &lt;li class=&quot;shared received&quot;&gt;
-I'm here Tushar, due to middle ear infections I will only respond to text
+I&apos;m here Tushar, due to middle ear infections I will only respond to text
 &lt;/li&gt;
 
 &lt;/ul&gt;
 
 &lt;blockquote class=&quot;attention&quot;&gt;
-If a person doesn't pick your phone, most probably he is not genuine.
+If a person doesn&apos;t pick your phone, most probably he is not genuine.
 &lt;/blockquote&gt;
 
 &lt;ul class=&quot;chatlist &quot;&gt;
@@ -6202,7 +6242,7 @@ If a person doesn't pick your phone, most probably he is not genuine.
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
-  Unfortunately I can't view this unit at the moment
+  Unfortunately I can&apos;t view this unit at the moment
   &lt;/li&gt;
 
   &lt;li class=&quot;shared sent&quot;&gt;
@@ -6210,7 +6250,7 @@ If a person doesn't pick your phone, most probably he is not genuine.
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
-  Sure I'm interested in renting this room in the apartment  
+  Sure I&apos;m interested in renting this room in the apartment  
   &lt;/li&gt;
 
 
@@ -6236,7 +6276,7 @@ So how do we go forward? Do you want to see the pics or ask any details?
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
-  Perfect, I'm very comfortable with my rent
+  Perfect, I&apos;m very comfortable with my rent
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -6244,11 +6284,11 @@ So how do we go forward? Do you want to see the pics or ask any details?
 
 &lt;ul class=&quot;chatlist &quot;&gt;
   &lt;li class=&quot;shared received&quot;&gt;
-  Brief introduction about myself. I'm a pure vegetarian, a professional in the IT sector, I live and work here in Hawaii but on a job relocation hence will need a place to rent as I have 6/12 months project I need to work on. I still kind of follow the Hindu culture partially I am not a traditional Hindu person. Am originally from Eluru A.P. Have been around the USA for a while now.
+  Brief introduction about myself. I&apos;m a pure vegetarian, a professional in the IT sector, I live and work here in Hawaii but on a job relocation hence will need a place to rent as I have 6/12 months project I need to work on. I still kind of follow the Hindu culture partially I am not a traditional Hindu person. Am originally from Eluru A.P. Have been around the USA for a while now.
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
-  I am 34 yrs, I will be staying alone on my arrival. I work for CISCO SYSTEMS as a security expert (BASICALLY IN CHARGE OF THEIR SERVERS). I don't drink, or smoke. I am easy to get free along with others. I respect people's privacy and also love to live in a clean house
+  I am 34 yrs, I will be staying alone on my arrival. I work for CISCO SYSTEMS as a security expert (BASICALLY IN CHARGE OF THEIR SERVERS). I don&apos;t drink, or smoke. I am easy to get free along with others. I respect people&apos;s privacy and also love to live in a clean house
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -6339,7 +6379,7 @@ If anyone is sending you extra money, be very careful.
   &lt;/li&gt;
 
   &lt;li class=&quot;shared sent&quot;&gt;
-  See if you transfer any amount to my account, it has to be exact $***, else I won't cash it
+  See if you transfer any amount to my account, it has to be exact $***, else I won&apos;t cash it
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
@@ -6354,15 +6394,15 @@ If anyone is sending you extra money, be very careful.
   Please, this will be the only time I will make payment in this form. OK
   &lt;/li&gt;
   &lt;li class=&quot;shared received&quot;&gt;
-  Please I'm pleading with you to assist me with this and I promise you will not regret helping me out
+  Please I&apos;m pleading with you to assist me with this and I promise you will not regret helping me out
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
-  I don't want to lose this great opportunity
+  I don&apos;t want to lose this great opportunity
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
-  I already take you as a family and I honestly can't wait to meet you in person on arrival
+  I already take you as a family and I honestly can&apos;t wait to meet you in person on arrival
   &lt;/li&gt;
 
   &lt;li class=&quot;shared received&quot;&gt;
@@ -6417,7 +6457,7 @@ Alright, please what is the update regarding the cheque payment that I sent to y
 &lt;/ul&gt;
 
 &lt;blockquote class=&quot;attention&quot;&gt;
-He didn't ask me how come I have orangutan in my apartment. How often do people keep apes as pets ? But all he cares about is cheque deposit.
+He didn&apos;t ask me how come I have orangutan in my apartment. How often do people keep apes as pets ? But all he cares about is cheque deposit.
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -6464,11 +6504,11 @@ He didn't ask me how come I have orangutan in my apartment. How often do people 
 
 &lt;ul class=&quot;chatlist &quot;&gt;
   &lt;li class=&quot;shared sent&quot;&gt;
-Ok . I'll deposit it today. But I wanted to know more about you? Are you married ?
+Ok . I&apos;ll deposit it today. But I wanted to know more about you? Are you married ?
 &lt;/li&gt;
 
 &lt;li class=&quot;shared received&quot;&gt;
-Perfect and no I have never been married. I'm still single
+Perfect and no I have never been married. I&apos;m still single
 &lt;/li&gt;
 
 &lt;li class=&quot;shared sent&quot;&gt;
@@ -6484,11 +6524,11 @@ Are you a pure vegetarian? I sometimes eat seafood, chicken, sea-shell, duck or 
 &lt;/li&gt;
 
 &lt;li class=&quot;shared received&quot;&gt;
-Sure I honestly don't have any problem with you eating habit in the unit but I'm a pure vegetarian and I don't cook.
+Sure I honestly don&apos;t have any problem with you eating habit in the unit but I&apos;m a pure vegetarian and I don&apos;t cook.
 &lt;/li&gt;
 
 &lt;li class=&quot;shared sent&quot;&gt;
-Ok. I 'll deposit the cheque today after work. Also, I forgot to tell you that I practice Tantra. As a traditional Hindu myself, I sometimes practice nudity in my apartment. I hope that wouldn't bother you.
+Ok. I &apos;ll deposit the cheque today after work. Also, I forgot to tell you that I practice Tantra. As a traditional Hindu myself, I sometimes practice nudity in my apartment. I hope that wouldn&apos;t bother you.
 &lt;/li&gt;
 
 
@@ -6504,7 +6544,7 @@ He has no problem with me being cannibal or nude. He was agreeing to pretty much
 
 &lt;ul class=&quot;chatlist &quot;&gt;
   &lt;li class=&quot;shared sent&quot;&gt;
-That's very nice. So what are your skills ? Do you work in JAVA / C++ , Python ?&lt;/li&gt;
+That&apos;s very nice. So what are your skills ? Do you work in JAVA / C++ , Python ?&lt;/li&gt;
 
 &lt;li class=&quot;shared received&quot;&gt;
 You have asked me a million questions, please update me as soon as you deposit the cheque.
@@ -6853,7 +6893,7 @@ And therein lies your real fear.&quot;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&quot;You can find poetry in your everyday life, your memory, in what people say on the bus, in the news, or just what's in your heart.&quot; - Carol Ann Duffy 
+&quot;You can find poetry in your everyday life, your memory, in what people say on the bus, in the news, or just what&apos;s in your heart.&quot; - Carol Ann Duffy 
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -6964,9 +7004,9 @@ Image credit ~ &lt;a href=&quot;https://xkcd.com/1240/&quot;&gt;xckd&lt;/a&gt;
 
 &lt;p&gt;Capture all &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt; request using tshark on the network interface &amp;amp; save it to the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/out.ncap&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ tshark -i en1 -f 'port 80 and 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ tshark -i en1 -f &apos;port 80 and 
 (tcp[((tcp[12:1] &amp;amp; 0xf0) &amp;gt;&amp;gt; 2):4] = 0x504F5354 or 
-tcp[((tcp[12:1] &amp;amp; 0xf0) &amp;gt;&amp;gt; 2):4] = 0x47455420)' -w ~/out.ncap   
+tcp[((tcp[12:1] &amp;amp; 0xf0) &amp;gt;&amp;gt; 2):4] = 0x47455420)&apos; -w ~/out.ncap   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The above commands looks gibberish, however if you analyze closely, its plain easy. Lets read it line by line&lt;/p&gt;
@@ -7086,7 +7126,7 @@ tcp[((tcp[12:1] &amp;amp; 0xf0) &amp;gt;&amp;gt; 2):4] = 0x47455420)' -w ~/out.n
 
 &lt;p&gt;If you are using Windows, you can find many bootable software like Unetbootin.&lt;/p&gt;
 
-&lt;p&gt;Next you need to plug in your bootable medium &amp;amp; select your computer to boot from that instead of your default boot medium. After successful booting, you will be greeted with a bluish black screen with multiple options. I'll proceed with the first option which loads a 64 bits Arch Linux. &lt;/p&gt;
+&lt;p&gt;Next you need to plug in your bootable medium &amp;amp; select your computer to boot from that instead of your default boot medium. After successful booting, you will be greeted with a bluish black screen with multiple options. I&apos;ll proceed with the first option which loads a 64 bits Arch Linux. &lt;/p&gt;
 
 &lt;p&gt; 
 &lt;img src=&quot;/img/arch_start.png&quot; /&gt;
@@ -7619,7 +7659,7 @@ void countingSortSwap(char S[][k], int j)
     int count[256] = {0};
 
     char temp[n][k];
-    temp[0][0] = ' ';
+    temp[0][0] = &apos; &apos;;
 
 
     for (int i = 0; i &amp;lt; n; i++) {
@@ -7854,14 +7894,14 @@ relish your sourrounding.
 &lt;img src=&quot;/img/sunset.jpg&quot; /&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Well, the sunset is beautiful because it's obvious to your eyes. Similarly programming is beautiful for those who enjoy it. Below is the poem which which eulogises lisp programming language&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; but it may be bland for those who have no experience with lisp.
+&lt;p&gt;Well, the sunset is beautiful because it&apos;s obvious to your eyes. Similarly programming is beautiful for those who enjoy it. Below is the poem which which eulogises lisp programming language&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; but it may be bland for those who have no experience with lisp.
 
 &lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Now, some folks on the Internet
 put their faith in C++.
-They swear that it's so powerful,
-it's what God used for us.
+They swear that it&apos;s so powerful,
+it&apos;s what God used for us.
 And maybe it lets mortals dredge
 their objects from the C.
 But I think that explains
@@ -7870,7 +7910,7 @@ why only God can make a tree.
 For God wrote in Lisp code
 When he filled the leaves with green.
 The fractal flowers and recursive roots:
-The most lovely hack I've seen.
+The most lovely hack I&apos;ve seen.
 And when I ponder snowflakes,
 never finding two the same,
 I know God likes a language
@@ -8028,7 +8068,7 @@ with its own four-letter name.
 &lt;/center&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Leslee Udwin, the maker of the documentary, has flown out of India citing her security. In an interview to BBC, she said, “But I’m not muzzled. Nor will I be muzzled” &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. India’s Home Minister, Rajnath Singh, was furious &amp;amp; sought report from Tihar’s jail authorities on how the Nirbhaya's rape accused had given a controversial interview to BBC &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. &quot;This is an international conspiracy to defame India. We will see how the film can be stopped abroad too&quot;, said parliamentary affairs minister M. Venkaiah Naidu &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
+&lt;p&gt;Leslee Udwin, the maker of the documentary, has flown out of India citing her security. In an interview to BBC, she said, “But I’m not muzzled. Nor will I be muzzled” &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. India’s Home Minister, Rajnath Singh, was furious &amp;amp; sought report from Tihar’s jail authorities on how the Nirbhaya&apos;s rape accused had given a controversial interview to BBC &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. &quot;This is an international conspiracy to defame India. We will see how the film can be stopped abroad too&quot;, said parliamentary affairs minister M. Venkaiah Naidu &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
 &lt;/p&gt;
 
 &lt;p&gt;Kudos to the government for silencing the interviewer. We don’t want another ‘Slumdog millionaire’ to remind us of the filth in our society. We are a competing global power. We just launched a satellite to Mars for God’s sake. Such western propaganda will not work. How dare a western correspondent air something demeaning to our country? Shouldn’t she need to visit Taj Majal and experience incredible India?&lt;/p&gt;
@@ -8394,7 +8434,7 @@ Or our love will be a mournful chime? &lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;Einstein became disillusioned with the non-deterministic model of the universe. During the dusk of his life, he ceaselessly endeavoured in finding an alternate model. These were his famous words:&lt;/p&gt;
 
 &lt;blockquote&gt;
-God doesn't play dice with the world.
+God doesn&apos;t play dice with the world.
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -8551,7 +8591,7 @@ the crop of happiness without remorse or pest &lt;br /&gt;&lt;/p&gt;
 
 &lt;div&gt;
   &lt;p&gt;
-I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &quot;It's easier this way.&quot;, he chuckled, &quot;I can quickly find all the softwares I need.&quot;. I showed him my desktop which was spick and span.&quot;Doesn't it consumes time in finding the softwares you need?&quot;, he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. &quot;You just use one software?&quot;, he asked.&quot;Mostly, yes&quot;, I said. &quot;What about *editing*, *browsing*, *music*, etc?&quot;, he asked. &quot;I do it all in emacs.&quot;, I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
+I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &quot;It&apos;s easier this way.&quot;, he chuckled, &quot;I can quickly find all the softwares I need.&quot;. I showed him my desktop which was spick and span.&quot;Doesn&apos;t it consumes time in finding the softwares you need?&quot;, he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. &quot;You just use one software?&quot;, he asked.&quot;Mostly, yes&quot;, I said. &quot;What about *editing*, *browsing*, *music*, etc?&quot;, he asked. &quot;I do it all in emacs.&quot;, I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
 &lt;/p&gt;
 &lt;/div&gt;
 
@@ -8603,12 +8643,12 @@ I once complained to my friend of his desktop on his computer. His desktop was a
 &lt;p&gt;If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses an extension &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w3m.el&lt;/code&gt; which uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w3m&lt;/code&gt; which itself is a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-browser&lt;/code&gt;. Of course there are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lynx&lt;/code&gt; and other text editors, but integrating w3m with emacs is very fast.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-common-lisp&quot; data-lang=&quot;common-lisp&quot;&gt; 
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'load-path&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;~/emacs-w3m&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'w3m-load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;browse-url-browser-function&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'w3m-browse-url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;autoload&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'w3m-browse-url&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w3m&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Ask a WWW browser to show a URL.&quot;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;load-path&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;~/emacs-w3m&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;w3m-load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;browse-url-browser-function&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;w3m-browse-url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;autoload&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;w3m-browse-url&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w3m&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Ask a WWW browser to show a URL.&quot;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;;; optional keyboard short-cut&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;global-set-key&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;\C-xm&quot;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'browse-url-at-point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;global-set-key&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;\C-xm&quot;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;browse-url-at-point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here’s a snapshot of my website in emacs.&lt;/p&gt;
 
@@ -8619,19 +8659,19 @@ I once complained to my friend of his desktop on his computer. His desktop was a
 &lt;p&gt;How about integrating emacs to view your email. You could do this by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GNUS&lt;/code&gt;. Add this to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.gnus&lt;/code&gt; file&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-common-lisp&quot; data-lang=&quot;common-lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;gnus-select-method&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;nnimap&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;gmail&quot;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;nnimap&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;gmail&quot;&lt;/span&gt;
 	       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;nnimap-address&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;imap.gmail.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 	       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;nnimap-server-port&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;993&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 	       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;nnimap-stream&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ssl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
 
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;message-send-mail-function&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'smtpmail-send-it&lt;/span&gt;
-      &lt;span class=&quot;nv&quot;&gt;smtpmail-starttls-credentials&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smtp.gmail.com&quot;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;587&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-      &lt;span class=&quot;nv&quot;&gt;smtpmail-auth-credentials&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smtp.gmail.com&quot;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;587&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;message-send-mail-function&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;smtpmail-send-it&lt;/span&gt;
+      &lt;span class=&quot;nv&quot;&gt;smtpmail-starttls-credentials&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smtp.gmail.com&quot;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;587&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;nv&quot;&gt;smtpmail-auth-credentials&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smtp.gmail.com&quot;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;587&lt;/span&gt;
 				   &lt;span class=&quot;s&quot;&gt;&quot;user@gmail.com&quot;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
       &lt;span class=&quot;nv&quot;&gt;smtpmail-default-smtp-server&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;smtp.gmail.com&quot;&lt;/span&gt;
       &lt;span class=&quot;nv&quot;&gt;smtpmail-smtp-server&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;smtp.gmail.com&quot;&lt;/span&gt;
       &lt;span class=&quot;nv&quot;&gt;smtpmail-smtp-service&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;587&lt;/span&gt;
-      &lt;span class=&quot;nv&quot;&gt;gnus-ignored-newsgroups&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\&quot;]\&quot;[#'()]&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+      &lt;span class=&quot;nv&quot;&gt;gnus-ignored-newsgroups&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\&quot;]\&quot;[#&apos;()]&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Replace user with you’re gmail username.Also add this to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.authinfo&lt;/code&gt; file&lt;/p&gt;
 
@@ -8657,11 +8697,11 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
 
 &lt;p&gt;If you love &lt;em&gt;LaTeX&lt;/em&gt;, then there are more reasons to love &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;org mode&lt;/code&gt;. You could integrated &lt;em&gt;TeX&lt;/em&gt; support and export your work in &lt;em&gt;PDF&lt;/em&gt;.For this add this to your ~/.emacs file&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-common-lisp&quot; data-lang=&quot;common-lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'org-latex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;boundp&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'org-export-latex-classes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-common-lisp&quot; data-lang=&quot;common-lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;org-latex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;boundp&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;org-export-latex-classes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;org-export-latex-classes&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'org-export-latex-classes&lt;/span&gt;
-             &lt;span class=&quot;o&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;article&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;org-export-latex-classes&lt;/span&gt;
+             &lt;span class=&quot;o&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;article&quot;&lt;/span&gt;
                &lt;span class=&quot;s&quot;&gt;&quot;\\documentclass{article}&quot;&lt;/span&gt;
                &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;\\section{ %s}&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;\\section*{ %s}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -8697,14 +8737,14 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
 
 &lt;p&gt;It will clone the folder emms. Inside the folder, there are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*el&lt;/code&gt; file inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lisp&lt;/code&gt;. Copy them all to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.emacs.d/site-lisp/emms&lt;/code&gt;. Find the executable of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mplayer&lt;/code&gt; which is usually in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/local/bin/&lt;/code&gt;. Then add this to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.emacs&lt;/code&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-common-lisp&quot; data-lang=&quot;common-lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;exec-path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;append&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;exec-path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/usr/local/bin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'load-path&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;~/.emacs.d/site-lisp/emms/lisp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'emms-setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'emms-player-mplayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-common-lisp&quot; data-lang=&quot;common-lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;exec-path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;append&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;exec-path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/usr/local/bin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;load-path&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;~/.emacs.d/site-lisp/emms/lisp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;emms-setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;emms-player-mplayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;emms-standard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;emms-default-players&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;define-emms-simple-player&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;mplayer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;regexp-opt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.ogg&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.mp3&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.wav&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.mpg&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.mpeg&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.wmv&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.wma&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;define-emms-simple-player&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;mplayer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;regexp-opt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.ogg&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.mp3&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.wav&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.mpg&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.mpeg&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.wmv&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.wma&quot;&lt;/span&gt;
                     &lt;span class=&quot;s&quot;&gt;&quot;.mov&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.avi&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.divx&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.ogm&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.asf&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.mkv&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;mms://&quot;&lt;/span&gt;
                     &lt;span class=&quot;s&quot;&gt;&quot;.rm&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.rmvb&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.mp4&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.flac&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.vob&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.m4a&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.flv&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.ogv&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.pls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
       &lt;span class=&quot;s&quot;&gt;&quot;mplayer&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-slave&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-quiet&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-really-quiet&quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-fullscreen&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -8721,7 +8761,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
 
 &lt;p&gt;To use twitter, download &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;twittering-mode.el&lt;/code&gt; and store it somewhere. Add this to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.emacs&lt;/code&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-common-lisp&quot; data-lang=&quot;common-lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'load-path&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/PATH/TO/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-common-lisp&quot; data-lang=&quot;common-lisp&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;add-to-list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;&apos;load-path&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/PATH/TO/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h4 id=&quot;emacs-for-amusement&quot;&gt;Emacs for Amusement&lt;/h4&gt;
 
@@ -8765,7 +8805,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
 
 &lt;div&gt;
 &lt;p&gt;
-It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India's IT company. I vividly remember the countless occasions when ViM saved my day.
+It was just another day in Gurgaon. The hot scorching sun was parading the city. The inescapable life of riding with the autowalas is the common sight of this concrete jungle.       Though I am a FOSS enthusiast, my first job landed me to just another India&apos;s IT company. I vividly remember the countless occasions when ViM saved my day.
 &lt;/p&gt;
 &lt;/div&gt;
 
@@ -8834,7 +8874,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
   &lt;li&gt;Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;d&lt;/code&gt; to cut the line from fourth element to end&lt;/li&gt;
   &lt;li&gt;Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt; to go to beginning of file. Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt; to paste.&lt;/li&gt;
   &lt;li&gt;Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt; to reach last element.&lt;/li&gt;
-  &lt;li&gt;Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'&lt;/code&gt; to cut the last element&lt;/li&gt;
+  &lt;li&gt;Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&apos;&lt;/code&gt; to cut the last element&lt;/li&gt;
   &lt;li&gt;Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt; to reverse search comma and press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;. Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p&lt;/code&gt; to paste.&lt;/li&gt;
   &lt;li&gt;Copy paste extra text where required. Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; to enter insert mode and to paste  press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SHIFT&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CTRL&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;V&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enter&lt;/code&gt; to jump off the line and press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;q&lt;/code&gt; to stop the macro&lt;/li&gt;
@@ -8856,7 +8896,7 @@ It was just another day in Gurgaon. The hot scorching sun was parading the city.
 
 &lt;p&gt;And copy paste this value of macro in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let @a = 'MACRO_VALUE'
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let @a = &apos;MACRO_VALUE&apos;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Just replace MACRO_VALUE with the value of your own macro. Here’s value of my own macro&lt;/p&gt;
