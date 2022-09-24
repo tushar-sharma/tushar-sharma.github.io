@@ -39,4 +39,5 @@ Now lets create default `poetry` profile
 ```bash
 $ poetry init
 $ poetry add tweepy
+$ poetry run python tweets.py tshrocks
 ```
