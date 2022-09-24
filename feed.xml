@@ -37,6 +37,26 @@
 
 &lt;script src=&quot;https://gist.github.com/tushar-sharma/ac2739f5e0282add422a1430988a4a3d.js?file=get-tweets.py&quot;&gt;&lt;/script&gt;
 
+&lt;p&gt;We can get tweets by running&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;poetry run python get-tweets tshrocks
+Get tweets &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;the tshrocks
+getting tweets before 1284662084169596930
+...389 tweets downloaded so far
+getting tweets before 1030303523794288639
+...571 tweets downloaded so far
+getting tweets before 909242746770247681
+...771 tweets downloaded so far
+getting tweets before 312978397368291328
+...963 tweets downloaded so far
+getting tweets before 153814759517585407
+...1157 tweets downloaded so far
+getting tweets before 99546946154409983
+...1177 tweets downloaded so far
+getting tweets before 83587008219447295
+...1177 tweets downloaded so far
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;We can open our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;csv&lt;/code&gt; file with any editor or excel.&lt;/p&gt;
 </description>
           <pubDate>2022-09-23T00:00:00-04:00</pubDate>
