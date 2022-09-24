@@ -16,4 +16,6 @@ How do we know whether a form should be ranked as a species or a variety? If Nea
 
 But what about interbreeding? We know mule is produced by mating horse and donkey. Of course mule is sterile. Donkey and Horse are different species and can interbreed but this offspring will be sterile.
 
-Charles Darwin was at Galapagos islands in Ecuador. Mr Wallace was on islands of Malayan archipelego. 
+Charles Darwin was at Galapagos islands in Ecuador. Mr Wallace was on islands of Malayan archipelego.
+
+"Struggle for life most severe between individuals and varieties of the same species" - What do you think of this statement.  
