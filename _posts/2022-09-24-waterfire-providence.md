@@ -15,7 +15,6 @@ published: true
 
 Waterfire is a popular event at Providence, Rhode Island. It's a popular festival to see bonfires, boats, and music. There are also food trucks if you are feeling hungry.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
-In this tutorial, we will extract tweets from Twitter using python.
 
 Waterfire is a popular event at Providence, Rhode Island. It's a popular festival to see bonfires, boats, and music. There are also food trucks if you are felling hungry.
 
