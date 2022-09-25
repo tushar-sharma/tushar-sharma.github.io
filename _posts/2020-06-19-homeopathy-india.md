@@ -142,7 +142,7 @@ Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a ma
 
 <blockquote class="attention">
 Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India.
-</blockquote>
+</blockquote><br>
 
 <iframe
   style="position: relative;  width: 100%;" 
@@ -159,7 +159,7 @@ Mukesh Batra is recipient of Padma Shri award from the president of India. It’
 <blockquote class="attention">
 <i style="color: orange;" class="fas fa-exclamation-circle"> </i>
 DD News is a Indian government funded news channel. It reports how homeopathy can treat respiratory problems
-</blockquote>
+</blockquote><br>
 
 <iframe
   style="position: relative;  width: 100%;" 
@@ -175,7 +175,7 @@ DD News is a Indian government funded news channel. It reports how homeopathy ca
 
 <blockquote class="attention">
 Claims that homeopathy can cure genetic disorders
-</blockquote>
+</blockquote><br>
 
 <iframe
   style="position: relative;  width: 100%;" 
