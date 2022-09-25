@@ -14,7 +14,6 @@ published: true
 <style>
 .terminal {
     font-family: FreeMono, monospace !important;
-    font-size: 12px !important;
     line-height: 14px !important;
     padding: 8px 15px !important;
     background: #f8f8f8 !important;
@@ -27,24 +26,28 @@ published: true
   color: var(--color, #aaa);
   background-color: #f8f8f8 !important;
 }
+
+textarea #lb4yip {
+  font-size: 16px !important;
+}
 </style>
 
 <script type="text/javascript">
 function myIP() {
-    if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
-    else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-
-    xmlhttp.open("GET","https://web.archive.org/web/20140615132821/http://api.hostip.info/get_html.php",false);
-    xmlhttp.send();
-
-    hostipInfo = xmlhttp.responseText.split("\n");
-
-    for (i=0; hostipInfo.length >= i; i++) {
-        ipAddress = hostipInfo[i].split(":");
-        if ( ipAddress[0] == "IP" ) return ipAddress[1];
+  ajax = new XMLHttpRequest();
+  if(ajax!=null){
+    ajax.open("GET","https://europe-west3-devrcc.cloudfunctions.net/whatismyip",true);
+    ajax.onreadystatechange = function() {
+        if(this.readyState == 4) {
+            if(this.status == 200) {
+                console.log(this.responseText);
+            }
+        }
     }
+    ajax.send(null);
+  } 
 
-    return false;
+  return false;
 }
 
 $(function() {
@@ -57,24 +60,7 @@ $(function() {
 " \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
 "  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
 "       \\/         \\/              \\/                 \\/       \\/ \n\n\n" +
-"      ----   to Random Wits   ----  \n\n\n";
-
-
-    var picTxt = "<div class=\"cl2\"> " +
-"               _  _  _  _ \n" +
-"              ( `  `  `  `) \n" +
-"             (  Type help  ) \n" +
-"           (_   _   .   _   _) \n" +
-"                 o \n" +
-"               o \n" +
-"        .--. \n" +
-"       |o_o | \n" +
-"       |:_/ | \n" +
-"      //   \\ \\ \n" +
-"     (|     | ) \n" +
-"    /'\\_   _/`\\ \n" +
-"    \\___)=(___/\n\n" +
-"</div>";
+"      ----   to Random Wits   ----  \n";
 
 
     var anim = false;
@@ -114,7 +100,7 @@ $(function() {
     $('#foo').terminal(function(cmd, term) {
         var finish = false;
 
-        var msg = "\nWake up, " + cmd + "The Matrix has you...type help to escape\n";
+        var msg = "\n\nWake up, " + cmd + "! The Matrix has you. You take blue pill, the story ends here. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes!\n\nType red for red pill, blue for blue pill.\n\n";
         term.set_prompt('$ ');
 
         /*typed_message(term, msg, 100, function() {
@@ -126,10 +112,11 @@ $(function() {
 
         if (aOnce == true) {  //only once
             aOnce = false;
-		term.echo("<br><br>Wake up, " + cmd + ". The Matrix has you...type help to escape\n\n<br><br>" + "\n<div class=\"like-pre\">" + "\n\n</div>" , {
-              raw: function(div) { }
-            });
-        } else if (cmd == "help") {
+		        term.echo(msg);
+            this.echo('<img src="https://pbs.twimg.com/media/CtZpAWgUkAEVGX1?format=jpg&name=small"/><br><br>', {raw: true});
+        }  else if (cmd == "blue") { 
+          window.location.href = "/"
+        }else if (cmd == "red" || cmd == "help") {
 
             mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">ls</span> List directory content.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">songs</span> Recommend me a song.<br><span class=\"cl\">books</span> Books on my shelf.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
 
@@ -153,14 +140,13 @@ $(function() {
         } else if (arg == "cd" || cmd == "cd") {
 
           ip = myIP();
-     term.echo("You've tried to gain access to something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI. To avoid reporting it, please submit an apology <a href=\"/../contact/\">here</a>.", {
+     term.echo("You've tried to gain access to something which you're not authorized to. Your IP address has been logged and reported to FBI. To file a dispute, please submit an apology <a href=\"/../contact/\">here</a>.", {
               raw: function(div) {
             }
          });
 
 
        } else if (arg == "cat" || cmd == "cat") {
-
 
           ip = myIP();
     term.echo("You've tried to gain access to something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI. To avoid reporting it, please submit an apology <a href=\"/../contact/\">here</a>.", {
