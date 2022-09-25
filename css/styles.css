@@ -451,21 +451,21 @@ span.pagination-step {
   /**css for polls */
 
   /** we dont want padding **/
-  .hpoll_ABJwWk{
+  .hpoll_AEmwJP{
     padding: 0 0 0 0 !important;
   }
   /**no title text for poll */
-  .hpoll_ABJwWk_t {
+  .hpoll_AEmwJP_t {
     display: none !important;
   }
   /*no border */
-  .hpoll_ABJwWk_o{
+  .hpoll_AEmwJP_o{
     border: none !important;
     border-bottom: 1px solid #ddd !important; 
     padding: 12px 0 !important;
   }
   
-  .hpoll_ABJwWk_o-title{
+  .hpoll_AEmwJP_o-title{
     font: 300 1.125em "Source Sans Pro", Helvetica, Arial, sans-serif !important;
     color: #39c !important;
     cursor: pointer;
@@ -473,7 +473,7 @@ span.pagination-step {
     font-size:20px !important;
   }
   
-  .hpoll_ABJwWk_o-title:hover{
+  .hpoll_AEmwJP_o-title:hover{
     color: #ddd !important;
     z-index: 0;
     transition: .35s ease color;
