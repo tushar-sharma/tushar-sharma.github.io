@@ -30,7 +30,7 @@ Some of the snapshots from the event.
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Waterfire Providence"
-></iframe>
+></iframe><br>
 
 <iframe
   style="position: relative;  width: 100%;" 
