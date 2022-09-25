@@ -13,10 +13,10 @@ featuredPost: false
 published: true
 ---
 
-Waterfire is a popular event at Providence, Rhode Island. It's a popular festival to see bonfires, boats, and music. There are also food trucks if you are feeling hungry.<!-- truncate_here -->
+Waterfire is a popular festival at Providence, Rhode Island. The Waterplace park is lit up with bonfires along with boat processions and music. There are also food trucks if you are feeling hungry.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-Waterfire is a popular event at Providence, Rhode Island. It's a popular festival to see bonfires, boats, and music. There are also food trucks if you are felling hungry.
+Waterfire is a popular festival at Providence, Rhode Island. The Waterplace park is lit up with bonfires along with boat processions and music. There are also food trucks if you are feeling hungry.
 
 Some of the snapshots from the event.
 
