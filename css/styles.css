@@ -478,3 +478,16 @@ span.pagination-step {
     z-index: 0;
     transition: .35s ease color;
   }
+
+    /**css for about me page **/
+
+#wrap_slider{
+  clear:both;
+  width: 800px; 
+  height: 394px; 
+  padding: 0; 
+  position:relative;  
+  top:0px; overflow: hidden;
+}
+#crop { width:100%; height:100%; position:relative; left:-120px; top:0px; }
+#crop { -ms-zoom: 1.3; -moz-transform: scale(1.3); -moz-transform-origin: 0px 0; -o-transform: scale(1.3); -o-transform-origin: 0 0; -webkit-transform: scale(1.3); -webkit-transform-origin: 0 0; }
