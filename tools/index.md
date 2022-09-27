@@ -34,20 +34,22 @@ toc_icon: cog
 |         |         | [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/) | |
 | [Chrome](https://www.google.com/chrome/)  | browser  | [Checkbot](https://chrome.google.com/webstore/detail/checkbot-seo-web-speed-se/dagohlmlhagincbfilmkadjgmdnkjinl) | SEO tool |
 |         |         | [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) | |
+|         |         | [Cookie Remover](https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce?hl=en)| |
 |         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | |
 |         |         | [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) | |
 |         |         | [HeadingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi) | Browse the headings structure of a website |
 |         |         | [I dont care about cookies](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja) |  |
 | [Ubuntu](https://ubuntu.com/)  | Operating System  |  | Details<sup><a href='#fn:3' rel='footnote'>3</a></sup> |
 | [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
-|                                           |          | Github Copilot |  |
-|                                           |          | Git Graph      |  |
+|                                            |          | Github Copilot |  |
+|                                            |          | Git Graph      |  |
 | [Neovim](https://github.com/neovim/neovim)  | editor  |  | Details<sup><a href='#fn:2' rel='footnote'>2</a></sup> for Windows  |
 | [Winmerge](https://winmerge.org/)  | Diff  |  [Dotfiles](https://github.com/tushar-sharma/dotfiles)   |  |
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
 | [ConEmu ](https://conemu.github.io/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
 | [Cygwin](https://www.cygwin.com/)     | Terminal | Details<sup><a href='#fn:4' rel='footnote'>4</a></sup> | |
+| [Warp](https://www.warp.dev/)              | Terminal | Currently supports only Mac |
 | [qBittorrent](https://www.qbittorrent.org/)  | BitTorrent | | |
 | [Expressvpn](https://www.expressvpn.com/)  | VPN | | |
 
