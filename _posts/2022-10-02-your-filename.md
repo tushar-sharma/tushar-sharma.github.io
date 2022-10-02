@@ -20,3 +20,8 @@ It has following methods
 
 1. execute - which can execute the given RedisScript. This is the solution with `lua` but Scott want to alternative solution.
 
+
+I want to be able to use `opsForValue` method to store the value in JSON data type. Currenlty I am able to save it in `String` datatype only.
+
+
+
