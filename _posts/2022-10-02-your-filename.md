@@ -87,6 +87,14 @@ public interface StatefulRedisModulesConnection<K, V> extends StatefulRedisConne
 ```
 
 
+Add this dependency to the gradle config
+
+```yaml
+dependencies {
+    implementation 'com.redis:lettucemod:3.1.5'
+}
+```
+
 
 
 
