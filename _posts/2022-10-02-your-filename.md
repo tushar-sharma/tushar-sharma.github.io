@@ -11,6 +11,9 @@ I want this God job where people praise me for any good thing that happen in the
 
 In java , an interface can extend another interface. An interface is a blueprint of a class. It has static constants and abstract methods.
 
+Since Java 8, we can have default and static methods in an interface.
+Since Java 9, we can have private methods in an interface.
+
 
 
 
