@@ -9,7 +9,9 @@ I want this God job where people praise me for any good thing that happen in the
 
 ## Java
 
-In java , an interface can extend another interface.
+In java , an interface can extend another interface. An interface is a blueprint of a class. It has static constants and abstract methods.
+
+
 
 
 ## Redisjson
