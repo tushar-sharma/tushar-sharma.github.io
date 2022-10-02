@@ -47,4 +47,11 @@ public interface RedisJSONReactiveCommands<K, V> {
 
 There's another interface that extends `RedisJSONReactiveCommands` inteface.
 
+```java
+public inteface RedisModulesReactiveCommands<K, V> extends ReactiveCommands<K,V>, RedisReactiveCommands<K, V> {
+  @Override 
+  StatefulRedisModulesConnection<K,V> getStatefulConnection();
+}
+```
+
 
