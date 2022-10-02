@@ -95,6 +95,22 @@ dependencies {
 }
 ```
 
+here are few methods / intrface that I see
+
+```bash
+public interface StatefulRedisModulesClusterConnection<K,V> extends StatefulRedisClusterConnection<K, V>, StatefulRedisModulesConnection<K, V> {
+
+    RedisModulesAdvancedClusterReactiveCommands<K, V> reactive();
+    
+}
+
+
+public interface StatefulRedisModulesConnection<K, V> extends StatefulRedisConnection<K, V> {
+
+	RedisModulesReactiveCommands<K, V> reactive();
+}
+
+```
 
 
 
