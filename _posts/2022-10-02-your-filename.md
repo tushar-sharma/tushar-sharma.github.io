@@ -7,6 +7,11 @@ God is the best job in the world. "God is great" is a phrase I have heard often.
 
 I want this God job where people praise me for any good thing that happen in their life and pray to me for anything worse. No responsiblity whatsoever.
 
+## Java
+
+In java , an interface can extend another interface.
+
+
 ## Redisjson
 
 It's been a long time that I am strugglng with `redisjon` reactive way. I even asked a question in [stackoverflow](https://stackoverflow.com/questions/73913760/reactively-write-to-redis-in-redisjson-format) but haven't got any response. 
@@ -32,5 +37,7 @@ public interface RedisJSONReactiveCommands<K, V> {
   
 }
 ```
+
+There's another interface that extends `RedisJSONReactiveCommands` inteface.
 
 
