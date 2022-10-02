@@ -83,7 +83,6 @@ public interface StatefulRedisModulesConnection<K, V> extends StatefulRedisConne
 
 	RedisModulesReactiveCommands<K, V> reactive();
 }
-
 ```
 
 
@@ -97,7 +96,7 @@ dependencies {
 
 here are few methods / intrface that I see
 
-```bash
+```java
 public interface StatefulRedisModulesClusterConnection<K,V> extends StatefulRedisClusterConnection<K, V>, StatefulRedisModulesConnection<K, V> {
 
     RedisModulesAdvancedClusterReactiveCommands<K, V> reactive();
