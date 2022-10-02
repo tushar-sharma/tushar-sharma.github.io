@@ -56,7 +56,12 @@ public inteface RedisModulesReactiveCommands<K, V> extends ReactiveCommands<K,V>
 
 Now I have to search for `RedisModulesReactiveCommands` interface.
 
+There's another interface that has `RedisModulesClusterReactiveCommands` that uses `RedisModulesReactiveCommands`
 
+```java
+public interface RedisModulesClusterReactiveCommands<K,V> extends RedisModulesReactiveCommands<K,V>  {
+}
+```
 
 
 
