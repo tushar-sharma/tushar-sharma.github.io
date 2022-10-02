@@ -11,4 +11,5 @@ I want this God job where people praise me for any good thing that happen in the
 
 It's been a long time that I am strugglng with `redisjon` reactive way. I even asked a question in [stackoverflow](https://stackoverflow.com/questions/73913760/reactively-write-to-redis-in-redisjson-format) but haven't got any response. 
 
-Is it impossible.
+
+There's a library [lettucemod](https://github.com/redis-developer/lettucemod) that use letticue library to make connection to redis.
