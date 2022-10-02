@@ -110,6 +110,10 @@ public interface StatefulRedisModulesConnection<K, V> extends StatefulRedisConne
 	RedisModulesReactiveCommands<K, V> reactive();
 }
 
+
+public class StatefulRedisModulesClusterConnectionImpl<K, V> extends StatefulRedisClusterConnectionImpl<K, V>
+		implements StatefulRedisModulesClusterConnection<K, V> {
+}
 ```
 
 
