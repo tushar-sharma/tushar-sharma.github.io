@@ -13,3 +13,10 @@ It's been a long time that I am strugglng with `redisjon` reactive way. I even a
 
 
 There's a library [lettucemod](https://github.com/redis-developer/lettucemod) that use letticue library to make connection to redis.
+
+We are using a an interface called `ReactiveRedisOperations`
+
+It has following methods
+
+1. execute - which can execute the given RedisScript. This is the solution with `lua` but Scott want to alternative solution.
+
