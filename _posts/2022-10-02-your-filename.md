@@ -72,6 +72,20 @@ public class RedisModulesReactiveCommandsImpl<K,V> extends RedisReactiveCommands
 ```
 
 
+Why not use the module, it seems that there's an intefrace definition like this
+
+```java
+public interface StatefulRedisModulesConnection<K, V> extends StatefulRedisConnection<K, V> {
+
+	RedisModulesCommands<K, V> sync();
+
+	RedisModulesAsyncCommands<K, V> async();
+
+	RedisModulesReactiveCommands<K, V> reactive();
+}
+
+```
+
 
 
 
