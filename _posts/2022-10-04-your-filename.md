@@ -26,6 +26,9 @@ and
  
 My hunch is to pass some generic Serializer to serilzation context.
 
+I am following this article
+
+https://www.baeldung.com/spring-boot-redis-cache
 
 
 ```java
