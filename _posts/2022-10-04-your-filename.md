@@ -32,6 +32,16 @@ https://www.baeldung.com/spring-boot-redis-cache
 
 
 ```java
+    private <T> ReactiveRedisOperations<String, T> buildRedisOperations(ReactiveRedisConnectionFactory factory, Class<T> clazz) {
+        RedisSerializationContext.RedisSerializationContextBuilder<String, T> builder = RedisSerializationContext
+                .newSerializationContext(new StringRedisSerializer());
+        RedisSerializationContext<String, T> context = builder.value((RedisSerializationContext.SerializationPair<T>) RedisSerializationContext.SerializationPair.fromSerializer(new GenericJackson2JsonRedisSerializer())).build();
+        return new ReactiveRedisTemplate<>(factory, context);
+    }
+```
 
+Now I am getting different error
 
+```bash
+Could not write JSON: Type id handling not implemented for type java.lang.Object
 ```
