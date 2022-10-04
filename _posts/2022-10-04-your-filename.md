@@ -6,7 +6,7 @@ published: false
 ### Training
 
 ### RedisJSON 
-Time: 
+Time: 43 min
 
 So ReactiveRedisOperations<String, T> foo;
 
