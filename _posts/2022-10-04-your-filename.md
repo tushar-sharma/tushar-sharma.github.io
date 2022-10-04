@@ -22,4 +22,6 @@ and
         RedisSerializationContext.RedisSerializationContextBuilder<String, T> builder = RedisSerializationContext
                 .newSerializationContext(new StringRedisSerializer());
 ```
-  
+ 
+ 
+My hunch is to pass some generic Serializer to serilzation context.
