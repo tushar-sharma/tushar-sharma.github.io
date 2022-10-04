@@ -62,3 +62,5 @@ RedisJSONCommands<String, String> json = connection.reactive();
 json.jsonSet("arr", ".", "[1,2,3]"); // (2)
 
 ```
+
+I thought this [solution](https://cdmana.com/2021/02/20210222135830769w.html) would work , but still the data type is string.
