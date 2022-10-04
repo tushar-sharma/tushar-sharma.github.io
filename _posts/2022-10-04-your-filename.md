@@ -7,7 +7,9 @@ published: false
 
 ### RedisJSON
 
-So ReactiveRedisOperations<String, T> foo = bar;
+So ReactiveRedisOperations<String, T> foo;
+
+foo = bar;
 
 and ReactiveRedisTemplate<factory, context> bar;
 
