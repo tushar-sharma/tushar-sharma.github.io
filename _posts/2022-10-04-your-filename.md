@@ -45,3 +45,12 @@ Now I am getting different error
 ```bash
 it's still stirng data type
 ```
+
+So looking at library https://github.com/redis-developer/lettucemod, there's a command that
+
+```java
+RedisJSONCommands<String, String> json = connection.reactive();
+
+json.jsonSet("arr", ".", "[1,2,3]"); // (2)
+
+```
