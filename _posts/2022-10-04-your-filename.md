@@ -1,12 +1,20 @@
 ---
 published: false
 ---
+Time 
+
+| Task               |         |          |  
+|--------------------|---------|----------|
+| redisJSON          | 43 min  | 70 min   |
+
+
 ## Moodys
 
 ### Training
 
 ### RedisJSON 
 Time: 43 min
+
 
 So ReactiveRedisOperations<String, T> foo;
 
