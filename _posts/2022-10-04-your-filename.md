@@ -6,7 +6,8 @@ Time
 | Task               |         |          |  
 |--------------------|---------|----------|
 | redisJSON          | 43 min  | 70 min   |
-
+| training moodys    | 30 min| | 
+| reading            | 30 min| | 
 
 ## Moodys
 
