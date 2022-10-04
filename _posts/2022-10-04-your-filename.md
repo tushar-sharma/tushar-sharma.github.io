@@ -7,3 +7,5 @@ published: false
 
 ### RedisJSON
 
+So ReactiveRedisTemplate<factory, context>
+  
