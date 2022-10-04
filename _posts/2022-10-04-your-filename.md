@@ -43,5 +43,5 @@ https://www.baeldung.com/spring-boot-redis-cache
 Now I am getting different error
 
 ```bash
-Could not write JSON: Type id handling not implemented for type java.lang.Object
+it's still stirng data type
 ```
