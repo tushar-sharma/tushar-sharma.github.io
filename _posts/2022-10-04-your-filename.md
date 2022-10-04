@@ -17,5 +17,10 @@ and ReactiveRedisTemplate<factory, context> bar;
 
 RedisSerializationContext<String, T> context = builder.value(serializer).build();
 
+and 
 
+```java
+        RedisSerializationContext.RedisSerializationContextBuilder<String, T> builder = RedisSerializationContext
+                .newSerializationContext(new StringRedisSerializer());
+```
   
