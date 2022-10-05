@@ -19,4 +19,8 @@ On the left sidebar, click on collection.
 
 Create a new collection.
 
+## LDAP
+
+LDAP is a protocol. Active Directory is a directory server that uses LDAP protocol.
+
 
