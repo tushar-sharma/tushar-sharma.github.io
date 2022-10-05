@@ -9,3 +9,6 @@ I learned about the terminalogy called postman collection. It's a set of request
 
 On the left sidebar, click on collection.
 
+Create a new collection.
+
+
