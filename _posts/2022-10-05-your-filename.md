@@ -26,5 +26,5 @@ LDAP is a protocol. Active Directory is a directory server that uses LDAP protoc
 
 ## RedisJSON
 
-I have updated the question on `stackoverflow` with a bounty.
+I have updated the question on `stackoverflow` with a bounty. Lets see if that's workds.
 
