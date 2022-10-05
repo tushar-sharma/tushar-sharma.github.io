@@ -1,6 +1,8 @@
 ---
 published: false
 ---
-## A New Post
+## Moodys
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+### Postman collection
+
+I learned about the terminalogy called postman collection. It's a set of requests grouped into a folder than could be easily shared.
