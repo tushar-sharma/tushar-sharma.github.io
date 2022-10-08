@@ -287,6 +287,17 @@ Queued
 
 <script src="https://gist.github.com/tushar-sharma/8873da1fe181ff7624be0d544310c560.js?file=conn.py"></script>
 
+<p>To execute commands that are currently <a href="https://github.com/redis/redis-py/blob/master/redis/commands/cluster.py">supported</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">%s"</span> <span class="o">%</span> <span class="n">conn</span><span class="p">.</span><span class="n">mget</span><span class="p">(</span><span class="n">key1</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">%s"</span> <span class="o">%</span> <span class="n">conn</span><span class="p">.</span><span class="n">mget</span><span class="p">(</span><span class="n">key2</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>To execute an arbitrary <code class="language-plaintext highlighter-rouge">redis command</code>,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">conn</span><span class="p">.</span><span class="n">execute_command</span><span class="p">(</span><span class="s">'zscan key1 0 MATCH *EMAIL:random@email.com*#* COUNT 100000'</span><span class="p">))</span>
+</code></pre></div></div>
 
 
 
