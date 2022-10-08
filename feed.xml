@@ -47,7 +47,7 @@ Queued
 
 &lt;h2 id=&quot;solution-2&quot;&gt;Solution 2&lt;/h2&gt;
 
-&lt;p&gt;We could simply use a python script if you dont want to modify your keys&lt;/p&gt;
+&lt;p&gt;We could simply use a python library &lt;a href=&quot;https://github.com/redis/redis-py&quot;&gt;redis&lt;/a&gt;, if you dont want to modify your keys&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/tushar-sharma/8873da1fe181ff7624be0d544310c560.js?file=conn.py&quot;&gt;&lt;/script&gt;
 
