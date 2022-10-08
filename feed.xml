@@ -7,8 +7,61 @@
     
       
         <item>
+          <title>Resolve the Error CROSSSLOT Keys in request don&apos;t hash to the same slot</title>
+          <description>&lt;p&gt;AWS offers managed service Amazon MemoryDB which is redis compatible. The entire keyspace in Redis cluster is divided into hash slots and these slots are assigned to multiple nodes. In redis, getting a single value is straightforward.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/redis&quot; title=&quot;View posts tagged with &amp;quot;redis&amp;quot;&quot;&gt;redis&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/memorydb&quot; title=&quot;View posts tagged with &amp;quot;memorydb&amp;quot;&quot;&gt;memorydb&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;AWS offers managed service Amazon MemoryDB which is redis compatible.. The entire keyspace in Redis cluster is divided into hash slots and these slots are assigned to multiple nodes. In redis-cli, getting a single value is straightforward&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; mget &lt;span class=&quot;s2&quot;&gt;&quot;user1.key1&quot;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; mget &lt;span class=&quot;s2&quot;&gt;&quot;user1.key2&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;However if you want to run multi-operations in redis,&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; MULTI 
+Queued
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; EVAL &lt;span class=&quot;s2&quot;&gt;&quot;return redis.call(&apos;TIME&apos;)[1]&quot;&lt;/span&gt; 0 0
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; mget &lt;span class=&quot;s2&quot;&gt;&quot;user1.key1&quot;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; mget &lt;span class=&quot;s2&quot;&gt;&quot;user1.key2&quot;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; EVAL &lt;span class=&quot;s2&quot;&gt;&quot;return redis.call(&apos;TIME&apos;)[1]&quot;&lt;/span&gt; 0 0
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; EXEC
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This would most likely will result in following error&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;error&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; CROSSSLOT Keys &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;request don&lt;span class=&quot;s1&quot;&gt;&apos;t hash to the same slot
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
+
+&lt;p&gt;One solution is to force redis to insert the keys into same slot. We can achieve that using patter “{…}”&lt;/p&gt;
+
+&lt;p&gt;So we have to modify are keys as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{user1}.key1&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{user1}.key2&lt;/code&gt;. Here hash slots are only computed for keys within the braces&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-2&quot;&gt;Solution 2&lt;/h2&gt;
+
+&lt;p&gt;We could simply use a python script if you dont want to modify your keys&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/8873da1fe181ff7624be0d544310c560.js?file=conn.py&quot;&gt;&lt;/script&gt;
+
+</description>
+          <pubDate>2022-10-07T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/crossslot-keys-error-redis</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/crossslot-keys-error-redis</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Is Wikipedia bias?</title>
-          <description>&lt;p&gt;What’s the first link that google throws at you when you search anything? Wikipedia is always foremost search result that you encounter. When it comes to science and technology, Wikipedia often provides good foundation for the beginners. However when it comes to politics, Wikipedia often begins to falter. .&lt;!-- truncate_here --&gt;&lt;/p&gt;
+          <description>&lt;p&gt;What’s the first link that google throws at you when you search anything? Wikipedia is always foremost search result that you encounter. When it comes to science and technology, Wikipedia often provides good foundation for the beginners. However when it comes to politics, Wikipedia often begins to falter.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/opinion&quot; title=&quot;View posts tagged with &amp;quot;opinion&amp;quot;&quot;&gt;opinion&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;What’s the first link that google throws at you when you search anything? Wikipedia is always foremost search result that you encounter. When it comes to science and technology, Wikipedia often provides good foundation for the beginners. However when it comes to politics, Wikipedia often begins to falter.&lt;/p&gt;
