@@ -12,7 +12,7 @@ author: Tushar Sharma
 published: true
 ---
 
-What's the first link that google throws at you when you search anything? Wikipedia is always foremost search result that you encounter. When it comes to science and technology, Wikipedia often provides good foundation for the beginners. However when it comes to politics, Wikipedia often begins to falter. .<!-- truncate_here -->
+What's the first link that google throws at you when you search anything? Wikipedia is always foremost search result that you encounter. When it comes to science and technology, Wikipedia often provides good foundation for the beginners. However when it comes to politics, Wikipedia often begins to falter.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 What's the first link that google throws at you when you search anything? Wikipedia is always foremost search result that you encounter. When it comes to science and technology, Wikipedia often provides good foundation for the beginners. However when it comes to politics, Wikipedia often begins to falter. 
