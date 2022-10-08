@@ -62,3 +62,17 @@ So we have to modify are keys as `{user1}.key1` and `{user1}.key2`. Here hash sl
 We could simply use a python library [redis](https://github.com/redis/redis-py), if you dont want to modify your keys
 
 <script src="https://gist.github.com/tushar-sharma/8873da1fe181ff7624be0d544310c560.js?file=conn.py"></script>
+
+To execute commands that are currently [supported](https://github.com/redis/redis-py/blob/master/redis/commands/cluster.py)
+
+```python
+print("\n%s" % conn.mget(key1))
+
+print("\n%s" % conn.mget(key2))
+```
+
+To execute an arbitrary `redis command`, 
+
+```python
+print(conn.execute_command('zscan key1 0 MATCH *EMAIL:random@email.com*#* COUNT 100000'))
+```
