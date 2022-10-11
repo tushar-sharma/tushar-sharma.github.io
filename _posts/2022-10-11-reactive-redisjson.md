@@ -39,3 +39,7 @@ operation
 .opsForValue()
 .set(key1, ByteBuffer.wrap(key.toByteArray()))
 ```
+
+Try2 
+
+https://github.com/redis/redis-om-spring doesnt support lettuce. It only suports jedis.
