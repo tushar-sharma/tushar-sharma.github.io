@@ -29,3 +29,13 @@ operation
 .opsForValue()
 .set(key1, ByteBuffer.wrap(key.ByteUtils.getBytes()))
 ```
+
+or use `toByteArray`
+
+```
+ReactiveRedisOperations
+.map(operation -> 
+operation
+.opsForValue()
+.set(key1, ByteBuffer.wrap(key.toByteArray()))
+```
