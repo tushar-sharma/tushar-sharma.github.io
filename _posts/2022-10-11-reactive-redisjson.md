@@ -9,3 +9,23 @@ As if now it doesn't suport [REDISJSON](https://github.com/spring-projects/sprin
 
 ## Try1 
 
+key is Class object. 
+
+
+```
+ReactiveRedisOperations
+.map(operation -> 
+operation
+.opsForValue()
+.set(key1, key)
+```
+
+Try using `bytebuffer`
+
+```
+ReactiveRedisOperations
+.map(operation -> 
+operation
+.opsForValue()
+.set(key1, key)
+```
