@@ -1,6 +1,11 @@
 ---
 published: false
 ---
-## A New Post
+## Spring Data Redis
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+It provides `ReactiveRedisOperations` for writing reactively to redis. 
+
+As if now it doesn't suport [REDISJSON](https://github.com/spring-projects/spring-data-redis/issues/2429) format.
+
+## Try1 
+
