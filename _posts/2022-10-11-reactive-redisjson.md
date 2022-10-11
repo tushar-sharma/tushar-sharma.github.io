@@ -27,5 +27,5 @@ ReactiveRedisOperations
 .map(operation -> 
 operation
 .opsForValue()
-.set(key1, ByteBuffer.wrap(key.getBytes()))
+.set(key1, ByteBuffer.wrap(key.ByteUtils.getBytes()))
 ```
