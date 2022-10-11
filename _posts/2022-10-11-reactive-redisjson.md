@@ -48,6 +48,7 @@ https://github.com/redis/redis-om-spring doesnt support lettuce. It only suports
 Links 
 https://stackoverflow.com/questions/61062171/spring-data-redis-support-for-modules
 
+https://github.com/redis-developer/lettucemod/blob/master/subprojects/lettucemod/src/main/java/com/redis/lettucemod/protocol/JsonCommandType.java
 
 Lettucemod
 
