@@ -45,6 +45,10 @@ Try2
 https://github.com/redis/redis-om-spring doesnt support lettuce. It only suports jedis.
 
 
+Links 
+https://stackoverflow.com/questions/61062171/spring-data-redis-support-for-modules
+
+
 Lettucemod
 
 ```java
