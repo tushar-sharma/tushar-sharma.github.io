@@ -47,3 +47,8 @@ https://github.com/redis/redis-om-spring doesnt support lettuce. It only suports
 
 Lettucemod
 
+```java
+StatefulRedisModulesConnection<String, String> connection;
+
+```
+
