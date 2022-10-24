@@ -10,3 +10,6 @@ These are the series of letters where I try to log anything interesting happen o
 I was on a daily standup meeting. Someone in the team mentioned he had a ticket to work on Argo CD. I thought I could install it on my computer to learn more about it.
 
 ## How to connect to Active Directory on Mac
+
+
+## State Inspection of a car for Driving License
