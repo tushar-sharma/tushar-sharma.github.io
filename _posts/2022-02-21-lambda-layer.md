@@ -46,7 +46,7 @@ $ docker run \
 ```
 
 <blockquote class="attention" markdown="1">
-This will create lambda layer for python runtime `3.7`. However you can use a different `runtime` by choosing a different `version` like  `3.6`, `3.8`, etc
+This will create lambda layer for python runtime `3.7`. However you can also use docker image : public.ecr.aws/sam/build-python3.9 for `3.9`. 
 </blockquote>
 
 The example directory structure for a Lambda layer that's compatible with Python `3.7` 
@@ -85,5 +85,3 @@ $ aws lambda publish-layer-version --layer-name my-lambda-layer --description "D
 ### Reference
 
 [^quota]: [Lambda Layer Size Quota](https://docs.aws.amazon.com/lambda/latest/dg/invocation-layers.html)
-
-
