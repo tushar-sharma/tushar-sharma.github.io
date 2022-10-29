@@ -14,4 +14,4 @@ First I visited Petsmart store in North Carolina. Most of the stores didn't have
 
 Next I visited Petco store which only had dwarf hamster at that time. 
 
-For my last visit, I visited Pet supermarket. 
+For my last visit, I visited Pet supermarket in South Carolina. 
