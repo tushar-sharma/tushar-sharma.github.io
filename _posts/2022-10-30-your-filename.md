@@ -12,5 +12,7 @@ published: false
 
 1. RedisJSON implementation 
 
-2. 
+2. Postman Collection
+
+3. https://randomwits.com/blog/crossslot-keys-error-redis
 
