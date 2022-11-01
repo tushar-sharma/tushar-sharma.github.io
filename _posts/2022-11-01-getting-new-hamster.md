@@ -1,6 +1,6 @@
 ---
 published: false
 ---
-## A New Post
+## Diet
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+Syrian hamsters diet include cucumber, carrots, celery, kale, and Romaine lettuce (not iceberg).
