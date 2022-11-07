@@ -144,3 +144,5 @@ class MultipleMeta(type):
 
 ```
 
+Reference : https://www.google.com/books/edition/_/f7wGeA71_eUC?hl=en&gbpv=0&bsq=Implementing%20Multiple%20Dispatch%20with%20Function%20Annotations
+
