@@ -54,7 +54,11 @@ argument is int: 2
 argument is int: {'id': 2, 'name': 'test'
 ```
 
-So does python support `function override`? In python by default function override is not supported. However you can use Implementing Multiple Dispatch with Function Annotations 
+
+So does python support `function override`? In python by default function override is not supported. When we define multiple functions with the same name, the later one always overrides the prior and thus, in the namespace, there will always be a single entry against each function name. 
+
+
+However you can use Implementing Multiple Dispatch with Function Annotations 
 
 ```python
 import inspect
@@ -145,4 +149,3 @@ class MultipleMeta(type):
 ```
 
 Reference : https://www.google.com/books/edition/_/f7wGeA71_eUC?hl=en&gbpv=0&bsq=Implementing%20Multiple%20Dispatch%20with%20Function%20Annotations
-
