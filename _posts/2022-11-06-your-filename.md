@@ -18,8 +18,8 @@ class Test:
 Now if we call this separately we get this
 
 ```python
-id = 2 
-data = {"id": 2, "name" : "TestName"} 
+id = 2
+data = {"id": 2, "name": "test"}
 
 print(Test(id))
 
