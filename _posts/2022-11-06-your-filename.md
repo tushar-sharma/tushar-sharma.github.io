@@ -7,11 +7,12 @@ lets say we have a python code like this
 
 ```python
 class Test:
-    def __init__(self, data: int):
-        print(f"Argument is int: {data}")
-        
-    def __init__(self, data: dict):
-        print(f"Argument is dict: {data}")
+    def __init__(self, data: int) -> None:
+        print(f"argument is int: {int}")
+
+    def __init__(self, data: dict) -> None:
+        print(f"argument is dict: {data}")
+
 ```
 
 Now if we call this separately we get this
