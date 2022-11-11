@@ -1,3 +1,5 @@
+create:
+	bash createPost.sh
 serve:
 	JEKYLL_ENV=production bundle exec jekyll serve --trace
 clean:
