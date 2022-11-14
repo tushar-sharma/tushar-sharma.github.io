@@ -40,6 +40,8 @@ However badminton skills are not directly transferable to tennis. On my first da
 
 Currently my tennis rating is `2.5`[^rating]. Tennis is often dubbed as a sport for anyone between 4 and 94 years of age. Luckily I little younger than 94, so I can continue to improve and enjoy game of tennis.
 
+In Charlotte, there are two meetups where I go to play tennis, [Fun Charlotte Tennis for Beginner & Intermediate Group](https://www.meetup.com/fun-charlotte-tennis-for-beginners-intermediates-group/) and [Hornests Nest Park - Tennis Meetup Group](https://www.meetup.com/hornets-nest-tennis-meetup/).
+
 ### References
 
 [^rating]: [Ratings](https://www.usta.com/content/dam/usta/pdfs/10013_experience_player_ntrp_guidelines.pdf)
