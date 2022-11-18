@@ -1,0 +1,53 @@
+---
+layout: post
+date: 2022-11-17
+title: AWS CLI to stop running instances of statemachine
+image: https://unsplash.com/photos/aiyBwbrWWlo/download?w=800
+thumb: https://unsplash.com/photos/aiyBwbrWWlo/download?w=800
+author: Tushar Sharma
+tags:
+  - aws
+  - statemachine
+---
+
+I could not delete a statemachine that had running instances stuck in Progress. Since the number of instances were humongous, it was impossible to manually delete them using UI.<!-- truncate_here -->
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
+
+I could not delete a statemachine that had running instances stuck in Progress. Since the number of instances were humongous, it was impossible to manually delete them using UI. 
+
+We can bulk delete these instances using aws-cli in bash.
+
+| <img align="center"  loading="lazy" src="{{ root_url }}/img/sfn1.jpg" alt="" />|
+
+First we can get list of all executions of a statemachine that are in running state.
+
+```bash
+$ export arn=""
+$ aws stepfunctions list-executions --state-machine-arn $arn --status-filter RUNNING --query "executions[*].{executionArn:executionArn}" --output text)
+```
+
+We can combine this with `stop-execution` command like
+
+```bash
+$ export arn=""
+$ for i in $(aws stepfunctions list-executions --state-machine-arn $arn --status-filter RUNNING --query "executions[*].{executionArn:executionArn}" --output text); do
+aws stepfunctions stop-execution --execution-arn $i > /dev/null 2>&1;
+done
+```
+
+However this might be slow for large number of executions. Much faster solution would be to execute them in `parallel`
+
+```bash
+$ export arn=""
+$ export limit=14000
+$ aws  stepfunctions list-executions --state-machine-arn $arn --status-filter RUNNING  --max-items 10000 | grep executionArn | awk '{print $2}' | sed -e 's/\"//g' | sed -e 's/,//g' | xargs -L 1 -n 1 -P 10 aws stepfunctions stop-execution --execution-arn >/dev/null 2>&1
+```
+
+Here,
+
+`14000` is the value I got from trial and error. Any larger value than 14000 throws following error from the API
+
+```bash
+An error occurred (ThrottlingException) when calling the ListExecutions operation
+
+```
