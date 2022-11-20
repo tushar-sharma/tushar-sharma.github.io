@@ -7,6 +7,38 @@
     
       
         <item>
+          <title>Dear Vishi, what's the Philosophy of Kintsugi?</title>
+          <description>&lt;p&gt;How often do you bump into a painter? “So what do you do?”, I asked. “Well I am a painter”, she said. “Like a real painter?”. “Yes”.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;How often do you bump into a painter? “So what do you do?”, I asked. “Well I am a painter”, she said. “Like a real painter?”. “Yes”&lt;/p&gt;
+
+&lt;p&gt;It’s the time of the year in November when it gets cold in Carolinas. It’s not as freezing as as up north. However enough for me to reach for my jumper.&lt;/p&gt;
+
+&lt;p&gt;Every weekend I try to plan to visit events to meet new people. Mostly Saturdays are reserved for this activity. It was one of the event in Greenville, South Carolina where I happened to meet this lady who was a painter.&lt;/p&gt;
+
+&lt;p&gt;She showed me her portfolio of paintings. Most of it had pictures of toddler. However few of them were that of women with cracks. May be cracks were there only to add an aesthetic purpose.&lt;/p&gt;
+
+&lt;p&gt;She explained to me that the crack was inspired &lt;strong&gt;kintsugi&lt;/strong&gt; which is a Japanese art of pottery which glue back broken pottery by using lacquer, a natural resin made from tree sap. The lacquer is sprinkled with gold powder.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://mymodernmet.com/wp/wp-content/uploads/2017/04/kintsugi-update-2.jpg&quot; alt=&quot;&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;But why fix a broken pottery? The pottery resembles some aspect of ourself. With time, the pottery will be broken or damaged with scars which is inevitable. The key is to not to abandon the pottery but rebuild it which is going to be more resilient and beautiful than the original pottery. The cracks symbolizes the experiences which we encounter in life.&lt;/p&gt;
+</description>
+          <pubDate>2022-11-20T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/philosophy-kintsugi</link>
+          <guid isPermaLink="true">https://randomwits.com/philosophy-kintsugi</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>AWS CLI to stop running instances of statemachine</title>
           <description>&lt;p&gt;I could not delete a statemachine that had running instances stuck in Progress. Since the number of instances were humongous, it was impossible to manually delete them using UI.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/statemachine&quot; title=&quot;View posts tagged with &amp;quot;statemachine&amp;quot;&quot;&gt;statemachine&lt;/a&gt;    &lt;/p&gt;
