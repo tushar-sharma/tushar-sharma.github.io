@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2022-11-20
-title: The Philosophy of Kintsugi
+title: Dear Vishi, what's the Philosophy of Kintsugi?
 image: https://mymodernmet.com/wp/wp-content/uploads/2017/04/kintsugi-update-2.jpg
 thumb: https://mymodernmet.com/wp/wp-content/uploads/2017/04/kintsugi-update-2.jpg
 author: Tushar Sharma
 tags: 
-  - rambling
+  - letters
 ---
 
 How often do you bump into a painter? "So what do you do?", I asked. "Well I am a painter", she said. "Like a real painter?". "Yes".<!-- truncate_here -->
