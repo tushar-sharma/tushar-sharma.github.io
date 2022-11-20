@@ -4,12 +4,12 @@ tushar-sharma.github.io
 ![Build](https://github.com/tushar-sharma/tushar-sharma.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
 
 
-## About 
+## About
 
 This is my [personal website](https://randomwits.com). It is supported by [Jekyll](https://github.com/mojombo/jekyll) platform.
 
 
-Content in the `_posts` folder is copyrighted. 
+Content in the `_posts` folder is copyrighted.
 
 ## License
 
@@ -20,7 +20,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### Inserting an image
 
-Images are stored in `img` folder. To insert an image, 
+Images are stored in `img` folder. To insert an image,
 
 ```bash
 | <img align="center"  loading="lazy" src="{{ root_url }}/img/sample.jpg" alt="Sample Image" />|
@@ -32,7 +32,7 @@ Here, sample is video url.
 
 ```bash
 <iframe
-  style="position: relative;  width: 100%;" 
+  style="position: relative;  width: 100%;"
    height="500"
   src="https://www.youtube.com/embed/sample&autoplay=1"
   srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/sample?autoplay=1><img src=https://img.youtube.com/vi/sample/hqdefault.jpg alt='Sample'><span>▶</span></a>"
@@ -42,3 +42,7 @@ Here, sample is video url.
   title="Sample"
 ></iframe>
 ```
+
+## Posts
+
+* [Philosophy of kintsugi](randomwits.com/blog/philosophy-of-kintsugi)
