@@ -1,13 +1,14 @@
 ---
 layout: post
-date: 2022-11-17
+date: {}
 title: AWS CLI to stop running instances of statemachine
-image: https://unsplash.com/photos/aiyBwbrWWlo/download?w=800
-thumb: https://unsplash.com/photos/aiyBwbrWWlo/download?w=800
+image: 'https://unsplash.com/photos/aiyBwbrWWlo/download?w=800'
+thumb: 'https://unsplash.com/photos/aiyBwbrWWlo/download?w=800'
 author: Tushar Sharma
 tags:
   - aws
   - statemachine
+published: true
 ---
 
 I could not delete a statemachine that had running instances stuck in Progress. Since the number of instances were humongous, it was impossible to manually delete them using UI.<!-- truncate_here -->
@@ -41,6 +42,15 @@ However this might be slow for large number of executions. Much faster solution 
 $ export arn=""
 $ export limit=14000
 $ aws  stepfunctions list-executions --state-machine-arn $arn --status-filter RUNNING  --max-items 10000 | grep executionArn | awk '{print $2}' | sed -e 's/\"//g' | sed -e 's/,//g' | xargs -L 1 -n 1 -P 10 aws stepfunctions stop-execution --execution-arn >/dev/null 2>&1
+```
+
+We can combine both solution if you still have a large number of executions. You can set count to the number of times you want to repeat this process.
+
+```bash
+$ export count=20
+$ for i in $(seq $count); do 
+ aws  stepfunctions list-executions --state-machine-arn $arn --status-filter RUNNING  --max-items 10000 | grep executionArn | awk '{print $2}' | sed -e 's/\"//g' | sed -e 's/,//g' | xargs -L 1 -n 1 -P 10 aws stepfunctions stop-execution --execution-arn >/dev/null 2>&1
+done
 ```
 
 Here,
