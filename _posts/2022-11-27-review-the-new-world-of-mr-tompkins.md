@@ -18,5 +18,8 @@ Newton wrote in his book Principia wrote this about time
 
 and this about space
 
-""
+"Absolute space, in its own nature, without relation to anything external, remains alwayas similar and immovable"
+
+This idea that space and time are absolute was challenged by discovery that velocity of light in a vaccum is a constant. Earlier it was believed that earth was surrounded by a medium call aether. If light is a wave, Speed of light would appear to differ according to the relative motion of earth through the aether. But Michelson and Morley found that velocity of light is same in all directions. 
+
 
