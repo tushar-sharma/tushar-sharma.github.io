@@ -1,6 +1,5 @@
 ---
 layout: post
-date: {}
 title: AWS CLI to stop running instances of statemachine
 image: 'https://unsplash.com/photos/aiyBwbrWWlo/download?w=800'
 thumb: 'https://unsplash.com/photos/aiyBwbrWWlo/download?w=800'
