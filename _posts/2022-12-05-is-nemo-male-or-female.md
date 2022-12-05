@@ -18,4 +18,4 @@ Unless you were living under a rock, it's very likely that you saw the movie - F
 
 That's a silly question. Of course Marlin was a male in the movie. But he was also a clownfish. Clownfish are hermaphrodite. Hermaphrodites are organisms which have both male and female reproductive organs. All clownfish are born as males. A male fish changes to female if there is no female available. 
 
-Do you know any other species that's a hermaphrodite? Most flowering plants are hermaphrodite. They disperse pollen as well as receive pollen. However they can also self-fertilize but plants try to avoid it because inbreeding has hamful mutation. Even in humans mating with someone close to your family lineage causes deletrious effects on offsprings.
+Do you know any other species that's a hermaphrodite? Most flowering plants are hermaphrodite. They disperse pollen as well as receive pollen. However they can also self-fertilize but plants avoid it because inbreeding causes harmful mutation. Inbreeding even in humans have deleterious effects on offspring.
