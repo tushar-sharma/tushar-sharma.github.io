@@ -10,45 +10,48 @@ author: Tushar Sharma
 <!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-JWT is pronounced jot. The stateless token of JWT. JWT is base 64 encoded. JSON Web Tokens (JWT) are referred to as stateless because the authorizing server needs to maintain no state; the token itself is all that is needed to verify a token bearer's authorization.
+JSON Web Tokens(JWT) is pronounced as jot. It's a compact, self-contained method for transfering secure data as JSON object. JWT are stateless token because the authorizing server doesnt maintain any state.
 
 
-JWT HEADER
+### Uses
 
-eyJslaflasf can be decoded with base 64 {
-}
+* Authentication 
 
-JWT body
-claim means keys in JTW body. 
+* Information Exchange
 
-{
-    
-}
+JWT consist of a header, payload & a signature. An sample JWT would look like
 
-JWT signature...
+<p>
+<span style="color:red;">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>. <span style="color:pink;">eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9</span>. <span style="color:blue;">TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</span><br>
+</p>
 
-consuming the JWT..
+### Header in JWT
 
+It's used to specify the token type and the signature algorithm which is used to sign the token.
 
-So JWT has three parts 
-- JWT header
-- JWT body
-- JWT signature
+### Payload in JWT
 
-Validation of JWT
-1. validate the signature
-2. validated the claims 
- iss claim : who created this jwt 
- exp claim : they are time based because JWT is stateless
- aud claim (means audience): issuer of JWT is putting aud claim for audience
+The payload is where all access data is added. Each assertion is called claims. Some of the registered claims are
 
-```java
-//check claims
-Jwt jwt = new JTW();
+* iss: The issuer of this token.
 
-jwt.getOtherClaims.put("name", "Dan moore");
-jwt.getOtherClaims.put("role", new String[]{"1" , "2"});
+* sub: Usually a machine-readable identifier of the
+client that this token is issued to.
 
-```
+* aud : Service-specific string identifier or list of string
+identifiers representing the intended audience for this
+token.
 
-JWT uuses as bearer token. Like a car key, anyone can use it.
+* iat: Indicating when this token was originally issued.
+
+* exp : Indicating when this token will expire.
+
+* nbf: Indicating when this token is not to be used
+before.
+
+* scope:A JSON string containing a space-separated list
+of scopes associated with this token.
+
+### Signature in JWT
+
+This is to ensure authenticity of the token. The authority first encodes the header and the payload with base64 algorithm and then signs on the concatenation of the encoded data.
