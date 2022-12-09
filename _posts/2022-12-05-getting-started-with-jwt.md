@@ -19,17 +19,19 @@ JSON Web Tokens(JWT) is pronounced as jot. It's a compact, self-contained method
 
 * Information Exchange
 
+### Structure of JWT
+
 JWT consist of a header, payload & a signature. An sample JWT would look like
 
 <p>
 <span style="color:red;">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>. <span style="color:pink;">eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9</span>. <span style="color:blue;">TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</span><br>
 </p>
 
-### Header in JWT
+#### Header in JWT
 
 It's used to specify the token type and the signature algorithm which is used to sign the token.
 
-### Payload in JWT
+#### Payload in JWT
 
 The payload is where all access data is added. Each assertion is called claims. Some of the registered claims are
 
@@ -52,6 +54,6 @@ before.
 * scope:A JSON string containing a space-separated list
 of scopes associated with this token.
 
-### Signature in JWT
+#### Signature in JWT
 
 This is to ensure authenticity of the token. The authority first encodes the header and the payload with base64 algorithm and then signs on the concatenation of the encoded data.
