@@ -7,6 +7,32 @@
     
       
         <item>
+          <title>Dear Vishi, is Nemo a Male or a Female?</title>
+          <description>&lt;p&gt;Unless you were living under a rock, it’s very likely that you saw the movie - Finding Nemo. I liked Marlin who was nemo’s dad who faught against the odds to recover his son. Can you tell me if nemo was male or a female?.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Unless you were living under a rock, it’s very likely that you saw the movie - Finding Nemo. I liked Marlin who was nemo’s dad who faught against the odds to recover his son. Can you tell me if nemo’s dad was a male or a female?&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://unsplash.com/photos/rEM3cK8F1pk/download?w=800&quot; alt=&quot;Finding Nemo&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;That’s a silly question. Of course Marlin was a male in the movie. But he was also a clownfish. Clownfish are hermaphrodite. Hermaphrodites are organisms which have both male and female reproductive organs. All clownfish are born as males. A male fish changes to female if there is no female available.&lt;/p&gt;
+
+&lt;p&gt;Do you know any other species that’s a hermaphrodite? Most flowering plants are hermaphrodite. They disperse pollen as well as receive pollen. However they can also self-fertilize but plants avoid it because inbreeding causes harmful mutation. Inbreeding even in humans have deleterious effects on offspring.&lt;/p&gt;
+</description>
+          <pubDate>2022-12-05T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/is-nemo-male-or-female</link>
+          <guid isPermaLink="true">https://randomwits.com/is-nemo-male-or-female</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Dear Vishi, what's the Philosophy of Kintsugi?</title>
           <description>&lt;p&gt;How often do you bump into a painter? “So what do you do?”, I asked. “Well I am a painter”, she said. “Like a real painter?”. “Yes”.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
@@ -74,6 +100,14 @@
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;arn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;limit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;14000
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;aws  stepfunctions list-executions &lt;span class=&quot;nt&quot;&gt;--state-machine-arn&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$arn&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--status-filter&lt;/span&gt; RUNNING  &lt;span class=&quot;nt&quot;&gt;--max-items&lt;/span&gt; 10000 | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;executionArn | &lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $2}'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/\&quot;//g'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/,//g'&lt;/span&gt; | xargs &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; 10 aws stepfunctions stop-execution &lt;span class=&quot;nt&quot;&gt;--execution-arn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/dev/null 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can combine both solution if you still have a large number of executions. You can set count to the number of times you want to repeat this process.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;20
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;seq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$count&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do 
+ &lt;/span&gt;aws  stepfunctions list-executions &lt;span class=&quot;nt&quot;&gt;--state-machine-arn&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$arn&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--status-filter&lt;/span&gt; RUNNING  &lt;span class=&quot;nt&quot;&gt;--max-items&lt;/span&gt; 10000 | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;executionArn | &lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $2}'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/\&quot;//g'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'s/,//g'&lt;/span&gt; | xargs &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1 &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; 10 aws stepfunctions stop-execution &lt;span class=&quot;nt&quot;&gt;--execution-arn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/dev/null 2&amp;gt;&amp;amp;1
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Here,&lt;/p&gt;

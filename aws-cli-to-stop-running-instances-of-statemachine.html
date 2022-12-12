@@ -280,6 +280,14 @@ header li {
 <span class="nv">$ </span>aws  stepfunctions list-executions <span class="nt">--state-machine-arn</span> <span class="nv">$arn</span> <span class="nt">--status-filter</span> RUNNING  <span class="nt">--max-items</span> 10000 | <span class="nb">grep </span>executionArn | <span class="nb">awk</span> <span class="s1">'{print $2}'</span> | <span class="nb">sed</span> <span class="nt">-e</span> <span class="s1">'s/\"//g'</span> | <span class="nb">sed</span> <span class="nt">-e</span> <span class="s1">'s/,//g'</span> | xargs <span class="nt">-L</span> 1 <span class="nt">-n</span> 1 <span class="nt">-P</span> 10 aws stepfunctions stop-execution <span class="nt">--execution-arn</span> <span class="o">&gt;</span>/dev/null 2&gt;&amp;1
 </code></pre></div></div>
 
+<p>We can combine both solution if you still have a large number of executions. You can set count to the number of times you want to repeat this process.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">export </span><span class="nv">count</span><span class="o">=</span>20
+<span class="nv">$ </span><span class="k">for </span>i <span class="k">in</span> <span class="si">$(</span><span class="nb">seq</span> <span class="nv">$count</span><span class="si">)</span><span class="p">;</span> <span class="k">do 
+ </span>aws  stepfunctions list-executions <span class="nt">--state-machine-arn</span> <span class="nv">$arn</span> <span class="nt">--status-filter</span> RUNNING  <span class="nt">--max-items</span> 10000 | <span class="nb">grep </span>executionArn | <span class="nb">awk</span> <span class="s1">'{print $2}'</span> | <span class="nb">sed</span> <span class="nt">-e</span> <span class="s1">'s/\"//g'</span> | <span class="nb">sed</span> <span class="nt">-e</span> <span class="s1">'s/,//g'</span> | xargs <span class="nt">-L</span> 1 <span class="nt">-n</span> 1 <span class="nt">-P</span> 10 aws stepfunctions stop-execution <span class="nt">--execution-arn</span> <span class="o">&gt;</span>/dev/null 2&gt;&amp;1
+<span class="k">done</span>
+</code></pre></div></div>
+
 <p>Here,</p>
 
 <p><code class="language-plaintext highlighter-rouge">14000</code> is the value I got from trial and error. Any larger value than 14000 throws following error from the API</p>
