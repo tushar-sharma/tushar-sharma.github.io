@@ -13,16 +13,13 @@ thumb: https://unsplash.com/photos/CJO9xWDVGXU/download?w=437
 summary: Finding lowest common ancestor of a binary tree
 image: https://unsplash.com/photos/CJO9xWDVGXU/download?w=437
 author: Tushar Sharma
+mutipleTab: true
 ---
 
 Questions involving the binary tree data structure are very popular in tech interviews, and can be challenging and varied! A binary tree is a data structure consisting of a collection of nodes (starting at a root node), where each node consists of a value (data), together with a directed edges to at most two nodes (the "left child" and "right child"), with the additional conditions that no two edges point to the same node and no edge points to the root. I recently solved an interesting problem on binary tree.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-
-<link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>
-<script src="{{ root_url }}/js/jquery.easytabs.min.js"></script>
-<script src="{{ root_url }}/js/multipleTab.js"></script>
 
 <p>Questions involving the binary tree data structure are very popular in tech interviews, and can be challenging and varied! A binary tree is a data structure consisting of a collection of nodes (starting at a root node), where each node consists of a value (data), together with a directed edges to at most two nodes (the "left child" and "right child"), with the additional conditions that no two edges point to the same node and no edge points to the root. I recently solved an interesting problem on binary tree.
 </p>
