@@ -7,6 +7,72 @@
     
       
         <item>
+          <title>Find if Path Exists in Graph leetcode solution</title>
+          <description>&lt;p&gt;It’s a easy problem on Graph in leetcode to find if a path exist in graph.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;It’s a easy problem on Graph in leetcode to find if a path exist in graph.&lt;/p&gt;
+
+&lt;h3 id=&quot;problem-statement&quot;&gt;Problem Statement&lt;/h3&gt;
+
+&lt;p&gt;There is a bi-directional graph with n vertices, where each vertex is labeled from 0 to n - 1 (inclusive). The edges in the graph are represented as a 2D integer array edges, where each edges[i] = [ui, vi] denotes a bi-directional edge between vertex ui and vertex vi. Every vertex pair is connected by at most one edge, and no vertex has an edge to itself.&lt;/p&gt;
+
+&lt;p&gt;You want to determine if there is a valid path that exists from vertex source to vertex destination.&lt;/p&gt;
+
+&lt;p&gt;Given edges and the integers n, source, and destination, return true if there is a valid path from source to destination, or false otherwise.&lt;/p&gt;
+
+&lt;h3 id=&quot;explanation&quot;&gt;Explanation&lt;/h3&gt;
+
+&lt;p&gt;To solve this problem, you can use a graph traversal algorithm, such as breadth-first search (BFS).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a queue to store nodes that need to be visited.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add the start node to the queue.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;While the queue is not empty:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Remove the first node from the queue.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the node is the end node, return True (a path has been found).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Otherwise, add all of the node’s neighbors to the queue.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the queue is empty and the end node has not been found, return False (no path exists).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;solution&quot;&gt;Solution&lt;/h3&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;tab Java2&quot;&gt;&lt;a href=&quot;#Java1&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+   &lt;div class=&quot;codeSample Java1&quot; id=&quot;Java1&quot;&gt;
+      &lt;script src=&quot;https://gist.github.com/tushar-sharma/7b99a20c4164f2ef510729218f0cef1b.js?file=ValidPath.java&quot;&gt;&lt;/script&gt;
+   &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script src=&quot;https://gist.github.com/tushar-sharma/.js&quot;&gt;&lt;/script&gt;
+
+</description>
+          <pubDate>2022-12-23T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/find-if-path-exists-in-graph</link>
+          <guid isPermaLink="true">https://randomwits.com/find-if-path-exists-in-graph</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Dear Vishi, is Nemo a Male or a Female?</title>
           <description>&lt;p&gt;Unless you were living under a rock, it’s very likely that you saw the movie - Finding Nemo. I liked Marlin who was nemo’s dad who faught against the odds to recover his son. Can you tell me if nemo was male or a female?.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
@@ -3104,12 +3170,6 @@ hope my lost friends still harbour my memories well.&lt;br /&gt;
 
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/javascript&quot; title=&quot;View posts tagged with &amp;quot;javascript&amp;quot;&quot;&gt;javascript&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/scala&quot; title=&quot;View posts tagged with &amp;quot;scala&amp;quot;&quot;&gt;scala&lt;/a&gt;    &lt;/p&gt;
 
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
-
-&lt;script src=&quot;/js/jquery.easytabs.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/js/multipleTab.js&quot;&gt;&lt;/script&gt;
-
 &lt;p&gt;Questions involving the binary tree data structure are very popular in tech interviews, and can be challenging and varied! A binary tree is a data structure consisting of a collection of nodes (starting at a root node), where each node consists of a value (data), together with a directed edges to at most two nodes (the &quot;left child&quot; and &quot;right child&quot;), with the additional conditions that no two edges point to the same node and no edge points to the root. I recently solved an interesting problem on binary tree.
 &lt;/p&gt;
 
@@ -3334,12 +3394,6 @@ A contiguous substring of string s is a string that can be obtained from s by re
           <title>Coin Change solution leetcode</title>
           <description>&lt;p&gt;It’s one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/dp&quot; title=&quot;View posts tagged with &amp;quot;dp&amp;quot;&quot;&gt;dp&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
-
-&lt;script src=&quot;/js/jquery.easytabs.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/js/multipleTab.js&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;It's one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.&lt;/p&gt;
 
