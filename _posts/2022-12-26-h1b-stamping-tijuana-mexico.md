@@ -1,6 +1,8 @@
 ---
 published: false
 ---
+Status: Research 
+
 I got my H1b visa renewed and got I797 visa. However I cant travel outside the USA unless I have visa stamped. Queue in India for visa stamping is long so I am exploring other options like Mexico to get visa stamped.
 
 So there's a term called Third Country nationals(TCNs) which are people who are applying for visa which is nto their home country.
