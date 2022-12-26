@@ -1,6 +1,10 @@
 ---
 published: false
 ---
-## A New Post
+## References
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+https://medium.com/@ask4amitkumar/us-visa-stamping-from-tijuana-mexico-b91425463cc8
+
+https://www.usvisaservicesinmexico.com/tijuana-mexico-us-visa-h1b-h4-e3-renewal-stamping-interview-experiences/
+
+
