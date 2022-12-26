@@ -7,6 +7,8 @@ I got my H1b visa renewed and got I797 visa. However I cant travel outside the U
 
 So there's a term called Third Country nationals(TCNs) which is a citizen of a country other than Mexico who applies for a non-immigrant visa with their non-Mexican passport. Here's the website https://mx.usembassy.gov/third-country-nationals/
 
+It seems that it's not possible to get visa stamped in Mexico https://mx.usembassy.gov/third-country-nationals/
+
 
 ## References
 
