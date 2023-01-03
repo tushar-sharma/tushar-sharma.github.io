@@ -7,12 +7,12 @@ published: false
 $ docker pull sonarqube
 ```
 
-If this throws error:
+On ARM based Macs you might get this error
 
 ```bash
 no matching manifest for linux/arm64/v8 in the manifest list entries
 ```
-then do 
+Solution 
 
 ```bash
 $ mkdir ~/myFiles/sonarqube-arm
