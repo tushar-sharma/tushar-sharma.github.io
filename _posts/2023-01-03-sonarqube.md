@@ -1,7 +1,14 @@
 ---
-published: false
+layout: post
+date: 2022-12-23
+title: Scan Code locally using Sonarqube
+image: https://unsplash.com/photos/XBxQZLNBM0Q/download?w=800
+thumb: https://unsplash.com/photos/XBxQZLNBM0Q/download?w=800
+tags:
+- docker
+- sonarqube
+author: Tushar Sharma
 ---
-## Sonar Cube Scan
 
 ```bash
 $ docker pull sonarqube
