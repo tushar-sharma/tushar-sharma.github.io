@@ -7,6 +7,68 @@
     
       
         <item>
+          <title>Scan Code locally using SonarQube</title>
+          <description>&lt;p&gt;SonarQube is an open-source platform used to manage code quality. It provides static code analysis, which means it can automatically analyze code to detect bugs, vulnerabilities, and code smells (design issues that could lead to problems in the future).&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/docker&quot; title=&quot;View posts tagged with &amp;quot;docker&amp;quot;&quot;&gt;docker&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sonarqube&quot; title=&quot;View posts tagged with &amp;quot;sonarqube&amp;quot;&quot;&gt;sonarqube&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;SonarQube is an open-source platform used to manage code quality. It provides static code analysis, which means it can automatically analyze code to detect bugs, vulnerabilities, and code smells (design issues that could lead to problems in the future).&lt;/p&gt;
+
+&lt;p&gt;You can use Docker to run SonarQube in a container. This can be useful if you don’t want to install SonarQube directly on your machine, or if you want to easily set up a test environment.&lt;/p&gt;
+
+&lt;p&gt;Go to the &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker website&lt;/a&gt; and download and install Docker for your operating system.
+Follow the installation instructions to set up Docker on your machine.&lt;/p&gt;
+
+&lt;p&gt;Next we will pull up the docker image.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;imageName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sonarqube
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker pull &lt;span class=&quot;nv&quot;&gt;$imageName&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you are using ARM based Mac, you might get following error&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;no matching manifest &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;linux/arm64/v8 &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;the manifest list entries
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Instead use a different docker image on Mac&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;imageName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;davealdon/sonarqube-with-docker-and-m1-macs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run the SonarQube container:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 $imageName
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Login to sonarqube server locally at http://localhost:9000 using following credentials&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Username : admin
+Password : admin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For token go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;My Profile -&amp;gt; Security -&amp;gt; Generate token&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Install the sonar-scanner. For Mac you can use&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;sonar-scanner
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Lastly go to the folder where you want to scan&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sonar-scanner &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt;  &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-Dsonar&lt;/span&gt;.projectKey&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Test &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-Dsonar&lt;/span&gt;.sources&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-Dsonar&lt;/span&gt;.host.url&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://localhost:9000 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;-Dsonar&lt;/span&gt;.login&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;token&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+          <pubDate>2022-12-23T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/scan-code-locally-sonarqube</link>
+          <guid isPermaLink="true">https://randomwits.com/scan-code-locally-sonarqube</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Find if Path Exists in Graph leetcode solution</title>
           <description>&lt;p&gt;It’s a easy problem on Graph in leetcode to find if a path exist in graph.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;/p&gt;
