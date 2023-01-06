@@ -15,3 +15,10 @@ try:
 except urlib3.exceptions.HTTPError as e:
     print('Request Failed:', e.reason)
 ```
+
+Now I want to send list of Ids as part of GET request.
+
+```python
+
+```
+
