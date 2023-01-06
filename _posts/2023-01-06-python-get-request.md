@@ -8,10 +8,10 @@ import urllib3
 
 url = '#' 
 http = urllib3.PoolManager()
-response = http.request('Get', url)
 
 try:
     response = http.request('GET', url)
+    print(response.data, response.status)
 except urlib3.exceptions.HTTPError as e:
     print('Request Failed:', e.reason)
 ```
