@@ -1,24 +1,8 @@
 ---
 published: false
 ---
-A simple GET request to a endpoint in python 
+ 
+If you download Spring Boot application from  Spring Initializr website at https://start.spring.io/ for Gradle, you might encounter `Read timed out` error. 
 
-```python
-import urllib3
 
-url = '#' 
-http = urllib3.PoolManager()
-
-try:
-    response = http.request('GET', url)
-    print(response.data, response.status)
-except urlib3.exceptions.HTTPError as e:
-    print('Request Failed:', e.reason)
-```
-
-Now I want to send list of Ids as part of GET request.
-
-```python
-
-```
 
