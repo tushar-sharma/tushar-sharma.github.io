@@ -125,6 +125,15 @@ vim.cmd("set indentexpr=")
 --zoom in and out
 vim.cmd("noremap zz <c-w>_ \\| <c-w>\\|")
 vim.cmd("noremap zo <c-w>=")
+
+--folding
+vim.cmd("set foldmethod=indent")
+vim.cmd("set foldlevel=1")
+vim.cmd("set foldclose=all")
+-- zo - opens folds
+-- zc - closes fold
+-- zm - increases auto fold depth
+-- zr - reduces auto fold depth
 ```
 
 2. Supress `diagnostic warnings` by adding the following to `lua/lvim/lsp/handlers.lua`.
