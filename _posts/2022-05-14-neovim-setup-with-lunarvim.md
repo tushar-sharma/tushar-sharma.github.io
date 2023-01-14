@@ -128,8 +128,8 @@ vim.cmd("noremap zo <c-w>=")
 
 --folding
 vim.cmd("set foldmethod=indent")
-vim.cmd("set foldlevel=1")
-vim.cmd("set foldclose=all")
+vim.cmd("set foldlevel=0")
+
 -- zo - opens folds
 -- zc - closes fold
 -- zm - increases auto fold depth
