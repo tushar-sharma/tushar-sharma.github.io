@@ -16,4 +16,7 @@ IAMC got more than $1 million in revenue in 2019[^1]. HAF regularly gets revenue
 IAMC regulary holds meetings with  Council on American-Islamic Relations (CAIR) and Hindus for Human Rights (HfHR)[^3].
 
 
+
+
+
 [3]: https://www.youtube.com/watch?v=8x5NGxGXgzE
