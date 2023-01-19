@@ -119,21 +119,39 @@ Now you can copy using the following command
 1. Add the following line to the file `~/.local/share/lunarvim/lvim/init.lua`
 
 ```lua
+vim.cmd("set foldmethod=indent")
+vim.cmd("set foldlevel=0")
+vim.cmd("set ai")
+
 --stop auto indent
 vim.cmd("set indentexpr=")
 
 --zoom in and out
-vim.cmd("noremap zz <c-w>_ \\| <c-w>\\|")
-vim.cmd("noremap zo <c-w>=")
+vim.cmd("noremap z2 <c-w>_ \\| <c-w>\\|")
+vim.cmd("noremap z1 <c-w>=")
 
---folding
-vim.cmd("set foldmethod=indent")
-vim.cmd("set foldlevel=0")
+vim.cmd [[
+    set tabstop=4
+    set shiftwidth=4
+    set softtabstop=4
+    set backspace=indent,eol,start
+    set expandtab
+    set autoindent
+    set smarttab
+    set encoding=utf-8
+    set incsearch
+    set hlsearch
+]]
 
--- zo - opens folds
--- zc - closes fold
--- zm - increases auto fold depth
--- zr - reduces auto fold depth
+-- remove trailing whitespace --
+function stripTrailing()
+    local l = vim.fn.line(".")
+    local c = vim.fn.col(".")
+    vim.api.nvim_command("%s/\\s\\+$//e")
+    vim.api.nvim_command("call cursor(" .. l .. ", " .. c .. ")")
+end
+
+vim.api.nvim_command("autocmd BufWritePre * lua stripTrailing()")
 ```
 
 2. Supress `diagnostic warnings` by adding the following to `lua/lvim/lsp/handlers.lua`.
