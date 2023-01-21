@@ -344,21 +344,39 @@ Build <span class="nb">type</span>: Release
 </li>
 </ol>
 
-<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">--stop auto indent</span>
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set foldmethod=indent"</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set foldlevel=0"</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set ai"</span><span class="p">)</span>
+
+<span class="c1">--stop auto indent</span>
 <span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set indentexpr="</span><span class="p">)</span>
 
 <span class="c1">--zoom in and out</span>
-<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"noremap zz &lt;c-w&gt;_ \\| &lt;c-w&gt;\\|"</span><span class="p">)</span>
-<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"noremap zo &lt;c-w&gt;="</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"noremap z2 &lt;c-w&gt;_ \\| &lt;c-w&gt;\\|"</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"noremap z1 &lt;c-w&gt;="</span><span class="p">)</span>
 
-<span class="c1">--folding</span>
-<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set foldmethod=indent"</span><span class="p">)</span>
-<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set foldlevel=0"</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span> <span class="s">[[
+    set tabstop=4
+    set shiftwidth=4
+    set softtabstop=4
+    set backspace=indent,eol,start
+    set expandtab
+    set autoindent
+    set smarttab
+    set encoding=utf-8
+    set incsearch
+    set hlsearch
+]]</span>
 
-<span class="c1">-- zo - opens folds</span>
-<span class="c1">-- zc - closes fold</span>
-<span class="c1">-- zm - increases auto fold depth</span>
-<span class="c1">-- zr - reduces auto fold depth</span>
+<span class="c1">-- remove trailing whitespace --</span>
+<span class="k">function</span> <span class="nf">stripTrailing</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">l</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">fn</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="s2">"."</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">c</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">fn</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="s2">"."</span><span class="p">)</span>
+    <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_command</span><span class="p">(</span><span class="s2">"%s/\\s\\+$//e"</span><span class="p">)</span>
+    <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_command</span><span class="p">(</span><span class="s2">"call cursor("</span> <span class="o">..</span> <span class="n">l</span> <span class="o">..</span> <span class="s2">", "</span> <span class="o">..</span> <span class="n">c</span> <span class="o">..</span> <span class="s2">")"</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_command</span><span class="p">(</span><span class="s2">"autocmd BufWritePre * lua stripTrailing()"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <ol>
