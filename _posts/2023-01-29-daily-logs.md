@@ -9,5 +9,11 @@ When you do `git status` sometimes, you dont want to ignore some files. For exam
 $ git status | grep -v deleted
 ```
 
-Hre -v is for invert-search. You can type `man grep` for more detail. 
+Here -v is for invert-search. You can type `man grep` for more detail. 
+
+## Guinea Pig food
+
+I stopped at Petsmart today to buy pellets for piggies. Those little cute bastards are pooping dumpster. They eat pellets in the morning, vegtables in the night. Not to forget continous supply of hay. They are high maintance.
+
+
 
