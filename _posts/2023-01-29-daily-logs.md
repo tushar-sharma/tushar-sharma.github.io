@@ -30,4 +30,4 @@ Brussels sprouts are not my favoruite food. Here's the recipe
 
 ## Tennis 
 
-I played tennis in the morning. My serves keep hitting the net. I guess I need to work on my serves.I usually do continental serve. I swtich to pancake serve once I hit too many nets.
+I played tennis in the morning. My serves keep hitting the net. I guess I need to work on my serves. I usually do continental serve but had to switch to pancake serves when I hit too many of them.
