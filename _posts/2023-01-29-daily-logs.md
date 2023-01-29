@@ -9,7 +9,15 @@ When you do `git status` , sometimes you want to filter some result. For example
 $ git status | grep -v deleted
 ```
 
-Here -v is for invert-search. You can type `man grep` for more detail. 
+Here -v is for invert-search. 
+
+If you want to filter multiple words
+
+```bash
+$ git status | grep -E -v 'deleted|modified'
+```
+
+You can type `man grep` for more detail. 
 
 ## Guinea Pig food
 
