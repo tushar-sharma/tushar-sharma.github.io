@@ -13,8 +13,7 @@ Here -v is for invert-search. You can type `man grep` for more detail.
 
 ## Guinea Pig food
 
-I stopped at Petsmart today to buy pellets for piggies. Those little cute bastards are pooping dumpster. They eat pellets in the morning, vegtables in the night. Not to forget continous supply of hay. They are high maintance.
-
+I stopped at Petsmart today to buy pellets for piggies. Those little cute bastards are pooping volcanoes. They even poop in their sleep. It's one of the worst thing owning a guinea pig.
 
 ## Brussel Sprouts
 
@@ -28,3 +27,7 @@ Brussels sprouts are not my favoruite food. Here's the recipe
 
 4. Bake them for 20 minutes. 
 
+
+## Tennis 
+
+I played tennis in the morning. My serves keep hitting the net. I guess I need to work on my serves.I usually do continental serve. I swtich to pancake serve once I hit too many nets.
