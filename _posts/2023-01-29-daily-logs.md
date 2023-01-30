@@ -19,6 +19,47 @@ $ git status | grep -E -v 'deleted|modified'
 
 You can type `man grep` for more detail. 
 
+## React 
+
+On an existing react app you can start it by
+
+```bash
+$ npm install
+$ npm start
+```
+
+You can create dropdown using `select`.
+
+```javascript
+return (
+  <select 
+    value={selectedValue} 
+    onChange={e => setSelectedValue(e.target.value)}
+  >
+    {options.map(option => (
+      <option key={option.value} value={option.value}>
+        {option.label}
+      </option>
+    ))}
+  </select>
+);
+```
+
+Here , `value` is used to set the default selected value in the dropdown list when the component first renders. It is taken from the values object using the get function.
+
+`options` is an array of objects that represents the dropdown list options. Each option object contains the text to be displayed in the list and its corresponding value. When the component is rendered, these options will be displayed as the available choices for the user to select from.
+
+You can pass `options` as 
+
+```javascript
+const options = [
+  { value: 'Option 1', label: 'Option 1' },
+  { value: 'Option 2', label: 'Option 2' },
+  { value: 'Option 3', label: 'Option 3' },
+];
+```
+
+
 ## Guinea Pig food
 
 I stopped at Petsmart today to buy pellets for piggies. Those little cute bastards are pooping volcanoes. They even poop in their sleep. It's one of the worst thing owning a guinea pig.
