@@ -7,6 +7,69 @@
     
       
         <item>
+          <title>Dear Vishi, daily log on Jan 30, 2022</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for July 10, 2022.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for July 10, 2022.&lt;/p&gt;
+
+&lt;h2 id=&quot;cooking&quot;&gt;Cooking&lt;/h2&gt;
+
+&lt;p&gt;I made vermicelli today. Here’s the recipe&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Saute onion, garlic, tomatoes with salt and other spices.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pour water and vermicelli and cover the lid and let it rest for some time (I forgot to count how much time).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cut coriander and garnish it.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;panera&quot;&gt;Panera&lt;/h2&gt;
+
+&lt;p&gt;I ate dinner at Panera. I liked that they have pick up two option.I had tomato soup and half chipotle chicken sandwitch.&lt;/p&gt;
+
+&lt;h2 id=&quot;git&quot;&gt;Git&lt;/h2&gt;
+
+&lt;p&gt;Git status command also shows untracked files. Sometime it’s too much clutter. Hide untracked files&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--local&lt;/span&gt; status.showUntrackedFiles no
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;node-vs-npm&quot;&gt;Node vs NPM&lt;/h2&gt;
+
+&lt;p&gt;Node.js is JavaScript runtime environment that executes JavaScript code outside of a browser. Check node version as&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;node &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;NPM(Node Package Manager) is a package manager for Node.js that helps manage packages and dependencies for a Node.js project. Check npm version as&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;unable-to-find-valid-certification-path-to-requested-target&quot;&gt;Unable to find valid certification path to requested target&lt;/h2&gt;
+
+&lt;p&gt;I got this error in Spring boot while making a GET request to bitbucket. First got to bitbucket website.&lt;/p&gt;
+
+&lt;p&gt;Click on lock icon left of url bar. Connection is secure -&amp;gt; Certificate is valid -&amp;gt; Details -&amp;gt; Export to download SSL certificate file.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;keytool &lt;span class=&quot;nt&quot;&gt;--import&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-alias&lt;/span&gt; spring.cer &lt;span class=&quot;nt&quot;&gt;-file&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$filename&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-keystore&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$JAVA_HOME&lt;/span&gt;/lib/security/cacerts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then it will ask for keystore password which is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;changeit&lt;/code&gt;.&lt;/p&gt;
+</description>
+          <pubDate>2023-01-30T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/daily-logs-2023-01-30</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2023-01-30</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Dear Vishi, daily log on Jan 29, 2023</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for Jan 29, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
