@@ -42,3 +42,9 @@ Here, sample is video url.
   title="Sample"
 ></iframe>
 ```
+
+### Tweet
+
+```bash
+| <a href="https://twitter.com/"><img align="center"  loading="lazy" src="https://i.imgur.com/" /> </a>|
+```
