@@ -28,13 +28,13 @@ Create a JSON file that will act as your API endpoint. For example, you could cr
 Start the JSON-Server using the following command, specifying the db.json file you created in step 2 as the source of your data:
 
 ```javascript
-$ json-server --watch db.json
+$ json-server --watch db.json --port 3003
 ```
 
 Make a curl request to your localhost to access the data from your dummy JSON API.
 
 ```bash
-$ curl http://localhost:3000/posts
+$ curl http://localhost:3003/posts
 ```
 
 You should see the JSON data that you added to your db.json file returned in the curl response. JSON-Server is not intended for use in production, it is only meant for use in development and testing environments.
