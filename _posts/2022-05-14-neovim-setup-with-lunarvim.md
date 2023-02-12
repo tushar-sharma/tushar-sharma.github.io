@@ -29,7 +29,7 @@ As of today (May 14, 2022), Lunarvim requires Neovim v0.7 or higher. So we will 
 
 
 ```bash
-$ sudo apt-get install libtool libtool-bin m4 automake cmake gettext ninja-build autoconf g++ pkg-config unzip curl
+$ sudo apt-get install libtool libtool-bin m4 automake pkg-config cmake gettext ninja-build autoconf g++ pkg-config unzip curl
 $ git clone https://github.com/neovim/neovim
 $ cd neovim
 $ git checkout stable
