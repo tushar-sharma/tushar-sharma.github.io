@@ -56,6 +56,15 @@ $ cd tree-sitter-fusion
 $ yarn install
 ```
 
+If you get error as Yarn install command error No such file or directory: 'install' then
+
+```bash
+$ sudo apt remove cmdtest
+
+$ npm -g install yarn
+
+```
+
 ### Install `packer.nvim`
 
 ```bash
