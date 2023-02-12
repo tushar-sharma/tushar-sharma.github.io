@@ -36,7 +36,7 @@ $ git checkout stable
 $ make CMAKE_BUILD_TYPE=Release
 $ sudo make install
 # If  error on previous command
-$ make distclean; make
+$ sudo make distclean; make
 ```
 
 You can verify version of `neovim`
