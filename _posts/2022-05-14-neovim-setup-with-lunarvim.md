@@ -78,6 +78,8 @@ $ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 $ curl -s https://raw.githubusercontent.com/ChristianChiarulli/lunarvim/rolling/utils/installer/install.sh | LVBRANCH=rolling bash -s -- --overwrite
 ```
 
+Or go to the [website](https://www.lunarvim.org/) to get latest installation command.
+
 To fetch the latest changes for `lunarvim`
 
 
