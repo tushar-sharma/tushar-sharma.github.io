@@ -36,7 +36,7 @@ $ git checkout stable
 $ make CMAKE_BUILD_TYPE=Release
 $ sudo make install
 # If  error on previous command
-$ make distclean; make
+$ sudo make distclean; make
 ```
 
 You can verify version of `neovim`
@@ -56,6 +56,15 @@ $ cd tree-sitter-fusion
 $ yarn install
 ```
 
+If you get error as Yarn install command error No such file or directory: 'install' then
+
+```bash
+$ sudo apt remove cmdtest
+
+$ npm -g install yarn
+
+```
+
 ### Install `packer.nvim`
 
 ```bash
@@ -68,6 +77,8 @@ $ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ```bash
 $ curl -s https://raw.githubusercontent.com/ChristianChiarulli/lunarvim/rolling/utils/installer/install.sh | LVBRANCH=rolling bash -s -- --overwrite
 ```
+
+Or go to the [website](https://www.lunarvim.org/) to get latest installation command.
 
 To fetch the latest changes for `lunarvim`
 
