@@ -2424,7 +2424,7 @@ As of today (May 14, 2022), Lunarvim requires Neovim v0.7 or higher. So we will 
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make &lt;span class=&quot;nv&quot;&gt;CMAKE_BUILD_TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Release
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# If  error on previous command&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make distclean&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; make
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;make distclean&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; make
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You can verify version of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;neovim&lt;/code&gt;&lt;/p&gt;
@@ -2441,6 +2441,14 @@ Build &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;: Release
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;p&gt;If you get error as Yarn install command error No such file or directory: ‘install’ then&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt remove cmdtest
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;yarn
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h3 id=&quot;install-packernvim&quot;&gt;Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;packer.nvim&lt;/code&gt;&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone &lt;span class=&quot;nt&quot;&gt;--depth&lt;/span&gt; 1 https://github.com/wbthomason/packer.nvim&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -2451,6 +2459,8 @@ Build &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;: Release
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; https://raw.githubusercontent.com/ChristianChiarulli/lunarvim/rolling/utils/installer/install.sh | &lt;span class=&quot;nv&quot;&gt;LVBRANCH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;rolling bash &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--overwrite&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Or go to the &lt;a href=&quot;https://www.lunarvim.org/&quot;&gt;website&lt;/a&gt; to get latest installation command.&lt;/p&gt;
 
 &lt;p&gt;To fetch the latest changes for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lunarvim&lt;/code&gt;&lt;/p&gt;
 
