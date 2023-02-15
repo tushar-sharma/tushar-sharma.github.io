@@ -48,3 +48,31 @@ Here, sample is video url.
 ```bash
 | <a href="https://twitter.com/"><img align="center"  loading="lazy" src="https://i.imgur.com/" /> </a>|
 ```
+
+### Gists
+
+add this in markdown
+
+```yaml
+mutipleTab: true
+```
+
+and this code
+
+```html
+<div class="tab-container">
+  <ul>
+    <li class="tab Java1"><a href="#Java1">Java</a></li>
+    <li class="tab Python1"><a href="#Python1">Python</a></li>
+  </ul>
+
+   <div class="codeSample Java1" id="Java1">
+      <script src="https://gist.github.com/tushar-sharma/sample.js?file=ValidPath.java"></script>
+   </div>
+
+   <div class="codeSample Python" id="Python1">
+      <script src="https://gist.github.com/tushar-sharma/sample.js?file=ValidPath.java"></script>
+   </div>
+
+</div>
+```
