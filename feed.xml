@@ -7,6 +7,90 @@
     
       
         <item>
+          <title>Cribsheet for Set in Java</title>
+          <description>&lt;p&gt;A set in Java is a collection that stores a unique set of elements. This means that there are no duplicates in a set. You can define set using HashSet, TreeSet, or LinkedHashSet.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/interview&quot; title=&quot;View posts tagged with &amp;quot;interview&amp;quot;&quot;&gt;interview&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;A set in Java is a collection that stores a unique set of elements. This means that there are no duplicates in a set. You can define set using HashSet, TreeSet, or LinkedHashSet.&lt;/p&gt;
+
+&lt;div&gt;
+ &lt;script src=&quot;https://gist.github.com/tushar-sharma/6550255e0cf551112a494f4920727a9c.js?file=Set1.java&quot;&gt;&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;If you don’t care about the order of your elements and want the best performance, use HashSet. If you need your elements to be in sorted order, use TreeSet. If you want to maintain the order in which elements were added, use LinkedHashSet.&lt;/p&gt;
+
+&lt;h3 id=&quot;time-complexity&quot;&gt;Time Complexity&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Method&lt;/th&gt;
+      &lt;th&gt;HashSet&lt;/th&gt;
+      &lt;th&gt;TreeSet&lt;/th&gt;
+      &lt;th&gt;LinkedHashSet&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;add(E e)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;remove(Object o)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;contains(Object o)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(log n)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;size()&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iterator()&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+      &lt;td&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clear()&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O(n)&lt;/td&gt;
+      &lt;td&gt;O(n)&lt;/td&gt;
+      &lt;td&gt;O(n)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;using-apis&quot;&gt;Using APIs&lt;/h3&gt;
+
+&lt;div&gt;
+ &lt;script src=&quot;https://gist.github.com/tushar-sharma/6550255e0cf551112a494f4920727a9c.js?file=Set2.java&quot;&gt;&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Interestingly we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt; primitive data type instead of Integer like&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mySet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;element is: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+ &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We are iterating over the set and extracting each Integer object, which we can then use in our code. If we were to use for (int element : mySet) instead, we would be attempting to extract int primitives from the set, which is not possible since sets can only contain objects. However this will not throw error because the int values in the Set are automatically boxed into Integer objects by the compiler. This process is called autoboxing and has performance cost.&lt;/p&gt;
+</description>
+          <pubDate>2023-02-14T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/cribsheet-for-set-in-java</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/cribsheet-for-set-in-java</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Create a Dummy JSON API with JSON-Server</title>
           <description>&lt;p&gt;JSON-Server is a popular tool for creating fake REST APIs quickly and easily. It’s a great option for testing purposes when you need to mock up an API to see how your application interacts with it.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/api&quot; title=&quot;View posts tagged with &amp;quot;api&amp;quot;&quot;&gt;api&lt;/a&gt;    &lt;/p&gt;
