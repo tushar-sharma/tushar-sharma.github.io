@@ -7,6 +7,62 @@
     
       
         <item>
+          <title>Set up Dillinger using docker for markdown files</title>
+          <description>&lt;p&gt;Dillinger is a popular open-source Markdown editor that allows users to create, edit, and preview Markdown files with advanced features. In this tutorial, we will show you how to use Docker to set up Dillinger and use its advanced features to create, edit, and preview Markdown files. We’ll also cover collaboration and export features, making it easy to work with others and export your Markdown files in various formats.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/docker&quot; title=&quot;View posts tagged with &amp;quot;docker&amp;quot;&quot;&gt;docker&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/mardkown&quot; title=&quot;View posts tagged with &amp;quot;mardkown&amp;quot;&quot;&gt;mardkown&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Dillinger is a popular open-source Markdown editor that allows users to create, edit, and preview Markdown files with advanced features. In this tutorial, we will show you how to use Docker to set up Dillinger and use its advanced features to create, edit, and preview Markdown files. We’ll also cover collaboration and export features, making it easy to work with others and export your Markdown files in various formats.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-docker&quot;&gt;Install Docker&lt;/h3&gt;
+
+&lt;p&gt;Before you can set up Dillinger, you need to have Docker installed on your system. If you don’t have Docker installed, head over to the official Docker website and follow the instructions to download and install Docker for your operating system.&lt;/p&gt;
+
+&lt;h3 id=&quot;pull-the-dillinger-docker-image&quot;&gt;Pull the Dillinger Docker Image&lt;/h3&gt;
+
+&lt;p&gt;Once you have Docker installed, open up a terminal window and run the following command to pull the Dillinger Docker image from Docker Hub:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker pull joedicastro/dillinger
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;run-the-dillinger-docker-container&quot;&gt;Run the Dillinger Docker Container&lt;/h3&gt;
+
+&lt;p&gt;After pulling the Dillinger Docker image, run the following command to start a new Docker container:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8087:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; joedicastro/dillinger
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;access-dillinger-in-your-browser&quot;&gt;Access Dillinger in Your Browser&lt;/h4&gt;
+
+&lt;p&gt;Open up your web browser and navigate to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8087&lt;/code&gt; to access the Dillinger Markdown editor interface.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-a-new-markdown-file&quot;&gt;Create a New Markdown File&lt;/h3&gt;
+
+&lt;p&gt;In the Dillinger editor, click the “New” button in the top left corner of the screen to create a new Markdown file.&lt;/p&gt;
+
+&lt;h3 id=&quot;edit-your-markdown-file&quot;&gt;Edit Your Markdown File&lt;/h3&gt;
+
+&lt;p&gt;In the editor, you can use Markdown syntax to format your text. Use common Markdown syntax like # for headers, * or _ for italics, ** or __ for bold, and - or * for unordered lists. You can also use code blocks by surrounding your text with three backticks (`) or use inline code by surrounding your text with single backticks.&lt;/p&gt;
+
+&lt;h4 id=&quot;preview-your-markdown-file&quot;&gt;Preview Your Markdown File&lt;/h4&gt;
+
+&lt;p&gt;To preview your Markdown file, click the “Preview” button in the top right corner of the screen. This will render your Markdown file and display it in the preview pane on the right side of the screen.&lt;/p&gt;
+
+&lt;h3 id=&quot;export-your-markdown-file&quot;&gt;Export Your Markdown File&lt;/h3&gt;
+
+&lt;p&gt;When you’re happy with your Markdown file, you can export it in a variety of formats by clicking the “Export” button in the top right corner of the screen. Dillinger supports exporting to HTML, PDF, Markdown, and other formats.&lt;/p&gt;
+
+&lt;h3 id=&quot;collaborate-on-your-markdown-file&quot;&gt;Collaborate on Your Markdown File&lt;/h3&gt;
+
+&lt;p&gt;Dillinger has excellent collaboration capabilities, allowing you to collaborate with others on your Markdown file. To share your file, click the “Share” button in the top right corner of the screen and copy the link that is generated. You can then share this link with others to collaborate on your file in real-time.&lt;/p&gt;
+</description>
+          <pubDate>2023-02-25T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/set-up-dillinger-using-docker-for-markdown-files</link>
+          <guid isPermaLink="true">https://randomwits.com/set-up-dillinger-using-docker-for-markdown-files</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Cribsheet for Set in Java</title>
           <description>&lt;p&gt;A set in Java is a collection that stores a unique set of elements. This means that there are no duplicates in a set. You can define set using HashSet, TreeSet, or LinkedHashSet.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/interview&quot; title=&quot;View posts tagged with &amp;quot;interview&amp;quot;&quot;&gt;interview&lt;/a&gt;    &lt;/p&gt;
