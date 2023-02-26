@@ -34,7 +34,7 @@ $ docker pull linuxserver/dillinger
 After pulling the Dillinger Docker image, run the following command to start a new Docker container:
 
 ```bash
-docker run -p 8087:8080 -d joedicastro/dillinger
+$ docker run -p 8087:8080 -d linuxserver/dillinger
 ```
 
 #### Access Dillinger in Your Browser
