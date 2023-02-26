@@ -1,6 +1,5 @@
 ---
 layout: post
-date: {}
 title: Set up Dillinger using docker for markdown files
 image: 'https://unsplash.com/photos/_KaMTEmJnxY/download?w=800'
 thumb: 'https://unsplash.com/photos/_KaMTEmJnxY/download?w=800'
