@@ -21,14 +21,14 @@
 
 &lt;p&gt;Once you have Docker installed, open up a terminal window and run the following command to pull the Dillinger Docker image from Docker Hub:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker pull joedicastro/dillinger
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker pull linuxserver/dillinger
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;run-the-dillinger-docker-container&quot;&gt;Run the Dillinger Docker Container&lt;/h3&gt;
 
 &lt;p&gt;After pulling the Dillinger Docker image, run the following command to start a new Docker container:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8087:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; joedicastro/dillinger
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8087:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; linuxserver/dillinger
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;access-dillinger-in-your-browser&quot;&gt;Access Dillinger in Your Browser&lt;/h4&gt;
