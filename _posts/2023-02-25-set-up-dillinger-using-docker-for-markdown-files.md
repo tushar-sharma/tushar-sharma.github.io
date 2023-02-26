@@ -1,13 +1,14 @@
 ---
 layout: post
-date: 2023-02-25
+date: {}
 title: Set up Dillinger using docker for markdown files
-image: https://unsplash.com/photos/_KaMTEmJnxY/download?w=800
-thumb: https://unsplash.com/photos/_KaMTEmJnxY/download?w=800
+image: 'https://unsplash.com/photos/_KaMTEmJnxY/download?w=800'
+thumb: 'https://unsplash.com/photos/_KaMTEmJnxY/download?w=800'
 author: Tushar Sharma
 tags:
- - docker
- - mardkown
+  - docker
+  - mardkown
+published: true
 ---
 
 Dillinger is a popular open-source Markdown editor that allows users to create, edit, and preview Markdown files with advanced features. In this tutorial, we will show you how to use Docker to set up Dillinger and use its advanced features to create, edit, and preview Markdown files. We'll also cover collaboration and export features, making it easy to work with others and export your Markdown files in various formats.<!-- truncate_here -->
@@ -25,7 +26,7 @@ Before you can set up Dillinger, you need to have Docker installed on your syste
 Once you have Docker installed, open up a terminal window and run the following command to pull the Dillinger Docker image from Docker Hub:
 
 ```bash
-$ docker pull joedicastro/dillinger
+$ docker pull linuxserver/dillinger
 ```
 
 ### Run the Dillinger Docker Container
