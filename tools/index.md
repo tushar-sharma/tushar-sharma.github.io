@@ -44,6 +44,7 @@ toc_icon: cog
 | [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
 |                                            |          | Github Copilot |  |
 |                                            |          | Git Graph      |  |
+|                                            |          | [ChatGPT](https://marketplace.visualstudio.com/items?itemName=gencay.vscode-chatgpt) |
 | [Neovim](https://github.com/neovim/neovim)  | editor  |  | Details<sup><a href='#fn:2' rel='footnote'>2</a></sup> for Windows  |
 | [Winmerge](https://winmerge.org/)  | Diff  |  [Dotfiles](https://github.com/tushar-sharma/dotfiles)   |  |
 | [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
