@@ -1,6 +1,8 @@
 ---
 published: false
 ---
-## A New Post
+Some of the commands I used with `ChatGPT`
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+```
+can you read this https://heather.miller.am/teaching/cs4240/spring2018/pdf/spark-1-4.pdf and explain me the concepts
+```
