@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set up Dillinger using docker for markdown files
+title: Set up markdown editor locally using docker
 image: 'https://unsplash.com/photos/_KaMTEmJnxY/download?w=800'
 thumb: 'https://unsplash.com/photos/_KaMTEmJnxY/download?w=800'
 author: Tushar Sharma
@@ -10,11 +10,10 @@ tags:
 published: true
 ---
 
-Dillinger is a popular open-source Markdown editor that allows users to create, edit, and preview Markdown files with advanced features. In this tutorial, we will show you how to use Docker to set up Dillinger and use its advanced features to create, edit, and preview Markdown files. We'll also cover collaboration and export features, making it easy to work with others and export your Markdown files in various formats.<!-- truncate_here -->
+If you're a writer or a developer who frequently deals with text formatting, you're probably familiar with Markdown. Markdown is a lightweight markup language that allows you to easily format text using simple syntax. While you can write Markdown in any text editor, using a dedicated Markdown editor can make the process much easier and more efficient.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-
-Dillinger is a popular open-source Markdown editor that allows users to create, edit, and preview Markdown files with advanced features. In this tutorial, we will show you how to use Docker to set up Dillinger and use its advanced features to create, edit, and preview Markdown files. We'll also cover collaboration and export features, making it easy to work with others and export your Markdown files in various formats.
+If you're a writer or a developer who frequently deals with text formatting, you're probably familiar with Markdown. Markdown is a lightweight markup language that allows you to easily format text using simple syntax. While you can write Markdown in any text editor, using a dedicated Markdown editor can make the process much easier and more efficient.
 
 ### Install Docker
 
