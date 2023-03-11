@@ -7,6 +7,39 @@
     
       
         <item>
+          <title>Dear Vishi, daily log on March 10, 2023.</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for March 10, 2023.
+&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for March 10, 2023.&lt;/p&gt;
+
+&lt;p&gt;My Twitter feed is being inundated with news regarding the collapse of Silicon Valley Bank. The stock price of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$SIVB&lt;/code&gt; has plummeted from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$300&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$80&lt;/code&gt; in just a few days. This piqued my curiosity, so I dug a little deeper to understand what the fuss is about.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;/img/svb.png&quot; alt=&quot;Silicon Valley Bank&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Silicon Valley Bank is known for specializing in providing financial services and resources to early-stage and high-growth technology companies and venture capitalists. However, recent reports suggest that the bank may be facing financial challenges due to its investment strategies.&lt;/p&gt;
+
+&lt;p&gt;It was reported that the bank invested its customers’ money in mortgage-backed securities (MBS), which yield between 1.56-1.66%. However, the Federal Reserve interest rate is currently at 4.57%, which has caused concerns among depositors.&lt;/p&gt;
+
+&lt;p&gt;A bank run is a situation where a large number of depositors withdraw their funds from a bank at the same time, usually due to concerns about the bank’s solvency or ability to meet its obligations. Silicon Valley Bank experienced a bank run because it had mostly uninsured deposits from startups who borrowed money from the same bank, leaving it vulnerable to a run.&lt;/p&gt;
+
+&lt;p&gt;The collapse of Silicon Valley Bank was reportedly due to depositors, mostly technology workers and venture capital-backed companies, pulling their money out, resulting in the bank’s insolvency.&lt;/p&gt;
+</description>
+          <pubDate>2023-03-10T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/daily-logs-2023-03-10</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2023-03-10</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Set up markdown editor locally using docker</title>
           <description>&lt;p&gt;If you’re a writer or a developer who frequently deals with text formatting, you’re probably familiar with Markdown. Markdown is a lightweight markup language that allows you to easily format text using simple syntax. While you can write Markdown in any text editor, using a dedicated Markdown editor can make the process much easier and more efficient.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/docker&quot; title=&quot;View posts tagged with &amp;quot;docker&amp;quot;&quot;&gt;docker&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/mardkown&quot; title=&quot;View posts tagged with &amp;quot;mardkown&amp;quot;&quot;&gt;mardkown&lt;/a&gt;    &lt;/p&gt;
