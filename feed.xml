@@ -7,6 +7,33 @@
     
       
         <item>
+          <title>Navigating Buffers in LunarVim</title>
+          <description>&lt;p&gt;Lunarvim is a powerful tool that can enhance productivity for advanced software engineers. One feature that is particularly useful for working with multiple files is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vsplit&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;telescope&lt;/code&gt;. However, it can become cumbersome to navigate between files using a mouse. &lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/neovim&quot; title=&quot;View posts tagged with &amp;quot;neovim&amp;quot;&quot;&gt;neovim&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/vim&quot; title=&quot;View posts tagged with &amp;quot;vim&amp;quot;&quot;&gt;vim&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/lunarvim&quot; title=&quot;View posts tagged with &amp;quot;lunarvim&amp;quot;&quot;&gt;lunarvim&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Lunarvim is a powerful tool that can enhance productivity for advanced software engineers. One feature that is particularly useful for working with multiple files is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vsplit&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;telescope&lt;/code&gt;. However, it can become cumbersome to navigate between files using a mouse.&lt;/p&gt;
+
+&lt;p&gt;Easiest way is to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:bp&lt;/code&gt; command. However it jumps files sequentially.&lt;/p&gt;
+
+&lt;p&gt;First get the buffer number by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:ls&lt;/code&gt; which will display buffer number corresponding to the filename.&lt;/p&gt;
+
+&lt;p&gt;Now to make a jump to a specific file&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:buffer 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This allows you to quickly switch to a specific buffer, without having to cycle through all open buffers using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:bn&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:bp&lt;/code&gt; commands.&lt;/p&gt;
+
+&lt;p&gt;I mostly avoid using mouse and love to do most of my work using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;keyboard&lt;/code&gt;.&lt;/p&gt;
+</description>
+          <pubDate>2023-03-11T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/navigating-buffers-in-lunarvim-tips-for-efficient-file-management</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/navigating-buffers-in-lunarvim-tips-for-efficient-file-management</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Dear Vishi, daily log on March 10, 2023.</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for March 10, 2023.
 &lt;!-- truncate_here --&gt;&lt;/p&gt;
