@@ -24,8 +24,20 @@ This allows you to quickly switch to a specific buffer, without having to cycle 
 
 In addition to switching to a specific buffer, you can also navigate the buffer list by a specific count using the `:bnext` and `:bprev` commands. These commands allow you to skip over certain buffers in the buffer list and navigate directly to the buffer you want.
 
+Some of the buffer number is random in `lunarvim`, if you want to make them sequential like 1,2,3 
+
+Open your LunarVim configuration file by typing :e ~/.config/lvim/config.lua in LunarVim's command mode.
+
+Add the following line to your configuration file:
+
+```
+lvim.builtin.tabline.style = "numbers"
+
+```
+
+Save the configuration file by typing :w and then pressing Enter.
+
+Restart LunarVim by typing :Restart and then pressing Enter.
+
+
 In conclusion, LunarVim offers powerful features for navigating buffers, including the ability to switch to a specific buffer by its number, and the ability to navigate the buffer list by a specific count. These features can save you time and help you work more efficiently, whether you are working on a small project or a large codebase. So give them a try and see how they can improve your workflow in LunarVim!
-
-
-
-
