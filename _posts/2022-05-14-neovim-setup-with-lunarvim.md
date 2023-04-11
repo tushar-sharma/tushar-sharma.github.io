@@ -193,3 +193,7 @@ Error executing lua callback: .../.local/share/lunarvim/lvim/lua/lvim/core/trees
 cd ~/.local/share/lunarvim/site/pack/packer/start/nvim-treesitter/
 git pull origin master
 ```
+
+```
+Error executing lua: ...im/0.9.0/share/nvim/runtime/lua/vim/treesitter/query.lua:259
+```
