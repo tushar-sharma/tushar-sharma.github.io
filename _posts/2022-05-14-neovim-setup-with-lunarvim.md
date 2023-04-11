@@ -178,7 +178,7 @@ vim.api.nvim_command("autocmd BufWritePre * lua stripTrailing()")
     vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, diagnostic_opts)
 ```
 
-### Issues
+### Errors
 
 ```
 Error detected while processing VimEnter Autocommands for "*":
