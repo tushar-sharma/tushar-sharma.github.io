@@ -189,7 +189,6 @@ Error executing lua callback: .../.local/share/lunarvim/lvim/lua/lvim/core/trees
 
 #### Solution 
 
-
 ```
 cd ~/.local/share/lunarvim/site/pack/packer/start/nvim-treesitter/
 git pull origin master
