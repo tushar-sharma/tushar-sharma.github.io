@@ -177,3 +177,20 @@ vim.api.nvim_command("autocmd BufWritePre * lua stripTrailing()")
 
     vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, diagnostic_opts)
 ```
+
+### Issues
+
+```
+Error detected while processing VimEnter Autocommands for "*":
+Error executing lua callback: .../.local/share/lunarvim/lvim/lua/lvim/core/treesitter.lua:185: VimEnter Autocommands for "*":
+ Vim(lua):Installation not possible: ...er/start/nvim-treesitter/lua/nvim-treesitter/install.lua:52: Parser not available for
+ language "vimdoc"
+```
+
+#### Solution 
+
+
+```
+cd ~/.local/share/lunarvim/site/pack/packer/start/nvim-treesitter/
+git pull origin master
+```
