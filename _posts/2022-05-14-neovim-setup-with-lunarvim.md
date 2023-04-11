@@ -197,3 +197,9 @@ git pull origin master
 ```
 Error executing lua: ...im/0.9.0/share/nvim/runtime/lua/vim/treesitter/query.lua:259
 ```
+
+#### Solution
+
+```
+:TSInstall all
+```
