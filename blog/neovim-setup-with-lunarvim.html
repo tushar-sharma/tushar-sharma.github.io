@@ -299,7 +299,7 @@ Build <span class="nb">type</span>: Release
 <h3 id="install-lunarvim">Install <code class="language-plaintext highlighter-rouge">LunarVim</code>
 </h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">-s</span> https://raw.githubusercontent.com/ChristianChiarulli/lunarvim/rolling/utils/installer/install.sh | <span class="nv">LVBRANCH</span><span class="o">=</span>rolling bash <span class="nt">-s</span> <span class="nt">--</span> <span class="nt">--overwrite</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ LV_BRANCH</span><span class="o">=</span><span class="s1">'release-1.2/neovim-0.8'</span> bash &lt;<span class="o">(</span>curl <span class="nt">-s</span> https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh<span class="o">)</span>
 </code></pre></div></div>
 
 <p>Or go to the <a href="https://www.lunarvim.org/">website</a> to get latest installation command.</p>
@@ -401,6 +401,28 @@ Build <span class="nb">type</span>: Release
   <span class="p">}</span>
 
     <span class="n">vim</span><span class="p">.</span><span class="n">lsp</span><span class="p">.</span><span class="n">handlers</span><span class="p">[</span><span class="s2">"textDocument/publishDiagnostics"</span><span class="p">]</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">lsp</span><span class="p">.</span><span class="n">with</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">lsp</span><span class="p">.</span><span class="n">diagnostic</span><span class="p">.</span><span class="n">on_publish_diagnostics</span><span class="p">,</span> <span class="n">diagnostic_opts</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="errors">Errors</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error detected while processing VimEnter Autocommands for "*":
+Error executing lua callback: .../.local/share/lunarvim/lvim/lua/lvim/core/treesitter.lua:185: VimEnter Autocommands for "*":
+ Vim(lua):Installation not possible: ...er/start/nvim-treesitter/lua/nvim-treesitter/install.lua:52: Parser not available for
+ language "vimdoc"
+</code></pre></div></div>
+
+<h4 id="solution">Solution</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.local/share/lunarvim/site/pack/packer/start/nvim-treesitter/
+git pull origin master
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error executing lua: ...im/0.9.0/share/nvim/runtime/lua/vim/treesitter/query.lua:259
+</code></pre></div></div>
+
+<h4 id="solution-1">Solution</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:TSInstall all
 </code></pre></div></div>
 
 
