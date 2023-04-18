@@ -400,7 +400,13 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 <tr>
   <td>One, Two, Three...Infinity</td>
   <td>George Gamow</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
+  <td>
+    <div class="cl">
+      {% for i in (1..5) %}
+        <span class="fa fa-star checked"></span>
+      {% endfor %}
+    </div>
+  </td>
   <td>To be updated...</td>
 </tr>
 
@@ -525,6 +531,32 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 
+<!-- Musicophilia  -->
+<tr>
+  <td>Musicophilia</td>
+  <td>Oliver Sacks</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book4"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+
+<!-- ng-book: The complete book on Angular 8  -->
+<tr>
+  <td>ng-book: The complete book on Angular 8</td>
+  <td>Nate Murray, Felipe Coury, Ari Lerner, Carlos Taborda</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book4"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
 
 <!-- ending -->
 
