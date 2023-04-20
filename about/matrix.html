@@ -45,7 +45,7 @@ function myIP() {
         }
     }
     ajax.send(null);
-  } 
+  }
 
   return false;
 }
@@ -114,7 +114,7 @@ $(function() {
             aOnce = false;
 		        term.echo(msg);
             this.echo('<img src="https://pbs.twimg.com/media/CtZpAWgUkAEVGX1?format=jpg&name=small"/><br><br>', {raw: true});
-        }  else if (cmd == "blue") { 
+        }  else if (cmd == "blue") {
           window.location.href = "/"
         }else if (cmd == "red" || cmd == "help") {
 
@@ -211,6 +211,9 @@ $(function() {
           });*/
 
         } else if (cmd == "songs") {
+            // Clear the terminal first
+            term.clear();
+
             jQuery.get('/../songs.txt', function(data) {
               let songs = data.split("\n");
               idx = Math.floor((songs.length - 1) * Math.random());
