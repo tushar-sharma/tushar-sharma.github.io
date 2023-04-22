@@ -26,7 +26,7 @@ Some of the jewels from Thenmozhi Soundararajan, the founder of `Equality labs`[
 
 2. Every act of Hindu scripture has brought nothing but violence and pain
 
-Caste is social construct that is archaic and needs to be dismantled. How can it be dismantled? It depends on whom you ask. Most centrist or right wing Hindus believe that Hinduism can be reformed just like Christianity. However the left in India belives that caste distmantling entails dismantling Hinduism itself. Prof Dwivedi, an IIT professor, claimed that a French-style revolution alone can help India recover from its current caste stasis[^ref2].
+Caste is social construct that is archaic and needs to be dismantled. How can it be dismantled? It depends on whom you ask. Most centrist or right wing Hindus believe that Hinduism can be reformed just like Christianity. However the left in India belives that caste distmantling entails dismantling Hinduism itself. Prof Dwivedi, an IIT professor, claimed that a French-style revolution alone can help India recover from its current caste stasis[^ref2]. Some of these politics is spilling over US politics.
 
 The California Civil Rights Department dismissed its case against two Cisco engineers who allegedly engaged in caste bias. However even before the verdict, the internation media and left/liberal media in India drew prima facie conclusion that it was a caste discrimination.
 
