@@ -2,8 +2,8 @@
 layout: post
 date: 2023-04-22
 title: The Caste Politics in USA
-image: https://unsplash.com/photos/DoA2duXyzRM/download?w=800
-thumb: https://unsplash.com/photos/DoA2duXyzRM/download?w=800
+image: https://1.bp.blogspot.com/-8xjbEtzKsmQ/WH-uusA9jfI/AAAAAAAAsXs/wGl-MNoBaxg_jCanb4HENCE8Jq1xJWMWgCLcB/w1200-h630-p-k-no-nu/targeted-individual-class-action-lawsuit-2017_orig.jpeg
+thumb: https://1.bp.blogspot.com/-8xjbEtzKsmQ/WH-uusA9jfI/AAAAAAAAsXs/wGl-MNoBaxg_jCanb4HENCE8Jq1xJWMWgCLcB/w1200-h630-p-k-no-nu/targeted-individual-class-action-lawsuit-2017_orig.jpeg
 author: Tushar Sharma
 tags:
   - caste
