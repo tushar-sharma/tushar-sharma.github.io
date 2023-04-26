@@ -76,3 +76,10 @@ and this code
 
 </div>
 ```
+
+### Build this website
+
+```
+$ make build
+```
+
