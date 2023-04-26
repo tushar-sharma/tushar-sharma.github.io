@@ -13,6 +13,8 @@ build:
 	JEKYLL_ENV=production bundle exec jekyll build
 	$(MAKE) copy
 copy:
+	rm -fr tag
+	cp -r _site/tag .
 	cp -r sitemap.xml _site/
 	cp -r CNAME _site/
 	cp .nojekyll _site/
