@@ -1,6 +1,5 @@
 ---
 published: false
 ---
-## A New Post
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+## Update a Lambda Layer in a CloudFormation Stack with a New Zip File on S3
