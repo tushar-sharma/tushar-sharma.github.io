@@ -22,9 +22,7 @@ If you are on a visa in the US and need to travel outside of the country, it is 
 
 Recently, I had to travel to India for personal reasons and decided to take advantage of the dropbox option. I booked an appointment at Delhi's VAC (Visa Application Center) located at the Shivaji Stadium Metro Station.
 
-Upon arriving at the VAC center, I learned that there were restrictions on carrying a bag or luggage, except for the necessary documents. After going through security, I was able to head to the VAC center, which was three levels below ground level.
-
-To be prepared for the appointment, it's important to have the following documents in hand:
+There were restrictions on carrying a bag or luggage, except for the necessary documents. After going through security, I was able to head to the VAC center, which was three levels below ground level.
 
 ### Documents required
 
@@ -39,5 +37,3 @@ To be prepared for the appointment, it's important to have the following documen
 5. Employement verification letter
 
 6. `I-797 Approval Notice` copy (Not original).
-
-Having these documents ready ahead of time can save a lot of time and hassle during the appointment.
