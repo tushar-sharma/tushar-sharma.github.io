@@ -1,23 +1,39 @@
 ---
-published: false
+layout: post
+title: US H1b visa dropbox experience in India
+category: blog
+tags:
+  - visa
+  - usa
+thumb: https://unsplash.com/photos/rFKBUwLg_WQ/download?w=800
+summary: US H1b visa dropbox experience in India
+image: https://unsplash.com/photos/rFKBUwLg_WQ/download?w=800
+author: Tushar Sharma
+featuredPost: false
+published: true
 ---
 
-1. Go to [^address]
+If you are working in USA on a visa, you are more likely need to visit your home country to get a visa stamp. This helps you to return to United States if you travel. If you applying for the same visa class, you are most likely eligible for dropbox. It means that you dont need to go for USA visa interview to get a US visa stamp.<!-- truncate_here -->
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-[^address] : Shivaji Stadium Metro Station, Concourse Level, Baba Kharak Singh Rd, Connaught Place, New Delhi, Delhi 110001
+If you are working in USA on a visa, you are more likely need to visit your home country to get a visa stamp. This helps you to return to United States if you travel. If you applying for the same visa class, you are most likely eligible for dropbox. It means that you dont need to go for USA visa interview to get a US visa stamp.
 
-2. Just carry a documents.
+I travelled to India and booked an appointment at Delhi's VAC (Visa Applicaiton Center)[^address]. There's a restrictions in carrying a bag or luggage except your documents. After the security, you can head to the VAC center which is three level below.
+### Documents required
 
-3. Inside there's guard screening.. 
+1. Valid passport
 
-4. Go down to third floor below. Ask if this is for US visa. 
+2. Appointment confirmation
 
-5. Documents you need : 
+3. DS-160 confirmation
 
-a. Appointment confirmation
-b. DS 160
-c. 1 passport photo ( I got it from Walgreens in USA)
-d. Employement verification 
-e. copy of I797.
+4. One passport photo (I got it from Walgreens in US, [size requirement](https://travel.state.gov/content/travel/en/passports/how-apply/photos.html))
+
+5. Employement verification letter
+
+6. `I-797 Approval Notice` copy (Not original).
 
 
+### References 
+
+[^address]: The address was Shivaji Stadium Metro Station, Concourse Level, Baba Kharak Singh Rd, Connaught Place, New Delhi, Delhi 110001. 
