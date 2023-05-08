@@ -7,6 +7,178 @@
     
       
         <item>
+          <title>Dear Vishi, daily logs for May 7, 2023</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for May 7, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
+
+&lt;!--begin_of_post --&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for May 7, 2023.&lt;/p&gt;
+
+&lt;h3 id=&quot;sleep&quot;&gt;Sleep&lt;/h3&gt;
+
+&lt;p&gt;I am still having jetlag I guess. I sleep at 3 am and wake at 8 am. It’s been almost a week. There is hilarious quote about sleep&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Dear sleep, I’m sorry we broke up this morning. I want you back!” — Anonymous&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I like to collect quotes and keep a personal &lt;a href=&quot;https://randomwits.com/quotes/&quot;&gt;collection&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;passport-from-us-embassy&quot;&gt;Passport from US Embassy&lt;/h3&gt;
+
+&lt;p&gt;I had applied for dropbox stamping on May 1, 2023. I am still waiting for my passport. More than a week has passed. I made a foolhardy plan to only give 2 week buffer before boarding my flight. Hope the passport comes on time.&lt;/p&gt;
+
+&lt;h3 id=&quot;30-days-of-lc-javascript-challenge&quot;&gt;30 Days of LC Javascript challenge&lt;/h3&gt;
+
+&lt;p&gt;There is a 30 day challenge hosted at &lt;a href=&quot;https://leetcode.com/discuss/study-guide/3458761/day-4-30-days-of-lc-javascript-challenge&quot;&gt;leetcode&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;apply-transform-over-each-element-in-array&quot;&gt;Apply Transform Over Each Element in Array&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Given an integer array arr and a mapping function fn, return a new array with a transformation applied to each element.
+
+Input: arr = [1,2,3], fn = function plusone(n) { return n + 1; }
+Output: [2,3,4]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The solution is straightforward to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;create-hello-world-function&quot;&gt;Create Hello World Function&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Write a function createHelloWorld. It should return a new function that always returns &quot;Hello World&quot;.
+
+Input: args = []
+Output: &quot;Hello World&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Solution:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createHelloWorld&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(..&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello World&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;counter&quot;&gt;Counter&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
+
+
+const counter = createCounter(10)
+counter() // 10
+counter() // 11
+counter() // 12
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Solution:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createCounter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is a simple example of using closures in javascript.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Closure are nested function which has access to the outer scope&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After the outer function is returned, by keeping a reference to the inner function (the closures) we prevent the outer scope to be destroyed.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;sonarqube-exclude-directories&quot;&gt;SonarQube exclude directories&lt;/h3&gt;
+
+&lt;p&gt;Sometimes you want to skip certain folders for scanning. Add following option to the config&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-Dsonar.exclusions=**/site-packages/**
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;top-gun-movie&quot;&gt;Top Gun movie&lt;/h3&gt;
+
+&lt;p&gt;I watched it today. It was in my bucket list. I liked the soundtrack and visual effects.  I guess story could have been more captivating.&lt;/p&gt;
+
+&lt;h3 id=&quot;ng-book&quot;&gt;ng-book&lt;/h3&gt;
+
+&lt;p&gt;I am currenlty reading &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ng-book&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Create a new project&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ng new angular-hello-world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;angular-hello-world/src/index.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;app-root&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/app-root&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app-root&lt;/code&gt; is where application is rendered. It’s a component.&lt;/p&gt;
+
+&lt;p&gt;To run the application, go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost:4200&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ng serve &lt;span class=&quot;nt&quot;&gt;--port&lt;/span&gt; 4200
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;create-a-component&quot;&gt;Create a component&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ng generate component hello-world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Component consist of two parts&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;a component decorator&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;a component definition class&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Open the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;angular-hello-world/src/app/hello-world/hello-world.component.ts&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OnInit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@angualar/core&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;Component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;app-hello-world&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;templateUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./hello-world.component.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;styleUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./hello-world.component.css&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorldComponent&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OnInit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;ngOnInit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Component&lt;/code&gt; is the decorators. In the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;angular-hello-world/src/app/app.component.html&lt;/code&gt;, we can use&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;app-hello-world&amp;gt;&amp;lt;/app-hello-world&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I am tracking my books &lt;a href=&quot;https://randomwits.com/books&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+</description>
+          <pubDate>2023-05-07T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/daily-logs-2023-05-07</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2023-05-07</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Unit Test AWS Lambda Function in Python</title>
           <description>&lt;p&gt;AWS lambda function are event driven serverless code. To follow TDD, we should write unit test our lambda functions.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
