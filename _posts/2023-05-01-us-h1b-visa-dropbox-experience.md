@@ -5,9 +5,9 @@ category: blog
 tags:
   - visa
   - usa
-thumb: https://unsplash.com/photos/rFKBUwLg_WQ/download?w=800
+thumb: 'https://unsplash.com/photos/rFKBUwLg_WQ/download?w=800'
 summary: US H1b visa dropbox experience in India
-image: https://unsplash.com/photos/rFKBUwLg_WQ/download?w=800
+image: 'https://unsplash.com/photos/rFKBUwLg_WQ/download?w=800'
 author: Tushar Sharma
 featuredPost: false
 published: true
@@ -37,3 +37,8 @@ There were restrictions on carrying a bag or luggage, except for the necessary d
 5. Employement verification letter
 
 6. `I-797 Approval Notice` copy (Not original).
+
+### Passport delivery
+
+If you selected `premium delivery` while filling the appointment, you can go to [Blue Dart website](https://www.bluedart.com/web/guest). You need to enter your **UID**. This information is printed on your appointment confirmation page.
+
