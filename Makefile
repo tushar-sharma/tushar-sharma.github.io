@@ -15,8 +15,8 @@ build:
 copy:
 	rm -fr tag
 	cp -r _site/tag .
-	cp -r sitemap.xml _site/
-	cp -r CNAME _site/
+	cp  sitemap.xml _site/
+	cp  CNAME _site/
 	cp .nojekyll _site/
 	cp robots.txt _site/
 	cp loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt _site/
