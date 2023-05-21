@@ -45,8 +45,10 @@ Here, sample is video url.
 
 ### Tweet
 
+Go to [Poet.so](https://poet.so/) to download the screenshot.
+
 ```bash
-| <a href="https://twitter.com/"><img align="center"  loading="lazy" src="https://i.imgur.com/" /> </a>|
+| <a href="https://twitter.com/status/?"><img align="center"  loading="lazy" src="{{ root_url }}/img/downloaded.png" /> </a>|
 ```
 
 ### Gists
