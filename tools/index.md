@@ -41,7 +41,7 @@ toc_icon: cog
 |         |         | [I dont care about cookies](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja) |  |
 |         |         | [Json formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa/related?hl=en)    |         |
 | [Ubuntu](https://ubuntu.com/)  | Operating System  |  | Details<sup><a href='#fn:3' rel='footnote'>3</a></sup> |
-| [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Development environment |
+| [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Type Shift+Command+P and select install `code` command in PATH. |
 |                                            |          | Github Copilot |  |
 |                                            |          | Git Graph      |  |
 |                                            |          | [ChatGPT](https://marketplace.visualstudio.com/items?itemName=gencay.vscode-chatgpt) |

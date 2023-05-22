@@ -2,13 +2,13 @@
 layout: post
 date: 2023-05-21
 title: Guide to Travel to Thailand
-image: https://unsplash.com/photos//download?w=800
-thumb: https://unsplash.com/photos//download?w=800
+image: https://unsplash.com/photos/rH1aA4TqGms/download?w=800
+thumb: https://unsplash.com/photos/rH1aA4TqGms/download?w=800
 tags:
   - thailand
   - travel
 author: Tushar Sharma
-published: false
+published: true
 ---
 
 Thailand has got a bad reputation for its seedy masssage parlors and go go bars. However it's a beautiful country with plenty of toursit attractions. Below is my snapshot of my travel to Thailand.<!-- truncate_here -->
