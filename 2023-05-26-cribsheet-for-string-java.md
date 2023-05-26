@@ -24,6 +24,10 @@ assert asciiA == 97;
 // Get ASCII value of 'z' at index 1
 int asciiZ = sb.charAt(1); 
 assert asciiZ == 122;
+
+// Get character from ASCII value
+char c = (char) asciiA; 
+assert c == 'a';
 ```
 
 
