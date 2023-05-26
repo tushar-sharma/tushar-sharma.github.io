@@ -10,6 +10,12 @@ StringBuilder sb = new StringBuidler(input);
 
 // Convert back to String
 String sbString = sb.toString();
+
+// Get a character at index 1
+char c = sb.charAt(1);
+
+// Modify at index 1
+sb.setCharAt(1, 'z');
 ```
 
 
