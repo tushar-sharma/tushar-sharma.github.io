@@ -16,6 +16,14 @@ char c = sb.charAt(1);
 
 // Modify at index 1
 sb.setCharAt(1, 'z');
+
+// Get ASCII value of 'a' at index 0
+int asciiA = sb.charAt(0); 
+assert asciiA == 97;
+
+// Get ASCII value of 'z' at index 1
+int asciiZ = sb.charAt(1); 
+assert asciiZ == 122;
 ```
 
 
