@@ -6,7 +6,7 @@ Strings are immutable in java. It's best to convert string to StringBuilder/Stri
 ```java
 // Convert to StringBuilder
 String input = "abcde";
-StringBuilder sb = new StringBuidler(input);
+StringBuilder sb = new StringBuilder(input);
 
 // Convert back to String
 String sbString = sb.toString();
