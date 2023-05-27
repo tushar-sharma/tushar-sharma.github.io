@@ -28,4 +28,12 @@ assert asciiZ == 122;
 // Get character from ASCII value
 char c = (char) asciiA; 
 assert c == 'a';
+
+// Get ASCII value for 'A' 
+int asciiA = 'A';
+assert asciiA == 65;
+
+// Get ASCII value for 'Z'
+int asciiZ = 'Z';
+assert asciiZ == 90;
 ```
