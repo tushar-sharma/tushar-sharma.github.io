@@ -1,7 +1,7 @@
 
 ### Cribsheet for String in java
 
-Strings are immutable in java. It's best to convert string to StringBuilder/StringBuffer so that it's memory efficient while string manipulation.
+Strings are immutable in java. It's best to convert string to StringBuilder/StringBuffer so that it's memory efficient for string manipulation.
 
 ```java
 // Convert to StringBuilder
@@ -29,5 +29,3 @@ assert asciiZ == 122;
 char c = (char) asciiA; 
 assert c == 'a';
 ```
-
-
