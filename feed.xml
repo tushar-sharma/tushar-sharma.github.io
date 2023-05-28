@@ -7,6 +7,24 @@
     
       
         <item>
+          <title>Cribsheet for String in Java</title>
+          <description>&lt;p&gt;Strings are immutable in java. It’s best to convert string to StringBuilder/StringBuffer so that it’s memory efficient for string manipulation.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/interview&quot; title=&quot;View posts tagged with &amp;quot;interview&amp;quot;&quot;&gt;interview&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Strings are immutable in java. It’s best to convert string to StringBuilder/StringBuffer so that it’s memory efficient for string manipulation. Use StringBuilder for speed and StringBuffer for threadsafe.&lt;/p&gt;
+
+&lt;div&gt;
+ &lt;script src=&quot;https://gist.github.com/tushar-sharma/394745794444792a8d6d271d922bad55.js?file=String1.java&quot;&gt;&lt;/script&gt;
+ &lt;/div&gt;
+</description>
+          <pubDate>2023-05-27T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/cribsheet-string-java</link>
+          <guid isPermaLink="true">https://randomwits.com/cribsheet-string-java</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Guide to Travel to Thailand</title>
           <description>&lt;p&gt;Thailand has got a bad reputation for its seedy masssage parlors and go go bars. However it’s a beautiful country with plenty of toursit attractions. Below is my snapshot of my travel to Thailand.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/thailand&quot; title=&quot;View posts tagged with &amp;quot;thailand&amp;quot;&quot;&gt;thailand&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/travel&quot; title=&quot;View posts tagged with &amp;quot;travel&amp;quot;&quot;&gt;travel&lt;/a&gt;    &lt;/p&gt;
