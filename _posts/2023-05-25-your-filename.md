@@ -7,6 +7,7 @@ thumb: /img/writing.jpg
 summary: Daily Log on Aug 29, 2022
 image: /img/writing.jpg
 author: Tushar Sharma
+published: false
 ---
 
 Random thought on foreign news on Kerala Story.<!-- truncate_here -->
