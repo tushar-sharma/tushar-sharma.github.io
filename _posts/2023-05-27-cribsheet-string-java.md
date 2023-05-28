@@ -15,18 +15,34 @@ Strings are immutable in java. It's best to convert string to StringBuilder/Stri
 
 Strings are immutable in Java, meaning their values cannot be changed once they are created. To efficiently manipulate strings, it is recommended to convert them to StringBuilder or StringBuffer objects. StringBuilder is preferable for its speed, while StringBuffer is thread-safe.
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rouge/3.26.0/rouge.min.css">
+
+
 Here's an example of converting a string to a StringBuilder:
 
-```java
-String input = "abcde";
-StringBuilder sb = new StringBuilder(input);
-```
+
+<div class="code-block">
+  <pre>
+    <code class="language-java">
+      String input = "abcd";
+      StringBuilder sb = new StringBuilder(input);
+    </code>
+  </pre>
+  <button class="copy-button">Copy</button>
+</div>
 
 Appending a value to the StringBuilder can be done using the append() method:
 
-```java
-sb.append("zz");
-```
+<div class="code-block">
+  <pre>
+    <code class="language-java highlighter-rouge">
+      <!-- Your code goes here -->
+     sb.append("zz");
+    </code>
+  </pre>
+  <button class="copy-button">Copy</button>
+</div>
+
 
 To check the resulting string, you can convert the StringBuilder back to a string using `toString()` and compare it:
 
