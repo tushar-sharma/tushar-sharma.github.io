@@ -247,11 +247,79 @@ header li {
   
 <p>Tags:  <a class="mytag" href="/tag/java" title='View posts tagged with "java"'>java</a>    <a class="mytag" href="/tag/interview" title='View posts tagged with "interview"'>interview</a>    </p>
 
-<p>Strings are immutable in java. It’s best to convert string to StringBuilder/StringBuffer so that it’s memory efficient for string manipulation. Use StringBuilder for speed and StringBuffer for threadsafe.</p>
+<p>Strings are immutable in Java, meaning their values cannot be changed once they are created. To efficiently manipulate strings, it is recommended to convert them to StringBuilder or StringBuffer objects. StringBuilder is preferable for its speed, while StringBuffer is thread-safe.</p>
 
-<div>
- <script src="https://gist.github.com/tushar-sharma/394745794444792a8d6d271d922bad55.js?file=String1.java"></script>
- </div>
+<p>Here’s an example of converting a string to a StringBuilder:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">input</span> <span class="o">=</span> <span class="s">"abcde"</span><span class="o">;</span>
+<span class="nc">StringBuilder</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">(</span><span class="n">input</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Appending a value to the StringBuilder can be done using the append() method:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"zz"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>To check the resulting string, you can convert the StringBuilder back to a string using <code class="language-plaintext highlighter-rouge">toString()</code> and compare it:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assert</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"abcdezz"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>You can also retrieve the index location of a specific substring within the StringBuilder using the indexOf() method:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">"zz"</span><span class="o">);</span>
+<span class="k">assert</span> <span class="n">index</span> <span class="o">==</span> <span class="mi">5</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>If you need to replace a portion of the string with another value, you can use the replace() method:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sb</span><span class="o">.</span><span class="na">replace</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="s">"foo"</span><span class="o">);</span>
+<span class="k">assert</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"afooezz"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>To reverse the string in the StringBuilder, you can use the <code class="language-plaintext highlighter-rouge">reverse()</code> method:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sb</span><span class="o">.</span><span class="na">reverse</span><span class="o">();</span>
+<span class="k">assert</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"zzeoofa"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Removing a substring from the StringBuilder can be achieved using the delete() method:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sb</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">6</span><span class="o">);</span>
+<span class="k">assert</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"zzea"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Alternatively, you can delete a specific character at a given index using deleteCharAt():</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sb</span><span class="o">.</span><span class="na">deleteCharAt</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+<span class="k">assert</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"zea"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>To access a character at a specific index within the StringBuilder, you can use <code class="language-plaintext highlighter-rouge">charAt()</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>If you wish to modify a character at a specific index, you can use setCharAt():</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sb</span><span class="o">.</span><span class="na">setCharAt</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="sc">'z'</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>You can obtain the ASCII value of a character by using the charAt() method and casting it to an int:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">asciiA</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+<span class="k">assert</span> <span class="n">asciiA</span> <span class="o">==</span> <span class="mi">97</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">asciiA</span> <span class="o">=</span> <span class="sc">'A'</span><span class="o">;</span>
+<span class="k">assert</span> <span class="n">asciiA</span> <span class="o">==</span> <span class="mi">65</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>Conversely, you can convert an ASCII value back to a character using a cast:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="o">(</span><span class="kt">char</span><span class="o">)</span> <span class="n">asciiA</span><span class="o">;</span>
+<span class="k">assert</span> <span class="n">c</span> <span class="o">==</span> <span class="sc">'a'</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">asciiZ</span> <span class="o">=</span> <span class="sc">'Z'</span><span class="o">;</span>
+<span class="k">assert</span> <span class="n">asciiZ</span> <span class="o">==</span> <span class="mi">90</span><span class="o">;</span>
+</code></pre></div></div>
 
 
 
