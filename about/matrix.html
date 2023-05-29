@@ -7,12 +7,12 @@ published: true
 ---
 
 <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.js"></script>
-<link href="{{ root_url}}/css/jquery.terminal.css" rel="stylesheet"/>
+<link href="{{ root_url}}/css/jquery.terminal.css" rel="stylesheet" />
 <script src="https://unpkg.com/js-polyfills/keyboard.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/jcubic/static/js/wcwidth.js"></script>
 
 <style>
-.terminal {
+  .terminal {
     font-family: FreeMono, monospace !important;
     line-height: 14px !important;
     padding: 8px 15px !important;
@@ -20,206 +20,216 @@ published: true
     border-radius: 5px !important;
     border: 1px solid #e5e5e5 !important;
     overflow-x: auto !important;
-}
+  }
 
-.cmd div {
-  color: var(--color, #aaa);
-  background-color: #f8f8f8 !important;
-}
+  .cmd div {
+    color: var(--color, #aaa);
+    background-color: #f8f8f8 !important;
+  }
 
-textarea #lb4yip {
-  font-size: 16px !important;
-}
+  textarea #lb4yip {
+    font-size: 16px !important;
+  }
 </style>
 
 <script type="text/javascript">
-function myIP() {
-  ajax = new XMLHttpRequest();
-  if(ajax!=null){
-    ajax.open("GET","https://europe-west3-devrcc.cloudfunctions.net/whatismyip",true);
-    ajax.onreadystatechange = function() {
-        if(this.readyState == 4) {
-            if(this.status == 200) {
-                console.log(this.responseText);
-            }
+  function myIP() {
+    ajax = new XMLHttpRequest();
+    if (ajax != null) {
+      ajax.open("GET", "https://europe-west3-devrcc.cloudfunctions.net/whatismyip", true);
+      ajax.onreadystatechange = function () {
+        if (this.readyState == 4) {
+          if (this.status == 200) {
+            console.log(this.responseText);
+          }
         }
+      }
+      ajax.send(null);
     }
-    ajax.send(null);
+
+    return false;
   }
 
-  return false;
-}
-
-$(function() {
+  $(function () {
     var aOnce = true;
     var aHelp = true; /* used to avoid triggering help in greetings */
 
     var greetTxt = " __      __           .__                                       \n" +
-"/  \\    /  \\   ____   |  |     ____     ____     _____     ____  \n" +
-"\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  \n" +
-" \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
-"  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
-"       \\/         \\/              \\/                 \\/       \\/ \n\n\n" +
-"      ----   to Random Wits   ----  \n";
+      "/  \\    /  \\   ____   |  |     ____     ____     _____     ____  \n" +
+      "\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  \n" +
+      " \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
+      "  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
+      "       \\/         \\/              \\/                 \\/       \\/ \n\n\n" +
+      "      ----   to Random Wits   ----  \n";
 
 
     var anim = false;
     function typed(finish_typing) {
-        return function(term, message, delay, finish) {
-            anim = true;
-            var prompt = term.get_prompt();
-            var c = 0;
-            if (message.length > 0) {
-                term.set_prompt('');
-                var interval = setInterval(function() {
-                    term.insert(message[c++]);
-                    if (c == message.length) {
-                        clearInterval(interval);
-                        // execute in next interval
-                        setTimeout(function() {
-                            // swap command with prompt
-                            finish_typing(term, message, prompt);
-                            anim = false
-                            finish && finish();
-                        }, delay);
-                    }
-                }, delay);
+      return function (term, message, delay, finish) {
+        anim = true;
+        var prompt = term.get_prompt();
+        var c = 0;
+        if (message.length > 0) {
+          term.set_prompt('');
+          var interval = setInterval(function () {
+            term.insert(message[c++]);
+            if (c == message.length) {
+              clearInterval(interval);
+              // execute in next interval
+              setTimeout(function () {
+                // swap command with prompt
+                finish_typing(term, message, prompt);
+                anim = false
+                finish && finish();
+              }, delay);
             }
-        };
+          }, delay);
+        }
+      };
     }
-    var typed_prompt = typed(function(term, message, prompt) {
-        // swap command with prompt
-        term.set_command('');
-        term.set_prompt(message + ' ');
+    var typed_prompt = typed(function (term, message, prompt) {
+      // swap command with prompt
+      term.set_command('');
+      term.set_prompt(message + ' ');
     });
-    var typed_message = typed(function(term, message, prompt) {
-        term.set_command('');
-        term.echo(message)
-        term.set_prompt(prompt);
+    var typed_message = typed(function (term, message, prompt) {
+      term.set_command('');
+      term.echo(message)
+      term.set_prompt(prompt);
     });
-    $('#foo').terminal(function(cmd, term) {
-        var finish = false;
+    $('#foo').terminal(function (cmd, term) {
+      var finish = false;
 
-        var msg = "\n\nWake up, " + cmd + "! The Matrix has you. You take blue pill, the story ends here. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes!\n\nType red for red pill, blue for blue pill.\n\n";
-        term.set_prompt('$ ');
+      var msg = "\n\nWake up, " + cmd + "! The Matrix has you. You take blue pill, the story ends here. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes!\n\nType red for red pill, blue for blue pill.\n\n";
+      term.set_prompt('$ ');
 
-        /*typed_message(term, msg, 100, function() {
-            finish = true;
-        });*/
+      /*typed_message(term, msg, 100, function() {
+          finish = true;
+      });*/
 
-        arg = cmd.substr(0,cmd.indexOf(' '));
-        toSearch = cmd.substr(cmd.indexOf(' ')+1);
+      arg = cmd.substr(0, cmd.indexOf(' '));
+      toSearch = cmd.substr(cmd.indexOf(' ') + 1);
 
-        if (aOnce == true) {  //only once
-            aOnce = false;
-		        term.echo(msg);
-            this.echo('<img src="https://pbs.twimg.com/media/CtZpAWgUkAEVGX1?format=jpg&name=small"/><br><br>', {raw: true});
-        }  else if (cmd == "blue") {
-          window.location.href = "/"
-        }else if (cmd == "red" || cmd == "help") {
+      if (aOnce == true) {  //only once
+        aOnce = false;
+        term.echo(msg);
+        this.echo('<img src="https://pbs.twimg.com/media/CtZpAWgUkAEVGX1?format=jpg&name=small"/><br><br>', {raw: true});
+      } else if (cmd == "blue") {
+        window.location.href = "/"
+      } else if (cmd == "red" || cmd == "help") {
 
-            mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">ls</span> List directory content.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">songs</span> Recommend me a song.<br><span class=\"cl\">books</span> Books on my shelf.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
+        mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">ls</span> List directory content.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">songs</span> Recommend me a song.<br><span class=\"cl\">books</span> Books on my shelf.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
 
-            term.echo(mystr, {
-              raw: function(div) {
-            }
-         });
-        } else if (cmd == "about") {
-           term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/about\">...more</a><br>", {
-              raw: function(div) {
-            }
-         });
+        term.echo(mystr, {
+          raw: function (div) {
+          }
+        });
+      } else if (cmd == "about") {
+        term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/about\">...more</a><br>", {
+          raw: function (div) {
+          }
+        });
 
-         } else if (cmd == "ls") {
+      } else if (cmd == "ls") {
 
-           term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
-              raw: function(div) {
-            }
-         });
+        term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
+          raw: function (div) {
+          }
+        });
 
-        } else if (arg == "cd" || cmd == "cd") {
+      } else if (arg == "cd" || cmd == "cd") {
 
-          ip = myIP();
-     term.echo("You've tried to gain access to something which you're not authorized to. Your IP address has been logged and reported to FBI. To file a dispute, please submit an apology <a href=\"/../contact/\">here</a>.", {
-              raw: function(div) {
-            }
-         });
-
-
-       } else if (arg == "cat" || cmd == "cat") {
-
-          ip = myIP();
-    term.echo("You've tried to gain access to something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI. To avoid reporting it, please submit an apology <a href=\"/../contact/\">here</a>.", {
-              raw: function(div) {
-            }
-         });
+        ip = myIP();
+        term.echo("You've tried to gain access to something which you're not authorized to. Your IP address has been logged and reported to FBI. To file a dispute, please submit an apology <a href=\"/../contact/\">here</a>.", {
+          raw: function (div) {
+          }
+        });
 
 
-       }  else if (arg == "dir" || cmd == "dir") {
+      } else if (arg == "cat" || cmd == "cat") {
 
-     term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
-              raw: function(div) {
-            }
-         });
+        ip = myIP();
+        term.echo("You've tried to gain access to something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI. To avoid reporting it, please submit an apology <a href=\"/../contact/\">here</a>.", {
+          raw: function (div) {
+          }
+        });
 
 
-        }else if (cmd == "contact") {
-          window.location.href="/contact";
-        } else if (cmd == "projects") {
-          window.location.href="/projects";
-        } else if (cmd == "blog") {
-          window.location.href="/blog";
-        } else if (arg == "search" || cmd == "search") {
-            if (toSearch == "" || cmd =="search")
-              term.echo("Wrong Parameters. Usage: search <to search>");
-            else window.location.href="/search/?q=" + toSearch;
-        }  else if (cmd == "books") {
-          //window.open('/books', '_blank');
-          window.location.href="/books";
+      } else if (arg == "dir" || cmd == "dir") {
 
-        } else if (cmd == "games") {
-          window.location.href="/games";
-        } /*else if (cmd == "qrcode") {
+        term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
+          raw: function (div) {
+          }
+        });
+
+
+      } else if (cmd == "contact") {
+        window.location.href = "/contact";
+      } else if (cmd == "projects") {
+        window.location.href = "/projects";
+      } else if (cmd == "blog") {
+        window.location.href = "/blog";
+      } else if (arg == "search" || cmd == "search") {
+        if (toSearch == "" || cmd == "search")
+          term.echo("Wrong Parameters. Usage: search <to search>");
+        else window.location.href = "/search/?q=" + toSearch;
+      } else if (cmd == "books") {
+        //window.open('/books', '_blank');
+        window.location.href = "/books";
+
+      } else if (cmd == "games") {
+        window.location.href = "/games";
+      } /*else if (cmd == "qrcode") {
             term.echo("<img src=\"http://api.qrserver.com/v1/create-qr-code/?data=MECARD%3AN%3ASharma%2CTushar%3BEMAIL%3Atushar%40randomwits.com%3BTEL%3A%2B919837264416%3BURL%3Ahttp%3A%2F%2Frandomwits.com%3B%3B&#38;size=150x150&#38;prov=goqrme\" alt=\"MECARD:N:Sharma,Tushar;EMAIL:tushar@randomwits.com;TEL:+919837264416;URL:http://randomwits.com;; \"  /> ", {
               raw: function(div) {
             }
          });
 
-        }*/ else if(cmd == "hack") {
+        }*/ else if (cmd == "hack") {
 
-            javascript:var i,s,ss=['{{ root-url }}/js/kh.js','https://web.archive.org/web/20140615132821/http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
+        javascript: var i, s, ss = ['{{ root-url }}/js/kh.js', 'https://web.archive.org/web/20140615132821/http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js']; for (i = 0; i != ss.length; i++) {s = document.createElement('script'); s.src = ss[i]; document.body.appendChild(s);} void (0);
 
-         }else if (cmd == "resume") {
+      } else if (cmd == "resume") {
 
-           term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" target=\"_blank\" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" >..resume</a>", {
-              raw: function(div) {
-            }
-         });
-        } else if (cmd == "quote") {
-            jQuery.get('/../quotes.txt', function(data) {
-              quotes = data.split("\n");
-              idx = Math.floor((quotes.length - 1) * Math.random());
-              term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", {
-                  raw: function(div) { }
-               });
-            });
+        term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" target=\"_blank\" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" >..resume</a>", {
+          raw: function (div) {
+          }
+        });
+      } else if (cmd == "quote") {
+        jQuery.get('/../quotes.txt', function (data) {
+          quotes = data.split("\n");
+          idx = Math.floor((quotes.length - 1) * Math.random());
+          term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", {
+            raw: function (div) { }
+          });
+        });
 
-          /* term.echo(art, {
-             finalize: function(div) {
-               div.css("color", "rgb(51, 153, 204)");
-             }
-          });*/
+      } else if (cmd == "trivia") {
+        jQuery.get('/../trivia.txt', function (data) {
+          trivia = data.split("\n");
+          idx = Math.floor((trivia.length - 1) * Math.random());
+          term.echo("<span style=\"color: rgb(51, 153, 204); \">" + trivia[idx] + "</span>", {
+            raw: function (div) { }
+          });
+        });
 
-        } else if (cmd == "songs") {
-            // Clear the terminal first
-            term.clear();
 
-            jQuery.get('/../songs.txt', function(data) {
-              let songs = data.split("\n");
-              idx = Math.floor((songs.length - 1) * Math.random());
-	      let song = songs[idx];
+        /* term.echo(art, {
+           finalize: function(div) {
+             div.css("color", "rgb(51, 153, 204)");
+           }
+        });*/
 
-              let video = `<iframe
+      } else if (cmd == "songs") {
+        // Clear the terminal first
+        term.clear();
+
+        jQuery.get('/../songs.txt', function (data) {
+          let songs = data.split("\n");
+          idx = Math.floor((songs.length - 1) * Math.random());
+          let song = songs[idx];
+
+          let video = `<iframe
   style="position: relative;  width: 100%;"
    height="500"
 	   src="https://www.youtube.com/embed/${song}&autoplay=1"
@@ -229,49 +239,49 @@ $(function() {
   allowfullscreen
   title="Sample"
 ></iframe>`
-              term.echo("<br><br><span style=\"color: rgb(51, 153, 204); \">" + video + "</span><br><br>", {
-                  raw: function(div) { }
-               });
+          term.echo("<br><br><span style=\"color: rgb(51, 153, 204); \">" + video + "</span><br><br>", {
+            raw: function (div) { }
+          });
 
-            });
+        });
 
-        } else  {
-          if (aOnce == false) {
-            term.echo("Unknown command <span class=\"cl2\">" + cmd + "</span>. Please type <span class=\"cl2\">help</span>.", {
-              raw: function(div) {
+      } else {
+        if (aOnce == false) {
+          term.echo("Unknown command <span class=\"cl2\">" + cmd + "</span>. Please type <span class=\"cl2\">help</span>.", {
+            raw: function (div) {
             }
-         });
-         }
-       }
+          });
+        }
+      }
 
       var args = {cmd: cmd};
-        $.get('cmds.php', args, function(result) {
-            (function wait() {
-                if (finish) {
-                    term.echo(result);
-                } else {
-                    setTimeout(wait, 500);
-                }
-            })();
-        });
+      $.get('cmds.php', args, function (result) {
+        (function wait() {
+          if (finish) {
+            term.echo(result);
+          } else {
+            setTimeout(wait, 500);
+          }
+        })();
+      });
     }, {
-        name: 'Tushar',
-        greetings: greetTxt,
-        onInit: function(term) {
-            // first question
-            var msg = "\n";
-            typed_message(term, msg, 100, function() {
-                typed_prompt(term, "What's your name? :", 100, function() {});
-            });
-        },
-        keydown: function(e) {
-            //disable keyboard when animating
-            if (anim) {
-                return false;
-            }
+      name: 'Tushar',
+      greetings: greetTxt,
+      onInit: function (term) {
+        // first question
+        var msg = "\n";
+        typed_message(term, msg, 100, function () {
+          typed_prompt(term, "What's your name? :", 100, function () { });
+        });
+      },
+      keydown: function (e) {
+        //disable keyboard when animating
+        if (anim) {
+          return false;
         }
+      }
     });
-});
+  });
 
 </script>
 
