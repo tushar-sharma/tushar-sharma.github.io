@@ -501,3 +501,12 @@ span.pagination-step {
   top: 0;
   right: 0;
 }
+
+code[class*=language-],pre[class*=language-]{
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+
+pre[class*=language-]{
+  padding:0em !important;
+}
