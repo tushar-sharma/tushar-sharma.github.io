@@ -9,6 +9,8 @@ thumb: https://threewill.com/wp-content/uploads/female-programmer.jpg
 image: https://threewill.com/wp-content/uploads/female-programmer.jpg
 author: Tushar Sharma
 published: true
+python: true
+prismjs: true
 ---
 AWS lambda function are event driven serverless code. To follow TDD, we should write unit test our lambda functions.<!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
@@ -29,9 +31,8 @@ MyLambda/
 
 We will create a simple `lambda_function.py` that simply returns id as response.
 
-```python
+{% template customPython.html %}
 import json
-
 
 def lambda_handler(event, context):
 
@@ -43,11 +44,12 @@ def lambda_handler(event, context):
             'id': id
         }
     }
-```
+{% endtemplate %}
+
 
 We have a test corresponding to the test file `MyLambda/test/test_lambda_function.py`:
 
-```python
+{% template customPython.html %}
 import pytest
 
 from MyLambda.lambda_function import lambda_handler
@@ -63,7 +65,7 @@ def test_lambda_handler():
     assert result['statusCode'] == 200
 
     assert result['body']['id'] == 5
-```
+{% endtemplate %}
 
 We will use `pytest` to run our test:
 
@@ -91,7 +93,7 @@ TOTAL                                                     11      0   100%
 
 As our lambda function gets complex, we must explore additional functionality to test our lambda function. We can use `patch` to mock resources like environment variables, etc
 
-```python
+{% template customPython.html %}
 import json
 import os
 
@@ -108,11 +110,11 @@ def lambda_handler(event, context):
             'name': name
         }
     }
-```
+{% endtemplate %}
 
 Our updated `test` becomes
 
-```python
+{% template customPython.html %}
 import pytest
 import os
 from unittest.mock import patch
@@ -135,13 +137,13 @@ def test_lambda_handler():
     assert result['body']['id'] == 5
 
     assert result['body']['name'] == 'FAKE_NAME'
-```
+{% endtemplate %}
 
 ### Pytest fixtures
 
 A fixture is a function that returns a test resource to supply a mock `context` object to our lambda function. Let's rewrite our test function 
 
-```python
+{% template customPython.html %}
 import pytest
 import os
 from unittest.mock import patch
@@ -167,6 +169,7 @@ def test_lambda_handler(event):
     assert result['body']['id'] == 5
 
     assert result['body']['name'] == 'FAKE_NAME'
-```
+{% endtemplate %}
+
 
 In our example, we define a `event` fixture that return dictionary. We then pass this fixture as an argument to our test function.
