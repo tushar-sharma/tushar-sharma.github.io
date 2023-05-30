@@ -9,6 +9,7 @@ image: https://unsplash.com/photos/xZTScJvolYk/download?w=800
 thumb: https://unsplash.com/photos/xZTScJvolYk/download?w=800
 author: Tushar Sharma
 java: true
+prismjs: true
 ---
 
 Strings are immutable in java. It's best to convert string to StringBuilder/StringBuffer so that it's memory efficient for string manipulation.<!-- truncate_here -->
