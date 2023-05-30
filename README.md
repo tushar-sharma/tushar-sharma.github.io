@@ -85,3 +85,29 @@ and this code
 $ make build
 ```
 
+
+### Highlight Code
+
+Add this to post `_posts/` 
+
+```
+python: true
+prismjs: true
+```
+
+And insert code like this 
+
+```
+{% template customPython.html %}
+{% endtemplate %}
+```
+
+For `java` 
+
+
+```
+{% template customJava.html %}
+{% endtemplate %}
+```
+
+TODO : Create a generic `template` for code highlight.
