@@ -15,37 +15,73 @@
 
 &lt;p&gt;Here’s an example of converting a string to a StringBuilder:&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;abcde&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;code-block language-java  highlighter-rouge&quot;&gt;
+  &lt;div class=&quot;highlight&quot;&gt;
+    &lt;pre class=&quot;highlight&quot;&gt;
+      &lt;code&gt;
+  String input = &quot;abcd&quot;;
+  StringBuilder sb = new StringBuilder(input);&lt;/code&gt;
+    &lt;/pre&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Appending a value to the StringBuilder can be done using the append() method:&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;zz&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;code-block language-java  highlighter-rouge&quot;&gt;
+  &lt;div class=&quot;highlight&quot;&gt;
+    &lt;pre class=&quot;highlight&quot;&gt;
+      &lt;code&gt;
+  sb.append(&quot;zz&quot;)&lt;/code&gt;
+    &lt;/pre&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;
+&lt;/div&gt;
 
 &lt;p&gt;To check the resulting string, you can convert the StringBuilder back to a string using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toString()&lt;/code&gt; and compare it:&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abcdezz&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;code-block&quot;&gt;
+  &lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;
+    assert sb.toString().equals(&quot;abcdezz&quot;);&lt;/code&gt;
+  &lt;/pre&gt;
+  &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;
+&lt;/div&gt;
 
 &lt;p&gt;You can also retrieve the index location of a specific substring within the StringBuilder using the indexOf() method:&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;zz&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;code-block&quot;&gt;
+  &lt;pre&gt;
+    &lt;code class=&quot;language-java&quot;&gt;
+    int index = sb.indexOf(&quot;zz&quot;);
+    assert index == 5;
+    &lt;/code&gt;
+  &lt;/pre&gt;
+  &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;
+&lt;/div&gt;
 
 &lt;p&gt;If you need to replace a portion of the string with another value, you can use the replace() method:&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;afooezz&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;code-block&quot;&gt;
+  &lt;pre&gt;
+    &lt;code class=&quot;language-java&quot;&gt;
+sb.replace(1, 4, &quot;foo&quot;);
+assert sb.toString().equals(&quot;afooezz&quot;);
+    &lt;/code&gt;
+  &lt;/pre&gt;
+  &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;
+&lt;/div&gt;
 
 &lt;p&gt;To reverse the string in the StringBuilder, you can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reverse()&lt;/code&gt; method:&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;zzeoofa&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;code-block&quot;&gt;
+  &lt;pre&gt;
+    &lt;code class=&quot;language-java&quot;&gt;
+sb.reverse();
+assert sb.toString().equals(&quot;zzeoofa&quot;);
+    &lt;/code&gt;
+  &lt;/pre&gt;
+  &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Removing a substring from the StringBuilder can be achieved using the delete() method:&lt;/p&gt;
 
