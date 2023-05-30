@@ -18,6 +18,7 @@ gem 'RedCloth', '~> 4.3', '>= 4.3.2'
 
 gem 'jekyll-compose', group: [:jekyll_plugins]
 group :jekyll_plugins do
+  gem 'jekyll-jolt'
   gem 'jekyll-gzip'
   gem 'jekyll-include-cache'
   gem 'jekyll-mentions', '1.6.0'
@@ -25,3 +26,4 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'webrick'
 end
+
