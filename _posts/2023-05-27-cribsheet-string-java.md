@@ -8,6 +8,7 @@ tags:
 image: https://unsplash.com/photos/xZTScJvolYk/download?w=800
 thumb: https://unsplash.com/photos/xZTScJvolYk/download?w=800
 author: Tushar Sharma
+java: true
 ---
 
 Strings are immutable in java. It's best to convert string to StringBuilder/StringBuffer so that it's memory efficient for string manipulation.<!-- truncate_here -->
@@ -15,46 +16,82 @@ Strings are immutable in java. It's best to convert string to StringBuilder/Stri
 
 Strings are immutable in Java, meaning their values cannot be changed once they are created. To efficiently manipulate strings, it is recommended to convert them to StringBuilder or StringBuffer objects. StringBuilder is preferable for its speed, while StringBuffer is thread-safe.
 
+
 Here's an example of converting a string to a StringBuilder:
 
-```java
-String input = "abcde";
-StringBuilder sb = new StringBuilder(input);
-```
+<div class="code-block language-java  highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight">
+      <code>
+  String input = "abcd";
+  StringBuilder sb = new StringBuilder(input);</code>
+    </pre>
+  </div>
+  <button class="copy-button">Copy</button>
+</div>
+
 
 Appending a value to the StringBuilder can be done using the append() method:
 
-```java
-sb.append("zz");
-```
+<div class="code-block language-java  highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight">
+      <code>
+  sb.append("zz")</code>
+    </pre>
+  </div>
+  <button class="copy-button">Copy</button>
+</div>
+
 
 To check the resulting string, you can convert the StringBuilder back to a string using `toString()` and compare it:
 
 
-```java
-assert sb.toString().equals("abcdezz");
-```
+<div class="code-block">
+  <pre><code class="language-java">
+    assert sb.toString().equals("abcdezz");</code>
+  </pre>
+  <button class="copy-button">Copy</button>
+</div>
+
 
 You can also retrieve the index location of a specific substring within the StringBuilder using the indexOf() method:
 
-```java
-int index = sb.indexOf("zz");
-assert index == 5;
-```
+<div class="code-block">
+  <pre>
+    <code class="language-java">
+    int index = sb.indexOf("zz");
+    assert index == 5;
+    </code>
+  </pre>
+  <button class="copy-button">Copy</button>
+</div>
+
 
 If you need to replace a portion of the string with another value, you can use the replace() method:
 
-```java
+<div class="code-block">
+  <pre>
+    <code class="language-java">
 sb.replace(1, 4, "foo");
 assert sb.toString().equals("afooezz");
-```
+    </code>
+  </pre>
+  <button class="copy-button">Copy</button>
+</div>
 
 To reverse the string in the StringBuilder, you can use the `reverse()` method:
 
-```java
+<div class="code-block">
+  <pre>
+    <code class="language-java">
 sb.reverse();
 assert sb.toString().equals("zzeoofa");
-```
+    </code>
+  </pre>
+  <button class="copy-button">Copy</button>
+</div>
+
 
 Removing a substring from the StringBuilder can be achieved using the delete() method:
 
