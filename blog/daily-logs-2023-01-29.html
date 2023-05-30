@@ -17,8 +17,8 @@
 <meta property="og:site_name" content="Tushar Sharma">
 <title>Dear Vishi, daily log on Jan 29, 2023</title>
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
-<!-- <link rel="icon" type="image/png" href="/img/favicon.png">
-<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">-->
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">
 <link rel="stylesheet" href="/css/font-awesome.css">
 <link rel="stylesheet" href="/css/styles.css">
 <script async src="/js/scale.fix.js"></script>
@@ -49,8 +49,8 @@
 <script src="/js/clipboard.min.js"></script>
 
 <!-- Include Prism.js CSS and JavaScript files -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
+
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Dear Vishi, daily log on Jan 29, 2023 | RandomWits</title>
@@ -283,12 +283,12 @@ header li {
 
 <p>To create dropdown you can use <code class="language-plaintext highlighter-rouge">select</code>.</p>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="p">(</span>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return </span><span class="p">(</span>
   <span class="p">&lt;</span><span class="nt">select</span> 
     <span class="na">value</span><span class="p">=</span><span class="si">{</span><span class="nx">selectedValue</span><span class="si">}</span> 
-    <span class="na">onChange</span><span class="p">=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">setSelectedValue</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span><span class="si">}</span>
+    <span class="na">onChange</span><span class="p">=</span><span class="si">{</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="nf">setSelectedValue</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span><span class="si">}</span>
   <span class="p">&gt;</span>
-    <span class="si">{</span><span class="nx">options</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">option</span> <span class="o">=&gt;</span> <span class="p">(</span>
+    <span class="si">{</span><span class="nx">options</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="nx">option</span> <span class="o">=&gt;</span> <span class="p">(</span>
       <span class="p">&lt;</span><span class="nt">option</span> <span class="na">key</span><span class="p">=</span><span class="si">{</span><span class="nx">option</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span> <span class="na">value</span><span class="p">=</span><span class="si">{</span><span class="nx">option</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span><span class="p">&gt;</span>
         <span class="si">{</span><span class="nx">option</span><span class="p">.</span><span class="nx">label</span><span class="si">}</span>
       <span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>

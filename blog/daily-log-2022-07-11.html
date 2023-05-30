@@ -17,8 +17,8 @@
 <meta property="og:site_name" content="Tushar Sharma">
 <title>Dear Vishi, daily log on July 11, 2022</title>
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
-<!-- <link rel="icon" type="image/png" href="/img/favicon.png">
-<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">-->
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">
 <link rel="stylesheet" href="/css/font-awesome.css">
 <link rel="stylesheet" href="/css/styles.css">
 <script async src="/js/scale.fix.js"></script>
@@ -49,8 +49,8 @@
 <script src="/js/clipboard.min.js"></script>
 
 <!-- Include Prism.js CSS and JavaScript files -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
+
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Dear Vishi, daily log on July 11, 2022 | RandomWits</title>
@@ -295,32 +295,32 @@ header li {
 <p>Magic methods are methods that start with double underscores (eg <strong>init</strong>, <strong>lt</strong>). Today we are going to talk about <strong>__eq__</strong> method. Lets say we have the following code</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         
-<span class="n">person1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Tushar"</span><span class="p">)</span>
-<span class="n">person2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Tushar"</span><span class="p">)</span>
+<span class="n">person1</span> <span class="o">=</span> <span class="nc">Person</span><span class="p">(</span><span class="sh">"</span><span class="s">Tushar</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">person2</span> <span class="o">=</span> <span class="nc">Person</span><span class="p">(</span><span class="sh">"</span><span class="s">Tushar</span><span class="sh">"</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">person1</span> <span class="o">==</span> <span class="n">person2</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">person1</span> <span class="o">==</span> <span class="n">person2</span><span class="p">)</span>
 <span class="c1"># prints False
 </span></code></pre></div></div>
 <p>Both objects have same the name but different memory address. However if we want to override this behavior we can do</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
-  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-    <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
-  <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Person</span><span class="p">):</span>
-      <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">other</span><span class="p">.</span><span class="n">name</span>
+    <span class="k">if</span> <span class="nf">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Person</span><span class="p">):</span>
+      <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">other</span><span class="p">.</span><span class="n">name</span>
     <span class="k">else</span><span class="p">:</span>
       <span class="k">return</span> <span class="bp">False</span>
 
-<span class="n">person1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Tushar"</span><span class="p">)</span>
-<span class="n">person2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Tushar"</span><span class="p">)</span>
+<span class="n">person1</span> <span class="o">=</span> <span class="nc">Person</span><span class="p">(</span><span class="sh">"</span><span class="s">Tushar</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">person2</span> <span class="o">=</span> <span class="nc">Person</span><span class="p">(</span><span class="sh">"</span><span class="s">Tushar</span><span class="sh">"</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">person1</span> <span class="o">==</span> <span class="n">person2</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">person1</span> <span class="o">==</span> <span class="n">person2</span><span class="p">)</span>
 <span class="c1"># prints True
 </span></code></pre></div></div>
 

@@ -17,8 +17,8 @@
 <meta property="og:site_name" content="Tushar Sharma">
 <title>How to Make(Or Lose) Money in Stocks Part1</title>
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
-<!-- <link rel="icon" type="image/png" href="/img/favicon.png">
-<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">-->
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">
 <link rel="stylesheet" href="/css/font-awesome.css">
 <link rel="stylesheet" href="/css/styles.css">
 <script async src="/js/scale.fix.js"></script>
@@ -49,8 +49,8 @@
 <script src="/js/clipboard.min.js"></script>
 
 <!-- Include Prism.js CSS and JavaScript files -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
+
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>How to Make(Or Lose) Money in Stocks Part1 | RandomWits</title>
@@ -305,22 +305,22 @@ msft,0,0,230,0
 
 <p>Next create python file, <code class="language-plaintext highlighter-rouge">stocks/main.py</code></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
-<span class="kn">from</span> <span class="nn">reportlab.platypus</span> <span class="kn">import</span> <span class="n">SimpleDocTemplate</span><span class="p">,</span> <span class="n">Paragraph</span><span class="p">,</span> <span class="n">PageBreak</span>
-<span class="kn">from</span> <span class="nn">reportlab.lib.styles</span> <span class="kn">import</span> <span class="n">getSampleStyleSheet</span><span class="p">,</span> <span class="n">ParagraphStyle</span>
-<span class="kn">from</span> <span class="nn">reportlab.lib.units</span> <span class="kn">import</span> <span class="n">mm</span>
-<span class="kn">from</span> <span class="nn">reportlab.lib.pagesizes</span> <span class="kn">import</span> <span class="n">letter</span>
-<span class="kn">from</span> <span class="nn">reportlab.platypus.tables</span> <span class="kn">import</span> <span class="n">Table</span><span class="p">,</span> <span class="n">TableStyle</span>
-<span class="kn">from</span> <span class="nn">reportlab.lib</span> <span class="kn">import</span> <span class="n">colors</span>
-<span class="kn">from</span> <span class="nn">reportlab</span> <span class="kn">import</span> <span class="n">platypus</span>
-<span class="kn">from</span>  <span class="nn">reportlab.lib.styles</span> <span class="kn">import</span> <span class="n">ParagraphStyle</span> <span class="k">as</span> <span class="n">PS</span>
-<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.common.keys</span> <span class="kn">import</span> <span class="n">Keys</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.common.action_chains</span> <span class="kn">import</span> <span class="n">ActionChains</span>
-<span class="kn">from</span> <span class="nn">reportlab.platypus</span> <span class="kn">import</span> <span class="n">Image</span> <span class="k">as</span> <span class="n">Image2</span>
-<span class="kn">import</span> <span class="nn">logging</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">from</span> <span class="n">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="n">reportlab.platypus</span> <span class="kn">import</span> <span class="n">SimpleDocTemplate</span><span class="p">,</span> <span class="n">Paragraph</span><span class="p">,</span> <span class="n">PageBreak</span>
+<span class="kn">from</span> <span class="n">reportlab.lib.styles</span> <span class="kn">import</span> <span class="n">getSampleStyleSheet</span><span class="p">,</span> <span class="n">ParagraphStyle</span>
+<span class="kn">from</span> <span class="n">reportlab.lib.units</span> <span class="kn">import</span> <span class="n">mm</span>
+<span class="kn">from</span> <span class="n">reportlab.lib.pagesizes</span> <span class="kn">import</span> <span class="n">letter</span>
+<span class="kn">from</span> <span class="n">reportlab.platypus.tables</span> <span class="kn">import</span> <span class="n">Table</span><span class="p">,</span> <span class="n">TableStyle</span>
+<span class="kn">from</span> <span class="n">reportlab.lib</span> <span class="kn">import</span> <span class="n">colors</span>
+<span class="kn">from</span> <span class="n">reportlab</span> <span class="kn">import</span> <span class="n">platypus</span>
+<span class="kn">from</span>  <span class="n">reportlab.lib.styles</span> <span class="kn">import</span> <span class="n">ParagraphStyle</span> <span class="k">as</span> <span class="n">PS</span>
+<span class="kn">from</span> <span class="n">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="n">selenium.webdriver.common.keys</span> <span class="kn">import</span> <span class="n">Keys</span>
+<span class="kn">from</span> <span class="n">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
+<span class="kn">from</span> <span class="n">selenium.webdriver.common.action_chains</span> <span class="kn">import</span> <span class="n">ActionChains</span>
+<span class="kn">from</span> <span class="n">reportlab.platypus</span> <span class="kn">import</span> <span class="n">Image</span> <span class="k">as</span> <span class="n">Image2</span>
+<span class="kn">import</span> <span class="n">logging</span>
 
 </code></pre></div></div>
 

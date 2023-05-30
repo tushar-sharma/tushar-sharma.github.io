@@ -17,8 +17,8 @@
 <meta property="og:site_name" content="Tushar Sharma">
 <title>Cribsheet for String in Java</title>
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
-<!-- <link rel="icon" type="image/png" href="/img/favicon.png">
-<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">-->
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">
 <link rel="stylesheet" href="/css/font-awesome.css">
 <link rel="stylesheet" href="/css/styles.css">
 <script async src="/js/scale.fix.js"></script>
@@ -49,10 +49,13 @@
 <script src="/js/clipboard.min.js"></script>
 
 <!-- Include Prism.js CSS and JavaScript files -->
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Cribsheet for String in Java | RandomWits</title>
@@ -262,75 +265,75 @@ header li {
 
 <p>Here’s an example of converting a string to a StringBuilder:</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>String input = “abcd”;
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>String input = “abcd”;
 StringBuilder sb = new StringBuilder(input);</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>Appending a value to the StringBuilder can be done using the append() method:</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>sb.append(“zz”)</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.append(“zz”)</p>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>To check the resulting string, you can convert the StringBuilder back to a string using <code class="language-plaintext highlighter-rouge">toString()</code> and compare it:</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>assert sb.toString().equals(“abcdezz”);</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>assert sb.toString().equals(“abcdezz”);</p>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>You can also retrieve the index location of a specific substring within the StringBuilder using the indexOf() method:</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>int index = sb.indexOf(“zz”);
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>int index = sb.indexOf(“zz”);
 assert index == 5;</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>If you need to replace a portion of the string with another value, you can use the replace() method:</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>sb.replace(1, 4, “foo”);
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.replace(1, 4, “foo”);
 assert sb.toString().equals(“afooezz”);</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>To reverse the string in the StringBuilder, you can use the <code class="language-plaintext highlighter-rouge">reverse()</code> method:</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>sb.reverse();
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.reverse();
 assert sb.toString().equals(“zzeoofa”);</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>Removing a substring from the StringBuilder can be achieved using the delete() method:</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>sb.delete(3, 6);
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.delete(3, 6);
 assert sb.toString().equals(“zzea”);</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>Alternatively, you can delete a specific character at a given index using deleteCharAt():</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>sb.deleteCharAt(1);
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.deleteCharAt(1);
 assert sb.toString().equals(“zea”);</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>To access a character at a specific index within the StringBuilder, you can use <code class="language-plaintext highlighter-rouge">charAt()</code>:</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>char c = sb.charAt(1);</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>char c = sb.charAt(1);</p>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>If you wish to modify a character at a specific index, you can use setCharAt():</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>sb.setCharAt(1, ‘z’);</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.setCharAt(1, ‘z’);</p>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>You can obtain the ASCII value of a character by using the charAt() method and casting it to an int:</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>int asciiA = sb.charAt(0);
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>int asciiA = sb.charAt(0);
 assert asciiA == 97;
 int asciiA = ‘A’;
 assert asciiA == 65;</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>Conversely, you can convert an ASCII value back to a character using a cast:</p>
 
-<div class="code-block language-java highlighter-rouge"> <div class="highlight"> <pre class="highlight"><code><p>char c = (char) asciiA;
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>char c = (char) asciiA;
 assert c == ‘a’;
 int asciiZ = ‘Z’;
 assert asciiZ == 90;</p>
-</code></pre> </div> <button class="copy-button">Copy</button> </div>
+</code></pre> <button class="copy-button">Copy</button> </div>
 
 
 

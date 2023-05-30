@@ -17,8 +17,8 @@
 <meta property="og:site_name" content="Tushar Sharma">
 <title>Resolve the Error CROSSSLOT Keys in request don't hash to the same slot</title>
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
-<!-- <link rel="icon" type="image/png" href="/img/favicon.png">
-<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">-->
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">
 <link rel="stylesheet" href="/css/font-awesome.css">
 <link rel="stylesheet" href="/css/styles.css">
 <script async src="/js/scale.fix.js"></script>
@@ -49,8 +49,8 @@
 <script src="/js/clipboard.min.js"></script>
 
 <!-- Include Prism.js CSS and JavaScript files -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
+
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Resolve the Error CROSSSLOT Keys in request don’t hash to the same slot | RandomWits</title>
@@ -298,14 +298,14 @@ Queued
 
 <p>To execute commands that are currently <a href="https://github.com/redis/redis-py/blob/master/redis/commands/cluster.py">supported</a></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">%s"</span> <span class="o">%</span> <span class="n">conn</span><span class="p">.</span><span class="n">mget</span><span class="p">(</span><span class="n">key1</span><span class="p">))</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="se">\n</span><span class="s">%s</span><span class="sh">"</span> <span class="o">%</span> <span class="n">conn</span><span class="p">.</span><span class="nf">mget</span><span class="p">(</span><span class="n">key1</span><span class="p">))</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">%s"</span> <span class="o">%</span> <span class="n">conn</span><span class="p">.</span><span class="n">mget</span><span class="p">(</span><span class="n">key2</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="se">\n</span><span class="s">%s</span><span class="sh">"</span> <span class="o">%</span> <span class="n">conn</span><span class="p">.</span><span class="nf">mget</span><span class="p">(</span><span class="n">key2</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>To execute an arbitrary <code class="language-plaintext highlighter-rouge">redis command</code>,</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">conn</span><span class="p">.</span><span class="n">execute_command</span><span class="p">(</span><span class="s">'zscan key1 0 MATCH *EMAIL:random@email.com*#* COUNT 100000'</span><span class="p">))</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">conn</span><span class="p">.</span><span class="nf">execute_command</span><span class="p">(</span><span class="sh">'</span><span class="s">zscan key1 0 MATCH *EMAIL:random@email.com*#* COUNT 100000</span><span class="sh">'</span><span class="p">))</span>
 </code></pre></div></div>
 
 
