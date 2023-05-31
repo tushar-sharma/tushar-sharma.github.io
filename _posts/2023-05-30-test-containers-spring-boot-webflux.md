@@ -19,7 +19,7 @@ Testcontainers is a Java library that provides lightweight, disposable container
 
 Testcontainers is a Java library that provides lightweight, disposable containers for running integration tests. It's a useful tool for testing applications that rely on external dependencies like databases or message queues.
 
-Gradle dependencies are
+Let's create gradle dependencies
 
 {% template customGradle.html %}
 plugins {
@@ -62,63 +62,105 @@ tasks.named('test') {
 {% endtemplate %}
 
 
-Next, let's create a simple Spring Boot Reactive application that we can test. Create a new Java class, `GreetingController`, in the location `src/main/java/com/example/demoTestContainer/api`.
+Lets create `Consultants.java` in `src/main/java/com/example/demoTestContainer/repository`
 
 {% template customJava.html %}
-package com.example.demoTestContainer.api;
+package com.example.demoTestContainer.repository;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Mono;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@RestController
-public class GreetingController {
+import java.util.UUID;
 
-    @GetMapping("/greet")
-    public Mono<String> greet() {
-        return Mono.just("Hello, world!");
-    }
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Consultants {
+    @Id
+    private UUID id;
+    private String name;
+    private int grade;
+    private String technology;
 }
 {% endtemplate %}
 
-Create an integration test that uses Testcontainers to spin up a PostgreSQL container and test our Spring Boot Reactive application. Create a new Java class, for example, GreetingControllerIntegrationTest, in the `src/test/java` directory:
+We will also create `ConsultantsRepository.java`in `src/main/java/com/example/demoTestContainer/repository`
+
+{% template customJava.html %}
+package com.example.demoTestContainer.repository;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
+import java.util.UUID;
+
+public interface ConsultantsRepository extends CrudRepository<Consultants, UUID> {
+    @Query(value = "SELECT * FROM Consultant c where c.grade = 2 and c.techology = :tech", nativeQuery = true)
+    List<Consultants> getSeniorConsultantsByTechnology(@Param("tech") String technology);
+}
+
+{% endtemplate %}
+
+Now we can test it `ConsultantsRepositoryTest.java` in `src/test/java/com/example/demoTestContainer`
+
 
 {% template customJava.html %}
 package com.example.demoTestContainer;
 
-import org.junit.jupiter.api.Test;
+import com.example.demoTestContainer.repository.ConsultantsRepository;
+import com.example.demoTestContainer.repository.Consultants;
+import org.assertj.core.api.Assertions;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.web.reactive.server.WebTestClient;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureWebTestClient
-@Testcontainers
-public class GreetingControllerIntegrationTest {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
+@Testcontainers
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) // deactivate the default behaviour
+@DataJpaTest
+public class ConsultantsRepositoryTest {
     @Container
-    public static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>("postgres:13");
+    static PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer("postgres:11.1")
+            .withDatabaseName("test")
+            .withUsername("sa")
+            .withPassword("sa");
+
+    @DynamicPropertySource
+    static void setProperties(DynamicPropertySource registry){
+        registry.add("spring.datasource.url", postgreSQLContainer::getJdbcUrl);
+        registry.add("spring.datasource.username", postgreSQLContainer::getUsername);
+        registry.add("spring.datasource.password", postgreSQLContainer::getPassword);
+    }
 
     @Autowired
-    private WebTestClient webTestClient;
+    private ConsultantsRepository consultantsRepository;
 
     @Test
-    public void testGreet() {
-        webTestClient.get().uri("/greet")
-                .exchange()
-                .expectStatus().isOk()
-                .expectBody(String.class)
-                .isEqualTo("Hello, world!");
+    public void should_be_able_to_get_senior_consultant_by_technology(){
+        //arrange
+        Consultants consultants1 = new Consultants(UUID.randomUUID(), "Adam Smith", 2, "Java");
+        Consultants consultants2 = new Consultants(UUID.randomUUID(), name="Kim James", 2, ".NET");
+        //act
+        List<Consultants> consultants = new ArrayList<>();
+        consultantsRepository.getSeniorConsultantsByTechnology("Java").forEach(c -> consultants.add(c));
+
+        Assertions.assertThat(consultants).hasSize(1);
+        Assertions.assertThat(consultants.get(0).getName()).isEqualTo("Adam Smith");
     }
 }
-{% endtemplate %}
 
-In this integration test, we're using Testcontainers' PostgreSQLContainer to start a PostgreSQL container before running the test. The @Container annotation marks the container as a JUnit test container. We're using the latest version of PostgreSQL (postgres:13), but you can use any other version that suits your needs.
-
-The @SpringBootTest annotation is used to start the Spring Boot application with a random port for testing. The @AutoConfigureWebTestClient annotation sets up the WebTestClient to make requests to our application.
-
-The testGreet() method is a simple test that sends a GET request to the /greet endpoint and verifies that the response status is 200 (OK) and the response body matches the expected greeting message.
+{% endTemplate %}
