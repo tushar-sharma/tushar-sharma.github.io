@@ -44,6 +44,39 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'org.testcontainers:junit-jupiter'
+	testImplementation 'org.testcontainers:testcontainers:1.17.6'
+	testImplementation "org.testcontainers:mongodb:1.17.6"
+	testImplementation "org.testcontainers:postgresql:1.17.6"
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -70,7 +103,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 public class GreetingController {
-    
+
     @GetMapping("/greet")
     public Mono<String> greet() {
         return Mono.just("Hello, world!");
