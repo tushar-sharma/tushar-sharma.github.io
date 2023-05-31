@@ -59,36 +59,6 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-}
-
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
-
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
-}
-
-repositories {
-	mavenCentral()
-}
-
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.boot:spring-boot-testcontainers'
-	testImplementation 'io.projectreactor:reactor-test'
-	testImplementation 'org.testcontainers:junit-jupiter'
-}
-
-tasks.named('test') {
-	useJUnitPlatform()
-}
-
 {% endtemplate %}
 
 
