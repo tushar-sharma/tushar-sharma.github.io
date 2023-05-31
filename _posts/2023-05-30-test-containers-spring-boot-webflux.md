@@ -116,7 +116,7 @@ package com.example.demoTestContainer;
 import com.example.demoTestContainer.repository.ConsultantsRepository;
 import com.example.demoTestContainer.repository.Consultants;
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -130,37 +130,40 @@ import java.util.List;
 import java.util.UUID;
 
 @Testcontainers
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) // deactivate the default behaviour
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) // deactivate the default behavior
 @DataJpaTest
 public class ConsultantsRepositoryTest {
     @Container
-    static PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer("postgres:11.1")
+    static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>("postgres:11.1")
             .withDatabaseName("test")
             .withUsername("sa")
             .withPassword("sa");
 
     @DynamicPropertySource
-    static void setProperties(DynamicPropertySource registry){
-        registry.add("spring.datasource.url", postgreSQLContainer::getJdbcUrl);
-        registry.add("spring.datasource.username", postgreSQLContainer::getUsername);
-        registry.add("spring.datasource.password", postgreSQLContainer::getPassword);
+    static void setProperties(org.springframework.core.env.MutablePropertySources sources) {
+        org.springframework.core.env.PropertySource<?> testcontainers = new org.springframework.core.env.PropertiesPropertySource("testcontainers", postgreSQLContainer.getTestProperties());
+        sources.addFirst(testcontainers);
     }
 
     @Autowired
     private ConsultantsRepository consultantsRepository;
 
     @Test
-    public void should_be_able_to_get_senior_consultant_by_technology(){
-        //arrange
+    public void should_be_able_to_get_senior_consultant_by_technology() {
+        // arrange
         Consultants consultants1 = new Consultants(UUID.randomUUID(), "Adam Smith", 2, "Java");
-        Consultants consultants2 = new Consultants(UUID.randomUUID(), name="Kim James", 2, ".NET");
-        //act
-        List<Consultants> consultants = new ArrayList<>();
-        consultantsRepository.getSeniorConsultantsByTechnology("Java").forEach(c -> consultants.add(c));
+        Consultants consultants2 = new Consultants(UUID.randomUUID(), "Kim James", 2, ".NET");
 
+        consultantsRepository.save(consultants1);
+        consultantsRepository.save(consultants2);
+
+        // act
+        List<Consultants> consultants = consultantsRepository.getSeniorConsultantsByTechnology("Java");
+
+        // assert
         Assertions.assertThat(consultants).hasSize(1);
         Assertions.assertThat(consultants.get(0).getName()).isEqualTo("Adam Smith");
     }
 }
 
-{% endTemplate %}
+{% endtemplate %}
