@@ -1,6 +1,7 @@
 ---
 published: false
 ---
-## A New Post
+## Review of "The Life you can save" by Peter Singer.
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+There are children dieing of preventable diseasss due to extreme poverty like malaria, diarrhea, etc. 
+
