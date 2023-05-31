@@ -78,10 +78,10 @@ public class GreetingController {
 }
 {% endtemplate %}
 
-Now, let's create an integration test that uses Testcontainers to spin up a PostgreSQL container and test our Spring Boot Reactive application. Create a new Java class, for example, GreetingControllerIntegrationTest, in the src/test/java directory:
+Create an integration test that uses Testcontainers to spin up a PostgreSQL container and test our Spring Boot Reactive application. Create a new Java class, for example, GreetingControllerIntegrationTest, in the `src/test/java` directory:
 
 {% template customJava.html %}
-package com.example.demo;
+package com.example.demoTestContainer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
