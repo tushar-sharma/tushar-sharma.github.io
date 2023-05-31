@@ -19,7 +19,7 @@ Testcontainers is a Java library that provides lightweight, disposable container
 
 Testcontainers is a Java library that provides lightweight, disposable containers for running integration tests. It's a useful tool for testing applications that rely on external dependencies like databases or message queues.
 
-First, you need to set up a new Spring Boot project and add the necessary dependencies. Make sure you have Maven or Gradle installed, depending on your build tool preference. Here's an example using Maven:
+Gradle dependencies are
 
 {% template customGradle.html %}
 dependencies {
@@ -30,10 +30,10 @@ dependencies {
 {% endtemplate %}
 
 
-Next, let's create a simple Spring Boot Reactive application that we can test. Create a new Java class, for example, GreetingController, in the package com.example.demo:
+Next, let's create a simple Spring Boot Reactive application that we can test. Create a new Java class, `GreetingController`, in the location `src/main/java/com/example/demoTestContainer/api`.
 
 {% template customJava.html %}
-package com.example.demo;
+package com.example.demoTestContainer.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
