@@ -52,6 +52,7 @@
 
 
 
+
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Connect to an Oracle Database using kerberos with python | RandomWits</title>
 <meta name="generator" content="Jekyll v4.3.2">
@@ -260,7 +261,7 @@ header li {
 
 <p>After few emails back and forth with the Support team, I discoverd that the server had been upgraded with Kerberos authentication. I have to modify my scripts to support kerberos authentication. I have to dig up more to understand more about kerberos.</p>
 
-<h2 id="whats-a-kerberos">What’s a Kerberos?</h2>
+<h2 id="whats-a-kerberos">What's a Kerberos?</h2>
 
 <p>Kerberos is a system for authenticating access to services.</p>
 
@@ -288,7 +289,7 @@ header li {
 
 <h3 id="create-a-config-file">Create a config file</h3>
 
-<p>Let’s create a config.json used for our script &amp; replace $HOSTNAME, $PORT_NUMBER, $SERVICE_NAME, $USERNAME, $PASSWORD respectively.</p>
+<p>Let's create a config.json used for our script &amp; replace $HOSTNAME, $PORT_NUMBER, $SERVICE_NAME, $USERNAME, $PASSWORD respectively.</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span>
     <span class="s2">"_hostname"</span>: <span class="s2">"</span><span class="nv">$HOSTNAME</span><span class="s2">"</span>,
@@ -304,7 +305,7 @@ header li {
 
 <h3 id="parse-config-file">Parse config file</h3>
 
-<p>Let’s create a simple python script to parse config file</p>
+<p>Let's create a simple python script to parse config file</p>
 
 <script src="https://gist.github.com/tushar-sharma/4564f7c5ece9d5acaf439fe3142a8937.js"></script>
 

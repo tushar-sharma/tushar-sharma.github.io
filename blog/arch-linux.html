@@ -52,6 +52,7 @@
 
 
 
+
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Guide to install Arch Linux | RandomWits</title>
 <meta name="generator" content="Jekyll v4.3.2">
@@ -265,7 +266,7 @@ header li {
 
 <p>I finally divorced <code class="language-plaintext highlighter-rouge">Windows</code> soon after I fell in love with Linux. Ubuntu was my first love. I met her on <code class="language-plaintext highlighter-rouge">Distrowatch</code>. But she spoke no English. So I spent hours gawking at her sleaky terminal trying to learn her language, <code class="language-plaintext highlighter-rouge">bash</code>.</p>
 
-<p>Soon I flirted with others; Mint came but reminded me of my ex, Fedora had a different <code class="language-plaintext highlighter-rouge">yum</code>, BSD couldn’t agree on my license, Debian was old schooled. Few months ago, I discovered grey hair on my head and decided to settle down. So I started looking for someone who was simple yet was elegant. Little did I know that I would stumble upon Arch Linux.</p>
+<p>Soon I flirted with others; Mint came but reminded me of my ex, Fedora had a different <code class="language-plaintext highlighter-rouge">yum</code>, BSD couldn't agree on my license, Debian was old schooled. Few months ago, I discovered grey hair on my head and decided to settle down. So I started looking for someone who was simple yet was elegant. Little did I know that I would stumble upon Arch Linux.</p>
 
 <p>Dating Arch is a different game. She is not just another <code class="language-plaintext highlighter-rouge">click-next-install</code> Linux. Like any good relationship, it needs time. So you need to undertand <code class="language-plaintext highlighter-rouge">bricks &amp; bolts</code> of Linux system. Well it turns out, learning Arch is much simpler than building a house in LEGO.</p>
 
@@ -275,7 +276,7 @@ header li {
 
 <h1 id="step-1--find-the-base">Step 1 : Find the base</h1>
 
-<p>Through out this guide, I’ll keep our LEGO analogy. At the end we’ll have a working house i.e. Arch Linux. But before we begin installing Arch, we need to decide our base.</p>
+<p>Through out this guide, I'll keep our LEGO analogy. At the end we'll have a working house i.e. Arch Linux. But before we begin installing Arch, we need to decide our base.</p>
 
 <p>Loosely speaking, Base is a box on which the Arch Linux will be installed. There are multiple candidates for the base</p>
 
@@ -288,13 +289,13 @@ header li {
 <p><b>Whole System</b> : Choose this if you want to remain faithful to only Arch Linux. This would wipe off any other operating system you have on your computer. Though Arch is great, however some your fancy hardware may not find their drivers. If you like games, probably you also occassionally need to talk to Windows. </p>
 
 <p><b>Dual Boot</b> : Choose this if you want the best of both worlds. You can install Arch Linux along side your legacy operating system. However this requires little effort in trying to keep both operating system together. You need to manually partition physical file system and edit the boot loader.</p>
-<p><strong>Hypervisor</strong> : Choose this if you dont want to physically partition your memory. It lets you create an abstraction layer where you could virtually run mutliple operating systems. Also if you’re beginning to learn Arch Linux, I would recommend you to proceed with this method.</p>
+<p><strong>Hypervisor</strong> : Choose this if you dont want to physically partition your memory. It lets you create an abstraction layer where you could virtually run mutliple operating systems. Also if you're beginning to learn Arch Linux, I would recommend you to proceed with this method.</p>
 
 <h1 id="step-2--plan-your-house">Step 2 : Plan your house</h1>
 
 <p>Next step in our LEGO design, require us to plan our house. For Arch Linux, we need to prepare our system before installing Arch it.</p>
 
-<p>I’m assuming that you have createa a bootable medium (CD or usb)  for Arch Linux. If you are on a Unix like system, you can type</p>
+<p>I'm assuming that you have createa a bootable medium (CD or usb)  for Arch Linux. If you are on a Unix like system, you can type</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo dd if=/path/to/arch.iso  of=/dev/sdX bs=4m &amp;&amp; sync
 </code></pre></div></div>
@@ -320,11 +321,11 @@ header li {
 <img src="/img/arch_lsblk.png">
 </p>
 
-<p>Next we need to partition the filesystem. I’ll divide the filesystem into following</p>
+<p>Next we need to partition the filesystem. I'll divide the filesystem into following</p>
 
-<p>1.<strong>BIOS Partition</strong> : This is the partition for BIOS grub.  We set “bios_grub” flag on.</p>
+<p>1.<strong>BIOS Partition</strong> : This is the partition for BIOS grub.  We set "bios_grub" flag on.</p>
 
-<p>2.<strong>Boot Partition</strong> : This is the partition for virtual “boot loader”.</p>
+<p>2.<strong>Boot Partition</strong> : This is the partition for virtual "boot loader".</p>
 
 <p>3.<strong>Swap Partition</strong> : (Optional) This is used for computer to free use extra space, when computer with lots of applications running can free some <code class="language-plaintext highlighter-rouge">RAM</code>.</p>
 
@@ -332,7 +333,7 @@ header li {
 
 <p>5.<strong>Home Partition</strong> : This is the partition where rest of your files and personal settings will live.</p>
 
-<p>Each partition information is stored in “partition table”. There are 2 main formats in use: the classic Master Boot Record, and the modern GUID Partition Table. I’ll be using GPT partition table which is an improved version that does away with several limitations of MBR style.</p>
+<p>Each partition information is stored in "partition table". There are 2 main formats in use: the classic Master Boot Record, and the modern GUID Partition Table. I'll be using GPT partition table which is an improved version that does away with several limitations of MBR style.</p>
 
 <p>To use <strong>GPT partition</strong>, type</p>
 
@@ -349,19 +350,19 @@ header li {
 
 <ol>
   <li>
-    <p>Type ‘n’ at the prompt and hit ‘Return’.</p>
+    <p>Type ‘n’ at the prompt and hit 'Return'.</p>
   </li>
   <li>
     <p>When it asks for a partition number, hit ‘Return’ to accept the default (1).</p>
   </li>
   <li>
-    <p>When it asks for a “first sector”, hit ‘Return’ to accept the default.  This will start the partition at the beginning of your virtual hard disk.</p>
+    <p>When it asks for a “first sector”, hit 'Return' to accept the default.  This will start the partition at the beginning of your virtual hard disk.</p>
   </li>
   <li>
-    <p>When it asks for a “last sector”, type  ‘+32m’. This will create 32 megabytes in size, which is used for BIOS grub.</p>
+    <p>When it asks for a “last sector”, type  '+32m'. This will create 32 megabytes in size, which is used for BIOS grub.</p>
   </li>
   <li>
-    <p>When it asks for a “hex code”, type ‘EF02’ and hit ‘Return’</p>
+    <p>When it asks for a "hex code", type 'EF02' and hit 'Return'</p>
   </li>
 </ol>
 
@@ -373,19 +374,19 @@ header li {
 
 <ol>
   <li>
-    <p>Type ‘n’ at the prompt and hit ‘Return’.</p>
+    <p>Type ‘n’ at the prompt and hit 'Return'.</p>
   </li>
   <li>
     <p>When it asks for a partition number, hit ‘Return’ to accept the default (1).</p>
   </li>
   <li>
-    <p>When it asks for a “first sector”, hit ‘Return’ to accept the default.  This will start the partition at the beginning of your virtual hard disk.</p>
+    <p>When it asks for a “first sector”, hit 'Return' to accept the default.  This will start the partition at the beginning of your virtual hard disk.</p>
   </li>
   <li>
-    <p>When it asks for a “last sector”, type  ‘+1g’. This will create 1 gigabytes in size, which is used for bootloader partition.</p>
+    <p>When it asks for a “last sector”, type  '+1g'. This will create 1 gigabytes in size, which is used for bootloader partition.</p>
   </li>
   <li>
-    <p>When it asks for a “hex code”, type ‘8300’ and hit ‘Return’</p>
+    <p>When it asks for a "hex code", type '8300' and hit 'Return'</p>
   </li>
 </ol>
 
@@ -393,19 +394,19 @@ header li {
 
 <ol>
   <li>
-    <p>Type ‘n’ at the prompt and hit ‘Return’.</p>
+    <p>Type ‘n’ at the prompt and hit 'Return'.</p>
   </li>
   <li>
     <p>When it asks for a partition number, hit ‘Return’ to accept the default (1).</p>
   </li>
   <li>
-    <p>When it asks for a “first sector”, hit ‘Return’ to accept the default.  This will start the partition at the beginning of your virtual hard disk.</p>
+    <p>When it asks for a “first sector”, hit 'Return' to accept the default.  This will start the partition at the beginning of your virtual hard disk.</p>
   </li>
   <li>
-    <p>When it asks for a “last sector”, type  ‘+2g’. This will create 2 gigabytes in size, which is used for swap partition.</p>
+    <p>When it asks for a “last sector”, type  '+2g'. This will create 2 gigabytes in size, which is used for swap partition.</p>
   </li>
   <li>
-    <p>When it asks for a “hex code”, type ‘8200’ and hit ‘Return’</p>
+    <p>When it asks for a "hex code", type '8200' and hit 'Return'</p>
   </li>
 </ol>
 
@@ -413,19 +414,19 @@ header li {
 
 <ol>
   <li>
-    <p>Type ‘n’ at the prompt and hit ‘Return’.</p>
+    <p>Type ‘n’ at the prompt and hit 'Return'.</p>
   </li>
   <li>
     <p>When it asks for a partition number, hit ‘Return’ to accept the default (1).</p>
   </li>
   <li>
-    <p>When it asks for a “first sector”, hit ‘Return’ to accept the default.  This will start the partition at the beginning of your virtual hard disk.</p>
+    <p>When it asks for a “first sector”, hit 'Return' to accept the default.  This will start the partition at the beginning of your virtual hard disk.</p>
   </li>
   <li>
-    <p>When it asks for a “last sector”, type  ‘+15g’. This will create 15 gigabytes in size, which is used for root partition.</p>
+    <p>When it asks for a “last sector”, type  '+15g'. This will create 15 gigabytes in size, which is used for root partition.</p>
   </li>
   <li>
-    <p>When it asks for a “hex code”, type ‘8300’ and hit ‘Return’</p>
+    <p>When it asks for a "hex code", type '8300' and hit 'Return'</p>
   </li>
 </ol>
 
@@ -433,19 +434,19 @@ header li {
 
 <ol>
   <li>
-    <p>Type ‘n’ at the prompt and hit ‘Return’.</p>
+    <p>Type ‘n’ at the prompt and hit 'Return'.</p>
   </li>
   <li>
     <p>When it asks for a partition number, hit ‘Return’ to accept the default (1).</p>
   </li>
   <li>
-    <p>When it asks for a “first sector”, hit ‘Return’ to accept the default.  This will start the partition at the beginning of your virtual hard disk.</p>
+    <p>When it asks for a “first sector”, hit 'Return' to accept the default.  This will start the partition at the beginning of your virtual hard disk.</p>
   </li>
   <li>
-    <p>When it asks for a “last sector”, hit ‘Return’. This will allocate remaining size, which is used for home partition.</p>
+    <p>When it asks for a “last sector”, hit 'Return'. This will allocate remaining size, which is used for home partition.</p>
   </li>
   <li>
-    <p>When it asks for a “hex code”, type ‘8300’ and hit ‘Return’</p>
+    <p>When it asks for a "hex code", type '8300' and hit 'Return'</p>
   </li>
 </ol>
 
@@ -453,10 +454,10 @@ header li {
 
 <ol>
   <li>
-    <p>Type ‘p’ to see all the partition</p>
+    <p>Type 'p' to see all the partition</p>
   </li>
   <li>
-    <p>Type ‘w’ to save the partition to the filesystem.</p>
+    <p>Type 'w' to save the partition to the filesystem.</p>
   </li>
 </ol>
 
@@ -473,7 +474,7 @@ header li {
 <img src="/img/arch_fdisk.png">
 </p>
 
-<p>Next we need to format our partitons before we install Arch Linux. However don’t format the first partition i.e. <code class="language-plaintext highlighter-rouge">/dev/sda1</code>.</p>
+<p>Next we need to format our partitons before we install Arch Linux. However don't format the first partition i.e. <code class="language-plaintext highlighter-rouge">/dev/sda1</code>.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mkfs -t ext4 /dev/sda2
 
@@ -516,7 +517,7 @@ Also format the swap space and switch it on.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># pacstrap /mnt base base-devel
 </code></pre></div></div>
 
-<p>After this we need to install bootloader. When a computer loads up, it needs bootloader to find and load an operating system. There are many bootloaders to install like syslinux, grub, LILO, etc but we’ll be using GRUB for this guide.</p>
+<p>After this we need to install bootloader. When a computer loads up, it needs bootloader to find and load an operating system. There are many bootloaders to install like syslinux, grub, LILO, etc but we'll be using GRUB for this guide.</p>
 
 <p>Local and remote filesystem mounts a special file <code class="language-plaintext highlighter-rouge">/etc/fstab</code> which contains instructions on starting up all your Linux system’s various partitions. To generate <code class="language-plaintext highlighter-rouge">fstab</code> file type</p>
 
@@ -530,7 +531,7 @@ Also format the swap space and switch it on.</p>
 
 <h1 id="step-4--add-a-roof">Step 4 : Add a roof</h1>
 
-<p>You can’t live in your Lego home before you add a roof. Similarly you can’t reboot your system now before you initialize your Boot Loader.</p>
+<p>You can't live in your Lego home before you add a roof. Similarly you can't reboot your system now before you initialize your Boot Loader.</p>
 
 <h2 id="install-grub-on-non-efi-system">Install Grub on non-efi system</h2>
 
@@ -554,7 +555,7 @@ Also format the swap space and switch it on.</p>
 
 <p><strong>Note</strong>: If you are dual booting on efi system, installing grub would be slightly different. You could follow this <a href="https://github.com/pandeiro/arch-on-air">blog</a></p>
 
-<p>Now you could easily reboot your system. However it’s advised that you follow the last step to make it more usable.</p>
+<p>Now you could easily reboot your system. However it's advised that you follow the last step to make it more usable.</p>
 
 <h1 id="step-5--add-final-touches">Step 5 : Add final touches</h1>
 
@@ -601,7 +602,7 @@ en_US ISO-8859-1
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># sudo pacman -S xorg-twm xorg-xclock xterm
 </code></pre></div></div>
 
-<p>Well we also need to install a destop environment. Destop environment uses X11 to provide better user interface. Popular examples are GNOME, KDE, etc. I like tiling window environment which is suited for people who like tinkering &amp; since you’re installing Arch Linux, I reckon i3 would appeal to you. To install i3, type</p>
+<p>Well we also need to install a destop environment. Destop environment uses X11 to provide better user interface. Popular examples are GNOME, KDE, etc. I like tiling window environment which is suited for people who like tinkering &amp; since you're installing Arch Linux, I reckon i3 would appeal to you. To install i3, type</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># sudo pacman -S i3
 </code></pre></div></div>

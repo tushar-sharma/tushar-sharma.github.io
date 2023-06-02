@@ -50,12 +50,13 @@
 
 <!-- Include Prism.js CSS and JavaScript files -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Unit Test AWS Lambda Function in Python | RandomWits</title>
@@ -378,7 +379,7 @@ assert result['body']['name'] == 'FAKE_NAME'
 
 <h3 id="pytest-fixtures">Pytest fixtures</h3>
 
-<p>A fixture is a function that returns a test resource to supply a mock <code class="language-plaintext highlighter-rouge">context</code> object to our lambda function. Let’s rewrite our test function</p>
+<p>A fixture is a function that returns a test resource to supply a mock <code class="language-plaintext highlighter-rouge">context</code> object to our lambda function. Let's rewrite our test function</p>
 
 <div class="code-block language-python highlighter-rouge"> <pre class="highlight"><code><p>import pytest
 import os
@@ -388,7 +389,7 @@ from MyLambda.lambda_function import lambda_handler</p>
 <p>@pytest.fixture
 def event():
     return {
-        ‘id’: 5
+        'id': 5
     }</p>
 
 <p>def test_lambda_handler(event):</p>

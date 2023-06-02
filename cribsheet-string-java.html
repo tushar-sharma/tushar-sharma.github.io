@@ -50,11 +50,12 @@
 
 <!-- Include Prism.js CSS and JavaScript files -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
 
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
@@ -63,8 +64,8 @@
 <meta property="og:title" content="Cribsheet for String in Java">
 <meta name="author" content="Tushar Sharma">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="Strings are immutable in java. It’s best to convert string to StringBuilder/StringBuffer so that it’s memory efficient for string manipulation. Tags: java interview">
-<meta property="og:description" content="Strings are immutable in java. It’s best to convert string to StringBuilder/StringBuffer so that it’s memory efficient for string manipulation. Tags: java interview">
+<meta name="description" content="Strings are immutable in java. It's best to convert string to StringBuilder/StringBuffer so that it's memory efficient for string manipulation. Tags: java interview">
+<meta property="og:description" content="Strings are immutable in java. It's best to convert string to StringBuilder/StringBuffer so that it's memory efficient for string manipulation. Tags: java interview">
 <link rel="canonical" href="https://randomwits.com/cribsheet-string-java">
 <meta property="og:url" content="https://randomwits.com/cribsheet-string-java">
 <meta property="og:site_name" content="RandomWits">
@@ -75,7 +76,7 @@
 <meta property="twitter:image" content="https://unsplash.com/photos/xZTScJvolYk/download?w=800">
 <meta property="twitter:title" content="Cribsheet for String in Java">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2023-05-27T00:00:00-04:00","datePublished":"2023-05-27T00:00:00-04:00","description":"Strings are immutable in java. It’s best to convert string to StringBuilder/StringBuffer so that it’s memory efficient for string manipulation. Tags: java interview","headline":"Cribsheet for String in Java","image":"https://unsplash.com/photos/xZTScJvolYk/download?w=800","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/cribsheet-string-java"},"url":"https://randomwits.com/cribsheet-string-java"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2023-05-27T00:00:00-04:00","datePublished":"2023-05-27T00:00:00-04:00","description":"Strings are immutable in java. It&#39;s best to convert string to StringBuilder/StringBuffer so that it&#39;s memory efficient for string manipulation. Tags: java interview","headline":"Cribsheet for String in Java","image":"https://unsplash.com/photos/xZTScJvolYk/download?w=800","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/cribsheet-string-java"},"url":"https://randomwits.com/cribsheet-string-java"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -263,50 +264,50 @@ header li {
 
 <p>Strings are immutable in Java, meaning their values cannot be changed once they are created. To efficiently manipulate strings, it is recommended to convert them to StringBuilder or StringBuffer objects. StringBuilder is preferable for its speed, while StringBuffer is thread-safe.</p>
 
-<p>Here’s an example of converting a string to a StringBuilder:</p>
+<p>Here's an example of converting a string to a StringBuilder:</p>
 
-<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>String input = “abcd”;
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>String input = "abcd";
 StringBuilder sb = new StringBuilder(input);</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>Appending a value to the StringBuilder can be done using the append() method:</p>
 
-<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.append(“zz”)</p>
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.append("zz")</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>To check the resulting string, you can convert the StringBuilder back to a string using <code class="language-plaintext highlighter-rouge">toString()</code> and compare it:</p>
 
-<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>assert sb.toString().equals(“abcdezz”);</p>
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>assert sb.toString().equals("abcdezz");</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>You can also retrieve the index location of a specific substring within the StringBuilder using the indexOf() method:</p>
 
-<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>int index = sb.indexOf(“zz”);
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>int index = sb.indexOf("zz");
 assert index == 5;</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>If you need to replace a portion of the string with another value, you can use the replace() method:</p>
 
-<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.replace(1, 4, “foo”);
-assert sb.toString().equals(“afooezz”);</p>
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.replace(1, 4, "foo");
+assert sb.toString().equals("afooezz");</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>To reverse the string in the StringBuilder, you can use the <code class="language-plaintext highlighter-rouge">reverse()</code> method:</p>
 
 <div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.reverse();
-assert sb.toString().equals(“zzeoofa”);</p>
+assert sb.toString().equals("zzeoofa");</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>Removing a substring from the StringBuilder can be achieved using the delete() method:</p>
 
 <div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.delete(3, 6);
-assert sb.toString().equals(“zzea”);</p>
+assert sb.toString().equals("zzea");</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>Alternatively, you can delete a specific character at a given index using deleteCharAt():</p>
 
 <div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.deleteCharAt(1);
-assert sb.toString().equals(“zea”);</p>
+assert sb.toString().equals("zea");</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>To access a character at a specific index within the StringBuilder, you can use <code class="language-plaintext highlighter-rouge">charAt()</code>:</p>
@@ -316,22 +317,22 @@ assert sb.toString().equals(“zea”);</p>
 
 <p>If you wish to modify a character at a specific index, you can use setCharAt():</p>
 
-<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.setCharAt(1, ‘z’);</p>
+<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>sb.setCharAt(1, 'z');</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>You can obtain the ASCII value of a character by using the charAt() method and casting it to an int:</p>
 
 <div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>int asciiA = sb.charAt(0);
 assert asciiA == 97;
-int asciiA = ‘A’;
+int asciiA = 'A';
 assert asciiA == 65;</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <p>Conversely, you can convert an ASCII value back to a character using a cast:</p>
 
 <div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>char c = (char) asciiA;
-assert c == ‘a’;
-int asciiZ = ‘Z’;
+assert c == 'a';
+int asciiZ = 'Z';
 assert asciiZ == 90;</p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
@@ -339,7 +340,7 @@ assert asciiZ == 90;</p>
 
 <!-- this is for pagination -->
 <nav class="pagination clear" style="padding-bottom:20px;">
-   <a class="prev-item" href="/guide-to-travel-to-thailand" title="Previous Post: Guide to Travel to Thailand">←Previous</a>     
+   <a class="prev-item" href="/guide-to-travel-to-thailand" title="Previous Post: Guide to Travel to Thailand">←Previous</a>     <a class="next-item" href="/fix-sonarqube-error-public-writable-directories-aws-lambda-python" title="Next Post: Fix SonarQube Error of Public Writable Directories in AWS lambda python">Next→</a>         
 </nav>  
 
 <hr>

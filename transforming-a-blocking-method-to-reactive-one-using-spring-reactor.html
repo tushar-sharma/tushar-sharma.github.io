@@ -56,6 +56,7 @@
 
 
 
+
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Transforming a blocking method to a reactive one using Spring Reactor | RandomWits</title>
 <meta name="generator" content="Jekyll v4.3.2">
@@ -262,7 +263,7 @@ header li {
 
 <p>Reactive programming is becoming increasingly popular in modern software development, and the use of reactive frameworks like Spring Reactor and RxJava is becoming more common. Reactive programming is an event-driven approach to programming that emphasizes asynchronous data streams, non-blocking I/O, and functional programming.</p>
 
-<p>The code we’re working with is a method that reads a value from Redis and returns an App object. The method is blocking, and the Redis call can take some time to complete. Here’s the original code:</p>
+<p>The code we're working with is a method that reads a value from Redis and returns an App object. The method is blocking, and the Redis call can take some time to complete. Here's the original code:</p>
 
 <div class="tab-container">
   <ul>
@@ -278,7 +279,7 @@ header li {
 
 <p>The method returns a Mono<app> object, which is a reactive stream that can emit one or more values. The Redis read operation is performed synchronously, which means that the thread calling this method will be blocked until the operation completes. This is not ideal in a reactive application, as we want to avoid blocking threads and keep the application responsive.</app></p>
 
-<p>To make this method more reactive, we can use the Mono.fromCallable operator. This operator allows us to wrap a synchronous method call in a reactive stream. Here’s the new code:</p>
+<p>To make this method more reactive, we can use the Mono.fromCallable operator. This operator allows us to wrap a synchronous method call in a reactive stream. Here's the new code:</p>
 
 <div class="tab-container">
   <ul>
@@ -292,11 +293,11 @@ header li {
 
 </div>
 
-<p>The fromCallable operator takes a Callable object, which is a functional interface that takes no arguments and returns a value. In our case, the Callable object wraps the Redis read operation. This operation is still synchronous, but it’s now executed inside a reactive stream.</p>
+<p>The fromCallable operator takes a Callable object, which is a functional interface that takes no arguments and returns a value. In our case, the Callable object wraps the Redis read operation. This operation is still synchronous, but it's now executed inside a reactive stream.</p>
 
 <p>The onErrorResume operator allows us to handle exceptions that may be thrown during the Redis read operation. If an exception is thrown, we log a warning message and return an empty Mono.</p>
 
-<p>In conclusion, by using the fromCallable operator, we’ve transformed a blocking method into a reactive one. The Redis read operation is now executed asynchronously inside a reactive stream, which allows us to avoid blocking threads and keep our application responsive.</p>
+<p>In conclusion, by using the fromCallable operator, we've transformed a blocking method into a reactive one. The Redis read operation is now executed asynchronously inside a reactive stream, which allows us to avoid blocking threads and keep our application responsive.</p>
 
 
 

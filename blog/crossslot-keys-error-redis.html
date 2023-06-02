@@ -52,10 +52,11 @@
 
 
 
+
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Resolve the Error CROSSSLOT Keys in request don’t hash to the same slot | RandomWits</title>
+<title>Resolve the Error CROSSSLOT Keys in request don't hash to the same slot | RandomWits</title>
 <meta name="generator" content="Jekyll v4.3.2">
-<meta property="og:title" content="Resolve the Error CROSSSLOT Keys in request don’t hash to the same slot">
+<meta property="og:title" content="Resolve the Error CROSSSLOT Keys in request don't hash to the same slot">
 <meta name="author" content="Tushar Sharma">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="AWS offers managed service Amazon MemoryDB which is redis compatible. The entire keyspace in Redis cluster is divided into hash slots and these slots are assigned to multiple nodes. In redis, getting a single value is straightforward. Tags: python redis memorydb aws">
@@ -68,9 +69,9 @@
 <meta property="article:published_time" content="2022-10-07T00:00:00-04:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="https://unsplash.com/photos/kEFrAFKY6Sk/download?w=800">
-<meta property="twitter:title" content="Resolve the Error CROSSSLOT Keys in request don’t hash to the same slot">
+<meta property="twitter:title" content="Resolve the Error CROSSSLOT Keys in request don't hash to the same slot">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2022-10-07T00:00:00-04:00","datePublished":"2022-10-07T00:00:00-04:00","description":"AWS offers managed service Amazon MemoryDB which is redis compatible. The entire keyspace in Redis cluster is divided into hash slots and these slots are assigned to multiple nodes. In redis, getting a single value is straightforward. Tags: python redis memorydb aws","headline":"Resolve the Error CROSSSLOT Keys in request don’t hash to the same slot","image":"https://unsplash.com/photos/kEFrAFKY6Sk/download?w=800","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/crossslot-keys-error-redis"},"url":"https://randomwits.com/blog/crossslot-keys-error-redis"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2022-10-07T00:00:00-04:00","datePublished":"2022-10-07T00:00:00-04:00","description":"AWS offers managed service Amazon MemoryDB which is redis compatible. The entire keyspace in Redis cluster is divided into hash slots and these slots are assigned to multiple nodes. In redis, getting a single value is straightforward. Tags: python redis memorydb aws","headline":"Resolve the Error CROSSSLOT Keys in request don&#39;t hash to the same slot","image":"https://unsplash.com/photos/kEFrAFKY6Sk/download?w=800","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/crossslot-keys-error-redis"},"url":"https://randomwits.com/blog/crossslot-keys-error-redis"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -286,7 +287,7 @@ Queued
 
 <h2 id="solution-1">Solution 1</h2>
 
-<p>One solution is to force redis to insert the keys into same slot. We can achieve that using patter “{…}”</p>
+<p>One solution is to force redis to insert the keys into same slot. We can achieve that using patter "{…}"</p>
 
 <p>So we have to modify are keys as <code class="language-plaintext highlighter-rouge">{user1}.key1</code> and <code class="language-plaintext highlighter-rouge">{user1}.key2</code>. Here hash slots are only computed for keys within the braces</p>
 

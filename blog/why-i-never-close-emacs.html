@@ -52,14 +52,15 @@
 
 
 
+
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Why I never close Emacs | RandomWits</title>
 <meta name="generator" content="Jekyll v4.3.2">
 <meta property="og:title" content="Why I never close Emacs">
 <meta name="author" content="Tushar Sharma">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. “It’s easier this way.”, he chuckled, “I can quickly find all the softwares I need.”. I showed him my desktop which was spick and span.”Doesn’t it consumes time in finding the softwares you need?”, he asked.">
-<meta property="og:description" content="I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. “It’s easier this way.”, he chuckled, “I can quickly find all the softwares I need.”. I showed him my desktop which was spick and span.”Doesn’t it consumes time in finding the softwares you need?”, he asked.">
+<meta name="description" content="I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &quot;It's easier this way.&quot;, he chuckled, &quot;I can quickly find all the softwares I need.&quot;. I showed him my desktop which was spick and span.&quot;Doesn't it consumes time in finding the softwares you need?&quot;, he asked.">
+<meta property="og:description" content="I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &quot;It's easier this way.&quot;, he chuckled, &quot;I can quickly find all the softwares I need.&quot;. I showed him my desktop which was spick and span.&quot;Doesn't it consumes time in finding the softwares you need?&quot;, he asked.">
 <link rel="canonical" href="https://randomwits.com/blog/why-i-never-close-emacs">
 <meta property="og:url" content="https://randomwits.com/blog/why-i-never-close-emacs">
 <meta property="og:site_name" content="RandomWits">
@@ -70,7 +71,7 @@
 <meta property="twitter:image" content="https://randomwits.com/img/emacs.png">
 <meta property="twitter:title" content="Why I never close Emacs">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2013-11-06T00:00:00-05:00","datePublished":"2013-11-06T00:00:00-05:00","description":"I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. “It’s easier this way.”, he chuckled, “I can quickly find all the softwares I need.”. I showed him my desktop which was spick and span.”Doesn’t it consumes time in finding the softwares you need?”, he asked.","headline":"Why I never close Emacs","image":"https://randomwits.com/img/emacs.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/why-i-never-close-emacs"},"url":"https://randomwits.com/blog/why-i-never-close-emacs"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2013-11-06T00:00:00-05:00","datePublished":"2013-11-06T00:00:00-05:00","description":"I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &quot;It&#39;s easier this way.&quot;, he chuckled, &quot;I can quickly find all the softwares I need.&quot;. I showed him my desktop which was spick and span.&quot;Doesn&#39;t it consumes time in finding the softwares you need?&quot;, he asked.","headline":"Why I never close Emacs","image":"https://randomwits.com/img/emacs.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/why-i-never-close-emacs"},"url":"https://randomwits.com/blog/why-i-never-close-emacs"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -284,9 +285,9 @@ I once complained to my friend of his desktop on his computer. His desktop was a
 
 <h4 id="emacs-for-editing">Emacs for Editing</h4>
 
-<p>Emacs is modeless editor which mean that unlike vim, you can start inserting text as soon as you open it. This is one of the reason why it’s popular with newbies. But that doesn’t mean you can’t get your hands dirty with emacs.</p>
+<p>Emacs is modeless editor which mean that unlike vim, you can start inserting text as soon as you open it. This is one of the reason why it's popular with newbies. But that doesn't mean you can't get your hands dirty with emacs.</p>
 
-<p>Most people criticize emacs user for trying to do everything with emacs except editing. So let’s begin with editing for which emacs was initially built.</p>
+<p>Most people criticize emacs user for trying to do everything with emacs except editing. So let's begin with editing for which emacs was initially built.</p>
 
 <p>Emacs can handle pretty much any type of file. Just type</p>
 
@@ -300,7 +301,7 @@ I once complained to my friend of his desktop on his computer. His desktop was a
 
 <h4 id="emacs-for-backup">Emacs for Backup</h4>
 
-<p>Emacs by default creates a backup file for every file it edits. It’s usually named as the original file followed by tilde like FileName~. Though backup files are life saver, they are difficult to manage if they accumulate on the same folder. To save all your files in one place, let’s say in folder <code class="language-plaintext highlighter-rouge">.saves</code>, add this to your <code class="language-plaintext highlighter-rouge">~/.emacs</code></p>
+<p>Emacs by default creates a backup file for every file it edits. It's usually named as the original file followed by tilde like FileName~. Though backup files are life saver, they are difficult to manage if they accumulate on the same folder. To save all your files in one place, let's say in folder <code class="language-plaintext highlighter-rouge">.saves</code>, add this to your <code class="language-plaintext highlighter-rouge">~/.emacs</code></p>
 
 <figure class="highlight"><pre><code class="language-common-lisp" data-lang="common-lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">backup-directory-alist</span> <span class="o">`</span><span class="p">((</span><span class="s">"."</span> <span class="o">.</span> <span class="s">"~/.saves"</span><span class="p">)))</span></code></pre></figure>
 
@@ -316,7 +317,7 @@ I once complained to my friend of his desktop on his computer. His desktop was a
 <span class="c1">;; optional keyboard short-cut</span>
 <span class="p">(</span><span class="nv">global-set-key</span> <span class="s">"\C-xm"</span> <span class="ss">'browse-url-at-point</span><span class="p">)</span></code></pre></figure>
 
-<p>Here’s a snapshot of my website in emacs.</p>
+<p>Here's a snapshot of my website in emacs.</p>
 
 <p><img src="/img/myblog.png" alt="myblog" title="My Blog"></p>
 
@@ -339,7 +340,7 @@ I once complained to my friend of his desktop on his computer. His desktop was a
       <span class="nv">smtpmail-smtp-service</span> <span class="mi">587</span>
       <span class="nv">gnus-ignored-newsgroups</span> <span class="s">"^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]"</span><span class="p">)</span></code></pre></figure>
 
-<p>Replace user with you’re gmail username.Also add this to your <code class="language-plaintext highlighter-rouge">~/.authinfo</code> file</p>
+<p>Replace user with you're gmail username.Also add this to your <code class="language-plaintext highlighter-rouge">~/.authinfo</code> file</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>machine imap.gmail.com login user@gmail.com password secret port 993
 machine smtp.gmail.com login user@gmail.com password secret port 587
@@ -357,7 +358,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
 
 <h4 id="emacs-for-composing-documents">Emacs for composing Documents</h4>
 
-<p>This is one of the feature I find unparalleled to emacs. The official website says about org mode, “Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system”.</p>
+<p>This is one of the feature I find unparalleled to emacs. The official website says about org mode, "Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system".</p>
 
 <p><img src="/img/orgMode.png" alt="orgMode" title="Org"></p>
 
@@ -373,7 +374,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
 
 <h4 id="emacs-for-secret-writing">Emacs for Secret Writing</h4>
 
-<p>If you happen to maintain a personal diary, you must be paranoid about it’s secrecy. Emacs could be used to store your personal information. It uses <code class="language-plaintext highlighter-rouge">GNU GPG</code> to save the file. Open any file in emacs with <code class="language-plaintext highlighter-rouge">gpg</code> extension.To save it, press <code class="language-plaintext highlighter-rouge">C-s</code> which asks for which type of encryption method to use. Just use the default and press OK. This would prompt for a passphrase for saving.</p>
+<p>If you happen to maintain a personal diary, you must be paranoid about it's secrecy. Emacs could be used to store your personal information. It uses <code class="language-plaintext highlighter-rouge">GNU GPG</code> to save the file. Open any file in emacs with <code class="language-plaintext highlighter-rouge">gpg</code> extension.To save it, press <code class="language-plaintext highlighter-rouge">C-s</code> which asks for which type of encryption method to use. Just use the default and press OK. This would prompt for a passphrase for saving.</p>
 
 <p><img src="/img/secretGPG.png" alt="secretGPG" title="GPG"></p>
 
@@ -419,7 +420,7 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
 
 <h4 id="emacs-for-social-networking">Emacs for Social Networking</h4>
 
-<p>If you cling for user experience, it’s better to use regular browsers for social networking. And it sometimes becomes difficult to replicate all functionality of websites in emacs. Nevertheless, there’s a ways to circumvent some of the limitations and use social networking in emacs.</p>
+<p>If you cling for user experience, it's better to use regular browsers for social networking. And it sometimes becomes difficult to replicate all functionality of websites in emacs. Nevertheless, there's a ways to circumvent some of the limitations and use social networking in emacs.</p>
 
 <p>To use facebook, visit <code class="language-plaintext highlighter-rouge">http://m.facebook.com</code>. If you want login information to remain store, add cookie information in emacs.</p>
 
@@ -445,14 +446,14 @@ machine smtp.gmail.com login user@gmail.com password secret port 587
   <li>Type <code class="language-plaintext highlighter-rouge">M-x gomoku</code> for five-in-a-row against the computer 
 8.Type <code class="language-plaintext highlighter-rouge">M-x dunnet</code> for text based adventure game.</li>
   <li>Type <code class="language-plaintext highlighter-rouge">M-x life</code> to grow your own cell in emacs.</li>
-  <li>Type <code class="language-plaintext highlighter-rouge">M-x butterfly</code> if you’re a <a href="http://xkcd.com/378/">xkcd</a> fan.</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">M-x butterfly</code> if you're a <a href="http://xkcd.com/378/">xkcd</a> fan.</li>
 </ol>
 
-<p>For more visit emac’s <a href="http://www.emacswiki.org/emacs/CategoryGames">games</a>.</p>
+<p>For more visit emac's <a href="http://www.emacswiki.org/emacs/CategoryGames">games</a>.</p>
 
 <h4 id="conclusion">Conclusion</h4>
 
-<p>Emacs is not meant to be an <strong>all-in-one</strong> substitute for all softwares. Of course certain softwares are better at doing specific tasks. Emacs wins over the fact that I rarely needs to close it. One can easily customize and extend emacs using elisp, a dialect of lisp. If you’re convinced of the power of emacs, let me welcome you to the <a href="http://www.emacswiki.org/emacs/ChurchOfEmacs">Church of Emacs</a>. If not, let’s part ways with an old joke, “<em>The Emacs operaating system needs a better editor</em>”.</p>
+<p>Emacs is not meant to be an <strong>all-in-one</strong> substitute for all softwares. Of course certain softwares are better at doing specific tasks. Emacs wins over the fact that I rarely needs to close it. One can easily customize and extend emacs using elisp, a dialect of lisp. If you're convinced of the power of emacs, let me welcome you to the <a href="http://www.emacswiki.org/emacs/ChurchOfEmacs">Church of Emacs</a>. If not, let's part ways with an old joke, "<em>The Emacs operaating system needs a better editor</em>".</p>
 
 
 
