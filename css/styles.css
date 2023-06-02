@@ -44,17 +44,18 @@ a{color:#39c;font-weight:400;text-decoration:none}a small{font-size:16px;color:#
 
 @import url('https://fonts.googleapis.com/css?family=Special+Elite');
 
-
 blockquote {
-  font-family: 'Special Elite', cursive;
-	font-weight: 100;
-	max-width: 600px;
-	line-height: 1.4;
-	position: relative;
-	margin: 0;
-	padding: .5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #333;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-left: 4px solid #39c;
+  background-color: #f9f9f9;
 }
-
 .dq:before,
 .dq:after{
 	position: absolute;
