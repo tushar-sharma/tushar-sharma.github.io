@@ -50,7 +50,7 @@ What about caste? Can you be a Hindu without caste? The left ecosystem deliberat
 | <a href="https://twitter.com/surajyengde/status/1496214159146500107"><img align="center"  loading="lazy" src="{{site.baseurl}}/img/tweet_yengde.jpg" alt="Tweet" /> </a>|
 
 
-## Religion is all about interpretation
+### Religion is all about interpretation
 
 Why are computers not programmed in the English language even though it was invented in the English dominant part of the world? It's because human languages are ambiguous. That's why most programming languages have unambiguous syntax. 
 
@@ -76,13 +76,13 @@ In his book, the **Hindu View of Life**, [Sarvepalli Radhakrishnan](https://en.w
 At the onset, one is confronted by the difficulty of defining what Hinduism is. To many it seems to be a name without any content. Is it a museum of beliefs, a medley of rites, or a mere map, a geographical expression? 
 </blockquote><br>
 
-## The facade of Secularism in India
+### The facade of Secularism in India
 
 It's not my expertise to dwell into theology of religion. I believe religion should be a personal matter between believers and God. Secularism should entail the separtion of religion and State like French's [**laicite**](https://en.wikipedia.org/wiki/Secularism_in_France).  
 
 In India, every party claim they are secular fighting against **fascism**, **nazism**, etc yet eschew secular liberal ideas. Self proclaimed secular parties have banned movies, books, curbed free speech, used blasphemy laws, used archaic sedition law, etc indiscriminately. Secularism in India has no definitive definition except feel-good notion of Sarva Dharma Sama Bhava.
 
-## Reform not Annihilate
+### Reform not Annihilate
 
 Every religion needs reforms. Christian Humanism was a product of the Northern Renaissance. Women are no longer burned for witchcraft in Europe. 
 
@@ -92,7 +92,7 @@ Supreme Court of India in the case titled Sunita Singh Versus State of Uttar Pra
 
 I am not an expert to dwell upon a complex subject on a polytheistic religion like Hinduism. However as a cultural Hindu, I believe Hindus must not fall into trap by pseudo left in denigrating Hinduism. Hinduism most not shy itself from reforms and embracing scientific temperament while preserving its cultural heritage.
 
-## References 
+### References 
 
 [^ref1]: [The Buddha and His Dhamma by B. R. Ambedkar](http://www.columbia.edu/itc/mealac/pritchett/00ambedkar/ambedkar_buddha/00_intro.html)
 
