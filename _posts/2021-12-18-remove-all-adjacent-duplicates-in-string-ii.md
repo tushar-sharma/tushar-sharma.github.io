@@ -10,9 +10,9 @@ tags:
 - scala
 - javascript
 name: remove-adjacent-string-ii
-thumb: https://i.imgur.com/kUneR4Y.jpeg
+thumb: https://unsplash.com/photos/842ofHC6MaI/download?w=437
 summary: Remove all adjacent duplicates in string
-image: https://i.imgur.com/kUneR4Y.jpeg
+image: https://unsplash.com/photos/842ofHC6MaI/download?w=437
 author: Tushar Sharma
 ---
 
@@ -134,6 +134,3 @@ Space Complexity: O(N).
   </ol>
 </div>
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

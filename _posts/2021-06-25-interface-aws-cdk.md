@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamically create cloudformation stack using AWS CDK
+title: Automate creation of AWS Stack
 category: blog
 tags:
 - aws
@@ -9,7 +9,8 @@ tags:
 - typescript
 - tutorial
 name: interface-aws-cdk
-thumb: https://cdkworkshop.com/images/new-cdk-logo.png
+thumb: https://unsplash.com/photos/pgSkeh0yl8o/download?w=437
+image: https://unsplash.com/photos/pgSkeh0yl8o/download?w=437
 ---
 
 

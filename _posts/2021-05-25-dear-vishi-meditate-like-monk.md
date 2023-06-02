@@ -62,6 +62,3 @@ However Nehru was critical of Aurangzeb, who was the last ruler of the Mughal Em
 
 Do you think Babar was better than Aurangzeb? Remember history is nuanced. May be you can read more about it to form your own opinion. 
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

@@ -121,6 +121,3 @@ Heavy bumps are often advised by doctors to cure for day dreaming. Luckily India
 
 The sun had now retired to give respite to people for the day. The traffic was gradually uncoiling. I stood there watching the bus depart. The experience I spent in the bus was surreal. The bus was anthropomorphically transmuted into a random stranger with whom I shared my dream. My eyes were moist as I saw the bus dissolve into traffic and disappear (May be my emotions were due to inhaling of smoke). I pulled out my ticket & tossed it into the air in agony of estrangement. And I walked away in the opposite direction of the bus. 
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

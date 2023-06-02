@@ -1,0 +1,285 @@
+---
+layout: default
+title: Travel Log
+summary: About Me
+image: https://randomwits.com/img/little_world.png
+author: Tushar Sharma
+---
+
+<link rel="stylesheet" href="{{ root_url }}/css/chat.css" />
+
+
+    
+<!-- dummy box begins -->
+<div style="padding-bottom:60px; padding-top:20px; background : white;">
+</div>
+
+
+<link rel="stylesheet" href="{{ root_url }}/css/travel.css" />
+<!-- leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<!-- leaflet easybutton -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
+<script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
+<script src="https://use.fontawesome.com/e1f76e437e.js"></script>
+
+    <!-- content table beginning -->
+    <div id="contenttable">
+
+      <!-- header graphic -->
+
+      <!-- content beginning-->
+      <div class="content-place">
+       <br>
+        <h1 class="me_blurb">
+         Travel log
+         </h1><br>
+
+         <div class="blue-attention">
+            "Wherever you go becomes a part of you somehow" - Anita Desai
+        </div><br>    
+
+          <div id="map"></div>
+
+          <script>
+            
+              var map = L.map('map', {
+                  scrollWheelZoom: false,
+              }).setView([30, 5.5], 2);
+
+
+              var greyCartoDB = L.tileLayer('https://{s}.tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=36d8b80d7de9431998538d4760d0f568', {
+                attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                apikey: '36d8b80d7de9431998538d4760d0f568',
+                maxZoom: 22
+              });
+              greyCartoDB.addTo(map);
+
+              /* own marker design */
+
+              var home = L.icon({
+                  iconUrl: '{{ root_url }}/img/home.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+
+              var travel = L.icon({
+                  iconUrl: '{{ root_url }}/img/visit.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+
+              var activities = L.icon({
+                  iconUrl: '{{ root_url }}/img/activities.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+
+              var car = L.icon({
+                  iconUrl: '{{ root_url }}/img/car.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+              
+              var ballon = L.icon({
+                  iconUrl: '{{ root_url }}/img/ballon.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+
+              var plan = L.icon({
+                  iconUrl: '{{ root_url }}/img/plan.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+
+              var bucket = L.icon({
+                  iconUrl: '{{ root_url }}/img/bucket.png',
+                  iconSize: [20, 20],
+                  iconAnchor: [10, 20]
+              });
+
+      /*** markers ***/
+
+              /* home */
+
+
+             L.marker([30.49921310, 77.86223141], {
+                  icon: home
+              }).addTo(map).bindPopup("Dehradun");
+
+               L.marker([12.98883395, 77.62227731], {
+                  icon: home
+                }).addTo(map).bindPopup("Bangalore");
+
+                L.marker([25.17370190, 75.85741940], {
+                  icon: home
+                }).addTo(map).bindPopup("Kota");
+
+                L.marker([29.65196840, -82.32498460 ], {
+                  icon: home
+                }).addTo(map).bindPopup("Gainesville,FL");
+
+                L.marker([40.76843420, -74.14542140 ], {
+                  icon: home
+                }).addTo(map).bindPopup("Harrison,NJ");
+
+                L.marker([35.227085, -80.843124], {
+                  icon: home
+                }).addTo(map).bindPopup("Charlotte,NC");
+
+                L.marker([41.05538850, -74.00737637], {
+                  icon: home
+                }).addTo(map).bindPopup("Pearl River,NY");
+
+                L.marker([31.00999600, 77.09153160], {
+                  icon: home
+                }).addTo(map).bindPopup("Waknaghat");
+
+
+                L.marker([41.825226, -71.418884], {
+                  icon: home
+              }).addTo(map).bindPopup("East Providence, RI");
+
+              /* travel */
+
+              L.marker([19.432608, -99.133209], {
+                  icon: travel
+              }).addTo(map).bindPopup("<a target=\"_blank\" href=\"{{ root_url }}/tag/mexico/\">Mexico city</a>");
+
+              L.marker([42.31271390, -71.06384893], {
+                  icon: travel
+              }).addTo(map).bindPopup("Boston,MA");
+
+              L.marker([36.169941, -115.139832], {
+                  icon: travel
+              }).addTo(map).bindPopup("Las Vegas");
+              
+
+              L.marker([32.715736, -117.161087], {
+                  icon: travel
+              }).addTo(map).bindPopup("San Diego");
+
+              L.marker([36.5323, -116.9325], {
+                  icon: travel
+              }).addTo(map).bindPopup("Death Valley");
+
+              L.marker([36.917839, -111.458664], {
+                  icon: travel
+              }).addTo(map).bindPopup("Arizona");
+
+              L.marker([40.22535690, -82.68813950], {
+                icon: travel
+              }).addTo(map).bindPopup("Ohio");
+
+
+              L.marker([13.08369390, 80.27018600], {
+                  icon: travel
+              }).addTo(map).bindPopup("Chennai");
+
+
+              L.marker([15.870032, 100.99254100000007], {
+                  icon: travel
+              }).addTo(map).bindPopup("<a target=\"_blank\" href=\"{{ root_url }}/tag/thailand/\">Thailand</a>");
+
+ 
+              /* bucket */
+
+              L.marker([41.8724111, 12.48022489999994], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Rome");
+
+
+              L.marker([52.3702157, 4.8951678], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Amsterdam");
+
+
+              L.marker([64.963051, -19.020835000000034], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Iceland");
+
+              L.marker([53.41291, -8.243889999999965], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Ireland");
+            
+              L.marker([55.755826, 37.6173], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Moskow");
+
+
+              L.marker([36.204824, 138.252924], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Japan");
+
+              L.marker([19.8967662, -155.58278180000002], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Hawaii");
+
+              L.marker([-33.447487, -70.673676], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Chile");
+            
+
+              L.marker([12.8797, 121.7740], {
+                  icon: bucket
+              }).addTo(map).bindPopup("Philippines");
+
+              /** round trips **/
+              //courtesy ~ https://www.latlong.net/place/ohio-usa-5522.html
+
+
+              var westcoastTrip = [
+                  [40.741895, -73.989308], //NYC
+                  [39.9525839, -75.1652215], //Philly
+                  [38.9071923, -77.0368707], //Washington
+                  [40.741895, -73.989308], //NYC
+                  [45.4215296, -75.697193], //Otawa
+                  [45.5016889, -73.5672559], //Montreal
+                  [42.3600825, -71.05888] //Boston
+              ];
+
+              var brownTrip = [
+                  [40.367474,  -82.996216], //ohio
+                  [41.825226, -71.418884], //Providence RI
+                  [42.361145, -71.057083] //Boston
+              ]
+              var moodysTrip = [
+                  [40.883884, -74.055984], // Hackensack, NJ
+                  [35.227085, -80.843124] // Charlotte, NC
+              ]
+
+             
+
+              /** legend **/
+
+              var legend = L.control({
+                  position: 'topright'
+              });
+
+              legend.onAdd = function(map) {
+
+                  var div = L.DomUtil.create('div', 'legend');
+                  div.innerHTML += '<img src="{{ root_url }}/img/visit.png"/> Places I visited<br /><img src="{{ root_url }}/img/bucket.png"/>Places on my bucket list <br /><img src="{{ root_url }}/img/home.png"/>Places I lived, worked & studied';
+                  return div;
+              };
+
+
+              legend.addTo(map);
+
+
+              /** reset zoom button **/
+
+              L.easyButton('fa fa-globe fa-lg', function() {
+                  map.setView([30, 5.5], 2);
+              }).addTo(map);
+
+          </script>
+
+      </div>
+      <!--content ending-->
+
+      <!-- footer for futer links (disclaimer, contact, etc)-->
+      <div id="footer"></div>
+  </div>

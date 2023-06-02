@@ -1,5 +1,6 @@
 ### Jekyll ###
 _site/
+.jekyll-cache/
 
 # Compiled source #
 ###################
@@ -28,6 +29,10 @@ _site/
 *.log
 *.sql
 *.sqlite
+ 
+# Python #
+######################
+.venv
 
 # OS generated files #
 ######################

@@ -7,7 +7,7 @@ tags:
   - diary
   - letters
 name: dear-vishi
-thumb: https://i.imgur.com/EK6Lu1I.jpg
+thumb: https://unsplash.com/photos/BXOXnQ26B7o/download?w=437
 published: true
 ---
 
@@ -65,6 +65,3 @@ I would recommend you to create a Github repository to keep track your progress 
 
 <!--end_of_post -->
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

@@ -7,9 +7,9 @@ tags:
 - friends
 - audio
 name: lost-friends
-thumb: https://i.imgur.com/imYXtDU.jpg
+thumb: https://unsplash.com/photos/lSegRSDBMLw/download?w=437
 summary: My musing in my solitude.
-image: https://i.imgur.com/imYXtDU.jpg
+image: https://unsplash.com/photos/lSegRSDBMLw/download?w=437
 author: Tushar Sharma
 ---
 
@@ -53,6 +53,3 @@ Since I am too poor to afford a grandeur farewell,<br>
 hope my lost friends still harbour my memories well.<br>
 <!--end_of_post -->
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

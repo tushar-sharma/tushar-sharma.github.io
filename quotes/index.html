@@ -1,5 +1,5 @@
 ---
-layout: comments
+layout: default
 title: Random Quotes
 summary: Random Quotes
 image: https://i.imgur.com/RwZdX35.jpg
@@ -24,7 +24,7 @@ author: Tushar Sharma
     var idx;
      if (typeof defaultValue !== 'undefined') {
          idx = defaultValue;
-     } else {         
+     } else {
        idx = Math.floor((quotes.length - 1) * Math.random());
      }
 
@@ -34,13 +34,13 @@ author: Tushar Sharma
        textQuote = quotes[idx].replace(/\<br\>/g,"\n") + " ";
      }
 
-     document.getElementById("quote").innerHTML = textQuote; 
+     document.getElementById("quote").innerHTML = textQuote;
 
-     
-     $("#quote").typewriter(); 
+
+     $("#quote").typewriter();
 
      var tweetText = quotes[idx] + " %23quotes https://randomwits.com/quotes/";
-  
+
      $('.twitter-button').attr("href", 'https://twitter.com/intent/tweet?text=' + tweetText);
 
     });
@@ -50,8 +50,11 @@ $(document).ready(function() {
 });
 </script>
 
+<!-- dummy box begins -->
+<div style="padding-bottom:60px; padding-top:20px; background : white;">
+</div>
 
-<h2 class="entry-title">Random Quotes</h2>
+<h1 class="entry-title">Random Quotes</h1>
 <br>
 <br>
 <div style="white-space:pre-wrap;overflow-x: hidden;border-top: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;">

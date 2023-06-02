@@ -16,25 +16,31 @@ author: Tushar Sharma
 featuredPost: true
 ---
 
-
 I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.<!-- truncate_here -->
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
-{% include embed-audio.html src="/sounds/2020-06-19-homeopathy-india.mp3" %}<br>
+
+{% capture audio_url %}
+{{ root_url }}/sounds/{{ page.path | split:'/'  | last | replace: '.md' '' }}.mp3
+{% endcapture %}
+{% include embed-audio.html src=audio_url %}
+<br>
 <!--begin_of_post -->
 
 <p> I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.</p>
 
-<p>
-<center>
-<figure>
-  <iframe height="500" src="https://www.youtube.com/embed/rFP0iF5toOg"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-</center>
-</p>
 
-<br>
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/rFP0iF5toOg&autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/rFP0iF5toOg?autoplay=1><img src=https://img.youtube.com/vi/rFP0iF5toOg/hqdefault.jpg ><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Homeopathy is the best friend for a Women's Health"
+></iframe><br>
 
 
 ## Allopathy vs Homeopathy
@@ -47,7 +53,7 @@ Other was alternative medicine, which is an umbrella term for Ayurveda, homeopat
 
 It was developed by Samuel Hahnemann in 1796. During this time modern germ theory of disease was not prevalent. Most scientist believed in miasma theory of disease. Also unconventional methods like bloodletting was also prevalent.
 
-Homeopathy in a nutshell has two main concepts i.e. 
+Homeopathy in a nutshell has two main concepts i.e.
 
 1. **Like cures Like**: the notion that a disease can be cured by a substance that produces similar symptoms in healthy people
 
@@ -76,22 +82,20 @@ The FDA has warned consumers about different products labeled as homeopathic. Fo
 Celebrities & Politicians are powerful influencers in any country. The product they endorse usually have huge impact on consumer buying behavior. List of politicians endorsing homeopathy products:
 <br>
 
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+<blockquote class="attention">
 Press Information Bureau, government of India, suggesting homeopathy for coronavirus
-</div>
-<br>
+</blockquote>
+
 
 <center>
  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Advisory for <a href="https://twitter.com/hashtag/CoronaVirus?src=hash&amp;ref_src=twsrc%5Etfw">#CoronaVirus</a><br><br>Homoeopathy for Prevention of Corona virus Infections<br><br>Unani Medicines useful in the symptomatic management of Corona Virus infection<br><br><a href="https://t.co/OXC7PtM7L3">Details here.</a></p>&mdash; PIB India (@PIB_India) <a href="https://twitter.com/PIB_India/status/1222385553892528128?ref_src=twsrc%5Etfw">January 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
  </center>
 <br>
 
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+<blockquote class="attention">
 Shashi Tharor is the Indian politician, writer, former Under-Secretary General of the United Nations.
-</div>
-<br>
+</blockquote>
+
 
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Launching Dr Mukesh Batra&#39;s new magazine &quot;Homeopathy &amp; You&quot; at the Lalit basement shortly. Open to public, Regency Room 5</p>&mdash; Shashi Tharoor (@ShashiTharoor) <a href="https://twitter.com/ShashiTharoor/status/395801712050454528?ref_src=twsrc%5Etfw">October 31, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -99,11 +103,9 @@ Shashi Tharor is the Indian politician, writer, former Under-Secretary General o
 
 <br>
 
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+<blockquote class="attention">
 Shatrughan Sinha, an Indian film actor & politician.
-</div>
-<br>
+</blockquote>
 
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">On Tuesday evening, Dr. Batra&#39;s Positive Health Awards were held at the Royal Opera House. Dr. Mukesh Batra a world renowned Homeopath along with his son, Dr.Akshay Batra celebrated the 12th anniversary of these special awards.His dedication towards his work has been remarkable</p>&mdash; Shatrughan Sinha (@ShatruganSinha) <a href="https://twitter.com/ShatruganSinha/status/1068407477165793280?ref_src=twsrc%5Etfw">November 30, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -111,11 +113,9 @@ Shatrughan Sinha, an Indian film actor & politician.
 <br>
 
 
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+<blockquote class="attention">
 Nita Ambani is the chairperson and founder of the Reliance Foundation.
-</div>
-<br>
+</blockquote>
 
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/NitaAmbani?src=hash&amp;ref_src=twsrc%5Etfw">#NitaAmbani</a> receiving the ‘Shri Pravinchandra V Gandhi Award for Excellence in Public Life’ for Philanthropy from Dr Mukesh Batra <a href="https://twitter.com/Rotary?ref_src=twsrc%5Etfw">@Rotary</a> <a href="https://t.co/F0kC3CGZDh">pic.twitter.com/F0kC3CGZDh</a></p>&mdash; Reliance Foundation (@ril_foundation) <a href="https://twitter.com/ril_foundation/status/849246465272807426?ref_src=twsrc%5Etfw">April 4, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -123,66 +123,71 @@ Nita Ambani is the chairperson and founder of the Reliance Foundation.
 <br>
 
 
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+<blockquote class="attention">
 Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a mass movement". <br>
-</div>
+</blockquote>
 <br>
 
-<p>
-<center>
-<figure>
-  <iframe height="500" src="https://www.youtube.com/embed/rDy5oTAhaLw"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-</center>
-</p>
-
-<br>
-
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
-Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India. <br>
-</div>
-<br>
-
-<p>
-<center>
-<figure>
-  <iframe height="500" src="https://www.youtube.com/embed/2r4NCbqev0M"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-</center>
-</p>
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/rDy5oTAhaLw&autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/rDy5oTAhaLw?autoplay=1><img src=https://img.youtube.com/vi/rDy5oTAhaLw/hqdefault.jpg><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Homeopathy should become a mass movement, says Vice President on World Homeopathy Day"
+></iframe><br>
 
 
-<div class="attention">
+<blockquote class="attention">
+Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India.
+</blockquote><br>
+
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/2r4NCbqev0M&autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/2r4NCbqev0M?autoplay=1><img src=https://img.youtube.com/vi/2r4NCbqev0M/hqdefault.jpg><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Dr. Mukesh Batra receives the Padma Shri Award for Medicine, 2012"
+></iframe><br>
+
+
+<blockquote class="attention">
 <i style="color: orange;" class="fas fa-exclamation-circle"> </i>
 DD News is a Indian government funded news channel. It reports how homeopathy can treat respiratory problems
-</div>
-<br>
+</blockquote><br>
 
-<p>
-<center>
-<figure>
-  <iframe height="500"  src="https://www.youtube.com/embed/zhoDZrGj9Kc"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-</center>
-</p>
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/zhoDZrGj9Kc&autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/zhoDZrGj9Kc?autoplay=1><img src=https://img.youtube.com/vi/zhoDZrGj9Kc/hqdefault.jpg><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Homeopathy in treating respiratory problems (Hindi)"
+></iframe><br>
 
 
-
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+<blockquote class="attention">
 Claims that homeopathy can cure genetic disorders
-</div>
-<br>
+</blockquote><br>
 
-<p>
-<center>
-<figure>
-  <iframe height="500"  src="https://www.youtube.com/embed/x4_HjgUgvp4"  scrolling="no" frameborder="0" style="position: relative;  width: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
-</center>
-</p>
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/x4_HjgUgvp4&autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/x4_HjgUgvp4?autoplay=1><img src=https://img.youtube.com/vi/x4_HjgUgvp4/hqdefault.jpg><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Genetic Disorders: Treating with homeopathy - Dr. Surekha Tiwari"
+></iframe><br>
+
 
 <div markdown="1">
 
@@ -261,6 +266,3 @@ Investing in modern science requires both capital & extensive research in R&D. S
   </ol>
 </div>
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

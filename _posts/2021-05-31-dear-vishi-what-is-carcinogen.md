@@ -8,8 +8,8 @@ tags:
   - carcinogen
   - meditation
 name: diary-carcinogen
-thumb: https://i.imgur.com/rVIAbeu.jpg
-image: https://i.imgur.com/rVIAbeu.jpg
+thumb: https://unsplash.com/photos/L7en7Lb-Ovc/download?w=437
+image: https://unsplash.com/photos/L7en7Lb-Ovc/download?w=437
 published: true
 ---
 
@@ -75,6 +75,3 @@ This loosely translates as
 > May all see what is auspicious, may no one suffer. <br/>
 > Om Peace, peace, peace.
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

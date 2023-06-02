@@ -9,7 +9,7 @@ name: never-close-emacs
 thumb: /img/emacs.png
 image: /img/emacs.png
 summary: Tips and tricks in Emacs.
-featuredPost: true
+featuredPost: false
 ---
 
 I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. "It's easier this way.", he chuckled, "I can quickly find all the softwares I need.". I showed him my desktop which was spick and span."Doesn't it consumes time in finding the softwares you need?", he asked.<!-- truncate_here -->
@@ -221,9 +221,6 @@ For more visit emac's [games].
 
 Emacs is not meant to be an **all-in-one** substitute for all softwares. Of course certain softwares are better at doing specific tasks. Emacs wins over the fact that I rarely needs to close it. One can easily customize and extend emacs using elisp, a dialect of lisp. If you're convinced of the power of emacs, let me welcome you to the [Church of Emacs]. If not, let's part ways with an old joke, "*The Emacs operaating system needs a better editor*".
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a> 	{% endif %}
-</nav>
 
 [^1]: There's a famous editor war between VI and Emacs
 [^2]: Free means as if freedom not gratis
