@@ -2,8 +2,8 @@
 layout: post
 date: 2023-06-01
 title: Fix SonarQube Error of Public Writable Directories in AWS lambda python
-thumb:  https://pm1.narvii.com/8379/01055562de23186541c6bda0fa5c5d6707102a38r1-900-900v2_hq.jpg 
-image:  https://pm1.narvii.com/8379/01055562de23186541c6bda0fa5c5d6707102a38r1-900-900v2_hq.jpg 
+thumb:  /img/error_wallpaper.jpg
+image:  /img/error_wallpaper.jpg
 author: Tushar Sharma
 tags:
  - sonarqube
@@ -30,6 +30,7 @@ mode = "w"
 
 In this code snippet, the /tmp directory is publicly writable, which can pose security risks if not managed properly.
 
+### Solution: Use tempfile
 
 To address the SonarQube warning and safely manage temporary directories in AWS Lambda functions, we can leverage Python's built-in tempfile module. The tempfile module provides a secure and convenient way to create temporary files and directories with proper permissions and unique names.
 
