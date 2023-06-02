@@ -21,6 +21,9 @@ kramdown:
   math_engine: mathjax
   input: GFM
   syntax_highlighter: rouge
+  auto_ids: true
+  hard_wrap: false
+  smart_quotes: ["apos", "apos", "quot", "quot"]
 exclude:
 - README.md
 - CNAME
