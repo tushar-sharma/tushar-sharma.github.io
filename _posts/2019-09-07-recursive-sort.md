@@ -170,7 +170,3 @@ Lastly we need to write our merge method.
 It's a recursive algorithm , so we need a recurrence
 
 <img src="{{ root_url }}/img/rec.png" >
-
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

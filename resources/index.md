@@ -7,6 +7,11 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 ---
 
+
+<!-- dummy box begins -->
+<div style="padding-bottom:60px; padding-top:20px; background : white;">
+</div>
+
 <h1 class="entry-title">Resources for Programmers</h1>
 
 <style type="text/css">
@@ -532,3 +537,10 @@ a good online resource which goes through design fundamentals
 * [How to be a program manager - Joel on Software](http://www.joelonsoftware.com/items/2009/03/09.html)
 * [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
 * [mid-1980's textfiles](http://www.textfiles.com/)
+
+## SEO
+
+* [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly)
+* [Ubersuggest](https://neilpatel.com/ubersuggest/)
+* [Serpstat](https://serpstat.com/)
+* [Google keyword planner](https://ads.google.com/home/tools/keyword-planner/)

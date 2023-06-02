@@ -7,7 +7,7 @@ tags:
   - sleep 
   - apnea
   - diary
-  - lettetrs
+  - letters
   - audio
 name: snoring
 thumb: https://i.imgur.com/Dos9r5p.jpeg
@@ -95,7 +95,3 @@ So is snoring innocuous? Probably not.
 </div>
 
 
-
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

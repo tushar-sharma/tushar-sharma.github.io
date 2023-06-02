@@ -68,7 +68,3 @@ Another way to export data is to use boto3 client. It's a low level AWS services
 However boto3 client will generates dynamodb JSON. A simple python script to convert it back to normalized JSON using `dynamodb_json` library.
 
 <script src="https://gist.github.com/tushar-sharma/e7ee63cd8dcdbd2767ac34846762b72e.js"></script>
-
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

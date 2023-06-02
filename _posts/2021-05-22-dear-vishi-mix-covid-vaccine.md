@@ -6,8 +6,8 @@ tags:
   - diary
   - letters
 name: dear-vishi
-thumb: >-
-  https://www.irishtimes.com/polopoly_fs/1.3158018.1500311533!/image/image.jpg_gen/derivatives/box_620_330/image.jpg
+thumb: https://unsplash.com/photos/npjP0dCtoxo/download?w=437
+image: https://unsplash.com/photos/npjP0dCtoxo/download?w=437
 published: true
 ---
 
@@ -104,6 +104,3 @@ If you remove `python3-virtualenv` then `poetry` seems to work.
 $ sudo apt remove --purge python3-virtualenv
 ```
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

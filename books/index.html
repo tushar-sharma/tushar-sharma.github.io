@@ -10,12 +10,15 @@ author: Tushar Sharma
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <link rel="stylesheet" href="{{ root_url }}/css/books.css" />
 <link rel="stylesheet" href="{{ root_url }}/css/search.css" />
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ root_ulr }}/css/jquery.dataTables.min.css" />
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 <style>
-  .cl {
+.cl {
     white-space: nowrap !important;
   }
+.dataTables_filter {
+    float: right !important;
+}
 </style>
 <!-- end heading -->
 <script  type="text/javascript">
@@ -56,12 +59,14 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 });
 </script>
 
+<!-- dummy box begins -->
+<div style="padding-bottom:60px; padding-top:20px; background : white;">
+</div>
+
 <!-- heading -->
-<h2 class="entry-title">Books on my shelf</h2>
+<h1 class="entry-title">Books on my shelf</h1>
 
-<p>These are some of books and other miscellaneous writings that are currently on my shelf. </p>
-
-<p><b>Challenge:</b> Search your favourite author or a book in the <i>search bar</i>. If you can't find it, feel free to send me your name and the <a href="{{ root_url }}/contact" >book suggestion</a>. I will give you a shout-out by adding your name in the comments.</p>
+<p>Feel free to send me your  <a href="{{ root_url }}/contact" >favourite book suggestion</a>. I will give you a shout-out by adding your name in the comments.</p><br>
 
 <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
   <thead>
@@ -84,7 +89,11 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
       <td>Anna Karenina</td>
       <td>Leo Tolstoy</td>
       <td>
-        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></div>
+        <div class="cl">
+          {% for i in (1..5) %}
+           <span class="fa fa-star checked"></span>
+          {% endfor %}
+        </div>
       </td>
       <td>Acclaimed as world's greatest novel but was a tedious read. Philosophical ramblings of Lenin & fall of Anna from grace to the tragic end of extramarital affair with dashing cavalry officer Count Alexi makes it a great read.</td>
     </tr>
@@ -94,7 +103,11 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
       <td>Great Expectation</td>
       <td>Charles Dickens</td>
       <td>
-        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></div>
+        <div class="cl">
+          {% for i in (1..5) %}
+           <span class="fa fa-star checked"></span>
+          {% endfor %}
+        </div>
       </td>
       <td>This was my first novel of Charles Dickens. The rustic charm of Dickens is apparent throughtout the novel. It's humorous at times, often grim but retains the literary prowess of Dickens. If you're a fan of classics, it's a fascinating read.</td>
     </tr>
@@ -104,7 +117,11 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
       <td>Man's Search for Meaning</td>
       <td>Viktor Frankl</td>
       <td>
-        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></div>
+        <div class="cl">
+           {% for i in (1..5) %}
+             <span class="fa fa-star checked"></span>
+           {% endfor %}
+         </div>
       </td>
       <td>Viktor Frankl is a  Holocaust survivor and a neurologist and psychiatrist. In his memoir he narrates his life in Nazi concentrated camps.  It's an interesting read on how he proposes to find meaning in life amidst hostile environment.</td>
     </tr>
@@ -114,7 +131,13 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
       <td>Wings of Fire: An Autobiography</td>
       <td>A. P. J. Abdul Kalam</td>
       <td>
-        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-half"></i><i class="icon-star-empty"></i></div>
+        <div class="cl">
+          {% for i in (1..3) %}
+            <span class="fa fa-star checked"></span>
+          {% endfor %}
+          <i class="fas fa-star-half-alt"></i>
+          <i class="icon-star-empty"></i>
+        </div>
 
       </td>
       <td>He was the most loved President of India. It's an autobiography where he covers his humble beginning & his journey in becoming "Missile Man" of India. </td>
@@ -126,7 +149,14 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
       <td>The Five People You Meet in Heaven	</td>
       <td>Mitch Albom</td>
       <td>
-        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></div>
+        <div class="cl">
+          {% for i in (1..3) %}
+            <span class="fa fa-star checked"></span>
+          {% endfor %}
+          {% for i in (1..2) %}
+            <i class="icon-star-empty"></i>
+          {% endfor %}
+        </div>
 
       </td>
       <td>Mitch's stories are often inspiring trying to illuminate the meaning of life. It's a story of a veteran where he learns that heaven is not a destination. It's a place where your life is explained to you by five people.</td>
@@ -351,6 +381,36 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
   <td>It's a short beautiful poem. Wordsworth was inspired by a long belt of "daffodills" as visited a lake with his sister. "They flash upon that inward eye, which is the bliss of solitude". I guess my only remorse is that my solitude doesn't have any daffodils.  </td>
 </tr>
 
+<!--A Mathematician's Apology-->
+<tr>
+  <td>A Mathematician's Apology  </td>
+  <td> G. H. Hardy</td>
+  <td>
+    <div class="cl">
+      {% for i in (1..3) %}
+        <span class="fa fa-star checked"></span>
+      {% endfor %}
+      <i class="icon-star-empty"></i>
+      <i class="icon-star-empty"></i>
+    </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<tr>
+  <td>One, Two, Three...Infinity</td>
+  <td>George Gamow</td>
+  <td>
+    <div class="cl">
+      {% for i in (1..5) %}
+        <span class="fa fa-star checked"></span>
+      {% endfor %}
+    </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+
 <!-- Kafka: The Definitive Guide  -->
 <tr>
   <td>Kafka: The Definitive Guide</td>
@@ -404,6 +464,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
   <td>To be updated...</td>
 </tr>
 
+
 <!--The Evolution of Physics -->
 <tr>
   <td>The Evolution of Physics</td>
@@ -444,18 +505,6 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <tr>
-  <td>One, Two, Three...Infinity</td>
-  <td>George Gamow</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book11"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<tr>
   <td>Mastering Bitcoin</td>
   <td>Andreas Antonopoulos</td>
   <td>
@@ -466,6 +515,355 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
   </td>
   <td>To be updated...</td>
 </tr>
+
+
+<!--On the Origin of Species -->
+<tr>
+  <td>On the Origin of Species</td>
+  <td>Charles Darwin</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book13"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+
+<!-- Musicophilia  -->
+<tr>
+  <td>Musicophilia</td>
+  <td>Oliver Sacks</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book4"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+
+<!-- ng-book: The complete book on Angular 8  -->
+<tr>
+  <td>ng-book: The complete book on Angular 8</td>
+  <td>Nate Murray, Felipe Coury, Ari Lerner, Carlos Taborda</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book4"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<!-- The Black Book of Communism -->
+<tr>
+  <td>The Black Book of Communism</td>
+  <td>Stéphane Courtois, Andrzej Paczkowski, Nicolas Werth, Jean-Louis Margolin</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+
+<!-- The Truth Pill -->
+<tr>
+  <td>The Truth Pill</td>
+  <td>Dinesh Thakur, Prashant Reddy</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<!-- Quantitative Finance with Python -->
+<tr>
+  <td>Quantitative Finance with Python</td>
+  <td>Chris Kellihe</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<!-- Effective Java  -->
+<tr>
+  <td>Effective Java</td>
+  <td>Joshua Bloch</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+
+<!--The Wonder That Was India  -->
+<tr>
+  <td>The Wonder That Was India</td>
+  <td>Arthur Llewellyn Basham</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<!--A Perfect Spy -->
+<tr>
+  <td>A Perfect Spy</td>
+  <td>John le Carré</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<!--Neuromancer-->
+<tr>
+  <td>Neuromancer</td>
+  <td>William Gibson</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<!--The Moon Is a Harsh Mistress-->
+<tr>
+  <td>The Moon Is a Harsh Mistress</td>
+  <td>Robert A. Heinlein</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+
+<!--The Outsider-->
+<tr>
+  <td>The Outsider</td>
+  <td>Albert Camus</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>Recommended by Anurag Kashyap. To be updated...</td>
+</tr>
+
+
+<!--The Trial-->
+<tr>
+  <td>The Trial</td>
+  <td>Franz Kafka </td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>Recommended by Anurag Kashyap. To be updated...</td>
+</tr>
+
+<!--Notes from Underground-->
+<tr>
+  <td>Notes from Underground</td>
+  <td>Fyodor Dostoevsky</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>Recommended by Anurag Kashyap. To be updated...</td>
+</tr>
+
+<!--What Is to Be Done?-->
+<tr>
+  <td>What Is to Be Done?</td>
+  <td>Nikolay Chernyshevsky</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<!--Invisible Man-->
+<tr>
+  <td>Invisible Man</td>
+  <td>Ralph Ellison</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="book10"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<!--Mitrokhin Archive-->
+<tr>
+  <td>Mitrokhin Archive</td>
+  <td>Vasili Mitrokhin</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="tbd"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<!--Kafka on the Shore-->
+<tr>
+  <td>Kafka on the Shore</td>
+  <td>Haruki Murakami</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="tbd"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+<!--Rust for Rustaceans-->
+<tr>
+  <td>Rust for Rustaceans</td>
+  <td>Jon Gjengset</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="tbd"></div>
+   </div>
+  </div>
+  </td>
+  <td>To be updated...</td>
+</tr>
+
+
+<!--Desert Solitaire-->
+<tr>
+  <td>Desert Solitaire</td>
+  <td>Edward Abbey</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="tbd"></div>
+   </div>
+  </div>
+  </td>
+  <td>Recommended by Kristina Lynn. To be updated...</td>
+</tr>
+
+<!--Physics of the Impossible-->
+<tr>
+  <td>Physics of the Impossible</td>
+  <td>Michio Kaku</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="tbd"></div>
+   </div>
+  </div>
+  </td>
+  <td>Recommended by Simon Clark. To be updated...</td>
+</tr>
+
+<!--Quantum: Einstein, Bohr, and the Great Debate About the Nature of Reality-->
+<tr>
+  <td>Quantum: Einstein, Bohr, and the Great Debate About the Nature of Reality</td>
+  <td>Manjit Kumar</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="tbd"></div>
+   </div>
+  </div>
+  </td>
+  <td>Recommended by Simon Clark. To be updated...</td>
+</tr>
+
+
+<!--Chromosome Woman, Nomad Scientist: E. K. Janaki Ammal-->
+<tr>
+  <td>Chromosome Woman, Nomad Scientist: E. K. Janaki Ammal</td>
+  <td>Savithri Preetha Nair</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="tbd"></div>
+   </div>
+  </div>
+  </td>
+  <td>Recommended by Ramachandra Guha. To be updated...</td>
+</tr>
+
+
+<!--Small Is Beautiful-->
+<tr>
+  <td>Small Is Beautiful</td>
+  <td>E. F. Schumacher</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="tbd"></div>
+   </div>
+  </div>
+  </td>
+  <td>Recommended by Ramachandra Guha. To be updated...</td>
+</tr>
+
+<!--Normal People-->
+<tr>
+  <td>Normal People</td>
+  <td>Sally Rooney</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="tbd"></div>
+   </div>
+  </div>
+  </td>
+  <td>Recommended by @bookishsophia. To be updated...</td>
+</tr>
+
+<!--The Poppy War-->
+<tr>
+  <td>The Poppy War</td>
+  <td>R.F.Kuang</td>
+  <td>
+  <div id="progress-outer">
+     <div id="progress-inner" class="tbd"></div>
+   </div>
+  </div>
+  </td>
+  <td>Recommended by @bookishsophia. To be updated...</td>
+</tr>
+
 
 
 <!-- ending -->
@@ -481,19 +879,27 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 <!-- disclaimer -->
 <center>
 <div class="cl disclaimer">
-  <i class="icon-star"></i>
+  <span class="fa fa-star checked"></span>
     <span style="color:black"> &nbsp;&nbsp;Terrible, trash, useless</span> <br>
 
-  <i class="icon-star"></i><i class="icon-star"></i>
+  {% for i in (1..2) %}
+    <span class="fa fa-star checked"></span>
+  {% endfor %}
   <span style="color:black">&nbsp;&nbsp;Poor, disappointing, disliked</span> <br>
 
-  <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+  {% for i in (1..3) %}
+    <span class="fa fa-star checked"></span>
+  {% endfor %}
   <span style="color:black">&nbsp;&nbsp;Okay, readable, useful</span> <br>
 
-  <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+  {% for i in (1..4) %}
+    <span class="fa fa-star checked"></span>
+  {% endfor %}
   <span style="color:black">&nbsp;&nbsp;Liked well enough to recommend to others</span> <br>
 
-  <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+  {% for i in (1..5) %}
+    <span class="fa fa-star checked"></span>
+  {% endfor %}
   <span style="color:black">&nbsp;&nbsp;Liked well enough to reread and recommend enthusiastically to other</span> <br>
 
 </div>

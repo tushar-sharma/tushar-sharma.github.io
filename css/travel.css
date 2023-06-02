@@ -1,0 +1,165 @@
+/**
+ Courtesy : https://lauralouu.github.io/TravelBucketList/
+ */
+ #contenttable {
+    padding: 0 0 5px 5px;
+    width: 100%;
+    margin: 0 auto;
+    /*margin-top: 35px;*/
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+#content {
+    width: 600px;
+    float: right;
+    padding: 10px;
+}
+
+#footer {
+    clear: both;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+i {}
+
+/**** links ****/
+
+a {
+    text-decoration: none;
+}
+
+/**** content boxes classes ****/
+
+.content-place {
+    margin-left: 5px;
+    padding: 5px 5px 5px 0;
+}
+
+
+/*** leaflet ***/
+.leaflet-container {
+    background-color:rgba(255,0,0,0.0) !important;
+}
+
+#map {
+    height: 670px; /*470  */
+    margin: 5px 5px 25px 0;
+}
+
+.legend {
+    padding: 5px;
+    background-color: #efefef;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 260px;
+    line-height: 23px;
+}
+
+.legend img {
+    vertical-align: middle;
+    width: 20px;
+    margin-right: 5px;
+
+}
+
+.legendResp {
+    padding: 5px;
+    background-color: #efefef;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 260px;
+    line-height: 23px;
+    display: none;
+}
+
+.legendResp img {
+    vertical-align: middle;
+    width: 20px;
+    margin-right: 5px;
+}
+
+/***************** responsive *******************/
+
+/* cannot test any widescreen,
+so it is hard to decide what would look good */
+
+/* for 980px or less */
+
+@media screen and (max-width: 980px) {
+
+    #contenttable {
+        width: 94%;
+    }
+    #content {
+        width: 65%;
+        box-sizing: border-box;
+    }
+}
+
+/* for 700px or less */
+
+@media screen and (max-width: 700px) {
+
+    #content {
+        width: auto;
+        float: none;
+    }
+
+}
+
+
+/* for 480px or less */
+
+@media screen and (max-width: 480px) {
+
+    #header {
+        height: auto;
+    }
+
+    #contenttable {
+        width: auto;
+        margin-top: 0;
+    }
+
+
+    .legend {
+        padding: 5px;
+        background-color: #efefef;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        width: 260px;
+        line-height: 23px;
+        display: none;
+    }
+
+    .legend img {
+        vertical-align: middle;
+        width: 20px;
+        margin-right: 5px;
+
+    }
+
+    .legendResp {
+        padding: 5px;
+        background-color: #efefef;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        width: auto;
+        line-height: 23px;
+        display: block;
+        margin-right: 5px;
+    }
+
+    .legendResp img {
+        vertical-align: middle;
+        width: 20px;
+        margin-right: 5px;
+    }
+
+
+}

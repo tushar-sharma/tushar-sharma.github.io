@@ -126,7 +126,3 @@ The output looks like this
 | <img align="center" src="{{ root_url }}/img/st3.png" alt="" /> |
 
 Of course predicting the buying and selling prices is an uphill task. May be you can call up Warren Buffett for tips. But I can't since he doesn't pick up my call 😢. So in next tutorial we'll do some technical analysis on stocks.
-
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

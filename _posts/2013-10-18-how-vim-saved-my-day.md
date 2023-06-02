@@ -118,9 +118,6 @@ And Voila! Your Macro is saved.
 
 ViM is a wonderful editor if only you get to know it. The following task took me less than 15 minutes to complete. Of course less than 15 minutes feat dazzled my supervisor but more than the approval it's the satisfaction that comes from solving problems smartly. So what's your story? Have ViM ever saved your day? 
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a> 	{% endif %}
-</nav>
 
 [^1]: There's a famous editor war between VI and Emacs
 [^2]: Free means as if freedom not gratis

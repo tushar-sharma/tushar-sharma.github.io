@@ -89,6 +89,19 @@ nav#pagination span.prev {
     hyphens: none;
 }
 
+select {
+    font-size: 1rem;
+    margin-left: 10px;
+    line-height: 1.5;
+    color: #495057;
+    font-size: 20px !important;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 /* begin - books progress*/
 .book1 {width: 25%; }    /*Possible world 44 pages out of  200 */
 .book3 {width: 0%; }    /* other  */
@@ -97,9 +110,10 @@ nav#pagination span.prev {
 .book6 {width: 48.71%; }  /* Glimpse of the world  page : 525 / 1129 */
 .book7 {width: 45%; }  /* Hackers */
 .book8 {width: 20%; }  /* evolution of physics */
-.book9 {width: 24%; }  /* eminent historians */
+.book9 {width: 30%; }  /* eminent historians */
 .book10 {width: 9.45%; }  /* java 8 in action */
-.book11 {width: 59%; }  /* One, Two, Three...Infinity */
 .book12 {width: 10%; }  /* Mastering bitcoin */
+.book13 {width: 20%; }  /* Origin of Species */
+.book15 {width: 6%; }  /* ng-book 46/766 */
 .tbd {width: 0%; }  /* TBD */
 /* end -  book progress*/

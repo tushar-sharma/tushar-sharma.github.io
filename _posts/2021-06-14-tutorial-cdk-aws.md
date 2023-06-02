@@ -9,10 +9,10 @@ tags:
 - typescript
 - python
 name: aws-cdk
-thumb: https://i.imgur.com/DOFlgaf.jpg
+thumb: https://unsplash.com/photos/HpWwEURimK8/download?w=437
 summary: AWS CDK tutorial
 author: Tushar Sharma
-image : https://i.imgur.com/DOFlgaf.jpg
+image : https://unsplash.com/photos/HpWwEURimK8/download?w=437
 featuredPost: true
 ---
 
@@ -42,11 +42,14 @@ Just a quick referesher to few concepts before we delve into AWS CDK
 
 5. **L3 construct** are called high-level patterns. These constructs are designed to help you complete common tasks in AWS, often involving multiple kinds of resources. 
 
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+
+<blockquote class="attention">
+<i style="color: red; " class="fas fa-exclamation"></i>
 For this tutorial, we will use L1 construct. However same concept can be used for L2 construct.
-</div>
+</blockquote>
+
 <br>
+
 ## Installation
 
 First, install the AWS CDK CLI from command line using
@@ -78,7 +81,7 @@ Then you can verify
 <script src="https://gist.github.com/tushar-sharma/167a194b3e9258d39e176905a6788d9b.js?file=cdk-doctor.sh"></script><br>
 
 
-For our first use case, will add Parameters to our cloudformation. We need to edit file **lib\test-cdk-stack.ts** for typescript or **lib\test_cdk_stack.py** for python.
+For our first use case, will add Parameters to our cloudformation. We need to edit file `lib\test-cdk-stack.ts` for typescript or `lib\test_cdk_stack.py` for python.
 
 <div class="tab-container">
   <ul>
@@ -113,15 +116,13 @@ The output is
 <script src="https://gist.github.com/tushar-sharma/167a194b3e9258d39e176905a6788d9b.js?file=synth_output1.yaml"></script>
 
 
-<div class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
+<blockquote class="attention">
 For CDK v2, CheckBootstrapVersion rule is added to the Stack's template as a safety check, to verify that the bootstrap stack in the target environment meets the minimum requirements of the current stack<sup><a href='#fn:1' rel='footnote'>1</a></sup>.
-</div>
-<br>
+</blockquote>
 
 ## Stepfunction
 
-The cloudformation template needs at least one resource to validate. We will add a `stepfunction` to our cloudformation. We will define our stepfunction inside a json file, **helloworld.asl.json**
+The cloudformation template needs at least one resource to validate. We will add a `stepfunction` to our cloudformation. We will define our stepfunction inside a json file, `helloworld.asl.json`
 
 ```json
 {
@@ -148,7 +149,7 @@ If you are not familiar with Stepfunction, AWS Stepfunction console has a nice v
 <img src="https://docs.aws.amazon.com/step-functions/latest/dg/images/tutorial-getting-started-visual-pane-render.png" alt="stepfunction image">
 </center><br>
 
-Next we need to upload the **helloworld.asl.json** to s3 bucket. We also need to define a mapping to access this `json` file.
+Next we need to upload the `helloworld.asl.json` to s3 bucket. We also need to define a mapping to access this `json` file.
 
 
 <div class="tab-container">
@@ -215,6 +216,3 @@ $ cdk deploy
   </ol>
 </div>
 
-<nav class="pagination clear" style="padding-bottom:20px;">
-{% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
-</nav>

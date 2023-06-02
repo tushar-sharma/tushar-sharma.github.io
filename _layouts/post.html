@@ -4,6 +4,7 @@ root: true
 ---
 <link rel="stylesheet" href="{{ root_url }}/css/search.css" />
 <link rel="stylesheet" href="{{ root_url }}/css/toc.css" />
+<script src="{{ root_url }}/js/copyClipboard.js" type="text/javascript"></script>
 
 
 <!-- search box begins -->
@@ -15,7 +16,7 @@ root: true
 <!-- search box ends -->
 <br>
 
-<small style="float:right; margin-top:5px;">{{ page.date | date:'%a %d %b %Y' }}</small>
+<small style="float:right; margin-top:5px;"><strong></strong></small>
 <h1>{{ page.title }}</h1>
 
 {% assign truncated_post = content | split:"<!-- truncate_here -->" %}
@@ -24,6 +25,11 @@ root: true
 {% else %}
  {{ truncated_post.last }}
 {% endif %}
+
+<!-- this is for pagination -->
+<nav class="pagination clear" style="padding-bottom:20px;">
+  {% if page.previous.url %} <a class="prev-item" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr;Previous</a>   {% endif %}  {% if page.next.url %}<a class="next-item" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next&rarr;</a>         {% endif %}
+</nav>  
 
 <hr>
 {% include comments.html %}

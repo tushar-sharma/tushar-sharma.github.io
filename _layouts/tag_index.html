@@ -13,14 +13,19 @@ root: true
 {% for post in blogposts %}
 {% for tag in post.tags %}
 {% if tag == page.tag %}
-  <small style="float:right; margin-top:5px;">{{ post.date | date:'%a %d %b %Y' }}</small>
+  <small style="float:right; margin-top:5px;"><strong></strong></small>
   <a href="{{ post.url }}">
     <h2>{{ post.title }}</h2>
   </a>
       <div>
-            <!-- this is for thumb images;  -->
-	    <div style="background:url('{{ post.thumb }}') no-repeat;background-size:100% auto;" class="thumb"></div>
+           <div >
+            <a href="{{ post.url }}">
+              <img src="{{ post.thumb }}" class="thumb"  width="800" height="437"/>
+            </a>
 
+           </div>
+            <!-- this is for thumb images;  -->
+     
             {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
             {% if truncated_post != post.content %}
             {{ truncated_post | append:".."}}

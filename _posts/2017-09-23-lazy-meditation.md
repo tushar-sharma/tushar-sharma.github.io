@@ -4,9 +4,10 @@ title:  Lazy Meditation
 category: blog
 tags:
 - meditation
-- rambling
+- opinion
 name: lazy-meditation
-thumb: /img/bhudda_st.jpg
+thumb: /img/dog_yoga.jpg
+image: /img/dog_yoga.jpg
 ---
 
 
@@ -32,7 +33,6 @@ Both arms of the clock had stopped graciously at 10 before the sound filled the 
 I pulled up a meditation lesson by “Ravi Ravi Shankar”. His photo with long hair while smiling profusely, instilled unparalleled motivation in me. “I could be next Vivekananda”, I quipped, though the Buddha statue in my room chuckled mischievously. I have seen American do challenging “yoga” while as an Indian I felt the embarrassment on failing to properly sit cross legs. Since I needed a scapegoat to blame for my flaws, I blame western culture & modernity. (A common phrase used India to blame for our woes<sup><a href='#fn:2' rel='footnote'>2</a></sup>, though such reasons are as much genuine as my rambling).
 
 | <img align="center" src="{{ root_url }}/img/dog_yoga.jpg" alt="" /> |
-
 
 The meditation started with nice Sitars. And I really felt energized in midst of the meditation. It was all beautiful and I could feel the experience transcendence while inhaling & the exhaling. After a long time, I sheepishly opened my eye to keep track of the time. To my horror, it had only elapsed five minutes yet it appeared as eternity as if time froze. The clocks were taking revenge on me by dragging their feet slowly like a toy train, even slower than one which I took from Shimla to Kalka, jerking at regular intervals at the every junction of the seconds. With every minute I grew more uncomfortable. It seems my body had lost the capacity to comprehend stillness. And like a sponge I sat, marinating in my mediocrity.
 
