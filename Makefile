@@ -21,3 +21,11 @@ copy:
 	cp robots.txt _site/
 	cp loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt _site/
 	rm -f scripts/habit.log
+verify:
+	@echo "Verifying copied files..."
+	@test -d tag && echo "tag directory: OK" || echo "tag directory: Missing"
+	@test -f _site/sitemap.xml && echo "sitemap.xml: OK" || echo "sitemap.xml: Missing"
+	@test -f _site/CNAME && echo "CNAME: OK" || echo "CNAME: Missing"
+	@test -f _site/.nojekyll && echo ".nojekyll: OK" || echo ".nojekyll: Missing"
+	@test -f _site/robots.txt && echo "robots.txt: OK" || echo "robots.txt: Missing"
+	@test ! -f scripts/habit.log && echo "scripts/habit.log: OK" || echo "scripts/habit.log: Still present"
