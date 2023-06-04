@@ -67,3 +67,5 @@ For Gradle terminology:
 2. **compileOnly**: This configuration is used for dependencies that are required only during the compilation phase but not at runtime. These dependencies will be available during the compilation of your main application code but won't be included in the final runtime classpath. This is often used for dependencies that are used for compile-time only, such as annotation processors or libraries used for generating code.
 
 3. **implementation**: This configuration is used for dependencies that are required during both the compilation and runtime phases of your application. These dependencies will be included in both the compilation classpath and the runtime classpath of your application. This is typically used for the main dependencies of your project that are required for the functionality of your application.
+
+https://stackoverflow.com/questions/57795263/test-events-were-not-received-when-run-tests-using-intellij
