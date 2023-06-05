@@ -8,7 +8,7 @@ author: Tushar Sharma
 java: true
 prismjs: true
 gradle: true
-prismYaml: true
+yaml: true
 tags:
   - java
   - spring boot
@@ -81,6 +81,12 @@ import org.springframework.data.repository.CrudRepository;
 public interface CustomerRepository extends CrudRepository<Customer, Integer> {}
 {% endtemplate %}
 
+You can verify this by loging to your `postgres` database as 
+
+```bash
+$ docker exec -it <CONTAINER_ID> -U user -d database -W
+```
+
 ### Test using actual database
 
 We can spin up database using `docker`
@@ -106,7 +112,7 @@ Also define `application.yaml` as
 
 {% template customYaml.html %}
 spring.sql.init.mode=always
-spring.datasource.url=jdbc:postgresql://localhost/bk
+spring.datasource.url=jdbc:postgresql://localhost/database
 spring.datasource.username=user
 spring.datasource.password=password
 {% endtemplate %}
