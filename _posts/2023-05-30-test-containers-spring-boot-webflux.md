@@ -22,9 +22,9 @@ Create a Spring Boot project with following `gradle` dependencies
 
 {% template customGradle.html %}
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.1.0'
-	id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+    id 'org.springframework.boot' version '3.1.0'
+    id 'io.spring.dependency-management' version '1.1.0'
 }
 
 group = 'com.example'
@@ -32,22 +32,23 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-	implementation 'org.projectlombok:lombok:1.18.22'
-	runtimeOnly 'org.postgresql:postgresql'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.boot:spring-boot-testcontainers'
-	testImplementation "org.testcontainers:postgresql"
-	testImplementation 'org.testcontainers:junit-jupiter'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.projectlombok:lombok:1.18.26'
+    runtimeOnly 'org.postgresql:postgresql'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+    testImplementation "org.testcontainers:postgresql"
+    testImplementation 'org.testcontainers:junit-jupiter'
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
+
 {% endtemplate %}
 
 For Gradle terminology:
@@ -58,4 +59,19 @@ For Gradle terminology:
 
 3. **implementation**: This configuration is used for dependencies that are required during both the compilation and runtime phases of your application. These dependencies will be included in both the compilation classpath and the runtime classpath of your application. This is typically used for the main dependencies of your project that are required for the functionality of your application.
 
-https://stackoverflow.com/questions/57795263/test-events-were-not-received-when-run-tests-using-intellij
+Create `repository/Customer.java`
+
+{% template customJava.html %}
+import org.springframework.data.annotation.Id;
+
+public record Customer(@Id Integer id, String name){}
+{% endTemplate %}
+
+Create `repository/CustomerRepository.java`
+
+
+{% template customJava.html %}
+import org.springframework.data.repository.CrudRepository;
+
+public interface CustomerRepository extends CrudRepository<Customer, Integer> {}
+{% endTemplate %}
