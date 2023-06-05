@@ -63,6 +63,216 @@ mode = &quot;w&quot;&lt;/p&gt;
     
       
         <item>
+          <title>TestContainers with Spring Boot Webflux</title>
+          <description>&lt;p&gt;Testcontainers is a Java library that provides lightweight, disposable containers for running integration tests. It&apos;s a useful tool for testing applications that rely on external dependencies like databases or message queues.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/spring boot&quot; title=&quot;View posts tagged with &amp;quot;spring boot&amp;quot;&quot;&gt;spring boot&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Testcontainers is a Java library that provides lightweight, disposable containers for running integration tests. It&apos;s a useful tool for testing applications that rely on external dependencies like databases or message queues.&lt;/p&gt;
+
+&lt;p&gt;Setup a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;demo&lt;/code&gt; Spring boot project&lt;/p&gt;
+
+&lt;h3 id=&quot;gradle-dependencies&quot;&gt;Gradle Dependencies&lt;/h3&gt;
+
+&lt;div class=&quot;code-block language-gradle highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;plugins {
+    id &apos;java&apos;
+    id &apos;org.springframework.boot&apos; version &apos;3.1.0&apos;
+    id &apos;io.spring.dependency-management&apos; version &apos;1.1.0&apos;
+}&lt;/p&gt;
+
+&lt;p&gt;group = &apos;com.example&apos;
+version = &apos;0.0.1-SNAPSHOT&apos;
+sourceCompatibility = &apos;17&apos;&lt;/p&gt;
+
+&lt;p&gt;repositories {
+    mavenCentral()
+}&lt;/p&gt;
+
+&lt;p&gt;dependencies {
+    implementation &apos;org.springframework.boot:spring-boot-starter-data-jdbc&apos;
+    implementation &apos;org.projectlombok:lombok:1.18.26&apos;
+    runtimeOnly &apos;org.postgresql:postgresql&apos;
+    testImplementation &apos;org.springframework.boot:spring-boot-starter-test&apos;
+    testImplementation &apos;org.springframework.boot:spring-boot-testcontainers&apos;
+    testImplementation &quot;org.testcontainers:postgresql&quot;
+    testImplementation &apos;org.testcontainers:junit-jupiter&apos;
+}&lt;/p&gt;
+
+&lt;p&gt;tasks.named(&apos;test&apos;) {
+    useJUnitPlatform()
+}&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;gradle-terminologies&quot;&gt;gradle terminologies&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;testImplementation&lt;/strong&gt;: This configuration is used for dependencies that are required only for the tests in your project. These dependencies will be available during the test compilation and execution phases, but they won&apos;t be included in the runtime classpath of your main application. This is useful when you have testing-specific libraries or frameworks that are not needed in the production code.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;compileOnly&lt;/strong&gt;: This configuration is used for dependencies that are required only during the compilation phase but not at runtime. These dependencies will be available during the compilation of your main application code but won&apos;t be included in the final runtime classpath. This is often used for dependencies that are used for compile-time only, such as annotation processors or libraries used for generating code.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;implementation&lt;/strong&gt;: This configuration is used for dependencies that are required during both the compilation and runtime phases of your application. These dependencies will be included in both the compilation classpath and the runtime classpath of your application. This is typically used for the main dependencies of your project that are required for the functionality of your application.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;define-repository-layer&quot;&gt;Define repository layer&lt;/h3&gt;
+
+&lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repository/Customer.java&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import org.springframework.data.annotation.Id;&lt;/p&gt;
+
+&lt;p&gt;public record Customer(@Id Integer id, String name){}&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repository/CustomerRepository.java&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import org.springframework.data.repository.CrudRepository;&lt;/p&gt;
+
+&lt;p&gt;public interface CustomerRepository extends CrudRepository&amp;lt;Customer, Integer&amp;gt; {}&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;test-using-actual-database&quot;&gt;Test using actual database&lt;/h3&gt;
+
+&lt;p&gt;We can spin up database using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;code-block language-sh highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;version: &apos;3&apos;&lt;/p&gt;
+
+&lt;p&gt;services:
+  db:
+    image: postgres:latest
+    container_name: postgress-image
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: bk&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;Also define &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;application.yaml&lt;/code&gt; as&lt;/p&gt;
+
+&lt;div class=&quot;code-block language-sh highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;spring.sql.init.mode=always
+spring.datasource.url=jdbc:postgresql://localhost/database
+spring.datasource.username=user
+spring.datasource.password=password&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;We also need to define a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resources/schema.sql&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;code-block language-sql highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;create table  customer(
+    id serial primary key,
+    name varchar(255) not null
+);&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;We can write our test as&lt;/p&gt;
+
+&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
+import org.testcontainers.containers.GenericContainer;
+import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
+import org.testcontainers.utility.DockerImageName;&lt;/p&gt;
+
+&lt;p&gt;@SpringBootTest
+class JdbcApplicationTests {&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Autowired
+public CustomerRepository customerRepository;
+
+@Test
+void contextLoads() throws Exception {
+	Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -&amp;gt; &quot;there should be no data&quot;);
+	customerRepository.save(new Customer(null, &quot;Tushar&quot;));
+	Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -&amp;gt; &quot;there should be some data&quot;);
+	for (Customer customer : customerRepository.findAll()){
+		Assertions.assertTrue(customer.name().equals(&quot;Tushar&quot;));
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;p&gt;}&lt;/p&gt; &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;You can verify this by loging to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;postgres&lt;/code&gt; database as&lt;/p&gt;
+
+&lt;div class=&quot;code-block language-sh highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;$ docker exec -it &lt;CONTAINER_ID&gt; -U user -d database -W&lt;/CONTAINER_ID&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;test-using-testcontainers&quot;&gt;Test using TestContainers&lt;/h3&gt;
+
+&lt;p&gt;Intead of running actual database everytime, it&apos;s much more convenient to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TestContainers&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
+import org.testcontainers.containers.GenericContainer;
+import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
+import org.testcontainers.utility.DockerImageName;&lt;/p&gt;
+
+&lt;p&gt;@SpringBootTest
+@Testcontainers
+class JdbcApplicationTests {&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Container
+public static PostgreSQLContainer&amp;lt;?&amp;gt; pgsql = new PostgreSQLContainer(DockerImageName.parse(&quot;postgres:latest&quot;));
+
+@DynamicPropertySource
+static void configTestcontainersProperties(DynamicPropertyRegistry registry){
+	  registry.add(&quot;spring.datasource.url&quot;, pgsql::getJdbcUrl);
+	  registry.add(&quot;spring.datasource.username&quot;, pgsql::getUsername);
+	  registry.add(&quot;spring.datasource.password&quot;, pgsql::getPassword);
+}
+
+@Autowired
+public CustomerRepository customerRepository;
+
+@Test
+void contextLoads() throws Exception {
+	Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -&amp;gt; &quot;there should be no data&quot;);
+	customerRepository.save(new Customer(null, &quot;Tushar&quot;));
+	Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -&amp;gt; &quot;there should be some data&quot;);
+	for (Customer customer : customerRepository.findAll()){
+		Assertions.assertTrue(customer.name().equals(&quot;Tushar&quot;));
+	}
+} }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Testcontainers&lt;/code&gt;: Integrates Testcontainers library with JUnit 5 to manage Docker containers for testing&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Container&lt;/code&gt;: Indicates the usage of a Docker container for testing.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@DynamicPropertySource&lt;/code&gt;: Allows the dynamic configuration of properties used in the Spring application context.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public static PostgreSQLContainer&amp;lt;?&amp;gt; pgsql = new PostgreSQLContainer(DockerImageName.parse(&quot;postgres:latest&quot;))&lt;/code&gt;: Declares a static field pgsql of type PostgreSQLContainer that represents a PostgreSQL Docker container. The container uses the postgres:latest image&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          <pubDate>2023-05-30T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/test-containers-spring-boot</link>
+          <guid isPermaLink="true">https://randomwits.com/test-containers-spring-boot</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Cribsheet for String in Java</title>
           <description>&lt;p&gt;Strings are immutable in java. It&apos;s best to convert string to StringBuilder/StringBuffer so that it&apos;s memory efficient for string manipulation.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/interview&quot; title=&quot;View posts tagged with &amp;quot;interview&amp;quot;&quot;&gt;interview&lt;/a&gt;    &lt;/p&gt;
