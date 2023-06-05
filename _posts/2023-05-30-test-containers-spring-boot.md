@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-05-30
-title: TestContainers with Spring Boot Webflux
+title: TestContainers with Spring Boot
 image: https://pubkgroup.com/wp-content/uploads/2021/03/computer-problems.jpg
 thumb: https://pubkgroup.com/wp-content/uploads/2021/03/computer-problems.jpg
 author: Tushar Sharma
