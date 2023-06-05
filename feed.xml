@@ -63,7 +63,7 @@ mode = &quot;w&quot;&lt;/p&gt;
     
       
         <item>
-          <title>TestContainers with Spring Boot Webflux</title>
+          <title>TestContainers with Spring Boot</title>
           <description>&lt;p&gt;Testcontainers is a Java library that provides lightweight, disposable containers for running integration tests. It&apos;s a useful tool for testing applications that rely on external dependencies like databases or message queues.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/spring boot&quot; title=&quot;View posts tagged with &amp;quot;spring boot&amp;quot;&quot;&gt;spring boot&lt;/a&gt;    &lt;/p&gt;
 
