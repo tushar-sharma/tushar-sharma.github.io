@@ -65,7 +65,7 @@ Create `repository/Customer.java`
 import org.springframework.data.annotation.Id;
 
 public record Customer(@Id Integer id, String name){}
-{% endTemplate %}
+{% endtemplate %}
 
 Create `repository/CustomerRepository.java`
 
@@ -74,4 +74,4 @@ Create `repository/CustomerRepository.java`
 import org.springframework.data.repository.CrudRepository;
 
 public interface CustomerRepository extends CrudRepository<Customer, Integer> {}
-{% endTemplate %}
+{% endtemplate %}
