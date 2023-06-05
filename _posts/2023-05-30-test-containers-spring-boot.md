@@ -8,7 +8,7 @@ author: Tushar Sharma
 java: true
 prismjs: true
 gradle: true
-yaml: true
+prismYaml: true
 tags:
   - java
   - spring boot
@@ -81,17 +81,12 @@ import org.springframework.data.repository.CrudRepository;
 public interface CustomerRepository extends CrudRepository<Customer, Integer> {}
 {% endtemplate %}
 
-You can verify this by loging to your `postgres` database as 
-
-```bash
-$ docker exec -it <CONTAINER_ID> -U user -d database -W
-```
 
 ### Test using actual database
 
 We can spin up database using `docker`
 
-{% template customYaml.html %}
+{% template customBash.html %}
 version: '3'
 
 services:
@@ -110,7 +105,7 @@ services:
 Also define `application.yaml` as
 
 
-{% template customYaml.html %}
+{% template customBash.html %}
 spring.sql.init.mode=always
 spring.datasource.url=jdbc:postgresql://localhost/database
 spring.datasource.username=user
@@ -164,6 +159,12 @@ class JdbcApplicationTests {
 
 {% endtemplate %}
 
+You can verify this by loging to your `postgres` database as 
+
+{% template customBash.html %}
+$ docker exec -it <CONTAINER_ID> -U user -d database -W
+{% endtemplate %}
+
 ### Test using TestContainers
 
 Intead of running actual database everytime, it's much more convenient to use `TestContainers`
@@ -210,3 +211,11 @@ class JdbcApplicationTests {
 	}
 }
 {% endtemplate %}
+
+* `@Testcontainers`: Integrates Testcontainers library with JUnit 5 to manage Docker containers for testing
+
+* `@Container`: Indicates the usage of a Docker container for testing.
+
+* `@DynamicPropertySource`: Allows the dynamic configuration of properties used in the Spring application context.
+
+* `public static PostgreSQLContainer<?> pgsql = new PostgreSQLContainer(DockerImageName.parse("postgres:latest"))`: Declares a static field pgsql of type PostgreSQLContainer that represents a PostgreSQL Docker container. The container uses the postgres:latest image
