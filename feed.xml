@@ -149,7 +149,7 @@ sourceCompatibility = &apos;17&apos;&lt;/p&gt;
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: bk&lt;/p&gt;
+      POSTGRES_DB: database&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;Also define &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;application.yaml&lt;/code&gt; as&lt;/p&gt;
