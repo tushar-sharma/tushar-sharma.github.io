@@ -55,6 +55,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 {% endif %}
+{% if page.prismBash %}
+https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js
+{% endif %}
 {% if page.java %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
 {% endif %}
@@ -63,4 +66,7 @@
 {% endif %}
 {% if page.gradle %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-gradle.min.js"></script>
+{% endif %}
+{% if page.SQL %}
+https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js
 {% endif %}
