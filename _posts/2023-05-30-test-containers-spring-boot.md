@@ -8,6 +8,7 @@ author: Tushar Sharma
 java: true
 prismjs: true
 gradle: true
+prismYaml: true
 tags:
   - java
   - spring boot
