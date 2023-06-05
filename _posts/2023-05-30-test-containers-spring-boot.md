@@ -99,7 +99,7 @@ services:
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: bk
+      POSTGRES_DB: database
 {% endtemplate %}
 
 Also define `application.yaml` as
