@@ -230,13 +230,9 @@ class JdbcApplicationTests {
 
 	@Test
 	void contextLoads() throws Exception {
-	
 		Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -> "there should be no data");
-
 		customerRepository.save(new Customer(null, "Tushar"));
-
 		Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -> "there should be some data");
-
 		for (Customer customer : customerRepository.findAll()){
 			Assertions.assertTrue(customer.name().equals("Tushar"));
 		}
