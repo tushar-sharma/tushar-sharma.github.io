@@ -54,6 +54,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
 
@@ -62,6 +64,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-gradle.min.js"></script>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>TestContainers with Spring Boot | RandomWits</title>
@@ -337,7 +343,7 @@ sourceCompatibility = '17'</p>
 
 <p>We can spin up database using <code class="language-plaintext highlighter-rouge">docker</code></p>
 
-<div class="code-block language-sh highlighter-rouge"> <pre class="highlight"><code><p>version: '3'</p>
+<div class="code-block language-yaml highlighter-rouge"> <pre class="highlight"><code><p>version: '3'</p>
 
 <p>services:
   db:
@@ -354,7 +360,7 @@ sourceCompatibility = '17'</p>
 
 <p>Also define <code class="language-plaintext highlighter-rouge">application.yaml</code> as</p>
 
-<div class="code-block language-sh highlighter-rouge"> <pre class="highlight"><code><p>spring.sql.init.mode=always
+<div class="code-block language-bash highlighter-rouge"> <pre class="highlight"><code><p>spring.sql.init.mode=always
 spring.datasource.url=jdbc:postgresql://localhost/database
 spring.datasource.username=user
 spring.datasource.password=password</p>
@@ -402,7 +408,7 @@ void contextLoads() throws Exception {
 
 <p>You can verify this by loging to your <code class="language-plaintext highlighter-rouge">postgres</code> database as</p>
 
-<div class="code-block language-sh highlighter-rouge"> <pre class="highlight"><code><p>$ docker exec -it <container_id> -U user -d database -W</container_id></p>
+<div class="code-block language-bash highlighter-rouge"> <pre class="highlight"><code><p>$ docker exec -it <container_id> -U user -d database -W</container_id></p>
 </code></pre> <button class="copy-button">Copy</button> </div>
 
 <h3 id="test-using-testcontainers">Test using TestContainers</h3>
@@ -441,9 +447,13 @@ public CustomerRepository customerRepository;
 
 @Test
 void contextLoads() throws Exception {
+
 	Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -&gt; "there should be no data");
+
 	customerRepository.save(new Customer(null, "Tushar"));
+
 	Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -&gt; "there should be some data");
+
 	for (Customer customer : customerRepository.findAll()){
 		Assertions.assertTrue(customer.name().equals("Tushar"));
 	}

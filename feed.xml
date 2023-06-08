@@ -137,7 +137,7 @@ sourceCompatibility = &apos;17&apos;&lt;/p&gt;
 
 &lt;p&gt;We can spin up database using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-sh highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;version: &apos;3&apos;&lt;/p&gt;
+&lt;div class=&quot;code-block language-yaml highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;version: &apos;3&apos;&lt;/p&gt;
 
 &lt;p&gt;services:
   db:
@@ -154,7 +154,7 @@ sourceCompatibility = &apos;17&apos;&lt;/p&gt;
 
 &lt;p&gt;Also define &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;application.yaml&lt;/code&gt; as&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-sh highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;spring.sql.init.mode=always
+&lt;div class=&quot;code-block language-bash highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;spring.sql.init.mode=always
 spring.datasource.url=jdbc:postgresql://localhost/database
 spring.datasource.username=user
 spring.datasource.password=password&lt;/p&gt;
@@ -202,7 +202,7 @@ void contextLoads() throws Exception {
 
 &lt;p&gt;You can verify this by loging to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;postgres&lt;/code&gt; database as&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-sh highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;$ docker exec -it &lt;CONTAINER_ID&gt; -U user -d database -W&lt;/CONTAINER_ID&gt;&lt;/p&gt;
+&lt;div class=&quot;code-block language-bash highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;$ docker exec -it &lt;CONTAINER_ID&gt; -U user -d database -W&lt;/CONTAINER_ID&gt;&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;test-using-testcontainers&quot;&gt;Test using TestContainers&lt;/h3&gt;
@@ -241,9 +241,13 @@ public CustomerRepository customerRepository;
 
 @Test
 void contextLoads() throws Exception {
+
 	Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -&amp;gt; &quot;there should be no data&quot;);
+
 	customerRepository.save(new Customer(null, &quot;Tushar&quot;));
+
 	Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -&amp;gt; &quot;there should be some data&quot;);
+
 	for (Customer customer : customerRepository.findAll()){
 		Assertions.assertTrue(customer.name().equals(&quot;Tushar&quot;));
 	}
