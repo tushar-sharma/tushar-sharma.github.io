@@ -46,7 +46,7 @@ def delivery_callback(err, msg):
         print("Successfully published to topic")
 
 
-def publish_data():
+def kafka_producer():
     """
     Publish Data
     """
@@ -69,39 +69,43 @@ def publish_data():
     producer.produce(f"{kafka_topic}", json.dumps(payload, default=str), callback=delivery_callback)
     producer.flush()
 
-if __name__ == "__main__":
-    publish_data()
+def lambda_handler(event, context):
+    kafka_producer()
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
 
 {% endtemplate %}
 
 ### Kafka Consumer
 
 
-```
+{% template customCode.html %}
+---
+title: language-python
+---
 import json
 import confluent_kafka
+import os
 
-def main():
-    kafka_topic=""
-
+def kafka_consumer():
+    kafka_topic= os.environ["kafka_topic"]
     conf = {
-        "bootstrap.servers": "",
+        "bootstrap.servers": os.environ["brokers"],
         "socket.timeout.ms": 10000,
         "security.protocol": "SASL_SSL",
         "sasl.mechanisms": "SCRAM-SHA-512",
-        "sasl.username": "",
-        "sasl.password": "",
+        "sasl.username": os.environ["username"],
+        "sasl.password": os.environ["password"],
         "broker.version.fallback": "0.9.0",
         "api.version.request": True,
-        "group.id": "group5"
+        "group.id": os.environ["groupid"],
     }
-
     consumer = confluent_kafka.Consumer(**conf)
     consumer.subscribe([kafka_topic])
-
     while True:
         message = consumer.poll(timeout=1.0)
-
         if message is None:
             continue
         if message.error():
@@ -110,11 +114,9 @@ def main():
             print(message.value())
 
 def lambda_handler(event, context):
-    # TODO implement
-    main()
+    kafka_consumer()
     return {
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!')
     }
-
-```
+{% endtemplate %}
