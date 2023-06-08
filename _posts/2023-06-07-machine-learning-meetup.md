@@ -1,6 +1,7 @@
 ---
 published: false
 ---
-## A New Post
+Large Language model. It's based on transformer. It's a set of layers that helps it to understand to text. 
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+1. the model 
+2. the tokenizer (split our text into shorter text). 
