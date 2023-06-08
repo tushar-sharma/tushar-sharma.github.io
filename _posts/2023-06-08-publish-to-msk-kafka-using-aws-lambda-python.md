@@ -73,3 +73,48 @@ if __name__ == "__main__":
     publish_data()
 
 {% endtemplate %}
+
+### Kafka Consumer
+
+
+```
+import json
+import confluent_kafka
+
+def main():
+    kafka_topic=""
+
+    conf = {
+        "bootstrap.servers": "",
+        "socket.timeout.ms": 10000,
+        "security.protocol": "SASL_SSL",
+        "sasl.mechanisms": "SCRAM-SHA-512",
+        "sasl.username": "",
+        "sasl.password": "",
+        "broker.version.fallback": "0.9.0",
+        "api.version.request": True,
+        "group.id": "group5"
+    }
+
+    consumer = confluent_kafka.Consumer(**conf)
+    consumer.subscribe([kafka_topic])
+
+    while True:
+        message = consumer.poll(timeout=1.0)
+
+        if message is None:
+            continue
+        if message.error():
+            raise confluent_kafka.KafkaException(message.error())
+        else:
+            print(message.value())
+
+def lambda_handler(event, context):
+    # TODO implement
+    main()
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
+
+```
