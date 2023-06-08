@@ -33,7 +33,7 @@ tokenizer = AutoTokenizer.from_pretrained(model
 
 Semi supervised learning , we decide what the output is 
 
-AutoTokenizer: The AutoTokenizer class from the transformers library is used for tokenizing text. Tokenization is the process of splitting raw text into smaller units called tokens, which are typically individual words or subwords. Tokenization is a crucial step in natural language processing tasks, such as language modeling or text classificatio
+AutoTokenizer: The AutoTokenizer class from the transformers library is used for tokenizing text. Tokenization is the process of splitting raw text into smaller units called tokens, which are typically individual words or subwords. Tokenization is a crucial step in natural language processing tasks, such as language modeling or text classification.
 
 
 
