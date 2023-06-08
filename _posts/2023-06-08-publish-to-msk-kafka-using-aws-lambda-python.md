@@ -35,8 +35,36 @@ import json
 import confluent_kafka
 import os
 
+def delivery_callback(err, msg):
+    if err:
+        print(f"Unable to publish to topic:")
+    else:
+        print(f"Successfully publish to topic")
+
+def publish_data():
+    kafka_topic="devx-events-nprd"
+
+    payload = {
+        'message': '${status}'
+    }
+
+    conf = {
+        "bootstrap.servers": "234",
+        "socket.timeout.ms": 10000,
+        "security.protocol": "SASL_SSL",
+        "sasl.mechanisms": "SCRAM-SHA-512",
+        "sasl.username": "23",
+        "sasl.password": "sdf",
+        "broker.version.fallback": "0.9.0",
+        "api.version.request": True,
+        "batch.num.messages": 100,
+    }
+    
+    producer = confluent_kafka.Producer(**conf)
+    
+    producer.produce(f"{kafka_topic}", json.dumps(payload, default=str), callback=delivery_callback)
+    producer.flush()
 
 if __name__=="__main__":
     publish_data()
 {% endtemplate %}
-
