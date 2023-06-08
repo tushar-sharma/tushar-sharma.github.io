@@ -98,7 +98,10 @@ prismjs: true
 And insert code like this 
 
 ```
-{% template customPython.html %}
+{% template customCode.html %}
+---
+title: language-python
+---
 {% endtemplate %}
 ```
 
@@ -106,8 +109,9 @@ For `java`
 
 
 ```
-{% template customJava.html %}
+{% template customCode.html %}
+---
+title: language-java
+---
 {% endtemplate %}
 ```
-
-TODO : Create a generic `template` for code highlight.

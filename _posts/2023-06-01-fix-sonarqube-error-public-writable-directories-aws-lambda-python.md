@@ -22,7 +22,10 @@ In AWS Lambda functions, it's common to use temporary directories for tasks like
 
 One common SonarQube warning is related to the usage of publicly writable directories. SonarQube raises this warning to highlight potential security risks when working with directories that have open write permissions. In the case of AWS Lambda functions, the `/tmp` directory is often used for temporary file operations.
 
-{% template customPython.html %}
+{% template  customCode.html %}
+---
+title: language-python
+---
 temp_dir = "/tmp"
 report_file = f"{temp_dir}/test.csv"
 mode = "w"
@@ -37,7 +40,10 @@ To address the SonarQube warning and safely manage temporary directories in AWS 
 Here's an updated version of the code that uses the tempfile module:
 
 
-{% template customPython.html %}
+{% template  customCode.html %}
+---
+title: language-python
+---
 import tempfile
 
 temp_dir = tempfile.gettempdir()

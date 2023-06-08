@@ -8,6 +8,8 @@ author: Tushar Sharma
 java: true
 prismjs: true
 gradle: true
+prismSQL: true
+prismBash: true
 prismYaml: true
 tags:
   - java
@@ -23,7 +25,10 @@ Setup a `demo` Spring boot project
 
 ### Gradle Dependencies
 
-{% template customGradle.html %}
+{% template customCode.html %}
+---
+title: language-gradle
+---
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.1.0'
@@ -66,7 +71,10 @@ tasks.named('test') {
 
 Create `repository/Customer.java`
 
-{% template customJava.html %}
+{% template customCode.html %}
+---
+title: language-java
+---
 import org.springframework.data.annotation.Id;
 
 public record Customer(@Id Integer id, String name){}
@@ -75,7 +83,10 @@ public record Customer(@Id Integer id, String name){}
 Create `repository/CustomerRepository.java`
 
 
-{% template customJava.html %}
+{% template customCode.html %}
+---
+title: language-java
+---
 import org.springframework.data.repository.CrudRepository;
 
 public interface CustomerRepository extends CrudRepository<Customer, Integer> {}
@@ -86,7 +97,10 @@ public interface CustomerRepository extends CrudRepository<Customer, Integer> {}
 
 We can spin up database using `docker`
 
-{% template customBash.html %}
+{% template customCode.html %}
+---
+title: language-yaml
+---
 version: '3'
 
 services:
@@ -105,7 +119,10 @@ services:
 Also define `application.yaml` as
 
 
-{% template customBash.html %}
+{% template customCode.html %}
+---
+title: language-bash
+---
 spring.sql.init.mode=always
 spring.datasource.url=jdbc:postgresql://localhost/database
 spring.datasource.username=user
@@ -114,7 +131,10 @@ spring.datasource.password=password
 
 We also need to define a `resources/schema.sql`
 
-{% template customSQL.html %}
+{% template customCode.html %}
+---
+title: language-sql
+---
 create table  customer(
     id serial primary key,
     name varchar(255) not null
@@ -124,8 +144,10 @@ create table  customer(
 
 We can write our test as 
 
-{% template customJava.html %}
-
+{% template  customCode.html %}
+---
+title: language-java
+---
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -161,7 +183,10 @@ class JdbcApplicationTests {
 
 You can verify this by loging to your `postgres` database as 
 
-{% template customBash.html %}
+{% template customCode.html %}
+---
+title: language-bash
+---
 $ docker exec -it <CONTAINER_ID> -U user -d database -W
 {% endtemplate %}
 
@@ -169,7 +194,10 @@ $ docker exec -it <CONTAINER_ID> -U user -d database -W
 
 Intead of running actual database everytime, it's much more convenient to use `TestContainers`
 
-{% template customJava.html %}
+{% template customCode.html %}
+---
+title: language-java
+---
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -202,9 +230,13 @@ class JdbcApplicationTests {
 
 	@Test
 	void contextLoads() throws Exception {
+	
 		Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -> "there should be no data");
+
 		customerRepository.save(new Customer(null, "Tushar"));
+
 		Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -> "there should be some data");
+
 		for (Customer customer : customerRepository.findAll()){
 			Assertions.assertTrue(customer.name().equals("Tushar"));
 		}

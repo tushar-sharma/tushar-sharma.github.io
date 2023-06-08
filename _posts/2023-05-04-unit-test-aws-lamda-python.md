@@ -31,7 +31,10 @@ MyLambda/
 
 We will create a simple `lambda_function.py` that simply returns id as response.
 
-{% template customPython.html %}
+{% template customCode.html %}
+---
+title: language-python
+---
 import json
 
 def lambda_handler(event, context):
@@ -49,7 +52,10 @@ def lambda_handler(event, context):
 
 We have a test corresponding to the test file `MyLambda/test/test_lambda_function.py`:
 
-{% template customPython.html %}
+{% template customCode.html %}
+---
+title: language-python
+---
 import pytest
 
 from MyLambda.lambda_function import lambda_handler
@@ -93,7 +99,10 @@ TOTAL                                                     11      0   100%
 
 As our lambda function gets complex, we must explore additional functionality to test our lambda function. We can use `patch` to mock resources like environment variables, etc
 
-{% template customPython.html %}
+{% template customCode.html %}
+---
+title: language-python
+---
 import json
 import os
 
@@ -114,7 +123,10 @@ def lambda_handler(event, context):
 
 Our updated `test` becomes
 
-{% template customPython.html %}
+{% template customCode.html %}
+---
+title: language-python
+---
 import pytest
 import os
 from unittest.mock import patch
@@ -143,7 +155,10 @@ def test_lambda_handler():
 
 A fixture is a function that returns a test resource to supply a mock `context` object to our lambda function. Let's rewrite our test function 
 
-{% template customPython.html %}
+{% template customCode.html %}
+---
+title: language-python
+---
 import pytest
 import os
 from unittest.mock import patch
