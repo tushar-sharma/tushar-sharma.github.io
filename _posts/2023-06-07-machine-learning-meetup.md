@@ -23,3 +23,4 @@ Optimum Intel. It has
 [^ref1]: https://github.com/openvinotoolkit/openvino_notebooks
 [^ref2]: https://huggingface.co/docs/transformers/index
 [^ref3]: https://huggingface.co/docs/optimum/index
+[^ref4]: https://huggingface.co/databricks/dolly-v2-3b
