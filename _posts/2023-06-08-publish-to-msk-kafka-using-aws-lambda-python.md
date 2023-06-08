@@ -6,6 +6,7 @@ image: https://damion.club/uploads/posts/2022-02/1646069008_33-damion-club-p-che
 thumb: https://damion.club/uploads/posts/2022-02/1646069008_33-damion-club-p-chelovek-za-kompyuterom-art-art-36.jpg
 prismjs: true
 prismBash: true
+python: true
 ---
 
 .<!-- truncate_here -->
@@ -36,35 +37,39 @@ import confluent_kafka
 import os
 
 def delivery_callback(err, msg):
+    """
+    Callback method
+    """
     if err:
-        print(f"Unable to publish to topic:")
+        print("Unable to publish to topic:", err)
     else:
-        print(f"Successfully publish to topic")
+        print("Successfully published to topic")
+
 
 def publish_data():
-    kafka_topic="devx-events-nprd"
-
-    payload = {
-        'message': '${status}'
-    }
-
+    """
+    Publish Data
+    """
+    kafka_topic = os.environ["kafka_topic"]
     conf = {
-        "bootstrap.servers": "234",
+        "bootstrap.servers": os.environ["brokers"],
         "socket.timeout.ms": 10000,
         "security.protocol": "SASL_SSL",
         "sasl.mechanisms": "SCRAM-SHA-512",
-        "sasl.username": "23",
-        "sasl.password": "sdf",
+        "sasl.username": os.environ["username"],
+        "sasl.password": os.environ["password"],
         "broker.version.fallback": "0.9.0",
         "api.version.request": True,
         "batch.num.messages": 100,
     }
-    
     producer = confluent_kafka.Producer(**conf)
-    
+    payload = {
+        "message": "This is payload"
+    }
     producer.produce(f"{kafka_topic}", json.dumps(payload, default=str), callback=delivery_callback)
     producer.flush()
 
-if __name__=="__main__":
+if __name__ == "__main__":
     publish_data()
+
 {% endtemplate %}
