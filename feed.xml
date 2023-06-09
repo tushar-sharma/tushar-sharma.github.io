@@ -7,6 +7,65 @@
     
       
         <item>
+          <title>Publish to MSK Kafka using AWS Lambda Python</title>
+          <description>&lt;p&gt;Apache Kafka is a distributed streaming platform designed to handle real-time data streams efficiently. It uses a publish-subscribe model, where producers publish messages to topics, and consumers subscribe to those topics to receive the messages. Amazon MSK simplifies the deployment and management of Kafka clusters on AWS, providing a fully managed and scalable solution. You can use AWS lambda in python to publish to MSK topic.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/kafka&quot; title=&quot;View posts tagged with &amp;quot;kafka&amp;quot;&quot;&gt;kafka&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Apache Kafka is a distributed streaming platform designed to handle real-time data streams efficiently. It uses a publish-subscribe model, where producers publish messages to topics, and consumers subscribe to those topics to receive the messages. Amazon MSK simplifies the deployment and management of Kafka clusters on AWS, providing a fully managed and scalable solution. You can use AWS lambda in python to publish to MSK topic.&lt;/p&gt;
+
+&lt;h3 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h3&gt;
+
+&lt;p&gt;First we need to build a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda layer&lt;/code&gt; which will install dependencies for the lambda function:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=layer.sh&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;Open the AWS Management Console and navigate to the AWS Lambda service.&lt;/p&gt;
+
+&lt;p&gt;Create a new layer: Click on &quot;Layers&quot; in the left navigation menu and then click the &quot;Create layer&quot; button.&lt;/p&gt;
+
+&lt;p&gt;Configure the layer: Provide a name for your layer, and optionally, a description and compatible runtimes. Select the appropriate runtime based on the code files included in your layer.&lt;/p&gt;
+
+&lt;p&gt;Upload the zip file: In the &quot;Code entry type&quot; section, select &quot;Upload a file from Amazon S3&quot; or &quot;Upload a file from your computer&quot;, depending on where your zip file is located. If it&apos;s on your local machine, choose the latter option. Then, click the &quot;Upload&quot; button and select your zip file.&lt;/p&gt;
+
+&lt;p&gt;Create the layer: Once the zip file is uploaded, click the &quot;Create&quot; button to create the Lambda layer.&lt;/p&gt;
+
+&lt;p&gt;Add the layer to your Lambda function: After the layer is created, you can add it to your Lambda function. Open the function&apos;s configuration, scroll down to the &quot;Layers&quot; section, and click on &quot;Add a layer&quot;. Select the layer you created from the list and click &quot;Add&quot;.&lt;/p&gt;
+
+&lt;h3 id=&quot;kafka-producer&quot;&gt;Kafka Producer&lt;/h3&gt;
+
+&lt;p&gt;We will write a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;producer&lt;/code&gt; to publish to MSK topic. Environment variables passed are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;kafka_topic&lt;/strong&gt;. Producers write data to a specific topic, and consumers read from one or more topics.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Kafka broker&lt;/strong&gt;. Brokers receive messages from producers and serve them to consumers. Multiple brokers form a Kafka cluster, and they collaborate to provide fault tolerance, scalability, and high throughput.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;sasl username&lt;/strong&gt;. SASL (Simple Authentication and Security Layer) is a framework used for authentication and data security in distributed systems.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;sasl password&lt;/strong&gt;. Secret credential associated with a SASL username.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=kafka_producer.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;kafka-consumer&quot;&gt;Kafka Consumer&lt;/h3&gt;
+
+&lt;p&gt;Similarly, we can write a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;consumer&lt;/code&gt; to subscribe to the topic:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=kafka_consumer.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+</description>
+          <pubDate>2023-06-08T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/publish-to-msk-kafka-using-aws-lambda-python</link>
+          <guid isPermaLink="true">https://randomwits.com/publish-to-msk-kafka-using-aws-lambda-python</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Fix SonarQube Error of Public Writable Directories in AWS lambda python</title>
           <description>&lt;p&gt;In AWS Lambda functions, it&apos;s common to use temporary directories for tasks like generating temporary files, storing intermediate data, or processing data securely. However, improperly managing publicly writable directories can lead to security vulnerabilities. In this article, we&apos;ll explore how to address this issue and ensure safe usage of temporary directories in AWS Lambda functions using Python&apos;s tempfile module.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/sonarqube&quot; title=&quot;View posts tagged with &amp;quot;sonarqube&amp;quot;&quot;&gt;sonarqube&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;/p&gt;
@@ -17,10 +76,7 @@
 
 &lt;p&gt;One common SonarQube warning is related to the usage of publicly writable directories. SonarQube raises this warning to highlight potential security risks when working with directories that have open write permissions. In the case of AWS Lambda functions, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/tmp&lt;/code&gt; directory is often used for temporary file operations.&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-python highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;temp_dir = &quot;/tmp&quot;
-report_file = f&quot;{temp_dir}/test.csv&quot;
-mode = &quot;w&quot;&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=wrong_example.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;In this code snippet, the /tmp directory is publicly writable, which can pose security risks if not managed properly.&lt;/p&gt;
 
@@ -30,12 +86,7 @@ mode = &quot;w&quot;&lt;/p&gt;
 
 &lt;p&gt;Here&apos;s an updated version of the code that uses the tempfile module:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-python highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import tempfile&lt;/p&gt;
-
-&lt;p&gt;temp_dir = tempfile.gettempdir()
-report_file = f&quot;{temp_dir}/test.csv&quot;
-mode = &quot;w&quot;&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=correct_example.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;In the updated code, we make use of the tempfile.gettempdir() function to retrieve the system&apos;s default temporary directory, which is typically /tmp on Linux-based systems. By using the system&apos;s default temporary directory, we ensure consistent and secure behavior across different environments.&lt;/p&gt;
 
@@ -73,35 +124,7 @@ mode = &quot;w&quot;&lt;/p&gt;
 
 &lt;h3 id=&quot;gradle-dependencies&quot;&gt;Gradle Dependencies&lt;/h3&gt;
 
-&lt;div class=&quot;code-block language-gradle highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;plugins {
-    id &apos;java&apos;
-    id &apos;org.springframework.boot&apos; version &apos;3.1.0&apos;
-    id &apos;io.spring.dependency-management&apos; version &apos;1.1.0&apos;
-}&lt;/p&gt;
-
-&lt;p&gt;group = &apos;com.example&apos;
-version = &apos;0.0.1-SNAPSHOT&apos;
-sourceCompatibility = &apos;17&apos;&lt;/p&gt;
-
-&lt;p&gt;repositories {
-    mavenCentral()
-}&lt;/p&gt;
-
-&lt;p&gt;dependencies {
-    implementation &apos;org.springframework.boot:spring-boot-starter-data-jdbc&apos;
-    implementation &apos;org.projectlombok:lombok:1.18.26&apos;
-    runtimeOnly &apos;org.postgresql:postgresql&apos;
-    testImplementation &apos;org.springframework.boot:spring-boot-starter-test&apos;
-    testImplementation &apos;org.springframework.boot:spring-boot-testcontainers&apos;
-    testImplementation &quot;org.testcontainers:postgresql&quot;
-    testImplementation &apos;org.testcontainers:junit-jupiter&apos;
-}&lt;/p&gt;
-
-&lt;p&gt;tasks.named(&apos;test&apos;) {
-    useJUnitPlatform()
-}&lt;/p&gt;
-
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=build.gradle&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;gradle-terminologies&quot;&gt;gradle terminologies&lt;/h3&gt;
 
@@ -121,138 +144,40 @@ sourceCompatibility = &apos;17&apos;&lt;/p&gt;
 
 &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repository/Customer.java&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import org.springframework.data.annotation.Id;&lt;/p&gt;
-
-&lt;p&gt;public record Customer(@Id Integer id, String name){}&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Customer.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repository/CustomerRepository.java&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import org.springframework.data.repository.CrudRepository;&lt;/p&gt;
-
-&lt;p&gt;public interface CustomerRepository extends CrudRepository&amp;lt;Customer, Integer&amp;gt; {}&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=CustomerRepository.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;test-using-actual-database&quot;&gt;Test using actual database&lt;/h3&gt;
 
 &lt;p&gt;We can spin up database using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-yaml highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;version: &apos;3&apos;&lt;/p&gt;
-
-&lt;p&gt;services:
-  db:
-    image: postgres:latest
-    container_name: postgress-image
-    restart: always
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: database&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=docker-compose.yaml&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;Also define &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;application.yaml&lt;/code&gt; as&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-bash highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;spring.sql.init.mode=always
-spring.datasource.url=jdbc:postgresql://localhost/database
-spring.datasource.username=user
-spring.datasource.password=password&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=application.yaml&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;We also need to define a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resources/schema.sql&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-sql highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;create table  customer(
-    id serial primary key,
-    name varchar(255) not null
-);&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=schema.sql&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;We can write our test as&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
-import org.testcontainers.containers.GenericContainer;
-import org.testcontainers.containers.PostgreSQLContainer;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.utility.DockerImageName;&lt;/p&gt;
-
-&lt;p&gt;@SpringBootTest
-class JdbcApplicationTests {&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Autowired
-public CustomerRepository customerRepository;
-
-@Test
-void contextLoads() throws Exception {
-	Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -&amp;gt; &quot;there should be no data&quot;);
-	customerRepository.save(new Customer(null, &quot;Tushar&quot;));
-	Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -&amp;gt; &quot;there should be some data&quot;);
-	for (Customer customer : customerRepository.findAll()){
-		Assertions.assertTrue(customer.name().equals(&quot;Tushar&quot;));
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;p&gt;}&lt;/p&gt; &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Test1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;You can verify this by loging to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;postgres&lt;/code&gt; database as&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-bash highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;$ docker exec -it &lt;CONTAINER_ID&gt; -U user -d database -W&lt;/CONTAINER_ID&gt;&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &amp;lt;CONTAINER_ID&amp;gt; &lt;span class=&quot;nt&quot;&gt;-U&lt;/span&gt; user &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; database &lt;span class=&quot;nt&quot;&gt;-W&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;test-using-testcontainers&quot;&gt;Test using TestContainers&lt;/h3&gt;
 
 &lt;p&gt;Intead of running actual database everytime, it&apos;s much more convenient to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TestContainers&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
-import org.testcontainers.containers.GenericContainer;
-import org.testcontainers.containers.PostgreSQLContainer;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.utility.DockerImageName;&lt;/p&gt;
-
-&lt;p&gt;@SpringBootTest
-@Testcontainers
-class JdbcApplicationTests {&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Container
-public static PostgreSQLContainer&amp;lt;?&amp;gt; pgsql = new PostgreSQLContainer(DockerImageName.parse(&quot;postgres:latest&quot;));
-
-@DynamicPropertySource
-static void configTestcontainersProperties(DynamicPropertyRegistry registry){
-	  registry.add(&quot;spring.datasource.url&quot;, pgsql::getJdbcUrl);
-	  registry.add(&quot;spring.datasource.username&quot;, pgsql::getUsername);
-	  registry.add(&quot;spring.datasource.password&quot;, pgsql::getPassword);
-}
-
-@Autowired
-public CustomerRepository customerRepository;
-
-@Test
-void contextLoads() throws Exception {
-
-	Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -&amp;gt; &quot;there should be no data&quot;);
-
-	customerRepository.save(new Customer(null, &quot;Tushar&quot;));
-
-	Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -&amp;gt; &quot;there should be some data&quot;);
-
-	for (Customer customer : customerRepository.findAll()){
-		Assertions.assertTrue(customer.name().equals(&quot;Tushar&quot;));
-	}
-} }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Test2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -285,75 +210,75 @@ void contextLoads() throws Exception {
 
 &lt;p&gt;Here&apos;s an example of converting a string to a StringBuilder:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;String input = &quot;abcd&quot;;
-StringBuilder sb = new StringBuilder(input);&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;abcd&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Appending a value to the StringBuilder can be done using the append() method:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;sb.append(&quot;zz&quot;)&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;zz&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;To check the resulting string, you can convert the StringBuilder back to a string using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;toString()&lt;/code&gt; and compare it:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;assert sb.toString().equals(&quot;abcdezz&quot;);&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abcdezz&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You can also retrieve the index location of a specific substring within the StringBuilder using the indexOf() method:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;int index = sb.indexOf(&quot;zz&quot;);
-assert index == 5;&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;zz&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you need to replace a portion of the string with another value, you can use the replace() method:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;sb.replace(1, 4, &quot;foo&quot;);
-assert sb.toString().equals(&quot;afooezz&quot;);&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;afooezz&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;To reverse the string in the StringBuilder, you can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reverse()&lt;/code&gt; method:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;sb.reverse();
-assert sb.toString().equals(&quot;zzeoofa&quot;);&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;zzeoofa&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Removing a substring from the StringBuilder can be achieved using the delete() method:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;sb.delete(3, 6);
-assert sb.toString().equals(&quot;zzea&quot;);&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;zzea&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Alternatively, you can delete a specific character at a given index using deleteCharAt():&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;sb.deleteCharAt(1);
-assert sb.toString().equals(&quot;zea&quot;);&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;deleteCharAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;zea&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;To access a character at a specific index within the StringBuilder, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;charAt()&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;char c = sb.charAt(1);&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you wish to modify a character at a specific index, you can use setCharAt():&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;sb.setCharAt(1, &apos;z&apos;);&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setCharAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&apos;z&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;You can obtain the ASCII value of a character by using the charAt() method and casting it to an int:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;int asciiA = sb.charAt(0);
-assert asciiA == 97;
-int asciiA = &apos;A&apos;;
-assert asciiA == 65;&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asciiA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asciiA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;97&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asciiA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asciiA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Conversely, you can convert an ASCII value back to a character using a cast:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-java highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;char c = (char) asciiA;
-assert c == &apos;a&apos;;
-int asciiZ = &apos;Z&apos;;
-assert asciiZ == 90;&lt;/p&gt;
-&lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asciiA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&apos;a&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asciiZ&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&apos;Z&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asciiZ&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
           <pubDate>2023-05-27T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/cribsheet-string-java</link>
@@ -618,38 +543,11 @@ counter() // 12
 
 &lt;p&gt;We will create a simple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda_function.py&lt;/code&gt; that simply returns id as response.&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-python highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import json&lt;/p&gt;
-
-&lt;p&gt;def lambda_handler(event, context):&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;id = event[&apos;id&apos;]
-
-return {
-    &apos;statusCode&apos;: 200,
-    &apos;body&apos;: {
-        &apos;id&apos;: id
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex1.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;We have a test corresponding to the test file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyLambda/test/test_lambda_function.py&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-python highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import pytest&lt;/p&gt;
-
-&lt;p&gt;from MyLambda.lambda_function import lambda_handler&lt;/p&gt;
-
-&lt;p&gt;def test_lambda_handler():&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;event = {
-    &apos;id&apos;: 5
-}
-
-result = lambda_handler(event, context={})
-
-assert result[&apos;statusCode&apos;] == 200
-
-assert result[&apos;body&apos;][&apos;id&apos;] == 5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex2.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;We will use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pytest&lt;/code&gt; to run our test:&lt;/p&gt;
 
@@ -674,77 +572,17 @@ TOTAL                                                     11      0   100%
 
 &lt;p&gt;As our lambda function gets complex, we must explore additional functionality to test our lambda function. We can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;patch&lt;/code&gt; to mock resources like environment variables, etc&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-python highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import json
-import os&lt;/p&gt;
-
-&lt;p&gt;def lambda_handler(event, context):&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;id = event[&apos;id&apos;]
-name = os.environ[&apos;name&apos;]  our
-return {
-    &apos;statusCode&apos;: 200,
-    &apos;body&apos;: {
-        &apos;id&apos;: id,
-        &apos;name&apos;: name
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex3.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;Our updated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test&lt;/code&gt; becomes&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-python highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import pytest
-import os
-from unittest.mock import patch
-from MyLambda.lambda_function import lambda_handler&lt;/p&gt;
-
-&lt;p&gt;def test_lambda_handler():&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;event = {
-    &apos;id&apos;: 5
-}
-
-with patch.dict(os.environ, {
-    &apos;name&apos;: &apos;FAKE_NAME&apos;
-}):
-
-    result = lambda_handler(event, context={})
-
-assert result[&apos;statusCode&apos;] == 200
-
-assert result[&apos;body&apos;][&apos;id&apos;] == 5
-
-assert result[&apos;body&apos;][&apos;name&apos;] == &apos;FAKE_NAME&apos;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex4.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;pytest-fixtures&quot;&gt;Pytest fixtures&lt;/h3&gt;
 
 &lt;p&gt;A fixture is a function that returns a test resource to supply a mock &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;context&lt;/code&gt; object to our lambda function. Let&apos;s rewrite our test function&lt;/p&gt;
 
-&lt;div class=&quot;code-block language-python highlighter-rouge&quot;&gt; &lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;p&gt;import pytest
-import os
-from unittest.mock import patch
-from MyLambda.lambda_function import lambda_handler&lt;/p&gt;
-
-&lt;p&gt;@pytest.fixture
-def event():
-    return {
-        &apos;id&apos;: 5
-    }&lt;/p&gt;
-
-&lt;p&gt;def test_lambda_handler(event):&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;with patch.dict(os.environ, {
-    &apos;name&apos;: &apos;FAKE_NAME&apos;
-}):
-
-    result = lambda_handler(event, context={})
-
-assert result[&apos;statusCode&apos;] == 200
-
-assert result[&apos;body&apos;][&apos;id&apos;] == 5
-
-assert result[&apos;body&apos;][&apos;name&apos;] == &apos;FAKE_NAME&apos;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;/code&gt;&lt;/pre&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex5.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;In our example, we define a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;event&lt;/code&gt; fixture that return dictionary. We then pass this fixture as an argument to our test function.&lt;/p&gt;
 </description>

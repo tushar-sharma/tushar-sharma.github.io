@@ -50,24 +50,11 @@
 
 <!-- Include Prism.js CSS and JavaScript files -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-gradle.min.js"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>TestContainers with Spring Boot | RandomWits</title>
@@ -279,35 +266,7 @@ header li {
 
 <h3 id="gradle-dependencies">Gradle Dependencies</h3>
 
-<div class="code-block language-gradle highlighter-rouge"> <pre class="highlight"><code><p>plugins {
-    id 'java'
-    id 'org.springframework.boot' version '3.1.0'
-    id 'io.spring.dependency-management' version '1.1.0'
-}</p>
-
-<p>group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'</p>
-
-<p>repositories {
-    mavenCentral()
-}</p>
-
-<p>dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-    implementation 'org.projectlombok:lombok:1.18.26'
-    runtimeOnly 'org.postgresql:postgresql'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.boot:spring-boot-testcontainers'
-    testImplementation "org.testcontainers:postgresql"
-    testImplementation 'org.testcontainers:junit-jupiter'
-}</p>
-
-<p>tasks.named('test') {
-    useJUnitPlatform()
-}</p>
-
-</code></pre> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=build.gradle"></script> <button class="copy-button">Copy</button> </div>
 
 <h3 id="gradle-terminologies">gradle terminologies</h3>
 
@@ -327,138 +286,40 @@ sourceCompatibility = '17'</p>
 
 <p>Create <code class="language-plaintext highlighter-rouge">repository/Customer.java</code></p>
 
-<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>import org.springframework.data.annotation.Id;</p>
-
-<p>public record Customer(@Id Integer id, String name){}</p>
-</code></pre> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Customer.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>Create <code class="language-plaintext highlighter-rouge">repository/CustomerRepository.java</code></p>
 
-<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>import org.springframework.data.repository.CrudRepository;</p>
-
-<p>public interface CustomerRepository extends CrudRepository&lt;Customer, Integer&gt; {}</p>
-</code></pre> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=CustomerRepository.java"></script> <button class="copy-button">Copy</button> </div>
 
 <h3 id="test-using-actual-database">Test using actual database</h3>
 
 <p>We can spin up database using <code class="language-plaintext highlighter-rouge">docker</code></p>
 
-<div class="code-block language-yaml highlighter-rouge"> <pre class="highlight"><code><p>version: '3'</p>
-
-<p>services:
-  db:
-    image: postgres:latest
-    container_name: postgress-image
-    restart: always
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: database</p>
-</code></pre> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=docker-compose.yaml"></script> <button class="copy-button">Copy</button> </div>
 
 <p>Also define <code class="language-plaintext highlighter-rouge">application.yaml</code> as</p>
 
-<div class="code-block language-bash highlighter-rouge"> <pre class="highlight"><code><p>spring.sql.init.mode=always
-spring.datasource.url=jdbc:postgresql://localhost/database
-spring.datasource.username=user
-spring.datasource.password=password</p>
-</code></pre> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=application.yaml"></script> <button class="copy-button">Copy</button> </div>
 
 <p>We also need to define a <code class="language-plaintext highlighter-rouge">resources/schema.sql</code></p>
 
-<div class="code-block language-sql highlighter-rouge"> <pre class="highlight"><code><p>create table  customer(
-    id serial primary key,
-    name varchar(255) not null
-);</p>
-</code></pre> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=schema.sql"></script> <button class="copy-button">Copy</button> </div>
 
 <p>We can write our test as</p>
 
-<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
-import org.testcontainers.containers.GenericContainer;
-import org.testcontainers.containers.PostgreSQLContainer;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.utility.DockerImageName;</p>
-
-<p>@SpringBootTest
-class JdbcApplicationTests {</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Autowired
-public CustomerRepository customerRepository;
-
-@Test
-void contextLoads() throws Exception {
-	Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -&gt; "there should be no data");
-	customerRepository.save(new Customer(null, "Tushar"));
-	Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -&gt; "there should be some data");
-	for (Customer customer : customerRepository.findAll()){
-		Assertions.assertTrue(customer.name().equals("Tushar"));
-	}
-}
-</code></pre></div></div> <p>}</p> </code></pre> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Test1.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>You can verify this by loging to your <code class="language-plaintext highlighter-rouge">postgres</code> database as</p>
 
-<div class="code-block language-bash highlighter-rouge"> <pre class="highlight"><code><p>$ docker exec -it <container_id> -U user -d database -W</container_id></p>
-</code></pre> <button class="copy-button">Copy</button> </div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> &lt;CONTAINER_ID&gt; <span class="nt">-U</span> user <span class="nt">-d</span> database <span class="nt">-W</span>
+</code></pre></div></div>
 
 <h3 id="test-using-testcontainers">Test using TestContainers</h3>
 
 <p>Intead of running actual database everytime, it's much more convenient to use <code class="language-plaintext highlighter-rouge">TestContainers</code></p>
 
-<div class="code-block language-java highlighter-rouge"> <pre class="highlight"><code><p>import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
-import org.testcontainers.containers.GenericContainer;
-import org.testcontainers.containers.PostgreSQLContainer;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.utility.DockerImageName;</p>
-
-<p>@SpringBootTest
-@Testcontainers
-class JdbcApplicationTests {</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Container
-public static PostgreSQLContainer&lt;?&gt; pgsql = new PostgreSQLContainer(DockerImageName.parse("postgres:latest"));
-
-@DynamicPropertySource
-static void configTestcontainersProperties(DynamicPropertyRegistry registry){
-	  registry.add("spring.datasource.url", pgsql::getJdbcUrl);
-	  registry.add("spring.datasource.username", pgsql::getUsername);
-	  registry.add("spring.datasource.password", pgsql::getPassword);
-}
-
-@Autowired
-public CustomerRepository customerRepository;
-
-@Test
-void contextLoads() throws Exception {
-
-	Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -&gt; "there should be no data");
-
-	customerRepository.save(new Customer(null, "Tushar"));
-
-	Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -&gt; "there should be some data");
-
-	for (Customer customer : customerRepository.findAll()){
-		Assertions.assertTrue(customer.name().equals("Tushar"));
-	}
-} }
-</code></pre></div></div> </code></pre> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Test2.java"></script> <button class="copy-button">Copy</button> </div>
 
 <ul>
   <li>

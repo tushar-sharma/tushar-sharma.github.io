@@ -50,13 +50,8 @@
 
 <!-- Include Prism.js CSS and JavaScript files -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 
 
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 
 
 
@@ -271,10 +266,7 @@ header li {
 
 <p>One common SonarQube warning is related to the usage of publicly writable directories. SonarQube raises this warning to highlight potential security risks when working with directories that have open write permissions. In the case of AWS Lambda functions, the <code class="language-plaintext highlighter-rouge">/tmp</code> directory is often used for temporary file operations.</p>
 
-<div class="code-block language-python highlighter-rouge"> <pre class="highlight"><code><p>temp_dir = "/tmp"
-report_file = f"{temp_dir}/test.csv"
-mode = "w"</p>
-</code></pre> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=wrong_example.py"></script> <button class="copy-button">Copy</button> </div>
 
 <p>In this code snippet, the /tmp directory is publicly writable, which can pose security risks if not managed properly.</p>
 
@@ -284,12 +276,7 @@ mode = "w"</p>
 
 <p>Here's an updated version of the code that uses the tempfile module:</p>
 
-<div class="code-block language-python highlighter-rouge"> <pre class="highlight"><code><p>import tempfile</p>
-
-<p>temp_dir = tempfile.gettempdir()
-report_file = f"{temp_dir}/test.csv"
-mode = "w"</p>
-</code></pre> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=correct_example.py"></script> <button class="copy-button">Copy</button> </div>
 
 <p>In the updated code, we make use of the tempfile.gettempdir() function to retrieve the system's default temporary directory, which is typically /tmp on Linux-based systems. By using the system's default temporary directory, we ensure consistent and secure behavior across different environments.</p>
 
@@ -313,7 +300,7 @@ mode = "w"</p>
 
 <!-- this is for pagination -->
 <nav class="pagination clear" style="padding-bottom:20px;">
-   <a class="prev-item" href="/test-containers-spring-boot" title="Previous Post: TestContainers with Spring Boot">←Previous</a>     
+   <a class="prev-item" href="/test-containers-spring-boot" title="Previous Post: TestContainers with Spring Boot">←Previous</a>     <a class="next-item" href="/publish-to-msk-kafka-using-aws-lambda-python" title="Next Post: Publish to MSK Kafka using AWS Lambda Python">Next→</a>         
 </nav>  
 
 <hr>
