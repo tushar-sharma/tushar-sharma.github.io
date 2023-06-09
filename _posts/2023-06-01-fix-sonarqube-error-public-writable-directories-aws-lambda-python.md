@@ -9,8 +9,6 @@ tags:
  - sonarqube
  - python
  - aws
-prismjs: true
-python: true
 ---
 
 In AWS Lambda functions, it's common to use temporary directories for tasks like generating temporary files, storing intermediate data, or processing data securely. However, improperly managing publicly writable directories can lead to security vulnerabilities. In this article, we'll explore how to address this issue and ensure safe usage of temporary directories in AWS Lambda functions using Python's tempfile module.<!-- truncate_here -->
@@ -24,11 +22,9 @@ One common SonarQube warning is related to the usage of publicly writable direct
 
 {% template  customCode.html %}
 ---
-title: language-python
+id: 9832f3acbfaa468021d3c5cb44679242
+file: wrong_example.py
 ---
-temp_dir = "/tmp"
-report_file = f"{temp_dir}/test.csv"
-mode = "w"
 {% endtemplate %}
 
 In this code snippet, the /tmp directory is publicly writable, which can pose security risks if not managed properly.
@@ -42,13 +38,9 @@ Here's an updated version of the code that uses the tempfile module:
 
 {% template  customCode.html %}
 ---
-title: language-python
+id: 9832f3acbfaa468021d3c5cb44679242
+file: correct_example.py
 ---
-import tempfile
-
-temp_dir = tempfile.gettempdir()
-report_file = f"{temp_dir}/test.csv"
-mode = "w"
 {% endtemplate %}
 
 In the updated code, we make use of the tempfile.gettempdir() function to retrieve the system's default temporary directory, which is typically /tmp on Linux-based systems. By using the system's default temporary directory, we ensure consistent and secure behavior across different environments.

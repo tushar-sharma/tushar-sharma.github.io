@@ -5,12 +5,6 @@ title: TestContainers with Spring Boot
 image: https://pubkgroup.com/wp-content/uploads/2021/03/computer-problems.jpg
 thumb: https://pubkgroup.com/wp-content/uploads/2021/03/computer-problems.jpg
 author: Tushar Sharma
-java: true
-prismjs: true
-gradle: true
-prismSQL: true
-prismBash: true
-prismYaml: true
 tags:
   - java
   - spring boot
@@ -27,36 +21,9 @@ Setup a `demo` Spring boot project
 
 {% template customCode.html %}
 ---
-title: language-gradle
+id: b74d54089885e9d1301ada9696e7d470
+file: build.gradle
 ---
-plugins {
-    id 'java'
-    id 'org.springframework.boot' version '3.1.0'
-    id 'io.spring.dependency-management' version '1.1.0'
-}
-
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-    implementation 'org.projectlombok:lombok:1.18.26'
-    runtimeOnly 'org.postgresql:postgresql'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.boot:spring-boot-testcontainers'
-    testImplementation "org.testcontainers:postgresql"
-    testImplementation 'org.testcontainers:junit-jupiter'
-}
-
-tasks.named('test') {
-    useJUnitPlatform()
-}
-
 {% endtemplate %}
 
 ### gradle terminologies
@@ -73,23 +40,18 @@ Create `repository/Customer.java`
 
 {% template customCode.html %}
 ---
-title: language-java
+id: b74d54089885e9d1301ada9696e7d470
+file: Customer.java
 ---
-import org.springframework.data.annotation.Id;
-
-public record Customer(@Id Integer id, String name){}
 {% endtemplate %}
 
 Create `repository/CustomerRepository.java`
 
-
 {% template customCode.html %}
 ---
-title: language-java
+id: b74d54089885e9d1301ada9696e7d470
+file: CustomerRepository.java
 ---
-import org.springframework.data.repository.CrudRepository;
-
-public interface CustomerRepository extends CrudRepository<Customer, Integer> {}
 {% endtemplate %}
 
 
@@ -99,21 +61,9 @@ We can spin up database using `docker`
 
 {% template customCode.html %}
 ---
-title: language-yaml
+id: b74d54089885e9d1301ada9696e7d470
+file: docker-compose.yaml
 ---
-version: '3'
-
-services:
-  db:
-    image: postgres:latest
-    container_name: postgress-image
-    restart: always
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: database
 {% endtemplate %}
 
 Also define `application.yaml` as
@@ -121,24 +71,18 @@ Also define `application.yaml` as
 
 {% template customCode.html %}
 ---
-title: language-bash
+id: b74d54089885e9d1301ada9696e7d470
+file: application.yaml
 ---
-spring.sql.init.mode=always
-spring.datasource.url=jdbc:postgresql://localhost/database
-spring.datasource.username=user
-spring.datasource.password=password
 {% endtemplate %}
 
 We also need to define a `resources/schema.sql`
 
 {% template customCode.html %}
 ---
-title: language-sql
+id: b74d54089885e9d1301ada9696e7d470
+file: schema.sql
 ---
-create table  customer(
-    id serial primary key,
-    name varchar(255) not null
-);
 {% endtemplate  %}
 
 
@@ -146,49 +90,17 @@ We can write our test as
 
 {% template  customCode.html %}
 ---
-title: language-java
+id: b74d54089885e9d1301ada9696e7d470
+file: Test1.java
 ---
-import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
-import org.testcontainers.containers.GenericContainer;
-import org.testcontainers.containers.PostgreSQLContainer;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.utility.DockerImageName;
-
-@SpringBootTest
-class JdbcApplicationTests {
-
-	@Autowired
-	public CustomerRepository customerRepository;
-
-	@Test
-	void contextLoads() throws Exception {
-		Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -> "there should be no data");
-		customerRepository.save(new Customer(null, "Tushar"));
-		Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -> "there should be some data");
-		for (Customer customer : customerRepository.findAll()){
-			Assertions.assertTrue(customer.name().equals("Tushar"));
-		}
-	}
-
-}
-
 {% endtemplate %}
 
 You can verify this by loging to your `postgres` database as 
 
-{% template customCode.html %}
----
-title: language-bash
----
+
+```bash
 $ docker exec -it <CONTAINER_ID> -U user -d database -W
-{% endtemplate %}
+```
 
 ### Test using TestContainers
 
@@ -196,52 +108,9 @@ Intead of running actual database everytime, it's much more convenient to use `T
 
 {% template customCode.html %}
 ---
-title: language-java
+id: b74d54089885e9d1301ada9696e7d470
+file: Test2.java
 ---
-import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
-import org.testcontainers.containers.GenericContainer;
-import org.testcontainers.containers.PostgreSQLContainer;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.utility.DockerImageName;
-
-@SpringBootTest
-@Testcontainers
-class JdbcApplicationTests {
-
-	@Container
-	public static PostgreSQLContainer<?> pgsql = new PostgreSQLContainer(DockerImageName.parse("postgres:latest"));
-
-	@DynamicPropertySource
-	static void configTestcontainersProperties(DynamicPropertyRegistry registry){
-		  registry.add("spring.datasource.url", pgsql::getJdbcUrl);
-		  registry.add("spring.datasource.username", pgsql::getUsername);
-		  registry.add("spring.datasource.password", pgsql::getPassword);
-	}
-
-	@Autowired
-	public CustomerRepository customerRepository;
-
-	@Test
-	void contextLoads() throws Exception {
-	
-		Assertions.assertFalse(customerRepository.findAll().iterator().hasNext(), () -> "there should be no data");
-
-		customerRepository.save(new Customer(null, "Tushar"));
-
-		Assertions.assertTrue(customerRepository.findAll().iterator().hasNext(), () -> "there should be some data");
-
-		for (Customer customer : customerRepository.findAll()){
-			Assertions.assertTrue(customer.name().equals("Tushar"));
-		}
-	}
-}
 {% endtemplate %}
 
 * `@Testcontainers`: Integrates Testcontainers library with JUnit 5 to manage Docker containers for testing
