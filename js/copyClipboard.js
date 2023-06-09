@@ -13,19 +13,30 @@ document.addEventListener('DOMContentLoaded', function() {
         tempTextarea.select();
   
         try {
-          document.execCommand('copy');
-          console.log('Text copied to clipboard');
-          button.textContent = 'Copied!';
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(content)
+              .then(function() {
+                console.log('Text copied to clipboard');
+                button.textContent = 'Copied!';
+                setTimeout(function() {
+                  button.textContent = 'Copy';
+                }, 2000);
+              })
+              .catch(function(err) {
+                console.error('Failed to copy text: ', err);
+                button.textContent = 'Copy';
+              })
+              .finally(function() {
+                document.body.removeChild(tempTextarea);
+              });
+          } else {
+            throw new Error('Clipboard API not available');
+          }
         } catch (err) {
           console.error('Failed to copy text: ', err);
           button.textContent = 'Copy';
+          document.body.removeChild(tempTextarea);
         }
-  
-        document.body.removeChild(tempTextarea);
-  
-        setTimeout(function() {
-          button.textContent = 'Copy';
-        }, 2000);
       });
     });
   });
