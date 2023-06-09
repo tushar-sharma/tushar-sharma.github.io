@@ -2,11 +2,8 @@
 layout: post
 date: 2023-06-08
 title: Publish to MSK Kafka using AWS Lambda Python
-image: https://damion.club/uploads/posts/2022-02/1646069008_33-damion-club-p-chelovek-za-kompyuterom-art-art-36.jpg
-thumb: https://damion.club/uploads/posts/2022-02/1646069008_33-damion-club-p-chelovek-za-kompyuterom-art-art-36.jpg
-prismjs: true
-prismBash: true
-python: true
+image: https://onlyhdwallpapers.com/wallpaper/makoto-shinkai-laptops-the-1dlL.jpg
+thumb: https://onlyhdwallpapers.com/wallpaper/makoto-shinkai-laptops-the-1dlL.jpg
 tags:
 - kafka
 - aws
@@ -24,20 +21,9 @@ First we need to build a `lambda layer` which will install dependencies for the 
 
 {% template customCode.html %}
 ---
-title: language-bash
+id: 056166b6da844fcbe20271310e890ec0
+file: layer.sh
 ---
-$ mkdir -p kakfaLibrary && cd $_
-$ python3 -m venv myenv
-$ . myenv/bin/activate
-$ echo "confluent-kafka===1.9.2" > requirements.txt
-$ pip install \
-  --target=python/lib/python3.8/site-packages \
-  --implementation cp \
-  --python 3.8 \
-  --only-binary=:all --upgrade \
-  -r requirements.txt
-$ zip -r kakfaLibrary.zip python
-$ deactivate
 {% endtemplate %}
 
 Open the AWS Management Console and navigate to the AWS Lambda service.
@@ -67,95 +53,18 @@ We will write a `producer` to publish to MSK topic. Environment variables passed
 
 {% template customCode.html %}
 ---
-title: language-python
+id: 056166b6da844fcbe20271310e890ec0
+file: kafka_producer.py
 ---
-import json
-import confluent_kafka
-import os
-
-def delivery_callback(err, msg):
-    """
-    Callback method
-    """
-    if err:
-        print("Unable to publish to topic:", err)
-    else:
-        print("Successfully published to topic")
-
-
-def kafka_producer():
-    """
-    Publish Data
-    """
-    kafka_topic = os.environ["kafka_topic"]
-    conf = {
-        "bootstrap.servers": os.environ["brokers"],
-        "socket.timeout.ms": 10000,
-        "security.protocol": "SASL_SSL",
-        "sasl.mechanisms": "SCRAM-SHA-512",
-        "sasl.username": os.environ["username"],
-        "sasl.password": os.environ["password"],
-        "broker.version.fallback": "0.9.0",
-        "api.version.request": True,
-        "batch.num.messages": 100,
-    }
-    producer = confluent_kafka.Producer(**conf)
-    payload = {
-        "message": "This is payload"
-    }
-    producer.produce(f"{kafka_topic}", json.dumps(payload, default=str), callback=delivery_callback)
-    producer.flush()
-
-def lambda_handler(event, context):
-    kafka_producer()
-    return {
-        'statusCode': 200,
-        'body': json.dumps('Hello from Lambda!')
-    }
-
 {% endtemplate %}
 
 ### Kafka Consumer
 
 Similarly, we can write a `consumer` to subscribe to the topic: 
 
-
 {% template customCode.html %}
 ---
-title: language-python
+id: 056166b6da844fcbe20271310e890ec0
+file: kafka_consumer.py
 ---
-import json
-import confluent_kafka
-import os
-
-def kafka_consumer():
-    kafka_topic= os.environ["kafka_topic"]
-    conf = {
-        "bootstrap.servers": os.environ["brokers"],
-        "socket.timeout.ms": 10000,
-        "security.protocol": "SASL_SSL",
-        "sasl.mechanisms": "SCRAM-SHA-512",
-        "sasl.username": os.environ["username"],
-        "sasl.password": os.environ["password"],
-        "broker.version.fallback": "0.9.0",
-        "api.version.request": True,
-        "group.id": os.environ["groupid"],
-    }
-    consumer = confluent_kafka.Consumer(**conf)
-    consumer.subscribe([kafka_topic])
-    while True:
-        message = consumer.poll(timeout=1.0)
-        if message is None:
-            continue
-        if message.error():
-            raise confluent_kafka.KafkaException(message.error())
-        else:
-            print(message.value())
-
-def lambda_handler(event, context):
-    kafka_consumer()
-    return {
-        'statusCode': 200,
-        'body': json.dumps('Hello from Lambda!')
-    }
 {% endtemplate %}
