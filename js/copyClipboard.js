@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .map(line => line.substring(1))
       .join('\n')
 
-      content = resultString;
+      content = resultString.replace(/(\n\s*\n)+/g, '\n\n');
 
   
       button.addEventListener('click', function() {
