@@ -4,6 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     copyButtons.forEach(function(button) {
       var codeBlock = button.previousElementSibling;
       var content = codeBlock.innerText;
+
+      // Remove leading spaces from each line
+      const resultString = content
+      .split('\n')
+      .map(line => line.substring(1))
+      .join('\n')
+
+      content = resultString;
+
   
       button.addEventListener('click', function() {
         var tempTextarea = document.createElement('textarea');
