@@ -46,15 +46,10 @@ To solve this problem, you can use a graph traversal algorithm, such as breadth-
 
 ### Solution
 
-<div class="tab-container">
-  <ul>
-    <li class="tab Java2"><a href="#Java1">Java</a></li>
-  </ul>
-
-   <div class="codeSample Java1" id="Java1">
-      <script src="https://gist.github.com/tushar-sharma/7b99a20c4164f2ef510729218f0cef1b.js?file=ValidPath.java"></script>
-   </div>
-
-</div>
-
-<script src="https://gist.github.com/tushar-sharma/.js"></script>
+{% template customTab.html %}
+---
+id: 7b99a20c4164f2ef510729218f0cef1b
+file: ValidPath.java
+language: Java
+---
+{% endtemplate %}
