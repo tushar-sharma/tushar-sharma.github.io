@@ -17,7 +17,7 @@
 
 &lt;p&gt;First we need to build a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda layer&lt;/code&gt; which will install dependencies for the lambda function:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=layer.sh&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab Bash&quot;&gt;&lt;a href=&quot;#Bash&quot;&gt;Bash&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;codeSample Bash code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=layer.sh&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Open the AWS Management Console and navigate to the AWS Lambda service.&lt;/p&gt;
 
@@ -50,13 +50,13 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=kafka_producer.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab Python&quot;&gt;&lt;a href=&quot;#Python&quot;&gt;Python&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;codeSample Python code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=kafka_producer.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;kafka-consumer&quot;&gt;Kafka Consumer&lt;/h3&gt;
 
 &lt;p&gt;Similarly, we can write a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;consumer&lt;/code&gt; to subscribe to the topic:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=kafka_consumer.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab Python&quot;&gt;&lt;a href=&quot;#Python&quot;&gt;Python&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;codeSample Python code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=kafka_consumer.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2023-06-08T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/publish-to-msk-kafka-using-aws-lambda-python</link>
@@ -1655,19 +1655,7 @@ Password : admin
 
 &lt;h3 id=&quot;solution&quot;&gt;Solution&lt;/h3&gt;
 
-&lt;div class=&quot;tab-container&quot;&gt;
-  &lt;ul&gt;
-    &lt;li class=&quot;tab Java2&quot;&gt;&lt;a href=&quot;#Java1&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-
-   &lt;div class=&quot;codeSample Java1&quot; id=&quot;Java1&quot;&gt;
-      &lt;script src=&quot;https://gist.github.com/tushar-sharma/7b99a20c4164f2ef510729218f0cef1b.js?file=ValidPath.java&quot;&gt;&lt;/script&gt;
-   &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script src=&quot;https://gist.github.com/tushar-sharma/.js&quot;&gt;&lt;/script&gt;
-
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab Java&quot;&gt;&lt;a href=&quot;#Java&quot;&gt;Java&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot;codeSample Java code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7b99a20c4164f2ef510729218f0cef1b.js?file=ValidPath.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2022-12-23T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/find-if-path-exists-in-graph</link>
@@ -9221,6 +9209,112 @@ Image credit ~ &lt;a href=&quot;https://xkcd.com/1240/&quot;&gt;xckd&lt;/a&gt;
           <pubDate>2016-02-07T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/random-stranger</link>
           <guid isPermaLink="true">https://randomwits.com/blog/random-stranger</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Setup php on Mac OS X localhost</title>
+          <description>&lt;p&gt;Users with the newest versions of Mac OS X (Mountain Lion or later) no longer see the option of web sharing in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;System Preferences-&amp;gt;Sharing&lt;/code&gt;. If you are a web developer / designer, you might find this change unpleasant. However Mac OS X still includes Apache HTTP version.&lt;/p&gt;
+
+&lt;p&gt;Testing web sites on your personal computer is indispensable for web developers / designers. Enabling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;php&lt;/code&gt; on Mac OX S is plain and easy. &lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/mac&quot; title=&quot;View posts tagged with &amp;quot;mac&amp;quot;&quot;&gt;mac&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/php&quot; title=&quot;View posts tagged with &amp;quot;php&amp;quot;&quot;&gt;php&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Users with the newest versions of Mac OS X (Mountain Lion or later) no longer see the option of web sharing in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;System Preferences-&amp;gt;Sharing&lt;/code&gt;. If you are a web developer / designer, you might find this change unpleasant. However Mac OS X still includes Apache HTTP version.&lt;/p&gt;
+
+&lt;p&gt;Testing web sites on your personal computer is indispensable for developers / designers. Enabling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;php&lt;/code&gt; on Mac OX S is plain and easy.&lt;/p&gt;
+
+&lt;p&gt;First test your apache server. Open your terminal and type&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;httpd &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you see something similar, we are good to proceed.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Server version: Apache/2.4.16 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Unix&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Server built:   Jul 31 2015 15:53:26
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Unix like operating system keep its configuration files in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /etc 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Copy the default &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;php&lt;/code&gt; file.  The php.ini file is where you declare changes to your PHP settings. You can use the default settings for the server, change specific settings by editing the existing php.ini, or create a new text file and name it php.ini`.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo cp &lt;/span&gt;php.ini.default php.ini 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Open the following file &amp;amp; search line number containing  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;libexec/apache2/libphp5.so&lt;/code&gt; &amp;amp; uncomment it (remove the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt; from the front)&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pico /etc/apache2/httd.conf 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Save and close the editor by pressing &lt;strong&gt;Control-O&lt;/strong&gt; followed by &lt;strong&gt;Control-X&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Next we need to create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sites&lt;/code&gt; folder. It will be used for saving sites hosted on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo mkdir&lt;/span&gt; ~/Sites
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo chmod &lt;/span&gt;o+r ~/Sites
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;?php phpinfo(); ?&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; ~/Sites/phptest.php
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo chmod &lt;/span&gt;o+r ~/Sites/phptest.php
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, edit the following file. Write your username instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tushar&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pico /etc/apache2/users/&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;whoami&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For all systems other than Yosemite, use the following as the content:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&quot;/Users/tushar/Sites/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	Options Indexes MultiViews
+	AllowOverride None
+	Order allow,deny
+	Allow from localhost
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For Yosemite, use this content:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&quot;/Users/tushar/Sites/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	AddLanguage en .en
+	LanguagePriority en fr de
+	ForceLanguagePriority Fallback
+	Options Indexes MultiViews
+	AllowOverride None
+	Order allow,deny
+	Allow from localhost
+	Require all granted
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Enable the web server&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apachectl start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Change the permission of the configuration folder.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo chown &lt;/span&gt;root:wheel /etc/apache2/users/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo chmod &lt;/span&gt;644 /etc/apache2/users/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Restart the server&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apachectl restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Lastly , go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost&lt;/code&gt; to confirm.&lt;/p&gt;
+
+&lt;p&gt; 
+&lt;img src=&quot;/img/localhost.png&quot; /&gt;
+&lt;/p&gt;
+</description>
+          <pubDate>2016-01-29T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/localhost-php-setup-mac</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/localhost-php-setup-mac</guid>
         </item>
       
     
