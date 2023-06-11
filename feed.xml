@@ -7,67 +7,6 @@
     
       
         <item>
-          <title>Bookmark Anything using ChatGPT</title>
-          <description>&lt;p&gt;.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/chatgpt&quot; title=&quot;View posts tagged with &amp;quot;chatgpt&amp;quot;&quot;&gt;chatgpt&lt;/a&gt;    &lt;/p&gt;
-
-&lt;h3 id=&quot;create-a-notion-page&quot;&gt;Create a &lt;a href=&quot;https://www.notion.so/&quot;&gt;Notion&lt;/a&gt; page.&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add a new page called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bookmark&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Insert a database&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add a new property called &quot;Bookmark&quot;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;set-up-zapier-plugin&quot;&gt;Set up &lt;a href=&quot;https://zapier.com/app/login&quot;&gt;Zapier&lt;/a&gt; plugin&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Install Zapier plugin in ChatGPT&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Go to &lt;a href=&quot;https://nla.zapier.com/openai/actions&quot;&gt;nla.zapier.com/openai/actions&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Set up the &quot;Notion: Create Database&quot; action&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;create-shortcut-in-text-blaze&quot;&gt;Create shortcut in Text Blaze&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Go to &lt;a href=&quot;https://textblaze.me/moritz&quot;&gt;textblaze.me/moritz&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Create a new snippet and enter this prompt&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Save to notion
-Name: [2-word summary of last response]
-Bookmark: [insert text from last response]
-Tags:
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;save-bookmark&quot;&gt;Save bookmark&lt;/h3&gt;
-
-&lt;p&gt;Type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/save&lt;/code&gt; in chatgpt to save bookmark.&lt;/p&gt;
-
-</description>
-          <pubDate>2023-06-10T00:00:00-04:00</pubDate>
-          <link>https://randomwits.com/bookmark-using-chatgpt</link>
-          <guid isPermaLink="true">https://randomwits.com/bookmark-using-chatgpt</guid>
-        </item>
-      
-    
-      
-        <item>
           <title>Publish to MSK Kafka using AWS Lambda Python</title>
           <description>&lt;p&gt;Apache Kafka is a distributed streaming platform designed to handle real-time data streams efficiently. It uses a publish-subscribe model, where producers publish messages to topics, and consumers subscribe to those topics to receive the messages. Amazon MSK simplifies the deployment and management of Kafka clusters on AWS, providing a fully managed and scalable solution. You can use AWS lambda in python to publish to MSK topic.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/kafka&quot; title=&quot;View posts tagged with &amp;quot;kafka&amp;quot;&quot;&gt;kafka&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
