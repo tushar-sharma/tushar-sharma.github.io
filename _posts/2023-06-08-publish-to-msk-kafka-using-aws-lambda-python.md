@@ -2,8 +2,8 @@
 layout: post
 date: 2023-06-08
 title: Publish to MSK Kafka using AWS Lambda Python
-image: https://onlyhdwallpapers.com/wallpaper/makoto-shinkai-laptops-the-1dlL.jpg
-thumb: https://onlyhdwallpapers.com/wallpaper/makoto-shinkai-laptops-the-1dlL.jpg
+image: https://unsplash.com/photos/0Fws0jyIt9s/download?w=800
+thumb: https://unsplash.com/photos/0Fws0jyIt9s/download?w=800
 tags:
 - kafka
 - aws
