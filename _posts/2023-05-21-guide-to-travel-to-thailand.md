@@ -57,3 +57,38 @@ If you are phone allows `eSIM`, download the app [airolo](https://www.airalo.com
 I really liked [Grab](https://www.grab.com/sg/) which is a great app to book cabs, food, etc. There are other options like `Bolt` however it seems to work with cash only for me. Tuktuk in Thailand are supposed to be expensive so avoid it unless you really crave for the experiences.
 
 If you are in Bangkok , I would really recommend this [airbnb experience](https://www.airbnb.com/experiences/66091). You get to bike around the Bang Kachao, kayak and ride in a long-tail boat.
+
+I booked parasailing through [mamybooking](https://www.mamybooking.com/). Despite initial apprehensions about its potential fright factor, I was pleasantly surprised to discover that the experience was far less intimidating than expected. The thrill of soaring high above the seas, followed by those invigorating plunges, added an extra layer of excitement to the adventure. However, my biggest pet peeve was that the ride was of very short duration.
+
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/WN09Oy8IgIo?autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/WN09Oy8IgIo?autoplay=1><img src=https://img.youtube.com/vi/WN09Oy8IgIo/hqdefault.jpg alt='Parasailing in Pattaya, Thailand Part 1'><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Parasailing in Pattaya, Thailand Part 1"
+></iframe><br>
+
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/YGXienBN9lo?autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/YGXienBN9lo?autoplay=1><img src=https://img.youtube.com/vi/YGXienBN9lo/hqdefault.jpg alt='Parasailing in Pattaya, Thailand Part 2'><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Parasailing in Pattaya, Thailand Part 2"
+></iframe><br>
+
+<iframe
+  style="position: relative;  width: 100%;" 
+   height="500"
+  src="https://www.youtube.com/embed/69VSxchXdYs?autoplay=1"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/69VSxchXdYs?autoplay=1><img src=https://img.youtube.com/vi/69VSxchXdYs/hqdefault.jpg alt='Parasailing in Pattaya, Thailand Part 3'><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Parasailing in Pattaya, Thailand Part 3"
+></iframe><br>
