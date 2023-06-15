@@ -452,21 +452,21 @@ span.pagination-step {
   /**css for polls */
 
   /** we dont want padding **/
-  .hpoll_zDmbqM{
+  .hpoll_ALkxm0{
     padding: 0 0 0 0 !important;
   }
   /**no title text for poll */
-  .hpoll_zDmbqM_t {
+  .hpoll_ALkxm0_t {
     display: none !important;
   }
   /*no border */
-  .hpoll_zDmbqM_o{
+  .hpoll_ALkxm0_o{
     border: none !important;
     border-bottom: 1px solid #ddd !important; 
     padding: 12px 0 !important;
   }
   
-  .hpoll_zDmbqM_o-title{
+  .hpoll_ALkxm0_o-title{
     font: 300 1.125em "Source Sans Pro", Helvetica, Arial, sans-serif !important;
     color: #39c !important;
     cursor: pointer;
@@ -474,7 +474,7 @@ span.pagination-step {
     font-size:20px !important;
   }
   
-  .hpoll_zDmbqM_o-title:hover{
+  .hpoll_ALkxm0_o-title:hover{
     color: #ddd !important;
     z-index: 0;
     transition: .35s ease color;
@@ -506,4 +506,32 @@ span.pagination-step {
 code[class*=language-],pre[class*=language-]{
   word-wrap: break-word !important;
   white-space: pre-wrap !important;
+}
+
+/**author design **/
+.author-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.author-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 18px;
+  font-weight: bold;
 }
