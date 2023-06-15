@@ -104,7 +104,7 @@ Assuming you have donned the R wizard's robe and your dataset has been summoned 
 {% template customCode.html %}
 ---
 id: 61c45d98524ca2471059dbdb216b631b
-file: ex3.sas
+file: ex3.r
 ---
 {% endtemplate %}
 
@@ -114,7 +114,7 @@ file: ex3.sas
 {% template customCode.html %}
 ---
 id: 61c45d98524ca2471059dbdb216b631b
-file: ex4.sas
+file: ex4.4
 ---
 {% endtemplate %}
 
