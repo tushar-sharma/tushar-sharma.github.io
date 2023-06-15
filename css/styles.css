@@ -507,3 +507,31 @@ code[class*=language-],pre[class*=language-]{
   word-wrap: break-word !important;
   white-space: pre-wrap !important;
 }
+
+/**author design **/
+.author-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.author-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 18px;
+  font-weight: bold;
+}
