@@ -16,7 +16,7 @@ Imagine you have a magical tool called studentized residuals that helps you expl
 <div class="author-info">
   <div class="author-image">
    <a href="/tag/{{ page.author | replace: ' ', '%20' }}" >
-     <img src="{{ root_url }}/img/{{ page.author | append: '.jpg' }}" alt="Author">
+     <img src="{{ root_url }}/img/{{ page.author | replace: ' ', '_' | append: '.jpg' }}" alt="Author">
    </a>
   </div>
   <span class="author-name">Written by: 
