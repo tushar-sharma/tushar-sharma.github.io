@@ -40,7 +40,7 @@ Here, sample is video url.
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
-></iframe>
+></iframe><br>
 ```
 
 ### Tweet
