@@ -100,3 +100,6 @@ file: ex2.py
 ---
 {% endtemplate %}
 ```
+### Tags
+
+Dont create tags with upper case name. Always use lowercase.
