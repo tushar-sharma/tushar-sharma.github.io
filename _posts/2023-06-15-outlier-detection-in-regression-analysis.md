@@ -8,6 +8,7 @@ author: richa gairola
 tags: 
 - sas
 - richa gairola
+- r
 ---
 
 Imagine you have a magical tool called studentized residuals that helps you explore the secrets hidden in data. These residuals are like detectives who investigate the influence and odd behaviors of individual data points. They compare the actual values of something you're trying to predict with the values your model predicts, and then they measure how different they are. By using a special formula, they make sure the measurements are fair, no matter what model or dataset you're using.<!-- truncate_here -->
