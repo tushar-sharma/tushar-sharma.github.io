@@ -133,7 +133,7 @@ Each of these bewitching residuals represents a unique departure from the predic
 
 Remember to replace 'model' with the actual name of your fitted regression model object. With the powerful combination of R and the guidance of studentized residuals, you can delve deeper into the mysteries of your regression models and embark on thrilling data adventures! May your journey be filled with wonder and discovery! 🌟🔮 
 
-Unveiling the Mystical Limitations of Studentized Residuals - When the Magic Fades Away
+### Unveiling the Mystical Limitations of Studentized Residuals - When the Magic Fades Away
 
 Listen closely, young apprentices, as we delve into the secrets of studentized residuals and uncover the circumstances where their enchanting powers may wane. Remember, even the mightiest spells have their limits!
 
