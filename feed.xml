@@ -44,7 +44,7 @@
         <item>
           <title>Exploring the Power of Outlier Detection in Regression Analysis</title>
           <description>&lt;p&gt;Imagine you have a magical tool called studentized residuals that helps you explore the secrets hidden in data. These residuals are like detectives who investigate the influence and odd behaviors of individual data points. They compare the actual values of something you&apos;re trying to predict with the values your model predicts, and then they measure how different they are. By using a special formula, they make sure the measurements are fair, no matter what model or dataset you&apos;re using.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/sas&quot; title=&quot;View posts tagged with &amp;quot;sas&amp;quot;&quot;&gt;sas&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/richa gairola&quot; title=&quot;View posts tagged with &amp;quot;richa gairola&amp;quot;&quot;&gt;richa gairola&lt;/a&gt;    &lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/sas&quot; title=&quot;View posts tagged with &amp;quot;sas&amp;quot;&quot;&gt;sas&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/richa gairola&quot; title=&quot;View posts tagged with &amp;quot;richa gairola&amp;quot;&quot;&gt;richa gairola&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/r&quot; title=&quot;View posts tagged with &amp;quot;r&amp;quot;&quot;&gt;r&lt;/a&gt;    &lt;/p&gt;
 
 &lt;div class=&quot;author-info&quot;&gt;
   &lt;div class=&quot;author-image&quot;&gt;
@@ -128,11 +128,11 @@ StudentizedResiduals
 
 &lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Conjuring the Regression Spell 🧙‍♂️ We shall begin by fitting a magical regression model using the extraordinary capabilities of R. Imagine you have already crafted a wondrous fitted regression model object called &apos;model&apos; (you can choose a name that resonates with your inner sorcerer).&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex3.sas&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex3.r&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt;  Unveiling the Residuals&apos; Enigma 💫 Prepare to witness the astounding power of studentized residuals as we unveil their hidden secrets! With a simple wave of the R wand, we can showcase these mysterious values. It&apos;s like unraveling the pages of an ancient scroll containing the numerical wonders of our data. Are you prepared for this revelation?&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex4.sas&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex4.4&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;Behold! The R sorcery will manifest the studentized residuals before your eyes, illuminating the path to enlightenment. You will be greeted with a mesmerizing display, similar to this:&lt;/p&gt;
 
@@ -149,7 +149,7 @@ StudentizedResiduals
 
 &lt;p&gt;Remember to replace &apos;model&apos; with the actual name of your fitted regression model object. With the powerful combination of R and the guidance of studentized residuals, you can delve deeper into the mysteries of your regression models and embark on thrilling data adventures! May your journey be filled with wonder and discovery! 🌟🔮&lt;/p&gt;
 
-&lt;p&gt;Unveiling the Mystical Limitations of Studentized Residuals - When the Magic Fades Away&lt;/p&gt;
+&lt;h3 id=&quot;unveiling-the-mystical-limitations-of-studentized-residuals---when-the-magic-fades-away&quot;&gt;Unveiling the Mystical Limitations of Studentized Residuals - When the Magic Fades Away&lt;/h3&gt;
 
 &lt;p&gt;Listen closely, young apprentices, as we delve into the secrets of studentized residuals and uncover the circumstances where their enchanting powers may wane. Remember, even the mightiest spells have their limits!&lt;/p&gt;
 
