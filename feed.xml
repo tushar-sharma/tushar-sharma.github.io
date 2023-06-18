@@ -11952,7 +11952,7 @@ R&lt;sub&gt;i&lt;/sub&gt; = L&lt;sub&gt;i - 1&lt;/sub&gt; &amp;oplus; f(R&lt;sub
 &lt;img alt=&quot;usb Modem image&quot; src=&quot;https://i.imgur.com/y6rUbX9.jpg&quot; /&gt;
 &lt;/center&gt;
 
-&lt;p&gt;I&apos;ll be using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wvdial&lt;/code&gt; to configure the internet. It&apos;s likely that your system will have the package pre installed. Otherwise you can manyally download it from &lt;a href=&quot;http://packages.debian.org/squeeze/wvdial&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I&apos;ll be using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wvdial&lt;/code&gt; to configure the internet. It&apos;s likely that your system will have the package pre installed. Otherwise you can manually download it from &lt;a href=&quot;http://packages.debian.org/squeeze/wvdial&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Now connect the modem and run lsusb to see the modem connected to the usb:&lt;/p&gt;
 
