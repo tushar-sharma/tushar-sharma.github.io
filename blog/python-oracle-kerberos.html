@@ -359,7 +359,55 @@ wkt username.keytab
 
 <p>As if <a href="https://github.com/krbcontext/python-krbcontext/issues/33#issuecomment-569232653">now</a>, <code class="language-plaintext highlighter-rouge">krbcontext</code> library only supports Linux like OS. So we can use Docker to run the python script on windows</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=Dockerfile"></script> <button class="copy-button">Copy</button> </div>
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> alpine:3.7</span>
+
+<span class="c">### 2. config</span>
+<span class="k">ENV</span><span class="s"> WORKPATH /usr/src/project</span>
+<span class="k">WORKDIR</span><span class="s"> $WORKPATH</span>
+
+<span class="c">### 3. setup for the $WORKPATH</span>
+<span class="k">COPY</span><span class="s"> ./krbOracle.py $WORKPATH</span>
+<span class="k">COPY</span><span class="s"> ./SharmaT1.keytab $WORKPATH</span>
+<span class="k">COPY</span><span class="s"> ./ojdbc6.jar $WORKPATH</span>
+<span class="k">COPY</span><span class="s"> ./config.json $WORKPATH</span>
+
+<span class="c">### 4. installing req libraries</span>
+<span class="k">RUN </span>apk add <span class="nt">--update</span> <span class="se">\
+</span>    python3 <span class="se">\
+</span>    python3-dev <span class="se">\
+</span>    py-pip <span class="se">\
+</span>    build-base <span class="se">\
+</span>    openjdk8-jre <span class="se">\
+</span>  <span class="o">&amp;&amp;</span> pip3 <span class="nb">install</span> <span class="nt">--upgrade</span> pip setuptools <span class="se">\
+</span>  <span class="o">&amp;&amp;</span> <span class="nb">rm</span> <span class="nt">-rf</span> /var/cache/apk/<span class="k">*</span>
+
+<span class="k">RUN </span>apk <span class="nt">--update</span> add krb5-dev
+
+<span class="c">### uncomment these lines if kerberos complain following error</span>
+<span class="c">### error :  Clock skew too great</span>
+<span class="c">### set the timezone accordingly</span>
+<span class="c"># ENV TZ=America/New_York</span>
+<span class="c"># RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;&amp; echo $TZ &gt; /etc/timezone</span>
+
+<span class="c">### 5. set the environment</span>
+<span class="k">ENV</span><span class="s"> JAVA_HOME /usr/lib/jvm/java-1.8-openjdk</span>
+<span class="k">ENV</span><span class="s"> PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin</span>
+<span class="k">ENV</span><span class="s"> LD_LIBRARY_PATH /usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/default-jvm/lib/amd64/jli</span>
+
+<span class="c">### 6. exports</span>
+<span class="k">RUN </span><span class="nb">export </span>JAVA_HOME
+<span class="k">RUN </span><span class="nb">export </span>PATH
+<span class="k">RUN </span><span class="nb">export </span>LD_LIBRARY_PATH
+
+<span class="c">### 7. install python libraries</span>
+<span class="k">RUN </span>pip3 <span class="nb">install </span>jaydebeapi
+<span class="k">RUN </span>pip3 <span class="nb">install </span>krbcontext
+<span class="k">RUN </span>pip3 <span class="nb">install </span><span class="nv">JPype1</span><span class="o">==</span>0.6.3 <span class="nt">--force-reinstall</span>
+
+<span class="c">### 8. run the script</span>
+<span class="k">ADD</span><span class="s"> krbOracle.py /</span>
+<span class="k">CMD</span><span class="s"> [ "python3", "./krbOracle.py"]</span>
+</code></pre></div></div>
 
 <p>You can build &amp; run the dockerfile</p>
 
