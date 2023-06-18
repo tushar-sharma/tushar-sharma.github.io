@@ -68,15 +68,24 @@ Let's create a config.json used for our script & replace $HOSTNAME, $PORT_NUMBER
 
 Let's create a simple python script to parse config file
 
-<script src="https://gist.github.com/tushar-sharma/4564f7c5ece9d5acaf439fe3142a8937.js"></script>
-
+{% template customCode.html %}
+---
+id: b2bdbbdd2648c4737a2f37630e5026ee
+file: ex1.py
+---
+{% endtemplate %}
 
 ### Establishing a connection
 
-Let us try to connect to oracle database using jaydebeapi library.
+Let us try to connect to oracle database using `jaydebeapi` library.
 
 
-<script src="https://gist.github.com/tushar-sharma/bb2209809bacbb3f8c6edd909722cbf1.js"></script>
+{% template customCode.html %}
+---
+id: b2bdbbdd2648c4737a2f37630e5026ee
+file: ex2.py
+---
+{% endtemplate %}
 
 
 However while running the script, you will get the following error
@@ -85,7 +94,7 @@ However while running the script, you will get the following error
 ORA-01017: invalid username/password; logon denied
 ```
 
-###= Connecting to Oracle with Kerberos
+### Connecting to Oracle with Kerberos
 
 To connect to Oracle database using kerberos, we need the following
 
@@ -124,62 +133,23 @@ if you got no errors till these steps, you can copy the file to your test folder
 
 ### Full code to use kerberos
 
-<script src="https://gist.github.com/tushar-sharma/c95a7f50b88fb14ff1bfaec306b99e20.js"></script>
+{% template customCode.html %}
+---
+id: b2bdbbdd2648c4737a2f37630e5026ee
+file: full_code.py
+---
+{% endtemplate %}
 
 ### Using Docker
 
 As if [now](https://github.com/krbcontext/python-krbcontext/issues/33#issuecomment-569232653), `krbcontext` library only supports Linux like OS. So we can use Docker to run the python script on windows
 
-```dockerfile
-FROM alpine:3.7
-
-### 2. config
-ENV WORKPATH /usr/src/project
-WORKDIR $WORKPATH
-
-### 3. setup for the $WORKPATH
-COPY ./krbOracle.py $WORKPATH
-COPY ./SharmaT1.keytab $WORKPATH
-COPY ./ojdbc6.jar $WORKPATH
-COPY ./config.json $WORKPATH
-
-### 4. installing req libraries
-RUN apk add --update \
-    python3 \
-    python3-dev \
-    py-pip \
-    build-base \
-    openjdk8-jre \
-  && pip3 install --upgrade pip setuptools \
-  && rm -rf /var/cache/apk/*
-
-RUN apk --update add krb5-dev
-
-### uncomment these lines if kerberos complain following error
-### error :  Clock skew too great
-### set the timezone accordingly
-# ENV TZ=America/New_York
-# RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-### 5. set the environment
-ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
-ENV PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
-ENV LD_LIBRARY_PATH /usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/default-jvm/lib/amd64/jli
-
-### 6. exports
-RUN export JAVA_HOME
-RUN export PATH
-RUN export LD_LIBRARY_PATH
-
-### 7. install python libraries
-RUN pip3 install jaydebeapi
-RUN pip3 install krbcontext
-RUN pip3 install JPype1==0.6.3 --force-reinstall
-
-### 8. run the script
-ADD krbOracle.py /
-CMD [ "python3", "./krbOracle.py"]
-```
+{% template customCode.html %}
+---
+id: b2bdbbdd2648c4737a2f37630e5026ee
+file: Dockerfile
+---
+{% endtemplate %}
 
 You can build & run the dockerfile
 
