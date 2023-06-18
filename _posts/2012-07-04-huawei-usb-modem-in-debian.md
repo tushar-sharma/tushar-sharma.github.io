@@ -24,7 +24,7 @@ The Debian claimed to be the Universal Operating System. Impressed by the stabil
 <img alt="usb Modem image" src="https://i.imgur.com/y6rUbX9.jpg" >
 </center>
 
-I'll be using `wvdial` to configure the internet. It's likely that your system will have the package pre installed. Otherwise you can manyally download it from <a href="http://packages.debian.org/squeeze/wvdial" target="_blank">here</a>. 
+I'll be using `wvdial` to configure the internet. It's likely that your system will have the package pre installed. Otherwise you can manually download it from <a href="http://packages.debian.org/squeeze/wvdial" target="_blank">here</a>. 
 
 Now connect the modem and run lsusb to see the modem connected to the usb:
 
