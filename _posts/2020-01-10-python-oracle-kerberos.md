@@ -144,12 +144,56 @@ file: full_code.py
 
 As if [now](https://github.com/krbcontext/python-krbcontext/issues/33#issuecomment-569232653), `krbcontext` library only supports Linux like OS. So we can use Docker to run the python script on windows
 
-{% template customCode.html %}
----
-id: b2bdbbdd2648c4737a2f37630e5026ee
-file: Dockerfile
----
-{% endtemplate %}
+```dockerfile
+FROM alpine:3.7
+
+### 2. config
+ENV WORKPATH /usr/src/project
+WORKDIR $WORKPATH
+
+### 3. setup for the $WORKPATH
+COPY ./krbOracle.py $WORKPATH
+COPY ./SharmaT1.keytab $WORKPATH
+COPY ./ojdbc6.jar $WORKPATH
+COPY ./config.json $WORKPATH
+
+### 4. installing req libraries
+RUN apk add --update \
+    python3 \
+    python3-dev \
+    py-pip \
+    build-base \
+    openjdk8-jre \
+  && pip3 install --upgrade pip setuptools \
+  && rm -rf /var/cache/apk/*
+
+RUN apk --update add krb5-dev
+
+### uncomment these lines if kerberos complain following error
+### error :  Clock skew too great
+### set the timezone accordingly
+# ENV TZ=America/New_York
+# RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+### 5. set the environment
+ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
+ENV PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
+ENV LD_LIBRARY_PATH /usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/default-jvm/lib/amd64/jli
+
+### 6. exports
+RUN export JAVA_HOME
+RUN export PATH
+RUN export LD_LIBRARY_PATH
+
+### 7. install python libraries
+RUN pip3 install jaydebeapi
+RUN pip3 install krbcontext
+RUN pip3 install JPype1==0.6.3 --force-reinstall
+
+### 8. run the script
+ADD krbOracle.py /
+CMD [ "python3", "./krbOracle.py"]
+```
 
 You can build & run the dockerfile
 
