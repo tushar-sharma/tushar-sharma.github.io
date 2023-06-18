@@ -7476,20 +7476,20 @@ libraryDependencies +&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; “au.com.by
 
 &lt;p&gt;Let&apos;s create a simple python script to parse config file&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/tushar-sharma/4564f7c5ece9d5acaf439fe3142a8937.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=ex1.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;establishing-a-connection&quot;&gt;Establishing a connection&lt;/h3&gt;
 
-&lt;p&gt;Let us try to connect to oracle database using jaydebeapi library.&lt;/p&gt;
+&lt;p&gt;Let us try to connect to oracle database using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jaydebeapi&lt;/code&gt; library.&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/tushar-sharma/bb2209809bacbb3f8c6edd909722cbf1.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=ex2.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;However while running the script, you will get the following error&lt;/p&gt;
 
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ORA-01017: invalid username/password&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; logon denied
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;###= Connecting to Oracle with Kerberos&lt;/p&gt;
+&lt;h3 id=&quot;connecting-to-oracle-with-kerberos&quot;&gt;Connecting to Oracle with Kerberos&lt;/h3&gt;
 
 &lt;p&gt;To connect to Oracle database using kerberos, we need the following&lt;/p&gt;
 
@@ -7527,61 +7527,13 @@ wkt username.keytab
 
 &lt;h3 id=&quot;full-code-to-use-kerberos&quot;&gt;Full code to use kerberos&lt;/h3&gt;
 
-&lt;script src=&quot;https://gist.github.com/tushar-sharma/c95a7f50b88fb14ff1bfaec306b99e20.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=full_code.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;using-docker&quot;&gt;Using Docker&lt;/h3&gt;
 
 &lt;p&gt;As if &lt;a href=&quot;https://github.com/krbcontext/python-krbcontext/issues/33#issuecomment-569232653&quot;&gt;now&lt;/a&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;krbcontext&lt;/code&gt; library only supports Linux like OS. So we can use Docker to run the python script on windows&lt;/p&gt;
 
-&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; alpine:3.7&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;### 2. config&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; WORKPATH /usr/src/project&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;WORKDIR&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; $WORKPATH&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;### 3. setup for the $WORKPATH&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; ./krbOracle.py $WORKPATH&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; ./SharmaT1.keytab $WORKPATH&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; ./ojdbc6.jar $WORKPATH&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; ./config.json $WORKPATH&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;### 4. installing req libraries&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;apk add &lt;span class=&quot;nt&quot;&gt;--update&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    python3 &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    python3-dev &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    py-pip &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    build-base &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;    openjdk8-jre &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; pip3 &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--upgrade&lt;/span&gt; pip setuptools &lt;span class=&quot;se&quot;&gt;\
-&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; /var/cache/apk/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;apk &lt;span class=&quot;nt&quot;&gt;--update&lt;/span&gt; add krb5-dev
-
-&lt;span class=&quot;c&quot;&gt;### uncomment these lines if kerberos complain following error&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;### error :  Clock skew too great&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;### set the timezone accordingly&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# ENV TZ=America/New_York&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;amp;&amp;amp; echo $TZ &amp;gt; /etc/timezone&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;### 5. set the environment&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; JAVA_HOME /usr/lib/jvm/java-1.8-openjdk&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; LD_LIBRARY_PATH /usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/default-jvm/lib/amd64/jli&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;### 6. exports&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;JAVA_HOME
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;PATH
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;LD_LIBRARY_PATH
-
-&lt;span class=&quot;c&quot;&gt;### 7. install python libraries&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jaydebeapi
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;krbcontext
-&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;JPype1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;0.6.3 &lt;span class=&quot;nt&quot;&gt;--force-reinstall&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;### 8. run the script&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ADD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; krbOracle.py /&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [ &quot;python3&quot;, &quot;./krbOracle.py&quot;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=Dockerfile&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;You can build &amp;amp; run the dockerfile&lt;/p&gt;
 
