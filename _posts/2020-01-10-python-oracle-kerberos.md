@@ -10,7 +10,8 @@ tags:
   - oracle
   - database
 name: kerberos-oracle
-thumb: 'https://d22e4d61ky6061.cloudfront.net/sites/default/files/Kerberos_1.png'
+thumb: https://d22e4d61ky6061.cloudfront.net/sites/default/files/Kerberos_1.png
+img: https://d22e4d61ky6061.cloudfront.net/sites/default/files/Kerberos_1.png
 published: true
 ---
 
