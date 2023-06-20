@@ -12,6 +12,8 @@ add:
 build:
 	JEKYLL_ENV=production bundle exec jekyll build
 	$(MAKE) copy
+clean branch:
+	git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -D
 copy:
 	rm -fr tag
 	cp -r _site/tag .
