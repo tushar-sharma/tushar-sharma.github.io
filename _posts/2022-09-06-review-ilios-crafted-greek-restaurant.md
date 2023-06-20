@@ -2,7 +2,7 @@
 layout: post
 title: Review Ilios Crafted Greek Restaurant
 tags:
-  - north carolina
+  - charlotte
   - food
 thumb: https://unsplash.com/photos/pUCck5WyUH4/download?w=800"
 summary: Review Ilios Crafted Greek Restaurant
