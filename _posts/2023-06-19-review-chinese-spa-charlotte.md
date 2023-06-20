@@ -16,6 +16,8 @@ As I arrived in Charlotte after a long journey from Durham, NC, my body was in d
 
 As I arrived in Charlotte after a long journey from Durham, NC, my body was in dire need of respite. Hours spent in the car had left me fatigued and achy, prompting me to seek solace at a spa. With hopes of rejuvenation, I eagerly indulged in a massage session, eager to alleviate the tension that had accumulated during my travels.
 
+I went for spa at Chinese spa so I thought I reviewed it. The spa is located at 5309 E Independence Blvd Ste, G, Charlotte, NC 28212.
+
 The experience at Chinese Spa can be best described as okish. While the massage certainly provided some relief, it fell slightly short of my expectations. The therapist's technique was decent, effectively targeting the areas of discomfort and providing a moderate level of relaxation. I was disappointed that they don't have hot stones. However, there was a certain lack of finesse that I probably wont repeat.
 
 
