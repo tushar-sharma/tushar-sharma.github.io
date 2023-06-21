@@ -21,7 +21,13 @@ I went for spa at Chinese spa so I thought I reviewed it. The spa is located at 
 The experience at Chinese Spa can be best described as okish. While the massage certainly provided some relief, it fell slightly short of my expectations. The therapist's technique was decent, effectively targeting the areas of discomfort and providing a moderate level of relaxation. I was disappointed that they don't have hot stones. However, there was a certain lack of finesse that I probably wont repeat.
 
 
-Rating: ⭐⭐⭐☆☆ (3/5 stars)
+<div>
+Rating: {% for i in (1..3) %}
+  <span class="fa fa-star checked"></span>
+{% endfor %}
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+</div><br>
 
 <iframe
   style="position: relative;  width: 100%;"
