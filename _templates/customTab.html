@@ -1,11 +1,15 @@
 <div class="tab-container">
   <ul>
-    <li class="tab {{ template.language }}"><a href="#{{ template.language }}">{{ template.language }}</a></li>
+    {% for item in template.files %}
+      <li class="tab {{ item.language }}"><a href="#{{ item.language }}">{{ item.language }}</a></li>
+    {% endfor %}
   </ul>
 
-<div class="codeSample {{ template.language }} code-block">
-  <script src="https://gist.github.com/tushar-sharma/{{ template.id }}.js?file={{ template.file }}"></script>
-  <button class="copy-button">Copy</button>
-</div>
+  {% for item in template.files %}
+    <div class=" code-block codeSample {{ item.language }}" id="{{ item.language }}">
+      <script src="https://gist.github.com/tushar-sharma/{{ template.id }}.js?file={{ item.file }}"></script>
+      <button class="copy-button">Copy</button>
+    </div>
+  {% endfor %}
 
 </div>
