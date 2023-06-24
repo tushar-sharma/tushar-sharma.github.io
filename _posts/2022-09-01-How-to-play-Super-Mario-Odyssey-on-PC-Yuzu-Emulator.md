@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to play Super Mario Odyssey on PC (Yuzu Emulator)
+category: blog
 tags:
   - game
 thumb: https://unsplash.com/photos/_R95VMWyn7A/download?w=800"
@@ -16,12 +17,10 @@ Super Mario Odyssey is a 2017 video game has been voted as the one of the best M
 
 We need to download [yuzu](https://yuzu-emu.org/downloads/) emulator. Follow the instructions to install it on Windows. First download and install Microsoft Visual C++ redistributable. Next download `yuzu_install.exe`.
 
-<blockquote class="attention">
-If you get error, yuzu encryption keys are missing. <br><br>
-Fix: Download the <a href="https://raw.githubusercontent.com/icosaswitch/Yuzu-NAND/master/prod.keys">prod</a> file.<br><br> 
-On Yuzu Windows -> Go to File -> Open Yuzu folder <br><br>
-Save the file under `keys` folder.
-</blockquote><br>
+> If you get error, yuzu encryption keys are missing. <br><br>
+> Fix: Download the <a href="https://raw.githubusercontent.com/icosaswitch/Yuzu-NAND/master/prod.keys">prod</a> file.<br><br> 
+> On Yuzu Windows -> Go to File -> Open Yuzu folder <br><br>
+> Save the file under `keys` folder.
 
 
 I am assuming that you already download the game in a NSP package. Open `yuzu` emulator  and click on plus sign (Add new Game directory). Navigate to the game directory. 

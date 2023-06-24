@@ -27,10 +27,11 @@ First, let us review our use case. Our lambda function will read from table from
 
 ## Using boto3 resource
 
-<br>
-
-<script src="https://gist.github.com/tushar-sharma/71d7b985435d2719d73dbf927e2c966a.js"></script>
-
+{% template  customCode.html %}
+---
+id: 71d7b985435d2719d73dbf927e2c966a
+---
+{% endtemplate %}
 
 We can create a payload to test our lambda function 
 
@@ -54,17 +55,28 @@ TypeError: Object of type Decimal is not JSON serializable.
 
 We can use a JSONEncoder class to update our lamda function. 
 
-
-<script src="https://gist.github.com/tushar-sharma/4d5c8a61cae95198e6033789e5dd604d.js"></script>
+{% template  customCode.html %}
+---
+id: 4d5c8a61cae95198e6033789e5dd604d
+---
+{% endtemplate %}
 
 ## Using boto3 client
 
 Another way to export data is to use boto3 client. It's a low level AWS services. 
 
-<script src="https://gist.github.com/tushar-sharma/2d8898fd4ae7cd629657d9a241c7d829.js"></script>
 
+{% template  customCode.html %}
+---
+id: 2d8898fd4ae7cd629657d9a241c7d829
+---
+{% endtemplate %}
 
 
 However boto3 client will generates dynamodb JSON. A simple python script to convert it back to normalized JSON using `dynamodb_json` library.
 
-<script src="https://gist.github.com/tushar-sharma/e7ee63cd8dcdbd2767ac34846762b72e.js"></script>
+{% template  customCode.html %}
+---
+id: e7ee63cd8dcdbd2767ac34846762b72e
+---
+{% endtemplate %}
