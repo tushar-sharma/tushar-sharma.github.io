@@ -61,7 +61,13 @@ So we have to modify are keys as `{user1}.key1` and `{user1}.key2`. Here hash sl
 
 We could simply use a python library [redis](https://github.com/redis/redis-py), if you dont want to modify your keys
 
-<script src="https://gist.github.com/tushar-sharma/8873da1fe181ff7624be0d544310c560.js?file=conn.py"></script>
+{% template  customCode.html %}
+---
+id: 8873da1fe181ff7624be0d544310c560
+file: conn.py
+---
+{% endtemplate %}
+
 
 To execute commands that are currently [supported](https://github.com/redis/redis-py/blob/master/redis/commands/cluster.py)
 
