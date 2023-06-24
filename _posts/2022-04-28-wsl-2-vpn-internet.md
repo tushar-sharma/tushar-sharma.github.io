@@ -65,9 +65,7 @@ $ sudo bash -c 'echo "search .com" >> /etc/resolv.conf'
 $ sudo chattr +i /etc/resolv.conf 
 ```
 
-<blockquote class="attention" markdown="1">
-Remove any nameserver that starts with 172.* or 192.
-</blockquote>
+> Remove any nameserver that starts with 172.* or 192.
 
 ### Step 4 
 
