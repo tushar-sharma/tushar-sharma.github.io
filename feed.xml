@@ -2335,7 +2335,7 @@ Queued
 
 &lt;p&gt;We could simply use a python library &lt;a href=&quot;https://github.com/redis/redis-py&quot;&gt;redis&lt;/a&gt;, if you dont want to modify your keys&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/tushar-sharma/8873da1fe181ff7624be0d544310c560.js?file=conn.py&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/8873da1fe181ff7624be0d544310c560.js?file=conn.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;To execute commands that are currently &lt;a href=&quot;https://github.com/redis/redis-py/blob/master/redis/commands/cluster.py&quot;&gt;supported&lt;/a&gt;&lt;/p&gt;
 
@@ -2566,13 +2566,12 @@ getting tweets before 83587008219447295
 
 &lt;p&gt;We need to download &lt;a href=&quot;https://yuzu-emu.org/downloads/&quot;&gt;yuzu&lt;/a&gt; emulator. Follow the instructions to install it on Windows. First download and install Microsoft Visual C++ redistributable. Next download &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yuzu_install.exe&lt;/code&gt;.&lt;/p&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
-If you get error, yuzu encryption keys are missing. &lt;br /&gt;&lt;br /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;If you get error, yuzu encryption keys are missing. &lt;br /&gt;&lt;br /&gt;
 Fix: Download the &lt;a href=&quot;https://raw.githubusercontent.com/icosaswitch/Yuzu-NAND/master/prod.keys&quot;&gt;prod&lt;/a&gt; file.&lt;br /&gt;&lt;br /&gt; 
 On Yuzu Windows -&amp;gt; Go to File -&amp;gt; Open Yuzu folder &lt;br /&gt;&lt;br /&gt;
-Save the file under `keys` folder.
+Save the file under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;keys&lt;/code&gt; folder.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;I am assuming that you already download the game in a NSP package. Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yuzu&lt;/code&gt; emulator  and click on plus sign (Add new Game directory). Navigate to the game directory.&lt;/p&gt;
 
@@ -2599,8 +2598,8 @@ Save the file under `keys` folder.
 &lt;/table&gt;
 </description>
           <pubDate>2022-09-01T00:00:00-04:00</pubDate>
-          <link>https://randomwits.com/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator</link>
-          <guid isPermaLink="true">https://randomwits.com/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator</guid>
+          <link>https://randomwits.com/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator</guid>
         </item>
       
     
@@ -3968,7 +3967,7 @@ git pull origin master
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chattr +i /etc/resolv.conf 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
+&lt;blockquote&gt;
   &lt;p&gt;Remove any nameserver that starts with 172.* or 192.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -7089,9 +7088,7 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
 
 &lt;h2 id=&quot;using-boto3-resource&quot;&gt;Using boto3 resource&lt;/h2&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/tushar-sharma/71d7b985435d2719d73dbf927e2c966a.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/71d7b985435d2719d73dbf927e2c966a.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;We can create a payload to test our lambda function&lt;/p&gt;
 
@@ -7110,18 +7107,17 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
 
 &lt;p&gt;We can use a JSONEncoder class to update our lamda function.&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/tushar-sharma/4d5c8a61cae95198e6033789e5dd604d.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4d5c8a61cae95198e6033789e5dd604d.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;h2 id=&quot;using-boto3-client&quot;&gt;Using boto3 client&lt;/h2&gt;
 
 &lt;p&gt;Another way to export data is to use boto3 client. It&apos;s a low level AWS services.&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/tushar-sharma/2d8898fd4ae7cd629657d9a241c7d829.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/2d8898fd4ae7cd629657d9a241c7d829.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;However boto3 client will generates dynamodb JSON. A simple python script to convert it back to normalized JSON using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dynamodb_json&lt;/code&gt; library.&lt;/p&gt;
 
-&lt;script src=&quot;https://gist.github.com/tushar-sharma/e7ee63cd8dcdbd2767ac34846762b72e.js&quot;&gt;&lt;/script&gt;
-
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/e7ee63cd8dcdbd2767ac34846762b72e.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 </description>
           <pubDate>2020-10-23T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/export-dynamodb-s3</link>
