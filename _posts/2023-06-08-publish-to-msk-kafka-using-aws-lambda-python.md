@@ -9,6 +9,7 @@ tags:
 - aws
 - python
 mutipleTab: true
+category: blog
 ---
 
 Apache Kafka is a distributed streaming platform designed to handle real-time data streams efficiently. It uses a publish-subscribe model, where producers publish messages to topics, and consumers subscribe to those topics to receive the messages. Amazon MSK simplifies the deployment and management of Kafka clusters on AWS, providing a fully managed and scalable solution. You can use AWS lambda in python to publish to MSK topic.<!-- truncate_here -->

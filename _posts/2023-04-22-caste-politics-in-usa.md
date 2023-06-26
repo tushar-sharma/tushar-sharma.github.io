@@ -7,6 +7,7 @@ thumb: https://1.bp.blogspot.com/-8xjbEtzKsmQ/WH-uusA9jfI/AAAAAAAAsXs/wGl-MNoBax
 author: Tushar Sharma
 tags:
   - caste
+category: blog
 ---
 
 I grew up in India and am still unable to grasp the complexity of the caste system. While there is still caste discrimination plaguing India, the country with a population of over a billion people, diverse languages, cultures, and levels of prosperity does not have a consensus on caste. However, it is unfortunate that a white professor in the US, who has lived all her life outside India, seems to claim expert knowledge on caste.<!-- truncate_here -->

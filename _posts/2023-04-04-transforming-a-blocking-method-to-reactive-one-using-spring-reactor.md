@@ -9,6 +9,7 @@ mutipleTab: true
 tags:
  - reactive programming
  - java
+ category: blog
 ---
 
 Reactive programming is becoming increasingly popular in modern software development, and the use of reactive frameworks like Spring Reactor and RxJava is becoming more common. Reactive programming is an event-driven approach to programming that emphasizes asynchronous data streams, non-blocking I/O, and functional programming.<!-- truncate_here -->

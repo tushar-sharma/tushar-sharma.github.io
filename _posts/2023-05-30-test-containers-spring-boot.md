@@ -8,6 +8,7 @@ author: Tushar Sharma
 tags:
   - java
   - spring boot
+category: blog
 ---
 
 Testcontainers is a Java library that provides lightweight, disposable containers for running integration tests. It's a useful tool for testing applications that rely on external dependencies like databases or message queues.<!-- truncate_here -->

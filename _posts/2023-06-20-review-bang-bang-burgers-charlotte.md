@@ -4,10 +4,11 @@ date: 2023-06-20
 title: Review Bang Bang Burgers in Charlotte
 image: https://s3-media0.fl.yelpcdn.com/bphoto/nwDdDNh14ArwATQ6tNdRpw/l.jpg
 thumb: https://s3-media0.fl.yelpcdn.com/bphoto/nwDdDNh14ArwATQ6tNdRpw/l.jpg
-author: ;
+author: Tushar Sharma
 tags: 
  - charlotte
  - food
+ category: blog
 ---
 
 I went for lunch with my team at Bang Bang Burgers in Charlotte. It was a bit of a walk from the office, but luckily the weather wasn't hot, so it was a pleasant stroll to the restaurant.<!-- truncate_here -->
