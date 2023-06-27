@@ -9,7 +9,7 @@ tags:
  - sonarqube
  - python
  - aws
- category: blog
+category: blog
 ---
 
 In AWS Lambda functions, it's common to use temporary directories for tasks like generating temporary files, storing intermediate data, or processing data securely. However, improperly managing publicly writable directories can lead to security vulnerabilities. In this article, we'll explore how to address this issue and ensure safe usage of temporary directories in AWS Lambda functions using Python's tempfile module.<!-- truncate_here -->

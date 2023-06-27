@@ -9,7 +9,7 @@ mutipleTab: true
 tags: 
  - java
  - javascript
- categoy: blog
+category: blog
 ---
 
 In this [kata](https://www.codewars.com/kata/57873ab5e55533a2890000c7/), you are given a string that represents a time in the format "HH:MM:SS". The string may be in the wrong format, or it may be missing some characters. Your task is to correct the string so that it represents a valid time.<!-- truncate_here -->
