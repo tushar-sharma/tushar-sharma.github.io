@@ -22,6 +22,7 @@ title: $post_variable
 image: https://unsplash.com/photos/$image_variable/download?w=800
 thumb: https://unsplash.com/photos/$image_variable/download?w=800
 author: $author_variable;
+category: blog
 ---
 
 .<!-- truncate_here -->
