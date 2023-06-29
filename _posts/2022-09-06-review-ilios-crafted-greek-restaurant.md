@@ -8,6 +8,7 @@ thumb: https://unsplash.com/photos/pUCck5WyUH4/download?w=800"
 summary: Review Ilios Crafted Greek Restaurant
 image: https://unsplash.com/photos/pUCck5WyUH4/download?w=800"
 author: Tushar Sharma
+category: blog
 ---
 
 I went for lunch at Ilios Crafted Greek Restaurant so I thought I reviewed it.<!-- truncate_here -->

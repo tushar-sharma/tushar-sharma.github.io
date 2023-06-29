@@ -9,6 +9,7 @@ tags:
 - java
 author: Tushar Sharma
 mutipleTab: true
+category: blog
 ---
 
 It's a easy problem on Graph in leetcode to find if a path exist in graph.<!-- truncate_here -->
@@ -46,10 +47,9 @@ To solve this problem, you can use a graph traversal algorithm, such as breadth-
 
 ### Solution
 
-{% template customTab.html %}
+{% template customCode.html %}
 ---
 id: 7b99a20c4164f2ef510729218f0cef1b
 file: ValidPath.java
-language: Java
 ---
 {% endtemplate %}

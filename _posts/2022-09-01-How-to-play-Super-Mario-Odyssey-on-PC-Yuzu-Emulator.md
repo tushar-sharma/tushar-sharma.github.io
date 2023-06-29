@@ -23,7 +23,7 @@ We need to download [yuzu](https://yuzu-emu.org/downloads/) emulator. Follow the
 > Save the file under `keys` folder.
 
 
-I am assuming that you already download the game in a NSP package. Open `yuzu` emulator  and click on plus sign (Add new Game directory). Navigate to the game directory. 
+You can download the NSP package from [here](https://drive.google.com/file/d/12jCjC6v0zPPZ_fHFnB0-Mq3dKGQm0tBp/view?usp=sharing). Open `yuzu` emulator  and click on plus sign (Add new Game directory). Navigate to the game directory. 
 
 | <img align="center"  loading="lazy" src="{{ root_url }}/img/yuzu1.png"  />|
 

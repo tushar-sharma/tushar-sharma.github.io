@@ -8,6 +8,7 @@ author: Tushar Sharma
 tags:
   - hamster
   - pet
+category: blog
 ---
 
 I have a Syrian hamster called Mustard. In less than a week he has learned to climb stairs.<!-- truncate_here -->

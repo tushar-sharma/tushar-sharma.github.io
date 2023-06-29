@@ -7,6 +7,7 @@ thumb: https://mymodernmet.com/wp/wp-content/uploads/2017/04/kintsugi-update-2.j
 author: Tushar Sharma
 tags: 
   - letters
+category: blog
 ---
 
 How often do you bump into a painter? "So what do you do?", I asked. "Well I am a painter", she said. "Like a real painter?". "Yes".<!-- truncate_here -->

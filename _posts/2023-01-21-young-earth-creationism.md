@@ -8,6 +8,7 @@ author: Tushar
 tags: 
   - science
   - religion
+category: blog
 ---
 
 I stumbled upon a youtube <a href="https://www.youtube.com/watch?v=82j1IqwA6P0">video</a> of Georgia Purdom, an American biologist and young Earth creationist. As a biologist, how can one reject the theory of evolution, the very foundation of the field?<!-- truncate_here -->

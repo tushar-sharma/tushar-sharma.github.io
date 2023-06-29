@@ -8,6 +8,7 @@ tags:
 image: https://unsplash.com/photos/flha0KwRrRc/download?w=800
 thumb: https://unsplash.com/photos/flha0KwRrRc/download?w=800
 author: Tushar Sharma
+category: blog
 ---
 
 Most of the terminal I have used in Windows were at best lackluster. However wsl2 is a game changer which makes your Windows OS Unixy.<!-- truncate_here -->

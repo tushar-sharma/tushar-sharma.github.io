@@ -9,6 +9,7 @@ tags:
   - travel
 author: Tushar Sharma
 published: true
+category: blog
 ---
 
 Thailand has got a bad reputation for its seedy masssage parlors and go go bars. However it's a beautiful country with plenty of toursit attractions. Below is my snapshot of my travel to Thailand.<!-- truncate_here -->

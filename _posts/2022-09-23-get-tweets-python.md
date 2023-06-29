@@ -7,6 +7,7 @@ thumb: https://unsplash.com/photos/DGyL_hXFPV4/download?w=800"
 summary: Extract data from Twitter using Python
 image: https://unsplash.com/photos/DGyL_hXFPV4/download?w=800"
 author: Tushar Sharma
+category: blog
 ---
 
 In this tutorial, we will extract tweets from Twitter using python.<!-- truncate_here -->
