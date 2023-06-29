@@ -12,6 +12,7 @@ summary: How to fix WSL2 internet connection while on VPN
 image: 'https://unsplash.com/photos/0Fws0jyIt9s/download?w=800'
 author: Tushar Sharma
 published: true
+category: blog
 ---
 
 Windows Subsystem for Linux (WSL2) provides native Linux environment for Windows. It's great alternative to `cygwin` which can't run native Linux apps. However WSL2 doesn't have out-of-box connectivity with internet once you connect with `vpn`.<!-- truncate_here -->

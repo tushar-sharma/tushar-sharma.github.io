@@ -8,6 +8,7 @@ tags:
 image: https://unsplash.com/photos/4EajIuUxgAQ/download?w=800
 thumb: https://unsplash.com/photos/4EajIuUxgAQ/download?w=800
 author: Tushar Sharma
+category: blog
 ---
 
 Performing inner join on pandas dataframe is straightforward. However I wanted to override values from the right dataframe.<!-- truncate_here -->

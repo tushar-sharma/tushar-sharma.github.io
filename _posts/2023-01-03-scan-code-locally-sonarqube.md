@@ -8,6 +8,7 @@ tags:
 - docker
 - sonarqube
 author: Tushar Sharma
+category: blog
 ---
 
 

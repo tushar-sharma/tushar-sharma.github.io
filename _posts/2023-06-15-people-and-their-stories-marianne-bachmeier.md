@@ -7,6 +7,7 @@ thumb: https://i.ytimg.com/vi/YnaOvWeiBQw/maxresdefault.jpg
 author: Tushar Sharma
 tags:
   - people
+category: blog
 ---
 
 In the annals of crime and justice, there are stories that captivate our attention due to their sheer complexity and the ethical dilemmas they present. One such story is that of Marianne Bachmeier, a woman whose actions shocked the world. On January 6, 1981, in a courtroom in Germany, Bachmeier took the life of the man accused of sexually abusing and murdering her daughter. Was her act justified?<!-- truncate_here -->
