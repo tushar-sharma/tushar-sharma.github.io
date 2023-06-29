@@ -26,6 +26,7 @@ There were restrictions on carrying a bag or luggage, except for the necessary d
 
 ### Documents required
 
+
 1. Valid passport
 
 2. Appointment confirmation
@@ -36,7 +37,7 @@ There were restrictions on carrying a bag or luggage, except for the necessary d
 
 5. Employement verification letter
 
-6. `I-797 Approval Notice` copy (Not original).
+6. `I-797 Approval Notice` copy (Original I-797 is not deposited but carry it for authentication.).
 
 ### Passport delivery
 
