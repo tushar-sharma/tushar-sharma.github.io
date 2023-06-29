@@ -55,8 +55,8 @@
 <meta property="og:title" content="Recursively sort a array">
 <meta name="author" content="Tushar Sharma">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="Welcome to Randomwits, my digital nest.">
-<meta property="og:description" content="Welcome to Randomwits, my digital nest.">
+<meta name="description" content="I recently came across a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort. Tags: algorithm java code">
+<meta property="og:description" content="I recently came across a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort. Tags: algorithm java code">
 <link rel="canonical" href="https://randomwits.com/blog/recursive-sort">
 <meta property="og:url" content="https://randomwits.com/blog/recursive-sort">
 <meta property="og:site_name" content="RandomWits">
@@ -65,7 +65,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Recursively sort a array">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2019-09-07T00:00:00-04:00","datePublished":"2019-09-07T00:00:00-04:00","description":"Welcome to Randomwits, my digital nest.","headline":"Recursively sort a array","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/recursive-sort"},"url":"https://randomwits.com/blog/recursive-sort"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2019-09-07T00:00:00-04:00","datePublished":"2019-09-07T00:00:00-04:00","description":"I recently came across a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort. Tags: algorithm java code","headline":"Recursively sort a array","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/recursive-sort"},"url":"https://randomwits.com/blog/recursive-sort"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -255,139 +255,34 @@ header li {
 
 
   
-<p>Tags:  <a class="mytag" href="/tag/programming" title='View posts tagged with "programming"'>programming</a>    <a class="mytag" href="/tag/interview" title='View posts tagged with "interview"'>interview</a>    <a class="mytag" href="/tag/merge%20sort" title='View posts tagged with "merge sort"'>merge sort</a>    <a class="mytag" href="/tag/sort" title='View posts tagged with "sort"'>sort</a>    <a class="mytag" href="/tag/java" title='View posts tagged with "java"'>java</a>    <a class="mytag" href="/tag/code" title='View posts tagged with "code"'>code</a>    </p>
+<p>Tags:  <a class="mytag" href="/tag/algorithm" title='View posts tagged with "algorithm"'>algorithm</a>    <a class="mytag" href="/tag/java" title='View posts tagged with "java"'>java</a>    <a class="mytag" href="/tag/code" title='View posts tagged with "code"'>code</a>    </p>
 
 <p>I recently came across a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort.
 </p>
 
-<h2 id="problem-statement">Problem statement</h2>
+<h3 id="create-an-array-that-needs-to-be-sorted">Create an array that needs to be sorted</h3>
 
-<p>Given an input array, produce the following output array</p>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec1.java"></script> <button class="copy-button">Copy</button> </div>
 
-<p>eg,</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>input array = [10 8 1 7 1 2]
-
-output array = [2 8 10 1 1 7]
-</code></pre></div></div>
-
-<h2 id="lets-use-a-simple-template-class">let's use a simple template class</h2>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RecSortEven</span> <span class="o">{</span>
-     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-     <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<h2 id="create-a-array-that-needs-to-be-sorted">create a Array that needs to be sorted</h2>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RecSortEven</span> <span class="o">{</span>
-     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-         <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">testInput</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">));</span>
-
-         <span class="cm">/*sort the array recursively*/</span>
-         <span class="n">cusSort</span><span class="o">(</span><span class="n">testInput</span><span class="o">);</span>
-
-     <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<h2 id="merge-sort">Merge sort</h2>
+<h3 id="merge-sort">Merge sort</h3>
 
 <p>If you are unfamiliary with merge sort, we just break the array into sub parts and later combine them based on our criteria. Here, we will maintiain left and right pointer which keeps track of the end of the array. Initially, the left is equal to 0 and right equals to the last element of the array.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
- * calls merge sort
- @param : testInput ArrayList
- */</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">cusSort</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">testInput</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">mergeSort</span><span class="o">(</span><span class="n">testInput</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">testInput</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
-<span class="o">}</span>
-
-</code></pre></div></div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec2.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>We calculate a mid point and recursively call the method twice one half of array and another half of array. lastly we add the crux of our logic in merge sort.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* recursively sort the array
- * @param testInput: ArrayList
- * @param left integer
- * @param right integer
-*/</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">testInput</span><span class="o">,</span> <span class="kt">int</span> <span class="n">left</span><span class="o">,</span> <span class="kt">int</span> <span class="n">right</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">//TODO: remember the base condition</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">left</span> <span class="o">&gt;=</span> <span class="n">right</span><span class="o">)</span> <span class="o">{</span>
-          <span class="k">return</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">left</span> <span class="o">+</span> <span class="o">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
-
-
-    <span class="n">mergeSort</span><span class="o">(</span><span class="n">testInput</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">mid</span> <span class="o">);</span>
-
-    <span class="n">mergeSort</span><span class="o">(</span><span class="n">testInput</span><span class="o">,</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">right</span><span class="o">);</span>
-
-    <span class="n">merge</span><span class="o">(</span><span class="n">testInput</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">mid</span><span class="o">,</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">right</span><span class="o">);</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec3.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>As per our requirement we need to sort even arrays before odd arrays, so we need to have a method to check that.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cm">/*
-     * checks if a number is even or not
-     * @param number integer
-     */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isEven</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span> <span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-</code></pre></div></div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec4.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>Lastly we need to write our merge method.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cm">/*combine arrays */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">merge</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">testInput</span><span class="o">,</span> <span class="kt">int</span> <span class="n">left1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">right1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">left2</span><span class="o">,</span> <span class="kt">int</span> <span class="n">right2</span><span class="o">)</span> <span class="o">{</span>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec5.java"></script> <button class="copy-button">Copy</button> </div>
 
-        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">auxInput</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
-
-        <span class="kt">int</span> <span class="n">iter1</span> <span class="o">=</span> <span class="n">left1</span><span class="o">,</span> <span class="n">iter2</span> <span class="o">=</span> <span class="n">left2</span><span class="o">;</span>
-
-        <span class="k">while</span> <span class="o">(</span><span class="n">iter1</span> <span class="o">&lt;=</span> <span class="n">right1</span> <span class="o">&amp;&amp;</span> <span class="n">iter2</span> <span class="o">&lt;=</span> <span class="n">right2</span><span class="o">)</span> <span class="o">{</span>
-
-            <span class="k">if</span> <span class="o">(</span><span class="n">isEven</span><span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter1</span><span class="o">))</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">isEven</span><span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter2</span><span class="o">)))</span> <span class="o">{</span>
-                <span class="n">auxInput</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter1</span><span class="o">++));</span>
-            <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">isEven</span><span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter2</span><span class="o">))</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">isEven</span><span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter1</span><span class="o">)))</span> <span class="o">{</span>
-                <span class="n">auxInput</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter2</span><span class="o">++));</span>
-            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-
-                <span class="k">if</span> <span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter1</span><span class="o">)</span> <span class="o">&lt;</span> <span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter2</span><span class="o">))</span> <span class="o">{</span>
-                    <span class="n">auxInput</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter1</span><span class="o">++));</span>
-                <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-                    <span class="n">auxInput</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter2</span><span class="o">++));</span>
-                <span class="o">}</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-
-        <span class="k">while</span> <span class="o">(</span><span class="n">iter1</span> <span class="o">&lt;=</span> <span class="n">right1</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">auxInput</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter1</span><span class="o">++));</span>
-        <span class="o">}</span>
-
-        <span class="k">while</span> <span class="o">(</span><span class="n">iter2</span> <span class="o">&lt;=</span> <span class="n">right2</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">auxInput</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">testInput</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">iter2</span><span class="o">++));</span>
-        <span class="o">}</span>
-
-        <span class="c1">//copy the content</span>
-        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">left1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">right2</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-            <span class="n">testInput</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">auxInput</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
-        <span class="o">}</span>
-
-    <span class="o">}</span>
-
-</code></pre></div></div>
-
-<h2 id="what-is-the-complexity-of-the-program">What is the complexity of the program</h2>
+<h3 id="what-is-the-complexity-of-the-program">What is the complexity of the program</h3>
 
 <p>It's a recursive algorithm , so we need a recurrence</p>
 
