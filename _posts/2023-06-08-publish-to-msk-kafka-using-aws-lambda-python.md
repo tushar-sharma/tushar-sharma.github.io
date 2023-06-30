@@ -21,11 +21,12 @@ Apache Kafka is a distributed streaming platform designed to handle real-time da
 
 First we need to build a `lambda layer` which will install dependencies for the lambda function:
 
-{% template customTab.html %}
+{% template  customTab.html %}
 ---
 id: 056166b6da844fcbe20271310e890ec0
-file: layer.sh
-language: Bash
+files:
+  - file: layer.sh
+    language: Bash
 ---
 {% endtemplate %}
 
@@ -54,11 +55,12 @@ We will write a `producer` to publish to MSK topic. Environment variables passed
 
 4. **sasl password**. Secret credential associated with a SASL username. 
 
-{% template customTab.html %}
+{% template  customTab.html %}
 ---
 id: 056166b6da844fcbe20271310e890ec0
-file: kafka_producer.py
-language: Python
+files:
+  - file: kafka_producer.py
+    language: Python
 ---
 {% endtemplate %}
 
@@ -66,10 +68,11 @@ language: Python
 
 Similarly, we can write a `consumer` to subscribe to the topic: 
 
-{% template customTab.html %}
+{% template  customTab.html %}
 ---
 id: 056166b6da844fcbe20271310e890ec0
-file: kafka_consumer.py
-language: Python
+files:
+  - file: kafka_consumer.py
+    language: Python
 ---
 {% endtemplate %}
