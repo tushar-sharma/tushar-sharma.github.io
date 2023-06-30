@@ -7,6 +7,67 @@
     
       
         <item>
+          <title>House Robber Leetcode Solution</title>
+          <description>&lt;p&gt;You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/javascript&quot; title=&quot;View posts tagged with &amp;quot;javascript&amp;quot;&quot;&gt;javascript&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/rust&quot; title=&quot;View posts tagged with &amp;quot;rust&amp;quot;&quot;&gt;rust&lt;/a&gt;    &lt;/p&gt;
+
+&lt;h3 id=&quot;problem-statement&quot;&gt;Problem Statement&lt;/h3&gt;
+
+&lt;p&gt;You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.&lt;/p&gt;
+
+&lt;p&gt;Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.&lt;/p&gt;
+
+&lt;h3 id=&quot;explanation&quot;&gt;Explanation&lt;/h3&gt;
+
+&lt;p&gt;We can use dynamic programming to solve this problem. We will create an auxiliary array &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dp&lt;/code&gt; which will store the largest money for each iteration. Eg for input : &lt;strong&gt;[2 , 1, 1, 2, 9]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ith value&lt;/th&gt;
+      &lt;th&gt;dp array&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;i = 0&lt;/td&gt;
+      &lt;td&gt;[2, 0, 0, 0, 0]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;i = 1&lt;/td&gt;
+      &lt;td&gt;[2, 2, 0, 0, 0]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;i = 2&lt;/td&gt;
+      &lt;td&gt;[2, 2, 3, 0, 0]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;i = 3&lt;/td&gt;
+      &lt;td&gt;[2, 2, 3, 4, 0]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;i = 4&lt;/td&gt;
+      &lt;td&gt;[2, 2, 3, 4, 12]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;solution&quot;&gt;Solution&lt;/h3&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab java&quot;&gt;&lt;a href=&quot;#java&quot;&gt;java&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;tab python&quot;&gt;&lt;a href=&quot;#python&quot;&gt;python&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;tab javascript&quot;&gt;&lt;a href=&quot;#javascript&quot;&gt;javascript&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;tab rust&quot;&gt;&lt;a href=&quot;#rust&quot;&gt;rust&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot; code-block codeSample java&quot; id=&quot;java&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/c7e93c597941b726616dc6a74c274dde.js?file=HouseRobber.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;div class=&quot; code-block codeSample python&quot; id=&quot;python&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/c7e93c597941b726616dc6a74c274dde.js?file=house_rubber.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;div class=&quot; code-block codeSample javascript&quot; id=&quot;javascript&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/c7e93c597941b726616dc6a74c274dde.js?file=houseRobber.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;div class=&quot; code-block codeSample rust&quot; id=&quot;rust&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/c7e93c597941b726616dc6a74c274dde.js?file=houseRobber.rs&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;time-complexity-is&quot;&gt;Time complexity is&lt;/h3&gt;
+
+&lt;p&gt;$ O(n) $&lt;/p&gt;
+</description>
+          <pubDate>2023-06-30T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/house-robber-leetcode</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/house-robber-leetcode</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Review Bang Bang Burgers in Charlotte</title>
           <description>&lt;p&gt;I went for lunch with my team at Bang Bang Burgers in Charlotte. It was a bit of a walk from the office, but luckily the weather wasn&apos;t hot, so it was a pleasant stroll to the restaurant.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/charlotte&quot; title=&quot;View posts tagged with &amp;quot;charlotte&amp;quot;&quot;&gt;charlotte&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/food&quot; title=&quot;View posts tagged with &amp;quot;food&amp;quot;&quot;&gt;food&lt;/a&gt;    &lt;/p&gt;
@@ -293,7 +354,7 @@ Remember, young apprentices, while studentized residuals possess great power, th
 
 &lt;p&gt;First we need to build a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda layer&lt;/code&gt; which will install dependencies for the lambda function:&lt;/p&gt;
 
-&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;/ul&gt; &lt;/div&gt;
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab Bash&quot;&gt;&lt;a href=&quot;#Bash&quot;&gt;Bash&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot; code-block codeSample Bash&quot; id=&quot;Bash&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=layer.sh&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Open the AWS Management Console and navigate to the AWS Lambda service.&lt;/p&gt;
 
@@ -326,13 +387,13 @@ Remember, young apprentices, while studentized residuals possess great power, th
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;/ul&gt; &lt;/div&gt;
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab Python&quot;&gt;&lt;a href=&quot;#Python&quot;&gt;Python&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot; code-block codeSample Python&quot; id=&quot;Python&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=kafka_producer.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;kafka-consumer&quot;&gt;Kafka Consumer&lt;/h3&gt;
 
 &lt;p&gt;Similarly, we can write a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;consumer&lt;/code&gt; to subscribe to the topic:&lt;/p&gt;
 
-&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;/ul&gt; &lt;/div&gt;
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab Python&quot;&gt;&lt;a href=&quot;#Python&quot;&gt;Python&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot; code-block codeSample Python&quot; id=&quot;Python&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/056166b6da844fcbe20271310e890ec0.js?file=kafka_consumer.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2023-06-08T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/publish-to-msk-kafka-using-aws-lambda-python</link>
@@ -883,7 +944,7 @@ TOTAL                                                     11      0   100%
         <item>
           <title>US H1b visa dropbox experience in India</title>
           <description>&lt;p&gt;As a non-immigrant worker in the United States, navigating the visa stamping process can be a cumbersome task. However, with proper planning and understanding of the process, the journey can be much smoother.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/visa&quot; title=&quot;View posts tagged with &amp;quot;visa&amp;quot;&quot;&gt;visa&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/usa&quot; title=&quot;View posts tagged with &amp;quot;usa&amp;quot;&quot;&gt;usa&lt;/a&gt;    &lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/visa&quot; title=&quot;View posts tagged with &amp;quot;visa&amp;quot;&quot;&gt;visa&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/usa&quot; title=&quot;View posts tagged with &amp;quot;usa&amp;quot;&quot;&gt;usa&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/india&quot; title=&quot;View posts tagged with &amp;quot;india&amp;quot;&quot;&gt;india&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;As a non-immigrant worker in the United States, navigating the visa stamping process can be a cumbersome task. However, with proper planning and understanding of the process, the journey can be much smoother.&lt;/p&gt;
 
@@ -912,7 +973,7 @@ TOTAL                                                     11      0   100%
     &lt;p&gt;Employement verification letter&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;I-797 Approval Notice&lt;/code&gt; copy (Not original).&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;I-797 Approval Notice&lt;/code&gt; copy (Original I-797 is not deposited but carry it for authentication.).&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -10015,21 +10076,9 @@ en_US ISO-8859-1
       
         <item>
           <title>Quickly sort large file in linear time</title>
-          <description>&lt;p&gt;Any deterministic general sorting algorithm  has average case time complexity &lt;strong&gt;O(nlogn)&lt;/strong&gt; . However, certain sorting algorithm can run faster in &lt;strong&gt;O(n)&lt;/strong&gt; but with limitation. Instead of comparision-based sort, each element is looked individually by its value. Radix sort is one fine example of integer sorting.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+          <description>&lt;p&gt;Any deterministic general sorting algorithm  has average case time complexity $ O(nlogn) $ . However, certain sorting algorithm can run faster in $ O(n) $ but with limitation. Instead of comparision-based sort, each element is looked individually by its value. Radix sort is one fine example of integer sorting.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/lsd&quot; title=&quot;View posts tagged with &amp;quot;lsd&amp;quot;&quot;&gt;lsd&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/radix sort&quot; title=&quot;View posts tagged with &amp;quot;radix sort&amp;quot;&quot;&gt;radix sort&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sorting&quot; title=&quot;View posts tagged with &amp;quot;sorting&amp;quot;&quot;&gt;sorting&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/cplusplus&quot; title=&quot;View posts tagged with &amp;quot;cplusplus&amp;quot;&quot;&gt;cplusplus&lt;/a&gt;    &lt;/p&gt;
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ [&quot;@L&quot;,&quot;@L&quot;], [&quot;\\(&quot;,&quot;\\)&quot;] ],
-      processEscapes: true
-    }
-});
-
-&lt;/script&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/shCore.js&quot;&gt;&lt;/script&gt;
 
@@ -10039,7 +10088,7 @@ MathJax.Hub.Config({
 
 &lt;script type=&quot;text/javascript&quot;&gt;SyntaxHighlighter.all();&lt;/script&gt;
 
-&lt;p&gt;Any deterministic general sorting algorithm  has average case time complexity $$ \Omega(n\log{}n) $$ . However, certain sorting algorithm can run faster in $$ O(n) $$ but with limitation&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Instead of comparision-based sort, each element is looked individually by its value. Radix sort is one fine example of integer sorting.&lt;/p&gt;
+&lt;p&gt;Any deterministic general sorting algorithm has an average-case time complexity of Ω(nlogn). However, certain sorting algorithms can run faster in O(n) but with limitations&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Instead of comparison-based sorting, each element is examined individually based on its value. Radix sort is a prime example of an integer sorting algorithm.&lt;/p&gt;
 
 &lt;center&gt;
 &lt;img src=&quot;/img/alphabet.jpg&quot; /&gt;
