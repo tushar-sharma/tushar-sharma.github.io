@@ -53,7 +53,11 @@ Go to [Poet.so](https://poet.so/) to download the screenshot.
 
 ### Gists
 
-add this in markdown
+There are two ways to add Gist muli tab or single tab
+
+#### Multitab
+
+Enable multitab in post
 
 ```yaml
 mutipleTab: true
@@ -61,23 +65,34 @@ mutipleTab: true
 
 and this code
 
-```html
-<div class="tab-container">
-  <ul>
-    <li class="tab Java1"><a href="#Java1">Java</a></li>
-    <li class="tab Python1"><a href="#Python1">Python</a></li>
-  </ul>
-
-   <div class="codeSample Java1" id="Java1">
-      <script src="https://gist.github.com/tushar-sharma/sample.js?file=ValidPath.java"></script>
-   </div>
-
-   <div class="codeSample Python" id="Python1">
-      <script src="https://gist.github.com/tushar-sharma/sample.js?file=ValidPath.java"></script>
-   </div>
-
-</div>
+```md
+{% template  customTab.html %}
+---
+id: <ID>
+files:
+  - file: File1.java
+    language: java
+  - file: File1.js
+    language: javascript
+---
+{% endtemplate %}
 ```
+
+#### Single Tab
+
+Just add this code
+
+```
+{% template  customCode.html %}
+---
+id: <ID>
+file: file1.py
+---
+{% endtemplate %}
+
+```
+
+
 
 ### Build this website
 
