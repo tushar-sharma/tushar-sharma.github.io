@@ -52,6 +52,7 @@ define `KafkaMessage.groovy` as
 ```groovy
 class KafkaMessage implements Serializable {
     def status
+    List<Stage> stages = []
     
     KafkaMessage(def status){
         this.status = status
@@ -98,3 +99,8 @@ class Events {
        }
 }
 ```
+
+ The @NonCPS annotation is specific to Jenkins' implementation of Groovy, and it is used to mark a method as "non-continuable-permanent-space" (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.
+In Jenkins, pipeline scripts are executed in a "sandbox" environment that restricts certain operations for security reasons. For example, the sandbox does not allow methods that use reflection, file I/O, or network I/O.
+The @NonCPS annotation is used to mark methods that perform operations that are not allowed in the sandbox. In this case, the getStage method performs operations that access the raw build data, which is not allowed in the sandbox. By marking the method with @NonCPS, Jenkins allows it to be executed outside the sandbox, which allows it to access the raw build data.
+To summarize, the @NonCPS annotation is specific to Jenkins' implementation of Groovy, and it is used to mark methods that perform operations that are not allowed in the sandbox.
