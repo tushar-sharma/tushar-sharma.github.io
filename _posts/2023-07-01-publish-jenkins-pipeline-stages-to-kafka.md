@@ -45,7 +45,9 @@ pipeline {
 }
 ```
 
-We can define model for `KafkaMessage` as 
+### Create our model
+
+define `KafkaMessage.groovy` as
 
 ```groovy
 class KafkaMessage implements Serializable {
@@ -53,6 +55,16 @@ class KafkaMessage implements Serializable {
     
     KafkaMessage(def status){
         this.status = status
+    }
+    
+    static class Stage {
+        def startTime
+        def endTime
+        
+        Stage(def startTime, def endTime){
+            this.startTime = startTime
+            this.endTime = endTime
+        }
     }
 }
 ```
