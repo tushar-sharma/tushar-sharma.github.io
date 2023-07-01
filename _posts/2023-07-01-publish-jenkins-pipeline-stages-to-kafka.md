@@ -44,3 +44,15 @@ pipeline {
     }
 }
 ```
+
+We can define model for `KafkaMessage` as 
+
+```groovy
+class KafkaMessage implements Serializable {
+    def status
+    
+    KafkaMessage(def status){
+        this.status = status
+    }
+}
+```
