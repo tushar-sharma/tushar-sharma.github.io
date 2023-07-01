@@ -56,3 +56,33 @@ class KafkaMessage implements Serializable {
     }
 }
 ```
+
+Now we can define `Events` class. 
+
+```groovy
+class Events {
+
+    def steps
+    
+    Events(steps) {
+        this.steps = steps
+    }
+    
+    def publish(KafkaMessage kafkaMessage, def currentBuild, def testMode){
+
+        def saslUsername = ""
+        def saslPassword = ""
+        def kafkaBrokers = ""
+
+        def payload = JsonOutput.toJson(kafkaMessage)
+
+        def output = this.steps.sh(script: """
+                                 set -x
+                                 aws --version
+                                 aws sts get-caller-identity
+                                 echo '${payload}' | kafkacat -b ${kafkaBrokers} -t ${kafkaTopic} -P -l -J -z 'gzip' -X security.protocol=SASL_SSL -X sasl.mechanism=SCRAM-SHA-512 -X sasl.username=${saslUsername} -X sasl.password=${saslPassword}
+                                 """, returnStdout: true).trim()
+
+       }
+}
+```
