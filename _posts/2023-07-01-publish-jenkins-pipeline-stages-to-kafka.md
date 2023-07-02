@@ -65,7 +65,7 @@ file: Events.groovy
 ---
 {% endtemplate %}
 
-### Understanding the @NonCPS Notation
+### Understanding the NonCPS Notation
 
 The `@NonCPS` annotation is specific to Jenkins' implementation of Groovy, and it is used to mark a method as "non-continuable-permanent-space" (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.
 
