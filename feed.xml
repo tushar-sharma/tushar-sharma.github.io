@@ -41,7 +41,7 @@
 
 &lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Events.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
-&lt;h3 id=&quot;understanding-the-noncps-notation&quot;&gt;Understanding the @NonCPS Notation&lt;/h3&gt;
+&lt;h3 id=&quot;understanding-the-noncps-notation&quot;&gt;Understanding the NonCPS Notation&lt;/h3&gt;
 
 &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NonCPS&lt;/code&gt; annotation is specific to Jenkins&apos; implementation of Groovy, and it is used to mark a method as &quot;non-continuable-permanent-space&quot; (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.&lt;/p&gt;
 
