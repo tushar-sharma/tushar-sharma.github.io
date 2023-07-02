@@ -269,21 +269,27 @@ header li {
 
 <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=pipeline.groovy"></script> <button class="copy-button">Copy</button> </div>
 
-<h3 id="creatng-our-model">Creatng our model</h3>
+<h3 id="modeling-pipeline-stages">Modeling Pipeline Stages</h3>
 
-<p>First we will model our data that we need to publish. <code class="language-plaintext highlighter-rouge">Stage</code> class will contain the information about the stages.</p>
+<p>We'll define a Stage class that contains information about each stage in the pipeline. This class will help us organize and structure the data before sending it to Kafka.</p>
 
 <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Stage.groovy"></script> <button class="copy-button">Copy</button> </div>
 
-<p><code class="language-plaintext highlighter-rouge">KafkaMessage</code> is the actual <code class="language-plaintext highlighter-rouge">json</code> that is sent to the kafka topic.</p>
+<p>The <code class="language-plaintext highlighter-rouge">Stage</code> class will provide the necessary structure to capture relevant information about each stage in the pipeline.</p>
+
+<h3 id="creating-kafka-messages">Creating Kafka Messages</h3>
+
+<p>In order to publish data to the Kafka topic, we need to define the structure of the messages we will be sending. We'll create a <code class="language-plaintext highlighter-rouge">KafkaMessage</code> class that represents the JSON format of the data to be published.</p>
 
 <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=KafkaMessage.groovy"></script> <button class="copy-button">Copy</button> </div>
+
+<h3 id="implementing-the-events-class">Implementing the Events Class</h3>
 
 <p>Lastly we will define our <code class="language-plaintext highlighter-rouge">Events</code> class. We will use <code class="language-plaintext highlighter-rouge">PipelineNodeGraphVisitor</code> to intrinsically get each nodes information. Also we use <code class="language-plaintext highlighter-rouge">kafkacat</code> utility to publish to kafka topic.</p>
 
 <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Events.groovy"></script> <button class="copy-button">Copy</button> </div>
 
-<h3 id="whats-noncps-notation">What's NonCPS notation</h3>
+<h3 id="understanding-the-noncps-notation">Understanding the <a href="https://github.com/NonCPS" class="user-mention">@NonCPS</a> Notation</h3>
 
 <p>The <code class="language-plaintext highlighter-rouge">@NonCPS</code> annotation is specific to Jenkins' implementation of Groovy, and it is used to mark a method as "non-continuable-permanent-space" (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.</p>
 

@@ -21,21 +21,27 @@
 
 &lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=pipeline.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
-&lt;h3 id=&quot;creatng-our-model&quot;&gt;Creatng our model&lt;/h3&gt;
+&lt;h3 id=&quot;modeling-pipeline-stages&quot;&gt;Modeling Pipeline Stages&lt;/h3&gt;
 
-&lt;p&gt;First we will model our data that we need to publish. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Stage&lt;/code&gt; class will contain the information about the stages.&lt;/p&gt;
+&lt;p&gt;We&apos;ll define a Stage class that contains information about each stage in the pipeline. This class will help us organize and structure the data before sending it to Kafka.&lt;/p&gt;
 
 &lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Stage.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KafkaMessage&lt;/code&gt; is the actual &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt; that is sent to the kafka topic.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Stage&lt;/code&gt; class will provide the necessary structure to capture relevant information about each stage in the pipeline.&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-kafka-messages&quot;&gt;Creating Kafka Messages&lt;/h3&gt;
+
+&lt;p&gt;In order to publish data to the Kafka topic, we need to define the structure of the messages we will be sending. We&apos;ll create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KafkaMessage&lt;/code&gt; class that represents the JSON format of the data to be published.&lt;/p&gt;
 
 &lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=KafkaMessage.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;implementing-the-events-class&quot;&gt;Implementing the Events Class&lt;/h3&gt;
 
 &lt;p&gt;Lastly we will define our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Events&lt;/code&gt; class. We will use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PipelineNodeGraphVisitor&lt;/code&gt; to intrinsically get each nodes information. Also we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kafkacat&lt;/code&gt; utility to publish to kafka topic.&lt;/p&gt;
 
 &lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Events.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
-&lt;h3 id=&quot;whats-noncps-notation&quot;&gt;What&apos;s NonCPS notation&lt;/h3&gt;
+&lt;h3 id=&quot;understanding-the-noncps-notation&quot;&gt;Understanding the @NonCPS Notation&lt;/h3&gt;
 
 &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NonCPS&lt;/code&gt; annotation is specific to Jenkins&apos; implementation of Groovy, and it is used to mark a method as &quot;non-continuable-permanent-space&quot; (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.&lt;/p&gt;
 
