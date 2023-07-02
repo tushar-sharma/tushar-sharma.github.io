@@ -30,9 +30,9 @@ file: pipeline.groovy
 ---
 {% endtemplate %}
 
-### Creatng our model
+### Modeling Pipeline Stages
 
-First we will model our data that we need to publish. `Stage` class will contain the information about the stages.
+We'll define a Stage class that contains information about each stage in the pipeline. This class will help us organize and structure the data before sending it to Kafka.
 
 {% template customCode.html %}
 ---
@@ -41,7 +41,11 @@ file: Stage.groovy
 ---
 {% endtemplate %}
 
-`KafkaMessage` is the actual `json` that is sent to the kafka topic.
+The `Stage` class will provide the necessary structure to capture relevant information about each stage in the pipeline.
+
+### Creating Kafka Messages
+
+In order to publish data to the Kafka topic, we need to define the structure of the messages we will be sending. We'll create a `KafkaMessage` class that represents the JSON format of the data to be published.
 
 {% template customCode.html %}
 ---
@@ -49,6 +53,8 @@ id: 7bb66bc02307332cd4f7009daa0a1594
 file: KafkaMessage.groovy
 ---
 {% endtemplate %}
+
+### Implementing the Events Class
 
 Lastly we will define our `Events` class. We will use `PipelineNodeGraphVisitor` to intrinsically get each nodes information. Also we use `kafkacat` utility to publish to kafka topic.
 
@@ -59,7 +65,7 @@ file: Events.groovy
 ---
 {% endtemplate %}
 
-### What's NonCPS notation
+### Understanding the @NonCPS Notation
 
 The `@NonCPS` annotation is specific to Jenkins' implementation of Groovy, and it is used to mark a method as "non-continuable-permanent-space" (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.
 
