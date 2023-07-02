@@ -7,6 +7,52 @@
     
       
         <item>
+          <title>Publish Jenkins Pipeline&apos;s Stages to Kafka topic</title>
+          <description>&lt;p&gt;Jenkins is a popular automation tool used for continuous integration and continuous delivery (CI/CD) processes. Kafka, on the other hand, is a distributed event streaming platform capable of handling large volumes of real-time data. By combining the power of Jenkins and Kafka, we can effectively publish pipeline information to a Kafka topic.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/groovy&quot; title=&quot;View posts tagged with &amp;quot;groovy&amp;quot;&quot;&gt;groovy&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/jenkins&quot; title=&quot;View posts tagged with &amp;quot;jenkins&amp;quot;&quot;&gt;jenkins&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/kafka&quot; title=&quot;View posts tagged with &amp;quot;kafka&amp;quot;&quot;&gt;kafka&lt;/a&gt;    &lt;/p&gt;
+
+&lt;p&gt;Jenkins is a popular automation tool used for continuous integration and continuous delivery (CI/CD) processes. Kafka, on the other hand, is a distributed event streaming platform capable of handling large volumes of real-time data. By combining the power of Jenkins and Kafka, we can effectively publish pipeline information to a Kafka topic.&lt;/p&gt;
+
+&lt;p&gt;Lets say we have a jenkins pipeline. Post success or failure of the pipeline, we want to publish this information to kakfa topic. We would also want to log start and end time of each stages. We want to do this without modifiying our pipeline script.&lt;/p&gt;
+
+&lt;p&gt;We can create an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Event&lt;/code&gt; class with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;publish&lt;/code&gt; method that will push to kafka.&lt;/p&gt;
+
+&lt;h3 id=&quot;pipeline-script&quot;&gt;Pipeline Script&lt;/h3&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=pipeline.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;creatng-our-model&quot;&gt;Creatng our model&lt;/h3&gt;
+
+&lt;p&gt;First we will model our data that we need to publish. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Stage&lt;/code&gt; class will contain the information about the stages.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Stage.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KafkaMessage&lt;/code&gt; is the actual &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt; that is sent to the kafka topic.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=KafkaMessage.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;Lastly we will define our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Events&lt;/code&gt; class. We will use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PipelineNodeGraphVisitor&lt;/code&gt; to intrinsically get each nodes information. Also we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kafkacat&lt;/code&gt; utility to publish to kafka topic.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Events.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;whats-noncps-notation&quot;&gt;What&apos;s NonCPS notation&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NonCPS&lt;/code&gt; annotation is specific to Jenkins&apos; implementation of Groovy, and it is used to mark a method as &quot;non-continuable-permanent-space&quot; (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.&lt;/p&gt;
+
+&lt;p&gt;In Jenkins, pipeline scripts are executed in a &quot;sandbox&quot; environment that restricts certain operations for security reasons. For example, the sandbox does not allow methods that use reflection, file I/O, or network I/O.&lt;/p&gt;
+
+&lt;p&gt;The @NonCPS annotation is used to mark methods that perform operations that are not allowed in the sandbox. In this case, the getStage method performs operations that access the raw build data, which is not allowed in the sandbox. By marking the method with @NonCPS, Jenkins allows it to be executed outside the sandbox, which allows it to access the raw build data.&lt;/p&gt;
+
+&lt;p&gt;To summarize, the @NonCPS annotation is specific to Jenkins&apos; implementation of Groovy, and it is used to mark methods that perform operations that are not allowed in the sandbox.&lt;/p&gt;
+</description>
+          <pubDate>2023-07-01T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/publish-jenkins-pipeline-stages-to-kafka</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/publish-jenkins-pipeline-stages-to-kafka</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>House Robber Leetcode Solution</title>
           <description>&lt;p&gt;You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/javascript&quot; title=&quot;View posts tagged with &amp;quot;javascript&amp;quot;&quot;&gt;javascript&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/rust&quot; title=&quot;View posts tagged with &amp;quot;rust&amp;quot;&quot;&gt;rust&lt;/a&gt;    &lt;/p&gt;
