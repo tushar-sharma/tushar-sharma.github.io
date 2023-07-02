@@ -1,106 +1,70 @@
 ---
-published: false
+layout: post
+title: Publish Jenkins Pipeline's Stages to Kafka topic
+tags:
+  - groovy
+  - jenkins
+  - kafka
+image: /img/girl-question.jpeg
+thumb: /img/girl-question.jpeg
+author: Tushar Sharma
+category: blog
 ---
-## Publish Jenkinks Pipeline Stages to Kafka
 
-Let say you have jenkins pipeline as
+Jenkins is a popular automation tool used for continuous integration and continuous delivery (CI/CD) processes. Kafka, on the other hand, is a distributed event streaming platform capable of handling large volumes of real-time data. By combining the power of Jenkins and Kafka, we can effectively publish pipeline information to a Kafka topic.<!-- truncate_here -->
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-```groovy
-pipeline {
-  agent{node{label "TestNode"}}
-  
-  stages {
-  
-    stage("Intitialize") {
-    }
-  
-    stage("Unit tests") {
-    }
-  
-    stage("Deploy"){
-    }
-  }
-}
-```
+Jenkins is a popular automation tool used for continuous integration and continuous delivery (CI/CD) processes. Kafka, on the other hand, is a distributed event streaming platform capable of handling large volumes of real-time data. By combining the power of Jenkins and Kafka, we can effectively publish pipeline information to a Kafka topic.
 
-You can add a post action to push to kafka 
+Lets say we have a jenkins pipeline. Post success or failure of the pipeline, we want to publish this information to kakfa topic. We would also want to log start and end time of each stages. We want to do this without modifiying our pipeline script.
+
+We can create an `Event` class with `publish` method that will push to kafka.
+
+### Pipeline Script
 
 
-```groovy
-pipeline {
-    stages {
-    }
-    post {
-      success {
-        script {
-          new Events(this).publish(new KafkaMessage("success");
-        }
-      }
-      failure {
-        script {
-            new Events(this).publish(new KafkaMessage("failure");
-        }
-      }
-    }
-}
-```
+{% template customCode.html %}
+---
+id: 7bb66bc02307332cd4f7009daa0a1594
+file: pipeline.groovy
+---
+{% endtemplate %}
 
-### Create our model
+### Creatng our model
 
-define `KafkaMessage.groovy` as
+First we will model our data that we need to publish. `Stage` class will contain the information about the stages.
 
-```groovy
-class KafkaMessage implements Serializable {
-    def status
-    List<Stage> stages = []
-    
-    KafkaMessage(def status){
-        this.status = status
-    }
-    
-    static class Stage {
-        def startTime
-        def endTime
-        
-        Stage(def startTime, def endTime){
-            this.startTime = startTime
-            this.endTime = endTime
-        }
-    }
-}
-```
+{% template customCode.html %}
+---
+id: 7bb66bc02307332cd4f7009daa0a1594
+file: Stage.groovy
+---
+{% endtemplate %}
 
-Now we can define `Events` class. 
+`KafkaMessage` is the actual `json` that is sent to the kafka topic.
 
-```groovy
-class Events {
+{% template customCode.html %}
+---
+id: 7bb66bc02307332cd4f7009daa0a1594
+file: KafkaMessage.groovy
+---
+{% endtemplate %}
 
-    def steps
-    
-    Events(steps) {
-        this.steps = steps
-    }
-    
-    def publish(KafkaMessage kafkaMessage, def currentBuild, def testMode){
+Lastly we will define our `Events` class. We will use `PipelineNodeGraphVisitor` to intrinsically get each nodes information. Also we use `kafkacat` utility to publish to kafka topic.
 
-        def saslUsername = ""
-        def saslPassword = ""
-        def kafkaBrokers = ""
+{% template customCode.html %}
+---
+id: 7bb66bc02307332cd4f7009daa0a1594
+file: Events.groovy
+---
+{% endtemplate %}
 
-        def payload = JsonOutput.toJson(kafkaMessage)
+### What's NonCPS notation
 
-        def output = this.steps.sh(script: """
-                                 set -x
-                                 aws --version
-                                 aws sts get-caller-identity
-                                 echo '${payload}' | kafkacat -b ${kafkaBrokers} -t ${kafkaTopic} -P -l -J -z 'gzip' -X security.protocol=SASL_SSL -X sasl.mechanism=SCRAM-SHA-512 -X sasl.username=${saslUsername} -X sasl.password=${saslPassword}
-                                 """, returnStdout: true).trim()
+The `@NonCPS` annotation is specific to Jenkins' implementation of Groovy, and it is used to mark a method as "non-continuable-permanent-space" (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.
 
-       }
-}
-```
-
- The @NonCPS annotation is specific to Jenkins' implementation of Groovy, and it is used to mark a method as "non-continuable-permanent-space" (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.
 In Jenkins, pipeline scripts are executed in a "sandbox" environment that restricts certain operations for security reasons. For example, the sandbox does not allow methods that use reflection, file I/O, or network I/O.
+
 The @NonCPS annotation is used to mark methods that perform operations that are not allowed in the sandbox. In this case, the getStage method performs operations that access the raw build data, which is not allowed in the sandbox. By marking the method with @NonCPS, Jenkins allows it to be executed outside the sandbox, which allows it to access the raw build data.
+
 To summarize, the @NonCPS annotation is specific to Jenkins' implementation of Groovy, and it is used to mark methods that perform operations that are not allowed in the sandbox.
