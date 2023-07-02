@@ -1,106 +1,57 @@
 ---
-published: false
+layout: post
+title: Publish Jenkins Pipeline's Stages to Kafka topic
+tags:
+  - groovy
+  - jenkins
+  - kafka
+image: /img/girl-question.jpeg
+thumb: /img/girl-question.jpeg
+author: Tushar Sharma
+category: blog
 ---
-## Publish Jenkinks Pipeline Stages to Kafka
 
-Let say you have jenkins pipeline as
+Strings are immutable in java. It's best to convert string to StringBuilder/StringBuffer so that it's memory efficient for string manipulation.<!-- truncate_here -->
+<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
-```groovy
-pipeline {
-  agent{node{label "TestNode"}}
-  
-  stages {
-  
-    stage("Intitialize") {
-    }
-  
-    stage("Unit tests") {
-    }
-  
-    stage("Deploy"){
-    }
-  }
-}
-```
-
-You can add a post action to push to kafka 
+Publish Jenkins Pipeline's Stages to Kafka topic
 
 
-```groovy
-pipeline {
-    stages {
-    }
-    post {
-      success {
-        script {
-          new Events(this).publish(new KafkaMessage("success");
-        }
-      }
-      failure {
-        script {
-            new Events(this).publish(new KafkaMessage("failure");
-        }
-      }
-    }
-}
-```
+### Pipeline Script
 
-### Create our model
 
-define `KafkaMessage.groovy` as
+{% template customCode.html %}
+---
+id: 7bb66bc02307332cd4f7009daa0a1594
+file: pipeline.groovy
+---
+{% endtemplate %}
 
-```groovy
-class KafkaMessage implements Serializable {
-    def status
-    List<Stage> stages = []
-    
-    KafkaMessage(def status){
-        this.status = status
-    }
-    
-    static class Stage {
-        def startTime
-        def endTime
-        
-        Stage(def startTime, def endTime){
-            this.startTime = startTime
-            this.endTime = endTime
-        }
-    }
-}
-```
+### Create model class
+
+
+{% template customCode.html %}
+---
+id: 7bb66bc02307332cd4f7009daa0a1594
+file: KafkaMessage.groovy
+---
+{% endtemplate %}
 
 Now we can define `Events` class. 
 
-```groovy
-class Events {
+{% template customCode.html %}
+---
+id: 7bb66bc02307332cd4f7009daa0a1594
+file: Events.groovy
+---
+{% endtemplate %}
 
-    def steps
-    
-    Events(steps) {
-        this.steps = steps
-    }
-    
-    def publish(KafkaMessage kafkaMessage, def currentBuild, def testMode){
+### What's NonCPS notation
 
-        def saslUsername = ""
-        def saslPassword = ""
-        def kafkaBrokers = ""
+The `@NonCPS` annotation is specific to Jenkins' implementation of Groovy, and it is used to mark a method as "non-continuable-permanent-space" (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.
 
-        def payload = JsonOutput.toJson(kafkaMessage)
-
-        def output = this.steps.sh(script: """
-                                 set -x
-                                 aws --version
-                                 aws sts get-caller-identity
-                                 echo '${payload}' | kafkacat -b ${kafkaBrokers} -t ${kafkaTopic} -P -l -J -z 'gzip' -X security.protocol=SASL_SSL -X sasl.mechanism=SCRAM-SHA-512 -X sasl.username=${saslUsername} -X sasl.password=${saslPassword}
-                                 """, returnStdout: true).trim()
-
-       }
-}
-```
-
- The @NonCPS annotation is specific to Jenkins' implementation of Groovy, and it is used to mark a method as "non-continuable-permanent-space" (NCPS). This means that the method cannot be continued in a later build step, and its state cannot be saved across pipeline restarts.
 In Jenkins, pipeline scripts are executed in a "sandbox" environment that restricts certain operations for security reasons. For example, the sandbox does not allow methods that use reflection, file I/O, or network I/O.
+
 The @NonCPS annotation is used to mark methods that perform operations that are not allowed in the sandbox. In this case, the getStage method performs operations that access the raw build data, which is not allowed in the sandbox. By marking the method with @NonCPS, Jenkins allows it to be executed outside the sandbox, which allows it to access the raw build data.
+
 To summarize, the @NonCPS annotation is specific to Jenkins' implementation of Groovy, and it is used to mark methods that perform operations that are not allowed in the sandbox.
