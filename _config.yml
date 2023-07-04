@@ -33,6 +33,10 @@ exclude:
 - branch.txt
 - .gitignore
 - .jekyll-cache
+algolia:
+  application_id: '0XJJCPHPDY'
+  index_name: randomwits
+  public_key: 618de85a39ad952f6e4c506d3c752777
 gems: [jekyll-paginate]
 paginate: 3
 not_paginated_categories:

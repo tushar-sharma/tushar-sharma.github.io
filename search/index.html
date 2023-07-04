@@ -2,15 +2,55 @@
 layout: default
 ---
 
-<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
-<!-- search box begins -->
-<div style="padding-bottom:60px; padding-top:20px; background : white;">
-      <form style="float:right;" action="{{ root_url }}/search/?">
-              <input type="search" name="q" placeholder="Search">
-                </form>
-</div>
-<!-- search box ends -->
-<br>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"
+/>
 
-<script async src="https://cse.google.com/cse.js?cx=004141762666147305676:ncbx9tikfg8"></script>
-<div class="gcse-searchresults-only"></div>
+<div id='autocomplete'></div>
+
+<script type="text/javascript">
+const { autocomplete,  getAlgoliaResults} = window['@algolia/autocomplete-js'];
+var searchClient = algoliasearch("0XJJCPHPDY", "618de85a39ad952f6e4c506d3c752777")
+var algoliaIndex = searchClient.initIndex('randomwits');
+
+
+autocomplete({
+    container: '#autocomplete',
+    placeholder: 'Search for posts',
+  getSources({ query }) {
+    return [
+      {
+        sourceId: 'posts',
+        getItems() {
+          return getAlgoliaResults({
+            searchClient,
+            queries: [
+              {
+                indexName: 'randomwits',
+                query,
+                params: {
+                  hitsPerPage: 5,
+                  snippetEllipsisText: '…',
+                },
+              },
+            ],
+          });
+        },
+        templates: {
+          item({ item, createElement, components }) {
+            return createElement('div', null,
+              createElement('a', { href: item.url, class: "text-decoration-none text-body" },
+                components.Highlight({ hit: item, attribute: 'title', tagName: 'strong' })
+              ),
+            );
+          },
+          noResults(){
+            return 'No Results';
+          }
+        },
+      },
+    ]
+  }
+});
+  </script>
