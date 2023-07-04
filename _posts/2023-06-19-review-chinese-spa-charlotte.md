@@ -32,7 +32,7 @@ Rating: {% for i in (1..3) %}
 <iframe
   style="position: relative;  width: 100%;"
    height="400"
-	   src="{{ root_url }}/encrypted/2023-06-19-review-chinese-spa-charlotte-encrypted.html"
+	   src="{{ root_url }}/encrypted/{{ page.path | split:'/'  | last | replace: '.md' '' }}.html"
   frameborder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
