@@ -5,6 +5,7 @@ category: blog
 tags:
   - charlotte
   - travel
+  - spa
 thumb:  /img/massage.jpeg
 image: /img/massage.jpeg
 author: Tushar Sharma
@@ -37,4 +38,5 @@ Rating: {% for i in (1..3) %}
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
+  sandbox="allow-same-origin"
 ></iframe>`

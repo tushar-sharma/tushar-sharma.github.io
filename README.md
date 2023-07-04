@@ -122,6 +122,7 @@ iframe
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
+  sandbox="allow-same-origin"
 ></iframe>`
 ```
 
