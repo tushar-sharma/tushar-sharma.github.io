@@ -39,18 +39,15 @@ The masseur was from Thailand. So I greeted her in Thai:
 <a class="speech-link speech" data-toggle="audio" data-audio-id="2">ครับ<span><i class="cl icon-volume-up icon-small"></i></span></a>
 <audio id="2" src="{{root_url}}/sounds/ครับ.mp3" preload="auto"></audio>
 
+Considering these factors, I must admit that this spa might not be a place I would return to in the future. While the lukewarm massage and difficulty in finding the spa were drawbacks, it's worth noting that everyone's experience can differ. For those seeking a convenient and exceptional spa experience in Philadelphia, I would recommend exploring other options to ensure a more satisfying visit.
 
 <iframe
   style="position: relative; width: 100%;"
   height="400"
-  src="{{ root_url }}/encrypted/{{ page.path | split:'/' | last | replace: '.md' '' }}.html"
+  src="{{ root_url }}/encrypted/{{ page.path | split:'/' | last | remove: '.md' }}.html"
   frameborder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
-  id="myIframe"
-  onload="applyParentStyles(this)"
+  sandbox="allow-same-origin"
 ></iframe>
-
-
-Considering these factors, I must admit that this spa might not be a place I would return to in the future. While the lukewarm massage and difficulty in finding the spa were drawbacks, it's worth noting that everyone's experience can differ. For those seeking a convenient and exceptional spa experience in Philadelphia, I would recommend exploring other options to ensure a more satisfying visit.
