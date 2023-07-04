@@ -14,43 +14,59 @@ const { autocomplete,  getAlgoliaResults} = window['@algolia/autocomplete-js'];
 var searchClient = algoliasearch("0XJJCPHPDY", "618de85a39ad952f6e4c506d3c752777")
 var algoliaIndex = searchClient.initIndex('randomwits');
 
+// Extract query parameter from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const queryParam = urlParams.get('q');
+console.log(queryParam)
 
-autocomplete({
+  autocomplete({
     container: '#autocomplete',
     placeholder: 'Search for posts',
-  getSources({ query }) {
-    return [
-      {
-        sourceId: 'posts',
-        getItems() {
-          return getAlgoliaResults({
-            searchClient,
-            queries: [
-              {
-                indexName: 'randomwits',
-                query,
-                params: {
-                  hitsPerPage: 5,
-                  snippetEllipsisText: '…',
+    getSources({ query }) {
+      return [
+        {
+          sourceId: 'posts',
+          getItems() {
+            return getAlgoliaResults({
+              searchClient,
+              queries: [
+                {
+                  indexName: 'randomwits',
+                  query: queryParam || query,
+                  params: {
+                    hitsPerPage: 5,
+                    snippetEllipsisText: '…',
+                  },
                 },
-              },
-            ],
-          });
-        },
-        templates: {
-          item({ item, createElement, components }) {
-            return createElement('div', null,
-              createElement('a', { href: item.url, class: "text-decoration-none text-body" },
-                components.Highlight({ hit: item, attribute: 'title', tagName: 'strong' })
-              ),
-            );
+              ],
+            });
           },
-          noResults(){
-            return 'No Results';
-          }
+          templates: {
+            item({ item, createElement, components }) {
+              return createElement(
+                'div',
+                null,
+                createElement(
+                  'a',
+                  { href: item.url, class: "text-decoration-none text-body" },
+                  components.Highlight({ hit: item, attribute: 'title', tagName: 'strong' })
+                )
+              );
+            },
+            noResults() {
+              return 'No Results';
+            },
+          },
         },
-      },
-    ]
-  }
-});
+      ];
+    },
+  });
+
+  // Set the value of the search input field with the query parameter
+  document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.querySelector('input[name="q"]');
+    if (searchInput && queryParam) {
+      searchInput.value = queryParam;
+    }
+  });
   </script>
