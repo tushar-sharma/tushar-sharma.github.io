@@ -19,8 +19,8 @@ cat <<EOF > _posts/$postdate-$file_variable.md
 layout: post
 date: $jekylldate
 title: $post_variable
-image: https://unsplash.com/photos/$image_variable/download?w=800
-thumb: https://unsplash.com/photos/$image_variable/download?w=800
+image: /img/$image_variable
+thumb: /img/$image_variable
 author: $author_variable;
 category: blog
 ---

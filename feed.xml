@@ -7,6 +7,45 @@
     
       
         <item>
+          <title>Review Thai Philly Spa in Philadelphia</title>
+          <description>&lt;p&gt;I recently found myself in need of a rejuvenating break during a road trip from Charlotte. I stumbled upon Thai Philly Spa, which was in between my trip to East Providence, RI. The spa center was anything but&lt;!-- truncate_here --&gt;&lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/travel&quot; title=&quot;View posts tagged with &amp;quot;travel&amp;quot;&quot;&gt;travel&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/spa&quot; title=&quot;View posts tagged with &amp;quot;spa&amp;quot;&quot;&gt;spa&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/philadelphia&quot; title=&quot;View posts tagged with &amp;quot;philadelphia&amp;quot;&quot;&gt;philadelphia&lt;/a&gt;    &lt;/p&gt;
+
+&lt;script&gt;
+$(document).ready(function() {
+  $(&apos;.speech&apos;).click(function() {
+    var audio = document.getElementById($(this).data(&apos;audio-id&apos;));
+    audio.play();
+  });
+});
+&lt;/script&gt;
+
+&lt;p&gt;I recently found myself in need of a rejuvenating break during a road trip from Charlotte. I stumbled upon Thai Philly Spa, which was in between my trip to East Providence, RI. The spa center was anything but lackluster.&lt;/p&gt;
+
+&lt;p&gt;I went for spa at Asian spa so I thought I reviewed it. The spa is located at 1613 Snyder Ave, Philadelphia, PA 19145.&lt;/p&gt;
+
+&lt;p&gt;Another challenge I encountered was locating the spa using Google Maps. Navigating through the bustling streets of Philadelphia proved to be a bit of a struggle. The spa&apos;s address didn&apos;t align accurately with its location on the map, leaving me feeling a tad frustrated and disoriented. It would have been helpful if the spa had provided clearer directions or a more prominent presence online to ensure a smoother arrival.&lt;/p&gt;
+
+&lt;p&gt;The masseur was from Thailand. So I greeted her in Thai:&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;speech-link speech&quot; data-toggle=&quot;audio&quot; data-audio-id=&quot;1&quot;&gt;สวัสดี&lt;span&gt;&lt;i class=&quot;cl icon-volume-up icon-small&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;audio id=&quot;1&quot; src=&quot;/sounds/สวัสดี.mp3&quot; preload=&quot;auto&quot;&gt;&lt;/audio&gt;
+
+&lt;p&gt;&lt;a class=&quot;speech-link speech&quot; data-toggle=&quot;audio&quot; data-audio-id=&quot;2&quot;&gt;ครับ&lt;span&gt;&lt;i class=&quot;cl icon-volume-up icon-small&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;audio id=&quot;2&quot; src=&quot;/sounds/ครับ.mp3&quot; preload=&quot;auto&quot;&gt;&lt;/audio&gt;
+
+&lt;p&gt;Considering these factors, I must admit that this spa might not be a place I would return to in the future. While the lukewarm massage and difficulty in finding the spa were drawbacks, it&apos;s worth noting that everyone&apos;s experience can differ. For those seeking a convenient and exceptional spa experience in Philadelphia, I would recommend exploring other options to ensure a more satisfying visit.&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative; width: 100%;&quot; height=&quot;400&quot; src=&quot;/encrypted/2023-07-03-review-thai-philly-spa-philadelphia.html&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot; sandbox=&quot;allow-same-origin&quot;&gt;&lt;/iframe&gt;
+</description>
+          <pubDate>2023-07-03T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/review-thai-philly-spa-philadelphia</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/review-thai-philly-spa-philadelphia</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Publish Jenkins Pipeline&apos;s Stages to Kafka topic</title>
           <description>&lt;p&gt;Jenkins is a popular automation tool used for continuous integration and continuous delivery (CI/CD) processes. Kafka, on the other hand, is a distributed event streaming platform capable of handling large volumes of real-time data. By combining the power of Jenkins and Kafka, we can effectively publish pipeline information to a Kafka topic.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/groovy&quot; title=&quot;View posts tagged with &amp;quot;groovy&amp;quot;&quot;&gt;groovy&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/jenkins&quot; title=&quot;View posts tagged with &amp;quot;jenkins&amp;quot;&quot;&gt;jenkins&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/kafka&quot; title=&quot;View posts tagged with &amp;quot;kafka&amp;quot;&quot;&gt;kafka&lt;/a&gt;    &lt;/p&gt;
@@ -190,7 +229,7 @@ Rating:
         <item>
           <title>Review Chinese Spa in Charlotte</title>
           <description>&lt;p&gt;As I arrived in Charlotte after a long journey from Durham, NC, my body was in dire need of respite. Hours spent in the car had left me fatigued and achy, prompting me to seek solace at a spa. With hopes of rejuvenation, I eagerly indulged in a massage session, eager to alleviate the tension that had accumulated during my travels.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/charlotte&quot; title=&quot;View posts tagged with &amp;quot;charlotte&amp;quot;&quot;&gt;charlotte&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/travel&quot; title=&quot;View posts tagged with &amp;quot;travel&amp;quot;&quot;&gt;travel&lt;/a&gt;    &lt;/p&gt;
+&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/charlotte&quot; title=&quot;View posts tagged with &amp;quot;charlotte&amp;quot;&quot;&gt;charlotte&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/travel&quot; title=&quot;View posts tagged with &amp;quot;travel&amp;quot;&quot;&gt;travel&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/spa&quot; title=&quot;View posts tagged with &amp;quot;spa&amp;quot;&quot;&gt;spa&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;As I arrived in Charlotte after a long journey from Durham, NC, my body was in dire need of respite. Hours spent in the car had left me fatigued and achy, prompting me to seek solace at a spa. With hopes of rejuvenation, I eagerly indulged in a massage session, eager to alleviate the tension that had accumulated during my travels.&lt;/p&gt;
 
@@ -211,8 +250,7 @@ Rating:
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;400&quot; src=&quot;/encrypted/2023-06-19-review-chinese-spa-charlotte-encrypted.html&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;`&lt;/p&gt;
+&lt;iframe style=&quot;position: relative; width: 100%;&quot; height=&quot;400&quot; src=&quot;/encrypted/2023-06-19-review-chinese-spa-charlotte.html&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot; sandbox=&quot;allow-same-origin&quot;&gt;&lt;/iframe&gt;
 </description>
           <pubDate>2023-06-19T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/review-chinese-spa-charlotte</link>
@@ -3834,8 +3872,8 @@ This will fail as the time limit will exceed while submiting the solution to lee
 
 &lt;p&gt;I am an ardent &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim&lt;/code&gt; user. A forked version of vim called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;neovim&lt;/code&gt; recently caught my attention. It has more features like support for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;language server protocol&lt;/code&gt; that provides &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;auto-complete&lt;/code&gt;, etc. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LunarVim&lt;/code&gt; provides neovim configuration files so that it behaves as an IDE.&lt;/p&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
-As of today (May 14, 2022), Lunarvim requires Neovim v0.7 or higher. So we will install neovim from the source to get the latest version.
+&lt;blockquote&gt;
+  &lt;p&gt;As of today (May 14, 2022), Lunarvim requires Neovim v0.7 or higher. So we will install neovim from the source to get the latest version.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;install-neovim&quot;&gt;Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;neovim&lt;/code&gt;&lt;/h2&gt;
