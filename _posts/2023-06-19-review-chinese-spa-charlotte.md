@@ -38,5 +38,4 @@ Rating: {% for i in (1..3) %}
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
-  sandbox="allow-same-origin"
 ></iframe>

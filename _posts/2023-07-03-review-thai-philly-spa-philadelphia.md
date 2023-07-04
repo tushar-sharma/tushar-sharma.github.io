@@ -49,5 +49,4 @@ Considering these factors, I must admit that this spa might not be a place I wou
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
-  sandbox="allow-same-origin"
 ></iframe>
