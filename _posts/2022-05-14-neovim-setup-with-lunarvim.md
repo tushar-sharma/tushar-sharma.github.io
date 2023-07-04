@@ -20,10 +20,7 @@ I am an ardent `vim` user. A forked version of vim called `neovim` recently caug
 
 I am an ardent `vim` user. A forked version of vim called `neovim` recently caught my attention. It has more features like support for `language server protocol` that provides `auto-complete`, etc. `LunarVim` provides neovim configuration files so that it behaves as an IDE.
 
-<blockquote class="attention">
-As of today (May 14, 2022), Lunarvim requires Neovim v0.7 or higher. So we will install neovim from the source to get the latest version.
-</blockquote>
-
+> As of today (May 14, 2022), Lunarvim requires Neovim v0.7 or higher. So we will install neovim from the source to get the latest version.
 
 ## Install `neovim`
 
