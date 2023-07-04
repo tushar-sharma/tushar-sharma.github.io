@@ -5,6 +5,7 @@ category: blog
 tags:
   - charlotte
   - travel
+  - spa
 thumb:  /img/massage.jpeg
 image: /img/massage.jpeg
 author: Tushar Sharma
@@ -30,11 +31,12 @@ Rating: {% for i in (1..3) %}
 </div><br>
 
 <iframe
-  style="position: relative;  width: 100%;"
-   height="400"
-	   src="{{ root_url }}/encrypted/2023-06-19-review-chinese-spa-charlotte-encrypted.html"
+  style="position: relative; width: 100%;"
+  height="400"
+  src="{{ root_url }}/encrypted/{{ page.path | split:'/' | last | remove: '.md' }}.html"
   frameborder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
-></iframe>`
+  sandbox="allow-same-origin"
+></iframe>

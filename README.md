@@ -53,11 +53,34 @@ Go to [Poet.so](https://poet.so/) to download the screenshot.
 
 ### Gists
 
-There are two ways to add Gist muli tab or single tab
+There are two ways to add Gist code : 
+
+#### Use backtick 
+
+for a quick code snippet  use backtick : 
+
+{% raw %}
+```python
+```
+{% endraw %}
+
+#### Single Tab
+
+Just add this code 
+
+```
+{% template  customCode.html %}
+---
+id: <ID>
+file: file1.py
+---
+{% endtemplate %}
+
+```
 
 #### Multitab
 
-Enable multitab in post
+Enable multitab in post to include libraries
 
 ```yaml
 mutipleTab: true
@@ -78,43 +101,38 @@ files:
 {% endtemplate %}
 ```
 
-#### Single Tab
 
-Just add this code
+### Encrypting page
 
-```
-{% template  customCode.html %}
----
-id: <ID>
-file: file1.py
----
-{% endtemplate %}
+Create a html page in `encrypted` folder. This will contain the protected text
 
 ```
+$ export password=
+$ staticrypt myPost.html -p ${password}
+```
 
+Then add this 
+
+```
+iframe
+  style="position: relative;  width: 100%;"
+   height="400"
+	   src="{{ root_url }}/encrypted/{{ page.path | split:'/'  | last | replace: '.md' '' }}.html"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Sample"
+  sandbox="allow-same-origin"
+></iframe>`
+```
+
+### Tags
+
+Dont create tags with upper case name. Always use lowercase.
 
 
 ### Build this website
 
 ```
-$ make build
+$ make build && make verify
 ```
-
-
-### Highlight Code
-
-Add this to post `_posts/` 
-
-And insert code like this 
-
-```
-{% template customCode.html %}
----
-id: github-gist id
-file: ex2.py
----
-{% endtemplate %}
-```
-### Tags
-
-Dont create tags with upper case name. Always use lowercase.

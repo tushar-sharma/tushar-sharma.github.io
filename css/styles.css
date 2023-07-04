@@ -535,3 +535,35 @@ code[class*=language-],pre[class*=language-]{
   font-size: 18px;
   font-weight: bold;
 }
+
+/** audio tag **/
+.speech {
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.speech span {
+  margin-left: 0.5em;
+}
+
+.speech .icon-volume-up {
+  display: none;
+  font-size: 16px;
+  margin-left: 0.2em;
+}
+
+.speech:hover .icon-volume-up {
+  display: inline-block;
+}
+
+.speech-link {
+  color: blue; /* Added blue color */
+  text-decoration: underline; /* Added underline */
+}
+
+.speech-link:hover {
+  color: red; /* Update color on hover */
+}
