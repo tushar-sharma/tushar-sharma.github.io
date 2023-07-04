@@ -31,12 +31,12 @@ Rating: {% for i in (1..3) %}
 </div><br>
 
 <iframe
-  style="position: relative;  width: 100%;"
-   height="400"
-	   src="{{ root_url }}/encrypted/{{ page.path | split:'/'  | last | replace: '.md' '' }}.html"
+  style="position: relative; width: 100%;"
+  height="400"
+  src="{{ root_url }}/encrypted/{{ page.path | split:'/' | last | remove: '.md' }}.html"
   frameborder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
   sandbox="allow-same-origin"
-></iframe>`
+></iframe>
