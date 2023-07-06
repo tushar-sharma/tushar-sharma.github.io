@@ -51,20 +51,17 @@ Go to [Poet.so](https://poet.so/) to download the screenshot.
 | <a href="https://twitter.com/status/?"><img align="center"  loading="lazy" src="{{ root_url }}/img/downloaded.png" /> </a>|
 ```
 
-### Gists
+### Highlight Code
+
+#### Backtick
+
+simply use triple backtick to higlight code. 
+
+#### Gists
 
 There are two ways to add Gist code : 
 
-#### Use backtick 
-
-for a quick code snippet  use backtick : 
-
-{% raw %}
-```python
-```
-{% endraw %}
-
-#### Single Tab
+##### Single Tab
 
 Just add this code 
 
@@ -78,7 +75,7 @@ file: file1.py
 
 ```
 
-#### Multitab
+##### Multitab
 
 Enable multitab in post to include libraries
 
@@ -122,7 +119,6 @@ iframe
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
-  sandbox="allow-same-origin"
 ></iframe>`
 ```
 
