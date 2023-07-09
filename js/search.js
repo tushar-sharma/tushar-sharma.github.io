@@ -95,10 +95,10 @@ search.addWidgets([
 
 search.addWidget(
   instantsearch.widgets.pagination({
-    container: '#pagination',
+    container: '.pagination-wrapper',
     maxPages: 10,
     // default is to scroll to 'body', here we disable this behavior
-    scrollTo: false
+    scrollTo: false,
   })
 );
 

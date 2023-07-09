@@ -319,7 +319,7 @@ span.pagination-step {
 
 .pagination-first,
 .pagination-last,
-.pagination-more, {
+.pagination-more {
   display: none;
 }
 

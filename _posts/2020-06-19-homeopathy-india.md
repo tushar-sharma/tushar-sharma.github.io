@@ -20,11 +20,7 @@ I recently came across a Youtube video of a famous Indian actress Genelia Deshmu
 
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
-
-{% capture audio_url %}
-{{ root_url }}/sounds/{{ page.path | split:'/'  | last | replace: '.md' '' }}.mp3
-{% endcapture %}
-{% include embed-audio.html src=audio_url %}
+{% include embed-audio.html src="/sounds/2020-06-19-homeopathy-india.mp3" %}<br>
 <br>
 <!--begin_of_post -->
 
@@ -55,7 +51,7 @@ It was developed by Samuel Hahnemann in 1796. During this time modern germ theor
 
 Homeopathy in a nutshell has two main concepts i.e.
 
-1. **Like cures Like**: the notion that a disease can be cured by a substance that produces similar symptoms in healthy people
+1. **Like cures Like**: the notion that a disease can be cured by a substance that produces similar symptoms in healthy people.
 
 
 2. **Law of minimum dose** —the notion that the lower the dose of the medication, the greater its effectiveness. Many homeopathic products are so diluted that no molecules of the original substance remain.
@@ -82,20 +78,14 @@ The FDA has warned consumers about different products labeled as homeopathic. Fo
 Celebrities & Politicians are powerful influencers in any country. The product they endorse usually have huge impact on consumer buying behavior. List of politicians endorsing homeopathy products:
 <br>
 
-<blockquote class="attention">
-Press Information Bureau, government of India, suggesting homeopathy for coronavirus
-</blockquote>
-
+> Press Information Bureau, government of India, suggesting homeopathy for coronavirus
 
 <center>
  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Advisory for <a href="https://twitter.com/hashtag/CoronaVirus?src=hash&amp;ref_src=twsrc%5Etfw">#CoronaVirus</a><br><br>Homoeopathy for Prevention of Corona virus Infections<br><br>Unani Medicines useful in the symptomatic management of Corona Virus infection<br><br><a href="https://t.co/OXC7PtM7L3">Details here.</a></p>&mdash; PIB India (@PIB_India) <a href="https://twitter.com/PIB_India/status/1222385553892528128?ref_src=twsrc%5Etfw">January 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
  </center>
 <br>
 
-<blockquote class="attention">
-Shashi Tharor is the Indian politician, writer, former Under-Secretary General of the United Nations.
-</blockquote>
-
+> Shashi Tharor is the Indian politician, writer, former Under-Secretary General of the United Nations.
 
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Launching Dr Mukesh Batra&#39;s new magazine &quot;Homeopathy &amp; You&quot; at the Lalit basement shortly. Open to public, Regency Room 5</p>&mdash; Shashi Tharoor (@ShashiTharoor) <a href="https://twitter.com/ShashiTharoor/status/395801712050454528?ref_src=twsrc%5Etfw">October 31, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -103,19 +93,14 @@ Shashi Tharor is the Indian politician, writer, former Under-Secretary General o
 
 <br>
 
-<blockquote class="attention">
-Shatrughan Sinha, an Indian film actor & politician.
-</blockquote>
+> Shatrughan Sinha, an Indian film actor & politician.
 
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">On Tuesday evening, Dr. Batra&#39;s Positive Health Awards were held at the Royal Opera House. Dr. Mukesh Batra a world renowned Homeopath along with his son, Dr.Akshay Batra celebrated the 12th anniversary of these special awards.His dedication towards his work has been remarkable</p>&mdash; Shatrughan Sinha (@ShatruganSinha) <a href="https://twitter.com/ShatruganSinha/status/1068407477165793280?ref_src=twsrc%5Etfw">November 30, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
 <br>
 
-
-<blockquote class="attention">
-Nita Ambani is the chairperson and founder of the Reliance Foundation.
-</blockquote>
+> Nita Ambani is the chairperson and founder of the Reliance Foundation.
 
 <center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/NitaAmbani?src=hash&amp;ref_src=twsrc%5Etfw">#NitaAmbani</a> receiving the ‘Shri Pravinchandra V Gandhi Award for Excellence in Public Life’ for Philanthropy from Dr Mukesh Batra <a href="https://twitter.com/Rotary?ref_src=twsrc%5Etfw">@Rotary</a> <a href="https://t.co/F0kC3CGZDh">pic.twitter.com/F0kC3CGZDh</a></p>&mdash; Reliance Foundation (@ril_foundation) <a href="https://twitter.com/ril_foundation/status/849246465272807426?ref_src=twsrc%5Etfw">April 4, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -123,10 +108,7 @@ Nita Ambani is the chairperson and founder of the Reliance Foundation.
 <br>
 
 
-<blockquote class="attention">
-Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a mass movement". <br>
-</blockquote>
-<br>
+> Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a mass movement". 
 
 <iframe
   style="position: relative;  width: 100%;" 
@@ -140,9 +122,7 @@ Vice President of India, M. Venkaiah Naidu, said, "Homeopathy should become a ma
 ></iframe><br>
 
 
-<blockquote class="attention">
-Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India.
-</blockquote><br>
+> Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India.
 
 <iframe
   style="position: relative;  width: 100%;" 
@@ -156,10 +136,7 @@ Mukesh Batra is recipient of Padma Shri award from the president of India. It’
 ></iframe><br>
 
 
-<blockquote class="attention">
-<i style="color: orange;" class="fas fa-exclamation-circle"> </i>
-DD News is a Indian government funded news channel. It reports how homeopathy can treat respiratory problems
-</blockquote><br>
+> DD News is a Indian government funded news channel. It reports how homeopathy can treat respiratory problems
 
 <iframe
   style="position: relative;  width: 100%;" 
@@ -173,9 +150,7 @@ DD News is a Indian government funded news channel. It reports how homeopathy ca
 ></iframe><br>
 
 
-<blockquote class="attention">
-Claims that homeopathy can cure genetic disorders
-</blockquote><br>
+> Claims that homeopathy can cure genetic disorders
 
 <iframe
   style="position: relative;  width: 100%;" 
@@ -200,7 +175,7 @@ If an herb in Ayurveda can cures an illness, it becomes part of modern medicine 
 
 Many countries are discontinuing funding to homeopathy for example France will end reimbursing of homeopathic patient by 2021, Spain in 2018 plans to ban homeopathy, etc. I was surprised to find homeopathy medicine in CVS, a common drugstore in the US. I came across the news that a lawsuit has been filed by the Center for Inquiry (CFI) against this practice<sup><a href='#fn:5' rel='footnote'>5</a></sup>.
 
-It's unethical for the government of India to continue to promote hemeopoathy. Indian budget 2019 allocated ₹ 62,398 crore for healh sector. AYUSH ministry got ₹ 1,939.76 crore which is 15 per cent more than the previous fiscal<sup><a href='#fn:6' rel='footnote'>6</a></sup>. It's a boon for politicians as they can delude India masses by providing them substandard healthcare with less expense. It's ironical that most of Indian politicians continue to go abroad for their medical care.
+It's unethical for the government of India to continue to promote homeopathy. Indian budget 2019 allocated ₹ 62,398 crore for health sector. AYUSH ministry got ₹ 1,939.76 crore which is 15 per cent more than the previous fiscal<sup><a href='#fn:6' rel='footnote'>6</a></sup>. It's a boon for politicians as they can delude India masses by providing them substandard healthcare with less expense. It's ironical that most of Indian politicians continue to go abroad for their medical care.
 
 Investing in modern science requires both capital & extensive research in R&D. Successive Indian government have tried to use ancient past to hide their failures. Vedic Mathematics, documentary by K. Jagjivan Ram, won the 48th National Film Awards for the best scientific film by the government of India. Vedic mathematics has nothing do with either mathematics or vedas<sup><a href='#fn:7' rel='footnote'>7</a></sup>. Promotion of yoga is great, but obsession on research on cow<sup><a href='#fn:8' rel='footnote'>8</a></sup> is unwarranted. Instead of splurging money on researching on Ganga water's<sup><a href='#fn:9' rel='footnote'>9</a></sup> miraculous properties, it would be prudent for the government of India to clean the river first plagued by serious pollution<sup><a href='#fn:10' rel='footnote'>10</a></sup>. Homeopathy is one such tomfoolery which India must get rid sooner for her own good.
 </div>
