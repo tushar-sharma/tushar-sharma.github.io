@@ -9,7 +9,18 @@
         <item>
           <title>The Irony of Faith and Science</title>
           <description>&lt;p&gt;As we gaze into the dark sky, captivated by the sparkling stars, we often find ourselves contemplating the deeper meaning of life and the existence of a higher power. The question of whether God is a mere human construct or if our existence holds merit in the vast realm of the universe remains&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/religion&quot; title=&quot;View posts tagged with &amp;quot;religion&amp;quot;&quot;&gt;religion&lt;/a&gt;    &lt;/p&gt;
+
+&lt;div id=&quot;player&quot;&gt;
+&lt;div class=&quot;listen&quot;&gt;Listen to this article&lt;/div&gt;
+&lt;div id=&quot;waveform&quot;&gt;
+&lt;img src=&quot;/img/waveform.min.png&quot; /&gt;
+&lt;/div&gt;
+&lt;audio controls=&quot;&quot; class=&quot;audio_controls &quot; preload=&quot;metadata&quot;&gt;
+    &lt;source src=&quot;/sounds/2023-07-04-irony-faith-and-science.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;  
+&lt;/div&gt;
+&lt;!--begin_of_post --&gt;
 
 &lt;p&gt;As we gaze into the dark sky, captivated by the sparkling stars, we often find ourselves contemplating the deeper meaning of life and the existence of a higher power. The question of whether God is a mere human construct or if our existence holds merit in the vast realm of the universe remains an enduring and thought-provoking debate. While science does not provide definitive proof for or against the existence of God, examining the beliefs of renowned scientists can shed light on the diverse perspectives that coexist within the scientific community.&lt;/p&gt;
 
@@ -69,7 +80,6 @@
         <item>
           <title>Review Thai Philly Spa in Philadelphia</title>
           <description>&lt;p&gt;I recently found myself in need of a rejuvenating break during a road trip from Charlotte. I stumbled upon Thai Philly Spa, which was in between my trip to East Providence, RI. The spa center was anything but&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/travel&quot; title=&quot;View posts tagged with &amp;quot;travel&amp;quot;&quot;&gt;travel&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/spa&quot; title=&quot;View posts tagged with &amp;quot;spa&amp;quot;&quot;&gt;spa&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/philadelphia&quot; title=&quot;View posts tagged with &amp;quot;philadelphia&amp;quot;&quot;&gt;philadelphia&lt;/a&gt;    &lt;/p&gt;
 
 &lt;script&gt;
 $(document).ready(function() {
@@ -86,7 +96,7 @@ $(document).ready(function() {
 
 &lt;p&gt;Another challenge I encountered was locating the spa using Google Maps. Navigating through the bustling streets of Philadelphia proved to be a bit of a struggle. The spa&apos;s address didn&apos;t align accurately with its location on the map, leaving me feeling a tad frustrated and disoriented. It would have been helpful if the spa had provided clearer directions or a more prominent presence online to ensure a smoother arrival.&lt;/p&gt;
 
-&lt;p&gt;The masseur was from Thailand. So I greeted her in Thai:&lt;/p&gt;
+&lt;p&gt;The masseur was from Thailand. So I greeted her in Thai, Sawasdee khap&lt;/p&gt;
 
 &lt;p&gt;&lt;a class=&quot;speech-link speech&quot; data-toggle=&quot;audio&quot; data-audio-id=&quot;1&quot;&gt;สวัสดี&lt;span&gt;&lt;i class=&quot;cl icon-volume-up icon-small&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;audio id=&quot;1&quot; src=&quot;/sounds/สวัสดี.mp3&quot; preload=&quot;auto&quot;&gt;&lt;/audio&gt;
@@ -108,7 +118,6 @@ $(document).ready(function() {
         <item>
           <title>Publish Jenkins Pipeline&apos;s Stages to Kafka topic</title>
           <description>&lt;p&gt;Jenkins is a popular automation tool used for continuous integration and continuous delivery (CI/CD) processes. Kafka, on the other hand, is a distributed event streaming platform capable of handling large volumes of real-time data. By combining the power of Jenkins and Kafka, we can effectively publish pipeline information to a Kafka topic.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/groovy&quot; title=&quot;View posts tagged with &amp;quot;groovy&amp;quot;&quot;&gt;groovy&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/jenkins&quot; title=&quot;View posts tagged with &amp;quot;jenkins&amp;quot;&quot;&gt;jenkins&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/kafka&quot; title=&quot;View posts tagged with &amp;quot;kafka&amp;quot;&quot;&gt;kafka&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Jenkins is a popular automation tool used for continuous integration and continuous delivery (CI/CD) processes. Kafka, on the other hand, is a distributed event streaming platform capable of handling large volumes of real-time data. By combining the power of Jenkins and Kafka, we can effectively publish pipeline information to a Kafka topic.&lt;/p&gt;
 
@@ -160,7 +169,6 @@ $(document).ready(function() {
         <item>
           <title>House Robber Leetcode Solution</title>
           <description>&lt;p&gt;You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/javascript&quot; title=&quot;View posts tagged with &amp;quot;javascript&amp;quot;&quot;&gt;javascript&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/rust&quot; title=&quot;View posts tagged with &amp;quot;rust&amp;quot;&quot;&gt;rust&lt;/a&gt;    &lt;/p&gt;
 
 &lt;h3 id=&quot;problem-statement&quot;&gt;Problem Statement&lt;/h3&gt;
 
@@ -221,7 +229,6 @@ $(document).ready(function() {
         <item>
           <title>Review Bang Bang Burgers in Charlotte</title>
           <description>&lt;p&gt;I went for lunch with my team at Bang Bang Burgers in Charlotte. It was a bit of a walk from the office, but luckily the weather wasn&apos;t hot, so it was a pleasant stroll to the restaurant.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/charlotte&quot; title=&quot;View posts tagged with &amp;quot;charlotte&amp;quot;&quot;&gt;charlotte&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/food&quot; title=&quot;View posts tagged with &amp;quot;food&amp;quot;&quot;&gt;food&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
 
@@ -265,7 +272,6 @@ Rating:
         <item>
           <title>Kata - Correct the Time String</title>
           <description>&lt;p&gt;In this &lt;a href=&quot;https://www.codewars.com/kata/57873ab5e55533a2890000c7/&quot;&gt;kata&lt;/a&gt;, you are given a string that represents a time in the format &quot;HH:MM:SS&quot;. The string may be in the wrong format, or it may be missing some characters. Your task is to correct the string so that it represents a valid time.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/javascript&quot; title=&quot;View posts tagged with &amp;quot;javascript&amp;quot;&quot;&gt;javascript&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;In this &lt;a href=&quot;https://www.codewars.com/kata/57873ab5e55533a2890000c7/&quot;&gt;kata&lt;/a&gt;, you are given a string that represents a time in the format &quot;HH:MM:SS&quot;. The string may be in the wrong format, or it may be missing some characters. Your task is to correct the string so that it represents a valid time.&lt;/p&gt;
 
@@ -289,7 +295,6 @@ Rating:
         <item>
           <title>Review Chinese Spa in Charlotte</title>
           <description>&lt;p&gt;As I arrived in Charlotte after a long journey from Durham, NC, my body was in dire need of respite. Hours spent in the car had left me fatigued and achy, prompting me to seek solace at a spa. With hopes of rejuvenation, I eagerly indulged in a massage session, eager to alleviate the tension that had accumulated during my travels.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/charlotte&quot; title=&quot;View posts tagged with &amp;quot;charlotte&amp;quot;&quot;&gt;charlotte&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/travel&quot; title=&quot;View posts tagged with &amp;quot;travel&amp;quot;&quot;&gt;travel&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/spa&quot; title=&quot;View posts tagged with &amp;quot;spa&amp;quot;&quot;&gt;spa&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;As I arrived in Charlotte after a long journey from Durham, NC, my body was in dire need of respite. Hours spent in the car had left me fatigued and achy, prompting me to seek solace at a spa. With hopes of rejuvenation, I eagerly indulged in a massage session, eager to alleviate the tension that had accumulated during my travels.&lt;/p&gt;
 
@@ -322,7 +327,6 @@ Rating:
         <item>
           <title>People and Their Stories - Marianne Bachmeier</title>
           <description>&lt;p&gt;In the annals of crime and justice, there are stories that captivate our attention due to their sheer complexity and the ethical dilemmas they present. One such story is that of Marianne Bachmeier, a woman whose actions shocked the world. On January 6, 1981, in a courtroom in Germany, Bachmeier took the life of the man accused of sexually abusing and murdering her daughter. Was her act justified?&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/people&quot; title=&quot;View posts tagged with &amp;quot;people&amp;quot;&quot;&gt;people&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;In the annals of crime and justice, there are stories that captivate our attention due to their sheer complexity and the ethical dilemmas they present. One such story is that of Marianne Bachmeier, a woman whose actions shocked the world. On January 6, 1981, in a courtroom in Germany, Bachmeier took the life of the man accused of sexually abusing and murdering her daughter. Was her act justified?&lt;/p&gt;
 
@@ -357,7 +361,6 @@ Rating:
         <item>
           <title>Exploring the Power of Outlier Detection in Regression Analysis</title>
           <description>&lt;p&gt;Imagine you have a magical tool called studentized residuals that helps you explore the secrets hidden in data. These residuals are like detectives who investigate the influence and odd behaviors of individual data points. They compare the actual values of something you&apos;re trying to predict with the values your model predicts, and then they measure how different they are. By using a special formula, they make sure the measurements are fair, no matter what model or dataset you&apos;re using.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/sas&quot; title=&quot;View posts tagged with &amp;quot;sas&amp;quot;&quot;&gt;sas&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/richa gairola&quot; title=&quot;View posts tagged with &amp;quot;richa gairola&amp;quot;&quot;&gt;richa gairola&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/r&quot; title=&quot;View posts tagged with &amp;quot;r&amp;quot;&quot;&gt;r&lt;/a&gt;    &lt;/p&gt;
 
 &lt;div class=&quot;author-info&quot;&gt;
   &lt;div class=&quot;author-image&quot;&gt;
@@ -496,7 +499,6 @@ Remember, young apprentices, while studentized residuals possess great power, th
         <item>
           <title>Publish to MSK Kafka using AWS Lambda Python</title>
           <description>&lt;p&gt;Apache Kafka is a distributed streaming platform designed to handle real-time data streams efficiently. It uses a publish-subscribe model, where producers publish messages to topics, and consumers subscribe to those topics to receive the messages. Amazon MSK simplifies the deployment and management of Kafka clusters on AWS, providing a fully managed and scalable solution. You can use AWS lambda in python to publish to MSK topic.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/kafka&quot; title=&quot;View posts tagged with &amp;quot;kafka&amp;quot;&quot;&gt;kafka&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Apache Kafka is a distributed streaming platform designed to handle real-time data streams efficiently. It uses a publish-subscribe model, where producers publish messages to topics, and consumers subscribe to those topics to receive the messages. Amazon MSK simplifies the deployment and management of Kafka clusters on AWS, providing a fully managed and scalable solution. You can use AWS lambda in python to publish to MSK topic.&lt;/p&gt;
 
@@ -555,7 +557,6 @@ Remember, young apprentices, while studentized residuals possess great power, th
         <item>
           <title>Fix SonarQube Error of Public Writable Directories in AWS lambda python</title>
           <description>&lt;p&gt;In AWS Lambda functions, it&apos;s common to use temporary directories for tasks like generating temporary files, storing intermediate data, or processing data securely. However, improperly managing publicly writable directories can lead to security vulnerabilities. In this article, we&apos;ll explore how to address this issue and ensure safe usage of temporary directories in AWS Lambda functions using Python&apos;s tempfile module.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/sonarqube&quot; title=&quot;View posts tagged with &amp;quot;sonarqube&amp;quot;&quot;&gt;sonarqube&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;In AWS Lambda functions, it&apos;s common to use temporary directories for tasks like generating temporary files, storing intermediate data, or processing data securely. However, improperly managing publicly writable directories can lead to security vulnerabilities. In this article, we&apos;ll explore how to address this issue and ensure safe usage of temporary directories in AWS Lambda functions using Python&apos;s tempfile module.&lt;/p&gt;
 
@@ -603,7 +604,6 @@ Remember, young apprentices, while studentized residuals possess great power, th
         <item>
           <title>TestContainers with Spring Boot</title>
           <description>&lt;p&gt;Testcontainers is a Java library that provides lightweight, disposable containers for running integration tests. It&apos;s a useful tool for testing applications that rely on external dependencies like databases or message queues.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/spring boot&quot; title=&quot;View posts tagged with &amp;quot;spring boot&amp;quot;&quot;&gt;spring boot&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Testcontainers is a Java library that provides lightweight, disposable containers for running integration tests. It&apos;s a useful tool for testing applications that rely on external dependencies like databases or message queues.&lt;/p&gt;
 
@@ -691,7 +691,6 @@ Remember, young apprentices, while studentized residuals possess great power, th
         <item>
           <title>Cribsheet for String in Java</title>
           <description>&lt;p&gt;Strings are immutable in java. It&apos;s best to convert string to StringBuilder/StringBuffer so that it&apos;s memory efficient for string manipulation.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/interview&quot; title=&quot;View posts tagged with &amp;quot;interview&amp;quot;&quot;&gt;interview&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Strings are immutable in Java, meaning their values cannot be changed once they are created. To efficiently manipulate strings, it is recommended to convert them to StringBuilder or StringBuffer objects. StringBuilder is preferable for its speed, while StringBuffer is thread-safe.&lt;/p&gt;
 
@@ -777,7 +776,6 @@ Remember, young apprentices, while studentized residuals possess great power, th
         <item>
           <title>Guide to Travel to Thailand</title>
           <description>&lt;p&gt;Thailand has got a bad reputation for its seedy masssage parlors and go go bars. However it&apos;s a beautiful country with plenty of toursit attractions. Below is my snapshot of my travel to Thailand.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/thailand&quot; title=&quot;View posts tagged with &amp;quot;thailand&amp;quot;&quot;&gt;thailand&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/travel&quot; title=&quot;View posts tagged with &amp;quot;travel&amp;quot;&quot;&gt;travel&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Thailand has got a bad reputation for its seedy masssage parlors and go go bars. However it&apos;s a beautiful country with plenty of toursit attractions. Below is my snapshot of my travel to Thailand.&lt;/p&gt;
 
@@ -850,7 +848,6 @@ Remember, young apprentices, while studentized residuals possess great power, th
         <item>
           <title>Dear Vishi, daily logs for May 7, 2023</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for May 7, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;!--begin_of_post --&gt;
 
@@ -1022,7 +1019,6 @@ counter() // 12
         <item>
           <title>Unit Test AWS Lambda Function in Python</title>
           <description>&lt;p&gt;AWS lambda function are event driven serverless code. To follow TDD, we should write unit test our lambda functions.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Project Structure&lt;/p&gt;
 
@@ -1094,7 +1090,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>US H1b visa dropbox experience in India</title>
           <description>&lt;p&gt;As a non-immigrant worker in the United States, navigating the visa stamping process can be a cumbersome task. However, with proper planning and understanding of the process, the journey can be much smoother.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/visa&quot; title=&quot;View posts tagged with &amp;quot;visa&amp;quot;&quot;&gt;visa&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/usa&quot; title=&quot;View posts tagged with &amp;quot;usa&amp;quot;&quot;&gt;usa&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/india&quot; title=&quot;View posts tagged with &amp;quot;india&amp;quot;&quot;&gt;india&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;As a non-immigrant worker in the United States, navigating the visa stamping process can be a cumbersome task. However, with proper planning and understanding of the process, the journey can be much smoother.&lt;/p&gt;
 
@@ -1143,7 +1138,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Dear Vishi, daily log on Apr 25, 2023.</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for Apr 25, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/snyk&quot; title=&quot;View posts tagged with &amp;quot;snyk&amp;quot;&quot;&gt;snyk&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log for Apr 25, 2023.&lt;/p&gt;
 
@@ -1227,7 +1221,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>The Caste Politics in USA</title>
           <description>&lt;p&gt;I grew up in India and am still unable to grasp the complexity of the caste system. While there is still caste discrimination plaguing India, the country with a population of over a billion people, diverse languages, cultures, and levels of prosperity does not have a consensus on caste. However, it is unfortunate that a white professor in the US, who has lived all her life outside India, seems to claim expert knowledge on caste.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/caste&quot; title=&quot;View posts tagged with &amp;quot;caste&amp;quot;&quot;&gt;caste&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;I grew up in India and am still unable to grasp the complexity of the caste system. While there is still caste discrimination plaguing India, the country with a population of over a billion people, diverse languages, cultures, and levels of prosperity does not have a consensus on caste. However, it is unfortunate that a white professor in the US, who has lived all her life outside India, seems to claim expert knowledge on caste.&lt;/p&gt;
 
@@ -1286,7 +1279,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Transforming a blocking method to a reactive one using Spring Reactor</title>
           <description>&lt;p&gt;Reactive programming is becoming increasingly popular in modern software development, and the use of reactive frameworks like Spring Reactor and RxJava is becoming more common. Reactive programming is an event-driven approach to programming that emphasizes asynchronous data streams, non-blocking I/O, and functional programming.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/reactive programming&quot; title=&quot;View posts tagged with &amp;quot;reactive programming&amp;quot;&quot;&gt;reactive programming&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Reactive programming is becoming increasingly popular in modern software development, and the use of reactive frameworks like Spring Reactor and RxJava is becoming more common. Reactive programming is an event-driven approach to programming that emphasizes asynchronous data streams, non-blocking I/O, and functional programming.&lt;/p&gt;
 
@@ -1316,7 +1308,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Navigating Buffers in LunarVim</title>
           <description>&lt;p&gt;Lunarvim is a powerful tool that can enhance productivity for advanced software engineers. One feature that is particularly useful for working with multiple files is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vsplit&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;telescope&lt;/code&gt;. However, it can become cumbersome to navigate between files using a mouse. &lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/neovim&quot; title=&quot;View posts tagged with &amp;quot;neovim&amp;quot;&quot;&gt;neovim&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/vim&quot; title=&quot;View posts tagged with &amp;quot;vim&amp;quot;&quot;&gt;vim&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/lunarvim&quot; title=&quot;View posts tagged with &amp;quot;lunarvim&amp;quot;&quot;&gt;lunarvim&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Lunarvim is a powerful tool that can enhance productivity for advanced software engineers. One feature that is particularly useful for working with multiple files is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vsplit&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;telescope&lt;/code&gt;. However, it can become cumbersome to navigate between files using a mouse.&lt;/p&gt;
 
@@ -1344,7 +1335,6 @@ TOTAL                                                     11      0   100%
           <title>Dear Vishi, daily log on March 10, 2023.</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for March 10, 2023.
 &lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log for March 10, 2023.&lt;/p&gt;
 
@@ -1376,7 +1366,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Set up markdown editor locally using docker</title>
           <description>&lt;p&gt;If you&apos;re a writer or a developer who frequently deals with text formatting, you&apos;re probably familiar with Markdown. Markdown is a lightweight markup language that allows you to easily format text using simple syntax. While you can write Markdown in any text editor, using a dedicated Markdown editor can make the process much easier and more efficient.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/docker&quot; title=&quot;View posts tagged with &amp;quot;docker&amp;quot;&quot;&gt;docker&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/mardkown&quot; title=&quot;View posts tagged with &amp;quot;mardkown&amp;quot;&quot;&gt;mardkown&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;If you&apos;re a writer or a developer who frequently deals with text formatting, you&apos;re probably familiar with Markdown. Markdown is a lightweight markup language that allows you to easily format text using simple syntax. While you can write Markdown in any text editor, using a dedicated Markdown editor can make the process much easier and more efficient.&lt;/p&gt;
 
@@ -1416,7 +1405,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Cribsheet for Set in Java</title>
           <description>&lt;p&gt;A set in Java is a collection that stores a unique set of elements. This means that there are no duplicates in a set. You can define set using HashSet, TreeSet, or LinkedHashSet.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/interview&quot; title=&quot;View posts tagged with &amp;quot;interview&amp;quot;&quot;&gt;interview&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;A set in Java is a collection that stores a unique set of elements. This means that there are no duplicates in a set. You can define set using HashSet, TreeSet, or LinkedHashSet.&lt;/p&gt;
 
@@ -1500,7 +1488,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Create a Dummy JSON API with JSON-Server</title>
           <description>&lt;p&gt;JSON-Server is a popular tool for creating fake REST APIs quickly and easily. It&apos;s a great option for testing purposes when you need to mock up an API to see how your application interacts with it.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/api&quot; title=&quot;View posts tagged with &amp;quot;api&amp;quot;&quot;&gt;api&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;JSON-Server is a popular tool for creating fake REST APIs quickly and easily. It&apos;s a great option for testing purposes when you need to mock up an API to see how your application interacts with it.&lt;/p&gt;
 
@@ -1543,7 +1530,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Dear Vishi, daily log on Feb 07, 2023.</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for Feb 07, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log for Feb 07, 2023.&lt;/p&gt;
 
@@ -1606,7 +1592,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Dear Vishi, daily log on Feb 06, 2023.</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for Feb 06, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/spanish&quot; title=&quot;View posts tagged with &amp;quot;spanish&amp;quot;&quot;&gt;spanish&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log for Feb 06, 2023.&lt;/p&gt;
 
@@ -1666,7 +1651,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Dear Vishi, daily log on Feb 05, 2023.</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for Feb 05, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log for Feb 05, 2023.&lt;/p&gt;
 
@@ -1781,7 +1765,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Dear Vishi, daily log on Jan 31, 2023</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for Jan 31, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log for Jan 31, 2023.&lt;/p&gt;
 
@@ -1842,7 +1825,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Dear Vishi, daily log on Jan 30, 2023</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for Jan 30, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log for Jan 30, 2023.&lt;/p&gt;
 
@@ -1905,7 +1887,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Dear Vishi, daily log on Jan 29, 2023</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for Jan 29, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log for Jan 29, 2023.&lt;/p&gt;
 
@@ -1998,7 +1979,6 @@ TOTAL                                                     11      0   100%
         <item>
           <title>Young Earth Creationism</title>
           <description>&lt;p&gt;I stumbled upon a youtube &lt;a href=&quot;https://www.youtube.com/watch?v=82j1IqwA6P0&quot;&gt;video&lt;/a&gt; of Georgia Purdom, an American biologist and young Earth creationist. As a biologist, how can one reject the theory of evolution, the very foundation of the field?&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/science&quot; title=&quot;View posts tagged with &amp;quot;science&amp;quot;&quot;&gt;science&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/religion&quot; title=&quot;View posts tagged with &amp;quot;religion&amp;quot;&quot;&gt;religion&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;I stumbled upon a youtube &lt;a href=&quot;https://www.youtube.com/watch?v=82j1IqwA6P0&quot;&gt;video&lt;/a&gt; of Georgia Purdom, an American biologist and young Earth creationist. As a biologist, how can one reject the theory of evolution, the very foundation of the field?&lt;/p&gt;
 
@@ -2029,7 +2009,6 @@ The age of the earth ultimately comes down to a matter of trust—it&apos;s a wo
         <item>
           <title>Scan Code locally using SonarQube</title>
           <description>&lt;p&gt;SonarQube is an open-source platform used to manage code quality. It provides static code analysis, which means it can automatically analyze code to detect bugs, vulnerabilities, and code smells (design issues that could lead to problems in the future).&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/docker&quot; title=&quot;View posts tagged with &amp;quot;docker&amp;quot;&quot;&gt;docker&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sonarqube&quot; title=&quot;View posts tagged with &amp;quot;sonarqube&amp;quot;&quot;&gt;sonarqube&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;SonarQube is an open-source platform used to manage code quality. It provides static code analysis, which means it can automatically analyze code to detect bugs, vulnerabilities, and code smells (design issues that could lead to problems in the future).&lt;/p&gt;
 
@@ -2091,7 +2070,6 @@ Password : admin
         <item>
           <title>Find if Path Exists in Graph leetcode solution</title>
           <description>&lt;p&gt;It&apos;s a easy problem on Graph in leetcode to find if a path exist in graph.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;It&apos;s a easy problem on Graph in leetcode to find if a path exist in graph.&lt;/p&gt;
 
@@ -2145,7 +2123,6 @@ Password : admin
         <item>
           <title>Dear Vishi, is Nemo a Male or a Female?</title>
           <description>&lt;p&gt;Unless you were living under a rock, it&apos;s very likely that you saw the movie - Finding Nemo. I liked Marlin who was nemo&apos;s dad who faught against the odds to recover his son. Can you tell me if nemo was male or a female?.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Unless you were living under a rock, it&apos;s very likely that you saw the movie - Finding Nemo. I liked Marlin who was nemo&apos;s dad who faught against the odds to recover his son. Can you tell me if nemo&apos;s dad was a male or a female?&lt;/p&gt;
 
@@ -2171,7 +2148,6 @@ Password : admin
         <item>
           <title>Dear Vishi, what&apos;s the Philosophy of Kintsugi?</title>
           <description>&lt;p&gt;How often do you bump into a painter? &quot;So what do you do?&quot;, I asked. &quot;Well I am a painter&quot;, she said. &quot;Like a real painter?&quot;. &quot;Yes&quot;.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;How often do you bump into a painter? &quot;So what do you do?&quot;, I asked. &quot;Well I am a painter&quot;, she said. &quot;Like a real painter?&quot;. &quot;Yes&quot;&lt;/p&gt;
 
@@ -2203,7 +2179,6 @@ Password : admin
         <item>
           <title>AWS CLI to stop running instances of statemachine</title>
           <description>&lt;p&gt;I could not delete a statemachine that had running instances stuck in Progress. Since the number of instances were humongous, it was impossible to manually delete them using UI.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/statemachine&quot; title=&quot;View posts tagged with &amp;quot;statemachine&amp;quot;&quot;&gt;statemachine&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;I could not delete a statemachine that had running instances stuck in Progress. Since the number of instances were humongous, it was impossible to manually delete them using UI.&lt;/p&gt;
 
@@ -2264,7 +2239,6 @@ Password : admin
         <item>
           <title>Hamster Mustard Learns to climb</title>
           <description>&lt;p&gt;I have a Syrian hamster called Mustard. In less than a week he has learned to climb stairs.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/hamster&quot; title=&quot;View posts tagged with &amp;quot;hamster&amp;quot;&quot;&gt;hamster&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/pet&quot; title=&quot;View posts tagged with &amp;quot;pet&amp;quot;&quot;&gt;pet&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;I have a Syrian hamster called Mustard. In less than a week he has learned to climb stairs.&lt;/p&gt;
 
@@ -2290,7 +2264,6 @@ Password : admin
         <item>
           <title>Setup a development environment on Windows using wsl2</title>
           <description>&lt;p&gt;Most of the terminal I have used in Windows were at best lackluster. However wsl2 is a game changer which makes your Windows OS Unixy.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/wsl&quot; title=&quot;View posts tagged with &amp;quot;wsl&amp;quot;&quot;&gt;wsl&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/windows&quot; title=&quot;View posts tagged with &amp;quot;windows&amp;quot;&quot;&gt;windows&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Most of the terminal I have used in Windows were at best lackluster. However wsl2 is a game changer which makes your Windows OS Unixy.&lt;/p&gt;
 
@@ -2401,7 +2374,6 @@ Password : admin
         <item>
           <title>Pandas inner join on dataframes</title>
           <description>&lt;p&gt;Performing inner join on pandas dataframe is straightforward. However I wanted to override values from the right dataframe.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/pandas&quot; title=&quot;View posts tagged with &amp;quot;pandas&amp;quot;&quot;&gt;pandas&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Performing inner join on pandas dataframe is straightforward. However I wanted to override values from the right dataframe.&lt;/p&gt;
 
@@ -2486,7 +2458,6 @@ Password : admin
         <item>
           <title>Resolve the Error CROSSSLOT Keys in request don&apos;t hash to the same slot</title>
           <description>&lt;p&gt;AWS offers managed service Amazon MemoryDB which is redis compatible. The entire keyspace in Redis cluster is divided into hash slots and these slots are assigned to multiple nodes. In redis, getting a single value is straightforward.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/redis&quot; title=&quot;View posts tagged with &amp;quot;redis&amp;quot;&quot;&gt;redis&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/memorydb&quot; title=&quot;View posts tagged with &amp;quot;memorydb&amp;quot;&quot;&gt;memorydb&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;AWS offers managed service Amazon MemoryDB which is redis compatible.. The entire keyspace in Redis cluster is divided into hash slots and these slots are assigned to multiple nodes. In redis-cli, getting a single value is straightforward&lt;/p&gt;
 
@@ -2550,7 +2521,6 @@ Queued
         <item>
           <title>Is Wikipedia bias?</title>
           <description>&lt;p&gt;What&apos;s the first link that google throws at you when you search anything? Wikipedia is always foremost search result that you encounter. When it comes to science and technology, Wikipedia often provides good foundation for the beginners. However when it comes to politics, Wikipedia often begins to falter.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/opinion&quot; title=&quot;View posts tagged with &amp;quot;opinion&amp;quot;&quot;&gt;opinion&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;What&apos;s the first link that google throws at you when you search anything? Wikipedia is always foremost search result that you encounter. When it comes to science and technology, Wikipedia often provides good foundation for the beginners. However when it comes to politics, Wikipedia often begins to falter.&lt;/p&gt;
 
@@ -2628,7 +2598,6 @@ Queued
         <item>
           <title>WaterFire Event at Providence, Rhode Island</title>
           <description>&lt;p&gt;Waterfire is a popular festival at Providence, Rhode Island. The Waterplace park is lit up with bonfires along with boat processions and music. There are also food trucks if you are feeling hungry.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/rhode island&quot; title=&quot;View posts tagged with &amp;quot;rhode island&amp;quot;&quot;&gt;rhode island&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/travel&quot; title=&quot;View posts tagged with &amp;quot;travel&amp;quot;&quot;&gt;travel&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Waterfire is a popular festival at Providence, Rhode Island. The Waterplace park is lit up with bonfires along with boat processions and music. There are also food trucks if you are feeling hungry.&lt;/p&gt;
 
@@ -2648,9 +2617,8 @@ Queued
       
         <item>
           <title>Extract tweets from Twitter using Python</title>
-          <description>&lt;p&gt;In this tutorial, we will extract tweets from Twitter using python.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
-&lt;p&gt;In this tutorial, we will extract tweets from Twitter using python.&lt;/p&gt;
+          <description>&lt;p&gt;In this tutorial, we will extract tweets from Twitter using python.&lt;!-- truncate_here --&gt;
+In this tutorial, we will extract tweets from Twitter using python.&lt;/p&gt;
 
 &lt;p&gt;First lets create a project-&lt;/p&gt;
 
@@ -2798,7 +2766,6 @@ Save the file under &lt;code class=&quot;language-plaintext highlighter-rouge&qu
         <item>
           <title>Dear Vishi, daily log on Aug 30, 2022</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log on Aug 30, 2022.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log on Aug 30, 2022.&lt;/p&gt;
 
@@ -2848,7 +2815,6 @@ Save the file under &lt;code class=&quot;language-plaintext highlighter-rouge&qu
         <item>
           <title>Dear Vishi, daily log on Aug 29, 2022</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log on Aug 29, 2022.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log on Aug 29, 2022.&lt;/p&gt;
 
@@ -3134,7 +3100,6 @@ Beta, but why are you drinking CO2? Isn&apos;t it bad? Don&apos;t we exhale CO&l
         <item>
           <title>Serialize and Deserialize Binary Tree Leetcode solution</title>
           <description>&lt;p&gt;Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/design&quot; title=&quot;View posts tagged with &amp;quot;design&amp;quot;&quot;&gt;design&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.&lt;/p&gt;
 
@@ -3192,7 +3157,6 @@ Beta, but why are you drinking CO2? Isn&apos;t it bad? Don&apos;t we exhale CO&l
         <item>
           <title>Hinduism without caste</title>
           <description>&lt;p&gt;It&apos;s a just another day in twitter when you come across tweets disparaging Hinduism. &quot;Hinduism is a veritable chambers of horrors&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/hinduism&quot; title=&quot;View posts tagged with &amp;quot;hinduism&amp;quot;&quot;&gt;hinduism&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/caste&quot; title=&quot;View posts tagged with &amp;quot;caste&amp;quot;&quot;&gt;caste&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;It&apos;s a just another day in twitter when you come across tweets disparaging Hinduism.&lt;/p&gt;
 
@@ -3319,7 +3283,6 @@ At the onset, one is confronted by the difficulty of defining what Hinduism is. 
         <item>
           <title>Dear Vishi, daily log on July 11, 2022</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for July 11, 2022.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log for July 11, 2022.&lt;/p&gt;
 
@@ -3418,7 +3381,6 @@ At the onset, one is confronted by the difficulty of defining what Hinduism is. 
         <item>
           <title>Dear Vishi, daily log on July 11, 2022</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for July 10, 2022.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Dear Vishi, this is my daily log for July 10, 2022.&lt;/p&gt;
 
@@ -3517,7 +3479,6 @@ At the onset, one is confronted by the difficulty of defining what Hinduism is. 
         <item>
           <title>Apply Discount To Prices leetcode solution</title>
           <description>&lt;p&gt;A sentence is a string of single-space separated words where each word can contain digits, lowercase letters, and the dollar sign &apos;$&apos;. A word represents a price if it is a sequence of digits preceded by a dollar sign.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/string&quot; title=&quot;View posts tagged with &amp;quot;string&amp;quot;&quot;&gt;string&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;A sentence is a string of single-space separated words where each word can contain digits, lowercase letters, and the dollar sign &apos;$&apos;. A word represents a price if it is a sequence of digits preceded by a dollar sign.&lt;/p&gt;
 
@@ -3603,7 +3564,6 @@ At the onset, one is confronted by the difficulty of defining what Hinduism is. 
         <item>
           <title>Sort Characters By Frequency solution leetcode</title>
           <description>&lt;p&gt;Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/heap&quot; title=&quot;View posts tagged with &amp;quot;heap&amp;quot;&quot;&gt;heap&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.&lt;/p&gt;
 
@@ -3652,8 +3612,6 @@ At the onset, one is confronted by the difficulty of defining what Hinduism is. 
         <item>
           <title>Create a Lambda Function to run SQL queries in Redshift Cluster</title>
           <description>&lt;p&gt;Amazon Redshift is fully managed warehouse service provided by AWS. The Amazon Redshift engine is a SQL-compliant, massively-parallel, query processing and database management system designed to support analytics workload.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sql&quot; title=&quot;View posts tagged with &amp;quot;sql&amp;quot;&quot;&gt;sql&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/lambda function&quot; title=&quot;View posts tagged with &amp;quot;lambda function&amp;quot;&quot;&gt;lambda function&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/redshift&quot; title=&quot;View posts tagged with &amp;quot;redshift&amp;quot;&quot;&gt;redshift&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Amazon Redshift is fully managed warehouse service provided by AWS. The Amazon Redshift engine is a SQL-compliant, massively-parallel, query processing and database management system designed to support analytics workload.&lt;/p&gt;
 
@@ -3723,7 +3681,6 @@ query processing and data manipulation against local data.[^redshift]&lt;/p&gt;
         <item>
           <title>Getting Started with decorators in Python</title>
           <description>&lt;p&gt;In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.&lt;/p&gt;
 
@@ -3843,7 +3800,6 @@ Dog executed bowbow
         <item>
           <title>Minimum Consecutive Cards to Pick up solution leetcode</title>
           <description>&lt;p&gt;An interesting problem on leetcode to find minimum number of ways to pick up consecutive cards. We will start with a brute force algorithm that would exceed in time limit. Later we will improve upon this algorithm using hashmap.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/hashmap&quot; title=&quot;View posts tagged with &amp;quot;hashmap&amp;quot;&quot;&gt;hashmap&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
 
@@ -4394,8 +4350,6 @@ EOF
           <title>Creating Python AWS lambda layer with Docker</title>
           <description>&lt;p&gt;When you develop AWS lambda functions, you might feel the need to install additional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; libraries. This can be achieved using Lambda layers that can be included in any lambda function.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/docker&quot; title=&quot;View posts tagged with &amp;quot;docker&amp;quot;&quot;&gt;docker&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;When you develop AWS lambda functions, you might feel the need to install additional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; libraries. This can be achieved using Lambda layers that can be included in any lambda function.&lt;/p&gt;
 
 &lt;h3 id=&quot;creating-lambda-layer-with-docker&quot;&gt;Creating Lambda Layer with Docker&lt;/h3&gt;
@@ -4557,12 +4511,6 @@ EOF
           <description>&lt;p&gt;You are given a &lt;strong&gt;0-indexed&lt;/strong&gt; binary array &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt; of length &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt; can be divided at index &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; (where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0 &amp;lt;= i &amp;lt;= n&lt;/code&gt;) into two arrays (possibly empty) nums&lt;sub&gt;left&lt;/sub&gt; and nums&lt;sub&gt;right&lt;/sub&gt;&lt;!-- truncate_here --&gt;&lt;/p&gt;
 &lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/hashmap&quot; title=&quot;View posts tagged with &amp;quot;hashmap&amp;quot;&quot;&gt;hashmap&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/array&quot; title=&quot;View posts tagged with &amp;quot;array&amp;quot;&quot;&gt;array&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
 
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
-
-&lt;script src=&quot;/js/jquery.easytabs.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;/js/multipleTab.js&quot;&gt;&lt;/script&gt;
-
 &lt;h2 id=&quot;problem-statement&quot;&gt;Problem Statement&lt;/h2&gt;
 
 &lt;p&gt;You are given a &lt;strong&gt;0-indexed&lt;/strong&gt; binary array &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt; of length &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums&lt;/code&gt; can be divided at index &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; (where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0 &amp;lt;= i &amp;lt;= n&lt;/code&gt;) into two arrays (possibly empty) nums&lt;sub&gt;left&lt;/sub&gt; and nums&lt;sub&gt;right&lt;/sub&gt;:&lt;/p&gt;
@@ -4620,22 +4568,7 @@ Only index 0 has the highest possible division score 2.
 
 &lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
 
-&lt;div class=&quot;tab-container&quot;&gt;
-  &lt;ul&gt;
-    &lt;li class=&quot;tab Java1&quot;&gt;&lt;a href=&quot;#Java1&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;tab Python1&quot;&gt;&lt;a href=&quot;#Python1&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-
-   &lt;div class=&quot;codeSample Java1&quot; id=&quot;Java1&quot;&gt;
-     &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa433cb7d3f266f5853854805134c543.js?file=MaxScoreIndices.java&quot;&gt;&lt;/script&gt;
-   &lt;/div&gt;
-
-   &lt;div class=&quot;codeSample Python1&quot; id=&quot;Python1&quot;&gt;
-     &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa433cb7d3f266f5853854805134c543.js?file=max_score_indices.py&quot;&gt;&lt;/script&gt;
-   &lt;/div&gt;
-
-&lt;/div&gt;
-
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab java&quot;&gt;&lt;a href=&quot;#java&quot;&gt;java&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;tab python&quot;&gt;&lt;a href=&quot;#python&quot;&gt;python&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot; code-block codeSample java&quot; id=&quot;java&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa433cb7d3f266f5853854805134c543.js?file=MaxScoreIndices.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;div class=&quot; code-block codeSample python&quot; id=&quot;python&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa433cb7d3f266f5853854805134c543.js?file=max_score_indices.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2022-02-05T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/all-divisions-with-the-highest-score-of-a-binary-array</link>
@@ -4694,7 +4627,6 @@ Only index 0 has the highest possible division score 2.
         <item>
           <title>Leetcode - Longest Substring Without Repeating Characters</title>
           <description>&lt;p&gt;In this &lt;a href=&quot;https://leetcode.com/problems/longest-substring-without-repeating-characters/&quot;&gt;leetcode&lt;/a&gt; problem, we are asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abcabcbb&lt;/code&gt; the longest substring without repeating characters is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;abc&lt;/code&gt; (with a length of 3).&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/two pointers&quot; title=&quot;View posts tagged with &amp;quot;two pointers&amp;quot;&quot;&gt;two pointers&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/set&quot; title=&quot;View posts tagged with &amp;quot;set&amp;quot;&quot;&gt;set&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/string&quot; title=&quot;View posts tagged with &amp;quot;string&amp;quot;&quot;&gt;string&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
 
@@ -4874,8 +4806,6 @@ ___ spark_demo.py
           <title>Wild Marriage</title>
           <description>&lt;p&gt;&quot;Marriages are made in heaven&quot; is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However, there is a rare marriage that not only invites heaven&apos;s fury but also is consummated by mutual suicide.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/science&quot; title=&quot;View posts tagged with &amp;quot;science&amp;quot;&quot;&gt;science&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/annihilation&quot; title=&quot;View posts tagged with &amp;quot;annihilation&amp;quot;&quot;&gt;annihilation&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/matter&quot; title=&quot;View posts tagged with &amp;quot;matter&amp;quot;&quot;&gt;matter&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/antimatter&quot; title=&quot;View posts tagged with &amp;quot;antimatter&amp;quot;&quot;&gt;antimatter&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/audio&quot; title=&quot;View posts tagged with &amp;quot;audio&amp;quot;&quot;&gt;audio&lt;/a&gt;    &lt;/p&gt;
-
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full&quot;&gt;&lt;/script&gt;
 
 &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/chat.css&quot; /&gt;
@@ -4886,13 +4816,12 @@ ___ spark_demo.py
 &lt;img src=&quot;/img/waveform.min.png&quot; /&gt;
 &lt;/div&gt;
 &lt;audio controls=&quot;&quot; class=&quot;audio_controls &quot; preload=&quot;metadata&quot;&gt;
-    &lt;source src=&quot;
-/sounds/2021-12-24-wild-marriage.mp3
-&quot; type=&quot;audio/mp3&quot; /&gt;
+    &lt;source src=&quot;/sounds/2021-12-24-wild-marriage.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
     Your browser does not support the audio element.
 &lt;/audio&gt;  
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
 &lt;!--begin_of_post --&gt;&lt;/p&gt;
 
 &lt;p&gt;&quot;Marriages are made in heaven&quot; is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However there is a rare marriage that not only invites heaven&apos;s fury but also is consummated by mutual suicide.&lt;/p&gt;
@@ -4985,8 +4914,6 @@ you as your own being&quot;&lt;sup&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;foo
         <item>
           <title>Course Schedule Leetcode Solution</title>
           <description>&lt;p&gt;There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [a&lt;sub&gt;i&lt;/sub&gt;, b&lt;sub&gt;i&lt;/sub&gt;] indicates that you must take course b&lt;sub&gt;i&lt;/sub&gt; first if you want to take course a&lt;sub&gt;i&lt;/sub&gt;.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/graph&quot; title=&quot;View posts tagged with &amp;quot;graph&amp;quot;&quot;&gt;graph&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/bfs&quot; title=&quot;View posts tagged with &amp;quot;bfs&amp;quot;&quot;&gt;bfs&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
 
@@ -5105,8 +5032,6 @@ prerequisites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quo
         <item>
           <title>Remove-all-adjacent-duplicates-in-string-ii Solution</title>
           <description>&lt;p&gt;You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/stack&quot; title=&quot;View posts tagged with &amp;quot;stack&amp;quot;&quot;&gt;stack&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/scala&quot; title=&quot;View posts tagged with &amp;quot;scala&amp;quot;&quot;&gt;scala&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/javascript&quot; title=&quot;View posts tagged with &amp;quot;javascript&amp;quot;&quot;&gt;javascript&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
 
@@ -5239,8 +5164,6 @@ further than yesterday.&lt;br /&gt;
 while my feet ache and plead,&lt;br /&gt;
 I dragged &apos;em without paying any heed.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/poetry&quot; title=&quot;View posts tagged with &amp;quot;poetry&amp;quot;&quot;&gt;poetry&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/friends&quot; title=&quot;View posts tagged with &amp;quot;friends&amp;quot;&quot;&gt;friends&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/audio&quot; title=&quot;View posts tagged with &amp;quot;audio&amp;quot;&quot;&gt;audio&lt;/a&gt;    &lt;/p&gt;
-
 &lt;div id=&quot;player&quot;&gt;
 &lt;div class=&quot;listen&quot;&gt;Listen to this article&lt;/div&gt;
 &lt;div id=&quot;waveform&quot;&gt;
@@ -5295,8 +5218,6 @@ hope my lost friends still harbour my memories well.&lt;br /&gt;
         <item>
           <title>Lowest Common Ancestor of a Binary Tree</title>
           <description>&lt;p&gt;Questions involving the binary tree data structure are very popular in tech interviews, and can be challenging and varied! A binary tree is a data structure consisting of a collection of nodes (starting at a root node), where each node consists of a value (data), together with a directed edges to at most two nodes (the &quot;left child&quot; and &quot;right child&quot;), with the additional conditions that no two edges point to the same node and no edge points to the root. I recently solved an interesting problem on binary tree.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/javascript&quot; title=&quot;View posts tagged with &amp;quot;javascript&amp;quot;&quot;&gt;javascript&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/scala&quot; title=&quot;View posts tagged with &amp;quot;scala&amp;quot;&quot;&gt;scala&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Questions involving the binary tree data structure are very popular in tech interviews, and can be challenging and varied! A binary tree is a data structure consisting of a collection of nodes (starting at a root node), where each node consists of a value (data), together with a directed edges to at most two nodes (the &quot;left child&quot; and &quot;right child&quot;), with the additional conditions that no two edges point to the same node and no edge points to the root. I recently solved an interesting problem on binary tree.
 &lt;/p&gt;
@@ -5424,7 +5345,6 @@ Output: 1
         <item>
           <title>Ternary String solution Codeforces - 1354B</title>
           <description>&lt;p&gt;Ternary string is an interesting problem that could be solved using two pointers techniques. It&apos;s a convenient way to keep track of multiple indices. This helps in making decisions based on two values.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/codeforces&quot; title=&quot;View posts tagged with &amp;quot;codeforces&amp;quot;&quot;&gt;codeforces&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/two pointers&quot; title=&quot;View posts tagged with &amp;quot;two pointers&amp;quot;&quot;&gt;two pointers&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
 
@@ -5521,7 +5441,6 @@ A contiguous substring of string s is a string that can be obtained from s by re
         <item>
           <title>Coin Change solution leetcode</title>
           <description>&lt;p&gt;It&apos;s one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/dp&quot; title=&quot;View posts tagged with &amp;quot;dp&amp;quot;&quot;&gt;dp&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;It&apos;s one of the most popular questions on leetcode that seems very easy at first. Coin change is a classic dynamic programming problem. I will proceed with an obvious (albeit wrong) solution and subsequently proceed to an efficient correct solution.&lt;/p&gt;
 
@@ -5808,7 +5727,6 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
         <item>
           <title>Dear Vishi, is snoring innocuous?</title>
           <description>&lt;p&gt;I was an intern working in &lt;a href=&quot;https://en.wikipedia.org/wiki/Upstate_New_York&quot; target=&quot;_blank&quot;&gt;Upstate New York&lt;/a&gt;. Public transport required hopping multiple trains &amp;amp; buses and was woefully tedious. I found some other interns who were willing to split the fare with me for Uber. Even a ride in Uber consumed more than two hours. Occasionally I used to steal a quick nap. After a siesta of a few hours, I had always woken up with a gaggle of laughter. My peers often pulled my leg, &quot;You were snoring like a pig&quot;. However, I dismissed my faux pas as just a mere nuisance.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/snoring&quot; title=&quot;View posts tagged with &amp;quot;snoring&amp;quot;&quot;&gt;snoring&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sleep&quot; title=&quot;View posts tagged with &amp;quot;sleep&amp;quot;&quot;&gt;sleep&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/apnea&quot; title=&quot;View posts tagged with &amp;quot;apnea&amp;quot;&quot;&gt;apnea&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/audio&quot; title=&quot;View posts tagged with &amp;quot;audio&amp;quot;&quot;&gt;audio&lt;/a&gt;    &lt;/p&gt;
 
 &lt;div id=&quot;player&quot;&gt;
 &lt;div class=&quot;listen&quot;&gt;Listen to this article&lt;/div&gt;
@@ -5900,7 +5818,6 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
         <item>
           <title>Dear Vishi, does a virus poop?</title>
           <description>&lt;p&gt;When the alarm clock breaks my slumber, I roll down on my bed, blindly crawling towards my alarm clock as if it was a bomb to diffuse it. After multiple snoozes, I relinquished my dreams and come to my senses. Gulping water after I wake up is my first activity. Next, I excuse myself to the bathroom for “nature call”. All living things from a simple bacteria to a giant dinosaur needs to perform two basic life function; eat and excrete.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/virus&quot; title=&quot;View posts tagged with &amp;quot;virus&amp;quot;&quot;&gt;virus&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/audio&quot; title=&quot;View posts tagged with &amp;quot;audio&amp;quot;&quot;&gt;audio&lt;/a&gt;    &lt;/p&gt;
 
 &lt;div id=&quot;player&quot;&gt;
 &lt;div class=&quot;listen&quot;&gt;Listen to this article&lt;/div&gt;
@@ -5971,7 +5888,6 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
         <item>
           <title>Maximum Subarray</title>
           <description>&lt;p&gt;There&apos;s an interesting problem I recently solved on leetcode based on dynamic programming. My &lt;a href=&quot;https://github.com/tushar-sharma/prep-coding&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt; repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/dp&quot; title=&quot;View posts tagged with &amp;quot;dp&amp;quot;&quot;&gt;dp&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/multipleTab.css&quot; /&gt;
 
@@ -6053,7 +5969,6 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
         <item>
           <title>Bike Ride in Mexico City</title>
           <description>&lt;p&gt;This is my first time visiting Mexico city, also known as CDMX. Initially I was scared to come here because of Narcos. However during my brief two weeks stay I have felt safe. With my limited Spanish, I decided to book an &lt;a href=&quot;https://www.airbnb.co.in/experiences/102485&quot; target=&quot;_blank&quot;&gt;Airbnb experience&lt;/a&gt; for a bike tour.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/cdmx&quot; title=&quot;View posts tagged with &amp;quot;cdmx&amp;quot;&quot;&gt;cdmx&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/mexico&quot; title=&quot;View posts tagged with &amp;quot;mexico&amp;quot;&quot;&gt;mexico&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/travel&quot; title=&quot;View posts tagged with &amp;quot;travel&amp;quot;&quot;&gt;travel&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/bike&quot; title=&quot;View posts tagged with &amp;quot;bike&amp;quot;&quot;&gt;bike&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;This is my first time visiting Mexico city, also known as CDMX. Initially I was scared to come here because of Narcos. However during my brief two weeks stay I have felt safe. With my limited Spanish, I decided to book an &lt;a href=&quot;https://www.airbnb.co.in/experiences/102485&quot; target=&quot;_blank&quot;&gt;Airbnb experience&lt;/a&gt; for a bike tour.&lt;/p&gt;
 
@@ -6106,7 +6021,6 @@ amount &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 11
         <item>
           <title>Dear Vishi, have you seen a ghost?</title>
           <description>&lt;p&gt;Do you believe in ghosts? I did when I was a kid. I was infatuated with the paranormal. Sometimes I used to wander around desolate buildings with other kids concocting horror stories. I loquaciously gossiped about ghosts in school which earned me a sizeable audience. I was convinced that someday I would stumble upon an innocuous spirit that would instill some unearthly powers in me.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/infrasound&quot; title=&quot;View posts tagged with &amp;quot;infrasound&amp;quot;&quot;&gt;infrasound&lt;/a&gt;    &lt;/p&gt;
 
 &lt;style&gt;
 table, td, th {  
@@ -6269,7 +6183,6 @@ th, td {
 &lt;/style&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/cdk/&quot; target=&quot;_bank&quot;&gt;AWS CDK&lt;/a&gt; is a great framework to programmatically deploy cloudformation stack. If you are unfamiliar with AWS CDK, I would recommend first to check out &lt;a href=&quot;http://randomwits.com/blog/tutorial-cdk-aws&quot;&gt;Getting started with AWS CDK&lt;/a&gt;.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/cdk&quot; title=&quot;View posts tagged with &amp;quot;cdk&amp;quot;&quot;&gt;cdk&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/cloudformation&quot; title=&quot;View posts tagged with &amp;quot;cloudformation&amp;quot;&quot;&gt;cloudformation&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/typescript&quot; title=&quot;View posts tagged with &amp;quot;typescript&amp;quot;&quot;&gt;typescript&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/tutorial&quot; title=&quot;View posts tagged with &amp;quot;tutorial&amp;quot;&quot;&gt;tutorial&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/cdk/&quot; target=&quot;_bank&quot;&gt;AWS CDK&lt;/a&gt; is a great framework to programmatically deploy cloudformation stack. If you are unfamiliar with AWS CDK, I would recommend first to check out &lt;a href=&quot;http://randomwits.com/blog/tutorial-cdk-aws&quot;&gt;Getting started with AWS CDK&lt;/a&gt;.&lt;/p&gt;
 
@@ -6374,7 +6287,6 @@ th, td {
         <item>
           <title>Getting Started with AWS CDK</title>
           <description>&lt;p&gt;Cloudformation service in AWS allows you to describe an entire set of resources required to make a pipeline. The cloudformation template can be described in JSON or YAML format. Updating the cloudformation template was not a pleasant experience. I wanted to discover alternative ways to generate cloudformation template programmatically.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/cdk&quot; title=&quot;View posts tagged with &amp;quot;cdk&amp;quot;&quot;&gt;cdk&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/cloudformation&quot; title=&quot;View posts tagged with &amp;quot;cloudformation&amp;quot;&quot;&gt;cloudformation&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/typescript&quot; title=&quot;View posts tagged with &amp;quot;typescript&amp;quot;&quot;&gt;typescript&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/chat.css&quot; /&gt;
 
@@ -6586,7 +6498,6 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack&apos;s template as 
         <item>
           <title>Dear Vishi, what if Dehradun was in Nepal?</title>
           <description>&lt;p&gt;What’s a nationality? The idea of the nation-state is pretty modern. Ancient lands were usually under the suzerainty of kings &amp;amp; queens. While most emperors spilled blood to expand their kingdom, the common man was seldom concerned about borders.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;What’s a nationality? The idea of the nation-state is pretty modern. Ancient lands were usually under the suzerainty of kings &amp;amp; queens. While most emperors spilled blood to expand their kingdom, the common man was seldom concerned about borders.&lt;/p&gt;
 
@@ -6622,7 +6533,6 @@ For CDK v2, CheckBootstrapVersion rule is added to the Stack&apos;s template as 
         <item>
           <title>Dear Vishi, what&apos;s a carcinogen?</title>
           <description>&lt;p&gt;If you are not living under a cave, you probably have already heard about carcinogens. News is often awash with headlines alerting perils of carcinogens. In a nutshell, these are substances that have the potential to cause cancer. Not all carcinogens cause cancer. Not all cancer is caused by carcinogens. Cancer is a complicated group of diseases. Of course, it’s not my forte to expound on the subject of cancer. However, we should try to understand how carcinogens are identified and what we should do to protect ourselves.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/carcinogen&quot; title=&quot;View posts tagged with &amp;quot;carcinogen&amp;quot;&quot;&gt;carcinogen&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/meditation&quot; title=&quot;View posts tagged with &amp;quot;meditation&amp;quot;&quot;&gt;meditation&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;If you are not living under a cave, you probably have already heard about carcinogens. News is often awash with headlines alerting perils of carcinogens. In a nutshell, these are substances that have the potential to cause cancer. Not all carcinogens cause cancer. Not all cancer is caused by carcinogens. Cancer is a complicated group of diseases. Of course, it’s not my forte to expound on the subject of cancer. However, we should try to understand how carcinogens are identified and what we should do to protect ourselves.&lt;/p&gt;
 
@@ -6697,7 +6607,6 @@ Om Peace, peace, peace.&lt;/p&gt;
         <item>
           <title>Dear Vishi, can you meditate like a monk?</title>
           <description>&lt;p&gt;Today I tried to meditate again. I used Insight Timer app for background sound. However I think I&apos;ll just stick to Youtube as it has more varieties. I struggled for 20 minutes sitting cross-legged as my mind wandered in the labyrinth of thoughts. I guess it will take more practice to hone my skill. Have you ever wondered how monks can meditate for countless hours or days?&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot;&gt;
 function changeImage(elem) {
@@ -6757,7 +6666,6 @@ However Nehru was critical of Aurangzeb, who was the last ruler of the Mughal Em
         <item>
           <title>Dear Vishi, is there a time machine?</title>
           <description>&lt;p&gt;Did you remember we watched The Time Machine movie together? The protagonist loses his fiancée when a mugger kills her. He then builds a time machine to travel back in time to save her. Of course multiple movies have been made romanticizing the concept of time machine.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/time&quot; title=&quot;View posts tagged with &amp;quot;time&amp;quot;&quot;&gt;time&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;!--begin_of_post --&gt;
 
@@ -6820,7 +6728,6 @@ However Nehru was critical of Aurangzeb, who was the last ruler of the Mughal Em
         <item>
           <title>Dear Vishi, can you mix Covid Vaccine?</title>
           <description>&lt;p&gt;Today the sleep was better. Yesterday I was sleep deprived. Hunger is the best ingredient to make any food delicious. Likewise a sound sleep is like a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;manna from heaven&lt;/code&gt; for me.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Today the sleep was better. Yesterday I was sleep deprived. Hunger is the best ingredient to make any food delicious. Likewise a sound sleep is like a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;manna from heaven&lt;/code&gt; for me.&lt;/p&gt;
 
@@ -6912,7 +6819,6 @@ Poetry version 1.1.4
         <item>
           <title>Dear Vishi, have you travelled to Virginia?</title>
           <description>&lt;p&gt;I didn&apos;t have proper sleep today. I could barely keep my eyes open. Empty stomach and a heavy mind is a disaster for sound sleep. Yesterday I was brooding too much while trying to sleep. I guess I need to filter noises in my mind. Proper sleep is the basic physiological need in Maslow&apos;s pyramid. I guess it&apos;s a blessed day not to have a insomnia.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/diary&quot; title=&quot;View posts tagged with &amp;quot;diary&amp;quot;&quot;&gt;diary&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/letters&quot; title=&quot;View posts tagged with &amp;quot;letters&amp;quot;&quot;&gt;letters&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;I didn&apos;t have proper sleep today. I could barely keep my eyes open. Empty stomach and a heavy mind is a disaster for sound sleep. Yesterday I was brooding too much while trying to sleep. I guess I need to filter noises in my mind. Proper sleep is the basic physiological need in Maslow&apos;s pyramid. I guess it&apos;s a blessed day not to have a insomnia.&lt;/p&gt;
 
@@ -6962,8 +6868,6 @@ Poetry version 1.1.4
         <item>
           <title>How to Make(Or Lose) Money in Stocks Part1</title>
           <description>&lt;p&gt;Recently I finished watching web-series &lt;a href=&quot;https://en.wikipedia.org/wiki/Scam_1992&quot; target=&quot;_blank&quot;&gt;Scam 1992&lt;/a&gt;. It&apos;s based on story of Harshad Mehta, a famous Indian stockbrocker who made fortunes in stocks. Despite his iconic success &amp;amp; &lt;a href=&quot;https://en.wikipedia.org/wiki/1992_Indian_stock_market_scam&quot; target=&quot;_blank&quot;&gt;failure&lt;/a&gt;, the series rekindled my interest in world of &quot;stocks&quot;. I guess the famous dialogue &quot;Risk Hai Toh Ishq Hai&quot; has stuck with me.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/stocks&quot; title=&quot;View posts tagged with &amp;quot;stocks&amp;quot;&quot;&gt;stocks&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/finance&quot; title=&quot;View posts tagged with &amp;quot;finance&amp;quot;&quot;&gt;finance&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/money&quot; title=&quot;View posts tagged with &amp;quot;money&amp;quot;&quot;&gt;money&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/google&quot; title=&quot;View posts tagged with &amp;quot;google&amp;quot;&quot;&gt;google&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/selenium&quot; title=&quot;View posts tagged with &amp;quot;selenium&amp;quot;&quot;&gt;selenium&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Recently I finished watching web-series &lt;a href=&quot;https://en.wikipedia.org/wiki/Scam_1992&quot; target=&quot;_blank&quot;&gt;Scam 1992&lt;/a&gt;. It&apos;s based on story of Harshad Mehta, a famous Indian stockbrocker who made fortunes in stocks. Despite his iconic success &amp;amp; &lt;a href=&quot;https://en.wikipedia.org/wiki/1992_Indian_stock_market_scam&quot; target=&quot;_blank&quot;&gt;failure&lt;/a&gt;, the series rekindled my interest in world of &quot;stocks&quot;. I guess the famous dialogue &quot;Risk Hai Toh Ishq Hai&quot; has stuck with me.&lt;/p&gt;
 
@@ -7102,8 +7006,6 @@ msft,0,0,230,0
           <title>Famous breach of Trust in Cancer</title>
           <description>&lt;p&gt;I am currently reading &lt;a href=&quot;http://randomwits.com/books&quot; target=&quot;_blank&quot;&gt;The Emperor of Maladies&lt;/a&gt;. This is a fascination book where Siddhartha Mukherjee not only educate its readers about cancer disease but also shares interesting tidbits. Werner Bezwoda was an infamous oncologist who fudged data about bone marrow transplant in women with metastatic breast cancer.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/pseudoscience&quot; title=&quot;View posts tagged with &amp;quot;pseudoscience&amp;quot;&quot;&gt;pseudoscience&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/cancer&quot; title=&quot;View posts tagged with &amp;quot;cancer&amp;quot;&quot;&gt;cancer&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/breast cancer&quot; title=&quot;View posts tagged with &amp;quot;breast cancer&amp;quot;&quot;&gt;breast cancer&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/bone marrow&quot; title=&quot;View posts tagged with &amp;quot;bone marrow&amp;quot;&quot;&gt;bone marrow&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;I am currently reading &lt;a href=&quot;http://randomwits.com/books&quot; target=&quot;_blank&quot;&gt;The Emperor of Maladies&lt;/a&gt;. This is a fascination book where Siddhartha Mukherjee not only educate its readers about cancer disease but also shares interesting tidbits. Werner Bezwoda was an infamous oncologist who fudged data about bone marrow transplant in women with metastatic breast cancer.&lt;/p&gt;
 
 &lt;p&gt;Before I understood anything, I have to understand what bone marrow was. I remembered vaguely from my science class in school but I guess I needed a revision.&lt;/p&gt;
@@ -7180,8 +7082,6 @@ msft,0,0,230,0
         <item>
           <title>EnvCommandError in Windows using Poetry</title>
           <description>&lt;p&gt;Poetry is a great dependency management tool in python. It&apos;s better than managing a flat file like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;requirements.txt&lt;/code&gt;. There are also other great tools like pipenv. However I found poetry much simpler in resolving dependencies.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/windows&quot; title=&quot;View posts tagged with &amp;quot;windows&amp;quot;&quot;&gt;windows&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/poetry&quot; title=&quot;View posts tagged with &amp;quot;poetry&amp;quot;&quot;&gt;poetry&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/bug&quot; title=&quot;View posts tagged with &amp;quot;bug&amp;quot;&quot;&gt;bug&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Poetry is a great dependency management tool in python. It&apos;s better than managing a flat file like `requirements.txt`. There are also other great tools like pipenv. However I found poetry much simpler in resolving dependencies. &lt;/p&gt;
 
@@ -7263,8 +7163,6 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
           <title>Export DynamoDB Table to S3 Bucket Using Lambda Function</title>
           <description>&lt;p&gt;Dynamodb is a great NoSQL service by AWS. One of the most common use case is to export data to s3. There are multiple ways to export data to s3. For this tutorial we will leverage lambda function to achieve our goal.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/aws&quot; title=&quot;View posts tagged with &amp;quot;aws&amp;quot;&quot;&gt;aws&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/lambda function&quot; title=&quot;View posts tagged with &amp;quot;lambda function&amp;quot;&quot;&gt;lambda function&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/dynamodb&quot; title=&quot;View posts tagged with &amp;quot;dynamodb&amp;quot;&quot;&gt;dynamodb&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/s3&quot; title=&quot;View posts tagged with &amp;quot;s3&amp;quot;&quot;&gt;s3&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;Dynamodb is a great NoSQL service by AWS. Often it&apos;s required to export data from the dynamodb table .&lt;/p&gt;
 
 &lt;p&gt;First, let us review our use case. Our lambda function will read from table from dynamodb and export JSON to s3.&lt;/p&gt;
@@ -7321,22 +7219,17 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
           <title>Why homeopathy is so popular in India?</title>
           <description>&lt;p&gt;I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/pseudoscience&quot; title=&quot;View posts tagged with &amp;quot;pseudoscience&amp;quot;&quot;&gt;pseudoscience&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/homeopathy&quot; title=&quot;View posts tagged with &amp;quot;homeopathy&amp;quot;&quot;&gt;homeopathy&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/ayurveda&quot; title=&quot;View posts tagged with &amp;quot;ayurveda&amp;quot;&quot;&gt;ayurveda&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/india&quot; title=&quot;View posts tagged with &amp;quot;india&amp;quot;&quot;&gt;india&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/audio&quot; title=&quot;View posts tagged with &amp;quot;audio&amp;quot;&quot;&gt;audio&lt;/a&gt;   &lt;/p&gt;
-
 &lt;div id=&quot;player&quot;&gt;
 &lt;div class=&quot;listen&quot;&gt;Listen to this article&lt;/div&gt;
 &lt;div id=&quot;waveform&quot;&gt;
 &lt;img src=&quot;/img/waveform.min.png&quot; /&gt;
 &lt;/div&gt;
 &lt;audio controls=&quot;&quot; class=&quot;audio_controls &quot; preload=&quot;metadata&quot;&gt;
-    &lt;source src=&quot;
-/sounds/2020-06-19-homeopathy-india.mp3
-&quot; type=&quot;audio/mp3&quot; /&gt;
+    &lt;source src=&quot;/sounds/2020-06-19-homeopathy-india.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
     Your browser does not support the audio element.
 &lt;/audio&gt;  
 &lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;!--begin_of_post --&gt;&lt;/p&gt;
+&lt;!--begin_of_post --&gt;
 
 &lt;p&gt; I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.&lt;/p&gt;
 
@@ -7357,7 +7250,7 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Like cures Like&lt;/strong&gt;: the notion that a disease can be cured by a substance that produces similar symptoms in healthy people&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Like cures Like&lt;/strong&gt;: the notion that a disease can be cured by a substance that produces similar symptoms in healthy people.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Law of minimum dose&lt;/strong&gt; —the notion that the lower the dose of the medication, the greater its effectiveness. Many homeopathic products are so diluted that no molecules of the original substance remain.&lt;/p&gt;
@@ -7383,8 +7276,8 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
 &lt;p&gt;Celebrities &amp;amp; Politicians are powerful influencers in any country. The product they endorse usually have huge impact on consumer buying behavior. List of politicians endorsing homeopathy products:
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
-Press Information Bureau, government of India, suggesting homeopathy for coronavirus
+&lt;blockquote&gt;
+  &lt;p&gt;Press Information Bureau, government of India, suggesting homeopathy for coronavirus&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;center&gt;
@@ -7392,8 +7285,8 @@ Press Information Bureau, government of India, suggesting homeopathy for coronav
  &lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
-Shashi Tharor is the Indian politician, writer, former Under-Secretary General of the United Nations.
+&lt;blockquote&gt;
+  &lt;p&gt;Shashi Tharor is the Indian politician, writer, former Under-Secretary General of the United Nations.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;center&gt;
@@ -7402,8 +7295,8 @@ Shashi Tharor is the Indian politician, writer, former Under-Secretary General o
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
-Shatrughan Sinha, an Indian film actor &amp;amp; politician.
+&lt;blockquote&gt;
+  &lt;p&gt;Shatrughan Sinha, an Indian film actor &amp;amp; politician.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;center&gt;
@@ -7411,8 +7304,8 @@ Shatrughan Sinha, an Indian film actor &amp;amp; politician.
 &lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
-Nita Ambani is the chairperson and founder of the Reliance Foundation.
+&lt;blockquote&gt;
+  &lt;p&gt;Nita Ambani is the chairperson and founder of the Reliance Foundation.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;center&gt;
@@ -7420,35 +7313,30 @@ Nita Ambani is the chairperson and founder of the Reliance Foundation.
 &lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
-Vice President of India, M. Venkaiah Naidu, said, &quot;Homeopathy should become a mass movement&quot;. &lt;br /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Vice President of India, M. Venkaiah Naidu, said, &quot;Homeopathy should become a mass movement&quot;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/rDy5oTAhaLw&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/rDy5oTAhaLw?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/rDy5oTAhaLw/hqdefault.jpg&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Homeopathy should become a mass movement, says Vice President on World Homeopathy Day&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
-Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India.
+&lt;blockquote&gt;
+  &lt;p&gt;Mukesh Batra is recipient of Padma Shri award from the president of India. It’s 4th highest civilian award in India.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/2r4NCbqev0M&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/2r4NCbqev0M?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/2r4NCbqev0M/hqdefault.jpg&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Dr. Mukesh Batra receives the Padma Shri Award for Medicine, 2012&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
-&lt;i style=&quot;color: orange;&quot; class=&quot;fas fa-exclamation-circle&quot;&gt; &lt;/i&gt;
-DD News is a Indian government funded news channel. It reports how homeopathy can treat respiratory problems
+&lt;blockquote&gt;
+  &lt;p&gt;DD News is a Indian government funded news channel. It reports how homeopathy can treat respiratory problems&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/zhoDZrGj9Kc&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/zhoDZrGj9Kc?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/zhoDZrGj9Kc/hqdefault.jpg&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Homeopathy in treating respiratory problems (Hindi)&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;blockquote class=&quot;attention&quot;&gt;
-Claims that homeopathy can cure genetic disorders
+&lt;blockquote&gt;
+  &lt;p&gt;Claims that homeopathy can cure genetic disorders&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/x4_HjgUgvp4&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/x4_HjgUgvp4?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/x4_HjgUgvp4/hqdefault.jpg&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Genetic Disorders: Treating with homeopathy - Dr. Surekha Tiwari&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -7463,7 +7351,7 @@ Claims that homeopathy can cure genetic disorders
 
   &lt;p&gt;Many countries are discontinuing funding to homeopathy for example France will end reimbursing of homeopathic patient by 2021, Spain in 2018 plans to ban homeopathy, etc. I was surprised to find homeopathy medicine in CVS, a common drugstore in the US. I came across the news that a lawsuit has been filed by the Center for Inquiry (CFI) against this practice&lt;sup&gt;&lt;a href=&quot;#fn:5&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 
-  &lt;p&gt;It&apos;s unethical for the government of India to continue to promote hemeopoathy. Indian budget 2019 allocated ₹ 62,398 crore for healh sector. AYUSH ministry got ₹ 1,939.76 crore which is 15 per cent more than the previous fiscal&lt;sup&gt;&lt;a href=&quot;#fn:6&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. It&apos;s a boon for politicians as they can delude India masses by providing them substandard healthcare with less expense. It&apos;s ironical that most of Indian politicians continue to go abroad for their medical care.&lt;/p&gt;
+  &lt;p&gt;It&apos;s unethical for the government of India to continue to promote homeopathy. Indian budget 2019 allocated ₹ 62,398 crore for health sector. AYUSH ministry got ₹ 1,939.76 crore which is 15 per cent more than the previous fiscal&lt;sup&gt;&lt;a href=&quot;#fn:6&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. It&apos;s a boon for politicians as they can delude India masses by providing them substandard healthcare with less expense. It&apos;s ironical that most of Indian politicians continue to go abroad for their medical care.&lt;/p&gt;
 
   &lt;p&gt;Investing in modern science requires both capital &amp;amp; extensive research in R&amp;amp;D. Successive Indian government have tried to use ancient past to hide their failures. Vedic Mathematics, documentary by K. Jagjivan Ram, won the 48th National Film Awards for the best scientific film by the government of India. Vedic mathematics has nothing do with either mathematics or vedas&lt;sup&gt;&lt;a href=&quot;#fn:7&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;. Promotion of yoga is great, but obsession on research on cow&lt;sup&gt;&lt;a href=&quot;#fn:8&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; is unwarranted. Instead of splurging money on researching on Ganga water&apos;s&lt;sup&gt;&lt;a href=&quot;#fn:9&quot; rel=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; miraculous properties, it would be prudent for the government of India to clean the river first plagued by serious pollution&lt;sup&gt;&lt;a href=&quot;#fn:10&quot; rel=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;. Homeopathy is one such tomfoolery which India must get rid sooner for her own good.&lt;/p&gt;
 &lt;/div&gt;
@@ -7541,7 +7429,6 @@ Claims that homeopathy can cure genetic disorders
 
 &lt;p&gt;I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience and misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical &amp;amp; skeptical thinking from a famous astrophysicist, Carl Sagan.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/pseudoscience&quot; title=&quot;View posts tagged with &amp;quot;pseudoscience&amp;quot;&quot;&gt;pseudoscience&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/books&quot; title=&quot;View posts tagged with &amp;quot;books&amp;quot;&quot;&gt;books&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/review&quot; title=&quot;View posts tagged with &amp;quot;review&amp;quot;&quot;&gt;review&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/religion&quot; title=&quot;View posts tagged with &amp;quot;religion&amp;quot;&quot;&gt;religion&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/audio&quot; title=&quot;View posts tagged with &amp;quot;audio&amp;quot;&quot;&gt;audio&lt;/a&gt;    &lt;/p&gt;
 &lt;div id=&quot;player&quot;&gt;
 &lt;div class=&quot;listen&quot;&gt;Listen to this article&lt;/div&gt;
 &lt;div id=&quot;waveform&quot;&gt;
@@ -7636,8 +7523,6 @@ Religion is the opium of the masses - Karl Marx
           <title>Connecting to Oracle database form Scala using JDBC for large data</title>
           <description>&lt;p&gt;I was looking to write a scala script to fetch large data from Oracle database. I was earlier using the Alteryx software to fetch data (around 1 million rows) from oracle which took around 7 minutes. Licensed softwares like Alteryx or Informatica, etc are great, but I was looking for a free solution.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/jdbc&quot; title=&quot;View posts tagged with &amp;quot;jdbc&amp;quot;&quot;&gt;jdbc&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/scala&quot; title=&quot;View posts tagged with &amp;quot;scala&amp;quot;&quot;&gt;scala&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/oracle&quot; title=&quot;View posts tagged with &amp;quot;oracle&amp;quot;&quot;&gt;oracle&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/database&quot; title=&quot;View posts tagged with &amp;quot;database&amp;quot;&quot;&gt;database&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;I was looking to write a scala script to fetch large data from Oracle database. I was earlier using the Alteryx software to fetch data (around 1 million rows) from oracle which took around 7 minutes. Licensed softwares like Alteryx or Informatica, etc are great, but I was looking for a free solution.&lt;/p&gt;
 
 &lt;p&gt;We need ojdbc6.jar to connect to the Oracle 12 c database. We will create a Scala script to fetch data from the oracle database &amp;amp; save it to the output file (CSV format).&lt;/p&gt;
@@ -7681,7 +7566,6 @@ libraryDependencies +&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; “au.com.by
         <item>
           <title>Sleeping At Night</title>
           <description>&lt;p&gt;It feels great to sleep at night. I have a small but a cozy room. It’s not lavish or splending. It doesn’t even hoard much furniture. However it’s as peaceful as it can get.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/sleep&quot; title=&quot;View posts tagged with &amp;quot;sleep&amp;quot;&quot;&gt;sleep&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/opinion&quot; title=&quot;View posts tagged with &amp;quot;opinion&amp;quot;&quot;&gt;opinion&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;It feels great to sleep at night. I have a small but a cozy room. It’s not lavish or splending. It doesn’t even hoard much furniture. However it’s as peaceful as it can get.&lt;/p&gt;
 
@@ -7712,8 +7596,6 @@ libraryDependencies +&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; “au.com.by
         <item>
           <title>Connect to an Oracle Database using kerberos with python</title>
           <description>&lt;p&gt;Jobs failed! Screamed an automatic failure alert in email inbox. Existing python scripts were failing in the server which fetched data from Oracle database. I wondered if the credentials had changed.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/kerberos&quot; title=&quot;View posts tagged with &amp;quot;kerberos&amp;quot;&quot;&gt;kerberos&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/projects&quot; title=&quot;View posts tagged with &amp;quot;projects&amp;quot;&quot;&gt;projects&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/python&quot; title=&quot;View posts tagged with &amp;quot;python&amp;quot;&quot;&gt;python&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/docker&quot; title=&quot;View posts tagged with &amp;quot;docker&amp;quot;&quot;&gt;docker&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/oracle&quot; title=&quot;View posts tagged with &amp;quot;oracle&amp;quot;&quot;&gt;oracle&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/database&quot; title=&quot;View posts tagged with &amp;quot;database&amp;quot;&quot;&gt;database&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Jobs failed! Screamed an automatic failure alert in email inbox. Existing python scripts were failing in the server which fetched data from Oracle database. I wondered if the credentials had changed.&lt;/p&gt;
 
@@ -7890,8 +7772,6 @@ wkt username.keytab
           <title>Unwarranted Controversy - Hum Dekhenge</title>
           <description>&lt;p&gt;India is currently witnessing multiple protests against the Citizenship Amendment Act (CAA) passed by the BJP (the ruling party of India). In a nutshell it fast tracks citizenship to few religiously persecuted refugees like Hindu, Sikh, Jain, Buddhist, Christian and Parsi from neighbouring countries.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/faiz&quot; title=&quot;View posts tagged with &amp;quot;faiz&amp;quot;&quot;&gt;faiz&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/india&quot; title=&quot;View posts tagged with &amp;quot;india&amp;quot;&quot;&gt;india&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/urdu&quot; title=&quot;View posts tagged with &amp;quot;urdu&amp;quot;&quot;&gt;urdu&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/bjp&quot; title=&quot;View posts tagged with &amp;quot;bjp&amp;quot;&quot;&gt;bjp&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/nationalism&quot; title=&quot;View posts tagged with &amp;quot;nationalism&amp;quot;&quot;&gt;nationalism&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/caa&quot; title=&quot;View posts tagged with &amp;quot;caa&amp;quot;&quot;&gt;caa&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/nrc&quot; title=&quot;View posts tagged with &amp;quot;nrc&amp;quot;&quot;&gt;nrc&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/npr&quot; title=&quot;View posts tagged with &amp;quot;npr&amp;quot;&quot;&gt;npr&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;India is currently witnessing multiple protests against the Citizenship Amendment Act (CAA) passed by the BJP (the ruling party of India). In a nutshell it fast tracks citizenship to few religiously persecuted refugees like Hindu, Sikh, Jain, Buddhist, Christian and Parsi from neighbouring countries.&lt;/p&gt;
 
 &lt;p&gt;Some argue this act brazenly violates secular structure of India by explicitly inserting religious clause in the constitution. Others are worried that CAA along with NPR &amp;amp; NRC could be used to disenfranchise poor Muslims who lack proper documentation. I will defer my opinion on this matter for another day. However I fail to understand how innocuous poem of Faiz, &lt;a href=&quot;https://en.wikipedia.org/wiki/Hum_Dekhenge&quot;&gt;Hum Dekhenge&lt;/a&gt;, is mired in controversy.&lt;/p&gt;
@@ -7963,8 +7843,6 @@ Only Allah  name will survive&lt;br /&gt;
         <item>
           <title>Getting started with Graph Part 1</title>
           <description>&lt;p&gt;Graph are data structures made of vertices &amp;amp; edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/graph&quot; title=&quot;View posts tagged with &amp;quot;graph&amp;quot;&quot;&gt;graph&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/implementation&quot; title=&quot;View posts tagged with &amp;quot;implementation&amp;quot;&quot;&gt;implementation&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Graph are data structures made of vertices &amp;amp; edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.&lt;/p&gt;
 
@@ -8299,7 +8177,6 @@ Only Allah  name will survive&lt;br /&gt;
         <item>
           <title>Recursively sort a array</title>
           <description>&lt;p&gt;I recently came across a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/algorithm&quot; title=&quot;View posts tagged with &amp;quot;algorithm&amp;quot;&quot;&gt;algorithm&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/code&quot; title=&quot;View posts tagged with &amp;quot;code&amp;quot;&quot;&gt;code&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;I recently came across a simple telephonic interview problem. The problem was to sort an array recursively. But even numbers need to be placed before odd numbers. At first glance it was obvious that it was a simple case of implementation of merge sort.
 &lt;/p&gt;
@@ -8342,7 +8219,6 @@ Only Allah  name will survive&lt;br /&gt;
         <item>
           <title>Red Queen Race</title>
           <description>&lt;p&gt;When I was a kid, I was perturbed at the outbreaks of new diseases. There was no &lt;b&gt;Swine Flue&lt;/b&gt; before twenty first century or &lt;b&gt;HIV&lt;/b&gt; before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime humans make progress in science?&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/biology&quot; title=&quot;View posts tagged with &amp;quot;biology&amp;quot;&quot;&gt;biology&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/evolution&quot; title=&quot;View posts tagged with &amp;quot;evolution&amp;quot;&quot;&gt;evolution&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/antibiotics&quot; title=&quot;View posts tagged with &amp;quot;antibiotics&amp;quot;&quot;&gt;antibiotics&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;When I was a kid, I was perturbed at the outbreaks of new diseases. There was no &lt;strong&gt;Swine Flue&lt;/strong&gt; before twenty first century or &lt;strong&gt;HIV&lt;/strong&gt; before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime humans make progress in science?&lt;/p&gt;
 
@@ -8428,9 +8304,8 @@ With ravine, shriek&apos;d against his creed&lt;br /&gt;
 .mysubheading{font-family:&quot;Lucida Grande&quot;, Tahoma;font-size:10px;font-weight:lighter;font-variant:normal;text-transform:uppercase;color:#666;margin-top:10px;text-align:center!important;letter-spacing:.3em}
 &lt;/style&gt;
 
-&lt;p&gt;Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/programming&quot; title=&quot;View posts tagged with &amp;quot;programming&amp;quot;&quot;&gt;programming&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/code&quot; title=&quot;View posts tagged with &amp;quot;code&amp;quot;&quot;&gt;code&lt;/a&gt;    &lt;/p&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.&lt;!-- truncate_here --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Merge two sorted linked lists and return it as a new list.&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;The new list should be made by splicing together the nodes of the first two lists.&lt;/p&gt;
 
@@ -8508,8 +8383,6 @@ With ravine, shriek&apos;d against his creed&lt;br /&gt;
         <item>
           <title>Decoding ndtv darwin&apos;s theory debate</title>
           <description>&lt;p&gt;I wanted to decode an old debate that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India&apos;s Minister of State for Human Resource Development. He had claimed that evolution is &quot;scientifically wrong&quot; because he never &lt;strong&gt;saw an ape turning into human being&lt;/strong&gt;.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/pseudoscience&quot; title=&quot;View posts tagged with &amp;quot;pseudoscience&amp;quot;&quot;&gt;pseudoscience&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/evolution&quot; title=&quot;View posts tagged with &amp;quot;evolution&amp;quot;&quot;&gt;evolution&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/india&quot; title=&quot;View posts tagged with &amp;quot;india&amp;quot;&quot;&gt;india&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/ndtv&quot; title=&quot;View posts tagged with &amp;quot;ndtv&amp;quot;&quot;&gt;ndtv&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/news&quot; title=&quot;View posts tagged with &amp;quot;news&amp;quot;&quot;&gt;news&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/debate&quot; title=&quot;View posts tagged with &amp;quot;debate&amp;quot;&quot;&gt;debate&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;I wanted to decode an old debate &lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India&apos;s Minister of State for Human Resource Development. He had claimed that evolution is &quot;scientifically wrong&quot; because he never &quot;&lt;b&gt;saw an ape turning into human being&lt;/b&gt;&quot;.&lt;/p&gt;
 
@@ -8697,7 +8570,6 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
         <item>
           <title>Three Sum Problem Leetcode Solution</title>
           <description>&lt;p&gt;Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/leetcode&quot; title=&quot;View posts tagged with &amp;quot;leetcode&amp;quot;&quot;&gt;leetcode&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/two pointers&quot; title=&quot;View posts tagged with &amp;quot;two pointers&amp;quot;&quot;&gt;two pointers&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/java&quot; title=&quot;View posts tagged with &amp;quot;java&amp;quot;&quot;&gt;java&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.&lt;sup&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -8734,8 +8606,6 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
         <item>
           <title>Why Baahubali is not worthy of high rating?</title>
           <description>&lt;p&gt;I might slip into a cesspool of hate in criticizing India’s most successful movie, Baahubali 2: The Conclusion. One of my Telugu colleague eyes beamed with pride when she told me how she watched first day first show &amp;amp; how this movie has propelled Telugu movies in the same league of Hollywood.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/baahubali&quot; title=&quot;View posts tagged with &amp;quot;baahubali&amp;quot;&quot;&gt;baahubali&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/movies&quot; title=&quot;View posts tagged with &amp;quot;movies&amp;quot;&quot;&gt;movies&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;I might slip into a cesspool of hate in criticizing India’s most successful movie, Baahubali 2: The Conclusion. One of my Telugu colleague eyes beamed with pride when she told me how she watched first day first show &amp;amp; how this movie has propelled Telugu movies in the same league of Hollywood. People in India often put actors and politicians in pedestal with overwhelming emotions which is why it is sometimes difficult to have bonafide criticism of more than real life people like Rajinikanth in Tamil Nadu or Salman Khan in UP or Bihar.&lt;/p&gt;
 
@@ -8788,8 +8658,6 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
         <item>
           <title>How I almost fell for rent scam?</title>
           <description>&lt;p&gt;Recently, my roommate, had his job contract terminated. He found a new job in another city which meant I had to hunt for a new roommate. So I quickly posted an ad on Sulekha, a popular website in USA among Indians.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/rent&quot; title=&quot;View posts tagged with &amp;quot;rent&amp;quot;&quot;&gt;rent&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/scam&quot; title=&quot;View posts tagged with &amp;quot;scam&amp;quot;&quot;&gt;scam&lt;/a&gt;    &lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/chat.css&quot; /&gt;
 
@@ -9187,7 +9055,6 @@ Goodbye
         <item>
           <title>Lazy Meditation</title>
           <description>&lt;p&gt;The sun’s rays had already crept through my window &amp;amp; drenched my room with light. Sleep taste sweetest when you resist it. It is but with a heavy heart that I relinquish my sleep &amp;amp; pull myself together.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/meditation&quot; title=&quot;View posts tagged with &amp;quot;meditation&amp;quot;&quot;&gt;meditation&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/opinion&quot; title=&quot;View posts tagged with &amp;quot;opinion&amp;quot;&quot;&gt;opinion&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;The sun’s rays had already crept through my window &amp;amp; drenched my room with light. Sleep taste sweetest when you resist it. It is but with a heavy heart that I relinquish my sleep &amp;amp; pull myself together. But not today! It was a weekend that brought me few more drops of honey as I extended my sleep while a statue of abstemious Buddha, which I recently bought, wandered at the petty cumberworld outgrowing in both time &amp;amp; stupidity.&lt;/p&gt;
 
@@ -9281,8 +9148,6 @@ Goodbye
           <title>What India can learn from Pakistan?</title>
           <description>&lt;p&gt;On a brisk day, I was carpooling with my manager. Amidst the roaring traffic, was the familiar melodious voice on the radio. We have grown accustomed to the RJ who played songs that was music to our ears. As my manager revved up the engine, with the occasional drip in audio of the AM, often we broke into conversation.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/india&quot; title=&quot;View posts tagged with &amp;quot;india&amp;quot;&quot;&gt;india&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/pakistan&quot; title=&quot;View posts tagged with &amp;quot;pakistan&amp;quot;&quot;&gt;pakistan&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/cow&quot; title=&quot;View posts tagged with &amp;quot;cow&amp;quot;&quot;&gt;cow&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/vigilantism&quot; title=&quot;View posts tagged with &amp;quot;vigilantism&amp;quot;&quot;&gt;vigilantism&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;On a brisk day, I was carpooling with my manager. Amidst the roaring traffic, was the familiar melodious voice on the radio. We have grown accustomed to the RJ who played songs that was music to our ears. As my manager revved up the engine, with the occasional drip in audio of the AM, often we broke into conversation.&lt;/p&gt;
 
 &lt;p&gt;Amartya Sen in his book, The Argumentative Indian, has argued the Indians are inherently loquacious. True to the argumentative traditions, our conversation percolated through the porous soil of sports into the sedimentary rocks of politics while amassing lump of Bollywood, music, economics, etc along the way. While an old classic Bollywood song played on the radio and I hummed along, dragging our conversation to halt. I gazed out of the window, many sign posts passed by, most of them visibly crestfallen like me.&lt;/p&gt;
@@ -9339,8 +9204,6 @@ And therein lies your real fear.&quot;
 &lt;/style&gt;
 
 &lt;p&gt;The other day I stumble upon the question to find the k&lt;sup&gt;th&lt;/sup&gt; largest element in the array. At first glance, I thought the solution was trivial. But later I thought that there are multiple ways to achieve efficient solution.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/algorithm&quot; title=&quot;View posts tagged with &amp;quot;algorithm&amp;quot;&quot;&gt;algorithm&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/ruby&quot; title=&quot;View posts tagged with &amp;quot;ruby&amp;quot;&quot;&gt;ruby&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/heap&quot; title=&quot;View posts tagged with &amp;quot;heap&amp;quot;&quot;&gt;heap&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/max-heap&quot; title=&quot;View posts tagged with &amp;quot;max-heap&amp;quot;&quot;&gt;max-heap&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/projects&quot; title=&quot;View posts tagged with &amp;quot;projects&amp;quot;&quot;&gt;projects&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;The other day I stumble upon the question to find the k&lt;sup&gt;th&lt;/sup&gt; largest element in the array. At first glance, I thought the solution was trivial. But later I thought that there are multiple ways to achieve efficient solution&lt;/p&gt;
 
@@ -9456,8 +9319,6 @@ And therein lies your real fear.&quot;
         <item>
           <title>A random stranger</title>
           <description>&lt;p&gt;It was just another day in Bangalore. I caught the bus from the /&lt;em&gt;Kormangala&lt;/em&gt; bus depot. Amid exhausting heat &amp;amp; nudging elbows, I somehow managed to grab a seat in the bus. Securing a seat in the Indian bus during peak time is considered a fortune. This often attracts resentful eyes. However my Indian genes have made me immune to both pani puri &amp;amp; judgment.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/story&quot; title=&quot;View posts tagged with &amp;quot;story&amp;quot;&quot;&gt;story&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/india&quot; title=&quot;View posts tagged with &amp;quot;india&amp;quot;&quot;&gt;india&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/fiction&quot; title=&quot;View posts tagged with &amp;quot;fiction&amp;quot;&quot;&gt;fiction&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/bangalore&quot; title=&quot;View posts tagged with &amp;quot;bangalore&amp;quot;&quot;&gt;bangalore&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sci-fi&quot; title=&quot;View posts tagged with &amp;quot;sci-fi&amp;quot;&quot;&gt;sci-fi&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;It was just another day in Bangalore. I caught the bus from the &lt;em&gt;Kormangala&lt;/em&gt; bus depot. Amid exhausting heat &amp;amp; nudging elbows, I somehow managed to grab a seat in the bus. Securing a seat in the Indian bus during peak time is considered a fortune. This often attracts resentful eyes. However my Indian genes have made me immune to both &lt;a href=&quot;https://en.wikipedia.org/wiki/Panipuri&quot;&gt;pani puri&lt;/a&gt; &amp;amp; judgment.&lt;/p&gt;
 
@@ -9575,8 +9436,6 @@ Image credit ~ &lt;a href=&quot;https://xkcd.com/1240/&quot;&gt;xckd&lt;/a&gt;
 
 &lt;p&gt;Testing web sites on your personal computer is indispensable for web developers / designers. Enabling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;php&lt;/code&gt; on Mac OX S is plain and easy. &lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/mac&quot; title=&quot;View posts tagged with &amp;quot;mac&amp;quot;&quot;&gt;mac&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/php&quot; title=&quot;View posts tagged with &amp;quot;php&amp;quot;&quot;&gt;php&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;Users with the newest versions of Mac OS X (Mountain Lion or later) no longer see the option of web sharing in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;System Preferences-&amp;gt;Sharing&lt;/code&gt;. If you are a web developer / designer, you might find this change unpleasant. However Mac OS X still includes Apache HTTP version.&lt;/p&gt;
 
 &lt;p&gt;Testing web sites on your personal computer is indispensable for developers / designers. Enabling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;php&lt;/code&gt; on Mac OX S is plain and easy.&lt;/p&gt;
@@ -9681,8 +9540,6 @@ Server built:   Jul 31 2015 15:53:26
 
 &lt;p&gt;What is REST? REST is &lt;strong&gt;RE&lt;/strong&gt;presentational &lt;strong&gt;S&lt;/strong&gt;tate &lt;strong&gt;T&lt;/strong&gt;ransfer. Loosely speaking it defines how resources are exchanged based on item of request. Two most common HTTP Request Methods are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt;. Using tshark, we can see the headers exchange as you browse the web.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/tshark&quot; title=&quot;View posts tagged with &amp;quot;tshark&amp;quot;&quot;&gt;tshark&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/rest&quot; title=&quot;View posts tagged with &amp;quot;rest&amp;quot;&quot;&gt;rest&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/http&quot; title=&quot;View posts tagged with &amp;quot;http&amp;quot;&quot;&gt;http&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/get&quot; title=&quot;View posts tagged with &amp;quot;get&amp;quot;&quot;&gt;get&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/post&quot; title=&quot;View posts tagged with &amp;quot;post&amp;quot;&quot;&gt;post&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;Browsers have made browsing insanely easy. Toolbar fetches webpage magically. However, under the hood, lots of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;requests&lt;/code&gt; are exchanged. These requests are based on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;REST&lt;/code&gt; architecture.&lt;/p&gt;
 
 &lt;p&gt;What is REST? REST is &lt;strong&gt;RE&lt;/strong&gt;presentational &lt;strong&gt;S&lt;/strong&gt;tate &lt;strong&gt;T&lt;/strong&gt;ransfer. Loosely speaking it defines how resources are exchanged based on item of request. Two most common HTTP Request Methods are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POST&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt;. Using tshark, we can see the headers exchange as you browse the web.&lt;/p&gt;
@@ -9771,8 +9628,6 @@ tcp[((tcp[12:1] &amp;amp; 0xf0) &amp;gt;&amp;gt; 2):4] = 0x47455420)&apos; -w ~/
 &lt;/style&gt;
 
 &lt;p&gt;I finally divorced &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Windows&lt;/code&gt; soon after I fell in love with Linux. Ubuntu was my first love. I met her on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Distrowatch&lt;/code&gt;. But she spoke no English. So I spent hours gawking at her sleaky terminal trying to learn her language, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bash&lt;/code&gt;.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/arch&quot; title=&quot;View posts tagged with &amp;quot;arch&amp;quot;&quot;&gt;arch&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/linux&quot; title=&quot;View posts tagged with &amp;quot;linux&amp;quot;&quot;&gt;linux&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/install&quot; title=&quot;View posts tagged with &amp;quot;install&amp;quot;&quot;&gt;install&lt;/a&gt;    &lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/shCore.js&quot;&gt;&lt;/script&gt;
 
@@ -10228,8 +10083,6 @@ en_US ISO-8859-1
           <title>Quickly sort large file in linear time</title>
           <description>&lt;p&gt;Any deterministic general sorting algorithm  has average case time complexity $ O(nlogn) $ . However, certain sorting algorithm can run faster in $ O(n) $ but with limitation. Instead of comparision-based sort, each element is looked individually by its value. Radix sort is one fine example of integer sorting.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/lsd&quot; title=&quot;View posts tagged with &amp;quot;lsd&amp;quot;&quot;&gt;lsd&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/radix sort&quot; title=&quot;View posts tagged with &amp;quot;radix sort&amp;quot;&quot;&gt;radix sort&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sorting&quot; title=&quot;View posts tagged with &amp;quot;sorting&amp;quot;&quot;&gt;sorting&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/cplusplus&quot; title=&quot;View posts tagged with &amp;quot;cplusplus&amp;quot;&quot;&gt;cplusplus&lt;/a&gt;    &lt;/p&gt;
-
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/shCore.js&quot;&gt;&lt;/script&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/shBrushCpp.js&quot;&gt;&lt;/script&gt;
@@ -10565,8 +10418,6 @@ printToFile(char S[][k], string filename, int indexP[])
 
 &lt;p&gt;Imagine a sunset, with a tired sun sinking over a meadow. The chirping of birds steals your attention as they return to their homes. And while the sun disappears, you sink back and relish your sourrounding.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/programming&quot; title=&quot;View posts tagged with &amp;quot;programming&amp;quot;&quot;&gt;programming&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/general&quot; title=&quot;View posts tagged with &amp;quot;general&amp;quot;&quot;&gt;general&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;
 Imagine a sunset, with a tired sun sinking over a meadow. The chirping of birds steals your attention as they return to their homes. And while the sun disappears, you sink back and
 relish your sourrounding. 
@@ -10656,8 +10507,6 @@ with its own four-letter name.
           <title>Protect Your Privacy</title>
           <description>&lt;p&gt;&quot;If you&apos;ve got nothing to hide, you&apos;ve got nothing to fear&quot;. This is the most common retort used by governments to espouse Mass surveillance. They do it in the pretext of security. But even if you&apos;re not a fugitive, you have the right to protect your privacy.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/privacy&quot; title=&quot;View posts tagged with &amp;quot;privacy&amp;quot;&quot;&gt;privacy&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/surveillance&quot; title=&quot;View posts tagged with &amp;quot;surveillance&amp;quot;&quot;&gt;surveillance&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/snooping&quot; title=&quot;View posts tagged with &amp;quot;snooping&amp;quot;&quot;&gt;snooping&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;&quot;If you&apos;ve got nothing to hide, you&apos;ve got nothing to fear&quot;. This is the most common retort used by governments to espouse Mass surveillance&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. They do it in the pretext of security. But even if you&apos;re not a fugitive, you have the right to protect your privacy.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/privacy.jpg&quot; /&gt;&lt;/p&gt;
@@ -10737,8 +10586,6 @@ with its own four-letter name.
 &lt;/style&gt;
 
 &lt;p&gt;&quot;India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India &amp;amp; abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/bbc&quot; title=&quot;View posts tagged with &amp;quot;bbc&amp;quot;&quot;&gt;bbc&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/india&quot; title=&quot;View posts tagged with &amp;quot;india&amp;quot;&quot;&gt;india&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/ban&quot; title=&quot;View posts tagged with &amp;quot;ban&amp;quot;&quot;&gt;ban&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;
 &quot;India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India &amp;amp; abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable.
@@ -10871,8 +10718,6 @@ with its own four-letter name.
           <title>Digging on the codes of the Past</title>
           <description>&lt;p&gt;Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/code&quot; title=&quot;View posts tagged with &amp;quot;code&amp;quot;&quot;&gt;code&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/cryptography&quot; title=&quot;View posts tagged with &amp;quot;cryptography&amp;quot;&quot;&gt;cryptography&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/cipher&quot; title=&quot;View posts tagged with &amp;quot;cipher&amp;quot;&quot;&gt;cipher&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/monoalphabetic&quot; title=&quot;View posts tagged with &amp;quot;monoalphabetic&amp;quot;&quot;&gt;monoalphabetic&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.&lt;/p&gt;
 
 &lt;center&gt;
@@ -10986,8 +10831,6 @@ Avoiding prying eyes secretly,&lt;br /&gt;
 In between stretches a velvet sky,&lt;br /&gt;
 Only gulf in between us apparently.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/poetry&quot; title=&quot;View posts tagged with &amp;quot;poetry&amp;quot;&quot;&gt;poetry&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/romance&quot; title=&quot;View posts tagged with &amp;quot;romance&amp;quot;&quot;&gt;romance&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/moon&quot; title=&quot;View posts tagged with &amp;quot;moon&amp;quot;&quot;&gt;moon&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/audio&quot; title=&quot;View posts tagged with &amp;quot;audio&amp;quot;&quot;&gt;audio&lt;/a&gt;    &lt;/p&gt;
-
 &lt;div id=&quot;player&quot;&gt;
 &lt;div class=&quot;listen&quot;&gt;Listen to this article&lt;/div&gt;
 &lt;div id=&quot;waveform&quot;&gt;
@@ -11062,8 +10905,6 @@ Or our love will be a mournful chime? &lt;br /&gt;&lt;/p&gt;
         <item>
           <title>Idea of God</title>
           <description>&lt;p&gt;I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to wreak the whole place. And the mischievous alarm pulled me out of my dreams.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/god&quot; title=&quot;View posts tagged with &amp;quot;god&amp;quot;&quot;&gt;god&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/religion&quot; title=&quot;View posts tagged with &amp;quot;religion&amp;quot;&quot;&gt;religion&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/science&quot; title=&quot;View posts tagged with &amp;quot;science&amp;quot;&quot;&gt;science&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/audio&quot; title=&quot;View posts tagged with &amp;quot;audio&amp;quot;&quot;&gt;audio&lt;/a&gt;    &lt;/p&gt;
 
 &lt;div id=&quot;player&quot;&gt;
 &lt;div class=&quot;listen&quot;&gt;Listen to this article&lt;/div&gt;
@@ -11232,8 +11073,6 @@ As so many rivers, having their source in different mountains, roll down, crooke
 against all weather, people and slope, &lt;br /&gt;
 But after some distance I could not keep, &lt;br /&gt;
 enough pace as the way was steep.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/poetry&quot; title=&quot;View posts tagged with &amp;quot;poetry&amp;quot;&quot;&gt;poetry&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/happiness&quot; title=&quot;View posts tagged with &amp;quot;happiness&amp;quot;&quot;&gt;happiness&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;I walked miles on my feet and hope, &lt;br /&gt;
 against all weather, people and slope, &lt;br /&gt;
@@ -11698,8 +11537,6 @@ a hanging moon did my curtains lit,&lt;br /&gt;
 under my pillow sank my weary head,&lt;br /&gt; 
 and slumber weaved its sleepy knit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/poetry&quot; title=&quot;View posts tagged with &amp;quot;poetry&amp;quot;&quot;&gt;poetry&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/sleep&quot; title=&quot;View posts tagged with &amp;quot;sleep&amp;quot;&quot;&gt;sleep&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;As I lay on my cosy bed,&lt;br /&gt; 
 a hanging moon did my curtains lit,&lt;br /&gt; 
 under my pillow sank my weary head,&lt;br /&gt; 
@@ -12103,8 +11940,6 @@ R&lt;sub&gt;i&lt;/sub&gt; = L&lt;sub&gt;i - 1&lt;/sub&gt; &amp;oplus; f(R&lt;sub
           <title>Huawei Usb Modem in Debian</title>
           <description>&lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/debian&quot; title=&quot;View posts tagged with &amp;quot;debian&amp;quot;&quot;&gt;debian&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/usb&quot; title=&quot;View posts tagged with &amp;quot;usb&amp;quot;&quot;&gt;usb&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/modem&quot; title=&quot;View posts tagged with &amp;quot;modem&amp;quot;&quot;&gt;modem&lt;/a&gt;    &lt;/p&gt;
-
 &lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;/p&gt;
 
 &lt;center&gt;
@@ -12165,8 +12000,6 @@ Stupid Mode = 1
         <item>
           <title>Fear of Walmart</title>
           <description>&lt;p&gt;After a ruckus, the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Tags:  &lt;a class=&quot;mytag&quot; href=&quot;/tag/india&quot; title=&quot;View posts tagged with &amp;quot;india&amp;quot;&quot;&gt;india&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/walmart&quot; title=&quot;View posts tagged with &amp;quot;walmart&amp;quot;&quot;&gt;walmart&lt;/a&gt;    &lt;a class=&quot;mytag&quot; href=&quot;/tag/fdi&quot; title=&quot;View posts tagged with &amp;quot;fdi&amp;quot;&quot;&gt;fdi&lt;/a&gt;    &lt;/p&gt;
 
 &lt;p&gt;After a ruckus, the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart.&lt;/p&gt;
 

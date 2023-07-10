@@ -234,18 +234,64 @@ header li {
 <!-- end - this is to include Adds in the site --> 
       </header>
       <section>
-        <link rel="stylesheet" href="/css/search.css">
-<!-- search box begins -->
-<div style="padding-bottom:60px; padding-top:20px; background : white;">
-      <form style="float:right;" action="/search/?">
-              <input type="search" name="q" placeholder="Search">
-                </form>
-</div>
-<!-- search box ends -->
-<br>
+        <link rel="stylesheet" href="/css/styles.css">
 
-<script async src="https://cse.google.com/cse.js?cx=004141762666147305676:ncbx9tikfg8"></script>
-<div class="gcse-searchresults-only"></div>
+
+<style>
+ul {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block !important;;
+  margin-right: 10px;
+}
+  
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="mt-5 pt-2 col-md-12">
+        <div id="filtros"></div>
+      </div>
+      <div class="col-md-12 mt-2">
+        <div id="tagcloud"></div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <article>
+        <div id="searchbox" class="mt-4 mb-4"></div>
+        <div id="stats"></div>
+        <div id="hits" class="my-4"></div>
+        <div class="pagination-wrapper">
+          <div class="pagination">
+            
+              <span class="pagination-step">«</span>
+            
+            
+            
+              
+                <a href="/page0">0</a>
+              
+            
+            
+            
+              <span class="pagination-step">»</span>
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+<script defer language="javascript" type="text/javascript" src="/js/search.js"></script>
+
       </section>
    </div>
    <div style="clear:both;"></div>
