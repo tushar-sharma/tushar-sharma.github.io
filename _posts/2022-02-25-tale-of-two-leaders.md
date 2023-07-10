@@ -13,7 +13,6 @@ thumb: https://unsplash.com/photos/NQTqZLh6CxE/download?w=800
 ---
 
 After the outbreak of <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" target="#">Covid-19 pandemic</a> and <a href="https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)" target="_blank">Fall of Kabul</a>, year 2022 was supposed to instill normalcy back into the world. However world looks more topsy-turvy than before with the advent of war between Ukraine and Russia.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
 After the outbreak of <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" target="#">Covid-19 pandemic</a> and <a href="https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)" target="_blank">Fall of Kabul</a>, year 2022 was supposed to instill normalcy back into the world. However world looks more topsy-turvy than before with the advent of war between Ukraine and Russia.
 

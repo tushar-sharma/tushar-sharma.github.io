@@ -12,9 +12,6 @@ thumb: https://unsplash.com/photos/Z895fnYRbog/download?w=800
 
 Lots of website have added `dark themes` to their platform. [Twitter](https://twitter.com/) also has a dark mode which I really love while reading at night. Also there are [benefits](https://www.healthline.com/health/is-dark-mode-better-for-your-eyes#benefits-of-dark-mode) of using dark mode for the eyes.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
-
-
 
 Lots of website have added `dark themes` to their platform. [Twitter](https://twitter.com/) also has a dark mode which I really love while reading at night. Also there are [benefits](https://www.healthline.com/health/is-dark-mode-better-for-your-eyes#benefits-of-dark-mode) of using dark mode for the eyes.
 

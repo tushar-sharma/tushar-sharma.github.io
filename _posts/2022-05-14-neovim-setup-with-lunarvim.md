@@ -16,7 +16,6 @@ published: true
 
 
 I am an ardent `vim` user. A forked version of vim called `neovim` recently caught my attention. It has more features like support for `language server protocol` that provides `auto-complete`, etc. `LunarVim` provides neovim configuration files so that it behaves as an IDE.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
 I am an ardent `vim` user. A forked version of vim called `neovim` recently caught my attention. It has more features like support for `language server protocol` that provides `auto-complete`, etc. `LunarVim` provides neovim configuration files so that it behaves as an IDE.
 

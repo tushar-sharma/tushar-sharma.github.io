@@ -14,7 +14,6 @@ published: true
 
 I stumbled upon a <a href="https://ig.ft.com/ransomware-game/">ransomware negotiation simulator</a> by Financial Times. It's a mock simulation where you're in a hot seat at a hacked company, trying to stop cybercriminals from releasing sensitive data they have stolen from your systems.
 <!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
 I stumbled upon a [ransomware negotiation simulator](https://ig.ft.com/ransomware-game/) by Financial Times. It's a mock simulation where you're in a hot seat at a hacked company, trying to stop cybercriminals from releasing sensitive data they have stolen from your systems.
 

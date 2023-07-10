@@ -15,8 +15,6 @@ image: https://unsplash.com/photos/2FKTyJqfWX8/download?w=437
 
 Badminton sport has a low learning curve unlike tennis. Even your granny can hit a birdie. I grew up playing badminton but decided to try my luck with tennis. "Playing tennis would be a cakewalk", I thought. However my hubris was soon deflated.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
-
 Badminton sport has a low learning curve unlike tennis. Even your granny can hit a birdie. I grew up playing badminton but decided to try my luck with tennis. "Playing tennis would be a cakewalk", I thought. However my hubris was soon deflated.
 
 Badminton is a game of reflex and agility. One of my most favourite technique in badminton you can use your full strength to smash the shuttlecock across your opponent. Since the shuttlecock is made of feather, you can easily control its trajectory.

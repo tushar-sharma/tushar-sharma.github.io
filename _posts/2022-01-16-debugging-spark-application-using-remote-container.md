@@ -17,8 +17,6 @@ author: Tushar Sharma
 
 One of the nifty feature in any code development is the ability to debug your application using break points. Submitting a Spark job while waiting for it to complete will waste a lot of time debugging. Spark jobs can be debugging with `break points` and `step over` and `step into` and `step out` commands.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
-
 One of the nifty feature in any code development is the ability to debug your application using break points. Submitting a Spark job while waiting for it to complete will waste a lot of time debugging. Spark jobs can be debugging with `break points` and `step over` and `step into` and `step out` commands.
 
 

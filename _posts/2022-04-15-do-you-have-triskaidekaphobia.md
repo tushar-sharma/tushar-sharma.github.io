@@ -15,7 +15,6 @@ author: Tushar Sharma
 
 
 I grew up in India with a diet of basmati rice and superstition. I have seen pedestrians freezing at the sight of a black cat crossing their path for fear of bad luck. Lemon and chilis hang in front of vehicles to ward off bad spirits. I fondly remember numerous advertisements proclaiming protection from evil eyes. Recently I stumbled upon an ad that refreshed my memories.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
 
 <center>

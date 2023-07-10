@@ -16,7 +16,6 @@ category: blog
 ---
 
 Windows Subsystem for Linux (WSL2) provides native Linux environment for Windows. It's great alternative to `cygwin` which can't run native Linux apps. However WSL2 doesn't have out-of-box connectivity with internet once you connect with `vpn`.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
 Windows Subsystem for Linux (WSL2) provides native Linux environment for Windows. It's great alternative to `cygwin` which can't run native Linux apps. However WSL2 doesn't have out-of-box connectivity with internet once you connect with `vpn`.
 

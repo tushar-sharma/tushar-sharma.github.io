@@ -16,7 +16,6 @@ thumb: https://unsplash.com/photos/uXLgmicKSi4/download?w=800
 ---
 
 You are given a **0-indexed** binary array `nums` of length `n`. `nums` can be divided at index `i` (where `0 <= i <= n`) into two arrays (possibly empty) nums<sub>left</sub> and nums<sub>right</sub><!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 ## Problem Statement
 

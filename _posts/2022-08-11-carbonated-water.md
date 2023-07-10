@@ -14,7 +14,6 @@ published: true
 ---
 
 As I was walking down the aisle of a food mart, I was consumed with guilt about whether or not to buy a large can of coke. My waist is competing with inflation as both refused to halt their progress. I have thrown my weighing machine in the thrash as she refuses to lie at least once about my weight.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
 <link rel="stylesheet" type="text/css" href="{{ root_url }}/css/chat.css">
 
