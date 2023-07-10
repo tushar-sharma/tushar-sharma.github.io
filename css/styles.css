@@ -567,3 +567,154 @@ code[class*=language-],pre[class*=language-]{
 .speech-link:hover {
   color: red; /* Update color on hover */
 }
+
+/* algolia */
+/* Algolia search bar */
+.aa-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.aa-input-search {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.aa-input-search input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.aa-input-search .aa-input-icon {
+  margin-right: 8px;
+}
+
+.aa-input-search .aa-icon-cancel {
+  cursor: pointer;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.aa-input-search:hover .aa-icon-cancel {
+  opacity: 1;
+}
+
+.aa-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+  padding: 8px 0;
+  margin: 2px 0 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.aa-suggestion {
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.aa-suggestion:hover,
+.aa-suggestion.aa-cursor {
+  background-color: #f4f4f4;
+}
+
+.aa-suggestion > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aa-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.aa-suggestion img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.ais-SearchBox-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+
+/* Algolia search bar */
+.ais-SearchBox-submit {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #39c;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+
+.ais-SearchBox-submitIcon {
+  width: 16px;
+  height: 16px;
+  fill: #39c;
+  margin-right: 4px;
+}
+
+
+.ais-SearchBox-submit:focus {
+  outline: none;
+}
+
+/* Algolia search bar */
+.ais-SearchBox-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.ais-SearchBox-resetIcon {
+  width: 10px;
+  height: 10px;
+  fill: #999;
+}
+
+.ais-SearchBox-reset:hover .ais-SearchBox-resetIcon {
+  fill: #555;
+}
+
+.ais-SearchBox-reset:focus {
+  outline: none;
+}
+.ais-SearchBox-resetIcon {
+  width: 16px;
+  height: 16px;
+  fill: #39c;
+}

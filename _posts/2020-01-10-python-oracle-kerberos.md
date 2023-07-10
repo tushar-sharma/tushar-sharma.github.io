@@ -17,7 +17,6 @@ published: true
 
 Jobs failed! Screamed an automatic failure alert in email inbox. Existing python scripts were failing in the server which fetched data from Oracle database. I wondered if the credentials had changed.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <p>Jobs failed! Screamed an automatic failure alert in email inbox. Existing python scripts were failing in the server which fetched data from Oracle database. I wondered if the credentials had changed.</p>
 

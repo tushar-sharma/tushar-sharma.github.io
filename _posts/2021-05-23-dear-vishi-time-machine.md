@@ -12,7 +12,6 @@ published: true
 ---
 
 Did you remember we watched The Time Machine movie together? The protagonist loses his fiancée when a mugger kills her. He then builds a time machine to travel back in time to save her. Of course multiple movies have been made romanticizing the concept of time machine.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <!--begin_of_post -->
 

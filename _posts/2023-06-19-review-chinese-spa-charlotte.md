@@ -13,7 +13,6 @@ published: true
 encrypted: True
 ---
 As I arrived in Charlotte after a long journey from Durham, NC, my body was in dire need of respite. Hours spent in the car had left me fatigued and achy, prompting me to seek solace at a spa. With hopes of rejuvenation, I eagerly indulged in a massage session, eager to alleviate the tension that had accumulated during my travels.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 As I arrived in Charlotte after a long journey from Durham, NC, my body was in dire need of respite. Hours spent in the car had left me fatigued and achy, prompting me to seek solace at a spa. With hopes of rejuvenation, I eagerly indulged in a massage session, eager to alleviate the tension that had accumulated during my travels.
 

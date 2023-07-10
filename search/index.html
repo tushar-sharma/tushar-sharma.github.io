@@ -2,15 +2,74 @@
 layout: default
 ---
 
-<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
-<!-- search box begins -->
-<div style="padding-bottom:60px; padding-top:20px; background : white;">
-      <form style="float:right;" action="{{ root_url }}/search/?">
-              <input type="search" name="q" placeholder="Search">
-                </form>
-</div>
-<!-- search box ends -->
-<br>
+<link rel="stylesheet" href="{{ root_url }}/css/styles.css" />
 
-<script async src="https://cse.google.com/cse.js?cx=004141762666147305676:ncbx9tikfg8"></script>
-<div class="gcse-searchresults-only"></div>
+
+<style>
+ul {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block !important;;
+  margin-right: 10px;
+}
+  
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="mt-5 pt-2 col-md-12">
+        <div id="filtros"></div>
+      </div>
+      <div class="col-md-12 mt-2">
+        <div id="tagcloud"></div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <article>
+        <div id="searchbox" class="mt-4 mb-4"></div>
+        <div id="stats"></div>
+        <div id="hits" class="my-4"></div>
+        <div class="pagination-wrapper">
+          <div class="pagination">
+            {% if paginator.previous_page %}
+              <a class="pagination-step" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
+            {% else %}
+              <span class="pagination-step">&laquo;</span>
+            {% endif %}
+            {% if start > 1 %}
+              <a class="pagination-first" href="{{ site.baseurl }}/">1</a>
+              <span class="pagination-more">&middot;&middot;&middot;</span>
+            {% endif %}
+            {% for page in (start..end) %}
+              {% if page == paginator.page %}
+                <span class="active">{{ page }}</span>
+              {% elsif page == 1 %}
+                <a href="{{ site.baseurl }}/">{{ page }}</a>
+              {% else %}
+                <a href="{{ site.baseurl }}/page{{ page }}">{{ page }}</a>
+              {% endif %}
+            {% endfor %}
+            {% if end < paginator.total_pages %}
+              <span class="pagination-more">&middot;&middot;&middot;</span>
+              <a class="pagination-last" href="{{ site.baseurl }}/page{{ paginator.total_pages }}">{{ paginator.total_pages }}</a>
+            {% endif %}
+            {% if paginator.next_page %}
+              <a class="pagination-step" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a>
+            {% else %}
+              <span class="pagination-step">&raquo;</span>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+<script defer language="javascript" type="text/javascript" src="{{ root_url }}/js/search.js"></script>

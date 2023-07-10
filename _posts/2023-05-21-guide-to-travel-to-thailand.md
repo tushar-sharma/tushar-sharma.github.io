@@ -13,7 +13,6 @@ category: blog
 ---
 
 Thailand has got a bad reputation for its seedy masssage parlors and go go bars. However it's a beautiful country with plenty of toursit attractions. Below is my snapshot of my travel to Thailand.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Thailand has got a bad reputation for its seedy masssage parlors and go go bars. However it's a beautiful country with plenty of toursit attractions. Below is my snapshot of my travel to Thailand.
 

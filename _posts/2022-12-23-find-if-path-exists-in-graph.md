@@ -13,7 +13,6 @@ category: blog
 ---
 
 It's a easy problem on Graph in leetcode to find if a path exist in graph.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 It's a easy problem on Graph in leetcode to find if a path exist in graph.
 

@@ -14,7 +14,6 @@ published: false
 ---
 
 Mahatma Gandhi said, "I like your Christ, I do not like your Christians. Your Christians are so unlike your Christ". This perfectly sums up my feelings about liberals in India. I like liberal values but not the liberals of India. They reeks of hypocrisy.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Mahatma Gandhi said, "I like your Christ, I do not like your Christians. Your Christians are so unlike your Christ". This perfectly sums up my feelings about liberals in India. I like liberal values but not the liberals of India. They reeks of hypocrisy.
 

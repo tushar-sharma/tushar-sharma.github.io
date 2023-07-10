@@ -11,7 +11,6 @@ thumb: https://teepee12.files.wordpress.com/2014/06/alice-red-queen.jpg
 ---
 
 When I was a kid, I was perturbed at the outbreaks of new diseases. There was no <b>Swine Flue</b> before twenty first century or <b>HIV</b> before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime humans make progress in science?<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 When I was a kid, I was perturbed at the outbreaks of new diseases. There was no **Swine Flue** before twenty first century or **HIV** before tenth century. Why nature was hell-bent in pulling diseases out of a hat everytime humans make progress in science?
 

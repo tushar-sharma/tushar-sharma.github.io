@@ -18,7 +18,6 @@ further than yesterday.<br>
 while my feet ache and plead,<br>
 I dragged 'em without paying any heed.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 {% include embed-audio.html src="/sounds/2021-12-13-lost-friends.mp3" %}<br>
 <!--begin_of_post -->

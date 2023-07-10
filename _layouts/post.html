@@ -21,6 +21,7 @@ root: true
 
 {% assign truncated_post = content | split:"<!-- truncate_here -->" %}
 {% if truncated_post != content %}
+  <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
   {{ truncated_post.last }}
 {% else %}
  {{ truncated_post.last }}

@@ -17,7 +17,6 @@ thumb: https://img.youtube.com/vi/unOqa2tnzSM/0.jpg
 
 India is currently witnessing multiple protests against the Citizenship Amendment Act (CAA) passed by the BJP (the ruling party of India). In a nutshell it fast tracks citizenship to few religiously persecuted refugees like Hindu, Sikh, Jain, Buddhist, Christian and Parsi from neighbouring countries.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 India is currently witnessing multiple protests against the Citizenship Amendment Act (CAA) passed by the BJP (the ruling party of India). In a nutshell it fast tracks citizenship to few religiously persecuted refugees like Hindu, Sikh, Jain, Buddhist, Christian and Parsi from neighbouring countries.
 

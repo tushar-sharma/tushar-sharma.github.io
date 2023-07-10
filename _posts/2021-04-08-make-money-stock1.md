@@ -15,7 +15,6 @@ thumb: https://specials-images.forbesimg.com/imageserve/5fb540dd14833bd77ea925b8
 
 Recently I finished watching web-series <a href="https://en.wikipedia.org/wiki/Scam_1992" target="_blank">Scam 1992</a>. It's based on story of Harshad Mehta, a famous Indian stockbrocker who made fortunes in stocks. Despite his iconic success & <a href="https://en.wikipedia.org/wiki/1992_Indian_stock_market_scam" target="_blank">failure</a>, the series rekindled my interest in world of "stocks". I guess the famous dialogue "Risk Hai Toh Ishq Hai" has stuck with me.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Recently I finished watching web-series <a href="https://en.wikipedia.org/wiki/Scam_1992" target="_blank">Scam 1992</a>. It's based on story of Harshad Mehta, a famous Indian stockbrocker who made fortunes in stocks. Despite his iconic success & <a href="https://en.wikipedia.org/wiki/1992_Indian_stock_market_scam" target="_blank">failure</a>, the series rekindled my interest in world of "stocks". I guess the famous dialogue "Risk Hai Toh Ishq Hai" has stuck with me.
 

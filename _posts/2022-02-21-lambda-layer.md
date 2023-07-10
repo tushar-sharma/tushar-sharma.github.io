@@ -14,7 +14,6 @@ published: true
 
 When you develop AWS lambda functions, you might feel the need to install additional `python` libraries. This can be achieved using Lambda layers that can be included in any lambda function.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 When you develop AWS lambda functions, you might feel the need to install additional `python` libraries. This can be achieved using Lambda layers that can be included in any lambda function.  
 

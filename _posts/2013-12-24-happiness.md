@@ -12,7 +12,6 @@ against all weather, people and slope, <br>
 But after some distance I could not keep, <br>
 enough pace as the way was steep.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 I walked miles on my feet and hope, <br>
 against all weather, people and slope, <br>

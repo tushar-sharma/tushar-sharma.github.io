@@ -11,7 +11,6 @@ author: Tushar Sharma
 published: true
 ---
 AWS lambda function are event driven serverless code. To follow TDD, we should write unit test our lambda functions.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Project Structure 
 

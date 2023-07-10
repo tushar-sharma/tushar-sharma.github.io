@@ -12,7 +12,6 @@ published: true
 ---
 
 It feels great to sleep at night. I have a small but a cozy room. It’s not lavish or splending. It doesn’t even hoard much furniture. However it’s as peaceful as it can get.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
 It feels great to sleep at night. I have a small but a cozy room. It’s not lavish or splending. It doesn’t even hoard much furniture. However it’s as peaceful as it can get.

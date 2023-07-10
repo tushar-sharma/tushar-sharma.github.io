@@ -12,7 +12,6 @@ thumb: /img/privacy.jpg
 
 "If you've got nothing to hide, you've got nothing to fear". This is the most common retort used by governments to espouse Mass surveillance. They do it in the pretext of security. But even if you're not a fugitive, you have the right to protect your privacy.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 "If you've got nothing to hide, you've got nothing to fear". This is the most common retort used by governments to espouse Mass surveillance<sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup>. They do it in the pretext of security. But even if you're not a fugitive, you have the right to protect your privacy. 
 
