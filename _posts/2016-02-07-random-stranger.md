@@ -17,7 +17,6 @@ summary: A lonely day in Bangalore.
 
 It was just another day in Bangalore. I caught the bus from the /*Kormangala* bus depot. Amid exhausting heat & nudging elbows, I somehow managed to grab a seat in the bus. Securing a seat in the Indian bus during peak time is considered a fortune. This often attracts resentful eyes. However my Indian genes have made me immune to both pani puri & judgment.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 It was just another day in Bangalore. I caught the bus from the *Kormangala* bus depot. Amid exhausting heat & nudging elbows, I somehow managed to grab a seat in the bus. Securing a seat in the Indian bus during peak time is considered a fortune. This often attracts resentful eyes. However my Indian genes have made me immune to both [pani puri](https://en.wikipedia.org/wiki/Panipuri) & judgment. 
 

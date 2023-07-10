@@ -12,7 +12,6 @@ category: blog
 ---
 
 I went for lunch with my team at Bang Bang Burgers in Charlotte. It was a bit of a walk from the office, but luckily the weather wasn't hot, so it was a pleasant stroll to the restaurant.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <link rel="stylesheet" href="{{ root_url }}/css/books.css" />
 

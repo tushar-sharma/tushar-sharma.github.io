@@ -14,7 +14,6 @@ published: true
 
 
 This is my first time visiting Mexico city, also known as CDMX. Initially I was scared to come here because of Narcos. However during my brief two weeks stay I have felt safe. With my limited Spanish, I decided to book an <a href="https://www.airbnb.co.in/experiences/102485" target="_blank">Airbnb experience</a> for a bike tour.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <p>This is my first time visiting Mexico city, also known as CDMX. Initially I was scared to come here because of Narcos. However during my brief two weeks stay I have felt safe. With my limited Spanish, I decided to book an <a href="https://www.airbnb.co.in/experiences/102485" target="_blank">Airbnb experience</a> for a bike tour.</p> 
 

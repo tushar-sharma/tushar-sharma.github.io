@@ -37,6 +37,9 @@ algolia:
   application_id: '0XJJCPHPDY'
   index_name: randomwits
   public_key: 618de85a39ad952f6e4c506d3c752777
+  files_to_exclude:
+    - tag/*
+    - blog/*
 gems: [jekyll-paginate]
 paginate: 3
 not_paginated_categories:

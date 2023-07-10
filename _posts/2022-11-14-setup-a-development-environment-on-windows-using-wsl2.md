@@ -12,7 +12,6 @@ category: blog
 ---
 
 Most of the terminal I have used in Windows were at best lackluster. However wsl2 is a game changer which makes your Windows OS Unixy.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Most of the terminal I have used in Windows were at best lackluster. However wsl2 is a game changer which makes your Windows OS Unixy.
 

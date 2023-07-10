@@ -12,7 +12,6 @@ published: true
 ---
 
 Today the sleep was better. Yesterday I was sleep deprived. Hunger is the best ingredient to make any food delicious. Likewise a sound sleep is like a `manna from heaven` for me.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Today the sleep was better. Yesterday I was sleep deprived. Hunger is the best ingredient to make any food delicious. Likewise a sound sleep is like a `manna from heaven` for me.
 

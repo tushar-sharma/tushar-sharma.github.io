@@ -17,7 +17,6 @@ thumb: /img/women.jpg
 
 "India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <p>
 "India’s Daughter”, a documentary on Gang rape of 2012 has been officially banned. The Indian government went all gun to arrest the release of the documentary in India & abroad. BBC, Google, Youtube have all been sent legal notices to comply with the government’s diktat. Congratulations! We have shown the world that we will silence anything that will make us uncomfortable.

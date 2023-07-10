@@ -11,7 +11,6 @@ category: blog
 ---
 
 In this tutorial, we will extract tweets from Twitter using python.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 In this tutorial, we will extract tweets from Twitter using python.
 
 First lets create a project- 

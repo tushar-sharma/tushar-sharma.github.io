@@ -14,7 +14,6 @@ featuredPost: true
 
 Dynamodb is a great NoSQL service by AWS. One of the most common use case is to export data to s3. There are multiple ways to export data to s3. For this tutorial we will leverage lambda function to achieve our goal.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Dynamodb is a great NoSQL service by AWS. Often it's required to export data from the dynamodb table .
 

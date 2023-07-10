@@ -31,7 +31,7 @@ const search = instantsearch({
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#searchbox',
-    placeholder: 'Randomwits',
+    placeholder: 'Search Randomwits...',
     autofocus: false,
     searchAsYouType: true,
   })

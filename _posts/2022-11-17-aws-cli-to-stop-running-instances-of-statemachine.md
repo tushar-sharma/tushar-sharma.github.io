@@ -12,7 +12,6 @@ category: blog
 ---
 
 I could not delete a statemachine that had running instances stuck in Progress. Since the number of instances were humongous, it was impossible to manually delete them using UI.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 I could not delete a statemachine that had running instances stuck in Progress. Since the number of instances were humongous, it was impossible to manually delete them using UI. 
 

@@ -14,7 +14,6 @@ tags:
 ---
 
 In this [leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/) problem, we are asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string `abcabcbb` the longest substring without repeating characters is `abc` (with a length of 3).<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
 <link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>

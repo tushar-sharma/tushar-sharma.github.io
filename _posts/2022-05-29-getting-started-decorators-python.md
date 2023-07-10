@@ -10,7 +10,6 @@ image: https://unsplash.com/photos/Cl-OpYWFFm0/download?w=800
 ---
 
 In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.
 

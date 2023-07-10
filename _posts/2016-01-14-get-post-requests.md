@@ -16,7 +16,6 @@ Browsers have made browsing insanely easy. Toolbar fetches webpage magically. Ho
 
 What is REST? REST is **RE**presentational **S**tate **T**ransfer. Loosely speaking it defines how resources are exchanged based on item of request. Two most common HTTP Request Methods are `POST` and `GET`. Using tshark, we can see the headers exchange as you browse the web.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Browsers have made browsing insanely easy. Toolbar fetches webpage magically. However, under the hood, lots of `requests` are exchanged. These requests are based on `REST` architecture. 
 

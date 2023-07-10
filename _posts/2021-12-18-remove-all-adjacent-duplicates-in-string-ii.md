@@ -19,7 +19,6 @@ author: Tushar Sharma
 
 You are given a string s and an integer k, a k duplicate removal consists of choosing k adjacent and equal letters from s and removing them, causing the left and the right side of the deleted substring to concatenate together.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>
 <script src="{{ root_url }}/js/jquery.easytabs.min.js"></script>
