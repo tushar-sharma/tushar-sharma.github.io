@@ -12,7 +12,6 @@ category: blog
 
 
 I was looking for a company to play ping pong. I found a table tennis meetup at Pig Pound Brewery at Greensboro, North Carolina. I drove hundred miles from Charlotte to reach the place which is a testimony to the fact that I really like the sport.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
 
 I was looking for a company to play ping pong. I found a table tennis meetup at Pig Pound Brewery at Greensboro, North Carolina. I drove hundred miles from Charlotte to reach the place which is a testimony to the fact that I really like the sport.

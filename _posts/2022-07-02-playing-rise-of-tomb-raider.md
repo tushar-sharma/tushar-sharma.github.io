@@ -11,7 +11,6 @@ thumb: https://i.imgur.com/J3CWcvw.jpg
 
 I am an ardent fan of <strong>Tomb Raider</strong> game series. I grew up falling in love with <strong>Tomb Raider III</strong>. Much time swept away since I have tried any other game of this series. So finally I decided to try my hands on <strong>Rise of Tomb Raider</strong>.
 <!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}</p>
 
 <script src="https://raw.githubusercontent.com/aFarkas/lazysizes/gh-pages/lazysizes.min.js" async=""></script>
 
