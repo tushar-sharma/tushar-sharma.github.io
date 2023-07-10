@@ -11,7 +11,6 @@ category: blog
 ---
 
 Unless you were living under a rock, it's very likely that you saw the movie - Finding Nemo. I liked Marlin who was nemo's dad who faught against the odds to recover his son. Can you tell me if nemo was male or a female?.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Unless you were living under a rock, it's very likely that you saw the movie - Finding Nemo. I liked Marlin who was nemo's dad who faught against the odds to recover his son. Can you tell me if nemo's dad was a male or a female?
 

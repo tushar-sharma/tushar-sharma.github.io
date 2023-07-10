@@ -11,7 +11,6 @@ published: true
 ---
 
 JSON-Server is a popular tool for creating fake REST APIs quickly and easily. It's a great option for testing purposes when you need to mock up an API to see how your application interacts with it.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 JSON-Server is a popular tool for creating fake REST APIs quickly and easily. It's a great option for testing purposes when you need to mock up an API to see how your application interacts with it.
 

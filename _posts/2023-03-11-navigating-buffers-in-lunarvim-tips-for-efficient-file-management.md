@@ -13,7 +13,6 @@ published: true
 ---
 
 Lunarvim is a powerful tool that can enhance productivity for advanced software engineers. One feature that is particularly useful for working with multiple files is `vsplit` and `telescope`. However, it can become cumbersome to navigate between files using a mouse. <!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Lunarvim is a powerful tool that can enhance productivity for advanced software engineers. One feature that is particularly useful for working with multiple files is `vsplit` and `telescope`. However, it can become cumbersome to navigate between files using a mouse. 
 

@@ -12,7 +12,6 @@ category: blog
 ---
 
 If you're a writer or a developer who frequently deals with text formatting, you're probably familiar with Markdown. Markdown is a lightweight markup language that allows you to easily format text using simple syntax. While you can write Markdown in any text editor, using a dedicated Markdown editor can make the process much easier and more efficient.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 If you're a writer or a developer who frequently deals with text formatting, you're probably familiar with Markdown. Markdown is a lightweight markup language that allows you to easily format text using simple syntax. While you can write Markdown in any text editor, using a dedicated Markdown editor can make the process much easier and more efficient.
 

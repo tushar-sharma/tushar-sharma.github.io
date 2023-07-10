@@ -11,7 +11,6 @@ published: false
 ---
 
 Random thought on foreign news on Kerala Story.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Random thought on foreign news on Kerala Story.
 

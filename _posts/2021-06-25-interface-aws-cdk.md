@@ -33,7 +33,6 @@ th, td {
 </style>
 
 <a href="https://aws.amazon.com/cdk/" target="_bank">AWS CDK</a> is a great framework to programmatically deploy cloudformation stack. If you are unfamiliar with AWS CDK, I would recommend first to check out [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws).<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <a href="https://aws.amazon.com/cdk/" target="_bank">AWS CDK</a> is a great framework to programmatically deploy cloudformation stack. If you are unfamiliar with AWS CDK, I would recommend first to check out [Getting started with AWS CDK](http://randomwits.com/blog/tutorial-cdk-aws). 
 

@@ -13,7 +13,6 @@ category: blog
 
 
 SonarQube is an open-source platform used to manage code quality. It provides static code analysis, which means it can automatically analyze code to detect bugs, vulnerabilities, and code smells (design issues that could lead to problems in the future).<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 SonarQube is an open-source platform used to manage code quality. It provides static code analysis, which means it can automatically analyze code to detect bugs, vulnerabilities, and code smells (design issues that could lead to problems in the future).
 

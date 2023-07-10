@@ -8,10 +8,13 @@ author: Tushar Sharma;
 category: blog
 tags:
  - religion
+ - audio
 ---
 
 As we gaze into the dark sky, captivated by the sparkling stars, we often find ourselves contemplating the deeper meaning of life and the existence of a higher power. The question of whether God is a mere human construct or if our existence holds merit in the vast realm of the universe remains<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
+
+{% include embed-audio.html src="/sounds/2023-07-04-irony-faith-and-science.mp3" %}
+<!--begin_of_post -->
 
 As we gaze into the dark sky, captivated by the sparkling stars, we often find ourselves contemplating the deeper meaning of life and the existence of a higher power. The question of whether God is a mere human construct or if our existence holds merit in the vast realm of the universe remains an enduring and thought-provoking debate. While science does not provide definitive proof for or against the existence of God, examining the beliefs of renowned scientists can shed light on the diverse perspectives that coexist within the scientific community.
 

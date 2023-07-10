@@ -9,7 +9,6 @@ published: false
 ---
 
 .<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 The Chain of Responsibility pattern is a design pattern used in object-oriented programming to create a chain of objects that can process a request. In Reactive Java Spring Boot, the pattern can be used to handle and process events asynchronously in a non-blocking manner.
 

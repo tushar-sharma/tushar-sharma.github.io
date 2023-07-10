@@ -17,7 +17,6 @@ published: true
 ---
 
 AWS offers managed service Amazon MemoryDB which is redis compatible. The entire keyspace in Redis cluster is divided into hash slots and these slots are assigned to multiple nodes. In redis, getting a single value is straightforward.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 AWS offers managed service Amazon MemoryDB which is redis compatible.. The entire keyspace in Redis cluster is divided into hash slots and these slots are assigned to multiple nodes. In redis-cli, getting a single value is straightforward
 

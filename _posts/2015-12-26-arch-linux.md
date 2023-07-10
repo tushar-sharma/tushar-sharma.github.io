@@ -17,7 +17,6 @@ thumb: /img/lego_walls.jpg
 
 I finally divorced `Windows` soon after I fell in love with Linux. Ubuntu was my first love. I met her on `Distrowatch`. But she spoke no English. So I spent hours gawking at her sleaky terminal trying to learn her language, `bash`.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
 <script type="text/javascript" src="{{ root_url }}/js/shCore.js"></script>

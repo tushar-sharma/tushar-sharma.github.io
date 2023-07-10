@@ -17,7 +17,6 @@ image: https://i.imgur.com/jqKRwJx.jpg
 
 I have begun to realize how many posts on Facebook, Whatsapp, etc contains pseudoscience and misinformation. Few posts are easy to debunk. Magic water curing cancer is a no-brainer. However other posts are too meticulous to debunk. I thought it might be fruitful for me as a layman to learn critical & skeptical thinking from a famous astrophysicist, Carl Sagan.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 {% include embed-audio.html src="/sounds/2020-04-11-demon-haunted-review-1.mp3" %}<br>
 
 <!--begin_of_post -->
