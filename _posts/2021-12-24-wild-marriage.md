@@ -22,7 +22,6 @@ author: Tushar Sharma
 
 <link rel="stylesheet" type="text/css" href="{{ root_url }}/css/chat.css">
 {% include embed-audio.html src="/sounds/2021-12-24-wild-marriage.mp3" %}<br>
-<br>
 <!--begin_of_post -->
 
 "Marriages are made in heaven" is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However there is a rare marriage that not only invites heaven's fury but also is consummated by mutual suicide.

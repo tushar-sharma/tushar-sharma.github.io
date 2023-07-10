@@ -18,7 +18,7 @@ featuredPost: true
 
 I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.<!-- truncate_here -->
 
-{% include embed-audio.html src="/sounds/2020-06-19-homeopathy-india.mp3" %}
+{% include embed-audio.html src="/sounds/2020-06-19-homeopathy-india.mp3" %}<br>
 <!--begin_of_post -->
 
 <p> I recently came across a Youtube video of a famous Indian actress Genelia Deshmukh promoting homeopathic products. The Bollywood couple, Riteish and Genelia Deshmukh, has invested in Welcome Cure, a Homeopathy treatment service platform. Science has repeatedly dismissed homeopathy as quakery or at best placebo, but that has not deter companies or Indian government to continue to fund and research in homeopathy.</p>
