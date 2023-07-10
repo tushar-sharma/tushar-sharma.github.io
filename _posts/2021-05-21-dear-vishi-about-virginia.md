@@ -11,7 +11,6 @@ published: true
 ---
 
 I didn't have proper sleep today. I could barely keep my eyes open. Empty stomach and a heavy mind is a disaster for sound sleep. Yesterday I was brooding too much while trying to sleep. I guess I need to filter noises in my mind. Proper sleep is the basic physiological need in Maslow's pyramid. I guess it's a blessed day not to have a insomnia.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 I didn't have proper sleep today. I could barely keep my eyes open. Empty stomach and a heavy mind is a disaster for sound sleep. Yesterday I was brooding too much while trying to sleep. I guess I need to filter noises in my mind. Proper sleep is the basic physiological need in Maslow's pyramid. I guess it's a blessed day not to have a insomnia.
 

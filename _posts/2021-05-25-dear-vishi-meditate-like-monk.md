@@ -14,7 +14,6 @@ toc_stick: true
 
 
 Today I tried to meditate again. I used Insight Timer app for background sound. However I think I'll just stick to Youtube as it has more varieties. I struggled for 20 minutes sitting cross-legged as my mind wandered in the labyrinth of thoughts. I guess it will take more practice to hone my skill. Have you ever wondered how monks can meditate for countless hours or days?<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <script type="text/javascript">
 function changeImage(elem) {

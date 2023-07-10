@@ -12,7 +12,6 @@ category: blog
 ---
 
 Performing inner join on pandas dataframe is straightforward. However I wanted to override values from the right dataframe.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Performing inner join on pandas dataframe is straightforward. However I wanted to override values from the right dataframe.
 

@@ -16,7 +16,6 @@ Avoiding prying eyes secretly,<br>
 In between stretches a velvet sky,<br>
 Only gulf in between us apparently.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 {% include embed-audio.html src="/sounds/2014-03-30-romance-moon.mp3" %}<br>
 <!--begin_of_post -->

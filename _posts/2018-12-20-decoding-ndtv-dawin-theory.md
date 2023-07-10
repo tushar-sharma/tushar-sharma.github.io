@@ -15,7 +15,6 @@ thumb: https://i.imgur.com/nvegAOw.jpg
 
 I wanted to decode an old debate that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" because he never **saw an ape turning into human being**.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
 I wanted to decode an old debate <sup><a href='#fn:1' rel='footnote'>1</a></sup> that I saw on ndtv. It was about a controversy erupted by the comments of a junior Indian education minister, Satyapal Singh. He is India's Minister of State for Human Resource Development. He had claimed that evolution is "scientifically wrong" because he never "<b>saw an ape turning into human being</b>".

@@ -12,7 +12,6 @@ thumb: https://unsplash.com/photos/-2vD8lIhdnw/download?w=800
 ---
 
 An interesting problem on leetcode to find minimum number of ways to pick up consecutive cards. We will start with a brute force algorithm that would exceed in time limit. Later we will improve upon this algorithm using hashmap.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
 <link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>

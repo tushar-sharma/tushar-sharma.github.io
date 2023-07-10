@@ -17,7 +17,6 @@ thumb: /img/heap_array.png
 
 
 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>The new list should be made by splicing together the nodes of the first two lists.

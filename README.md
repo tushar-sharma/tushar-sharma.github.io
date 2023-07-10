@@ -126,6 +126,13 @@ iframe
 
 Dont create tags with upper case name. Always use lowercase.
 
+### Searching
+
+Update index in algolia with admin API Key. 
+
+```
+ALGOLIA_API_KEY='' bundle exec jekyll algolia
+```
 
 ### Build this website
 

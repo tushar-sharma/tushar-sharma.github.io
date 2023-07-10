@@ -14,7 +14,6 @@ tags:
 
 
 I recently found myself in need of a rejuvenating break during a road trip from Charlotte. I stumbled upon Thai Philly Spa, which was in between my trip to East Providence, RI. The spa center was anything but<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <script>
 $(document).ready(function() {
@@ -31,7 +30,7 @@ I went for spa at Asian spa so I thought I reviewed it. The spa is located at 16
 
 Another challenge I encountered was locating the spa using Google Maps. Navigating through the bustling streets of Philadelphia proved to be a bit of a struggle. The spa's address didn't align accurately with its location on the map, leaving me feeling a tad frustrated and disoriented. It would have been helpful if the spa had provided clearer directions or a more prominent presence online to ensure a smoother arrival.
 
-The masseur was from Thailand. So I greeted her in Thai: 
+The masseur was from Thailand. So I greeted her in Thai, Sawasdee khap
 
 <a class="speech-link speech" data-toggle="audio" data-audio-id="1">สวัสดี<span><i class="cl icon-volume-up icon-small"></i></span></a>
 <audio id="1" src="{{root_url}}/sounds/สวัสดี.mp3" preload="auto"></audio>

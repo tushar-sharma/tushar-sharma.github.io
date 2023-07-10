@@ -17,7 +17,6 @@ featuredPost: true
 ---
 
 Cloudformation service in AWS allows you to describe an entire set of resources required to make a pipeline. The cloudformation template can be described in JSON or YAML format. Updating the cloudformation template was not a pleasant experience. I wanted to discover alternative ways to generate cloudformation template programmatically.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <link rel="stylesheet" type="text/css" href="{{ root_url }}/css/chat.css">
 <link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>

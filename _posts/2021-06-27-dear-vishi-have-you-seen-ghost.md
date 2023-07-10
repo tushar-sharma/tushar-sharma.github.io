@@ -13,7 +13,6 @@ published: true
 ---
 
 Do you believe in ghosts? I did when I was a kid. I was infatuated with the paranormal. Sometimes I used to wander around desolate buildings with other kids concocting horror stories. I loquaciously gossiped about ghosts in school which earned me a sizeable audience. I was convinced that someday I would stumble upon an innocuous spirit that would instill some unearthly powers in me.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <style>
 table, td, th {  

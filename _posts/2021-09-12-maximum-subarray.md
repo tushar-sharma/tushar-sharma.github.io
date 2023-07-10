@@ -12,7 +12,6 @@ thumb: https://www.hrccu.org/wp-content/uploads/2020/05/hackers.jpg
 ---
 
 There's an interesting problem I recently solved on leetcode based on dynamic programming. My <a href="https://github.com/tushar-sharma/prep-coding" target="_blank">Github</a> repository contains list of all problems that I have solved. I often start with a brute force approach without fretting about time complexity. Later I try to improve my algorithm for a better efficient solution.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 
 <link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>

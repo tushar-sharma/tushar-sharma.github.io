@@ -11,7 +11,6 @@ category: blog
 ---
 
 How often do you bump into a painter? "So what do you do?", I asked. "Well I am a painter", she said. "Like a real painter?". "Yes".<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 How often do you bump into a painter? "So what do you do?", I asked. "Well I am a painter", she said. "Like a real painter?". "Yes"
 

@@ -17,15 +17,11 @@ author: Tushar Sharma
 
 "Marriages are made in heaven" is an old adage quite prevalent across all cultures. Whether heaven harbors any interest in the mortal affair has still scant empirical evidence. However, there is a rare marriage that not only invites heaven's fury but also is consummated by mutual suicide.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
 <link rel="stylesheet" type="text/css" href="{{ root_url }}/css/chat.css">
-{% capture audio_url %}
-{{ root_url }}/sounds/{{ page.path | split:'/'  | last | replace: '.md' '' }}.mp3
-{% endcapture %}
-{% include embed-audio.html src=audio_url %}
+{% include embed-audio.html src="/sounds/2021-12-24-wild-marriage.mp3" %}<br>
 <br>
 <!--begin_of_post -->
 

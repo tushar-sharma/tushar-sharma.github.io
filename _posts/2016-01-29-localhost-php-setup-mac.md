@@ -13,7 +13,6 @@ Users with the newest versions of Mac OS X (Mountain Lion or later) no longer se
  
 Testing web sites on your personal computer is indispensable for web developers / designers. Enabling `php` on Mac OX S is plain and easy. <!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 Users with the newest versions of Mac OS X (Mountain Lion or later) no longer see the option of web sharing in `System Preferences->Sharing`. If you are a web developer / designer, you might find this change unpleasant. However Mac OS X still includes Apache HTTP version. 
  

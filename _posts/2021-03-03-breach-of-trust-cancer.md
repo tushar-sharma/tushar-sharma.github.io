@@ -13,7 +13,6 @@ thumb: https://www.andersonregional.org/images/content/WEB-3D-MAMMOGRAPHY-PROCED
 
 I am currently reading <a href="http://randomwits.com/books" target="_blank">The Emperor of Maladies</a>. This is a fascination book where Siddhartha Mukherjee not only educate its readers about cancer disease but also shares interesting tidbits. Werner Bezwoda was an infamous oncologist who fudged data about bone marrow transplant in women with metastatic breast cancer.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <p>I am currently reading <a href="http://randomwits.com/books" target="_blank">The Emperor of Maladies</a>. This is a fascination book where Siddhartha Mukherjee not only educate its readers about cancer disease but also shares interesting tidbits. Werner Bezwoda was an infamous oncologist who fudged data about bone marrow transplant in women with metastatic breast cancer.</p>
 

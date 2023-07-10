@@ -12,7 +12,6 @@ thumb: https://i.imgur.com/ceIoDSn.jpeg
 ---
 
 Ternary string is an interesting problem that could be solved using two pointers techniques. It's a convenient way to keep track of multiple indices. This helps in making decisions based on two values.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 <link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>
 

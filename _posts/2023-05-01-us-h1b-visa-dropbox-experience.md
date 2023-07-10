@@ -15,7 +15,6 @@ published: true
 ---
 
 As a non-immigrant worker in the United States, navigating the visa stamping process can be a cumbersome task. However, with proper planning and understanding of the process, the journey can be much smoother.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 As a non-immigrant worker in the United States, navigating the visa stamping process can be a cumbersome task. However, with proper planning and understanding of the process, the journey can be much smoother.
 

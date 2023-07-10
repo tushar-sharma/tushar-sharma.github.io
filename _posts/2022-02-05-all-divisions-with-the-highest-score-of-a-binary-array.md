@@ -8,19 +8,15 @@ tags:
 - array
 - java
 - python
+mutipleTab: true
 name: highest-score-binary-array
-featuredPost: 
+featuredPost: false
 image: https://unsplash.com/photos/uXLgmicKSi4/download?w=800
 thumb: https://unsplash.com/photos/uXLgmicKSi4/download?w=800
 ---
 
 You are given a **0-indexed** binary array `nums` of length `n`. `nums` can be divided at index `i` (where `0 <= i <= n`) into two arrays (possibly empty) nums<sub>left</sub> and nums<sub>right</sub><!-- truncate_here -->
 <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
-
-
-<link rel="stylesheet" href="{{ root_url }}/css/multipleTab.css"/>
-<script src="{{ root_url }}/js/jquery.easytabs.min.js"></script>
-<script src="{{ root_url }}/js/multipleTab.js"></script>
 
 ## Problem Statement
 
@@ -100,20 +96,13 @@ The maxium key in **hashmap** will contain the list of indices with the highest 
 
 ## Solution
 
-<div class="tab-container">
-  <ul>
-    <li class="tab Java1"><a href="#Java1">Java</a></li>
-    <li class="tab Python1"><a href="#Python1">Python</a></li>
-  </ul>
-
-   <div class="codeSample Java1" id="Java1">
-     <script src="https://gist.github.com/tushar-sharma/fa433cb7d3f266f5853854805134c543.js?file=MaxScoreIndices.java"></script>
-   </div>
-
-   <div class="codeSample Python1" id="Python1">
-     <script src="https://gist.github.com/tushar-sharma/fa433cb7d3f266f5853854805134c543.js?file=max_score_indices.py"></script>
-   </div>
-
-</div>
-
-
+{% template  customTab.html %}
+---
+id: fa433cb7d3f266f5853854805134c543
+files:
+  - file: MaxScoreIndices.java
+    language: java
+  - file: max_score_indices.py
+    language: python
+---
+{% endtemplate %}

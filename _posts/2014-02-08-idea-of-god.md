@@ -15,7 +15,6 @@ featuredPost: true
 
 I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to wreak the whole place. And the mischievous alarm pulled me out of my dreams.<!-- truncate_here -->
 
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 {% include embed-audio.html src="/sounds/2014-02-08-idea-of-god.mp3" %}<br>
 <!--begin_of_post -->

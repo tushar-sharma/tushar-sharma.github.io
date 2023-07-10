@@ -12,7 +12,6 @@ published: true
 ---
 
 What’s a nationality? The idea of the nation-state is pretty modern. Ancient lands were usually under the suzerainty of kings & queens. While most emperors spilled blood to expand their kingdom, the common man was seldom concerned about borders.<!-- truncate_here -->
-<p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
 
 What’s a nationality? The idea of the nation-state is pretty modern. Ancient lands were usually under the suzerainty of kings & queens. While most emperors spilled blood to expand their kingdom, the common man was seldom concerned about borders.
 
