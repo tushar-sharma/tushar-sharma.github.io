@@ -298,10 +298,9 @@ https://muffinman.io/blog/custom-jekyll-pagination/
   color: #fff;
 }
 
+
 .pagination-wrapper .pagination a,
-.pagination span,
-.pagination-wrapper .pagination li a,
-.pagination li span {
+.pagination span {
   border-radius: 3px;
   float: left;
   height: 20px;
@@ -310,18 +309,17 @@ https://muffinman.io/blog/custom-jekyll-pagination/
   border: 1px solid #eee;
   padding: 7px 18px;
   list-style-position: inside;
+
 }
 
 .pagination-wrapper a.pagination-step,
-span.pagination-step,
-.pagination-wrapper li.pagination-step a,
-.pagination-wrapper li.pagination-step span {
+span.pagination-step {
   width: auto;
 }
 
 .pagination-first,
 .pagination-last,
-.pagination-more {
+.pagination-more, {
   display: none;
 }
 
@@ -338,9 +336,7 @@ span.pagination-step,
   }
 
   a.pagination-step,
-  span.pagination-step,
-  .pagination li.pagination-step a,
-  .pagination li.pagination-step span {
+  span.pagination-step {
     width: auto;
   }
 }
@@ -571,6 +567,7 @@ code[class*=language-],pre[class*=language-]{
 .speech-link:hover {
   color: red; /* Update color on hover */
 }
+
 /* algolia */
 /* Algolia search bar */
 .aa-input-container {
