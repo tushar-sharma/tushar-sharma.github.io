@@ -11,7 +11,13 @@ image: /img
 
 TODO.<!-- truncate_here -->
 
-### Autowired
+## Inversion of Control
+
+Inversion of Control (IoC) is a principle in software development that refers to the shift of control of object creation and lifecycle management from the application code to an external container or framework. In IoC, the responsibility of creating and managing objects (often referred to as "beans") is delegated to a container, which dynamically manages the dependencies between objects.
+
+## Annotations
+
+### `@Autowired`
 
 `@Autowired` is a Spring framework annotation that enables dependency injection in a Spring application. It allows the Spring container to automatically wire beans by matching their data type. The @Autowired annotation can be used on setter methods, instance variables, or constructors.
 
@@ -66,7 +72,7 @@ public class UserController{
     }
 }
 ```
-### Configuration
+### `@Configuration`
 
 @Configuration: It is a class-level annotation. The class annotated with @Configuration used by Spring Containers as a source of bean definitions.
 
@@ -90,35 +96,30 @@ public class AppConfig {
 }
 ````
 
-### Service
+### `@Service`
 
 @Service: It is also used at class level. It tells the Spring that class contains the business logic.
 
-### Inversion of Control
+### `@Bean`
 
-Inversion of Control (IoC) is a principle in software development that refers to the shift of control of object creation and lifecycle management from the application code to an external container or framework. In IoC, the responsibility of creating and managing objects (often referred to as "beans") is delegated to a container, which dynamically manages the dependencies between objects.
+@Bean: It is a method-level annotation. It is an alternative of XML tag. It tells the method to produce a bean to be managed by Spring Container.
+
+
 
 @Required: It applies to the bean setter method. It indicates that the annotated bean must be populated at configuration time with the required property, else it throws an exception BeanInitilizationException.
 
-@Autowired: Spring provides annotation-based auto-wiring by providing @Autowired annotation. It is used to autowire spring bean on setter methods, instance variable, and constructor. When we use @Autowired annotation, the spring container auto-wires the bean by matching data-type.
 
 @Configuration: It is a class-level annotation. The class annotated with @Configuration used by Spring Containers as a source of bean definitions.
 
-@ComponentScan: It is used when we want to scan a package for beans. It is used with the annotation @Configuration. We can also specify the base packages to scan for Spring Components.
-
-@Bean: It is a method-level annotation. It is an alternative of XML tag. It tells the method to produce a bean to be managed by Spring Container.
 
 @Component: It is a class-level annotation. It is used to mark a Java class as a bean. A Java class annotated with @Component is found during the classpath. The Spring Framework pick it up and configure it in the application context as a Spring Bean.
 
 @Controller: The @Controller is a class-level annotation. It is a specialization of @Component. It marks a class as a web request handler. It is often used to serve web pages. By default, it returns a string that indicates which route to redirect. It is mostly used with @RequestMapping annotation.
 
-@Service: It is also used at class level. It tells the Spring that class contains the business logic.
-
 @Repository: It is a class-level annotation. The repository is a DAOs (Data Access Object) that access the database directly. The repository does all the operations related to the database.
 
 @SpringBootApplication: It is a combination of three annotations @EnableAutoConfiguration, @ComponentScan, and @Configuration.
 
-Spring MVC and REST Annotations:
 @RequestMapping: It is used to map the web requests. It has many optional elements like consumes, header, method, name, params, path, produces, and value. We use it with the class as well as the method.
 
 @GetMapping: It maps the HTTP GET requests on the specific handler method. It is used to create a web service endpoint that fetches It is used instead of using: @RequestMapping(method = RequestMethod.GET)
@@ -144,7 +145,3 @@ Spring MVC and REST Annotations:
 @RestController: It can be considered as a combination of @Controller and @ResponseBody annotations. The @RestController annotation is itself annotated with the @ResponseBody annotation. It eliminates the need for annotating each method with @ResponseBody.
 
 @RequestAttribute: It binds a method parameter to request attribute. It provides convenient access to the request attributes from a controller method. With the help of @RequestAttribute annotation, we can access objects that are populated on the server-side.
-
-@EnableSwagger2: Mainly used for documentation the Restful we-service
-
-@EnableOAuth2Sso: Oauth Authentication
