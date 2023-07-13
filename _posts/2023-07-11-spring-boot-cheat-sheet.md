@@ -5,8 +5,8 @@ category: blog
 tags:
 - spring boot
 name: interface-aws-cdk
-thumb: /img/
-image: /img
+thumb: /img/spider-girl.jpeg
+image: /img/spider-girl.jpeg
 ---
 
 TODO.<!-- truncate_here -->
