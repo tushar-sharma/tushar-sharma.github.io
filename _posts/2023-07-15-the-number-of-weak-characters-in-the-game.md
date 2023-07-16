@@ -40,3 +40,23 @@ I tried using brute force
 I got **Time Limit Exceeded**. The complexity of the solution is O(n2)
 
 ## Second attempt
+
+```
+    public int optimalSolution(int[][] properties){
+        int output = 0;
+
+
+        Arrays.sort(properties, (a, b) -> a[0] == b[0] ? a[1] - b[1] : b[0] - a[0]);
+        int max = 0;
+
+        for (int[] property : properties){
+            if (property[1] < max){
+                output++;
+            }else {
+                max = property[1];
+            }
+        }
+
+        return output;
+    }
+```
