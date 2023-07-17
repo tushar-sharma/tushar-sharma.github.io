@@ -1,7 +1,7 @@
 create:
 	bash createPost.sh
 serve:
-	JEKYLL_ENV=production bundle exec jekyll serve --trace --incremental
+	JEKYLL_ENV=production bundle exec jekyll serve --trace
 clean:
 	rm -fr tag
 	cp -r _site/tag .
