@@ -7,7 +7,7 @@
     
       
         <item>
-          <title>The number of Weak Characers in the Game</title>
+          <title>The number of Weak Characters in the Game</title>
           <description>&lt;p&gt;You are playing a game that contains multiple characters, and each of the characters has two main properties: attack and defense. You are given a 2D integer array properties where properties[i] = [attacki, defensei] represents the properties of the ith character in the game..&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;p&gt;You are playing a game that contains multiple characters, and each of the characters has two main properties: attack and defense. You are given a 2D integer array properties where properties[i] = [attacki, defensei] represents the properties of the ith character in the game.&lt;/p&gt;
