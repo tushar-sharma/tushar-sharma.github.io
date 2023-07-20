@@ -22,7 +22,7 @@
 
 &lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ecf1dc2cef72c564a908353159f754dc.js?file=BruteForceSolution.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
-&lt;p&gt;I got &lt;strong&gt;Time Limit Exceeded&lt;/strong&gt;. The complexity of the solution is $$O(n^2)$$&lt;/p&gt;
+&lt;p&gt;I got &lt;strong&gt;Time Limit Exceeded&lt;/strong&gt;. The complexity of the solution is &lt;strong&gt;$$O(n^2)$$&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;optimal-solution&quot;&gt;Optimal Solution&lt;/h2&gt;
 
