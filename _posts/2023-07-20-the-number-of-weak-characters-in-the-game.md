@@ -30,7 +30,7 @@ file: BruteForceSolution.java
 ---
 {% endtemplate %}
 
-I got **Time Limit Exceeded**. The complexity of the solution is $$O(n^2)$$
+I got **Time Limit Exceeded**. The complexity of the solution is **$$O(n^2)$$**.
 
 ## Optimal Solution
 
