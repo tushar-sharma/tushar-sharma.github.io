@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-07-20
-title: The number of Weak Characers in the Game
+title: The number of Weak Characters in the Game
 image: https://i.imgur.com/PC32zDw.jpg 
 thumb: https://i.imgur.com/PC32zDw.jpg 
 author: Tushar Sharma
