@@ -98,16 +98,6 @@ files:
 {% endtemplate %}
 ```
 
-There's a caveat in using github gist. It wont be searchable by algolia. so workaround is to add your code redundantly
-
-```
-<div style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">
-    public class YourClass {
-        // Your code here
-    }
-</div>
-
-```
 
 ### Encrypting page
 
