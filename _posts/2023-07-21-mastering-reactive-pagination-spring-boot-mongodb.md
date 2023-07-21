@@ -162,7 +162,7 @@ Create a `GET` request for pagination entries: `http://localhost:8080/paginaged-
 Create a `GET` request for getting all entries: `http://localhost:8080/products`
 
 
-<div style="display: none;">
+<div style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">
 <!-- build.gradle -->
 plugins {
 	id 'java'
