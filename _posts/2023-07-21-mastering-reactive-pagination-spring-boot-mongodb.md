@@ -10,6 +10,7 @@ mutipleTab: true
 tags:
  - spring boot
  - java
+ - mongodb
 ---
 As we delve into the realms of sophisticated data management, we will be harnessing the strengths of Spring Boot, the agility of MongoDB, and the responsiveness of reactive programming to implement an efficient pagination system. Pagination is a critical feature, instrumental in enhancing user experience and application performance. By the end of this guide, you'll have a deep understanding of reactive pagination, equipping you with the skills to manage large data sets with ease and proficiency. Let's get started.<!-- truncate_here -->
 
