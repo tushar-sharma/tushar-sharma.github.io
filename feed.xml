@@ -108,7 +108,7 @@
 
 &lt;p&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; request for getting all entries: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/products&lt;/code&gt;&lt;/p&gt;
 
-&lt;div style=&quot;display: none;&quot;&gt;
+&lt;div style=&quot;position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;&quot;&gt;
 &lt;!-- build.gradle --&gt;
 plugins {
 	id &apos;java&apos;
