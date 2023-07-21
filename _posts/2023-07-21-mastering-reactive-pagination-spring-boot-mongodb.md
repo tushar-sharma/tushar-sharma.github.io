@@ -10,28 +10,63 @@ category: blog
 
 .<!-- truncate_here -->
 
-
 ###  Create a New Spring Boot Application
 
-Go to https://start.spring.io/ and create a new Spring Boot Application.
+Go to [https://start.spring.io/](https://start.spring.io/) and create a new Spring Boot Application.
 
-Build the applicaiton.
+For this tutorial, below are the selections: 
 
+Project : Gradle - Groovy
+Spring Boot : 3.1.2
+Packaging: Jar
+Java: 17
 
-### Dependencies
+Below is the `build.gradle`
 
 ```
-<dependencies>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-webflux</artifactId>
-    </dependency>
-</dependencies>
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.2'
+	id 'io.spring.dependency-management' version '1.1.2'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
 ```
+
+Build the project and then open it in your favourite Editor (I'm using IntelliJ)
+
+```bash
+$ gradle build
+```
+
 
 ### Configure MongDB
 
@@ -42,65 +77,46 @@ Create an application.properties file in the resources folder with the following
 spring.data.mongodb.uri=mongodb://localhost:27017/testdb
 ```
 
+
+### Mongodb
+
+```
+docker-compose up
+```
+
 ### Create an Entity
 
-Create a Product entity in the model package.
+Create a Product entity in the model.
 
-```
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "products")
-public class Product {
-
-    @Id
-    private String id;
-    private String name;
-
-    // Getters and Setters
-}
-
-```
+{% template  customCode.html %}
+---
+id: 6e037d6c7261350abe5772eb6f196435
+file: Product.java
+---
+{% endtemplate %}
 
 ###  Create a Repository
 
 Create a ProductRepository in the repository package which extends ReactiveSortingRepository.
 
-```
-import org.springframework.data.repository.reactive.ReactiveSortingRepository;
-import org.springframework.stereotype.Repository;
+{% template  customCode.html %}
+---
+id: 6e037d6c7261350abe5772eb6f196435
+file: ProductRepository.java
+---
+{% endtemplate %}
 
-@Repository
-public interface ProductRepository extends ReactiveSortingRepository<Product, String> {
-}
-
-```
 
 ### Create a Service
 
 Create a ProductService class in the service package to interact with the repository.
 
-
-
-```
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-import reactor.core.publisher.Flux;
-
-@Service
-public class ProductService {
-
-    private final ProductRepository productRepository;
-
-    public ProductService(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
-
-    public Flux<Product> findPaginated(Pageable pageable) {
-        return productRepository.findAll(pageable);
-    }
-}
-
+{% template  customCode.html %}
+---
+id: 6e037d6c7261350abe5772eb6f196435
+file: ProductRepository.java
+---
+{% endtemplate %}
 ```
 
 ### Create a Controller
@@ -108,68 +124,29 @@ public class ProductService {
 Create a ProductController in the controller package to handle HTTP requests.
 
 
-```
-import org.springframework.data.domain.PageRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Flux;
-
-import java.util.Optional;
-
-@RestController
-public class ProductController {
-
-    private final ProductService productService;
-
-    public ProductController(ProductService productService) {
-        this.productService = productService;
-    }
-
-    @GetMapping("/products")
-    public Flux<Product> getProducts(
-        @RequestParam Optional<Integer> page, 
-        @RequestParam Optional<Integer> size
-    ) {
-        return productService.findPaginated(
-            PageRequest.of(page.orElse(0), size.orElse(10))
-        );
-    }
-}
-
-```
 
 ### Unit Testing
 
 Create a test class for ProductService in your test directory.
 
-```
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.PageRequest;
-import reactor.test.StepVerifier;
 
-@SpringBootTest
-public class ProductServiceTest {
-
-    @Autowired
-    private ProductService productService;
-
-    @Test
-    public void testFindPaginated() {
-        var pageable = PageRequest.of(0, 10);
-
-        var products = productService.findPaginated(pageable);
-
-        StepVerifier.create(products)
-                .expectNextCount(10)
-                .verifyComplete();
-    }
-}
-
-```
 
 ### Running the Application
 
-Run your Spring Boot application. You should be able to access paginated results at http://localhost:8080/products. To get the first page with two items per page, use http://localhost:8080/products?page=0&size=2.
+Add `-Dspring.profiles.active=local` to vm options to run your spring boot application locally.
+
+
+http://localhost:8080/paginaged-products?page=0&size=2
+
+```
+[
+    {
+        "id": 1,
+        "name": "Product1"
+    },
+    {
+        "id": 4,
+        "name": "Product4"
+    }
+]
+```
