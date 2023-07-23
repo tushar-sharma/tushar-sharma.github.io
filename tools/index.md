@@ -44,15 +44,15 @@ toc_icon: cog
 | [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Type Shift+Command+P and select install `code` command in PATH. |
 |                                            |          | Github Copilot |  |
 |                                            |          | Git Graph      |  |
-|                                            |          | [ChatGPT](https://marketplace.visualstudio.com/items?itemName=gencay.vscode-chatgpt) |
+| Windows                                    |          | [qBittorrent](https://www.qbittorrent.org/)  |
+|                                            |          | [Notepad++](https://notepad-plus-plus.org/downloads/) |
 | [Neovim](https://github.com/neovim/neovim)  | editor  |  | Details<sup><a href='#fn:2' rel='footnote'>2</a></sup> for Windows  |
 | [Winmerge](https://winmerge.org/)  | Diff  |  [Dotfiles](https://github.com/tushar-sharma/dotfiles)   |  |
-| [Notepad++](https://notepad-plus-plus.org/downloads/) | Editor | | |
+| | Editor | | |
 | [Vim](https://www.vim.org/)     | editor  | [Dotfiles](https://github.com/tushar-sharma/dotfiles) |
 | [ConEmu ](https://conemu.github.io/)  | Terminal | Details<sup><a href='#fn:1' rel='footnote'>1</a></sup> | |
 | [Cygwin](https://www.cygwin.com/)     | Terminal | Details<sup><a href='#fn:4' rel='footnote'>4</a></sup> | |
 | [Warp](https://www.warp.dev/)              | Terminal | Currently supports only Mac |
-| [qBittorrent](https://www.qbittorrent.org/)  | BitTorrent | | |
 | [Expressvpn](https://www.expressvpn.com/)  | VPN | | |
 
 
