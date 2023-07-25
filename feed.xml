@@ -7,6 +7,44 @@
     
       
         <item>
+          <title>Daily Logs for July 24, 2023</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for July 24, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for July 24, 2023.&lt;/p&gt;
+
+&lt;h3 id=&quot;twitter-has-been-renamed-x&quot;&gt;Twitter has been renamed X&lt;/h3&gt;
+
+&lt;p&gt;I logged into twitter today and saw the logo has changed. The bird logo has been replaced with letter &apos;X&apos;.&lt;/p&gt;
+
+&lt;p&gt;Also X.com would redirect to twitter.com, Elon Musk said. However, there seems to be some DNS issue as I am redirected to GoDaddy website.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;/img/X.com.png&quot; alt=&quot;DNS issue&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;print-an-object-as-json-in-java&quot;&gt;Print an object as Json in java&lt;/h3&gt;
+
+&lt;p&gt;Lets say you wanted to print an object in java&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Build&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getBuild&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;writeValueAsString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Json Object is: {}&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;400&quot; src=&quot;/encrypted/2023-07-24-daily-logs-2023-07-24.html&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
+</description>
+          <pubDate>2023-07-24T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/daily-logs-2023-07-24</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2023-07-24</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Mastering Reactive Pagination with Spring Boot and MongoDB</title>
           <description>&lt;p&gt;As we delve into the realms of sophisticated data management, we will be harnessing the strengths of Spring Boot, the agility of MongoDB, and the responsiveness of reactive programming to implement an efficient pagination system. Pagination is a critical feature, instrumental in enhancing user experience and application performance. By the end of this guide, you&apos;ll have a deep understanding of reactive pagination, equipping you with the skills to manage large data sets with ease and proficiency. Let&apos;s get started.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -107,159 +145,6 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; request for getting all entries: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/products&lt;/code&gt;&lt;/p&gt;
-
-&lt;div style=&quot;position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;&quot;&gt;
-&lt;!-- build.gradle --&gt;
-plugins {
-	id &apos;java&apos;
-	id &apos;org.springframework.boot&apos; version &apos;3.1.2&apos;
-	id &apos;io.spring.dependency-management&apos; version &apos;1.1.2&apos;
-}
-
-group = &apos;com.example&apos;
-version = &apos;0.0.1-SNAPSHOT&apos;
-
-java {
-	sourceCompatibility = &apos;17&apos;
-}
-
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
-}
-
-repositories {
-	mavenCentral()
-}
-
-dependencies {
-	implementation &apos;org.springframework.boot:spring-boot-starter-data-mongodb-reactive&apos;
-	implementation &apos;org.springframework.boot:spring-boot-starter-webflux&apos;
-	compileOnly &apos;org.projectlombok:lombok&apos;
-	annotationProcessor &apos;org.projectlombok:lombok&apos;
-	testImplementation &apos;org.springframework.boot:spring-boot-starter-test&apos;
-	testImplementation &apos;io.projectreactor:reactor-test&apos;
-}
-
-tasks.named(&apos;test&apos;) {
-	useJUnitPlatform()
-}
-&lt;!-- docker-compose.yml --&gt;
-version: &apos;3.8&apos;
-services:
-  mongodb:
-    image: mongo:latest
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: password
-    ports:
-      - &apos;27017:27017&apos;
-    volumes:
-      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
-&lt;!-- init-mongo.js --&gt;
-db = db.getSiblingDB(&apos;testdb&apos;);
-db.createUser(
-    {
-        user: &quot;root&quot;,
-        pwd: &quot;password&quot;,
-        roles: [{role: &quot;readWrite&quot;, db: &quot;testdb&quot;}]
-    }
-);
-&lt;!-- Product.java --&gt;
-package com.example.demoPagination.model;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = &quot;products&quot;)
-@Data
-@AllArgsConstructor
-public class Product {
-    @Id
-    private int id;
-    private String name;
-}
-&lt;!-- ProductRepository.java --&gt;
-package com.example.demoPagination.repository;
-
-import com.example.demoPagination.model.Product;
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
-import org.springframework.data.repository.reactive.ReactiveSortingRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface ProductRepository  extends ReactiveCrudRepository&amp;lt;Product, String&amp;gt; {
-}
-&lt;!-- ProductService.java --&gt;
-package com.example.demoPagination.service;
-
-import com.example.demoPagination.model.Product;
-import com.example.demoPagination.repository.ProductRepository;
-import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
-import reactor.core.publisher.Flux;
-
-import org.springframework.data.domain.Pageable;
-
-@Service
-public class ProductService {
-    private final ProductRepository productRepository;
-
-    public ProductService(ProductRepository productRepository){
-        this.productRepository = productRepository;
-    }
-
-    public Flux&lt;Product&gt; findAll(){
-        return productRepository.findAll();
-    }
-
-    public Flux&lt;Product&gt; findPaginated(Pageable pageable){
-        return productRepository.findAll()
-                .skip(pageable.getPageNumber() * pageable.getPageSize())
-                .take(pageable.getPageSize());
-    }
-}
-&lt;!-- ProductController.java --&gt;
-
-package com.example.demoPagination.api;
-
-import com.example.demoPagination.model.Product;
-import com.example.demoPagination.service.ProductService;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Flux;
-
-import java.util.Optional;
-
-@RestController
-public class ProductController {
-    private final ProductService productService;
-
-    public ProductController(ProductService productService){
-        this.productService = productService;
-    }
-
-    @GetMapping(&quot;/products&quot;)
-    public Flux&lt;Product&gt; getProduct(){
-        return productService.findAll();
-    }
-
-    @GetMapping(&quot;/paginaged-products&quot;)
-    public Flux&lt;Product&gt; getProducts(
-            @RequestParam Optional&lt;Integer&gt; page,
-            @RequestParam Optional&lt;Integer&gt; size
-    ){
-        return productService.findPaginated(
-                PageRequest.of(page.orElse(0), size.orElse(2)));
-    }
-}
-&amp;lt;/div&amp;gt;
-&lt;/Integer&gt;&lt;/Integer&gt;&lt;/Product&gt;&lt;/Product&gt;&lt;/Product&gt;&lt;/Product&gt;&lt;/div&gt;
 </description>
           <pubDate>2023-07-21T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/mastering-reactive-pagination-spring-boot-mongodb</link>
