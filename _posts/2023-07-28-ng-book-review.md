@@ -62,3 +62,4 @@ Now on `user-list.component.html` :
   <li *ngFor="let name of names">Hello {{ name }}</li>
 </ul>
 ```
+NgFor repeats the element that the ngFor is called.
