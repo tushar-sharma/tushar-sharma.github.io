@@ -66,4 +66,28 @@ NgFor repeats the element that the ngFor is called.
 
 ### Accepting inputs
 
+Modify the `user-item-component.ts`: 
 
+```js
+imprt {
+  Component,
+  OnInit,
+  Input
+} from '@angular/core';
+
+@Component({
+  selector: 'app-user-item',
+  templateUrl: './user-item.component.html',
+  styleUrls: ['./user-item.component.css']
+)}
+           
+export class UserItemComponent implements OnInit{
+    @Input() name: string; 
+
+    constructor(){
+    }
+
+    ngOnInit(){
+    }
+}
+```
