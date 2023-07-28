@@ -68,7 +68,7 @@ NgFor repeats the element that the ngFor is called.
 
 @Input() and @Output() give a child component a way to communicate with its parent component. @Input() lets a parent component update data in the child component. Conversely, @Output() lets the child send data to a parent component.
 
-Modify the `user-item-component.ts`: 
+Add input to child component :  `user-item-component.ts` : 
 
 ```js
 imprt {
@@ -93,12 +93,12 @@ export class UserItemComponent implements OnInit{
     }
 }
 ```
-To pass values to a component we can use bracket[] syntax. `user-list.component.html`
+To pass values to a component we can use bracket[] syntax on parent compoentn `user-list.component.html`
 
 ```html
 <ul>
-  <li *ngFor="let name for names">
-    <app-user-item [name]="name"></app-user-item>
+  <li *ngFor="let individualName for names">
+    <app-user-item [name]="individualName"></app-user-item>
   </li>
 </ul>
 ```
