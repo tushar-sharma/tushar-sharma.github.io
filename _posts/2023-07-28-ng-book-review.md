@@ -91,3 +91,12 @@ export class UserItemComponent implements OnInit{
     }
 }
 ```
+To pass values to a component we can use bracket[] syntax. `user-list.component.html`
+
+```html
+<ul>
+  <li *ngFor="let name for names">
+    <app-user-item [name]="name"></app-user-item>
+  </li>
+</ul>
+```
