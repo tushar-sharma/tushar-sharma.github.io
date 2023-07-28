@@ -11,3 +11,16 @@ $ ng generate component user-item
 ```
 
 In user-item.component.ts file , we can define a new property class UserItemComponent.
+
+```js
+export class UserItemComponent implements OnInit{
+  name: string;
+
+  constuctor(){
+    this.name = "Tushar";
+  }
+
+  ngOnInit(){
+  }
+}
+```
