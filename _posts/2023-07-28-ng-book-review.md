@@ -66,6 +66,8 @@ NgFor repeats the element that the ngFor is called.
 
 ### Accepting inputs
 
+@Input() and @Output() give a child component a way to communicate with its parent component. @Input() lets a parent component update data in the child component. Conversely, @Output() lets the child send data to a parent component.
+
 Modify the `user-item-component.ts`: 
 
 ```js
