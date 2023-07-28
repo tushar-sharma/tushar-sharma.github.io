@@ -63,3 +63,7 @@ Now on `user-list.component.html` :
 </ul>
 ```
 NgFor repeats the element that the ngFor is called.
+
+### Accepting inputs
+
+
