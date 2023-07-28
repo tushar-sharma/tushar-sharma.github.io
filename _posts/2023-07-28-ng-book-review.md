@@ -9,3 +9,5 @@ Creating a new component
 ```bash
 $ ng generate component user-item
 ```
+
+In user-item.component.ts file , we can define a new property class UserItemComponent.
