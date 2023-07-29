@@ -116,6 +116,7 @@ for this html
 ```html
 <form>
   <input name="title" #newTitle>
+  <button (click)="addArticle(newTitle)">
 </form>
 ```
 
