@@ -149,3 +149,44 @@ export class ArticleComponent implements OnInit{
   }
 }
 ```
+### Property '...' has no initializer and is not definitely assigned in the constructor error fix in Angular
+
+Lets say you ahve a child component 
+
+```js
+
+export class EmpComponent implements OnInit {
+  
+  @Input() employees: Employee[];
+  
+  constructor() {
+
+   }
+
+  ngOnInit() {
+    
+  }
+
+}
+```
+
+This may give error : Property '...' has no initializer. 
+
+One fix is to definite assignment assertion to property. 
+
+```js
+
+export class EmpComponent implements OnInit {
+  
+  @Input() employees!: Employee[];
+  
+  constructor() {
+
+   }
+
+  ngOnInit() {
+    
+  }
+
+}
+```
