@@ -109,4 +109,14 @@ To pass values to a component we can use bracket[] syntax on parent component: `
 We use `AppModule` to bootstrap the app. AppModule is specified in `src/app/app.module.ts`. You have to declare components in NgModule before you can use them in your templates. However if you use `ng generate` command, component is automatically added to the declarations list.
 
 
-### Writing first application
+### Binding inputs to values
+
+for this html 
+
+```html
+<form>
+  <input name="title" #newTitle>
+</form>
+```
+
+Here Angular binds the <input> to a variable newTitle. #newTitle syntax is called a resolve. newTitle is now an object that represents this input DOM element (specifically, the type is HTMLInputElement). Because newtitle is an object, that means we get the value of the input tag using newtitle.value.
