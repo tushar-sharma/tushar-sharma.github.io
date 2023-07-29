@@ -121,3 +121,31 @@ for this html
 ```
 
 Here Angular binds the <input> to a variable newTitle. #newTitle syntax is called a resolve. newTitle is now an object that represents this input DOM element (specifically, the type is HTMLInputElement). Because newtitle is an object, that means we get the value of the input tag using newtitle.value.
+
+### create a model 
+
+You can create a model inside a component, `article.model.ts`: 
+
+```js
+export class Article {
+  title: string;
+
+  constructor(title: string) {
+    this.title = title;
+  }
+}
+```
+
+Then you can use `model` inside your component, `article.component.ts`: 
+
+```js
+export class ArticleComponent implements OnInit{
+  article: Article;
+
+  constructor(){
+    this.article = new Article(
+      'TestTitle'
+    )
+  }
+}
+```
