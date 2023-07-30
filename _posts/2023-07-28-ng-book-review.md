@@ -225,3 +225,7 @@ enum Role {Employee=3, Manager=9, Admin=0};
 var something: any = 'asString';
 
 ```
+
+### Components
+
+128page	
