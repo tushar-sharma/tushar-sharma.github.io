@@ -191,7 +191,16 @@ export class EmpComponent implements OnInit {
 }
 ```
 
-### Transpilers
+### Typescript
 
+Typescript is a superset of ES6 (ECMAScript 6). The transpiler takes typescript code and converts to ES6. 
 
-Typescript is a superset of ES6 (ECMAScript 6). The transpiler takes typescript code and converts to ES6.
+Benefits of using typescript : 
+1. type checking. It helps prevent bugs at compile time. eg
+
+```js
+var fullName : string;
+function greetText(fullName: string): string {
+  return "hello " + fullName;
+}
+```
