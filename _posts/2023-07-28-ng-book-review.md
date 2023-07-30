@@ -190,3 +190,8 @@ export class EmpComponent implements OnInit {
 
 }
 ```
+
+### Transpilers
+
+
+Typescript is a superset of ES6 (ECMAScript 6). The transpiler takes typescript code and converts to ES6.
