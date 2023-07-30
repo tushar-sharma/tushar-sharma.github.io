@@ -195,7 +195,8 @@ export class EmpComponent implements OnInit {
 
 Typescript is a superset of ES6 (ECMAScript 6). The transpiler takes typescript code and converts to ES6. 
 
-Benefits of using typescript : 
+Benefits of using typescript:
+	
 1. type checking. It helps prevent bugs at compile time. eg
 
 ```js
@@ -203,4 +204,24 @@ var fullName : string;
 function greetText(fullName: string): string {
   return "hello " + fullName;
 }
+function setName(name: string) : void{
+  this.fullName = name;
+}
+```
+
+Builtin types for typescript: 
+
+```js
+var fullName: string = "Tushar"; 
+var age: number = 5;
+var married: boolean = true;
+var jobs: string[] = ['Apple', 'Dell', 'Hp'];
+var JOBS: Array<String> = ['Apple, 'Dell', 'Hp'];
+// default value is 0
+enum Role { Employee, Manager, Admin}; 
+var role : Role = Role.Employee;
+// manally set value
+enum Role {Employee=3, Manager=9, Admin=0};
+var something: any = 'asString';
+
 ```
