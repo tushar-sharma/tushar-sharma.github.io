@@ -117,4 +117,7 @@ select {
 .book15 {width: 17%; }  /* ng-book 130/766 */
 .book16 {width: 33%; }  /* Musicophilia */
 .tbd {width: 0%; }  /* TBD */
+.hidden {
+    display: none;
+  }
 /* end -  book progress*/
