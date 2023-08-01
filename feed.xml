@@ -7,6 +7,66 @@
     
       
         <item>
+          <title>Observable Tutorial in Angular</title>
+          <description>&lt;p&gt;Observables provide support for passing messages between parts of your application. They are use frequently in Angular applications for handling async data flows.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Observables provide support for passing messages between parts of your application. They are use frequently in Angular applications for handling async data flows.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-are-observables&quot;&gt;What are observables?&lt;/h3&gt;
+
+&lt;p&gt;An observable is a stream of data that we can subscribe to. It emits new values over time that we can react to.&lt;/p&gt;
+
+&lt;p&gt;For example, an Observable from a HTTP request would emit the response when the request completes. Or a time Observalbe could emit values at regular interval.&lt;/p&gt;
+
+&lt;p&gt;Observable help us handle asynchronous data flows in a declarative style.  We define the Observable data stream and then subscribe to it to get notified of new values.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting started&lt;/h3&gt;
+
+&lt;p&gt;Create a new angular app.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng new angular-observables-demo
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;angular-observables-demo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Add Boostrap&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--save&lt;/span&gt; bootstrap@latest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and import it in  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/styles.css&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&apos;~bootstrap/dist/css/bootstrap.min.css&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Building a UserService&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng generate service user
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user.service.ts&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=user.service.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;It returns an observable of the HTTP response.&lt;/p&gt;
+
+&lt;h3 id=&quot;subscribing-in-the-component&quot;&gt;Subscribing in the component&lt;/h3&gt;
+
+&lt;p&gt;Modify &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.component.ts&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=app.component.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;For displaying data, you can modify &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.component.html&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=app.component.html&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+</description>
+          <pubDate>2023-07-31T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/angular-observable-tutorial</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/angular-observable-tutorial</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Daily Logs for July 24, 2023</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log for July 24, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
