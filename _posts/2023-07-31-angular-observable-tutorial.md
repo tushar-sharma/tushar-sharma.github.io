@@ -27,10 +27,10 @@ cd angular-observables-demo
 Add Boostrap
 
 ```bash
-npm install bootstrap@latest
+npm install --save bootstrap@latest
 ```
 
-and import it in `src/styles.css`
+and import it in  `src/styles.css`
 
 ```css
 @import '~bootstrap/dist/css/bootstrap.min.css';
@@ -42,13 +42,23 @@ Building a UserService
 ng generate service user
 ```
 
+And add `user.service.ts`
+
 ```ts
-@Injectable()
-export class UserService{
-  constructor(private http: HttpClient) { }
-  
-  getUsers(){
-    return this.http.get<any[]>('/api/users');
+import { Injectable } from '@angular/core';
+import {Observable, of} from "rxjs";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+
+  constructor() { }
+
+  data: string[] = ['Tom', 'Dick', 'Harry'];
+
+  getUsers(): Observable<string[]> {
+    return of(this.data);
   }
 }
 ```
@@ -57,29 +67,41 @@ It returns an observable of the HTTP response.
 
 ### Subscribing in the component
 
-Inject the service into `AppComponent`
+Modify `app.component.ts`: 
 
 ```ts
-constructor(private userService: UserService){ } 
-```
+import {Component, OnInit} from '@angular/core';
+import {UserService} from "./user.service";
 
-subscribe to `getUsers()`
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent implements OnInit{
+  users: string[] | undefined;
+  title: string;
+  constructor(private userService : UserService) {
+    this.title = 'Tutorial on Observable';
+  }
 
-```ts
-ngOnInit() {
-  this.userService.getUsers()
-  .subscribe(
-    users => this.users = users,
-    error => this.error = error
-    );
+  ngOnInit(){
+    this.userService.getUsers().subscribe(users => {
+      this.users = users;
+    });
+  }
 }
 ```
-Displaying the data
+For displaying data, you can modify `app.component.html`: 
 
 ```html
-<ul>
-  <li *ngFor="let user of users">
-    {{ user.name }}
-  </li>
-</ul>
+<div>
+  <h1>{{ title }}</h1>
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user }}
+    </li>
+  </ul>
+</div>
+
 ```
