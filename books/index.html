@@ -257,16 +257,20 @@ $(document).ready(function () {
  // Material Design example
 $(document).ready(function () {
 
-$('#dtMaterialDesignExample').DataTable( {
-"bSort": false,
-pageLength : 10,
-"autoWidth" : true,
-"columns": [
-null,
-null,
-{ 'searchable': false },
-{ 'searchable': false }
-] } );
+  var table = $('#dtMaterialDesignExample').DataTable({
+  "bSort": false,
+  pageLength : 10,
+  "autoWidth" : true,
+  "columns": [
+    null,
+    null,
+    { 'searchable': false },
+    { 'searchable': false }
+  ]
+});
+
+// You can hide and remove rows as follows
+table.rows('.hidden').remove().draw();
 
 $('#dtMaterialDesignExample_wrapper').find('label').each(function () {
 $(this).parent().append($(this).children());
@@ -867,7 +871,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!-- The Black Book of Communism -->
-<tr>
+<tr class="hidden">
   <td>The Black Book of Communism</td>
   <td>Stéphane Courtois, Andrzej Paczkowski, Nicolas Werth, Jean-Louis Margolin</td>
   <td>
@@ -880,7 +884,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 
 
 <!-- The Truth Pill -->
-<tr>
+<tr class="hidden">
   <td>The Truth Pill</td>
   <td>Dinesh Thakur, Prashant Reddy</td>
   <td>
@@ -892,7 +896,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!-- Quantitative Finance with Python -->
-<tr>
+<tr class="hidden">
   <td>Quantitative Finance with Python</td>
   <td>Chris Kellihe</td>
   <td>
@@ -904,7 +908,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!-- Effective Java  -->
-<tr>
+<tr class="hidden">
   <td>Effective Java</td>
   <td>Joshua Bloch</td>
   <td>
@@ -917,7 +921,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 
 
 <!--The Wonder That Was India  -->
-<tr>
+<tr class="hidden">
   <td>The Wonder That Was India</td>
   <td>Arthur Llewellyn Basham</td>
   <td>
@@ -929,7 +933,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--A Perfect Spy -->
-<tr>
+<tr class="hidden">
   <td>A Perfect Spy</td>
   <td>John le Carré</td>
   <td>
@@ -941,7 +945,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--Neuromancer-->
-<tr>
+<tr class="hidden">
   <td>Neuromancer</td>
   <td>William Gibson</td>
   <td>
@@ -953,7 +957,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--The Moon Is a Harsh Mistress-->
-<tr>
+<tr class="hidden">
   <td>The Moon Is a Harsh Mistress</td>
   <td>Robert A. Heinlein</td>
   <td>
@@ -966,7 +970,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 
 
 <!--The Outsider-->
-<tr>
+<tr class="hidden">
   <td>The Outsider</td>
   <td>Albert Camus</td>
   <td>
@@ -979,7 +983,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 
 
 <!--The Trial-->
-<tr>
+<tr class="hidden">
   <td>The Trial</td>
   <td>Franz Kafka</td>
   <td>
@@ -991,7 +995,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--Notes from Underground-->
-<tr>
+<tr class="hidden">
   <td>Notes from Underground</td>
   <td>Fyodor Dostoevsky</td>
   <td>
@@ -1003,7 +1007,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--What Is to Be Done?-->
-<tr>
+<tr class="hidden">
   <td>What Is to Be Done?</td>
   <td>Nikolay Chernyshevsky</td>
   <td>
@@ -1015,7 +1019,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--Invisible Man-->
-<tr>
+<tr class="hidden">
   <td>Invisible Man</td>
   <td>Ralph Ellison</td>
   <td>
@@ -1027,7 +1031,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--Mitrokhin Archive-->
-<tr>
+<tr class="hidden">
   <td>Mitrokhin Archive</td>
   <td>Vasili Mitrokhin</td>
   <td>
@@ -1039,7 +1043,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--Kafka on the Shore-->
-<tr>
+<tr class="hidden">
   <td>Kafka on the Shore</td>
   <td>Haruki Murakami</td>
   <td>
@@ -1051,7 +1055,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--Rust for Rustaceans-->
-<tr>
+<tr class="hidden">
   <td>Rust for Rustaceans</td>
   <td>Jon Gjengset</td>
   <td>
@@ -1064,7 +1068,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 
 
 <!--Desert Solitaire-->
-<tr>
+<tr class="hidden">
   <td>Desert Solitaire</td>
   <td>Edward Abbey</td>
   <td>
@@ -1076,7 +1080,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--Physics of the Impossible-->
-<tr>
+<tr class="hidden">
   <td>Physics of the Impossible</td>
   <td>Michio Kaku</td>
   <td>
@@ -1088,7 +1092,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--Quantum: Einstein, Bohr, and the Great Debate About the Nature of Reality-->
-<tr>
+<tr class="hidden">
   <td>Quantum: Einstein, Bohr, and the Great Debate About the Nature of Reality</td>
   <td>Manjit Kumar</td>
   <td>
@@ -1101,7 +1105,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 
 
 <!--Chromosome Woman, Nomad Scientist: E. K. Janaki Ammal-->
-<tr>
+<tr class="hidden">
   <td>Chromosome Woman, Nomad Scientist: E. K. Janaki Ammal</td>
   <td>Savithri Preetha Nair</td>
   <td>
@@ -1114,7 +1118,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 
 
 <!--Small Is Beautiful-->
-<tr>
+<tr class="hidden">
   <td>Small Is Beautiful</td>
   <td>E. F. Schumacher</td>
   <td>
@@ -1126,7 +1130,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--Normal People-->
-<tr>
+<tr class="hidden">
   <td>Normal People</td>
   <td>Sally Rooney</td>
   <td>
@@ -1138,7 +1142,7 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </tr>
 
 <!--The Poppy War-->
-<tr>
+<tr class="hidden">
   <td>The Poppy War</td>
   <td>R.F.Kuang</td>
   <td>
@@ -1149,6 +1153,18 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
   <td>Recommended by <a href="https://github.com/bookishsophia" class="user-mention">@bookishsophia</a>. To be updated…</td>
 </tr>
 
+
+<!--The Singing Neanderthals: The Origins of Music, Language, Mind, and Body-->
+<tr class="hidden">
+  <td>The Singing Neanderthals: The Origins of Music, Language, Mind, and Body</td>
+  <td>Steven Mithen</td>
+  <td>
+<div id="progress-outer">
+<div id="progress-inner" class="tbd"></div>
+</div>
+</td>
+  <td>Mentioned by Oliver Sacks in Musicophilia. To be updated…</td>
+</tr>
 
 
 <!-- ending -->
@@ -1211,7 +1227,6 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 </center>
 
 <div style="border:none;" id="Pagination" class="pagination"></div>
-
         <hr>
         
 
