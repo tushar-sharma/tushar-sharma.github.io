@@ -3,7 +3,6 @@ published: false
 ---
 ## Learn to Use Observables in Angular
 
-
 Observables provide support for passing messages between parts of your application. They are use frequently in Angular applications for handling async data flows. 
 
 ### What are observables?
