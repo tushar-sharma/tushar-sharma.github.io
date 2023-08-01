@@ -1,7 +1,16 @@
 ---
-published: false
+layout: post
+title: Observable Tutorial in Angular 
+category: blog
+tags:
+  - angular
+thumb: /img/cloud-girl.jpeg
+image: /img/cloud-girl.jpeg
+author: Tushar Sharma
+published: true
 ---
-## Learn to Use Observables in Angular
+
+Observables provide support for passing messages between parts of your application. They are use frequently in Angular applications for handling async data flows.<!-- truncate_here -->
 
 Observables provide support for passing messages between parts of your application. They are use frequently in Angular applications for handling async data flows. 
 
@@ -43,24 +52,13 @@ ng generate service user
 
 And add `user.service.ts`
 
-```ts
-import { Injectable } from '@angular/core';
-import {Observable, of} from "rxjs";
+{% template  customCode.html %}
+---
+id: abe9eec9e3361f5901b9221b5758e726
+file: user.service.ts
+---
+{% endtemplate %}
 
-@Injectable({
-  providedIn: 'root'
-})
-export class UserService {
-
-  constructor() { }
-
-  data: string[] = ['Tom', 'Dick', 'Harry'];
-
-  getUsers(): Observable<string[]> {
-    return of(this.data);
-  }
-}
-```
 
 It returns an observable of the HTTP response. 
 
@@ -68,39 +66,18 @@ It returns an observable of the HTTP response.
 
 Modify `app.component.ts`: 
 
-```ts
-import {Component, OnInit} from '@angular/core';
-import {UserService} from "./user.service";
+{% template  customCode.html %}
+---
+id: abe9eec9e3361f5901b9221b5758e726
+file: app.component.ts
+---
+{% endtemplate %}
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent implements OnInit{
-  users: string[] | undefined;
-  title: string;
-  constructor(private userService : UserService) {
-    this.title = 'Tutorial on Observable';
-  }
+For displaying data, you can modify `app.component.html`:
 
-  ngOnInit(){
-    this.userService.getUsers().subscribe(users => {
-      this.users = users;
-    });
-  }
-}
-```
-For displaying data, you can modify `app.component.html`: 
-
-```html
-<div>
-  <h1>{{ title }}</h1>
-  <ul>
-    <li *ngFor="let user of users">
-      {{ user }}
-    </li>
-  </ul>
-</div>
-
-```
+{% template  customCode.html %}
+---
+id: abe9eec9e3361f5901b9221b5758e726
+file: app.component.html
+---
+{% endtemplate %}
