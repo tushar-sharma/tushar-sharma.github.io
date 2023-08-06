@@ -11,4 +11,4 @@ published: false
 
 ### Window function
 
-Applies a function to a window. Perform calculatio0ns across set of rows or a window.
+Applies a function to a window. Perform calculations across set of rows or a window.
