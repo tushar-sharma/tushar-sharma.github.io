@@ -6,6 +6,7 @@ image: /img/
 thumb: /img/
 author: ;
 category: blog
+published: false
 ---
 
 .<!-- truncate_here -->
