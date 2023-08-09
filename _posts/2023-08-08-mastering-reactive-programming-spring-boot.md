@@ -113,5 +113,70 @@ public void testGetGreetings(){
     .contains("Hello", "Bonjour", "Namaste");
 }
 ```
+### Flatmap
+
+The flatMap operation is used to transform the data contained within the reactive type (Mono in this case). It's like the map operation, but instead of just transforming the data, it also allows you to return a new reactive type.
 
 
+The term "flatten" in this context doesn't refer to any structural simplification of a single Book object or its properties. Instead, it pertains to the transformation of a higher-order structure (like a collection or another reactive type) into a flattened, sequential stream.
+
+When we say "flatten the List<Book> into a Flux<Book>", we're referring to the process of taking each individual Book element from the list and emitting it as an item in a reactive sequence.
+
+
+Let's simulate two services: one that fetches user data and another that fetches user orders.
+
+Create a `UserService` class:
+
+```java
+package tutorial;
+
+import org.springframework.stereotype.Service;
+import reactor.core.publisher.Mono;
+
+@Service
+public class UserService {
+    public Mono<String> findUser(String userId){
+        return Mono.just("User: " + userId);
+    }
+}
+
+
+```
+
+And a OrderService class:
+
+```java
+package tutorial;
+
+import org.springframework.stereotype.Service;
+import reactor.core.publisher.Mono;
+
+@Service
+public class OrderService {
+
+    public Mono<String> findOrders(String userId) {
+        return Mono.just("Orders for User: " + userId);
+    }
+}
+
+```
+Update your ReactiveController to use these services:
+
+
+```java
+@RestController
+public class ReactiveController {
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private OrderService orderService;
+
+    @GetMapping("/user/{userId}/details")
+    public Mono<String> getUserDetails(@PathVariable String userId){
+        return userService.findUser(userId)
+               .flatmap(user -> orderService.findOrders(userId))
+               .map(order -> user + " | "  + order);
+    }
+}
+```
