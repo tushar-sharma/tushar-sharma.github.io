@@ -23,6 +23,7 @@ image: /img/$image_variable
 thumb: /img/$image_variable
 author: $author_variable;
 category: blog
+published: false
 ---
 
 .<!-- truncate_here -->
