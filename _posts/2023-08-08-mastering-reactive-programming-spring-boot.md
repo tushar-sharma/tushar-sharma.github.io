@@ -86,3 +86,32 @@ public class ReactiveControllerTest{
     }
 }
 ```
+
+### Filter
+
+Modify `ReactiveController's` getGreetings method:
+
+```java
+@GetMapping
+public Flux<String> getGreetings() {
+    return Flux.just("Hello", "Hola", "Bonjour", "Namaste")
+               .filter(greeting -> !greeting.equals("Hola"));
+}
+```
+
+Update the test in `ReactiveControllerTest`
+
+```java
+@Test
+public void testGetGreetings(){
+    webTestClient.get()
+    .uri("/greetings")
+    .exchange()
+    .expectStatus().isOk()
+    .expectBodyList(String.class)
+    .hasSize(3)
+    .contains("Hello", "Bonjour", "Namaste");
+}
+```
+
+
