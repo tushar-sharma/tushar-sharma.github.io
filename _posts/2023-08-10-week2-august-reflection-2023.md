@@ -72,7 +72,7 @@ Also cooked `Shrimp`, Recipe is
 
 Went to `Tikka Shack` for lunch .Ordered `Original curry` with extra vegetables and chicken. I didnt like it much.
 
-Had a free pizza avaailable from Dominos. Add extra olives and mushroom. It cost $3.75 exta.
+Had a free pizza available from Dominos. Add extra olives and mushroom. It cost $3.75 exta.
 
 Panera: I usually buy two. I had turkey sandwitch which was good. I added green goddess cobb salad. Didnt like it though.
 
