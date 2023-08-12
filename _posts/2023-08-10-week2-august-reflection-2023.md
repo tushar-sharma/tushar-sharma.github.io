@@ -18,6 +18,10 @@ I watched the movie "Founders" about McDonald. Without spoilers, it's a fascinat
 
 I also wateched "The Big Short". It's a movie about USA Housing crisis in 2008.
 
+### Games
+
+I've been playing Fifa 19 game on my PC. 
+
 ###  Coding Pratice
 
 I solved the leetcode problem [Largest Element in an Array After Merge Operations](https://leetcode.com/problems/largest-element-in-an-array-after-merge-operations/).
