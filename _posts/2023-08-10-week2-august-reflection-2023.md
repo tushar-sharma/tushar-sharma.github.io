@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2023-08-10
+date: {}
 title: Week 2 August Reflection 2023
 image: /img/
 thumb: /img/
@@ -16,7 +16,7 @@ published: false
 
 I watched the movie "Founders" about McDonald. Without spoilers, it's a fascinating account about the beginning of Mcdonald. 
 
-I also wateched "The Big Short". It's a movie about Housing crisis in America.
+I also wateched "The Big Short". It's a movie about USA Housing crisis in 2008.
 
 ###  Coding Pratice
 
