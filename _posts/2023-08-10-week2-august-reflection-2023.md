@@ -1,6 +1,5 @@
 ---
 layout: post
-date: {}
 title: Week 2 August Reflection 2023
 image: /img/
 thumb: /img/
