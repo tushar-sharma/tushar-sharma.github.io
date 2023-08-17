@@ -7,6 +7,107 @@
     
       
         <item>
+          <title>Daily Logs for August 16, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for Aug 16, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for Aug 16, 2023.&lt;/p&gt;
+
+&lt;h3 id=&quot;picking-a-stock&quot;&gt;Picking a stock&lt;/h3&gt;
+
+&lt;p&gt;It&apos;s been months since I bought any stocks. Recently I sold &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$SAIC&lt;/code&gt; stock. But picking a stocks is a tedious process for me. I want to invest in stock or ETF this month.&lt;/p&gt;
+
+&lt;p&gt;First I calculate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;moving average&lt;/code&gt; for each stocks and generate a s&lt;a href=&quot;https://drive.google.com/file/d/11WyMo0tQX6McQNdktcvpav30tlZSJg7p/view?usp=sharing&quot;&gt;report&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Another filter I try use is to pick stocks with dividend. Even if the stocks plummet in its value, you can still grow your portfolios by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reinvesting dividend&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;commute-to-office&quot;&gt;Commute to office&lt;/h3&gt;
+
+&lt;p&gt;It takes me almost 30 minutes to reach to office. Most of the time I am stuck at morning traffic. I have few options how to utilitze this time while on car&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Call home (talk to parents at Indian time)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Listen to music (I have a personal audio collection in Google Drive)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Listen to audiobooks or a podcast.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Watch a movie.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Listen to pink/white noise.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Learn spanish.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Watching a movie always make me nervous as it may not be legal to watch while drive. Even audiobooks distracts me while driving. I have sleep apnea so I don&apos;t like talking to anyone in the morning. If I was commuting on a train, I would probably add reading. So it boils down to these choices.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Listen to music.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Listen to pink/white noise.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Learn Spanish.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;espp-contribution&quot;&gt;ESPP contribution&lt;/h3&gt;
+
+&lt;p&gt;An employee stock purchase plan (ESPP) is a company-run program in which participating employees can purchase company stock at a discounted price.&lt;/p&gt;
+
+&lt;p&gt;I have contributed 7% of my paycheck. I will need to read more about it to understand more.&lt;/p&gt;
+
+&lt;h3 id=&quot;badminton&quot;&gt;Badminton&lt;/h3&gt;
+
+&lt;p&gt;I played Badminton today at Marion Diehl Recreation Center and Indoor Pool. I have to learn to hone my skills in dropping shot. I am trying to learn from this tutorial:&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/dkX1aGk8Tow?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/dkX1aGk8Tow?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/dkX1aGk8Tow/hqdefault.jpg alt=&apos;dkX1aGk8Tow&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;time-based-key-value-store&quot;&gt;Time Based Key-Value Store&lt;/h3&gt;
+
+&lt;h4 id=&quot;problem-statement&quot;&gt;Problem statement&lt;/h4&gt;
+
+&lt;p&gt;Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key&apos;s value at a certain timestamp.&lt;/p&gt;
+
+&lt;p&gt;Implement the TimeMap class:&lt;/p&gt;
+
+&lt;p&gt;TimeMap() Initializes the object of the data structure.
+void set(String key, String value, int timestamp) Stores the key key with the value value at the given time timestamp.
+String get(String key, int timestamp) Returns a value such that set was called previously, with timestamp_prev &amp;lt;= timestamp. If there are multiple such values, it returns the value associated with the largest timestamp_prev. If there are no values, it returns &quot;&quot;.&lt;/p&gt;
+
+&lt;h4 id=&quot;first-attempt&quot;&gt;First Attempt&lt;/h4&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;It failed with error : Time Limit Exceeded.&lt;/p&gt;
+
+&lt;h4 id=&quot;second-attempt&quot;&gt;Second Attempt&lt;/h4&gt;
+
+&lt;p&gt;Instead of using List, I can try using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TreeMap&lt;/code&gt;. A TreeMap is a Red-Black tree-based NavigableMap implementation that stores keys in sorted order.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;We use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;floorEntry&lt;/code&gt; method of the TreeMap to get the closest timestamp lower than or equal to the requested timestamp.&lt;/p&gt;
+
+&lt;p&gt;Consider a TreeMap with the following key-value pairs: {1: &quot;a&quot;, 3: &quot;b&quot;, 5: &quot;c&quot;}. Let&apos;s assume you call the floorEntry method with the argument 4. Since 4 is greater than 3 but less than 5, the method will return the entry with the key 3 and value &quot;b&quot;.&lt;/p&gt;
+</description>
+          <pubDate>2023-08-16T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/daily-logs-2023-08-16</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2023-08-16</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Observable Tutorial in Angular</title>
           <description>&lt;p&gt;Observables provide support for passing messages between parts of your application. They are use frequently in Angular applications for handling async data flows.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
