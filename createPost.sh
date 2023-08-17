@@ -6,9 +6,6 @@
 ################
 # Get our info #
 ################
-yearmonth=`date "+%Y/%m"`
-postdate=`date "+%Y-%m-%d"`
-jekylldate=`date "+%Y-%m-%d"`
 read -p "Enter the file name: " file_variable;
 read -p "Enter the post name: " post_variable;
 read -p "Enter the image name " image_variable;
@@ -17,7 +14,6 @@ touch _posts/$postdate-$file_variable.md
 cat <<EOF > _posts/$postdate-$file_variable.md
 ---
 layout: post
-date: $jekylldate
 title: $post_variable
 image: /img/$image_variable
 thumb: /img/$image_variable
