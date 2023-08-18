@@ -6,6 +6,9 @@
 ################
 # Get our info #
 ################
+yearmonth=`date "+%Y/%m"`
+postdate=`date "+%Y-%m-%d"`
+jekylldate=`date "+%Y-%m-%d"`
 read -p "Enter the file name: " file_variable;
 read -p "Enter the post name: " post_variable;
 read -p "Enter the image name " image_variable;
