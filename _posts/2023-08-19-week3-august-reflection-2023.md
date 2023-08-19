@@ -18,3 +18,7 @@ I had to renew my car registration [online](https://payments.ncdot.gov/). Earlie
 ### Pratice against ping pong robot
 
 There's a ping pong robot at Table tennis club, Charlotte. It's fun to pratice against it. However I am not seeing any improvement in my game. Last leage game, I had a worst performance.
+
+### Badminton
+
+I have resumed playing Badminton at Marion Diehl Recreation Center and Pool. The timings are 7pm to 9pm on Wednesday. 
