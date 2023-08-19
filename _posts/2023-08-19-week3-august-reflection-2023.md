@@ -12,6 +12,37 @@ Dear Vishi, this is third weekly reflection for Aug, 2023.<!-- truncate_here -->
 
 Dear Vishi, this is third weekly reflection for Aug, 2023.
 
+### Picking a stock
+
+It's been months since I bought any stocks. Recently I sold `$SAIC` stock. But picking a stocks is a tedious process for me. I want to invest in stock or ETF this month.
+
+First I calculate `moving average` for each stocks and generate a [report](https://drive.google.com/file/d/11WyMo0tQX6McQNdktcvpav30tlZSJg7p/view?usp=sharing).
+
+Another filter I try use is to pick stocks with dividend. Even if the stocks plummet in its value, you can still grow your portfolios by `reinvesting dividend`.
+
+### Commute to office
+
+It takes me almost 30 minutes to reach to office. Most of the time I am stuck at morning traffic. I have few options how to utilitze this time while on car
+
+1. Call home (talk to parents at Indian time)
+
+2. Listen to music.
+
+3. Listen to audiobooks or a podcast.
+
+4. Watch a movie.
+
+5. Listen to pink/white noise.
+
+6. Learn spanish.
+
+Watching a movie always make me nervous as it may not be legal to watch while driving. Even audiobooks distracts me. I have sleep apnea so I don't like talking to anyone in the morning. If I was commuting on a train, I would probably add reading. So it boils down to these choices. 
+
+1. Listen to music. 
+
+2. Listen to pink/white noise. 
+
+3. Learn Spanish.
 
 ### Food
 
@@ -72,4 +103,8 @@ I am trying to improve my backend return. I had a an hour coaching with Zack in 
   title="p2Jw1N-eWuM"
 ></iframe><br>
 
-### Coding problems
+### ESPP contribution
+
+An employee stock purchase plan (ESPP) is a company-run program in which participating employees can purchase company stock at a discounted price.
+
+I have contributed 7% of my paycheck. I will need to read more about it to understand more.
