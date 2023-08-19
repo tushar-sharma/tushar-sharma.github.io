@@ -9,4 +9,4 @@ I bought P.F. Chang's Chicken Lo Mein from Food lion. It was frozen and I probab
 
 ### Video Games
 
-I am enjoying playing Fifa 19. I mostly play Journey mode. I enjoy shuffling between three characters.
+I am enjoying playing Fifa 19. I mostly play Journey mode. I enjoy shuffling between three characters. Also playing soccer with controller is much more fun compare to shooting game.
