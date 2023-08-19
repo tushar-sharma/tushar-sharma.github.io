@@ -7,6 +7,101 @@
     
       
         <item>
+          <title>Why Math.max() is Less Than Math.min() in JavaScript</title>
+          <description>&lt;p&gt;JavaScript is full of surprises and unexpected behaviors that often leave developers scratching their heads. One of those strange behaviors is the fact that Math.max() &amp;lt; Math.min() is true in JavaScript. In this blog, we&apos;ll delve into the underlying reasons for this seemingly paradoxical result.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScript is full of surprises and unexpected behaviors that often leave developers scratching their heads. One of those strange behaviors is the fact that Math.max() &amp;lt; Math.min() is true in JavaScript. In this blog, we&apos;ll delve into the underlying reasons for this seemingly paradoxical result.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-tale-of-two-functions&quot;&gt;A Tale of Two Functions&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Math&lt;/code&gt; object in JavaScript provides a collection of properties and methods for performing mathematical operations. Two of the most commonly used methods are Math.max() and Math.min().&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Math.max()&lt;/code&gt; returns the largest of zero or more numbers.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Math.min()&lt;/code&gt; returns the smallest of zero or more numbers.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At first glance, it would seem impossible for the maximum of a set of numbers to be less than the minimum of the same set. But, as we will see, there&apos;s a catch when we don&apos;t provide any arguments to these functions.&lt;/p&gt;
+
+&lt;h3 id=&quot;dealing-with-no-arguments&quot;&gt;Dealing with No Arguments&lt;/h3&gt;
+
+&lt;p&gt;When you call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Math.max()&lt;/code&gt; with no arguments, it returns -Infinity, which represents negative infinity in JavaScript. Similarly, when you call Math.min() with no arguments, it returns Infinity, which represents positive infinity in JavaScript.&lt;/p&gt;
+
+&lt;p&gt;These results might seem counterintuitive, but they&apos;re based on the behavior of these functions when dealing with an empty set of numbers.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-does-this-happen&quot;&gt;Why Does This Happen?&lt;/h3&gt;
+
+&lt;p&gt;The logic behind this behavior lies in the definition of the functions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Math.max()&lt;/code&gt;: When given an empty set, it assumes that every real number is smaller than the largest number in the set. Since there are no numbers in the set, it defaults to -Infinity.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Math.min()&lt;/code&gt;: When given an empty set, it assumes that every real number is larger than the smallest number in the set. Since there are no numbers in the set, it defaults to Infinity.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;the-inequality-in-question&quot;&gt;The Inequality in Question&lt;/h3&gt;
+
+&lt;p&gt;As a result, the following inequality is indeed true in JavaScript:&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// evaluates to true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is because -Infinity &amp;lt; Infinity is a valid statement in the world of mathematics.&lt;/p&gt;
+</description>
+          <pubDate>2023-08-19T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/why-math-max-is-less-than-math-min-in-javascript</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/why-math-max-is-less-than-math-min-in-javascript</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Time Based Key-Value Store Solution</title>
+          <description>&lt;p&gt;Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key&apos;s value at a certain timestamp.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key&apos;s value at a certain timestamp.&lt;/p&gt;
+
+&lt;h4 id=&quot;problem-statement&quot;&gt;Problem statement&lt;/h4&gt;
+
+&lt;p&gt;Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key&apos;s value at a certain timestamp.&lt;/p&gt;
+
+&lt;p&gt;Implement the TimeMap class:&lt;/p&gt;
+
+&lt;p&gt;TimeMap() Initializes the object of the data structure.
+void set(String key, String value, int timestamp) Stores the key key with the value value at the given time timestamp.
+String get(String key, int timestamp) Returns a value such that set was called previously, with timestamp_prev &amp;lt;= timestamp. If there are multiple such values, it returns the value associated with the largest timestamp_prev. If there are no values, it returns &quot;&quot;.&lt;/p&gt;
+
+&lt;h4 id=&quot;first-attempt&quot;&gt;First Attempt&lt;/h4&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;It failed with error : Time Limit Exceeded.&lt;/p&gt;
+
+&lt;h4 id=&quot;second-attempt&quot;&gt;Second Attempt&lt;/h4&gt;
+
+&lt;p&gt;Instead of using List, I can try using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TreeMap&lt;/code&gt;. A TreeMap is a Red-Black tree-based NavigableMap implementation that stores keys in sorted order.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;We use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;floorEntry&lt;/code&gt; method of the TreeMap to get the closest timestamp lower than or equal to the requested timestamp.&lt;/p&gt;
+
+&lt;p&gt;Consider a TreeMap with the following key-value pairs: {1: &quot;a&quot;, 3: &quot;b&quot;, 5: &quot;c&quot;}. Let&apos;s assume you call the floorEntry method with the argument 4. Since 4 is greater than 3 but less than 5, the method will return the entry with the key 3 and value &quot;b&quot;.&lt;/p&gt;
+</description>
+          <pubDate>2023-08-19T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/time-based-key-value-store-solution</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/time-based-key-value-store-solution</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Understanding Date Formatting in Angular</title>
           <description>&lt;p&gt;Angular provides the DatePipe for formatting dates. You can use it directly in your templates with the pipe syntax, or you can use it programmatically in your components.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -47,107 +142,6 @@
           <pubDate>2023-08-18T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/understanding-date-formatting-in-angular</link>
           <guid isPermaLink="true">https://randomwits.com/blog/understanding-date-formatting-in-angular</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Daily Logs for August 16, 2024</title>
-          <description>&lt;p&gt;Dear Vishi, this is my daily log for Aug 16, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Dear Vishi, this is my daily log for Aug 16, 2023.&lt;/p&gt;
-
-&lt;h3 id=&quot;picking-a-stock&quot;&gt;Picking a stock&lt;/h3&gt;
-
-&lt;p&gt;It&apos;s been months since I bought any stocks. Recently I sold &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$SAIC&lt;/code&gt; stock. But picking a stocks is a tedious process for me. I want to invest in stock or ETF this month.&lt;/p&gt;
-
-&lt;p&gt;First I calculate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;moving average&lt;/code&gt; for each stocks and generate a &lt;a href=&quot;https://drive.google.com/file/d/11WyMo0tQX6McQNdktcvpav30tlZSJg7p/view?usp=sharing&quot;&gt;report&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Another filter I try use is to pick stocks with dividend. Even if the stocks plummet in its value, you can still grow your portfolios by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reinvesting dividend&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;commute-to-office&quot;&gt;Commute to office&lt;/h3&gt;
-
-&lt;p&gt;It takes me almost 30 minutes to reach to office. Most of the time I am stuck at morning traffic. I have few options how to utilitze this time while on car&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Call home (talk to parents at Indian time)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Listen to music (I have a personal audio collection in Google Drive)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Listen to audiobooks or a podcast.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Watch a movie.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Listen to pink/white noise.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Learn spanish.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Watching a movie always make me nervous as it may not be legal to watch while drive. Even audiobooks distracts me while driving. I have sleep apnea so I don&apos;t like talking to anyone in the morning. If I was commuting on a train, I would probably add reading. So it boils down to these choices.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Listen to music.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Listen to pink/white noise.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Learn Spanish.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;espp-contribution&quot;&gt;ESPP contribution&lt;/h3&gt;
-
-&lt;p&gt;An employee stock purchase plan (ESPP) is a company-run program in which participating employees can purchase company stock at a discounted price.&lt;/p&gt;
-
-&lt;p&gt;I have contributed 7% of my paycheck. I will need to read more about it to understand more.&lt;/p&gt;
-
-&lt;h3 id=&quot;badminton&quot;&gt;Badminton&lt;/h3&gt;
-
-&lt;p&gt;I played Badminton today at Marion Diehl Recreation Center and Indoor Pool. I have to learn to hone my skills in dropping shot. I am trying to learn from this tutorial:&lt;/p&gt;
-
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/dkX1aGk8Tow?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/dkX1aGk8Tow?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/dkX1aGk8Tow/hqdefault.jpg alt=&apos;dkX1aGk8Tow&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;time-based-key-value-store&quot;&gt;Time Based Key-Value Store&lt;/h3&gt;
-
-&lt;h4 id=&quot;problem-statement&quot;&gt;Problem statement&lt;/h4&gt;
-
-&lt;p&gt;Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key&apos;s value at a certain timestamp.&lt;/p&gt;
-
-&lt;p&gt;Implement the TimeMap class:&lt;/p&gt;
-
-&lt;p&gt;TimeMap() Initializes the object of the data structure.
-void set(String key, String value, int timestamp) Stores the key key with the value value at the given time timestamp.
-String get(String key, int timestamp) Returns a value such that set was called previously, with timestamp_prev &amp;lt;= timestamp. If there are multiple such values, it returns the value associated with the largest timestamp_prev. If there are no values, it returns &quot;&quot;.&lt;/p&gt;
-
-&lt;h4 id=&quot;first-attempt&quot;&gt;First Attempt&lt;/h4&gt;
-
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
-
-&lt;p&gt;It failed with error : Time Limit Exceeded.&lt;/p&gt;
-
-&lt;h4 id=&quot;second-attempt&quot;&gt;Second Attempt&lt;/h4&gt;
-
-&lt;p&gt;Instead of using List, I can try using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TreeMap&lt;/code&gt;. A TreeMap is a Red-Black tree-based NavigableMap implementation that stores keys in sorted order.&lt;/p&gt;
-
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
-
-&lt;p&gt;We use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;floorEntry&lt;/code&gt; method of the TreeMap to get the closest timestamp lower than or equal to the requested timestamp.&lt;/p&gt;
-
-&lt;p&gt;Consider a TreeMap with the following key-value pairs: {1: &quot;a&quot;, 3: &quot;b&quot;, 5: &quot;c&quot;}. Let&apos;s assume you call the floorEntry method with the argument 4. Since 4 is greater than 3 but less than 5, the method will return the entry with the key 3 and value &quot;b&quot;.&lt;/p&gt;
-</description>
-          <pubDate>2023-08-16T00:00:00-04:00</pubDate>
-          <link>https://randomwits.com/blog/daily-logs-2023-08-16</link>
-          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2023-08-16</guid>
         </item>
       
     
