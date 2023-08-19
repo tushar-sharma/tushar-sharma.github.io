@@ -6,7 +6,7 @@ tags:
   - letters
 image: /img/thinkingGirl.jpeg
 thumb: /img/thinkingGirl.jpeg
-published: false
+published: true
 ---
 
 Dear Vishi, this is third weekly reflection for Aug, 2023.<!-- truncate_here -->
