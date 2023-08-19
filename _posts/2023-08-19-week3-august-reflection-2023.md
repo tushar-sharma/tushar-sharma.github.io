@@ -20,6 +20,8 @@ First I calculate `moving average` for each stocks and generate a [report](https
 
 Another filter I try use is to pick stocks with dividend. Even if the stocks plummet in its value, you can still grow your portfolios by `reinvesting dividend`.
 
+Lets first look at `$cme` stock. 
+
 ### Commute to office
 
 It takes me almost 30 minutes to reach to office. Most of the time I am stuck at morning traffic. I have few options how to utilitze this time while on car
@@ -108,3 +110,7 @@ I am trying to improve my backend return. I had a an hour coaching with Zack in 
 An employee stock purchase plan (ESPP) is a company-run program in which participating employees can purchase company stock at a discounted price.
 
 I have contributed 7% of my paycheck. I will need to read more about it to understand more.
+
+### Programming
+
+I solved leetcode problem: [time based key-value store]({{ root_url}}/blog/time-based-key-value-store-solution)
