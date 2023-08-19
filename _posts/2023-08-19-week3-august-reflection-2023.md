@@ -25,6 +25,6 @@ I have resumed playing Badminton at Marion Diehl Recreation Center and Pool. The
 
 ### Tennis
 
-I am trying to improve my backend return. 
+I am trying to improve my backend return. I had a an hour coaching with Zack for tennis for $50. He showed me how to use a backhand properly. I am still trying to improve it.
 
 https://www.youtube.com/watch?v=NSQSnyVZK5k
