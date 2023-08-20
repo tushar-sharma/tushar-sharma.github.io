@@ -17,11 +17,9 @@ Dear Vishi, this is third weekly reflection for Aug, 2023.
 
 It's been months since I bought any stocks. Recently I sold `$SAIC` stock. But picking a stocks is a tedious process for me. I want to invest in stock or ETF this month.
 
-First I calculate `moving average` for each stocks and generate a [report](https://drive.google.com/file/d/11WyMo0tQX6McQNdktcvpav30tlZSJg7p/view?usp=sharing).
+First I calculate `moving average` for each stocks.
 
 Another filter I try use is to pick stocks with dividend. Even if the stocks plummet in its value, you can still grow your portfolios by `reinvesting dividend`.
-
-Lets first look at `$cme` stock. 
 
 ### Commute to office
 
@@ -49,6 +47,8 @@ Watching a movie always make me nervous as it may not be legal to watch while dr
 
 ### Food
 
+#### Restaurants
+
 I bought P.F. Chang's Chicken Lo Mein from Food lion. It was frozen and I probably not going to purchase it again. The only frozen noodles that I liked so far were Ajinomoto Vegetable Yakisoba from costco. But I dont have costco membership anymore.
 
 I also ate at following resturants this week (I would probably would go bankrupt spending money on food): 
@@ -59,11 +59,25 @@ I also ate at following resturants this week (I would probably would go bankrupt
 
 3. Taco Bell: Power menu bowl with chicken and black bean chalupa supreme.
 
-4. Tikka Shack: Spinach Masala with extra veggies and rice.
+4. Tikka Shack: Spinach Masala with extra veggies, chicken and rice.
 
 5. Ilios crafted greek: Chicken Sandwitch with beet salad.
 
 6. Chick-fil-A: Grilled sandwitch wtih Cobb salad. I really liked Charred Tomato Crispy Red Bell Peppers.
+
+#### Recipe
+
+1. Rajma (kidney beans)
+
+* Soak Rajma overnight in water. 
+
+* Pressure cook in Insatapot for 20 min with water. 
+
+* Add avacado oil on a pan. Saute with mustard seeds. Add chopped onion, masala, chopped tomatoes. Let it cook in medium heat for 10 minutes.   
+
+* Mix rajma in the gravy.
+
+* Best enjoyed with cooked rice on the side.
 
 
 ### Video Games
