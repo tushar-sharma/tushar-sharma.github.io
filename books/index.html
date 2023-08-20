@@ -372,7 +372,15 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 <tr>
   <td>Fooled by Randomness</td>
   <td>Nassim Nicholas Taleb</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i></i></div></td>
+  <td>
+    <div class="cl">
+      {% for i in (1..4) %}
+        <span class="fa fa-star checked"></span>
+      {% endfor %}
+      <i class="icon-star-empty"></i>
+    </div>
+  </td>
+
   <td>To be updated...</td>
 </tr>
 
