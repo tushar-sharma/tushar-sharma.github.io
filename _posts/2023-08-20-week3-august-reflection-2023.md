@@ -4,8 +4,8 @@ category: blog
 layout: post
 tags: 
   - letters
-image: /img/thinkingGirl.jpeg
-thumb: /img/thinkingGirl.jpeg
+image: https://unsplash.com/photos/nLXOatvTaLo/download?w=800
+thumb: https://unsplash.com/photos/nLXOatvTaLo/download?w=800
 published: true
 ---
 
