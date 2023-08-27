@@ -7,6 +7,52 @@
     
       
         <item>
+          <title>Resolving Netty&apos;s DNS Resolution Error on MacOS M1 Systems</title>
+          <description>&lt;p&gt;In the evolving landscape of software development, the Apple M1 chip has introduced a paradigm shift in performance and efficiency. However, like any new technology, it comes with its own set of challenges. One such challenge is the DNS resolution error encountered when using the Netty library. In this article, we will delve deep into the root cause of this issue and provide a solution for both Gradle and Maven users.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;In the evolving landscape of software development, the Apple M1 chip has introduced a paradigm shift in performance and efficiency. However, like any new technology, it comes with its own set of challenges. One such challenge is the DNS resolution error encountered when using the Netty library. In this article, we will delve deep into the root cause of this issue and provide a solution for both Gradle and Maven users.&lt;/p&gt;
+
+&lt;h3 id=&quot;error&quot;&gt;Error&lt;/h3&gt;
+
+&lt;p&gt;Developers utilizing the Netty library on MacOS M1 systems might encounter the following error:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on &apos;io.netty:netty-resolver-dns-native-macos&apos;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This error stems from Netty&apos;s inability to access the native MacOS DNS resolver. The consequence of this is potential incorrect DNS resolutions, which can lead to a myriad of network-related issues in your application.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-underlying-cause&quot;&gt;The Underlying Cause&lt;/h3&gt;
+
+&lt;p&gt;Netty uses native code to interface with the system&apos;s DNS resolver for optimal performance. On MacOS systems, especially those with the M1 chip, the required native library might be missing, leading to the aforementioned error. The solution is to explicitly provide this native library.&lt;/p&gt;
+
+&lt;h3 id=&quot;solution&quot;&gt;Solution&lt;/h3&gt;
+
+&lt;p&gt;For projects managed with Gradle, you need to include the following dependency in your build.gradle file:&lt;/p&gt;
+
+&lt;div class=&quot;language-gradle highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;runtimeOnly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;io.netty:netty-resolver-dns-native-macos:4.1.76.Final:osx-aarch_64&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For Maven Users:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.netty&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;netty-resolver-dns-native-macos&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;4.1.76.Final&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;classifier&amp;gt;&lt;/span&gt;osx-aarch_64&lt;span class=&quot;nt&quot;&gt;&amp;lt;/classifier&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;runtime&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After adding this, it&apos;s advisable to run mvn clean install to ensure all dependencies are correctly updated.&lt;/p&gt;
+</description>
+          <pubDate>2023-08-26T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/unable-to-load-io-netty-resolver-dns-macos-macosdnsserveraddressstreamprovider</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/unable-to-load-io-netty-resolver-dns-macos-macosdnsserveraddressstreamprovider</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Week3 August Reflection 2023</title>
           <description>&lt;p&gt;Dear Vishi, this is third weekly reflection for Aug, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
