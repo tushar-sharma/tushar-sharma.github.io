@@ -8,3 +8,5 @@
 | Algorithm Study Group | TODO |
 | Spanish Conversation Group South Charlotte | TODO |
 | Intonation Practice  | TODO |
+| Ping Pong League | TODO |
+
