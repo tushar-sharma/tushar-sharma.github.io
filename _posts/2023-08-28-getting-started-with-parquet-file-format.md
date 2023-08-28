@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Getting Started With Parquet File Format
-image: https://unsplash.com/photos/gU_qQ40op5A/download?w=800
-thumb: https://unsplash.com/photos/gU_qQ40op5A/download?w=800
+image: https://unsplash.com/photos/1tpLdmxki-c/download?w=800
+thumb: https://unsplash.com/photos/1tpLdmxki-c/download?w=800
 author: Tushar Sharma
 tags:
   - parquet
+  - spark
 category: blog
 ---
 
@@ -42,3 +43,29 @@ When working with Parquet in big data systems like Spark, choosing the right par
 3. Low Cardinality Columns: Columns with low cardinality create a small number of directories but each directory contains a large amount of data. This can optimize read operations.
 
 4. Trial and Error: Sometimes, the best way to determine the optimal partition column is through experimentation. Monitor the performance of your queries and adjust accordingly.
+
+### Benchmarking TXT vs. Parquet
+
+Ensure you have the necessary libraries:
+ 
+```
+pip install pyspark pandas pyarrow
+```
+
+Benchmarking with Spark
+
+{% template  customCode.html %}
+---
+id: fa3ac375801b222a3f1268939bd3a608
+file: benchmark.py
+---
+{% endtemplate %}
+
+Output is 
+
+{% template  customCode.html %}
+---
+id: fa3ac375801b222a3f1268939bd3a608
+file: benchmark.txt
+---
+{% endtemplate %}
