@@ -7,6 +7,83 @@
     
       
         <item>
+          <title>Getting Started With Parquet File Format</title>
+          <description>&lt;p&gt;Data can be broadly categorized into three types based on its structure: Unstructured, semi-unstructured, structured data.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;Data can be broadly categorized into three types based on its structure:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unstructured Data: This includes formats like CSV, TXT which don&apos;t have a specific structure or schema.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Semi-Structured Data: Data formats like XML and JSON fall into this category. They have a flexible schema but still maintain some level of structure.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Structured Data: Formats like Avro and Parquet are considered structured as they have a defined schema.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;parquet-overview&quot;&gt;Parquet Overview&lt;/h3&gt;
+
+&lt;p&gt;Parquet is a popular choice for big data processing tasks, and here&apos;s why:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Binary Format with Efficient Compression: Parquet is a binary file format. By default, it uses the Snappy compression algorithm when used with Apache Spark, which provides a good balance between compression ratio and speed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Columnar Storage: Unlike row-based files, Parquet is columnar. This means it supports column pruning and predicate pushdown, which can significantly speed up queries.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Optimized for WORM: Parquet is optimized for Write Once, Read Many (WORM) operations. This makes it a preferred choice for data lakes and big data processing tasks.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;how-to-choose-a-good-partition-column&quot;&gt;How to Choose a Good Partition Column&lt;/h3&gt;
+
+&lt;p&gt;When working with Parquet in big data systems like Spark, choosing the right partition column is crucial. Here are some guidelines:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Avoid High Cardinality Columns: If a column has a lot of unique values, it will create numerous directories. This leads to more overhead during parsing.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Filterable Columns: Choose columns that are frequently used as filters in queries. For example, if you often filter data by a specific &quot;date&quot; or &quot;region&quot;, those might be good partitioning candidates.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Low Cardinality Columns: Columns with low cardinality create a small number of directories but each directory contains a large amount of data. This can optimize read operations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Trial and Error: Sometimes, the best way to determine the optimal partition column is through experimentation. Monitor the performance of your queries and adjust accordingly.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;benchmarking-txt-vs-parquet&quot;&gt;Benchmarking TXT vs. Parquet&lt;/h3&gt;
+
+&lt;p&gt;Ensure you have the necessary libraries:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install pyspark pandas pyarrow
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Benchmarking with Spark&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa3ac375801b222a3f1268939bd3a608.js?file=benchmark.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;Output is&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa3ac375801b222a3f1268939bd3a608.js?file=benchmark.txt&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+</description>
+          <pubDate>2023-08-28T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/getting-started-with-parquet-file-format</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/getting-started-with-parquet-file-format</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Resolving Netty&apos;s DNS Resolution Error on MacOS M1 Systems</title>
           <description>&lt;p&gt;In the evolving landscape of software development, the Apple M1 chip has introduced a paradigm shift in performance and efficiency. However, like any new technology, it comes with its own set of challenges. One such challenge is the DNS resolution error encountered when using the Netty library. In this article, we will delve deep into the root cause of this issue and provide a solution for both Gradle and Maven users.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
