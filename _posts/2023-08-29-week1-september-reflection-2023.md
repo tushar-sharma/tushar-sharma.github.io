@@ -22,3 +22,15 @@ Interesting thing I learned about Jinnah is that he never went to jail. Also he 
 In contrast, Nehru, Gandhi and even Savarkar wrote book and went to jail. I find left in India often demonizes Savarkar. The RSS/BJP ecosystem lampoons Nehru. I guess both of unwarranted. Both went to jail against the British. Of course you can cherry pick events or speeches to criticize either one of 'em.
 
 [^ham]: https://www.ishtiaqahmed.se/post/jinnah-his-success-failures-and-role-in-historyby-ishtiaq-ahmed-penguin-viking-2020
+
+## What do do after an accident in the United States
+
+This is the first time I have to deal with accident in the U.S. so I wanted to document everything. First thing to do during the accident is take pictures of your car from all side. Also take picture of the other's car from all sides. 
+
+Next step is to get number of any witeness or someone who saw the accident. This would be helpful. If accident is fatal and the person is not accepting the fault, then it would be prudent to call the 911. 
+
+The goal is to get the insurance policy number from the other person. You dont want to call your own insurance company else your monthly rate would go up. Instead ideally we want the other person's insurance to pay for the damage. 
+
+When you call the other person's agent, he will call you and tell you that your call is recorded. You can decline this and ask him to send these questions on email. I didn't know this as he is trying to find fault in your line of thoughts.
+
+Next is you need to upload live photos throught their app and wait for the claim.
