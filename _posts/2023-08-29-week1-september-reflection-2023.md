@@ -15,3 +15,11 @@ Learnt a new proverb, "one swallow doesn't make a summer". It means that a singl
 
 ### Open Telemetry Introduction with Zipkins
 
+### Jinnah
+
+Interesting thing I learned about Jinnah is that he never went to jail. Also he never wrote a book. In contrast, Nehru, Gandhi and even Savarkar wrote book and went to jail. According to Istiaq Ahmad[^ham], he also enjoyed pork sausages. 
+
+I find left in India often demonizes Savarkar. The RSS/BJP ecosystem lampoons Nehru. I guess both of unwarranted. Both went to jail against the British. Of course you can cherry pick events or speeches to criticize either one of 'em.
+
+[^ham]: https://www.ishtiaqahmed.se/post/jinnah-his-success-failures-and-role-in-historyby-ishtiaq-ahmed-penguin-viking-2020
+
