@@ -1,6 +1,8 @@
 ---
 published: false
 ---
-## A New Post
+## Skills
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+### English
+
+Learnt a new proverb, "one swallow doesn't make a summer". 
