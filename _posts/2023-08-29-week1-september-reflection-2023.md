@@ -15,11 +15,16 @@ Learnt a new proverb, "one swallow doesn't make a summer". It means that a singl
 
 ### Open Telemetry Introduction with Zipkins
 
-### Jinnah
+### ON Jinnah
 
 Interesting thing I learned about Jinnah is that he never went to jail. Also he never wrote a book.According to Ishtiaq Ahmed [^ham], he also enjoyed pork sausages. 
 
 In contrast, Nehru, Gandhi and even Savarkar wrote book and went to jail. I find left in India often demonizes Savarkar. The RSS/BJP ecosystem lampoons Nehru. I guess both of unwarranted. Both went to jail against the British. Of course you can cherry pick events or speeches to criticize either one of 'em.
+
+
+There was an old controversy in India regarding Jinnah's portrait at Aligarh Muslim University.Left leaning [The Wire](https://thewire.in/history/aligarh-muslim-university-jinnah-portrait) defended the portrait instead stating that: The AMU portrait of Jinnah must not go. If anything, we need thousands more. However interestingly, portrait of Nobel laureate, [Aung San Suu Kyi ](https://www.theguardian.com/world/2017/sep/29/oxford-college-removes-painting-of-aung-san-suu-kyi-from-display) was removed from Oxford. Would a liberal position will be to support both the Jinnah portrait in AMU as well as Savarkar portrait in the parliament?
+
+
 
 [^ham]: https://www.ishtiaqahmed.se/post/jinnah-his-success-failures-and-role-in-historyby-ishtiaq-ahmed-penguin-viking-2020
 
