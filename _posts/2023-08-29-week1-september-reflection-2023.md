@@ -15,6 +15,25 @@ Learnt a new proverb, "one swallow doesn't make a summer". It means that a singl
 
 ### Open Telemetry Introduction with Zipkins
 
+### Spring
+
+Dependency report
+
+```
+./gradlew dependencies > ~/dependencies.txt
+```
+
+
+
+
+
+
+
+
+
+
+
+
 ### On Jinnah
 
 Interesting thing I learned about Jinnah is that he never went to jail. Also he never wrote a book.According to Ishtiaq Ahmed [^ham], he also enjoyed pork sausages. 
