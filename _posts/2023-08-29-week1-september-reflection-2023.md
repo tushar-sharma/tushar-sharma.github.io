@@ -25,7 +25,7 @@ Interesting thing I learned about Jinnah is that he never went to jail. Also he 
 
 In contrast, Nehru, Gandhi and even Savarkar wrote book and went to jail. I find left in India often demonizes Savarkar. The RSS/BJP ecosystem lampoons Nehru. I guess both attacks are unwarranted. Both went to jail protesting against the British. 
 
-There was an old controversy in India regarding Jinnah's portrait at Aligarh Muslim University.Left leaning [The Wire](https://thewire.in/history/aligarh-muslim-university-jinnah-portrait) defended the portrait instead stating that: The AMU portrait of Jinnah must not go. If anything, we need thousands more. However interestingly, portrait of Nobel laureate, [Aung San Suu Kyi ](https://www.theguardian.com/world/2017/sep/29/oxford-college-removes-painting-of-aung-san-suu-kyi-from-display) was removed from Oxford. Would a liberal position will be to support both the Jinnah portrait in AMU as well as Savarkar portrait in the parliament?
+There is an old controversy in India regarding Jinnah's portrait at Aligarh Muslim University. Left leaning [The Wire](https://thewire.in/history/aligarh-muslim-university-jinnah-portrait) defended the portrait instead stating that: The AMU portrait of Jinnah must not go. If anything, we need thousands more. A good question is is there a trend to remove portraits of controversial people. Portrait of Nobel laureate, [Aung San Suu Kyi ](https://www.theguardian.com/world/2017/sep/29/oxford-college-removes-painting-of-aung-san-suu-kyi-from-display) was removed from Oxford after worseing conflict in Myanamar. Statues of Lenin were destroyed in Ukraine after the fall of Soviet Union.
 
 
 
