@@ -19,6 +19,8 @@ Shoot the breeze. It means to have a informal conversations.
 
 ### Create dependency tree with Maven
 
+### Thursday Ping Pong league
+
 ### On Jinnah
 
 Interesting thing I learned about Jinnah is that he never went to jail. Also he never wrote a book. According to Ishtiaq Ahmed[^ham], he also enjoyed pork sausages. 
