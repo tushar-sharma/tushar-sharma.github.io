@@ -19,12 +19,6 @@ Shoot the breeze. It means to have a informal conversations.
 
 ### Spring
 
-Dependency report
-
-```
-./gradlew dependencies > ~/dependencies.txt
-```
-
 
 
 
