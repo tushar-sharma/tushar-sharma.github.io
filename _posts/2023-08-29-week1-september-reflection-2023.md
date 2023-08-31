@@ -21,6 +21,56 @@ Shoot the breeze. It means to have a informal conversations.
 
 ### Thursday Ping Pong league
 
+### Static vs Final Static
+
+For final, it can be assigned different values at runtime when initialized.
+
+```java
+class Test{
+  private final int foo; 
+  
+  setFoo(int foo){
+    this.foo = foo;
+  }
+  
+  getFoo(){
+    return foo;
+  }
+}
+
+Test test1 = new Test();
+test1.setFoo(20);
+test1.getFoo(); // 20
+
+test2 = new Test();
+test2.setFoo(10);
+test2.getFoo(); // 10
+
+```
+For static final, all instances share the same value, and can’t be altered after first initialized.
+
+```java
+class Test{
+  private static final int foo; 
+  
+  setFoo(int foo){
+    this.foo = foo;
+  }
+  
+  getFoo(){
+    return foo;
+  }
+}
+
+Test test1 = new Test();
+test1.setFoo(20);
+test1.getFoo(); // 20
+
+test2 = new Test();
+test2.setFoo(10);
+test2.getFoo(); // Error
+```
+
 ### On Jinnah
 
 Interesting thing I learned about Jinnah is that he never went to jail. Also he never wrote a book. According to Ishtiaq Ahmed[^ham], he also enjoyed pork sausages. 
