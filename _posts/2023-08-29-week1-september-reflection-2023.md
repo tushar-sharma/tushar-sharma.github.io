@@ -21,54 +21,26 @@ Shoot the breeze. It means to have a informal conversations.
 
 ### Thursday Ping Pong league
 
-### Static vs Final Static
+### Static vs Final Static in Java
 
-For final, it can be assigned different values at runtime when initialized.
+final: when applied to a variable, it means that variable can be assigned only once.
 
-```java
-class Test{
-  private final int foo; 
-  
-  setFoo(int foo){
-    this.foo = foo;
-  }
-  
-  getFoo(){
-    return foo;
-  }
-}
+static: variable or method belongs to class itself, rather than instance of the class. 
 
-Test test1 = new Test();
-test1.setFoo(20);
-test1.getFoo(); // 20
-
-test2 = new Test();
-test2.setFoo(10);
-test2.getFoo(); // 10
-
-```
-For static final, all instances share the same value, and can’t be altered after first initialized.
 
 ```java
-class Test{
-  private static final int foo; 
+class Test1 {
+  private final int finalVariable = 10;
   
-  setFoo(int foo){
-    this.foo = foo;
-  }
-  
-  getFoo(){
-    return foo;
+  private static final int STATIC_FINAL_VARIABLE = 100;
+ 
+} 
+
+public class Test2 {
+  public static void main(String[] args){
+    
   }
 }
-
-Test test1 = new Test();
-test1.setFoo(20);
-test1.getFoo(); // 20
-
-test2 = new Test();
-test2.setFoo(10);
-test2.getFoo(); // Error
 ```
 
 ### On Jinnah
