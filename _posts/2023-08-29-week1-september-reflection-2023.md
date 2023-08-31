@@ -17,22 +17,11 @@ Shoot the breeze. It means to have a informal conversations.
 
 ### Open Telemetry Introduction with Zipkins
 
-### Spring
-
-
-
-
-
-
-
-
-
-
-
+### Create dependency tree with Maven
 
 ### On Jinnah
 
-Interesting thing I learned about Jinnah is that he never went to jail. Also he never wrote a book.According to Ishtiaq Ahmed [^ham], he also enjoyed pork sausages. 
+Interesting thing I learned about Jinnah is that he never went to jail. Also he never wrote a book. According to Ishtiaq Ahmed [^ham], he also enjoyed pork sausages. 
 
 In contrast, Nehru, Gandhi and even Savarkar wrote book and went to jail. I find left in India often demonizes Savarkar. The RSS/BJP ecosystem lampoons Nehru. I guess both of unwarranted. Both went to jail against the British. Of course you can cherry pick events or speeches to criticize either one of 'em.
 
