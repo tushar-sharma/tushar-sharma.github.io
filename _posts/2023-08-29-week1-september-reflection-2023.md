@@ -28,9 +28,6 @@ In contrast, Nehru, Gandhi and even Savarkar wrote book and went to jail. I find
 There is an old controversy in India regarding Jinnah's portrait at Aligarh Muslim University. Left leaning [The Wire](https://thewire.in/history/aligarh-muslim-university-jinnah-portrait) defended the portrait instead stating that: The AMU portrait of Jinnah must not go. If anything, we need thousands more. A good question is is there a trend to remove portraits of controversial people. Portrait of Nobel laureate, [Aung San Suu Kyi ](https://www.theguardian.com/world/2017/sep/29/oxford-college-removes-painting-of-aung-san-suu-kyi-from-display) was removed from Oxford after worseing conflict in Myanamar. Statues of Lenin were destroyed in Ukraine after the fall of Soviet Union.
 
 
-
-[^ham]: https://www.ishtiaqahmed.se/post/jinnah-his-success-failures-and-role-in-historyby-ishtiaq-ahmed-penguin-viking-2020
-
 ## What do do after an accident in the United States
 
 This is the first time I have to deal with accident in the U.S. so I wanted to document everything. First thing to do during the accident is take pictures of your car from all side. Also take picture of the other's car from all sides. 
@@ -42,3 +39,6 @@ The goal is to get the insurance policy number from the other person. You dont w
 When you call the other person's agent, he will call you and tell you that your call is recorded. You can decline this and ask him to send these questions on email. I didn't know this as he is trying to find fault in your line of thoughts.
 
 Next is you need to upload live photos throught their app and wait for the claim.
+
+
+[^ham]: https://www.ishtiaqahmed.se/post/jinnah-his-success-failures-and-role-in-historyby-ishtiaq-ahmed-penguin-viking-2020
