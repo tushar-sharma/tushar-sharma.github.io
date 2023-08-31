@@ -21,28 +21,6 @@ Shoot the breeze. It means to have a informal conversations.
 
 ### Thursday Ping Pong league
 
-### Static vs Final Static in Java
-
-final: when applied to a variable, it means that variable can be assigned only once.
-
-static: variable or method belongs to class itself, rather than instance of the class. 
-
-
-```java
-class Test1 {
-  private final int finalVariable = 10;
-  
-  private static final int STATIC_FINAL_VARIABLE = 100;
- 
-} 
-
-public class Test2 {
-  public static void main(String[] args){
-    
-  }
-}
-```
-
 ### On Jinnah
 
 Interesting thing I learned about Jinnah is that he never went to jail. Also he never wrote a book. According to Ishtiaq Ahmed[^ham], he also enjoyed pork sausages. 
