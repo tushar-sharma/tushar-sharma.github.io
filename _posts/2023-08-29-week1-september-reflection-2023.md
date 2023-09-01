@@ -9,6 +9,8 @@ One swallow doesn't make a summer. It means that a single event or occurrence do
 
 Shoot the breeze. It means to have a informal conversations. 
 
+blue eyed boy.
+
 ### Spanish
 
 ¿Dónde vives? It means where do you live. Of course vive would mean "I live". So, Yo vivo en Charlotte. This means I live in Charlotte. However if I have to say: I am from India, then I can say, "Soy de India". 
