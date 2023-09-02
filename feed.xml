@@ -7,6 +7,49 @@
     
       
         <item>
+          <title>Understanding final vs Static final in Java</title>
+          <description>&lt;p&gt;Java provides various modifiers to control the behavior of classes, methods, and variables. Two such modifiers are final and static final. Let&apos;s delve deeper into their significance and differences.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Java provides various modifiers to control the behavior of classes, methods, and variables. Two such modifiers are final and static final. Let&apos;s delve deeper into their significance and differences.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-modifier&quot;&gt;Final modifier&lt;/h2&gt;
+
+&lt;p&gt;When you come across the final keyword in Java, think of it as a way to make something unchangeable or immutable.&lt;/p&gt;
+
+&lt;h3 id=&quot;variables&quot;&gt;Variables&lt;/h3&gt;
+
+&lt;p&gt;When the final keyword is applied to variables, it ensures that once a variable is assigned a value, it cannot be reassigned. Every instance of the class will have its own separate copy of this final variable.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=MyClass.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;methods&quot;&gt;Methods&lt;/h3&gt;
+
+&lt;p&gt;A final method cannot be overridden in subclasses. This is useful when you want to lock the behavior of a method, ensuring that no subclass can change its implementation.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=ChildClass.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;classes&quot;&gt;Classes&lt;/h3&gt;
+
+&lt;p&gt;A final class cannot be subclassed. This is often done for security reasons or to ensure the design integrity of a class.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=FinalClass.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h2 id=&quot;static-final&quot;&gt;Static Final&lt;/h2&gt;
+
+&lt;h3 id=&quot;variables-1&quot;&gt;Variables&lt;/h3&gt;
+
+&lt;p&gt;A static final variable belongs to the class and not any specific instance. It&apos;s also immutable. Value can only be assigned at point of declaration or within a static initizlizer block. An initializer block is a chunk of code that runs when the class is first loaded into memory. It runs only once, regardless of how many instance of the class.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=StaticFinal.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+</description>
+          <pubDate>2023-08-31T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/understanding-java-final-static-final</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/understanding-java-final-static-final</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Getting Started With Parquet File Format</title>
           <description>&lt;p&gt;Data can be broadly categorized into three types based on its structure: Unstructured, semi-unstructured, structured data.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
