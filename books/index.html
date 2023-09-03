@@ -211,7 +211,13 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 <tr>
   <td>Left hand of darkness</td>
   <td>Ursula K. Le Guin</td>
-  <td> <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
+  <td>
+      <div class="cl">
+        {% for i in (1..5) %}
+          <span class="fa fa-star checked"></span>
+        {% endfor %}
+      </div>
+  </td>
   <td>A classic must-read in science-fiction genre, the story revolves around Genly Ai, an earthling, on his perilous journey in an alien planet Gethen to pursuade them to join Ekumen (an intergalactic civilization). Living with androgynous people of Gethens, he embraces contradictory aspects of psychology, society,  patriotism, friendship, religion, sexual orientation, etc.</td>
 </tr>
 
