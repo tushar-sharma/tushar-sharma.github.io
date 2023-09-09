@@ -14,5 +14,9 @@ My usual is buy two. One is soup and one is baja bowl. The issue is that it's ex
 
 My night to go is taco bell. I usually customize my meal. I remove cheese, sauce and rice. The issue is that they serve you less quantity of healthy ingredients.
 
+## Food
 
+* Brussel Sprout 
+
+This is my regular food. It takes least amount of time to prepare and is healthy and delicious.
 
