@@ -25,3 +25,7 @@ I attended a online meetup on GraphQL. Learned few concepts like
 
 3. Tennis
 
+## Quotes I liked
+
+"No man is a hero to his valet. This is not because the hero is not a hero, but because the valet is a valet."
+― Georg Wilhelm Friedrich Hegel
