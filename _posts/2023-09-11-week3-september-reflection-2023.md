@@ -4,7 +4,8 @@ published: false
 
 ## Car Repair
 
-I dropped my car to Town and Country Ford. I got the rental from Enterprise. The car was repaired.
+I dropped my car to Town and Country Ford. I got the rental from Enterprise (Nissan Rougue). The car was repaired.
+
 
 ## GraphQL
 
