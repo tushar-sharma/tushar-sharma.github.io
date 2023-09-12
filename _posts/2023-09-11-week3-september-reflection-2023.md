@@ -18,6 +18,10 @@ I attended a online meetup on GraphQL. Learned few concepts like
 
 * Hawkers Asian Street Food
 
+I ordered Curry Laksa Ramen. I liked the soup. There's lot of noodles. 
+
+Chicken dumpling was not good. 
+
 ## Sports
 
 1. Table tennis
