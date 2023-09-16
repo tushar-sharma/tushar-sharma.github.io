@@ -7,6 +7,47 @@
     
       
         <item>
+          <title>Empty s3 bucket and Delete using Jenkins and AWS CLI</title>
+          <description>&lt;p&gt;Amazon Simple Storage Service (s3) is a scalable object storage service provided by AWS. It allows users to store and retrieve vast amount of data, make it a fundamental building block for many applications hosted on AWS. Deleting a s3 bucket is a two step process: empty a s3 bucket and then delete a s3 bucket.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Amazon Simple Storage Service (s3) is a scalable object storage service provided by AWS. It allows users to store and retrieve vast amount of data, make it a fundamental building block for many applications hosted on AWS. Deleting a s3 bucket is a two step process: empty a s3 bucket and then delete a s3 bucket.&lt;/p&gt;
+
+&lt;h3 id=&quot;deleting-bucket-without-versioning&quot;&gt;Deleting bucket without versioning&lt;/h3&gt;
+
+&lt;p&gt;If a bucket has no versioning, we can empty s3 bucket using aws cli via jenkins&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/eec7e619c93f9f2c2874d26833200bce.js?file=pipeline1.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;If there&apos;s versioning, then it will fail with the following error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-none&quot;&gt;The bucket you tried to delete is not empty. You must delte all versions in the bucket.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;understanding-s3-versioning-and-delete-markers&quot;&gt;Understanding s3 versioning and delete markers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Versioning&lt;/strong&gt;: It allows you to preserve, retrieve, and restore every version of every object in a bucket. Once enabled, it cannot be suspended, only disabled.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Delete Markers&lt;/strong&gt;: Once you delete a versioned object in s3, a delete marker is inserted. This marker becomes the current version, simulating a &quot;delete&quot; operatings but not actually removing the object.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;deleting-bucket-with-versioning&quot;&gt;Deleting bucket with versioning&lt;/h3&gt;
+
+&lt;p&gt;We need to delete all versions and delete markers to empty the s3 bucket.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/eec7e619c93f9f2c2874d26833200bce.js?file=pipeline2.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+</description>
+          <pubDate>2023-09-15T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/s3-bucket-empty-delete-aws-cli-jenkins</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/s3-bucket-empty-delete-aws-cli-jenkins</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Understanding final vs Static final in Java</title>
           <description>&lt;p&gt;Java provides various modifiers to control the behavior of classes, methods, and variables. Two such modifiers are final and static final. Let&apos;s delve deeper into their significance and differences.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
