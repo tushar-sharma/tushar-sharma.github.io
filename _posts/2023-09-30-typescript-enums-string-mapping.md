@@ -30,7 +30,7 @@ console.log('The status is ' + Status.Approved + ' with answer ' + Answer.Yes);
 npm install -g json-server
 ```
 
-lets create a `db.json`
+lets create a file `db.json`
 
 ```
 {
@@ -65,7 +65,7 @@ Check `localhost:3003/users` on your browser.
 ## Create a new angular application
 
 ```
-ng create enum-mapping && cd $_
+ng new enum-mapping && cd $_
 npm install --save bootstrap@latest
 ```
 
