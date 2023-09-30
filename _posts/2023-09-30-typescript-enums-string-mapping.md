@@ -23,3 +23,16 @@ console.log('The status is ' + Status.Approved + ' with answer ' + Answer.Yes);
 
 // The status is Approved with answer 1
 ```
+
+## Create a new angular application
+
+```
+ng create enum-mapping && cd $_
+npm install --save bootstrap@latest
+```
+
+And import it in `src/styles.css` 
+
+```
+@import '~bootstrap/dist/css/bootstrap.min.css';
+```
