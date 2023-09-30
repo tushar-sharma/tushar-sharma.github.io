@@ -54,7 +54,6 @@ lets create a file `db.json`
 }
 ```
 
-
 ```
 json-server --watch db.json --port 3003
 ```
