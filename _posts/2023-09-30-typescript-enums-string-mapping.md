@@ -10,8 +10,8 @@ Lets define a enum in typescript
 
 ```
 enum Answer {
-  No = 0,
-  Yes = 1,
+    No = 0,
+    Yes = 1
 }
 
 enum Status {
@@ -19,8 +19,7 @@ enum Status {
     Pending = 'Pending'
 }
 
-console.log(Answer.Yes);
+console.log('The status is ' + Status.Approved + ' with answer ' + Answer.Yes);
 
-console.log(Status.Approved);
-
+// The status is Approved with answer 1
 ```
