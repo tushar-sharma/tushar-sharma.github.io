@@ -123,3 +123,9 @@ export class DataService {
 ```
 
 `Injectable` is a decorator for dependency injection (DI). Through the `providedIn` property, it controls the scope and instantiation of services.
+
+Create a component
+
+```
+ng crr
+```
