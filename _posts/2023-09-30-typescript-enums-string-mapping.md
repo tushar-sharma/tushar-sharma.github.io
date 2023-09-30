@@ -15,8 +15,12 @@ enum Answer {
 }
 
 enum Status {
-    Approved = 'APPROVED',
-    Pending = 'PENDING'
+    Approved = 'Approved',
+    Pending = 'Pending'
 }
+
+console.log(Answer.Yes);
+
+console.log(Status.Approved);
 
 ```
