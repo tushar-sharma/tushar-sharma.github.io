@@ -36,3 +36,41 @@ And import it in `src/styles.css`
 ```
 @import '~bootstrap/dist/css/bootstrap.min.css';
 ```
+
+## Lets create a Mock data
+
+```
+npm install -g json-server
+```
+
+lets create a `db.json`
+
+```
+{
+  "users": [
+    {
+      "id": 1234,
+      "name": "Andrew Owen",
+      "status": Approved,
+    },
+    {
+      "id": 1235,
+      "name": "Susan Que",
+      "status": "Pending,
+    },
+    {
+      "id": 1236,
+      "name": "John Doe",
+      "status": "Pending",
+    }
+  ]
+}
+```
+
+
+```
+json-server --watch db.json --port 3003
+```
+
+Check `localhost:3003/users` on your browser.
+
