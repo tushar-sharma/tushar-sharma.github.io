@@ -74,4 +74,52 @@ And import it in `src/styles.css`
 @import '~bootstrap/dist/css/bootstrap.min.css';
 ```
 
+Create a new file `src/app/types.ts`:
 
+```ts
+export enum Status {
+  Pending = 'Pending',
+  Approval = 'Approval'
+}
+
+```
+
+Create a new service
+
+```
+ng generate service data
+```
+
+add this to `data-service.ts`
+
+```ts
+import { Injectable } from '@angular/core';
+import { Status } from './types';
+import { HttpClient} from "@angular/common/http";
+import {map} from "rxjs/operators";
+const API_ENDPOINT = 'http://localhost:3003/users';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+
+  constructor(private http: HttpClient) { }
+
+  fetchData() {
+    return this.http.get<any[]>(API_ENDPOINT).pipe(
+      map(apps => apps.map( app => {
+        app.status = this.decodeStatus(app.status);
+        return app;
+      }))
+    )
+  }
+
+  private decodeStatus(status: string){
+    return Status[status as keyof typeof Status];
+  }
+}
+
+```
+
+`Injectable` is a decorator for dependency injection (DI). Through the `providedIn` property, it controls the scope and instantiation of services.
