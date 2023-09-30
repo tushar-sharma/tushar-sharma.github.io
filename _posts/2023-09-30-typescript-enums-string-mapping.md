@@ -38,17 +38,17 @@ lets create a file `db.json`
     {
       "id": 1234,
       "name": "Andrew Owen",
-      "status": Approved,
+      "status": "Approved"
     },
     {
       "id": 1235,
       "name": "Susan Que",
-      "status": "Pending,
+      "status": "Pending"
     },
     {
       "id": 1236,
       "name": "John Doe",
-      "status": "Pending",
+      "status": "Pending"
     }
   ]
 }
