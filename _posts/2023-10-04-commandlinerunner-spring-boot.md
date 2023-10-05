@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Dear Vishi, daily log on Oct 4, 2023
+title: Delving into CommandLineRunner in Spring Boot
 category: blog
 tags:
-  - diary
-  - letters
+  - spring boot
 thumb: /img/writing.jpg
 image: /img/writing.jpg
 author: Tushar Sharma
