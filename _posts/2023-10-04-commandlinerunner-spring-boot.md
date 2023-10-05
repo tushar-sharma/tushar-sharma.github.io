@@ -28,7 +28,7 @@ public class ApplicationStartupRunner implements CommandLineRunner {
 ```
 > **Quiz:** What's the role of the `@Component` annotation in Spring?
 
-<button class="quiz-btn" onclick="toggleQuizAnswer('answer1', this)">Show Answer</button>
+<button class="quiz-btn" data-showing="false" onclick="toggleAnswer('answer1')">Show Answer</button>
 <div class="quiz-answer" id="answer1">
 The `@Component` annotation is used in Spring to indicate that a class should be considered as a Spring-managed component. When the application context is being created, classes annotated with `@Component` are auto-detected and a bean instance is created for them in the Spring container.
 </div>
@@ -67,8 +67,8 @@ The `@Component` annotation is used in Spring to indicate that a class should be
 The String... syntax in Java denotes a varargs (variable number of arguments). It allows you to pass any number of arguments when invoking a method. Internally, varargs are treated as an array. The key difference between String... args and String[] args is in how you call the method. With varargs (String... args), you can call the method with multiple string arguments directly, without having to create an array. With String[] args, you'd need to pass an array of strings. However, inside the method body, args behaves like an array in both cases.
 
 
-<script type="text/javascript">
-function toggleQuizAnswer(answerId, buttonElement) {
+<script>
+function toggleAnswer(answerId, buttonElement) {
     var answer = document.getElementById(answerId);
     if (answer.style.display === "none" || answer.style.display === "") {
         answer.style.display = "block";
