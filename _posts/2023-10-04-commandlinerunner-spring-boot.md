@@ -11,14 +11,19 @@ published: true
 ---
 
 <script>
-function toggleAnswer(answerId) {
+<script>
+function toggleAnswer(answerId, buttonElement) {
     var answer = document.getElementById(answerId);
-    if (answer.style.display === "none") {
+    if (answer.style.display === "none" || answer.style.display === "") {
         answer.style.display = "block";
+        buttonElement.innerHTML = "Hide Answer";
     } else {
         answer.style.display = "none";
+        buttonElement.innerHTML = "Show Answer";
     }
 }
+</script>
+
 </script>
 
 
