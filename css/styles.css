@@ -717,3 +717,21 @@ code[class*=language-],pre[class*=language-]{
   height: 16px;
   fill: #39c;
 }
+
+/** quiz **/
+.quiz-answer {
+    display: none;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}
+
+.quiz-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
