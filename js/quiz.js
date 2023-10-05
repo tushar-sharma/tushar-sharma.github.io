@@ -1,27 +1,21 @@
 $(document).ready(function(){
-    console.log("ready");
+    $('.quiz-btn').on('click', function(event) {
+        toggleQuiz($(this).data('answer'), event);
+    });
 
-    function toggleQuiz(answerId) {
-    
-        var answer = document.getElementById(answerId);
-        var button = event.currentTarget;
+   function toggleQuiz(answerId, event){
 
-        if (button.getAttribute('data-showing') === 'false') {
-    
-            answer.style.display = "block";
-    
-            answer.textContent = "Hide Answer";
-    
-            button.setAttribute('data-showing', true);
-    
+        var answer = $("#" + answerId);
+        var button = $(event.currentTarget);
+
+        if (button.attr('data-showing') === 'false') {
+            answer.show();
+            button.text('Hide Answer');
+            button.attr('data-showing', 'true');
         } else {
-    
-            answer.styles.display = "none";
-    
-            button.textContent = "Show Answer";
-    
-            button.setAttribute('data-showing', 'false');
-    
+            answer.hide();
+            button.text('Show Answer');
+            button.attr('data-showing', 'false');
         }
     }
 
