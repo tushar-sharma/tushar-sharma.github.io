@@ -10,6 +10,18 @@ author: Tushar Sharma
 published: true
 ---
 
+<script>
+function toggleAnswer(answerId) {
+    var answer = document.getElementById(answerId);
+    if (answer.style.display === "none") {
+        answer.style.display = "block";
+    } else {
+        answer.style.display = "none";
+    }
+}
+</script>
+
+
 Spring Boot provides a range of functionalities that allow developers to run specific code blocks during the application's lifecycle. One such feature is the CommandLineRunner interface. This interface is specifically designed to execute a code block just once, right after the Spring Boot application has initialized. This can be particularly useful for tasks like database seeding, running sanity checks, or any other initialization logic you want to run before your application begins processing.
 
 There are a few ways to utilize the CommandLineRunner in a Spring Boot application. Let's explore them:
@@ -26,7 +38,12 @@ public class ApplicationStartupRunner implements CommandLineRunner {
     }
 }
 ```
-> Quick Quiz: What's the role of the @Component annotation in Spring?
+> **Quiz:** What's the role of the `@Component` annotation in Spring?
+
+<button class="quiz-btn" onclick="toggleAnswer('answer1')">Show Answer</button>
+<div class="quiz-answer" id="answer1">
+The `@Component` annotation is used in Spring to indicate that a class should be considered as a Spring-managed component. When the application context is being created, classes annotated with `@Component` are auto-detected and a bean instance is created for them in the Spring container.
+</div>
 
 ## Integrating with `@SpringBootApplication`
 
