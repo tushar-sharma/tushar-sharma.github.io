@@ -7,6 +7,98 @@
     
       
         <item>
+          <title>Delving into CommandLineRunner in Spring Boot</title>
+          <description>&lt;p&gt;Spring Boot provides a range of functionalities that allow developers to run specific code blocks during the application&apos;s lifecycle. One such feature is the CommandLineRunner interface. This interface is specifically designed to execute a code block just once, right after the Spring Boot application has initialized. This can be particularly useful for tasks like database seeding, running sanity checks, or any other initialization logic you want to run before your application begins processing.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Spring Boot provides a range of functionalities that allow developers to run specific code blocks during the application&apos;s lifecycle. One such feature is the CommandLineRunner interface. This interface is specifically designed to execute a code block just once, right after the Spring Boot application has initialized. This can be particularly useful for tasks like database seeding, running sanity checks, or any other initialization logic you want to run before your application begins processing.&lt;/p&gt;
+
+&lt;p&gt;There are a few ways to utilize the CommandLineRunner in a Spring Boot application. Let&apos;s explore them:&lt;/p&gt;
+
+&lt;h2 id=&quot;using-component-annotation&quot;&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Component&lt;/code&gt; Annotation&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Slf4j&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApplicationStartupRunner&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CommandLineRunner&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ApplicationStartupRunner started...!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Quiz:&lt;/strong&gt; What&apos;s the role of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Component&lt;/code&gt; annotation in Spring?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;button class=&quot;quiz-btn&quot; data-showing=&quot;false&quot; data-answer=&quot;answer1&quot;&gt;Show Answer&lt;/button&gt;&lt;/p&gt;
+&lt;div class=&quot;quiz-answer&quot; id=&quot;answer1&quot;&gt;
+The `@Component` annotation is used in Spring to indicate that a class should be considered as a Spring-managed component. When the application context is being created, classes annotated with `@Component` are auto-detected and a bean instance is created for them in the Spring container.
+&lt;/div&gt;
+
+&lt;h2 id=&quot;integrating-with-springbootapplication&quot;&gt;Integrating with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@SpringBootApplication&lt;/code&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Slf4j&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DemoCommandLineApplication&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CommandLineRunner&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;CommandLineRunner started!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;DemoCommandLineApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Quick Quiz: Explain the syntax &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String....&lt;/code&gt; How is it different than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String[] args&lt;/code&gt; in Java?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;button class=&quot;quiz-btn&quot; data-showing=&quot;false&quot; data-answer=&quot;answer2&quot;&gt;Show Answer&lt;/button&gt;&lt;/p&gt;
+&lt;div class=&quot;quiz-answer&quot; id=&quot;answer2&quot;&gt;
+The String... syntax in Java denotes a varargs (variable number of arguments). It allows you to pass any number of arguments when invoking a method. Internally, varargs are treated as an array. The key difference between String... args and String[] args is in how you call the method. With varargs (String... args), you can call the method with multiple string arguments directly, without having to create an array. With String[] args, you&apos;d need to pass an array of strings. However, inside the method body, args behaves like an array in both cases.
+&lt;/div&gt;
+</description>
+          <pubDate>2023-10-04T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/commandlinerunner-spring-boot</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/commandlinerunner-spring-boot</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Dear Vishi, daily log on Oct 3, 2023</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for Oct 3, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for Oct 3, 2023.&lt;/p&gt;
+
+&lt;h2 id=&quot;shingles&quot;&gt;Shingles&lt;/h2&gt;
+
+&lt;p&gt;I was talking to my collegue during lunch who told me about shingles. He previously worked in some litigation law firm. He said that stress on his previous job caused him shingles.&lt;/p&gt;
+
+&lt;p&gt;This is the first time I heard about shingles. What the heck is that and how is related to stress?&lt;/p&gt;
+
+&lt;p&gt;Shingles is a painful rash caused by viral infection that means it&apos;s caused by a virus and not bacteria. It&apos;s nothing but a chickenpox virus which is also called varicella-zoster virus. If it&apos;s a same virus, then why have two different names?&lt;/p&gt;
+
+&lt;p&gt;Chickenpox is a primary infection. It usually occurs in childhood. Symptoms include fever, fatigue, loss of appetite, and a characteristic itchy rash. The rash starts as red spots which become raised and then form fluid-filled blisters. These blisters can spread all over the body.&lt;/p&gt;
+
+&lt;p&gt;Once you&apos;ve been infected with the varicella-zoster virus (VZV) — the virus responsible for chickenpox — the virus doesn&apos;t completely leave your body. After the active chickenpox infection resolves, the virus becomes dormant and retreats to nerve cells near the spinal cord and brain, where it remains for the rest of a person&apos;s life.&lt;/p&gt;
+
+&lt;p&gt;Shingles is a reactivation of the varicella-zoster virus that has been dormant in the nerve cells since a person had chickenpox. What causes reactivation?&lt;/p&gt;
+
+&lt;p&gt;Stress can be a trigger for shingles in some individuals. When a person experiences significant stress, their immune system may weaken, making it less effective at keeping the varicella-zoster virus in check. Anecdotal evidence of my collegue also confirms that stress can cause shingles.&lt;/p&gt;
+
+&lt;p&gt;This is one more reason not to take stress in life.&lt;/p&gt;
+</description>
+          <pubDate>2023-10-03T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/daily-logs-2023-10-03</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2023-10-03</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Empty s3 bucket and Delete using Jenkins and AWS CLI</title>
           <description>&lt;p&gt;Amazon Simple Storage Service (s3) is a scalable object storage service provided by AWS. It allows users to store and retrieve vast amount of data, make it a fundamental building block for many applications hosted on AWS. Deleting a s3 bucket is a two step process: empty a s3 bucket and then delete a s3 bucket.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
