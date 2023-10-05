@@ -722,9 +722,10 @@ code[class*=language-],pre[class*=language-]{
 .quiz-answer {
     display: none;
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 5px;
     margin-top: 10px;
     background-color: #f9f9f9;
+    margin-bottom: 20px;
 }
 
 .quiz-btn {
