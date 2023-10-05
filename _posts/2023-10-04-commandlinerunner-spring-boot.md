@@ -66,16 +66,18 @@ The `@Component` annotation is used in Spring to indicate that a class should be
 
 The String... syntax in Java denotes a varargs (variable number of arguments). It allows you to pass any number of arguments when invoking a method. Internally, varargs are treated as an array. The key difference between String... args and String[] args is in how you call the method. With varargs (String... args), you can call the method with multiple string arguments directly, without having to create an array. With String[] args, you'd need to pass an array of strings. However, inside the method body, args behaves like an array in both cases.
 
-
 <script>
-function toggleAnswer(answerId, buttonElement) {
+function toggleAnswer(answerId) {
     var answer = document.getElementById(answerId);
-    if (answer.style.display === "none" || answer.style.display === "") {
+    var button = event.currentTarget;  // Get the button that was clicked
+    if (button.getAttribute('data-showing') === "false") {
         answer.style.display = "block";
-        buttonElement.textContent = "Hide Answer";
+        button.textContent = "Hide Answer";
+        button.setAttribute('data-showing', 'true');
     } else {
         answer.style.display = "none";
-        buttonElement.textContent = "Show Answer";
+        button.textContent = "Show Answer";
+        button.setAttribute('data-showing', 'false');
     }
 }
 </script>
