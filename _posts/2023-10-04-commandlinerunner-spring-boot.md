@@ -58,19 +58,3 @@ public class DemoCommandLineApplication implements CommandLineRunner {
 <div class="quiz-answer" id="answer2">
 The String... syntax in Java denotes a varargs (variable number of arguments). It allows you to pass any number of arguments when invoking a method. Internally, varargs are treated as an array. The key difference between String... args and String[] args is in how you call the method. With varargs (String... args), you can call the method with multiple string arguments directly, without having to create an array. With String[] args, you'd need to pass an array of strings. However, inside the method body, args behaves like an array in both cases.
 </div>
-
-<script>
-function toggleAnswer(answerId) {
-    var answer = document.getElementById(answerId);
-    var button = event.currentTarget;  // Get the button that was clicked
-    if (button.getAttribute('data-showing') === "false") {
-        answer.style.display = "block";
-        button.textContent = "Hide Answer";
-        button.setAttribute('data-showing', 'true');
-    } else {
-        answer.style.display = "none";
-        button.textContent = "Show Answer";
-        button.setAttribute('data-showing', 'false');
-    }
-}
-</script>
