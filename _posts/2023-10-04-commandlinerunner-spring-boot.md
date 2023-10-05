@@ -11,19 +11,14 @@ published: true
 ---
 
 <script>
-<script>
-function toggleAnswer(answerId, buttonElement) {
+function toggleAnswer(answerId) {
     var answer = document.getElementById(answerId);
-    if (answer.style.display === "none" || answer.style.display === "") {
+    if (answer.style.display === "none") {
         answer.style.display = "block";
-        buttonElement.innerHTML = "Hide Answer";
     } else {
         answer.style.display = "none";
-        buttonElement.innerHTML = "Show Answer";
     }
 }
-</script>
-
 </script>
 
 
@@ -46,7 +41,7 @@ public class ApplicationStartupRunner implements CommandLineRunner {
 > **Quiz:** What's the role of the `@Component` annotation in Spring?
 
 <button class="quiz-btn" onclick="toggleAnswer('answer1')">Show Answer</button>
-<button class="quiz-btn" onclick="toggleAnswer('answer1', this)">Show Answer</button>
+<div class="quiz-answer" id="answer1">
 The `@Component` annotation is used in Spring to indicate that a class should be considered as a Spring-managed component. When the application context is being created, classes annotated with `@Component` are auto-detected and a bean instance is created for them in the Spring container.
 </div>
 
