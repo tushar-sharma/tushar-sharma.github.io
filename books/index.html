@@ -11,56 +11,58 @@ author: Tushar Sharma
 <link rel="stylesheet" href="{{ root_url }}/css/books.css" />
 <link rel="stylesheet" href="{{ root_url }}/css/search.css" />
 <link rel="stylesheet" type="text/css" href="{{ root_ulr }}/css/jquery.dataTables.min.css" />
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8"
+  src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 <style>
-.cl {
+  .cl {
     white-space: nowrap !important;
   }
-.dataTables_filter {
+
+  .dataTables_filter {
     float: right !important;
-}
+  }
 </style>
 <!-- end heading -->
-<script  type="text/javascript">
+<script type="text/javascript">
 
-$(document).ready(function () {
+  $(document).ready(function () {
 
 
- // Material Design example
-$(document).ready(function () {
+    // Material Design example
+    $(document).ready(function () {
 
-  var table = $('#dtMaterialDesignExample').DataTable({
-  "bSort": false,
-  pageLength : 10,
-  "autoWidth" : true,
-  "columns": [
-    null,
-    null,
-    { 'searchable': false },
-    { 'searchable': false }
-  ]
-});
+      var table = $('#dtMaterialDesignExample').DataTable({
+        "bSort": false,
+        pageLength: 10,
+        "autoWidth": true,
+        "columns": [
+          null,
+          null,
+          {'searchable': false},
+          {'searchable': false}
+        ]
+      });
 
-// You can hide and remove rows as follows
-table.rows('.hidden').remove().draw();
+      // You can hide and remove rows as follows
+      table.rows('.hidden').remove().draw();
 
-$('#dtMaterialDesignExample_wrapper').find('label').each(function () {
-$(this).parent().append($(this).children());
-});
-$('#dtMaterialDesignExample_wrapper .dataTables_filter').find('input').each(function () {
-$('input').attr("placeholder", "Search");
-$('input').removeClass('form-control-sm');
-});
-$('#dtMaterialDesignExample_wrapper .dataTables_length').addClass('d-flex flex-row');
-$('#dtMaterialDesignExample_wrapper .dataTables_filter').addClass('md-form');
-$('#dtMaterialDesignExample_wrapper select').removeClass(
-'custom-select custom-select-sm form-control form-control-sm');
-$('#dtMaterialDesignExample_wrapper select').addClass('mdb-select');
-$('#dtMaterialDesignExample_wrapper .mdb-select').materialSelect();
-$('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
-});
+      $('#dtMaterialDesignExample_wrapper').find('label').each(function () {
+        $(this).parent().append($(this).children());
+      });
+      $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('input').each(function () {
+        $('input').attr("placeholder", "Search");
+        $('input').removeClass('form-control-sm');
+      });
+      $('#dtMaterialDesignExample_wrapper .dataTables_length').addClass('d-flex flex-row');
+      $('#dtMaterialDesignExample_wrapper .dataTables_filter').addClass('md-form');
+      $('#dtMaterialDesignExample_wrapper select').removeClass(
+        'custom-select custom-select-sm form-control form-control-sm');
+      $('#dtMaterialDesignExample_wrapper select').addClass('mdb-select');
+      $('#dtMaterialDesignExample_wrapper .mdb-select').materialSelect();
+      $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
+    });
 
-});
+  });
 </script>
 
 <!-- dummy box begins -->
@@ -70,7 +72,8 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 <!-- heading -->
 <h1 class="entry-title">Books on my shelf</h1>
 
-<p>Feel free to send me your  <a href="{{ root_url }}/contact" >favourite book suggestion</a>. I will give you a shout-out by adding your name in the comments.</p><br>
+<p>Feel free to send me your <a href="{{ root_url }}/contact">favourite book suggestion</a>. I will give you a shout-out
+  by adding your name in the comments.</p><br>
 
 <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
   <thead>
@@ -95,11 +98,13 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
       <td>
         <div class="cl">
           {% for i in (1..5) %}
-           <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
           {% endfor %}
         </div>
       </td>
-      <td>Acclaimed as world's greatest novel but was a tedious read. Philosophical ramblings of Lenin & fall of Anna from grace to the tragic end of extramarital affair with dashing cavalry officer Count Alexi makes it a great read.</td>
+      <td>Acclaimed as world's greatest novel but was a tedious read. Philosophical ramblings of Lenin & fall of Anna
+        from grace to the tragic end of extramarital affair with dashing cavalry officer Count Alexi makes it a great
+        read.</td>
     </tr>
 
     <!-- Great Expectation -->
@@ -109,11 +114,13 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
       <td>
         <div class="cl">
           {% for i in (1..5) %}
-           <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
           {% endfor %}
         </div>
       </td>
-      <td>This was my first novel of Charles Dickens. The rustic charm of Dickens is apparent throughtout the novel. It's humorous at times, often grim but retains the literary prowess of Dickens. If you're a fan of classics, it's a fascinating read.</td>
+      <td>This was my first novel of Charles Dickens. The rustic charm of Dickens is apparent throughtout the novel.
+        It's humorous at times, often grim but retains the literary prowess of Dickens. If you're a fan of classics,
+        it's a fascinating read.</td>
     </tr>
 
     <!-- Man's Search for Meaning -->
@@ -122,853 +129,963 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
       <td>Viktor Frankl</td>
       <td>
         <div class="cl">
-           {% for i in (1..5) %}
-             <span class="fa fa-star checked"></span>
-           {% endfor %}
-         </div>
+          {% for i in (1..5) %}
+          <span class="fa fa-star checked"></span>
+          {% endfor %}
+        </div>
       </td>
-      <td>Viktor Frankl is a  Holocaust survivor and a neurologist and psychiatrist. In his memoir he narrates his life in Nazi concentrated camps.  It's an interesting read on how he proposes to find meaning in life amidst hostile environment.</td>
+      <td>Viktor Frankl is a Holocaust survivor and a neurologist and psychiatrist. In his memoir he narrates his life
+        in Nazi concentrated camps. It's an interesting read on how he proposes to find meaning in life amidst hostile
+        environment.</td>
     </tr>
 
-	 <!--Wings of Fire: An Autobiography -->
+    <!--Wings of Fire: An Autobiography -->
     <tr>
       <td>Wings of Fire: An Autobiography</td>
       <td>A. P. J. Abdul Kalam</td>
       <td>
         <div class="cl">
           {% for i in (1..3) %}
-            <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
           {% endfor %}
           <i class="fas fa-star-half-alt"></i>
           <i class="icon-star-empty"></i>
         </div>
 
       </td>
-      <td>He was the most loved President of India. It's an autobiography where he covers his humble beginning & his journey in becoming "Missile Man" of India. </td>
+      <td>He was the most loved President of India. It's an autobiography where he covers his humble beginning & his
+        journey in becoming "Missile Man" of India. </td>
     </tr>
 
 
-	 <!-- The Five People You Meet in Heaven -->
+    <!-- The Five People You Meet in Heaven -->
     <tr>
-      <td>The Five People You Meet in Heaven	</td>
+      <td>The Five People You Meet in Heaven </td>
       <td>Mitch Albom</td>
       <td>
         <div class="cl">
           {% for i in (1..3) %}
-            <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
           {% endfor %}
           {% for i in (1..2) %}
-            <i class="icon-star-empty"></i>
+          <i class="icon-star-empty"></i>
           {% endfor %}
         </div>
 
       </td>
-      <td>Mitch's stories are often inspiring trying to illuminate the meaning of life. It's a story of a veteran where he learns that heaven is not a destination. It's a place where your life is explained to you by five people.</td>
+      <td>Mitch's stories are often inspiring trying to illuminate the meaning of life. It's a story of a veteran where
+        he learns that heaven is not a destination. It's a place where your life is explained to you by five people.
+      </td>
     </tr>
 
-	<!-- Heidi -->
+    <!-- Heidi -->
     <tr>
       <td>Heidi</td>
       <td>Johanna Spyri</td>
       <td>
-        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i></div>
-	  </td>
-      <td>One of my favourite novels while growing up. I was in love with Heidi as well as envied her. The story is about an orphan girl, Heidi, who has been sent to live with a lonely, angry man at the top of a mountain in the Swiss Alp. A must read if you love nature. </td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star-empty"></i></div>
+      </td>
+      <td>One of my favourite novels while growing up. I was in love with Heidi as well as envied her. The story is
+        about an orphan girl, Heidi, who has been sent to live with a lonely, angry man at the top of a mountain in the
+        Swiss Alp. A must read if you love nature. </td>
     </tr>
 
 
-	<!--  The Selfish Gene -->
+    <!--  The Selfish Gene -->
     <tr>
       <td>The Selfish Gene</td>
       <td>Richard Dawkins</td>
       <td>
-      <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div>
-	  </td>
-      <td>Listed as the most influential science book of all time in a poll to celebrate the 30th anniversary of the Royal Society science book prize. Richard Dawkins is an outspoken evolutionary scientist and an atheist. He is an eloquent writer and a popularizer of science.</td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></i></div>
+      </td>
+      <td>Listed as the most influential science book of all time in a poll to celebrate the 30th anniversary of the
+        Royal Society science book prize. Richard Dawkins is an outspoken evolutionary scientist and an atheist. He is
+        an eloquent writer and a popularizer of science.</td>
     </tr>
 
-	<!--  The Complete Sherlock Holmes -->
+    <!--  The Complete Sherlock Holmes -->
     <tr>
       <td>The Complete Sherlock Holmes</td>
       <td>Arthur Conan Doyle</td>
       <td>
-        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></div>
-	  </td>
-      <td>Absolute classics if you're fan of detective stories. Sherlock Holmes is the one of the most imparishable characters of history.</td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></div>
+      </td>
+      <td>Absolute classics if you're fan of detective stories. Sherlock Holmes is the one of the most imparishable
+        characters of history.</td>
     </tr>
 
-	<!-- The Monk Who Sold His Ferrari  -->
+    <!-- The Monk Who Sold His Ferrari  -->
     <tr>
       <td>The Monk Who Sold His Ferrari</td>
       <td>Robin Sharma</td>
       <td>
-	  <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></div>
-	  </td>
-      <td>It's a self help book. It's an easy read. It discusses seven virtues of enlightened Learning that could be incorporated in daily life. </td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star-empty"></i><i class="icon-star-empty"></i></div>
+      </td>
+      <td>It's a self help book. It's an easy read. It discusses seven virtues of enlightened Learning that could be
+        incorporated in daily life. </td>
     </tr>
 
-<!-- left hand of darkness  -->
-<tr>
-  <td>Left hand of darkness</td>
-  <td>Ursula K. Le Guin</td>
-  <td>
-      <div class="cl">
-        {% for i in (1..5) %}
+    <!-- left hand of darkness  -->
+    <tr>
+      <td>Left hand of darkness</td>
+      <td>Ursula K. Le Guin</td>
+      <td>
+        <div class="cl">
+          {% for i in (1..5) %}
           <span class="fa fa-star checked"></span>
-        {% endfor %}
-      </div>
-  </td>
-  <td>A classic must-read in science-fiction genre, the story revolves around Genly Ai, an earthling, on his perilous journey in an alien planet Gethen to pursuade them to join Ekumen (an intergalactic civilization). Living with androgynous people of Gethens, he embraces contradictory aspects of psychology, society,  patriotism, friendship, religion, sexual orientation, etc.</td>
-</tr>
-
-
-<!-- plato and platypus  -->
-<tr>
-  <td>Plato and platypus</td>
-  <td>Thomas Cathcart, Daniel Klein</td>
-  <td>
-  <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></i></div>
-  </td>
-  <td>A quick read, a blend of jokes and philosophy. Read it for a lighter introduction to philosophy.</td>
-</tr>
-
-<!-- The Discovery of India  -->
-<tr>
-  <td>The Discovery of India</td>
-  <td>Jawaharlal Nehru</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></div></td>
-  <td>Legacy of Nehru, India's first Prime Minister,  is controversial. The left-wing often glorifies him while the right-wing demeans him. His fascination for Fabian socialism, his impetus for education in India or commitment to secularism & parliamentary democracy along with blunders in dealing with China  makes his memoir a great read.</td>
-</tr>
-
-<!-- Five Point Someone   -->
-<tr>
-  <td>Five Point Someone </td>
-  <td>Chetan Bhagat</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></div></td>
-  <td>If you are an engineering student college, you are probably enamoured by it. It's a story of three friends in IIT who bunks classes, succumb to drinking & smoking, have sex, yet manage to secure jobs at the end of the college. It's a quick read though it lacks literary merit. </td>
-</tr>
-
-<!--  The Code Book -->
-<tr>
-  <td>The Code Book</td>
-  <td>Simon Singh</td>
-  <td>
-    <div class="cl">
-      {% for i in (1..5) %}
-        <span class="fa fa-star checked"></span>
-      {% endfor %}
-    </div>
-  </td>
-  <td>From the mlecchita-vikalpa, a 4th century AD manuscript, to the Enigma machine, Simon Singh dives into the world secret ciphers which have not only won wars but also altered history. This is probably a breathtaking book who want to stroll into the world of cryptography.</td>
-</tr>
-
-<!--  Macbeth -->
-<tr>
-  <td>Macbeth</td>
-  <td>William Shakespeare</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
-  <td>A Shakespeare's classic and a must read. It's a great trajedy which traces the rise and fall of Macbeth. I am usually relish the soliloquies in the Shakespeare's play.</td>
-</tr>
-
-
-<!-- Network Security -->
-<tr>
-  <td>Network Security</td>
-  <td>Charlie Kaufman</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></div></td>
-  <td>It's an excellent book for introduction to security & cryptography. Was a great help in my semester project.</td>
-</tr>
-
-
-<!--  Our Tress Still Grow in Dehra -->
-<tr>
-  <td>Our Tress Still Grow in Dehra</td>
-  <td>Ruskin Bond</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></i></div></td>
-  <td>Ruskin Bond is India's Wordsworth. Fourteen engaging stories from one of India's master story-tellers Semi-autobiographical in nature, these stories span the period from the author's childhood to the present.</td>
-</tr>
-
-<!--  Trespassing on Einstein's Lawn -->
-<tr>
-  <td>Trespassing on Einstein's Lawn</td>
-  <td>Amanda Gefter</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
-  <td>This book won Physics World's 2015 book of the year award. It's a memoir where Amanda tracers her life from a fifteeen year old teenager to being an editor of New Scientist while meeting prominent scientists in understanding the physical reality of the universe.</td>
-</tr>
-
-<!-- The Hindu View Of Life  -->
-<tr>
-  <td>The Hindu View Of Life</td>
-  <td>Sarvepalli  Radhakrishnan</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></i></div></td>
-  <td>He was the first Vice President of independent India & the most distinguished twentieth-century scholars of comparative religion and philosophy. His interpretation of Hindiusm is quite liberal and pluralistic.  He is a Hindu apologetics and lamented "uninformed Western criticism", contributing to the formation of contemporary Hindu identity.</td>
-</tr>
-
-
-
-<!--  Why We Get Sick: The New Science of Darwinian Medicine -->
-<tr>
-  <td>Why We Get Sick: The New Science of Darwinian Medicine</td>
-  <td>Randolph M. Nesse</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
-  <td>Recommended by Richard Dawkins. The book's main title is misleading as it's not a book about diseases & cure. However it tries to explore the evolutionary reasons for certain diseases. Like uric acid would not have been a problem for our African savannah dwelling ancestors that barely lived forty years. However with the surge of human's life expectancy, the higher uric acid, despite being an antioxidant, leads to gout. Must read to understand Darwinian origin of diseases & medicine.</td>
-</tr>
-
-<!-- The Demon-Haunted World  -->
-<tr>
-  <td>The Demon-Haunted World</td>
-  <td>Carl Sagan</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
-  <td>Carl Sagan was an American astronomer, scientist & a science popularizer. He coined the concept of baloney detection kit, rules for critical thinking. Why do people belive in UFO, astrology, paranormal, etc? Isn't science itself interesting. However it's not always eays to detect pseudoscience. This book is most relevant in our times as we live in post-truth world rampant with psuedoscience, fake news, etc. </td>
-</tr>
-
-<!--Midnight's Children -->
-<tr>
-  <td>Midnight's Children</td>
-  <td>Salman Rushdie</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i></i></div></td>
-  <td>It won both the Booker Prize and the James Tait Black Memorial Prize in 1981. To be updated...</td>
-</tr>
-
-<!--  Why I am an atheist -->
-<tr>
-  <td>Why I am an atheist</td>
-  <td>Bhagat Singh</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></i></div></td>
-  <td>To be updated...</td>
-</tr>
-
-<!-- The Gene: An Intimate History-->
-<tr>
-  <td>The Gene: An Intimate History</td>
-  <td>Siddhartha Mukherjee</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
-  <td>To be updated...</td>
-</tr>
-
-<!--  The Overcoat-->
-<tr>
-  <td>The Overcoat</td>
-  <td>Nikolai Gogol</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></i></div></td>
-  <td>To be updated...</td>
-</tr>
-
-<!-- Harp of India-->
-<tr>
-  <td>The Harp of India</td>
-  <td>Henry Louis Vivian Derozio</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
-  <td>He is one of my favourite Anglo Indian poet. The poem laments India's loss of freedom to the British colonial rule and hopes it would regain its past glory.</td>
-</tr>
-
-
-<!--Silent Spring  -->
-<tr>
-  <td>Silent Spring</td>
-  <td>Rachel Carson</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
-  <td>Recommended by Peter Singer & Varun Gandhi. To be updated...</td>
-</tr>
-
-
-<!--The Emperor of All Maladies  -->
-<tr>
-  <td>The Emperor of All Maladies</td>
-  <td>Siddhartha Mukherjee</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
-  <td>This book won the 2011 Pultizer Prize for General Non-fiction. It's a fascinating biography of a morbid disease, cancer. It's a riveting account of quest to understand cancer and finding its cure from ancient ancient Egypt till 20<sup>th</sup> century. Siddhartha Mukherjee's anecdotes of his cancer patients succinctly conveys the trauma experienced by cancer patients.</td>
-</tr>
-
-<!--Fooled by Randomness-->
-<tr>
-  <td>Fooled by Randomness</td>
-  <td>Nassim Nicholas Taleb</td>
-  <td>
-    <div class="cl">
-      {% for i in (1..4) %}
-        <span class="fa fa-star checked"></span>
-      {% endfor %}
-      <i class="icon-star-empty"></i>
-    </div>
-  </td>
-
-  <td>To be updated...</td>
-</tr>
-
-
-<!--I Wandered Lonely as a Cloud-->
-<tr>
-  <td>I Wandered Lonely as a Cloud</td>
-  <td>William Wordsworth</td>
-  <td><div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></i></div></td>
-  <td>It's a short beautiful poem. Wordsworth was inspired by a long belt of "daffodills" as visited a lake with his sister. "They flash upon that inward eye, which is the bliss of solitude". I guess my only remorse is that my solitude doesn't have any daffodils.  </td>
-</tr>
-
-<!--A Mathematician's Apology-->
-<tr>
-  <td>A Mathematician's Apology  </td>
-  <td> G. H. Hardy</td>
-  <td>
-    <div class="cl">
-      {% for i in (1..3) %}
-        <span class="fa fa-star checked"></span>
-      {% endfor %}
-      <i class="icon-star-empty"></i>
-      <i class="icon-star-empty"></i>
-    </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<tr>
-  <td>One, Two, Three...Infinity</td>
-  <td>George Gamow</td>
-  <td>
-    <div class="cl">
-      {% for i in (1..5) %}
-        <span class="fa fa-star checked"></span>
-      {% endfor %}
-    </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!-- Kafka: The Definitive Guide  -->
-<tr>
-  <td>Kafka: The Definitive Guide</td>
-  <td>Gwen Shapira, Neha Narkhede, Todd Palino</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book4"></div>
-   </div>
-  </div>
-  </td>
-  <td>Co-author Neha Narkhede helped develop Apache Kafka at LinkedIn. To be updated...</td>
-</tr>
-
-<!--Technical Analysis of the Financial Markets  -->
-<tr>
-  <td>Technical Analysis of the Financial Markets</td>
-  <td>John J. Murphy</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book5"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by @BlogJulianKomar. To be updated...</td>
-</tr>
-
-
-<!--Glimpse of the World History-->
-<tr>
-  <td>Glimpse of the World History</td>
-  <td>Jawaharlal Nehru</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book6"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--Hackers: Heroes of the Computer Revolution -->
-<tr>
-  <td>Hackers: Heroes of the Computer Revolution</td>
-  <td>Steven Levy</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book7"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!--The Evolution of Physics -->
-<tr>
-  <td>The Evolution of Physics</td>
-  <td> Albert Einstein, Leopold Infeld</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book8"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!--Eminent Historians: Their Technology, Their Line, Their Fraud-->
-<tr>
-  <td>Eminent Historians: Their Technology, Their Line, Their Fraud</td>
-  <td>Arun Shourie</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book9"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<tr>
-  <td>Java 8 in Action</td>
-  <td>Raoul-Gabriel Urma, Mario Fusco, Alan Mycroft</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<tr>
-  <td>Mastering Bitcoin</td>
-  <td>Andreas Antonopoulos</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book12"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!--On the Origin of Species -->
-<tr>
-  <td>On the Origin of Species</td>
-  <td>Charles Darwin</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book13"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!-- Musicophilia  -->
-<tr>
-  <td>Musicophilia</td>
-  <td>Oliver Sacks</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book16"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!-- ng-book: The complete book on Angular 8  -->
-<tr>
-  <td>ng-book: The complete book on Angular 8</td>
-  <td>Nate Murray, Felipe Coury, Ari Lerner, Carlos Taborda</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book15"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!-- The Black Book of Communism -->
-<tr class="hidden">
-  <td>The Black Book of Communism</td>
-  <td>Stéphane Courtois, Andrzej Paczkowski, Nicolas Werth, Jean-Louis Margolin</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!-- Thought as a System -->
-<tr class="hidden">
-  <td>Thought as a System</td>
-  <td>David Bohm</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--The Ending of Time -->
-<tr class="hidden">
-  <td>The Ending of Time</td>
-  <td>David Bohm, J. Krishnamurti</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--The Particle Hunters -->
-<tr class="hidden">
-  <td>The Particle Hunters</td>
-  <td>Yuval Ne'eman, Yoram Kirsh</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--Ataturk: The Biography of the Founder of Modern Turkey-->
-<tr class="hidden">
-  <td>Ataturk: The Biography of the Founder of Modern Turkey</td>
-  <td>Andrew Mango</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!-- The Truth Pill -->
-<tr class="hidden">
-  <td>The Truth Pill</td>
-  <td>Dinesh Thakur, Prashant Reddy</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!-- Quantitative Finance with Python -->
-<tr class="hidden">
-  <td>Quantitative Finance with Python</td>
-  <td>Chris Kellihe</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!-- Effective Java  -->
-<tr class="hidden">
-  <td>Effective Java</td>
-  <td>Joshua Bloch</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!--The Wonder That Was India  -->
-<tr class="hidden">
-  <td>The Wonder That Was India</td>
-  <td>Arthur Llewellyn Basham</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--A Perfect Spy -->
-<tr class="hidden">
-  <td>A Perfect Spy</td>
-  <td>John le Carré</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--Neuromancer-->
-<tr class="hidden">
-  <td>Neuromancer</td>
-  <td>William Gibson</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--The Moon Is a Harsh Mistress-->
-<tr class="hidden">
-  <td>The Moon Is a Harsh Mistress</td>
-  <td>Robert A. Heinlein</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!--The Outsider-->
-<tr class="hidden">
-  <td>The Outsider</td>
-  <td>Albert Camus</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by Anurag Kashyap. To be updated...</td>
-</tr>
-
-
-<!--The Trial-->
-<tr class="hidden">
-  <td>The Trial</td>
-  <td>Franz Kafka </td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by Anurag Kashyap. To be updated...</td>
-</tr>
-
-<!--Notes from Underground-->
-<tr class="hidden">
-  <td>Notes from Underground</td>
-  <td>Fyodor Dostoevsky</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by Anurag Kashyap. To be updated...</td>
-</tr>
-
-<!--What Is to Be Done?-->
-<tr class="hidden">
-  <td>What Is to Be Done?</td>
-  <td>Nikolay Chernyshevsky</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--Invisible Man-->
-<tr class="hidden">
-  <td>Invisible Man</td>
-  <td>Ralph Ellison</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="book10"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--Mitrokhin Archive-->
-<tr class="hidden">
-  <td>Mitrokhin Archive</td>
-  <td>Vasili Mitrokhin</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--Kafka on the Shore-->
-<tr class="hidden">
-  <td>Kafka on the Shore</td>
-  <td>Haruki Murakami</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-<!--Rust for Rustaceans-->
-<tr class="hidden">
-  <td>Rust for Rustaceans</td>
-  <td>Jon Gjengset</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!--Desert Solitaire-->
-<tr class="hidden">
-  <td>Desert Solitaire</td>
-  <td>Edward Abbey</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by Kristina Lynn. To be updated...</td>
-</tr>
-
-<!--Physics of the Impossible-->
-<tr class="hidden">
-  <td>Physics of the Impossible</td>
-  <td>Michio Kaku</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by Simon Clark. To be updated...</td>
-</tr>
-
-<!--Quantum: Einstein, Bohr, and the Great Debate About the Nature of Reality-->
-<tr class="hidden">
-  <td>Quantum: Einstein, Bohr, and the Great Debate About the Nature of Reality</td>
-  <td>Manjit Kumar</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by Simon Clark. To be updated...</td>
-</tr>
-
-
-<!--Chromosome Woman, Nomad Scientist: E. K. Janaki Ammal-->
-<tr class="hidden">
-  <td>Chromosome Woman, Nomad Scientist: E. K. Janaki Ammal</td>
-  <td>Savithri Preetha Nair</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by Ramachandra Guha. To be updated...</td>
-</tr>
-
-
-<!--Small Is Beautiful-->
-<tr class="hidden">
-  <td>Small Is Beautiful</td>
-  <td>E. F. Schumacher</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by Ramachandra Guha. To be updated...</td>
-</tr>
-
-<!--Normal People-->
-<tr class="hidden">
-  <td>Normal People</td>
-  <td>Sally Rooney</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by @bookishsophia. To be updated...</td>
-</tr>
-
-<!--The Poppy War-->
-<tr class="hidden">
-  <td>The Poppy War</td>
-  <td>R.F.Kuang</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>Recommended by @bookishsophia. To be updated...</td>
-</tr>
-
-
-<!--The Singing Neanderthals: The Origins of Music, Language, Mind, and Body-->
-<tr class="hidden">
-  <td>The Singing Neanderthals: The Origins of Music, Language, Mind, and Body</td>
-  <td>Steven Mithen</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>Mentioned by Oliver Sacks in Musicophilia. To be updated...</td>
-</tr>
-
-<!--The Uncertainty Solution: How to Invest with Confidence in the Face of the Unknown-->
-<tr class="hidden">
-  <td>The Uncertainty Solution: How to Invest with Confidence in the Face of the Unknown</td>
-  <td>John M. Jennings</td>
-  <td>
-  <div id="progress-outer">
-     <div id="progress-inner" class="tbd"></div>
-   </div>
-  </div>
-  </td>
-  <td>To be updated...</td>
-</tr>
-
-
-<!-- ending -->
+          {% endfor %}
+        </div>
+      </td>
+      <td>A classic must-read in science-fiction genre, the story revolves around Genly Ai, an earthling, on his
+        perilous journey in an alien planet Gethen to pursuade them to join Ekumen (an intergalactic civilization).
+        Living with androgynous people of Gethens, he embraces contradictory aspects of psychology, society, patriotism,
+        friendship, religion, sexual orientation, etc.</td>
+    </tr>
+
+
+    <!-- plato and platypus  -->
+    <tr>
+      <td>Plato and platypus</td>
+      <td>Thomas Cathcart, Daniel Klein</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star-empty"></i><i class="icon-star-empty"></i></i></div>
+      </td>
+      <td>A quick read, a blend of jokes and philosophy. Read it for a lighter introduction to philosophy.</td>
+    </tr>
+
+    <!-- The Discovery of India  -->
+    <tr>
+      <td>The Discovery of India</td>
+      <td>Jawaharlal Nehru</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></div>
+      </td>
+      <td>Legacy of Nehru, India's first Prime Minister, is controversial. The left-wing often glorifies him while the
+        right-wing demeans him. His fascination for Fabian socialism, his impetus for education in India or commitment
+        to secularism & parliamentary democracy along with blunders in dealing with China makes his memoir a great read.
+      </td>
+    </tr>
+
+    <!-- Five Point Someone   -->
+    <tr>
+      <td>Five Point Someone </td>
+      <td>Chetan Bhagat</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i
+            class="icon-star-empty"></i><i class="icon-star-empty"></i></div>
+      </td>
+      <td>If you are an engineering student college, you are probably enamoured by it. It's a story of three friends in
+        IIT who bunks classes, succumb to drinking & smoking, have sex, yet manage to secure jobs at the end of the
+        college. It's a quick read though it lacks literary merit. </td>
+    </tr>
+
+    <!--  The Code Book -->
+    <tr>
+      <td>The Code Book</td>
+      <td>Simon Singh</td>
+      <td>
+        <div class="cl">
+          {% for i in (1..5) %}
+          <span class="fa fa-star checked"></span>
+          {% endfor %}
+        </div>
+      </td>
+      <td>From the mlecchita-vikalpa, a 4th century AD manuscript, to the Enigma machine, Simon Singh dives into the
+        world secret ciphers which have not only won wars but also altered history. This is probably a breathtaking book
+        who want to stroll into the world of cryptography.</td>
+    </tr>
+
+    <!--  Macbeth -->
+    <tr>
+      <td>Macbeth</td>
+      <td>William Shakespeare</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></i></div>
+      </td>
+      <td>A Shakespeare's classic and a must read. It's a great trajedy which traces the rise and fall of Macbeth. I am
+        usually relish the soliloquies in the Shakespeare's play.</td>
+    </tr>
+
+
+    <!-- Network Security -->
+    <tr>
+      <td>Network Security</td>
+      <td>Charlie Kaufman</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></div>
+      </td>
+      <td>It's an excellent book for introduction to security & cryptography. Was a great help in my semester project.
+      </td>
+    </tr>
+
+
+    <!--  Our Tress Still Grow in Dehra -->
+    <tr>
+      <td>Our Tress Still Grow in Dehra</td>
+      <td>Ruskin Bond</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star-empty"></i><i class="icon-star-empty"></i></i></div>
+      </td>
+      <td>Ruskin Bond is India's Wordsworth. Fourteen engaging stories from one of India's master story-tellers
+        Semi-autobiographical in nature, these stories span the period from the author's childhood to the present.</td>
+    </tr>
+
+    <!--  Trespassing on Einstein's Lawn -->
+    <tr>
+      <td>Trespassing on Einstein's Lawn</td>
+      <td>Amanda Gefter</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></i></div>
+      </td>
+      <td>This book won Physics World's 2015 book of the year award. It's a memoir where Amanda tracers her life from a
+        fifteeen year old teenager to being an editor of New Scientist while meeting prominent scientists in
+        understanding the physical reality of the universe.</td>
+    </tr>
+
+    <!-- The Hindu View Of Life  -->
+    <tr>
+      <td>The Hindu View Of Life</td>
+      <td>Sarvepalli Radhakrishnan</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star-empty"></i><i class="icon-star-empty"></i></i></div>
+      </td>
+      <td>He was the first Vice President of independent India & the most distinguished twentieth-century scholars of
+        comparative religion and philosophy. His interpretation of Hindiusm is quite liberal and pluralistic. He is a
+        Hindu apologetics and lamented "uninformed Western criticism", contributing to the formation of contemporary
+        Hindu identity.</td>
+    </tr>
+
+
+
+    <!--  Why We Get Sick: The New Science of Darwinian Medicine -->
+    <tr>
+      <td>Why We Get Sick: The New Science of Darwinian Medicine</td>
+      <td>Randolph M. Nesse</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></i></div>
+      </td>
+      <td>Recommended by Richard Dawkins. The book's main title is misleading as it's not a book about diseases & cure.
+        However it tries to explore the evolutionary reasons for certain diseases. Like uric acid would not have been a
+        problem for our African savannah dwelling ancestors that barely lived forty years. However with the surge of
+        human's life expectancy, the higher uric acid, despite being an antioxidant, leads to gout. Must read to
+        understand Darwinian origin of diseases & medicine.</td>
+    </tr>
+
+    <!-- The Demon-Haunted World  -->
+    <tr>
+      <td>The Demon-Haunted World</td>
+      <td>Carl Sagan</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></i></div>
+      </td>
+      <td>Carl Sagan was an American astronomer, scientist & a science popularizer. He coined the concept of baloney
+        detection kit, rules for critical thinking. Why do people belive in UFO, astrology, paranormal, etc? Isn't
+        science itself interesting. However it's not always eays to detect pseudoscience. This book is most relevant in
+        our times as we live in post-truth world rampant with psuedoscience, fake news, etc. </td>
+    </tr>
+
+    <!--Midnight's Children -->
+    <tr>
+      <td>Midnight's Children</td>
+      <td>Salman Rushdie</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star-empty"></i></i></div>
+      </td>
+      <td>It won both the Booker Prize and the James Tait Black Memorial Prize in 1981. To be updated...</td>
+    </tr>
+
+    <!--  Why I am an atheist -->
+    <tr>
+      <td>Why I am an atheist</td>
+      <td>Bhagat Singh</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star-empty"></i><i class="icon-star-empty"></i></i></div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!-- The Gene: An Intimate History-->
+    <tr>
+      <td>The Gene: An Intimate History</td>
+      <td>Siddhartha Mukherjee</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></i></div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--  The Overcoat-->
+    <tr>
+      <td>The Overcoat</td>
+      <td>Nikolai Gogol</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star-empty"></i><i class="icon-star-empty"></i></i></div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!-- Harp of India-->
+    <tr>
+      <td>The Harp of India</td>
+      <td>Henry Louis Vivian Derozio</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></i></div>
+      </td>
+      <td>He is one of my favourite Anglo Indian poet. The poem laments India's loss of freedom to the British colonial
+        rule and hopes it would regain its past glory.</td>
+    </tr>
+
+
+    <!--Silent Spring  -->
+    <tr>
+      <td>Silent Spring</td>
+      <td>Rachel Carson</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></i></div>
+      </td>
+      <td>Recommended by Peter Singer & Varun Gandhi. To be updated...</td>
+    </tr>
+
+
+    <!--The Emperor of All Maladies  -->
+    <tr>
+      <td>The Emperor of All Maladies</td>
+      <td>Siddhartha Mukherjee</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></i></div>
+      </td>
+      <td>This book won the 2011 Pultizer Prize for General Non-fiction. It's a fascinating biography of a morbid
+        disease, cancer. It's a riveting account of quest to understand cancer and finding its cure from ancient ancient
+        Egypt till 20<sup>th</sup> century. Siddhartha Mukherjee's anecdotes of his cancer patients succinctly conveys
+        the trauma experienced by cancer patients.</td>
+    </tr>
+
+    <!--Fooled by Randomness-->
+    <tr>
+      <td>Fooled by Randomness</td>
+      <td>Nassim Nicholas Taleb</td>
+      <td>
+        <div class="cl">
+          {% for i in (1..4) %}
+          <span class="fa fa-star checked"></span>
+          {% endfor %}
+          <i class="icon-star-empty"></i>
+        </div>
+      </td>
+
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!--I Wandered Lonely as a Cloud-->
+    <tr>
+      <td>I Wandered Lonely as a Cloud</td>
+      <td>William Wordsworth</td>
+      <td>
+        <div class="cl"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
+            class="icon-star"></i><i class="icon-star"></i></i></div>
+      </td>
+      <td>It's a short beautiful poem. Wordsworth was inspired by a long belt of "daffodills" as visited a lake with his
+        sister. "They flash upon that inward eye, which is the bliss of solitude". I guess my only remorse is that my
+        solitude doesn't have any daffodils. </td>
+    </tr>
+
+    <!--A Mathematician's Apology-->
+    <tr>
+      <td>A Mathematician's Apology </td>
+      <td> G. H. Hardy</td>
+      <td>
+        <div class="cl">
+          {% for i in (1..3) %}
+          <span class="fa fa-star checked"></span>
+          {% endfor %}
+          <i class="icon-star-empty"></i>
+          <i class="icon-star-empty"></i>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <tr>
+      <td>One, Two, Three...Infinity</td>
+      <td>George Gamow</td>
+      <td>
+        <div class="cl">
+          {% for i in (1..5) %}
+          <span class="fa fa-star checked"></span>
+          {% endfor %}
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!-- Kafka: The Definitive Guide  -->
+    <tr>
+      <td>Kafka: The Definitive Guide</td>
+      <td>Gwen Shapira, Neha Narkhede, Todd Palino</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book4"></div>
+        </div>
+        </div>
+      </td>
+      <td>Co-author Neha Narkhede helped develop Apache Kafka at LinkedIn. To be updated...</td>
+    </tr>
+
+    <!--Technical Analysis of the Financial Markets  -->
+    <tr>
+      <td>Technical Analysis of the Financial Markets</td>
+      <td>John J. Murphy</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book5"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by @BlogJulianKomar. To be updated...</td>
+    </tr>
+
+
+    <!--Glimpse of the World History-->
+    <tr>
+      <td>Glimpse of the World History</td>
+      <td>Jawaharlal Nehru</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book6"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--Hackers: Heroes of the Computer Revolution -->
+    <tr>
+      <td>Hackers: Heroes of the Computer Revolution</td>
+      <td>Steven Levy</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book7"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!--The Evolution of Physics -->
+    <tr>
+      <td>The Evolution of Physics</td>
+      <td> Albert Einstein, Leopold Infeld</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book8"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!--Eminent Historians: Their Technology, Their Line, Their Fraud-->
+    <tr>
+      <td>Eminent Historians: Their Technology, Their Line, Their Fraud</td>
+      <td>Arun Shourie</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book9"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <tr>
+      <td>Java 8 in Action</td>
+      <td>Raoul-Gabriel Urma, Mario Fusco, Alan Mycroft</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <tr>
+      <td>Mastering Bitcoin</td>
+      <td>Andreas Antonopoulos</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book12"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!--On the Origin of Species -->
+    <tr>
+      <td>On the Origin of Species</td>
+      <td>Charles Darwin</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book13"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!-- Musicophilia  -->
+    <tr>
+      <td>Musicophilia</td>
+      <td>Oliver Sacks</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book16"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!-- ng-book: The complete book on Angular 8  -->
+    <tr>
+      <td>ng-book: The complete book on Angular 8</td>
+      <td>Nate Murray, Felipe Coury, Ari Lerner, Carlos Taborda</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book15"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!-- The Black Book of Communism -->
+    <tr class="hidden">
+      <td>The Black Book of Communism</td>
+      <td>Stéphane Courtois, Andrzej Paczkowski, Nicolas Werth, Jean-Louis Margolin</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!-- Thought as a System -->
+    <tr class="hidden">
+      <td>Thought as a System</td>
+      <td>David Bohm</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--The Ending of Time -->
+    <tr class="hidden">
+      <td>The Ending of Time</td>
+      <td>David Bohm, J. Krishnamurti</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--The Particle Hunters -->
+    <tr class="hidden">
+      <td>The Particle Hunters</td>
+      <td>Yuval Ne'eman, Yoram Kirsh</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--Ataturk: The Biography of the Founder of Modern Turkey-->
+    <tr class="hidden">
+      <td>Ataturk: The Biography of the Founder of Modern Turkey</td>
+      <td>Andrew Mango</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!-- The Truth Pill -->
+    <tr class="hidden">
+      <td>The Truth Pill</td>
+      <td>Dinesh Thakur, Prashant Reddy</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!-- Quantitative Finance with Python -->
+    <tr class="hidden">
+      <td>Quantitative Finance with Python</td>
+      <td>Chris Kellihe</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!-- Effective Java  -->
+    <tr class="hidden">
+      <td>Effective Java</td>
+      <td>Joshua Bloch</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!--The Wonder That Was India  -->
+    <tr class="hidden">
+      <td>The Wonder That Was India</td>
+      <td>Arthur Llewellyn Basham</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--A Perfect Spy -->
+    <tr class="hidden">
+      <td>A Perfect Spy</td>
+      <td>John le Carré</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--Neuromancer-->
+    <tr class="hidden">
+      <td>Neuromancer</td>
+      <td>William Gibson</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--The Moon Is a Harsh Mistress-->
+    <tr class="hidden">
+      <td>The Moon Is a Harsh Mistress</td>
+      <td>Robert A. Heinlein</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!--The Outsider-->
+    <tr class="hidden">
+      <td>The Outsider</td>
+      <td>Albert Camus</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by Anurag Kashyap. To be updated...</td>
+    </tr>
+
+
+    <!--The Trial-->
+    <tr class="hidden">
+      <td>The Trial</td>
+      <td>Franz Kafka </td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by Anurag Kashyap. To be updated...</td>
+    </tr>
+
+    <!--Notes from Underground-->
+    <tr class="hidden">
+      <td>Notes from Underground</td>
+      <td>Fyodor Dostoevsky</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by Anurag Kashyap. To be updated...</td>
+    </tr>
+
+    <!--What Is to Be Done?-->
+    <tr class="hidden">
+      <td>What Is to Be Done?</td>
+      <td>Nikolay Chernyshevsky</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--Invisible Man-->
+    <tr class="hidden">
+      <td>Invisible Man</td>
+      <td>Ralph Ellison</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="book10"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--Mitrokhin Archive-->
+    <tr class="hidden">
+      <td>Mitrokhin Archive</td>
+      <td>Vasili Mitrokhin</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--Kafka on the Shore-->
+    <tr class="hidden">
+      <td>Kafka on the Shore</td>
+      <td>Haruki Murakami</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--Rust for Rustaceans-->
+    <tr class="hidden">
+      <td>Rust for Rustaceans</td>
+      <td>Jon Gjengset</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+
+    <!--Desert Solitaire-->
+    <tr class="hidden">
+      <td>Desert Solitaire</td>
+      <td>Edward Abbey</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by Kristina Lynn. To be updated...</td>
+    </tr>
+
+    <!--Physics of the Impossible-->
+    <tr class="hidden">
+      <td>Physics of the Impossible</td>
+      <td>Michio Kaku</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by Simon Clark. To be updated...</td>
+    </tr>
+
+    <!--Quantum: Einstein, Bohr, and the Great Debate About the Nature of Reality-->
+    <tr class="hidden">
+      <td>Quantum: Einstein, Bohr, and the Great Debate About the Nature of Reality</td>
+      <td>Manjit Kumar</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by Simon Clark. To be updated...</td>
+    </tr>
+
+
+    <!--Chromosome Woman, Nomad Scientist: E. K. Janaki Ammal-->
+    <tr class="hidden">
+      <td>Chromosome Woman, Nomad Scientist: E. K. Janaki Ammal</td>
+      <td>Savithri Preetha Nair</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by Ramachandra Guha. To be updated...</td>
+    </tr>
+
+
+    <!--Small Is Beautiful-->
+    <tr class="hidden">
+      <td>Small Is Beautiful</td>
+      <td>E. F. Schumacher</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by Ramachandra Guha. To be updated...</td>
+    </tr>
+
+    <!--Normal People-->
+    <tr class="hidden">
+      <td>Normal People</td>
+      <td>Sally Rooney</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by @bookishsophia. To be updated...</td>
+    </tr>
+
+    <!--The Poppy War-->
+    <tr class="hidden">
+      <td>The Poppy War</td>
+      <td>R.F.Kuang</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>Recommended by @bookishsophia. To be updated...</td>
+    </tr>
+
+
+    <!--The Singing Neanderthals: The Origins of Music, Language, Mind, and Body-->
+    <tr class="hidden">
+      <td>The Singing Neanderthals: The Origins of Music, Language, Mind, and Body</td>
+      <td>Steven Mithen</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>Mentioned by Oliver Sacks in Musicophilia. To be updated...</td>
+    </tr>
+
+    <!--The Uncertainty Solution: How to Invest with Confidence in the Face of the Unknown-->
+    <tr class="hidden">
+      <td>The Uncertainty Solution: How to Invest with Confidence in the Face of the Unknown</td>
+      <td>John M. Jennings</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!--Extraordinary People : Understanding Savant Syndrome-->
+    <tr class="hidden">
+      <td>Extraordinary People : Understanding Savant Syndrome</td>
+      <td>Darold A. Treffert</td>
+      <td>
+        <div id="progress-outer">
+          <div id="progress-inner" class="tbd"></div>
+        </div>
+        </div>
+      </td>
+      <td>To be updated...</td>
+    </tr>
+
+    <!-- ending -->
 
   </tbody>
   <tfoot>
@@ -980,31 +1097,32 @@ $('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
 <br><br>
 <!-- disclaimer -->
 <center>
-<div class="cl disclaimer">
-  <span class="fa fa-star checked"></span>
+  <div class="cl disclaimer">
+    <span class="fa fa-star checked"></span>
     <span style="color:black"> &nbsp;&nbsp;Terrible, trash, useless</span> <br>
 
-  {% for i in (1..2) %}
+    {% for i in (1..2) %}
     <span class="fa fa-star checked"></span>
-  {% endfor %}
-  <span style="color:black">&nbsp;&nbsp;Poor, disappointing, disliked</span> <br>
+    {% endfor %}
+    <span style="color:black">&nbsp;&nbsp;Poor, disappointing, disliked</span> <br>
 
-  {% for i in (1..3) %}
+    {% for i in (1..3) %}
     <span class="fa fa-star checked"></span>
-  {% endfor %}
-  <span style="color:black">&nbsp;&nbsp;Okay, readable, useful</span> <br>
+    {% endfor %}
+    <span style="color:black">&nbsp;&nbsp;Okay, readable, useful</span> <br>
 
-  {% for i in (1..4) %}
+    {% for i in (1..4) %}
     <span class="fa fa-star checked"></span>
-  {% endfor %}
-  <span style="color:black">&nbsp;&nbsp;Liked well enough to recommend to others</span> <br>
+    {% endfor %}
+    <span style="color:black">&nbsp;&nbsp;Liked well enough to recommend to others</span> <br>
 
-  {% for i in (1..5) %}
+    {% for i in (1..5) %}
     <span class="fa fa-star checked"></span>
-  {% endfor %}
-  <span style="color:black">&nbsp;&nbsp;Liked well enough to reread and recommend enthusiastically to other</span> <br>
+    {% endfor %}
+    <span style="color:black">&nbsp;&nbsp;Liked well enough to reread and recommend enthusiastically to other</span>
+    <br>
 
-</div>
+  </div>
 </center>
 
 <div style="border:none;" id="Pagination" class="pagination"></div>
