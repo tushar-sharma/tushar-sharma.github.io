@@ -137,5 +137,10 @@ ALGOLIA_API_KEY='' bundle exec jekyll algolia
 ### Build this website
 
 ```
+$ g clone git@github.com:tushar-sharma/tushar-sharma.github.io.git
+$ cd $_ 
+$ g clone git@github.com:tushar-sharma/tushar-sharma.github.io.git _site
 $ make build && make verify
+$ cd _site
+$ g a .
 ```
