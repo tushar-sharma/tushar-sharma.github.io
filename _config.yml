@@ -33,6 +33,7 @@ exclude:
 - branch.txt
 - .gitignore
 - .jekyll-cache
+- raw/
 algolia:
   application_id: '0XJJCPHPDY'
   index_name: randomwits
