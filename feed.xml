@@ -7,6 +7,55 @@
     
       
         <item>
+          <title>Dear Vishi, daily log on Oct 11, 2023</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log on Oct 11, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log on Oct 11, 2023.&lt;/p&gt;
+
+&lt;h3 id=&quot;doom-emacs&quot;&gt;Doom Emacs&lt;/h3&gt;
+
+&lt;p&gt;I wanted to try emacs again. I kind of ditched it since I started flirting with vim. First download emacs for &lt;a href=&quot;https://emacsformacosx.com/&quot;&gt;Mac&lt;/a&gt;. Next open you terminal&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone &lt;span class=&quot;nt&quot;&gt;--depth&lt;/span&gt; 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#  we need to make sure the directory does not exist&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; ~/.emacs.d/
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.config/emacs/bin
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./doom &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Also, add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/emacs/bin&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$PATH&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;error-port-already-in-use&quot;&gt;Error: Port already in use&lt;/h3&gt;
+
+&lt;p&gt;Often we see error that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;port already in use&lt;/code&gt;. This happens when another process is already running on the port. Simpler solution is to restart the machine but sometimes that's too cumbersome.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Lets assume port 8082 is unavailable&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# we try to list all processs on this port&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;lsof &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; :8082
+&lt;span class=&quot;c&quot;&gt;# This will gives us the PID for each process&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# The (LISTEN) state indicates that this process is the one listening on the port&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# kill the process&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-9&lt;/span&gt; PID
+&lt;span class=&quot;c&quot;&gt;# -9 option sends a SIGKILL signal, which forces the process to terminate immediately&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;kopi-luwak&quot;&gt;Kopi Luwak&lt;/h3&gt;
+
+&lt;p&gt;Learned today that &lt;strong&gt;kopi luwak&lt;/strong&gt; is the most expensive coffee in the world. It's made from coffee beans that have been partially digested and excreted by the Indonesian palm civet&lt;/p&gt;
+
+&lt;p&gt;It's known for its unique taste, which is notable for its lack of bitterness and acidity. However it's also controversial.&lt;/p&gt;
+
+&lt;p&gt;Civets are typically snatched from their homes and life in the wild to be imprisoned alone in tiny, barren cages. There have been many complaints from international concerns, as well as journalistic programs regarding animal cruelty in these coffee farms.&lt;/p&gt;
+</description>
+          <pubDate>2023-10-11T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/daily-logs-2023-10-11</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2023-10-11</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Dear Vishi, daily log on Oct 10, 2023</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log on Oct 10, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
