@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Snapshot of my travel to Cancun, Mexico
+title: Snapshot of my travel to Cartagena, Colombia
 tags:
   - travel
-  - mexico
-thumb: https://unsplash.com/photos/D4mC9bNSCsE/download?w=800"
-summary: Snapshot of my travel to Cancun, Mexico
-image: https://unsplash.com/photos/D4mC9bNSCsE/download?w=800"
+  - colombia
+thumb: https://unsplash.com/photos/mnrkkwOTqqE/download?w=800"
+summary: Snapshot of my travel to Cartagena, Colombia
+image: https://unsplash.com/photos/mnrkkwOTqqE/download?w=800"
 author: Tushar Sharma
 category: blog
 ---
 
-Snapshot of my travel to Cancun, Mexico.<!-- truncate_here -->
+Snapshot of my travel to Cartagena, Colombia<!-- truncate_here -->
 
-Snapshot of my travel to Cancun, Mexico.
+Snapshot of my travel to Cartagena, Colombia
 
 ### Arrival
 
