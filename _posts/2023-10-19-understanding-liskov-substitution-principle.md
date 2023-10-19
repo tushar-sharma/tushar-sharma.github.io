@@ -58,4 +58,41 @@ public static void main(String[] args) {
 
 In the above code, a Square is-a Rectangle by inheritance. However, when we attempt to set distinct width and height for a Square (which violates a square's properties), we get incorrect results.
 
+### Honoring LSP with Code
+
+One solution is to use an abstract base class or interface and then have separate implementations for Rectangle and Square.
+
+```java
+interface Shape {
+    int getArea();
+}
+class Rectangle implements Shape {
+    protected int width, height;
+
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public int getArea() {
+        return width * height;
+    }
+}
+
+class Square implements Shape {
+    private int side;
+
+    public Square(int side) {
+        this.side = side;
+    }
+
+    @Override
+    public int getArea() {
+        return side * side;
+    }
+}
+```
+
+
 
