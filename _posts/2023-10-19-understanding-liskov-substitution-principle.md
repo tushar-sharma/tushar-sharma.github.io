@@ -94,5 +94,8 @@ class Square implements Shape {
 }
 ```
 
+Now, both Rectangle and Square implement Shape, but they are not directly related by inheritance. This way, we ensure that each class adheres to its intended behavior without breaking the LSP.
+
+
 
 
