@@ -9,6 +9,7 @@ summary: Snapshot of my travel to Cancun, Mexico
 image: https://unsplash.com/photos/D4mC9bNSCsE/download?w=800"
 author: Tushar Sharma
 category: blog
+published: false
 ---
 
 Snapshot of my travel to Cancun, Mexico.<!-- truncate_here -->

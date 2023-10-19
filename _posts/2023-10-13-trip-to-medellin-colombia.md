@@ -9,34 +9,12 @@ summary: Snapshot of my travel to Medellin, Colombia
 image: https://unsplash.com/photos/Iqa-WlbNjqs/download?w=800"
 author: Tushar Sharma
 category: blog
+published: false
 ---
 
 Snapshot of my travel to Medellin, Colombia.<!-- truncate_here -->
 
 Snapshot of my travel to Medellin, Colombia.
-
-### Arrival
-
-I flew from Charlotte Douglas International Airport (CLT) to Cancun International Airport (CUN) airport on November 22 with American Airline. I reached Cancun at 4.30pm.
-
-I have Iphone 14 which supports eSIM. I already had airola. I purchased Mexican plan before reaching there.
-
-### Table tennis coach
-
-I found Jonathan on [instagram](https://www.instagram.com/jonathan_tapia_/). He gives tabel tennis coaching for $15 per hour. This is much cheaper rate than the United States.
-
-### Tours
-
-I took [volleyball airbnb experience](https://www.airbnb.com/experiences/3578453). Chrispy was so welcoming and he was a constant teacher to the game! The games were fun and competitive and met a lot of local friends. A lot of volleyball being played, amazing people to meet and overall wonderful experience for the value! Would recommend to anyone who wants to enjoy the sun, play a little beach volleyball and meet some new friends.
-
-I also took [ATV adventures](https://www.viator.com/tours/Cozumel/ATV-Ride-to-the-Jade-Cavern/d632-3386P12) in Cozumel...
-
-
-### Things to buy before travelling
-
-* Purchase reeef sunscreen.
-
-* Buy [Katadyn one](https://www.amazon.com/gp/product/B01M0MZ7NI/ref=as_li_qf_sp_asin_il_tl).
 
 
 <iframe
@@ -48,12 +26,3 @@ I also took [ATV adventures](https://www.viator.com/tours/Cozumel/ATV-Ride-to-th
   allowfullscreen
   title="Daily log"
 ></iframe>
-
-
-### FAQ
-
-* Immigration
-
-* Uber
-
-* ADO bus stop

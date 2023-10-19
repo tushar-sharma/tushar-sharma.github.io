@@ -1,6 +1,19 @@
 ---
-published: false
+layout: post
+title: Understanding Liskov Substitution Principle
+image: https://unsplash.com/photos/lUaaKCUANVI/download?w=800
+thumb: https://unsplash.com/photos/lUaaKCUANVI/download?w=800
+author: Tushar Sharma
+tags:
+  - oop
+  - java
+category: blog
+published: true
 ---
+
+The Liskov Substitution Principle, named after Barbara Liskov who introduced it in 1987, is one of the five SOLID principles of object-oriented design and programming. It states that<!-- truncate_here -->
+
+
 The Liskov Substitution Principle, named after Barbara Liskov who introduced it in 1987, is one of the five SOLID principles of object-oriented design and programming. It states that:
 
 > "Objects of a superclass shall be replaceable with objects of a subclass without affecting the correctness of the program."
