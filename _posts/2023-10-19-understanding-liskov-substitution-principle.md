@@ -18,7 +18,7 @@ LSP emphasizes the importance of ensuring that a derived class doesn't just inhe
 Let's start with an example where LSP is violated.
 
 ```java
-class Rectable {
+class Rectangle {
   protected int width, height;
   
   public void setWidth(int width) {
@@ -32,6 +32,9 @@ class Rectable {
   public int getArea() {
     return width * height;
   }
+}
+
+class Square extends Rectangle {
 }
 ```
 
