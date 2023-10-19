@@ -35,6 +35,27 @@ class Rectangle {
 }
 
 class Square extends Rectangle {
+    @Override
+    public void setWidth(int width) {
+        super.setWidth(width);
+        super.setHeight(width);  // A square's width and height are the same
+    }
+
+    @Override
+    public void setHeight(int height) {
+        super.setWidth(height);
+        super.setHeight(height);
+    }
+}
+
+public static void main(String[] args) {
+    Rectangle rect = new Square();
+    rect.setWidth(5);
+    rect.setHeight(10);
+    System.out.println(rect.getArea());  // Outputs 100 instead of expected 50
 }
 ```
+
+In the above code, a Square is-a Rectangle by inheritance. However, when we attempt to set distinct width and height for a Square (which violates a square's properties), we get incorrect results.
+
 
