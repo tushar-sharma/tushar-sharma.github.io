@@ -13,89 +13,67 @@ In simple terms, if a program is using a base class, it should be able to switch
 
 LSP emphasizes the importance of ensuring that a derived class doesn't just inherit the properties and behaviors of its base class but also adheres to its intended contract or behavior. By following LSP, developers can write more maintainable and scalable code, making it easier to add or modify subclasses without breaking existing functionality.
 
-### Breaking LSP with Code
+### LSP Violated
 
-Let's start with an example where LSP is violated.
+Imagine you're modeling a simple zoo management software and decide to use a basic inheritance hierarchy for birds.
+
 
 ```java
-class Rectangle {
-  protected int width, height;
-  
-  public void setWidth(int width) {
-    this.width = width;
-  }
-  
-  public void setHeight(int height) {
-    this.height = heigth;
-  }
-  
-  public int getArea() {
-    return width * height;
+class Bird {
+  void fly() {
+        System.out.println("I can fly");
   }
 }
 
-class Square extends Rectangle {
-    @Override
-    public void setWidth(int width) {
-        super.setWidth(width);
-        super.setHeight(width);  // A square's width and height are the same
-    }
-
-    @Override
-    public void setHeight(int height) {
-        super.setWidth(height);
-        super.setHeight(height);
-    }
-}
-
-public static void main(String[] args) {
-    Rectangle rect = new Square();
-    rect.setWidth(5);
-    rect.setHeight(10);
-    System.out.println(rect.getArea());  // Outputs 100 instead of expected 50
+class Ostrich extends Bird {
+  @Override
+  void fly() {
+    throw new UnsupportedOperationException("Ostriches can't fly");
+  }
 }
 ```
 
-In the above code, a Square is-a Rectangle by inheritance. However, when we attempt to set distinct width and height for a Square (which violates a square's properties), we get incorrect results.
+In this case, Ostrich is a subtype of Bird. However, since not all birds can fly (like the ostrich), our current design violates the Liskov Substitution Principle. If a function is designed to operate on a Bird, it might mistakenly call the fly method, causing an unexpected exception when an Ostrich object is passed.
 
-### Honoring LSP with Code
 
-One solution is to use an abstract base class or interface and then have separate implementations for Rectangle and Square.
+### A Better Design
+
+To adhere to the LSP, we can refactor our design to ensure that every subtype of Bird can be replaced seamlessly.
 
 ```java
-interface Shape {
-    int getArea();
+
+abstract class Bird {
+    abstract void move();
 }
-class Rectangle implements Shape {
-    protected int width, height;
 
-    public Rectangle(int width, int height) {
-        this.width = width;
-        this.height = height;
-    }
-
+class Sparrow extends Bird {
     @Override
-    public int getArea() {
-        return width * height;
+    void move() {
+        System.out.println("I fly");
     }
 }
 
-class Square implements Shape {
-    private int side;
-
-    public Square(int side) {
-        this.side = side;
-    }
-
+class Ostrich extends Bird {
     @Override
-    public int getArea() {
-        return side * side;
+    void move() {
+        System.out.println("I run");
     }
 }
+
+````
+With this design, each bird defines its own move method. So, when a function expects a Bird, it can safely call the move method without any unexpected behavior.
+
+
+```java
+public void makeBirdMove(Bird bird) {
+    bird.move();
+}
+
+Sparrow mySparrow = new Sparrow();
+Ostrich myOstrich = new Ostrich();
+
+makeBirdMove(mySparrow);  // Outputs: "I fly"
+makeBirdMove(myOstrich);  // Outputs: "I run"
+
 ```
-
-Now, both Rectangle and Square implement Shape, but they are not directly related by inheritance. This way, we ensure that each class adheres to its intended behavior without breaking the LSP.
-
-
-
 
