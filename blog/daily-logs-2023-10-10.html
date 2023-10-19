@@ -277,6 +277,20 @@ header li {
 
 <iframe style="position: relative;  width: 100%;" height="400" src="/encrypted/2023-10-10-daily-logs-2023-10-10.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Daily log"></iframe>
 
+<script>
+$(document).ready(function() {
+    $('iframe[title="Daily log"]').on('load', function() {
+        try {
+            var iframeBody = this.contentWindow.document.body;
+            var height = $(iframeBody).height();
+            $(this).height(height);
+        } catch (e) {
+            console.error("Could not adjust iframe size:", e);
+        }
+    });
+});
+</script>
+
 
 
 

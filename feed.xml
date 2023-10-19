@@ -7,6 +7,121 @@
     
       
         <item>
+          <title>Understanding Liskov Substitution Principle</title>
+          <description>&lt;p&gt;The Liskov Substitution Principle, named after Barbara Liskov who introduced it in 1987, is one of the five SOLID principles of object-oriented design and programming. It states that&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;The Liskov Substitution Principle, named after Barbara Liskov who introduced it in 1987, is one of the five SOLID principles of object-oriented design and programming. It states that:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&quot;Objects of a superclass shall be replaceable with objects of a subclass without affecting the correctness of the program.&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In simple terms, if a program is using a base class, it should be able to switch to a derived class without any unexpected behavior.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-is-lsp-important&quot;&gt;Why is LSP Important?&lt;/h3&gt;
+
+&lt;p&gt;LSP emphasizes the importance of ensuring that a derived class doesn't just inherit the properties and behaviors of its base class but also adheres to its intended contract or behavior. By following LSP, developers can write more maintainable and scalable code, making it easier to add or modify subclasses without breaking existing functionality.&lt;/p&gt;
+
+&lt;h3 id=&quot;lsp-violated&quot;&gt;LSP Violated&lt;/h3&gt;
+
+&lt;p&gt;Imagine you're modeling a simple zoo management software and decide to use a basic inheritance hierarchy for birds.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bird&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;I can fly&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Ostrich&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bird&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;UnsupportedOperationException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Ostriches can't fly&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this case, Ostrich is a subtype of Bird. However, since not all birds can fly (like the ostrich), our current design violates the Liskov Substitution Principle. If a function is designed to operate on a Bird, it might mistakenly call the fly method, causing an unexpected exception when an Ostrich object is passed.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-better-design&quot;&gt;A Better Design&lt;/h3&gt;
+
+&lt;p&gt;To adhere to the LSP, we can refactor our design to ensure that every subtype of Bird can be replaced seamlessly.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bird&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Sparrow&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bird&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;I fly&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Ostrich&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bird&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;I run&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;With this design, each bird defines its own move method. So, when a function expects a Bird, it can safely call the move method without any unexpected behavior.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;makeBirdMove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Bird&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bird&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;bird&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;Sparrow&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mySparrow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Sparrow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;Ostrich&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myOstrich&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Ostrich&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;makeBirdMove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mySparrow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Outputs: &quot;I fly&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;makeBirdMove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;myOstrich&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Outputs: &quot;I run&quot;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+          <pubDate>2023-10-19T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/understanding-liskov-substitution-principle</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/understanding-liskov-substitution-principle</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Dear Vishi, daily log on Oct 13, 2023</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for Oct 13, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for Oct 13, 2023.&lt;/p&gt;
+
+&lt;h2 id=&quot;la-fitness&quot;&gt;La Fitness&lt;/h2&gt;
+
+&lt;p&gt;I ran a treadmill for over 2 miles. I took a break after every 0.5 mile. Since my right airpod is missing, I am learning to run without music. Not sure pros or cons of listening music while running. Nevertheless I dont have a choice.&lt;/p&gt;
+
+&lt;p&gt;Today was leg's day. Started with leg curl on machine. Next barbell squat and inclined leg press.&lt;/p&gt;
+
+&lt;h2 id=&quot;donnie-darko&quot;&gt;Donnie Darko&lt;/h2&gt;
+
+&lt;p&gt;I watched Donnie Darko today at Ayrsley Grand Cinema &lt;sup id=&quot;fnref:addr&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:addr&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. The film's conclusion, with its foray into time travel, genuinely piqued my interest. While its portrayal of wormholes and the underlying science felt somewhat superficial, it's evident that the movie leans more towards drama. From the outset, it paints a picture of a young man who seems to grapple with schizophrenia. The graphics may not have been groundbreaking, but the story's depth made up for it.&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:addr&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;9110 Kings Parade Blvd, Charlotte, NC 28273 &lt;a href=&quot;#fnref:addr&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2023-10-13T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/daily-logs-2023-10-13</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2023-10-13</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Dear Vishi, daily log on Oct 11, 2023</title>
           <description>&lt;p&gt;Dear Vishi, this is my daily log on Oct 11, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -73,6 +188,20 @@
 &lt;p&gt;The tradition of lucky peanuts at NASA dates back to the Ranger missions in the 1960s. After facing six failures with Ranger missions aimed at the moon, the team at NASA's Jet Propulsion Laboratory (JPL) opened peanuts for good luck during the Ranger 7 launch. When the mission was a success, the &quot;lucky peanuts&quot; ritual was born. Since then, it has become customary for JPL staff to munch on peanuts during critical mission events, hoping for favorable outcomes.&lt;/p&gt;
 
 &lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;400&quot; src=&quot;/encrypted/2023-10-10-daily-logs-2023-10-10.html&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Daily log&quot;&gt;&lt;/iframe&gt;
+
+&lt;script&gt;
+$(document).ready(function() {
+    $('iframe[title=&quot;Daily log&quot;]').on('load', function() {
+        try {
+            var iframeBody = this.contentWindow.document.body;
+            var height = $(iframeBody).height();
+            $(this).height(height);
+        } catch (e) {
+            console.error(&quot;Could not adjust iframe size:&quot;, e);
+        }
+    });
+});
+&lt;/script&gt;
 
 </description>
           <pubDate>2023-10-10T00:00:00-04:00</pubDate>
@@ -1282,7 +1411,7 @@ $(document).ready(function() {
 
 &lt;p&gt;The address is 235 W Tremont Ave #101, Charlotte, NC 28203.&lt;/p&gt;
 
-&lt;p&gt;I decided to try their Burger Bowls with Salmon. The bowl was filled with a delightful combination of ingredients. It had mixed greens, crispy bacon, sliced tomatoes, red onion, guacamole, a hard-boiled egg, and sweet potato. The bowl was dressed with a refreshing mix of lemon juice and extra virgin olive oil. As I don't eat red meat, I skipped the pork and focused on enjoying the other delicious flavors in the bowl. The portion was generous, and I felt satisfied after finishing it.&lt;/p&gt;
+&lt;p&gt;I decided to try their Burger Bowls with Salmon. Ask to remove bacon if you dont eat read meat like me. It had mixed greens, sliced tomatoes, red onion, guacamole, a hard-boiled egg, and sweet potato. The bowl was dressed with a mix of lemon juice and extra virgin olive oil. Little price for lunch, it cost me like $20 including tip.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
