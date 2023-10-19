@@ -9,3 +9,5 @@ In simple terms, if a program is using a base class, it should be able to switch
 
 
 
+### Why is LSP Important?
+
