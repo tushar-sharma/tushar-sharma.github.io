@@ -9,6 +9,7 @@ summary: Snapshot of my travel to Cartagena, Colombia
 image: https://unsplash.com/photos/mnrkkwOTqqE/download?w=800"
 author: Tushar Sharma
 category: blog
+published: false
 ---
 
 Snapshot of my travel to Cartagena, Colombia<!-- truncate_here -->
