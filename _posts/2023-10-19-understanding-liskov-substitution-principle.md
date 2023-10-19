@@ -11,3 +11,27 @@ In simple terms, if a program is using a base class, it should be able to switch
 
 ### Why is LSP Important?
 
+LSP emphasizes the importance of ensuring that a derived class doesn't just inherit the properties and behaviors of its base class but also adheres to its intended contract or behavior. By following LSP, developers can write more maintainable and scalable code, making it easier to add or modify subclasses without breaking existing functionality.
+
+### Breaking LSP with Code
+
+Let's start with an example where LSP is violated.
+
+```java
+class Rectable {
+  protected int width, height;
+  
+  public void setWidth(int width) {
+    this.width = width;
+  }
+  
+  public void setHeight(int height) {
+    this.height = heigth;
+  }
+  
+  public int getArea() {
+    return width * height;
+  }
+}
+```
+
