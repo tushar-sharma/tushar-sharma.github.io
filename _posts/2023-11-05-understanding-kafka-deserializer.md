@@ -1,11 +1,24 @@
 ---
-published: false
+layout: post
+title: Understanding Kafka Deserializer
+category: blog
+tags:
+  - kafka
+thumb: https://unsplash.com/photos/TyQ-OIPq6e4/download?w=800"
+summary: Understanding Kafka Deserializer
+image: https://unsplash.com/photos/TyQ-OIPq6e4/download?w=800"
+author: Tushar Sharma
 ---
-Understanding Kafka Deserializer
+
+In Kafka, a deserializer is responsible for converting byte arrays from kafka topic into Java Objects. Kafka provides default deserializer for standard data types like strings and integers, but you can also implement custom deserializer for complex types.<!-- truncate_here -->
 
 In Kafka, a deserializer is responsible for converting byte arrays from kafka topic into Java Objects. Kafka provides default deserializer for standard data types like strings and integers, but you can also implement custom deserializer for complex types.
 
-Usually you will encounter error: 'No delegate deserializer configured' when consuming messages from a kafka topic. 
+
+Usually you can encounter erro while consuming message from a kafka topic.
+
+> No delegate deserializer configured
+
 
 This error often occurs when using the 'ErrorHandlingDeserializer' provided by Spring Kafka which acts as a wrapper around another deserializer (the delegate) to provide additional error-handling capabilities. If the delegate deserializer isn't configured properly, then 'ErrorHandlingDeserializer' cannot function correctly.
 
