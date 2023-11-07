@@ -19,10 +19,9 @@ Usually you can encounter erro while consuming message from a kafka topic.
 
 > No delegate deserializer configured
 
-
 This error often occurs when using the 'ErrorHandlingDeserializer' provided by Spring Kafka which acts as a wrapper around another deserializer (the delegate) to provide additional error-handling capabilities. If the delegate deserializer isn't configured properly, then 'ErrorHandlingDeserializer' cannot function correctly.
 
-Solution
+### Solution
 
 * Ensure that both the 'ErrorHandlingDeserializer' and the delegate deserializer are correctly configured in 'application.yaml'. 
 
@@ -39,26 +38,11 @@ spring:
         spring.deserializer.value.delegate.class: org.apache.kafka.common.serialization.StringDeserializer
 ```
 
-Like in Java, we would also update consumer properties
+We can update our consumer to read those properties
 
-```java
-
-private final Map<String, Object> kafkaConfigProperties = new HashMap<>();
-
-private void setConfigProps(KafkaProperties kafkaProperties) { 
-this.kafkaConfigProperties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,
-        Class.forName(kafkaProperties.getConsumer().getProperties().getOrDefault(
-                "spring.deserializer.key.delegate.class",
-                StringDeserializer.class.getName()
-        ))
-);
-
-this.kafkaConfigProperties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,
-        Class.forName(kafkaProperties.getConsumer().getProperties().getOrDefault(
-                "spring.deserializer.value.delegate.class",
-                StringDeserializer.class.getName()
-        ))
-}
-);
-```
-
+{% template  customCode.html %}
+---
+id: 78449a7e4798e0cff259776b097c8e02
+file: Consumer.java
+---
+{% endtemplate %}
