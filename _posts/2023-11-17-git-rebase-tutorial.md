@@ -5,7 +5,6 @@ Git, a powerful version control system, is essential for managing and organizing
 
 ## Basic Rebase Command:
 
-
 To perform a rebase, you'll first switch to your feature branch and then rebase it onto the master branch. This operation rewrites the project history by applying the changes made in the feature branch on top of the latest changes in the master branch.
 
 
@@ -32,6 +31,35 @@ The --strategy-option (or -X for short) flag allows you to specify how conflicts
 * **-X ours:** In case of a conflict, keep the changes from the master branch.
 
 * **-X theirs:** In case of a conflict, keep the changes from your feature branch (myBranch).
+
+## Conflict Resolution via Command Line
+
+Open the conflicted files in your preferred text editor. Git marks the conflicts within the file. For example:
+
+```git
+<<<<<<< HEAD
+[Your branch's changes]
+=======
+[Conflicting changes from the branch you're rebasing onto]
+>>>>>>> [Commit SHA]
+```
+
+Manually edit the file to resolve the conflict. This often involves choosing between changes or merging them manually.
+
+
+After resolving conflicts in all files, mark them as resolved using:
+
+```bash
+$ git add [file]
+```
+
+Once all conflicts are resolved and changes are staged, continue the rebase process with:
+
+```bash
+$ git rebase --continue
+```
+
+Or you can use GUI tool to resolve conflicts like kdiff3, GitKraken, Sourcetree, or the Git integration in IDEs like Visual Studio Code.
 
 ## Best Practices
 
