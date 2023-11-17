@@ -4,9 +4,9 @@ title: Understanding Kafka Deserializer
 category: blog
 tags:
   - kafka
-thumb: https://unsplash.com/photos/4T5MTKMrjZg/download?w=800
+thumb: https://unsplash.com/photos/i9w4Uy1pU-s/download?w=800
 summary: Understanding Kafka Deserializer
-image: https://unsplash.com/photos/4T5MTKMrjZg/download?w=800
+image: https://unsplash.com/photos/i9w4Uy1pU-s/download?w=800
 author: Tushar Sharma
 ---
 
