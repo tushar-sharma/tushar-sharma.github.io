@@ -16,6 +16,8 @@ $ git checkout myBranch
 $ git rebase origin/master
 ```
 
+Rebasing is instrumental in maintaining a linear project history, which simplifies many aspects of version control. By avoiding the creation of unnecessary merge commits, it offers a cleaner alternative to the `git merge` command in certain workflows.
+
 ## Handling Conflicts
 
 Rebasing can sometimes lead to conflicts, especially if changes in the feature branch overlap with those in the master branch. To resolve these conflicts, you can use a merge tool, but in some scenarios, you might prefer a simpler solution.
