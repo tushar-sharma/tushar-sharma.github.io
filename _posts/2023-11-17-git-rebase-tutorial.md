@@ -1,6 +1,17 @@
 ---
-published: false
+layout: post
+title: Git rebase tutorial
+category: blog
+tags:
+  - git
+thumb: https://unsplash.com/photos/3o7O_6fi7Qc/download?w=800
+summary: Git rebase tutorial
+image: https://unsplash.com/photos/3o7O_6fi7Qc/download?w=800
+author: Tushar Sharma
 ---
+
+Git, a powerful version control system, is essential for managing and organizing files, especially in team environments. When working collaboratively, developers often create multiple branches to isolate their work. The git rebase command becomes crucial when you need to integrate changes from the master(sometimes can also be main) branch into your feature branch.<!-- truncate_here -->
+
 Git, a powerful version control system, is essential for managing and organizing files, especially in team environments. When working collaboratively, developers often create multiple branches to isolate their work. The git rebase command becomes crucial when you need to integrate changes from the master(sometimes can also be main) branch into your feature branch.
 
 ## Basic Rebase Command:
