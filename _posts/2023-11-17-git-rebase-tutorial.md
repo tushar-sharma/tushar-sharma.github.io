@@ -33,3 +33,7 @@ The --strategy-option (or -X for short) flag allows you to specify how conflicts
 
 * **-X theirs:** In case of a conflict, keep the changes from your feature branch (myBranch).
 
+## Best Practices
+
+While using -X ours or -X theirs can be quick, it's often better to manually resolve conflicts using a merge tool. This approach ensures that you're making conscious decisions about the changes and maintaining the integrity of your codebase.
+
