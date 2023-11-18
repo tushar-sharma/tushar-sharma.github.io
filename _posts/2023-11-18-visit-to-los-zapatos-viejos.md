@@ -10,3 +10,5 @@ This peculiar monument, tucked away in a serene part of the city, away from the 
  
 [img](los-zapatos-viejos.jpg)
 
+
+It's a unique landmark that captures the spirit of the city in a pair of old, bronze shoes.
