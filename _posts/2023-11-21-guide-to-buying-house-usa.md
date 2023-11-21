@@ -10,4 +10,10 @@ published: false
 
 You need a realtor to buy house in USA. So there's a seller realtor and a buyers realtor. The realtor will get commission from the bank once you purchase the house.
 
-## 
+## Buy down rate
+
+## townhouse or single family house
+
+## HOA 
+
+## Rental insurance 
