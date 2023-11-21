@@ -17,3 +17,5 @@ You need a realtor to buy house in USA. So there's a seller realtor and a buyers
 ## HOA 
 
 ## Rental insurance 
+
+## Closing cost
