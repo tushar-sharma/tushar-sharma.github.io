@@ -11,7 +11,7 @@ published: true
 category: blog
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<!-- truncate_here -->
+I flew to Mexico on the eve of Thanksgiving, November 22, 2023. Holding an Indian passport with a valid H1B visa stamped, I was eligible for visa-free entry to Mexico, as the country accepts travelers with a valid U.S. visa with at least six months validity. This made my travel plans smoother, requiring only that my passport be valid for the duration of my stay in Mexico.<!-- truncate_here -->
 
 I flew to Mexico on the eve of Thanksgiving, November 22, 2023. Holding an Indian passport with a valid H1B visa stamped, I was eligible for visa-free entry to Mexico, as the country accepts travelers with a valid U.S. visa with at least six months validity. This made my travel plans smoother, requiring only that my passport be valid for the duration of my stay in Mexico.
 
