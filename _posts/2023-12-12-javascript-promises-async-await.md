@@ -86,10 +86,14 @@ fs.readdir(source, function (err, files) {
 In the above code, we first read a directory. For each file in the directory, we then read the file. This leads to callbacks nested within callbacks, which can quickly become difficult to manage as the complexity of the operations increases.
 To mitigate callback hell, there are several strategies that we can use:
 Modularization: Break down callbacks into independent functions. This makes the code easier to read and manage.
+
 Use Promises: Promises in JavaScript represent the eventual completion or failure of an asynchronous operation. They can be used to avoid callback hell by chaining .then() calls.
 Async/Await: This is a special syntax in JavaScript built on top of promises. It makes asynchronous code look and behave like synchronous code, which can greatly improve readability.
 Here is an example of how the previous code can be improved using async/await:
+
+```js
 const fs = require('fs').promises;
+
 async function printFileContent() {
   try {
     const files = await fs.readdir(source);
@@ -102,5 +106,6 @@ async function printFileContent() {
   }
 }
 printFileContent();
+```
 
 In this version of the code, each operation is performed sequentially with the await keyword, and errors are handled with a try/catch block. This results in code that is much easier to read and understand.
