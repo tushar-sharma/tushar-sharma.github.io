@@ -57,3 +57,50 @@ fetchActivity();
 ```
 
 Async functions are different from regular JavaScript functions in the sense that they can contain await expressions, allowing the function to pause and wait for the Promise to resolve or reject, before resuming execution and returning the resolved value. You don't have to use await inside an async function, but it's the primary reason for declaring a function as async.
+
+
+"Callback Hell" is a phrase referring to a situation where callbacks are nested within callbacks, leading to complex and potentially unreadable code. This is a common issue in JavaScript, particularly with Node.js, where callbacks are frequently used for asynchronous operations.
+
+Let's consider a hypothetical example to illustrate callback hell:
+
+```js
+fs.readdir(source, function (err, files) {
+  if (err) {
+    console.log('Error finding files: ' + err)
+  } else {
+    files.forEach(function (filename, fileIndex) {
+      console.log(filename)
+      fs.readFile(filename, 'utf8', function (err, content) {
+        if (err) {
+          console.log('Error reading file: ' + err)
+        } else {
+          console.log(content)
+        }
+      })
+    })
+  }
+})
+```
+
+
+In the above code, we first read a directory. For each file in the directory, we then read the file. This leads to callbacks nested within callbacks, which can quickly become difficult to manage as the complexity of the operations increases.
+To mitigate callback hell, there are several strategies that we can use:
+Modularization: Break down callbacks into independent functions. This makes the code easier to read and manage.
+Use Promises: Promises in JavaScript represent the eventual completion or failure of an asynchronous operation. They can be used to avoid callback hell by chaining .then() calls.
+Async/Await: This is a special syntax in JavaScript built on top of promises. It makes asynchronous code look and behave like synchronous code, which can greatly improve readability.
+Here is an example of how the previous code can be improved using async/await:
+const fs = require('fs').promises;
+async function printFileContent() {
+  try {
+    const files = await fs.readdir(source);
+    for(let file of files) {
+      const content = await fs.readFile(file, 'utf8');
+      console.log(content);
+    }
+  } catch (err) {
+    console.log('Error: ', err);
+  }
+}
+printFileContent();
+
+In this version of the code, each operation is performed sequentially with the await keyword, and errors are handled with a try/catch block. This results in code that is much easier to read and understand.
