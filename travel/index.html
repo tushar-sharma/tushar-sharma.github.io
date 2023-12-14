@@ -202,7 +202,7 @@ published: true
               }).addTo(map).bindPopup("Cartagena");
 
               L.marker([6.2442, -75.5812], {
-                icon: bucket
+                icon: travel
               }).addTo(map).bindPopup("Medellín");
 
 
@@ -241,7 +241,7 @@ published: true
               legend.onAdd = function(map) {
 
                   var div = L.DomUtil.create('div', 'legend');
-                  div.innerHTML += '<img src="{{ root_url }}/img/visit.png"/> Places I visited<br /><img src="{{ root_url }}/img/bucket.png"/>Places on my bucket list <br /><img src="{{ root_url }}/img/home.png"/>Places I lived, worked & studied';
+                  div.innerHTML += '<img src="{{ root_url }}/img/visit.png"/> Places I visited<br /><img src="{{ root_url }}/img/home.png"/>Places I lived, worked & studied';
                   return div;
               };
 
