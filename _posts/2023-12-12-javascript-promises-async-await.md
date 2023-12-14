@@ -1,9 +1,21 @@
 ---
-published: false
+layout: post
+title: Getting started with Javascript Promises and Async Await
+image: https://unsplash.com/photos/EWqwxi9He04/download?w=800
+thumb: https://unsplash.com/photos/EWqwxi9He04/download?w=800
+author: Tushar Sharma
+category: blog
+published: true
+tags:
+  - javascript
 ---
 
-Javascript Promises and Async Await
+Getting started with Javascript Promises and Async Await<!-- truncate_here -->
 
+
+Getting started with Javascript Promises and Async Await.
+
+### The Sequential Code Limitation
 
 Lets's say you have the following code which executes sequentially
 
@@ -13,9 +25,11 @@ let bar = '9';
 console.log(`${foo} has ${bar} words.`);
 ```
 
-In this snippet, we define a sentence and count the words manually. However, in practical applications, we may need to fetch data from external sources, which leads us to asynchronous operations.
+This code executes sequentially. But what if you need to perform an operation that depends on data from a server or an API?
 
-A Promise is a special JavaScript object representing the eventual completion or failure of an asynchronous operation and its resulting value.
+### Introducing Promises
+
+A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
 
 Consider the following example where we make an API request using the `axios` library:
 
@@ -28,7 +42,8 @@ console.log(`${response.data}`);
 
 This code will fail because the data property does not exist at the time of the console.log() statement. The `axios.get()` method returns a Promise, which is an asynchronous operation.
 
-We can handle this using then and catch methods provided by the Promise object. The then method is invoked when the Promise is fulfilled, and catch is invoked when the Promise is rejected:
+The beauty of Promises is in their methods: `.then()` and `.catch()`. The .then() method is used for handling successful responses, while .catch() is used for handling errors.
+
 
 ```js
 const axios = require('axios')
@@ -43,69 +58,119 @@ axios
   });
 ```
 
-The `await` keyword is used to pause and wait for a Promise to resolve or reject. It can only be used inside an async function:
+### Simplifying with Async/Await
+
+Async/Await is syntactic sugar over Promises, making asynchronous code easier to write and read. An async function returns a Promise, and the await keyword is used to wait for a Promise to resolve or reject.
 
 ```js
 const axios = require('axios');
 
-async function fetchActivity() {
-   let response = await axios.get('URL');
-   console.log(response.data);
+async function fetchAndDisplayData() {
+  try {
+    let response = await axios.get('https://api.example.com/data');
+    console.log('Data:', response.data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }
 
-fetchActivity();
+fetchAndDisplayData();
 ```
+
+This code is more readable and looks synchronous, even though it’s handling asynchronous operations.
+
 
 Async functions are different from regular JavaScript functions in the sense that they can contain await expressions, allowing the function to pause and wait for the Promise to resolve or reject, before resuming execution and returning the resolved value. You don't have to use await inside an async function, but it's the primary reason for declaring a function as async.
 
+### Callback hell
 
-"Callback Hell" is a phrase referring to a situation where callbacks are nested within callbacks, leading to complex and potentially unreadable code. This is a common issue in JavaScript, particularly with Node.js, where callbacks are frequently used for asynchronous operations.
-
-Let's consider a hypothetical example to illustrate callback hell:
-
-```js
-fs.readdir(source, function (err, files) {
-  if (err) {
-    console.log('Error finding files: ' + err)
-  } else {
-    files.forEach(function (filename, fileIndex) {
-      console.log(filename)
-      fs.readFile(filename, 'utf8', function (err, content) {
-        if (err) {
-          console.log('Error reading file: ' + err)
-        } else {
-          console.log(content)
-        }
-      })
-    })
-  }
-})
-```
-
-
-In the above code, we first read a directory. For each file in the directory, we then read the file. This leads to callbacks nested within callbacks, which can quickly become difficult to manage as the complexity of the operations increases.
-To mitigate callback hell, there are several strategies that we can use:
-Modularization: Break down callbacks into independent functions. This makes the code easier to read and manage.
-
-Use Promises: Promises in JavaScript represent the eventual completion or failure of an asynchronous operation. They can be used to avoid callback hell by chaining .then() calls.
-Async/Await: This is a special syntax in JavaScript built on top of promises. It makes asynchronous code look and behave like synchronous code, which can greatly improve readability.
-Here is an example of how the previous code can be improved using async/await:
+Callback Hell typically occurs when you have several nested callbacks, creating a complex and hard-to-read code structure. This often happens when dealing with multiple asynchronous operations that need to be performed in sequence.
 
 ```js
-const fs = require('fs').promises;
+// Simulated asynchronous operations using setTimeout
 
-async function printFileContent() {
-  try {
-    const files = await fs.readdir(source);
-    for(let file of files) {
-      const content = await fs.readFile(file, 'utf8');
-      console.log(content);
-    }
-  } catch (err) {
-    console.log('Error: ', err);
-  }
+function getUser(userId, callback) {
+    setTimeout(() => {
+        console.log("Fetched user");
+        callback({ id: userId, name: "Tushar Sharma" });
+    }, 1000);
 }
-printFileContent();
+
+function getUserPosts(userId, callback) {
+    setTimeout(() => {
+        console.log(`Fetched posts for user ${userId}`);
+        callback(["Post 1", "Post 2", "Post 3"]);
+    }, 1000);
+}
+
+function getPostComments(postId, callback) {
+    setTimeout(() => {
+        console.log(`Fetched comments for post ${postId}`);
+        callback(["Comment 1", "Comment 2"]);
+    }, 1000);
+}
+
+// Callback Hell
+getUser(1, user => {
+    getUserPosts(user.id, posts => {
+        getPostComments(posts[0], comments => {
+            console.log(comments); // Finally, we get the comments
+        });
+    });
+});
+```
+### Resolving Callback Hell
+
+Promises provide a cleaner way to handle asynchronous operations. Let’s refactor the above example using Promises:
+
+```js
+function getUser(userId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Fetched user");
+            resolve({ id: userId, name: "John Doe" });
+        }, 1000);
+    });
+}
+
+function getUserPosts(userId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(`Fetched posts for user ${userId}`);
+            resolve(["Post 1", "Post 2", "Post 3"]);
+        }, 1000);
+    });
+}
+
+function getPostComments(postId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(`Fetched comments for post ${postId}`);
+            resolve(["Comment 1", "Comment 2"]);
+        }, 1000);
+    });
+}
+
+getUser(1)
+    .then(user => getUserPosts(user.id))
+    .then(posts => getPostComments(posts[0]))
+    .then(comments => console.log(comments))
+    .catch(error => console.error(error));
 ```
 
-In this version of the code, each operation is performed sequentially with the await keyword, and errors are handled with a try/catch block. This results in code that is much easier to read and understand.
+Async/Await further simplifies asynchronous code, making it even more readable:
+
+```js
+async function displayPostComments() {
+    try {
+        const user = await getUser(1);
+        const posts = await getUserPosts(user.id);
+        const comments = await getPostComments(posts[0]);
+        console.log(comments);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+displayPostComments();
+```
