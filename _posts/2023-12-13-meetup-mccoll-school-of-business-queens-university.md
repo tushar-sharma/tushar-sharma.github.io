@@ -67,40 +67,32 @@ Formula: `β = Covariance(Return of Asset, Return of Market) / Variance(Return o
 
 ### Example in Python
 
-```python
-import yfinance as yf
-import numpy as np
+{% template  customCode.html %}
+---
+id: a3938241e0d8a64c323787dc363916af
+file: fama_french.py
+---
+{% endtemplate %}
 
-# Fetch historical data for a stock (e.g., Apple Inc.)
-data = yf.download('AAPL', start='2020-01-01', end='2020-12-31')
+### Interpretation of the output
 
-# Calculate daily returns
-data['Return'] = data['Adj Close'].pct_change()
-
-# Calculate R-squared and Beta for Apple Inc. against S&P 500
-market_data = yf.download('^GSPC', start='2020-01-01', end='2020-12-31')
-market_data['Return'] = market_data['Adj Close'].pct_change()
-
-# Drop the NaN values that are a result of the percentage change calculation
-asset_returns = data['Return'].dropna()
-market_returns = market_data['Return'].dropna()
-
-# Ensure that both series have the same length
-min_length = min(len(asset_returns), len(market_returns))
-asset_returns = asset_returns[-min_length:]
-market_returns = market_returns[-min_length:]
-
-# Calculate beta
-covariance = np.cov(asset_returns, market_returns)[0, 1]
-variance_market = np.var(market_returns)
-beta = covariance / variance_market
-
-# Print the beta coefficient
-print(f"The beta of the asset is: {beta}")
-
-# Calculate and print R-squared
-correlation_matrix = np.corrcoef(asset_returns, market_returns)
-correlation_xy = correlation_matrix[0,1]
-r_squared = correlation_xy**2
-print(f"The R-squared value is: {r_squared}")
 ```
+The beta of AAPL is 1.2175729053938895
+The R-squared value is 0.6075157876617264
+```
+
+The beta of a stock measures its volatility relative to the market. A beta of 1.22 suggests that Apple's stock is 22% more volatile than the market. If the market goes up by 1%, Apple's stock is expected to go up by 1.22% and vice versa. This implies a higher level of risk compared to the market, but also the potential for higher returns.
+
+Trading Implication: As a trader, if you expect the market to rise, holding AAPL could yield better returns compared to a less volatile stock (with lower beta). Conversely, if the market falls, AAPL could potentially fall more. If you are averse to risk or if the market is expected to be bearish, you might consider diversifying your portfolio or looking into stocks with a lower beta.
+
+R-squared values range from 0 to 1 and measure how closely the stock's price movements are related to the movements of the market index. An R-squared of 0.61 means that approximately 61% of the stock's price movements can be explained by changes in the S&P 500 index. The remaining 39% of price movements are influenced by factors specific to Apple or its industry.
+
+Trading Implication: An R-squared of 0.61 indicates a moderate-to-high correlation with the market. For traders, this means that while Apple does follow the market to a significant extent, there's still a considerable portion of its price movement that is due to company or industry-specific factors. Hence, it's important to pay attention to Apple's own news, financial reports, and industry trends, in addition to overall market sentiment.
+What This Means for Trading
+When trading a stock like AAPL with a beta higher than 1 and a moderately high R-squared:
+
+* In a bullish market, AAPL may provide higher returns than the market average.
+
+* In a bearish market, AAPL may see larger losses than the market average.
+
+* While AAPL moves with the market to a degree, individual factors are also at play, so it's not solely tied to market movements.
