@@ -7,7 +7,9 @@ published: false
 3 pillars of observability: 
 
 1. Traces
+
 2. Metrics
+
 3. logs
 
 
