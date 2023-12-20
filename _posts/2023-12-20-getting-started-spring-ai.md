@@ -80,7 +80,7 @@ Using prompt tempalte
 
 ```java
 @GetMapping("/topsong/{year}")
-public String topSong(@PathVariabl("year") int year){
+public String topSong(@PathVariable("year") int year){
     String prompt = "What was the Billboard number one year-end top 100 single for {year}?";
     PromptTemplate template = new PromptTemplate(prompt);
     template.add("year", year);
