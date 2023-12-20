@@ -90,5 +90,11 @@ public String topSong(@PathVariable("year") int year){
 
 question? why use promptTemplate? 
 
+Create a record class `TopSong.java`
 
+```java
+public record TopSong(String title, String artist, String album, String year) {
+    
+}
+```
 
