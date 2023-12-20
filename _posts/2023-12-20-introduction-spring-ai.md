@@ -13,7 +13,7 @@ start.spring.io
  
 Add snapshot repository. 
 
-TODO: but what is snapshot repository?
+question? but what is snapshot repository?
 
 ```xml
  <repositories>
@@ -43,3 +43,33 @@ Add API_KEY in `src/main/resources/application.properties`.
 ```
 spring.ai.openai.api-key=YOUR_API_KEY
 ```
+
+
+Create a class `controller/SongsController.java`
+
+question? what is requestMapping?
+
+```java
+import org.springframework.ai.client.AiClient;
+
+@RestController
+@RequestMapping("/songs")
+public class SongsController {
+    private final AiClient aiClient;
+  
+    public SongsController(AiClient aiClient) {
+        this.aiClinet = aiClient;
+    }
+  
+    @GetMapping("/topsong")
+    public lString topSong() {
+        String prompt = "What was the Billboard number one year-end top 100 single for 1980?";
+        return aiClient.generate(prompt);
+    }
+}
+```
+
+question? dont we need to put `AutoWired` when we are injecting aiClient. Is it constructor injection?
+
+Now go to 'localhost:8080/songs/topsong' to get the answer.
+
