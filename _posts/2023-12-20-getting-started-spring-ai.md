@@ -98,3 +98,29 @@ public record TopSong(String title, String artist, String album, String year) {
 }
 ```
 
+```java
+@GetMapping("/topsong/{year}")
+public TopSong topSong(@PathVariable("year" ) int year) {
+    BeanOutputParser<TopSong> parser = new BeanOutputParser<>(TopSong.class);
+    
+    String promptString = """
+      What was the Billboard number one year-end top 100 single for {year}?
+      {format}
+      """;
+        
+    PromptTemplate template = new PromptTemplate(promptString);
+    template.add("year", year);
+    template.add("format", parser.getFormat());
+    template.setOutputParser(parser);
+    
+    Prompt prompt = template.create();
+    AiResponse aiResponse = aiClient.generate(prompt);
+  
+    String text = aiResponse.getGeneration().getText();
+    return aiClient.generate(template.render());
+  
+}
+```
+
+question? what is beanoutputparser and why use it?
+
