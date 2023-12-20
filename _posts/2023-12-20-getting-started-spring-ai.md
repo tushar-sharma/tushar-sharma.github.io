@@ -61,9 +61,9 @@ public class SongsController {
         this.aiClinet = aiClient;
     }
   
-    @GetMapping("/topsong")
-    public lString topSong() {
-        String prompt = "What was the Billboard number one year-end top 100 single for 1980?";
+    @GetMapping("/topsong/{year}")
+    public lString topSong(@PathVariable("year") int year) {
+        String prompt = "What was the Billboard number one year-end top 100 single for {year}?";
         return aiClient.generate(prompt);
     }
 }
@@ -72,4 +72,6 @@ public class SongsController {
 question? dont we need to put `AutoWired` when we are injecting aiClient. Is it constructor injection?
 
 Now go to 'localhost:8080/songs/topsong' to get the answer.
+
+question? what's a path variable?
 
