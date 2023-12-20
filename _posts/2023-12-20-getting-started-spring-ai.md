@@ -3,7 +3,7 @@ published: false
 ---
 
 
-Spring AI
+Getting Started with Spring AI
 
 start.spring.io
 * name : SongsApi
@@ -126,4 +126,3 @@ question? what is beanoutputparser and why use it?
 
 
 question? what is parser.getFormat()
-
