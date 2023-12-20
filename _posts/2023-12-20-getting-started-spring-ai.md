@@ -124,3 +124,6 @@ public TopSong topSong(@PathVariable("year" ) int year) {
 
 question? what is beanoutputparser and why use it?
 
+
+question? what is parser.getFormat()
+
