@@ -19,16 +19,13 @@ There are a few ways to utilize the CommandLineRunner in a Spring Boot applicati
 
 ## Using `@Component` Annotation
 
-```java
-@Component
-@Slf4j
-public class ApplicationStartupRunner implements CommandLineRunner {
-    @Override
-    public void run(String... args) throws Exception {
-        log.info("ApplicationStartupRunner started...!");
-    }
-}
-```
+{% template  customCode.html %}
+---
+id: e0d44e13920719e6b27abadcd03294e9
+file: ApplicationStartupRunner.java
+---
+{% endtemplate %}
+
 > **Quiz:** What's the role of the `@Component` annotation in Spring?
 
 <button class="quiz-btn" data-showing="false" data-answer="answer1">Show Answer</button>
@@ -38,21 +35,12 @@ The `@Component` annotation is used in Spring to indicate that a class should be
 
 ## Integrating with `@SpringBootApplication`
 
-```java
-@SpringBootApplication
-@Slf4j
-public class DemoCommandLineApplication implements CommandLineRunner {
-
-	@Override
-	public void run(String... args){
-		log.info("CommandLineRunner started!");
-	}
-
-	public static void main(String[] args) {
-		SpringApplication.run(DemoCommandLineApplication.class, args);
-	}
-}
-```
+{% template  customCode.html %}
+---
+id: e0d44e13920719e6b27abadcd03294e9
+file: DemoCommandLineApplication.java
+---
+{% endtemplate %}
 
 > Quick Quiz: Explain the syntax `String....` How is it different than `String[] args` in Java?
 

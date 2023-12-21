@@ -8,6 +8,7 @@ category: blog
 published: true
 tags:
   - spring boot
+quiz: true
 ---
 
 In this blog, we'll explore how to create a simple Spring Boot application that leverages Spring AI for generating responses. We'll build a BooksApi application that can tell us which book won the booker prize for a given year.<!-- truncate_here -->
@@ -44,8 +45,6 @@ spring.ai.openai.api-key=YOUR_API_KEY
 
 ### Controller
 
-@RequestMapping is an annotation used in Spring to map web requests to specific handler classes or handler methods. Here, it's used to map all requests starting with `/books` to this controller.
-
 Create `controller/BooksController.java``:
 
 {% template  customCode.html %}
@@ -57,6 +56,13 @@ file: BooksController1.java
 
 
 In the above code, `openAiClient` is injected through constructor injection, which is a preferred method in Spring for dependency injection. The @Autowired annotation is not required when using constructor injection.
+
+> Quick Quiz: What's @RequestMapping Annotation?
+
+<button class="quiz-btn" data-showing="false" data-answer="answer1">Show Answer</button>
+<div class="quiz-answer" id="answer1">
+@RequestMapping is an annotation used in Spring to map web requests to specific handler classes or handler methods. Here, it's used to map all requests starting with <i>/books</i> to this controller.
+</div>
 
 ### Using PromptTemplate
 
@@ -71,9 +77,16 @@ file: BooksController2.java
 
 If you go to : `http://localhost:8080/books/booker/2003`, it will output something like 
 
-> The book that won the Booker Prize in 2003 is "Vernon God Little" by DBC Pierre.
+```
+The book that won the Booker Prize in 2003 is "Vernon God Little" by DBC Pierre.
+```
 
+> Quick Quiz: What's @PathVariable Annotation?
+
+<button class="quiz-btn" data-showing="false" data-answer="answer2">Show Answer</button>
+<div class="quiz-answer" id="answer2">
 A path variable is a part of the URL that is captured and used as a variable in your method. In this case, {year} in the URL /booker/{year} is a path variable.
+</div>
 
 ### Creating a record class
 
@@ -101,8 +114,10 @@ file: BooksController3.java
 
 If you go to : `http://localhost:8080/books/booker/2003`, it will output something like 
 
-> {
+```
+{
   "title": "Vernon God Little",
   "author": "DBC Pierre",
   "year": "2003"
-  }
+}
+```
