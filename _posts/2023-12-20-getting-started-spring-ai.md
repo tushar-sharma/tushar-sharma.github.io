@@ -88,9 +88,9 @@ file: BookWinner.java
 
 ### Parsing AI Response into Java Object
 
-BeanOutputParser is a utility in Spring AI that helps in parsing the output from AI into a Java Bean (in our case, TopSong).
+BeanOutputParser is a utility in Spring AI that helps in parsing the output from AI into a Java Bean (in our case, BookerWinner).
 
-`parser.getFormat()` returns a string that represents the format in which the AI should return the data, making it easier to parse into the TopSong object.
+`parser.getFormat()` returns a string that represents the format in which the AI should return the data, making it easier to parse into the BookerWinner object.
 
 {% template  customCode.html %}
 ---
