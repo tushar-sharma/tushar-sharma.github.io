@@ -7,6 +7,467 @@
     
       
         <item>
+          <title>Getting Started with Spring AI</title>
+          <description>&lt;p&gt;In this blog, we&apos;ll explore how to create a simple Spring Boot application that leverages Spring AI for generating responses. We&apos;ll build a BooksApi application that can tell us which book won the booker prize for a given year.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;In this blog, we&apos;ll explore how to create a simple Spring Boot application that leverages Spring AI for generating responses. We&apos;ll build a BooksApi application that can tell us which book won the booker prize for a given year.&lt;/p&gt;
+
+&lt;h3 id=&quot;initialize-your-project&quot;&gt;Initialize Your Project&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to &lt;a href=&quot;https://start.spring.io/&quot;&gt;start.spring.io&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Name your project as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BooksApi&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add the dependencies: Spring Web, Spring Boot Dev Tools&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;adding-snapshot-repository-with-gradle&quot;&gt;Adding Snapshot Repository with Gradle&lt;/h3&gt;
+
+&lt;p&gt;Snapshot repositories store development versions of artifacts. The Spring Snapshot Repository contains the latest updates. Add this to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; to access the Spring Snapshot Repository and Spring AI dependency:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=build.gradle&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;api-keys&quot;&gt;API Keys&lt;/h3&gt;
+
+&lt;p&gt;Add your API key to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/resources/application.properties&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;spring.ai.openai.api-key=YOUR_API_KEY&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;controller&quot;&gt;Controller&lt;/h3&gt;
+
+&lt;p&gt;@RequestMapping is an annotation used in Spring to map web requests to specific handler classes or handler methods. Here, it&apos;s used to map all requests starting with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/books&lt;/code&gt; to this controller.&lt;/p&gt;
+
+&lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;controller/BooksController.java&lt;/code&gt;`:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;In the above code, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;openAiClient&lt;/code&gt; is injected through constructor injection, which is a preferred method in Spring for dependency injection. The @Autowired annotation is not required when using constructor injection.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-prompttemplate&quot;&gt;Using PromptTemplate&lt;/h3&gt;
+
+&lt;p&gt;PromptTemplate is useful for dynamically constructing prompts with variables. It ensures cleaner code and easier manipulation of the prompt string.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;If you go to : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/books/booker/2003&lt;/code&gt;, it will output something like&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The book that won the Booker Prize in 2003 is &quot;Vernon God Little&quot; by DBC Pierre.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A path variable is a part of the URL that is captured and used as a variable in your method. In this case, {year} in the URL /booker/{year} is a path variable.&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-a-record-class&quot;&gt;Creating a record class&lt;/h3&gt;
+
+&lt;p&gt;A record class in Java is a concise way to create immutable data objects.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BookWinner.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;parsing-ai-response-into-java-object&quot;&gt;Parsing AI Response into Java Object&lt;/h3&gt;
+
+&lt;p&gt;BeanOutputParser is a utility in Spring AI that helps in parsing the output from AI into a Java Bean (in our case, BookerWinner).&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parser.getFormat()&lt;/code&gt; returns a string that represents the format in which the AI should return the data, making it easier to parse into the BookerWinner object.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController3.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;If you go to : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/books/booker/2003&lt;/code&gt;, it will output something like&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;{
+  &quot;title&quot;: &quot;Vernon God Little&quot;,
+  &quot;author&quot;: &quot;DBC Pierre&quot;,
+  &quot;year&quot;: &quot;2003&quot;
+  }&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+          <pubDate>2023-12-20T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/getting-started-spring-ai</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/getting-started-spring-ai</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Binary Tree Right Side View Leetcode</title>
+          <description>&lt;p&gt;We delve into a popular algorithmic problem from LeetCode: the &quot;Binary Tree Right Side View&quot;. This problem is an excellent exercise for understanding tree-based data structures and breadth-first traversal techniques.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;We delve into a popular algorithmic problem from LeetCode: the &quot;Binary Tree Right Side View&quot;. This problem is an excellent exercise for understanding tree-based data structures and breadth-first traversal techniques.&lt;/p&gt;
+
+&lt;h3 id=&quot;problem-statement&quot;&gt;Problem Statement&lt;/h3&gt;
+
+&lt;p&gt;The &quot;Binary Tree Right Side View&quot; problem asks us to find the values of the nodes you can see when you look at a binary tree from the right side. This perspective means we only observe the rightmost node at each level of the tree.&lt;/p&gt;
+
+&lt;p&gt;example&lt;/p&gt;
+
+&lt;p&gt;Given a binary tree like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    1
+   / \
+  2   3
+   \   \
+    5   4
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The right side view will be [1, 3, 4].&lt;/p&gt;
+
+&lt;h3 id=&quot;solution&quot;&gt;Solution&lt;/h3&gt;
+
+&lt;p&gt;To solve this problem, we employ a breadth-first search (BFS) approach using a queue. BFS allows us to traverse the tree level by level, ensuring we can access the rightmost element of each level.&lt;/p&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab python&quot;&gt;&lt;a href=&quot;#python&quot;&gt;python&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;tab java&quot;&gt;&lt;a href=&quot;#java&quot;&gt;java&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot; code-block codeSample python&quot; id=&quot;python&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/752705ffec52ff6a44ed559c49d0fd2f.js?file=right_side_view.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;div class=&quot; code-block codeSample java&quot; id=&quot;java&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/752705ffec52ff6a44ed559c49d0fd2f.js?file=RightSideView.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;code-walkthrough&quot;&gt;Code Walkthrough&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Method Signature: The method rightSideView takes the root of a binary tree as its input and returns a list of integers representing the tree&apos;s right side view.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Base Case Check: We first check if the root is null. If it is, we return an empty list, as there&apos;s no tree to traverse.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Queue Initialization: We use a Deque to store nodes at each level.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;BFS Loop: We iterate through the tree using a while loop, processing nodes level by level.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Level Processing: For each level, we iterate through the nodes at that level. The key is to add the value of the last node of each level to our output list.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Child Nodes: We add the left and right child nodes of each processed node to the queue for subsequent processing.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;time-complexity&quot;&gt;Time Complexity&lt;/h3&gt;
+
+&lt;p&gt;The time complexity of this solution is O(N), where N is the number of nodes in the tree. This is because each node is visited exactly once during the BFS traversal.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Queue Operations: Each node is added and removed from the queue exactly once.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Level-wise Traversal: Since we process nodes level by level, we ensure that each node is considered only once.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          <pubDate>2023-12-19T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/binary-tree-right-side-view-leetcode.md</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/binary-tree-right-side-view-leetcode.md</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Meetup at McColl School of Business at Queens University</title>
+          <description>&lt;p&gt;I went to Charlotte Fintech Meetup. It was held in Room 326 of Sykes Hall, which is located in the McColl School of Business at Queens University. .&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;I went to Charlotte Fintech Meetup. It was held in Room 326 of Sykes Hall, which is located in the McColl School of Business at Queens University.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1qhnpHMoI-CG9mdRkK8yq509c8iChU1xW&quot; alt=&quot;Sample Image&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;fama-french-three-factor-model&quot;&gt;Fama-French Three-Factor Model&lt;/h3&gt;
+
+&lt;p&gt;The Fama-French Model is an expansion of the Capital Asset Pricing Model (CAPM). It adds two additional factors to the market risk factor in CAPM. The model is often used to explain the performance of stock portfolios by examining how portfolios with different characteristics perform relative to risk factors. If a portfolio consistently invests in a small-cap or value stocks, it may have a positive SMB or HML factor, indicating that it&apos;s positioned to potentially benefit from the higher returns associated with these factors.&lt;/p&gt;
+
+&lt;h4 id=&quot;size-factor-smb-small-minus-big&quot;&gt;Size Factor (SMB: Small Minus Big)&lt;/h4&gt;
+
+&lt;p&gt;SMB stands for &quot;Small Minus Big&quot; and is one of the three factors in the Fama-Fench three-factor model. It represents the excess return of small-cap stocks over large-cap stocks.&lt;/p&gt;
+
+&lt;p&gt;The idea behind SMB is that small-cap stocks (with a small market capitalization) tends to have higher risk and potentially higher return to compensate for that risk. Over time, historically, small cap stocks have outperformed large-cap stocks on average.&lt;/p&gt;
+
+&lt;h4 id=&quot;value-factor-hml-high-minus-low&quot;&gt;Value Factor (HML: High Minus Low)&lt;/h4&gt;
+
+&lt;p&gt;HML stands for &quot;High Minus Low&quot; and represents the excess retrun of value stock (with high book-to-market ratios) over growth stocks (with low book to market ratios).&lt;/p&gt;
+
+&lt;p&gt;Value stocks are typically companies that are considered undervalued relative to their fundamental value as indicated by their financial statements. Growth stocks are companies that might not be undervalued but are expected to grow at an above-average rate compared to other companies. Historically, value stocks have outperformed growth stocks, which is what HML seek to capture.&lt;/p&gt;
+
+&lt;h3 id=&quot;markowitz-modern-portfolio-theory-mpt&quot;&gt;Markowitz Modern Portfolio Theory (MPT)&lt;/h3&gt;
+
+&lt;p&gt;Developed by Harry Markowitz in the 1950s, MPT is a framework for assembling a portfolio of assets such that the expected return is maximized for a given level of risk. It relies on diversification to reduce the risk.&lt;/p&gt;
+
+&lt;h3 id=&quot;return-of-a-financial-asset-r&quot;&gt;Return of a Financial Asset (R)&lt;/h3&gt;
+&lt;p&gt;The return of an asset from time t-1 to t is calculated as:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Return (R) = (Price at time t / Price at time t-1) - 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This formula gives us the percentage change in the asset&apos;s price.&lt;/p&gt;
+
+&lt;h3 id=&quot;time-periods&quot;&gt;Time Periods&lt;/h3&gt;
+
+&lt;p&gt;In financial analysis, time periods are crucial. They can be days, months, years, or any other interval used to measure performance.&lt;/p&gt;
+
+&lt;h3 id=&quot;r-squared-r2&quot;&gt;R-squared (R^2)&lt;/h3&gt;
+
+&lt;p&gt;R-squared is a statistical measure in a regression model that determines the proportion of the variance in the dependent variable that is predictable from the independent variable(s).&lt;/p&gt;
+
+&lt;p&gt;Formula: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R^2 = 1 - (Unexplained Variance / Total Variance)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;beta-coefficients-β&quot;&gt;Beta Coefficients (β)&lt;/h3&gt;
+
+&lt;p&gt;Beta is a measure of the volatility, or systematic risk, of a security or a portfolio in comparison to the market as a whole. It is used in the CAPM.&lt;/p&gt;
+
+&lt;p&gt;Formula: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;β = Covariance(Return of Asset, Return of Market) / Variance(Return of Market)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;example-in-python&quot;&gt;Example in Python&lt;/h3&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a3938241e0d8a64c323787dc363916af.js?file=fama_french.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;interpretation-of-the-output&quot;&gt;Interpretation of the output&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The beta of AAPL is 1.2175729053938895
+The R-squared value is 0.6075157876617264
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The beta of a stock measures its volatility relative to the market. A beta of 1.22 suggests that Apple&apos;s stock is 22% more volatile than the market. If the market goes up by 1%, Apple&apos;s stock is expected to go up by 1.22% and vice versa. This implies a higher level of risk compared to the market, but also the potential for higher returns.&lt;/p&gt;
+
+&lt;p&gt;Trading Implication: As a trader, if you expect the market to rise, holding AAPL could yield better returns compared to a less volatile stock (with lower beta). Conversely, if the market falls, AAPL could potentially fall more. If you are averse to risk or if the market is expected to be bearish, you might consider diversifying your portfolio or looking into stocks with a lower beta.&lt;/p&gt;
+
+&lt;p&gt;R-squared values range from 0 to 1 and measure how closely the stock&apos;s price movements are related to the movements of the market index. An R-squared of 0.61 means that approximately 61% of the stock&apos;s price movements can be explained by changes in the S&amp;amp;P 500 index. The remaining 39% of price movements are influenced by factors specific to Apple or its industry.&lt;/p&gt;
+
+&lt;p&gt;Trading Implication: An R-squared of 0.61 indicates a moderate-to-high correlation with the market. For traders, this means that while Apple does follow the market to a significant extent, there&apos;s still a considerable portion of its price movement that is due to company or industry-specific factors. Hence, it&apos;s important to pay attention to Apple&apos;s own news, financial reports, and industry trends, in addition to overall market sentiment.
+What This Means for Trading
+When trading a stock like AAPL with a beta higher than 1 and a moderately high R-squared:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In a bullish market, AAPL may provide higher returns than the market average.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In a bearish market, AAPL may see larger losses than the market average.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;While AAPL moves with the market to a degree, individual factors are also at play, so it&apos;s not solely tied to market movements.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          <pubDate>2023-12-13T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/meetup-mccoll-school-of-business-queens-university</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/meetup-mccoll-school-of-business-queens-university</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Getting started with Javascript Promises and Async Await</title>
+          <description>&lt;p&gt;Getting started with Javascript Promises and Async Await&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Getting started with Javascript Promises and Async Await.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-sequential-code-limitation&quot;&gt;The Sequential Code Limitation&lt;/h3&gt;
+
+&lt;p&gt;Lets&apos;s say you have the following code which executes sequentially&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=seq.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;This code executes sequentially. But what if you need to perform an operation that depends on data from a server or an API?&lt;/p&gt;
+
+&lt;h3 id=&quot;introducing-promises&quot;&gt;Introducing Promises&lt;/h3&gt;
+
+&lt;p&gt;A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.&lt;/p&gt;
+
+&lt;p&gt;Consider the following example where we make an API request using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;axios&lt;/code&gt; library:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise1.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;This code will fail because the data property does not exist at the time of the console.log() statement. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;axios.get()&lt;/code&gt; method returns a Promise, which is an asynchronous operation.&lt;/p&gt;
+
+&lt;p&gt;The beauty of Promises is in their methods: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.then()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.catch()&lt;/code&gt;. The .then() method is used for handling successful responses, while .catch() is used for handling errors.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise2.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;simplifying-with-asyncawait&quot;&gt;Simplifying with Async/Await&lt;/h3&gt;
+
+&lt;p&gt;Async/Await is syntactic sugar over Promises, making asynchronous code easier to write and read. An async function returns a Promise, and the await keyword is used to wait for a Promise to resolve or reject.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise3.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;This code is more readable and looks synchronous, even though it’s handling asynchronous operations.&lt;/p&gt;
+
+&lt;p&gt;Async functions are different from regular JavaScript functions in the sense that they can contain await expressions, allowing the function to pause and wait for the Promise to resolve or reject, before resuming execution and returning the resolved value. You don&apos;t have to use await inside an async function, but it&apos;s the primary reason for declaring a function as async.&lt;/p&gt;
+
+&lt;h3 id=&quot;callback-hell&quot;&gt;Callback hell&lt;/h3&gt;
+
+&lt;p&gt;Callback Hell typically occurs when you have several nested callbacks, creating a complex and hard-to-read code structure. This often happens when dealing with multiple asynchronous operations that need to be performed in sequence.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;resolving-callback-hell&quot;&gt;Resolving Callback Hell&lt;/h3&gt;
+
+&lt;p&gt;Promises provide a cleaner way to handle asynchronous operations. Let’s refactor the above example using Promises:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell1.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;Async/Await further simplifies asynchronous code, making it even more readable:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell2.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+</description>
+          <pubDate>2023-12-12T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/javascript-promises-async-await</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/javascript-promises-async-await</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Beard Trim in Cartagena, Colombia</title>
+          <description>&lt;p&gt;In search of a barber during my stay in Cartagena, I turned to Google Maps for assistance. It led me to Valentino Barberia, located at 130001, Cartagena de Indias, Bolívar. The ambiance of the place, complete with Spanish music playing softly in the background, immediately caught my attention. Upon entering, I requested a &quot;corte de barba,&quot; seeking a neat beard trim to freshen up my look.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;In search of a barber during my stay in Cartagena, I turned to Google Maps for assistance. It led me to Valentino Barberia, located at 130001, Cartagena de Indias, Bolívar. The ambiance of the place, complete with Spanish music playing softly in the background, immediately caught my attention. Upon entering, I requested a &quot;corte de barba,&quot; seeking a neat beard trim to freshen up my look.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=11O4nLdlWs6OX_CVoX9Flv0IFjH9rs2UU&quot; alt=&quot;Sample Image&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=167hRA1P3DCwBIw6mR216fNGJaBTGFzOK&quot; alt=&quot;Sample Image&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1K-lqnqvkT-8JLisp0EfHjhN58xDUd-VA&quot; alt=&quot;Sample Image&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The service I received was commendable. However, when it came time to pay, I learned that they only accepted cash, not credit cards. I asked if I could go to an ATM, and to my relief, the barber agreed. This display of trust, especially from someone I had just met in a new city, was both surprising and heartwarming.&lt;/p&gt;
+
+&lt;p&gt;Being more familiar with Mexican pesos, the Colombian currency proved a bit tricky for me. The banknotes were much larger, and I initially found it difficult to differentiate between the denominations. When I returned from the ATM, I almost paid more than what was due. Thankfully, the barber was honest and kind, taking only the necessary amount and advising me to be more careful with the local currency in the future.&lt;/p&gt;
+
+&lt;p&gt;I saw a portrait of pabla escabar on the wall which was quite amusing.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1piPTANTW8Y6Gap6BJv5nwvv38iRgvQWd&quot; alt=&quot;Sample Image&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+          <pubDate>2023-12-01T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/beard-trim-in-cartagena-colombia</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/beard-trim-in-cartagena-colombia</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Guide to Travel to Mexico</title>
+          <description>&lt;p&gt;I flew to Mexico on the eve of Thanksgiving, November 22, 2023. Holding an Indian passport with a valid H1B visa stamped, I was eligible for visa-free entry to Mexico, as the country accepts travelers with a valid U.S. visa with at least six months validity. This made my travel plans smoother, requiring only that my passport be valid for the duration of my stay in Mexico.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;I flew to Mexico on the eve of Thanksgiving, November 22, 2023. Holding an Indian passport with a valid H1B visa stamped, I was eligible for visa-free entry to Mexico, as the country accepts travelers with a valid U.S. visa with at least six months validity. This made my travel plans smoother, requiring only that my passport be valid for the duration of my stay in Mexico.&lt;/p&gt;
+
+&lt;h3 id=&quot;immigration&quot;&gt;Immigration&lt;/h3&gt;
+
+&lt;p&gt;Landing at Cancun airport, I was pleasantly surprised by the efficient immigration process, which took less than 10 minutes - a perk of traveling during the off-season, it seemed. The immigration officer&apos;s sole inquiry was about the length of my stay, to which I replied &quot;siete días&quot; (seven days).&lt;/p&gt;
+
+&lt;h3 id=&quot;atm&quot;&gt;ATM&lt;/h3&gt;
+
+&lt;p&gt;Post-immigration, I navigated to the &apos;Salida&apos; (exit) where conveniently located ATMs offered a seamless cash withdrawal experience. Utilizing my Bank of America debit card at an HSBC ATM, I obtained the necessary local currency without a hitch.&lt;/p&gt;
+
+&lt;h3 id=&quot;ado-bus&quot;&gt;ADO Bus&lt;/h3&gt;
+
+&lt;p&gt;My next step was locating the ADO bus service. Just outside the airport, I found an ADO booth where I secured a ticket to Merida, roughly a 5-hour journey from Cancun. The buses were stationed just across the road, making the transition smooth. The ride from Cancun to Merida is five hours.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1qdlXaf-F71K3E_6KUhwGncR1dQ9RX4mm&quot; alt=&quot;Sample Image&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;merida&quot;&gt;Merida&lt;/h3&gt;
+
+&lt;p&gt;First thing I did in Merida, was to enroll in table tennis training at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Club Estyga de Tenis de Mesa&lt;/code&gt;. The price for 2 hours classes was 200 pesos. In US, an hour table tennis class would be at least 50 bucks.&lt;/p&gt;
+
+&lt;p&gt;For lunch, I tried Miyabi restaurant in Merida. It had kaisenjiru soup with avacado which was delicous.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1A4G1IQxRKhrG2lYR9HCHrzRNnrYr1s_1&quot; alt=&quot;Sample Image&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Another nifty trick is to use ChatGPT to upload images and it will help you translate Spanish labels on products. Like I uploaded this picture of detergent on ChatGPT, here&apos;s the response I got&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://drive.google.com/uc?export=view&amp;amp;id=1Xl9MMTwx_EGjoD203EyqINAwIebjB74w&quot; alt=&quot;Sample Image&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;tulum&quot;&gt;Tulum&lt;/h3&gt;
+
+&lt;p&gt;Next, my travels took me to Tulum, where I indulged in an adventurous tour featuring a cenote visit, ATV rides, and zip-lining. The natural beauty of the cenote was a highlight of this excursion.&lt;/p&gt;
+
+&lt;h3 id=&quot;playa-del-carmen&quot;&gt;Playa del carmen&lt;/h3&gt;
+
+&lt;p&gt;In Playa del carmen (PDC), I took an airbnb experience for volleyball. The beach is beautiful, I wished I had more time in PDC than Tulum.&lt;/p&gt;
+
+&lt;p&gt;I skipped Cancun for this trip. Also missed islands like Cozumel and Isla Mujeres. May be next time these places will be on my radard.&lt;/p&gt;
+
+&lt;h3 id=&quot;caveats&quot;&gt;Caveats&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Uber is not available in playa del carmen, cancun or tulum due to taxi drivers&lt;sup id=&quot;fnref:taxi&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:taxi&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. However it was available in Merida.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Buy mosquito repellant everytime you go outside as I had awful mosquitoes bites&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Buy only REEF sunscreen which is biodegradable. Biodegradable sunscreens use mineral-based ingredients like zinc oxide or titanium dioxide to protect against the sun&apos;s harmful rays. They are different from traditional sunscreens, which often contain harmful chemicals like oxybenzone and octinoxate.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h3&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:taxi&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.poresto.net/quintana-roo/2023/4/7/socios-de-uber-piden-piso-parejo-en-cancun-senalan-las-autoridades-de-beneficiar-los-taxistas-378539.html&quot;&gt;socios-de-uber-piden-piso-parejo-en-cancun-senalan-las-autoridades-de-beneficiar-los-taxistas&lt;/a&gt; &lt;a href=&quot;#fnref:taxi&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2023-11-22T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/guide-to-travel-to-mexico</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/guide-to-travel-to-mexico</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Git rebase tutorial</title>
           <description>&lt;p&gt;Git, a powerful version control system, is essential for managing and organizing files, especially in team environments. When working collaboratively, developers often create multiple branches to isolate their work. The git rebase command becomes crucial when you need to integrate changes from the master(sometimes can also be main) branch into your feature branch.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
