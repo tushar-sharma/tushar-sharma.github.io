@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting Started with Spring AI
-image: https://unsplash.com/photos/f0JGorLOkw0/download?w=800
-thumb: https://unsplash.com/photos/f0JGorLOkw0/download?w=800
+image: https://unsplash.com/photos/Dj6D287bxiQ/download?w=800
+thumb: https://unsplash.com/photos/Dj6D287bxiQ/download?w=800
 author: Tushar Sharma
 category: blog
 published: true
