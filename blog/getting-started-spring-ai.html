@@ -46,6 +46,8 @@
 
 
 
+<script src="/js/quiz.js"></script>
+
 
 <script src="/js/clipboard.js"></script>
 <script src="/js/clipboard.min.js"></script>
@@ -292,13 +294,20 @@ header li {
 
 <h3 id="controller">Controller</h3>
 
-<p><a href="https://github.com/RequestMapping" class="user-mention">@RequestMapping</a> is an annotation used in Spring to map web requests to specific handler classes or handler methods. Here, it's used to map all requests starting with <code class="language-plaintext highlighter-rouge">/books</code> to this controller.</p>
-
 <p>Create <code class="language-plaintext highlighter-rouge">controller/BooksController.java</code>`:</p>
 
 <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController1.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>In the above code, <code class="language-plaintext highlighter-rouge">openAiClient</code> is injected through constructor injection, which is a preferred method in Spring for dependency injection. The <a href="https://github.com/Autowired" class="user-mention">@Autowired</a> annotation is not required when using constructor injection.</p>
+
+<blockquote>
+  <p>Quick Quiz: What's <a href="https://github.com/RequestMapping" class="user-mention">@RequestMapping</a> Annotation?</p>
+</blockquote>
+
+<p><button class="quiz-btn" data-showing="false" data-answer="answer1">Show Answer</button></p>
+<div class="quiz-answer" id="answer1">
+<a href="https://github.com/RequestMapping" class="user-mention">@RequestMapping</a> is an annotation used in Spring to map web requests to specific handler classes or handler methods. Here, it's used to map all requests starting with <i>/books</i> to this controller.
+</div>
 
 <h3 id="using-prompttemplate">Using PromptTemplate</h3>
 
@@ -308,11 +317,17 @@ header li {
 
 <p>If you go to : <code class="language-plaintext highlighter-rouge">http://localhost:8080/books/booker/2003</code>, it will output something like</p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The book that won the Booker Prize in 2003 is "Vernon God Little" by DBC Pierre.
+</code></pre></div></div>
+
 <blockquote>
-  <p>The book that won the Booker Prize in 2003 is "Vernon God Little" by DBC Pierre.</p>
+  <p>Quick Quiz: What's <a href="https://github.com/PathVariable" class="user-mention">@PathVariable</a> Annotation?</p>
 </blockquote>
 
-<p>A path variable is a part of the URL that is captured and used as a variable in your method. In this case, {year} in the URL /booker/{year} is a path variable.</p>
+<p><button class="quiz-btn" data-showing="false" data-answer="answer2">Show Answer</button></p>
+<div class="quiz-answer" id="answer2">
+A path variable is a part of the URL that is captured and used as a variable in your method. In this case, {year} in the URL /booker/{year} is a path variable.
+</div>
 
 <h3 id="creating-a-record-class">Creating a record class</h3>
 
@@ -330,13 +345,12 @@ header li {
 
 <p>If you go to : <code class="language-plaintext highlighter-rouge">http://localhost:8080/books/booker/2003</code>, it will output something like</p>
 
-<blockquote>
-  <p>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "title": "Vernon God Little",
   "author": "DBC Pierre",
   "year": "2003"
-  }</p>
-</blockquote>
+}
+</code></pre></div></div>
 
 
 

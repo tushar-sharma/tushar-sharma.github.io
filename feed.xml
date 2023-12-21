@@ -41,13 +41,20 @@
 
 &lt;h3 id=&quot;controller&quot;&gt;Controller&lt;/h3&gt;
 
-&lt;p&gt;@RequestMapping is an annotation used in Spring to map web requests to specific handler classes or handler methods. Here, it&apos;s used to map all requests starting with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/books&lt;/code&gt; to this controller.&lt;/p&gt;
-
 &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;controller/BooksController.java&lt;/code&gt;`:&lt;/p&gt;
 
 &lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;p&gt;In the above code, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;openAiClient&lt;/code&gt; is injected through constructor injection, which is a preferred method in Spring for dependency injection. The @Autowired annotation is not required when using constructor injection.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Quick Quiz: What&apos;s @RequestMapping Annotation?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;button class=&quot;quiz-btn&quot; data-showing=&quot;false&quot; data-answer=&quot;answer1&quot;&gt;Show Answer&lt;/button&gt;&lt;/p&gt;
+&lt;div class=&quot;quiz-answer&quot; id=&quot;answer1&quot;&gt;
+@RequestMapping is an annotation used in Spring to map web requests to specific handler classes or handler methods. Here, it&apos;s used to map all requests starting with &lt;i&gt;/books&lt;/i&gt; to this controller.
+&lt;/div&gt;
 
 &lt;h3 id=&quot;using-prompttemplate&quot;&gt;Using PromptTemplate&lt;/h3&gt;
 
@@ -57,11 +64,17 @@
 
 &lt;p&gt;If you go to : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/books/booker/2003&lt;/code&gt;, it will output something like&lt;/p&gt;
 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The book that won the Booker Prize in 2003 is &quot;Vernon God Little&quot; by DBC Pierre.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;blockquote&gt;
-  &lt;p&gt;The book that won the Booker Prize in 2003 is &quot;Vernon God Little&quot; by DBC Pierre.&lt;/p&gt;
+  &lt;p&gt;Quick Quiz: What&apos;s @PathVariable Annotation?&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;A path variable is a part of the URL that is captured and used as a variable in your method. In this case, {year} in the URL /booker/{year} is a path variable.&lt;/p&gt;
+&lt;p&gt;&lt;button class=&quot;quiz-btn&quot; data-showing=&quot;false&quot; data-answer=&quot;answer2&quot;&gt;Show Answer&lt;/button&gt;&lt;/p&gt;
+&lt;div class=&quot;quiz-answer&quot; id=&quot;answer2&quot;&gt;
+A path variable is a part of the URL that is captured and used as a variable in your method. In this case, {year} in the URL /booker/{year} is a path variable.
+&lt;/div&gt;
 
 &lt;h3 id=&quot;creating-a-record-class&quot;&gt;Creating a record class&lt;/h3&gt;
 
@@ -79,13 +92,12 @@
 
 &lt;p&gt;If you go to : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/books/booker/2003&lt;/code&gt;, it will output something like&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;{
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
   &quot;title&quot;: &quot;Vernon God Little&quot;,
   &quot;author&quot;: &quot;DBC Pierre&quot;,
   &quot;year&quot;: &quot;2003&quot;
-  }&lt;/p&gt;
-&lt;/blockquote&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
           <pubDate>2023-12-20T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/getting-started-spring-ai</link>
@@ -929,15 +941,8 @@ $(document).ready(function() {
 
 &lt;h2 id=&quot;using-component-annotation&quot;&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Component&lt;/code&gt; Annotation&lt;/h2&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Slf4j&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApplicationStartupRunner&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CommandLineRunner&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ApplicationStartupRunner started...!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/e0d44e13920719e6b27abadcd03294e9.js?file=ApplicationStartupRunner.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Quiz:&lt;/strong&gt; What&apos;s the role of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Component&lt;/code&gt; annotation in Spring?&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -949,20 +954,7 @@ The `@Component` annotation is used in Spring to indicate that a class should be
 
 &lt;h2 id=&quot;integrating-with-springbootapplication&quot;&gt;Integrating with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@SpringBootApplication&lt;/code&gt;&lt;/h2&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Slf4j&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DemoCommandLineApplication&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CommandLineRunner&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-	&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;CommandLineRunner started!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nc&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;DemoCommandLineApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/e0d44e13920719e6b27abadcd03294e9.js?file=DemoCommandLineApplication.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Quick Quiz: Explain the syntax &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String....&lt;/code&gt; How is it different than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String[] args&lt;/code&gt; in Java?&lt;/p&gt;

@@ -269,15 +269,8 @@ header li {
 
 <h2 id="using-component-annotation">Using <code class="language-plaintext highlighter-rouge">@Component</code> Annotation</h2>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span>
-<span class="nd">@Slf4j</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ApplicationStartupRunner</span> <span class="kd">implements</span> <span class="nc">CommandLineRunner</span> <span class="o">{</span>
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-        <span class="n">log</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"ApplicationStartupRunner started...!"</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/e0d44e13920719e6b27abadcd03294e9.js?file=ApplicationStartupRunner.java"></script> <button class="copy-button">Copy</button> </div>
+
 <blockquote>
   <p><strong>Quiz:</strong> What's the role of the <code class="language-plaintext highlighter-rouge">@Component</code> annotation in Spring?</p>
 </blockquote>
@@ -290,20 +283,7 @@ The `<a href="https://github.com/Component" class="user-mention">@Component</a>`
 <h2 id="integrating-with-springbootapplication">Integrating with <code class="language-plaintext highlighter-rouge">@SpringBootApplication</code>
 </h2>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@SpringBootApplication</span>
-<span class="nd">@Slf4j</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DemoCommandLineApplication</span> <span class="kd">implements</span> <span class="nc">CommandLineRunner</span> <span class="o">{</span>
-
-	<span class="nd">@Override</span>
-	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">){</span>
-		<span class="n">log</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"CommandLineRunner started!"</span><span class="o">);</span>
-	<span class="o">}</span>
-
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-		<span class="nc">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="nc">DemoCommandLineApplication</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/e0d44e13920719e6b27abadcd03294e9.js?file=DemoCommandLineApplication.java"></script> <button class="copy-button">Copy</button> </div>
 
 <blockquote>
   <p>Quick Quiz: Explain the syntax <code class="language-plaintext highlighter-rouge">String....</code> How is it different than <code class="language-plaintext highlighter-rouge">String[] args</code> in Java?</p>
