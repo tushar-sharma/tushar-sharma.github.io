@@ -34,9 +34,6 @@ The flourishing godmen in Indian who have been accused of terrorism, rape , etc 
 'To develop scientific temper, humanism and the spirit of inquiry and reform' is one of the fundamental duties of the people of the Republic of India, according to the Constitution of India.
 </blockquote> <br>
 
-
 India boast of being the largest producer of films in the world and second oldest film industry in the world which originated around about 105 years ago. However it is appalling that most of the movies panders to stereotype and many lack any imaginative script albeit there are exceptions.
 
 The Ramayana or Mahabharata can easily dwarf likes of Iliad or Odyssey by Homer. India is replete with myriad art of story telling even without the advent of technology. It’s sad that with all the visual fireworks, Baahubali may be among India’s highest grossing film, but has fell short to become an epic pan Indian film like Mother India.
-
-<
