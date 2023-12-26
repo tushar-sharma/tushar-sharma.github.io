@@ -8,7 +8,7 @@ category: blog
 published: true
 tags:
   - travel
-  - colombia
+  - cartagena
 ---
 
 In search of a barber during my stay in Cartagena, I turned to Google Maps for assistance. It led me to Valentino Barberia, located at 130001, Cartagena de Indias, Bolívar. The ambiance of the place, complete with Spanish music playing softly in the background, immediately caught my attention. Upon entering, I requested a "corte de barba," seeking a neat beard trim to freshen up my look.<!-- truncate_here -->
