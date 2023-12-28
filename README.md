@@ -104,6 +104,7 @@ files:
 Create a html page in `encrypted` folder. This will contain the protected text
 
 ```
+$ npm i -g staticrypt
 $ export password=
 $ staticrypt myPost.html -p ${password}
 ```
@@ -111,7 +112,7 @@ $ staticrypt myPost.html -p ${password}
 Then add this 
 
 ```
-iframe
+<iframe
   style="position: relative;  width: 100%;"
    height="400"
 	   src="{{ root_url }}/encrypted/{{ page.path | split:'/'  | last | replace: '.md' '' }}.html"
@@ -119,7 +120,7 @@ iframe
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
-></iframe>`
+></iframe>
 ```
 
 ### Tags
