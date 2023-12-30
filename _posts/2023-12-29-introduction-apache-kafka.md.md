@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Introduction to Apache Kafka
-image: /img/
-thumb: /img/
+image: https://unsplash.com/photos/5xmFg-EGhpw/download?w=800
+thumb: https://unsplash.com/photos/5xmFg-EGhpw/download?w=800
 author: Tushar Sharma;
 category: blog
 tags: kafka
