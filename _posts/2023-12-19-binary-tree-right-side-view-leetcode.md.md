@@ -5,7 +5,6 @@ image: https://unsplash.com/photos/eZt5mvF7RcU/download?w=800
 thumb: https://unsplash.com/photos/eZt5mvF7RcU/download?w=800
 author: ;
 tags:
-  - leetcode
   - python
   - queue
   - java
