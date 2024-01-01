@@ -68,4 +68,4 @@ file: Rec5.java
 
 It's a recursive algorithm , so we need a recurrence
 
-<img src="{{ root_url }}/img/rec.png" >
+<img src="{{ root_url }}/img/rec.png" />
