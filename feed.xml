@@ -7,6 +7,375 @@
     
       
         <item>
+          <title>Weekly logs from Dec 25,2023 to Dec 31, 2023</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from Dec 25,2023 to Dec 31, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+
+const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A1:T8?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;daily-logs&quot;&gt;Daily logs&lt;/h2&gt;
+
+&lt;h3 id=&quot;dec-31-2023&quot;&gt;Dec 31, 2023&lt;/h3&gt;
+
+&lt;p&gt;Git stash is nifty feature. Lets say you are in a branch but need to checkout another but you have modified some files and you dont want to lose those changes.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git stash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To pull your changes back&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git stash pop
+# handing conflict better
+$ git stash apply
+$ git stash drop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;However if you just want to stash one file&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git stash push path/to/your/file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;dec-29-2023&quot;&gt;Dec 29, 2023&lt;/h3&gt;
+
+&lt;p&gt;I forgot the credentials of jenkins running at my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost:8080&lt;/code&gt; on Mac. So an easier way is to disable authentication by editing the file : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Users/&amp;lt;USERNAME&amp;gt;/.jenkins/config.xml&lt;/code&gt; and set the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useSecurity&lt;/code&gt; to false&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;useSecurity&amp;gt;&lt;/span&gt;false&lt;span class=&quot;nt&quot;&gt;&amp;lt;/useSecurity&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Next restart the server:&lt;/p&gt;
+
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew services
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew services restart jenkins
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;dec-28-2023&quot;&gt;Dec 28, 2023&lt;/h3&gt;
+
+&lt;p&gt;Gradle uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GRADLE_USER_HOME&lt;/code&gt; environment variable to determine where to store its cache and configuration files. So in our groovy pipeline we can set it like&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pipeline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;environment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;GRADLE_USER_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/home/jenkins/.gradle/${env.JOB_NAME}&quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A study in PLOS Medicine (2015) reported that overweight individuals who are physically active have a lower risk of mortality than normal-weight individuals who are inactive. So that means that a overweight person who exercises regularly would outlive a skinny person who doesn&apos;t exercises. So that&apos;s a motivation I need for the new year since weighing machine is a biggest let down for me.&lt;/p&gt;
+
+&lt;h3 id=&quot;dec-27-2023&quot;&gt;Dec 27, 2023&lt;/h3&gt;
+
+&lt;p&gt;What is the purpose of life? I&apos;m not sure. But what about the purpose of a day? That&apos;s easier to answer. Each day follows a similar cycle: you wake up, go to the bathroom, eat, drink, and sleep. Then there are the chores that need to be done, such as grocery shopping, filing taxes, etc. What about the rest of your time? Perhaps you could watch something, listen to music, develop some skills, pursue a hobby, or connect with people. As the day ends, what remains are the memories of what you did and the regrets over things you couldn&apos;t complete or even attempt.&lt;/p&gt;
+
+&lt;p&gt;Today, we visited the USPS to get a money order. Yesterday, we were frantically searching for a money order like headless chicken accross stores like CVS, Walgreens and Harris Teeter. It seemed that the money order machines were down everywhere. I had no idea what that meant.&lt;/p&gt;
+
+&lt;p&gt;I skipped the gym today and I&apos;m feeling pretty awful about it. To make matters worse, I lost my AirPods again. Going to the gym without music feels dull and demotivating, which seemed like a good enough excuse for me to forgive myself. Fortunately, I managed to find them using the &lt;strong&gt;Find My&lt;/strong&gt; app. Hopefully, I&apos;ll make it to the gym tomorrow, or else I&apos;ll need to come up with another good excuse!&lt;/p&gt;
+
+&lt;p&gt;I use &lt;strong&gt;wsl&lt;/strong&gt; linux terminal on my Windows Computer. I got stuck on the terminal because there was a typo in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; file and I couldn&apos;t terminate it or return to terminal. The fix was simple as to open the Ubuntu File System on Windows by going to the following location:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\\wsl$\Ubuntu\home\YourUsername
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;YouUserName is your actual Window username.&lt;/p&gt;
+
+&lt;p&gt;I also installed &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;oh-my-zsh&lt;/code&gt; on the terminal with &lt;strong&gt;powerlevel10k&lt;/strong&gt; theme. I keep the copy of my dotfiles &lt;a href=&quot;https://github.com/tushar-sharma/dotfiles&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;400&quot; src=&quot;/encrypted/2023-12-27-daily-logs-2023-12-27.html&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;
+  &lt;/iframe&gt;
+</description>
+          <pubDate>2023-12-30T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2023-12-25-31</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2023-12-25-31</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Maximum Width of Binary Tree</title>
+          <description>&lt;p&gt;The problem statement, as given on LeetCode, asks us to find the maximum width of a binary tree. The width of a level is defined as the number of nodes at that level. The maximum width of the binary tree is the maximum width among all levels.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;The problem statement, as given on LeetCode, asks us to find the maximum width of a binary tree. The width of a level is defined as the number of nodes at that level. The maximum width of the binary tree is the maximum width among all levels.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab python&quot;&gt;&lt;a href=&quot;#python&quot;&gt;python&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;tab java&quot;&gt;&lt;a href=&quot;#java&quot;&gt;java&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot; code-block codeSample python&quot; id=&quot;python&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/279fb609b7e6502db5e74eaab77c701b.js?file=width_of_binary_tree.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;div class=&quot; code-block codeSample java&quot; id=&quot;java&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/279fb609b7e6502db5e74eaab77c701b.js?file=WidthOfBinaryTree.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
+
+&lt;h2 id=&quot;code-walkthrough&quot;&gt;Code Walkthrough&lt;/h2&gt;
+
+&lt;p&gt;Initialization: Start with the root node of the binary tree. Initialize a queue to hold nodes and their positions. Set a variable max_width to keep track of the maximum width seen so far (initially set to 0).&lt;/p&gt;
+
+&lt;p&gt;Breadth-First Search (BFS): Perform a BFS traversal of the binary tree. Begin with the root node and assign it a position of 0. Enqueue the root node along with its position into the queue.&lt;/p&gt;
+
+&lt;p&gt;While the Queue is not Empty:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Get the size of the queue, which represents the number of nodes at the current level.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Initialize left_index and right_index to track the indices of the leftmost and rightmost nodes at the current level.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Iterate through the nodes at the current level:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dequeue a node and its position from the queue.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Update left_index with the position of the leftmost node.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Update right_index with the position of the last node (rightmost) in the current level.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Calculate the width of the current level as right_index - left_index + 1.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Update max_width with the maximum of its current value and the width of the current level.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the node has a left child, enqueue the left child with a position calculated as (2 * current_position) + 1.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the node has a right child, enqueue the right child with a position calculated as (2 * current_position) + 2.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Return max_width: After processing all levels, max_width will hold the maximum width of the binary tree.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;time-complexity&quot;&gt;Time Complexity&lt;/h2&gt;
+
+&lt;p&gt;The time complexity is O(N), where N is the number of nodes in the binary tree. This is because both solutions traverse all nodes in the tree once using BFS.&lt;/p&gt;
+</description>
+          <pubDate>2023-12-29T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/maximum-width-of-binary-tree</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/maximum-width-of-binary-tree</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Introduction to Apache Kafka</title>
+          <description>&lt;p&gt;In the realm of distributed data processing, Apache Kafka shines as a powerful and versatile tool, serving as the backbone of many real-time data pipelines and event-driven architectures. At its core, Kafka is a distributed commit log - a concept that underpins its efficiency and reliability. &lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;In the realm of distributed data processing, Apache Kafka shines as a powerful and versatile tool, serving as the backbone of many real-time data pipelines and event-driven architectures. At its core, Kafka is a distributed commit log - a concept that underpins its efficiency and reliability.&lt;/p&gt;
+
+&lt;p&gt;A commit log, in the context of Kafka, represents the fundamental building block of the system. Also known as a write-ahead log, commit log, or transaction log, it is a simple yet powerful data structure. The commit log is an ordered sequence that only supports appending new data. Crucially, once data is written to the log, it becomes immutable; it cannot be modified or deleted in place. This immutability ensures data integrity and enables Kafka&apos;s robust durability guarantees.&lt;/p&gt;
+
+&lt;h3 id=&quot;consumer&quot;&gt;Consumer&lt;/h3&gt;
+
+&lt;p&gt;Consumers play a pivotal role in Kafka&apos;s ecosystem. They are responsible for reading data from topics, with each consumer belonging to a specific consumer group identified by a unique group ID. Kafka topics are further divided into partitions, a crucial concept that enables parallel processing and fault tolerance.&lt;/p&gt;
+
+&lt;p&gt;Partitions serve as the means by which Kafka distributes data across multiple nodes within a Kafka cluster. This distribution allows for parallel consumption of data, thereby enhancing overall system throughput. When a consumer connects to a Kafka broker, often referred to as a bootstrap server, it is effectively connecting to the entire Kafka cluster. This is due to the collaborative nature of Kafka brokers, which collectively form a distributed system. Any broker can serve as an entry point to the cluster, providing resilience and flexibility.&lt;/p&gt;
+
+&lt;p&gt;In a single partition scenario, consumers read records in the order in which they were produced. However, when multiple partitions are in play, consumers within the same group can read from different partitions concurrently, significantly boosting the overall read throughput. To maximize parallelism and throughput, it is advisable to have at least as many partitions as there are consumers.&lt;/p&gt;
+
+&lt;p&gt;Consider the following scenarios:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;If a topic has only two partitions and three consumers sharing the same group ID, only two of them will be active, each consuming from one partition.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If the same topic has three consumers with different group IDs, all three will be active and able to consume data concurrently.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;consumer-offset&quot;&gt;Consumer Offset&lt;/h3&gt;
+
+&lt;p&gt;Kafka keeps track of the offset at which a consumer group has been reading data. These offsets are crucial for ensuring that consumers pick up where they left off in the event of failures or restarts. The offsets are stored in a Kafka topic aptly named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__consumer_offsets&lt;/code&gt;, making them accessible for Kafka&apos;s internal bookkeeping and ensuring that consumers maintain data consistency and progress.&lt;/p&gt;
+
+&lt;h3 id=&quot;producer&quot;&gt;Producer&lt;/h3&gt;
+
+&lt;p&gt;Producers in Kafka are responsible for publishing messages to topics. The way in which messages are distributed to partitions depends on whether a key is provided:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Round-Robin Strategy:&lt;/strong&gt; When a producer publishes a message without specifying a key, Kafka employs a round-robin strategy to evenly distribute messages across all available partitions. In this scenario, the first message goes to the first partition, the second message to the second partition, and so on. When the last partition is reached, the next message circulates back to the first partition. This cyclic distribution mechanism is why it&apos;s referred to as &quot;round-robin.&quot;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Key-Based Partitioning:&lt;/strong&gt; When a producer includes a key with a message, Kafka hashes the key to determine the target partition for the message. This approach ensures that all messages with the same key consistently land in the same partition. By preserving this order, Kafka allows consumers to maintain the sequencing of related messages, a crucial feature for applications that require message ordering guarantees.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          <pubDate>2023-12-29T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/introduction-apache-kafka.md</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/introduction-apache-kafka.md</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Getting Started with Spring AI</title>
           <description>&lt;p&gt;In this blog, we&apos;ll explore how to create a simple Spring Boot application that leverages Spring AI for generating responses. We&apos;ll build a BooksApi application that can tell us which book won the booker prize for a given year.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -10355,8 +10724,6 @@ is a pseudoscience. &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_heali
 &lt;p&gt;India boast of being the largest producer of films in the world and second oldest film industry in the world which originated around about 105 years ago. However it is appalling that most of the movies panders to stereotype and many lack any imaginative script albeit there are exceptions.&lt;/p&gt;
 
 &lt;p&gt;The Ramayana or Mahabharata can easily dwarf likes of Iliad or Odyssey by Homer. India is replete with myriad art of story telling even without the advent of technology. It’s sad that with all the visual fireworks, Baahubali may be among India’s highest grossing film, but has fell short to become an epic pan Indian film like Mother India.&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;&lt;/p&gt;
 </description>
           <pubDate>2018-08-19T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/overrated-movie</link>
