@@ -1,14 +1,15 @@
 ---
 layout: post
-date: 2022-11-14
+date: {}
 title: Setup a development environment on Windows using wsl2
 tags:
- - wsl
- - windows
-image: https://unsplash.com/photos/flha0KwRrRc/download?w=800
-thumb: https://unsplash.com/photos/flha0KwRrRc/download?w=800
+  - wsl
+  - windows
+image: 'https://unsplash.com/photos/flha0KwRrRc/download?w=800'
+thumb: 'https://unsplash.com/photos/flha0KwRrRc/download?w=800'
 author: Tushar Sharma
 category: blog
+published: true
 ---
 
 Most of the terminal I have used in Windows were at best lackluster. However wsl2 is a game changer which makes your Windows OS Unixy.<!-- truncate_here -->
@@ -92,15 +93,6 @@ Edit `~/.p10k.zsh` to only show current directory
 typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
 # change it to 
 typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
-```
-
-Install `tmux` for multi-pane environment.
-
-```bash
-$ sudo apt-get install tmux
-$ cd 
-$ wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/.tmux.conf
-$ tmux -u 
 ```
 
 Install lunarvim from [here](https://randomwits.com/blog/neovim-setup-with-lunarvim).
