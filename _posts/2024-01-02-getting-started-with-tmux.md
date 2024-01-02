@@ -1,6 +1,14 @@
 ---
 published: false
 ---
-## A New Post
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+## Detach a session
+
+`Cltr` + `A` and then `D`
+
+## Reattach a session
+
+```bash
+$ tmux ls
+$ tmux attach -d -t 0
+```
