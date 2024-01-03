@@ -1,6 +1,5 @@
 ---
 layout: post
-date: {}
 title: Setup a development environment on Windows using wsl2
 tags:
   - wsl
