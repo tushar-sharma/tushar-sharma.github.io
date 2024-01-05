@@ -7,6 +7,191 @@
     
       
         <item>
+          <title>Weekly Logs from Jan 1, 2024 to Jan 7, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from Jan 1, 2024 to Jan 7, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+
+const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A9:T17?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</description>
+          <pubDate>2024-01-01T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2024-01-01-07</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-01-01-07</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Weekly logs from Dec 25,2023 to Dec 31, 2023</title>
           <description>&lt;p&gt;Dear Vishi, this is my weekly logs from Dec 25,2023 to Dec 31, 2023.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -328,45 +513,8 @@ $ git stash drop
           <title>Introduction to Apache Kafka</title>
           <description>&lt;p&gt;In the realm of distributed data processing, Apache Kafka shines as a powerful and versatile tool, serving as the backbone of many real-time data pipelines and event-driven architectures. At its core, Kafka is a distributed commit log - a concept that underpins its efficiency and reliability. &lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;In the realm of distributed data processing, Apache Kafka shines as a powerful and versatile tool, serving as the backbone of many real-time data pipelines and event-driven architectures. At its core, Kafka is a distributed commit log - a concept that underpins its efficiency and reliability.&lt;/p&gt;
+&lt;p&gt;Apache Kafka is a distributed commit log. Why distributed? It&apos;s distributed because the data is replicated across multiple nodes in a Kafka cluster. Why commit log? Once a entry is written to commit log, it becomes immutable - it means it cannot be altered or deleted.&lt;/p&gt;
 
-&lt;p&gt;A commit log, in the context of Kafka, represents the fundamental building block of the system. Also known as a write-ahead log, commit log, or transaction log, it is a simple yet powerful data structure. The commit log is an ordered sequence that only supports appending new data. Crucially, once data is written to the log, it becomes immutable; it cannot be modified or deleted in place. This immutability ensures data integrity and enables Kafka&apos;s robust durability guarantees.&lt;/p&gt;
-
-&lt;h3 id=&quot;consumer&quot;&gt;Consumer&lt;/h3&gt;
-
-&lt;p&gt;Consumers play a pivotal role in Kafka&apos;s ecosystem. They are responsible for reading data from topics, with each consumer belonging to a specific consumer group identified by a unique group ID. Kafka topics are further divided into partitions, a crucial concept that enables parallel processing and fault tolerance.&lt;/p&gt;
-
-&lt;p&gt;Partitions serve as the means by which Kafka distributes data across multiple nodes within a Kafka cluster. This distribution allows for parallel consumption of data, thereby enhancing overall system throughput. When a consumer connects to a Kafka broker, often referred to as a bootstrap server, it is effectively connecting to the entire Kafka cluster. This is due to the collaborative nature of Kafka brokers, which collectively form a distributed system. Any broker can serve as an entry point to the cluster, providing resilience and flexibility.&lt;/p&gt;
-
-&lt;p&gt;In a single partition scenario, consumers read records in the order in which they were produced. However, when multiple partitions are in play, consumers within the same group can read from different partitions concurrently, significantly boosting the overall read throughput. To maximize parallelism and throughput, it is advisable to have at least as many partitions as there are consumers.&lt;/p&gt;
-
-&lt;p&gt;Consider the following scenarios:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;If a topic has only two partitions and three consumers sharing the same group ID, only two of them will be active, each consuming from one partition.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;If the same topic has three consumers with different group IDs, all three will be active and able to consume data concurrently.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;consumer-offset&quot;&gt;Consumer Offset&lt;/h3&gt;
-
-&lt;p&gt;Kafka keeps track of the offset at which a consumer group has been reading data. These offsets are crucial for ensuring that consumers pick up where they left off in the event of failures or restarts. The offsets are stored in a Kafka topic aptly named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__consumer_offsets&lt;/code&gt;, making them accessible for Kafka&apos;s internal bookkeeping and ensuring that consumers maintain data consistency and progress.&lt;/p&gt;
-
-&lt;h3 id=&quot;producer&quot;&gt;Producer&lt;/h3&gt;
-
-&lt;p&gt;Producers in Kafka are responsible for publishing messages to topics. The way in which messages are distributed to partitions depends on whether a key is provided:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Round-Robin Strategy:&lt;/strong&gt; When a producer publishes a message without specifying a key, Kafka employs a round-robin strategy to evenly distribute messages across all available partitions. In this scenario, the first message goes to the first partition, the second message to the second partition, and so on. When the last partition is reached, the next message circulates back to the first partition. This cyclic distribution mechanism is why it&apos;s referred to as &quot;round-robin.&quot;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Key-Based Partitioning:&lt;/strong&gt; When a producer includes a key with a message, Kafka hashes the key to determine the target partition for the message. This approach ensures that all messages with the same key consistently land in the same partition. By preserving this order, Kafka allows consumers to maintain the sequencing of related messages, a crucial feature for applications that require message ordering guarantees.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
 </description>
           <pubDate>2023-12-29T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/introduction-apache-kafka.md</link>
@@ -4468,14 +4616,6 @@ Password : admin
 &lt;span class=&quot;nb&quot;&gt;typeset&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;POWERLEVEL9K_SHORTEN_STRATEGY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;truncate_to_unique
 &lt;span class=&quot;c&quot;&gt;# change it to &lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;typeset&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;POWERLEVEL9K_SHORTEN_STRATEGY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;truncate_to_last
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tmux&lt;/code&gt; for multi-pane environment.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;tmux
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; 
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wget https://raw.githubusercontent.com/tushar-sharma/dotfiles/master/.tmux.conf
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;tmux &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Install lunarvim from &lt;a href=&quot;https://randomwits.com/blog/neovim-setup-with-lunarvim&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
