@@ -14,12 +14,18 @@ public String someFunction(String foo) {
 }
 ```
 
+```python
+def some_function(foo: str):
+    if not foo:
+        return -1
+```
+
 * Count frequencies of each character in a string
 
 ```python
 from collections import Counter
 
-def some_function(foo: str) {
+def some_function(foo: str):
     count = Counter(str)
     
     # Iterate the count
@@ -28,7 +34,6 @@ def some_function(foo: str) {
     
     # Get value
     print(count['key'])
-}
 
 ```
 
@@ -42,4 +47,12 @@ def some_function(foo: str) {
 
 ```python
 foo = max(foo, bar)
+```
+
+* Length
+
+```python
+foo = "abcd"
+bar = len(foo)
+assert bar == 4
 ```
