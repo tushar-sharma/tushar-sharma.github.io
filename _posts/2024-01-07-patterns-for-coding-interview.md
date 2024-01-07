@@ -17,7 +17,7 @@ public String someFunction(String foo) {
 * Count frequencies of each character in a string
 
 ```python
-from Counter import Count
+from colelctions import Counter
 
 def some_function(foo: str) {
     count = Counter(str)
