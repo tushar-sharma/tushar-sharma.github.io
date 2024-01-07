@@ -35,3 +35,11 @@ def some_function(foo: str) {
 * Split a String with space
 
 * Split a string with any character
+
+## Built in functions
+
+* Max 
+
+```python
+foo = max(foo, bar)
+```
