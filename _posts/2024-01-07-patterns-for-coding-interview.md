@@ -23,6 +23,8 @@ def some_function(foo: str) {
     count = Counter(str)
     
     # Iterate the count
+    for key, value in count.items():
+        print(key, value)
     
     # Get value
 }
