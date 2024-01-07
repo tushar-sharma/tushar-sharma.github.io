@@ -21,6 +21,10 @@ from colelctions import Counter
 
 def some_function(foo: str) {
     count = Counter(str)
+    
+    # Iterate the count
+    
+    # Get value
 }
 
 ```
