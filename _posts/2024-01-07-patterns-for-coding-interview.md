@@ -27,6 +27,7 @@ def some_function(foo: str) {
         print(key, value)
     
     # Get value
+    print(count['key'])
 }
 
 ```
