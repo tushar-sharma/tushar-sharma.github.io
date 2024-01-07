@@ -41,6 +41,14 @@ def some_function(foo: str):
 
 * Split a string with any character
 
+* Get a character at location for string
+
+```java
+public void someFunction(String foo) {
+  char c = foo.charAt(0);
+}
+```
+
 ## Built in functions
 
 * Max 
