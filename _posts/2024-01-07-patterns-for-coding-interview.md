@@ -77,10 +77,18 @@ Map<Integer, Integer> freq = new HashMap<>();
 Set<Integer> set = new HashSet<>();
 ```
 
+```python
+mySet = set()
+```
+
 * add a value
 
 ```java
 set.add(2);
+```
+
+```python
+mySet.add(3)
 ```
 
 * check if a value exist
