@@ -48,6 +48,18 @@ public void someFunction(String foo) {
   char c = foo.charAt(0);
 }
 ```
+## Hashmap
+
+* create one
+
+```python
+freq = {}
+```
+```java
+import java.util.Map;
+
+Map<Integer, Integer> freq = new HashMap<>();
+```
 
 ## Built in functions
 
