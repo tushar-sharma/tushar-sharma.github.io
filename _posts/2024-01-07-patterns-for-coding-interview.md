@@ -20,6 +20,13 @@ def some_function(foo: str):
         return -1
 ```
 
+* length 
+
+```java
+String s = "testString";
+int len = s.length();
+```
+
 * Count frequencies of each character in a string
 
 ```python
