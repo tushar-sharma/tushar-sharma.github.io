@@ -68,6 +68,34 @@ import java.util.Map;
 Map<Integer, Integer> freq = new HashMap<>();
 ```
 
+
+## Set
+
+* create
+
+```java
+Set<Integer> set = new HashSet<>();
+```
+
+* add a value
+
+```java
+set.add(2);
+```
+
+* check if a value exist
+
+```java
+if (set.contains(value)) {
+}
+```
+
+* clear all values
+
+```java
+freq = new HashSet<>();
+```
+
 ## Built in functions
 
 * Max 
