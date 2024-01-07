@@ -28,3 +28,7 @@ def some_function(foo: str) {
 ```java
 
 ```
+
+* Split a String with space
+
+* Split a string with any character
