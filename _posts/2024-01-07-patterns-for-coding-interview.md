@@ -1,6 +1,26 @@
 ---
-published: false
+layout: post
+title: Patterns for Coding Interview
+image: https://unsplash.com/photos/8rj4sz9YLCI/download?w=800
+thumb: https://unsplash.com/photos/8rj4sz9YLCI/download?w=800
+author: Tushar Sharma;
+category: blog
+published: true
+tags:
+  - coding
 ---
+
+<!-- truncate_here -->
+
+## Array
+
+* Sort an array
+
+```python
+nums = [4, 3, 2, 2]
+snums = sorted(nums)
+```
+
 ## String
 
 What you can do with a string? 
