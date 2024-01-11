@@ -32,3 +32,23 @@ You should see the output at :
 ```
 Build cache node started (port: 5071).
 ```
+
+Next we will install the minikube. Minikube is kubernetes cluster that we can run locally.
+
+
+```bash
+curl -LO https://github.com/kubernetes/minikube/releases/download/v1.32.0/minikube-darwin-arm64
+sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+```
+
+Start minikube
+
+```
+minikube start
+```
+
+To see minkube locally in a browser
+
+```
+minikube dashboard
+```
