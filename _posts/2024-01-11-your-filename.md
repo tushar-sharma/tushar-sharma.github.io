@@ -27,12 +27,8 @@ $ docker build -t gradle-cache .
 $ docker run -p 8080:5071 gradle-cache
 ```
 
-This give me this error : 
+You should see the output at : 
 
 ```
-docker run -p 8080:5071 gradle-cache                                                                                ✔  3874  15:34:17
-Error: A JNI error has occurred, please check your installation and try again
-Exception in thread "main" java.lang.UnsupportedClassVersionError: com/gradle/buildcache/node/BuildCacheNodeMain has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+Build cache node started (port: 5071).
 ```
-
-How to fix?
