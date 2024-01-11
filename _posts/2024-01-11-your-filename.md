@@ -7,18 +7,14 @@ published: false
 Lets start with a dockerfile
 
 ```yaml
-FROM openjdk:8-jre-alpine
+FROM amazoncorretto:17-alpine-jdk
 
-# Set the working directory in the container to /app
 WORKDIR /app
 
-RUN apk add --no-cache curl && \
-    curl -k -o /app/build-cache-node.jar https://docs.gradle.com/build-cache-node/jar/build-cache-node-18.0.jar && \
-    apk del curl
+ADD https://docs.gradle.com/build-cache-node/jar/build-cache-node-18.0.jar /app/build-cache-node.jar
 
 EXPOSE 5071
 
-# Run build-cache-node.jar when the container launches
 CMD ["java", "-jar", "/app/build-cache-node.jar"]
 ```
 
@@ -30,3 +26,13 @@ We can build and run dockerfile locally like
 $ docker build -t gradle-cache .
 $ docker run -p 8080:5071 gradle-cache
 ```
+
+This give me this error : 
+
+```
+docker run -p 8080:5071 gradle-cache                                                                                ✔  3874  15:34:17
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread "main" java.lang.UnsupportedClassVersionError: com/gradle/buildcache/node/BuildCacheNodeMain has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 52.0
+```
+
+How to fix?
