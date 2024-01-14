@@ -3,6 +3,8 @@ published: false
 ---
 Gradle build cache is a build cache that works by storing (locally or remotely) build outputs and thus saving build time. (?add something more)
 
+> Note : Tested with Gradle 8.5
+
 For the password, it expects a hashed salt password. You can generate it using the same jar
 
 ```bash
@@ -80,15 +82,19 @@ Go to [start.initializr](https://start.spring.io/) and create a simple applicati
 Update `settings.gradle` : 
 
 ```groovy
+rootProject.name = 'testGradleCache'
 buildCache {
+    local {
+        enabled = false
+    }
     remote(HttpBuildCache) {
-        url = 'http://localhost:5071/cache/'
+        url = 'http://localhost:8080/cache/'
         push = true  // push to the cache
-        enabled = true
         allowInsecureProtocol=true
+        enabled = true
         credentials {
             username = 'tsharma' 
-            password = '2simplePassword@1' 
+            password = 'simplePassword@1' 
         }
     }
 }
