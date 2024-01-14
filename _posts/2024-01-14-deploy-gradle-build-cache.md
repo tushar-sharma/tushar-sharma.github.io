@@ -3,6 +3,12 @@ published: false
 ---
 Gradle build cache is a build cache that works by storing (locally or remotely) build outputs and thus saving build time. (?add something more)
 
+For the password, it expects a hashed salt password. You can generate it using the same jar
+
+```bash
+java -jar build-cache-node-18.0.jar hash
+```
+
 First download the [jar](https://docs.gradle.com/build-cache-node/jar/build-cache-node-18.0.jar). We can run it locally by using 
 
 ```bash
@@ -10,13 +16,14 @@ java -jar build-cache-node-18.0.jar start
 WARNING: Using default data dir location '/tmp/build-cache-node' which is in temp space and could be deleted at any time (use '--data-dir=<dir>' to specify a persistent location).
 WARNING: This build cache is unusable as a build cache due to its access control settings - anonymous access is disabled and no users are defined.
 Starting Develocity build cache node (18.0) ...
-UI access is protected by generated username and password: user691 jjtsg4homjaq315zc5u6hkblla
+UI access is protected by generated username and password:
 Build cache node started (port: 5071).
 ```
-It's started on port 5071 but we could also see the warnings: 
+It's started on port `5071` but we could also see the warnings: 
 
-1. Since we haven't defined a `data dir location`, so a temp space is used. It many not be useful if we want to keep persistent cache
-2. By default, access to the build cache is disabled. Only UI access is allowed which is also protected by username and password generated randomly. So we need to create `config`file to grant access to our application.
+1. Since we haven't defined a `data dir location`, so a temp space is used. It many not be useful if we want to keep persistent cache.
+
+2. By default, access to the build cache is disabled. Only UI access is allowed which is also protected by username and password generated randomly. So we need to create `config` file to grant access to our application.
 
 For our use case, we need our java application to be able to access this cache. So we will start by creating our `dockerfile` which is easy to deploy to any container environment. 
 
@@ -38,7 +45,7 @@ cache:\n\
     anonymousLevel: \"read\"\n\
     users:\n\
       tsharma:\n\
-        password: \"8Fzqdkmw4g2LcKRcwez7+iMEQdzZ/PMFQDJhVmuUhy0=:Zxqw3oU1jRXj3YL00vtDkJw0TmTWtu8rs529KMKXmP8=\"\n\
+        password: \"sbTBSQggNYR9FHBrtOyHxPRovBsKy8YoiOWmHbjB4KY=:ModlttzkQ/ycq4w9j2s7y4AKQVjnQIvlj++gaKBEMqU=\"\n\
         level: \"readwrite\"\n\
         note: \"testing...\"\n" > /app/config/temp-config.yaml
 
@@ -65,11 +72,7 @@ export agent="docker"
 $agent build -t gradle-cache .
 $agent run -p 8080:5071 gradle-cache
 ```
-For the password, it expects a hashed salt password. You can generate it using the same jar
 
-```bash
-java -jar build-cache-node-18.0.jar hash
-```
 ## Verify the Gradle Cache
 
 Go to [start.initializr](https://start.spring.io/) and create a simple application. Put `org.gradle.caching=true` in your `gradle.properties`
@@ -79,12 +82,13 @@ Update `settings.gradle` :
 ```groovy
 buildCache {
     remote(HttpBuildCache) {
-        url = 'http://localhost:8080/cache/'
+        url = 'http://localhost:5071/cache/'
         push = true  // push to the cache
         enabled = true
+        allowInsecureProtocol=true
         credentials {
             username = 'tsharma' 
-            password = 'simpleComplicated@1' 
+            password = '2simplePassword@1' 
         }
     }
 }
