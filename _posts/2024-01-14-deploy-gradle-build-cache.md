@@ -1,17 +1,32 @@
 ---
-published: false
+layout: post
+title: Optimizing Builds with Gradle Build Cache
+image: https://unsplash.com/photos/5UNYknY0MTA/download?w=800
+thumb: https://unsplash.com/photos/5UNYknY0MTA/download?w=800
+author: Tushar Sharma
+category: blog
+published: true
+tags:
+  - gradle
+  - java
 ---
-Gradle build cache is a build cache that works by storing (locally or remotely) build outputs and thus saving build time. (?add something more)
 
-> Note : Tested with Gradle 8.5
+Gradle build cache is an essential tool for optimizing build times in software development. By storing build outputs either locally or remotely, it significantly reduces the time and resources required for rebuilding similar tasks. This cache mechanism is especially beneficial in continuous integration environments where builds occur frequently.<!-- truncate_here -->
 
-For the password, it expects a hashed salt password. You can generate it using the same jar
+Gradle build cache is an essential tool for optimizing build times in software development. By storing build outputs either locally or remotely, it significantly reduces the time and resources required for rebuilding similar tasks. This cache mechanism is especially beneficial in continuous integration environments where builds occur frequently.
 
-```bash
-java -jar build-cache-node-18.0.jar hash
-```
 
-First download the [jar](https://docs.gradle.com/build-cache-node/jar/build-cache-node-18.0.jar). We can run it locally by using 
+> Note : Tested with gradle 8.5
+
+## Setting Up the Build Cache Node
+
+### Generating a Hashed Salt Password
+
+For enhanced security, the Gradle build cache requires a hashed salt password. You can generate this using the build-cache-node jar. First, ensure you have the jar file by downloading it from the official Gradle Documentation.
+
+### Running the Build Cache Node Locally
+
+After downloading the  [jar](https://docs.gradle.com/build-cache-node/jar/build-cache-node-18.0.jar) file, you can start the build cache node locally:
 
 ```bash
 java -jar build-cache-node-18.0.jar start
@@ -21,85 +36,66 @@ Starting Develocity build cache node (18.0) ...
 UI access is protected by generated username and password:
 Build cache node started (port: 5071).
 ```
-It's started on port `5071` but we could also see the warnings: 
+This command will output several messages, including warnings and information about the default settings:
 
-1. Since we haven't defined a `data dir location`, so a temp space is used. It many not be useful if we want to keep persistent cache.
+1. **Default Data Directory:** It warns about using the default data directory located in temporary space (/tmp/build-cache-node). For persistent caching, it's recommended to specify a directory using --data-dir=`<dir>`.
 
-2. By default, access to the build cache is disabled. Only UI access is allowed which is also protected by username and password generated randomly. So we need to create `config` file to grant access to our application.
+2. **Access Control Settings:** By default, anonymous access to the build cache is disabled. To enable your application to access the cache, you need to configure access control settings.
 
-For our use case, we need our java application to be able to access this cache. So we will start by creating our `dockerfile` which is easy to deploy to any container environment. 
+## Configuring Access for a Java Application
 
-```yaml
-FROM amazoncorretto:17-alpine-jdk
+Let's set up a Docker container to deploy the cache node easily in any environment. Below is the Dockerfile for creating such a container:
 
-WORKDIR /app
+{% template  customCode.html %}
+---
+id: a7a291a9e4a5d16c8a2f298ec508bd05
+file: Dockerfile
+---
+{% endtemplate %}
 
-# Add the Gradle build cache node jar
-ADD https://docs.gradle.com/build-cache-node/jar/build-cache-node-18.0.jar /app/build-cache-node.jar
+Replace `<hashed_password>` with the hashed password generated earlier.
 
-# Create directories for storing the cache data and config
-RUN mkdir -p /app/cache /app/config
-
-# create the config.yaml file
-RUN printf "version: 5\n\
-cache:\n\
-  accessControl:\n\
-    anonymousLevel: \"read\"\n\
-    users:\n\
-      tsharma:\n\
-        password: \"sbTBSQggNYR9FHBrtOyHxPRovBsKy8YoiOWmHbjB4KY=:ModlttzkQ/ycq4w9j2s7y4AKQVjnQIvlj++gaKBEMqU=\"\n\
-        level: \"readwrite\"\n\
-        note: \"testing...\"\n" > /app/config/temp-config.yaml
-
-# Copy the temporary config file to the final location
-RUN cp /app/config/temp-config.yaml /app/config/config.yaml
-
-EXPOSE 5071
-
-# Start the build cache node with a specified data directory and config directory
-CMD ["java", "-jar", "/app/build-cache-node.jar", "start", "--data-dir", "/app/cache", "--config-dir", "/app/config"]
-```
-If you are using `podman`, you might need to give full path of the `dockerfile`. For example an image from `DockerHub` would look like : 
+> Note: If you're using podman, ensure to specify the full path of the Dockerfile. For example:
 
 ```yaml
 FROM docker.io/library/amazoncorretto:17-alpine-jdk
 ```
 
-Next we will build our application 
+Build and run your Docker container:
 
 ```bash
-# Choose your build agent
-export agent="docker"
-# or export agent="podman"
-$agent build -t gradle-cache .
-$agent run -p 8080:5071 gradle-cache
+# Build the Docker container
+docker build -t gradle-cache .
+
+# Run the container
+docker run -p 8080:5071 gradle-cache  
 ```
 
 ## Verify the Gradle Cache
 
-Go to [start.initializr](https://start.spring.io/) and create a simple application. Put `org.gradle.caching=true` in your `gradle.properties`
+### Creating a Simple Application
 
-Update `settings.gradle` : 
+Go to [start.initializr](https://start.spring.io/) and create a simple application. Ensure `gradle.properties` contains: 
 
-```groovy
-rootProject.name = 'testGradleCache'
-buildCache {
-    local {
-        enabled = false
-    }
-    remote(HttpBuildCache) {
-        url = 'http://localhost:8080/cache/'
-        push = true  // push to the cache
-        allowInsecureProtocol=true
-        enabled = true
-        credentials {
-            username = 'tsharma' 
-            password = 'simplePassword@1' 
-        }
-    }
-}
 ```
+org.gradle.caching=true
+```
+
+Update your `settings.gradle` to configure the remote build cache:
+
+{% template customCode.html %}
+---
+id: a7a291a9e4a5d16c8a2f298ec508bd05
+file: settings.gradle
+---
+{% endtemplate %}
+
+### Building the Application
+
+Finally, build your application:
 
 ```bash
 ./gradlew clean build
 ```
+
+By setting up and utilizing the Gradle build cache, you significantly reduce build times and enhance the efficiency of your development workflow. It's a powerful feature that, when configured correctly, can provide substantial benefits in both local and CI/CD environments.
