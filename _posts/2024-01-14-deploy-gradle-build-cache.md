@@ -20,10 +20,6 @@ Gradle build cache is an essential tool for optimizing build times in software d
 
 ## Setting Up the Build Cache Node
 
-### Generating a Hashed Salt Password
-
-For enhanced security, the Gradle build cache requires a hashed salt password. You can generate this using the build-cache-node jar. First, ensure you have the jar file by downloading it from the official Gradle Documentation.
-
 ### Running the Build Cache Node Locally
 
 After downloading the  [jar](https://docs.gradle.com/build-cache-node/jar/build-cache-node-18.0.jar) file, you can start the build cache node locally:
@@ -44,6 +40,15 @@ This command will output several messages, including warnings and information ab
 
 ## Configuring Access for a Java Application
 
+### Generating a Hashed Salt Password
+
+For enhanced security, the Gradle build cache requires a hashed salt password. You can generate this using the build-cache-node jar. 
+
+```java
+java -jar build-cache-node-18.0.jar hash
+```
+### Dockerfile
+
 Let's set up a Docker container to deploy the cache node easily in any environment. Below is the Dockerfile for creating such a container:
 
 {% template  customCode.html %}
@@ -55,7 +60,7 @@ file: Dockerfile
 
 Replace `<hashed_password>` with the hashed password generated earlier.
 
-> Note: If you're using podman, ensure to specify the full path of the Dockerfile. For example:
+> Note: If you're using podman, ensure to specify the full path of the Dockerfile like
 
 ```yaml
 FROM docker.io/library/amazoncorretto:17-alpine-jdk
@@ -70,6 +75,7 @@ docker build -t gradle-cache .
 # Run the container
 docker run -p 8080:5071 gradle-cache  
 ```
+
 
 ## Verify the Gradle Cache
 
