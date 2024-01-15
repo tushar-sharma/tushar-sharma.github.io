@@ -14,7 +14,7 @@ gem 'maruku', '=0.6.0'
 gem 'nokogiri', '>= 1.13.6'
 gem 'rdiscount', '=2.2.0.2'
 gem 'redcarpet', '>= 3.5.1'
-gem 'RedCloth', '~> 4.3', '>= 4.3.2'
+gem 'RedCloth', '~> 4.3'
 
 gem 'jekyll-compose', group: [:jekyll_plugins]
 group :jekyll_plugins do
