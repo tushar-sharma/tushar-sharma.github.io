@@ -25,6 +25,7 @@ GEM
     filesize (0.2.0)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
+    google-protobuf (3.23.2-arm64-darwin)
     google-protobuf (3.23.2-x86_64-linux)
     html-pipeline (2.14.3)
       activesupport (>= 2)
@@ -103,6 +104,8 @@ GEM
       syntax (>= 1.0.0)
     mercenary (0.4.0)
     minitest (5.18.0)
+    nokogiri (1.15.2-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.15.2-x86_64-linux)
       racc (~> 1.4)
     pathutil (0.16.2)
@@ -119,7 +122,9 @@ GEM
     rexml (3.2.5)
     rouge (4.1.1)
     safe_yaml (1.0.5)
-    sass-embedded (1.62.1-x86_64-linux-gnu)
+    sass-embedded (1.62.1-arm64-darwin)
+      google-protobuf (~> 3.21)
+    sass-embedded (1.62.1-x86_64-linux)
       google-protobuf (~> 3.21)
     syntax (1.2.2)
     terminal-table (3.0.2)
@@ -131,6 +136,7 @@ GEM
     webrick (1.8.1)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
