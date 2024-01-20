@@ -264,66 +264,33 @@ header li {
 
 <p>There are lots of tutorials that require adding separte <code class="language-plaintext highlighter-rouge">CSS</code> for light and dark theme. However I wanted to leverage a simple <code class="language-plaintext highlighter-rouge">javascript</code> solution to implement dark mode.</p>
 
-<h2 id="create-button-for-light-and-dark-mode">Create button for light and dark mode</h2>
+<h3 id="dependencies">Dependencies</h3>
+
+<p>First we need to import necessary files to our html file.</p>
+
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode2.html"></script> <button class="copy-button">Copy</button> </div>
+
+<h3 id="create-button-for-light-and-dark-mode">Create button for light and dark mode</h3>
 
 <p>We can use <a href="https://fontawesome.com/">FontAwesome</a> to add <code class="language-plaintext highlighter-rouge">moon</code> icon for light mode and <code class="language-plaintext highlighter-rouge">sun</code> icon for dark mode.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dark-mode-button"</span> <span class="nt">&gt;</span>
-  <span class="nt">&lt;i</span> <span class="na">id=</span><span class="s">"icon-dark"</span> <span class="na">class=</span><span class="s">"fa fa-moon"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"dark-text"</span><span class="nt">&gt;</span>Sunset<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/a&gt;</span>
-</code></pre></div></div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode1.html"></script> <button class="copy-button">Copy</button> </div>
 
-<p>Next we need to add <code class="language-plaintext highlighter-rouge">darkreader.js</code> to our html file.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/darkreader@4.9.44/darkreader.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div></div>
-
-<h2 id="toggle-between-light-and-dark-mode">Toggle between light and dark mode</h2>
+<h3 id="toggle-between-light-and-dark-mode">Toggle between light and dark mode</h3>
 
 <p>On clicking the button, we need to call the function <code class="language-plaintext highlighter-rouge">darkmode</code>.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByClassName</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode-button</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">darkmode</span><span class="p">()</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode3.js"></script> <button class="copy-button">Copy</button> </div>
 
 <p>The <code class="language-plaintext highlighter-rouge">localStorage</code> object allows you to save key/value pairs in the browser. This is useful to save the state of your application between page loads.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">darkmode</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">enabled</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nf">getItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode</span><span class="dl">'</span><span class="p">)</span>
-
-  <span class="k">if </span><span class="p">(</span><span class="nx">enabled</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if </span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span> <span class="o">&amp;&amp;</span> <span class="nb">window</span><span class="p">.</span><span class="nf">matchMedia</span><span class="p">(</span><span class="dl">'</span><span class="s1">(prefers-color-scheme: dark)</span><span class="dl">'</span><span class="p">).</span><span class="nx">matches</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nf">enable</span><span class="p">();</span>
-    <span class="p">}</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="k">if </span><span class="p">(</span><span class="nx">enabled</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">true</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">enable</span><span class="p">()</span>
-  <span class="p">}</span>
-
-  <span class="k">if </span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nf">getItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode</span><span class="dl">'</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">false</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nf">enable</span><span class="p">();</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nf">disable</span><span class="p">();</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode4.js"></script> <button class="copy-button">Copy</button> </div>
 
 <p>Lastly we need to call <code class="language-plaintext highlighter-rouge">setFetchMethod</code> to check if the browser is using <code class="language-plaintext highlighter-rouge">darkmode</code> before enabling or disabling it.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">enable</span><span class="p">()</span>  <span class="p">{</span>
-  <span class="nx">DarkReader</span><span class="p">.</span><span class="nf">setFetchMethod</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">fetch</span><span class="p">)</span>
-  <span class="nx">DarkReader</span><span class="p">.</span><span class="nf">enable</span><span class="p">();</span>
-  <span class="nx">localStorage</span><span class="p">.</span><span class="nf">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">true</span><span class="dl">'</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode5.js"></script> <button class="copy-button">Copy</button> </div>
 
-<span class="kd">function</span> <span class="nf">disable</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">DarkReader</span><span class="p">.</span><span class="nf">disable</span><span class="p">();</span>
-  <span class="nx">localStorage</span><span class="p">.</span><span class="nf">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">dark-mode</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">false</span><span class="dl">'</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="demo">Demo</h2>
+<h3 id="demo">Demo</h3>
 
 <p><img src="/img/dark_mode.gif" alt="" title="Dark Mode"></p>
 
