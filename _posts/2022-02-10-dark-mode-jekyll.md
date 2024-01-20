@@ -18,74 +18,60 @@ Lots of website have added `dark themes` to their platform. [Twitter](https://tw
 
 There are lots of tutorials that require adding separte `CSS` for light and dark theme. However I wanted to leverage a simple `javascript` solution to implement dark mode.
 
+### Dependencies
 
-## Create button for light and dark mode
+First we need to import necessary files to our html file.
+
+{% template  customCode.html %}
+---
+id: 58c77577dbff8a291523d9cc5a4f3731
+file: darkmode2.html
+---
+{% endtemplate %}
+
+### Create button for light and dark mode
 
 We can use [FontAwesome](https://fontawesome.com/) to add `moon` icon for light mode and `sun` icon for dark mode.
 
+{% template  customCode.html %}
+---
+id: 58c77577dbff8a291523d9cc5a4f3731
+file: darkmode1.html
+---
+{% endtemplate %}
 
-```html
-<a class="dark-mode-button" >
-  <i id="icon-dark" class="fa fa-moon"></i>
-  <span id="dark-text">Sunset</span>
-</a>
-```
-
-Next we need to add `darkreader.js` to our html file.
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.44/darkreader.js"></script>
-```
-
-## Toggle between light and dark mode
+### Toggle between light and dark mode
 
 On clicking the button, we need to call the function `darkmode`.
 
-```javascript
-document.getElementsByClassName('dark-mode-button')[0].onclick = function() {
-    darkmode()
-}
-```
+{% template  customCode.html %}
+---
+id: 58c77577dbff8a291523d9cc5a4f3731
+file: darkmode3.js
+---
+{% endtemplate %}
+
 
 The `localStorage` object allows you to save key/value pairs in the browser. This is useful to save the state of your application between page loads.
 
 
-```javascript
-function darkmode() {
-  let enabled = localStorage.getItem('dark-mode')
-
-  if (enabled === null) {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        enable();
-    }
-  } else if (enabled === 'true') {
-    enable()
-  }
-
-  if (localStorage.getItem('dark-mode') === 'false') {
-      enable();
-  } else {
-      disable();
-  }
-}
-```
+{% template  customCode.html %}
+---
+id: 58c77577dbff8a291523d9cc5a4f3731
+file: darkmode4.js
+---
+{% endtemplate %}
 
 Lastly we need to call `setFetchMethod` to check if the browser is using `darkmode` before enabling or disabling it.
 
-```javascript
-function enable()  {
-  DarkReader.setFetchMethod(window.fetch)
-  DarkReader.enable();
-  localStorage.setItem('dark-mode', 'true');
-}
+{% template  customCode.html %}
+---
+id: 58c77577dbff8a291523d9cc5a4f3731
+file: darkmode5.js
+---
+{% endtemplate %}
 
-function disable() {
-  DarkReader.disable();
-  localStorage.setItem('dark-mode', 'false');
-}
-```
-
-## Demo
+### Demo
 
 ![](/img/dark_mode.gif "Dark Mode")
 
