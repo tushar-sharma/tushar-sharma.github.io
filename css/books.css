@@ -101,6 +101,17 @@ select {
     border-radius: 0.25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.cl {
+    white-space: nowrap !important;
+}
+
+.dataTables_filter {
+    float: right !important;
+}
+/* Hide the DataTables search label */
+.dataTables_filter label {
+    display: none !important;
+}
 
 /* begin - books progress*/
 .book1 {width: 25%; }    /*Possible world 44 pages out of  200 */
