@@ -2,7 +2,7 @@ $(document).ready(function () {
     var table = $('#dtMaterial').DataTable({
         "paging": true, // Ensure paging is true
         "bSort": false,
-        pageLength: 5,
+        pageLength: 10,
         "autoWidth": true,
         "columns": [
           null,
