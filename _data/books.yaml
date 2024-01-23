@@ -175,6 +175,13 @@
   pending: false
   progress: 0
 
+- title: "Technical Analysis of the Financial Markets"
+  author: "John J. Murphy"
+  rating: 0
+  comments: ""
+  pending: true
+  progress: 10
+
 - title: "Possible World"
   author: "J.B.S. Haldane"
   rating: 0
@@ -186,6 +193,12 @@
   rating: 0
   pending: true
   progress: 4
+
+- title: "Hackers"
+  author: "Steven Levy"
+  rating: 0
+  pending: true
+  progress: 45
 
 - title: "Kafka: The Definitive Guide"
   author: "Gwen Shapira, Neha Narkhede, Todd Palino"
@@ -223,4 +236,3 @@
   rating: 0
   pending: true
   progress: 48.71
-
