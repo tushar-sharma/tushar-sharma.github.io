@@ -1,13 +1,12 @@
 $(document).ready(function () {
     var table = $('#dtMaterial').DataTable({
-        "paging": true, // Ensure paging is true
+        "paging": true,
         "bSort": false,
-        pageLength: 10,
+        pageLength: 10 ,
         "autoWidth": true,
         "columns": [
           null,
           null,
-          {'searchable': false},
           {'searchable': false}
         ]
       });

@@ -1,13 +1,22 @@
-#progress-outer { background: #333;
-    -webkit-border-radius: 13px;
-    height: 12px;
-    width: 70px;
+.progress-outer {
+    background: #f2f2f2; /* Light grey background */
+    border-radius: 13px; /* Rounded corners */
+    height: 12px; /* Match height with star size if needed */
+    width: 132px; /* Adjusted width to match 5 stars */
+    border: 1px solid #ccc; /* Slight border */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+    display: inline-block; /* Align with inline elements like stars */
+    vertical-align: middle; /* Align middle if stars and progress bar are on the same line */
 }
-#progress-inner {
-    background: rgb(51, 153, 204);
-      height: 100%;
-    -webkit-border-radius: 9px;
+
+.progress-inner {
+    background: rgb(51, 153, 204); /* Blue progress color */
+    height: 100%;
+    border-radius: 9px; /* Slightly less than container for a nice effect */
+    transition: width 0.4s ease-in-out; /* Smooth transition for changes */
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); /* Shadow for a 3D effect */
 }
+
 
 .cl{ color: rgb(51, 153, 204);
      overflow:hidden; display: inline-block; }
@@ -114,19 +123,6 @@ select {
 }
 
 /* begin - books progress*/
-.book1 {width: 25%; }    /*Possible world 44 pages out of  200 */
-.book3 {width: 0%; }    /* other  */
-.book4 {width: 27%; }    /* Kafka : The Definite Guide  has 11 chapters */
-.book5 {width: 10%; }    /* technical analysis */
-.book6 {width: 48.71%; }  /* Glimpse of the world  page : 525 / 1129 */
-.book7 {width: 45%; }  /* Hackers */
-.book8 {width: 20%; }  /* evolution of physics */
-.book9 {width: 30%; }  /* eminent historians */
-.book10 {width: 9.45%; }  /* java 8 in action */
-.book12 {width: 10%; }  /* Mastering bitcoin */
-.book13 {width: 20%; }  /* Origin of Species */
-.book15 {width: 17%; }  /* ng-book 130/766 */
-.book16 {width: 55%; }  /* Musicophilia */
 .tbd {width: 0%; }  /* TBD */
 .hidden {
     display: none;

@@ -1,0 +1,107 @@
+- title: "Anna Karenina"
+  author: "Leo Tolstoy"
+  rating: 4
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Great Expectation"
+  author: "Charles Dickens"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Man's Search for Meaning"
+  author: "Viktor Frankl"
+  rating: 5
+  pending: false
+  progress: 0
+
+- title: "The Discovery of India"
+  author: "Jawaharlal Nehru"
+  rating: 5
+  pending: false
+  progress: 0
+
+- title: "Wings of Fire: An Autobiography"
+  author: "A. P. J. Abdul Kalam"
+  rating: 3.5
+  pending: false
+  progress: 0
+
+- title: "The Five People You Meet in Heaven"
+  author: "Mitch Albom"
+  rating: 3.5 
+  pending: false
+  progress: 0
+
+- title: "The Selfish Gene"
+  author: "Richard Dawkins"
+  rating: 5
+  pending: false
+  progress: 0
+
+- title: "The Complete Sherlock Holmes"
+  author: "Arthur Conan D"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Five Point Someone"
+  author: "Chetan Bhagat"
+  rating: 2.5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Possible World"
+  author: "J.B.S. Haldane"
+  rating: 0
+  pending: true
+  progress: 25
+
+- title: "Crime and Punishment"
+  author: "Fyodor Dostoevsky"
+  rating: 0
+  pending: true
+  progress: 4
+
+- title: "Kafka: The Definitive Guide"
+  author: "Gwen Shapira, Neha Narkhede, Todd Palino"
+  rating: 0
+  comments: ""
+  pending: true
+  progress: 27
+
+- title: "ng-book: The complete book on Angular 8"
+  author: "Nate Murray, Felipe Coury, Ari Lerner, Carlos Taborda"
+  rating: 0
+  pending: true
+  progress: 17
+
+- title: "Musicophilia: Tales of Music and the Brain"
+  author: "Oliver Sacks"
+  rating: 0
+  pending: true
+  progress: 55
+
+- title: "On the Origin of Species"
+  author: "Charles Darwin"
+  rating: 0
+  pending: true
+  progress: 20
+
+- title: "Eminent Historians: Their Technology, Their Line, Their Fraud"
+  author: "Arun Shourie"
+  rating: 0
+  pending: true
+  progress: 30
+
+- title: "Glimpses of World History"
+  author: "Jawaharlal Nehru"
+  rating: 0
+  pending: true
+  progress: 48.71
+

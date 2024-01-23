@@ -20,187 +20,58 @@ author: Tushar Sharma
 <!-- heading -->
 <h1 class="entry-title">Books on my shelf</h1>
 
-<p>Feel free to send me your <a href="{{ root_url }}/contact">favourite book suggestion</a>. I will give you a shout-out
-  by adding your name in the comments.</p><br>
-
-<table id="dtMaterial" class="table table-striped" cellspacing="0" width="100%">
-  <thead>
-    <tr>
-      <th class="th-sm">Title
-      </th>
-      <th class="th-sm">Author
-      </th>
-      <th class="th-sm">Rating
-      </th>
-      <th class="th-sm">Comments
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <!-- Anna Karenina  -->
-    <tr>
-      <td>Anna Karenina</td>
-      <td>Leo Tolstoy</td>
-      <td>
-        <div class="cl">
-          {% for i in (1..5) %}
-          <span class="fa fa-star checked"></span>
-          {% endfor %}
-        </div>
-      </td>
-      <td>It's a journey into the heart's chaos. Witness Anna's captivating allure and downfall, alongside Levin's profound quest for life's meaning. A story rich in beauty, tragedy, and insight.</td>
-    </tr>
-
-    <!-- Great Expectation -->
-    <tr class="book1">
-      <td>Great Expectation</td>
-      <td>Charles Dickens</td>
-      <td>
-        <div class="cl">
-          {% for i in (1..5) %}
-          <span class="fa fa-star checked"></span>
-          {% endfor %}
-        </div>
-      </td>
-      <td>
-        Pip's life flips with one kind gesture to a fugitive, spiraling him into a world of heartache, mystery, and love with Miss Havisham and Estella. It's a story of how a single act of kindness can shape one's destiny.
-      </td>
-    </tr>
-
-      <!-- Man's Search for Meaning -->
-        <tr>
-          <td>Man's Search for Meaning</td>
-          <td>Viktor Frankl</td>
-          <td>
-            <div class="cl">
-              {% for i in (1..5) %}
-              <span class="fa fa-star checked"></span>
-              {% endfor %}
-            </div>
-          </td>
-          <td>
-            Frankl's memoir is a profound odyssey through history's darkness, revealing life in concentration camps and the quest for meaning amidst despair. A riveting, inspirational read.
-          </td>
-        </tr>
-
-    <!--Wings of Fire: An Autobiography -->
-    <tr>
-      <td>Wings of Fire: An Autobiography</td>
-      <td>A. P. J. Abdul Kalam</td>
-      <td>
-        <div class="cl">
-          {% for i in (1..3) %}
-          <span class="fa fa-star checked"></span>
-          {% endfor %}
-          <i class="fas fa-star-half-alt"></i>
-          <i class="icon-star-empty"></i>
-        </div>
-
-      </td>
-      <td>
-        It is more than an autobiography; it's the inspiring journey of India's beloved President and the 'Missile Man', A.P.J. Abdul Kalam. From humble origins to pioneering India's space and missile programs, his life story ignites the dreams within us all.
-      </td>
-    </tr>
-
-    <!-- The Five People You Meet in Heaven -->
-        <tr>
-          <td>The Five People You Meet in Heaven </td>
-          <td>Mitch Albom</td>
-          <td>
-            <div class="cl">
-              {% for i in (1..3) %}
-              <span class="fa fa-star checked"></span>
-              {% endfor %}
-              {% for i in (1..2) %}
-              <i class="icon-star-empty"></i>
-              {% endfor %}
-            </div>
-          </td>
-          <td>
-            A poignant journey through heaven's lessons, where one man's life is beautifully unraveled through the five people he meets. A tale of understanding life's intricate connections and the impact of every encounter.
-          </td>
-        </tr>
-    
-
-    <!-- The Selfish Gene -->
-    <tr>
-      <td>The Selfish Gene</td>
-      <td>Richard Dawkins</td>
-      <td>
-        <div class="cl">
-          {% for i in (1..5) %}
-          <span class="fa fa-star checked"></span>
-          {% endfor %}
-        </div>
-      </td>
-      <td>
-        Journey with Dawkins as he unravels the compelling saga of genes and survival. A concise, profound exploration that shifts the paradigm of evolution.
-      </td>
-    </tr>
-
-    <!--  The Complete Sherlock Holmes -->
-    <tr>
-      <td>The Complete Sherlock Holmes</td>
-      <td>Arthur Conan Doyle</td>
-      <td>
-        <div class="cl">
-          {% for i in (1..5) %}
-          <span class="fa fa-star checked"></span>
-          {% endfor %}
-        </div>
-      </td>
-      <td>
-        Holmes and Watson take you through a labyrinth of cunning cases, blending sharp intellect with thrilling suspense—a definitive collection for the detective in us all.
-      </td>
-    </tr>
-
-    <!-- The Monk Who Sold His Ferrari  -->
-    <tr>
-      <td>The Monk Who Sold His Ferrari</td>
-      <td>Robin Sharma</td>
-      <td>
-        <div class="cl">
-          {% for i in (1..3) %}
-          <span class="fa fa-star checked"></span>
-          {% endfor %}
-          
-          {% for i in (1..2) %}
-            <i class="icon-star-empty"></i>
-          {% endfor %}
-        </div>
-      </td>
-      <td>
-        It captivated me with its blend of life's hustle and spiritual wisdom. While I reveled in the profound life lessons from the tranquil Himalayas, some moments felt a bit idealistic. Yet, it's a personal guide that beautifully navigates the path to purpose and peace.
-      </td>
-    </tr>
-
-    <!--Midnight's Children -->
-    <tr>
-      <td>Midnight's Children</td>
-      <td>Salman Rushdie</td>
-      <td>
-        <div class="cl">
-          {% for i in (1..4) %}
-          <span class="fa fa-star checked"></span>
-          {% endfor %}
-          
-          {% for i in (1..1) %}
-            <i class="icon-star-empty"></i>
-          {% endfor %}
-        </div>
-      </td>
-      <td>
-        Dr. Aziz's love blooms through a perforated sheet, reflecting life's fragmented nature. Saleem, with his prophetic nose and a birth switched at midnight, mirrors India's own turbulent journey to independence. A story where personal fate and national history are inseparably entwined.
-      </td>
-    </tr>    
-
-    <!-- ending -->
-  </tbody>
+  <table id="dtMaterial" class="table table-striped" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th class="th-sm">Title</th>
+        <th class="th-sm">Author</th>
+        <th class="th-sm">Rating</th>
+      </tr>
+    </thead>
   
-  <tfoot>
-  </tfoot>
-</table>
+    <tbody>
+      {% for book in site.data.books %}
+      <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>
+          <div class="cl">
+            {% if book.pending %}
+            <!-- Progress bar for pending books -->
+            <div class="progress-outer">
+              <div class="progress-inner" style="width: {{ book.progress }}%;"></div> <!-- Add % to ensure it's treated as a percentage-->
+            </div>
+          {% else %}
+                 <!-- full stars -->
+                {% assign full_stars = book.rating | floor %}
+                {% for i in (1..full_stars) %}
+                  <span class="fa fa-star checked"></span>
+                {% endfor %}
+    
+                 <!-- half stars -->
+                 {% assign has_half_star = book.rating | modulo: 1 %}
+                 {% if has_half_star > 0 %}
+                   <i class="fas fa-star-half-alt"></i>
+                  {% assign empty_stars = 5 | minus: full_stars | minus: 1 %}
+                 {% else %}
+                   {% assign empty_stars = 5 | minus: full_stars %}
+                 {% endif %}
+                
+                <!-- Empty stars -->
+                {% for i in (1..empty_stars) %}
+                  <span class="icon-star-empty"></span>
+                {% endfor %}
+            {% endif %}
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    
+    <tfoot>
+    </tfoot>
+  </table>
+  
 
 <br><br>
 <!-- disclaimer -->
@@ -227,9 +98,8 @@ author: Tushar Sharma
     {% for i in (1..5) %}
     <span class="fa fa-star checked"></span>
     {% endfor %}
-    <span style="color:black">&nbsp;&nbsp;Liked well enough to reread and recommend enthusiastically to other</span>
+    <span style="color:black">&nbsp;&nbsp;Read it before you die</span>
     <br>
-
   </div>
 </center>
 
