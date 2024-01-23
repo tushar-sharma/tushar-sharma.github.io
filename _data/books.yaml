@@ -43,8 +43,22 @@
   progress: 0
 
 - title: "The Complete Sherlock Holmes"
-  author: "Arthur Conan D"
+  author: "Arthur Conan Doyle"
   rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Left hand of darkness"
+  author: "Ursula K. Le Guin"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Plato and platypus"
+  author: "Thomas Cathcart, Daniel Klein"
+  rating: 3
   comments: ""
   pending: false
   progress: 0
@@ -52,6 +66,111 @@
 - title: "Five Point Someone"
   author: "Chetan Bhagat"
   rating: 2.5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "The Code Book"
+  author: "Simon Singh"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Our Tress Still Grow in Dehra"
+  author: "Ruskin Bond"
+  rating: 3.5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Trespassing on Einstein's Lawn"
+  author: "Amanda Gefter"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Why We Get Sick: The New Science of Darwinian Medicine"
+  author: "Randolph M. Nesse"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "The Demon-Haunted World"
+  author: "Carl Sagan"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Midnight's Children"
+  author: "Salman Rushdie"
+  rating: 4
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Why I am an atheist"
+  author: "Bhagat Singh"
+  rating: 3
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "The Gene: An Intimate History"
+  author: "Siddhartha Mukherjee"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "The Harp of India"
+  author: "Henry Louis Vivian Derozio"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Silent Spring"
+  author: "Rachel Carson"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "The Emperor of All Maladies"
+  author: "Siddhartha Mukherjee"
+  rating: 5
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "Fooled by Randomness"
+  author: "Nassim Nicholas Taleb"
+  rating: 4
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "I Wandered Lonely as a Cloud"
+  author: "William Wordsworth"
+  rating: 4
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "A Mathematician's Apology"
+  author: "G. H. Hardy"
+  rating: 3
+  comments: ""
+  pending: false
+  progress: 0
+
+- title: "One, Two, Three...Infinity"
+  author: "George Gamow"
+  rating: 5
   comments: ""
   pending: false
   progress: 0
