@@ -65,7 +65,7 @@
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A39:T49?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A39:T50?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -183,6 +183,96 @@ req.send(null);
   &lt;/div&gt;
 
 &lt;/div&gt;
+
+&lt;h2 id=&quot;buying-a-stock&quot;&gt;Buying a stock&lt;/h2&gt;
+
+&lt;h3 id=&quot;kr-stock&quot;&gt;kr stock&lt;/h3&gt;
+
+&lt;p&gt;Here&apos;s a moving average:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*M1UGwLJI9jGDBe2sPLEVDg.jpeg&quot;  /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Lets look at some metrics&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dividend&lt;/td&gt;
+      &lt;td&gt;2.51%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;RSI(14)&lt;/td&gt;
+      &lt;td&gt;57.20&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Lets compare it with S&amp;amp;P&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*rVffMBPU9g7ulr_twMgvEQ.jpeg&quot;  /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Why not just invest in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VOO&lt;/code&gt; then if it doesn&apos;t give more return than S&amp;amp;P?&lt;/p&gt;
+
+&lt;h3 id=&quot;qcom-stock&quot;&gt;qcom stock&lt;/h3&gt;
+
+&lt;p&gt;First lets compare against it S&amp;amp;P&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*OFayJNLyJcnZjJuCVOJPww.jpeg&quot;  /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Lets look at some metrics&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dividend&lt;/td&gt;
+      &lt;td&gt;2.12%&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;RSI(14)&lt;/td&gt;
+      &lt;td&gt;64.54&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;EPS&lt;/td&gt;
+      &lt;td&gt;1.98 (12/25/2022)&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PEG&lt;/td&gt;
+      &lt;td&gt;2.15&lt;/td&gt;
+      &lt;td&gt;Stock is relatively high compared to its earning growth rate&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;How about moving average?&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*ZMOXhYKFc4FOQyp8JXEhbQ.jpeg&quot;  /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 </description>
           <pubDate>2024-01-22T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/weekly-logs-2024-01-22-28</link>
