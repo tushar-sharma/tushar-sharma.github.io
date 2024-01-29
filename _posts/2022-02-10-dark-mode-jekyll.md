@@ -4,7 +4,7 @@ category: blog
 layout: post
 tags:
 - jekyll
-featuredPost: false
+featuredPost: true
 image: https://unsplash.com/photos/Z895fnYRbog/download?w=800
 thumb: https://unsplash.com/photos/Z895fnYRbog/download?w=800
 ---
