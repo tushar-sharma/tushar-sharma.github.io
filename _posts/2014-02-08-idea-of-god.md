@@ -10,7 +10,7 @@ tags:
 - audio
 thumb: https://i.imgur.com/7iVRKen.jpg
 image: https://i.imgur.com/7iVRKen.jpg
-featuredPost: true
+featuredPost: false
 ---
 
 I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to wreak the whole place. And the mischievous alarm pulled me out of my dreams.<!-- truncate_here -->
