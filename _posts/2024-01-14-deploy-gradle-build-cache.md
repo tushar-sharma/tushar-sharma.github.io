@@ -44,8 +44,8 @@ This command will output several messages, including warnings and information ab
 
 For enhanced security, the Gradle build cache requires a hashed salt password. You can generate this using the build-cache-node jar. 
 
-```java
-java -jar build-cache-node-18.0.jar hash
+```bash
+$ java -jar build-cache-node-18.0.jar hash
 ```
 ### Dockerfile
 
@@ -62,7 +62,7 @@ Replace `<hashed_password>` with the hashed password generated earlier.
 
 > Note: If you're using podman, ensure to specify the full path of the Dockerfile like
 
-```yaml
+```bash
 FROM docker.io/library/amazoncorretto:17-alpine-jdk
 ```
 
@@ -70,10 +70,10 @@ Build and run your Docker container:
 
 ```bash
 # Build the Docker container
-docker build -t gradle-cache .
+$ docker build -t gradle-cache .
 
 # Run the container
-docker run -p 5071:5071 gradle-cache  
+$ docker run -p 5071:5071 gradle-cache  
 ```
 
 
@@ -109,7 +109,7 @@ file: settings.gradle
 Finally, build your application:
 
 ```bash
-./gradlew clean build
+$ ./gradlew clean build
 ```
 
 By setting up and utilizing the Gradle build cache, you significantly reduce build times and enhance the efficiency of your development workflow. It's a powerful feature that, when configured correctly, can provide substantial benefits in both local and CI/CD environments.
