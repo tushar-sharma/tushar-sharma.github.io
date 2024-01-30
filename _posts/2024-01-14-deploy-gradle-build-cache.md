@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Optimizing Builds with Gradle Build Cache
-image: https://unsplash.com/photos/5UNYknY0MTA/download?w=800
-thumb: https://unsplash.com/photos/5UNYknY0MTA/download?w=800
+image: 'https://unsplash.com/photos/5UNYknY0MTA/download?w=800'
+thumb: 'https://unsplash.com/photos/5UNYknY0MTA/download?w=800'
 author: Tushar Sharma
 category: blog
 published: true
@@ -73,11 +73,19 @@ Build and run your Docker container:
 docker build -t gradle-cache .
 
 # Run the container
-docker run -p 8080:5071 gradle-cache  
+docker run -p 5071:5071 gradle-cache  
 ```
 
 
 ## Verify the Gradle Cache
+
+### Using Curl
+
+
+```bash
+$ curl -sw \\n --fail-with-body --show-error http://localhost:5071/ping
+SUCCESS
+```
 
 ### Creating a Simple Application
 
