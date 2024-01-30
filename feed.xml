@@ -506,7 +506,7 @@ Build cache node started &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;port: 507
 
 &lt;p&gt;For enhanced security, the Gradle build cache requires a hashed salt password. You can generate this using the build-cache-node jar.&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;18.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hash&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; build-cache-node-18.0.jar &lt;span class=&quot;nb&quot;&gt;hash&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&quot;dockerfile&quot;&gt;Dockerfile&lt;/h3&gt;
 
@@ -520,19 +520,25 @@ Build cache node started &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;port: 507
   &lt;p&gt;Note: If you&apos;re using podman, ensure to specify the full path of the Dockerfile like&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;FROM docker.io/library/amazoncorretto:17-alpine-jdk&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM docker.io/library/amazoncorretto:17-alpine-jdk
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Build and run your Docker container:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Build the Docker container&lt;/span&gt;
-docker build &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; gradle-cache &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker build &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; gradle-cache &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# Run the container&lt;/span&gt;
-docker run &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8080:5071 gradle-cache  
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 5071:5071 gradle-cache  
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;verify-the-gradle-cache&quot;&gt;Verify the Gradle Cache&lt;/h2&gt;
+
+&lt;h3 id=&quot;using-curl&quot;&gt;Using Curl&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-sw&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;n &lt;span class=&quot;nt&quot;&gt;--fail-with-body&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--show-error&lt;/span&gt; http://localhost:5071/ping
+SUCCESS
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;creating-a-simple-application&quot;&gt;Creating a Simple Application&lt;/h3&gt;
 
@@ -549,7 +555,7 @@ docker run &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8080:5071 gradle-cac
 
 &lt;p&gt;Finally, build your application:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gradlew clean build
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./gradlew clean build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;By setting up and utilizing the Gradle build cache, you significantly reduce build times and enhance the efficiency of your development workflow. It&apos;s a powerful feature that, when configured correctly, can provide substantial benefits in both local and CI/CD environments.&lt;/p&gt;
@@ -761,22 +767,22 @@ req.send(null);
 
 &lt;p&gt;To view a list of services&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew services list
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew services list
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Staring a service&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew services start service_name
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew services start service_name
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Stopping a service&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew services stop service_name
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew services stop service_name
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Restarting a service&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew services restart service_name
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew services restart service_name
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
           <pubDate>2024-01-08T00:00:00-05:00</pubDate>
@@ -1285,20 +1291,6 @@ $ git stash drop
           <pubDate>2023-12-29T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/maximum-width-of-binary-tree</link>
           <guid isPermaLink="true">https://randomwits.com/blog/maximum-width-of-binary-tree</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Introduction to Apache Kafka</title>
-          <description>&lt;p&gt;In the realm of distributed data processing, Apache Kafka shines as a powerful and versatile tool, serving as the backbone of many real-time data pipelines and event-driven architectures. At its core, Kafka is a distributed commit log - a concept that underpins its efficiency and reliability. &lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Apache Kafka is a distributed commit log. Why distributed? It&apos;s distributed because the data is replicated across multiple nodes in a Kafka cluster. Why commit log? Once a entry is written to commit log, it becomes immutable - it means it cannot be altered or deleted.&lt;/p&gt;
-
-</description>
-          <pubDate>2023-12-29T00:00:00-05:00</pubDate>
-          <link>https://randomwits.com/blog/introduction-apache-kafka.md</link>
-          <guid isPermaLink="true">https://randomwits.com/blog/introduction-apache-kafka.md</guid>
         </item>
       
     

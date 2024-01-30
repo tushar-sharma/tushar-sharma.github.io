@@ -18,7 +18,7 @@
 <title>Optimizing Builds with Gradle Build Cache</title>
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 <link rel="icon" type="image/png" href="/img/favicon.png">
-<link rel="stylesheet" href="/css/pygment_trac_solarized_dark.css">
+<link rel="stylesheet" href="/css/github.css">
 <link rel="stylesheet" href="/css/font-awesome.css">
 <link rel="stylesheet" href="/css/styles.css">
 <script async src="/js/scale.fix.js"></script>
@@ -296,7 +296,7 @@ Build cache node started <span class="o">(</span>port: 5071<span class="o">)</sp
 
 <p>For enhanced security, the Gradle build cache requires a hashed salt password. You can generate this using the build-cache-node jar.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">build</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">node</span><span class="o">-</span><span class="mf">18.0</span><span class="o">.</span><span class="na">jar</span> <span class="n">hash</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>java <span class="nt">-jar</span> build-cache-node-18.0.jar <span class="nb">hash</span>
 </code></pre></div></div>
 <h3 id="dockerfile">Dockerfile</h3>
 
@@ -310,19 +310,25 @@ Build cache node started <span class="o">(</span>port: 5071<span class="o">)</sp
   <p>Note: If you're using podman, ensure to specify the full path of the Dockerfile like</p>
 </blockquote>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">FROM docker.io/library/amazoncorretto:17-alpine-jdk</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM docker.io/library/amazoncorretto:17-alpine-jdk
 </code></pre></div></div>
 
 <p>Build and run your Docker container:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Build the Docker container</span>
-docker build <span class="nt">-t</span> gradle-cache <span class="nb">.</span>
+<span class="nv">$ </span>docker build <span class="nt">-t</span> gradle-cache <span class="nb">.</span>
 
 <span class="c"># Run the container</span>
-docker run <span class="nt">-p</span> 8080:5071 gradle-cache  
+<span class="nv">$ </span>docker run <span class="nt">-p</span> 5071:5071 gradle-cache  
 </code></pre></div></div>
 
 <h2 id="verify-the-gradle-cache">Verify the Gradle Cache</h2>
+
+<h3 id="using-curl">Using Curl</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">-sw</span> <span class="se">\\</span>n <span class="nt">--fail-with-body</span> <span class="nt">--show-error</span> http://localhost:5071/ping
+SUCCESS
+</code></pre></div></div>
 
 <h3 id="creating-a-simple-application">Creating a Simple Application</h3>
 
@@ -339,7 +345,7 @@ docker run <span class="nt">-p</span> 8080:5071 gradle-cache
 
 <p>Finally, build your application:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew clean build
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./gradlew clean build
 </code></pre></div></div>
 
 <p>By setting up and utilizing the Gradle build cache, you significantly reduce build times and enhance the efficiency of your development workflow. It's a powerful feature that, when configured correctly, can provide substantial benefits in both local and CI/CD environments.</p>
