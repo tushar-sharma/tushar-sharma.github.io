@@ -38,6 +38,7 @@ toc_icon: cog
 |         |         | [Pop up blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche) | |
 |         |         | [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) | |
 |         |         | [HeadingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi) | Browse the headings structure of a website |
+|         |         | [Medium Parser](https://chromewebstore.google.com/detail/medium-parser/egejbknaophaadmhijkepokfchkbnelc) | Read Medium articles for free |
 |         |         | [I dont care about cookies](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja) |  |
 |         |         | [Json formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa/related?hl=en)    |         |
 | [Ubuntu](https://ubuntu.com/)  | Operating System  |  | Details<sup><a href='#fn:3' rel='footnote'>3</a></sup> |
