@@ -6,7 +6,7 @@ author: Tushar Sharma
 published: true
 ---
 
-<script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.js"></script>
+<script src="https://unpkg.com/jquery.terminal@2.35.0/js/jquery.terminal.js"></script>
 <link href="{{ root_url}}/css/jquery.terminal.css" rel="stylesheet" />
 <script src="https://unpkg.com/js-polyfills/keyboard.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/jcubic/static/js/wcwidth.js"></script>
@@ -118,7 +118,17 @@ published: true
         window.location.href = "/"
       } else if (cmd == "red" || cmd == "help") {
 
-        mystr = "<span class=\"cl\">clear</span> Clear screen.<br><span class=\"cl\">about</span> A short bio.<br><span class=\"cl\">resume</span> mini resume, links to pdf version.<br><span class=\"cl\">ls</span> List directory content.<br><span class=\"cl\">blog</span> Open my blog.<br><span class=\"cl\">songs</span> Recommend me a song.<br><span class=\"cl\">books</span> Books on my shelf.<br><span class=\"cl\">games</span> List some of games I developed.<br><span class=\"cl\">contact</span> Send me a direct message.<br><span class=\"cl\">quote</span> Display a random quote.<br><span class=\"cl\">hack</span> Katamari hack<br><span class=\"cl\">search</span> Search my site.";
+        mystr = `
+        <span class=\"cl\">clear</span> Clear screen<br><br>
+        <span class=\"cl\">about</span> Who the heck am I?<br><br>
+        <span class=\"cl\"> Resume</span> Do you want to hire me?<br><br>
+        <span class=\"cl\">ls</span> See hidden files<br><br>
+        <span class=\"cl\">songs</span> Recommend me a song<br><br>
+        <span class=\"cl\">games</span> List some of games I developed.<br><br>
+        <span class=\"cl\">contact</span> Send me a direct message<br><br>
+        <span class=\"cl\">quote</span> A random quote.<br><br>
+        <span class=\"cl\">hack</span> Go loco<br><br>
+        <span class=\"cl\">search</span> Search my site.`;
 
         term.echo(mystr, {
           raw: function (div) {
@@ -167,16 +177,10 @@ published: true
         window.location.href = "/contact";
       } else if (cmd == "projects") {
         window.location.href = "/projects";
-      } else if (cmd == "blog") {
-        window.location.href = "/blog";
       } else if (arg == "search" || cmd == "search") {
         if (toSearch == "" || cmd == "search")
           term.echo("Wrong Parameters. Usage: search <to search>");
         else window.location.href = "/search/?q=" + toSearch;
-      } else if (cmd == "books") {
-        //window.open('/books', '_blank');
-        window.location.href = "/books";
-
       } else if (cmd == "games") {
         window.location.href = "/games";
       } /*else if (cmd == "qrcode") {
@@ -212,6 +216,7 @@ published: true
             raw: function (div) { }
           });
         });
+        
 
 
         /* term.echo(art, {
@@ -220,7 +225,37 @@ published: true
            }
         });*/
 
-      } else if (cmd == "songs") {
+      } 
+           
+      else if (cmd == "travel") {
+         var places = {
+             "Chimney Rock, North Carolina": "https://www.youtube.com/watch?v=z8poghdWw3Y",
+             "Yellow Stone": "https://www.youtube.com/watch?v=YjPGz9192S0",
+             "Seabreacher Ride": "https://www.getyourguide.com/cancun-l150/cancun-seabreacher-ride-t251922/",
+             "Dunk Tanks": "",
+             "Bamboo river rafting, Thailand": "https://www.airbnb.com/experiences/933327",
+             "Marble caves of Chile": "",
+             "Las Botas Viejas, Cartagena": ""
+         };
+         
+         var list = '<pre style="font-family: Courier, monospace; color: #ff6347;">_..-----._<br>-          -<br>|｡ ♥ ｡|<br>\'.  -ˏˋ Destination List ˊˎ-  .\'<br>  `""""""""`</pre><br>';
+         
+         for (var place in places) {
+             if (places[place]) {
+                 // If the place has a link, add it as a hyperlink
+                 list += '<a href="' + places[place] + '" style="color: #008080; font-family: Courier, monospace; margin-bottom: 10px;" target="_blank">' + place + '</a><br><br>';
+             } else {
+                 // If the place doesn't have a link, add it as plain text
+                 list += '<span style="color: #008080; font-family: Courier, monospace; margin-bottom: 10px;">' + place + '</span><br><br>';
+             }
+         }
+         
+         term.echo(list, {
+             raw: true
+         });
+       }
+
+      else if (cmd == "songs") {
         // Clear the terminal first
         term.clear();
 
