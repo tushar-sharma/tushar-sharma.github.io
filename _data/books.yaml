@@ -236,3 +236,9 @@
   rating: 0
   pending: true
   progress: 48.71
+
+- title: "Quantitative Finance with Python"
+  author: Chris Kelliher 
+  rating: 0
+  pending: true
+  progress: 7.73
