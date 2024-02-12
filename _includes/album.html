@@ -1,0 +1,9 @@
+<div id="{{include.albumname}}">
+    {% for image in page.images %}
+    <a  data-lightbox="image-{{ forloop.index }}"  href="{{ image.source }}" class="album-image" data-sub-html="{{ image.caption }}" >
+            <img src="{{ image.thumb }}" />
+        </a>
+    {% endfor %}
+    <a id="album-left" href="#">&lsaquo;</a>
+    <a id="album-right" href="#">&rsaquo;</a>
+</div>

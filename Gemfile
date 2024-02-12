@@ -26,5 +26,8 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'webrick'
   gem 'jekyll-algolia', '~> 1.0'
+  gem 'jekyll-maps'
+  gem "mini_magick"
+  gem "exifr"
 end
 
