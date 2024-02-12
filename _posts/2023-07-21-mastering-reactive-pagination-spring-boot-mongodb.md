@@ -160,3 +160,18 @@ Create a `GET` request for pagination entries: `http://localhost:8080/paginaged-
 ```
 
 Create a `GET` request for getting all entries: `http://localhost:8080/products`
+
+### Login to MongoDB
+
+You can also verify the data inside mongoDB
+
+```bash
+$ docker ps 
+<CONTAINER_ID> mongo:latest
+
+$ docker exec -it <CONTAINER_ID> bash
+# mongosh -u username -p password
+# use testdb
+# show collections
+
+```
