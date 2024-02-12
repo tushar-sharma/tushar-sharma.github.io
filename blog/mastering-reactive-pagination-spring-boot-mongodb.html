@@ -51,6 +51,8 @@
 
 
 
+
+
 <script src="/js/clipboard.js"></script>
 <script src="/js/clipboard.min.js"></script>
 
@@ -361,6 +363,20 @@ header li {
 </span></code></pre></div></div>
 
 <p>Create a <code class="language-plaintext highlighter-rouge">GET</code> request for getting all entries: <code class="language-plaintext highlighter-rouge">http://localhost:8080/products</code></p>
+
+<h3 id="login-to-mongodb">Login to MongoDB</h3>
+
+<p>You can also verify the data inside mongoDB</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker ps 
+&lt;CONTAINER_ID&gt; mongo:latest
+
+<span class="nv">$ </span>docker <span class="nb">exec</span> <span class="nt">-it</span> &lt;CONTAINER_ID&gt; bash
+<span class="c"># mongosh -u username -p password</span>
+<span class="c"># use testdb</span>
+<span class="c"># show collections</span>
+
+</code></pre></div></div>
 
 
 

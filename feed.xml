@@ -1,9 +1,662 @@
+<script type='text/javascript'>
+  /* global google */
+/* global MarkerClusterer */
+// eslint-disable-next-line no-unused-vars
+var jekyllMaps = (function() {
+  'use strict'
+  var clusterSettings = {}
+  var clusterReady = false
+  var mapReady = false
+  var options = {}
+  var data = []
+  var maps = []
+
+  return {
+    initializeMap: initializeMap,
+    initializeCluster: initializeCluster,
+    register: register
+  }
+
+  /**
+   * Setup Google Maps options and call renderer.
+   */
+  function initializeMap() {
+    options = {
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      center: new google.maps.LatLng(0, 0),
+      styles: []
+    }
+    mapReady = true
+    render()
+  }
+
+  /**
+   * Register map data to be rendered once Google Maps API is loaded.
+   *
+   * @param string id
+   * @param Array locations
+   * @param Object settings
+   */
+  function register(id, locations, options) {
+    data.push({ id: id, locations: locations, options: options })
+    render()
+  }
+
+  /**
+   * Render maps data if Google Maps API is loaded.
+   */
+  function render() {
+    if (!mapReady) return
+
+    while (data.length > 0) {
+      var item = data.pop()
+      var bounds = new google.maps.LatLngBounds()
+      var mapOptions = Object.assign({}, options, item.options)
+      var map = new google.maps.Map(
+        document.getElementById(item.id),
+        mapOptions
+      )
+      var infoWindow = new google.maps.InfoWindow()
+      var markers = item.locations.map(createMarker)
+
+      map.fitBounds(bounds)
+      google.maps.event.addListenerOnce(map, 'idle', function() {
+        if (this.customZoom) this.setZoom(this.customZoom)
+      })
+      if (mapOptions.useCluster) {
+        maps.push({ map: map, markers: markers })
+        processCluster()
+      }
+    }
+
+    function createMarker(location) {
+      var position = new google.maps.LatLng(
+        location.latitude,
+        location.longitude
+      )
+      bounds.extend(position)
+      if (!mapOptions.showMarker) return false
+
+      var marker = new google.maps.Marker({
+        position: position,
+        title: location.title,
+        image: location.image,
+        popup_html: location.popup_html,
+        icon: location.icon || mapOptions.markerIcon,
+        url: markerUrl(mapOptions.baseUrl, location.url),
+        url_text: location.url_text,
+        map: map
+      })
+      if (mapOptions.showMarkerPopup) marker.addListener('click', markerPopup)
+
+      return marker
+    }
+
+    function markerUrl(baseUrl, url) {
+      if (/^(https?|\/\/)/.test(url)) return url
+
+      return url.length > 0 ? baseUrl + url : ''
+    }
+
+    function markerPopup() {
+      var content = '<div class="map-info-window"><h5>' + this.title + '</h5>'
+      if (this.popup_html.length > 0) {
+        content += this.popup_html
+      }
+      else {
+        var imageTag =
+          this.image.length > 0 &&
+          '<img src="' + this.image + '" alt="' + this.title + '"/>'
+        if (this.url.length > 0) {
+          var linkContent = imageTag || this.url_text || 'View'
+          content += '<a href="' + this.url + '">' + linkContent + '</a>'
+        } else if (imageTag) {
+          content += imageTag
+        }
+      }
+      content += '</div>'
+      infoWindow.setContent(content)
+      infoWindow.open(map, this)
+    }
+  }
+
+  function initializeCluster(settings) {
+    clusterReady = true
+    clusterSettings = settings || {}
+    processCluster()
+  }
+
+  function processCluster() {
+    if (!clusterReady) return
+
+    while (maps.length > 0) {
+      var obj = maps.pop()
+      // eslint-disable-next-line no-new
+      new MarkerClusterer(obj.map, obj.markers, {
+        gridSize: clusterSettings.grid_size || 25,
+        imagePath:
+          'https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/images/m'
+      })
+    }
+  }
+})()
+/* Object.assign polyfill */
+if (typeof Object.assign !== 'function') {
+  Object.assign = function(target) {
+    'use strict'
+    if (target == null) {
+      throw new TypeError('Cannot convert undefined or null to object')
+    }
+
+    target = Object(target)
+    for (var index = 1; index < arguments.length; index++) {
+      var source = arguments[index]
+      if (source != null) {
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key]
+          }
+        }
+      }
+    }
+    return target
+  }
+}
+
+</script>
+<script type='text/javascript'>
+  /* global google */
+/* global MarkerClusterer */
+// eslint-disable-next-line no-unused-vars
+var jekyllMaps = (function() {
+  'use strict'
+  var clusterSettings = {}
+  var clusterReady = false
+  var mapReady = false
+  var options = {}
+  var data = []
+  var maps = []
+
+  return {
+    initializeMap: initializeMap,
+    initializeCluster: initializeCluster,
+    register: register
+  }
+
+  /**
+   * Setup Google Maps options and call renderer.
+   */
+  function initializeMap() {
+    options = {
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      center: new google.maps.LatLng(0, 0),
+      styles: []
+    }
+    mapReady = true
+    render()
+  }
+
+  /**
+   * Register map data to be rendered once Google Maps API is loaded.
+   *
+   * @param string id
+   * @param Array locations
+   * @param Object settings
+   */
+  function register(id, locations, options) {
+    data.push({ id: id, locations: locations, options: options })
+    render()
+  }
+
+  /**
+   * Render maps data if Google Maps API is loaded.
+   */
+  function render() {
+    if (!mapReady) return
+
+    while (data.length > 0) {
+      var item = data.pop()
+      var bounds = new google.maps.LatLngBounds()
+      var mapOptions = Object.assign({}, options, item.options)
+      var map = new google.maps.Map(
+        document.getElementById(item.id),
+        mapOptions
+      )
+      var infoWindow = new google.maps.InfoWindow()
+      var markers = item.locations.map(createMarker)
+
+      map.fitBounds(bounds)
+      google.maps.event.addListenerOnce(map, 'idle', function() {
+        if (this.customZoom) this.setZoom(this.customZoom)
+      })
+      if (mapOptions.useCluster) {
+        maps.push({ map: map, markers: markers })
+        processCluster()
+      }
+    }
+
+    function createMarker(location) {
+      var position = new google.maps.LatLng(
+        location.latitude,
+        location.longitude
+      )
+      bounds.extend(position)
+      if (!mapOptions.showMarker) return false
+
+      var marker = new google.maps.Marker({
+        position: position,
+        title: location.title,
+        image: location.image,
+        popup_html: location.popup_html,
+        icon: location.icon || mapOptions.markerIcon,
+        url: markerUrl(mapOptions.baseUrl, location.url),
+        url_text: location.url_text,
+        map: map
+      })
+      if (mapOptions.showMarkerPopup) marker.addListener('click', markerPopup)
+
+      return marker
+    }
+
+    function markerUrl(baseUrl, url) {
+      if (/^(https?|\/\/)/.test(url)) return url
+
+      return url.length > 0 ? baseUrl + url : ''
+    }
+
+    function markerPopup() {
+      var content = '<div class="map-info-window"><h5>' + this.title + '</h5>'
+      if (this.popup_html.length > 0) {
+        content += this.popup_html
+      }
+      else {
+        var imageTag =
+          this.image.length > 0 &&
+          '<img src="' + this.image + '" alt="' + this.title + '"/>'
+        if (this.url.length > 0) {
+          var linkContent = imageTag || this.url_text || 'View'
+          content += '<a href="' + this.url + '">' + linkContent + '</a>'
+        } else if (imageTag) {
+          content += imageTag
+        }
+      }
+      content += '</div>'
+      infoWindow.setContent(content)
+      infoWindow.open(map, this)
+    }
+  }
+
+  function initializeCluster(settings) {
+    clusterReady = true
+    clusterSettings = settings || {}
+    processCluster()
+  }
+
+  function processCluster() {
+    if (!clusterReady) return
+
+    while (maps.length > 0) {
+      var obj = maps.pop()
+      // eslint-disable-next-line no-new
+      new MarkerClusterer(obj.map, obj.markers, {
+        gridSize: clusterSettings.grid_size || 25,
+        imagePath:
+          'https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/images/m'
+      })
+    }
+  }
+})()
+/* Object.assign polyfill */
+if (typeof Object.assign !== 'function') {
+  Object.assign = function(target) {
+    'use strict'
+    if (target == null) {
+      throw new TypeError('Cannot convert undefined or null to object')
+    }
+
+    target = Object(target)
+    for (var index = 1; index < arguments.length; index++) {
+      var source = arguments[index]
+      if (source != null) {
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key]
+          }
+        }
+      }
+    }
+    return target
+  }
+}
+
+</script>
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Randomwits - Articles</title>
     <description>Increasing the entropy of the universe</description>
     <link>https://randomwits.com</link>
+    
+      
+        <item>
+          <title>North Carolina Museum of Natural Sciences</title>
+          <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;div id=&quot;1703f4ff-6a5c-4c38-aaee-788bde0c182a&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  jekyllMaps.register(
+    &apos;1703f4ff-6a5c-4c38-aaee-788bde0c182a&apos;,
+    [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
+    {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
+  );
+&lt;/script&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;br /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;museum&quot;&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*9bc3CTmkJpa5LqFgR9pEdw.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*9bc3CTmkJpa5LqFgR9pEdw.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*mk5xbWBa88B1dcHfdxYa1g.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*mk5xbWBa88B1dcHfdxYa1g.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*yAKJXclZDHOcuA-hqGsElA.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*yAKJXclZDHOcuA-hqGsElA.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*awoqkGFXzXy7hmXjBXr1Kw.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*awoqkGFXzXy7hmXjBXr1Kw.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*Yg7WsvBbZZVYd_26mP8udA.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*Yg7WsvBbZZVYd_26mP8udA.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*oT-IFG_4nS_hMK-mbuB8_g.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*oT-IFG_4nS_hMK-mbuB8_g.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*4oWOuW5rmcQzaJz4O8TRMg.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*4oWOuW5rmcQzaJz4O8TRMg.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*69dzALU3XrAFrZohyg4zvg.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*69dzALU3XrAFrZohyg4zvg.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*yzVBW8CnW_6ncv9HZVHj6A.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*yzVBW8CnW_6ncv9HZVHj6A.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*p0NBLexR_Mc_w1YG1u9i5Q.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*p0NBLexR_Mc_w1YG1u9i5Q.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*vj67_k7y2VhcbZSH7IGlYw.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*vj67_k7y2VhcbZSH7IGlYw.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*KUH6OgBraSZ9_qW0n5-X-Q.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*KUH6OgBraSZ9_qW0n5-X-Q.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*_bQRF9fPcTEle_GgalyMKQ.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*_bQRF9fPcTEle_GgalyMKQ.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a id=&quot;album-left&quot; href=&quot;#&quot;&gt;&amp;lsaquo;&lt;/a&gt;
+    &lt;a id=&quot;album-right&quot; href=&quot;#&quot;&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; src=&quot;https://drive.google.com/file/d/10_QpTw52_-19jaJVJAjkQ45xMmKsLPm3/preview&quot; width=&quot;640&quot; height=&quot;480&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+</description>
+          <pubDate>2024-02-11T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/north-carolina-museum-of-natural-sciences</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/north-carolina-museum-of-natural-sciences</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Weekly Logs from Feb 5 to Feb 11</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from Feb 5 to Feb 11, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my weekly logs from Feb 5 to Feb 11, 2024.&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+
+const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A64:T76?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;h3 id=&quot;gradle-cache&quot;&gt;Gradle Cache&lt;/h3&gt;
+
+&lt;p&gt;I was testing if the gradle cache pod I deployed was successful or not. So a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Makefile&lt;/code&gt; is convenient way to test different endpoints&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ping:
+    @echo &quot;Pinging $(url):5071&quot;
+    @curl -sw &apos;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&apos; --fail-with-body --show-error
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And then you can test it like&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make ping &lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://localhost
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make ping &lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://some/server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;gradle&quot;&gt;Gradle&lt;/h3&gt;
+
+&lt;p&gt;To locate your Gradle installation, you can use the where command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;where gradle
+/opt/homebrew/bin/gradle
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Inspect the symbolic link to find the current Gradle location:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; /opt/homebrew/bin/gradle 
+/opt/homebrew/bin/gradle -&amp;gt; ../Cellar/gradle/8.5/bin/gradle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To manually update Gradle, download the new Gradle version and move it to the location found above. For example, if /path/to/new/gradle is the location of your downloaded Gradle folder:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mv&lt;/span&gt; /path/to/new/gradle ../Cellar/gradle/8.5/bin/gradle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;heic-to-jpg&quot;&gt;HEIC to JPG&lt;/h3&gt;
+
+&lt;p&gt;On Mac you can convert heic images to jpg format&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;imagemagick
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;magick convert foo.HEIC foo.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+          <pubDate>2024-02-05T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2024-02-05-11</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-02-05-11</guid>
+        </item>
+      
     
       
         <item>
@@ -3270,6 +3923,20 @@ String get(String key, int timestamp) Returns a value such that set was called p
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GET&lt;/code&gt; request for getting all entries: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/products&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;login-to-mongodb&quot;&gt;Login to MongoDB&lt;/h3&gt;
+
+&lt;p&gt;You can also verify the data inside mongoDB&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker ps 
+&amp;lt;CONTAINER_ID&amp;gt; mongo:latest
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &amp;lt;CONTAINER_ID&amp;gt; bash
+&lt;span class=&quot;c&quot;&gt;# mongosh -u username -p password&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# use testdb&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# show collections&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
           <pubDate>2023-07-21T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/mastering-reactive-pagination-spring-boot-mongodb</link>
