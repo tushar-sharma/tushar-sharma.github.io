@@ -20,7 +20,7 @@ plugins:
   - jekyll-maps
 maps:
   google:
-    api_key: ENV['GOOGLE_MAP_API_KEY']
+    api_key: AIzaSyB6zGGwhhPehgRGDlc84747vLqaitf57_E 
 kramdown:
   math_engine: mathjax
   input: GFM
