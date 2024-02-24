@@ -1,16 +1,15 @@
 ---
 layout: post
 title: Handling File Operations in Jenkins Pipeline
-image: /img/
-thumb: /img/
+image: 'https://unsplash.com/photos/LNwIJHUtED4/download?w=800'
+thumb: 'https://unsplash.com/photos/LNwIJHUtED4/download?w=800'
 tags:
  - jenkins
-author: ;
+author: Tushar Sharma
 category: blog
-published: false
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<!-- truncate_here -->
+Jenkins pipelines are a powerful tool for automating continuous integration and delivery workflows. However, when dealing with file operations in a Jenkins pipeline, developers often encounter a common pitfall related to file handling.<!-- truncate_here -->
 
 Jenkins pipelines are a powerful tool for automating continuous integration and delivery workflows. However, when dealing with file operations in a Jenkins pipeline, developers often encounter a common pitfall related to file handling.
 
@@ -19,7 +18,6 @@ Jenkins pipelines are a powerful tool for automating continuous integration and 
 In a Jenkins pipeline, the conventional way to handle file operations is to use java.io.File. However, this method operates on the file system of the JVM where the Groovy script is running, which is the master node in the case of a Jenkins pipeline. This means that when you use java.io.File, it refers to files on the master machine where Jenkins is running, not in the workspace of the slave machine where your job might be running. This discrepancy can lead to a FileNotFoundException.
 
 For example, consider the following code snippet:
-
 
 ```groovy
 def homeDir = "${steps.WORKSPACE}"
