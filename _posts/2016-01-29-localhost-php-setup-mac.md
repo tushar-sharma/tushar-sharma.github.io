@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Setup php on Mac OS X localhost
+title: Setup php on MacOS localhost
 category: blog
 tags:
-- mac 
+- macos
 - php
 name: localhost-php-setup
 thumb: /img/localhost.png
