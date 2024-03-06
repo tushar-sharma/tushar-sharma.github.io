@@ -339,6 +339,115 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Optimizing SQL Queries - Understanding and Refreshing Materialized Views</title>
+          <description>&lt;p&gt;When to use a materialized view? And how does it perform against a normal view. Benchmarking using docker.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;When to use a materialized view? And how does it perform against a normal view. Benchmarking using docker.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-a-view&quot;&gt;What&apos;s a view?&lt;/h2&gt;
+
+&lt;p&gt;A view is a virtual table based on a result-set of a SQL query. It&apos;s not physically materialized, the query is run every time the view is referenced.&lt;/p&gt;
+
+&lt;h2 id=&quot;materialized-view&quot;&gt;Materialized view&lt;/h2&gt;
+
+&lt;p&gt;A materialized view is a physical table that contains the result of a query. It&apos;s used when the query is complex and involves large amounts of data, making it unfeasible to execute each time. Instead, results are pre-computed and stored in the view.&lt;/p&gt;
+
+&lt;h2 id=&quot;stale-data&quot;&gt;Stale data&lt;/h2&gt;
+
+&lt;p&gt;Data can become stale after a time in a materialized view. Since the data is pre-computed and stored, it can get out of sync with the underlying base tables if those tables are updated.&lt;/p&gt;
+
+&lt;p&gt;The concurrency option is more resource-intensive and might not be suitable for all scenarios.&lt;/p&gt;
+
+&lt;h2 id=&quot;solutions&quot;&gt;Solutions&lt;/h2&gt;
+
+&lt;h3 id=&quot;traditional-refresh&quot;&gt;Traditional refresh&lt;/h3&gt;
+
+&lt;p&gt;Drop the old version of the view and replace it with new one. This can cause issues as it can block other queries from reading the view during the refresh process.&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;refresh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;materialized&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view_name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;concurrent-refresh&quot;&gt;Concurrent refresh&lt;/h3&gt;
+
+&lt;p&gt;Queries can read the view even when the view is getting refreshed as the update can be performed concurrently in the background. In order to use this approach, a unique index must be added to the materialized view. This unique index acts as a lookup table while the table is refreshing.&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unique&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_unique_index&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;programs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;program_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;refresh&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;materialized&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;concurrently&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;benchmarking-with-docker&quot;&gt;Benchmarking with Docker&lt;/h2&gt;
+
+&lt;h3 id=&quot;dockerfile&quot;&gt;Dockerfile&lt;/h3&gt;
+
+&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; postgres:latest&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; /data/postgres
+&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; schema.sql /docker-entrypoint-initdb.d/&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;EXPOSE&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; 5432&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;ENTRYPOINT&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [&quot;docker-entrypoint.sh&quot;, &quot;postgres&quot;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dockerfile&lt;/code&gt; defines a container based on official PostgreSQL image. It creates a directory for persistent data and copies a schema file (containing the materialized view definition and sample data) to the initialization directory, ensuring the schema is applied when the container starts.&lt;/p&gt;
+
+&lt;h3 id=&quot;schemasql&quot;&gt;schema.sql&lt;/h3&gt;
+
+&lt;p&gt;This schema creates a courses table and a programs materialized view contianing the count of courses grouped by ID. Additionally, it defines a unique index on the course_id column of the materialized view, which is necessary for concurrent refresh.&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;courses&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;course_id&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;serial&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;primary&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;course_name&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;varchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;materialized&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;programs&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;course_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;program_count&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;courses&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;c&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;course_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unique&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx_programs&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;programs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;course_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;deploy-postgres-container&quot;&gt;Deploy postgres container&lt;/h3&gt;
+
+&lt;p&gt;Build and run the container using docker-&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker build &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; my_postgres_image &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; my_postgres_container &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 5432:5432 &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;password my_postgres_image
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;install-dependencies&quot;&gt;Install dependencies&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python3 &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; venv myenv 
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; myenv/bin/activate
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;psycopg2-binary
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python benchmark.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;python-script&quot;&gt;Python script&lt;/h3&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/2089f8af1ba720e91e29e206a28f7430.js?file=benchmark.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;result&quot;&gt;Result&lt;/h3&gt;
+
+&lt;p&gt;Traditional refresh are usually faster than concurrent refresh. However traditional refresh take longer time for queries due to lock mechanism.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;***Traditional Refresh***
+Refresh time:  1.312699794769287
+Fetch time:  1.4531309604644775
+***Concurrent Refresh***
+Refresh time:  6.476271152496338
+Fetch time:  1.2998201847076416
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+          <pubDate>2024-03-04T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/refresh-materialized-views-concurrently</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/refresh-materialized-views-concurrently</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Resolving chromedrive verification error in MacOS</title>
           <description>&lt;p&gt;The MacOS Catalina (v 10.15.3) has a security feature known as Gatekeeper, which verifies downloaded applications. When you encounter the error: &quot;chromedriver&quot; cannot be opened because the developer cannot be verified, it&apos;s due to Gatekeeper restricting the execution of the chromedriver executable. This is because it doesn&apos;t recognize the developer, which is a common issue for developers and testers who use chromedriver for browser automation.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -367,61 +476,6 @@ if (typeof Object.assign !== 'function') {
           <pubDate>2024-03-03T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/resolving-chromedrive-verification-error-macos</link>
           <guid isPermaLink="true">https://randomwits.com/blog/resolving-chromedrive-verification-error-macos</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Hinduphobia Archives</title>
-          <description>&lt;p&gt;It&apos;s a collection of archives of Hinduphobia.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
-
-&lt;!-- disclaimer --&gt;
-&lt;div style=&quot;margin: 0 auto&quot; class=&quot;cl disclaimer&quot;&gt;
-  &lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;
-    &lt;span style=&quot;color:black&quot;&gt; &amp;nbsp;&amp;nbsp;This article will be continously updated
-    &lt;/span&gt; 
-&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;It&apos;s a collection of archives of Hinduphobia.&lt;/p&gt;
-
-&lt;h2 id=&quot;one-of-the-most-obscene-disgusted-sacred-books&quot;&gt;one of the most obscene disgusted sacred books&lt;/h2&gt;
-
-&lt;p&gt;Recently I saw a video of Slavoj Žižek, Slovenian philosopher, ranting against Bhagavad Gita which is one of the holiest book for the Hindus.&lt;/p&gt;
-
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/6xUuzrzmFac?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/6xUuzrzmFac?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/6xUuzrzmFac/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;In the video, he refers to Bhagavad Gita as the &quot;one of the most obscene disgusted sacred books (sic)&quot;. Had he directed similar criticism for other Abrahamic religions, the repercussions might have been more severe. He still has his job as International director of the Birkbeck Institute for the Humantities. But bashing Hinduism has no severe backlash:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;There is no Hindu majority countries except India and Nepal.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Much of the left in India vehemently opposes Hindusim in guise of &quot;dismantling Brahmanism&quot;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;misognisitc-pig&quot;&gt;misognisitc pig&lt;/h2&gt;
-
-&lt;p&gt;Audrey truschke, a historian of South Asia and an associate professor at Rutgers University, referred to Rama, a revered diety in Hindusim, as a &lt;a href=&quot;https://www.newslaundry.com/2018/04/30/the-unscholarly-dishonesty-of-audrey-truschke&quot;&gt;misognisitc pig&lt;/a&gt;. Recenlty she wrote an article for the &lt;a href=&quot;https://time.com/6564148/ayodhya-ram-temple-modi-india/&quot;&gt;Time magazine&lt;/a&gt; on the occassion of inaguration of Rama temple in India and she continues to teach at Rutgers University.&lt;/p&gt;
-
-&lt;p&gt;On contrary, consider this. In U.S, Erika López Prater, an adjunct professor at Hamline University, lost her job becasue she showed painting of Islamic art that was deemed offensive by some Muslims.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-do-we-say-no-to-holi&quot;&gt;Why Do We Say No to Holi?&lt;/h2&gt;
-
-&lt;p&gt;Equality labs opposes &lt;a href=&quot;https://browngirlmagazine.com/why-do-we-say-no-to-holi-a-guide-to-challenge-casteism/&quot;&gt;celebration of Holi&lt;/a&gt;. Holi is a significant Hindu festival celebrated as the Festival of Colours.&lt;/p&gt;
-
-&lt;h2 id=&quot;brahmins-who-are-historically-indolent&quot;&gt;Brahmins, who are historically indolent&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://thewire.in/caste/does-india-need-a-caste-based-quota-in-cricket&quot;&gt;The Wire&lt;/a&gt; published an article on why cricket sport in India needs caste based reservation. Caricature Brahmins as, &quot;Brahmins, who are historically indolent, like cricket because it involves hours of merely standing around and an absence of physical contact.&quot;&lt;/p&gt;
-</description>
-          <pubDate>2024-03-03T00:00:00-05:00</pubDate>
-          <link>https://randomwits.com/blog/hinduphobia-archives</link>
-          <guid isPermaLink="true">https://randomwits.com/blog/hinduphobia-archives</guid>
         </item>
       
     
@@ -1083,10 +1137,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;0192d883-ce40-4613-9fe0-26e2a287d096&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;7ef0affa-1ae9-4663-af21-baae6276116c&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;0192d883-ce40-4613-9fe0-26e2a287d096&apos;,
+    &apos;7ef0affa-1ae9-4663-af21-baae6276116c&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
