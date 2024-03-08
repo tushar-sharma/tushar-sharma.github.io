@@ -13,7 +13,7 @@ tagline: life is too short for a diary
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-gzip
   - jekyll-include-cache
   - jekyll-spaceship
@@ -45,10 +45,12 @@ algolia:
   files_to_exclude:
     - tag/*
     - blog/*
-gems: [jekyll-paginate]
-paginate: 3
-not_paginated_categories:
-  - 'projects'
+pagination:
+  enabled: true
+  per_page: 4
+  permalink: '/page:num/'
+  sort_field: 'date'
+  sort_reverse: true
 author:
   name: "Tushar Sharma"
 # Disqus Comments

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Meetup at McColl School of Business at Queens University
-image: https://drive.google.com/uc?export=view&id=1qhnpHMoI-CG9mdRkK8yq509c8iChU1xW
-thumb: https://drive.google.com/uc?export=view&id=1qhnpHMoI-CG9mdRkK8yq509c8iChU1xW
+image: https://cdn-images-1.medium.com/v2/resize:fit:2600/1*8gpeGFhtT6I5J8IlPQ018g.jpeg
+thumb: https://cdn-images-1.medium.com/v2/resize:fit:2600/1*8gpeGFhtT6I5J8IlPQ018g.jpeg
 author: Tushar Sharma
 category: blog
 published: true
@@ -16,7 +16,7 @@ I went to Charlotte Fintech Meetup. It was held in Room 326 of Sykes Hall, which
 
 I went to Charlotte Fintech Meetup. It was held in Room 326 of Sykes Hall, which is located in the McColl School of Business at Queens University. 
 
-| <img align="center"  loading="lazy" src="https://drive.google.com/uc?export=view&id=1qhnpHMoI-CG9mdRkK8yq509c8iChU1xW" alt="Sample Image" />|
+| <img align="center"  loading="lazy" src="https://cdn-images-1.medium.com/v2/resize:fit:2600/1*8gpeGFhtT6I5J8IlPQ018g.jpeg" alt="Sample Image" />|
 
 ### Fama-French Three-Factor Model
 
