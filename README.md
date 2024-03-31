@@ -43,6 +43,26 @@ Here, sample is video url.
 ></iframe><br>
 ```
 
+### Footnotes
+
+add this : 
+
+```
+<sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup>
+
+
+
+<div class='footnotes'><h3>Footnotes</h3><hr />
+  <ol>
+    <li id='fn:1'>
+         <p> <a href="http://localhost:8080" target="_blank">text</a> </p>
+         <a href='#fnref:1' rev='footnote'>&#8617;</a>
+    </li>
+
+  </ol>
+</div>
+
+```
 ### Tweet
 
 Go to [Poet.so](https://poet.so/) to download the screenshot.
