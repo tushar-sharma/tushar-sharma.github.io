@@ -18,7 +18,19 @@ GlobalProtect is a security platform that extends the capabilities of a firewall
 The LaunchAgent plist is a type of file used by macOS systems to control the behavior of various services and applications. These files are written in XML and dictate when and how certain apps or services are launched, among other settings. In the case of GlobalProtect, the plist file of interest is `com.paloaltonetworks.gp.pangpa.plist`.
 
 
-The command line tool sed can be used to modify this plist file and thereby control the GlobalProtect service. sed, or the stream editor, is a Unix utility that parses and transforms text. It is typically used for extracting part of a file using pattern matching or substituting multiple occurrences of a string within a file.
+Open you terminal and type 
+
+```bash
+$ launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*
+```
+
+If you wish to enable it again, type
+
+```bash
+$ launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*
+```
+
+If you want to change it 
 
 The command to disable GlobalProtect service is:
 
