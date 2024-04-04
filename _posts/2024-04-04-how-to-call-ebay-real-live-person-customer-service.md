@@ -1,11 +1,12 @@
 ---
 layout: post
-title: how-to-call-ebay-real-live-customer-service
+title: How to call Ebay Real live Person Customer Service
 image: /img/
 thumb: /img/
-author: ;
+author: Tushar Sharma
 category: blog
-published: false
+tags: 
+ - customer care
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<!-- truncate_here -->
