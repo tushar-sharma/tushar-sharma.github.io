@@ -1,17 +1,17 @@
 ---
 layout: post
 title: How to call Ebay Real live Person Customer Service
-image: /img/
-thumb: /img/
+image: 'https://unsplash.com/photos/GFrBMipOd_E/download?w=800'
+thumb: 'https://unsplash.com/photos/GFrBMipOd_E/download?w=800'
 author: Tushar Sharma
 category: blog
 tags: 
- - customer care
+ - ebay
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<!-- truncate_here -->
+I bought a ping pong table on eBay, only to endure an agonizing wait of over a month. When it finally arrived, the table bore no resemblance to the one advertised in the pictures. Eager to fast-track my return, I discovered that contacting eBay directly via phone was not an option. The customer service numbers provided no straightforward path to speak with a live representative. Engaging directly with a person often speeds up resolution processes, but finding that human connection proved to be a challenge in this case.<!-- truncate_here -->
 
-I bought a ping pong table that looked nothing like what was advertised. It was a frustrating experience, especially when I attempted to reach eBay's customer service, which proved to be an impossible task.
+I bought a ping pong table on eBay, only to endure an agonizing wait of over a month. When it finally arrived, the table bore no resemblance to the one advertised in the pictures. Eager to fast-track my return, I discovered that contacting eBay directly via phone was not an option. The customer service numbers provided no straightforward path to speak with a live representative. Engaging directly with a person often speeds up resolution processes, but finding that human connection proved to be a challenge in this case.
 
 So here's a trick to get to talk to a person in ebay custoemr care. 
 
@@ -35,27 +35,3 @@ So here's a trick to get to talk to a person in ebay custoemr care.
 5. Type, **contact an agent**
 
 | <img align="center" loading="lazy" src="https://cdn-images-1.medium.com/v2/resize:fit:2400/1*kDMyHE5JSR62NuG5Wz1EKA.png" > |
-
-
-<div class='footnotes'><h3>Footnotes</h3><hr />
-  <ol>
-    <li id='fn:1'>
-         <p> <a href="https://twitter.com/PeytonElroy/status/1742919905878679881" target="_blank">tweet by PeytonElroy</a> </p>
-         <a href='#fnref:1' rev='footnote'>&#8617;</a>
-    </li>
-
-    <li id='fn:2'>
-         <p> <a href="https://www.hsph.harvard.edu/nutritionsource/magnesium/" target="_blank">hsph.harvard.edu</a> </p>
-         <a href='#fnref:2' rev='footnote'>&#8617;</a>
-    </li>
-
-    
-    <li id='fn:3'>
-         <p> <a href="https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/#:~:text=Too%20much%20magnesium%20from%20food,and%20abdominal%20cramping%20%5B1%5" target="_blank">ods.od.nih.gov</a> </p>
-         <a href='#fnref:3' rev='footnote'>&#8617;</a>
-    </li>
-
-  </ol>
-</div>
-
- 
