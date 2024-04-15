@@ -3,9 +3,9 @@ layout: post
 title: Integrating Reactive Kafka with Micrometer for Enhanced Tracing
 image: 'https://unsplash.com/photos/jAJZfSh4rXU/download?w=800'
 thumb: 'https://unsplash.com/photos/jAJZfSh4rXU/download?w=800'
-author: Tushar Sharma;
+author: Tushar Sharma
 category: blog
-published: true
+published: false
 tags:
  - kafka
 ---
