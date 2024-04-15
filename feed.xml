@@ -339,6 +339,526 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Weekly Logs From Apr 8 to Apr 14, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from Apr 8 to Apr 14, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my weekly logs from Apr 8 to Apr 14, 2024.&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+
+const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A146:T159?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;an-honest-beggar&quot;&gt;An Honest Beggar&lt;/h2&gt;
+
+&lt;p&gt;On my way home from work, I caught sight of a beggar displaying a unique placard. At least he was being honest.&lt;/p&gt;
+
+&lt;div id=&quot;beggar&quot;&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*eOSuTgVoAab5dYCNJLSVeQ.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*eOSuTgVoAab5dYCNJLSVeQ.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*NxauLHmElGpr0tz4j7CvAw.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
+            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*NxauLHmElGpr0tz4j7CvAw.jpeg&quot; /&gt;
+        &lt;/a&gt;
+    
+    &lt;a id=&quot;album-left&quot; href=&quot;#&quot;&gt;&amp;lsaquo;&lt;/a&gt;
+    &lt;a id=&quot;album-right&quot; href=&quot;#&quot;&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2024-04-10T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2024-04-08-14</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-04-08-14</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>How to call Ebay Real live Person Customer Service</title>
+          <description>&lt;p&gt;I bought a ping pong table on eBay, only to endure an agonizing wait of over a month. When it finally arrived, the table bore no resemblance to the one advertised in the pictures. Eager to fast-track my return, I discovered that contacting eBay directly via phone was not an option. The customer service numbers provided no straightforward path to speak with a live representative. Engaging directly with a person often speeds up resolution processes, but finding that human connection proved to be a challenge in this case.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;I bought a ping pong table on eBay, only to endure an agonizing wait of over a month. When it finally arrived, the table bore no resemblance to the one advertised in the pictures. Eager to fast-track my return, I discovered that contacting eBay directly via phone was not an option. The customer service numbers provided no straightforward path to speak with a live representative. Engaging directly with a person often speeds up resolution processes, but finding that human connection proved to be a challenge in this case.&lt;/p&gt;
+
+&lt;p&gt;So here&apos;s a trick to get to talk to a person in ebay custoemr care.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;First go to &lt;a href=&quot;https://www.ebay.com/help/home&quot;&gt;help&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Scroll to the bottom, and click on contact us&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2400/1*xeSAsvS5f3BmMjhlvUGBIg.png&quot; alt=&quot;Contact Us&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Select anything under &quot;Contact Us&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2400/1*GtQhBZMPd1CxhrJ7Z9CW4w.png&quot; alt=&quot;Contact Us&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; loading=&quot;lazy&quot; src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2400/1*KT5jrKbDcDCQKMacrlOOnw.png&quot; alt=&quot;Contact Us&quot;&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Next on the left side , click on &lt;strong&gt;Chat with our automated assistant&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; loading=&quot;lazy&quot; src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2400/1*Iefzq1CD5saBXe4kfVU8hA.png&quot; alt=&quot;Contact Us&quot;&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Type, &lt;strong&gt;contact an agent&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot; loading=&quot;lazy&quot; src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2400/1*kDMyHE5JSR62NuG5Wz1EKA.png&quot; &amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+          <pubDate>2024-04-04T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/how-to-call-ebay-real-live-person-customer-service</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/how-to-call-ebay-real-live-person-customer-service</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Weekly Logs From Apr 1 to Apr 7, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from Apr 1 to Apr 7, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my weekly logs from Apr 1 to Apr 7, 2024.&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+
+const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A132:T145?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;magnesium-supplements&quot;&gt;Magnesium supplements&lt;/h2&gt;
+
+&lt;p&gt;I usually take two supplements -&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;B12 on empty stomach&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;D3 with food&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Recently I cam across multiple tweets extolling magnesium supplements&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Which foods are rich in magnesium? Like nuts and seeds like almonds, cashews. Green vegetables like spinach, kale, etc. Fruits like avacado, banana, etc. Fish like salmon, etc&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Can there be an overdose of magnesium? In healthy individuals, an overdose of magnesium from dietary sources is rare because the kidneys efficiently eliminate any excess amounts. However, it&apos;s essential to approach magnesium supplements with caution, as they can lead to adverse effects if consumed in excessively high quantities, especially in individuals with kidney dysfunction.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lastly, do we need supplments if we dont have a deficiency? There&apos;s a huge market for supplements so I&apos;m skeptical in taking any supplements that is touted as a wonder pill. If people lost weight just by drinking green tea or cured baldness by just applying rosemary / mustard / bla oil, there would be no overweight or bald person in the entire world?&lt;/p&gt;
+</description>
+          <pubDate>2024-04-01T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2024-04-01-07</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-04-01-07</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Unsolicited Advice - The noise of Well Meaning Strangers</title>
+          <description>&lt;p&gt;Consider the following scenario: You&apos;re sitting on a bus when a stranger initiates a conversation. &quot;What do you do for a living?&quot; he asks. At this time, I was unemployed. &quot;I&apos;m currently in between jobs,&quot; I responded.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Consider the following scenario: You&apos;re sitting on a bus when a stranger initiates a conversation. &quot;What do you do for a living?&quot; he asks. At this time, I was unemployed. &quot;I&apos;m currently in between jobs,&quot; I responded.&lt;/p&gt;
+
+&lt;p&gt;&quot;And for how long have you been seeking employment?&quot; he probed. I generally prefer not to share too much personal information, especially with strangers. &quot;I might consider becoming a stock broker,&quot; I replied, attempting to lighten the mood.&lt;/p&gt;
+
+&lt;p&gt;Seizing the opportunity, the stranger launched into a lengthy critique about the pitfalls of the stock market. He argued that even the most skilled data scientists struggle to profit, suggesting that the system is fundamentally flawed and unnecessary. As I listened, a question began to form: why are people so eager to offer unsolicited advice?&lt;/p&gt;
+
+&lt;p&gt;Would this stranger be willing to pay for my lunch? Yet, he was freely dispensing his opinions. Did this mean his advice was worth less than a meal?&lt;/p&gt;
+
+&lt;p&gt;It seems humans have an inherent tendency to give advice. This behaviour can be traced back to our evolutionary roots. As primates, we are hardwired for communication, and there is a certain satisfaction in imparting wisdom. However, when asked to part with our resources, our survival instincts kick in, reminding us of the importance of self-preservation. This dichotomy explains why individuals can be generous with advice but frugal with their wallets.&lt;/p&gt;
+
+&lt;p&gt;However, does advice without context carry any value? Steve Jobs famously spoke of pursuing his dreams after dropping out of college. This might not be suitable advice for everyone.&lt;/p&gt;
+
+&lt;p&gt;Beware of generic advice. Many say that hard work leads to success, but if that were the case, a hardworking donkey would be the owner of the farm.&lt;/p&gt;
+
+&lt;p&gt;Seek advice from those who are accountable for their words. For instance, a doctor who prescribes medication can be held liable for mistakes. This form of advice is more reliable than that from a well-intentioned stranger on the street.&lt;/p&gt;
+
+&lt;p&gt;Similarly, consider advice from those who have a vested interest in your success, such as a paid tennis coach or your parents.&lt;/p&gt;
+
+&lt;p&gt;In a world filled with noise, it&apos;s crucial to seek advice that carries weight, advice backed by accountability, expertise, and genuine concern.&lt;/p&gt;
+</description>
+          <pubDate>2024-03-08T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/unsolicited-advice</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/unsolicited-advice</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Optimizing SQL Queries - Understanding and Refreshing Materialized Views</title>
           <description>&lt;p&gt;When to use a materialized view? And how does it perform against a normal view. Benchmarking using docker.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -488,7 +1008,17 @@ Fetch time:  1.2998201847076416
 
 &lt;p&gt;The LaunchAgent plist is a type of file used by macOS systems to control the behavior of various services and applications. These files are written in XML and dictate when and how certain apps or services are launched, among other settings. In the case of GlobalProtect, the plist file of interest is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.paloaltonetworks.gp.pangpa.plist&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;The command line tool sed can be used to modify this plist file and thereby control the GlobalProtect service. sed, or the stream editor, is a Unix utility that parses and transforms text. It is typically used for extracting part of a file using pattern matching or substituting multiple occurrences of a string within a file.&lt;/p&gt;
+&lt;p&gt;Open you terminal and type&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you wish to enable it again, type&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you want to change it&lt;/p&gt;
 
 &lt;p&gt;The command to disable GlobalProtect service is:&lt;/p&gt;
 
@@ -1137,10 +1667,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;7ef0affa-1ae9-4663-af21-baae6276116c&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;cf753f5a-10ab-44bb-b87b-bc8fb0a5fe97&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;7ef0affa-1ae9-4663-af21-baae6276116c&apos;,
+    &apos;cf753f5a-10ab-44bb-b87b-bc8fb0a5fe97&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
