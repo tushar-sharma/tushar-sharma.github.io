@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Unsolicited Advice - The noise of Well Meaning Strangers
-image: https://unsplash.com/photos/n31JPLu8_Pw/download?w=800
-thumb: https://unsplash.com/photos/n31JPLu8_Pw/download?w=800
+image: 'https://unsplash.com/photos/n31JPLu8_Pw/download?w=800'
+thumb: 'https://unsplash.com/photos/n31JPLu8_Pw/download?w=800'
 author: Tushar Sharma
 category: blog
 tags:
@@ -16,9 +16,9 @@ Consider the following scenario: You're sitting on a bus when a stranger initiat
 
 "And for how long have you been seeking employment?" he probed. I generally prefer not to share too much personal information, especially with strangers. "I might consider becoming a stock broker," I replied, attempting to lighten the mood.
 
-Seizing the opportunity, the stranger launched into a lengthy critique about the pitfalls of the stock market. He argued that even the most skilled data scientists struggle to profit, suggesting that the system is fundamentally flawed and unnecessary. As I listened, a question began to form: why are people so eager to offer unsolicited advice?
+Seizing the opportunity, the stranger launched into a lengthy critique about the pitfalls of the stock market. He argued that even the most skilled data scientists struggle to profit, suggesting that the system is fundamentally flawed and unnecessary. 
 
-Would this stranger be willing to pay for my lunch? Yet, he was freely dispensing his opinions. Did this mean his advice was worth less than a meal?
+Would this stranger be willing to pay for my lunch? "Could you please pay for my lunch at the next stop?" I requested, "I forgot my wallet at home." His tone changed, and he said that he had to leave soon. Why was he not kind enough to pay for my lunch yet so gregarious a moment ago? Did this mean his advice was worth less than a meal? I began to wonder, why are people so eager to offer unsolicited advice?
 
 It seems humans have an inherent tendency to give advice. This behaviour can be traced back to our evolutionary roots. As primates, we are hardwired for communication, and there is a certain satisfaction in imparting wisdom. However, when asked to part with our resources, our survival instincts kick in, reminding us of the importance of self-preservation. This dichotomy explains why individuals can be generous with advice but frugal with their wallets.
 
