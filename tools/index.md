@@ -55,6 +55,7 @@ toc_icon: cog
 | [Cygwin](https://www.cygwin.com/)     | Terminal | Details<sup><a href='#fn:4' rel='footnote'>4</a></sup> | |
 | [Warp](https://www.warp.dev/)              | Terminal | Currently supports only Mac |
 | [Expressvpn](https://www.expressvpn.com/)  | VPN | | |
+| [iMazing Converter](https://imazing.com/converter)  | Convert HEIC photos to JPG | Mac, Windows |
 
 
 ## Details
