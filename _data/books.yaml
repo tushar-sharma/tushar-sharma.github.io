@@ -217,7 +217,7 @@
   author: "Oliver Sacks"
   rating: 0
   pending: true
-  progress: 55
+  progress: 60
 
 - title: "On the Origin of Species"
   author: "Charles Darwin"
@@ -242,3 +242,9 @@
   rating: 0
   pending: true
   progress: 7.73
+
+- title: "The Hunting of the Quarks"
+  author: Michael Riordan
+  rating: 0
+  pending: true
+  progress: 15
