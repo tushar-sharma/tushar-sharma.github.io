@@ -22,11 +22,11 @@ Would this stranger be willing to pay for my lunch? "Could you please pay for my
 
 It seems humans have an inherent tendency to give advice. This behaviour can be traced back to our evolutionary roots. As primates, we are hardwired for communication, and there is a certain satisfaction in imparting wisdom. However, when asked to part with our resources, our survival instincts kick in, reminding us of the importance of self-preservation. This dichotomy explains why individuals can be generous with advice but frugal with their wallets.
 
-However, does advice without context carry any value? Steve Jobs famously spoke of pursuing his dreams after dropping out of college. This might not be suitable advice for everyone.
+However, is advice without context truly valuable? Steve Jobs famously advocated for following one's dreams after he dropped out of college. Yet, this advice may not be universally applicable. Similarly, Elon Musk has stated that attending college is not necessary for acquiring knowledge. Nevertheless, job listings at his companies, such as Tesla and SpaceX, often require a degree. 
 
 Beware of generic advice. Many say that hard work leads to success, but if that were the case, a hardworking donkey would be the owner of the farm.
 
-Seek advice from those who are accountable for their words. For instance, a doctor who prescribes medication can be held liable for mistakes. This form of advice is more reliable than that from a well-intentioned stranger on the street.
+Seek advice from those who are accountable for their words. For instance, a doctor who prescribes medication can be held liable for mistakes. This form of advice is more reliable than that from a well-intentioned stranger shouting on the street.
 
 Similarly, consider advice from those who have a vested interest in your success, such as a paid tennis coach or your parents.
 
