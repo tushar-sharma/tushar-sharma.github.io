@@ -30,9 +30,7 @@ If you wish to enable it again, type
 $ launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*
 ```
 
-If you want to change it 
-
-The command to disable GlobalProtect service is:
+Also you can disable it at startup:
 
 ```bash
 $ sudo sed -i '' -e "s/true/false/g" /Library/LaunchAgents/com.paloaltonetworks.gp.pangpa.plist
