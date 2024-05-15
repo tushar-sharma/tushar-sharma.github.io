@@ -14,7 +14,7 @@ Cozumel, a jewel in the Caribbean Sea, is famed for its crystal-clear waters, vi
 
 Cozumel, a jewel in the Caribbean Sea, is famed for its crystal-clear waters, vibrant coral reefs, and lush green landscapes. While this Mexican island offers a plethora of activities for the eager tourist, one of the best ways to explore its natural beauty and hidden gems is by renting a scooter. 
 
-Upon arrival from the ferry, you might be tempted to rent a scooter from the first vendor you see near the ferry terminal. My advice? Resist the urge. These spots often come with a higher price tag and a crowd of touts looking to capitalize on freshly-arrived tourists. Instead, take a leisurely walk or a short cab ride further into the island, where numerous rental shops offer more competitive rates. And yes, some of these shops even boast signs offering "free scooters," which, while part of their marketing strategy, indicates a willingness to negotiate.
+Upon arrival from the ferry, you might be tempted to rent a scooter from the first vendor you see near the ferry terminal. My advice? Resist the urge. These spots often come with a higher price tag and a crowd of touts looking to capitalize on freshly-arrived tourists. Instead, take a leisurely walk or a short cab ride further into the island, where numerous rental shops offer more competitive rates.
 
 My initial offer for a scooter rental was 500 pesos until 7 PM. However, with a bit of haggling, I managed to secure a 24-hour rental for 450 Mexican Pesos. Based on my experience, and with a bit of persistence, you might be able to push that price down to 400 Pesos or even lower.
 
