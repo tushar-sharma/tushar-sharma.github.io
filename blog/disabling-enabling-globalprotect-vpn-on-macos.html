@@ -276,9 +276,7 @@ header li {
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp<span class="k">*</span>
 </code></pre></div></div>
 
-<p>If you want to change it</p>
-
-<p>The command to disable GlobalProtect service is:</p>
+<p>Also you can disable it at startup:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo sed</span> <span class="nt">-i</span> <span class="s1">''</span> <span class="nt">-e</span> <span class="s2">"s/true/false/g"</span> /Library/LaunchAgents/com.paloaltonetworks.gp.pangpa.plist
 </code></pre></div></div>
