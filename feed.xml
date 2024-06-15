@@ -339,6 +339,31 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Weekly Logs from June 10 to 16, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from June 10 to 16, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;juen-14&quot;&gt;Juen 14&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tried chicken &lt;em&gt;Sate lilit&lt;/em&gt; which is part of Balinese cuisine. It was okay but didn&apos;t like it too much.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;https://miro.medium.com/v2/resize:fit:1400/format:webp/1*GH0JX3MsZwzJhEng4pCqww.jpeg&quot; alt=&quot;Sample Image&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+          <pubDate>2024-06-09T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2024-06-10-16</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-06-10-16</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Rent a Scooter in Cozumel, Mexico</title>
           <description>&lt;p&gt;Cozumel, a jewel in the Caribbean Sea, is famed for its crystal-clear waters, vibrant coral reefs, and lush green landscapes. While this Mexican island offers a plethora of activities for the eager tourist, one of the best ways to explore its natural beauty and hidden gems is by renting a scooter.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -386,10 +411,10 @@ if (typeof Object.assign !== 'function') {
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;0b660408-d3cc-4610-b663-2ec594ccdb8b&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;35a36053-c606-4d76-a54c-18db79bba3c2&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;0b660408-d3cc-4610-b663-2ec594ccdb8b&apos;,
+    &apos;35a36053-c606-4d76-a54c-18db79bba3c2&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -1454,14 +1479,15 @@ Fetch time:  1.2998201847076416
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&apos;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;s/true/false/g&quot;&lt;/span&gt; /Library/LaunchAgents/com.paloaltonetworks.gp.pangpa.plist
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Here, sudo is used to run the command with root privileges, which is necessary when modifying system files. -i option is for in-place editing of the file. -e option allows for the addition of the script to be executed. &quot;s/true/false/g&quot; is the actual sed command that replaces all instances of the string &quot;true&quot; with &quot;false&quot;. This effectively changes the settings of the plist file to disable the GlobalProtect service.&lt;/p&gt;
-
 &lt;p&gt;To revert the changes and enable the GlobalProtect service again, the following command can be used:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&apos;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;s/false/true/g&quot;&lt;/span&gt; /Library/LaunchAgents/com.paloaltonetworks.gp.pangpa.plist
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This command is similar to the previous one, but it replaces instances of &quot;false&quot; with &quot;true&quot;, thereby re-enabling the service.&lt;/p&gt;
+&lt;p&gt;Sometimes , &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content Filter&lt;/code&gt; is enabled which restricts access to internet despite disabling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Global Protect&lt;/code&gt;. You can remove this file and restart your computer (This file is autogenerated everytime global protect runs)&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ rm /Library/Preferences/com.paloaltonetworks.GlobalProtect.settings.plist
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
           <pubDate>2024-03-03T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/disabling-enabling-globalprotect-vpn-on-macos</link>
@@ -2096,10 +2122,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;3fd42e04-d43f-44e3-8037-4719f3e7154e&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;b507e5dc-4d66-48fc-84d8-4918fec4d787&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;3fd42e04-d43f-44e3-8037-4719f3e7154e&apos;,
+    &apos;b507e5dc-4d66-48fc-84d8-4918fec4d787&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
