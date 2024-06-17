@@ -342,11 +342,11 @@ if (typeof Object.assign !== 'function') {
           <title>Weekly Logs from June 10 to 16, 2024</title>
           <description>&lt;p&gt;Dear Vishi, this is my weekly logs from June 10 to 16, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;juen-14&quot;&gt;Juen 14&lt;/h2&gt;
+&lt;h2 id=&quot;june-14&quot;&gt;June 14&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Tried chicken &lt;em&gt;Sate lilit&lt;/em&gt; which is part of Balinese cuisine. It was okay but didn&apos;t like it too much.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;sate-lilit&quot;&gt;Sate Lilit&lt;/h3&gt;
+
+&lt;p&gt;Tried chicken &lt;em&gt;Sate lilit&lt;/em&gt; which is part of Balinese cuisine. It&apos;s spiced minced meat on a skewer that&apos;s grilled. It&apos;s okay and I didn&apos;t like it that much.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -355,6 +355,15 @@ if (typeof Object.assign !== 'function') {
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;h2 id=&quot;june-16&quot;&gt;June 16&lt;/h2&gt;
+
+&lt;h3 id=&quot;whoosh-train-in-jakarta&quot;&gt;Whoosh train in Jakarta&lt;/h3&gt;
+
+&lt;p&gt;You can book ticket online via &lt;a href=&quot;https://ticket.kcic.co.id/webTrade/#/home/index&quot;&gt;website&lt;/a&gt;. You would need your passport details to register. However I missed my first train due to traffic. Try to reach the station at least 30 minutues prior to departure. You can also book ticket at the train station and remember to carry your passport during the trip.&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/nESuAG2_i_s?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/nESuAG2_i_s?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/nESuAG2_i_s/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Whoosh in Jakarta&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 </description>
           <pubDate>2024-06-09T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/weekly-logs-2024-06-10-16</link>
@@ -411,10 +420,10 @@ if (typeof Object.assign !== 'function') {
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;35a36053-c606-4d76-a54c-18db79bba3c2&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;c462a95e-d58f-4f29-be42-68556b1279a3&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;35a36053-c606-4d76-a54c-18db79bba3c2&apos;,
+    &apos;c462a95e-d58f-4f29-be42-68556b1279a3&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -2122,10 +2131,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;b507e5dc-4d66-48fc-84d8-4918fec4d787&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;f9c159fa-c79a-4afa-bee7-f755e74e7d48&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;b507e5dc-4d66-48fc-84d8-4918fec4d787&apos;,
+    &apos;f9c159fa-c79a-4afa-bee7-f755e74e7d48&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
