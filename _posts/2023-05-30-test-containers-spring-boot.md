@@ -8,6 +8,7 @@ author: Tushar Sharma
 tags:
   - java
   - spring boot
+  - testcontainers
 category: blog
 ---
 
