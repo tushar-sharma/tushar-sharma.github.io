@@ -1,8 +1,13 @@
-<div id="{{include.albumname}}">
+<div id="{{ include.albumname }}" class="album">
     {% for image in page.images %}
-    <a  data-lightbox="gallery" href="{{ image.source }}" class="album-image" data-sub-html="{{ image.caption }}" >
+    <div class="album-item">
+        {% unless image.text == empty or image.text == nil %}
+            <p class="image-text">{{ image.text }}</p>
+        {% endunless %}
+        <a data-lightbox="gallery" href="{{ image.source }}" class="album-image" data-sub-html="{{ image.caption }}">
             <img src="{{ image.thumb }}" />
         </a>
+    </div>
     {% endfor %}
     <a id="album-left" href="#">&lsaquo;</a>
     <a id="album-right" href="#">&rsaquo;</a>
