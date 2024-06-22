@@ -736,3 +736,19 @@ code[class*=language-],pre[class*=language-]{
     color: #fff;
     cursor: pointer;
 }
+
+/** album */
+
+.album {
+  text-align: center; /* Centers the content of '.album-item' */
+}
+
+.album-item {
+  display: inline-block; /* Allows block-level elements to sit side-by-side and respects text-align */
+  margin: 0 auto; /* Additional centering for margin alignment */
+  text-align: center; /* Ensures text is centered within '.album-item' */
+}
+
+.album .image-text {
+  margin-bottom: 1rem; /* Optional: Adds space between the text and the image */
+}
