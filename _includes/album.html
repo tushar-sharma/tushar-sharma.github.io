@@ -2,10 +2,18 @@
     {% for image in page.images %}
     <div class="album-item">
         {% unless image.text == empty or image.text == nil %}
-            <p class="image-text">{{ image.text }}</p>
+            <br><span class="image-text">{{ image.text }}</span>
         {% endunless %}
+        {% case image.rating %}
+        {% when 'up' %}
+            <span class="cl fa fa-thumbs-up checked"></span><br>
+        {% when 'down' %}
+            <span class="cl fa fa-thumbs-down checked"></span><br>
+        {% when 'neutral' %}
+           <span class="cl fa fa-meh checked"></span> <br>
+        {% endcase %}
         <a data-lightbox="gallery" href="{{ image.source }}" class="album-image" data-sub-html="{{ image.caption }}">
-            <img src="{{ image.thumb }}" />
+            <br><img src="{{ image.thumb }}" /><br>
         </a>
     </div>
     {% endfor %}
