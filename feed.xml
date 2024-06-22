@@ -372,37 +372,49 @@ if (typeof Object.assign !== 'function') {
     
     &lt;div class=&quot;album-item&quot;&gt;
         
-            &lt;p class=&quot;image-text&quot;&gt;Chicken sate lilit&lt;/p&gt;
+            &lt;br /&gt;&lt;span class=&quot;image-text&quot;&gt;Chicken sate lilit. Didn&apos;t like it too much&lt;/span&gt;
+        
+        
+            &lt;span class=&quot;cl fa fa-thumbs-down checked&quot;&gt;&lt;/span&gt;&lt;br /&gt;
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://miro.medium.com/v2/resize:fit:1400/format:webp/1*GH0JX3MsZwzJhEng4pCqww.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://miro.medium.com/v2/resize:fit:300/format:webp/1*GH0JX3MsZwzJhEng4pCqww.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://miro.medium.com/v2/resize:fit:600/format:webp/1*GH0JX3MsZwzJhEng4pCqww.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
         
-            &lt;p class=&quot;image-text&quot;&gt;Lontong Sayur Kari&lt;/p&gt;
+            &lt;br /&gt;&lt;span class=&quot;image-text&quot;&gt;Lontong Sayur Kari. One of my favourite dish in Bandung&lt;/span&gt;
+        
+        
+            &lt;span class=&quot;cl fa fa-thumbs-up checked&quot;&gt;&lt;/span&gt;&lt;br /&gt;
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://miro.medium.com/v2/resize:fit:1400/format:webp/1*xkVS2BGmy7HxYEtM-JUf-w.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://miro.medium.com/v2/resize:fit:300/format:webp/1*xkVS2BGmy7HxYEtM-JUf-w.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://miro.medium.com/v2/resize:fit:600/format:webp/1*xkVS2BGmy7HxYEtM-JUf-w.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
         
-            &lt;p class=&quot;image-text&quot;&gt;Avacado drink without sugar&lt;/p&gt;
+            &lt;br /&gt;&lt;span class=&quot;image-text&quot;&gt;Loved avacado drink without sugar at Bali airport&lt;/span&gt;
+        
+        
+            &lt;span class=&quot;cl fa fa-thumbs-up checked&quot;&gt;&lt;/span&gt;&lt;br /&gt;
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://miro.medium.com/v2/resize:fit:1400/format:webp/1*YlEpODKqoR3oisNXe5Yc0Q.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://miro.medium.com/v2/resize:fit:300/format:webp/1*YlEpODKqoR3oisNXe5Yc0Q.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://miro.medium.com/v2/resize:fit:600/format:webp/1*YlEpODKqoR3oisNXe5Yc0Q.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
         
-            &lt;p class=&quot;image-text&quot;&gt;Fried banana&lt;/p&gt;
+            &lt;br /&gt;&lt;span class=&quot;image-text&quot;&gt;Fried banana was más o menos&lt;/span&gt;
+        
+        
+           &lt;span class=&quot;cl fa fa-meh checked&quot;&gt;&lt;/span&gt; &lt;br /&gt;
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://miro.medium.com/v2/resize:fit:1400/format:webp/1*CWIGRogzSLPZe0pDoSfAQw.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://miro.medium.com/v2/resize:fit:300/format:webp/1*CWIGRogzSLPZe0pDoSfAQw.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://miro.medium.com/v2/resize:fit:600/format:webp/1*CWIGRogzSLPZe0pDoSfAQw.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
@@ -707,10 +719,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;2622ed5a-12b7-4052-b807-bcc14e3f076d&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;15199914-ba4f-44c8-889e-d4bd590dc98a&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;2622ed5a-12b7-4052-b807-bcc14e3f076d&apos;,
+    &apos;15199914-ba4f-44c8-889e-d4bd590dc98a&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -741,57 +753,65 @@ req.send(null);
     
     &lt;div class=&quot;album-item&quot;&gt;
         
+        
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*zHIcD6Qd1dbv26hn9NSEnA.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*zHIcD6Qd1dbv26hn9NSEnA.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*zHIcD6Qd1dbv26hn9NSEnA.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*bbUREvgmG4FMCEaM8Dz3nw.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*bbUREvgmG4FMCEaM8Dz3nw.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*bbUREvgmG4FMCEaM8Dz3nw.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*CoAKkPVHIDQQaSlof550Yg.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*CoAKkPVHIDQQaSlof550Yg.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*CoAKkPVHIDQQaSlof550Yg.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*RLIqVNyKcBJI5fAneMGebQ.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*RLIqVNyKcBJI5fAneMGebQ.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*RLIqVNyKcBJI5fAneMGebQ.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*2btNlCsG_uK-W0I1NO34Hg.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*2btNlCsG_uK-W0I1NO34Hg.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*2btNlCsG_uK-W0I1NO34Hg.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*7iyWC1XXnqwAqYVHr3I4Eg.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*7iyWC1XXnqwAqYVHr3I4Eg.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*7iyWC1XXnqwAqYVHr3I4Eg.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
         
+        
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*LSmUUD82jXk85trqkEyjDA.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*LSmUUD82jXk85trqkEyjDA.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*LSmUUD82jXk85trqkEyjDA.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
@@ -1201,15 +1221,17 @@ req.send(null);
     
     &lt;div class=&quot;album-item&quot;&gt;
         
+        
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*eOSuTgVoAab5dYCNJLSVeQ.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*eOSuTgVoAab5dYCNJLSVeQ.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*eOSuTgVoAab5dYCNJLSVeQ.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
         
+        
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*NxauLHmElGpr0tz4j7CvAw.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*NxauLHmElGpr0tz4j7CvAw.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*NxauLHmElGpr0tz4j7CvAw.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
@@ -1504,107 +1526,6 @@ req.send(null);
           <pubDate>2024-04-01T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/weekly-logs-2024-04-01-07</link>
           <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-04-01-07</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Weekly Logs 03 25 31</title>
-          <description>&lt;h2 id=&quot;magnesium&quot;&gt;Magnesium&lt;/h2&gt;
-
-&lt;p&gt;I usually take two vitamins supplements :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;B12 on empty stomach&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;D3 with food&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Saw some tweets like &lt;a href=&quot;https://twitter.com/JonLOCKD/status/1771474009646895565&quot;&gt;JonLOCKD&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/foundmyfitness/status/1773769975083483484&quot;&gt;foundmyfitness&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Question? Can&apos;t we get magnesium from food? I checked foods like spinach, banana, avacado, braccoli, etc which are good sources of magnesium.&lt;/p&gt;
-
-&lt;p&gt;Or do we need to take supplements? Big pharmas have huge incentive to promote supplements. Do supplements really help if a person doesn&apos;t have any acute deficiency or eats a healthy diet?&lt;/p&gt;
-
-&lt;p&gt;But what about scientific studies? Can&apos;t take any scientific study at prima facie. Problem with it&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Peer reviewed. That&apos;s a starting point. But that&apos;s not enough?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Who&apos;s funding the research? Like clinical studies funded by wine companies on benefits of red wine should raise eyebrows.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sample Size? Tested on just 100 people hmm.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Replicability and Counter Studies&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;first-man-movie&quot;&gt;First Man Movie&lt;/h2&gt;
-
-&lt;p&gt;Watched it.&lt;/p&gt;
-
-&lt;p&gt;Things I liked :&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Visual of the movie are good. The rocket launches look realistic&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Things I didn&apos;t like&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Less focus on rocket science.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Abrubt ending&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;turkey-e-visa&quot;&gt;Turkey E-visa&lt;/h2&gt;
-
-&lt;p&gt;Applying for Turkey e-visa is super convenient. You need following conditions to quality :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;My passport covers the period that I will be staying in Türkiye.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I can prove that I hold a return ticket, hotel reservation and at least 50 $ per each day of my stay.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I am travelling for the purposes of tourism or business.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I have a valid Supporting Document (Valid visa OR valid residence permit from one of the Schengen Countries, USA, UK or Ireland). E- visas are not accepted as supporting documents.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;game-betting&quot;&gt;Game betting&lt;/h2&gt;
-
-&lt;h2 id=&quot;piezaa&quot;&gt;PIE.ZAA&lt;/h2&gt;
-
-&lt;p&gt;Location : 1440 S Tryon St #103, Charlotte, NC 28203&lt;/p&gt;
-
-&lt;p&gt;There&apos;s a lunch special offer where you get the second slice half the price. Ordered two Garden slice. The order was late. Didn&apos;t like it. Wont repeat it.&lt;/p&gt;
-
-&lt;h2 id=&quot;kafka-traces&quot;&gt;Kafka Traces&lt;/h2&gt;
-
-&lt;h2 id=&quot;holi&quot;&gt;Holi&lt;/h2&gt;
-
-&lt;h2 id=&quot;filing-taxes&quot;&gt;Filing Taxes&lt;/h2&gt;
-
-&lt;p&gt;This year used freetaxusa.com instead of Turbotax as its cheaper. Turbotax mostly did stocks for me. Here I had to manually add short and long term stocks from 1099-B form. The federal filing is free and the state filing is $15.&lt;/p&gt;
-</description>
-          <pubDate>2024-03-27T00:00:00-04:00</pubDate>
-          <link>https://randomwits.com/weekly-logs-03-25-31</link>
-          <guid isPermaLink="true">https://randomwits.com/weekly-logs-03-25-31</guid>
         </item>
       
     
@@ -2448,10 +2369,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;07337ad2-d856-4594-9047-f246dffe8157&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;58296bb3-1505-4835-aa00-d114c5d7cd3f&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;07337ad2-d856-4594-9047-f246dffe8157&apos;,
+    &apos;58296bb3-1505-4835-aa00-d114c5d7cd3f&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -2465,99 +2386,113 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
     
     &lt;div class=&quot;album-item&quot;&gt;
         
+        
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*9bc3CTmkJpa5LqFgR9pEdw.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*9bc3CTmkJpa5LqFgR9pEdw.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*9bc3CTmkJpa5LqFgR9pEdw.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*mk5xbWBa88B1dcHfdxYa1g.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*mk5xbWBa88B1dcHfdxYa1g.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*mk5xbWBa88B1dcHfdxYa1g.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*yAKJXclZDHOcuA-hqGsElA.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*yAKJXclZDHOcuA-hqGsElA.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*yAKJXclZDHOcuA-hqGsElA.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*awoqkGFXzXy7hmXjBXr1Kw.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*awoqkGFXzXy7hmXjBXr1Kw.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*awoqkGFXzXy7hmXjBXr1Kw.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*Yg7WsvBbZZVYd_26mP8udA.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*Yg7WsvBbZZVYd_26mP8udA.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*Yg7WsvBbZZVYd_26mP8udA.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*oT-IFG_4nS_hMK-mbuB8_g.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*oT-IFG_4nS_hMK-mbuB8_g.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*oT-IFG_4nS_hMK-mbuB8_g.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*4oWOuW5rmcQzaJz4O8TRMg.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*4oWOuW5rmcQzaJz4O8TRMg.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*4oWOuW5rmcQzaJz4O8TRMg.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*69dzALU3XrAFrZohyg4zvg.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*69dzALU3XrAFrZohyg4zvg.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*69dzALU3XrAFrZohyg4zvg.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*yzVBW8CnW_6ncv9HZVHj6A.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*yzVBW8CnW_6ncv9HZVHj6A.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*yzVBW8CnW_6ncv9HZVHj6A.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*p0NBLexR_Mc_w1YG1u9i5Q.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*p0NBLexR_Mc_w1YG1u9i5Q.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*p0NBLexR_Mc_w1YG1u9i5Q.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*vj67_k7y2VhcbZSH7IGlYw.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*vj67_k7y2VhcbZSH7IGlYw.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*vj67_k7y2VhcbZSH7IGlYw.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
+        
         
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*KUH6OgBraSZ9_qW0n5-X-Q.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*KUH6OgBraSZ9_qW0n5-X-Q.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*KUH6OgBraSZ9_qW0n5-X-Q.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
     &lt;div class=&quot;album-item&quot;&gt;
         
+        
         &lt;a data-lightbox=&quot;gallery&quot; href=&quot;https://cdn-images-1.medium.com/v2/resize:fit:2600/1*_bQRF9fPcTEle_GgalyMKQ.jpeg&quot; class=&quot;album-image&quot; data-sub-html=&quot;&quot;&gt;
-            &lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*_bQRF9fPcTEle_GgalyMKQ.jpeg&quot; /&gt;
+            &lt;br /&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/v2/resize:fit:200/1*_bQRF9fPcTEle_GgalyMKQ.jpeg&quot; /&gt;&lt;br /&gt;
         &lt;/a&gt;
     &lt;/div&gt;
     
