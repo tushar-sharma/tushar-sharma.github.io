@@ -502,3 +502,4 @@ Feed the masses, eat with the classes.
 "We're all going to die, all of us, what a circus! That alone should make us love each other but it doesn't. We are terrorized and flattened by trivialities, we are eaten up by nothing." - Charles Bukowski
 "A man is what he thinks about all day long" - Ralph Waldo Emerson
 "If there is no possible way to determine whether a statement is true then that statement has no meaning whatsoever. For the meaning of a statement is the method of its verification." - Friedrich Waismann
+"What I cannot create, I do not understand" - Richard Feynman
