@@ -13,14 +13,12 @@ add:
 	git add sitemap.xml
 build:
 	JEKYLL_ENV=production bundle exec jekyll build
-	$(MAKE) copy
 cleanbranch:
 	git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -D
 copy:
 	rm -fr tag
-	cp -r _site/tag .
-	cp  sitemap.xml _site/
 	cp  CNAME _site/
+	cp  sitemap.xml _site/
 	cp .nojekyll _site/
 	cp robots.txt _site/
 	cp loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt _site/
