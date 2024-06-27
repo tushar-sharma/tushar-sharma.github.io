@@ -31,7 +31,17 @@ Interestingly Amartya Sen, who won the Nobel Prize in Economics in 1998 and is a
 
 So what's the truth? Was Nalanda university destoryed by Brahmins or Islamic invaders?
 
-Whatever the truth may be about Nalanda's fall, it's crucial to remember that history should not be weaponized to settle present-day scores. Unlike science, where hypotheses can be tested through repeatable experiments, history is more susceptible to interpretation and inaccuracies. The past can offer valuable lessons, but an obsessive focus on historical grievances can be detrimental to societal progress.
+One source is `Tabakat e Nasiri` by Minhaj-i-Siraj Juzjani, you an read the English translation online<sup id='fnref:4'><a href='#fn:4' rel='footnote'>4</a></sup> on page 552
+
+> There were two brothers of Farghānah, men of learning, one Nizam-ud-Din, the other Şamṣām-ud-Din [by name], in the service of Muḥammad-i-Bakht-yār; and the author of this book. These two wise brothers were soldiers' among that band of holy warriors when they reached the gateway of the fortress and began the attack, at which time Muḥammad-i-Bakht-yār, by the force of his intre-pidity, threw himself into the postern of the gateway of the place, and they captured the fortress, and acquired great booty. The greater number of the inhabitants of that place were Brahmans, and the whole of those Brahmans had their heads shaven; and they were all slain. There were a great number of books' there; and, when all these books came under the observation of the Musalmāns, they summoned a number of Hindus that they might give them information respecting the import of those books; but the whole of the Hindūs had been killed'. On becoming acquainted [with the contents of those books], it was found that the whole of that fortress and city was a college, and in the Hindui tongue, they call a college Bihār.
+
+> The Zubdat-ut-Tawarikh which quotes our author verbatim on most occassions, says they sent for a number of Hindus, who made them acquainted with the contents of the books, and in them it was written that fortress and city was called a college, but, correctly, a Budhist monastery.
+
+ I only quoted a single historical source, and other ancient documents may present differing perspectives. The problem with history is that unlike science, hypotheses cannot be tested through repeatable experiments. It's more susceptible to interpretation and inaccuracies. 
+ 
+ However I think in this case I would more likely agree with the right. I think the left-leaning historians in India occasionally behave as [regresssive left](https://en.wikipedia.org/wiki/Regressive_left).
+
+Whatever the truth may be about Nalanda's fall, it's crucial to remember that history should not be weaponized to settle present-day scores. The past can offer valuable lessons, but an obsessive focus on historical grievances can be detrimental to societal progress.
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
@@ -55,6 +65,12 @@ Whatever the truth may be about Nalanda's fall, it's crucial to remember that hi
             <a href="https://www.thehindu.com/opinion/op-ed/Nalanda-and-the-pursuit-of-science/article15519635.ece" target="_blank">Nalanda and the pursuit of science</a> 
          </p>
          <a href='#fnref:3' rev='footnote'>&#8617;</a>
+    </li>
+
+    <li id='fn:4'>
+         <p>
+           <a href="https://www.cristoraul.org/ENGLISH/readinghall/Doors-of-Wisdom/Biographies/BABAR/pdf/Tabaqat-i-Nasiri-Volume-1.pdf" target="_blank">Tabakat e Nasiri</a>
+         </p>
     </li>
 
   </ol>
