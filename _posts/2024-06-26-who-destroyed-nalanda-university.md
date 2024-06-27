@@ -3,7 +3,6 @@ layout: post
 title: 
 image: 'https://unsplash.com/photos/OdI2PZqKao4/download?w=800'
 thumb: 'https://unsplash.com/photos/OdI2PZqKao4/download?w=800'
-author: ;
 category: blog
 tags:
   - history
