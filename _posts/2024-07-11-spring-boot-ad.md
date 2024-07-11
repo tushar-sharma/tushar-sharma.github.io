@@ -1,10 +1,13 @@
 
-What's an AD? Active Directory mostly for Windows systems. It's used to give permissions to various users. And we can use LDAP protocol to talkk to the AD. 
+Active Directory is a directory service for Windows systems. It allows for managing permissions and acesss to various resources. LDAP is a protocal that interact with AD, making it possible to query and modify directory services.
 
-We create an AD server:
+## Setting up AD with docker
+
+We can simulate AD using Samba server. Samba is a free software re-implementation that provides file and print services to SMB/CIFS clients. It can also function as an Active Directory domain controller.
+
 
 ```bash
-$ docker run -it --name samba -p 139:139 -p 445:445 dperson/samba -s "public;/share" -u "admin;admin" -p -r 
+$ docker run -it --name samba -p 139:139 -p 445:445 dperson/samba -s "public;/share" -u "admin;admin" -p -r
 ```
 
 This will create a Samba server. 
