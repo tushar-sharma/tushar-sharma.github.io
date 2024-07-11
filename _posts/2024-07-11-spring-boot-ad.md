@@ -9,14 +9,15 @@ We can simulate AD using Samba server. Samba is a free software re-implementatio
 ```bash
 $ docker run -it --name samba -p 139:139 -p 445:445 dperson/samba -s "public;/share" -u "admin;admin" -p -r
 ```
+## Setup
 
-This will create a Samba server. 
+Use Spring Boot's [initializr](https://start.spring.io/) to create a new project. Add following dependencies
 
-Create a Spring boot using initializr 
+- Spring Web
 
-TODO : build.gradle file
+- Spring Security
 
-Add this in `application.properties` 
+Add following `LDAP` properties in `application.yaml`:
 
 ```yaml
 spring.ldap.urls=ldap://localhost:389
@@ -25,6 +26,16 @@ spring.ldap.username=cn=admin,dc=example,dc=com
 spring.ldap.password=admin
 spring.ldap.user.dn-pattern=cn={0},ou=users
 ```
+
+Here, 
+
+- **Distinguished Name (dn)**: A DN is a string that uniquely identifies an entry within the LDAP directory. It's compose of multiple components
+
+- **Domain Component (dc)**: represent segment of the domain, Example dc is `example.com`
+
+- **Common Name (cn)**: Use to represent name of an object or a person, like a user or group name in AD.
+
+- **Organizational unit (ou)**: respresents an organizational structure within the AD.
 
 Implement a simple security configuration where we would use Spring Security. 
 
