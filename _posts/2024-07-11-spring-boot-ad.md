@@ -47,10 +47,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   protected void configure(HttpSecurity http) throws Exception {
     http
       .authorizeRequests()
-      .anymatches("/public").permitAll()
-      .anyRequest().authenticated()
+      .anymatches("/public").permitAll() // No authentication required for /public
+      .anyRequest().authenticated() // All other requests require authentication
       .and()
-      .formLogin();
+      .formLogin(); // Use form-based authentication
   }
   
   @Override
