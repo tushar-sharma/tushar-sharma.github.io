@@ -57,6 +57,23 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 TODO : Why is one public and other protected ? Cant both be public? What happens then?
 
 TODO : what's teh differnce betwen DN and dc, cn and ou ?
+
+Next create REST Endpoints 
+
+```java
+@RestController
+public class TestController {
+    @GetMapping("/public")
+    public String publicEndpoint() {
+      return "Public API response";
+    }
+  
+    @GetMapping("/private")
+    public String privateEndpoint() {
+      return "Private API Response";
+    }
+}
+```
  
  
 
