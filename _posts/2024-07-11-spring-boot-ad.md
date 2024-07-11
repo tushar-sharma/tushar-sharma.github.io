@@ -14,7 +14,7 @@ $ docker run -it --name openldap \
   -e LDAP_USERS=user01 \
   -e LDAP_PASSWORDS=password01 \
   -e LDAP_DOMAIN=example.com \
-  -d bitnami/openldap:latest
+  bitnami/openldap:latest
 ```
 ## Setup
 
