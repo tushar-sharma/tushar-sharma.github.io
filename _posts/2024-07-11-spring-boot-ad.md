@@ -7,7 +7,14 @@ We can simulate AD using Samba server. Samba is a free software re-implementatio
 
 
 ```bash
-$ docker run -it --name samba -p 139:139 -p 445:445 dperson/samba -s "public;/share" -u "admin;admin" -p -r
+$ docker run -it --name openldap \
+  -p 1389:1389 -p 1636:1636 \
+  -e LDAP_ADMIN_USERNAME=admin \
+  -e LDAP_ADMIN_PASSWORD=adminpassword \
+  -e LDAP_USERS=user01 \
+  -e LDAP_PASSWORDS=password01 \
+  -e LDAP_DOMAIN=example.com \
+  -d bitnami/openldap:latest
 ```
 ## Setup
 
