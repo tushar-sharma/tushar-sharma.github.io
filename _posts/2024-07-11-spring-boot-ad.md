@@ -12,7 +12,7 @@ Active Directory is a directory service for Windows systems. It allows for manag
 
 ## Setting up AD with docker
 
-We can simulate AD using Samba server. Samba is a free software re-implementation that provides file and print services to SMB/CIFS clients. It can also function as an Active Directory domain controller.
+We use openldap docker file
 
 
 ```bash
