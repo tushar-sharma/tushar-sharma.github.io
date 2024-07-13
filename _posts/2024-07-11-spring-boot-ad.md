@@ -1,3 +1,12 @@
+---
+layout: post
+title: Spring Boot using Active Directory
+image: 'https://unsplash.com/photos/aSERflF331A/download?w=800'
+thumb: 'https://unsplash.com/photos/aSERflF331A/download?w=800'
+author: tushar sharma
+published: false
+category: blog
+---
 
 Active Directory is a directory service for Windows systems. It allows for managing permissions and acesss to various resources. LDAP is a protocal that interact with AD, making it possible to query and modify directory services.
 

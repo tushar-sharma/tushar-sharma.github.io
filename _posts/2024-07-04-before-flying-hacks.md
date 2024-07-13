@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Before Flying Hacks
-image: /img/
-thumb: /img/
+image: 'https://unsplash.com/photos/aSERflF331A/download?w=800'
+thumb: 'https://unsplash.com/photos/aSERflF331A/download?w=800'
 author: tushar sharma
 category: blog
 tags:
