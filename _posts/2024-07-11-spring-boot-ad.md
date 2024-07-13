@@ -17,7 +17,7 @@ We use openldap docker file
 
 ```bash
 $ docker run -it --name openldap \
-  -p 1389:1389 -p 1636:1636 \
+  -p 389:389 -p 636:636 \
   -e LDAP_ADMIN_USERNAME=admin \
   -e LDAP_ADMIN_PASSWORD=adminpassword \
   -e LDAP_USERS=user01 \
