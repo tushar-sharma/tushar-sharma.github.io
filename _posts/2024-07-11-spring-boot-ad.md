@@ -26,6 +26,10 @@ $ docker run -it --name openldap \
   -e LDAP_ADMIN_DN=cn=admin,dc=example,dc=org \
   bitnami/openldap:latest
 ```
+
+Do not forget to add the port mapping for both port 389 and 636 if you wish to access the ldap server from another machine.
+
+
 ## Setup
 
 Use Spring Boot's [initializr](https://start.spring.io/) to create a new project. Add following dependencies
