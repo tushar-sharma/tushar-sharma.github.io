@@ -22,7 +22,8 @@ $ docker run -it --name openldap \
   -e LDAP_ADMIN_PASSWORD=adminpassword \
   -e LDAP_USERS=user01 \
   -e LDAP_PASSWORDS=password01 \
-  -e LDAP_DOMAIN=example.com \
+  -e LDAP_ROOT=dc=example,dc=org \
+  -e LDAP_ADMIN_DN=cn=admin,dc=example,dc=org \
   bitnami/openldap:latest
 ```
 ## Setup
@@ -104,7 +105,3 @@ public class TestController {
     }
 }
 ```
- 
- 
-
-
