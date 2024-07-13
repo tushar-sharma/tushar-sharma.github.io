@@ -7,6 +7,7 @@ author: tushar sharma
 category: blog
 tags:
  - flying
+published: false
 ---
 
 Before Flying hacks.<!-- truncate_here -->
