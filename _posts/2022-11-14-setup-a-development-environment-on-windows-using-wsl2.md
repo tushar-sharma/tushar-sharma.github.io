@@ -47,6 +47,12 @@ Install `nerd` font
 * Unzip and install it on Windows.
 * In Settings -> Ubuntu -> Additional Settings -> Appearance -> Font face -> mononoki NF 
 
+Generate a **guid** using powershell
+
+```powershell
+[guid]::NewGuid()
+```
+
 Open Command Palette -> settings.json
 
 ```json
@@ -59,7 +65,7 @@ profiles: {
                     "face": "mononoki NF",
                     "size": 14
                 },
-                "guid": "",
+                "guid": "{GUID}",
                 "hidden": false,
                 "name": "Ubuntu",
                 "source": "Windows.Terminal.Wsl"
