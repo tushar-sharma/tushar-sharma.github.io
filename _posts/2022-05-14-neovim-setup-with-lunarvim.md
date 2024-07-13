@@ -129,6 +129,8 @@ Now you can copy using the following command
 vim.cmd("set foldmethod=indent")
 vim.cmd("set foldlevel=0")
 vim.cmd("set ai")
+vim.cmd("set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<")
+-- show list will show all characters
 
 --stop auto indent
 vim.cmd("set indentexpr=")
