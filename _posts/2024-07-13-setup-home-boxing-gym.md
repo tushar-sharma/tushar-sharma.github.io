@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Setup Home Boxing Gym at my garage
