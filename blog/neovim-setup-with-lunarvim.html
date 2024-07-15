@@ -55,7 +55,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Neovim Setup with LunarVim | RandomWits</title>
-<meta name="generator" content="Jekyll v4.3.2">
+<meta name="generator" content="Jekyll v4.3.3">
 <meta property="og:title" content="Neovim Setup with LunarVim">
 <meta name="author" content="Tushar Sharma">
 <meta property="og:locale" content="en_US">
@@ -261,6 +261,26 @@ header li {
 
   <p>Tags:  <a class="mytag" href="/tag/vim" title="View posts tagged with: vim">vim</a>    <a class="mytag" href="/tag/neovim" title="View posts tagged with: neovim">neovim</a>    <a class="mytag" href="/tag/lunarvim" title="View posts tagged with: lunarvim">lunarvim</a>    </p>
   
+  
+  
+  <div class="author-info">
+    <div class="author-image">
+      
+        <img src="/img/tushar_sharma.jpg" alt="Author">
+      
+    </div>
+    <span class="author-name">Written by: 
+      
+      
+        Tushar
+      
+        Sharma
+      
+    </span>
+  </div>
+  
+
+  
 
 <p>I am an ardent <code class="language-plaintext highlighter-rouge">vim</code> user. A forked version of vim called <code class="language-plaintext highlighter-rouge">neovim</code> recently caught my attention. It has more features like support for <code class="language-plaintext highlighter-rouge">language server protocol</code> that provides <code class="language-plaintext highlighter-rouge">auto-complete</code>, etc. <code class="language-plaintext highlighter-rouge">LunarVim</code> provides neovim configuration files so that it behaves as an IDE.</p>
 
@@ -372,6 +392,8 @@ Build <span class="nb">type</span>: Release
 <div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set foldmethod=indent"</span><span class="p">)</span>
 <span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set foldlevel=0"</span><span class="p">)</span>
 <span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set ai"</span><span class="p">)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set listchars=eol:$,tab:&gt;-,trail:~,extends:&gt;,precedes:&lt;"</span><span class="p">)</span>
+<span class="c1">-- show list will show all characters</span>
 
 <span class="c1">--stop auto indent</span>
 <span class="n">vim</span><span class="p">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">"set indentexpr="</span><span class="p">)</span>

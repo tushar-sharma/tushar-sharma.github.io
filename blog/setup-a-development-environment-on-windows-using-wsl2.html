@@ -55,7 +55,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Setup a development environment on Windows using wsl2 | RandomWits</title>
-<meta name="generator" content="Jekyll v4.3.2">
+<meta name="generator" content="Jekyll v4.3.3">
 <meta property="og:title" content="Setup a development environment on Windows using wsl2">
 <meta name="author" content="Tushar Sharma">
 <meta property="og:locale" content="en_US">
@@ -261,6 +261,26 @@ header li {
 
   <p>Tags:  <a class="mytag" href="/tag/wsl" title="View posts tagged with: wsl">wsl</a>    <a class="mytag" href="/tag/windows" title="View posts tagged with: windows">windows</a>    </p>
   
+  
+  
+  <div class="author-info">
+    <div class="author-image">
+      
+        <img src="/img/tushar_sharma.jpg" alt="Author">
+      
+    </div>
+    <span class="author-name">Written by: 
+      
+      
+        Tushar
+      
+        Sharma
+      
+    </span>
+  </div>
+  
+
+  
 
 <p>Most of the terminal I have used in Windows were at best lackluster. However wsl2 is a game changer which makes your Windows OS Unixy.</p>
 
@@ -308,6 +328,11 @@ header li {
   <li>In Settings -&gt; Ubuntu -&gt; Additional Settings -&gt; Appearance -&gt; Font face -&gt; mononoki NF</li>
 </ul>
 
+<p>Generate a <strong>guid</strong> using powershell</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">guid</span><span class="p">]::</span><span class="n">NewGuid</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
 <p>Open Command Palette -&gt; settings.json</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">profiles:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -319,7 +344,7 @@ header li {
                     </span><span class="nl">"face"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mononoki NF"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="w">
                 </span><span class="p">},</span><span class="w">
-                </span><span class="nl">"guid"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"guid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{GUID}"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"hidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ubuntu"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Windows.Terminal.Wsl"</span><span class="w">
