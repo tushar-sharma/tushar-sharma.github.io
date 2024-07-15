@@ -1,4 +1,14 @@
 
+---
+layout: post
+title: Setup Home Boxing Gym at my garage
+image: /img/
+thumb: /img/
+author: Tushar Sharma
+category: blog
+published: false
+---
+
 Setup Home Boxing Gym at my garage.<!-- truncate_here -->
 
 Setup Home Boxing Gym at my garage.
