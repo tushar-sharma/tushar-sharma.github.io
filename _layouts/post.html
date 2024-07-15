@@ -24,22 +24,24 @@ root: true
   <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with: {{ tag }}">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
   
   {% if page.author %}
-    {% assign author_tag = page.author | downcase %}
-    {% if page.tags contains author_tag %}
-    <div class="author-info">
-      <div class="author-image">
-        <a href="/tag/{{ page.author | replace: ' ', '%20' }}">
-          <img src="{{ root_url }}/img/{{ page.author | replace: ' ', '_' | append: '.jpg' }}" alt="Author">
+  {% assign author_tag = page.author | downcase %}
+  <div class="author-info">
+    <div class="author-image">
+      {% if page.tags contains author_tag %}
+        <a href="/tag/{{ author_tag | replace: ' ', '%20' }}">
+          <img src="{{ root_url }}/img/{{ author_tag | replace: ' ', '_' | append: '.jpg' }}" alt="Author">
         </a>
-      </div>
-      <span class="author-name">Written by: 
-        {% assign author_parts = page.author | split: ' ' %}
-        {% for part in author_parts %}
-          {{ part | capitalize }}{% unless forloop.last %} {% endunless %}
-        {% endfor %}
-      </span>
+      {% else %}
+        <img src="{{ root_url }}/img/{{ author_tag | replace: ' ', '_' | append: '.jpg' }}" alt="Author">
+      {% endif %}
     </div>
-    {% endif %}
+    <span class="author-name">Written by: 
+      {% assign author_parts = page.author | split: ' ' %}
+      {% for part in author_parts %}
+        {{ part | capitalize }}{% unless forloop.last %} {% endunless %}
+      {% endfor %}
+    </span>
+  </div>
   {% endif %}
 
   {{ truncated_post.last }}
