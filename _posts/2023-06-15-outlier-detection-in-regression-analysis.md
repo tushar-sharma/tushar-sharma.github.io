@@ -14,21 +14,6 @@ category: blog
 
 Imagine you have a magical tool called studentized residuals that helps you explore the secrets hidden in data. These residuals are like detectives who investigate the influence and odd behaviors of individual data points. They compare the actual values of something you're trying to predict with the values your model predicts, and then they measure how different they are. By using a special formula, they make sure the measurements are fair, no matter what model or dataset you're using.<!-- truncate_here -->
 
-<div class="author-info">
-  <div class="author-image">
-   <a href="/tag/{{ page.author | replace: ' ', '%20' }}" >
-     <img src="{{ root_url }}/img/{{ page.author | replace: ' ', '_' | append: '.jpg' }}" alt="Author">
-   </a>
-  </div>
-  <span class="author-name">Written by: 
-    {% assign author_parts = page.author | split: ' ' %}
-    {% for part in author_parts %}
-      {{ part | capitalize }}{% unless forloop.last %} {% endunless %}
-    {% endfor %}
-  </span>
-</div>
-
-
 Imagine you have a magical tool called studentized residuals that helps you explore the secrets hidden in data. These residuals are like detectives who investigate the influence and odd behaviors of individual data points. They compare the actual values of something you're trying to predict with the values your model predicts, and then they measure how different they are. By using a special formula, they make sure the measurements are fair, no matter what model or dataset you're using.
 
 The cool thing about studentized residuals is that they give you a superpower to spot outliers or extreme data points. If a studentized residual has a big number (positive or negative), it means that the data point is behaving very differently from what your model expected. It's like a rebel breaking the rules! Positive residuals show that the actual value is higher than predicted, while negative residuals mean it's lower. By understanding these residuals, you can find those special data points that have a strong impact on your model and might change your conclusions.

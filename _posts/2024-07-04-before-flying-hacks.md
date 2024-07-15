@@ -12,17 +12,6 @@ published: false
 
 Before Flying hacks.<!-- truncate_here -->
 
-<div class="author-info">
-  <div class="author-image">
-     <img src="{{ root_url }}/img/{{ page.author | replace: ' ', '_' | append: '.jpg' }}" alt="Author">
-  </div>
-  <span class="author-name">Written by: 
-    {% assign author_parts = page.author | split: ' ' %}
-    {% for part in author_parts %}
-      {{ part | capitalize }}{% unless forloop.last %} {% endunless %}
-    {% endfor %}
-  </span>
-</div>
 
 Before Flying hacks in airplane based on my personal experience.
 
