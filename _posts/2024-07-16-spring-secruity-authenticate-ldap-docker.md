@@ -16,21 +16,24 @@ services:
     image: osixia/openldap:1.5.0
     container_name: ldap
     environment:
-        - LDAP_ORGANISATION=My Company Inc.
-        - LDAP_DOMAIN=mycompany.com
+      - LDAP_ORGANISATION=My Company
+      - LDAP_DOMAIN=mycompany.com
+      - LDAP_BASE_DN=dc=mycompany,dc=com
+      - LDAP_ADMIN_PASSWORD=admin
     ports:
-        - 389:389
-        - 636:636
+      - 389:389
+      - 636:636
+    command: [--copy-service,  --loglevel, debug]
+    volumes:
+      - ./bootstrap.ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/bootstrap.ldif
 ```
 
-```bash
-$ docker exec -it ldap /bin/bash
-```
+`--copy-service` ensures that custom assets are the very last items which get added to your LDAP configuration.
 
-create ldif file
+
+`bootstrap.ldif` content:
 
 ```bash
-$ cat ldap.ldif <<EOF
 dn: ou=groups,dc=mycompany,dc=com
 objectclass: organizationalUnit
 objectclass: top
@@ -61,6 +64,11 @@ uidnumber: 1000
 userpassword: {MD5}ICy5YqxZB1uWSwcVLSNLcA==
 EOF
 ```
+
+```bash
+$ docker exec -it ldap /bin/bash
+```
+
 
 `application.yaml` is 
 
