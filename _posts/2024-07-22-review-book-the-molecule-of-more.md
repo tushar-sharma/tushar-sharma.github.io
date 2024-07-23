@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Review Book: The Molecule of More
+title: Review of The Molecule of More
 image: /img/
 thumb: /img/
-author: ;
+author: tushar sharma
 category: blog
 published: false
 ---
