@@ -516,6 +516,17 @@ req.send(null);
 
 &lt;/div&gt;
 
+&lt;h2 id=&quot;freecycleorg&quot;&gt;FreeCycle.org&lt;/h2&gt;
+
+&lt;p&gt;Stumbled upon this &lt;a href=&quot;https://www.freecycle.org/&quot;&gt;website&lt;/a&gt;. Though you can hardly get anthing brand new, but sometimes you can find some good cheap recyclable stuffs.&lt;/p&gt;
+
+&lt;h2 id=&quot;crowdstrike-outrage&quot;&gt;Crowdstrike Outrage&lt;/h2&gt;
+
+&lt;p&gt;We were suppose to fly to Anchorage, Alaska today with Delta. The flights were delayed so we missed our connecting flight. We had to hop to MSP airport and were on a standy ticket for the last flight. The flight was almost full and we got lucky and were the last lucky members to board the flight. The flight was meh. Just served snack and a beverage in a five hour flight.&lt;/p&gt;
+
+&lt;p&gt;It seems like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Crowdstrike&lt;/code&gt; pushed an update which ran on kernel mode and crashed all windows machine. Airports worldwide are affected by this issue. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;crwd&lt;/code&gt; stocks was also bearish.&lt;/p&gt;
+
+&lt;p&gt;Crowdstrike wrote a &lt;a href=&quot;https://www.crowdstrike.com/blog/falcon-update-for-windows-hosts-technical-details/&quot;&gt;blog&lt;/a&gt; explaining what happened. There was a logic error resulting in a system crash and blue screen (BSOD) on impacted systems.&lt;/p&gt;
 </description>
           <pubDate>2024-07-15T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/weekly-logs-2024-07-15-21</link>
@@ -1434,10 +1445,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;c5d80c5c-a68b-4b55-b962-4563c3864981&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;1a49211c-8038-4ad2-bdd6-2b9f050589f9&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;c5d80c5c-a68b-4b55-b962-4563c3864981&apos;,
+    &apos;1a49211c-8038-4ad2-bdd6-2b9f050589f9&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -3084,10 +3095,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;53d12b74-0816-4c65-bf4a-6fedb2b632c0&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;904f94a2-4fe1-4851-b4be-a0988923fc37&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;53d12b74-0816-4c65-bf4a-6fedb2b632c0&apos;,
+    &apos;904f94a2-4fe1-4851-b4be-a0988923fc37&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );

@@ -13,7 +13,6 @@ add:
 	git add sitemap.xml
 build:
 	JEKYLL_ENV=production bundle exec jekyll build
-	$(copy)
 cleanbranch:
 	git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -D
 copy:
