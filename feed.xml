@@ -537,138 +537,6 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
-          <title>Weekly Logs 2024 07 29 08 04</title>
-          <description>
-&lt;p&gt;Dear Vishi, this is my weekly logs from July 29 to Aug 4, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;music&quot;&gt;Music&lt;/h2&gt;
-
-&lt;p&gt;Songs that I liked this week&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aurora - Runaway&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aurora - It Happened Quiet&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aurora - Apple Tree&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aurora - Animal&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aurora - The Seed&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;how-do-i-consume-message-using-kcat&quot;&gt;how do I consume message using kcat?&lt;/h2&gt;
-
-&lt;p&gt;Ensure that kcat is installed on your system. If not, you can find installation instructions in the [kcat GitHub repository](https://github.com/edenhill/kcat&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Prepare your SASL Authentication details&lt;/strong&gt;: You&apos;ll need your SASL username and password, as well as the mechanism (typically PLAIN or SCRAM-SHA-256/SHA-512).&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;kcat &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; broker1:9092,broker2:9092 &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &amp;lt;topic&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; security.protocol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sasl_ssl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.mechanisms&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SCRAM-SHA-512 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.username&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;username&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;password&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; ssl.ca.location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;path_to_ca_cert&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-       &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-J&lt;/span&gt;
-       
-json
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&quot;topic&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;sample-topic&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;partition&quot;&lt;/span&gt;: 0,
-  &lt;span class=&quot;s2&quot;&gt;&quot;offset&quot;&lt;/span&gt;: 12345,
-  &lt;span class=&quot;s2&quot;&gt;&quot;tstype&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;create&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;ts&quot;&lt;/span&gt;: 1626894728000,
-  &lt;span class=&quot;s2&quot;&gt;&quot;key&quot;&lt;/span&gt;: null,
-  &lt;span class=&quot;s2&quot;&gt;&quot;payload&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;{&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;eventType&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;EVENT_TYPE&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;SOURCE_SYSTEM&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Here :&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-o -1: Start consuming from the latest message
--e: Exit after the last message is received.
--J:  Output the message in JSON format, including metadata such as offset, partition, and timestamp.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;or you can&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Consume from the Earliest Offset&lt;/strong&gt;:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;sh
-kcat -C -b broker1:9092,broker2:9092 -t your-topic &lt;br /&gt;
-    -X security.protocol=sasl_ssl &lt;br /&gt;
-    -X sasl.mechanisms=SCRAM-SHA-512 &lt;br /&gt;
-    -X sasl.username=your-username &lt;br /&gt;
-    -X sasl.password=your-password &lt;br /&gt;
-    -X ssl.ca.location=/path/to/ca.pem &lt;br /&gt;
-    -o beginning -e -J&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Consume from the Latest Offset&lt;/strong&gt;:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;sh
-kcat -C -b broker1:9092,broker2:9092 -t your-topic &lt;br /&gt;
-    -X security.protocol=sasl_ssl &lt;br /&gt;
-    -X sasl.mechanisms=SCRAM-SHA-512 &lt;br /&gt;
-    -X sasl.username=your-username &lt;br /&gt;
-    -X sasl.password=your-password &lt;br /&gt;
-    -X ssl.ca.location=/path/to/ca.pem &lt;br /&gt;
-    -o end -e -J&lt;/p&gt;
-
-&lt;p&gt;To publish , you can&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo &apos;{&quot;key&quot;:&quot;value&quot;, &quot;anotherKey&quot;:123}&apos; | kcat -P -b broker1:9092,broker2:9092 -t &amp;lt;topic&amp;gt; \
-    -X security.protocol=sasl_ssl \
-    -X sasl.mechanisms=SCRAM-SHA-512 \
-    -X sasl.username=your-username \
-    -X sasl.password=your-password \
-    -X ssl.ca.location=/path/to/ca.pem
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;For larger or more complex JSON payloads, consider using a file or another program to generate the JSON and pipe it into kcat.&lt;/p&gt;
-
-&lt;p&gt;example, message.json&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;key&quot;: &quot;value&quot;,
-  &quot;anotherKey&quot;: 123
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;and&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kcat -P -b broker1:9092,broker2:9092 -t your-topic \
-    -X security.protocol=sasl_ssl \
-    -X sasl.mechanisms=SCRAM-SHA-512 \
-    -X sasl.username=your-username \
-    -X sasl.password=your-password \
-    -X ssl.ca.location=/path/to/ca.pem \
-    -l message.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;What is SASL authentication?&lt;/p&gt;
-
-&lt;h2 id=&quot;master-makefile&quot;&gt;Master Makefile&lt;/h2&gt;
-
-&lt;h2 id=&quot;how-to-authenticate-using-preauthorize-jwt-token-in-spring&quot;&gt;How to authenticate using Preauthorize jwt token in Spring&lt;/h2&gt;
-</description>
-          <pubDate>2024-08-01T00:00:00-04:00</pubDate>
-          <link>https://randomwits.com/weekly-logs-2024-07-29-08-04</link>
-          <guid isPermaLink="true">https://randomwits.com/weekly-logs-2024-07-29-08-04</guid>
-        </item>
-      
-    
-      
-        <item>
           <title>Git Stash Tutorial</title>
           <description>&lt;p&gt;git stash is a powerful and nifty feature in Git that allows you to temporarily set aside changes you&apos;ve made to your working directory. This can be incredibly useful when you need to switch branches but aren&apos;t ready to commit your changes. Here’s a comprehensive guide on how to use git stash effectively.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -1939,10 +1807,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;86f343a5-06ee-4fbe-9065-26587cbd00bd&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;ad452948-09e8-4d73-9066-aa1591095548&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;86f343a5-06ee-4fbe-9065-26587cbd00bd&apos;,
+    &apos;ad452948-09e8-4d73-9066-aa1591095548&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -3589,10 +3457,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;909be653-b7cc-4e53-976b-6258f4b0ade4&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;a3eb7927-b84a-47e5-84ba-33e2aa7df911&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;909be653-b7cc-4e53-976b-6258f4b0ade4&apos;,
+    &apos;a3eb7927-b84a-47e5-84ba-33e2aa7df911&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
