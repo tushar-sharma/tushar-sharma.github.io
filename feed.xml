@@ -339,6 +339,207 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Handling Multiple Beans of the Same Type in Spring with Qualifier</title>
+          <description>&lt;p&gt;In Spring application, it&apos;s common to have multiple beans of the same type. However, this can lead to issues when Spring tries to autowire these beans, as it doesn&apos;t know which bean to inject. This problem can be resolved using Qualifier annotation.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;In Spring application, it&apos;s common to have multiple beans of the same type. However, this can lead to issues when Spring tries to autowire these beans, as it doesn&apos;t know which bean to inject. This problem can be resolved using Qualifier annotation.&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-of-multiple-beans&quot;&gt;Problem of multiple beans&lt;/h2&gt;
+
+&lt;p&gt;Suppose you have two beans of same type like&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;When Spring encounters these beans, it will throw an error due to the ambiguity of which bean to autowire.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-using-qualifier&quot;&gt;Solution using Qualifier&lt;/h2&gt;
+
+&lt;p&gt;To differentiate these beans, you can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Qualifier&lt;/code&gt; annotation. This annotation helps Spring identify which bean to inject when multiple beans of the same type exist.&lt;/p&gt;
+
+&lt;h3 id=&quot;define-beans-with-qualifier&quot;&gt;Define Beans with @Qualifier:&lt;/h3&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;autowire-beans-with-qualifier&quot;&gt;Autowire Beans with Qualifier&lt;/h3&gt;
+
+&lt;p&gt;Use the&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; @Qualifier&lt;/code&gt; annotation to specify which bean to inject in your components:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean3.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;Using the @Qualifier annotation in Spring allows you to manage multiple beans of the same type efficiently. By specifying unique qualifiers for each bean and using these qualifiers during autowiring, you can avoid conflicts and ensure your application runs smoothly.&lt;/p&gt;
+</description>
+          <pubDate>2024-08-02T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/handling-multipe-beans-of-same-type-in-spring-using-qualifier</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/handling-multipe-beans-of-same-type-in-spring-using-qualifier</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Git Stash Tutorial</title>
+          <description>&lt;p&gt;git stash is a powerful and nifty feature in Git that allows you to temporarily set aside changes you&apos;ve made to your working directory. This can be incredibly useful when you need to switch branches but aren&apos;t ready to commit your changes. Here’s a comprehensive guide on how to use git stash effectively.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;git stash is a powerful and nifty feature in Git that allows you to temporarily set aside changes you&apos;ve made to your working directory. This can be incredibly useful when you need to switch branches but aren&apos;t ready to commit your changes. Here’s a comprehensive guide on how to use git stash effectively.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-basics-of-git-stash&quot;&gt;The Basics of git stash&lt;/h2&gt;
+
+&lt;p&gt;Imagine you are working on a branch and you need to check out another branch. However, you have uncommitted changes that you don&apos;t want to lose. This is where git stash comes into play.&lt;/p&gt;
+
+&lt;p&gt;To stash your changes, simply run:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command will save your modified tracked files and staged changes in a new stash and revert your working directory to match the HEAD commit.&lt;/p&gt;
+
+&lt;h2 id=&quot;retrieving-your-changes&quot;&gt;Retrieving Your Changes&lt;/h2&gt;
+
+&lt;p&gt;When you&apos;re ready to retrieve your stashed changes, you have a couple of options:&lt;/p&gt;
+
+&lt;h3 id=&quot;git-stash-pop&quot;&gt;git stash pop&lt;/h3&gt;
+
+&lt;p&gt;This command will apply the most recent stash and then remove it from the stash list.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash pop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If there are conflicts, you’ll need to resolve them manually before proceeding.&lt;/p&gt;
+
+&lt;h3 id=&quot;git-stash-apply&quot;&gt;git stash apply&lt;/h3&gt;
+
+&lt;p&gt;If you prefer to apply the stash but keep it in the stash list (perhaps you want to keep it for later use), use git stash apply:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash apply
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After resolving any conflicts, you can remove the stash entry with:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash drop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;stashing-specific-files&quot;&gt;Stashing Specific Files&lt;/h2&gt;
+
+&lt;p&gt;If you only want to stash changes to a specific file or set of files, you can use the push option with the file path:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash push path/to/your/file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This will stash only the specified file while leaving other changes in your working directory.&lt;/p&gt;
+
+&lt;h3 id=&quot;viewing-and-managing-stashes&quot;&gt;Viewing and Managing Stashes&lt;/h3&gt;
+
+&lt;p&gt;You can view a list of all stashes you have saved with:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This will show you a list of all stash entries, each with an index and a description.&lt;/p&gt;
+
+&lt;p&gt;To apply a specific stash from the list, use its index:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash apply stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;index&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash apply stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To drop a specific stash from the list, again use its index:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash drop stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;index&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;applying-stash-with-untracked-files&quot;&gt;Applying Stash with Untracked Files&lt;/h2&gt;
+
+&lt;p&gt;By default, git stash only stashes tracked files. If you want to stash untracked files as well, use the -u option:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;creating-a-stash-with-a-message&quot;&gt;Creating a Stash with a Message&lt;/h2&gt;
+
+&lt;p&gt;You can add a custom message to your stash entry to make it easier to identify later:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash save &lt;span class=&quot;s2&quot;&gt;&quot;Testing my stash&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;examples-and-scenarios&quot;&gt;Examples and Scenarios&lt;/h2&gt;
+
+&lt;h3 id=&quot;switching-branches-with-uncommitted-changes&quot;&gt;Switching Branches with Uncommitted Changes&lt;/h3&gt;
+
+&lt;p&gt;You&apos;re working on feature-branch and need to switch to main to review a pull request, but you have uncommitted changes:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After reviewing, you can return to your branch and reapply your changes:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout feature-branch
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash pop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;stashing-part-of-your-work&quot;&gt;Stashing Part of Your Work&lt;/h3&gt;
+
+&lt;p&gt;You&apos;re working on multiple files but only want to stash changes to file1.txt:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash push path/to/file1.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The rest of your working directory remains unchanged.&lt;/p&gt;
+
+&lt;h3 id=&quot;resolving-conflicts-with-git-stash-apply&quot;&gt;Resolving Conflicts with git stash apply&lt;/h3&gt;
+
+&lt;p&gt;To handle conflicts better, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git stash&lt;/code&gt;apply followed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git stash drop&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash apply
+&lt;span class=&quot;c&quot;&gt;# Resolve conflicts&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash drop
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;stashing-multiple-times-and-applying-a-specific-stash&quot;&gt;Stashing Multiple Times and Applying a Specific Stash&lt;/h3&gt;
+
+&lt;p&gt;Sometimes, you might need to stash changes multiple times and later apply a specific stash. Here’s how you can manage multiple stashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash save &lt;span class=&quot;s2&quot;&gt;&quot;WIP: Implementing feature A&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash save &lt;span class=&quot;s2&quot;&gt;&quot;WIP: Fixing bug B&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash save &lt;span class=&quot;s2&quot;&gt;&quot;WIP: Refactoring module C&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To list all your stashes:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This might output something like:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;0&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;: WIP: Refactoring module C
+stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;: WIP: Fixing bug B
+stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;2&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;: WIP: Implementing feature A
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To apply a specific stash, for example, the one for fixing bug B:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash apply stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After resolving any conflicts, you can drop the applied stash:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash drop stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git stash&lt;/code&gt; is an essential tool for any developer using Git. It allows you to temporarily shelve your changes, giving you the flexibility to switch contexts without losing your progress.&lt;/p&gt;
+</description>
+          <pubDate>2024-07-29T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/git-stash-tutorial</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/git-stash-tutorial</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Weekly Logs from July 15 to 21, 2024</title>
           <description>&lt;p&gt;Dear Vishi, this is my weekly logs from from July 15 to 21, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -1445,10 +1646,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;70918f1c-504a-435a-b622-a9dbcbaae5e0&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;cf95d0eb-1c31-43f8-97f8-3115bb51c989&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;70918f1c-504a-435a-b622-a9dbcbaae5e0&apos;,
+    &apos;cf95d0eb-1c31-43f8-97f8-3115bb51c989&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -3095,10 +3296,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;cd7a6cca-e7f2-4d58-a61f-9ee1dcdfa6a1&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;5bd0bd1f-c23d-4f79-b024-632e4a6a13bf&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;cd7a6cca-e7f2-4d58-a61f-9ee1dcdfa6a1&apos;,
+    &apos;5bd0bd1f-c23d-4f79-b024-632e4a6a13bf&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4899,26 +5100,6 @@ req.send(null);
 &lt;/div&gt;
 
 &lt;h2 id=&quot;daily-logs&quot;&gt;Daily logs&lt;/h2&gt;
-
-&lt;h3 id=&quot;dec-31-2023&quot;&gt;Dec 31, 2023&lt;/h3&gt;
-
-&lt;p&gt;Git stash is nifty feature. Lets say you are in a branch but need to checkout another but you have modified some files and you dont want to lose those changes.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git stash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To pull your changes back&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git stash pop
-# handing conflict better
-$ git stash apply
-$ git stash drop
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;However if you just want to stash one file&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git stash push path/to/your/file
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;dec-29-2023&quot;&gt;Dec 29, 2023&lt;/h3&gt;
 
