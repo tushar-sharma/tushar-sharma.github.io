@@ -339,6 +339,167 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Using kcat with Kafka and SASL Authentication</title>
+          <description>&lt;p&gt;kcat (formerly known as kafkacat) is a versatile command-line tool for Apache Kafka. It allows you to consume and produce Kafka messages and interact with Kafka clusters efficiently. This guide will help you set up and use kcat with SASL authentication to consume and produce messages.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;kcat (formerly known as kafkacat) is a versatile command-line tool for Apache Kafka. It allows you to consume and produce Kafka messages and interact with Kafka clusters efficiently. This guide will help you set up and use kcat with SASL authentication to consume and produce messages.&lt;/p&gt;
+
+&lt;h3 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h3&gt;
+
+&lt;p&gt;Ensure that kcat is installed on your system. If not, you can find installation instructions in the &lt;a href=&quot;https://github.com/edenhill/kcat&quot;&gt;kcat GitHub repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;prepare-your-sasl-authentication-details&quot;&gt;Prepare Your SASL Authentication Details&lt;/h3&gt;
+
+&lt;p&gt;You&apos;ll need the following SASL authentication details:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;SASL username&lt;/li&gt;
+  &lt;li&gt;SASL password&lt;/li&gt;
+  &lt;li&gt;SASL mechanism (typically PLAIN or SCRAM-SHA-256/SHA-512)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;consuming-messages&quot;&gt;Consuming Messages&lt;/h3&gt;
+
+&lt;h4 id=&quot;basic-consumption-command&quot;&gt;Basic Consumption Command&lt;/h4&gt;
+
+&lt;p&gt;To consume messages from a Kafka topic using kcat with SASL authentication, use the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;kcat &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; broker1:9092,broker2:9092 &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &amp;lt;topic&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; security.protocol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sasl_ssl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.mechanisms&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SCRAM-SHA-512 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.username&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;username&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;password&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; ssl.ca.location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;path_to_ca_cert&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-J&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Options Explained:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;`-C`: Consume mode.&lt;/li&gt;
+  &lt;li&gt;`-b`: List of brokers.&lt;/li&gt;
+  &lt;li&gt;`-t`: Topic name.&lt;/li&gt;
+  &lt;li&gt;`-X security.protocol=sasl_ssl`: Use SASL_SSL for communication.&lt;/li&gt;
+  &lt;li&gt;`-X sasl.mechanisms=SCRAM-SHA-512`: Specify the SASL mechanism.&lt;/li&gt;
+  &lt;li&gt;`-X sasl.username=&lt;username&gt;\`: SASL username.&lt;/username&gt;&lt;/li&gt;
+  &lt;li&gt;`-X sasl.password=&lt;password&gt;\`: SASL password.&lt;/password&gt;&lt;/li&gt;
+  &lt;li&gt;`-X ssl.ca.location=&lt;path_to_ca_cert&gt;\`: Path to the CA certificate.&lt;/path_to_ca_cert&gt;&lt;/li&gt;
+  &lt;li&gt;`-o -1`: Start consuming from the latest message.&lt;/li&gt;
+  &lt;li&gt;`-e`: Exit after the last message is received.&lt;/li&gt;
+  &lt;li&gt;`-J`: Output messages in JSON format.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;example-json-output&quot;&gt;Example JSON Output&lt;/h4&gt;
+
+&lt;p&gt;When consuming messages with the above command, the output will be in JSON format, including metadata such as offset, partition, and timestamp.&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;topic&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sample-topic&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;partition&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;offset&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12345&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;tstype&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;create&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;ts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1626894728000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;key&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;payload&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;eventType&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;EVENT_TYPE&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;:&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;SOURCE_SYSTEM&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;}&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;additional-consumption-scenarios&quot;&gt;Additional Consumption Scenarios&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Consume from the Earliest Offset&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;kcat &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; broker1:9092,broker2:9092 &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; your-topic &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; security.protocol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sasl_ssl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.mechanisms&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SCRAM-SHA-512 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.username&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;your-username &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;your-password &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; ssl.ca.location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/path/to/ca.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; beginning &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-J&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Consume from the Latest Offset&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;kcat &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; broker1:9092,broker2:9092 &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; your-topic &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; security.protocol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sasl_ssl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.mechanisms&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SCRAM-SHA-512 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.username&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;your-username &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;your-password &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; ssl.ca.location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/path/to/ca.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; end &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-J&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;producing-messages&quot;&gt;Producing Messages&lt;/h3&gt;
+
+&lt;p&gt;To publish messages to a Kafka topic, use the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;{&quot;key&quot;:&quot;value&quot;, &quot;anotherKey&quot;:123}&apos;&lt;/span&gt; | kcat &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; broker1:9092,broker2:9092 &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &amp;lt;topic&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; security.protocol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sasl_ssl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.mechanisms&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SCRAM-SHA-512 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.username&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;your-username &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;your-password &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; ssl.ca.location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/path/to/ca.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For larger or more complex JSON payloads, consider using a file or another program to generate the JSON and pipe it into kcat.&lt;/p&gt;
+
+&lt;h4 id=&quot;using-a-json-file&quot;&gt;Using a JSON File&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create a file, `message.json`:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;key&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;anotherKey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Produce the message from the file:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;kcat &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; broker1:9092,broker2:9092 &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; your-topic &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+           &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; security.protocol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sasl_ssl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+           &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.mechanisms&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SCRAM-SHA-512 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+           &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.username&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;your-username &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+           &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;your-password &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+           &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; ssl.ca.location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/path/to/ca.pem &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+           &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; message.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;understanding-sasl-authentication-in-kafka&quot;&gt;Understanding SASL Authentication in Kafka&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;SASL (Simple Authentication and Security Layer)&lt;/strong&gt; is a framework for authentication and data security in internet protocols. In the context of Kafka, SASL provides a way to authenticate clients to Kafka brokers.&lt;/p&gt;
+
+&lt;p&gt;Kafka supports multiple SASL mechanisms, including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;PLAIN&lt;/strong&gt;: Uses plain text username and password for authentication. It’s simple but not secure without SSL.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SCRAM-SHA-256&lt;/strong&gt;: Uses the SCRAM (Salted Challenge Response Authentication Mechanism) with SHA-256 hashing. It is more secure than PLAIN.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SCRAM-SHA-512&lt;/strong&gt;: Uses SCRAM with SHA-512 hashing, providing even stronger security than SHA-256.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How Kafka Uses SASL Internally:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Authentication&lt;/strong&gt;: When a client connects to a Kafka broker, it uses the specified SASL mechanism to authenticate. The broker validates the credentials against its configuration or a user management system.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Encryption&lt;/strong&gt;: When combined with SSL (SASL_SSL), the data transmitted between the client and the broker is encrypted, providing both authentication and confidentiality.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;Using `kcat` with SASL authentication enables secure communication with Kafka clusters. By understanding and utilizing the different options and scenarios, you can efficiently consume and produce messages while ensuring the security of your Kafka interactions. Whether you&apos;re dealing with simple messages or complex JSON payloads, `kcat` provides a robust toolset for working with Kafka.&lt;/p&gt;
+</description>
+          <pubDate>2024-08-02T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/kcat-with-kafka-sasl-authentication</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/kcat-with-kafka-sasl-authentication</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Handling Multiple Beans of the Same Type in Spring with Qualifier</title>
           <description>&lt;p&gt;In Spring application, it&apos;s common to have multiple beans of the same type. However, this can lead to issues when Spring tries to autowire these beans, as it doesn&apos;t know which bean to inject. This problem can be resolved using Qualifier annotation.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -371,6 +532,138 @@ if (typeof Object.assign !== 'function') {
           <pubDate>2024-08-02T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/handling-multipe-beans-of-same-type-in-spring-using-qualifier</link>
           <guid isPermaLink="true">https://randomwits.com/blog/handling-multipe-beans-of-same-type-in-spring-using-qualifier</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Weekly Logs 2024 07 29 08 04</title>
+          <description>
+&lt;p&gt;Dear Vishi, this is my weekly logs from July 29 to Aug 4, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;music&quot;&gt;Music&lt;/h2&gt;
+
+&lt;p&gt;Songs that I liked this week&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aurora - Runaway&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aurora - It Happened Quiet&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aurora - Apple Tree&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aurora - Animal&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aurora - The Seed&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-do-i-consume-message-using-kcat&quot;&gt;how do I consume message using kcat?&lt;/h2&gt;
+
+&lt;p&gt;Ensure that kcat is installed on your system. If not, you can find installation instructions in the [kcat GitHub repository](https://github.com/edenhill/kcat&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prepare your SASL Authentication details&lt;/strong&gt;: You&apos;ll need your SASL username and password, as well as the mechanism (typically PLAIN or SCRAM-SHA-256/SHA-512).&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;kcat &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; broker1:9092,broker2:9092 &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &amp;lt;topic&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; security.protocol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sasl_ssl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.mechanisms&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;SCRAM-SHA-512 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.username&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;username&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; sasl.password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;password&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; ssl.ca.location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;path_to_ca_cert&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-J&lt;/span&gt;
+       
+json
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;topic&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;sample-topic&quot;&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;partition&quot;&lt;/span&gt;: 0,
+  &lt;span class=&quot;s2&quot;&gt;&quot;offset&quot;&lt;/span&gt;: 12345,
+  &lt;span class=&quot;s2&quot;&gt;&quot;tstype&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;create&quot;&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;ts&quot;&lt;/span&gt;: 1626894728000,
+  &lt;span class=&quot;s2&quot;&gt;&quot;key&quot;&lt;/span&gt;: null,
+  &lt;span class=&quot;s2&quot;&gt;&quot;payload&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;{&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;eventType&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;EVENT_TYPE&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;SOURCE_SYSTEM&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here :&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-o -1: Start consuming from the latest message
+-e: Exit after the last message is received.
+-J:  Output the message in JSON format, including metadata such as offset, partition, and timestamp.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or you can&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Consume from the Earliest Offset&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;sh
+kcat -C -b broker1:9092,broker2:9092 -t your-topic &lt;br /&gt;
+    -X security.protocol=sasl_ssl &lt;br /&gt;
+    -X sasl.mechanisms=SCRAM-SHA-512 &lt;br /&gt;
+    -X sasl.username=your-username &lt;br /&gt;
+    -X sasl.password=your-password &lt;br /&gt;
+    -X ssl.ca.location=/path/to/ca.pem &lt;br /&gt;
+    -o beginning -e -J&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Consume from the Latest Offset&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;sh
+kcat -C -b broker1:9092,broker2:9092 -t your-topic &lt;br /&gt;
+    -X security.protocol=sasl_ssl &lt;br /&gt;
+    -X sasl.mechanisms=SCRAM-SHA-512 &lt;br /&gt;
+    -X sasl.username=your-username &lt;br /&gt;
+    -X sasl.password=your-password &lt;br /&gt;
+    -X ssl.ca.location=/path/to/ca.pem &lt;br /&gt;
+    -o end -e -J&lt;/p&gt;
+
+&lt;p&gt;To publish , you can&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;echo &apos;{&quot;key&quot;:&quot;value&quot;, &quot;anotherKey&quot;:123}&apos; | kcat -P -b broker1:9092,broker2:9092 -t &amp;lt;topic&amp;gt; \
+    -X security.protocol=sasl_ssl \
+    -X sasl.mechanisms=SCRAM-SHA-512 \
+    -X sasl.username=your-username \
+    -X sasl.password=your-password \
+    -X ssl.ca.location=/path/to/ca.pem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For larger or more complex JSON payloads, consider using a file or another program to generate the JSON and pipe it into kcat.&lt;/p&gt;
+
+&lt;p&gt;example, message.json&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;key&quot;: &quot;value&quot;,
+  &quot;anotherKey&quot;: 123
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kcat -P -b broker1:9092,broker2:9092 -t your-topic \
+    -X security.protocol=sasl_ssl \
+    -X sasl.mechanisms=SCRAM-SHA-512 \
+    -X sasl.username=your-username \
+    -X sasl.password=your-password \
+    -X ssl.ca.location=/path/to/ca.pem \
+    -l message.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What is SASL authentication?&lt;/p&gt;
+
+&lt;h2 id=&quot;master-makefile&quot;&gt;Master Makefile&lt;/h2&gt;
+
+&lt;h2 id=&quot;how-to-authenticate-using-preauthorize-jwt-token-in-spring&quot;&gt;How to authenticate using Preauthorize jwt token in Spring&lt;/h2&gt;
+</description>
+          <pubDate>2024-08-01T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/weekly-logs-2024-07-29-08-04</link>
+          <guid isPermaLink="true">https://randomwits.com/weekly-logs-2024-07-29-08-04</guid>
         </item>
       
     
@@ -1646,10 +1939,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;cf95d0eb-1c31-43f8-97f8-3115bb51c989&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;86f343a5-06ee-4fbe-9065-26587cbd00bd&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;cf95d0eb-1c31-43f8-97f8-3115bb51c989&apos;,
+    &apos;86f343a5-06ee-4fbe-9065-26587cbd00bd&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -3296,10 +3589,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;5bd0bd1f-c23d-4f79-b024-632e4a6a13bf&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;909be653-b7cc-4e53-976b-6258f4b0ade4&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;5bd0bd1f-c23d-4f79-b024-632e4a6a13bf&apos;,
+    &apos;909be653-b7cc-4e53-976b-6258f4b0ade4&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
