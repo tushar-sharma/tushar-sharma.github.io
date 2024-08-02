@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Git Stash Tutorial
-image: 'https://unsplash.com/photos/FFaoc94hhKs/download?w=800'
-thumb: 'https://unsplash.com/photos/FFaoc94hhKs/download?w=800'
+image: 'https://images.pexels.com/photos/158847/pexels-photo-158847.jpeg?w=800'
+thumb: 'https://images.pexels.com/photos/158847/pexels-photo-158847.jpeg?w=800'
 author: tushar sharma
 category: blog
 tags:
