@@ -260,3 +260,10 @@
   rating: 0
   pending: true
   progress: 35
+
+- title: "Siddhartha"
+  author: Hermann Hesse
+  rating: 0
+  pending: true
+  progress: 0
+
