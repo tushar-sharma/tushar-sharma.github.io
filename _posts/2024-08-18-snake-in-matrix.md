@@ -18,11 +18,3 @@ id: 87ee394c73985774c17ff4a019200477
 file: FinalPositionOfSnake.java
 ---
 {% endtemplate %}
-
-### Things to remember
-
-1. How to use a `for loop` with String array
-
-2. `If` and `else if` statements
-
-3. String equality
