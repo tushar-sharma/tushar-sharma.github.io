@@ -26,6 +26,7 @@ author: Tushar Sharma
         <th class="th-sm">Title</th>
         <th class="th-sm">Author</th>
         <th class="th-sm">Rating</th>
+        <th class="th-sm">Comments</th>
       </tr>
     </thead>
   
@@ -64,6 +65,7 @@ author: Tushar Sharma
             {% endif %}
           </div>
         </td>
+        <td>{{ book.comments }}</td>
       </tr>
       {% endfor %}
     </tbody>
