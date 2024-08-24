@@ -1,22 +1,29 @@
 ---
 layout: post
-title: Review of The Molecule of More
-image: /img/
-thumb: /img/
+title: Review of The Molecule of More by Daniel Z. Lieberman, Michael E. Long
+image: https://unsplash.com/photos/jjMvkdunYt8/download?w=800
+thumb: https://unsplash.com/photos/jjMvkdunYt8/download?w=800
 author: tushar sharma
 category: blog
-published: false
+tags: books
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<!-- truncate_here -->
 
-Dopamine. What's dopamine? It's a molecule secreated by part of brain. Often dubbed pleasure molecule, it's presumed to be released when we experience pleasures. However this book explores how dopamine is a molecule of more not just pleasure. Like the author said the dopamine activity is not a marker of pleasure. It's a reaction to the unexpected - to possibility and anticipation
+<link rel="stylesheet" href="{{ root_url }}/css/books.css" />
+
+<!-- disclaimer -->
+<div style="margin: 0 auto" class="cl disclaimer">
+<span style="color:black"> &nbsp;&nbsp;These are my rough notes while reading this book
+</span> 
+</div>
+<br>
+
+What's a dopamine? It's a molecule secreated by part of brain. Often dubbed pleasure molecule, it's presumed to be released when we experience pleasures. However this book explores how dopamine is a molecule of more not just pleasure. Like the author said the dopamine activity is not a marker of pleasure. It's a reaction to the unexpected - to possibility and anticipation
 
 > Love is a need, a craving, a drive to seek's life greatest prize
 
-I like this quote. I guess we all need love to have a meaningful life. 
-
-The pathway to dopamine in the brain is called reward circuit. It reminds me of Pavlov dog. Ringing of a bell caused him to salivate. Was that releasing dopamine in his brain?
+The pathway to dopamine in the brain is called **reward circuit**. It reminds me of Pavlov dog. Ringing of a bell caused him to salivate. Did dog released dopamine at the sound of the bell?
 
 One problem with dopamine excitement is that it doesn't last forever. That's if you need to do something new to get more release of dopamine. Example if you like a dish so much, dopamine will be released in your brain. If you have the same delcious dish everyday, dopamine would stop releasing for the same dish.
 
@@ -28,12 +35,11 @@ I guess doesn't that makes dopamine drives us to get better. So can we equate do
 
 So dopamine makes you desire more but is never statisfied. You can't rely on dopamine alone to find happiness in our daily life.
 
->  Vasopressin acted like a "good-husband harmone". Dopamine does the opposite. Human beings who have genes that produces high levels of dopamine have the highest number of sexual partners and the lowest age of first sexual intercourse.
+>  Vasopressin acted like a "good-husband harmone". Dopamine does the opposite. Human beings who have genes that produces high levels of dopamine have the highest number of sexual partners and the lowest age of first sexual intercourse....Just as dopamine is the molecule of obsessive yearning, the chemicals mostly associated with long-term relationships are oxytocin and vasopressin. Oxytocin is more active in women and vasopressin in menj. 
 
+What's vasopressin? It's a molecule like dopmaine. It's a primarily acts as a hormone. What's a hormone? They are chemical messengers that are released by a gland and is released into the bloodstream. They travel to different parts of body to regularte various physiological processes like growth, metabolism and mood. Hormones influence the functions of the body’s cells by binding to large proteins known as receptors, whose shape and electrical charge interact with one particular hormone. When a hormone binds to its receptor protein, it causes a change in the receptor’s shape that triggers changes within the cell. So a molecule can be a hormone. But not all molecules can act as a hormone. What about proteins? Proteins are a complex molecule and can also act as a hormone. E.g. Insulin regulates blood sugar levels.  
 
-> Just as dopamine is the molecule of obsessive yearning, the chemicals mostly associated with long-term relationships are oxytocin and vasopressin. Oxytocin is more active in women and vasopressin in menj. 
-
-What's vasopressin? Is it a hormone or a molecule? If you hypothetically inject vasopressin in a promiscous male, would he change behavior? Are there any any food that promotes vasopressin? 
+If you hypothetically inject vasopressin in a promiscous male, would he change behavior? Are there any any food that promotes vasopressin? 
 
 > Endorphins (your brain's version of morphine), and a class of chemicals called endocannabinoids (your brains' version of marijuana). As opposed to the please of anticipation via dopamine, these chemicals give us pleasure from sensation and emotion. In fact, one of the endocannabinoid molecule is called anandamide, named after a Sanskrit word that means joy, bliss, and delight.
 
@@ -45,6 +51,9 @@ But isn't what we call hope? A janitor does his job diligently in a hope that he
 
 > the future isn't real. It's made up of bundle of possibilities that exist only in our minds. Those possibilities tend to be idealized - we usually don't imagine a mediocre outcome.
 
-> What happens when the future becomes the present - when the dineer is in your mouth or your lover is in your arms? The feeling of excitement, enthusiasm, and energy dissipate. Dopamine has shut down. Dopamine circuits doen't process experience in the rela world, only imaginary future possibilities.
+> What happens when the future becomes the present - when the dinner is in your mouth or your lover is in your arms? The feeling of excitement, enthusiasm, and energy dissipate. Dopamine has shut down. Dopamine circuits doen't process experience in the rela world, only imaginary future possibilities.
 
 So we need something else to keep feeling good after we achieve our goals?
+
+> In the early 1960s, doctors prescribed large amounts of dopamine-boosting amphetamine to promote "cheerfullness, mental alertness, and optimisim"
+
