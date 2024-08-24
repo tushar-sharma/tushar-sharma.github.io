@@ -94,7 +94,7 @@
 - title: "Why We Get Sick: The New Science of Darwinian Medicine"
   author: "Randolph M. Nesse"
   rating: 5
-  comments: ""
+  comments: "Recommended by Richard Dawkins"
   pending: false
   progress: 0
 
@@ -136,7 +136,7 @@
 - title: "Silent Spring"
   author: "Rachel Carson"
   rating: 5
-  comments: ""
+  comments: "Recommended by <a href='https://x.com/varungandhi80/status/1315125563367931905' target='_blank'>Varun Gandhi</a>"
   pending: false
   progress: 0
 
@@ -187,18 +187,21 @@
   rating: 0
   pending: true
   progress: 25
+  comments: ""
 
 - title: "Crime and Punishment"
   author: "Fyodor Dostoevsky"
   rating: 0
   pending: true
   progress: 10
+  comments: ""
 
 - title: "Hackers"
   author: "Steven Levy"
   rating: 0
   pending: true
   progress: 45
+  comments: ""
 
 - title: "Kafka: The Definitive Guide"
   author: "Gwen Shapira, Neha Narkhede, Todd Palino"
@@ -212,58 +215,74 @@
   rating: 0
   pending: true
   progress: 17
+  comments: ""
 
 - title: "Musicophilia: Tales of Music and the Brain"
   author: "Oliver Sacks"
   rating: 0
   pending: true
   progress: 60
+  comments: ""
 
 - title: "On the Origin of Species"
   author: "Charles Darwin"
   rating: 0
   pending: true
   progress: 20
+  comments: ""
 
 - title: "Eminent Historians: Their Technology, Their Line, Their Fraud"
   author: "Arun Shourie"
   rating: 0
   pending: true
   progress: 30
+  comments: ""
 
 - title: "Glimpses of World History"
   author: "Jawaharlal Nehru"
   rating: 0
   pending: true
   progress: 48.71
+  comments: ""
 
 - title: "Quantitative Finance with Python"
   author: Chris Kelliher 
   rating: 0
   pending: true
   progress: 7.73
+  comments: ""
 
 - title: "The Hunting of the Quarks"
   author: Michael Riordan
   rating: 0
   pending: true
   progress: 15
+  comments: ""
 
 - title: "The Logic of Scientific Discovery"
   author: Karl Popper
   rating: 0
   pending: true
   progress: 11
+  comments: ""
 
 - title: "The Molecule of More"
   author: Daniel Z. Lieberman, Michael E. Long
   rating: 0
   pending: true
   progress: 35
+  comments: "Recommended by Patricia. <a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
 
 - title: "Siddhartha"
   author: Hermann Hesse
   rating: 0
   pending: true
   progress: 0
+  comments: "Recommended by Maca"
 
+- title: "A Philosophy of Software Design"
+  author: John Ousterhout
+  rating: 0
+  pending: true
+  progress: 0
+  comments: ""
