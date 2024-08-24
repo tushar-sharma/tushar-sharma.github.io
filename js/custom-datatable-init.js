@@ -7,7 +7,8 @@ $(document).ready(function () {
         "columns": [
           null,
           null,
-          {'searchable': false}
+          {'searchable': false},
+          null
         ]
       });
 
