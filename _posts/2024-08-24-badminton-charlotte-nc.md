@@ -1,14 +1,18 @@
 ---
 layout: post
 title: Where to play Badminton in Charlotte NC
-image: /img/
-thumb: /img/
+image: https://unsplash.com/photos/s7R3sGbiYvA/download?w=800
+thumb: https://unsplash.com/photos/s7R3sGbiYvA/download?w=800
 author: tushar sharma
 category: blog
+tags:
+ - charlotte
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<!-- truncate_here -->
+I regularly play badminton at the Marion Diehl Recreation Center and Pool, where intermediate sessions are held every Wednesday from 7:00 pm to 9:00 pm. To secure a spot, you can make a reservation by calling +1 980-314-1300. From my experience, if you're looking to reserve a spot for the entire month, it's best to call on the 15th of the preceding month.<!-- truncate_here -->
 
-I usually play at Marion Diehl Recreation Center and Pool. The timings are 7pm to 9pm on Wednesday for intermediate. You can make reservation by calling this number +1 980-314-1300. For my experience, I usually call on 15th of a month if I need to make reservation for entire month. 
 
-Bring your racket, there are people with their birdie. You can also bring your own birdie. 
+I regularly play badminton at the Marion Diehl Recreation Center and Pool, where intermediate sessions are held every Wednesday from 7:00 pm to 9:00 pm. To secure a spot, you can make a reservation by calling +1 980-314-1300. From my experience, if you're looking to reserve a spot for the entire month, it's best to call on the 15th of the preceding month.
+
+
+Be sure to bring your own racket. While there are usually birdies available, you might want to bring your own just in case.     
