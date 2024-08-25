@@ -92,10 +92,6 @@ I had to renew my car registration [online](https://payments.ncdot.gov/). Earlie
 
 There's a ping pong robot at Table tennis club, Charlotte. It's fun to pratice against it. However I am not seeing any improvement in my game. Last Thursday's league game, I had the worst performance.  I had few nice serves but made too many **unforced errors**. 
 
-### Badminton
-
-I have resumed playing Badminton at Marion Diehl Recreation Center and Pool. The timings are 7pm to 9pm on Wednesday.
-
 ### Tennis
 
 I am trying to improve my backend return. I had a an hour coaching with Zack in Huntersville for tennis for $50. He showed me how to use a backhand properly. I am still trying to improve it.

@@ -57,3 +57,11 @@ So we need something else to keep feeling good after we achieve our goals?
 
 > In the early 1960s, doctors prescribed large amounts of dopamine-boosting amphetamine to promote "cheerfullness, mental alertness, and optimisim"
 
+ADHD = Attention Deficit Hyperactivity Disorder. People with ADHD have poor focus, less concentration and more impulsive. 
+
+> They may start pyaing bills, then switch to doing the laundry, then change a light bulb, then site down and watch TV with everything strewn all over the place...not listen to what people say to them. Sometimes they don't keep track of time, making them late, and they may lose things, such as car keys, call phones, even passports.
+
+
+ADHD is ofen seen on children because their frontal lobes which control dopamine acts, develop last and do not fully connect to the rest of the brain until a person finishes adolescence and enters adulthood. Can we say that frontal lobes in the brain control dopamine acts? Dopamine is produced in other parts of brain and it affects frontal lobes which is responsible for highly cognitive functions like decisions making.
+
+Frontal lobes are the last parts of brain to fully develop which might be in mid-20s. That's why teenagers are impulsive.
