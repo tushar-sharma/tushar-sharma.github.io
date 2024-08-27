@@ -1,0 +1,47 @@
+
+Method Overloading and Varargs in Java
+
+Method overloading in Java allows mulitple method to have same name but different parameters. Where as variable arguments (varargs) are a feature that allows a method to accpet zero or more arguments of a specified type. 
+
+Lets say you have a method that takes a string as argument and prints it to console
+
+```java
+public void printArgs(String args) {
+  System.out.println(args);
+}
+```
+
+We can use method overloading if we want to print multiple strings
+
+```java
+public void testArgs(String[] args) {
+  for (String arg : args) {
+    System.out.println(arg);
+  }
+}
+```
+
+for invoking the methods, we need to pass arguments differnetly like 
+
+```java
+testArgs("test");
+
+testArgs({"test1, "test2, "test3"]});
+```
+
+However we can use `varargs` like 
+
+```java
+public void testArgs(String... args) {
+  Arrays.stream(args)
+      .forEach(System.out::println);
+}
+````
+
+Now we have the same definition while invoking 
+
+```java
+testArgs("test1");
+testArgs("test1" , "test2");
+testArgs({"test1", "test2"});
+```
