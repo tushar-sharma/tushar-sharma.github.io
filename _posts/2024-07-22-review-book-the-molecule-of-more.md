@@ -65,3 +65,13 @@ ADHD = Attention Deficit Hyperactivity Disorder. People with ADHD have poor focu
 ADHD is ofen seen on children because their frontal lobes which control dopamine acts, develop last and do not fully connect to the rest of the brain until a person finishes adolescence and enters adulthood. Can we say that frontal lobes in the brain control dopamine acts? Dopamine is produced in other parts of brain and it affects frontal lobes which is responsible for highly cognitive functions like decisions making.
 
 Frontal lobes are the last parts of brain to fully develop which might be in mid-20s. That's why teenagers are impulsive.
+
+Can we say adrenaline as norepinephrine are similar? Both are neurotransmitter. Adrenaline is produced by adrenal gland. Adrenal gland is just above the kidneys. Norepinephrine is mainly produced by the nervous system, though some is also made by the adrenal glands. Norepinephrine is a H&N emotion of the moment. It's involved in immediate responses, particularly in the "fight or flight" response. Where as dopamine is involved in more cerebral approach.
+
+What's the detachment score? People who are focused on present moments, H&N circuts are activated and the warm, emotional aspects of our personality comes out. When we're engaged in the extrapersonal - at a distance, thinking abscractly, focusted on the future - the rational, emotionless parts of our personality are more likely to be seen.
+
+> Willpower can help an alchoholic say not to a drink once, but it's probably not going to work if he has to say no over and over again for months or years. Willpower is like a muscle. It becomes fatirgued with use, and after a farily short period of time, it gives out.
+
+> "Resisting temptation seems to have produced a psychic cost, in the sense that afterward particiapants were more inclined to give up easily in the face of frustration." If you're on a diet, the more times you resist temptation, the more likely you are to fail the next time around. Willpower is a limited resource.
+
+> You can't beat drugs with willpower alone...They have to combined with some form of psychotherapy.

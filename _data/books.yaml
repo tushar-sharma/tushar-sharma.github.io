@@ -270,7 +270,7 @@
   author: Daniel Z. Lieberman, Michael E. Long
   rating: 0
   pending: true
-  progress: 40
+  progress: 45
   comments: "Recommended by Patricia. <a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
 
 - title: "Siddhartha"
@@ -286,3 +286,10 @@
   pending: true
   progress: 0
   comments: ""
+
+- title: "The Wall"
+  author: "Marlen Haushofer"
+  rating: 0
+  progress: 0
+  pending: true
+  comments: "Recommended by <a href='https://www.meetup.com/creative-intellectuals/events/302641147/' target='_blank'>meetup group</a>"
