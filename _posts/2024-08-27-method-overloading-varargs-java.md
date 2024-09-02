@@ -16,7 +16,9 @@ Method overloading is a fundamental concept in object-oriented programming that 
 ### Key Characteristics:
 
 1. **Compile-time Polymorphism**: The compiler determines which method to call based on the number and types of arguments.
+
 2. **Type Safety**: Each overloaded method can have a distinct implementation tailored to specific parameter types.
+
 3. **Performance**: Method resolution occurs at compile-time, resulting in minimal runtime overhead.
 
 ### Example Implementation:
