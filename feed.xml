@@ -339,7 +339,7 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
-          <title>Unit Testing Preauthroize Annotation in Spring Boot</title>
+          <title>Testing Preauthorize Annotation in Spring Boot</title>
           <description>&lt;p&gt;Preauthorize annotation can be use to enforce access control in Spring Boot applications. It&apos;s part of Spring Security that allows you to specify access control expression for methods. These expressions are evaluated before method execution, determining whether the current user has the authority to invoke the method.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;p&gt;Preauthorize annotation can be use to enforce access control in Spring Boot applications. It&apos;s part of Spring Security that allows you to specify access control expression for methods. These expressions are evaluated before method execution, determining whether the current user has the authority to invoke the method.&lt;/p&gt;
@@ -488,8 +488,8 @@ void testHasKafkaAllowedAuthority_withoutAccess() {
 &lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=AuthorizedServiceIntegrationTest.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 </description>
           <pubDate>2024-09-01T00:00:00-04:00</pubDate>
-          <link>https://randomwits.com/blog/unit-testing-preauthorize-spring-boot</link>
-          <guid isPermaLink="true">https://randomwits.com/blog/unit-testing-preauthorize-spring-boot</guid>
+          <link>https://randomwits.com/blog/testing-preauthorize-spring-boot</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/testing-preauthorize-spring-boot</guid>
         </item>
       
     
@@ -2365,10 +2365,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;3f909cec-1aa3-40b7-b8ce-99bb31094cca&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;7578ea5b-2eeb-41b2-8cfa-b0954d8ddf21&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;3f909cec-1aa3-40b7-b8ce-99bb31094cca&apos;,
+    &apos;7578ea5b-2eeb-41b2-8cfa-b0954d8ddf21&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4015,10 +4015,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;fb84cc1b-1c0d-4ab3-803d-63674db99342&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;fd13dd27-d67a-4b3a-bc55-59a873403244&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;fb84cc1b-1c0d-4ab3-803d-63674db99342&apos;,
+    &apos;fd13dd27-d67a-4b3a-bc55-59a873403244&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
