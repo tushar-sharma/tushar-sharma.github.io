@@ -2,8 +2,6 @@ create:
 	bash createPost.sh
 serve:
 	JEKYLL_ENV=production bundle exec jekyll serve --trace
-search:
-	ALGOLIA_API_KEY='8d65dfe24d1ae133f0f8d5a376be5840' bundle exec jekyll algolia
 clean:
 	rm -fr tag
 	cp -r _site/tag .
