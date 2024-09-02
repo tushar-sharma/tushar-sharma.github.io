@@ -1,23 +1,4 @@
 <div class="line-numbers code-block">
   <script src="https://gist.github.com/tushar-sharma/{{ template.id }}.js?file={{ template.file }}"></script>
-  <button class="copy-button">Copy</button>   
-
-
-  {% capture hidden_content %}
-    {% capture gist_content %}
-      https://gist.github.com/tushar-sharma/{{ template.id }}.js?file={{ template.file }}
-    {% endcapture %}
-    {% assign gist_content_escaped = gist_content | uri_escape %}
-    {% assign gist_api_url = "https://api.github.com/gists/" | append: template.id %}
-
-    {% capture gist_data %}
-      curl -s {{ gist_api_url }} | jq '.files."{{ template.file }}".content'
-    {% endcapture %}
-    <div style="display: none;">
-      <pre>
-        {{ gist_data | shell }}
-      </pre>
-    </div>
-  {% endcapture %}
-  {{ hidden_content }}
+  <button class="copy-button">Copy</button>
 </div>
