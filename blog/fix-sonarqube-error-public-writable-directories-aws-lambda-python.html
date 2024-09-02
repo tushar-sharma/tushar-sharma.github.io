@@ -288,7 +288,11 @@ header li {
 
 <p>One common SonarQube warning is related to the usage of publicly writable directories. SonarQube raises this warning to highlight potential security risks when working with directories that have open write permissions. In the case of AWS Lambda functions, the <code class="language-plaintext highlighter-rouge">/tmp</code> directory is often used for temporary file operations.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=wrong_example.py"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=wrong_example.py"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/9832f3acbfaa468021d3c5cb44679242 | jq '.files."wrong_example.py".content'
+    
+      </pre> </div> </div>
 
 <p>In this code snippet, the /tmp directory is publicly writable, which can pose security risks if not managed properly.</p>
 
@@ -298,7 +302,11 @@ header li {
 
 <p>Here's an updated version of the code that uses the tempfile module:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=correct_example.py"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=correct_example.py"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/9832f3acbfaa468021d3c5cb44679242 | jq '.files."correct_example.py".content'
+    
+      </pre> </div> </div>
 
 <p>In the updated code, we make use of the tempfile.gettempdir() function to retrieve the system's default temporary directory, which is typically /tmp on Linux-based systems. By using the system's default temporary directory, we ensure consistent and secure behavior across different environments.</p>
 

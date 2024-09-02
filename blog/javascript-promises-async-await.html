@@ -288,7 +288,11 @@ header li {
 
 <p>Lets's say you have the following code which executes sequentially</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=seq.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=seq.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq '.files."seq.js".content'
+    
+      </pre> </div> </div>
 
 <p>This code executes sequentially. But what if you need to perform an operation that depends on data from a server or an API?</p>
 
@@ -298,19 +302,31 @@ header li {
 
 <p>Consider the following example where we make an API request using the <code class="language-plaintext highlighter-rouge">axios</code> library:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise1.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise1.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq '.files."promise1.js".content'
+    
+      </pre> </div> </div>
 
 <p>This code will fail because the data property does not exist at the time of the console.log() statement. The <code class="language-plaintext highlighter-rouge">axios.get()</code> method returns a Promise, which is an asynchronous operation.</p>
 
 <p>The beauty of Promises is in their methods: <code class="language-plaintext highlighter-rouge">.then()</code> and <code class="language-plaintext highlighter-rouge">.catch()</code>. The .then() method is used for handling successful responses, while .catch() is used for handling errors.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise2.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise2.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq '.files."promise2.js".content'
+    
+      </pre> </div> </div>
 
 <h3 id="simplifying-with-asyncawait">Simplifying with Async/Await</h3>
 
 <p>Async/Await is syntactic sugar over Promises, making asynchronous code easier to write and read. An async function returns a Promise, and the await keyword is used to wait for a Promise to resolve or reject.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise3.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise3.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq '.files."promise3.js".content'
+    
+      </pre> </div> </div>
 
 <p>This code is more readable and looks synchronous, even though it’s handling asynchronous operations.</p>
 
@@ -320,17 +336,29 @@ header li {
 
 <p>Callback Hell typically occurs when you have several nested callbacks, creating a complex and hard-to-read code structure. This often happens when dealing with multiple asynchronous operations that need to be performed in sequence.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq '.files."callbackHell.js".content'
+    
+      </pre> </div> </div>
 
 <h3 id="resolving-callback-hell">Resolving Callback Hell</h3>
 
 <p>Promises provide a cleaner way to handle asynchronous operations. Let’s refactor the above example using Promises:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell1.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell1.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq '.files."callbackHell1.js".content'
+    
+      </pre> </div> </div>
 
 <p>Async/Await further simplifies asynchronous code, making it even more readable:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell2.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell2.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq '.files."callbackHell2.js".content'
+    
+      </pre> </div> </div>
 
 
 

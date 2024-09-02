@@ -317,7 +317,11 @@ header li {
 
 <p>And add <code class="language-plaintext highlighter-rouge">user.service.ts</code></p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=user.service.ts"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=user.service.ts"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/abe9eec9e3361f5901b9221b5758e726 | jq '.files."user.service.ts".content'
+    
+      </pre> </div> </div>
 
 <p>It returns an observable of the HTTP response.</p>
 
@@ -325,11 +329,19 @@ header li {
 
 <p>Modify <code class="language-plaintext highlighter-rouge">app.component.ts</code>:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=app.component.ts"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=app.component.ts"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/abe9eec9e3361f5901b9221b5758e726 | jq '.files."app.component.ts".content'
+    
+      </pre> </div> </div>
 
 <p>For displaying data, you can modify <code class="language-plaintext highlighter-rouge">app.component.html</code>:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=app.component.html"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=app.component.html"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/abe9eec9e3361f5901b9221b5758e726 | jq '.files."app.component.html".content'
+    
+      </pre> </div> </div>
 
 
 

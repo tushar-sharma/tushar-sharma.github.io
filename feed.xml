@@ -346,88 +346,47 @@ if (typeof Object.assign !== 'function') {
 
 &lt;h2 id=&quot;implementing-preauthorize&quot;&gt;Implementing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@PreAuthorize&lt;/code&gt;&lt;/h2&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.security.access.prepost.PreAuthorize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;reactor.core.publisher.Mono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AuthorizedService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@PreAuthorize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hasAuthority(@config.getAuthority())&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Mono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hasAuthority&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Mono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;just&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=AuthorizedService.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq &apos;.files.&quot;AuthorizedService.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;In this example, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hasAuthority()&lt;/code&gt; method is protected by a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@PreAuthorize&lt;/code&gt; annotation. The expression &quot;hasAuthority(@config.getAuthority())&quot; checks if the current user has the authority specified by the getAuthority() method of a @Config bean.&lt;/p&gt;
 
 &lt;p&gt;To make this work, we need to define our Config class:&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-import lombok.Getter;
-
-@Component
-@Getter
-public class Config {
-    @Value(&quot;${spring.application.authority}&quot;)
-    private String authority;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=Config.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq &apos;.files.&quot;Config.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;This class reads the required authority from the application&apos;s configuration. In your application.yaml, you can specify the required authority:&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;spring:
-  application:
-    authority: myADgroup
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=application.yaml&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq &apos;.files.&quot;application.yaml&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h2 id=&quot;the-challenge-of-unit-testing&quot;&gt;The Challenge of Unit Testing&lt;/h2&gt;
 
 &lt;p&gt;When it comes to unit testing a service with @PreAuthorize, we encounter some challenges. Let&apos;s look at a common approach that doesn&apos;t work as expected:&lt;/p&gt;
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.jupiter.api.Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.jupiter.api.extension.ExtendWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.mockito.Mock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.mockito.InjectMocks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.mockito.junit.jupiter.MockitoExtension&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.security.test.context.support.WithMockUser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;reactor.test.StepVerifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.security.access.AccessDeniedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nd&quot;&gt;@ExtendWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MockitoExtension&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AuthorizedServiceTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@InjectMocks&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AuthorizedService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;authorizedService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@Mock&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Config&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@WithMockUser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorities&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ADMIN&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testHasAuthority_withAccess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAuthority&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;thenReturn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ADMIN&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;nc&quot;&gt;StepVerifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorizedService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasAuthority&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;expectNext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;verifyComplete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testHasAuthority_withoutAccess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;StepVerifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorizedService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasAuthority&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;expectError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AccessDeniedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;verify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=AuthorizedServiceTest.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq &apos;.files.&quot;AuthorizedServiceTest.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;It fails with following error :&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-Unnecessary stubbings detected.
-Clean &amp;amp; maintainable &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;code requires zero unnecessary code.
-Following stubbings are unnecessary &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;click to navigate to relevant line of code&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=error.txt&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq &apos;.files.&quot;error.txt&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;This approach fails because Mockito-created mocks are not proxied by Spring Security. As a result, the @PreAuthorize annotation is not processed, and the security checks are not performed during the test.&lt;/p&gt;
 
@@ -435,47 +394,11 @@ Following stubbings are unnecessary &lt;span class=&quot;o&quot;&gt;(&lt;/span&g
 
 &lt;p&gt;To properly test methods annotated with @PreAuthorize, we need to use integration tests that load the entire Spring context. Here&apos;s how we can modify our test:&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.mockito.InjectMocks;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.security.test.context.support.WithMockUser;
-import reactor.test.StepVerifier;
-import org.springframework.security.access.AccessDeniedException;
-import static org.mockito.Mockito.when;
-
-
-@SpringBootTest(properties = {&quot;spring.profiles.active=test&quot;})
-public class AuthorizedServiceTest {
-
-    @Autowired
-    private AuthorizedService authorizedService;
-
-    @Mock
-    private PropertyConfig propertyConfig;
-
-    @Test
-    @WithMockUser(authorities = &quot;ADMIN&quot;)
-    void testHasKafkaAllowedAuthority_withAccess() {
-
-        when(propertyConfig.getKafkaAllowedAuthority()).thenReturn(&quot;ADMIN&quot;);
-
-        StepVerifier.create(authorizedService.hasAuthority())
-                .expectNext(true)
-                .verifyComplete();
-    }
-
-    @Test
-    void testHasKafkaAllowedAuthority_withoutAccess() {
-
-        StepVerifier.create(authorizedService.hasAuthority())
-                .expectError(AccessDeniedException.class)
-                .verify();
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=AuthorizedServiceIntegrationTest.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq &apos;.files.&quot;AuthorizedServiceIntegrationTest.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2024-09-01T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/unit-testing-preauthorize-spring-boot</link>
@@ -506,11 +429,19 @@ public class AuthorizedServiceTest {
 
 &lt;h3 id=&quot;example-implementation&quot;&gt;Example Implementation:&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=StringPrinter.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=StringPrinter.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/ef1af44ec430026b0a94a6a3f148d4c3 | jq &apos;.files.&quot;StringPrinter.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;usage&quot;&gt;Usage:&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=StringPrinter2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=StringPrinter2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/ef1af44ec430026b0a94a6a3f148d4c3 | jq &apos;.files.&quot;StringPrinter2.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h2 id=&quot;variable-arguments-varargs-flexibility-through-variadic-functions&quot;&gt;Variable Arguments (Varargs): Flexibility Through Variadic Functions&lt;/h2&gt;
 
@@ -526,11 +457,19 @@ public class AuthorizedServiceTest {
 
 &lt;h3 id=&quot;example-implementation-1&quot;&gt;Example Implementation:&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=EnhancedStringPrinter.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=EnhancedStringPrinter.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/ef1af44ec430026b0a94a6a3f148d4c3 | jq &apos;.files.&quot;EnhancedStringPrinter.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;usage-1&quot;&gt;Usage:&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=EnhancedStringPrinter2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=EnhancedStringPrinter2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/ef1af44ec430026b0a94a6a3f148d4c3 | jq &apos;.files.&quot;EnhancedStringPrinter2.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h2 id=&quot;comparative-analysis&quot;&gt;Comparative Analysis&lt;/h2&gt;
 
@@ -675,13 +614,21 @@ public class AuthorizedServiceTest {
 
 &lt;p&gt;Let&apos;s start with a simple example:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex1.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex1.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq &apos;.files.&quot;ex1.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;In this case, &lt;strong&gt;x&lt;/strong&gt; and &lt;strong&gt;y&lt;/strong&gt; are primitive types (numbers), changing it doesn&apos;t change value since it&apos;s copied to different memory location.&lt;/p&gt;
 
 &lt;p&gt;However, objects in JavaScript work differently:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex2.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex2.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq &apos;.files.&quot;ex2.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -692,7 +639,11 @@ public class AuthorizedServiceTest {
 
 &lt;p&gt;If you want to create a copy of an object without affecting the original, you might consider using the spread operator &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;...&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex3.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex3.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq &apos;.files.&quot;ex3.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -701,7 +652,11 @@ public class AuthorizedServiceTest {
 
 &lt;p&gt;However, since the copy is shallow, nested objects within the original object are still shared between the original and the copied object:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex4.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex4.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq &apos;.files.&quot;ex4.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -712,7 +667,11 @@ public class AuthorizedServiceTest {
 
 &lt;p&gt;To avoid the pitfalls of shallow copying, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;structuredClone&lt;/code&gt;, which creates a deep copy of the object, including all nested objects:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex5.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex5.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq &apos;.files.&quot;ex5.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -727,7 +686,11 @@ public class AuthorizedServiceTest {
 
 &lt;p&gt;Primitive types in Java (e.g., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;char&lt;/code&gt;) store their values directly. When you assign one primitive variable to another, the value is copied:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=Ex6.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=Ex6.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq &apos;.files.&quot;Ex6.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -738,7 +701,11 @@ public class AuthorizedServiceTest {
 
 &lt;p&gt;Reference types in Java (e.g., objects, arrays) work similarly to JavaScript objects. They store a reference to the actual data in memory:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=Ex7.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=Ex7.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq &apos;.files.&quot;Ex7.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -923,7 +890,11 @@ public class AuthorizedServiceTest {
 
 &lt;p&gt;Suppose you have two beans of same type like&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/d3879dba90ba8946da656b1d032913be | jq &apos;.files.&quot;Bean1.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;When Spring encounters these beans, it will throw an error due to the ambiguity of which bean to autowire.&lt;/p&gt;
 
@@ -933,13 +904,21 @@ public class AuthorizedServiceTest {
 
 &lt;h3 id=&quot;define-beans-with-qualifier&quot;&gt;Define Beans with @Qualifier:&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/d3879dba90ba8946da656b1d032913be | jq &apos;.files.&quot;Bean2.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;autowire-beans-with-qualifier&quot;&gt;Autowire Beans with Qualifier&lt;/h3&gt;
 
 &lt;p&gt;Use the&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; @Qualifier&lt;/code&gt; annotation to specify which bean to inject in your components:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean3.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean3.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/d3879dba90ba8946da656b1d032913be | jq &apos;.files.&quot;Bean3.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Using the @Qualifier annotation in Spring allows you to manage multiple beans of the same type efficiently. By specifying unique qualifiers for each bean and using these qualifiers during autowiring, you can avoid conflicts and ensure your application runs smoothly.&lt;/p&gt;
 </description>
@@ -2355,10 +2334,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;3112e077-ca7f-4b92-a45f-6bed5c1540c0&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;4273acaa-c0d2-4444-9495-2f3fb836cc3a&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;3112e077-ca7f-4b92-a45f-6bed5c1540c0&apos;,
+    &apos;4273acaa-c0d2-4444-9495-2f3fb836cc3a&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -3285,7 +3264,11 @@ req.send(null);
 
 &lt;h3 id=&quot;python-script&quot;&gt;Python script&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/2089f8af1ba720e91e29e206a28f7430.js?file=benchmark.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/2089f8af1ba720e91e29e206a28f7430.js?file=benchmark.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/2089f8af1ba720e91e29e206a28f7430 | jq &apos;.files.&quot;benchmark.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;result&quot;&gt;Result&lt;/h3&gt;
 
@@ -4005,10 +3988,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;e50b8e93-3ed5-467a-a67d-1d611b2dde27&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;df8498cd-41d6-4280-a0ed-11989be83065&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;e50b8e93-3ed5-467a-a67d-1d611b2dde27&apos;,
+    &apos;df8498cd-41d6-4280-a0ed-11989be83065&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -5165,7 +5148,11 @@ Build cache node started &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;port: 507
 
 &lt;p&gt;Let&apos;s set up a Docker container to deploy the cache node easily in any environment. Below is the Dockerfile for creating such a container:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a7a291a9e4a5d16c8a2f298ec508bd05.js?file=Dockerfile&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a7a291a9e4a5d16c8a2f298ec508bd05.js?file=Dockerfile&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/a7a291a9e4a5d16c8a2f298ec508bd05 | jq &apos;.files.&quot;Dockerfile&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;hashed_password&amp;gt;&lt;/code&gt; with the hashed password generated earlier.&lt;/p&gt;
 
@@ -5202,7 +5189,11 @@ SUCCESS
 
 &lt;p&gt;Update your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;settings.gradle&lt;/code&gt; to configure the remote build cache:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a7a291a9e4a5d16c8a2f298ec508bd05.js?file=settings.gradle&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a7a291a9e4a5d16c8a2f298ec508bd05.js?file=settings.gradle&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/a7a291a9e4a5d16c8a2f298ec508bd05 | jq &apos;.files.&quot;settings.gradle&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;building-the-application&quot;&gt;Building the Application&lt;/h3&gt;
 
@@ -5952,7 +5943,11 @@ req.send(null);
 
 &lt;p&gt;Snapshot repositories store development versions of artifacts. The Spring Snapshot Repository contains the latest updates. Add this to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; to access the Spring Snapshot Repository and Spring AI dependency:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=build.gradle&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=build.gradle&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/a180a0e9603e7fe9d018b220387465f6 | jq &apos;.files.&quot;build.gradle&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;api-keys&quot;&gt;API Keys&lt;/h3&gt;
 
@@ -5965,7 +5960,11 @@ req.send(null);
 
 &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;controller/BooksController.java&lt;/code&gt;`:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/a180a0e9603e7fe9d018b220387465f6 | jq &apos;.files.&quot;BooksController1.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;In the above code, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;openAiClient&lt;/code&gt; is injected through constructor injection, which is a preferred method in Spring for dependency injection. The @Autowired annotation is not required when using constructor injection.&lt;/p&gt;
 
@@ -5982,7 +5981,11 @@ req.send(null);
 
 &lt;p&gt;PromptTemplate is useful for dynamically constructing prompts with variables. It ensures cleaner code and easier manipulation of the prompt string.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/a180a0e9603e7fe9d018b220387465f6 | jq &apos;.files.&quot;BooksController2.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;If you go to : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/books/booker/2003&lt;/code&gt;, it will output something like&lt;/p&gt;
 
@@ -6002,7 +6005,11 @@ A path variable is a part of the URL that is captured and used as a variable in 
 
 &lt;p&gt;A record class in Java is a concise way to create immutable data objects.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BookWinner.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BookWinner.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/a180a0e9603e7fe9d018b220387465f6 | jq &apos;.files.&quot;BookWinner.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;parsing-ai-response-into-java-object&quot;&gt;Parsing AI Response into Java Object&lt;/h3&gt;
 
@@ -6010,7 +6017,11 @@ A path variable is a part of the URL that is captured and used as a variable in 
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parser.getFormat()&lt;/code&gt; returns a string that represents the format in which the AI should return the data, making it easier to parse into the BookerWinner object.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController3.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController3.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/a180a0e9603e7fe9d018b220387465f6 | jq &apos;.files.&quot;BooksController3.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;If you go to : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/books/booker/2003&lt;/code&gt;, it will output something like&lt;/p&gt;
 
@@ -6161,7 +6172,11 @@ A path variable is a part of the URL that is captured and used as a variable in 
 
 &lt;h3 id=&quot;example-in-python&quot;&gt;Example in Python&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a3938241e0d8a64c323787dc363916af.js?file=fama_french.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/a3938241e0d8a64c323787dc363916af.js?file=fama_french.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/a3938241e0d8a64c323787dc363916af | jq &apos;.files.&quot;fama_french.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;interpretation-of-the-output&quot;&gt;Interpretation of the output&lt;/h3&gt;
 
@@ -6208,7 +6223,11 @@ When trading a stock like AAPL with a beta higher than 1 and a moderately high R
 
 &lt;p&gt;Lets&apos;s say you have the following code which executes sequentially&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=seq.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=seq.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq &apos;.files.&quot;seq.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;This code executes sequentially. But what if you need to perform an operation that depends on data from a server or an API?&lt;/p&gt;
 
@@ -6218,19 +6237,31 @@ When trading a stock like AAPL with a beta higher than 1 and a moderately high R
 
 &lt;p&gt;Consider the following example where we make an API request using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;axios&lt;/code&gt; library:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise1.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise1.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq &apos;.files.&quot;promise1.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;This code will fail because the data property does not exist at the time of the console.log() statement. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;axios.get()&lt;/code&gt; method returns a Promise, which is an asynchronous operation.&lt;/p&gt;
 
 &lt;p&gt;The beauty of Promises is in their methods: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.then()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.catch()&lt;/code&gt;. The .then() method is used for handling successful responses, while .catch() is used for handling errors.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise2.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise2.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq &apos;.files.&quot;promise2.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;simplifying-with-asyncawait&quot;&gt;Simplifying with Async/Await&lt;/h3&gt;
 
 &lt;p&gt;Async/Await is syntactic sugar over Promises, making asynchronous code easier to write and read. An async function returns a Promise, and the await keyword is used to wait for a Promise to resolve or reject.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise3.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=promise3.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq &apos;.files.&quot;promise3.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;This code is more readable and looks synchronous, even though it’s handling asynchronous operations.&lt;/p&gt;
 
@@ -6240,17 +6271,29 @@ When trading a stock like AAPL with a beta higher than 1 and a moderately high R
 
 &lt;p&gt;Callback Hell typically occurs when you have several nested callbacks, creating a complex and hard-to-read code structure. This often happens when dealing with multiple asynchronous operations that need to be performed in sequence.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq &apos;.files.&quot;callbackHell.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;resolving-callback-hell&quot;&gt;Resolving Callback Hell&lt;/h3&gt;
 
 &lt;p&gt;Promises provide a cleaner way to handle asynchronous operations. Let’s refactor the above example using Promises:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell1.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell1.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq &apos;.files.&quot;callbackHell1.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Async/Await further simplifies asynchronous code, making it even more readable:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell2.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/786d3bcfa40b6232e2c5ec24d1264ffd.js?file=callbackHell2.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/786d3bcfa40b6232e2c5ec24d1264ffd | jq &apos;.files.&quot;callbackHell2.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2023-12-12T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/javascript-promises-async-await</link>
@@ -6513,7 +6556,11 @@ When trading a stock like AAPL with a beta higher than 1 and a moderately high R
 
 &lt;p&gt;We can update our consumer to read those properties&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/78449a7e4798e0cff259776b097c8e02.js?file=Consumer.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/78449a7e4798e0cff259776b097c8e02.js?file=Consumer.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/78449a7e4798e0cff259776b097c8e02 | jq &apos;.files.&quot;Consumer.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2023-11-05T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/understanding-kafka-deserializer</link>
@@ -6857,7 +6904,11 @@ $(document).ready(function() {
 
 &lt;h2 id=&quot;using-component-annotation&quot;&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Component&lt;/code&gt; Annotation&lt;/h2&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/e0d44e13920719e6b27abadcd03294e9.js?file=ApplicationStartupRunner.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/e0d44e13920719e6b27abadcd03294e9.js?file=ApplicationStartupRunner.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/e0d44e13920719e6b27abadcd03294e9 | jq &apos;.files.&quot;ApplicationStartupRunner.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Quiz:&lt;/strong&gt; What&apos;s the role of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Component&lt;/code&gt; annotation in Spring?&lt;/p&gt;
@@ -6870,7 +6921,11 @@ The `@Component` annotation is used in Spring to indicate that a class should be
 
 &lt;h2 id=&quot;integrating-with-springbootapplication&quot;&gt;Integrating with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@SpringBootApplication&lt;/code&gt;&lt;/h2&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/e0d44e13920719e6b27abadcd03294e9.js?file=DemoCommandLineApplication.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/e0d44e13920719e6b27abadcd03294e9.js?file=DemoCommandLineApplication.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/e0d44e13920719e6b27abadcd03294e9 | jq &apos;.files.&quot;DemoCommandLineApplication.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Quick Quiz: Explain the syntax &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String....&lt;/code&gt; How is it different than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String[] args&lt;/code&gt; in Java?&lt;/p&gt;
@@ -6929,7 +6984,11 @@ The String... syntax in Java denotes a varargs (variable number of arguments). I
 
 &lt;p&gt;If a bucket has no versioning, we can empty s3 bucket using aws cli via jenkins&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/eec7e619c93f9f2c2874d26833200bce.js?file=pipeline1.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/eec7e619c93f9f2c2874d26833200bce.js?file=pipeline1.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/eec7e619c93f9f2c2874d26833200bce | jq &apos;.files.&quot;pipeline1.groovy&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;If there&apos;s versioning, then it will fail with the following error:&lt;/p&gt;
 
@@ -6951,7 +7010,11 @@ The String... syntax in Java denotes a varargs (variable number of arguments). I
 
 &lt;p&gt;We need to delete all versions and delete markers to empty the s3 bucket.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/eec7e619c93f9f2c2874d26833200bce.js?file=pipeline2.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/eec7e619c93f9f2c2874d26833200bce.js?file=pipeline2.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/eec7e619c93f9f2c2874d26833200bce | jq &apos;.files.&quot;pipeline2.groovy&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2023-09-15T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/s3-bucket-empty-delete-aws-cli-jenkins</link>
@@ -6974,19 +7037,31 @@ The String... syntax in Java denotes a varargs (variable number of arguments). I
 
 &lt;p&gt;When the final keyword is applied to variables, it ensures that once a variable is assigned a value, it cannot be reassigned. Every instance of the class will have its own separate copy of this final variable.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=MyClass.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=MyClass.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4222e65309873ad070e54a467871ec68 | jq &apos;.files.&quot;MyClass.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;methods&quot;&gt;Methods&lt;/h3&gt;
 
 &lt;p&gt;A final method cannot be overridden in subclasses. This is useful when you want to lock the behavior of a method, ensuring that no subclass can change its implementation.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=ChildClass.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=ChildClass.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4222e65309873ad070e54a467871ec68 | jq &apos;.files.&quot;ChildClass.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;classes&quot;&gt;Classes&lt;/h3&gt;
 
 &lt;p&gt;A final class cannot be subclassed. This is often done for security reasons or to ensure the design integrity of a class.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=FinalClass.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=FinalClass.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4222e65309873ad070e54a467871ec68 | jq &apos;.files.&quot;FinalClass.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h2 id=&quot;static-final&quot;&gt;Static Final&lt;/h2&gt;
 
@@ -6994,7 +7069,11 @@ The String... syntax in Java denotes a varargs (variable number of arguments). I
 
 &lt;p&gt;A static final variable belongs to the class and not any specific instance. It&apos;s also immutable. Value can only be assigned at point of declaration or within a static initizlizer block. An initializer block is a chunk of code that runs when the class is first loaded into memory. It runs only once, regardless of how many instance of the class.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=StaticFinal.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4222e65309873ad070e54a467871ec68.js?file=StaticFinal.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4222e65309873ad070e54a467871ec68 | jq &apos;.files.&quot;StaticFinal.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2023-08-31T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/understanding-java-final-static-final</link>
@@ -7067,11 +7146,19 @@ The String... syntax in Java denotes a varargs (variable number of arguments). I
 
 &lt;p&gt;Benchmarking with Spark&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa3ac375801b222a3f1268939bd3a608.js?file=benchmark.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa3ac375801b222a3f1268939bd3a608.js?file=benchmark.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/fa3ac375801b222a3f1268939bd3a608 | jq &apos;.files.&quot;benchmark.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Output is&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa3ac375801b222a3f1268939bd3a608.js?file=benchmark.txt&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/fa3ac375801b222a3f1268939bd3a608.js?file=benchmark.txt&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/fa3ac375801b222a3f1268939bd3a608 | jq &apos;.files.&quot;benchmark.txt&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2023-08-28T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/getting-started-with-parquet-file-format</link>
@@ -7345,7 +7432,11 @@ String get(String key, int timestamp) Returns a value such that set was called p
 
 &lt;h4 id=&quot;first-attempt&quot;&gt;First Attempt&lt;/h4&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/1860d33b9fc700c49c0d5dbd1cc348dc | jq &apos;.files.&quot;Solution1.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;It failed with error : Time Limit Exceeded.&lt;/p&gt;
 
@@ -7353,7 +7444,11 @@ String get(String key, int timestamp) Returns a value such that set was called p
 
 &lt;p&gt;Instead of using List, I can try using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TreeMap&lt;/code&gt;. A TreeMap is a Red-Black tree-based NavigableMap implementation that stores keys in sorted order.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/1860d33b9fc700c49c0d5dbd1cc348dc | jq &apos;.files.&quot;Solution2.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;We use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;floorEntry&lt;/code&gt; method of the TreeMap to get the closest timestamp lower than or equal to the requested timestamp.&lt;/p&gt;
 
@@ -7378,7 +7473,11 @@ String get(String key, int timestamp) Returns a value such that set was called p
 
 &lt;p&gt;For example, if you have a date value endDate in your component, you can format it in the template like this:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component.html&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component.html&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/3e9d22bd1078e502e7ca858134379f4d | jq &apos;.files.&quot;component.html&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Here, &apos;short&apos; is one of the predefined format options. It will display the date in a short format.&lt;/p&gt;
 
@@ -7388,19 +7487,35 @@ String get(String key, int timestamp) Returns a value such that set was called p
 
 &lt;p&gt;First, add DatePipe to your providers array in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.module.ts&lt;/code&gt;. This step is necessary because when you want to use a service (like DatePipe) in your component, Angular needs to know where it should create or find an instance of that service. By adding it to the providers array, you&apos;re telling Angular that it should be available for injection in this module.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=app.module.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=app.module.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/3e9d22bd1078e502e7ca858134379f4d | jq &apos;.files.&quot;app.module.ts&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Next, import the DatePipe from @angular/common in your component file.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component1.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component1.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/3e9d22bd1078e502e7ca858134379f4d | jq &apos;.files.&quot;component1.ts&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;In your component&apos;s TypeScript file, inject the DatePipe into your component&apos;s constructor.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component2.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component2.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/3e9d22bd1078e502e7ca858134379f4d | jq &apos;.files.&quot;component2.ts&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Lastly, use the DatePipe to format dates in your component&apos;s code&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component3.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component3.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/3e9d22bd1078e502e7ca858134379f4d | jq &apos;.files.&quot;component3.ts&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Here, the transform method of DatePipe is used to format the date. The result is stored in the formattedDate variable, which you can then use in your template or anywhere else in your component.&lt;/p&gt;
 </description>
@@ -7450,7 +7565,11 @@ String get(String key, int timestamp) Returns a value such that set was called p
 
 &lt;p&gt;And add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user.service.ts&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=user.service.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=user.service.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/abe9eec9e3361f5901b9221b5758e726 | jq &apos;.files.&quot;user.service.ts&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;It returns an observable of the HTTP response.&lt;/p&gt;
 
@@ -7458,11 +7577,19 @@ String get(String key, int timestamp) Returns a value such that set was called p
 
 &lt;p&gt;Modify &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.component.ts&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=app.component.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=app.component.ts&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/abe9eec9e3361f5901b9221b5758e726 | jq &apos;.files.&quot;app.component.ts&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;For displaying data, you can modify &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.component.html&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=app.component.html&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/abe9eec9e3361f5901b9221b5758e726.js?file=app.component.html&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/abe9eec9e3361f5901b9221b5758e726 | jq &apos;.files.&quot;app.component.html&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2023-07-31T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/angular-observable-tutorial</link>
@@ -7646,7 +7773,11 @@ String get(String key, int timestamp) Returns a value such that set was called p
 
 &lt;p&gt;My first hunch was to use a brute force solution. For each character, compare it against the remaining characters.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ecf1dc2cef72c564a908353159f754dc.js?file=BruteForceSolution.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ecf1dc2cef72c564a908353159f754dc.js?file=BruteForceSolution.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/ecf1dc2cef72c564a908353159f754dc | jq &apos;.files.&quot;BruteForceSolution.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;I got &lt;strong&gt;Time Limit Exceeded&lt;/strong&gt;. The complexity of the solution is &lt;strong&gt;$$O(n^2)$$&lt;/strong&gt;.&lt;/p&gt;
 
@@ -7669,7 +7800,11 @@ String get(String key, int timestamp) Returns a value such that set was called p
 
 &lt;p&gt;The output counter keeps track of the number of properties that are not optimal, as they have lower second elements than the previously seen properties.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ecf1dc2cef72c564a908353159f754dc.js?file=OptimalSolution.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ecf1dc2cef72c564a908353159f754dc.js?file=OptimalSolution.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/ecf1dc2cef72c564a908353159f754dc | jq &apos;.files.&quot;OptimalSolution.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2023-07-20T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/the-number-of-weak-characters-in-the-game</link>
@@ -7800,13 +7935,21 @@ $(document).ready(function() {
 
 &lt;h3 id=&quot;pipeline-script&quot;&gt;Pipeline Script&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=pipeline.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=pipeline.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/7bb66bc02307332cd4f7009daa0a1594 | jq &apos;.files.&quot;pipeline.groovy&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;modeling-pipeline-stages&quot;&gt;Modeling Pipeline Stages&lt;/h3&gt;
 
 &lt;p&gt;We&apos;ll define a Stage class that contains information about each stage in the pipeline. This class will help us organize and structure the data before sending it to Kafka.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Stage.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Stage.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/7bb66bc02307332cd4f7009daa0a1594 | jq &apos;.files.&quot;Stage.groovy&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Stage&lt;/code&gt; class will provide the necessary structure to capture relevant information about each stage in the pipeline.&lt;/p&gt;
 
@@ -7814,13 +7957,21 @@ $(document).ready(function() {
 
 &lt;p&gt;In order to publish data to the Kafka topic, we need to define the structure of the messages we will be sending. We&apos;ll create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KafkaMessage&lt;/code&gt; class that represents the JSON format of the data to be published.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=KafkaMessage.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=KafkaMessage.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/7bb66bc02307332cd4f7009daa0a1594 | jq &apos;.files.&quot;KafkaMessage.groovy&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;implementing-the-events-class&quot;&gt;Implementing the Events Class&lt;/h3&gt;
 
 &lt;p&gt;Lastly we will define our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Events&lt;/code&gt; class. We will use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PipelineNodeGraphVisitor&lt;/code&gt; to intrinsically get each nodes information. Also we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kafkacat&lt;/code&gt; utility to publish to kafka topic.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Events.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Events.groovy&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/7bb66bc02307332cd4f7009daa0a1594 | jq &apos;.files.&quot;Events.groovy&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;understanding-the-noncps-notation&quot;&gt;Understanding the NonCPS Notation&lt;/h3&gt;
 
@@ -8068,11 +8219,19 @@ Rating:
 
 &lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Casting the Regression Spell 🧙‍♀️ We&apos;ll use the magical PROC REG procedure in SAS to fit our regression model. We&apos;ll predict the values of our dependent variable using some independent variables like IndependentVariable1 and IndependentVariable2. Brace yourselves, the code is coming!&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex1.sas&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex1.sas&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/61c45d98524ca2471059dbdb216b631b | jq &apos;.files.&quot;ex1.sas&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt; Unveiling the Residuals&apos; Power 💪 Now, let&apos;s see what these studentized residuals have to say! We&apos;ll use another enchantment called PROC PRINT to display the studentized residuals. It&apos;s like opening a treasure chest filled with intriguing numbers. Get ready for the grand reveal!&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex2.sas&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex2.sas&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/61c45d98524ca2471059dbdb216b631b | jq &apos;.files.&quot;ex2.sas&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;And voila! The SAS sorcery will conjure up the studentized residuals, revealing their fascinating values. It might look something like this:&lt;/p&gt;
 
@@ -8101,11 +8260,19 @@ StudentizedResiduals
 
 &lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Conjuring the Regression Spell 🧙‍♂️ We shall begin by fitting a magical regression model using the extraordinary capabilities of R. Imagine you have already crafted a wondrous fitted regression model object called &apos;model&apos; (you can choose a name that resonates with your inner sorcerer).&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex3.r&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex3.r&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/61c45d98524ca2471059dbdb216b631b | jq &apos;.files.&quot;ex3.r&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt;  Unveiling the Residuals&apos; Enigma 💫 Prepare to witness the astounding power of studentized residuals as we unveil their hidden secrets! With a simple wave of the R wand, we can showcase these mysterious values. It&apos;s like unraveling the pages of an ancient scroll containing the numerical wonders of our data. Are you prepared for this revelation?&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex4.r&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex4.r&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/61c45d98524ca2471059dbdb216b631b | jq &apos;.files.&quot;ex4.r&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Behold! The R sorcery will manifest the studentized residuals before your eyes, illuminating the path to enlightenment. You will be greeted with a mesmerizing display, similar to this:&lt;/p&gt;
 
@@ -8221,7 +8388,11 @@ Remember, young apprentices, while studentized residuals possess great power, th
 
 &lt;p&gt;One common SonarQube warning is related to the usage of publicly writable directories. SonarQube raises this warning to highlight potential security risks when working with directories that have open write permissions. In the case of AWS Lambda functions, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/tmp&lt;/code&gt; directory is often used for temporary file operations.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=wrong_example.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=wrong_example.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/9832f3acbfaa468021d3c5cb44679242 | jq &apos;.files.&quot;wrong_example.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;In this code snippet, the /tmp directory is publicly writable, which can pose security risks if not managed properly.&lt;/p&gt;
 
@@ -8231,7 +8402,11 @@ Remember, young apprentices, while studentized residuals possess great power, th
 
 &lt;p&gt;Here&apos;s an updated version of the code that uses the tempfile module:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=correct_example.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9832f3acbfaa468021d3c5cb44679242.js?file=correct_example.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/9832f3acbfaa468021d3c5cb44679242 | jq &apos;.files.&quot;correct_example.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;In the updated code, we make use of the tempfile.gettempdir() function to retrieve the system&apos;s default temporary directory, which is typically /tmp on Linux-based systems. By using the system&apos;s default temporary directory, we ensure consistent and secure behavior across different environments.&lt;/p&gt;
 
@@ -8268,7 +8443,11 @@ Remember, young apprentices, while studentized residuals possess great power, th
 
 &lt;h3 id=&quot;gradle-dependencies&quot;&gt;Gradle Dependencies&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=build.gradle&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=build.gradle&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b74d54089885e9d1301ada9696e7d470 | jq &apos;.files.&quot;build.gradle&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;gradle-terminologies&quot;&gt;gradle terminologies&lt;/h3&gt;
 
@@ -8288,29 +8467,53 @@ Remember, young apprentices, while studentized residuals possess great power, th
 
 &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repository/Customer.java&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Customer.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Customer.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b74d54089885e9d1301ada9696e7d470 | jq &apos;.files.&quot;Customer.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repository/CustomerRepository.java&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=CustomerRepository.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=CustomerRepository.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b74d54089885e9d1301ada9696e7d470 | jq &apos;.files.&quot;CustomerRepository.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;test-using-actual-database&quot;&gt;Test using actual database&lt;/h3&gt;
 
 &lt;p&gt;We can spin up database using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=docker-compose.yaml&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=docker-compose.yaml&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b74d54089885e9d1301ada9696e7d470 | jq &apos;.files.&quot;docker-compose.yaml&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Also define &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;application.yaml&lt;/code&gt; as&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=application.yaml&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=application.yaml&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b74d54089885e9d1301ada9696e7d470 | jq &apos;.files.&quot;application.yaml&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;We also need to define a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resources/schema.sql&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=schema.sql&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=schema.sql&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b74d54089885e9d1301ada9696e7d470 | jq &apos;.files.&quot;schema.sql&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;We can write our test as&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Test1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Test1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b74d54089885e9d1301ada9696e7d470 | jq &apos;.files.&quot;Test1.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;You can verify this by loging to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;postgres&lt;/code&gt; database as&lt;/p&gt;
 
@@ -8321,7 +8524,11 @@ Remember, young apprentices, while studentized residuals possess great power, th
 
 &lt;p&gt;Intead of running actual database everytime, it&apos;s much more convenient to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TestContainers&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Test2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b74d54089885e9d1301ada9696e7d470.js?file=Test2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b74d54089885e9d1301ada9696e7d470 | jq &apos;.files.&quot;Test2.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -8694,11 +8901,19 @@ counter() // 12
 
 &lt;p&gt;We will create a simple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda_function.py&lt;/code&gt; that simply returns id as response.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex1.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex1.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/1dd4fbf8a8eead83a9535e2ae10c6ecd | jq &apos;.files.&quot;ex1.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;We have a test corresponding to the test file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyLambda/test/test_lambda_function.py&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex2.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex2.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/1dd4fbf8a8eead83a9535e2ae10c6ecd | jq &apos;.files.&quot;ex2.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;We will use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pytest&lt;/code&gt; to run our test:&lt;/p&gt;
 
@@ -8723,17 +8938,29 @@ TOTAL                                                     11      0   100%
 
 &lt;p&gt;As our lambda function gets complex, we must explore additional functionality to test our lambda function. We can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;patch&lt;/code&gt; to mock resources like environment variables, etc&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex3.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex3.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/1dd4fbf8a8eead83a9535e2ae10c6ecd | jq &apos;.files.&quot;ex3.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Our updated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test&lt;/code&gt; becomes&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex4.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex4.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/1dd4fbf8a8eead83a9535e2ae10c6ecd | jq &apos;.files.&quot;ex4.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;pytest-fixtures&quot;&gt;Pytest fixtures&lt;/h3&gt;
 
 &lt;p&gt;A fixture is a function that returns a test resource to supply a mock &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;context&lt;/code&gt; object to our lambda function. Let&apos;s rewrite our test function&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex5.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex5.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/1dd4fbf8a8eead83a9535e2ae10c6ecd | jq &apos;.files.&quot;ex5.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;In our example, we define a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;event&lt;/code&gt; fixture that return dictionary. We then pass this fixture as an argument to our test function.&lt;/p&gt;
 </description>
@@ -8941,13 +9168,21 @@ TOTAL                                                     11      0   100%
 
 &lt;p&gt;The code we&apos;re working with is a method that reads a value from Redis and returns an App object. The method is blocking, and the Redis call can take some time to complete. Here&apos;s the original code:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/31f81906fcf43e8395f455ee4ae2cbfc.js?file=Service1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/31f81906fcf43e8395f455ee4ae2cbfc.js?file=Service1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/31f81906fcf43e8395f455ee4ae2cbfc | jq &apos;.files.&quot;Service1.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;The method returns a Mono&lt;App&gt; object, which is a reactive stream that can emit one or more values. The Redis read operation is performed synchronously, which means that the thread calling this method will be blocked until the operation completes. This is not ideal in a reactive application, as we want to avoid blocking threads and keep the application responsive.&lt;/App&gt;&lt;/p&gt;
 
 &lt;p&gt;To make this method more reactive, we can use the Mono.fromCallable operator. This operator allows us to wrap a synchronous method call in a reactive stream. Here&apos;s the new code:&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/31f81906fcf43e8395f455ee4ae2cbfc.js?file=Service2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/31f81906fcf43e8395f455ee4ae2cbfc.js?file=Service2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/31f81906fcf43e8395f455ee4ae2cbfc | jq &apos;.files.&quot;Service2.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;The fromCallable operator takes a Callable object, which is a functional interface that takes no arguments and returns a value. In our case, the Callable object wraps the Redis read operation. This operation is still synchronous, but it&apos;s now executed inside a reactive stream.&lt;/p&gt;
 
@@ -9768,7 +10003,11 @@ Password : admin
 
 &lt;h3 id=&quot;solution&quot;&gt;Solution&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7b99a20c4164f2ef510729218f0cef1b.js?file=ValidPath.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/7b99a20c4164f2ef510729218f0cef1b.js?file=ValidPath.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/7b99a20c4164f2ef510729218f0cef1b | jq &apos;.files.&quot;ValidPath.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2022-12-23T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/find-if-path-exists-in-graph</link>
@@ -10151,7 +10390,11 @@ Queued
 
 &lt;p&gt;We could simply use a python library &lt;a href=&quot;https://github.com/redis/redis-py&quot;&gt;redis&lt;/a&gt;, if you dont want to modify your keys&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/8873da1fe181ff7624be0d544310c560.js?file=conn.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/8873da1fe181ff7624be0d544310c560.js?file=conn.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/8873da1fe181ff7624be0d544310c560 | jq &apos;.files.&quot;conn.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;To execute commands that are currently &lt;a href=&quot;https://github.com/redis/redis-py/blob/master/redis/commands/cluster.py&quot;&gt;supported&lt;/a&gt;&lt;/p&gt;
 
@@ -12063,27 +12306,47 @@ EOF
 
 &lt;p&gt;First we need to import necessary files to our html file.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode2.html&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode2.html&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/58c77577dbff8a291523d9cc5a4f3731 | jq &apos;.files.&quot;darkmode2.html&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;create-button-for-light-and-dark-mode&quot;&gt;Create button for light and dark mode&lt;/h3&gt;
 
 &lt;p&gt;We can use &lt;a href=&quot;https://fontawesome.com/&quot;&gt;FontAwesome&lt;/a&gt; to add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;moon&lt;/code&gt; icon for light mode and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sun&lt;/code&gt; icon for dark mode.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode1.html&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode1.html&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/58c77577dbff8a291523d9cc5a4f3731 | jq &apos;.files.&quot;darkmode1.html&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;toggle-between-light-and-dark-mode&quot;&gt;Toggle between light and dark mode&lt;/h3&gt;
 
 &lt;p&gt;On clicking the button, we need to call the function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darkmode&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode3.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode3.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/58c77577dbff8a291523d9cc5a4f3731 | jq &apos;.files.&quot;darkmode3.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localStorage&lt;/code&gt; object allows you to save key/value pairs in the browser. This is useful to save the state of your application between page loads.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode4.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode4.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/58c77577dbff8a291523d9cc5a4f3731 | jq &apos;.files.&quot;darkmode4.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Lastly we need to call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setFetchMethod&lt;/code&gt; to check if the browser is using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;darkmode&lt;/code&gt; before enabling or disabling it.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode5.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/58c77577dbff8a291523d9cc5a4f3731.js?file=darkmode5.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/58c77577dbff8a291523d9cc5a4f3731 | jq &apos;.files.&quot;darkmode5.js&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;demo&quot;&gt;Demo&lt;/h3&gt;
 
@@ -14762,7 +15025,11 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
 
 &lt;h2 id=&quot;using-boto3-resource&quot;&gt;Using boto3 resource&lt;/h2&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/71d7b985435d2719d73dbf927e2c966a.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/71d7b985435d2719d73dbf927e2c966a.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/71d7b985435d2719d73dbf927e2c966a | jq &apos;.files.&quot;&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;We can create a payload to test our lambda function&lt;/p&gt;
 
@@ -14781,17 +15048,29 @@ is hasattr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;sys, &lt;span class=&quo
 
 &lt;p&gt;We can use a JSONEncoder class to update our lamda function.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4d5c8a61cae95198e6033789e5dd604d.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4d5c8a61cae95198e6033789e5dd604d.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/4d5c8a61cae95198e6033789e5dd604d | jq &apos;.files.&quot;&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h2 id=&quot;using-boto3-client&quot;&gt;Using boto3 client&lt;/h2&gt;
 
 &lt;p&gt;Another way to export data is to use boto3 client. It&apos;s a low level AWS services.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/2d8898fd4ae7cd629657d9a241c7d829.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/2d8898fd4ae7cd629657d9a241c7d829.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/2d8898fd4ae7cd629657d9a241c7d829 | jq &apos;.files.&quot;&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;However boto3 client will generates dynamodb JSON. A simple python script to convert it back to normalized JSON using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dynamodb_json&lt;/code&gt; library.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/e7ee63cd8dcdbd2767ac34846762b72e.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/e7ee63cd8dcdbd2767ac34846762b72e.js?file=&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/e7ee63cd8dcdbd2767ac34846762b72e | jq &apos;.files.&quot;&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 </description>
           <pubDate>2020-10-23T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/export-dynamodb-s3</link>
@@ -15233,13 +15512,21 @@ libraryDependencies +&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; “au.com.by
 
 &lt;p&gt;Let&apos;s create a simple python script to parse config file&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=ex1.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=ex1.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b2bdbbdd2648c4737a2f37630e5026ee | jq &apos;.files.&quot;ex1.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;establishing-a-connection&quot;&gt;Establishing a connection&lt;/h3&gt;
 
 &lt;p&gt;Let us try to connect to oracle database using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jaydebeapi&lt;/code&gt; library.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=ex2.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=ex2.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b2bdbbdd2648c4737a2f37630e5026ee | jq &apos;.files.&quot;ex2.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;However while running the script, you will get the following error&lt;/p&gt;
 
@@ -15284,7 +15571,11 @@ wkt username.keytab
 
 &lt;h3 id=&quot;full-code-to-use-kerberos&quot;&gt;Full code to use kerberos&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=full_code.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=full_code.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/b2bdbbdd2648c4737a2f37630e5026ee | jq &apos;.files.&quot;full_code.py&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;using-docker&quot;&gt;Using Docker&lt;/h3&gt;
 
@@ -15769,25 +16060,45 @@ Only Allah  name will survive&lt;br /&gt;
 
 &lt;h3 id=&quot;create-an-array-that-needs-to-be-sorted&quot;&gt;Create an array that needs to be sorted&lt;/h3&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec1.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/f7d4dabc928d719367ab5cb3cc2a5dcf | jq &apos;.files.&quot;Rec1.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;merge-sort&quot;&gt;Merge sort&lt;/h3&gt;
 
 &lt;p&gt;If you are unfamiliary with merge sort, we just break the array into sub parts and later combine them based on our criteria. Here, we will maintiain left and right pointer which keeps track of the end of the array. Initially, the left is equal to 0 and right equals to the last element of the array.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/f7d4dabc928d719367ab5cb3cc2a5dcf | jq &apos;.files.&quot;Rec2.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;We calculate a mid point and recursively call the method twice one half of array and another half of array. lastly we add the crux of our logic in merge sort.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec3.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec3.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/f7d4dabc928d719367ab5cb3cc2a5dcf | jq &apos;.files.&quot;Rec3.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;As per our requirement we need to sort even arrays before odd arrays, so we need to have a method to check that.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec4.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec4.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/f7d4dabc928d719367ab5cb3cc2a5dcf | jq &apos;.files.&quot;Rec4.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Lastly we need to write our merge method.&lt;/p&gt;
 
-&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec5.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/f7d4dabc928d719367ab5cb3cc2a5dcf.js?file=Rec5.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt;   &lt;div style=&quot;display: none;&quot;&gt; &lt;pre&gt;
+        
+      curl -s https://api.github.com/gists/f7d4dabc928d719367ab5cb3cc2a5dcf | jq &apos;.files.&quot;Rec5.java&quot;.content&apos;
+    
+      &lt;/pre&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;h3 id=&quot;what-is-the-complexity-of-the-program&quot;&gt;What is the complexity of the program&lt;/h3&gt;
 

@@ -288,13 +288,21 @@ header li {
 
 <p>Let's start with a simple example:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex1.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex1.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq '.files."ex1.js".content'
+    
+      </pre> </div> </div>
 
 <p>In this case, <strong>x</strong> and <strong>y</strong> are primitive types (numbers), changing it doesn't change value since it's copied to different memory location.</p>
 
 <p>However, objects in JavaScript work differently:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex2.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex2.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq '.files."ex2.js".content'
+    
+      </pre> </div> </div>
 
 <p><strong>Explanation:</strong></p>
 <ul>
@@ -305,7 +313,11 @@ header li {
 
 <p>If you want to create a copy of an object without affecting the original, you might consider using the spread operator <code class="language-plaintext highlighter-rouge">...</code>:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex3.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex3.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq '.files."ex3.js".content'
+    
+      </pre> </div> </div>
 
 <p><strong>Explanation:</strong></p>
 <ul>
@@ -314,7 +326,11 @@ header li {
 
 <p>However, since the copy is shallow, nested objects within the original object are still shared between the original and the copied object:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex4.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex4.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq '.files."ex4.js".content'
+    
+      </pre> </div> </div>
 
 <p><strong>Explanation:</strong></p>
 <ul>
@@ -326,7 +342,11 @@ header li {
 
 <p>To avoid the pitfalls of shallow copying, you can use <code class="language-plaintext highlighter-rouge">structuredClone</code>, which creates a deep copy of the object, including all nested objects:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex5.js"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex5.js"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq '.files."ex5.js".content'
+    
+      </pre> </div> </div>
 
 <p><strong>Explanation:</strong></p>
 <ul>
@@ -341,7 +361,11 @@ header li {
 
 <p>Primitive types in Java (e.g., <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">char</code>) store their values directly. When you assign one primitive variable to another, the value is copied:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=Ex6.java"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=Ex6.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq '.files."Ex6.java".content'
+    
+      </pre> </div> </div>
 
 <p><strong>Explanation:</strong></p>
 <ul>
@@ -352,7 +376,11 @@ header li {
 
 <p>Reference types in Java (e.g., objects, arrays) work similarly to JavaScript objects. They store a reference to the actual data in memory:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=Ex7.java"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=Ex7.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/9dac8e798dac9501d4426ded1fb023fb | jq '.files."Ex7.java".content'
+    
+      </pre> </div> </div>
 
 <p><strong>Explanation:</strong></p>
 <ul>

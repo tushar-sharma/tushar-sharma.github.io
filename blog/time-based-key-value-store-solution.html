@@ -296,7 +296,11 @@ String get(String key, int timestamp) Returns a value such that set was called p
 
 <h4 id="first-attempt">First Attempt</h4>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution1.java"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution1.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/1860d33b9fc700c49c0d5dbd1cc348dc | jq '.files."Solution1.java".content'
+    
+      </pre> </div> </div>
 
 <p>It failed with error : Time Limit Exceeded.</p>
 
@@ -304,7 +308,11 @@ String get(String key, int timestamp) Returns a value such that set was called p
 
 <p>Instead of using List, I can try using <code class="language-plaintext highlighter-rouge">TreeMap</code>. A TreeMap is a Red-Black tree-based NavigableMap implementation that stores keys in sorted order.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution2.java"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1860d33b9fc700c49c0d5dbd1cc348dc.js?file=Solution2.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/1860d33b9fc700c49c0d5dbd1cc348dc | jq '.files."Solution2.java".content'
+    
+      </pre> </div> </div>
 
 <p>We use the <code class="language-plaintext highlighter-rouge">floorEntry</code> method of the TreeMap to get the closest timestamp lower than or equal to the requested timestamp.</p>
 

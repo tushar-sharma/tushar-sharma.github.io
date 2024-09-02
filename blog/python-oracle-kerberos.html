@@ -314,13 +314,21 @@ header li {
 
 <p>Let's create a simple python script to parse config file</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=ex1.py"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=ex1.py"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/b2bdbbdd2648c4737a2f37630e5026ee | jq '.files."ex1.py".content'
+    
+      </pre> </div> </div>
 
 <h3 id="establishing-a-connection">Establishing a connection</h3>
 
 <p>Let us try to connect to oracle database using <code class="language-plaintext highlighter-rouge">jaydebeapi</code> library.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=ex2.py"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=ex2.py"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/b2bdbbdd2648c4737a2f37630e5026ee | jq '.files."ex2.py".content'
+    
+      </pre> </div> </div>
 
 <p>However while running the script, you will get the following error</p>
 
@@ -365,7 +373,11 @@ wkt username.keytab
 
 <h3 id="full-code-to-use-kerberos">Full code to use kerberos</h3>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=full_code.py"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b2bdbbdd2648c4737a2f37630e5026ee.js?file=full_code.py"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/b2bdbbdd2648c4737a2f37630e5026ee | jq '.files."full_code.py".content'
+    
+      </pre> </div> </div>
 
 <h3 id="using-docker">Using Docker</h3>
 

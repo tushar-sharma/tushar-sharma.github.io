@@ -290,13 +290,21 @@ header li {
 
 <h3 id="pipeline-script">Pipeline Script</h3>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=pipeline.groovy"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=pipeline.groovy"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/7bb66bc02307332cd4f7009daa0a1594 | jq '.files."pipeline.groovy".content'
+    
+      </pre> </div> </div>
 
 <h3 id="modeling-pipeline-stages">Modeling Pipeline Stages</h3>
 
 <p>We'll define a Stage class that contains information about each stage in the pipeline. This class will help us organize and structure the data before sending it to Kafka.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Stage.groovy"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Stage.groovy"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/7bb66bc02307332cd4f7009daa0a1594 | jq '.files."Stage.groovy".content'
+    
+      </pre> </div> </div>
 
 <p>The <code class="language-plaintext highlighter-rouge">Stage</code> class will provide the necessary structure to capture relevant information about each stage in the pipeline.</p>
 
@@ -304,13 +312,21 @@ header li {
 
 <p>In order to publish data to the Kafka topic, we need to define the structure of the messages we will be sending. We'll create a <code class="language-plaintext highlighter-rouge">KafkaMessage</code> class that represents the JSON format of the data to be published.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=KafkaMessage.groovy"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=KafkaMessage.groovy"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/7bb66bc02307332cd4f7009daa0a1594 | jq '.files."KafkaMessage.groovy".content'
+    
+      </pre> </div> </div>
 
 <h3 id="implementing-the-events-class">Implementing the Events Class</h3>
 
 <p>Lastly we will define our <code class="language-plaintext highlighter-rouge">Events</code> class. We will use <code class="language-plaintext highlighter-rouge">PipelineNodeGraphVisitor</code> to intrinsically get each nodes information. Also we use <code class="language-plaintext highlighter-rouge">kafkacat</code> utility to publish to kafka topic.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Events.groovy"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/7bb66bc02307332cd4f7009daa0a1594.js?file=Events.groovy"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/7bb66bc02307332cd4f7009daa0a1594 | jq '.files."Events.groovy".content'
+    
+      </pre> </div> </div>
 
 <h3 id="understanding-the-noncps-notation">Understanding the NonCPS Notation</h3>
 

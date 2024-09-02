@@ -299,11 +299,19 @@ header li {
 
 <p>We will create a simple <code class="language-plaintext highlighter-rouge">lambda_function.py</code> that simply returns id as response.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex1.py"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex1.py"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/1dd4fbf8a8eead83a9535e2ae10c6ecd | jq '.files."ex1.py".content'
+    
+      </pre> </div> </div>
 
 <p>We have a test corresponding to the test file <code class="language-plaintext highlighter-rouge">MyLambda/test/test_lambda_function.py</code>:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex2.py"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex2.py"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/1dd4fbf8a8eead83a9535e2ae10c6ecd | jq '.files."ex2.py".content'
+    
+      </pre> </div> </div>
 
 <p>We will use <code class="language-plaintext highlighter-rouge">pytest</code> to run our test:</p>
 
@@ -328,17 +336,29 @@ TOTAL                                                     11      0   100%
 
 <p>As our lambda function gets complex, we must explore additional functionality to test our lambda function. We can use <code class="language-plaintext highlighter-rouge">patch</code> to mock resources like environment variables, etc</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex3.py"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex3.py"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/1dd4fbf8a8eead83a9535e2ae10c6ecd | jq '.files."ex3.py".content'
+    
+      </pre> </div> </div>
 
 <p>Our updated <code class="language-plaintext highlighter-rouge">test</code> becomes</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex4.py"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex4.py"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/1dd4fbf8a8eead83a9535e2ae10c6ecd | jq '.files."ex4.py".content'
+    
+      </pre> </div> </div>
 
 <h3 id="pytest-fixtures">Pytest fixtures</h3>
 
 <p>A fixture is a function that returns a test resource to supply a mock <code class="language-plaintext highlighter-rouge">context</code> object to our lambda function. Let's rewrite our test function</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex5.py"></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/1dd4fbf8a8eead83a9535e2ae10c6ecd.js?file=ex5.py"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/1dd4fbf8a8eead83a9535e2ae10c6ecd | jq '.files."ex5.py".content'
+    
+      </pre> </div> </div>
 
 <p>In our example, we define a <code class="language-plaintext highlighter-rouge">event</code> fixture that return dictionary. We then pass this fixture as an argument to our test function.</p>
 

@@ -277,7 +277,11 @@ header li {
 
 <h2 id="using-boto3-resource">Using boto3 resource</h2>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/71d7b985435d2719d73dbf927e2c966a.js?file="></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/71d7b985435d2719d73dbf927e2c966a.js?file="></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/71d7b985435d2719d73dbf927e2c966a | jq '.files."".content'
+    
+      </pre> </div> </div>
 
 <p>We can create a payload to test our lambda function</p>
 
@@ -296,17 +300,29 @@ header li {
 
 <p>We can use a JSONEncoder class to update our lamda function.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4d5c8a61cae95198e6033789e5dd604d.js?file="></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4d5c8a61cae95198e6033789e5dd604d.js?file="></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/4d5c8a61cae95198e6033789e5dd604d | jq '.files."".content'
+    
+      </pre> </div> </div>
 
 <h2 id="using-boto3-client">Using boto3 client</h2>
 
 <p>Another way to export data is to use boto3 client. It's a low level AWS services.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/2d8898fd4ae7cd629657d9a241c7d829.js?file="></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/2d8898fd4ae7cd629657d9a241c7d829.js?file="></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/2d8898fd4ae7cd629657d9a241c7d829 | jq '.files."".content'
+    
+      </pre> </div> </div>
 
 <p>However boto3 client will generates dynamodb JSON. A simple python script to convert it back to normalized JSON using <code class="language-plaintext highlighter-rouge">dynamodb_json</code> library.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/e7ee63cd8dcdbd2767ac34846762b72e.js?file="></script> <button class="copy-button">Copy</button> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/e7ee63cd8dcdbd2767ac34846762b72e.js?file="></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
+        
+      curl -s https://api.github.com/gists/e7ee63cd8dcdbd2767ac34846762b72e | jq '.files."".content'
+    
+      </pre> </div> </div>
 
 
 
