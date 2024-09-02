@@ -339,6 +339,420 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Unit Testing Preauthroize Annotation in Spring Boot</title>
+          <description>&lt;p&gt;Preauthorize annotation can be use to enforce access control in Spring Boot applications. It&apos;s part of Spring Security that allows you to specify access control expression for methods. These expressions are evaluated before method execution, determining whether the current user has the authority to invoke the method.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Preauthorize annotation can be use to enforce access control in Spring Boot applications. It&apos;s part of Spring Security that allows you to specify access control expression for methods. These expressions are evaluated before method execution, determining whether the current user has the authority to invoke the method.&lt;/p&gt;
+
+&lt;h2 id=&quot;implementing-preauthorize&quot;&gt;Implementing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@PreAuthorize&lt;/code&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.security.access.prepost.PreAuthorize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;reactor.core.publisher.Mono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AuthorizedService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@PreAuthorize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hasAuthority(@config.getAuthority())&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Mono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hasAuthority&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Mono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;just&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this example, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hasAuthority()&lt;/code&gt; method is protected by a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@PreAuthorize&lt;/code&gt; annotation. The expression &quot;hasAuthority(@config.getAuthority())&quot; checks if the current user has the authority specified by the getAuthority() method of a @Config bean.&lt;/p&gt;
+
+&lt;p&gt;To make this work, we need to define our Config class:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import lombok.Getter;
+
+@Component
+@Getter
+public class Config {
+    @Value(&quot;${spring.application.authority}&quot;)
+    private String authority;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This class reads the required authority from the application&apos;s configuration. In your application.yaml, you can specify the required authority:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;spring:
+  application:
+    authority: myADgroup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-challenge-of-unit-testing&quot;&gt;The Challenge of Unit Testing&lt;/h2&gt;
+
+&lt;p&gt;When it comes to unit testing a service with @PreAuthorize, we encounter some challenges. Let&apos;s look at a common approach that doesn&apos;t work as expected:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.jupiter.api.Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.jupiter.api.extension.ExtendWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.mockito.Mock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.mockito.InjectMocks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.mockito.junit.jupiter.MockitoExtension&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.security.test.context.support.WithMockUser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;reactor.test.StepVerifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.security.access.AccessDeniedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Mockito&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@ExtendWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MockitoExtension&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AuthorizedServiceTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@InjectMocks&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AuthorizedService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;authorizedService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Mock&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Config&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@WithMockUser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorities&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ADMIN&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testHasAuthority_withAccess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAuthority&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;thenReturn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ADMIN&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;nc&quot;&gt;StepVerifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorizedService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasAuthority&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;expectNext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;verifyComplete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testHasAuthority_withoutAccess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;StepVerifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorizedService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasAuthority&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;expectError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AccessDeniedException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;verify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It fails with following error :&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean &amp;amp; maintainable &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;code requires zero unnecessary code.
+Following stubbings are unnecessary &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;click to navigate to relevant line of code&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This approach fails because Mockito-created mocks are not proxied by Spring Security. As a result, the @PreAuthorize annotation is not processed, and the security checks are not performed during the test.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-solution-integration-testing&quot;&gt;The Solution: Integration Testing&lt;/h2&gt;
+
+&lt;p&gt;To properly test methods annotated with @PreAuthorize, we need to use integration tests that load the entire Spring context. Here&apos;s how we can modify our test:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.test.context.support.WithMockUser;
+import reactor.test.StepVerifier;
+import org.springframework.security.access.AccessDeniedException;
+import static org.mockito.Mockito.when;
+
+
+@SpringBootTest(properties = {&quot;spring.profiles.active=test&quot;})
+public class AuthorizedServiceTest {
+
+    @Autowired
+    private AuthorizedService authorizedService;
+
+    @Mock
+    private PropertyConfig propertyConfig;
+
+    @Test
+    @WithMockUser(authorities = &quot;ADMIN&quot;)
+    void testHasKafkaAllowedAuthority_withAccess() {
+
+        when(propertyConfig.getKafkaAllowedAuthority()).thenReturn(&quot;ADMIN&quot;);
+
+        StepVerifier.create(authorizedService.hasAuthority())
+                .expectNext(true)
+                .verifyComplete();
+    }
+
+    @Test
+    void testHasKafkaAllowedAuthority_withoutAccess() {
+
+        StepVerifier.create(authorizedService.hasAuthority())
+                .expectError(AccessDeniedException.class)
+                .verify();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+          <pubDate>2024-09-01T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/unit-testing-preauthorize-spring-boot</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/unit-testing-preauthorize-spring-boot</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Method Overloading and Varargs in Java</title>
+          <description>&lt;p&gt;Method overloading is a fundamental concept in object-oriented programming that allows multiple methods to share the same name within a class, differentiated by their parameter lists. This feature enhances code readability and provides type safety at compile-time.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Method overloading is a fundamental concept in object-oriented programming that allows multiple methods to share the same name within a class, differentiated by their parameter lists. This feature enhances code readability and provides type safety at compile-time.&lt;/p&gt;
+
+&lt;h3 id=&quot;key-characteristics&quot;&gt;Key Characteristics:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Compile-time Polymorphism&lt;/strong&gt;: The compiler determines which method to call based on the number and types of arguments.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Type Safety&lt;/strong&gt;: Each overloaded method can have a distinct implementation tailored to specific parameter types.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Performance&lt;/strong&gt;: Method resolution occurs at compile-time, resulting in minimal runtime overhead.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;example-implementation&quot;&gt;Example Implementation:&lt;/h3&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=StringPrinter.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;usage&quot;&gt;Usage:&lt;/h3&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=StringPrinter2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h2 id=&quot;variable-arguments-varargs-flexibility-through-variadic-functions&quot;&gt;Variable Arguments (Varargs): Flexibility Through Variadic Functions&lt;/h2&gt;
+
+&lt;p&gt;Introduced in Java 5, varargs provide a more flexible approach to method parameter handling. This feature allows methods to accept zero or more arguments of a specified type, simplifying method calls and reducing the need for overloading in certain scenarios.&lt;/p&gt;
+
+&lt;h3 id=&quot;key-characteristics-1&quot;&gt;Key Characteristics:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Runtime Flexibility&lt;/strong&gt;: The number of arguments is determined at runtime.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Simplified Method Calls&lt;/strong&gt;: Allows for more natural method invocations with a variable number of arguments.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Potential for Ambiguity&lt;/strong&gt;: Care must be taken to avoid conflicts with overloaded methods.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;example-implementation-1&quot;&gt;Example Implementation:&lt;/h3&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=EnhancedStringPrinter.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;usage-1&quot;&gt;Usage:&lt;/h3&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ef1af44ec430026b0a94a6a3f148d4c3.js?file=EnhancedStringPrinter2.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h2 id=&quot;comparative-analysis&quot;&gt;Comparative Analysis&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Aspect&lt;/th&gt;
+      &lt;th&gt;Method Overloading&lt;/th&gt;
+      &lt;th&gt;Variable Arguments&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Syntax&lt;/td&gt;
+      &lt;td&gt;Multiple method definitions&lt;/td&gt;
+      &lt;td&gt;Single method with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;...&lt;/code&gt; syntax&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Type Safety&lt;/td&gt;
+      &lt;td&gt;Strong, compile-time checking&lt;/td&gt;
+      &lt;td&gt;Weaker, runtime array conversion&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Performance&lt;/td&gt;
+      &lt;td&gt;Slightly better due to compile-time resolution&lt;/td&gt;
+      &lt;td&gt;Minor overhead from array creation&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Flexibility&lt;/td&gt;
+      &lt;td&gt;Limited to predefined parameter lists&lt;/td&gt;
+      &lt;td&gt;Accepts any number of arguments&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Readability&lt;/td&gt;
+      &lt;td&gt;Clear parameter expectations&lt;/td&gt;
+      &lt;td&gt;Potentially unclear parameter count&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Backwards Compatibility&lt;/td&gt;
+      &lt;td&gt;Excellent&lt;/td&gt;
+      &lt;td&gt;Introduced in Java 5, may require refactoring&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;best-practices-and-considerations&quot;&gt;Best Practices and Considerations&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Use Method Overloading When&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;You have a fixed set of parameter variations.&lt;/li&gt;
+      &lt;li&gt;Type safety is crucial.&lt;/li&gt;
+      &lt;li&gt;Performance is a critical concern.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Use Varargs When&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;The number of parameters is truly variable.&lt;/li&gt;
+      &lt;li&gt;You want to simplify the API for method callers.&lt;/li&gt;
+      &lt;li&gt;Backwards compatibility with pre-Java 5 code is not a concern.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Avoid Varargs Overuse&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Be cautious with varargs in overloaded methods to prevent ambiguity.&lt;/li&gt;
+      &lt;li&gt;Consider using collections or arrays for large numbers of parameters.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Performance Considerations&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Varargs create an array for each method call, which may impact performance in high-frequency invocations.&lt;/li&gt;
+      &lt;li&gt;Method overloading avoids this overhead but requires more boilerplate code.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+          <pubDate>2024-08-27T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/method-overloading-varargs-java</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/method-overloading-varargs-java</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Car Registration in North Carolina</title>
+          <description>&lt;p&gt;Car Registration in North Carolina.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Car Registration in North Carolina.&lt;/p&gt;
+
+&lt;h2 id=&quot;prerequisite-before-going-to-dmv&quot;&gt;Prerequisite before going to DMV&lt;/h2&gt;
+
+&lt;h3 id=&quot;state-inspection&quot;&gt;State Inspection&lt;/h3&gt;
+
+&lt;p&gt;Went to Jiffy Lube. Car inspection failed because of headlights. Went to Advanced AutoParts and bought &amp;amp; replaced lights for Honda Accord&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;H11 for lower beam light&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;9005 for higher beam light&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Following tutorials were helpful -&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/ZeMVNjDnkoc?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/ZeMVNjDnkoc?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/ZeMVNjDnkoc/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/yMYcVQmHx54?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/yMYcVQmHx54?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/yMYcVQmHx54/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+          <pubDate>2024-08-24T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/car-registration-nc-2024-08-19-25</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/car-registration-nc-2024-08-19-25</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Where to play Badminton in Charlotte NC</title>
+          <description>&lt;p&gt;I regularly play badminton at the Marion Diehl Recreation Center and Pool, where intermediate sessions are held every Wednesday from 7:00 pm to 9:00 pm. To secure a spot, you can make a reservation by calling +1 980-314-1300. From my experience, if you&apos;re looking to reserve a spot for the entire month, it&apos;s best to call on the 15th of the preceding month.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;I regularly play badminton at the Marion Diehl Recreation Center and Pool, where intermediate sessions are held every Wednesday from 7:00 pm to 9:00 pm. To secure a spot, you can make a reservation by calling +1 980-314-1300. From my experience, if you&apos;re looking to reserve a spot for the entire month, it&apos;s best to call on the 15th of the preceding month.&lt;/p&gt;
+
+&lt;p&gt;Be sure to bring your own racket. While there are usually birdies available, you might want to bring your own just in case.&lt;/p&gt;
+</description>
+          <pubDate>2024-08-24T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/badminton-charlotte-nc</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/badminton-charlotte-nc</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Understanding Object References in JavaScript</title>
+          <description>&lt;p&gt;When working with JavaScript, it&apos;s important to understand that objects are reference types. This means that when you assign an object to a new variable, you&apos;re not creating a new copy of the object—instead, both variables reference the same object in memory. This can lead to some unexpected behavior if you&apos;re not careful.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;When working with JavaScript, it&apos;s important to understand that objects are reference types. This means that when you assign an object to a new variable, you&apos;re not creating a new copy of the object—instead, both variables reference the same object in memory. This can lead to some unexpected behavior if you&apos;re not careful.&lt;/p&gt;
+
+&lt;h3 id=&quot;javascript-object-references&quot;&gt;JavaScript Object References&lt;/h3&gt;
+
+&lt;p&gt;Let&apos;s start with a simple example:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex1.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;In this case, &lt;strong&gt;x&lt;/strong&gt; and &lt;strong&gt;y&lt;/strong&gt; are primitive types (numbers), changing it doesn&apos;t change value since it&apos;s copied to different memory location.&lt;/p&gt;
+
+&lt;p&gt;However, objects in JavaScript work differently:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex2.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Here, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;originalObj&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;newObj&lt;/code&gt; reference the same object in memory. When you modify the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;age&lt;/code&gt; property using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;newObj&lt;/code&gt;, the change is reflected in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;originalObj&lt;/code&gt; as well, because both variables point to the same memory location.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;shallow-copy-with-the-spread-operator&quot;&gt;Shallow Copy with the Spread Operator&lt;/h3&gt;
+
+&lt;p&gt;If you want to create a copy of an object without affecting the original, you might consider using the spread operator &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;...&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex3.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The spread operator creates a &lt;strong&gt;shallow copy&lt;/strong&gt; of the object. In this example, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;originalObj&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;newObj&lt;/code&gt; are separate objects. Changing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;newObj&lt;/code&gt; does not affect &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;originalObj&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, since the copy is shallow, nested objects within the original object are still shared between the original and the copied object:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex4.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;While &lt;strong&gt;newObj.a&lt;/strong&gt; is independent of &lt;strong&gt;originalObj.a&lt;/strong&gt;, the nested object &lt;strong&gt;b&lt;/strong&gt; is still shared. Thus, changes to &lt;strong&gt;newObj.b.c&lt;/strong&gt; affect &lt;strong&gt;originalObj.b.c&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;deep-copy-with-structuredclone&quot;&gt;Deep Copy with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;structuredClone&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;To avoid the pitfalls of shallow copying, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;structuredClone&lt;/code&gt;, which creates a deep copy of the object, including all nested objects:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=ex5.js&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;structuredClone&lt;/code&gt; method ensures that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;newObj&lt;/code&gt; is a completely independent copy of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;originalObj&lt;/code&gt;, with no shared references.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;comparing-javascript-with-java&quot;&gt;Comparing JavaScript with Java&lt;/h3&gt;
+
+&lt;p&gt;The concept of references in JavaScript is similar to how Java handles data types, particularly when comparing primitive types and reference types.&lt;/p&gt;
+
+&lt;h4 id=&quot;primitive-types-in-java&quot;&gt;Primitive Types in Java&lt;/h4&gt;
+
+&lt;p&gt;Primitive types in Java (e.g., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;float&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;char&lt;/code&gt;) store their values directly. When you assign one primitive variable to another, the value is copied:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=Ex6.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Here, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt; are independent of each other after the assignment.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference-types-in-java&quot;&gt;Reference Types in Java&lt;/h4&gt;
+
+&lt;p&gt;Reference types in Java (e.g., objects, arrays) work similarly to JavaScript objects. They store a reference to the actual data in memory:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/9dac8e798dac9501d4426ded1fb023fb.js?file=Ex7.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;list1&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;list2&lt;/code&gt; reference the same ArrayList object in memory. Changes made through &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;list2&lt;/code&gt; are reflected when accessing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;list1&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          <pubDate>2024-08-08T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/cloning-objects-in-javascript</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/cloning-objects-in-javascript</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Using kcat with Kafka and SASL Authentication</title>
           <description>&lt;p&gt;kcat (formerly known as kafkacat) is a versatile command-line tool for Apache Kafka. It allows you to consume and produce Kafka messages and interact with Kafka clusters efficiently. This guide will help you set up and use kcat with SASL authentication to consume and produce messages.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -701,6 +1115,108 @@ stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;2&lt;span class=&quot;o&quot
     
       
         <item>
+          <title>Review of The Molecule of More by Daniel Z. Lieberman, Michael E. Long</title>
+          <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;!-- disclaimer --&gt;
+&lt;div style=&quot;margin: 0 auto&quot; class=&quot;cl disclaimer&quot;&gt;
+&lt;span style=&quot;color:black&quot;&gt; &amp;nbsp;&amp;nbsp;These are my rough notes while reading this book
+&lt;/span&gt; 
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;What&apos;s a dopamine? It&apos;s a molecule secreated by part of brain. Often dubbed pleasure molecule, it&apos;s presumed to be released when we experience pleasures. However this book explores how dopamine is a molecule of more not just pleasure. Like the author said the dopamine activity is not a marker of pleasure. It&apos;s a reaction to the unexpected - to possibility and anticipation&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Love is a need, a craving, a drive to seek&apos;s life greatest prize&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The pathway to dopamine in the brain is called &lt;strong&gt;reward circuit&lt;/strong&gt;. It reminds me of Pavlov dog. Ringing of a bell caused him to salivate. Did dog released dopamine at the sound of the bell?&lt;/p&gt;
+
+&lt;p&gt;One problem with dopamine excitement is that it doesn&apos;t last forever. That&apos;s if you need to do something new to get more release of dopamine. Example if you like a dish so much, dopamine will be released in your brain. If you have the same delcious dish everyday, dopamine would stop releasing for the same dish.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Dopamine has a very specific job: maximizing resources that will be available to us in the future; the pursuit of better things&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I guess doesn&apos;t that makes dopamine drives us to get better. So can we equate dopamine with motivation? Are they different?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you live under a bridge, dopamine makes you want a tent. If you live in a tent, dopmaine makes you want a house. If you live in the most expensive mansion in the world, dopmaine makes you want a castle on the moon. Dopmaine has no standard for good, and seeks no finish line. The dopmaine circuits in the brain can be stimulated only by the possiblity of whatever is shiny and new, never mind how perfect things are at the moment. The dopamine motto is &quot;More&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So dopamine makes you desire more but is never statisfied. You can&apos;t rely on dopamine alone to find happiness in our daily life.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Vasopressin acted like a &quot;good-husband harmone&quot;. Dopamine does the opposite. Human beings who have genes that produces high levels of dopamine have the highest number of sexual partners and the lowest age of first sexual intercourse….Just as dopamine is the molecule of obsessive yearning, the chemicals mostly associated with long-term relationships are oxytocin and vasopressin. Oxytocin is more active in women and vasopressin in menj.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What&apos;s vasopressin? It&apos;s a molecule like dopmaine. It&apos;s a primarily acts as a hormone. What&apos;s a hormone? They are chemical messengers that are released by a gland and is released into the bloodstream. They travel to different parts of body to regularte various physiological processes like growth, metabolism and mood. Hormones influence the functions of the body’s cells by binding to large proteins known as receptors, whose shape and electrical charge interact with one particular hormone. When a hormone binds to its receptor protein, it causes a change in the receptor’s shape that triggers changes within the cell. So a molecule can be a hormone. But not all molecules can act as a hormone. What about proteins? Proteins are a complex molecule and can also act as a hormone. E.g. Insulin regulates blood sugar levels.&lt;/p&gt;
+
+&lt;p&gt;If you hypothetically inject vasopressin in a promiscous male, would he change behavior? Are there any any food that promotes vasopressin?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Endorphins (your brain&apos;s version of morphine), and a class of chemicals called endocannabinoids (your brains&apos; version of marijuana). As opposed to the please of anticipation via dopamine, these chemicals give us pleasure from sensation and emotion. In fact, one of the endocannabinoid molecule is called anandamide, named after a Sanskrit word that means joy, bliss, and delight.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So if I release more endorphins in my body, will I get the same feeling as high on morphine?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Under more normal conditions, though, dopamine activation in the desire circuit triggers energy, enthusiasm, and hope. It feels good In fact, some people spend the majority of their lives pursuing this feeling - a feeling of anticipation, a feeling that life is about to get better.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;But isn&apos;t what we call hope? A janitor does his job diligently in a hope that he would save money and get better job in future.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;the future isn&apos;t real. It&apos;s made up of bundle of possibilities that exist only in our minds. Those possibilities tend to be idealized - we usually don&apos;t imagine a mediocre outcome.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What happens when the future becomes the present - when the dinner is in your mouth or your lover is in your arms? The feeling of excitement, enthusiasm, and energy dissipate. Dopamine has shut down. Dopamine circuits doen&apos;t process experience in the rela world, only imaginary future possibilities.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So we need something else to keep feeling good after we achieve our goals?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In the early 1960s, doctors prescribed large amounts of dopamine-boosting amphetamine to promote &quot;cheerfullness, mental alertness, and optimisim&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ADHD = Attention Deficit Hyperactivity Disorder. People with ADHD have poor focus, less concentration and more impulsive.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;They may start pyaing bills, then switch to doing the laundry, then change a light bulb, then site down and watch TV with everything strewn all over the place…not listen to what people say to them. Sometimes they don&apos;t keep track of time, making them late, and they may lose things, such as car keys, call phones, even passports.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ADHD is ofen seen on children because their frontal lobes which control dopamine acts, develop last and do not fully connect to the rest of the brain until a person finishes adolescence and enters adulthood. Can we say that frontal lobes in the brain control dopamine acts? Dopamine is produced in other parts of brain and it affects frontal lobes which is responsible for highly cognitive functions like decisions making.&lt;/p&gt;
+
+&lt;p&gt;Frontal lobes are the last parts of brain to fully develop which might be in mid-20s. That&apos;s why teenagers are impulsive.&lt;/p&gt;
+
+&lt;p&gt;Can we say adrenaline as norepinephrine are similar? Both are neurotransmitter. Adrenaline is produced by adrenal gland. Adrenal gland is just above the kidneys. Norepinephrine is mainly produced by the nervous system, though some is also made by the adrenal glands. Norepinephrine is a H&amp;amp;N emotion of the moment. It&apos;s involved in immediate responses, particularly in the &quot;fight or flight&quot; response. Where as dopamine is involved in more cerebral approach.&lt;/p&gt;
+
+&lt;p&gt;What&apos;s the detachment score? People who are focused on present moments, H&amp;amp;N circuts are activated and the warm, emotional aspects of our personality comes out. When we&apos;re engaged in the extrapersonal - at a distance, thinking abscractly, focusted on the future - the rational, emotionless parts of our personality are more likely to be seen.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Willpower can help an alchoholic say not to a drink once, but it&apos;s probably not going to work if he has to say no over and over again for months or years. Willpower is like a muscle. It becomes fatirgued with use, and after a farily short period of time, it gives out.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&quot;Resisting temptation seems to have produced a psychic cost, in the sense that afterward particiapants were more inclined to give up easily in the face of frustration.&quot; If you&apos;re on a diet, the more times you resist temptation, the more likely you are to fail the next time around. Willpower is a limited resource.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You can&apos;t beat drugs with willpower alone…They have to combined with some form of psychotherapy.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+          <pubDate>2024-07-22T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/review-book-the-molecule-of-more</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/review-book-the-molecule-of-more</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Weekly Logs from July 15 to 21, 2024</title>
           <description>&lt;p&gt;Dear Vishi, this is my weekly logs from from July 15 to 21, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -893,6 +1409,38 @@ req.send(null);
           <pubDate>2024-07-15T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/weekly-logs-2024-07-15-21</link>
           <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-07-15-21</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Travelling Hacks</title>
+          <description>&lt;p&gt;Travelling hacks.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;flying&quot;&gt;Flying&lt;/h2&gt;
+
+&lt;h3 id=&quot;ear-pain&quot;&gt;Ear pain&lt;/h3&gt;
+
+&lt;p&gt;Chewing gum or sucking on ginger candy during takeoff and landing can help equalize pressure in your ears, preventing discomfort.&lt;/p&gt;
+
+&lt;h3 id=&quot;seat-selection&quot;&gt;Seat Selection&lt;/h3&gt;
+
+&lt;p&gt;Seats near the wings or at the front of the plane are closer to the aircraft&apos;s center of gravity, which can result in a smoother ride with less turbulence. Avoid seats at the back of the plane, where turbulence is typically felt more intensely.&lt;/p&gt;
+
+&lt;p&gt;However in an unlikely event of crash, back seats are statistically more safer than front seats.&lt;/p&gt;
+
+&lt;h3 id=&quot;comfortable-clothing&quot;&gt;Comfortable Clothing&lt;/h3&gt;
+
+&lt;p&gt;Wear loose, comfortable clothing and layers to adapt to changing cabin temperatures. Compression socks can also help improve circulation and reduce the risk of deep vein thrombosis (DVT) on long flights.&lt;/p&gt;
+
+&lt;h2 id=&quot;general&quot;&gt;General&lt;/h2&gt;
+
+&lt;h3 id=&quot;portable-travel-bidet&quot;&gt;Portable travel bidet&lt;/h3&gt;
+
+</description>
+          <pubDate>2024-07-04T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/travelling-hacks</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/travelling-hacks</guid>
         </item>
       
     
@@ -1807,10 +2355,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;1e253fd2-9089-419a-8655-a39d87d111a2&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;3112e077-ca7f-4b92-a45f-6bed5c1540c0&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;1e253fd2-9089-419a-8655-a39d87d111a2&apos;,
+    &apos;3112e077-ca7f-4b92-a45f-6bed5c1540c0&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -3457,10 +4005,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;3bb87f9d-33a9-47fd-873a-57ba3df314a6&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;e50b8e93-3ed5-467a-a67d-1d611b2dde27&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;3bb87f9d-33a9-47fd-873a-57ba3df314a6&apos;,
+    &apos;e50b8e93-3ed5-467a-a67d-1d611b2dde27&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -6122,14 +6670,6 @@ When trading a stock like AAPL with a beta higher than 1 and a moderately high R
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-9&lt;/span&gt; PID
 &lt;span class=&quot;c&quot;&gt;# -9 option sends a SIGKILL signal, which forces the process to terminate immediately&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;kopi-luwak&quot;&gt;Kopi Luwak&lt;/h3&gt;
-
-&lt;p&gt;Learned today that &lt;strong&gt;kopi luwak&lt;/strong&gt; is the most expensive coffee in the world. It&apos;s made from coffee beans that have been partially digested and excreted by the Indonesian palm civet&lt;/p&gt;
-
-&lt;p&gt;It&apos;s known for its unique taste, which is notable for its lack of bitterness and acidity. However it&apos;s also controversial.&lt;/p&gt;
-
-&lt;p&gt;Civets are typically snatched from their homes and life in the wild to be imprisoned alone in tiny, barren cages. There have been many complaints from international concerns, as well as journalistic programs regarding animal cruelty in these coffee farms.&lt;/p&gt;
 </description>
           <pubDate>2023-10-11T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/daily-logs-2023-10-11</link>
@@ -6703,10 +7243,6 @@ The String... syntax in Java denotes a varargs (variable number of arguments). I
 &lt;h3 id=&quot;pratice-against-ping-pong-robot&quot;&gt;Pratice against ping pong robot&lt;/h3&gt;
 
 &lt;p&gt;There&apos;s a ping pong robot at Table tennis club, Charlotte. It&apos;s fun to pratice against it. However I am not seeing any improvement in my game. Last Thursday&apos;s league game, I had the worst performance.  I had few nice serves but made too many &lt;strong&gt;unforced errors&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;badminton&quot;&gt;Badminton&lt;/h3&gt;
-
-&lt;p&gt;I have resumed playing Badminton at Marion Diehl Recreation Center and Pool. The timings are 7pm to 9pm on Wednesday.&lt;/p&gt;
 
 &lt;h3 id=&quot;tennis&quot;&gt;Tennis&lt;/h3&gt;
 
