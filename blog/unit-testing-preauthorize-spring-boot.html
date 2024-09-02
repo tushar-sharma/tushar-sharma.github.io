@@ -287,47 +287,98 @@ header li {
 <h2 id="implementing-preauthorize">Implementing <code class="language-plaintext highlighter-rouge">@PreAuthorize</code>
 </h2>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=AuthorizedService.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq '.files."AuthorizedService.java".content'
-    
-      </pre> </div> </div>
+<div style="display:none;">
+  <p>import org.springframework.security.access.prepost.PreAuthorize;
+import reactor.core.publisher.Mono;</p>
+
+  <p>public class AuthorizedService {
+    <a href="https://github.com/PreAuthorize" class="user-mention">@PreAuthorize</a>("hasAuthority(@config.getAuthority())")
+    public Mono<boolean> hasAuthority() {
+        return Mono.just(true);
+    }
+}</boolean></p>
+</div>
+
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=AuthorizedService.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>In this example, the <code class="language-plaintext highlighter-rouge">hasAuthority()</code> method is protected by a <code class="language-plaintext highlighter-rouge">@PreAuthorize</code> annotation. The expression "hasAuthority(@config.getAuthority())" checks if the current user has the authority specified by the getAuthority() method of a <a href="https://github.com/Config" class="user-mention">@Config</a> bean.</p>
 
 <p>To make this work, we need to define our Config class:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=Config.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq '.files."Config.java".content'
-    
-      </pre> </div> </div>
+<div style="display:none;">
+  <p>import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+import lombok.Getter;</p>
+
+  <p><a href="https://github.com/Component" class="user-mention">@Component</a>
+<a href="https://github.com/Getter" class="user-mention">@Getter</a>
+public class Config {
+    <a href="https://github.com/Value" class="user-mention">@Value</a>("${spring.application.authority}")
+    private String authority;
+}</p>
+</div>
+
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=Config.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>This class reads the required authority from the application's configuration. In your application.yaml, you can specify the required authority:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=application.yaml"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq '.files."application.yaml".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=application.yaml"></script> <button class="copy-button">Copy</button> </div>
 
 <h2 id="the-challenge-of-unit-testing">The Challenge of Unit Testing</h2>
 
 <p>When it comes to unit testing a service with <a href="https://github.com/PreAuthorize" class="user-mention">@PreAuthorize</a>, we encounter some challenges. Let's look at a common approach that doesn't work as expected:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=AuthorizedServiceTest.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq '.files."AuthorizedServiceTest.java".content'
-    
-      </pre> </div> </div>
+<div style="display:none;">
+  <p>import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.test.context.support.WithMockUser;
+import reactor.test.StepVerifier;
+import org.springframework.security.access.AccessDeniedException;
+import static org.mockito.Mockito.when;</p>
+
+  <p><a href="https://github.com/ExtendWith" class="user-mention">@ExtendWith</a>(MockitoExtension.class)
+public class AuthorizedServiceTest {
+    <a href="https://github.com/InjectMocks" class="user-mention">@InjectMocks</a>
+    private AuthorizedService authorizedService;</p>
+
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>@Mock
+private Config config;
+
+@Test
+@WithMockUser(authorities = "ADMIN")
+void testHasAuthority_withAccess() {
+    when(config.getAuthority()).thenReturn("ADMIN");
+
+    StepVerifier.create(authorizedService.hasAuthority())
+        .expectNext(true)
+        .verifyComplete();
+}
+
+@Test
+void testHasAuthority_withoutAccess() {
+    StepVerifier.create(authorizedService.hasAuthority())
+        .expectError(AccessDeniedException.class)
+        .verify();
+} }
+</code></pre></div>  </div>
+</div>
+
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=AuthorizedServiceTest.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>It fails with following error :</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=error.txt"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq '.files."error.txt".content'
-    
-      </pre> </div> </div>
+<div style="display:none;">
+  <p>org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean &amp; maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):</p>
+</div>
+
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=error.txt"></script> <button class="copy-button">Copy</button> </div>
 
 <p>This approach fails because Mockito-created mocks are not proxied by Spring Security. As a result, the <a href="https://github.com/PreAuthorize" class="user-mention">@PreAuthorize</a> annotation is not processed, and the security checks are not performed during the test.</p>
 
@@ -335,11 +386,49 @@ header li {
 
 <p>To properly test methods annotated with <a href="https://github.com/PreAuthorize" class="user-mention">@PreAuthorize</a>, we need to use integration tests that load the entire Spring context. Here's how we can modify our test:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=AuthorizedServiceIntegrationTest.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/4152cea6d018ce10a56780ec6aaa1349 | jq '.files."AuthorizedServiceIntegrationTest.java".content'
-    
-      </pre> </div> </div>
+<div style="display:none;">
+  <p>import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.test.context.support.WithMockUser;
+import reactor.test.StepVerifier;
+import org.springframework.security.access.AccessDeniedException;
+import static org.mockito.Mockito.when;</p>
+
+  <p><a href="https://github.com/SpringBootTest" class="user-mention">@SpringBootTest</a>(properties = {"spring.profiles.active=test"})
+public class AuthorizedServiceIntegrationTest {</p>
+
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>@Autowired
+private AuthorizedService authorizedService;
+
+@Mock
+private PropertyConfig propertyConfig;
+
+@Test
+@WithMockUser(authorities = "ADMIN")
+void testHasKafkaAllowedAuthority_withAccess() {
+
+    when(propertyConfig.getKafkaAllowedAuthority()).thenReturn("ADMIN");
+
+    StepVerifier.create(authorizedService.hasAuthority())
+            .expectNext(true)
+            .verifyComplete();
+}
+
+@Test
+void testHasKafkaAllowedAuthority_withoutAccess() {
+
+    StepVerifier.create(authorizedService.hasAuthority())
+            .expectError(AccessDeniedException.class)
+            .verify();
+} }
+</code></pre></div>  </div>
+</div>
+
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/4152cea6d018ce10a56780ec6aaa1349.js?file=AuthorizedServiceIntegrationTest.java"></script> <button class="copy-button">Copy</button> </div>
 
 
 

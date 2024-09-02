@@ -288,11 +288,7 @@ header li {
 
 <p>If a bucket has no versioning, we can empty s3 bucket using aws cli via jenkins</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/eec7e619c93f9f2c2874d26833200bce.js?file=pipeline1.groovy"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/eec7e619c93f9f2c2874d26833200bce | jq '.files."pipeline1.groovy".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/eec7e619c93f9f2c2874d26833200bce.js?file=pipeline1.groovy"></script> <button class="copy-button">Copy</button> </div>
 
 <p>If there's versioning, then it will fail with the following error:</p>
 
@@ -314,11 +310,7 @@ header li {
 
 <p>We need to delete all versions and delete markers to empty the s3 bucket.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/eec7e619c93f9f2c2874d26833200bce.js?file=pipeline2.groovy"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/eec7e619c93f9f2c2874d26833200bce | jq '.files."pipeline2.groovy".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/eec7e619c93f9f2c2874d26833200bce.js?file=pipeline2.groovy"></script> <button class="copy-button">Copy</button> </div>
 
 
 

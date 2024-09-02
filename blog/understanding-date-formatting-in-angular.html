@@ -290,11 +290,7 @@ header li {
 
 <p>For example, if you have a date value endDate in your component, you can format it in the template like this:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component.html"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/3e9d22bd1078e502e7ca858134379f4d | jq '.files."component.html".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component.html"></script> <button class="copy-button">Copy</button> </div>
 
 <p>Here, 'short' is one of the predefined format options. It will display the date in a short format.</p>
 
@@ -304,35 +300,19 @@ header li {
 
 <p>First, add DatePipe to your providers array in <code class="language-plaintext highlighter-rouge">app.module.ts</code>. This step is necessary because when you want to use a service (like DatePipe) in your component, Angular needs to know where it should create or find an instance of that service. By adding it to the providers array, you're telling Angular that it should be available for injection in this module.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=app.module.ts"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/3e9d22bd1078e502e7ca858134379f4d | jq '.files."app.module.ts".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=app.module.ts"></script> <button class="copy-button">Copy</button> </div>
 
 <p>Next, import the DatePipe from @angular/common in your component file.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component1.ts"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/3e9d22bd1078e502e7ca858134379f4d | jq '.files."component1.ts".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component1.ts"></script> <button class="copy-button">Copy</button> </div>
 
 <p>In your component's TypeScript file, inject the DatePipe into your component's constructor.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component2.ts"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/3e9d22bd1078e502e7ca858134379f4d | jq '.files."component2.ts".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component2.ts"></script> <button class="copy-button">Copy</button> </div>
 
 <p>Lastly, use the DatePipe to format dates in your component's code</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component3.ts"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/3e9d22bd1078e502e7ca858134379f4d | jq '.files."component3.ts".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/3e9d22bd1078e502e7ca858134379f4d.js?file=component3.ts"></script> <button class="copy-button">Copy</button> </div>
 
 <p>Here, the transform method of DatePipe is used to format the date. The result is stored in the formattedDate variable, which you can then use in your template or anywhere else in your component.</p>
 

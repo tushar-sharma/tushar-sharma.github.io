@@ -304,11 +304,7 @@ header li {
 
 <p>Snapshot repositories store development versions of artifacts. The Spring Snapshot Repository contains the latest updates. Add this to your <code class="language-plaintext highlighter-rouge">build.gradle</code> to access the Spring Snapshot Repository and Spring AI dependency:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=build.gradle"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/a180a0e9603e7fe9d018b220387465f6 | jq '.files."build.gradle".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=build.gradle"></script> <button class="copy-button">Copy</button> </div>
 
 <h3 id="api-keys">API Keys</h3>
 
@@ -321,11 +317,7 @@ header li {
 
 <p>Create <code class="language-plaintext highlighter-rouge">controller/BooksController.java</code>`:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController1.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/a180a0e9603e7fe9d018b220387465f6 | jq '.files."BooksController1.java".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController1.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>In the above code, <code class="language-plaintext highlighter-rouge">openAiClient</code> is injected through constructor injection, which is a preferred method in Spring for dependency injection. The <a href="https://github.com/Autowired" class="user-mention">@Autowired</a> annotation is not required when using constructor injection.</p>
 
@@ -342,11 +334,7 @@ header li {
 
 <p>PromptTemplate is useful for dynamically constructing prompts with variables. It ensures cleaner code and easier manipulation of the prompt string.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController2.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/a180a0e9603e7fe9d018b220387465f6 | jq '.files."BooksController2.java".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController2.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>If you go to : <code class="language-plaintext highlighter-rouge">http://localhost:8080/books/booker/2003</code>, it will output something like</p>
 
@@ -366,11 +354,7 @@ A path variable is a part of the URL that is captured and used as a variable in 
 
 <p>A record class in Java is a concise way to create immutable data objects.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BookWinner.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/a180a0e9603e7fe9d018b220387465f6 | jq '.files."BookWinner.java".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BookWinner.java"></script> <button class="copy-button">Copy</button> </div>
 
 <h3 id="parsing-ai-response-into-java-object">Parsing AI Response into Java Object</h3>
 
@@ -378,11 +362,7 @@ A path variable is a part of the URL that is captured and used as a variable in 
 
 <p><code class="language-plaintext highlighter-rouge">parser.getFormat()</code> returns a string that represents the format in which the AI should return the data, making it easier to parse into the BookerWinner object.</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController3.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/a180a0e9603e7fe9d018b220387465f6 | jq '.files."BooksController3.java".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/a180a0e9603e7fe9d018b220387465f6.js?file=BooksController3.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>If you go to : <code class="language-plaintext highlighter-rouge">http://localhost:8080/books/booker/2003</code>, it will output something like</p>
 

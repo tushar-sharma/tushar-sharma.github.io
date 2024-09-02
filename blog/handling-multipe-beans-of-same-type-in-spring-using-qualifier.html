@@ -288,11 +288,7 @@ header li {
 
 <p>Suppose you have two beans of same type like</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean1.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/d3879dba90ba8946da656b1d032913be | jq '.files."Bean1.java".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean1.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>When Spring encounters these beans, it will throw an error due to the ambiguity of which bean to autowire.</p>
 
@@ -302,21 +298,13 @@ header li {
 
 <h3 id="define-beans-with-qualifier">Define Beans with <a href="https://github.com/Qualifier" class="user-mention">@Qualifier</a>:</h3>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean2.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/d3879dba90ba8946da656b1d032913be | jq '.files."Bean2.java".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean2.java"></script> <button class="copy-button">Copy</button> </div>
 
 <h3 id="autowire-beans-with-qualifier">Autowire Beans with Qualifier</h3>
 
 <p>Use the<code class="language-plaintext highlighter-rouge"> @Qualifier</code> annotation to specify which bean to inject in your components:</p>
 
-<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean3.java"></script> <button class="copy-button">Copy</button>   <div style="display: none;"> <pre>
-        
-      curl -s https://api.github.com/gists/d3879dba90ba8946da656b1d032913be | jq '.files."Bean3.java".content'
-    
-      </pre> </div> </div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/d3879dba90ba8946da656b1d032913be.js?file=Bean3.java"></script> <button class="copy-button">Copy</button> </div>
 
 <p>Using the <a href="https://github.com/Qualifier" class="user-mention">@Qualifier</a> annotation in Spring allows you to manage multiple beans of the same type efficiently. By specifying unique qualifiers for each bean and using these qualifiers during autowiring, you can avoid conflicts and ensure your application runs smoothly.</p>
 
