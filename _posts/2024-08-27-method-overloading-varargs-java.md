@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Method Overloading and Varargs in Java
-image: https://unsplash.com/photos/5d20kdvFCfA/download?w=800
-thumb: https://unsplash.com/photos/5d20kdvFCfA/download?w=800
+image: https://unsplash.com/photos/g_6WXkOMi6w/download?w=800
+thumb: https://unsplash.com/photos/g_6WXkOMi6w/download?w=800
 author: tushar sharma
 category: blog
 tags:
