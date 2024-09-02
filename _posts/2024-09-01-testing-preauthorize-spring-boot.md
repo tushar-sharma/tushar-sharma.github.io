@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unit Testing Preauthorize Annotation in Spring Boot
+title: Testing Preauthorize Annotation in Spring Boot
 image: https://unsplash.com/photos/kdqncvp6rao/download?w=800
 thumb: https://unsplash.com/photos/kdqncvp6rao/download?w=800
 author: tushar sharma
