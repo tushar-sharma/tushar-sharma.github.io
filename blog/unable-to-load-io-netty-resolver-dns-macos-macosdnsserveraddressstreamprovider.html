@@ -59,8 +59,8 @@
 <meta property="og:title" content="Resolving Netty's DNS Resolution Error on MacOS M1 Systems">
 <meta name="author" content="Tushar Sharma">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="In the evolving landscape of software development, the Apple M1 chip has introduced a paradigm shift in performance and efficiency. However, like any new technology, it comes with its own set of challenges. One such challenge is the DNS resolution error encountered when using the Netty library. In this article, we will delve deep into the root cause of this issue and provide a solution for both Gradle and Maven users.">
-<meta property="og:description" content="In the evolving landscape of software development, the Apple M1 chip has introduced a paradigm shift in performance and efficiency. However, like any new technology, it comes with its own set of challenges. One such challenge is the DNS resolution error encountered when using the Netty library. In this article, we will delve deep into the root cause of this issue and provide a solution for both Gradle and Maven users.">
+<meta name="description" content="Developers using Netty on MacOS M1 systems may encounter an error indicating a missing DNS resolver library. This error arises because Netty utilizes native code for optimal DNS resolution, and the necessary library might not be present on M1 systems.">
+<meta property="og:description" content="Developers using Netty on MacOS M1 systems may encounter an error indicating a missing DNS resolver library. This error arises because Netty utilizes native code for optimal DNS resolution, and the necessary library might not be present on M1 systems.">
 <link rel="canonical" href="https://randomwits.com/blog/unable-to-load-io-netty-resolver-dns-macos-macosdnsserveraddressstreamprovider">
 <meta property="og:url" content="https://randomwits.com/blog/unable-to-load-io-netty-resolver-dns-macos-macosdnsserveraddressstreamprovider">
 <meta property="og:site_name" content="RandomWits">
@@ -71,7 +71,7 @@
 <meta property="twitter:image" content="https://unsplash.com/photos/XWar9MbNGUY/download?w=800">
 <meta property="twitter:title" content="Resolving Netty's DNS Resolution Error on MacOS M1 Systems">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2023-08-26T00:00:00-04:00","datePublished":"2023-08-26T00:00:00-04:00","description":"In the evolving landscape of software development, the Apple M1 chip has introduced a paradigm shift in performance and efficiency. However, like any new technology, it comes with its own set of challenges. One such challenge is the DNS resolution error encountered when using the Netty library. In this article, we will delve deep into the root cause of this issue and provide a solution for both Gradle and Maven users.","headline":"Resolving Netty&#39;s DNS Resolution Error on MacOS M1 Systems","image":"https://unsplash.com/photos/XWar9MbNGUY/download?w=800","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/unable-to-load-io-netty-resolver-dns-macos-macosdnsserveraddressstreamprovider"},"url":"https://randomwits.com/blog/unable-to-load-io-netty-resolver-dns-macos-macosdnsserveraddressstreamprovider"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2023-08-26T00:00:00-04:00","datePublished":"2023-08-26T00:00:00-04:00","description":"Developers using Netty on MacOS M1 systems may encounter an error indicating a missing DNS resolver library. This error arises because Netty utilizes native code for optimal DNS resolution, and the necessary library might not be present on M1 systems.","headline":"Resolving Netty&#39;s DNS Resolution Error on MacOS M1 Systems","image":"https://unsplash.com/photos/XWar9MbNGUY/download?w=800","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/unable-to-load-io-netty-resolver-dns-macos-macosdnsserveraddressstreamprovider"},"url":"https://randomwits.com/blog/unable-to-load-io-netty-resolver-dns-macos-macosdnsserveraddressstreamprovider"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -259,7 +259,7 @@ header li {
 
 
 
-  <p>Tags:  <a class="mytag" href="/tag/macos" title="View posts tagged with: macos">macos</a>    </p>
+  <p>Tags:  <a class="mytag" href="/tag/macos" title="View posts tagged with: macos">macos</a>    <a class="mytag" href="/tag/gradle" title="View posts tagged with: gradle">gradle</a>    <a class="mytag" href="/tag/maven" title="View posts tagged with: maven">maven</a>    </p>
   
   
   
@@ -282,40 +282,35 @@ header li {
 
   
 
-<p>In the evolving landscape of software development, the Apple M1 chip has introduced a paradigm shift in performance and efficiency. However, like any new technology, it comes with its own set of challenges. One such challenge is the DNS resolution error encountered when using the Netty library. In this article, we will delve deep into the root cause of this issue and provide a solution for both Gradle and Maven users.</p>
+<p>Developers using Netty on MacOS M1 systems may encounter an error indicating a missing DNS resolver library. This error arises because Netty utilizes native code for optimal DNS resolution, and the necessary library might not be present on M1 systems.</p>
 
-<h3 id="error">Error</h3>
+<h2 id="error">Error</h2>
 
-<p>Developers utilizing the Netty library on MacOS M1 systems might encounter the following error:</p>
+<div style="display:none;">
+  <p>Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'.</p>
+</div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'.
-</code></pre></div></div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b25327b11fa0d1f42f9ccd2f05235817.js?file=Error.txt"></script> <button class="copy-button">Copy</button> </div>
 
-<p>This error stems from Netty's inability to access the native MacOS DNS resolver. The consequence of this is potential incorrect DNS resolutions, which can lead to a myriad of network-related issues in your application.</p>
-
-<h3 id="the-underlying-cause">The Underlying Cause</h3>
+<h2 id="cause">Cause</h2>
 
 <p>Netty uses native code to interface with the system's DNS resolver for optimal performance. On MacOS systems, especially those with the M1 chip, the required native library might be missing, leading to the aforementioned error. The solution is to explicitly provide this native library.</p>
 
-<h3 id="solution">Solution</h3>
+<h2 id="solution">Solution</h2>
 
 <p>For projects managed with Gradle, you need to include the following dependency in your build.gradle file:</p>
 
-<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">runtimeOnly</span><span class="o">(</span><span class="s2">"io.netty:netty-resolver-dns-native-macos:4.1.76.Final:osx-aarch_64"</span><span class="o">)</span>
-</code></pre></div></div>
+<h3 id="gradle">Gradle</h3>
 
-<p>For Maven Users:</p>
+<div style="display:none;">
+  <p>runtimeOnly("io.netty:netty-resolver-dns-native-macos:4.1.76.Final:osx-aarch_64")</p>
+</div>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>io.netty<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>netty-resolver-dns-native-macos<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>4.1.76.Final<span class="nt">&lt;/version&gt;</span>
-    <span class="nt">&lt;classifier&gt;</span>osx-aarch_64<span class="nt">&lt;/classifier&gt;</span>
-    <span class="nt">&lt;scope&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div></div>
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b25327b11fa0d1f42f9ccd2f05235817.js?file=build.gradle"></script> <button class="copy-button">Copy</button> </div>
 
-<p>After adding this, it's advisable to run mvn clean install to ensure all dependencies are correctly updated.</p>
+<h3 id="maven">Maven</h3>
+
+<div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/b25327b11fa0d1f42f9ccd2f05235817.js?file=pom.xml"></script> <button class="copy-button">Copy</button> </div>
 
 
 

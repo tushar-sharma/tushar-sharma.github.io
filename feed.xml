@@ -2365,10 +2365,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;7578ea5b-2eeb-41b2-8cfa-b0954d8ddf21&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;a433e4c1-9155-46a9-b5d2-ad577014dee1&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;7578ea5b-2eeb-41b2-8cfa-b0954d8ddf21&apos;,
+    &apos;a433e4c1-9155-46a9-b5d2-ad577014dee1&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4015,10 +4015,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;fd13dd27-d67a-4b3a-bc55-59a873403244&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;7f8e31d0-fb57-47e7-af09-2ecf8fed28d9&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;fd13dd27-d67a-4b3a-bc55-59a873403244&apos;,
+    &apos;7f8e31d0-fb57-47e7-af09-2ecf8fed28d9&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -7092,42 +7092,37 @@ The String... syntax in Java denotes a varargs (variable number of arguments). I
       
         <item>
           <title>Resolving Netty&apos;s DNS Resolution Error on MacOS M1 Systems</title>
-          <description>&lt;p&gt;In the evolving landscape of software development, the Apple M1 chip has introduced a paradigm shift in performance and efficiency. However, like any new technology, it comes with its own set of challenges. One such challenge is the DNS resolution error encountered when using the Netty library. In this article, we will delve deep into the root cause of this issue and provide a solution for both Gradle and Maven users.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+          <description>&lt;p&gt;Developers using Netty on MacOS M1 systems may encounter an error indicating a missing DNS resolver library. This error arises because Netty utilizes native code for optimal DNS resolution, and the necessary library might not be present on M1 systems.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;In the evolving landscape of software development, the Apple M1 chip has introduced a paradigm shift in performance and efficiency. However, like any new technology, it comes with its own set of challenges. One such challenge is the DNS resolution error encountered when using the Netty library. In this article, we will delve deep into the root cause of this issue and provide a solution for both Gradle and Maven users.&lt;/p&gt;
+&lt;p&gt;Developers using Netty on MacOS M1 systems may encounter an error indicating a missing DNS resolver library. This error arises because Netty utilizes native code for optimal DNS resolution, and the necessary library might not be present on M1 systems.&lt;/p&gt;
 
-&lt;h3 id=&quot;error&quot;&gt;Error&lt;/h3&gt;
+&lt;h2 id=&quot;error&quot;&gt;Error&lt;/h2&gt;
 
-&lt;p&gt;Developers utilizing the Netty library on MacOS M1 systems might encounter the following error:&lt;/p&gt;
+&lt;div style=&quot;display:none;&quot;&gt;
+  &lt;p&gt;Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on &apos;io.netty:netty-resolver-dns-native-macos&apos;.&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on &apos;io.netty:netty-resolver-dns-native-macos&apos;.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b25327b11fa0d1f42f9ccd2f05235817.js?file=Error.txt&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
-&lt;p&gt;This error stems from Netty&apos;s inability to access the native MacOS DNS resolver. The consequence of this is potential incorrect DNS resolutions, which can lead to a myriad of network-related issues in your application.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-underlying-cause&quot;&gt;The Underlying Cause&lt;/h3&gt;
+&lt;h2 id=&quot;cause&quot;&gt;Cause&lt;/h2&gt;
 
 &lt;p&gt;Netty uses native code to interface with the system&apos;s DNS resolver for optimal performance. On MacOS systems, especially those with the M1 chip, the required native library might be missing, leading to the aforementioned error. The solution is to explicitly provide this native library.&lt;/p&gt;
 
-&lt;h3 id=&quot;solution&quot;&gt;Solution&lt;/h3&gt;
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
 
 &lt;p&gt;For projects managed with Gradle, you need to include the following dependency in your build.gradle file:&lt;/p&gt;
 
-&lt;div class=&quot;language-gradle highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;runtimeOnly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;io.netty:netty-resolver-dns-native-macos:4.1.76.Final:osx-aarch_64&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;gradle&quot;&gt;Gradle&lt;/h3&gt;
 
-&lt;p&gt;For Maven Users:&lt;/p&gt;
+&lt;div style=&quot;display:none;&quot;&gt;
+  &lt;p&gt;runtimeOnly(&quot;io.netty:netty-resolver-dns-native-macos:4.1.76.Final:osx-aarch_64&quot;)&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.netty&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;netty-resolver-dns-native-macos&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;4.1.76.Final&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;classifier&amp;gt;&lt;/span&gt;osx-aarch_64&lt;span class=&quot;nt&quot;&gt;&amp;lt;/classifier&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;runtime&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b25327b11fa0d1f42f9ccd2f05235817.js?file=build.gradle&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 
-&lt;p&gt;After adding this, it&apos;s advisable to run mvn clean install to ensure all dependencies are correctly updated.&lt;/p&gt;
+&lt;h3 id=&quot;maven&quot;&gt;Maven&lt;/h3&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/b25327b11fa0d1f42f9ccd2f05235817.js?file=pom.xml&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
 </description>
           <pubDate>2023-08-26T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/unable-to-load-io-netty-resolver-dns-macos-macosdnsserveraddressstreamprovider</link>
