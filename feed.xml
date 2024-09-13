@@ -339,6 +339,150 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>792. Number of Matching Subsequences</title>
+          <description>&lt;p&gt;Given a string s and an array of strings words, return the number of words[i] that is a subsequence of s. A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Given a string s and an array of strings words, return the number of words[i] that is a subsequence of s.&lt;/p&gt;
+
+&lt;p&gt;A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.&lt;/p&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;Input:&lt;/p&gt;
+
+&lt;p&gt;s = &quot;abcde&quot;
+words = [&quot;a&quot;, &quot;bb&quot;, &quot;acd&quot;, &quot;ace&quot;]
+Output:&lt;/p&gt;
+
+&lt;p&gt;3 (&quot;a&quot;, &quot;acd&quot;, and &quot;ace&quot; are subsequences of s).&lt;/p&gt;
+
+&lt;h3 id=&quot;brute-force-approach&quot;&gt;Brute force Approach&lt;/h3&gt;
+
+&lt;p&gt;In this solution, we iterate through each word and check if it&apos;s a subsequence of the string s using a two-pointer technique.&lt;/p&gt;
+
+&lt;div style=&quot;display:none;&quot;&gt;
+  &lt;p&gt;class Solution {
+    public boolean isSubSequence(String word, String s) {
+        int sPos = 0;
+        int wPos = 0;&lt;/p&gt;
+
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    while (sPos &amp;lt; s.length()) { 
+        if (wPos == word.length()) break;
+
+        if (word.charAt(wPos) == s.charAt(sPos)) {
+            wPos++;
+        }
+        sPos++;
+    }
+
+    return wPos == word.length();
+}
+
+public int numMatchingSubseq(String s, String[] words) {
+    int count = 0;
+    for (String word : words) {
+        if (isSubSequence(word, s)) {
+            count++;
+        }
+    }
+    return count;
+} }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/5f1a0e8ba086c2ebe4a554b2628485b5.js?file=SubSequenceBrute.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h4 id=&quot;drawbacks&quot;&gt;Drawbacks:&lt;/h4&gt;
+
+&lt;p&gt;Time Complexity: O(m * n), where m is the length of s and n is the number of words. This brute force approach checks each word against the entire string s, leading to time limit exceeded (TLE) errors on large inputs.&lt;/p&gt;
+
+&lt;h3 id=&quot;optimized-approach-using-hashmap-and-binary-search&quot;&gt;Optimized Approach Using HashMap and Binary Search&lt;/h3&gt;
+
+&lt;p&gt;To optimize the brute force approach, we can precompute the indices of each character in s using a HashMap. Then, for each word, we perform binary search to efficiently find the next character&apos;s position in s.&lt;/p&gt;
+
+&lt;div style=&quot;display:none;&quot;&gt;
+  &lt;p&gt;class Solution {
+    public int numMatchingSubseq(String s, String[] words) {
+        int count = 0;
+        Map&amp;lt;Character, List&lt;Integer&gt;&amp;gt; map = new HashMap&amp;lt;&amp;gt;();&lt;/Integer&gt;&lt;/p&gt;
+
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    for (int i = 0; i &amp;lt; s.length(); i++) {
+        char c = s.charAt(i);
+        map.computeIfAbsent(c, k -&amp;gt; new ArrayList&amp;lt;&amp;gt;()).add(i);
+    }
+
+    for (String word : words) {
+        boolean found = true;
+        int prevIndex = -1;
+
+        for (char c : word.toCharArray()) {
+            if (!map.containsKey(c)) {
+                found = false;
+                break;
+            }
+
+            List&amp;lt;Integer&amp;gt; indices = map.get(c);
+            int pos = binarySearch(indices, prevIndex);
+
+            if (pos == indices.size()) {
+                found = false;
+                break;
+            }
+
+            prevIndex = indices.get(pos);
+        }
+
+        if (found) count++;
+    }
+
+    return count;
+}
+
+private int binarySearch(List&amp;lt;Integer&amp;gt; indices, int prevIndex) {
+    int low = 0;
+    int high = indices.size() - 1;
+
+    while (low &amp;lt;= high) {
+        int mid = low + (high - low) / 2;
+
+        if (indices.get(mid) &amp;lt;= prevIndex) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+
+    return low;
+} }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/5f1a0e8ba086c2ebe4a554b2628485b5.js?file=SubSequence.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h4 id=&quot;explanation&quot;&gt;Explanation&lt;/h4&gt;
+
+&lt;p&gt;HashMap Preprocessing: We create a HashMap where each character in s maps to a list of its indices. This allows us to quickly locate all occurrences of a character.&lt;/p&gt;
+
+&lt;p&gt;Binary Search for Subsequence Check: For each word, we use binary search to find the position of the next character in s after the last found character. This ensures that the characters appear in order while minimizing unnecessary comparisons.&lt;/p&gt;
+
+&lt;h4 id=&quot;benefits&quot;&gt;Benefits&lt;/h4&gt;
+
+&lt;p&gt;Time Complexity: O(m + n * k * log(l)), where:
+m is the length of s.
+n is the number of words.
+k is the average length of the words.
+l is the average number of occurrences of a character in s.&lt;/p&gt;
+
+&lt;p&gt;This is significantly faster, especially for larger inputs, since we reduce the time spent searching for characters using the precomputed HashMap and binary search.&lt;/p&gt;
+</description>
+          <pubDate>2024-09-12T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/number-of-matching-subsequences</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/number-of-matching-subsequences</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Testing Preauthorize Annotation in Spring Boot</title>
           <description>&lt;p&gt;Preauthorize annotation can be use to enforce access control in Spring Boot applications. It&apos;s part of Spring Security that allows you to specify access control expression for methods. These expressions are evaluated before method execution, determining whether the current user has the authority to invoke the method.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -2365,10 +2509,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;a433e4c1-9155-46a9-b5d2-ad577014dee1&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;3609a390-79e6-4042-86e1-6e4eeed924e2&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;a433e4c1-9155-46a9-b5d2-ad577014dee1&apos;,
+    &apos;3609a390-79e6-4042-86e1-6e4eeed924e2&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4015,10 +4159,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;7f8e31d0-fb57-47e7-af09-2ecf8fed28d9&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;0c9aab0a-5fbc-4c09-8a2f-849f2e3f3dd7&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;7f8e31d0-fb57-47e7-af09-2ecf8fed28d9&apos;,
+    &apos;0c9aab0a-5fbc-4c09-8a2f-849f2e3f3dd7&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
