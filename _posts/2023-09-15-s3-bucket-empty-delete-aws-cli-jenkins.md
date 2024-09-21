@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Empty s3 bucket and Delete using Jenkins and AWS CLI
-image: https://unsplash.com/photos/NVlcid8E5pI/download?w=800
-thumb: https://unsplash.com/photos/NVlcid8E5pI/download?w=800
+image: https://unsplash.com/photos/NVlcid8E5pI/download?w=437
+thumb: https://unsplash.com/photos/NVlcid8E5pI/download?w=437
 author: Tushar Sharma
 tags:
   - jenkins

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Travelling Hacks
-image: 'https://unsplash.com/photos/aSERflF331A/download?w=800'
-thumb: 'https://unsplash.com/photos/aSERflF331A/download?w=800'
+image: 'https://unsplash.com/photos/aSERflF331A/download?w=437'
+thumb: 'https://unsplash.com/photos/aSERflF331A/download?w=437'
 author: tushar sharma
 category: blog
 tags:

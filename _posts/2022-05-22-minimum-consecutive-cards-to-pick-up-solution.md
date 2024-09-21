@@ -8,7 +8,7 @@ tags:
 - python
 - hashmap
 name: minimum-cards-pick-up
-thumb: https://unsplash.com/photos/-2vD8lIhdnw/download?w=800
+thumb: https://unsplash.com/photos/-2vD8lIhdnw/download?w=437
 ---
 
 An interesting problem on leetcode to find minimum number of ways to pick up consecutive cards. We will start with a brute force algorithm that would exceed in time limit. Later we will improve upon this algorithm using hashmap.<!-- truncate_here -->

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Rent a Scooter in Cozumel, Mexico
-image: 'https://unsplash.com/photos/xRdZIt66FSE/download?w=800'
-thumb: 'https://unsplash.com/photos/xRdZIt66FSE/download?w=800'
+image: 'https://unsplash.com/photos/xRdZIt66FSE/download?w=437'
+thumb: 'https://unsplash.com/photos/xRdZIt66FSE/download?w=437'
 author: Tushar Sharma
 tags: 
  - mexico

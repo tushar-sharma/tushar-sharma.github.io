@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting Started With Parquet File Format
-image: https://unsplash.com/photos/1tpLdmxki-c/download?w=800
-thumb: https://unsplash.com/photos/1tpLdmxki-c/download?w=800
+image: https://unsplash.com/photos/1tpLdmxki-c/download?w=437
+thumb: https://unsplash.com/photos/1tpLdmxki-c/download?w=437
 author: Tushar Sharma
 tags:
   - parquet

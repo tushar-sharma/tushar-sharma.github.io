@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Maximum Width of Binary Tree
-image: https://unsplash.com/photos/GiIZSko7Guk/download?w=800
-thumb: https://unsplash.com/photos/GiIZSko7Guk/download?w=800
+image: https://unsplash.com/photos/GiIZSko7Guk/download?w=437
+thumb: https://unsplash.com/photos/GiIZSko7Guk/download?w=437
 author: Tushar Sharma
 category: blog
 published: true

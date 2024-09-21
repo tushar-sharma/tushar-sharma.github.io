@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 
-image: 'https://unsplash.com/photos/OdI2PZqKao4/download?w=800'
-thumb: 'https://unsplash.com/photos/OdI2PZqKao4/download?w=800'
+image: 'https://unsplash.com/photos/OdI2PZqKao4/download?w=437'
+thumb: 'https://unsplash.com/photos/OdI2PZqKao4/download?w=437'
 category: blog
 tags:
   - history

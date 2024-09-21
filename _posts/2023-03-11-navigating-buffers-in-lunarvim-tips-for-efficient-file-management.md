@@ -6,8 +6,8 @@ tags:
   - neovim
   - vim
   - lunarvim
-thumb: https://unsplash.com/photos/tSJc5U6f1M4/download?w=800
-image: https://unsplash.com/photos/tSJc5U6f1M4/download?w=800
+thumb: https://unsplash.com/photos/tSJc5U6f1M4/download?w=437
+image: https://unsplash.com/photos/tSJc5U6f1M4/download?w=437
 author: Tushar Sharma
 published: true
 ---

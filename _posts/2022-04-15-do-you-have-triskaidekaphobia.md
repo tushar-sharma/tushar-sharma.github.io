@@ -7,9 +7,9 @@ tags:
 - rationalism
 - python
 name: triskaidekaphobia
-thumb: https://unsplash.com/photos/yHG6llFLjS0/download?w=800
+thumb: https://unsplash.com/photos/yHG6llFLjS0/download?w=437
 summary: Homeopathy and pseudoscience
-image: https://unsplash.com/photos/yHG6llFLjS0/download?w=800
+image: https://unsplash.com/photos/yHG6llFLjS0/download?w=437
 author: Tushar Sharma
 ---
 
@@ -18,7 +18,7 @@ I grew up in India with a diet of basmati rice and superstition. I have seen ped
 
 
 <center>
-<img  class="thumb"  src="https://unsplash.com/photos/yHG6llFLjS0/download?w=800" alt="13 number" >
+<img  class="thumb"  src="https://unsplash.com/photos/yHG6llFLjS0/download?w=437" alt="13 number" >
 </center>
 
 ### Tryst with Superstition
@@ -57,7 +57,7 @@ When I moved to the United States, I believed I left behind the ghost of superst
 
 
 <center>
-<img  class="thumb"  src="https://unsplash.com/photos/TxprxES25nA/download?w=800" alt="13 number" >
+<img  class="thumb"  src="https://unsplash.com/photos/TxprxES25nA/download?w=437" alt="13 number" >
 </center>
 
 

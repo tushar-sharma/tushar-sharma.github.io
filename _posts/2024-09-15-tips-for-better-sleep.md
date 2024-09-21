@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Tips for Better Sleep
-image: https://unsplash.com/photos/kEFrAFKY6Sk/download?w=800
-thumb: https://unsplash.com/photos/kEFrAFKY6Sk/download?w=800
+image: https://unsplash.com/photos/QTe-MHNUrz4/download?w=437
+thumb: https://unsplash.com/photos/QTe-MHNUrz4/download?w=437
 author:  tushar sharma
 category: blog
 tags:

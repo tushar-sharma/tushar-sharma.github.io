@@ -2,8 +2,8 @@
 layout: post
 date: 2022-12-23
 title: Scan Code locally using SonarQube
-image: https://unsplash.com/photos/3yzE1SUfbwY/download?w=800
-thumb: https://unsplash.com/photos/3yzE1SUfbwY/download?w=800
+image: https://unsplash.com/photos/3yzE1SUfbwY/download?w=437
+thumb: https://unsplash.com/photos/3yzE1SUfbwY/download?w=437
 tags:
 - docker
 - sonarqube

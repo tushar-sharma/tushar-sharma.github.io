@@ -4,9 +4,9 @@ title: How to play Super Mario Odyssey on PC (Yuzu Emulator)
 category: blog
 tags:
   - game
-thumb: https://unsplash.com/photos/_R95VMWyn7A/download?w=800"
+thumb: https://unsplash.com/photos/_R95VMWyn7A/download?w=437"
 summary: How to play Super Mario Odyssey on PC (Yuzu Emulator)
-image: https://unsplash.com/photos/_R95VMWyn7A/download?w=800"
+image: https://unsplash.com/photos/_R95VMWyn7A/download?w=437"
 author: Tushar Sharma
 ---
 

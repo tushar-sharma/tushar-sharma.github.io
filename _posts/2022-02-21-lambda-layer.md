@@ -7,8 +7,8 @@ tags:
   - aws
   - python
 featuredPost: false
-image: 'https://unsplash.com/photos/1pyqUh8Jx3E/download?w=800'
-thumb: 'https://unsplash.com/photos/1pyqUh8Jx3E/download?w=800'
+image: 'https://unsplash.com/photos/1pyqUh8Jx3E/download?w=437'
+thumb: 'https://unsplash.com/photos/1pyqUh8Jx3E/download?w=437'
 published: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Handling File Operations in Jenkins Pipeline
-image: 'https://unsplash.com/photos/LNwIJHUtED4/download?w=800'
-thumb: 'https://unsplash.com/photos/LNwIJHUtED4/download?w=800'
+image: 'https://unsplash.com/photos/LNwIJHUtED4/download?w=437'
+thumb: 'https://unsplash.com/photos/LNwIJHUtED4/download?w=437'
 tags:
  - jenkins
 author: Tushar Sharma

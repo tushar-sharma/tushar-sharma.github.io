@@ -1,8 +1,8 @@
 ---
 layout: post
 title: How to call Ebay Real live Person Customer Service
-image: 'https://unsplash.com/photos/GFrBMipOd_E/download?w=800'
-thumb: 'https://unsplash.com/photos/GFrBMipOd_E/download?w=800'
+image: 'https://unsplash.com/photos/GFrBMipOd_E/download?w=437'
+thumb: 'https://unsplash.com/photos/GFrBMipOd_E/download?w=437'
 author: Tushar Sharma
 category: blog
 tags: 

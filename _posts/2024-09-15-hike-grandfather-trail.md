@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Hike the Grandfather Trail
-image: https://unsplash.com/photos/UVyOfX3v0Ls/download?w=800
-thumb: https://unsplash.com/photos/UVyOfX3v0Ls/download?w=800
+image: https://unsplash.com/photos/UVyOfX3v0Ls/download?w=437
+thumb: https://unsplash.com/photos/UVyOfX3v0Ls/download?w=437
 author: 
 category: blog
 tags:

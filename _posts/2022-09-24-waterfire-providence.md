@@ -5,9 +5,9 @@ category: blog
 tags:
   - rhode island
   - travel
-thumb: https://unsplash.com/photos/pMsebqxRnxs/download?w=800
+thumb: https://unsplash.com/photos/pMsebqxRnxs/download?w=437
 summary: Fizz up with carbonated water
-image: https://unsplash.com/photos/pMsebqxRnxs/download?w=800
+image: https://unsplash.com/photos/pMsebqxRnxs/download?w=437
 author: Tushar Sharma
 featuredPost: false
 published: true

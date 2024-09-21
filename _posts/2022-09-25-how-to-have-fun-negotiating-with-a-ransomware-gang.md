@@ -4,9 +4,9 @@ title: How to have fun negotiating with a ransomware gang
 category: blog
 tags:
   - hacking
-thumb: https://unsplash.com/photos/flha0KwRrRc/download?w=800
+thumb: https://unsplash.com/photos/flha0KwRrRc/download?w=437
 summary: How to have fun negotiating with a ransomware gang 
-image: https://unsplash.com/photos/flha0KwRrRc/download?w=800
+image: https://unsplash.com/photos/flha0KwRrRc/download?w=437
 author: Tushar Sharma
 featuredPost: false
 published: true

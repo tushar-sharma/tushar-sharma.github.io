@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Lazy lizard in Cozumel, Mexico
-image: 'https://unsplash.com/photos/pKr-xB-x2Zw/download?w=800'
-thumb: 'https://unsplash.com/photos/pKr-xB-x2Zw/download?w=800'
+image: 'https://unsplash.com/photos/pKr-xB-x2Zw/download?w=437'
+thumb: 'https://unsplash.com/photos/pKr-xB-x2Zw/download?w=437'
 author: Tushar Sharma
 tags:
  - mexico

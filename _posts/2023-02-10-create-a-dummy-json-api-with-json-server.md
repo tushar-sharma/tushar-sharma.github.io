@@ -4,8 +4,8 @@ title: Create a Dummy JSON API with JSON-Server
 category: blog
 tags:
   - api
-thumb: https://unsplash.com/photos/rfqaMzumGQQ/download?w=800
-image: https://unsplash.com/photos/rfqaMzumGQQ/download?w=800
+thumb: https://unsplash.com/photos/rfqaMzumGQQ/download?w=437
+image: https://unsplash.com/photos/rfqaMzumGQQ/download?w=437
 author: Tushar Sharma
 published: true
 ---

@@ -6,9 +6,9 @@ tags:
   - visa
   - usa
   - india
-thumb: 'https://unsplash.com/photos/rFKBUwLg_WQ/download?w=800'
+thumb: 'https://unsplash.com/photos/rFKBUwLg_WQ/download?w=437'
 summary: US H1b visa dropbox experience in India
-image: 'https://unsplash.com/photos/rFKBUwLg_WQ/download?w=800'
+image: 'https://unsplash.com/photos/rFKBUwLg_WQ/download?w=437'
 author: Tushar Sharma
 featuredPost: false
 published: true

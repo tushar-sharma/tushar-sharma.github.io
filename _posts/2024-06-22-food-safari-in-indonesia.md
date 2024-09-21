@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Food Safari in Indonesia
-image: 'https://unsplash.com/photos/m_DnPDhzGhg/download?w=800'
-thumb: 'https://unsplash.com/photos/m_DnPDhzGhg/download?w=800'
+image: 'https://unsplash.com/photos/m_DnPDhzGhg/download?w=437'
+thumb: 'https://unsplash.com/photos/m_DnPDhzGhg/download?w=437'
 category: blog
 tags:
  - food

@@ -5,8 +5,8 @@ layout: post
 tags:
 - jekyll
 featuredPost: true
-image: https://unsplash.com/photos/Z895fnYRbog/download?w=800
-thumb: https://unsplash.com/photos/Z895fnYRbog/download?w=800
+image: https://unsplash.com/photos/Z895fnYRbog/download?w=437
+thumb: https://unsplash.com/photos/Z895fnYRbog/download?w=437
 ---
 
 

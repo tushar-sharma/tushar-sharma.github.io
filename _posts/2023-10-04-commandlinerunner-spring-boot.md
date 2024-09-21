@@ -4,8 +4,8 @@ title: Delving into CommandLineRunner in Spring Boot
 category: blog
 tags:
   - spring boot
-thumb: https://unsplash.com/photos/7mfR5n3XozU/download?w=800
-image: https://unsplash.com/photos/7mfR5n3XozU/download?w=800
+thumb: https://unsplash.com/photos/7mfR5n3XozU/download?w=437
+image: https://unsplash.com/photos/7mfR5n3XozU/download?w=437
 author: Tushar Sharma
 published: true
 quiz: true
