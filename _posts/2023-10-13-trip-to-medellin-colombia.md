@@ -4,9 +4,9 @@ title: Snapshot of my travel to Medellin, Colombia
 tags:
   - travel
   - Colombia
-thumb: https://unsplash.com/photos/Iqa-WlbNjqs/download?w=800"
+thumb: https://unsplash.com/photos/Iqa-WlbNjqs/download?w=437"
 summary: Snapshot of my travel to Medellin, Colombia
-image: https://unsplash.com/photos/Iqa-WlbNjqs/download?w=800"
+image: https://unsplash.com/photos/Iqa-WlbNjqs/download?w=437"
 author: Tushar Sharma
 category: blog
 published: false

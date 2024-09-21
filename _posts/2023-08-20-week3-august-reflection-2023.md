@@ -4,8 +4,8 @@ category: blog
 layout: post
 tags: 
   - letters
-image: https://unsplash.com/photos/nLXOatvTaLo/download?w=800
-thumb: https://unsplash.com/photos/nLXOatvTaLo/download?w=800
+image: https://unsplash.com/photos/nLXOatvTaLo/download?w=437
+thumb: https://unsplash.com/photos/nLXOatvTaLo/download?w=437
 published: true
 ---
 

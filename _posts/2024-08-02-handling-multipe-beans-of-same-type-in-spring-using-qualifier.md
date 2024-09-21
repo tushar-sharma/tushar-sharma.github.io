@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Handling Multiple Beans of the Same Type in Spring with Qualifier
-image: 'https://unsplash.com/photos/FTFUli-xi3E/download?w=800'
-thumb: 'https://unsplash.com/photos/FTFUli-xi3E/download?w=800'
+image: 'https://unsplash.com/photos/FTFUli-xi3E/download?w=437'
+thumb: 'https://unsplash.com/photos/FTFUli-xi3E/download?w=437'
 author: tushar sharma
 category: blog
 tags:

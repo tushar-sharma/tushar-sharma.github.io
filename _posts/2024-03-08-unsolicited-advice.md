@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Unsolicited Advice - The noise of Well Meaning Strangers
-image: 'https://unsplash.com/photos/n31JPLu8_Pw/download?w=800'
-thumb: 'https://unsplash.com/photos/n31JPLu8_Pw/download?w=800'
+image: 'https://unsplash.com/photos/n31JPLu8_Pw/download?w=437'
+thumb: 'https://unsplash.com/photos/n31JPLu8_Pw/download?w=437'
 author: Tushar Sharma
 category: blog
 tags:

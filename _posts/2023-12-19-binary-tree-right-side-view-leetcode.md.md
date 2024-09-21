@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Binary Tree Right Side View Leetcode
-image: https://unsplash.com/photos/eZt5mvF7RcU/download?w=800
-thumb: https://unsplash.com/photos/eZt5mvF7RcU/download?w=800
+image: https://unsplash.com/photos/eZt5mvF7RcU/download?w=437
+thumb: https://unsplash.com/photos/eZt5mvF7RcU/download?w=437
 author: ;
 tags:
   - python

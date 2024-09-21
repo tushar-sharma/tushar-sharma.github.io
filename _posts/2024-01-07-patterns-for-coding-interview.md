@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Patterns for Coding Interview
-image: https://unsplash.com/photos/8rj4sz9YLCI/download?w=800
-thumb: https://unsplash.com/photos/8rj4sz9YLCI/download?w=800
+image: https://unsplash.com/photos/8rj4sz9YLCI/download?w=437
+thumb: https://unsplash.com/photos/8rj4sz9YLCI/download?w=437
 author: Tushar Sharma;
 category: blog
 published: false

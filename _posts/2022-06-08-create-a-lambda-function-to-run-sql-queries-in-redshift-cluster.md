@@ -10,8 +10,8 @@ tags:
   - redshift
 featuredPost: true
 summary: check fraud
-image: 'https://unsplash.com/photos/BjL7XCugMNY/download?w=800'
-thumb: 'https://unsplash.com/photos/BjL7XCugMNY/download?w=800'
+image: 'https://unsplash.com/photos/BjL7XCugMNY/download?w=437'
+thumb: 'https://unsplash.com/photos/BjL7XCugMNY/download?w=437'
 author: Tushar Sharma
 published: true
 ---

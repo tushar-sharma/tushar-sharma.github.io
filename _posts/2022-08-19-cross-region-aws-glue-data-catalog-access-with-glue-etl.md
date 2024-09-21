@@ -5,9 +5,9 @@ category: blog
 tags:
   - aws
   - glue
-thumb: https://unsplash.com/photos/2EJCSULRwC8/download?w=800
+thumb: https://unsplash.com/photos/2EJCSULRwC8/download?w=437
 summary: Fizz up with carbonated water
-image: https://unsplash.com/photos/2EJCSULRwC8/download?w=800
+image: https://unsplash.com/photos/2EJCSULRwC8/download?w=437
 author: Tushar Sharma
 featuredPost: false
 published: true

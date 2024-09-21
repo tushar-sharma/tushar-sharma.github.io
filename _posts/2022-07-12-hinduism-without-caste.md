@@ -5,9 +5,9 @@ category: blog
 tags:
   - hinduism
   - caste
-thumb: https://unsplash.com/photos/RvQpr47ckUE/download?w=800
+thumb: https://unsplash.com/photos/RvQpr47ckUE/download?w=437
 summary: Hinduism without caste
-image: https://unsplash.com/photos/RvQpr47ckUE/download?w=800
+image: https://unsplash.com/photos/RvQpr47ckUE/download?w=437
 author: Tushar Sharma
 featuredPost: false
 published: true

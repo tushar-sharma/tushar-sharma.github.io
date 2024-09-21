@@ -4,8 +4,8 @@ category: blog
 title: Leetcode - Longest Substring Without Repeating Characters
 date: 2022-01-17 21:07 -0500
 name: coin-change
-thumb: https://unsplash.com/photos/YK0HPwWDJ1I/download?w=800
-image: https://unsplash.com/photos/YK0HPwWDJ1I/download?w=800
+thumb: https://unsplash.com/photos/YK0HPwWDJ1I/download?w=437
+image: https://unsplash.com/photos/YK0HPwWDJ1I/download?w=437
 tags:
 - leetcode
 - two pointers

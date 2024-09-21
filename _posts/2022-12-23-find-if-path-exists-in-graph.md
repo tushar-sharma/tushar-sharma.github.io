@@ -2,8 +2,8 @@
 layout: post
 date: 2022-12-23
 title: Find if Path Exists in Graph leetcode solution
-image: https://unsplash.com/photos/XBxQZLNBM0Q/download?w=800
-thumb: https://unsplash.com/photos/XBxQZLNBM0Q/download?w=800
+image: https://unsplash.com/photos/XBxQZLNBM0Q/download?w=437
+thumb: https://unsplash.com/photos/XBxQZLNBM0Q/download?w=437
 tags:
 - leetcode
 - java

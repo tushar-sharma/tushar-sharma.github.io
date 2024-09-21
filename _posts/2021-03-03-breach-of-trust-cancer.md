@@ -8,8 +8,8 @@ tags:
 - breast cancer
 - bone marrow
 name: breach-trust-cancer
-thumb: https://unsplash.com/photos/hYcSP6SpoK0/download?w=800
-image: https://unsplash.com/photos/hYcSP6SpoK0/download?w=800
+thumb: https://unsplash.com/photos/hYcSP6SpoK0/download?w=437
+image: https://unsplash.com/photos/hYcSP6SpoK0/download?w=437
 ---
 
 I am currently reading <a href="http://randomwits.com/books" target="_blank">The Emperor of Maladies</a>. This is a fascination book where Siddhartha Mukherjee not only educate its readers about cancer disease but also shares interesting tidbits. Werner Bezwoda was an infamous oncologist who fudged data about bone marrow transplant in women with metastatic breast cancer.<!-- truncate_here -->

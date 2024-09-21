@@ -4,9 +4,9 @@ title: Snapshot of my travel to Cancun, Mexico
 tags:
   - travel
   - mexico
-thumb: https://unsplash.com/photos/D4mC9bNSCsE/download?w=800"
+thumb: https://unsplash.com/photos/D4mC9bNSCsE/download?w=437"
 summary: Snapshot of my travel to Cancun, Mexico
-image: https://unsplash.com/photos/D4mC9bNSCsE/download?w=800"
+image: https://unsplash.com/photos/D4mC9bNSCsE/download?w=437"
 author: Tushar Sharma
 category: blog
 published: false

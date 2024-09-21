@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Optimizing SQL Queries - Understanding and Refreshing Materialized Views
-image: https://unsplash.com/photos/PUvPZckRnOg/download?w=800
-thumb: https://unsplash.com/photos/PUvPZckRnOg/download?w=800
+image: https://unsplash.com/photos/PUvPZckRnOg/download?w=437
+thumb: https://unsplash.com/photos/PUvPZckRnOg/download?w=437
 tags:
   - sql
   - database

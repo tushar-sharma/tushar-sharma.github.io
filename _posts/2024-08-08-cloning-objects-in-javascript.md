@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Understanding Object References in JavaScript
-image: 'https://unsplash.com/photos/p_HYA_T-1WU/download?w=800'
-thumb: 'https://unsplash.com/photos/p_HYA_T-1WU/download?w=800'
+image: 'https://unsplash.com/photos/p_HYA_T-1WU/download?w=437'
+thumb: 'https://unsplash.com/photos/p_HYA_T-1WU/download?w=437'
 author: tushar sharma
 tags:
  - javascript

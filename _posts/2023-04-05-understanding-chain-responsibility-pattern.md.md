@@ -2,8 +2,8 @@
 layout: post
 date: 2023-04-05
 title: Understanding the Chain of Responsibility Pattern
-image: https://unsplash.com/photos//download?w=800
-thumb: https://unsplash.com/photos//download?w=800
+image: https://unsplash.com/photos//download?w=437
+thumb: https://unsplash.com/photos//download?w=437
 author: Tushar Sharma
 published: false
 ---

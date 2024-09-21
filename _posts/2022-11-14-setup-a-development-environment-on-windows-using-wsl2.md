@@ -4,8 +4,8 @@ title: Setup a development environment on Windows using wsl2
 tags:
   - wsl
   - windows
-image: 'https://unsplash.com/photos/flha0KwRrRc/download?w=800'
-thumb: 'https://unsplash.com/photos/flha0KwRrRc/download?w=800'
+image: 'https://unsplash.com/photos/flha0KwRrRc/download?w=437'
+thumb: 'https://unsplash.com/photos/flha0KwRrRc/download?w=437'
 author: Tushar Sharma
 category: blog
 published: true

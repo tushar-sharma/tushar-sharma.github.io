@@ -7,9 +7,9 @@ tags:
   - wsl
   - windows
 name: wsl2-vpn-internet
-thumb: 'https://unsplash.com/photos/0Fws0jyIt9s/download?w=800'
+thumb: 'https://unsplash.com/photos/0Fws0jyIt9s/download?w=437'
 summary: How to fix WSL2 internet connection while on VPN
-image: 'https://unsplash.com/photos/0Fws0jyIt9s/download?w=800'
+image: 'https://unsplash.com/photos/0Fws0jyIt9s/download?w=437'
 author: Tushar Sharma
 published: true
 category: blog

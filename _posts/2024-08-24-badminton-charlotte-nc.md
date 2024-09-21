@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Where to play Badminton in Charlotte NC
-image: https://unsplash.com/photos/s7R3sGbiYvA/download?w=800
-thumb: https://unsplash.com/photos/s7R3sGbiYvA/download?w=800
+image: https://unsplash.com/photos/s7R3sGbiYvA/download?w=437
+thumb: https://unsplash.com/photos/s7R3sGbiYvA/download?w=437
 author: tushar sharma
 category: blog
 tags:

@@ -4,9 +4,9 @@ title: Git rebase tutorial
 category: blog
 tags:
   - git
-thumb: https://unsplash.com/photos/3o7O_6fi7Qc/download?w=800
+thumb: https://unsplash.com/photos/3o7O_6fi7Qc/download?w=437
 summary: Git rebase tutorial
-image: https://unsplash.com/photos/3o7O_6fi7Qc/download?w=800
+image: https://unsplash.com/photos/3o7O_6fi7Qc/download?w=437
 author: Tushar Sharma
 ---
 

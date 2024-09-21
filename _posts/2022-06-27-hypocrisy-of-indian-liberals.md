@@ -7,8 +7,8 @@ tags:
   - india
 featuredPost: true
 summary: Why liberal values are different than pseudo liberal
-image: 'https://unsplash.com/photos/bm3L5PRAJCI/download?w=800'
-thumb: 'https://unsplash.com/photos/bm3L5PRAJCI/download?w=800'
+image: 'https://unsplash.com/photos/bm3L5PRAJCI/download?w=437'
+thumb: 'https://unsplash.com/photos/bm3L5PRAJCI/download?w=437'
 author: Tushar Sharma
 published: false
 ---

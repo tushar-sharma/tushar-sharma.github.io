@@ -5,8 +5,8 @@ title: Pandas inner join on dataframes
 tags:
    - python
    - pandas
-image: https://unsplash.com/photos/4EajIuUxgAQ/download?w=800
-thumb: https://unsplash.com/photos/4EajIuUxgAQ/download?w=800
+image: https://unsplash.com/photos/4EajIuUxgAQ/download?w=437
+thumb: https://unsplash.com/photos/4EajIuUxgAQ/download?w=437
 author: Tushar Sharma
 category: blog
 ---

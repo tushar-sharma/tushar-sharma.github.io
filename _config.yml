@@ -47,7 +47,7 @@ algolia:
     - blog/*
 pagination:
   enabled: true
-  per_page: 4
+  per_page: 3
   permalink: '/page:num/'
   sort_field: 'date'
   sort_reverse: true
@@ -62,3 +62,8 @@ disqus:
 twitter_username: tshrocks
 title_image: "https://i.imgur.com/4HK7q8C.jpg"
 description: "Welcome to Randomwits, my digital nest."
+svgo:
+  multipass: false
+  floatPrecision: 2 
+  plugins:
+    - cleanupIDs: false

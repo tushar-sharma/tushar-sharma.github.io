@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Optimizing Builds with Gradle Build Cache
-image: 'https://unsplash.com/photos/5UNYknY0MTA/download?w=800'
-thumb: 'https://unsplash.com/photos/5UNYknY0MTA/download?w=800'
+image: 'https://unsplash.com/photos/5UNYknY0MTA/download?w=437'
+thumb: 'https://unsplash.com/photos/5UNYknY0MTA/download?w=437'
 author: Tushar Sharma
 category: blog
 published: true

@@ -4,9 +4,9 @@ title: Snapshot of my travel to Cartagena, Colombia
 tags:
   - travel
   - colombia
-thumb: https://unsplash.com/photos/mnrkkwOTqqE/download?w=800"
+thumb: https://unsplash.com/photos/mnrkkwOTqqE/download?w=437"
 summary: Snapshot of my travel to Cartagena, Colombia
-image: https://unsplash.com/photos/mnrkkwOTqqE/download?w=800"
+image: https://unsplash.com/photos/mnrkkwOTqqE/download?w=437"
 author: Tushar Sharma
 category: blog
 published: false

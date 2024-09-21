@@ -6,8 +6,8 @@ tags:
   - opinion
 featuredPost: false
 summary: Is Wikipedia bias? 
-image: 'https://unsplash.com/photos/v2HgNzRDfII/download?w=800'
-thumb: 'https://unsplash.com/photos/v2HgNzRDfII/download?w=800'
+image: 'https://unsplash.com/photos/v2HgNzRDfII/download?w=437'
+thumb: 'https://unsplash.com/photos/v2HgNzRDfII/download?w=437'
 author: Tushar Sharma
 published: true
 ---

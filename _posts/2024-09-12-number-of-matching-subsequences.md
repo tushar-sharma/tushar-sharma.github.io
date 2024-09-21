@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 792. Number of Matching Subsequences
-image: https://unsplash.com/photos/5E5N49RWtbA/download?w=800
-thumb: https://unsplash.com/photos/5E5N49RWtbA/download?w=800
+image: https://unsplash.com/photos/5E5N49RWtbA/download?w=437
+thumb: https://unsplash.com/photos/5E5N49RWtbA/download?w=437
 author: tushar sharma
 category: blog
 tags:

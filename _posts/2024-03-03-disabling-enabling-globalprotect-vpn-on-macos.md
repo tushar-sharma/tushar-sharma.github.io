@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 
-image: 'https://unsplash.com/photos/flha0KwRrRc/download?w=800'
-thumb: 'https://unsplash.com/photos/flha0KwRrRc/download?w=800'
+image: 'https://unsplash.com/photos/flha0KwRrRc/download?w=437'
+thumb: 'https://unsplash.com/photos/flha0KwRrRc/download?w=437'
 author: Tushar Sharma
 tags:
   - macos

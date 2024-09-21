@@ -1,8 +1,8 @@
 ---
 layout: post
 title: AWS CLI to stop running instances of statemachine
-image: https://unsplash.com/photos/aiyBwbrWWlo/download?w=800
-thumb: https://unsplash.com/photos/aiyBwbrWWlo/download?w=800
+image: https://unsplash.com/photos/aiyBwbrWWlo/download?w=437
+thumb: https://unsplash.com/photos/aiyBwbrWWlo/download?w=437
 author: Tushar Sharma
 tags:
   - aws

@@ -2,8 +2,8 @@
 layout: post
 date: 2023-05-21
 title: Guide to Travel to Thailand
-image: https://unsplash.com/photos/rH1aA4TqGms/download?w=800
-thumb: https://unsplash.com/photos/rH1aA4TqGms/download?w=800
+image: https://unsplash.com/photos/rH1aA4TqGms/download?w=437
+thumb: https://unsplash.com/photos/rH1aA4TqGms/download?w=437
 tags:
   - thailand
   - travel

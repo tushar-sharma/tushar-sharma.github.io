@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Resolving Netty's DNS Resolution Error on MacOS M1 Systems
-image: https://unsplash.com/photos/XWar9MbNGUY/download?w=800
-thumb: https://unsplash.com/photos/XWar9MbNGUY/download?w=800
+image: https://unsplash.com/photos/XWar9MbNGUY/download?w=437
+thumb: https://unsplash.com/photos/XWar9MbNGUY/download?w=437
 author: Tushar Sharma
 category: blog
 published: true

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Review of The Molecule of More by Daniel Z. Lieberman, Michael E. Long
-image: https://unsplash.com/photos/jjMvkdunYt8/download?w=800
-thumb: https://unsplash.com/photos/jjMvkdunYt8/download?w=800
+image: https://unsplash.com/photos/jjMvkdunYt8/download?w=437
+thumb: https://unsplash.com/photos/jjMvkdunYt8/download?w=437
 author: tushar sharma
 category: blog
 tags: books

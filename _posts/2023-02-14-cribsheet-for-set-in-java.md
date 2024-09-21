@@ -5,8 +5,8 @@ category: blog
 tags:
   - java
   - interview
-thumb: https://unsplash.com/photos/xZTScJvolYk/download?w=800
-image: https://unsplash.com/photos/xZTScJvolYk/download?w=800
+thumb: https://unsplash.com/photos/xZTScJvolYk/download?w=437
+image: https://unsplash.com/photos/xZTScJvolYk/download?w=437
 author: Tushar Sharma
 published: true
 ---

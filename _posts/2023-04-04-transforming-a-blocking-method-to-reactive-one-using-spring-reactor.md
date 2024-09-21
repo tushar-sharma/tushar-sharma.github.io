@@ -2,8 +2,8 @@
 layout: post
 date: 2023-04-04
 title: Transforming a blocking method to a reactive one using Spring Reactor
-image: https://unsplash.com/photos/qac9Q3pWHWg/download?w=800
-thumb: https://unsplash.com/photos/qac9Q3pWHWg/download?w=800
+image: https://unsplash.com/photos/qac9Q3pWHWg/download?w=437
+thumb: https://unsplash.com/photos/qac9Q3pWHWg/download?w=437
 author: Tushar Sharma
 mutipleTab: true
 tags:

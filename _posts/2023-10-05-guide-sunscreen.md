@@ -4,8 +4,8 @@ title: Sunscreen for Dummies
 category: blog
 tags:
   - sunscreen
-thumb: https://unsplash.com/photos/rhn-r1IHi0I/download?w=800
-image: https://unsplash.com/photos/rhn-r1IHi0I/download?w=800
+thumb: https://unsplash.com/photos/rhn-r1IHi0I/download?w=437
+image: https://unsplash.com/photos/rhn-r1IHi0I/download?w=437
 author: Tushar Sharma
 published: true
 ---

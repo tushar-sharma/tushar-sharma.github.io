@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Publish your Java Library to Maven Local Using Gradle
-image: 'https://unsplash.com/photos/0HAIE_uZ5-0/download?w=800'
-thumb: 'https://unsplash.com/photos/0HAIE_uZ5-0/download?w=800'
+image: 'https://unsplash.com/photos/0HAIE_uZ5-0/download?w=437'
+thumb: 'https://unsplash.com/photos/0HAIE_uZ5-0/download?w=437'
 author: Tushar Sharma
 category: blog
 tags:

@@ -7,9 +7,9 @@ tags:
   - neovim
   - lunarvim
 name: neovim-setup-lunarvim
-thumb: 'https://unsplash.com/photos/8IJ5xNTv1QM/download?w=800'
+thumb: 'https://unsplash.com/photos/8IJ5xNTv1QM/download?w=437'
 summary: Neovim Setup with LunarVim
-image: 'https://unsplash.com/photos/8IJ5xNTv1QM/download?w=800'
+image: 'https://unsplash.com/photos/8IJ5xNTv1QM/download?w=437'
 author: Tushar Sharma
 published: true
 ---

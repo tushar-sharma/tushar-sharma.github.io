@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Whoosh train from Jakarta to Bandung
-image: 'https://unsplash.com/photos/nFjG0pcAixo/download?w=800'
-thumb: 'https://unsplash.com/photos/nFjG0pcAixo/download?w=800'
+image: 'https://unsplash.com/photos/nFjG0pcAixo/download?w=437'
+thumb: 'https://unsplash.com/photos/nFjG0pcAixo/download?w=437'
 category: blog
 tags:
   - indonesia
