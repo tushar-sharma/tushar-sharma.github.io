@@ -16,12 +16,8 @@ author: Tushar Sharma
 
 The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.<!-- truncate_here -->
 
-
 The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.
 
-<center>
-<img alt="usb Modem image" src="https://i.imgur.com/y6rUbX9.jpg" >
-</center>
 
 I'll be using `wvdial` to configure the internet. It's likely that your system will have the package pre installed. Otherwise you can manually download it from <a href="http://packages.debian.org/squeeze/wvdial" target="_blank">here</a>. 
 
@@ -60,4 +56,3 @@ Now run the following command.
 	# wvdial
 
 Bravo! It connects to the internet. Press <b>Ctrl + C</b> anytime to disconnect.
-
