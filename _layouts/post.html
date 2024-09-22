@@ -23,6 +23,7 @@ root: true
 {% if truncated_post != content %}
   <p>Tags: {% for tag in page.tags %} <a class="mytag" href="/tag/{{ tag }}" title="View posts tagged with: {{ tag }}">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %} </p>
   
+
   {% if page.author %}
   {% assign author_tag = page.author | downcase %}
   <div class="author-info">
@@ -42,6 +43,16 @@ root: true
       {% endfor %}
     </span>
   </div>
+  {% endif %}
+
+  {% if page.thumb %}
+    <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+      <img 
+      src="{% if page.image contains '?w=' %}{{ page.image | replace: '?w=437', '?w=800' }}{% else %}{{ page.image | append: '?w=800' }}{% endif %}" 
+      alt="Featured image for {{ page.title }}" 
+      style="max-width:100%; height:auto;" 
+    />
+     </div>
   {% endif %}
 
   {{ truncated_post.last }}
