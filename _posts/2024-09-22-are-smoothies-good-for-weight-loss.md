@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Are Smoothies Good for Weight Loss?
-image: https://unsplash.com/photos/5fsb2FGoJ8A/download?w=800
-thumb: https://unsplash.com/photos/5fsb2FGoJ8A/download?w=800
+image: https://unsplash.com/photos/bKEpLAopqkk/download?w=800
+thumb: https://unsplash.com/photos/bKEpLAopqkk/download?w=800
 author: tushar sharma
 category: blog
 tags:
