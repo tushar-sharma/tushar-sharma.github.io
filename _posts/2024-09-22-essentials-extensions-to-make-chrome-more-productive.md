@@ -64,5 +64,10 @@ Frustrated when you can’t copy-paste from certain websites? This extension ena
 ### [Small Tabs](https://chromewebstore.google.com/detail/small-tabs/ebfkcjpfhipceldaglgmaihlacpcomgj)
 Reduce the size of your Chrome tabs and keep your browser organized with Small Tabs. It’s especially useful when you have too many tabs open and want a cleaner workspace.
 
+### [Jasper Everywhere Extension](https://chromewebstore.google.com/detail/jasper-everywhere-extensi/bpiohchncadidhohcajcnoelomephkdd)
+If you frequently work with AI writing tools, Jasper Everywhere brings the power of Jasper AI to any text field in your browser, allowing you to generate content quickly and efficiently.
+
+### [Compose AI](https://chromewebstore.google.com/detail/compose-ai-ai-powered-wri/ddlbpiadoechcolndfeaonajmngmhblj?hl=en)
+Compose AI speeds up your writing process by generating smart, AI-powered suggestions for text completion. It’s a great tool for those who write emails, reports, or articles regularly.
 
 Happy browsing!
