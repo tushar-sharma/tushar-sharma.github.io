@@ -339,6 +339,74 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Essential Things to Do After Installing Chrome</title>
+          <description>&lt;p&gt;Google Chrome is one of the most widely-used web browsers for its speed, security, and versatility. After installing Chrome, there are a few key steps you can take to optimize your experience and boost productivity.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Google Chrome is one of the most widely-used web browsers for its speed, security, and versatility. After installing Chrome, there are a few key steps you can take to optimize your experience and boost productivity.&lt;/p&gt;
+
+&lt;h2 id=&quot;enable-developer-mode&quot;&gt;Enable Developer Mode&lt;/h2&gt;
+&lt;p&gt;If you want to unlock advanced features in Chrome, enabling &quot;Developer Mode&quot; is a must. This feature allows you to install custom extensions, debug web pages, and access more powerful tools. Here&apos;s how to enable it:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open Chrome and navigate to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chrome://extensions/&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;In the top-right corner, toggle the button to enable &lt;strong&gt;Developer Mode&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;install-essential-chrome-extensions&quot;&gt;Install Essential Chrome Extensions&lt;/h2&gt;
+
+&lt;p&gt;To enhance your productivity and browsing experience, consider installing these Chrome extensions:&lt;/p&gt;
+
+&lt;h3 id=&quot;ublock-origin&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm&quot;&gt;uBlock Origin&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;A lightweight and powerful ad blocker that improves your browsing experience by blocking intrusive ads, trackers, and malware.&lt;/p&gt;
+
+&lt;h3 id=&quot;vimium&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb&quot;&gt;Vimium&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;If you&apos;re a keyboard enthusiast, Vimium lets you navigate the web entirely with your keyboard, making your browsing experience faster and more efficient.&lt;/p&gt;
+
+&lt;h3 id=&quot;adguard-adblocker&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg&quot;&gt;AdGuard AdBlocker&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;AdGuard blocks ads, pop-ups, and trackers while offering privacy protection. It enhances your online security and keeps your browsing fast and smooth.&lt;/p&gt;
+
+&lt;h3 id=&quot;checkbot&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/checkbot-seo-web-speed-se/dagohlmlhagincbfilmkadjgmdnkjinl&quot;&gt;Checkbot&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;An all-in-one tool to check your website’s SEO, speed, and security. It&apos;s a must-have if you manage or build websites.&lt;/p&gt;
+
+&lt;h3 id=&quot;grammarly&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en&quot;&gt;Grammarly&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Improve your writing and avoid embarrassing grammar mistakes with Grammarly. It helps you write better across emails, social media, and documents.&lt;/p&gt;
+
+&lt;h3 id=&quot;cookie-remover&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce?hl=en&quot;&gt;Cookie Remover&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Quickly remove cookies for the current site with one click. This extension is great for privacy-conscious users who want to manage cookies on-the-fly.&lt;/p&gt;
+
+&lt;h3 id=&quot;pop-up-blocker&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche&quot;&gt;Pop-up Blocker&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Prevent annoying pop-ups from interrupting your browsing experience. This extension keeps unwanted ads and pop-ups at bay, improving both speed and focus.&lt;/p&gt;
+
+&lt;h3 id=&quot;screen-recorder&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden&quot;&gt;Screen Recorder&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Capture and record your screen directly from Chrome. It&apos;s useful for creating tutorials, recording meetings, or sharing visual feedback.&lt;/p&gt;
+
+&lt;h3 id=&quot;medium-parser&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/medium-parser/egejbknaophaadmhijkepokfchkbnelc&quot;&gt;Medium Parser&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Read Medium articles without hitting the paywall. This extension allows you to freely access Medium content without limitations.&lt;/p&gt;
+
+&lt;p&gt;If it gets blocked by the Chrome Web Store, you can &lt;a href=&quot;https://github.com/Xatta-Trone/medium-parser-extension/archive/refs/heads/main.zip&quot;&gt;download it here&lt;/a&gt;. Once downloaded, unzip the file, go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chrome://extensions&lt;/code&gt;, and drag the unzipped folder, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chrome&lt;/code&gt;,  into the page. It will automatically install.&lt;/p&gt;
+
+&lt;h3 id=&quot;i-dont-care-about-cookies&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja&quot;&gt;I Don&apos;t Care About Cookies&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Automatically remove cookie notifications from websites, keeping your browsing experience seamless and uncluttered.&lt;/p&gt;
+
+&lt;h3 id=&quot;json-formatter&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa/related?hl=en&quot;&gt;JSON Formatter&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;If you work with JSON data, this extension formats JSON responses so that they’re easy to read, edit, and debug.&lt;/p&gt;
+
+&lt;h3 id=&quot;enable-copy-paste&quot;&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/enable-copypaste/leghnagnephbfcencnbonkbdimeokhem?hl=en&quot;&gt;Enable Copy-Paste&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Frustrated when you can’t copy-paste from certain websites? This extension enables the ability to copy-paste text from sites that normally block it.&lt;/p&gt;
+
+&lt;h3 id=&quot;small-tabs&quot;&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/small-tabs/ebfkcjpfhipceldaglgmaihlacpcomgj&quot;&gt;Small Tabs&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Reduce the size of your Chrome tabs and keep your browser organized with Small Tabs. It’s especially useful when you have too many tabs open and want a cleaner workspace.&lt;/p&gt;
+
+&lt;p&gt;Happy browsing!&lt;/p&gt;
+</description>
+          <pubDate>2024-09-22T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/essentials-extensions-to-make-chrome-more-productive</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/essentials-extensions-to-make-chrome-more-productive</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Are Smoothies Good for Weight Loss?</title>
           <description>&lt;p&gt;This morning, I woke up and made a smoothie for myself—a mix of blueberries, raspberries, and milk, with no added sugar. I felt pretty good, thinking, &quot;At least I&apos;m eating healthy!&quot; But then, curiosity got the better of me. Are smoothies really as healthy as they seem?.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -2691,10 +2759,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;87c5e042-b756-46d3-bf28-29ae93229e24&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;8900b504-f34a-4a77-a778-be48d4a18a63&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;87c5e042-b756-46d3-bf28-29ae93229e24&apos;,
+    &apos;8900b504-f34a-4a77-a778-be48d4a18a63&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4341,10 +4409,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;3a259796-3878-4b47-8fd1-64c538d84db4&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;93888a99-42b8-4e8d-a7b7-10266dd47626&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;3a259796-3878-4b47-8fd1-64c538d84db4&apos;,
+    &apos;93888a99-42b8-4e8d-a7b7-10266dd47626&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
