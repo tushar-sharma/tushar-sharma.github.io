@@ -6,7 +6,8 @@ tags:
 - programming
 - general
 name: people-program
-thumb: /img/sunset.jpg
+thumb:  https://unsplash.com/photos/twukN12EN7c/download?w=437
+image: https://unsplash.com/photos/twukN12EN7c/download?w=437
 ---
 
 <style type="text/css">
