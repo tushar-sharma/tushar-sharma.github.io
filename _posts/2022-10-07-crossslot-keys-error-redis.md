@@ -52,7 +52,7 @@ This would most likely will result in following error
 
 ## Solution 1
 
-One solution is to force redis to insert the keys into same slot. We can achieve that using patter "{...}"
+One solution is to force redis to insert the keys into same slot. We can achieve that using pattern "{...}"
 
 So we have to modify are keys as `{user1}.key1` and `{user1}.key2`. Here hash slots are only computed for keys within the braces
 

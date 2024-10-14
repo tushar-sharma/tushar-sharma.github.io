@@ -86,6 +86,10 @@ There are two ways to add Gist code :
 Just add this code 
 
 ```
+<div style="display:none;" markdown="1">
+Duplicate code for indexing
+</div>
+
 {% template  customCode.html %}
 ---
 id: <ID>
@@ -124,23 +128,31 @@ files:
 Create a html page in `encrypted` folder. This will contain the protected text
 
 ```
+# Use latest Node version like
+$  source ~/.nvm/nvm.sh
+$ nvm use v20.10.0 
+# write secret post in myPost.md
+$  pandoc -s encrypted/myPost.md -o encrypted/myPost.html
 $ npm i -g staticrypt
 $ export password=
-$ staticrypt myPost.html -p ${password}
+$ staticrypt encrypted/myPost.html -p ${password}
 ```
 
 Then add this 
 
 ```
 <iframe
-  style="position: relative;  width: 100%;"
-   height="400"
-	   src="{{ root_url }}/encrypted/{{ page.path | split:'/'  | last | replace: '.md' '' }}.html"
+  id="dynamicIframe"
+  style="position: relative; width: 100%; height: 400px;"
+  src="{{ root_url }}/encrypted/{{ page.path | split:'/'  | last | replace: '.md' '' }}.html"
   frameborder="0"
+  scrolling="no"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
   title="Sample"
 ></iframe>
+
+<script src="{{ root_url }}/js/resizeIframe.js"></script>
 ```
 
 ### Tags
