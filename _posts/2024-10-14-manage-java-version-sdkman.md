@@ -61,7 +61,6 @@ This will show you the Java versions you currently have installed on your machin
 
 ```bash
 sdk install java 17.0.0-open
-
 ```
 
 This command downloads and installs OpenJDK 17. SDKMAN! will set this version as the default unless you specify otherwise.
