@@ -37,6 +37,8 @@ exclude:
 - branch.txt
 - .gitignore
 - .jekyll-cache
+- encrypted/*.md
+- .staticrypt.json
 - raw/
 algolia:
   application_id: '0XJJCPHPDY'
