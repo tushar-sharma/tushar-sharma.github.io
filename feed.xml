@@ -339,6 +339,517 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Manage Java Version Using SDKMAN</title>
+          <description>&lt;p&gt;As a Java developer, you often need to switch between multiple versions of Java for different projects. Managing this manually can be tedious, but SDKMAN! is a great tool that simplifies the process of installing, listing, and switching between Java versions.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;As a Java developer, you often need to switch between multiple versions of Java for different projects. Managing this manually can be tedious, but SDKMAN! is a great tool that simplifies the process of installing, listing, and switching between Java versions.&lt;/p&gt;
+
+&lt;p&gt;In this guide, we&apos;ll explore how to use SDKMAN! to:&lt;/p&gt;
+
+&lt;p&gt;List available and installed Java versions.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install specific Java versions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Switch between Java versions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set default and local versions for your projects.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;installing-sdkman&quot;&gt;Installing SDKMAN!&lt;/h3&gt;
+
+&lt;p&gt;First, if you don&apos;t have SDKMAN! installed, you can install it by running the following commands in your terminal:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://get.sdkman.io&quot;&lt;/span&gt; | bash
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/.sdkman/bin/sdkman-init.sh&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;to-verify-the-installation-run&quot;&gt;To verify the installation, run:&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sdk version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once SDKMAN! is installed, you can list all available Java versions and the ones you have installed locally.&lt;/p&gt;
+
+&lt;h3 id=&quot;list-all-available-java-versions&quot;&gt;List all available Java versions:&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sdk list java
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;list-installed-java-versions&quot;&gt;List installed Java versions:&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sdk current java
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This will show you the Java versions you currently have installed on your machine.&lt;/p&gt;
+
+&lt;h3 id=&quot;installing-a-specific-java-version&quot;&gt;Installing a Specific Java Version&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sdk &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;java 17.0.0-open
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command downloads and installs OpenJDK 17. SDKMAN! will set this version as the default unless you specify otherwise.&lt;/p&gt;
+
+&lt;h3 id=&quot;switching-between-java-versions&quot;&gt;Switching Between Java Versions&lt;/h3&gt;
+
+&lt;p&gt;You may need to switch Java versions frequently, depending on your project. SDKMAN! makes this seamless.&lt;/p&gt;
+
+&lt;h4 id=&quot;switch-globally-set-the-default-java-version&quot;&gt;Switch globally (set the default Java version):&lt;/h4&gt;
+
+&lt;p&gt;To switch the default Java version globally (for all projects), use the sdk use command. For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sdk use java 11.0.0-open
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This sets the default Java version system-wide to OpenJDK 11.&lt;/p&gt;
+
+&lt;h4 id=&quot;switch-locally-per-project&quot;&gt;Switch locally (per project):&lt;/h4&gt;
+
+&lt;p&gt;If you want to set a Java version for a specific project, navigate to your project folder and run:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sdk &lt;span class=&quot;nb&quot;&gt;env &lt;/span&gt;init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This creates a .sdkmanrc file where you can specify the Java version. To apply the version defined in .sdkmanrc, simply run:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sdk &lt;span class=&quot;nb&quot;&gt;env&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;SDKMAN! will automatically switch to the Java version specified in the project directory.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-a-default-java-version&quot;&gt;Setting a Default Java Version&lt;/h3&gt;
+
+&lt;p&gt;To set a default version that persists across terminal sessions:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sdk default java 17.0.0-open
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This command sets OpenJDK 17 as the default version system-wide.&lt;/p&gt;
+</description>
+          <pubDate>2024-10-14T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/manage-java-version-sdkman</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/manage-java-version-sdkman</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Weekly Logs from Oct 7 to 13, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from from Oct 7 to 13, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+
+const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A266:T278?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe id=&quot;dynamicIframe&quot; style=&quot;position: relative; width: 100%; height: 400px;&quot; src=&quot;/encrypted/2024-10-10-weekly-logs-2024-10-07-13.html&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
+
+&lt;script src=&quot;/js/resizeIframe.js&quot;&gt;&lt;/script&gt;
+
+</description>
+          <pubDate>2024-10-10T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2024-10-07-13</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-10-07-13</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>An Introduction to Spring Data Redis Reactive</title>
+          <description>&lt;p&gt;Spring Data Redis Reactive offers a powerful solution for working with Redis in a non-blocking, reactive manner. Let&apos;s dive into the key components and how to use them effectively.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Spring Data Redis Reactive offers a powerful solution for working with Redis in a non-blocking, reactive manner. Let&apos;s dive into the key components and how to use them effectively.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-up-dependencies&quot;&gt;Setting Up Dependencies&lt;/h3&gt;
+
+&lt;p&gt;To get started with Spring Data Redis Reactive, you need to include the appropriate dependency in your project. If you&apos;re using Maven, add the following to your pom.xml:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-data-redis-reactive&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For Gradle users, add this to your build.gradle:&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;org.springframework.boot:spring-boot-starter-data-redis-reactive&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This starter dependency brings in everything you need for reactive Redis operations, including the Lettuce driver, which is the preferred client for reactive Redis usage in Spring.&lt;/p&gt;
+
+&lt;p&gt;Spring Data Redis Reactive provides three main components for interacting with Redis:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;ReactiveRedisConnectionFactory&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ReactiveRedisOperations&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ReactiveRedisTemplate&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reactiveredisconnectionfactory&quot;&gt;ReactiveRedisConnectionFactory&lt;/h3&gt;
+
+&lt;p&gt;ReactiveRedisConnectionFactory is the cornerstone of Redis interactions in a reactive Spring application. It&apos;s responsible for creating and managing reactive Redis connections.&lt;/p&gt;
+
+&lt;h4 id=&quot;key-features&quot;&gt;Key Features&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Manages connection lifecycle&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Provides low-level access to Redis commands&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Supports connection pooling and custom configurations&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;when-to-use&quot;&gt;When to Use&lt;/h4&gt;
+
+&lt;p&gt;Use ReactiveRedisConnectionFactory when you need:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fine-grained control over Redis connections&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To execute raw Redis commands&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To implement custom Redis protocols or operations&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;code-example&quot;&gt;Code Example&lt;/h3&gt;
+
+&lt;div style=&quot;display:none;&quot;&gt;
+  &lt;p&gt;@Service
+public class LowLevelRedisService {
+    private final ReactiveRedisConnectionFactory connectionFactory;&lt;/p&gt;
+
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public LowLevelRedisService(ReactiveRedisConnectionFactory connectionFactory) {
+    this.connectionFactory = connectionFactory;
+}
+
+public Mono&amp;lt;String&amp;gt; executeCustomCommand(String key) {
+    return connectionFactory.getReactiveConnection()
+        .stringCommands()
+        .get(ByteBuffer.wrap(key.getBytes()))
+        .map(ByteBuffer::array)
+        .map(String::new);
+} }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4ebb9c09b2596714a50d94bbf9202d3c.js?file=ReactiveRedisConnectionFactory.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;reactiveredisoperations&quot;&gt;ReactiveRedisOperations&lt;/h3&gt;
+
+&lt;p&gt;ReactiveRedisOperations is an interface that defines a set of reactive Redis operations. It provides a higher-level abstraction compared to ReactiveRedisConnectionFactory.&lt;/p&gt;
+
+&lt;h4 id=&quot;key-features-1&quot;&gt;Key Features&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Defines operations for various Redis data structures (Strings, Lists, Sets, etc.)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Provides type-safe operations&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Allows for easy mocking in unit tests&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;when-to-use-1&quot;&gt;When to Use&lt;/h4&gt;
+
+&lt;p&gt;Use ReactiveRedisOperations when you:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Want to code against interfaces for better testability&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Need type-safe Redis operations&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Prefer a higher-level abstraction than raw connections&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;code-example-1&quot;&gt;Code Example&lt;/h4&gt;
+
+&lt;div style=&quot;display:none;&quot;&gt;
+  &lt;p&gt;@Service
+public class UserService {
+    private final ReactiveRedisOperations&amp;lt;String, User&amp;gt; redisOperations;&lt;/p&gt;
+
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public UserService(ReactiveRedisOperations&amp;lt;String, User&amp;gt; redisOperations) {
+    this.redisOperations = redisOperations;
+}
+
+public Mono&amp;lt;User&amp;gt; saveUser(User user) {
+    return redisOperations.opsForValue().set(user.getId(), user)
+        .thenReturn(user);
+}
+
+public Mono&amp;lt;User&amp;gt; getUser(String id) {
+    return redisOperations.opsForValue().get(id);
+} }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4ebb9c09b2596714a50d94bbf9202d3c.js?file=ReactiveRedisOperations.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;reactiveredistemplate&quot;&gt;ReactiveRedisTemplate&lt;/h3&gt;
+
+&lt;h4 id=&quot;key-features-2&quot;&gt;Key Features&lt;/h4&gt;
+
+&lt;p&gt;Implements ReactiveRedisOperations interface&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Handles serialization/deserialization of objects&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Provides exception translation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Supports Redis transactions&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;when-to-use-2&quot;&gt;When to Use&lt;/h4&gt;
+
+&lt;p&gt;Use ReactiveRedisTemplate when you:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Want a convenient, high-level API for Redis operations&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Need automatic serialization of complex objects&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Require support for Redis transactions&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;code-example-2&quot;&gt;Code Example&lt;/h4&gt;
+
+&lt;div style=&quot;display:none;&quot;&gt;
+  &lt;p&gt;@Service
+public class CacheService {
+    private final ReactiveRedisTemplate&amp;lt;String, User&amp;gt; redisTemplate;&lt;/p&gt;
+
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public CacheService(ReactiveRedisTemplate&amp;lt;String, User&amp;gt; redisTemplate) {
+    this.redisTemplate = redisTemplate;
+}
+
+public Mono&amp;lt;User&amp;gt; cacheUser(User user) {
+    return redisTemplate.opsForValue().set(user.getId(), user, Duration.ofMinutes(30))
+        .thenReturn(user);
+}
+
+public Mono&amp;lt;User&amp;gt; getCachedUser(String id) {
+    return redisTemplate.opsForValue().get(id);
+} }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/4ebb9c09b2596714a50d94bbf9202d3c.js?file=ReactiveRedisTemplate.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;All these &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Beans&lt;/code&gt; are autoconfigured by spring based on the dependency.&lt;/p&gt;
+</description>
+          <pubDate>2024-10-10T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/spring-data-redis-reactive</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/spring-data-redis-reactive</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Essential Things to Do After Installing Chrome</title>
           <description>&lt;p&gt;Google Chrome is one of the most widely-used web browsers for its speed, security, and versatility. After installing Chrome, there are a few key steps you can take to optimize your experience and boost productivity.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -396,6 +907,12 @@ if (typeof Object.assign !== 'function') {
 
 &lt;h3 id=&quot;small-tabs&quot;&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/small-tabs/ebfkcjpfhipceldaglgmaihlacpcomgj&quot;&gt;Small Tabs&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Reduce the size of your Chrome tabs and keep your browser organized with Small Tabs. It’s especially useful when you have too many tabs open and want a cleaner workspace.&lt;/p&gt;
+
+&lt;h3 id=&quot;jasper-everywhere-extension&quot;&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/jasper-everywhere-extensi/bpiohchncadidhohcajcnoelomephkdd&quot;&gt;Jasper Everywhere Extension&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;If you frequently work with AI writing tools, Jasper Everywhere brings the power of Jasper AI to any text field in your browser, allowing you to generate content quickly and efficiently.&lt;/p&gt;
+
+&lt;h3 id=&quot;compose-ai&quot;&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/compose-ai-ai-powered-wri/ddlbpiadoechcolndfeaonajmngmhblj?hl=en&quot;&gt;Compose AI&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Compose AI speeds up your writing process by generating smart, AI-powered suggestions for text completion. It’s a great tool for those who write emails, reports, or articles regularly.&lt;/p&gt;
 
 &lt;p&gt;Happy browsing!&lt;/p&gt;
 </description>
@@ -2759,10 +3276,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;8900b504-f34a-4a77-a778-be48d4a18a63&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;f3c7959c-e176-40cb-ac51-fa8cdd07b819&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;8900b504-f34a-4a77-a778-be48d4a18a63&apos;,
+    &apos;f3c7959c-e176-40cb-ac51-fa8cdd07b819&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4409,10 +4926,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;93888a99-42b8-4e8d-a7b7-10266dd47626&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;37cfeb88-a15b-4e69-8f50-69a9c2cd32c1&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;93888a99-42b8-4e8d-a7b7-10266dd47626&apos;,
+    &apos;37cfeb88-a15b-4e69-8f50-69a9c2cd32c1&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -10542,7 +11059,7 @@ Queued
 
 &lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
 
-&lt;p&gt;One solution is to force redis to insert the keys into same slot. We can achieve that using patter &quot;{…}&quot;&lt;/p&gt;
+&lt;p&gt;One solution is to force redis to insert the keys into same slot. We can achieve that using pattern &quot;{…}&quot;&lt;/p&gt;
 
 &lt;p&gt;So we have to modify are keys as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{user1}.key1&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{user1}.key2&lt;/code&gt;. Here hash slots are only computed for keys within the braces&lt;/p&gt;
 
@@ -10762,7 +11279,7 @@ On Yuzu Windows -&amp;gt; Go to File -&amp;gt; Open Yuzu folder &lt;br /&gt;&lt;
 Save the file under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;keys&lt;/code&gt; folder.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;You need to have already downloaded the game in NSP file format which I can&apos;t share due to copyright issues. Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yuzu&lt;/code&gt; emulator  and click on plus sign (Add new Game directory). Navigate to the game directory.&lt;/p&gt;
+&lt;p&gt;Download the game from &lt;a href=&quot;https://drive.google.com/file/d/1xwX7EO_YckfA43gD5v1WXsL7Tlkogehi/view?usp=sharing&quot;&gt;Google Drive&lt;/a&gt;. Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yuzu&lt;/code&gt; emulator  and click on plus sign (Add new Game directory). Navigate to the game directory.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -11571,7 +12088,7 @@ At the onset, one is confronted by the difficulty of defining what Hinduism is. 
 
 &lt;p&gt;Currently &lt;strong&gt;Rise of Tomb Raider&lt;/strong&gt; has a rating of 9 / 10 on &lt;strong&gt;Stream&lt;/strong&gt;. Below is the short video of the gameplay.&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/WGHGG0660EY&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/WGHGG0660EY?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/WGHGG0660EY/hqdefault.jpg alt=&apos;Video Russian President Putin announces military operation in Ukraine&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Russian President Putin announces military operation in Ukraine&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/WGHGG0660EY&amp;amp;autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/WGHGG0660EY?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/WGHGG0660EY/hqdefault.jpg alt=&apos;&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Russian President Putin announces military operation in Ukraine&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;So far I am enjoying the game. Not only I am enomored of the game mechanics, but the background music is spot on to infuse thrill. Music stimulates both psychological mood and physiological changes including heart rate and breathing. Below is the soundtrack of &lt;strong&gt;&quot;Whispers in the Dark&quot;&lt;/strong&gt; used in the game.&lt;/p&gt;
@@ -18703,10 +19220,6 @@ with its own four-letter name.
 
 &lt;p&gt;Different religion tells us about plethora of beautiful tales about the genesis of humans. We humans, like any other trivial species, descended not from heaven (sigh!) but due to mitosis in single cell organisms. And gradually we embraced bipedalism and various arts of survival. Languages replaced tedious gestures as a means of communication. We hunted animals and domesticated them. Such a long odysseys of humans is replete with footprints of the past. In these footprints we try to decipher bits and pieces of lives of our ancestors.&lt;/p&gt;
 
-&lt;center&gt;
-&lt;img src=&quot;/img/ancient.jpg&quot; /&gt;
-&lt;/center&gt;
-
 &lt;p&gt;While the universe is pretty old (3.7987 billion years and counting), it has been only few million years since the chapter of humans commenced. We had come a long way since. From time in memorial, numerous civilizations thrived and collapsed leaving behind their legacy. The episodes of both glory and horror are conspicuous part of history. Distant from the hurly burly of the present civilization, on the mounds of Mahanjo-Daro and Harrapa, an entirely different civilization spoke another language.&lt;/p&gt;
 
 &lt;h2 id=&quot;indus-valley-civilization&quot;&gt;Indus Valley Civilization&lt;/h2&gt;
@@ -18903,12 +19416,6 @@ Or our love will be a mournful chime? &lt;br /&gt;&lt;/p&gt;
 &lt;!--begin_of_post --&gt;&lt;/p&gt;
 
 &lt;p&gt;I was lying around on a secluded meadow. Under the open sky I gazed at the clouds scudding by. Suddenly it seemed that I was drifting away. A scathing sound began to wreak the whole place. And the mischievous alarm pulled me out of my dreams.&lt;/p&gt;
-
-&lt;p&gt; 
-&lt;center&gt;
-&lt;img src=&quot;https://i.imgur.com/7iVRKen.jpg&quot; alt=&quot;Thinking man&quot; /&gt;
-&lt;/center&gt;
-&lt;/p&gt;
 
 &lt;p&gt;After few seconds, the world came back to me. I glanced out of the window to catch any trace of light. The day had dawned with the sun steadily climbing up the sky. Few stars probably were lost and still wandered around. I flung open the door of my room and stood before the balcony.&lt;/p&gt;
 
@@ -19916,10 +20423,6 @@ R&lt;sub&gt;i&lt;/sub&gt; = L&lt;sub&gt;i - 1&lt;/sub&gt; &amp;oplus; f(R&lt;sub
 
 &lt;p&gt;The Debian claimed to be the Universal Operating System. Impressed by the stability and the community, I decided to switch to Debian. Earlier I used Fedora which handled all the hassles for me. Unlike Fedora, I had manually configure it to connect to the internet. But I soon realized it was not as difficult as it earlier seemed to be.&lt;/p&gt;
 
-&lt;center&gt;
-&lt;img alt=&quot;usb Modem image&quot; src=&quot;https://i.imgur.com/y6rUbX9.jpg&quot; /&gt;
-&lt;/center&gt;
-
 &lt;p&gt;I&apos;ll be using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wvdial&lt;/code&gt; to configure the internet. It&apos;s likely that your system will have the package pre installed. Otherwise you can manually download it from &lt;a href=&quot;http://packages.debian.org/squeeze/wvdial&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Now connect the modem and run lsusb to see the modem connected to the usb:&lt;/p&gt;
@@ -19962,7 +20465,6 @@ Stupid Mode = 1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Bravo! It connects to the internet. Press &lt;b&gt;Ctrl + C&lt;/b&gt; anytime to disconnect.&lt;/p&gt;
-
 </description>
           <pubDate>2012-07-04T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/huawei-usb-modem-in-debian</link>
@@ -19976,13 +20478,6 @@ Stupid Mode = 1
           <description>&lt;p&gt;After a ruckus, the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;p&gt;After a ruckus, the government agreed to roll back the proposed decision to increase FDI in retail sector. This could have paved way for the behemoth giants like Walmart to enter India. Indian Inc. was largely disappointed with the lack of much needed retail reform while the opposition parties including the local shopkeeper rejoiced over the fear of Walmart.&lt;/p&gt;
-
-&lt;p&gt;
-&lt;center&gt;
-&lt;img alt=&quot;Image of retail shop&quot; src=&quot;https://i.imgur.com/yXNTzgN.jpg&quot; /&gt;
-&lt;/center&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;My lack of education in economics convinced me of my inability to form an opinion on this matter. But as a concerned citizen , I tried to understand the repercussion of such an important law debated in the parliament. My first hurdle was to demystify FDI ( Foreign Direct Investment). FDI is way to control the investment of a foreign company. The investment may include purchase of land, building factories, employing people, etc. Usually FDI is restricted in countries to protect domestic companies against the might of the multi-national companies. But relaxing FDI organizes the sector, drives the economy, increases employment, etc. India liberalized most of its sectors after 1991 which also witnessed the boom of Indian IT sector. Currently FDI in retail sector is restricted below 51% forbidding companies like Walmart to pounce upon the Indian market.&lt;/p&gt;
 

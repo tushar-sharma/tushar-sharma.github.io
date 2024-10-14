@@ -319,7 +319,7 @@ Queued
 
 <h2 id="solution-1">Solution 1</h2>
 
-<p>One solution is to force redis to insert the keys into same slot. We can achieve that using patter "{…}"</p>
+<p>One solution is to force redis to insert the keys into same slot. We can achieve that using pattern "{…}"</p>
 
 <p>So we have to modify are keys as <code class="language-plaintext highlighter-rouge">{user1}.key1</code> and <code class="language-plaintext highlighter-rouge">{user1}.key2</code>. Here hash slots are only computed for keys within the braces</p>
 
