@@ -86,6 +86,10 @@ There are two ways to add Gist code :
 Just add this code 
 
 ```
+<div style="display:none;" markdown="1">
+Duplicate code for indexing
+</div>
+
 {% template  customCode.html %}
 ---
 id: <ID>
@@ -124,8 +128,11 @@ files:
 Create a html page in `encrypted` folder. This will contain the protected text
 
 ```
+# Use latest Node version like
+$  source ~/.nvm/nvm.sh
+$ nvm use v20.10.0 
 # write secret post in myPost.md
-$  pandoc encrypted/myPost.md -o encrypted/myPost.html
+$  pandoc -s encrypted/myPost.md -o encrypted/myPost.html
 $ npm i -g staticrypt
 $ export password=
 $ staticrypt encrypted/myPost.html -p ${password}
