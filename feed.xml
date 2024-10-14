@@ -390,7 +390,6 @@ if (typeof Object.assign !== 'function') {
 &lt;h3 id=&quot;installing-a-specific-java-version&quot;&gt;Installing a Specific Java Version&lt;/h3&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sdk &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;java 17.0.0-open
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This command downloads and installs OpenJDK 17. SDKMAN! will set this version as the default unless you specify otherwise.&lt;/p&gt;
@@ -3276,10 +3275,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;f3c7959c-e176-40cb-ac51-fa8cdd07b819&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;b6c9c014-16f8-4d9d-a368-ad2892ec1a3b&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;f3c7959c-e176-40cb-ac51-fa8cdd07b819&apos;,
+    &apos;b6c9c014-16f8-4d9d-a368-ad2892ec1a3b&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4926,10 +4925,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;37cfeb88-a15b-4e69-8f50-69a9c2cd32c1&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;61f331c9-e9fe-4181-a146-a72ff774d4f2&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;37cfeb88-a15b-4e69-8f50-69a9c2cd32c1&apos;,
+    &apos;61f331c9-e9fe-4181-a146-a72ff774d4f2&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
