@@ -75,3 +75,9 @@ What's the detachment score? People who are focused on present moments, H&N circ
 > "Resisting temptation seems to have produced a psychic cost, in the sense that afterward particiapants were more inclined to give up easily in the face of frustration." If you're on a diet, the more times you resist temptation, the more likely you are to fail the next time around. Willpower is a limited resource.
 
 > You can't beat drugs with willpower alone...They have to combined with some form of psychotherapy.
+
+Unlike dopamine, which is associated with reward and pleasure, serotonin is often linked to feelings of happiness and contentment. One interesting aspect of serotonin is its influence on harm aversion.
+
+Studies have shown that serotonin-boosting drugs, such as selective serotonin reuptake inhibitors (SSRIs), can increase an individual's aversion to harm. This means that when serotonin levels are elevated, people are more likely to focus on avoiding harm rather than enforcing fairness or justice. This shift in focus can have various implications, particularly in decision-making and social interactions.
+
+For example, in situations where a person must choose between a fair outcome that involves some risk and a safer option that may be less fair, higher serotonin levels might lead them to choose the safer option. This behavior underscores the role of serotonin in promoting cautious and risk-averse behavior, which can be beneficial in avoiding potential dangers but may also lead to more conservative decision-making.
