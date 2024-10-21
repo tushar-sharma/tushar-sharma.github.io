@@ -2128,6 +2128,12 @@ stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;2&lt;span class=&quot;o&quot
 &lt;blockquote&gt;
   &lt;p&gt;You can&apos;t beat drugs with willpower alone…They have to combined with some form of psychotherapy.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Unlike dopamine, which is associated with reward and pleasure, serotonin is often linked to feelings of happiness and contentment. One interesting aspect of serotonin is its influence on harm aversion.&lt;/p&gt;
+
+&lt;p&gt;Studies have shown that serotonin-boosting drugs, such as selective serotonin reuptake inhibitors (SSRIs), can increase an individual&apos;s aversion to harm. This means that when serotonin levels are elevated, people are more likely to focus on avoiding harm rather than enforcing fairness or justice. This shift in focus can have various implications, particularly in decision-making and social interactions.&lt;/p&gt;
+
+&lt;p&gt;For example, in situations where a person must choose between a fair outcome that involves some risk and a safer option that may be less fair, higher serotonin levels might lead them to choose the safer option. This behavior underscores the role of serotonin in promoting cautious and risk-averse behavior, which can be beneficial in avoiding potential dangers but may also lead to more conservative decision-making.&lt;/p&gt;
 </description>
           <pubDate>2024-07-22T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/review-book-the-molecule-of-more</link>
@@ -3275,10 +3281,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;b6c9c014-16f8-4d9d-a368-ad2892ec1a3b&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;cc4f130c-2c15-4eb3-add5-1b892d8ed0a8&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;b6c9c014-16f8-4d9d-a368-ad2892ec1a3b&apos;,
+    &apos;cc4f130c-2c15-4eb3-add5-1b892d8ed0a8&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4925,10 +4931,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;61f331c9-e9fe-4181-a146-a72ff774d4f2&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;d9e7eb6d-f197-4b0b-9034-7222675bfcf2&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;61f331c9-e9fe-4181-a146-a72ff774d4f2&apos;,
+    &apos;d9e7eb6d-f197-4b0b-9034-7222675bfcf2&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
