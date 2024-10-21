@@ -34,7 +34,7 @@ toc_icon: cog
 |         |         | [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/) | |
 | [Ubuntu](https://ubuntu.com/)  | Operating System  |  | Details<sup><a href='#fn:3' rel='footnote'>3</a></sup> |
 | [VS Code](https://code.visualstudio.com/)  | editor  | Gitpod | Type Shift+Command+P and select install `code` command in PATH. |
-|                                            |          | Github Copilot |  |
+|                                            |          | [GitHub Copilot](https://code.visualstudio.com/docs/copilot/overview) |  |
 |                                            |          | Git Graph      |  |
 | Windows                                    |          | [qBittorrent](https://www.qbittorrent.org/)  |
 |                                            |          | [Notepad++](https://notepad-plus-plus.org/downloads/) |
