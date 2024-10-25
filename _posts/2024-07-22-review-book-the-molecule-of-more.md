@@ -81,3 +81,9 @@ Unlike dopamine, which is associated with reward and pleasure, serotonin is ofte
 Studies have shown that serotonin-boosting drugs, such as selective serotonin reuptake inhibitors (SSRIs), can increase an individual's aversion to harm. This means that when serotonin levels are elevated, people are more likely to focus on avoiding harm rather than enforcing fairness or justice. This shift in focus can have various implications, particularly in decision-making and social interactions.
 
 For example, in situations where a person must choose between a fair outcome that involves some risk and a safer option that may be less fair, higher serotonin levels might lead them to choose the safer option. This behavior underscores the role of serotonin in promoting cautious and risk-averse behavior, which can be beneficial in avoiding potential dangers but may also lead to more conservative decision-making.
+
+Dopamine is a neurotransmitter, meaning it helps nerve cells communicate. Although only about 0.0005% of brain cells produce dopamine, it plays an outsized role in regulating mood, motivation, and creativity. Higher dopamine levels are associated with enhanced creativity but may also increase the risk of psychosis, as some dopamine pathways are involved in both creativity and schizophrenia.
+
+The dopamine transporter is a protein that recycles dopamine after it transmits a signal. Cocaine blocks this transporter, leading to dopamine buildup in the brain and intense euphoria. However, this can disrupt the brain’s reward system, making natural activities less pleasurable and fostering addiction.
+
+Interestingly, about 4.4% of the U.S. population experiences bipolar disorder, while only 0.7% are affected in Japan. Some theories suggest that immigrants, potentially with higher dopamine activity, may be more prone to certain mental health conditions and a desire for new experiences, known as “itchy feet.”
