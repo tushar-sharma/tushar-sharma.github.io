@@ -2140,6 +2140,12 @@ stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;2&lt;span class=&quot;o&quot
 &lt;p&gt;The dopamine transporter is a protein that recycles dopamine after it transmits a signal. Cocaine blocks this transporter, leading to dopamine buildup in the brain and intense euphoria. However, this can disrupt the brain’s reward system, making natural activities less pleasurable and fostering addiction.&lt;/p&gt;
 
 &lt;p&gt;Interestingly, about 4.4% of the U.S. population experiences bipolar disorder, while only 0.7% are affected in Japan. Some theories suggest that immigrants, potentially with higher dopamine activity, may be more prone to certain mental health conditions and a desire for new experiences, known as “itchy feet.”&lt;/p&gt;
+
+&lt;p&gt;Chemists originally classified molecules into two groups: organic and inorganic compounds. Substances extracted from plants and animals were labeled &quot;organic,&quot; while other compounds were considered &quot;inorganic.&quot; Scientists once believed that organic compounds had a unique &quot;vital force&quot; that distinguished them from inorganics. However, the laboratory synthesis of organic compounds from inorganic materials (e.g., urea by Friedrich Wöhler) disproved this theory. Today, “organic” refers to compounds containing both carbon and hydrogen, so substances like diamond are not considered organic.&lt;/p&gt;
+
+&lt;p&gt;Multitasking is generally counterproductive, as almost any experience improves with full attention — as highlighted by Kelly McGonigal.&lt;/p&gt;
+
+&lt;p&gt;Exposure to nature stimulates two brain processes: subcortical arousal (associated with desire and dopamine release) and cortical attention control (linked to managing dopamine and focus). This balance contributes to why natural environments are beneficial for our well-being, promoting relaxation and improved focus.&lt;/p&gt;
 </description>
           <pubDate>2024-07-22T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/review-book-the-molecule-of-more</link>
@@ -3287,10 +3293,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;ad02e518-8cfa-43a7-87ea-643c179eba19&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;ba6d6443-b660-4bbf-8d86-234cffd23829&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;ad02e518-8cfa-43a7-87ea-643c179eba19&apos;,
+    &apos;ba6d6443-b660-4bbf-8d86-234cffd23829&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4937,10 +4943,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;4e69e9af-5a46-476d-bbaf-1635dda3f6d1&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;2a9e8fdd-f5be-44b7-b014-5a5fb67a6fb6&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;4e69e9af-5a46-476d-bbaf-1635dda3f6d1&apos;,
+    &apos;2a9e8fdd-f5be-44b7-b014-5a5fb67a6fb6&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
