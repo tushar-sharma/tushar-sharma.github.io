@@ -87,3 +87,9 @@ Dopamine is a neurotransmitter, meaning it helps nerve cells communicate. Althou
 The dopamine transporter is a protein that recycles dopamine after it transmits a signal. Cocaine blocks this transporter, leading to dopamine buildup in the brain and intense euphoria. However, this can disrupt the brain’s reward system, making natural activities less pleasurable and fostering addiction.
 
 Interestingly, about 4.4% of the U.S. population experiences bipolar disorder, while only 0.7% are affected in Japan. Some theories suggest that immigrants, potentially with higher dopamine activity, may be more prone to certain mental health conditions and a desire for new experiences, known as “itchy feet.”
+
+Chemists originally classified molecules into two groups: organic and inorganic compounds. Substances extracted from plants and animals were labeled "organic," while other compounds were considered "inorganic." Scientists once believed that organic compounds had a unique "vital force" that distinguished them from inorganics. However, the laboratory synthesis of organic compounds from inorganic materials (e.g., urea by Friedrich Wöhler) disproved this theory. Today, “organic” refers to compounds containing both carbon and hydrogen, so substances like diamond are not considered organic.
+
+Multitasking is generally counterproductive, as almost any experience improves with full attention — as highlighted by Kelly McGonigal.
+
+Exposure to nature stimulates two brain processes: subcortical arousal (associated with desire and dopamine release) and cortical attention control (linked to managing dopamine and focus). This balance contributes to why natural environments are beneficial for our well-being, promoting relaxation and improved focus.
