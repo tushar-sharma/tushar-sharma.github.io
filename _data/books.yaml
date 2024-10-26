@@ -268,9 +268,9 @@
 
 - title: "The Molecule of More"
   author: Daniel Z. Lieberman, Michael E. Long
-  rating: 0
-  pending: true
-  progress: 85
+  rating: 5
+  pending: false
+  progress: 0
   comments: "Recommended by Patricia. <a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
 
 - title: "Siddhartha"
