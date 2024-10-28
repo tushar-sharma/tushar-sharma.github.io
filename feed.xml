@@ -339,6 +339,384 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Weekly Logs from Oct 21 to 27, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from from Oct 21 to 27, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+
+const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A292:T304?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe id=&quot;dynamicIframe&quot; style=&quot;position: relative; width: 100%; height: 400px;&quot; src=&quot;/encrypted/2024-10-20-weekly-logs-2014-10-21-27.html&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
+
+&lt;script src=&quot;/js/resizeIframe.js&quot;&gt;&lt;/script&gt;
+
+</description>
+          <pubDate>2024-10-20T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2014-10-21-27</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2014-10-21-27</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Weekly Logs from Oct 14 to 20, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from from Oct 14 to 20, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+
+const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A279:T291?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+</description>
+          <pubDate>2024-10-14T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2014-10-14-20</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2014-10-14-20</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Manage Java Version Using SDKMAN</title>
           <description>&lt;p&gt;As a Java developer, you often need to switch between multiple versions of Java for different projects. Managing this manually can be tedious, but SDKMAN! is a great tool that simplifies the process of installing, listing, and switching between Java versions.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -3293,10 +3671,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;7c31cfa6-95ba-42c2-b8a4-a573c6eb2e26&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;81834a7b-6648-43d8-9597-0216b7c1a8c2&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;7c31cfa6-95ba-42c2-b8a4-a573c6eb2e26&apos;,
+    &apos;81834a7b-6648-43d8-9597-0216b7c1a8c2&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4943,10 +5321,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;b9c610c5-655f-4e72-babc-c0c16c8efd4b&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;f8356519-d320-47dd-aed4-a8ffcd782bea&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;b9c610c5-655f-4e72-babc-c0c16c8efd4b&apos;,
+    &apos;f8356519-d320-47dd-aed4-a8ffcd782bea&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -11282,8 +11660,41 @@ getting tweets before 83587008219447295
     
       
         <item>
-          <title>How to play Super Mario Odyssey on PC (Yuzu Emulator)</title>
+          <title>Download and Play Super Mario Odyssey on PC (Yuzu Emulator)</title>
           <description>&lt;p&gt;Super Mario Odyssey is a 2017 video game has been voted as the one of the best Mario game ever made. The game is only available for Nitendo Switch. Luckily I end up playing the game on Windows nonetheless.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;style&gt;
+.download-container {
+  text-align: center; 
+  margin-top: 40px; 
+  padding: 20px;
+}
+
+.download-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 30px;
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #d32f2f; 
+  cursor: pointer;
+  transform: translateY(-3px); 
+}
+
+.download-btn:active {
+  background-color: #b71c1c; 
+  transform: translateY(0); 
+}
+&lt;/style&gt;
 
 &lt;p&gt;Super Mario Odyssey is a 2017 video game has been voted as the one of the best Mario game ever made. The game is only available for Nitendo Switch. Luckily I end up playing the game on Windows nonetheless.&lt;/p&gt;
 
@@ -11296,7 +11707,7 @@ On Yuzu Windows -&amp;gt; Go to File -&amp;gt; Open Yuzu folder &lt;br /&gt;&lt;
 Save the file under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;keys&lt;/code&gt; folder.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Download the game from &lt;a href=&quot;https://drive.google.com/file/d/1xwX7EO_YckfA43gD5v1WXsL7Tlkogehi/view?usp=sharing&quot;&gt;Google Drive&lt;/a&gt;. Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yuzu&lt;/code&gt; emulator  and click on plus sign (Add new Game directory). Navigate to the game directory.&lt;/p&gt;
+&lt;p&gt;Download the game below. Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yuzu&lt;/code&gt; emulator  and click on plus sign (Add new Game directory). Navigate to the game directory.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -11319,6 +11730,12 @@ Save the file under &lt;code class=&quot;language-plaintext highlighter-rouge&qu
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;div class=&quot;download-container&quot;&gt;
+  &lt;a class=&quot;download-btn&quot; href=&quot;https://multiup.io/project/020dcfb5564df1e45a615514752d9ac7&quot; target=&quot;_blank&quot;&gt;Download the Game&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For the password, in the comments type &quot;randomwits.com&quot; and &quot;your email&quot;, and I will send the password.&lt;/p&gt;
 </description>
           <pubDate>2022-09-01T00:00:00-04:00</pubDate>
           <link>https://randomwits.com/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator</link>
