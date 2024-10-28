@@ -13,37 +13,35 @@ author: Tushar Sharma
 Super Mario Odyssey is a 2017 video game has been voted as the one of the best Mario game ever made. The game is only available for Nitendo Switch. Luckily I end up playing the game on Windows nonetheless.<!-- truncate_here -->
 
 <style>
-/* Container for the download section */
 .download-container {
   text-align: center; /* Center the button */
   margin-top: 40px; /* Add space between the content and the button */
   padding: 20px;
 }
 
-/* Style for the download button */
 .download-btn {
-  background-color: #f44336; /* Red background */
-  color: white; /* White text */
-  padding: 15px 30px; /* More padding for a prominent button */
-  text-align: center; /* Center the text */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Ensure button-like behavior */
-  font-size: 18px; /* Larger font for emphasis */
-  border-radius: 10px; /* Rounded corners */
-  font-weight: bold; /* Bold text */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
+  background-color: #f44336;
+  color: white;
+  padding: 15px 30px;
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .download-btn:hover {
-  background-color: #d32f2f; /* Darker red on hover */
-  cursor: pointer; /* Pointer on hover */
-  transform: translateY(-3px); /* Lift the button when hovering */
+  background-color: #d32f2f; 
+  cursor: pointer;
+  transform: translateY(-3px); 
 }
 
 .download-btn:active {
-  background-color: #b71c1c; /* Even darker red when active */
-  transform: translateY(0); /* Reset position on click */
+  background-color: #b71c1c; 
+  transform: translateY(0); 
 }
 </style>
 
