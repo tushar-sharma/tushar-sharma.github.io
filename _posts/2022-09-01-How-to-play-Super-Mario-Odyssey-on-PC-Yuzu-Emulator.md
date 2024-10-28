@@ -14,8 +14,8 @@ Super Mario Odyssey is a 2017 video game has been voted as the one of the best M
 
 <style>
 .download-container {
-  text-align: center; /* Center the button */
-  margin-top: 40px; /* Add space between the content and the button */
+  text-align: center; 
+  margin-top: 40px; 
   padding: 20px;
 }
 
