@@ -75,3 +75,21 @@ What's the detachment score? People who are focused on present moments, H&N circ
 > "Resisting temptation seems to have produced a psychic cost, in the sense that afterward particiapants were more inclined to give up easily in the face of frustration." If you're on a diet, the more times you resist temptation, the more likely you are to fail the next time around. Willpower is a limited resource.
 
 > You can't beat drugs with willpower alone...They have to combined with some form of psychotherapy.
+
+Unlike dopamine, which is associated with reward and pleasure, serotonin is often linked to feelings of happiness and contentment. One interesting aspect of serotonin is its influence on harm aversion.
+
+Studies have shown that serotonin-boosting drugs, such as selective serotonin reuptake inhibitors (SSRIs), can increase an individual's aversion to harm. This means that when serotonin levels are elevated, people are more likely to focus on avoiding harm rather than enforcing fairness or justice. This shift in focus can have various implications, particularly in decision-making and social interactions.
+
+For example, in situations where a person must choose between a fair outcome that involves some risk and a safer option that may be less fair, higher serotonin levels might lead them to choose the safer option. This behavior underscores the role of serotonin in promoting cautious and risk-averse behavior, which can be beneficial in avoiding potential dangers but may also lead to more conservative decision-making.
+
+Dopamine is a neurotransmitter, meaning it helps nerve cells communicate. Although only about 0.0005% of brain cells produce dopamine, it plays an outsized role in regulating mood, motivation, and creativity. Higher dopamine levels are associated with enhanced creativity but may also increase the risk of psychosis, as some dopamine pathways are involved in both creativity and schizophrenia.
+
+The dopamine transporter is a protein that recycles dopamine after it transmits a signal. Cocaine blocks this transporter, leading to dopamine buildup in the brain and intense euphoria. However, this can disrupt the brain’s reward system, making natural activities less pleasurable and fostering addiction.
+
+Interestingly, about 4.4% of the U.S. population experiences bipolar disorder, while only 0.7% are affected in Japan. Some theories suggest that immigrants, potentially with higher dopamine activity, may be more prone to certain mental health conditions and a desire for new experiences, known as “itchy feet.”
+
+Chemists originally classified molecules into two groups: organic and inorganic compounds. Substances extracted from plants and animals were labeled "organic," while other compounds were considered "inorganic." Scientists once believed that organic compounds had a unique "vital force" that distinguished them from inorganics. However, the laboratory synthesis of organic compounds from inorganic materials (e.g., urea by Friedrich Wöhler) disproved this theory. Today, “organic” refers to compounds containing both carbon and hydrogen, so substances like diamond are not considered organic.
+
+Multitasking is generally counterproductive, as almost any experience improves with full attention — as highlighted by Kelly McGonigal.
+
+Exposure to nature stimulates two brain processes: subcortical arousal (associated with desire and dopamine release) and cortical attention control (linked to managing dopamine and focus). This balance contributes to why natural environments are beneficial for our well-being, promoting relaxation and improved focus.

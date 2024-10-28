@@ -175,6 +175,13 @@
   pending: false
   progress: 0
 
+- title: "The Molecule of More"
+  author: Daniel Z. Lieberman, Michael E. Long
+  rating: 5
+  pending: false
+  progress: 0
+  comments: "Recommended by Patricia. <a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
+
 - title: "Technical Analysis of the Financial Markets"
   author: "John J. Murphy"
   rating: 0
@@ -265,13 +272,6 @@
   pending: true
   progress: 11
   comments: ""
-
-- title: "The Molecule of More"
-  author: Daniel Z. Lieberman, Michael E. Long
-  rating: 0
-  pending: true
-  progress: 70
-  comments: "Recommended by Pat. <a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
 
 - title: "Siddhartha"
   author: Hermann Hesse
