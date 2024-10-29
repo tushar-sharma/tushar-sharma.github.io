@@ -70,4 +70,7 @@ If you frequently work with AI writing tools, Jasper Everywhere brings the power
 ### [Compose AI](https://chromewebstore.google.com/detail/compose-ai-ai-powered-wri/ddlbpiadoechcolndfeaonajmngmhblj?hl=en)
 Compose AI speeds up your writing process by generating smart, AI-powered suggestions for text completion. It’s a great tool for those who write emails, reports, or articles regularly.
 
+
+https://chromewebstore.google.com/detail/popup-blocker-strict/aefkmifgmaafnojlojpnekbpbmjiiogg
+
 Happy browsing!
