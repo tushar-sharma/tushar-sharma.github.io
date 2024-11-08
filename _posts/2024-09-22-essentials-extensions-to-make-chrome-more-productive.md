@@ -67,10 +67,13 @@ Reduce the size of your Chrome tabs and keep your browser organized with Small T
 ### [Jasper Everywhere Extension](https://chromewebstore.google.com/detail/jasper-everywhere-extensi/bpiohchncadidhohcajcnoelomephkdd)
 If you frequently work with AI writing tools, Jasper Everywhere brings the power of Jasper AI to any text field in your browser, allowing you to generate content quickly and efficiently.
 
-### [Compose AI](https://chromewebstore.google.com/detail/compose-ai-ai-powered-wri/ddlbpiadoechcolndfeaonajmngmhblj?hl=en)
+### [Compose AI](https://chromewebstore.google.com/detail/compose-ai-ai-powered-wri/ddlbpiadoechcolndfeaonajmngmhblj)
 Compose AI speeds up your writing process by generating smart, AI-powered suggestions for text completion. It’s a great tool for those who write emails, reports, or articles regularly.
 
+### [Popup Blocker (strict)](https://chromewebstore.google.com/detail/popup-blocker-strict/aefkmifgmaafnojlojpnekbpbmjiiogg)
+Strictly block all popup requests from any website
 
-https://chromewebstore.google.com/detail/popup-blocker-strict/aefkmifgmaafnojlojpnekbpbmjiiogg
+### [Image Downloader](https://chromewebstore.google.com/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj)
+Browse and download images on the web
 
 Happy browsing!
