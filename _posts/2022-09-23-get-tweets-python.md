@@ -3,9 +3,9 @@ layout: post
 title: Extract tweets from Twitter using Python
 tags:
   - python
-thumb: https://unsplash.com/photos/DGyL_hXFPV4/download?w=437"
+thumb: https://unsplash.com/photos/RlPgKA95Xs0/download?w=437"
 summary: Extract data from Twitter using Python
-image: https://unsplash.com/photos/DGyL_hXFPV4/download?w=437"
+image: https://unsplash.com/photos/RlPgKA95Xs0/download?w=437"
 author: Tushar Sharma
 category: blog
 ---
@@ -15,30 +15,50 @@ In this tutorial, we will extract tweets from Twitter using python.
 
 First lets create a project- 
 
-```bash
-$ mkdir get-tweets
-$ cd get-tweets
-$ touch tweets.py
-```
+
+{% template  customCode.html %}
+---
+id: ac2739f5e0282add422a1430988a4a3d
+file: start.sh
+---
+{% endtemplate %}
 
 We will use [poetry](https://python-poetry.org/) for managing our dependencies. 
 
-```bash
-$ poetry init
-$ poetry add tweepy
-```
+{% template  customCode.html %}
+---
+id: ac2739f5e0282add422a1430988a4a3d
+file: poetry.sh
+---
+{% endtemplate %}
 
 We haven't implemented anything, so it will just ouput `Get tweets for the tshrocks` to the console. `tshrocks` is my twitter profile username
 
-<script src="https://gist.github.com/tushar-sharma/ac2739f5e0282add422a1430988a4a3d.js?file=get-tweets1.py"></script>
+{% template  customCode.html %}
+---
+id: ac2739f5e0282add422a1430988a4a3d
+file: get-tweets1.py
+---
+{% endtemplate %}
+
 
 Next we need to authenticate with twitter, where we need access and consumer keys from twitter. You can go to [developer page](https://developer.twitter.com/en/apps) and create an app to get your keys.
 
-<script src="https://gist.github.com/tushar-sharma/ac2739f5e0282add422a1430988a4a3d.js?file=get-tweets2.py"></script>
+{% template  customCode.html %}
+---
+id: ac2739f5e0282add422a1430988a4a3d
+file: get-tweets2.py
+---
+{% endtemplate %}
 
 Lastly, here's the full code. 
 
-<script src="https://gist.github.com/tushar-sharma/ac2739f5e0282add422a1430988a4a3d.js?file=get-tweets.py"></script>
+{% template  customCode.html %}
+---
+id: ac2739f5e0282add422a1430988a4a3d
+file: get-tweets.py
+---
+{% endtemplate %}
 
 We can get tweets by running
 
