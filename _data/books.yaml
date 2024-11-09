@@ -182,6 +182,13 @@
   progress: 0
   comments: "Recommended by Patricia. <a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
 
+- title: "A Philosophy of Software Design"
+  author: John Ousterhout
+  rating: 0
+  pending: true
+  progress: 15
+  comments: "<a href='/blog/review-book-a-philosophy-of-software-design' target='_blank'>Notes</a>"
+
 - title: "Technical Analysis of the Financial Markets"
   author: "John J. Murphy"
   rating: 0
@@ -279,13 +286,6 @@
   pending: true
   progress: 0
   comments: "Recommended by Maca"
-
-- title: "A Philosophy of Software Design"
-  author: John Ousterhout
-  rating: 0
-  pending: true
-  progress: 10
-  comments: "<a href='/blog/review-book-a-philosophy-of-software-design' target='_blank'>Notes</a>"
 
 - title: "The Wall"
   author: "Marlen Haushofer"
