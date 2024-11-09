@@ -285,7 +285,7 @@
   rating: 0
   pending: true
   progress: 10
-  comments: "<a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
+  comments: "<a href='/blog/review-book-a-philosophy-of-software-design' target='_blank'>Notes</a>"
 
 - title: "The Wall"
   author: "Marlen Haushofer"
