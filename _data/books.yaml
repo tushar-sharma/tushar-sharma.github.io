@@ -284,8 +284,8 @@
   author: John Ousterhout
   rating: 0
   pending: true
-  progress: 0
-  comments: ""
+  progress: 10
+  comments: "<a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
 
 - title: "The Wall"
   author: "Marlen Haushofer"
