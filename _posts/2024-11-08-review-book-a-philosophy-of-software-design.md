@@ -1,10 +1,11 @@
 ---
 layout: post
 title: A Philosophy of Software Design by John Ousterhout
-image: https://unsplash.com/photos//download?w=437
-thumb: https://unsplash.com/photos//download?w=437
+image: https://unsplash.com/photos/aL2rxQhEfAM/download?w=437
+thumb: https://unsplash.com/photos/aL2rxQhEfAM/download?w=437
 author: tushar sharma
 category: blog
+tags: books
 ---
 
 These are my rough notes while reading this book.<!-- truncate_here -->
@@ -28,3 +29,18 @@ In object-oriented programming (OOP), each class can be viewed as a module. By a
 Abstraction provides a simplified view of an entity, focusing only on essential details while omitting irrelevant information. This principle allows developers to manage complexity effectively.
 
 An interface is like a contract that specifies methods which must be implemented by any class that adheres to it. It exposes these methods to other modules without revealing the actual implementation, ensuring that interactions occur through a consistent set of behaviors rather than direct access to the implementation."
+
+The best modules are deep: they have a lot of functionality hidden behind a simple interface. Shallow module is one whose interface is complicated relative to the functionality it provides.
+
+Often taught that "classes should be small". Instead classes should be deep. Small classes don't contribute much functionality and increase boilerplate. e.g. 
+
+
+```java
+FileInputStream fileStream = new FileInputStream(filename);
+BufferedInputStream bufferedStream = new BufferedInputStream(fileStream);
+ObjectInputStream objectStream = enw ObjectInputStream(bufferedStream);
+```
+
+In this code, `FileInputStream` only provides rudimentary I/O: it's not capable of bueffered I/O, nor can it read or write searialized objects. `BufferedInputStream` adds buffering to `FileInputStream` and `ObjectInputStream` adds read ability to read and write serialized objects. First two objects, `fileStream` and `bufferedStream` are never used once the file has been opened. So buffering must be requested explicitly. If a developer forgest to creat this object, there will be no bufferring and I/O will be slow.
+
+Java Developers argue that since not everyone wants to use buffering for file I/O, so that's why there's an additional step. However interfaces should be desigend to make **common case** as simple as possible. In contrast, Unix develoeprs made sequential I/O most common use case. 
