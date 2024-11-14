@@ -10,10 +10,9 @@ tags:
  - brazil
 ---
 
-My experience in getting Brazil Tourist Visa living in the USA while having Indian passport.<!-- truncate_here -->
+My experience on how to get Brazil's tourist visa with India passport living in the US.<!-- truncate_here -->
 
-My experience in getting Brazil Tourist Visa living in the USA while having Indian passport.
-
+My experience on how to get Brazil's tourist visa with India passport living in the US.
 
 First, you need to create an [online application](https://formulario-mre.serpro.gov.br/sci/pages/web/ui/#/cidadao-nacionalidade). Depending upon your passport, you may qualify for e-visa. However I had to apply for regular tourist visa. I had to upload following documents to successfully complete the application
 
@@ -21,7 +20,7 @@ First, you need to create an [online application](https://formulario-mre.serpro.
 
 2. US Driving License
 
-3. Rround trip Flight itinerary. I booked a refundable ticket and choose tentative dates
+3. Round trip Flight itinerary. I booked a refundable ticket and choose tentative dates
 
 4. Airbnb's refundable reservation
 
@@ -35,7 +34,17 @@ First, you need to create an [online application](https://formulario-mre.serpro.
 
 9. Address residency proof of address in the US 
 
-For the next step, either you can directly mail all your documents to the nearest Brazil embassy and schedule a in person interview. Or you can use a third party visa consultant service which can do this on your behalf. Brazil embassy has list of visa consultant services listed after you complete your application. Since this was my first time, I contacted American Visa of DC<sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup> and sent my documents via FedEx. I received my tourist visa within two weeks.
+For the next step, either you can directly mail all your documents (with original passport) to the nearest Brazil embassy and schedule an in person interview. Or you can use a third party visa consultant service which can do this on your behalf. Brazil embassy has list of visa consultant services listed after you complete your application. Since this was my first time, I contacted American Visa of DC<sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup> and sent my documents via FedEx. I received my tourist visa within two weeks. Following is the breakdown of cost 
+
+1. Brazil Service Fee $200
+
+2. Embassy Fee Brazil $80 
+
+3. US Postal Money order fee $25
+
+4. Federal Express Return $45
+
+| <img align="center"  loading="lazy" src="{{ root_url }}/img/visa_brazil.png" alt="Brazil Visa" />|
 
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
