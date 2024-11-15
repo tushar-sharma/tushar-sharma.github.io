@@ -41,13 +41,10 @@ Improve your writing and avoid embarrassing grammar mistakes with Grammarly. It 
 ### [Cookie Remover](https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce?hl=en)
 Quickly remove cookies for the current site with one click. This extension is great for privacy-conscious users who want to manage cookies on-the-fly.
 
-### [Pop-up Blocker](https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche)
-Prevent annoying pop-ups from interrupting your browsing experience. This extension keeps unwanted ads and pop-ups at bay, improving both speed and focus.
-
 ### [Screen Recorder](https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden)
 Capture and record your screen directly from Chrome. It's useful for creating tutorials, recording meetings, or sharing visual feedback.
 
-### [Medium Parser](https://chrome.google.com/webstore/detail/medium-parser/egejbknaophaadmhijkepokfchkbnelc)
+### [Medium Parser](https://chromewebstore.google.com/detail/medium-parser/elgmajanahbjpbcljflifdnnmpodfiij)
 Read Medium articles without hitting the paywall. This extension allows you to freely access Medium content without limitations.
 
 If it gets blocked by the Chrome Web Store, you can [download it here](https://github.com/Xatta-Trone/medium-parser-extension/archive/refs/heads/main.zip). Once downloaded, unzip the file, go to `chrome://extensions`, and drag the unzipped folder, `chrome`,  into the page. It will automatically install.
