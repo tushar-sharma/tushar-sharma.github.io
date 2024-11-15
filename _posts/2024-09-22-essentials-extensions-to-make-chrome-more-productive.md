@@ -77,6 +77,6 @@ Strictly block all popup requests from any website
 Browse and download images on the web
 
 ### [Tab List](https://chromewebstore.google.com/detail/tab-list/ccbillglagbffammojaidpaailialkje)
-List nad manage opened tabs for current window.
+List and manage opened tabs for current window.
 
 Happy browsing!
