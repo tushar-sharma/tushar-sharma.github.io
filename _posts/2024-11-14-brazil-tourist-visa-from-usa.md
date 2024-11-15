@@ -32,7 +32,7 @@ First, you need to create an [online application](https://formulario-mre.serpro.
 
 8. I-94 copy
 
-9. Address residency proof of address in the US 
+9. Proof of current address in the US 
 
 For the next step, either you can directly mail all your documents (with original passport) to the nearest Brazil embassy and schedule an in person interview. Or you can use a third party visa consultant service which can do this on your behalf. Brazil embassy has list of visa consultant services listed after you complete your application. Since this was my first time, I contacted American Visa of DC<sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup> and sent my documents via FedEx. I received my tourist visa within two weeks. Following is the breakdown of cost 
 
@@ -53,6 +53,5 @@ For the next step, either you can directly mail all your documents (with origina
          <p> American Visa of DC. 1801 Columbia Rd, NW Ste#200. Washington DC, 20009</p>
          <a href='#fnref:1' rev='footnote'>&#8617;</a>
     </li>
-
   </ol>
 </div>
