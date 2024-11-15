@@ -76,4 +76,7 @@ Strictly block all popup requests from any website
 ### [Image Downloader](https://chromewebstore.google.com/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj)
 Browse and download images on the web
 
+### [Tab List](https://chromewebstore.google.com/detail/tab-list/ccbillglagbffammojaidpaailialkje)
+List nad manage opened tabs for current window.
+
 Happy browsing!
