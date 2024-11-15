@@ -1537,13 +1537,10 @@ public Mono&amp;lt;User&amp;gt; getCachedUser(String id) {
 &lt;h3 id=&quot;cookie-remover&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce?hl=en&quot;&gt;Cookie Remover&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Quickly remove cookies for the current site with one click. This extension is great for privacy-conscious users who want to manage cookies on-the-fly.&lt;/p&gt;
 
-&lt;h3 id=&quot;pop-up-blocker&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/pop-up-blocker-for-chrome/bkkbcggnhapdmkeljlodobbkopceiche&quot;&gt;Pop-up Blocker&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Prevent annoying pop-ups from interrupting your browsing experience. This extension keeps unwanted ads and pop-ups at bay, improving both speed and focus.&lt;/p&gt;
-
 &lt;h3 id=&quot;screen-recorder&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden&quot;&gt;Screen Recorder&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Capture and record your screen directly from Chrome. It&apos;s useful for creating tutorials, recording meetings, or sharing visual feedback.&lt;/p&gt;
 
-&lt;h3 id=&quot;medium-parser&quot;&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/medium-parser/egejbknaophaadmhijkepokfchkbnelc&quot;&gt;Medium Parser&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;medium-parser&quot;&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/medium-parser/elgmajanahbjpbcljflifdnnmpodfiij&quot;&gt;Medium Parser&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Read Medium articles without hitting the paywall. This extension allows you to freely access Medium content without limitations.&lt;/p&gt;
 
 &lt;p&gt;If it gets blocked by the Chrome Web Store, you can &lt;a href=&quot;https://github.com/Xatta-Trone/medium-parser-extension/archive/refs/heads/main.zip&quot;&gt;download it here&lt;/a&gt;. Once downloaded, unzip the file, go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chrome://extensions&lt;/code&gt;, and drag the unzipped folder, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chrome&lt;/code&gt;,  into the page. It will automatically install.&lt;/p&gt;
@@ -1573,7 +1570,7 @@ public Mono&amp;lt;User&amp;gt; getCachedUser(String id) {
 &lt;p&gt;Browse and download images on the web&lt;/p&gt;
 
 &lt;h3 id=&quot;tab-list&quot;&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/tab-list/ccbillglagbffammojaidpaailialkje&quot;&gt;Tab List&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;List nad manage opened tabs for current window.&lt;/p&gt;
+&lt;p&gt;List and manage opened tabs for current window.&lt;/p&gt;
 
 &lt;p&gt;Happy browsing!&lt;/p&gt;
 </description>
@@ -3955,10 +3952,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;1ad1d5e5-5f6b-4f9b-b18b-bb2cf7a60167&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;a08c414f-41cb-44dd-b0a7-eb488b899b9a&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;1ad1d5e5-5f6b-4f9b-b18b-bb2cf7a60167&apos;,
+    &apos;a08c414f-41cb-44dd-b0a7-eb488b899b9a&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -5605,10 +5602,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;42b40977-1d78-4241-8bb4-3e5db254542d&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;b8e5c228-3e4d-4e8a-8c69-080fcfcb5b0f&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;42b40977-1d78-4241-8bb4-3e5db254542d&apos;,
+    &apos;b8e5c228-3e4d-4e8a-8c69-080fcfcb5b0f&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
