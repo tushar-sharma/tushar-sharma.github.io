@@ -280,12 +280,14 @@
   progress: 11
   comments: ""
 
-- title: "Siddhartha"
-  author: Hermann Hesse
+
+- title: "Build A Large Language Model (From Scratch)"
+  author: Sebastian Raschka
   rating: 0
   pending: true
-  progress: 0
-  comments: "Recommended by Maca"
+  progress: 11
+  comments: ""
+
 
 - title: "The Wall"
   author: "Marlen Haushofer"
