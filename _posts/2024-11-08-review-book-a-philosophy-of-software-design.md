@@ -44,3 +44,7 @@ ObjectInputStream objectStream = enw ObjectInputStream(bufferedStream);
 In this code, `FileInputStream` only provides rudimentary I/O: it's not capable of bueffered I/O, nor can it read or write searialized objects. `BufferedInputStream` adds buffering to `FileInputStream` and `ObjectInputStream` adds read ability to read and write serialized objects. First two objects, `fileStream` and `bufferedStream` are never used once the file has been opened. So buffering must be requested explicitly. If a developer forgest to creat this object, there will be no bufferring and I/O will be slow.
 
 Java Developers argue that since not everyone wants to use buffering for file I/O, so that's why there's an additional step. However interfaces should be desigend to make **common case** as simple as possible. In contrast, Unix develoeprs made sequential I/O most common use case. 
+
+A pass-through method is one that does little except invvoke another method, whose signature is similar or identical to that of the calling method. They make the `class` more shallow, increase the complexity without increasing the functionality of system. However, one such exception like dispatcher. A dispatcher is a method that uses its arguments to select one of several other methods to invoke. 
+
+**Decorators**. Also called wrapper. A decorator objct takes an existing object and extends its functionality. In Java, **BufferedInputStream** class is a decorator: given an **InputStream** object, it provides the same API but intorduces bufering. 

@@ -186,7 +186,7 @@
   author: John Ousterhout
   rating: 0
   pending: true
-  progress: 20
+  progress: 30
   comments: "<a href='/blog/review-book-a-philosophy-of-software-design' target='_blank'>Notes</a>"
 
 - title: "Technical Analysis of the Financial Markets"
@@ -285,7 +285,7 @@
   author: Sebastian Raschka
   rating: 0
   pending: true
-  progress: 11
+  progress: 0
   comments: ""
 
 
