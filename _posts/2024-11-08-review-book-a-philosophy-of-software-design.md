@@ -50,3 +50,7 @@ A pass-through method is one that does little except invoke another method, whos
 **Decorators**. Also called wrapper. A decorator objct takes an existing object and extends its functionality. In Java, **BufferedInputStream** class is a decorator: given an **InputStream** object, it provides the same API but intorduces bufering. 
 
 A pass-through variable is a variable that has been passed through long chain of methods. It increases complexity for intermediate methods. One Soulution - Use Global Variable. However it has it's cons. It's impossible to create independent instances of same system in same process that access same global variable (conflict). ANother solution - Use Context object. It stores all the glboal variable. Cons is that it can have thread safety issue. Solution use immutable objects in a context object.  
+
+**Subdivision**: Breaking up classes to divide work. However too many classes will increase complexity if there are shallow. Also subdivision works great if classes are independent. If there is dependencies between them, it would be to merge them into single class. e.g. HTTP request reader and parsing it into String would be better to have a single class.
+
+**GOTO* are bad programming practice because unstructured jumps makes it hard to understand the program.
