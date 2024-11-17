@@ -45,6 +45,8 @@ In this code, `FileInputStream` only provides rudimentary I/O: it's not capable 
 
 Java Developers argue that since not everyone wants to use buffering for file I/O, so that's why there's an additional step. However interfaces should be desigend to make **common case** as simple as possible. In contrast, Unix develoeprs made sequential I/O most common use case. 
 
-A pass-through method is one that does little except invvoke another method, whose signature is similar or identical to that of the calling method. They make the `class` more shallow, increase the complexity without increasing the functionality of system. However, one such exception like dispatcher. A dispatcher is a method that uses its arguments to select one of several other methods to invoke. 
+A pass-through method is one that does little except invoke another method, whose signature is similar or identical to that of the calling method. They make the `class` more shallow, increase the complexity without increasing the functionality of system. However, one such exception like dispatcher. A dispatcher is a method that uses its arguments to select one of several other methods to invoke. 
 
 **Decorators**. Also called wrapper. A decorator objct takes an existing object and extends its functionality. In Java, **BufferedInputStream** class is a decorator: given an **InputStream** object, it provides the same API but intorduces bufering. 
+
+A pass-through variable is a variable that has been passed through long chain of methods. It increases complexity for intermediate methods. One Soulution - Use Global Variable. However it has it's cons. It's impossible to create independent instances of same system in same process that access same global variable (conflict). ANother solution - Use Context object. It stores all the glboal variable. Cons is that it can have thread safety issue. Solution use immutable objects in a context object.  
