@@ -1,8 +1,8 @@
 ---
 layout: post
 title: A Philosophy of Software Design by John Ousterhout
-image: https://unsplash.com/photos/aL2rxQhEfAM/download?w=437
-thumb: https://unsplash.com/photos/aL2rxQhEfAM/download?w=437
+image: https://unsplash.com/photos/H7XNBcG3vw4/download?w=437
+thumb: https://unsplash.com/photos/H7XNBcG3vw4/download?w=437
 author: tushar sharma
 category: blog
 tags: books
