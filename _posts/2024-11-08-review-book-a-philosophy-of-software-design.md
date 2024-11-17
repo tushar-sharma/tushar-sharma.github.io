@@ -16,7 +16,7 @@ These are my rough notes while reading this book.<!-- truncate_here -->
 <div style="margin: 0 auto" class="cl disclaimer">
 <span style="color:black"> &nbsp;&nbsp;These are my rough notes while reading this book
 </span> 
-</div>
+</div> <br>
 
 In the Waterfall model, development is a linear process with distinct phases: requirements, design, implementation, testing, and deployment. Each phase must be completed before the next begins. This rigid approach can lead to challenges in adapting to changing requirements or unexpected issues.
 
