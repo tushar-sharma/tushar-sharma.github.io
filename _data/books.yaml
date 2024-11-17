@@ -321,3 +321,17 @@
   progress: 0
   comments: "<a href='https://towardsdatascience.com/understanding-llms-from-scratch-using-middle-school-math-e602d27ec876' target='_blank'>Article</a>"
 
+
+- title: "Data Structures"
+  author: University of California San Diego
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "<a href='https://www.coursera.org/learn/data-structures' target='_blank'>Online Course</a>"
+
+- title: "Java: Non-Linear Data Structures"
+  author: Codio
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "<a href='https://www.coursera.org/learn/codio-java-non-linear-data-structures' target='_blank'>Online Course</a>"
