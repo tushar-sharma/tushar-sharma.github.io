@@ -54,3 +54,21 @@ A pass-through variable is a variable that has been passed through long chain of
 **Subdivision**: Breaking up classes to divide work. However too many classes will increase complexity if there are shallow. Also subdivision works great if classes are independent. If there is dependencies between them, it would be to merge them into single class. e.g. HTTP request reader and parsing it into String would be better to have a single class.
 
 **GOTO* are bad programming practice because unstructured jumps makes it hard to understand the program.
+
+**How to Split a method** : 
+
+- Keep methods concise: Avoid methods exceeding 20 lines. While this isn't a strict rule, it serves as a guideline for keeping code readable and maintainable. 
+
+- Single Responsibility Principle: A method should perform one specific task and do it completely. If a method appears to do more than one thing, consider splitting it. 
+
+- Extract reusable subtasks: If a subtask within a method is general-purpose (i.e., it can be reused by other methods or components), extract it into its own method.
+
+- Avoid overly dependent methods: If a child method requires extensive understanding of its parent method to be understood, it is not a clean split. Such "conjoined methods" make code harder to maintain and debug.
+
+**Exception Handling:**:
+
+- Increased complexity: Exceptions can increase code complexity if not handled properly. Always strive for clear and consistent exception handling.
+
+- Masking exceptions: Handling exceptions at a low level (without propagating them when necessary) can hide the root cause of an issue. For example, silently failing or "hanging" instead of crashing might make debugging and resolution harder.
+
+- Aggregating exceptions: Handle exceptions at a higher level when possible. This means propagating errors upwards to a central place where they can be logged or managed consistently, reducing duplicated error-handling logic across the codebase.
