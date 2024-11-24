@@ -326,8 +326,18 @@ header li {
 
 var req = new XMLHttpRequest();
 req.responseType = 'json';
+  
+var url = "https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A227:T239?alt=json&key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw";
+var apiKey = ""; 
+var startRow = ""; 
+var endRow = ""; 
 
-const url = "https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A227:T239?alt=json&key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw";
+if (url && startRow && endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&key=${apiKey}`;
+    }
+}
 
 req.open('GET', url, true);
 

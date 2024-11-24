@@ -339,6 +339,330 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Weekly Logs from Nov Nov 18 to 24, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from Nov 18 to 24, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my weekly logs from Nov 18 to 24, 2024.&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!&quot;;
+var apiKey = &quot;AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;; 
+var startRow = &quot;A349&quot;; 
+var endRow = &quot;T372&quot;; 
+
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sunday-musing&quot;&gt;Sunday Musing&lt;/h2&gt;
+
+&lt;h3 id=&quot;scroll-to-bottom-of-google-sheets&quot;&gt;Scroll to Bottom of Google sheets&lt;/h3&gt;
+
+&lt;p&gt;I despise having to scroll to bottom of the Google Sheet with large entries. Go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Extentions-&amp;gt;Apps Script&lt;/code&gt; and add this to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Code.gs&lt;/code&gt; file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-gs&quot;&gt;function onOpen() {
+    let ss = SpreadsheetApp.getActiveSpreadsheet();
+    let sheet = ss.getActiveSheet();
+    sheet.setActiveRange(sheet.getRange(sheet.getLastRow(),1));
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;bangladesh-hindus&quot;&gt;Bangladesh Hindus&lt;/h3&gt;
+
+&lt;p&gt;This is what Donald Trump tweeted on Diwali before US elections&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;a href=&quot;https://x.com/realDonaldTrump/status/1852033622494105832&quot;&amp;gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;/img/TrumpTweetDiwali.png&quot; /&amp;gt; &amp;lt;/a&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Bangladesh has seen a recent ousting of their prime minister Sheikh Hasina who &lt;a href=&quot;https://thediplomat.com/2024/08/violence-in-bangladesh-after-hasinas-ouster-stirs-fear-among-hindu-minority/&quot;&gt;fled to India&lt;/a&gt;. It&apos;s interesting that Kamala Harris tweeted no such thing on Bangladesh&apos;s Hindus. However, Tulsi Gabbard was more vocal on her tweet on Bangladesh&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;a href=&quot;https://x.com/TulsiGabbard/status/1450975896920203267&quot;&amp;gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;/img/TulsiTweet.png&quot; /&amp;gt; &amp;lt;/a&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;movie-picks&quot;&gt;Movie Picks&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Checked out &lt;strong&gt;Deadpool 2&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It&apos;s hilarious with over-the-top action&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Would recommend&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;favourite-tracks&quot;&gt;Favourite Tracks&lt;/h3&gt;
+
+&lt;p&gt;Thanks to this song, I learned that New York City was originally called New Amsterdam as it was a Dutch colony in 1624. New York was captured during the reign of King Charles II of England and renamed.&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/6AP62vMnwMA?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/6AP62vMnwMA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/6AP62vMnwMA/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Song&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/JHRYD0Mv59o?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/JHRYD0Mv59o?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/JHRYD0Mv59o/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Song&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;delete-untracked-files-in-git&quot;&gt;Delete untracked files in Git&lt;/h3&gt;
+
+&lt;p&gt;You can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clean&lt;/code&gt; to remove untracked file in git repo. You can also provide options&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-f&lt;/code&gt;: Forcefully removes files.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-i&lt;/code&gt;: Review before deleting&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-d&lt;/code&gt;: Removes untracked directories.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-x&lt;/code&gt;: Includes ignored files (those listed in .gitignore).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;saturday-musing&quot;&gt;Saturday Musing&lt;/h2&gt;
+
+&lt;h3 id=&quot;suppress-stdout-for-commands-in-makefile&quot;&gt;Suppress stdout for commands in Makefile&lt;/h3&gt;
+
+&lt;p&gt;Let&apos;s say I&apos;ve a Makefile&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;build:
+	./gradlew clean build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If I simply run, I can see commands executed by Makefile&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make build
+./gradlew clean build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;However I can suppress command using&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;skipping-test-in-junit&quot;&gt;Skipping test in JUnit&lt;/h3&gt;
+
+&lt;p&gt;Skip a test during the build like&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.jupiter.api.Disabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Disabled&lt;/span&gt; 
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;thursday-musing&quot;&gt;Thursday Musing&lt;/h2&gt;
+
+&lt;h3 id=&quot;enable-2fa-for-chase&quot;&gt;Enable 2FA for Chase&lt;/h3&gt;
+
+&lt;p&gt;Default &lt;strong&gt;2FA&lt;/strong&gt; for Chase has only phone options. However if you are outside the U.S., you mostly rely on email for authentication. Go to &lt;a href=&quot;https://medium.com/r/?url=https%3A%2F%2Fsecure.chase.com%2Fweb%2Fauth%2Fdashboard%23%2Fdashboard%2FmyDevices%2FauthSecurity%2FtwoFactorAuthentication&quot;&gt;Chase 2FA&lt;/a&gt; and select email&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt;img align=&quot;center&quot;  loading=&quot;lazy&quot; src=&quot;/img/2fa.png&quot; alt=&quot;Chase 2FA&quot; /&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+          <pubDate>2024-11-21T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2024-nov-18-24</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-nov-18-24</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>How to Get Brazil Tourist Visa from USA with Indian passport</title>
           <description>&lt;p&gt;My experience on how to get Brazil&apos;s tourist visa with India passport living in the US.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -504,10 +828,10 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
-          <title>Weekly Logs from Oct 28 to Nov 3, 2024</title>
-          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from from Oct 28 to Nov 3, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+          <title>Weekly Logs from Nov 4 to 10, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from Nov 4 to 10, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;p&gt;Dear Vishi, this is my weekly logs from from Oct 28 to Nov 3, 2024.&lt;/p&gt;
+&lt;p&gt;Dear Vishi, this is my weekly logs from Nov 4 to 10, 2024.&lt;/p&gt;
 
 &lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
 
@@ -563,8 +887,238 @@ if (typeof Object.assign !== 'function') {
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A325:T347?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A305:T325?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;friday&quot;&gt;Friday&lt;/h2&gt;
+
+&lt;h3 id=&quot;hellblade-senuas-sacrifice&quot;&gt;Hellblade: Senua&apos;s Sacrifice&lt;/h3&gt;
+
+&lt;p&gt;I started playing &lt;strong&gt;Hellblade&lt;/strong&gt;. I bought it for discount on Steam.&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/8trsJwyjzJU?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/8trsJwyjzJU?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/8trsJwyjzJU/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;banning-movies-in-india&quot;&gt;Banning movies in India&lt;/h3&gt;
+
+&lt;p&gt;Should movies be banned in any country? Exception - child pronography, direct incitement to violence or treason for leaking national security States&apos;s secrets. But what about if the head of the State don&apos;t like the movie for whatever reason.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Kerala Story&lt;/strong&gt;, much liked by right wing,  was banned in West Bengal. &lt;strong&gt;Parzania&lt;/strong&gt; was banned in Gujarat which I believe would be much liked by the left. You can&apos;t cheer for one ban and oppose another. I reminds me a quote by Noam Chmosky&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If we don&apos;t believe in freedom of expression for people we despise, we don&apos;t believe in it at all&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;No movies should be banned period. Especially on the flimsy ground of &apos;hurting sentiments&apos;. And all right wing and left wing parties in India has been guilty of censorship.&lt;/p&gt;
+</description>
+          <pubDate>2024-11-04T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2024-nov-04-10</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-nov-04-10</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Weekly Logs from Oct 28 to Nov 3, 2024</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs from Oct 28 to Nov 3, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my weekly logs from Oct 28 to Nov 3, 2024.&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!&quot;;
+var apiKey = &quot;AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;; 
+var startRow = &quot;A305&quot;; 
+var endRow = &quot;T324&quot;; 
+
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -755,8 +1309,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A292:T304?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A292:T304?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -949,8 +1513,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A279:T291?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A279:T291?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -1234,8 +1808,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A266:T278?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A266:T278?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -2957,8 +3541,18 @@ stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;2&lt;span class=&quot;o&quot
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A227:T239?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A227:T239?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -3186,8 +3780,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A214:T226?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A214:T226?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -3530,8 +4134,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A201:T213?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A201:T213?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -3863,8 +4477,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A188:T201?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A188:T201?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -4038,10 +4662,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;0e8be6b5-c157-4431-9289-3288936cb4a8&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;5b3df77a-ebf5-472a-95b5-08adb753482c&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;0e8be6b5-c157-4431-9289-3288936cb4a8&apos;,
+    &apos;5b3df77a-ebf5-472a-95b5-08adb753482c&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -4205,8 +4829,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A174:T187?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A174:T187?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -4412,8 +5046,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A146:T159?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A146:T159?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -4701,8 +5345,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A132:T145?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A132:T145?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -5122,8 +5776,18 @@ Fetch time:  1.2998201847076416
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A104:T117?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A104:T117?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -5309,8 +5973,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A90:T103?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A90:T103?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -5544,8 +6218,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A77:T89?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A77:T89?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -5688,10 +6372,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;e003efeb-fca6-4fef-8217-8f1f1a2dee98&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;e2e535e3-08c3-4242-ba86-cd25e79239e0&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;e003efeb-fca6-4fef-8217-8f1f1a2dee98&apos;,
+    &apos;e2e535e3-08c3-4242-ba86-cd25e79239e0&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -5889,8 +6573,18 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A64:T76?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A64:T76?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -6121,8 +6815,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A51:T63?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A51:T63?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -6400,8 +7104,18 @@ Current browser version is 121.0.6167.139 with binary path /Applications/Google 
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A39:T50?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A39:T50?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -6675,8 +7389,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A28:T37?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A28:T37?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -6961,8 +7685,18 @@ SUCCESS
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A19:T27?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A19:T27?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -7186,8 +7920,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A9:T17?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A9:T17?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
@@ -7371,8 +8115,18 @@ req.send(null);
 
 var req = new XMLHttpRequest();
 req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A1:T8?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
 
-const url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A1:T8?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
 
 req.open(&apos;GET&apos;, url, true);
 
