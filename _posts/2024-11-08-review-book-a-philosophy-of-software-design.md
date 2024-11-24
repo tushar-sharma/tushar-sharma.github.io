@@ -72,3 +72,27 @@ A pass-through variable is a variable that has been passed through long chain of
 - Masking exceptions: Handling exceptions at a low level (without propagating them when necessary) can hide the root cause of an issue. For example, silently failing or "hanging" instead of crashing might make debugging and resolution harder.
 
 - Aggregating exceptions: Handle exceptions at a higher level when possible. This means propagating errors upwards to a central place where they can be logged or managed consistently, reducing duplicated error-handling logic across the codebase.
+
+
+Self-Documenting Code is discouraged. Good code doesn't repeat the code. eg 
+
+```java
+// Bad comment
+// Calculate the total price with tax
+double total = price + (price * taxRate);
+
+// Better: Make the code self-explanatory
+double totalPriceWithTax = price + (price * taxRate);
+```
+
+However comments are useful eg.
+
+```java
+// Using binary search because the dataset is pre-sorted and performance is critical
+int index = binarySearch(array, target);
+
+// Workaround for a bug in library version 1.2.3 that causes null pointer exceptions
+if (value != null) {
+    process(value);
+}
+```
