@@ -280,14 +280,12 @@
   progress: 11
   comments: ""
 
-
 - title: "Build A Large Language Model (From Scratch)"
   author: Sebastian Raschka
   rating: 0
   pending: true
   progress: 0
   comments: ""
-
 
 - title: "The Wall"
   author: "Marlen Haushofer"
@@ -296,15 +294,12 @@
   pending: true
   comments: "Recommended by <a href='https://www.meetup.com/creative-intellectuals/events/302641147/' target='_blank'>meetup group</a>"
 
-
-
 - title: "Introduction to Functional Programming"
   author: Erik Meijer
   rating: 0
   pending: true
   progress: 0
   comments: "<a href='https://ocw.tudelft.nl/courses/introduction-to-functional-programming/' target='_blank'>Online course</a>"
-
 
 - title: "AI for Trading"
   author: Udacity
@@ -313,14 +308,12 @@
   progress: 0
   comments: "<a href='https://www.udacity.com/course/ai-for-trading--nd880' target='_blank'>Online course</a>"
 
-
 - title: "Understanding LLMs from Scratch Using Middle School Math"
   author: Rohit Patel
   rating: 0
   pending: true
   progress: 15
   comments: "<a href='https://towardsdatascience.com/understanding-llms-from-scratch-using-middle-school-math-e602d27ec876' target='_blank'>Article</a>"
-
 
 - title: "Data Structures"
   author: University of California San Diego
