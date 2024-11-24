@@ -47,27 +47,24 @@
 
 <script type="text/javascript">
 
-  var baseUrl = "{{ page.google_sheet_url | default: '' }}";
-  var startRow = "{{ page.startRow | default: '' | strip }}";
-  var endRow = "{{ page.endRow | default: '' | strip }}"; 
-  var apiKey = "{{ page.google_sheet_key | default: '' | strip }}";
+var req = new XMLHttpRequest();
+req.responseType = 'json';
   
-  if (startRow && endRow) {
-    baseUrl = "{{ page.google_sheet_base_url | default: '' }}";
-    if (baseUrl) {
-      baseUrl += `${startRow}:${endRow}?alt=json`;
-      if (apiKey) {
-        baseUrl += `&key=${apiKey}`;
-      }
+var url = "{{ page.google_sheet_url | default: '' | strip }}";
+var apiKey = "{{ page.google_sheet_key | default: '' | strip }}"; 
+var startRow = "{{ page.startRow | default: '' | strip }}"; 
+var endRow = "{{ page.endRow | default: '' | strip }}"; 
+
+if (url && startRow && endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&key=${apiKey}`;
     }
-  }
+}
 
-  var req = new XMLHttpRequest();
-  req.responseType = 'json';
+req.open('GET', url, true);
 
-  req.open('GET', baseUrl, true);
-
-  req.onload  = function() {
+req.onload  = function() {
     var data = req.response["values"];
 
     let i;
