@@ -182,6 +182,13 @@
   progress: 0
   comments: "Recommended by Patricia. <a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
 
+- title: "A Philosophy of Software Design"
+  author: John Ousterhout
+  rating: 0
+  pending: true
+  progress: 50
+  comments: "<a href='/blog/review-book-a-philosophy-of-software-design' target='_blank'>Notes</a>"
+
 - title: "Technical Analysis of the Financial Markets"
   author: "John J. Murphy"
   rating: 0
@@ -273,15 +280,8 @@
   progress: 11
   comments: ""
 
-- title: "Siddhartha"
-  author: Hermann Hesse
-  rating: 0
-  pending: true
-  progress: 0
-  comments: "Recommended by Maca"
-
-- title: "A Philosophy of Software Design"
-  author: John Ousterhout
+- title: "Build A Large Language Model (From Scratch)"
+  author: Sebastian Raschka
   rating: 0
   pending: true
   progress: 0
@@ -293,3 +293,38 @@
   progress: 0
   pending: true
   comments: "Recommended by <a href='https://www.meetup.com/creative-intellectuals/events/302641147/' target='_blank'>meetup group</a>"
+
+- title: "Introduction to Functional Programming"
+  author: Erik Meijer
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "<a href='https://ocw.tudelft.nl/courses/introduction-to-functional-programming/' target='_blank'>Online course</a>"
+
+- title: "AI for Trading"
+  author: Udacity
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "<a href='https://www.udacity.com/course/ai-for-trading--nd880' target='_blank'>Online course</a>"
+
+- title: "Understanding LLMs from Scratch Using Middle School Math"
+  author: Rohit Patel
+  rating: 0
+  pending: true
+  progress: 15
+  comments: "<a href='https://towardsdatascience.com/understanding-llms-from-scratch-using-middle-school-math-e602d27ec876' target='_blank'>Article</a>"
+
+- title: "Data Structures"
+  author: University of California San Diego
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "<a href='https://www.coursera.org/learn/data-structures' target='_blank'>Online Course</a>"
+
+- title: "Java: Non-Linear Data Structures"
+  author: Codio
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "<a href='https://www.coursera.org/learn/codio-java-non-linear-data-structures' target='_blank'>Online Course</a>"

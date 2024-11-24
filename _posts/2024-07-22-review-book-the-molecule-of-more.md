@@ -8,7 +8,7 @@ category: blog
 tags: books
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<!-- truncate_here -->
+What's a dopamine? It's a molecule secreated by part of brain. Often dubbed pleasure molecule, it's presumed to be released when we experience pleasures. However this book explores how dopamine is a molecule of more not just pleasure. Like the author said the dopamine activity is not a marker of pleasure. It's a reaction to the unexpected - to possibility and anticipation.<!-- truncate_here -->
 
 <link rel="stylesheet" href="{{ root_url }}/css/books.css" />
 
