@@ -47,12 +47,27 @@
 
 <script type="text/javascript">
 
+var baseUrl = "{{ page.google_sheet_url | default: '' }}"; // Old format URL
+var startRow = "{{ page.startRow | default: '' | strip }}"; // New format startRow
+var endRow = "{{ page.endRow | default: '' | strip }}";     // New format endRow
+var apiKey = "{{ page.google_sheet_key | default: '' | strip }}"; // Optional API key for new format
+  
+// Construct the URL dynamically if startRow and endRow are defined
+if (startRow && endRow) {
+// Base URL for new format
+baseUrl = "{{ page.google_sheet_base_url | default: '' }}";
+if (baseUrl) {
+  baseUrl += `${startRow}:${endRow}?alt=json`;
+  if (apiKey) {
+      baseUrl += `&key=${apiKey}`;
+  }
+  }
+}
+
 var req = new XMLHttpRequest();
 req.responseType = 'json';
 
-const url = "{{ page.google_sheet_url }}";
-
-req.open('GET', url, true);
+req.open('GET', baseUrl, true);
 
 req.onload  = function() {
     var data = req.response["values"];
