@@ -49,8 +49,18 @@
 
 var req = new XMLHttpRequest();
 req.responseType = 'json';
+  
+var url = "{{ page.google_sheet_url | default: '' | strip }}";
+var apiKey = "{{ page.google_sheet_key | default: '' | strip }}"; 
+var startRow = "{{ page.startRow | default: '' | strip }}"; 
+var endRow = "{{ page.endRow | default: '' | strip }}"; 
 
-const url = "{{ page.google_sheet_url }}";
+if (url && startRow && endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&key=${apiKey}`;
+    }
+}
 
 req.open('GET', url, true);
 
