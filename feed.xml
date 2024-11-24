@@ -418,6 +418,92 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>A Philosophy of Software Design by John Ousterhout</title>
+          <description>&lt;p&gt;These are my rough notes while reading this book.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;!-- disclaimer --&gt;
+&lt;div style=&quot;margin: 0 auto&quot; class=&quot;cl disclaimer&quot;&gt;
+&lt;span style=&quot;color:black&quot;&gt; &amp;nbsp;&amp;nbsp;These are my rough notes while reading this book
+&lt;/span&gt; 
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the Waterfall model, development is a linear process with distinct phases: requirements, design, implementation, testing, and deployment. Each phase must be completed before the next begins. This rigid approach can lead to challenges in adapting to changing requirements or unexpected issues.&lt;/p&gt;
+
+&lt;p&gt;Agile methodologies, like Scrum or Kanban, emphasize iterative development. A project is broken down into smaller, manageable iterations or sprints. Each sprint involves planning, designing, implementing, and testing a specific set of features. This iterative approach allows for flexibility and continuous improvement.&lt;/p&gt;
+
+&lt;p&gt;Modular design is an approach where a software system is divided into distinct, relatively independent modules. Each module has two components: an interface and an implementation. The interface specifies what the module does without detailing how it accomplishes it. The implementation contains the code that fulfills the promises made by the interface.&lt;/p&gt;
+
+&lt;p&gt;In object-oriented programming (OOP), each class can be viewed as a module. By adhering to the interface, changes to a module&apos;s implementation do not impact other modules that depend on it. This isolation enhances flexibility and maintainability across the system.&lt;/p&gt;
+
+&lt;p&gt;Abstraction provides a simplified view of an entity, focusing only on essential details while omitting irrelevant information. This principle allows developers to manage complexity effectively.&lt;/p&gt;
+
+&lt;p&gt;An interface is like a contract that specifies methods which must be implemented by any class that adheres to it. It exposes these methods to other modules without revealing the actual implementation, ensuring that interactions occur through a consistent set of behaviors rather than direct access to the implementation.&quot;&lt;/p&gt;
+
+&lt;p&gt;The best modules are deep: they have a lot of functionality hidden behind a simple interface. Shallow module is one whose interface is complicated relative to the functionality it provides.&lt;/p&gt;
+
+&lt;p&gt;Often taught that &quot;classes should be small&quot;. Instead classes should be deep. Small classes don&apos;t contribute much functionality and increase boilerplate. e.g.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fileStream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FileInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;BufferedInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bufferedStream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BufferedInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;ObjectInputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objectStream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enw&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ObjectInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bufferedStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this code, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FileInputStream&lt;/code&gt; only provides rudimentary I/O: it&apos;s not capable of bueffered I/O, nor can it read or write searialized objects. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BufferedInputStream&lt;/code&gt; adds buffering to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FileInputStream&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ObjectInputStream&lt;/code&gt; adds read ability to read and write serialized objects. First two objects, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fileStream&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bufferedStream&lt;/code&gt; are never used once the file has been opened. So buffering must be requested explicitly. If a developer forgest to creat this object, there will be no bufferring and I/O will be slow.&lt;/p&gt;
+
+&lt;p&gt;Java Developers argue that since not everyone wants to use buffering for file I/O, so that&apos;s why there&apos;s an additional step. However interfaces should be desigend to make &lt;strong&gt;common case&lt;/strong&gt; as simple as possible. In contrast, Unix develoeprs made sequential I/O most common use case.&lt;/p&gt;
+
+&lt;p&gt;A pass-through method is one that does little except invoke another method, whose signature is similar or identical to that of the calling method. They make the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt; more shallow, increase the complexity without increasing the functionality of system. However, one such exception like dispatcher. A dispatcher is a method that uses its arguments to select one of several other methods to invoke.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Decorators&lt;/strong&gt;. Also called wrapper. A decorator objct takes an existing object and extends its functionality. In Java, &lt;strong&gt;BufferedInputStream&lt;/strong&gt; class is a decorator: given an &lt;strong&gt;InputStream&lt;/strong&gt; object, it provides the same API but intorduces bufering.&lt;/p&gt;
+
+&lt;p&gt;A pass-through variable is a variable that has been passed through long chain of methods. It increases complexity for intermediate methods. One Soulution - Use Global Variable. However it has it&apos;s cons. It&apos;s impossible to create independent instances of same system in same process that access same global variable (conflict). ANother solution - Use Context object. It stores all the glboal variable. Cons is that it can have thread safety issue. Solution use immutable objects in a context object.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Subdivision&lt;/strong&gt;: Breaking up classes to divide work. However too many classes will increase complexity if there are shallow. Also subdivision works great if classes are independent. If there is dependencies between them, it would be to merge them into single class. e.g. HTTP request reader and parsing it into String would be better to have a single class.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;GOTO&lt;/strong&gt; are bad programming practice because unstructured jumps makes it hard to understand the program.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How to Split a method&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Keep methods concise: Avoid methods exceeding 20 lines. While this isn&apos;t a strict rule, it serves as a guideline for keeping code readable and maintainable.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Single Responsibility Principle: A method should perform one specific task and do it completely. If a method appears to do more than one thing, consider splitting it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Extract reusable subtasks: If a subtask within a method is general-purpose (i.e., it can be reused by other methods or components), extract it into its own method.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Avoid overly dependent methods: If a child method requires extensive understanding of its parent method to be understood, it is not a clean split. Such &quot;conjoined methods&quot; make code harder to maintain and debug.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Exception Handling:&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Increased complexity: Exceptions can increase code complexity if not handled properly. Always strive for clear and consistent exception handling.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Masking exceptions: Handling exceptions at a low level (without propagating them when necessary) can hide the root cause of an issue. For example, silently failing or &quot;hanging&quot; instead of crashing might make debugging and resolution harder.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aggregating exceptions: Handle exceptions at a higher level when possible. This means propagating errors upwards to a central place where they can be logged or managed consistently, reducing duplicated error-handling logic across the codebase.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          <pubDate>2024-11-08T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/review-book-a-philosophy-of-software-design</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/review-book-a-philosophy-of-software-design</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Weekly Logs from Oct 28 to Nov 3, 2024</title>
           <description>&lt;p&gt;Dear Vishi, this is my weekly logs from from Oct 28 to Nov 3, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -2695,7 +2781,7 @@ stash@&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;2&lt;span class=&quot;o&quot
       
         <item>
           <title>Review of The Molecule of More by Daniel Z. Lieberman, Michael E. Long</title>
-          <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+          <description>&lt;p&gt;What&apos;s a dopamine? It&apos;s a molecule secreated by part of brain. Often dubbed pleasure molecule, it&apos;s presumed to be released when we experience pleasures. However this book explores how dopamine is a molecule of more not just pleasure. Like the author said the dopamine activity is not a marker of pleasure. It&apos;s a reaction to the unexpected - to possibility and anticipation.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
 
@@ -3952,10 +4038,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;6922e382-aa38-4d2a-8302-b38fb1d5fc7c&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;0e8be6b5-c157-4431-9289-3288936cb4a8&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;6922e382-aa38-4d2a-8302-b38fb1d5fc7c&apos;,
+    &apos;0e8be6b5-c157-4431-9289-3288936cb4a8&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -5602,10 +5688,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;22c5370c-7cd5-4f90-a23e-a0ea44a90a41&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;e003efeb-fca6-4fef-8217-8f1f1a2dee98&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;22c5370c-7cd5-4f90-a23e-a0ea44a90a41&apos;,
+    &apos;e003efeb-fca6-4fef-8217-8f1f1a2dee98&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
