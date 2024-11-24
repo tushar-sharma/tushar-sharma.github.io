@@ -52,9 +52,7 @@ var startRow = "{{ page.startRow | default: '' | strip }}"; // New format startR
 var endRow = "{{ page.endRow | default: '' | strip }}";     // New format endRow
 var apiKey = "{{ page.google_sheet_key | default: '' | strip }}"; // Optional API key for new format
   
-// Construct the URL dynamically if startRow and endRow are defined
 if (startRow && endRow) {
-// Base URL for new format
 baseUrl = "{{ page.google_sheet_base_url | default: '' }}";
 if (baseUrl) {
   baseUrl += `${startRow}:${endRow}?alt=json`;
