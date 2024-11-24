@@ -53,7 +53,7 @@ A pass-through variable is a variable that has been passed through long chain of
 
 **Subdivision**: Breaking up classes to divide work. However too many classes will increase complexity if there are shallow. Also subdivision works great if classes are independent. If there is dependencies between them, it would be to merge them into single class. e.g. HTTP request reader and parsing it into String would be better to have a single class.
 
-**GOTO* are bad programming practice because unstructured jumps makes it hard to understand the program.
+**GOTO** are bad programming practice because unstructured jumps makes it hard to understand the program.
 
 **How to Split a method** : 
 
