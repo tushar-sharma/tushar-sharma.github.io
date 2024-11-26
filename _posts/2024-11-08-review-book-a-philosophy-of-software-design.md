@@ -96,3 +96,65 @@ if (value != null) {
     process(value);
 }
 ```
+
+**Avoid Repeating the Code:**
+
+Comments should add value by providing context or intent, not restating what the code does. Bad Example (Repeats the code):
+
+```java
+// Setting the status to LOADING
+readRPC[i].status = LOADING;
+```
+
+Good Example (Explains the purpose):
+
+```java
+// Indicate that the RPC is currently being processed
+readRPC[i].status = LOADING;
+```
+
+**Provide High-Level Information:**
+
+Comments should explain the intent or purpose of the code rather than its specific implementation details.
+
+Ask Yourself: What is this code trying to achieve?
+
+```java
+// Append the current hash to the RPC list for the appropriate server if it hasn’t been processed yet
+if (!processedHashes.contains(currentHash)) {
+    appendToRPC(currentHash, server);
+}
+```
+
+**Abstraction in Comments:**
+
+Provide a simplified view of the entity or process. Focus on essential details and omit those that can be safely ignored. Bad Example (Too Detailed):
+
+```java
+// Check if the hash is already in the list of processed hashes, 
+// then find the appropriate server using the server map, 
+// and finally append the hash to the RPC queue of that server.
+if (!processedHashes.contains(currentHash)) {
+    appendToRPC(currentHash, server);
+}
+```
+
+Good Example (Abstracted):
+
+```java
+// Ensure the current hash is processed by the appropriate server
+if (!processedHashes.contains(currentHash)) {
+    appendToRPC(currentHash, server);
+}
+```
+
+**Use Comments for Context:**
+
+Comments should clarify the why and not just the what of the code. Example:
+
+```java
+// Avoid duplicate processing by checking if the hash has already been handled
+if (!processedHashes.contains(currentHash)) {
+    appendToRPC(currentHash, server);
+}
+```
