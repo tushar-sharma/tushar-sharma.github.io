@@ -364,6 +364,83 @@ header li {
   </li>
 </ul>
 
+<p>Self-Documenting Code is discouraged. Good code doesn't repeat the code. eg</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Bad comment</span>
+<span class="c1">// Calculate the total price with tax</span>
+<span class="kt">double</span> <span class="n">total</span> <span class="o">=</span> <span class="n">price</span> <span class="o">+</span> <span class="o">(</span><span class="n">price</span> <span class="o">*</span> <span class="n">taxRate</span><span class="o">);</span>
+
+<span class="c1">// Better: Make the code self-explanatory</span>
+<span class="kt">double</span> <span class="n">totalPriceWithTax</span> <span class="o">=</span> <span class="n">price</span> <span class="o">+</span> <span class="o">(</span><span class="n">price</span> <span class="o">*</span> <span class="n">taxRate</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>However comments are useful eg.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Using binary search because the dataset is pre-sorted and performance is critical</span>
+<span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">binarySearch</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="n">target</span><span class="o">);</span>
+
+<span class="c1">// Workaround for a bug in library version 1.2.3 that causes null pointer exceptions</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">value</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">process</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Avoid Repeating the Code:</strong></p>
+
+<p>Comments should add value by providing context or intent, not restating what the code does. Bad Example (Repeats the code):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Setting the status to LOADING</span>
+<span class="n">readRPC</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">status</span> <span class="o">=</span> <span class="no">LOADING</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>Good Example (Explains the purpose):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Indicate that the RPC is currently being processed</span>
+<span class="n">readRPC</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">status</span> <span class="o">=</span> <span class="no">LOADING</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p><strong>Provide High-Level Information:</strong></p>
+
+<p>Comments should explain the intent or purpose of the code rather than its specific implementation details.</p>
+
+<p>Ask Yourself: What is this code trying to achieve?</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Append the current hash to the RPC list for the appropriate server if it hasn’t been processed yet</span>
+<span class="k">if</span> <span class="o">(!</span><span class="n">processedHashes</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">currentHash</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">appendToRPC</span><span class="o">(</span><span class="n">currentHash</span><span class="o">,</span> <span class="n">server</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Abstraction in Comments:</strong></p>
+
+<p>Provide a simplified view of the entity or process. Focus on essential details and omit those that can be safely ignored. Bad Example (Too Detailed):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Check if the hash is already in the list of processed hashes, </span>
+<span class="c1">// then find the appropriate server using the server map, </span>
+<span class="c1">// and finally append the hash to the RPC queue of that server.</span>
+<span class="k">if</span> <span class="o">(!</span><span class="n">processedHashes</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">currentHash</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">appendToRPC</span><span class="o">(</span><span class="n">currentHash</span><span class="o">,</span> <span class="n">server</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Good Example (Abstracted):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Ensure the current hash is processed by the appropriate server</span>
+<span class="k">if</span> <span class="o">(!</span><span class="n">processedHashes</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">currentHash</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">appendToRPC</span><span class="o">(</span><span class="n">currentHash</span><span class="o">,</span> <span class="n">server</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Use Comments for Context:</strong></p>
+
+<p>Comments should clarify the why and not just the what of the code. Example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Avoid duplicate processing by checking if the hash has already been handled</span>
+<span class="k">if</span> <span class="o">(!</span><span class="n">processedHashes</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">currentHash</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">appendToRPC</span><span class="o">(</span><span class="n">currentHash</span><span class="o">,</span> <span class="n">server</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
 
 
 <!-- this is for pagination -->
