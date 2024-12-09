@@ -158,3 +158,36 @@ if (!processedHashes.contains(currentHash)) {
     appendToRPC(currentHash, server);
 }
 ```
+
+Interface documentation shouldn't have implementation details.
+
+Comments first before writing the code. Also comments are more like abstraction rather than repeting the code
+
+```bash
+// phase 1 : scan active RPC to see if call is completed
+```
+
+Local Variables should be named precise. Generic names are not good. e.g. 
+
+- **count** is too generic. 
+
+- Instead of using **x** and **y** for co-ordinates, better would be to use **charIndex**, **lineIndex**
+
+- Another bad named variable is **result**. 
+
+- However, **i**, **j** is fine for loop iteration as it only spans few lines of code
+
+- For **Go Developers**, convention is usually opposite, variable names are often short
+
+
+**Invariant** is a property of variable or structure that's always true. 
+
+**Generic container** are non obvious code. e.g. 
+
+```java
+return new Pair<Intger, Boolean>();
+```
+
+It's much better to wrap it under a class and give it a meaningful name. 
+
+If there's a bug in the code, first write a unit test and then fix the test.
