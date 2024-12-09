@@ -15,6 +15,7 @@ cleanbranch:
 	git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -D
 copy:
 	rm -fr tag
+	cp -r _site/tag .
 	cp  CNAME _site/
 	cp  sitemap.xml _site/
 	cp .nojekyll _site/
