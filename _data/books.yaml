@@ -185,8 +185,8 @@
 - title: "A Philosophy of Software Design"
   author: John Ousterhout
   rating: 0
-  pending: true
-  progress: 65
+  pending: false
+  progress: 0
   comments: "<a href='/blog/review-book-a-philosophy-of-software-design' target='_blank'>Notes</a>"
 
 - title: "Technical Analysis of the Financial Markets"
