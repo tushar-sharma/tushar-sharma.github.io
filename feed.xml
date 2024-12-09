@@ -339,209 +339,6 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
-          <title>Weekly Logs</title>
-          <description>&lt;p&gt;Dear Vishi, weekly logs from Dec 2 to 8, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
-
-&lt;p&gt;Dear Vishi, weekly logs from Dec 2 to 8, 2024.&lt;/p&gt;
-
-&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
-
-&lt;style type=&quot;text/css&quot;&gt;
-  .sketch-cirlce{
-    position:relative;
-  }
-  
-  .sketch-cirlce:before{
-    content:&quot;&quot;;
-    color: white;
-    z-index:-1;
-    left:-0.5em;
-    top:-0.1em;
-    border-width:2px;
-    border-style:solid;
-    border-color:#39c;
-    position:absolute;
-    border-right-color:transparent;
-    width:100%;
-    height:1em;
-    transform:rotate(2deg);
-    opacity:0.7;
-    border-radius:50%;
-    padding:0.1em 0.25em;
-  }
-  
-  .sketch-cirlce:after{
-    content:&quot;&quot;;
-    z-index:-1;
-    left:-0.5em;
-    top:0.1em;
-    padding:0.1em 0.25em;
-    border-width:2px;
-    border-style:solid;
-    border-color:#39c;
-    border-left-color:transparent;
-    border-top-color:transparent;
-    position:absolute;
-    width:100%;
-    height:1em;
-    transform:rotate(-1deg);
-    opacity:0.7;
-    border-radius:50%;
-  }
-&lt;/style&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-
-var req = new XMLHttpRequest();
-req.responseType = &apos;json&apos;;
-  
-var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!&quot;;
-var apiKey = &quot;AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;; 
-var startRow = &quot;A397&quot;; 
-var endRow = &quot;T420&quot;; 
-
-if (url &amp;&amp; startRow &amp;&amp; endRow) {
-    url += `${startRow}:${endRow}?alt=json`;
-    if (apiKey) {
-      url += `&amp;key=${apiKey}`;
-    }
-}
-
-req.open(&apos;GET&apos;, url, true);
-
-req.onload  = function() {
-    var data = req.response[&quot;values&quot;];
-
-    let i;
-
-    let getDate = [];
-
-    for (i = 1; i &lt; data.length; i++) {
-
-      let activity = data[i][0];
-      let streak  = data[i][1];
-      let logging = data[i][6];
-      let count = data[i][19];
-      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
-      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
-      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
-      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
-      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
-      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
-      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
-
-      if(data[i][18]) {
-          getDate.push(data[i][18]);
-      }
-
-      if (parseInt(streak) &gt; 0) {
-        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
-      }
-
-      document.getElementById(&quot;demo&quot;).innerHTML +=
-        &quot;&lt;tr&gt;&quot; +
-        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
-        activity +
-        &quot;&lt;/td&gt;&quot; +
-        &quot;&lt;td&gt;&quot; +
-        todayDate +
-        &quot;&lt;/td&gt;&quot; +
-        &quot;&lt;td&gt;&quot; +
-        yesterdayDate +
-        &quot;&lt;/td&gt;&quot; +
-        &quot;&lt;td&gt;&quot; +
-        yesterdayMinusOneDate +
-        &quot;&lt;/td&gt;&quot; +
-        &quot;&lt;td&gt;&quot; +
-          yesterdayMinusTwoDate +
-        &quot;&lt;/td&gt;&quot; +
-        &quot;&lt;td&gt;&quot; +
-          yesterdayMinusThreeDate +
-        &quot;&lt;/td&gt;&quot; +
-        &quot;&lt;td&gt;&quot; +
-          yesterdayMinusFourDate +
-        &quot;&lt;/td&gt;&quot; +
-        &quot;&lt;td&gt;&quot; +
-          yesterdayMinusFiveDate +
-        &quot;&lt;/td&gt;&quot; +
-        &quot;&lt;td&gt;&quot; +
-        streak +
-        &quot;&lt;/td&gt;&quot; +
-        &quot;&lt;td&gt;&quot; +
-        count +
-        &quot;&lt;/td&gt;&quot; +
-        &quot;&lt;td&gt;&quot; +
-        logging +
-        &quot;&lt;/td&gt;&quot; +
-
-        &quot;&lt;/tr&gt;&quot;;
-    }
-
-    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
-    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
-    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
-    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
-    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
-    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
-    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
-};
-req.send(null);
-&lt;/script&gt;
-
-&lt;!-- dummy box begins --&gt;
-&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;container my-5&quot;&gt;
-
-  &lt;div class=&quot;row&quot;&gt;
-
-    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
-
-      &lt;!-- Table --&gt;
-      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
-        &lt;thead&gt;
-          &lt;tr&gt;
-            &lt;th&gt;Activity&lt;/th&gt;
-           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
-            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
-            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
-            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
-            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
-            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
-            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
-            &lt;th&gt;Streak&lt;/th&gt;
-            &lt;th&gt;Count&lt;/th&gt;
-            &lt;th&gt;Logging&lt;/th&gt;
-          &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
-      &lt;/table&gt;
-
-    &lt;/div&gt;
-
-  &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;h2 id=&quot;tuesday&quot;&gt;Tuesday&lt;/h2&gt;
-
-&lt;h3 id=&quot;south-koreas-martial-law&quot;&gt;South Korea&apos;s martial law&lt;/h3&gt;
-
-&lt;p&gt;South Korea&apos;s President Yoon declared a martial law which effectively banned all political activities. South Korea was the last country I expected to have a political turmoil. According to the martial law decree, all political activities are strictly prohibited and media and publications will be controlled. I know too little about this subject to write more about it.&lt;/p&gt;
-</description>
-          <pubDate>2024-12-02T00:00:00-05:00</pubDate>
-          <link>https://randomwits.com/blog/weekly-logs-2024-dec-02-08</link>
-          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2024-dec-02-08</guid>
-        </item>
-      
-    
-      
-        <item>
           <title>Weekly Logs from Nov Nov 18 to 24, 2024</title>
           <description>&lt;p&gt;Dear Vishi, this is my weekly logs from Nov 18 to 24, 2024.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -789,7 +586,24 @@ req.send(null);
 &lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/6AP62vMnwMA?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/6AP62vMnwMA?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/6AP62vMnwMA/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Song&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/JHRYD0Mv59o?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/JHRYD0Mv59o?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/JHRYD0Mv59o/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Song&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;I saw video of this young girl getting emotional&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/xL9_Oc_nvkc?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/xL9_Oc_nvkc?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/xL9_Oc_nvkc/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Song&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the full song&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/b1MJVZH3f8w?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/b1MJVZH3f8w?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/b1MJVZH3f8w/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Song&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Recently watching lot of Osho reels&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/ZMURU6osGKU?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/ZMURU6osGKU?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/ZMURU6osGKU/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Song&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the background music&lt;/p&gt;
+
+&lt;iframe style=&quot;position: relative;  width: 100%;&quot; height=&quot;500&quot; src=&quot;https://www.youtube.com/embed/9dqtnByXqSo?autoplay=1&quot; srcdoc=&quot;&amp;lt;style&amp;gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&amp;lt;/style&amp;gt;&amp;lt;a href=https://www.youtube.com/embed/9dqtnByXqSo?autoplay=1&amp;gt;&amp;lt;img src=https://img.youtube.com/vi/9dqtnByXqSo/hqdefault.jpg alt=&apos;Sample&apos;&amp;gt;&amp;lt;span&amp;gt;▶&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Song&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;delete-untracked-files-in-git&quot;&gt;Delete untracked files in Git&lt;/h3&gt;
@@ -810,6 +624,12 @@ req.send(null);
     &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-x&lt;/code&gt;: Includes ignored files (those listed in .gitignore).&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;samosa-trumps-over-jalebi&quot;&gt;Samosa trumps over jalebi&lt;/h2&gt;
+
+&lt;p&gt;My friend asked if I wanted jalebi after work. I said, &quot;Nah, not a fan.&quot; He looked at me like I was suddenly grown a into health freak. “Wow, so health-conscious!”&lt;/p&gt;
+
+&lt;p&gt;I let him bask in my glory for three seconds before I ruined it. &quot;Let’s get samosas instead. I’m not healthy—I just like my diabetes deep-fried, not sugary.&quot;&lt;/p&gt;
 
 &lt;h2 id=&quot;saturday-musing&quot;&gt;Saturday Musing&lt;/h2&gt;
 
@@ -1099,6 +919,44 @@ req.send(null);
     &lt;span class=&quot;n&quot;&gt;appendToRPC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;currentHash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Interface documentation shouldn&apos;t have implementation details.&lt;/p&gt;
+
+&lt;p&gt;Comments first before writing the code. Also comments are more like abstraction rather than repeting the code&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// phase 1 : scan active RPC to see &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;call is completed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Local Variables should be named precise. Generic names are not good. e.g.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;count&lt;/strong&gt; is too generic.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Instead of using &lt;strong&gt;x&lt;/strong&gt; and &lt;strong&gt;y&lt;/strong&gt; for co-ordinates, better would be to use &lt;strong&gt;charIndex&lt;/strong&gt;, &lt;strong&gt;lineIndex&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Another bad named variable is &lt;strong&gt;result&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;However, &lt;strong&gt;i&lt;/strong&gt;, &lt;strong&gt;j&lt;/strong&gt; is fine for loop iteration as it only spans few lines of code&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For &lt;strong&gt;Go Developers&lt;/strong&gt;, convention is usually opposite, variable names are often short&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Invariant&lt;/strong&gt; is a property of variable or structure that&apos;s always true.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Generic container&lt;/strong&gt; are non obvious code. e.g.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Intger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It&apos;s much better to wrap it under a class and give it a meaningful name.&lt;/p&gt;
+
+&lt;p&gt;If there&apos;s a bug in the code, first write a unit test and then fix the test.&lt;/p&gt;
 </description>
           <pubDate>2024-11-08T00:00:00-05:00</pubDate>
           <link>https://randomwits.com/blog/review-book-a-philosophy-of-software-design</link>
@@ -4942,10 +4800,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;74ad481b-c083-4c97-aea4-2df783c9c1b9&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;bc1664f6-2c0e-4ec5-8825-16b9e36f4ef9&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;74ad481b-c083-4c97-aea4-2df783c9c1b9&apos;,
+    &apos;bc1664f6-2c0e-4ec5-8825-16b9e36f4ef9&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -6652,10 +6510,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;d2223b3b-0024-4fff-87a8-3c3bf73b991b&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;cb9f3fb8-50fe-4de4-80d4-fc6507800afb&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;d2223b3b-0024-4fff-87a8-3c3bf73b991b&apos;,
+    &apos;cb9f3fb8-50fe-4de4-80d4-fc6507800afb&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );

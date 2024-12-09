@@ -441,6 +441,44 @@ header li {
 <span class="o">}</span>
 </code></pre></div></div>
 
+<p>Interface documentation shouldn't have implementation details.</p>
+
+<p>Comments first before writing the code. Also comments are more like abstraction rather than repeting the code</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// phase 1 : scan active RPC to see <span class="k">if </span>call is completed
+</code></pre></div></div>
+
+<p>Local Variables should be named precise. Generic names are not good. e.g.</p>
+
+<ul>
+  <li>
+    <p><strong>count</strong> is too generic.</p>
+  </li>
+  <li>
+    <p>Instead of using <strong>x</strong> and <strong>y</strong> for co-ordinates, better would be to use <strong>charIndex</strong>, <strong>lineIndex</strong></p>
+  </li>
+  <li>
+    <p>Another bad named variable is <strong>result</strong>.</p>
+  </li>
+  <li>
+    <p>However, <strong>i</strong>, <strong>j</strong> is fine for loop iteration as it only spans few lines of code</p>
+  </li>
+  <li>
+    <p>For <strong>Go Developers</strong>, convention is usually opposite, variable names are often short</p>
+  </li>
+</ul>
+
+<p><strong>Invariant</strong> is a property of variable or structure that's always true.</p>
+
+<p><strong>Generic container</strong> are non obvious code. e.g.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">Intger</span><span class="o">,</span> <span class="nc">Boolean</span><span class="o">&gt;();</span>
+</code></pre></div></div>
+
+<p>It's much better to wrap it under a class and give it a meaningful name.</p>
+
+<p>If there's a bug in the code, first write a unit test and then fix the test.</p>
+
 
 
 <!-- this is for pagination -->
