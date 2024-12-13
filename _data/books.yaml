@@ -189,6 +189,13 @@
   progress: 0
   comments: "<a href='/blog/review-book-a-philosophy-of-software-design' target='_blank'>Notes</a>"
 
+- title: "How to Change Your Mind"
+  author: Michael Pollan
+  rating: 0
+  pending: true
+  progress: 5
+  comments: "<a href='/blog/review-book-how-to-change-your-mind' target='_blank'>Notes</a>"
+  
 - title: "Technical Analysis of the Financial Markets"
   author: "John J. Murphy"
   rating: 0
@@ -328,13 +335,6 @@
   pending: true
   progress: 0
   comments: "<a href='https://www.coursera.org/learn/codio-java-non-linear-data-structures' target='_blank'>Online Course</a>"
-
-- title: "How to Change Your Mind"
-  author: Michael Pollan
-  rating: 0
-  pending: true
-  progress: 0
-  comments: ""
 
 - title: "1,000 Foods To Eat Before You Die"
   author:  Mimi Sheraton
