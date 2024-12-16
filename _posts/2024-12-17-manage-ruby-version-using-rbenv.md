@@ -6,13 +6,14 @@ thumb: https://unsplash.com/photos/EUIALcbnQYI/download?w=437
 author: tushar sharma
 tags:
  - ruby
+ - jekyll
 category: blog
 ---
 
-Resolving error: public_suffix-6.0.1 requires ruby version >= 3.0, which is incompatible with the current version, ruby 2.7.0.<!-- truncate_here -->
+I usually build my `jekyll` website using `bundle install`. However I started getting following build error.<!-- truncate_here -->
 
 
-While running `$ bundle install`, you might encounter the following error:
+I usually build my `jekyll` website using `bundle install`. However I started getting following build error: 
 
 ```bash
 public_suffix-6.0.1 requires ruby version >= 3.0, which is incompatible with the current version, ruby 2.7.0
@@ -56,7 +57,7 @@ rbenv global 3.1.2
 rbenv versions
 ```
 
-   The output should list `3.1.2` as the active version.
+The output should list `3.1.2` as the active version.
 
 ### Step 3: Update Shell Configuration
 
