@@ -30,7 +30,7 @@ Run:
 ruby --version
 ```
 
-You’ll likely see:
+You'll likely see:
 
 ```
 ruby 2.7.0
