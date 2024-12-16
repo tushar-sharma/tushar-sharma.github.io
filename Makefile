@@ -11,6 +11,8 @@ add:
 	git add sitemap.xml
 build:
 	JEKYLL_ENV=production bundle exec jekyll build
+search:
+	ALGOLIA_API_KEY='your_admin_api_key' bundle exec jekyll algolia
 cleanbranch:
 	git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -D
 copy:
