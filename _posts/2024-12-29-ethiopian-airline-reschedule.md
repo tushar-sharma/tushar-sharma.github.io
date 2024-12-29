@@ -28,6 +28,6 @@ The customer service representative I spoke with was both professional and effic
 
 ### Step 4: Rescheduling Fee
 
-There was a $200 fee for rescheduling my flight. Given that my original flight cost was around $1,300, I was relieved that I didn’t have to spend anywhere near that amount again. While the fee might seem high, it felt reasonable under the circumstances, and I appreciated the straightforward explanation of the charges.
+There was a USD 200 fee for rescheduling my flight. Given that my original flight cost was around USD 1,300, I was relieved that I didn’t have to spend anywhere near that amount again. While the fee might seem high, it felt reasonable under the circumstances, and I appreciated the straightforward explanation of the charges.
 
-Overall, the process was smooth and stress-free, thanks to Ethiopian Airlines’ efficient customer service.
+Overall, the process was smooth and stress-free.
