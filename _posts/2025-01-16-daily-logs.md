@@ -2,25 +2,27 @@
 
 ## Git worktree
 
-If you remove wokrtree forcefull like 
+If you forcefully delete a Git worktree using:
 
-```bash
-$ rm -fr somefolder/worktree
-```
+rm -rf somefolder/worktree
 
-If you try to add the worktree again
+and then attempt to re-add the same worktree:
 
-```
-$ git worktree add somefolder/worktree mybranch
+git worktree add somefolder/worktree mybranch
 
-the branch is already checked out
-```
+you'll encounter the error:
 
-you can prune changes
+fatal: 'mybranch' is already checked out at 'somefolder/worktree'
 
-```
-$ git worktree prune
-```
+Solution: Prune Worktree References
+
+To resolve this, prune the stale worktree references using:
+
+git worktree prune
+
+This command cleans up the metadata for removed worktrees, allowing you to re-add the worktree:
+
+git worktree add somefolder/worktree mybranch
 
 
 
