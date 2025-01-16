@@ -1,8 +1,8 @@
 ---
 layout: post
 title: How To Change your mind by  Michael Pollan
-image: https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437
-thumb: https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437
+image: 'https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437'
+thumb: 'https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437'
 author: tushar sharma
 category: blog
 tags: books
@@ -63,4 +63,4 @@ MDMA enhances empathy, trust and emotional openness. It is often referred to as 
 
 Jesse setup a nonprofit called Council on Spiritual Practices (CSP) which aims at promoting entheogens. csp.org offers great psychedelic research.
 
-Good Friday Experiment by Walter Pahnke, psychiatrist under Timothy Leary. It's a double blind experiment with twent diving students. One group received psilocybin and other placebo. Folks with psilocybin had classical mystical experience. 
+Good Friday Experiment by Walter Pahnke, psychiatrist under Timothy Leary. It's a double blind experiment with twenty religious students. One group received psilocybin and other placebo. Folks with psilocybin had classical mystical experience. Experiment proves that drug induced experience is no different than mystical experience. 
