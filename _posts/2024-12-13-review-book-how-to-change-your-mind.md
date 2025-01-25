@@ -64,3 +64,9 @@ MDMA enhances empathy, trust and emotional openness. It is often referred to as 
 Jesse setup a nonprofit called Council on Spiritual Practices (CSP) which aims at promoting entheogens. csp.org offers great psychedelic research.
 
 Good Friday Experiment by Walter Pahnke, psychiatrist under Timothy Leary. It's a double blind experiment with twenty religious students. One group received psilocybin and other placebo. Folks with psilocybin had classical mystical experience. Experiment proves that drug induced experience is no different than mystical experience. 
+
+Holotropic breathwork, technique to induce psychedelics state of consciousness. 
+
+aHolotropic breathwork, technique to induce psychedelics state of consciousness. 
+
+Can MDMA is toxic to brain as it's aquired the reputation of club drug? 
