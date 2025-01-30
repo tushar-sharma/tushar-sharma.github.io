@@ -1,20 +1,18 @@
 ---
 layout: post
 title: Mapping YAML to Configuration classes in Spring Boot
-image: https://unsplash.com/photos//download?w=437
-thumb: https://unsplash.com/photos//download?w=437
-author: 
+image: https://unsplash.com/photos/TXxiFuQLBKQ/download?w=437
+thumb: https://unsplash.com/photos/TXxiFuQLBKQ/download?w=437
+author: tushar sharma
 category: blog
-published: false
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<!-- truncate_here -->
+Spring Boot provides an elegant way to bind YAML configurations directly to Java classes using the `@ConfigurationProperties` annotation. This tutorial will walk you through the basics and show you how to map a nested YAML structure to a configuration class.<!-- truncate_here -->
 
 Spring Boot provides an elegant way to bind YAML configurations directly to Java classes using the `@ConfigurationProperties` annotation. This tutorial will walk you through the basics and show you how to map a nested YAML structure to a configuration class.
 
 ## Prerequisites
 1. **Spring Boot project**: If you don't have a project ready, you can create one using [Spring Initializr](https://start.spring.io/).
-2. **Basic knowledge of YAML**: Understand the structure of YAML files.
 
 ---
 
