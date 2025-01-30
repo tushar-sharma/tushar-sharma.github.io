@@ -73,20 +73,7 @@ file: Config.java
 Annotate your main application class with `@EnableConfigurationProperties` to enable configuration property binding.
 
 ```java
-package com.example;
 
-import com.example.config.Config;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-
-@SpringBootApplication
-@EnableConfigurationProperties(Config.class)
-public class Application {
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
-}
 ```
 
 ---
@@ -97,27 +84,7 @@ You can now inject and use the configuration in any Spring component.
 #### Example Usage:
 
 ```java
-package com.example.service;
 
-import com.example.config.Config;
-import org.springframework.stereotype.Service;
-
-@Service
-public class ProjectService {
-
-    private final Config config;
-
-    public ProjectService(Config config) {
-        this.config = config;
-    }
-
-    public void printProjects() {
-        for (Config.Project project : config.getProjects()) {
-            System.out.println("Allowed Access: " + project.getAllowedAccess());
-            System.out.println("Allowed Groups: " + project.getAllowedGroup());
-        }
-    }
-}
 ```
 
 #### Output:
