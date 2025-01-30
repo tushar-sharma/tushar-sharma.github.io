@@ -18,7 +18,7 @@ Ethiopian Airlines provides a detailed list of worldwide contact numbers on thei
 
 ### Step 2: Using Rebtel to Call the U.S. Number
 
-To reach the U.S. toll-free number from India, I used the Rebtel app. This app is an excellent choice for making international calls at minimal cost. The number I dialed was:
+To reach the U.S. toll-free number from India, I used the Rebtel app. Make sure to put your cellular mode in airplane mode so that the app uses wifi to call. The number I dialed was:
 
 **Toll-Free:** 1-800-445-2733
 
