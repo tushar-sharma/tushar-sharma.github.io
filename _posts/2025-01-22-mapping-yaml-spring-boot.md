@@ -39,13 +39,12 @@ In this YAML:
 ### Step 1: Adding Dependencies
 Ensure you have the following dependency in your `pom.xml` (if using Maven):
 
-```xml
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-configuration-processor</artifactId>
-    <optional>true</optional>
-</dependency>
-```
+{% template  customCode.html %}
+---
+id: 51b4b6678f7ff4191d8e01b4e4527706
+file: pom.xml
+---
+{% endtemplate %}
 
 This dependency generates metadata for configuration properties, making it easier to manage properties in the IDE.
 
