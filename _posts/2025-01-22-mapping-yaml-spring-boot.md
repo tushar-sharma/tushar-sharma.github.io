@@ -72,9 +72,12 @@ file: Config.java
 ### Step 3: Enable Configuration Properties
 Annotate your main application class with `@EnableConfigurationProperties` to enable configuration property binding.
 
-```java
-
-```
+{% template  customCode.html %}
+---
+id: 51b4b6678f7ff4191d8e01b4e4527706
+file: Application.java
+---
+{% endtemplate %}
 
 ---
 
@@ -83,9 +86,12 @@ You can now inject and use the configuration in any Spring component.
 
 #### Example Usage:
 
-```java
-
-```
+{% template  customCode.html %}
+---
+id: 51b4b6678f7ff4191d8e01b4e4527706
+file: ProductService.java
+---
+{% endtemplate %}
 
 #### Output:
 For the provided YAML, the output will be:
