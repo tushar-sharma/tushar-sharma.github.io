@@ -23,16 +23,8 @@ Spring Boot provides an elegant way to bind YAML configurations directly to Java
 Consider the following YAML structure:
 
 ```yaml
-access:
-  projects:
-    - allowedAccess: t1
-      allowedGroup: 
-        - m1
-        - m2
-    - allowedAccess: t2
-      allowedGroup: 
-        - m2
-        - m3
+51b4b6678f7ff4191d8e01b4e4527706
+application.yaml
 ```
 
 In this YAML:
