@@ -5,6 +5,9 @@ image: https://unsplash.com/photos/TXxiFuQLBKQ/download?w=437
 thumb: https://unsplash.com/photos/TXxiFuQLBKQ/download?w=437
 author: tushar sharma
 category: blog
+tags:
+ - spring boot
+ - java
 ---
 
 Spring Boot provides an elegant way to bind YAML configurations directly to Java classes using the `@ConfigurationProperties` annotation. This tutorial will walk you through the basics and show you how to map a nested YAML structure to a configuration class.<!-- truncate_here -->
