@@ -53,32 +53,12 @@ This dependency generates metadata for configuration properties, making it easie
 ### Step 2: Define the Configuration Class
 To bind the YAML structure, create a configuration class using the `@ConfigurationProperties` annotation.
 
-```java
-package com.example.config;
-
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.util.List;
-
-@Configuration
-@ConfigurationProperties(prefix = "access")
-@Getter
-@Setter
-public class Config {
-
-    private List<Project> projects;
-
-    @Getter
-    @Setter
-    public static class Project {
-        private String allowedAccess;
-        private List<String> allowedGroup;
-    }
-}
-```
+{% template  customCode.html %}
+---
+id: 51b4b6678f7ff4191d8e01b4e4527706
+file: Config.java
+---
+{% endtemplate %}
 
 #### Explanation:
 1. **`@ConfigurationProperties("access")`**: Maps properties under the `access` key in the YAML file.
