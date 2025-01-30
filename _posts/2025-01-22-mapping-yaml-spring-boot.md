@@ -22,10 +22,13 @@ Spring Boot provides an elegant way to bind YAML configurations directly to Java
 ### YAML Example
 Consider the following YAML structure:
 
-```yaml
-51b4b6678f7ff4191d8e01b4e4527706
-application.yaml
-```
+{% template  customCode.html %}
+---
+id: 51b4b6678f7ff4191d8e01b4e4527706
+file: application.yaml
+---
+{% endtemplate %}
+
 
 In this YAML:
 - `access.projects` is a list of project configurations.
