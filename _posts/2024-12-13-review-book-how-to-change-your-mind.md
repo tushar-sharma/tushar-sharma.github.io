@@ -20,8 +20,7 @@ These are my rough notes while reading this book.<!-- truncate_here -->
 
 **LSD** is a molecule. It was synthesized by Hoffman in 1936 while he was working at Sandoz Laboratories in Switzerland. 
 
-Psilocybin is a naturally occurring psychedelic compound produced by certain species of mushrooms, commonly referred to as "magic mushrooms. It has a long history of use in indigenous rituals, particularly by the Mazatec people of Mexico, where it played a central role in spiritual and healing ceremonies.
-Psilocybin is converted in the body to psilocin, which is responsible for its psychoactive effects. 
+Psilocybin is a naturally occurring psychedelic compound produced by certain species of mushrooms, commonly referred to as "magic mushrooms. It has a long history of use in indigenous rituals, particularly by the Mazatec people of Mexico, where it played a central role in spiritual and healing ceremonies. Psilocybin is converted in the body to psilocin, which is responsible for its psychoactive effects. 
 
 **Acid trip** is psychedelic experience when consuming LSD. **Mushroop trip** is when you consume psilocybin. Both experiences often include altered perception of time, sensory enhancement, and profound changes in thought patterns. 
 
@@ -67,6 +66,22 @@ Good Friday Experiment by Walter Pahnke, psychiatrist under Timothy Leary. It's 
 
 Holotropic breathwork, technique to induce psychedelics state of consciousness. 
 
-aHolotropic breathwork, technique to induce psychedelics state of consciousness. 
+Is MDMA toxic to brain so that's why it's aquired the reputation of club drug? 
 
-Can MDMA is toxic to brain as it's aquired the reputation of club drug? 
+Roland Griffiths went to burning man? What is it? Is it a festival? 
+
+Why did certain mushroom evolved to produce molecule like LSD and psilocybin that mimics the serotonin and binds to serotonin receptor? What's the evolution advantage in producing such molecule? Or is it just luck?
+
+How is fungus different than bacteria? Both are micoorganisms? 
+
+What's mycelia? is it a membrane? And can it convey information? 
+
+Some mushroom like `Galerina autumnalis` when eaten result in agonizing death. It's similar to Psilocybe stunzi. One way to identify is - if a grilled mushroom has purplish brown to black spores, and flesh bruises bluish, then it's likely a psiocyin producing species. Blue pigment is a sign of oxidized psilocin, one of the main pschoactive compounds in a psilocybe. Other is psilocybin which break downs psilocin in body.
+
+Stoned Ape Theory - Ingestion of psilocybin caused rapid development of hominid brain for analytical thinking. Most scientist reject this hypothesis.
+
+In 1620, Roman Catholic Church declared use of plants for divination was `act of superstition condemned as opposed to the purity and integrity of our Holy Catholic Faith`.
+
+What's the difference between psilocybin and psilocin compound? Are both compound found in magic mashroom?
+
+
