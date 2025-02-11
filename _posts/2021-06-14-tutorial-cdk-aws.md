@@ -13,7 +13,6 @@ thumb: https://unsplash.com/photos/HpWwEURimK8/download?w=437
 summary: AWS CDK tutorial
 author: Tushar Sharma
 image : https://unsplash.com/photos/HpWwEURimK8/download?w=437
-featuredPost: true
 ---
 
 Cloudformation service in AWS allows you to describe an entire set of resources required to make a pipeline. The cloudformation template can be described in JSON or YAML format. Updating the cloudformation template was not a pleasant experience. I wanted to discover alternative ways to generate cloudformation template programmatically.<!-- truncate_here -->

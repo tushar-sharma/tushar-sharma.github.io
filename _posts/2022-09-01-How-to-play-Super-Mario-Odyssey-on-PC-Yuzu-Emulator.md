@@ -8,6 +8,7 @@ thumb: https://unsplash.com/photos/_R95VMWyn7A/download?w=437"
 summary: How to play Super Mario Odyssey on PC (Yuzu Emulator)
 image: https://unsplash.com/photos/_R95VMWyn7A/download?w=437"
 author: Tushar Sharma
+featuredPost: true
 ---
 
 Super Mario Odyssey is a 2017 video game has been voted as the one of the best Mario game ever made. The game is only available for Nitendo Switch. Luckily I end up playing the game on Windows nonetheless.<!-- truncate_here -->
