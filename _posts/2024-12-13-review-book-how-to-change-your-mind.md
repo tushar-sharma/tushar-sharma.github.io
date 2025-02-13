@@ -20,7 +20,17 @@ These are my rough notes while reading this book.<!-- truncate_here -->
 
 **LSD** is a molecule. It was synthesized by Hoffman in 1936 while he was working at Sandoz Laboratories in Switzerland. 
 
-<pre> ```text N / \ -- / \ -- | | | O | | | -- \ / -- \ / N—(C2H5)2 ``` </pre>
+<pre>
+        N
+       / \
+  -- /     \ --
+  |         |
+  |   O   |
+  |         |
+  -- \     / --
+       \ /
+        N—(C2H5)2
+</pre>
 
 Psilocybin is a naturally occurring psychedelic compound produced by certain species of mushrooms, commonly referred to as "magic mushrooms. It has a long history of use in indigenous rituals, particularly by the Mazatec people of Mexico, where it played a central role in spiritual and healing ceremonies. Psilocybin is converted in the body to psilocin, which is responsible for its psychoactive effects. 
 
