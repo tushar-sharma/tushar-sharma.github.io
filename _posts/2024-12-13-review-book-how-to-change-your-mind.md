@@ -48,6 +48,9 @@ Psilocybin is a naturally occurring psychedelic compound produced by certain spe
    CH3 CH3
 </pre>
 
+$$ \text{C}_{12}\text{H}_{17}\text{N}_2\text{O}_4\text{P} $$
+
+
 **Acid trip** is psychedelic experience when consuming LSD. **Mushroop trip** is when you consume psilocybin. Both experiences often include altered perception of time, sensory enhancement, and profound changes in thought patterns. 
 
 > "It's not the young who need to have an experience of the numinous, but those approaching the second half of life to negotiate its challenges." — Carl Jung
