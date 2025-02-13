@@ -32,7 +32,21 @@ These are my rough notes while reading this book.<!-- truncate_here -->
         N—(C2H5)2
 </pre>
 
-Psilocybin is a naturally occurring psychedelic compound produced by certain species of mushrooms, commonly referred to as "magic mushrooms. It has a long history of use in indigenous rituals, particularly by the Mazatec people of Mexico, where it played a central role in spiritual and healing ceremonies. Psilocybin is converted in the body to psilocin, which is responsible for its psychoactive effects. 
+Psilocybin is a naturally occurring psychedelic compound produced by certain species of mushrooms, commonly referred to as "magic mushrooms. It has a long history of use in indigenous rituals, particularly by the Mazatec people of Mexico, where it played a central role in spiritual and healing ceremonies. Psilocybin is converted in the body to psilocin, which is responsible for its psychoactive effects.
+
+<pre>
+        O
+        ||
+   N—CH2—CH2—N
+  /              \
+ /                \
+|       P=O       |
+|       |         |
+ \      O⁻       /
+  \______/  
+    |  |
+   CH3 CH3
+</pre>
 
 **Acid trip** is psychedelic experience when consuming LSD. **Mushroop trip** is when you consume psilocybin. Both experiences often include altered perception of time, sensory enhancement, and profound changes in thought patterns. 
 
