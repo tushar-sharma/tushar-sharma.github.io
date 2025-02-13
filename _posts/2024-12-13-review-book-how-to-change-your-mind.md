@@ -20,36 +20,10 @@ These are my rough notes while reading this book.<!-- truncate_here -->
 
 **LSD** is a molecule. It was synthesized by Hoffman in 1936 while he was working at Sandoz Laboratories in Switzerland. 
 
-<pre>
-        N
-       / \
-  -- /     \ --
-  |         |
-  |   O   |
-  |         |
-  -- \     / --
-       \ /
-        N—(C2H5)2
-</pre>
-
 Psilocybin is a naturally occurring psychedelic compound produced by certain species of mushrooms, commonly referred to as "magic mushrooms. It has a long history of use in indigenous rituals, particularly by the Mazatec people of Mexico, where it played a central role in spiritual and healing ceremonies. Psilocybin is converted in the body to psilocin, which is responsible for its psychoactive effects.
 
-<pre>
-        O
-        ||
-   N—CH2—CH2—N
-  /              \
- /                \
-|       P=O       |
-|       |         |
- \      O⁻       /
-  \______/  
-    |  |
-   CH3 CH3
-</pre>
 
-$$ \text{C}_{12}\text{H}_{17}\text{N}_2\text{O}_4\text{P} $$
-
+How is a molecule different than a compound? All compound are molecules but not all molecules are compound. A molecule is when two or more atoms bond together. Compound is a molecule when two or different atoms are bonded together. So O<sub>2</sub> is not a compound but a molecule.
 
 **Acid trip** is psychedelic experience when consuming LSD. **Mushroop trip** is when you consume psilocybin. Both experiences often include altered perception of time, sensory enhancement, and profound changes in thought patterns. 
 
@@ -57,11 +31,11 @@ $$ \text{C}_{12}\text{H}_{17}\text{N}_2\text{O}_4\text{P} $$
 
 Clinical studies suggest that psilocybin can alleviate anxiety and depression in people with terminal cancer, helping them face death with reduced fear.
 
-Similarly, MDMA (commonly known as ecstasy) has shown promise in treating PTSD (Post-Traumatic Stress Disorder) in clinical trials.
+Similarly, MDMA (commonly known as ecstasy) has shown promise in treating PTSD (Post-Traumatic Stress Disorder) in clinical trials. MDMA tends to lead to a crash after effects wear off. LSD on other hand has afterglow (only if it's a good trip).
 
 Marijuana has been researched for medical benefits, including pain relief and reduction of chemotherapy-induced nausea, but it does not share the same psychedelic properties as LSD or psilocybin.
 
-LSD is a schedule 1 substance that means the US goverment consider its' a drug of abuse with no accepted medical use and its illegal to sell and possess.
+LSD is a **Schedule 1 substance** that means the US goverment consider its' a drug of abuse with no accepted medical use and its illegal to sell and possess.
 
 Timothy Leary, a psychologist and professor at Harvard, became a prominent advocate for the use of psychedelics after conducting experiments with psilocybin in the 1960s.
 
@@ -83,9 +57,9 @@ Acid trip can be good or bad. Hofmann who discovered LSD had a bad acid trip. He
 
 LSD mimics serotonin and binds to serotonin receptor in brain. Serotonin maintians regular brain function, while LSD causes an exaggeration or altered activation of the same pathway. 
 
-Another interesting differnece between alchol and LSD is that the former produces hangover where as the latter gives a afterglow. Afterglow is a state of well-being, clarity, and connectedness that lingers after the psychedellics effects have worn off. One of the reason for the afterglow is that LSD promotes growth of new neural connections. 
+Another interesting difference between alcohol and LSD is that the former produces hangover where as the latter gives a afterglow. Afterglow is a state of well-being, clarity, and connectedness that lingers after the psychedellics effects have worn off. One of the reason for the afterglow is that LSD promotes growth of new neural connections. 
 
-UDV is a religious sect that uses halluciongenic tea called ayahuasca. It contains DMT, a schedule 1 substance yet is allowed import into USA. Native Americans use peyote for their ceremonies. 
+UDV is a religious sect that uses halluciongenic tea called ayahuasca. It contains DMT, a schedule 1 substance yet is allowed import into USA. Native Americans use peyote for their ceremonies. It originated in Brazil.
 
 MDMA enhances empathy, trust and emotional openness. It is often referred to as an empathogen because it stimulates feelings of closeness and connection between people. Wny not just use it? MDMA stimulates the release of large amounts of serotonin, depleting the brain's reserves. Over time, frequent or high-dose use can cause oxidative stress, which may damage or destroy serotonin axons (the projections of neurons that release serotonin). Also long term use, can cause depression and anxiety. LSD primarily acts as a psychedelic, whereas MDMA functions as an empathogen/stimulant. So LSD doesn't deplete serotonin or pose a significant risk of neurotoxicity.
 
@@ -101,7 +75,7 @@ Roland Griffiths went to burning man? What is it? Is it a festival?
 
 Why did certain mushroom evolved to produce molecule like LSD and psilocybin that mimics the serotonin and binds to serotonin receptor? What's the evolution advantage in producing such molecule? Or is it just luck?
 
-How is fungus different than bacteria? Both are micoorganisms? 
+How is fungus different than bacteria? Both are micro organism? Fungus have cells which have nucleus unlike bacteria. Nucleus is used for protecting DNA. Nuclues is used for cell division (that's how you get more cells). Fungi are multicellular and larger than bacteria. All bacteria are single celled and it's DNA is free-floating in the cell in area called nucleoid. That's why bacter are called prokaryotes which means before kernel (nucleus).  
 
 What's mycelia? is it a membrane? And can it convey information? 
 
@@ -111,6 +85,6 @@ Stoned Ape Theory - Ingestion of psilocybin caused rapid development of hominid 
 
 In 1620, Roman Catholic Church declared use of plants for divination was `act of superstition condemned as opposed to the purity and integrity of our Holy Catholic Faith`.
 
-What's the difference between psilocybin and psilocin compound? Are both compound found in magic mashroom?
+What's the difference between psilocybin and psilocin compound? Are both compound found in magic mashroom? Psiolocybin breaks down into Psilocin. Psilocin is what causes psychedelic effects. It's structure is similar to serotonin, a neuro transmitter.
 
 
