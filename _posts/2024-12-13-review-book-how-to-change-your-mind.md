@@ -87,4 +87,10 @@ In 1620, Roman Catholic Church declared use of plants for divination was `act of
 
 What's the difference between psilocybin and psilocin compound? Are both compound found in magic mashroom? Psiolocybin breaks down into Psilocin. Psilocin is what causes psychedelic effects. It's structure is similar to serotonin, a neuro transmitter.
 
+What do you think of **stoned ape theory**? Does the consumption of mushrooms by early humans led to drastic increase in our brain. I thought it was cooking. Cooking food was a revolution as we were able to absorb more nutrients.
 
+> As soon as we unloaded and stowed our gear, we laced up our boots and headed out to look for mushrooms
+
+Azzie mushroom which is part of psychedelic mushroom has side effect like temporary paralysis. Cultivation of this species is illegal in United States.
+
+Why are cows not affected by mushroom containing psilocybin? Does it have to do with their digestive system?
