@@ -339,6 +339,149 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Deploy an Angular App to GitHub Pages for Free</title>
+          <description>&lt;p&gt;GitHub Pages provides a simple way to host static websites for free. In this guide, we&apos;ll create a basic Angular app, build it for production, and deploy it to GitHub Pages.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;GitHub Pages provides a simple way to host static websites for free. In this guide, we&apos;ll create a basic Angular app, build it for production, and deploy it to GitHub Pages.&lt;/p&gt;
+
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;Ensure you have the following installed:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt; (LTS recommended)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://angular.io/cli&quot;&gt;Angular CLI&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install -g @angular/cli&lt;/code&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; account&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-1-create-an-angular-app&quot;&gt;Step 1: Create an Angular App&lt;/h2&gt;
+
+&lt;p&gt;First, generate a new Angular project:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ff86d6ee1733cd796f39ffa2877b5b15.js?file=create.sh&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;This creates a new Angular project with default settings.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-build-the-angular-app&quot;&gt;Step 2: Build the Angular App&lt;/h2&gt;
+
+&lt;p&gt;To deploy the app, we need to create a production-ready build:&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ff86d6ee1733cd796f39ffa2877b5b15.js?file=build.sh&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--configuration production&lt;/code&gt;: Optimizes the build for production.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--base-href &quot;/my-angular-app/&quot;&lt;/code&gt;: Required for GitHub Pages (replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;my-angular-app&lt;/code&gt; with your repository name).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The output files will be in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dist/my-angular-app&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-create-a-github-repository&quot;&gt;Step 3: Create a GitHub Repository&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click &lt;strong&gt;New repository&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Name it &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;my-angular-app&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Initialize with a README (optional).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click &lt;strong&gt;Create repository&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;step-4-deploy-to-github-pages&quot;&gt;Step 4: Deploy to GitHub Pages&lt;/h2&gt;
+
+&lt;p&gt;We’ll use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch for deployment.&lt;/p&gt;
+
+&lt;h3 id=&quot;initialize-git-and-push-code&quot;&gt;Initialize Git and Push Code&lt;/h3&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ff86d6ee1733cd796f39ffa2877b5b15.js?file=git.sh&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;deploy-the-build-to-github-pages&quot;&gt;Deploy the Build to GitHub Pages&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install the GitHub Pages deployment package:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ff86d6ee1733cd796f39ffa2877b5b15.js?file=buildAngular.sh&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Deploy the app:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ff86d6ee1733cd796f39ffa2877b5b15.js?file=deployAngular.sh&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h2 id=&quot;step-5-enable-github-pages&quot;&gt;Step 5: Enable GitHub Pages&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to your GitHub repository.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Navigate to &lt;strong&gt;Settings &amp;gt; Pages&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Under &lt;strong&gt;Branch&lt;/strong&gt;, select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click &lt;strong&gt;Save&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;step-6-access-your-live-app&quot;&gt;Step 6: Access Your Live App&lt;/h2&gt;
+
+&lt;p&gt;After a few minutes, your app will be available at:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://YOUR_USERNAME.github.io/my-angular-app/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;You’ve successfully deployed an Angular app to GitHub Pages! This method is ideal for hosting small projects, demos, or personal portfolios.&lt;/p&gt;
+
+&lt;h3 id=&quot;troubleshooting&quot;&gt;Troubleshooting&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;404 Errors?&lt;/strong&gt; Ensure the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;base-href&lt;/code&gt; is correctly set.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Changes Not Reflecting?&lt;/strong&gt; Try:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/ff86d6ee1733cd796f39ffa2877b5b15.js?file=verify.sh&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;GitHub Pages Not Loading?&lt;/strong&gt; Double-check that GitHub Pages is enabled under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings &amp;gt; Pages&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now, you can easily share your Angular project with the world! 🚀&lt;/p&gt;
+</description>
+          <pubDate>2025-03-02T00:00:00-05:00</pubDate>
+          <link>https://randomwits.com/blog/deploy-angular-app-github-pages-free</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/deploy-angular-app-github-pages-free</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Mapping YAML to Configuration classes in Spring Boot</title>
           <description>&lt;p&gt;Spring Boot provides an elegant way to bind YAML configurations directly to Java classes using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@ConfigurationProperties&lt;/code&gt; annotation. This tutorial will walk you through the basics and show you how to map a nested YAML structure to a configuration class.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -5231,10 +5374,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;2ffdae7b-28d2-4a40-a4af-30e0884fccc6&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;0266b993-80c8-4ed8-9a0d-a935bdcf9c38&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;2ffdae7b-28d2-4a40-a4af-30e0884fccc6&apos;,
+    &apos;0266b993-80c8-4ed8-9a0d-a935bdcf9c38&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -6941,10 +7084,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;a8d83f92-f091-47c6-99f2-5bf17daeea13&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;fba7d08b-e9b3-498c-9ab6-079fe25552d1&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;a8d83f92-f091-47c6-99f2-5bf17daeea13&apos;,
+    &apos;fba7d08b-e9b3-498c-9ab6-079fe25552d1&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
