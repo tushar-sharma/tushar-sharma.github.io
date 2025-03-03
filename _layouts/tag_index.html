@@ -2,15 +2,13 @@
 layout: default
 root: true
 ---
+
 <h1 style="color: rgb(51, 153, 204);">{{ page.title }}</h1>
 <link rel="stylesheet" href="{{ root_url }}/css/styles.css" />
 
 <div id="blog" style="padding-top:30px; margin-top:-23px;">
   <div class="pure-u-1-2">
     <div style="padding-right:10px; padding-left:10px;">
-      {% comment %}
-      Instead of looping over all posts (site.posts), we now loop over the paginated posts passed in via page.posts.
-      {% endcomment %}
       {% for post in page.posts %}
         <small style="float:right; margin-top:5px;"><strong></strong></small>
         <a href="{{ post.url }}">
@@ -45,22 +43,59 @@ root: true
     </div>
 
     <!-- Pagination Navigation for Tag Pages -->
+    {% assign paginator = page.paginator %}
+    {% assign start = paginator.page | minus: 2 %}
+    {% assign end = paginator.page | plus: 2 %}
+    {% if start < 1 %}
+      {% assign start = 1 %}
+      {% assign end = start | plus: 4 %}
+    {% elsif end > paginator.total_pages %}
+      {% assign start = paginator.total_pages | minus: 4 %}
+      {% assign end = paginator.total_pages %}
+    {% endif %}
+    {% if start < 1 %}
+      {% assign start = 1 %}
+    {% endif %}
+
     <div class="pagination-wrapper">
       <div class="pagination">
-      {% if page.paginator.previous_page %}
-        <a href="{% if page.paginator.previous_page == 1 %}/tag/{{ page.tag }}/{% else %}/tag/{{ page.tag }}/page{{ page.paginator.previous_page }}/{% endif %}">
-          &laquo; Previous
-        </a>
-      {% endif %}
-      <span>Page {{ page.paginator.page }} of {{ page.paginator.total_pages }}</span>
-      {% if page.paginator.next_page %}
-        <a href="/tag/{{ page.tag }}/page{{ page.paginator.next_page }}/">
-          Next &raquo;
-        </a>
-      {% endif %}
+        {% if paginator.previous_page %}
+          <a class="pagination-step" href="{% if paginator.previous_page == 1 %}/tag/{{ page.tag }}/{% else %}/tag/{{ page.tag }}/page{{ paginator.previous_page }}/{% endif %}">
+            &laquo;
+          </a>
+        {% else %}
+          <span class="pagination-step">&laquo;</span>
+        {% endif %}
+
+        {% if start > 1 %}
+          <a class="pagination-first" href="/tag/{{ page.tag }}/">1</a>
+          <span class="pagination-more">&middot;&middot;&middot;</span>
+        {% endif %}
+
+        {% for p in (start..end) %}
+          {% if p == paginator.page %}
+            <span class="active">{{ p }}</span>
+          {% elsif p == 1 %}
+            <a href="/tag/{{ page.tag }}/">{{ p }}</a>
+          {% else %}
+            <a href="/tag/{{ page.tag }}/page{{ p }}/">{{ p }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if end < paginator.total_pages %}
+          <span class="pagination-more">&middot;&middot;&middot;</span>
+          <a class="pagination-last" href="/tag/{{ page.tag }}/page{{ paginator.total_pages }}/">{{ paginator.total_pages }}</a>
+        {% endif %}
+
+        {% if paginator.next_page %}
+          <a class="pagination-step" href="/tag/{{ page.tag }}/page{{ paginator.next_page }}/">
+            &raquo;
+          </a>
+        {% else %}
+          <span class="pagination-step">&raquo;</span>
+        {% endif %}
       </div>
     </div>
-    
   </div>
 </div>
 
