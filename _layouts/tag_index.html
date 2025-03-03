@@ -3,55 +3,67 @@ layout: default
 root: true
 ---
 <h1 style="color: rgb(51, 153, 204);">{{ page.title }}</h1>
+<link rel="stylesheet" href="{{ root_url }}/css/styles.css" />
 
 <div id="blog" style="padding-top:30px; margin-top:-23px;">
-<!--{% assign blogposts = site.categories.blog %} -->
-<!-- use this only when you want blog category  -->
-{% assign blogposts = site.posts %}
-<div class="pure-u-1-2">
-<div style="padding-right:10px; padding-left:10px;">
-{% for post in blogposts %}
-{% for tag in post.tags %}
-{% if tag == page.tag %}
-  <small style="float:right; margin-top:5px;"><strong></strong></small>
-  <a href="{{ post.url }}">
-    <h2>{{ post.title }}</h2>
-  </a>
-      <div>
-           <div >
+  <div class="pure-u-1-2">
+    <div style="padding-right:10px; padding-left:10px;">
+      {% comment %}
+      Instead of looping over all posts (site.posts), we now loop over the paginated posts passed in via page.posts.
+      {% endcomment %}
+      {% for post in page.posts %}
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <a href="{{ post.url }}">
+          <h2>{{ post.title }}</h2>
+        </a>
+        <div>
+          <div>
             <a href="{{ post.url }}">
-              <img src="{{ post.thumb }}" class="thumb"  width="800" height="437"/>
+              <img src="{{ post.thumb }}" class="thumb" width="800" height="437"/>
             </a>
+          </div>
+          {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
+          {% if truncated_post != post.content %}
+            {{ truncated_post | append:".." }}
+          {% endif %}
+        </div>
+        <br>
+        <p>
+          <a href="{{ post.url }}">
+            <span>Continue reading &rarr;</span>
+          </a>
+          <span style="float:right;">
+            {% for tag in post.tags %}
+              <a class="mytag" href="/tag/{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+          </span>
+        </p>
+        {% unless forloop.last %}
+          <hr />
+        {% endunless %}
+      {% endfor %}
+    </div>
 
-           </div>
-            <!-- this is for thumb images;  -->
-     
-            {% assign truncated_post = post.content | split:"<!-- truncate_here -->" | first %}
-            {% if truncated_post != post.content %}
-            {{ truncated_post | append:".."}}
-      </div>
-  <br>
-  <p>
-  <a href="{{ post.url }}">
-    <span>Continue reading &rarr;</span>
-  </a>
-   <span style="float:right;" >
-    {% for tag in post.tags %}
-    <a class="mytag" href="/tag/{{ tag }}">{{ tag  }} </a>
-    {% endfor %}
-  </span>
-</p>
-  {% else %}
-      <br><br>
+    <!-- Pagination Navigation for Tag Pages -->
+    <div class="pagination-wrapper">
+      <div class="pagination">
+      {% if page.paginator.previous_page %}
+        <a href="{% if page.paginator.previous_page == 1 %}/tag/{{ page.tag }}/{% else %}/tag/{{ page.tag }}/page{{ page.paginator.previous_page }}/{% endif %}">
+          &laquo; Previous
+        </a>
       {% endif %}
-      <br>
-  {% if post != blogposts.last %}
-    <hr />
-    {% endif %}
-{% endif %}
-{% endfor %}
-{% endfor %}
+      <span>Page {{ page.paginator.page }} of {{ page.paginator.total_pages }}</span>
+      {% if page.paginator.next_page %}
+        <a href="/tag/{{ page.tag }}/page{{ page.paginator.next_page }}/">
+          Next &raquo;
+        </a>
+      {% endif %}
+      </div>
+    </div>
+    
+  </div>
 </div>
+
 <script type="text/javascript">
   window.onload = function() { scroll_to('blog'); };
-  </script>
+</script>
