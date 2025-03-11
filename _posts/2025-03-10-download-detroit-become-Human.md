@@ -51,7 +51,7 @@ You can launch the game by clicking the game icon.
 
 
 <div class="download-container">
-  <a class="download-btn" href="https://multiup.io/project/020dcfb5564df1e45a615514752d9ac7" target="_blank">Download the Game</a>
+  <a class="download-btn" href="https://multiup.io/423552775ca42dfd11f2b2b1fa5e3d18" target="_blank">Download the Game</a>
 </div>
 
 <p>For the password, in the comments type "randomwits.com" and "your email", and I will send the password.</p>
