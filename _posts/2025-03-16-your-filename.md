@@ -1,5 +1,5 @@
 
-## Observations
+## Observability in MongoDb
 
 Spring boot's metrics listener uses Micrometer's `MeterRegsitry`. There is autoconfiguration class `MongoMetericsAutoConfiguration.class`. 
 
@@ -29,5 +29,3 @@ MongoClientSettingsBuilderCustomizer mongoClientSettingsBuilderCustomizer(final 
      .addCommandListener(new MongoObservationCommandListener(observationRegistry);
 }
 ```
-
-
