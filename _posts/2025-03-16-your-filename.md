@@ -37,3 +37,7 @@ Rome wasn’t built in a day, and neither is lasting success or fulfillment. Ins
 * Avoid porn 
 
 * Avoid sugar
+
+## Video Game
+
+Currently playing `Lonely Mountains: Downhill`. Great gameplay with soothing background music. 
