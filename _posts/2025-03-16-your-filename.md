@@ -29,3 +29,11 @@ MongoClientSettingsBuilderCustomizer mongoClientSettingsBuilderCustomizer(final 
      .addCommandListener(new MongoObservationCommandListener(observationRegistry);
 }
 ```
+
+## Avoid cheap dopamine
+
+Rome wasn’t built in a day, and neither is lasting success or fulfillment. Instant gratification may feel rewarding in the moment, but it rarely leads to true progress or long-term happiness.
+
+* Avoid porn 
+
+* Avoid sugar
