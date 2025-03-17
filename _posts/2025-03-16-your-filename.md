@@ -38,7 +38,3 @@ Rome wasn’t built in a day, and neither is lasting success or fulfillment. Ins
 
 * Avoid sugar
 
-
-## Kickboxing
-
-I have a portable punching bag in my garage. It's good workout without leaving your house.  
