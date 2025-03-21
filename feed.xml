@@ -339,6 +339,325 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Fixing Missing Microsoft Visual C++ Runtime on Steam Deck</title>
+          <description>&lt;p&gt;When launching non-Steam games via Proton, you may encounter, following error.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;When launching non-Steam games via Proton, you may encounter, following error.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Following componet are required to run the program microsoft visual c++ runtime . steam deck proton experimental
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;enter-desktop-mode&quot;&gt;Enter Desktop Mode.&lt;/h3&gt;
+
+&lt;p&gt;Hold POWER button → Switch to Desktop Mode&lt;/p&gt;
+
+&lt;h3 id=&quot;install-protontricks&quot;&gt;Install ProtonTricks&lt;/h3&gt;
+
+&lt;p&gt;Open Discover (blue shopping bag icon)&lt;/p&gt;
+
+&lt;p&gt;Search → &quot;Protontricks&quot; → Install&lt;/p&gt;
+
+&lt;p&gt;Discover Store Protontricks Installation&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Run ProtonTricks&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Open Konsole (terminal) → Execute:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;protontricks &lt;span class=&quot;nt&quot;&gt;--gui&lt;/span&gt;
+Target Your Game
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Select from list: Non-Steam shortcut: Sifu.exe
+(Replace &quot;Sifu&quot; with your game&apos;s EXE name)&lt;/p&gt;
+
+&lt;p&gt;If missing, run the game once in Gaming Mode first&lt;/p&gt;
+
+&lt;h3 id=&quot;install-runtime-components&quot;&gt;Install Runtime Components&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Select → &quot;Select the default wineprefix&quot;
+Choose → &quot;Install a Windows DLL or component&quot;
+Check → vcrun2022 (Microsoft Visual C++ 2022 Redistributable)
+ProtonTricks workflow
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;confirm-installation&quot;&gt;Confirm Installation&lt;/h3&gt;
+
+&lt;p&gt;Accept all prompts → Wait for &quot;Install completed&quot; message&lt;/p&gt;
+</description>
+          <pubDate>2025-03-21T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/fixing-missing-microsoft-visual-cplusplus-runtime-on-steam-deck</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/fixing-missing-microsoft-visual-cplusplus-runtime-on-steam-deck</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Amazon DocumentDB Read Preferences Guide</title>
+          <description>&lt;p&gt;Amazon DocumentDB is a fully managed, MongoDB-compatible database service provided by AWS. It replicates data six times across three Availability Zones (two copies per zone) for high durability and availability..&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Amazon DocumentDB is a fully managed, MongoDB-compatible database service provided by AWS. It replicates data six times across three Availability Zones (two copies per zone) for high durability and availability.&lt;/p&gt;
+
+&lt;h3 id=&quot;connection-string-example-with-read-preferences&quot;&gt;Connection String Example with Read Preferences&lt;/h3&gt;
+
+&lt;p&gt;Specify read preferences directly in the connection string:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mongodb://host:port/database?readPreference&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;secondaryPreferred
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;consistency-tradeoffs&quot;&gt;Consistency Tradeoffs&lt;/h3&gt;
+
+&lt;p&gt;NoSQL databases like DocumentDB often use eventual consistency by default. This means reads immediately after writes might return stale data, as updates propagate asynchronously to replicas. This design prioritizes availability and scalability over strict consistency. You can override this behavior using read preferences, though this may impact scalability.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Read Preference Mode&lt;/th&gt;
+      &lt;th&gt;Consistency&lt;/th&gt;
+      &lt;th&gt;Behavior&lt;/th&gt;
+      &lt;th&gt;Use Case&lt;/th&gt;
+      &lt;th&gt;Consideration&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;**primaryPreferred**&lt;/td&gt;
+      &lt;td&gt;Read-after-write consistency&lt;/td&gt;
+      &lt;td&gt;- Routes reads to primary by default&lt;br /&gt;- Fails over to replicas if unavailable&lt;/td&gt;
+      &lt;td&gt;Critical reads requiring fresh data&lt;/td&gt;
+      &lt;td&gt;Creates primary bottleneck (not ideal for read-heavy workloads)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;**secondaryPreferred**&lt;/td&gt;
+      &lt;td&gt;Eventual consistency&lt;/td&gt;
+      &lt;td&gt;- Prioritizes replica reads&lt;br /&gt;- Uses primary only if replicas unavailable&lt;/td&gt;
+      &lt;td&gt;Read scaling &amp;amp; high availability&lt;/td&gt;
+      &lt;td&gt;Distributes read traffic across replicas&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;**nearest**&lt;/td&gt;
+      &lt;td&gt;Variable (depends on replication lag)&lt;/td&gt;
+      &lt;td&gt;- Selects lowest-latency nodes&lt;br /&gt;- Uses both primary and secondary nodes&lt;/td&gt;
+      &lt;td&gt;Latency-sensitive applications&lt;/td&gt;
+      &lt;td&gt;Fast responses but potentially stale data&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+          <pubDate>2025-03-21T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/amazon-documentdb-read-preferencesd-guide</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/amazon-documentdb-read-preferencesd-guide</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Weekly Logs from Mar 17 to Mar 23, 2025</title>
+          <description>&lt;p&gt;Dear Vishi, this is my weekly logs Mar 17 to Mar 23, 2025.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my weekly logs Mar 17 to Mar 23, 2025.&lt;/p&gt;
+
+&lt;h2 id=&quot;snapshot-of-my-habits&quot;&gt;Snapshot of my habits&lt;/h2&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/books.css&quot; /&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:&quot;&quot;;
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:&quot;&quot;;
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+var req = new XMLHttpRequest();
+req.responseType = &apos;json&apos;;
+  
+var url = &quot;https://sheets.googleapis.com/v4/spreadsheets/1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA/values/Habits!A421:T434?alt=json&amp;key=AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw&quot;;
+var apiKey = &quot;&quot;; 
+var startRow = &quot;&quot;; 
+var endRow = &quot;&quot;; 
+
+if (url &amp;&amp; startRow &amp;&amp; endRow) {
+    url += `${startRow}:${endRow}?alt=json`;
+    if (apiKey) {
+      url += `&amp;key=${apiKey}`;
+    }
+}
+
+req.open(&apos;GET&apos;, url, true);
+
+req.onload  = function() {
+    var data = req.response[&quot;values&quot;];
+
+    let i;
+
+    let getDate = [];
+
+    for (i = 1; i &lt; data.length; i++) {
+
+      let activity = data[i][0];
+      let streak  = data[i][1];
+      let logging = data[i][6];
+      let count = data[i][19];
+      let todayDate = (data[i][7] === &quot;yes&quot;) ? &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayDate = (data[i][8] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusOneDate = (data[i][9] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusTwoDate = (data[i][10] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusThreeDate = (data[i][11] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFourDate = (data[i][12] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+      let yesterdayMinusFiveDate = (data[i][13] === &quot;yes&quot;) ?  &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check cl\&quot;&gt;&lt;/i&gt;&quot;: &quot;&lt;i style=\&quot;font-size:24px\&quot; class=\&quot;icon-check-empty cl\&quot;&gt;&lt;/i&gt;&quot;;
+
+      if(data[i][18]) {
+          getDate.push(data[i][18]);
+      }
+
+      if (parseInt(streak) &gt; 0) {
+        activity = &quot;&lt;span class=\&quot;sketch-cirlce\&quot; &gt;&quot; + activity + &quot;&lt;/span&gt;&quot;;
+      }
+
+      document.getElementById(&quot;demo&quot;).innerHTML +=
+        &quot;&lt;tr&gt;&quot; +
+        &quot;&lt;td style=\&quot;white-space:nowrap;\&quot; &gt;&quot; + 
+        activity +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        todayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        yesterdayMinusOneDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusTwoDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusThreeDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFourDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+          yesterdayMinusFiveDate +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        streak +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        count +
+        &quot;&lt;/td&gt;&quot; +
+        &quot;&lt;td&gt;&quot; +
+        logging +
+        &quot;&lt;/td&gt;&quot; +
+
+        &quot;&lt;/tr&gt;&quot;;
+    }
+
+    document.getElementById(&quot;today&quot;).innerHTML = getDate[0];
+    document.getElementById(&quot;yesterday&quot;).innerHTML = getDate[1];
+    document.getElementById(&quot;yesterdayOneMinus&quot;).innerHTML = getDate[2];
+    document.getElementById(&quot;yesterdayTwoMinus&quot;).innerHTML = getDate[3];
+    document.getElementById(&quot;yesterdayThreeMinus&quot;).innerHTML = getDate[4];
+    document.getElementById(&quot;yesterdayFourMinus&quot;).innerHTML = getDate[5];
+    document.getElementById(&quot;yesterdayFiveMinus&quot;).innerHTML = getDate[6];
+};
+req.send(null);
+&lt;/script&gt;
+
+&lt;!-- dummy box begins --&gt;
+&lt;div style=&quot;padding-bottom:10px; padding-top:20px; background : white;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;container my-5&quot;&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+
+    &lt;div class=&quot;col-md-7 mb-4 mb-md-0&quot;&gt;
+
+      &lt;!-- Table --&gt;
+      &lt;table class=&quot;table table-striped&quot; style=&quot;font-size: 16px;&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Activity&lt;/th&gt;
+           &lt;th&gt;&lt;span id=&quot;today&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterday&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayOneMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayTwoMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayThreeMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFourMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;span id=&quot;yesterdayFiveMinus&quot;&gt;&lt;/span&gt;&lt;/th&gt;
+            &lt;th&gt;Streak&lt;/th&gt;
+            &lt;th&gt;Count&lt;/th&gt;
+            &lt;th&gt;Logging&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody id=&quot;demo&quot;&gt;&lt;/tbody&gt;
+      &lt;/table&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;langauge-devil-may-cry-5&quot;&gt;Langauge Devil May Cry 5&lt;/h2&gt;
+
+&lt;p&gt;Change language in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Devil May Cry 5&lt;/code&gt;. Go to the installation folder. Find the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;steam_emu.ini&lt;/code&gt; and update the langauge&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;###                                                                                                                                                                                                                                                                                                                                                                                       ### Language that will be used in the game                                                                                                                                                                                                                                                                                                                                                ###                                                                                                                                                                                                                                                                                                                                                                                       Language=english   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+          <pubDate>2025-03-17T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/weekly-logs-2025-03-17</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/weekly-logs-2025-03-17</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Download Detroit Become Human</title>
           <description>&lt;p&gt;Detroit: Become Human, the award-winning video game production from Quantic Dream, is finally available on Steam! Featuring world-renowned actors including Jesse Williams (Grey’s Anatomy), Clancy Brown (Carnivale), Lance Henriksen (Aliens), Bryan Dechart (True Blood) and Valorie Curry (Twilight).&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -5428,10 +5747,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;49584427-ea6a-4b89-bb1b-b50c5ce78acd&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;911c5a9f-eca4-4f35-897c-a44413df0d26&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;49584427-ea6a-4b89-bb1b-b50c5ce78acd&apos;,
+    &apos;911c5a9f-eca4-4f35-897c-a44413df0d26&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -7138,10 +7457,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;805c9d6e-4fe8-4948-8e6d-9f8279c61faa&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;c188d878-02f8-4d57-a75c-09414c590b48&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;805c9d6e-4fe8-4948-8e6d-9f8279c61faa&apos;,
+    &apos;c188d878-02f8-4d57-a75c-09414c590b48&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
