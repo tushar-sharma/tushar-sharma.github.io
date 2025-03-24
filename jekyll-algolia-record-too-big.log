@@ -1,6 +1,6 @@
 {
-  "html": "<p>\n          <a href=\"/blog/who-destroyed-nalanda-university\">\n            <span>Continue reading →</span>\n          </a>\n          <span style=\"float:right;\">\n            \n              <a class=\"mytag\" href=\"/tag/history\">history</a>\n            \n              <a class=\"mytag\" href=\"/tag/india\">india</a>\n            \n          </span>\n        </p>",
-  "content": "\n          \n            Continue reading →\n          \n          \n            \n              history\n            \n              india\n            \n          \n        ",
+  "html": "<p>\n  <a href=\"/blog/who-destroyed-nalanda-university\">\n    <span>Continue reading →</span>\n  </a>\n   <span style=\"float:right;\">\n    \n    <a class=\"mytag\" href=\"/tag/history\">history </a>\n    \n    <a class=\"mytag\" href=\"/tag/india\">india </a>\n    \n  </span>\n</p>",
+  "content": "\n  \n    Continue reading →\n  \n   \n    \n    history \n    \n    india \n    \n  \n",
   "headings": [
     "Posts Tagged: india",
     "Who Destroyed Nalanda University"
