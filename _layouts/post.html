@@ -45,7 +45,7 @@ root: true
   </div>
   {% endif %}
 
-  {% if page.thumb %}
+  {% if page.thumb and page.skipImage == nil %}
     <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
       <img 
       src="{% if page.image contains '?w=' %}{{ page.image | replace: '?w=437', '?w=800' }}{% else %}{{ page.image | append: '?w=800' }}{% endif %}" 
