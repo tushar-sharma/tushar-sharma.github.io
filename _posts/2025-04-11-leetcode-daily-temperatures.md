@@ -4,12 +4,13 @@ title:
 image: https://unsplash.com/photos/tAz4APuJwvs/download?w=437
 thumb: https://unsplash.com/photos/tAz4APuJwvs/download?w=437
 author: tushar sharma
-skipImage: true
 category: blog
 tags:
  - leetcode
  - python
  - stack
+ - java
+mutipleTab: true
 ---
 
 Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.<!-- truncate_here -->
@@ -19,26 +20,18 @@ Given an array of integers temperatures represents the daily temperatures, retur
 
 ## Brute force solution
 
-```python
-class Solution:
-    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
-        n = len(temperatures)
-        answers = [0] * n
+{% template  customTab.html %}
+---
+id: 68b174bcb00ebb2f0e3cc6b15bdfea3e
+files:
+  - file: BruteForce.java
+    language: java
+  - file: brute_force.py
+    language: python
+---
+{% endtemplate %}
 
-        for i, temp in enumerate(temperatures[:-1]):
-            answers[i] += 1
-            if temperatures[i + 1] <= temp:
-                j = i + 1
-                while temperatures[j] <= temp:
-                    answers[i] += 1
-                    j += 1
-                    if j > n - 1:
-                        answers[i] = 0
-                        break
-        return answers
-````
-
-Time Limit Exceeded since complexity is O(N²)
+Time Limit Exceeded since complexity is **O(N²)**
 
 ## Quick refresher on Monotonic stack
 
@@ -50,26 +43,16 @@ A monotonic stack , we maintain either increasing or decreasing order. Use decr
 
 We will use monotonic decreasing stack to find next largest element
 
-```python
-class Solution:
-    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+{% template  customTab.html %}
+---
+id: 68b174bcb00ebb2f0e3cc6b15bdfea3e
+files:
+  - file: monotoinc_stack.py
+    language: python
+---
+{% endtemplate %}
 
-       result = [0] * len(temperatures)
-
-       stack = []
-
-       for i, temp in enumerate(temperatures):
-
-           while stack and temperatures[stack[-1]] < temp: 
-               prev_index = stack.pop()
-               result[prev_index] = i - prev_index
-
-           stack.append(i)
-
-       return result
-```
-
-Time complexity O(n)
+Time complexity **O(n)**
 
 Why time complexity is O(N²)?
 
