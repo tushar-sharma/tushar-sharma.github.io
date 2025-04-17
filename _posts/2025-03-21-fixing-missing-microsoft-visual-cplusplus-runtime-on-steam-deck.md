@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Fixing Missing Microsoft Visual C++ Runtime on Steam Deck
-image: https://unsplash.com/photos/5l6vBFtJo6A/download?w=437
-thumb: https://unsplash.com/photos/5l6vBFtJo6A/download?w=437
+image: https://unsplash.com/photos/Urd-8c7N_pQ/download?w=437
+thumb: https://unsplash.com/photos/Urd-8c7N_pQ/download?w=437
 author: tushar sharma
 category: blog
+skipImage: true
 tags:
  - steam deck
 ---

@@ -1,52 +1,38 @@
 ---
 layout: post
-title: Cribsheet for Mongodb
-image: https://unsplash.com/photos//download?w=437
-thumb: https://unsplash.com/photos//download?w=437
+title: MongoDB Crib Sheet
+image: https://unsplash.com/photos/tWedmSHDF94/download?w=437
+thumb: https://unsplash.com/photos/tWedmSHDF94/download?w=437
 author: tushar sharma
 category: blog
-tags: [mongo]
+tags: [mongodb]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<!-- truncate_here -->
+MongoDB Crib Sheet.<!-- truncate_here -->
+
+MongoDB Crib Sheet. Mongo uses BSON to store data
 
 
-- NoSQL database
+## Document Structure (BSON)
 
-- Store data in form of BSON (Binary JSON) e.g.
-
-```
+```json
 {
-    name: "T",
-    salary: 230000,
-    designation: “Computer Scientist”,
-    teams: [ “front-end”, “database” ]
+  _id: ObjectId("507f191e810c19729de860ea"),
+  name: "Alice Chen",
+  salary: NumberLong(230000),
+  designation: "Principal Engineer",
+  teams: ["platform-engineering", "database-ops"],
+  meta: {
+    badge: "SDE-III",
+    clearance: "Level-5"
+  }
 }
 ```
 
-- Collection : Group of related documents with shared common index
+- Binary JSON format with type-rich encoding
 
-### Read Preference
+- Flexible schema (no fixed column structure)
 
-- default is primary
+- Nested documents (up to 100 levels deep)
 
-- determines where to route read operations
-
-- read from secondary may fetch stale data
-
-- strong vs Eventual consistency
-
-
-### Write Concern
-
-- default is acknowledged
-
-- determines the guarantee that mongodb provides on the success of write operations
-
-- weaker write concern is faster write time
-
-- default case, primary replicas acknowledge success of write operations
-
-## Journaling 
-
-- mongodb first write to journal \& it periodically get flushed to Mongodb memory
+- Automatic `_id` generation (12-byte unique identifier)

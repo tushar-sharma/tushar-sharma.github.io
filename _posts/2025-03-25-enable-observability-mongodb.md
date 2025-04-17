@@ -14,7 +14,6 @@ Implementing Observability in Reactive MongoDB with Spring Boot and Testcontaine
 
 ## Introduction to Observability
 
-
 Observability is the cornerstone of modern distributed systems, enabling developers to:
 - **Trace** request flows through microservices
 
@@ -31,7 +30,6 @@ In reactive MongoDB applications, observability becomes crucial due to:
 - Complex query performance analysis
 
 
-
 ## The Three Observability Pillars
 
 1. **Metrics**: Quantitative measurements (e.g., query duration)
@@ -42,32 +40,25 @@ In reactive MongoDB applications, observability becomes crucial due to:
 
 ## AutoConfigure class
 
-Lets create our `CustomMongoReactiveAutoConfiguration` class which needs to create a bean of `MongoClientSettingsBuilderCustomizer`
+Let’s create an **autoconfigure** class that will be loaded automatically when the dependency is added in `build.gradle`:
 
 
-```java
-@AutoConfigureAfter(value = {MongoReactiveAutoConfiguration.class, MongoReactiveDataAutoConfiguration.class})
-@ConditionalOnClass({ MongoClient.class, ReactiveMongoTemplate.class, MongoClientSettings.class})
-@EnableConfigurationProperties(MongoProperties.class)
-public class CustomMongoReactiveAutoConfiguration {
-
-    @Bean
-    @ConditionalOnMissingBean
-    @ConditionalOnProperty(prefix = "spring.data.mongodb", name = "database")
-    public ReactiveMongoTemplate reactiveMongoTemplate(MongoClient mongoClient, 
-                                                     MongoProperties mongoProperties) {
-        return new ReactiveMongoTemplate(mongoClient, mongoProperties.getDatabase());
-    }
-
-    @Bean
-    public MongoClientSettingsBuilderCustomizer mongoClientSettingsBuilderCustomizer(
-        final ObservationRegistry registry) {
-        return builder -> builder
-            .contextProvider(ContextProviderFactory.create(registry))
-            .addCommandListener(new MongoObservationCommandListener(registry));
-    }
+```gradle
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
 }
 ```
+
+Make sure to register this class in `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports` for Spring Boot to pick it up automatically.
+<br>
+
+
+{% template  customCode.html %}
+---
+id: 012eda6dae0f2bbcaa188b7e0f5f94d2
+file: CustomMongoReactiveAutoConfiguration.java
+---
+{% endtemplate %}
 
 **Key Components**:
 
@@ -77,70 +68,16 @@ public class CustomMongoReactiveAutoConfiguration {
 
 - **ContextProvider:** Propagates tracing context through reactive pipelines
 
-## Integration Testing with Testcontainers
+## Integration Testing
 
-```java
-@SpringBootTest(classes = {
-    TestObservationRegistry.class,
-    MongoReactiveAutoConfiguration.class,
-    CustomMongoReactiveAutoConfiguration.class}, 
-    properties = {
-        "spring.data.mongodb.database=testdb",
-        "management.metrics.mongo.command.enabled=false",
-        "management.tracing.enabled=true",
-        "spring.main.web-application-type=reactive"
-    })
-@Testcontainers
-@AutoConfigureObservability
-public class CustomMongoReactiveAutoConfigurationIntegrationTest {
+We can use **Testcontainers** for testing traces.
 
-    @Container
-    private static final GenericContainer<?> mongoDBContainer = 
-        new GenericContainer<>(DockerImageName.parse("mongo:latest"))
-            .withExposedPorts(27017)
-            .withEnv("MONGO_INITDB_ROOT_USERNAME", "root")
-            .withEnv("MONGO_INITDB_ROOT_PASSWORD", "password");
 
-    @Autowired
-    private ReactiveMongoTemplate mongoTemplate;
+{% template  customCode.html %}
+---
+id: 012eda6dae0f2bbcaa188b7e0f5f94d2
+file: CustomMongoReactiveAutoConfigurationIntegrationTest.java
+---
+{% endtemplate %}
 
-    @Autowired
-    private TestObservationRegistry observationRegistry;
-
-    @DynamicPropertySource
-    static void setProperties(DynamicPropertyRegistry registry) {
-        registry.add("spring.data.mongodb.uri", () -> 
-            String.format("mongodb://%s:%s@%s:%d/testdb?authSource=admin",
-                "root",
-                "password",
-                mongoDBContainer.getHost(),
-                mongoDBContainer.getFirstMappedPort()));
-    }
-
-    @Test
-    void verifyCommandObservationInstrumentation() {
-        TestDocument doc = new TestDocument("1", "test-data");
-        
-        StepVerifier.create(mongoTemplate.save(doc, "testCollection"))
-            .expectNextCount(1)
-            .verifyComplete();
-
-        TestObservationRegistryAssert.assertThat(observationRegistry)
-            .hasNumberOfObservationsWithNameEqualTo("spring.data.mongodb.command", 1)
-            .hasObservationWithNameEqualTo("spring.data.mongodb.command")
-            .that()
-            .hasLowCardinalityKeyValue("db.operation", "insert")
-            .hasLowCardinalityKeyValue("db.name", "testdb")
-            .hasLowCardinalityKeyValue("db.mongodb.collection", "testCollection");
-    }
-
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    static class TestDocument {
-        @Id
-        private String id;
-        private String payload;
-    }
-}
 ```
