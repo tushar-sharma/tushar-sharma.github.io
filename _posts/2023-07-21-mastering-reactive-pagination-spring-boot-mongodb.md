@@ -4,7 +4,7 @@ date: 2023-07-21
 title: Mastering Reactive Pagination with Spring Boot and MongoDB
 image: /img/girl-coding-rain.jpeg
 thumb: /img/girl-coding-rain.jpeg
-author: Tushar Sharma;
+author: tushar sharma
 category: blog
 mutipleTab: true
 tags:
