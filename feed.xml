@@ -339,6 +339,284 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Leetcode Daily Temperatures</title>
+          <description>&lt;p&gt;Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.&lt;/p&gt;
+
+&lt;h2 id=&quot;brute-force-solution&quot;&gt;Brute force solution&lt;/h2&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab java&quot;&gt;&lt;a href=&quot;#java&quot;&gt;java&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;tab python&quot;&gt;&lt;a href=&quot;#python&quot;&gt;python&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot; code-block codeSample java&quot; id=&quot;java&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/68b174bcb00ebb2f0e3cc6b15bdfea3e.js?file=BruteForce.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;div class=&quot; code-block codeSample python&quot; id=&quot;python&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/68b174bcb00ebb2f0e3cc6b15bdfea3e.js?file=brute_force.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
+
+&lt;p&gt;Time Limit Exceeded since complexity is &lt;strong&gt;O(N²)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;quick-refresher-on-monotonic-stack&quot;&gt;Quick refresher on Monotonic stack&lt;/h2&gt;
+
+&lt;p&gt;A regular stack follows LIFO (Last In, First Out). You push and pop from the top. &lt;/p&gt;
+
+&lt;p&gt;A monotonic stack , we maintain either increasing or decreasing order. Use decreasing monotonic stack to find next greater element. Use increasing monotonic stack to find next smallest element.&lt;/p&gt;
+
+&lt;h2 id=&quot;optimized-solution&quot;&gt;Optimized Solution&lt;/h2&gt;
+
+&lt;p&gt;We will use monotonic decreasing stack to find next largest element&lt;/p&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab java&quot;&gt;&lt;a href=&quot;#java&quot;&gt;java&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;tab python&quot;&gt;&lt;a href=&quot;#python&quot;&gt;python&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot; code-block codeSample java&quot; id=&quot;java&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/68b174bcb00ebb2f0e3cc6b15bdfea3e.js?file=MonotonicStack.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;div class=&quot; code-block codeSample python&quot; id=&quot;python&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/68b174bcb00ebb2f0e3cc6b15bdfea3e.js?file=monotoinc_stack.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
+
+&lt;p&gt;Time complexity &lt;strong&gt;O(n)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Why time complexity is O(N²)?&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for i in range(n):         # ← loop runs n times
+    while something:       # ← looks like this could run up to n times too
+        do stuff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The outer for loop runs n times (where n is the length of temperatures).&lt;/p&gt;
+
+&lt;p&gt;Each index is pushed onto the stack at most once. This contributes at most n push operations in total.&lt;/p&gt;
+
+&lt;p&gt;Each index is popped from the stack at most once. This contributes at most n pop operations in total.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Iteration&lt;/th&gt;
+      &lt;th&gt;Index&lt;/th&gt;
+      &lt;th&gt;Temperature&lt;/th&gt;
+      &lt;th&gt;Operations&lt;/th&gt;
+      &lt;th&gt;Stack State After&lt;/th&gt;
+      &lt;th&gt;Result Update&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;73&lt;/td&gt;
+      &lt;td&gt;Stack is empty → push index 0&lt;/td&gt;
+      &lt;td&gt;[0]&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[0, 0, 0, 0, 0, 0, 0, 0]&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;74&lt;/td&gt;
+      &lt;td&gt;Compare 74 with temperature at index 0 (73): 74 &amp;gt; 73 → pop index 0, set result[0] = 1; then push index 1&lt;/td&gt;
+      &lt;td&gt;[1]&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[1, 0, 0, 0, 0, 0, 0, 0]&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;75&lt;/td&gt;
+      &lt;td&gt;Compare 75 with temperature at index 1 (74): 75 &amp;gt; 74 → pop index 1, set result[1] = 1; then push index 2&lt;/td&gt;
+      &lt;td&gt;[2]&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[1, 1, 0, 0, 0, 0, 0, 0]&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;71&lt;/td&gt;
+      &lt;td&gt;Compare 71 with temperature at index 2 (75): 71 is not &amp;gt; 75 → push index 3&lt;/td&gt;
+      &lt;td&gt;[2, 3]&lt;/td&gt;
+      &lt;td&gt;No change&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;69&lt;/td&gt;
+      &lt;td&gt;Compare 69 with temperature at index 3 (71): 69 is not &amp;gt; 71 → push index 4&lt;/td&gt;
+      &lt;td&gt;[2, 3, 4]&lt;/td&gt;
+      &lt;td&gt;No change&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;72&lt;/td&gt;
+      &lt;td&gt;- Compare 72 with temperature at index 4 (69): 72 &amp;gt; 69 → pop index 4, set result[4] = 5 - 4 = 1&lt;br /&gt;- New top is index 3 (71): 72 &amp;gt; 71 → pop index 3, set result[3] = 5 - 3 = 2&lt;br /&gt;- 72 is not &amp;gt; temperature at index 2 (75), so push index 5&lt;/td&gt;
+      &lt;td&gt;[2, 5]&lt;/td&gt;
+      &lt;td&gt;result[4]=1, result[3]=2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;76&lt;/td&gt;
+      &lt;td&gt;- Compare 76 with temperature at index 5 (72): 76 &amp;gt; 72 → pop index 5, set result[5] = 6 - 5 = 1&lt;br /&gt;- New top is index 2 (75): 76 &amp;gt; 75 → pop index 2, set result[2] = 6 - 2 = 4&lt;br /&gt;- Stack empty → push index 6&lt;/td&gt;
+      &lt;td&gt;[6]&lt;/td&gt;
+      &lt;td&gt;result[5]=1, result[2]=4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;73&lt;/td&gt;
+      &lt;td&gt;Compare 73 with temperature at index 6 (76): 73 is not &amp;gt; 76 → push index 7&lt;/td&gt;
+      &lt;td&gt;[6, 7]&lt;/td&gt;
+      &lt;td&gt;No change&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+          <pubDate>2025-04-11T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/leetcode-daily-temperatures</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/leetcode-daily-temperatures</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Daily Logs</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for Mar 31, 2025.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for Mar 31, 2025.&lt;/p&gt;
+
+&lt;iframe id=&quot;dynamicIframe&quot; style=&quot;position: relative; width: 100%; height: 400px;&quot; src=&quot;/encrypted/2025-03-31-daily-logs-2025-03-31.html&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot; title=&quot;Sample&quot;&gt;&lt;/iframe&gt;
+
+&lt;script src=&quot;/js/resizeIframe.js&quot;&gt;&lt;/script&gt;
+
+</description>
+          <pubDate>2025-03-31T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/daily-logs-2025-03-31</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2025-03-31</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Enable Observability at MongoDB</title>
+          <description>&lt;p&gt;Implementing Observability in Reactive MongoDB with Spring Boot and Testcontainers. &lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Implementing Observability in Reactive MongoDB with Spring Boot and Testcontainers&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction-to-observability&quot;&gt;Introduction to Observability&lt;/h2&gt;
+
+&lt;p&gt;Observability is the cornerstone of modern distributed systems, enabling developers to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Trace&lt;/strong&gt; request flows through microservices&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Measure&lt;/strong&gt; system performance via metrics&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Diagnose&lt;/strong&gt; issues using structured logs&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In reactive MongoDB applications, observability becomes crucial due to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Non-blocking nature complicating request tracing&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connection pooling challenges&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Complex query performance analysis&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-three-observability-pillars&quot;&gt;The Three Observability Pillars&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Metrics&lt;/strong&gt;: Quantitative measurements (e.g., query duration)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Traces&lt;/strong&gt;: Distributed request context propagation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Logs&lt;/strong&gt;: Contextual event records&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;autoconfigure-class&quot;&gt;AutoConfigure class&lt;/h2&gt;
+
+&lt;p&gt;Let’s create an &lt;strong&gt;autoconfigure&lt;/strong&gt; class that will be loaded automatically when the dependency is added in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-gradle highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;org.springframework.boot:spring-boot-starter-data-mongodb-reactive&apos;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Make sure to register this class in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports&lt;/code&gt; for Spring Boot to pick it up automatically.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/012eda6dae0f2bbcaa188b7e0f5f94d2.js?file=CustomMongoReactiveAutoConfiguration.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Key Components&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;@AutoConfigureAfter:&lt;/strong&gt; Ensures proper configuration ordering&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;MongoClientSettingsBuilderCustomizer:&lt;/strong&gt; Injects observability instrumentation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;ContextProvider:&lt;/strong&gt; Propagates tracing context through reactive pipelines&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;integration-testing&quot;&gt;Integration Testing&lt;/h2&gt;
+
+&lt;p&gt;We can use &lt;strong&gt;Testcontainers&lt;/strong&gt; for testing traces.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/012eda6dae0f2bbcaa188b7e0f5f94d2.js?file=CustomMongoReactiveAutoConfigurationIntegrationTest.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+</description>
+          <pubDate>2025-03-25T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/enable-observability-mongodb</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/enable-observability-mongodb</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>MongoDB Crib Sheet</title>
+          <description>&lt;p&gt;MongoDB Crib Sheet.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;MongoDB Crib Sheet. Mongo uses BSON to store data&lt;/p&gt;
+
+&lt;h2 id=&quot;document-structure-bson&quot;&gt;Document Structure (BSON)&lt;/h2&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;_id:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ObjectId(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;507f191e810c19729de860ea&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;name:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Alice Chen&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;salary:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;NumberLong(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;230000&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;designation:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Principal Engineer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;teams:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;platform-engineering&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;database-ops&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;meta:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;badge:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SDE-III&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;clearance:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Level-5&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Binary JSON format with type-rich encoding&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Flexible schema (no fixed column structure)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nested documents (up to 100 levels deep)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Automatic &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_id&lt;/code&gt; generation (12-byte unique identifier)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          <pubDate>2025-03-25T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/cribsheet-for-mongodb</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/cribsheet-for-mongodb</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Fixing Missing Microsoft Visual C++ Runtime on Steam Deck</title>
           <description>&lt;p&gt;When launching non-Steam games via Proton, you may encounter, following error.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -5767,10 +6045,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;c113446e-a3d9-4f41-883c-8e061f699e8b&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;3ed24e92-241c-4e4a-864e-6d41f38e8bff&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;c113446e-a3d9-4f41-883c-8e061f699e8b&apos;,
+    &apos;3ed24e92-241c-4e4a-864e-6d41f38e8bff&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -7477,10 +7755,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;0c06cddc-aa2d-48ff-af71-27369c39da2b&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;f10657a2-1e33-4551-97f4-5ff0c3004e8a&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;0c06cddc-aa2d-48ff-af71-27369c39da2b&apos;,
+    &apos;f10657a2-1e33-4551-97f4-5ff0c3004e8a&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
