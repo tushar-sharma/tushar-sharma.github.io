@@ -15,7 +15,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta property="og:site_name" content="Tushar Sharma">
-<title>My Games</title>
+<title>Download Games</title>
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 <link rel="icon" type="image/png" href="/img/favicon.png">
 <link rel="stylesheet" href="/css/github.css">
@@ -28,11 +28,11 @@
 <![endif]-->
 <!-- Twitter cards -->
 <meta name="twitter:site" content="@tshrocks">
-<meta name="twitter:creator" content="@">
-<meta name="twitter:title" content="My Games">
+<meta name="twitter:creator" content="@Tushar Sharma">
+<meta name="twitter:title" content="Download Games">
 
 
-<meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+<meta name="twitter:description" content="Download Games">
 
 
 
@@ -54,9 +54,9 @@
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>My Games | RandomWits</title>
+<title>Download Games | RandomWits</title>
 <meta name="generator" content="Jekyll v4.3.3">
-<meta property="og:title" content="My Games">
+<meta property="og:title" content="Download Games">
 <meta name="author" content="Tushar Sharma">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="Welcome to Randomwits, my digital nest.">
@@ -66,9 +66,9 @@
 <meta property="og:site_name" content="RandomWits">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="My Games">
+<meta property="twitter:title" content="Download Games">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Welcome to Randomwits, my digital nest.","headline":"My Games","url":"https://randomwits.com/games/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Tushar Sharma"},"description":"Welcome to Randomwits, my digital nest.","headline":"Download Games","url":"https://randomwits.com/games/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -191,6 +191,7 @@ header li {
             <ul class="unstyled list-hover-slide">
 
               <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+              <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
               <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
               <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
               <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
@@ -237,36 +238,100 @@ header li {
 <!-- end - this is to include Adds in the site --> 
       </header>
       <section>
-        <link rel="stylesheet" href="/../css/books.css">
+        <link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/games.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<h2 class="entry-title">My Games</h2>
+<div class="games-container">
+
+      <div class="game-search-container">
+        <input type="text" id="gameSearch" placeholder="Search games by title, genre..." aria-label="Search games">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+    </div>
+  
+
+  <!-- Game Grid -->
+  <div class="game-grid">
     
-<p>The most intimidating as well as fulfilling part of programming is building games. I believe that programming can be best taught by the sheer inspiration of designing games. These games (or snippets of code) does not showcase ingeniousness or bleeding edge technology but rather my own effort to commence my odysseys in game development. Hope you'll like it !</p>
+    <div class="game-card" data-searchable="super mario odyssey platform, action-adventure">
+      <div class="game-thumbnail">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/8d/Super_Mario_Odyssey.jpg" alt="Super Mario Odyssey cover art" loading="lazy">
+      </div>
+      
+      <div class="game-info">
+        <h3 class="game-title">Super Mario Odyssey</h3>
+        <div class="game-meta">
+          <span class="game-genre">Platform, action-adventure</span>
+        </div>
+        
+        <div class="game-actions">
+          <a href="/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator" class="guide-button" rel="noopener noreferrer">
+            <i class="fas fa-download"></i>
+            Download
+          </a>
 
-<table>
-<thead>
-<tr>
-<th align="center"><strong>Cover</strong></th>
-<th align="center"><strong>Title</strong></th>
-<th align="center"><strong>Details</strong></th>
+        </div>
+      </div>
+    </div>
+    
+    <div class="game-card" data-searchable="detroit: become human adventure">
+      <div class="game-thumbnail">
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/ee/Detroit_Become_Human.jpg" alt="Detroit: Become Human cover art" loading="lazy">
+      </div>
+      
+      <div class="game-info">
+        <h3 class="game-title">Detroit: Become Human</h3>
+        <div class="game-meta">
+          <span class="game-genre">Adventure</span>
+        </div>
+        
+        <div class="game-actions">
+          <a href="/blog/download-detroit-become-Human" class="guide-button" rel="noopener noreferrer">
+            <i class="fas fa-download"></i>
+            Download
+          </a>
 
-</tr>
-</thead>
-<tbody>
+        </div>
+      </div>
+    </div>
+    
+  </div>
 
-<tr>
-<td align="center"><a href="ball-hit.html"><img class="book" src="/../img/ball-hit.png"></a></td>
-<td align="center">Ball Hit</td>
-<td align="center">Classic hit and ball game. Use cursor or mouse to navigate the brick.</td>
+  <div class="no-results">
+    <i class="fas fa-gamepad"></i>
+    <p>No games found matching your search</p>
+  </div>
+</section>
+</div>
 
-</tr>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('gameSearch');
+  const gameCards = document.querySelectorAll('.game-card');
+  const noResults = document.querySelector('.no-results');
 
-</tbody>
-</table>
+  function filterGames() {
+    const searchTerm = searchInput.value.toLowerCase();
+    let visibleCount = 0;
 
+    gameCards.forEach(card => {
+      const searchableText = card.dataset.searchable;
+      const isVisible = searchableText.includes(searchTerm);
+      
+      card.style.display = isVisible ? 'flex' : 'none';
+      if(isVisible) visibleCount++;
+    });
 
-      </section>
-   </div>
+    noResults.style.display = visibleCount > 0 ? 'none' : 'flex';
+  }
+
+  searchInput.addEventListener('input', filterGames);
+  filterGames(); // Initial filter
+});
+</script>
+      
+   
    <div style="clear:both;"></div>
 
     <div class="wrapper">
