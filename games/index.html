@@ -1,32 +1,81 @@
 ---
 layout: default
-title: My Games
+title: Download Games
+published: true
+summary: Download Games
+author: Tushar Sharma
 ---
 
-<link rel="stylesheet" href="/../css/books.css" />
+<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
+<link rel="stylesheet" href="{{ root_url }}/css/games.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<h2 class="entry-title">My Games</h2>
-    
-<p>The most intimidating as well as fulfilling part of programming is building games. I believe that programming can be best taught by the sheer inspiration of designing games. These games (or snippets of code) does not showcase ingeniousness or bleeding edge technology but rather my own effort to commence my odysseys in game development. Hope you'll like it !</p>
+<div class="games-container">
 
-<table>
-<thead>
-<tr>
-<th align="center"><strong>Cover</strong>                                                            </th>
-<th align="center"> <strong>Title</strong>        </th>
-<th align="center"> <strong>Details</strong>        </th>
+      <div class="game-search-container">
+        <input type="text" id="gameSearch" placeholder="Search games by title, genre..." 
+               aria-label="Search games">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+    </div>
+  </header>
 
-</tr>
-</thead>
-<tbody>
+  <!-- Game Grid -->
+  <div class="game-grid">
+    {% for game in site.data.games %}
+    <div class="game-card" data-searchable="{{ game.title | downcase }} {{ game.genre | downcase }}">
+      <div class="game-thumbnail">
+        <img src="{{ game.image }}" alt="{{ game.title }} cover art" loading="lazy">
+      </div>
+      
+      <div class="game-info">
+        <h3 class="game-title">{{ game.title }}</h3>
+        <div class="game-meta">
+          <span class="game-genre">{{ game.genre }}</span>
+        </div>
+        
+        <div class="game-actions">
+          <a href="{{ game.download_url }}" 
+          class="guide-button"
+          rel="noopener noreferrer">
+            <i class="fas fa-download"></i>
+            Download
+          </a>
 
-<tr>
-<td align="center"><a href="ball-hit.html"><img class="book" src="/../img/ball-hit.png"></a></td>
-<td align="center"> Ball Hit </td>
-<td align="center"> Classic hit and ball game. Use cursor or mouse to navigate the brick.</td>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 
-</tr>
+  <div class="no-results">
+    <i class="fas fa-gamepad"></i>
+    <p>No games found matching your search</p>
+  </div>
+</div>
 
-</tbody>
-</table>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('gameSearch');
+  const gameCards = document.querySelectorAll('.game-card');
+  const noResults = document.querySelector('.no-results');
 
+  function filterGames() {
+    const searchTerm = searchInput.value.toLowerCase();
+    let visibleCount = 0;
+
+    gameCards.forEach(card => {
+      const searchableText = card.dataset.searchable;
+      const isVisible = searchableText.includes(searchTerm);
+      
+      card.style.display = isVisible ? 'flex' : 'none';
+      if(isVisible) visibleCount++;
+    });
+
+    noResults.style.display = visibleCount > 0 ? 'none' : 'flex';
+  }
+
+  searchInput.addEventListener('input', filterGames);
+  filterGames(); // Initial filter
+});
+</script>

@@ -75,3 +75,12 @@ You can launch the game by clicking the game icon.
 </div>
 
 <p>For the password, in the comments type "randomwits.com" and "your email", and I will send the password.</p>
+
+<p >
+    Explore for more
+    <a href="{{ root_url }}/games" 
+       aria-label="Explore complete game catalog">
+       Games...
+        <i class="fas fa-chevron-right"></i>
+    </a>
+</p>
