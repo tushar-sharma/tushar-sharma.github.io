@@ -339,6 +339,196 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>How to add Non-Steam Games to Steam Deck</title>
+          <description>&lt;p&gt;I have a desktop for gaming, but ever since I got the Steam Deck, my gaming time has quadrupled. It&apos;s remarkable how well it handles even demanding games—it&apos;s like a Kindle for gaming. While the default SteamOS mainly supports games from the Steam store, you can actually play almost any game on the device.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;I have a desktop for gaming, but ever since I got the Steam Deck, my gaming time has quadrupled. It&apos;s remarkable how well it handles even demanding games—it&apos;s like a Kindle for gaming. While the default SteamOS mainly supports games from the Steam store, you can actually play almost any game on the device.&lt;/p&gt;
+
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;p&gt;Before diving into the steps, ensure you have the following:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Steam Deck&lt;/strong&gt;: Fully updated to the latest firmware.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;PC&lt;/strong&gt;: A computer to transfer game files (optional, but recommended).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Wi-Fi Network&lt;/strong&gt;: Both your Steam Deck and PC should be connected to the same network.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Terminal Access&lt;/strong&gt;: Familiarity with basic terminal commands is helpful.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Game Files&lt;/strong&gt;: The non-Steam game files you want to install.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;enable-desktop-mode&quot;&gt;Enable Desktop Mode&lt;/h2&gt;
+
+&lt;p&gt;The Steam Deck runs on a custom Linux-based operating system called SteamOS. To add non-Steam games, you’ll need to switch to &lt;strong&gt;Desktop Mode&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Power On&lt;/strong&gt; your Steam Deck.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Hold the Power Button&lt;/strong&gt; until the power menu appears.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Select &lt;strong&gt;Switch to Desktop&lt;/strong&gt; to enter Desktop Mode.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Once in Desktop Mode, you’ll have access to a full Linux desktop environment, allowing you to install and configure software.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-find-your-steam-decks-username-and-ip-address&quot;&gt;Step 2: Find Your Steam Deck’s Username and IP Address&lt;/h2&gt;
+
+&lt;p&gt;In Desktop Mode, open the &lt;strong&gt;Konsole&lt;/strong&gt; terminal (found in the Applications menu).&lt;/p&gt;
+
+&lt;h3 id=&quot;check-the-username&quot;&gt;Check the Username&lt;/h3&gt;
+&lt;p&gt;The default username on the Steam Deck is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deck&lt;/code&gt;. Confirm this by running:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;whoami&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Output: deck&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;find-the-ip-address&quot;&gt;Find the IP Address&lt;/h3&gt;
+
+&lt;p&gt;Next, find your Steam Deck’s IP address:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ip addr | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;inet
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Example output:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;inet: 127.0.0.1/8 scope host lo
+inet: 192.150.1.111/24 brd 192.168.1.255 scope global dynamic wlan0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Take note of the IP address (e.g., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;192.150.1.111&lt;/code&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;enable-ssh-on-steam-deck&quot;&gt;Enable SSH on Steam Deck&lt;/h2&gt;
+
+&lt;p&gt;To transfer files from your PC to the Steam Deck, enable SSH:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl start sshd
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl status sshd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;transfer-game-files-to-steam-deck&quot;&gt;Transfer Game Files to Steam Deck&lt;/h2&gt;
+
+&lt;p&gt;On your PC, open a terminal and run:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scp &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; GameFolder deck@192.168.1.124:/home/deck/Games
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;install-and-configure-lutris&quot;&gt;Install and Configure Lutris&lt;/h2&gt;
+
+&lt;p&gt;Lutris is a popular open-source gaming platform for Linux that simplifies the process of running non-Steam games. It supports a variety of runners, including Wine, Proton, and native Linux games.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open Discover: In Desktop Mode, open the Discover Software Center (similar to an app store).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Search for Lutris: Install Lutris from the Discover store.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install Wine and Dependencies: Lutris requires Wine to run Windows games. Install Wine and any necessary dependencies from Discover.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add Your Game:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Open Lutris and click the + button to add a new game.&lt;/li&gt;
+      &lt;li&gt;Set the runner to Wine.&lt;/li&gt;
+      &lt;li&gt;Browse to the game’s .exe file in /home/deck/Games.&lt;/li&gt;
+      &lt;li&gt;Configure any additional settings (e.g., Wine version, DXVK, etc.).&lt;/li&gt;
+      &lt;li&gt;Install and launch the game.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;add-the-game-to-steam&quot;&gt;Add the Game to Steam&lt;/h2&gt;
+
+&lt;p&gt;To make the game accessible from SteamOS (Gaming Mode), you’ll need to add it to your Steam library.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open Steam in Desktop Mode.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click Add a Game &amp;gt; Add a Non-Steam Game.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Browse to the game’s executable file. By default, Wine creates a virtual C: drive at:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/home/deck/.wine/drive_c/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Add the game and ensure it appears in your Steam library.&lt;/p&gt;
+
+&lt;h2 id=&quot;configure-proton-compatibility&quot;&gt;Configure Proton Compatibility&lt;/h2&gt;
+
+&lt;p&gt;For Windows games, you may need to enable Proton compatibility in SteamOS.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;In Gaming Mode, navigate to your library and select the non-Steam game.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to Properties &amp;gt; Compatibility.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Check Force the use of a specific Steam Play compatibility tool and select the latest version of Proton Experimental.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Launch the game and enjoy!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;common-issues-and-fixes&quot;&gt;Common Issues and Fixes&lt;/h2&gt;
+
+&lt;h3 id=&quot;terminal-error-unable-to-lock-database&quot;&gt;Terminal Error: “Unable to Lock Database”&lt;/h3&gt;
+
+&lt;p&gt;This error occurs when the package manager is locked by another process. Fix it by running:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pacman &lt;span class=&quot;nt&quot;&gt;-Syu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--noconfirm&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;missing-dependencies-eg-isskindll&quot;&gt;Missing Dependencies (e.g., isskin.dll)&lt;/h3&gt;
+
+&lt;p&gt;Some games require additional libraries. Install them using winetricks:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pacman -S winetricks --noconfirm
+winetricks vcrun6sp6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If issues persist, specify the Wine prefix:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;WINEPREFIX=~/.wine winetricks vcrun6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;invalid-or-corrupted-pgp-signature&quot;&gt;Invalid or Corrupted PGP Signature&lt;/h3&gt;
+
+&lt;p&gt;This error can occur when updating packages. Fix it by reinitializing the keyring:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo pacman-key --init
+sudo pacman-key --populate holo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+          <pubDate>2025-04-17T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/add-non-steam-games-to-steam-deck</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/add-non-steam-games-to-steam-deck</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Leetcode Daily Temperatures</title>
           <description>&lt;p&gt;Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -6045,10 +6235,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;3ed24e92-241c-4e4a-864e-6d41f38e8bff&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;2d2d3dbb-636e-4d5a-a063-0b085fb9d2fe&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;3ed24e92-241c-4e4a-864e-6d41f38e8bff&apos;,
+    &apos;2d2d3dbb-636e-4d5a-a063-0b085fb9d2fe&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -7755,10 +7945,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;f10657a2-1e33-4551-97f4-5ff0c3004e8a&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;9d6ebb5d-0cdd-43ba-aed6-feda08d1c59e&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;f10657a2-1e33-4551-97f4-5ff0c3004e8a&apos;,
+    &apos;9d6ebb5d-0cdd-43ba-aed6-feda08d1c59e&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
