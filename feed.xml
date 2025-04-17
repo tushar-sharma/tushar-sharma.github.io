@@ -339,6 +339,144 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Building Reactive File Upload with Spring Boot WebFlux and Swagger</title>
+          <description>&lt;p&gt;This solution implements a reactive REST API for handling multiple file uploads using.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;project-overview&quot;&gt;Project Overview&lt;/h2&gt;
+
+&lt;p&gt;This solution implements a reactive REST API for handling multiple file uploads using:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Boot WebFlux (Reactive Web)&lt;/li&gt;
+  &lt;li&gt;SpringDoc OpenAPI 3 documentation&lt;/li&gt;
+  &lt;li&gt;Project Reactor&lt;/li&gt;
+  &lt;li&gt;Java 21&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;project-setup-buildgradle&quot;&gt;Project Setup (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt;)&lt;/h2&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/2d7962ae629f4b5c8cc1ed4c45bb9846.js?file=build.gradle&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;key-dependencies&quot;&gt;Key Dependencies&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;webflux:&lt;/strong&gt; Enables reactive web programming&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;springdoc-openapi:&lt;/strong&gt; Generates OpenAPI 3 documentation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;reactor-test:&lt;/strong&gt; Provides testing utilities for reactive streams&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;main-application-class&quot;&gt;Main Application Class&lt;/h2&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/2d7962ae629f4b5c8cc1ed4c45bb9846.js?file=DemoUploadApplication.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;key-annotations&quot;&gt;Key Annotations:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;@OpenAPIDefinition:&lt;/strong&gt; Enables Swagger/OpenAPI documentation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Customizes API metadata through &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Info&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reactive-file-upload-controller&quot;&gt;Reactive File Upload Controller&lt;/h2&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/2d7962ae629f4b5c8cc1ed4c45bb9846.js?file=FileUploaderController.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;why-flux-instead-of-multipartfile&quot;&gt;Why Flux&lt;FilePart&gt; instead of MultipartFile?&lt;/FilePart&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Reactive Paradigm:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Flux handles streams of data asynchronously&lt;/li&gt;
+      &lt;li&gt;Processes files as they arrive without buffering entire request&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Memory Efficiency:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Handles large files without memory overload&lt;/li&gt;
+      &lt;li&gt;Backpressure-aware (controls data flow rate)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Non-Blocking I/O:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Works with WebFlux&apos;s event-loop model&lt;/li&gt;
+      &lt;li&gt;Maintains high concurrency with minimal threads&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;testing-with-swagger-ui&quot;&gt;Testing with Swagger UI&lt;/h2&gt;
+
+&lt;p&gt;Access the API documentation at:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://localhost:8080/swagger-ui/index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;sample-request&quot;&gt;Sample Request&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;POST /fileUploader/upload
+Content-Type: multipart/form-data
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;request-body&quot;&gt;Request Body&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Form field name: files&lt;/li&gt;
+  &lt;li&gt;Attach multiple files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sample-response&quot;&gt;Sample Response&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;Received files: 1.pdf, 2.pdf&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;understanding-documentation-components&quot;&gt;Understanding Documentation Components&lt;/h2&gt;
+
+&lt;h3 id=&quot;openapi-specification-openapijson&quot;&gt;OpenAPI Specification (openapi.json)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Machine-readable API contract&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Generated at runtime via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/v3/api-docs&lt;/code&gt; endpoint&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Contains endpoints, schemas, and examples&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;swagger-ui-indexhtml&quot;&gt;Swagger UI (index.html)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Human-friendly documentation interface&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Auto-generated from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;openapi.json&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Accessible via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/swagger-ui.html&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img class=&quot;mermaid&quot; src=&quot;https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5Vc2VyLT4-U3dhZ2dlciBVSTogQWNjZXNzIC9zd2FnZ2VyLXVpLmh0bWxcblN3YWdnZXIgVUktPj5TcHJpbmdEb2M6IEdFVCAvdjMvYXBpLWRvY3NcblNwcmluZ0RvYy0-PlN3YWdnZXIgVUk6IG9wZW5hcGkuanNvblxuU3dhZ2dlciBVSS0-PlVzZXI6IFJlbmRlcmVkIERvY3VtZW50YXRpb24iLCJtZXJtYWlkIjpudWxsfQ&quot; /&gt;&lt;/p&gt;
+</description>
+          <pubDate>2025-04-17T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/building-reactive-file-upload-spring-boot-webflux-swagger</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/building-reactive-file-upload-spring-boot-webflux-swagger</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>How to add Non-Steam Games to Steam Deck</title>
           <description>&lt;p&gt;I have a desktop for gaming, but ever since I got the Steam Deck, my gaming time has quadrupled. It&apos;s remarkable how well it handles even demanding games—it&apos;s like a Kindle for gaming. While the default SteamOS mainly supports games from the Steam store, you can actually play almost any game on the device.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -6235,10 +6373,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;2d2d3dbb-636e-4d5a-a063-0b085fb9d2fe&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;d41647c6-9c2f-4a60-9e3d-d8c7439782a7&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;2d2d3dbb-636e-4d5a-a063-0b085fb9d2fe&apos;,
+    &apos;d41647c6-9c2f-4a60-9e3d-d8c7439782a7&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -7945,10 +8083,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;9d6ebb5d-0cdd-43ba-aed6-feda08d1c59e&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;72e226dc-95b1-42f5-bc29-28a2513d026d&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;9d6ebb5d-0cdd-43ba-aed6-feda08d1c59e&apos;,
+    &apos;72e226dc-95b1-42f5-bc29-28a2513d026d&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
