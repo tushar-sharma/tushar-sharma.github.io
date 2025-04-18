@@ -339,6 +339,115 @@ if (typeof Object.assign !== 'function') {
     
       
         <item>
+          <title>Next Greater Element I</title>
+          <description>&lt;p&gt;The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.&lt;/p&gt;
+
+&lt;p&gt;You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2.&lt;/p&gt;
+
+&lt;p&gt;For each 0 &amp;lt;= i &amp;lt; nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2. If there is no next greater element, then the answer for this query is -1.&lt;/p&gt;
+
+&lt;p&gt;Return an array ans of length nums1.length such that ans[i] is the next greater element as described above.&lt;/p&gt;
+
+&lt;h2 id=&quot;brute-force&quot;&gt;Brute Force&lt;/h2&gt;
+
+&lt;p&gt;For each element in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums1&lt;/code&gt;, find its position in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums2&lt;/code&gt;, then search to the right for the first larger element.&lt;/p&gt;
+
+&lt;div class=&quot;line-numbers code-block&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d78c90b71089dd9f756605498853bb72.js?file=next_greatest_brute.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Time Complexity:&lt;/strong&gt; O(N&lt;sup&gt;2&lt;/sup&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;monotonic-stack&quot;&gt;Monotonic Stack&lt;/h2&gt;
+
+&lt;p&gt;A monotonic stack maintains elements in decreasing order. For each element in nums2, we track the next greater element using the stack, storing results in a hash map for O(1) lookups.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Initialize an empty stack and a hash map.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Iterate through nums2:
+    &lt;ul&gt;
+      &lt;li&gt;While the stack is not empty and the current element is greater than the stack&apos;s top:&lt;/li&gt;
+      &lt;li&gt;Pop from the stack and record the current element as the next greater for the popped value.&lt;/li&gt;
+      &lt;li&gt;Push the current element to the stack.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Query the hash map for each element in nums1 to build the result.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;tab-container&quot;&gt; &lt;ul&gt; &lt;li class=&quot;tab python&quot;&gt;&lt;a href=&quot;#python&quot;&gt;python&lt;/a&gt;&lt;/li&gt; &lt;li class=&quot;tab java&quot;&gt;&lt;a href=&quot;#java&quot;&gt;java&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;div class=&quot; code-block codeSample python&quot; id=&quot;python&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d78c90b71089dd9f756605498853bb72.js?file=next_greatest_stack.py&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;div class=&quot; code-block codeSample java&quot; id=&quot;java&quot;&gt; &lt;script src=&quot;https://gist.github.com/tushar-sharma/d78c90b71089dd9f756605498853bb72.js?file=NextGreatest.java&quot;&gt;&lt;/script&gt; &lt;button class=&quot;copy-button&quot;&gt;Copy&lt;/button&gt; &lt;/div&gt; &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Time Complexity:&lt;/strong&gt; O(nums1.length + nums2.length)&lt;/p&gt;
+</description>
+          <pubDate>2025-04-17T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/next-greater-element-i</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/next-greater-element-i</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Daily Logs for Apr 17, 2025</title>
+          <description>&lt;p&gt;Dear Vishi, this is my daily log for Apr 17, 2025.&lt;!-- truncate_here --&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear Vishi, this is my daily log for Apr 17, 2025.&lt;/p&gt;
+
+&lt;h2 id=&quot;thousand-eyes&quot;&gt;Thousand Eyes&lt;/h2&gt;
+
+&lt;p&gt;Indira, in Hindu mythology, has thousand eys. I didn&apos;t knew that. Here&apos;s a quote from Rig Veda 1.23.3.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;इ॒न्द्र॒वा॒यू म॑नो॒जुवा॒ विप्रा॑ हवन्त ऊ॒तये॑ । स॒ह॒स्रा॒क्षा धि॒यस्पती॑ ॥
+इन्द्रवायू मनोजुवा विप्रा हवन्त ऊतये । सहस्राक्षा धियस्पती ॥
+
+The wise invoke, for their preservation, Indra and Vāyu, who are swift as thought, have a thousand eyes, and are protectors of pious acts.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There&apos;s a &lt;a href=&quot;https://youtu.be/Ff82XtV78xo&quot;&gt;short film&lt;/a&gt; in Bengali where I learned reference to Ayalya. You can read more about Ayalya in the book, &lt;strong&gt;The Ramayana: A Shortened Modern Prose Version of the Indian Epic&lt;/strong&gt; by R. K. Narayan. Some of the excerpt from this book:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Brahma once created, out of the ingredients of absolute beauty, a woman, and she was called Ahalya (which in the Sanskrit language means nonimperfection). 
+
+God Indra, being the highest god among the gods, was attracted by her beauty and was convinced that he alone was worthy of claiming her hand. Brahma, noticing the conceit and presumptuousness of
+Indra, ignored him, sought out Sage Gautama, and left him in charge of the girl. She grew up in his custody, and when the time came the sage took her back to Brahma and handed her over to him. Brahma appreciated Gautama&apos;s purity of mind and heart (never once had any carnal thought crossed his mind), and said, &quot;Marry her, she is fit to be your wife, or rather you alone deserve to be her husband.&quot;
+
+Accordingly, she was married, blessed by Brahma and other gods. Having spent her
+childhood with Gautama, Ahalya knew his needs and so proved a perfect
+wife, and they lived happily.
+
+Indra, however, never got over his infatuation for Ahalya, and often came in different guises near to Gautama’s ashram, waiting for every chance to gaze and feast on Ahalya&apos;s form and figure; he also watched the habits of the sage and noticed that the sage left his ashram at the dawn of each day
+and was away for a couple of hours at the river for his bath and prayers. Unable to bear the pangs of love any more, Indra decided to attain the woman of his heart by subterfuge. One day, hardly able to wait for the sage to leave at his usual hour, Indra assumed the voice of a rooster, and woke up the sage, who, thinking that the morning had come, left for the river. Now Indra assumed the sage’s form, entered the hut, and made love to Ahalya.
+
+She surrendered herself, but at some stage realized that the man enjoying her was an imposter; but she could do nothing about it. Gautama came back at this moment, having intuitively felt that something was wrong, and surprised the couple in bed. Ahalya stood aside filled with shame and remorse; Indra assumed the form of a cat (the most facile animal form for sneaking in or out) and tried to slip away. The sage looked from the cat to the woman and was not to be deceived. He arrested the cat where he was with these words:
+
+&quot;Cat, I know you; your obsession with the female is your undoing. May your body be covered with a thousand female marks, so that in all the worlds, people may understand what really goes on in your mind all the time.&quot; Hardly had these words left his lips when every inch of Indra’s body
+displayed the female organ. There could be no greater shame for the proud and self-preening Indra.
+
+After Indra slunk away, back to his world, Gautama looked at his wife and said, “You have sinned with your body. May that body harden into a shapeless piece of granite, just where you are. . . .” Now in desperation Ahalya implored, “A grave mistake has been committed. It is in the nature of noble souls to forgive the errors of lesser beings. Please . . . I am already feeling a weight creeping up my feet. Do something . . . please help me. . ..&quot;
+
+Now the sage felt sorry for her and said, &quot;Your redemption will come when the son of Dasaratha, Rama, passes this way at some future date. . . .&quot;
+
+“When? Where?” she essayed to question, desperately, but before the words could leave her lips she had become a piece of stone.
+
+Indra’s predicament became a joke in all the worlds at first, but later proved noticeably tragic. He stayed in darkness and seclusion and could never appear before men or women. This caused much concern to all the gods, as his multifarious duties in various worlds remained suspended, and they went in a body to Brahma and requested him to intercede with Gautama. By this time, the sage’s resentment had vanished. And he said in response to Brahma’s appeal, &quot;May the thousand additions to Indra’s features become eyes.&quot; Indra thereafter came to be known as the “thousand eyed god.&quot;
+
+Viswamithra concluded the story and addressed Rama. &quot;O great one, you
+are born to restore righteousness and virtue to mankind and eliminate all
+evil. At our yagna, I saw the power of your arms, and now I see the
+greatness of the touch of your feet.&quot;
+
+Rama said to Ahalya, &quot;May you seek and join your revered husband, and
+live in his service again. Let not your heart be burdened with what is past
+and gone.&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+          <pubDate>2025-04-17T00:00:00-04:00</pubDate>
+          <link>https://randomwits.com/blog/daily-logs-2025-04-17</link>
+          <guid isPermaLink="true">https://randomwits.com/blog/daily-logs-2025-04-17</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Building Reactive File Upload with Spring Boot WebFlux and Swagger</title>
           <description>&lt;p&gt;This solution implements a reactive REST API for handling multiple file uploads using.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
@@ -6381,10 +6490,10 @@ req.send(null);
           <title>Best Restaurant in Cozumel Mexico</title>
           <description>&lt;p&gt;During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;c004a27c-828d-493c-a674-b5f46e0e5681&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;e7f53b33-36d4-490b-a6b3-5aa76de5eb8b&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;c004a27c-828d-493c-a674-b5f46e0e5681&apos;,
+    &apos;e7f53b33-36d4-490b-a6b3-5aa76de5eb8b&apos;,
     [{&quot;latitude&quot;:20.5066904,&quot;longitude&quot;:-87.107032,&quot;title&quot;:&quot;Best Restaurant in Cozumel Mexico&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/best-restaurant-in-cozumel-mexico&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
@@ -8091,10 +8200,10 @@ bundler: failed to load command: jekyll (/Users/USER/.gem/ruby/3.1.2/bin/jekyll)
           <title>North Carolina Museum of Natural Sciences</title>
           <description>&lt;p&gt;I went to North Carolina Museum of Natural Sciences on a damp morning with Richu and her mom. There is no entrance fee and the street parking was easy to find. I was particularly enamored with the fossils of dinosaurs and whales which are pretty humongous. There&apos;s also a cafe inside if you get tired from walking. Below are some of the highlights of my visit.&lt;!-- truncate_here --&gt;&lt;/p&gt;
 
-&lt;div id=&quot;0d9790c9-13ab-47f1-aabf-f8b049841615&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;21242bd4-93ba-4937-8cbc-595c94224141&quot; style=&quot;width:100%;height:568px;&quot; class=&quot; jekyll-map&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   jekyllMaps.register(
-    &apos;0d9790c9-13ab-47f1-aabf-f8b049841615&apos;,
+    &apos;21242bd4-93ba-4937-8cbc-595c94224141&apos;,
     [{&quot;latitude&quot;:35.7822,&quot;longitude&quot;:-78.6393,&quot;title&quot;:&quot;North Carolina Museum of Natural Sciences&quot;,&quot;icon&quot;:null,&quot;url&quot;:&quot;/blog/north-carolina-museum-of-natural-sciences&quot;,&quot;url_text&quot;:null,&quot;image&quot;:&quot;https://cdn-images-1.medium.com/v2/resize:fit:800/1*goRpzwmqRR3Hevhv6KnNlQ.jpeg&quot;,&quot;popup_html&quot;:&quot;&quot;}],
     {&quot;baseUrl&quot;:&quot;/&quot;,&quot;useCluster&quot;:true,&quot;showMarker&quot;:true,&quot;showMarkerPopup&quot;:false,&quot;markerIcon&quot;:null,&quot;styles&quot;:&quot;[]&quot;,&quot;customZoom&quot;:15}
   );
