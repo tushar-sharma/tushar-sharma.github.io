@@ -5,7 +5,7 @@ image: https://unsplash.com/photos/BfPUTEMXw2A/download?w=437
 thumb: https://unsplash.com/photos/BfPUTEMXw2A/download?w=437
 author: tushar sharma
 category: blog
-tags: [Spring Boot, reactive programming, swagger]
+tags: [spring boot, reactive programming, swagger]
 ---
 
 
