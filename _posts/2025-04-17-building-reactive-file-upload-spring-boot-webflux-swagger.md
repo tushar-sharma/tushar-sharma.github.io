@@ -9,11 +9,12 @@ tags: [spring boot, reactive programming, swagger]
 ---
 
 
-This solution implements a reactive REST API for handling multiple file uploads using.<!-- truncate_here -->
+How do you upload multiple PDF file in reactive REST API?.<!-- truncate_here -->
+
+How do you upload multiple PDF file in reactive REST API?
 
 ## Project Overview
 
-This solution implements a reactive REST API for handling multiple file uploads using:
 - Spring Boot WebFlux (Reactive Web)
 - SpringDoc OpenAPI 3 documentation
 - Project Reactor
