@@ -1,65 +1,115 @@
 ---
 layout: post
-title: Mastering JSON in Java
+title: Mastering JSON in Java using Jackson
 image: https://unsplash.com/photos//download?w=437
 thumb: https://unsplash.com/photos//download?w=437
 author: tushar sharma
 category: blog
+tags:
+ - java
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<!-- truncate_here -->
+JSON(Javascript Object Notation) is the universal language for data exchange in modern applications, particularly when working with REST APIs. In Java, <b>Jackson</b> library is often used for JSON processing. <!-- truncate_here -->
 
-- JSON is format is used to exchange information with REST APIs
+JSON(Javascript Object Notation) is the universal language for data exchange in modern applications, particularly when working with REST APIs. In Java, <b>Jackson</b> library is often used for JSON processing.
 
-- Java library Jackson for processing JSON
+## Jackson Core Components
 
-- Jackson has ObjectMapper, JsonNode, ObjectNode, ArrayNode
+- **ObjectMapper**: Bridge between JSON and Java objects
 
-- ObjectMapper converst JSON string to Java Objects
+- **JsonNode**: Tree model for dynamic JSON navigation
 
-```java
-String jsonString = "{\"name\": \"Alice\", \"age\": 30, \"address\": {\"street\": \"123 Maple Street\", \"city\": \"Wonderland\"}, \"isActive\": true}";
+- **ObjectNode/ArrayNode**: Mutable JSON node builder
 
-ObjectMapper objectMapper = new ObjectMapper();
+## Json Parsing fundamentals
 
-JsonNode jsonObject = objectMapper.readTree(jsonString);
+### Parse JSON String 
 
-// print jsonObject.get("name").asText();
-// print jsonbObject.get("address").asText();
-```
+{% template  customCode.html %}
+---
+id: b69b13dc8616b6b132e767b0f561ec3d
+file: Json1.java
+---
+{% endtemplate %}
 
-with `ObjectNode` we can add / modify objects
+### Building JSON dynamically
 
-```java
-ObjectNode jsonObject = objectMapper.createObjectNode();
-jsonObject.put("name", "Tom");
-jsonObject.put("age", 30);
-```
+Create new JSON object
 
-### Convert JSON to Java Objects
+{% template  customCode.html %}
+---
+id: b69b13dc8616b6b132e767b0f561ec3d
+file: Json2.java
+---
+{% endtemplate %}
 
-```java
-class Person {
-   private String name;
-   private int age;
-}
+### Java Objects <-> JSON Conversion
 
-String jsonString = "{\"name\": \"Tom\", \"age\": 30}";
+**Deserialization (JSON -> Object)**
 
-Person person = objectMapper.readValue(jsonStrong, Person.class);
-```
+{% template  customCode.html %}
+---
+id: b69b13dc8616b6b132e767b0f561ec3d
+file: Json3.java
+---
+{% endtemplate %}
 
-### Java Object to JSON
+**Serialization (Object -> JSON)**
 
-You can serialize Java object into a JSON string 
+{% template  customCode.html %}
+---
+id: b69b13dc8616b6b132e767b0f561ec3d
+file: Json4.java
+---
+{% endtemplate %}
 
-```java
-String jsonOutput = objectMapper.writeValueAsString(person);
+## Common Issues
 
-```
+### Date Handling
 
-### Mastering JSON with Path Expression
+{% template  customCode.html %}
+---
+id: b69b13dc8616b6b132e767b0f561ec3d
+file: Json5.java
+---
+{% endtemplate %}
 
-Jackson's `JsonNode` allows you to use `.path()` for retreiving nested data without worrying about nulls.
+**Don't forget** to register JavaTimeModule
 
-example?
+{% template  customCode.html %}
+---
+id: b69b13dc8616b6b132e767b0f561ec3d
+file: Json6.java
+---
+{% endtemplate %}
+
+### Extra Getters
+
+If the getter have no corresponding field, then deserialization would fail
+
+
+{% template  customCode.html %}
+---
+id: b69b13dc8616b6b132e767b0f561ec3d
+file: Json7.java
+---
+{% endtemplate %}
+
+**Use Ignore Unknown Properties**
+
+{% template  customCode.html %}
+---
+id: b69b13dc8616b6b132e767b0f561ec3d
+file: Json8.java
+---
+{% endtemplate %}
+
+**Or use Read-Only Properties**
+
+
+{% template  customCode.html %}
+---
+id: b69b13dc8616b6b132e767b0f561ec3d
+file: Json9.java
+---
+{% endtemplate %}
