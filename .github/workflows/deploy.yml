@@ -1,0 +1,59 @@
+name: Deploy Jekyll Site
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for Jekyll plugins
+
+      - name: 💎 Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1  # Matches your current version
+          bundler-cache: true
+          cache-version: 1
+
+      - name: 🔧 Install Dependencies
+        run: |
+          bundle config set --local path 'vendor/bundle'
+          bundle install
+
+      - name: 🏗️ Build Site
+        run: JEKYLL_ENV=production bundle exec jekyll build
+        env:
+          TZ: UTC  # Ensures consistent timestamps
+
+      - name: ✅ Verify Build
+        run: |
+          ls -la _site
+          [ -f _site/index.html ] || exit 1
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          force_orphan: true
+          keep_files: false
+          allow_empty_commit: false

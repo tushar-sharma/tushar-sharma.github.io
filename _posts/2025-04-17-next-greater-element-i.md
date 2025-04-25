@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Next Greater Element I
-image: https://unsplash.com/photos/NDdeOoTtxY0/download?w=437
-thumb: https://unsplash.com/photos/NDdeOoTtxY0/download?w=437
+image: https://unsplash.com/photos/32DXGkcwPLs/download?w=437
+thumb: https://unsplash.com/photos/32DXGkcwPLs/download?w=437
 author: tushar sharma
 category: blog
 skipImage: true
