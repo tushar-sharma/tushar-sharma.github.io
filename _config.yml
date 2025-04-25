@@ -21,6 +21,7 @@ plugins:
   - jekyll-minifier
 jekyll-minifier:
   compress_javascript: false
+  compress_js: false
   exclude:
     - js/*.js
 maps:
