@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Mastering JSON in Java using Jackson
-image: https://unsplash.com/photos//download?w=437
-thumb: https://unsplash.com/photos//download?w=437
+image: https://unsplash.com/photos/aFXlb5vSpbw/download?w=437
+thumb: https://unsplash.com/photos/aFXlb5vSpbw/download?w=437
 author: tushar sharma
 category: blog
 tags:
