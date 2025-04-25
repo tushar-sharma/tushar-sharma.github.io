@@ -33,8 +33,6 @@ GEM
     eventmachine (1.2.7)
     exifr (1.4.0)
     ffi (1.17.0)
-    ffi (1.17.0-arm64-darwin)
-    ffi (1.17.0-x86_64-darwin)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
@@ -92,6 +90,10 @@ GEM
     jekyll-mentions (1.6.0)
       html-pipeline (~> 2.3)
       jekyll (>= 3.7, < 5.0)
+    jekyll-minifier (0.0.6)
+      htmlcompressor (~> 0.3.0)
+      jekyll (>= 3.0.0)
+      yui-compressor (~> 0.12)
     jekyll-paginate-v2 (3.0.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-sass-converter (3.0.0)
@@ -151,10 +153,6 @@ GEM
     sass-embedded (1.69.5)
       google-protobuf (~> 3.23)
       rake (>= 13.0.0)
-    sass-embedded (1.69.5-arm64-darwin)
-      google-protobuf (~> 3.23)
-    sass-embedded (1.69.5-x86_64-darwin)
-      google-protobuf (~> 3.23)
     strscan (3.1.0)
     syntax (1.2.2)
     terminal-table (3.0.2)
@@ -164,6 +162,7 @@ GEM
     unicode-display_width (2.5.0)
     verbal_expressions (0.1.5)
     webrick (1.8.1)
+    yui-compressor (0.12.0)
 
 PLATFORMS
   arm64-darwin
@@ -185,6 +184,7 @@ DEPENDENCIES
   jekyll-jolt
   jekyll-maps
   jekyll-mentions (= 1.6.0)
+  jekyll-minifier
   jekyll-paginate-v2
   jekyll-seo-tag
   jekyll-sitemap
