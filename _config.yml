@@ -20,8 +20,9 @@ plugins:
   - jekyll-maps
   - jekyll-minifier
 jekyll-minifier:
-  compress_js: false
   compress_javascript: false
+  exclude:
+    - js/*.js
 maps:
   google:
     api_key: AIzaSyB6zGGwhhPehgRGDlc84747vLqaitf57_E 
