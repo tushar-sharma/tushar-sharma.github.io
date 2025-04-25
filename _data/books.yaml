@@ -189,6 +189,15 @@
   progress: 0
   comments: "<a href='/blog/review-book-a-philosophy-of-software-design' target='_blank'>Notes</a>"
 
+  
+- title: "A Beginning Spring AI"
+  author: Andrew Lombardi , Joseph Ottinger
+  rating: 0
+  pending: true
+  progress: 25
+  comments: ""
+  page: 118
+
 - title: "How to Change Your Mind"
   author: Michael Pollan
   rating: 0
@@ -238,6 +247,8 @@
   pending: true
   progress: 17
   comments: ""
+
+  
 
 - title: "Musicophilia: Tales of Music and the Brain"
   author: "Oliver Sacks"
