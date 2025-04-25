@@ -42,6 +42,23 @@ jobs:
         run: JEKYLL_ENV=production bundle exec jekyll build
         env:
           TZ: UTC  # Ensures consistent timestamps
+          
+      - name: 🔄 Post-Build File Management
+        run: |
+          # Create .nojekyll to prevent GitHub Pages from running Jekyll again
+          touch _site/.nojekyll
+          
+          # Copy important files if they exist
+          if [ -f "CNAME" ]; then cp CNAME _site/; fi
+          if [ -f "sitemap.xml" ]; then cp sitemap.xml _site/; fi
+          if [ -f "robots.txt" ]; then cp robots.txt _site/; fi
+          if [ -f "loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt" ]; then cp loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt _site/; fi
+          
+          # Handle tag directory if needed
+          if [ -d "_site/tag" ]; then
+            rm -fr tag
+            cp -r _site/tag .
+          fi
 
       - name: ✅ Verify Build
         run: |
