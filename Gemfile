@@ -30,5 +30,6 @@ group :jekyll_plugins do
   gem 'jekyll-maps'
   gem "mini_magick"
   gem "exifr"
+  gem "jekyll-tidy"
 end
 

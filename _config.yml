@@ -18,6 +18,10 @@ plugins:
   - jekyll-include-cache
   - jekyll-spaceship
   - jekyll-maps
+  - jekyll-tidy
+jekyll_tidy:
+  exclude: ["quotes/index.html"]
+  compress_html: true
 maps:
   google:
     api_key: AIzaSyB6zGGwhhPehgRGDlc84747vLqaitf57_E 
