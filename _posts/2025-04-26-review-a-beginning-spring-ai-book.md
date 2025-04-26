@@ -120,3 +120,26 @@ Where:
 - extract n-grams from text
 
 - n-grams are sequence of tokens in a specified order
+
+
+- If we comprae two sets of n-grams with low tempearature and low top_p values, it would be more similar. For higher values, it would have higher variability.
+
+- The `@ParameterizedTest` annotation is used to run the same test logic with different sets of input data.
+
+- Each set of input data is provided by a data source, in this case, the `@MethodSource` annotation.
+
+
+{% template  customCode.html %}
+---
+id: bea8036111fbedaff3b8d54812604a11
+file: JaccardSimilarityCalculator.java
+---
+{% endtemplate %}
+
+
+{% template  customCode.html %}
+---
+id: bea8036111fbedaff3b8d54812604a11
+file: JaccardSimilarityCalculatorTest.java
+---
+{% endtemplate %}
