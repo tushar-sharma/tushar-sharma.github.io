@@ -90,10 +90,6 @@ GEM
     jekyll-mentions (1.6.0)
       html-pipeline (~> 2.3)
       jekyll (>= 3.7, < 5.0)
-    jekyll-minifier (0.0.6)
-      htmlcompressor (~> 0.3.0)
-      jekyll (>= 3.0.0)
-      yui-compressor (~> 0.12)
     jekyll-paginate-v2 (3.0.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-sass-converter (3.0.0)
@@ -162,7 +158,6 @@ GEM
     unicode-display_width (2.5.0)
     verbal_expressions (0.1.5)
     webrick (1.8.1)
-    yui-compressor (0.12.0)
 
 PLATFORMS
   arm64-darwin
@@ -184,7 +179,6 @@ DEPENDENCIES
   jekyll-jolt
   jekyll-maps
   jekyll-mentions (= 1.6.0)
-  jekyll-minifier
   jekyll-paginate-v2
   jekyll-seo-tag
   jekyll-sitemap

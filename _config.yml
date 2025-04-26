@@ -18,11 +18,6 @@ plugins:
   - jekyll-include-cache
   - jekyll-spaceship
   - jekyll-maps
-  - jekyll-minifier
-jekyll-minifier:
-  compress_javascript: false
-  compress_js: false
-  js: false
 maps:
   google:
     api_key: AIzaSyB6zGGwhhPehgRGDlc84747vLqaitf57_E 
