@@ -10,9 +10,9 @@ published: false
 category: blog
 ---
 
-Below are my rough notes while reading the [ng-book]({{ root_url }}/books/).<!-- truncate_here -->
+Below are my rough notes while reading the [ng-book]({{ root_url }}/bookshelf/).<!-- truncate_here -->
 
-Below are my rough notes while reading the [ng-book]({{ root_url }}/books/).<br>
+Below are my rough notes while reading the [ng-book]({{ root_url }}/bookshelf/).<br>
 
 
 * Creating a new component 
