@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Review A Beginning Spring AI book
-image: https://unsplash.com/photos/Wf4nX6hiDo4/download?w=437
-thumb: https://unsplash.com/photos/Wf4nX6hiDo4/download?w=437
+image: https://unsplash.com/photos//download?w=437
+thumb: https://unsplash.com/photos//download?w=437
 author: tushar sharma
 category: blog
 tags:
@@ -86,7 +86,7 @@ file: OptionChatServiceTest.java
 
 ### Parameters
 
-- **Temperatuer**: Controls the randomness of the model's output. A lower value makes the output more focused and deterministic, while a higher value increases creativity and variability. Range from 0.0 to 2.
+- **Temperature**: Controls the randomness of the model's output. A lower value makes the output more focused and deterministic, while a higher value increases creativity and variability. Range from 0.0 to 2.
 
 - **Top_p**: Nucleus sampling. Percentage of things to consider. 0.10 means consider most relevant tokens, 1 means don't filter at all. 
 
@@ -143,3 +143,140 @@ id: bea8036111fbedaff3b8d54812604a11
 file: JaccardSimilarityCalculatorTest.java
 ---
 {% endtemplate %}
+
+## Conversations and Roles
+
+Prompt object accepts a string and a ChatOptions objet (optional) and returns a text. 
+
+
+### Type of messages in LLM
+
+- **User**: User query is setnt form user role
+
+- **Assistant**: Role assisgned to messages from the LLM
+
+- **System**: It's has persistent impact over the entire conversation. It's an edict for the LLM to factor in
+
+Lets create a service 
+
+```java
+import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.messages.Message;
+import org.springframework.ai.chat.model.Generation;
+import org.springframework.ai.chat.prompt.Prompt;
+import org.springframework.ai.openai.OpenAiChatOptions;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class ConversationChatService extends OptionChatService
+{
+    ConversationChatService(ChatClient.Builder builder) {
+        super(builder);
+    }
+
+    public List<Generation> converse(List<Message> messages) {
+        return converse(messages, new OpenAiChatOptions().builder().build());
+    }
+
+    public List<Generation> converse(
+            List<Message> messages,
+            OpenAiChatOptions options) {
+        var prompt = new Prompt(messages, options);
+
+        return chatClient.prompt(prompt).call().chatResponse().getResults();
+    }
+}
+
+```
+
+Unit test : 
+
+```
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.text.WordUtils;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.springframework.ai.chat.messages.AssistantMessage;
+import org.springframework.ai.chat.messages.Message;
+import org.springframework.ai.chat.messages.UserMessage;
+import org.springframework.ai.chat.model.Generation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+@SpringBootTest
+@Slf4j
+public class ConversationChatServiceTest {
+    @Autowired
+    private ConversationChatService conversationChatService;
+
+    /*
+    extract `assistantMessage` from the generated LLM output
+     */
+    private AssistantMessage getAssistantMessage(List<Generation> output) {
+        return output.get(0).getOutput();
+    }
+
+    private void display(String content) {
+        var lines = WordUtils
+                .wrap(content, 62, "\n", true)
+                .split("\\n");
+
+        for (String line : lines) {
+            log.info(line);
+        }
+    }
+
+    @Test
+    @Order(1)
+    void simpleConversation() {
+        // List.of creates an immutable list
+        var conversation = conversationChatService
+                .converse(List.of(new UserMessage("what's the slope of y=x*1.2/z if z=2?")));
+
+        var output = getAssistantMessage(conversation);
+        display(output.getText());
+        assertTrue(output.getText().contains("0.6"));
+    }
+
+    @Test
+    @Order(2)
+    void interactiveConversation() {
+        // we want to make a mutable list, because we're adding context
+        List<Message> messages = new ArrayList<>();
+
+        messages.add(new UserMessage("what's the slope of y=x*1.2/z if z=2?"));
+
+        var conversations = conversationChatService
+                .converse(messages);
+
+        var output = getAssistantMessage(conversations);
+
+        display(output.getText());
+
+        assertTrue(output.getText().contains("0.6"));
+
+        // we want to establish the context of the first asnwer
+        messages.add(output);
+
+        messages.add(
+                new UserMessage("And if z=3?"));
+
+        conversations = conversationChatService
+                .converse(messages);
+
+        output = getAssistantMessage(conversations);
+        display(output.getText());
+
+        assertTrue(output.getText().contains("0.4"));
+
+    }
+
+}
+```
