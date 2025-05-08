@@ -62,7 +62,7 @@ file: FileUploaderController.java
 ---
 {% endtemplate %}
 
-### Why Flux<FilePart> instead of MultipartFile?
+### Why FilePart instead of MultipartFile?
 
 * **Reactive Paradigm:**
   - Flux handles streams of data asynchronously
@@ -75,56 +75,3 @@ file: FileUploaderController.java
 * **Non-Blocking I/O:**
   - Works with WebFlux's event-loop model
   - Maintains high concurrency with minimal threads
-
-## Testing with Swagger UI
-
-Access the API documentation at:
-
-```
-http://localhost:8080/swagger-ui/index.html
-```
-
-### Sample Request
-
-```
-POST /fileUploader/upload
-Content-Type: multipart/form-data
-```
-
-### Request Body
-
-* Form field name: files
-* Attach multiple files
-
-
-### Sample Response
-
-```
-"Received files: 1.pdf, 2.pdf"
-```
-
-## Understanding Documentation Components
-
-### OpenAPI Specification (openapi.json)
-
-* Machine-readable API contract
-
-* Generated at runtime via `/v3/api-docs` endpoint
-
-* Contains endpoints, schemas, and examples
-
-### Swagger UI (index.html)
-
-* Human-friendly documentation interface
-
-* Auto-generated from `openapi.json`
-
-* Accessible via `/swagger-ui.html`
-
-```mermaid!
-sequenceDiagram
-    User->>Swagger UI: Access /swagger-ui.html
-    Swagger UI->>SpringDoc: GET /v3/api-docs
-    SpringDoc->>Swagger UI: openapi.json
-    Swagger UI->>User: Rendered Documentation
-```
