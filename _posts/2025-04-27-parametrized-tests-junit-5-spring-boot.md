@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Mastering Parameterized Tests in JUnit 5 with Spring Boot
-image: https://unsplash.com/photos/nr7oBrntJog/download?w=437
-thumb: https://unsplash.com/photos/nr7oBrntJog/download?w=437
+image: https://unsplash.com/photos/GW6yMuMupws/download?w=437
+thumb: https://unsplash.com/photos/GW6yMuMupws/download?w=437
 author: tushar sharma
 category: blog
 tags:
