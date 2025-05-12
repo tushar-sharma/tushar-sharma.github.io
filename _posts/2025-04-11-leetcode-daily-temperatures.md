@@ -58,11 +58,12 @@ Time complexity **O(n)**
 
 Why time complexity is O(N²)?
 
-```
-for i in range(n):         # ← loop runs n times
-    while something:       # ← looks like this could run up to n times too
-        do stuff
-```
+{% template  customCode.html %}
+---
+id: 68b174bcb00ebb2f0e3cc6b15bdfea3e
+file: psuedopseudoCode.sh
+---
+{% endtemplate %}
 
 The outer for loop runs n times (where n is the length of temperatures).
 
