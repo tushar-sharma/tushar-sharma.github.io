@@ -46,4 +46,6 @@ public interface StorageProvider {
 This is the easiest one to implement. Before Java 7, we relied on `io.file` for file procesisng. However, with Java 7, we have `nio.file` which is more efficient and faster. 
 
 ```java
+public class LocalStorage implements StorageProvider {
+}
 ```
