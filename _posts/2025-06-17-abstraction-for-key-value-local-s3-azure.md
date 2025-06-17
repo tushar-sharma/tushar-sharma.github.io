@@ -23,6 +23,23 @@ An interface is like a contract that we will expose to the client.
 <!-- TODO fix it later-->
 <img loading="lazy" src="{{ root_url }}/imgs/code/Storage_Provider_Design.png" alt="Storage_Provider_Design" />
 
+Here is the java code
+
+```java
+import java.io.IOException;
+
+public interface StorageProvider {
+
+    void write(@Nonnull Path path, @Nonnull byte[] data) throws IOException;
+
+    @NonNull
+    byte[] read(@NonNull Path path) throws IOException;
+
+    boolean delete(@NonNull Path path) throws IOException;
+
+    boolean exists(@NonNull Path path) throws IOException;
+}
+```
 
 ### File System Storage
 
