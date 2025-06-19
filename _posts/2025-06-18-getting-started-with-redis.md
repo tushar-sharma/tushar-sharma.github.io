@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting Started with Redis: Concepts, Commands, and Monitoring"
-categories: [redis, nosql, database, python]
+tags: [redis, nosql, python]
 author: tushar sharma
 skipImage: true
 img: https://unsplash.com/photos/qkfxBc2NQ18/download?w=437
