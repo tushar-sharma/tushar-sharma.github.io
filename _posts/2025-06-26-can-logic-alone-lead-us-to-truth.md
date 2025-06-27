@@ -5,6 +5,7 @@ thumb: https://unsplash.com/photos/phIFdC6lA4E/download?w=437
 image: https://unsplash.com/photos/phIFdC6lA4E/download?w=437
 author: Tushar Sharma
 category: Blog
+skipImage: true
 tags: [philosophy]
 ---
 
