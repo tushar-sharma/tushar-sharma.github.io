@@ -42,15 +42,19 @@ root: true
 </div>
 
 <!-- Pagination Controls -->
-<div class="pagination" style="margin-top:30px;">
+<div class="pagination" style="margin-top:30px; display:flex; align-items:center; justify-content:center; gap:16px;">
   {% if page.paginator.previous_page %}
-    <a href="{% if page.paginator.previous_page == 1 %}/tag/{{ page.tag }}/{% else %}/tag/{{ page.tag }}/page{{ page.paginator.previous_page }}/{% endif %}">&laquo; Previous</a>
+    <a class="pagination-link" style="white-space:nowrap;" href="{% if page.paginator.previous_page == 1 %}/tag/{{ page.tag }}/{% else %}/tag/{{ page.tag }}/page{{ page.paginator.previous_page }}/{% endif %}">&laquo; Previous</a>
   {% endif %}
 
-  <span>Page {{ page.paginator.page }} of {{ page.paginator.total_pages }}</span>
+  {% if page.paginator.total_pages > 1 %}
+    <span class="pagination-info" style="font-weight:bold; color:#3399cc; background:#f2f2f2; padding:4px 12px; border-radius:6px;">
+      Page {{ page.paginator.page }} of {{ page.paginator.total_pages }}
+    </span>
+  {% endif %}
 
   {% if page.paginator.next_page %}
-    <a href="/tag/{{ page.tag }}/page{{ page.paginator.next_page }}/">Next &raquo;</a>
+    <a class="pagination-link" style="white-space:nowrap;" href="/tag/{{ page.tag }}/page{{ page.paginator.next_page }}/">Next &raquo;</a>
   {% endif %}
 </div>
 </div>
