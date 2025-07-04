@@ -1,22 +1,95 @@
-
-    <!--<pre><code><span class="nv">$</span> random stuff</code><br>     ├── <span class="nv"><div class="quotebox"><br><i class="newcl icon-quote-left"></i>&nbsp;<span  class="newcl" id="myquotes"></span>&nbsp;<i class="newcl icon-quote-right"></i><br><span class="newcl" id="author"></span>.&nbsp;<br><br></div></span><br/>     └── <span class="nv"><a href="{{ root_url }}/books">my bookshelf</a></span><br>     └── <span class="nv"><a href="{{ root_url }}/about">about me</a></span>
-    -->
-    <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
-        <div class="nav-wrap">
-          <nav class="main-nav" >
-            <ul class="unstyled list-hover-slide">
-
-              <li><a href="{{ root_url }}/tags"><i class="fa fa-tag"></i> Tags</a></li>
-              <li><a href="{{ root_url }}/games"><i class="fas fa-gamepad"></i> Games</a></li>
-              <li><a href="{{ root_url }}/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
-              <li><a href="{{ root_url }}/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
-              <li><a href="{{ root_url }}/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
-              <li><a href="{{ root_url }}/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
-              <li><a href="{{ root_url }}/tools"><i class="fas fa-hammer"></i> Tools</a></li>
-              <li><a href="{{ root_url }}/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
-              <li><a href="{{ root_url }}/about"><i class="fas fa-fingerprint"></i> About</a></li>
-            </ul>
-          </nav>
-        </div>
-    </div>
+<!-- Responsive Sidebar Navigation -->
+<style>
+  .sidebar-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    margin: 10px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .nav-wrap {
+    transition: left 0.3s;
+  }
+  @media (max-width: 800px) {
+    .nav-wrap {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 240px;
+      height: 100vh;
+      background: #fff;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+      z-index: 1000;
+      padding-top: 60px;
+    }
+    .nav-wrap.open {
+      left: 0;
+    }
+    .sidebar-hamburger {
+      display: block;
+      position: fixed;
+      left: 10px;
+      top: 10px;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .main-nav ul {
+      padding: 0;
+      margin: 0;
+    }
+    .main-nav li {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid #eee;
+    }
+    .main-nav a {
+      display: block;
+      padding: 18px 24px;
+      font-size: 1.1em;
+      color: #333;
+      text-decoration: none;
+    }
+    .main-nav a:active, .main-nav a:focus {
+      background: #f0f0f0;
+    }
+    body.sidebar-open {
+      overflow: hidden;
+    }
+  }
+</style>
+<button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+  <span>&#9776;</span>
+</button>
+<div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+  <div class="nav-wrap">
+    <nav class="main-nav">
+      <ul class="unstyled list-hover-slide">
+        <li><a href="{{ root_url }}/tags"><i class="fa fa-tag"></i> Tags</a></li>
+        <li><a href="{{ root_url }}/games"><i class="fas fa-gamepad"></i> Games</a></li>
+        <li><a href="{{ root_url }}/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+        <li><a href="{{ root_url }}/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+        <li><a href="{{ root_url }}/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+        <li><a href="{{ root_url }}/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+        <li><a href="{{ root_url }}/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+        <li><a href="{{ root_url }}/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+        <li><a href="{{ root_url }}/about"><i class="fas fa-fingerprint"></i> About</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<script>
+  // Close sidebar when clicking outside (mobile)
+  document.addEventListener('click', function(e) {
+    var nav = document.querySelector('.nav-wrap');
+    var btn = document.querySelector('.sidebar-hamburger');
+    if (!nav || !btn) return;
+    if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+      nav.classList.remove('open');
+      document.body.classList.remove('sidebar-open');
+    }
+  });
+</script>
 
