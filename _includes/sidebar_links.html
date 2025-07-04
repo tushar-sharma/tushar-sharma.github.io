@@ -10,27 +10,29 @@
     z-index: 1001;
   }
   .nav-wrap {
-    transition: left 0.3s;
+    transition: right 0.3s;
   }
   @media (max-width: 800px) {
     .nav-wrap {
       position: fixed;
       top: 0;
-      left: -260px;
+      right: -260px;
+      left: auto;
       width: 240px;
       height: 100vh;
       background: #fff;
-      box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+      box-shadow: -2px 0 8px rgba(0,0,0,0.08);
       z-index: 1000;
       padding-top: 60px;
     }
     .nav-wrap.open {
-      left: 0;
+      right: 0;
     }
     .sidebar-hamburger {
       display: block;
       position: fixed;
-      left: 10px;
+      right: 10px;
+      left: auto;
       top: 10px;
       background: #fff;
       border-radius: 4px;
