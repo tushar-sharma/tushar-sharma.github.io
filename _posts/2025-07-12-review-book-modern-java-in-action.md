@@ -181,3 +181,126 @@ Here, `File::isHidden` is a method reference to the `isHidden()` method of the F
 ```java
 file -> file.isHidden()
 ```
+
+## Passing code as an example
+
+Lets you add **two filters** like
+
+```java
+public static List<Apple> filterGreenApples(List<Apple> inventory) {
+    List<Apple> result = new ArrayList<>();
+
+    for (Apple apple : inventory) {
+        if (GREEN.equals(apple.getColor())) {
+            result.add(apple);
+        }
+    }
+
+    return result;
+}
+
+public static List<Apple> filterHeavyApples(List<Apple> inventory) {
+    List<Apple> result = new ArrayList<>();
+
+    for (Apple apple : inventory) {
+        if (apple.getWeight() > 150) {
+            result.add(apple);
+        }
+    }
+
+    return result;
+}
+
+```
+
+Refactor this like where a method is passes a predicate parameter named **p**.
+
+```java
+public static boolean isGreenApple(Apple apple) {
+    return Green.equals(apple.getColor());
+}
+
+public static boolean isHeavyApple(Apple apple) {
+    return apple.getWeight() > 150;
+}
+
+
+import java.util.function.Predicate;
+
+static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> p) {
+    List<Apple> result = new ArrayList<>();
+
+    for (Apple apple : inventory) {
+        if (p.test(apple)) {
+            result.add(apple);
+        }
+    }
+
+    return result;
+}
+```
+To test this you can call 
+
+```java
+filterApples(inventory, Apple::isGreenApple);
+
+// or
+
+filterApples(inventory, Apple::isHeavyApple);
+```
+
+## Predicate in Java
+
+In Java, the `Predicate<T>` interface is part of the java.util.function package and plays a central role in functional-style programming.
+
+```java
+@FunctionalInterface
+public interface Predicate<T> {
+    boolean test(T t);
+}
+```
+
+* It defines a single abstract method : test(T t)
+
+* This makes it a functional interface , which means you can assign lambda expressions or method references to it.
+
+* It represents a boolean-valued function (i.e., a condition) on one input.
+
+### Basic Usage
+
+```java
+import java.util.function.Predicate;
+
+public class Main {
+    public static void main(String[] args) {
+        // Define a predicate using a lambda
+        Predicate<String> isLongerThan5 = s -> s.length() > 5;
+
+        // Use the test() method
+        System.out.println(isLongerThan5.test("hello"));     // false
+        System.out.println(isLongerThan5.test("longstring")); // true
+    }
+}
+```
+### Filtering Collections
+
+```java
+List<String> words = List.of("apple", "bat", "carrot", "dog", "elephant");
+
+List<String> longWords = words.stream()
+                               .filter(s -> s.length() > 5)
+                               .toList();
+```
+
+Predicate<T> also provides default methods for composing conditions:
+
+```java
+Predicate<String> startsWithA = s -> s.startsWith("a");
+Predicate<String> endsWithZ = s -> s.endsWith("z");
+
+// Combine with .and(), .or(), .negate()
+Predicate<String> combined = startsWithA.and(endsWithZ);
+
+System.out.println(combined.test("applez")); // true
+System.out.println(combined.test("apple"));  // false
+```
