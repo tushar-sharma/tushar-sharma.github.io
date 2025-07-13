@@ -180,7 +180,7 @@
   rating: 5
   pending: false
   progress: 0
-  comments: "Recommended by Patricia. <a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
+  comments: "Recommended by Pat. <a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
 
 - title: "A Philosophy of Software Design"
   author: John Ousterhout
@@ -383,3 +383,11 @@
   pending: true
   progress: 15
   comments: ""
+
+
+- title: "Modern Java in Action"
+  author: Alan Mycroft, Mario Fusco, and Raoul-Gabriel Urma
+  rating: 0
+  pending: true
+  progress: 8
+  comments: "<a href='/blog/review-book-the-molecule-of-more' target='_blank'>Notes</a>"
