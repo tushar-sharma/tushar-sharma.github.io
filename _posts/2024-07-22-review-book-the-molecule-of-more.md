@@ -6,6 +6,7 @@ thumb: https://unsplash.com/photos/jjMvkdunYt8/download?w=437
 author: tushar sharma
 category: blog
 tags: books
+skipImage: true
 ---
 
 What's a dopamine? It's a molecule secreated by part of brain. Often dubbed pleasure molecule, it's presumed to be released when we experience pleasures. However this book explores how dopamine is a molecule of more not just pleasure. Like the author said the dopamine activity is not a marker of pleasure. It's a reaction to the unexpected - to possibility and anticipation.<!-- truncate_here -->
