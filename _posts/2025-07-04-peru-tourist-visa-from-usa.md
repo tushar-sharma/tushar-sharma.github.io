@@ -19,7 +19,7 @@ My experience on how to get Peru's tourist visa with India passport living in th
 <!-- disclaimer -->
 <div style="margin: 0 auto" class="cl disclaimer">
   <i class="icon-star"></i>
-    <span style="color:black"> &nbsp;&nbsp;This post is in progress. It will be updated continously</span>
+    <span style="color:black"> &nbsp;&nbsp;This post is in progress. It will be updated continuously</span>
 </div>
 <br>
 
