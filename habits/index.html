@@ -1,0 +1,68 @@
+---
+layout: post
+title: Habits
+published: true
+---
+
+<h2>Weekly Habits Log</h2>
+<label for="week-select">Select Week:</label>
+<select id="week-select">
+  <!-- Options will be populated by JS -->
+</select>
+<div id="habits-table"></div>
+
+<script>
+const weeks = [
+  { label: "Jan 1-7, 2024", range: "A9:T17" },
+  { label: "Jan 8-14, 2024", range: "A18:T26" },
+];
+const sheetId = "1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA";
+const apiKey = "AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw";
+
+function populateDropdown() {
+  const select = document.getElementById('week-select');
+  weeks.forEach((week, i) => {
+    const opt = document.createElement('option');
+    opt.value = week.range;
+    opt.textContent = week.label;
+    select.appendChild(opt);
+  });
+}
+
+function fetchHabits(range) {
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Habits!${range}?alt=json&key=${apiKey}`;
+  document.getElementById('habits-table').innerHTML = '<em>Loading...</em>';
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      // Render table
+      const values = data.values || [];
+      let html = '<table class="habits-table">';
+      values.forEach(row => {
+        html += '<tr>' + row.map(cell => `<td>${cell}</td>`).join('') + '</tr>';
+      });
+      html += '</table>';
+      document.getElementById('habits-table').innerHTML = html;
+    })
+    .catch(() => {
+      document.getElementById('habits-table').innerHTML = '<span style="color:red;">Failed to load data.</span>';
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  populateDropdown();
+  fetchHabits(weeks[0].range);
+  document.getElementById('week-select').addEventListener('change', function() {
+    fetchHabits(this.value);
+  });
+});
+</script>
+
+<style>
+.habits-table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+.habits-table td, .habits-table th { border: 1px solid #ddd; padding: 8px; }
+.habits-table tr:nth-child(even){background-color: #f2f2f2;}
+.habits-table tr:hover {background-color: #e0eafc;}
+.habits-table th { background-color: #39c; color: white; }
+#week-select { margin: 0 0 1em 0; padding: 6px 12px; font-size: 1em; }
+</style>
