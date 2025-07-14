@@ -4,6 +4,53 @@ title: Habits
 published: true
 ---
 
+<link rel="stylesheet" href="{{ root_url }}/css/books.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+  .sketch-cirlce{
+    position:relative;
+  }
+  
+  .sketch-cirlce:before{
+    content:"";
+    color: white;
+    z-index:-1;
+    left:-0.5em;
+    top:-0.1em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    position:absolute;
+    border-right-color:transparent;
+    width:100%;
+    height:1em;
+    transform:rotate(2deg);
+    opacity:0.7;
+    border-radius:50%;
+    padding:0.1em 0.25em;
+  }
+  
+  .sketch-cirlce:after{
+    content:"";
+    z-index:-1;
+    left:-0.5em;
+    top:0.1em;
+    padding:0.1em 0.25em;
+    border-width:2px;
+    border-style:solid;
+    border-color:#39c;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    position:absolute;
+    width:100%;
+    height:1em;
+    transform:rotate(-1deg);
+    opacity:0.7;
+    border-radius:50%;
+  }
+</style>
+
 <label for="week-select">Select Week:</label>
 <select id="week-select"></select>
 
@@ -11,7 +58,7 @@ published: true
 <div class="container my-5">
   <div class="row">
     <div class="col-md-7 mb-4 mb-md-0">
-      <table class="table table-striped" style="font-size: 16px;">
+      <table class="table table-striped habits-table" style="font-size: 16px;">
         <thead>
           <tr>
             <th>Activity</th>
