@@ -7,13 +7,11 @@ author: tushar sharma
 category: blog
 tags: 
  - java
+
+skipImage: true
 ---
 
 Java is a statically typed language , which means that every variable, method parameter, and expression must have a defined type known at compile time. This helps catch errors early and improves code reliability.<!-- truncate_here -->Java is a statically typed language , which means that every variable, method parameter, and expression must have a defined type known at compile time. This helps catch errors early and improves code reliability.
-
-
-
-## What Is a Type in Java?
 
 A type in Java defines: the kind of value a variable can hold and what operations that can be performed on it.
 
