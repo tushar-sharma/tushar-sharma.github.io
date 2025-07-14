@@ -82,7 +82,9 @@ published: true
 
 <script>
 const weeks = [
-  { label: "July 7-13, 2025", range: "A450:T458" }
+  {% for week in site.data.weeks %}
+    { label: "{{ week.label }}", range: "{{ week.range }}" }{% if forloop.last == false %},{% endif %}
+  {% endfor %}
 ];
 const sheetId = "1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA";
 const apiKey = "AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw";
@@ -95,6 +97,8 @@ function populateDropdown() {
     opt.textContent = week.label;
     select.appendChild(opt);
   });
+  // Select the last week by default
+  select.selectedIndex = weeks.length - 1;
 }
 
 function fetchHabits(range) {
@@ -153,7 +157,8 @@ function fetchHabits(range) {
 
 document.addEventListener('DOMContentLoaded', () => {
   populateDropdown();
-  fetchHabits(weeks[0].range);
+  // Fetch habits for the last week by default
+  fetchHabits(weeks[weeks.length - 1].range);
   document.getElementById('week-select').addEventListener('change', function() {
     fetchHabits(this.value);
   });
