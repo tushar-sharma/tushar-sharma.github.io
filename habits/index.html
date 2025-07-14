@@ -1,20 +1,41 @@
 ---
-layout: post
+layout: default
 title: Habits
 published: true
 ---
 
-<h2>Weekly Habits Log</h2>
 <label for="week-select">Select Week:</label>
-<select id="week-select">
-  <!-- Options will be populated by JS -->
-</select>
-<div id="habits-table"></div>
+<select id="week-select"></select>
+
+<div style="padding-bottom:10px; padding-top:20px; background : white;"></div>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-7 mb-4 mb-md-0">
+      <table class="table table-striped" style="font-size: 16px;">
+        <thead>
+          <tr>
+            <th>Activity</th>
+            <th><span id="today"></span></th>
+            <th><span id="yesterday"></span></th>
+            <th><span id="yesterdayOneMinus"></span></th>
+            <th><span id="yesterdayTwoMinus"></span></th>
+            <th><span id="yesterdayThreeMinus"></span></th>
+            <th><span id="yesterdayFourMinus"></span></th>
+            <th><span id="yesterdayFiveMinus"></span></th>
+            <th>Streak</th>
+            <th>Count</th>
+            <th>Logging</th>
+          </tr>
+        </thead>
+        <tbody id="demo"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 <script>
 const weeks = [
-  { label: "Jan 1-7, 2024", range: "A9:T17" },
-  { label: "Jan 8-14, 2024", range: "A18:T26" },
+  { label: "July 7-13, 2025", range: "A450:T458" }
 ];
 const sheetId = "1Xb4wV0AOQiGWwXaciIBX-rkFebzg8DlAcRcClshyAnA";
 const apiKey = "AIzaSyCgYRKf_apK3TUSYGO9WhQ5dN-ukY4H0gw";
@@ -31,21 +52,55 @@ function populateDropdown() {
 
 function fetchHabits(range) {
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Habits!${range}?alt=json&key=${apiKey}`;
-  document.getElementById('habits-table').innerHTML = '<em>Loading...</em>';
+  document.getElementById('demo').innerHTML = '';
+  // Clear date headers
+  ["today","yesterday","yesterdayOneMinus","yesterdayTwoMinus","yesterdayThreeMinus","yesterdayFourMinus","yesterdayFiveMinus"].forEach(id => {
+    document.getElementById(id).innerHTML = '';
+  });
   fetch(url)
     .then(res => res.json())
     .then(data => {
-      // Render table
       const values = data.values || [];
-      let html = '<table class="habits-table">';
-      values.forEach(row => {
-        html += '<tr>' + row.map(cell => `<td>${cell}</td>`).join('') + '</tr>';
+      let getDate = [];
+      for (let i = 1; i < values.length; i++) {
+        let row = values[i];
+        let activity = row[0];
+        let streak  = row[1];
+        let logging = row[6];
+        let count = row[19];
+        let todayDate = (row[7] === "yes") ? "<i style='font-size:24px' class='icon-check cl'></i>" : "<i style='font-size:24px' class='icon-check-empty cl'></i>";
+        let yesterdayDate = (row[8] === "yes") ? "<i style='font-size:24px' class='icon-check cl'></i>" : "<i style='font-size:24px' class='icon-check-empty cl'></i>";
+        let yesterdayMinusOneDate = (row[9] === "yes") ? "<i style='font-size:24px' class='icon-check cl'></i>" : "<i style='font-size:24px' class='icon-check-empty cl'></i>";
+        let yesterdayMinusTwoDate = (row[10] === "yes") ? "<i style='font-size:24px' class='icon-check cl'></i>" : "<i style='font-size:24px' class='icon-check-empty cl'></i>";
+        let yesterdayMinusThreeDate = (row[11] === "yes") ? "<i style='font-size:24px' class='icon-check cl'></i>" : "<i style='font-size:24px' class='icon-check-empty cl'></i>";
+        let yesterdayMinusFourDate = (row[12] === "yes") ? "<i style='font-size:24px' class='icon-check cl'></i>" : "<i style='font-size:24px' class='icon-check-empty cl'></i>";
+        let yesterdayMinusFiveDate = (row[13] === "yes") ? "<i style='font-size:24px' class='icon-check cl'></i>" : "<i style='font-size:24px' class='icon-check-empty cl'></i>";
+        if(row[18]) getDate.push(row[18]);
+        if (parseInt(streak) > 0) {
+          activity = `<span class='sketch-cirlce'>${activity}</span>`;
+        }
+        document.getElementById('demo').innerHTML +=
+          `<tr>
+            <td style='white-space:nowrap;'>${activity}</td>
+            <td>${todayDate}</td>
+            <td>${yesterdayDate}</td>
+            <td>${yesterdayMinusOneDate}</td>
+            <td>${yesterdayMinusTwoDate}</td>
+            <td>${yesterdayMinusThreeDate}</td>
+            <td>${yesterdayMinusFourDate}</td>
+            <td>${yesterdayMinusFiveDate}</td>
+            <td>${streak}</td>
+            <td>${count}</td>
+            <td>${logging}</td>
+          </tr>`;
+      }
+      // Fill date headers
+      ["today","yesterday","yesterdayOneMinus","yesterdayTwoMinus","yesterdayThreeMinus","yesterdayFourMinus","yesterdayFiveMinus"].forEach((id, idx) => {
+        document.getElementById(id).innerHTML = getDate[idx] || '';
       });
-      html += '</table>';
-      document.getElementById('habits-table').innerHTML = html;
     })
     .catch(() => {
-      document.getElementById('habits-table').innerHTML = '<span style="color:red;">Failed to load data.</span>';
+      document.getElementById('demo').innerHTML = '<span style=\"color:red;\">Failed to load data.</span>';
     });
 }
 
@@ -57,12 +112,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-
-<style>
-.habits-table { border-collapse: collapse; width: 100%; margin-top: 1em; }
-.habits-table td, .habits-table th { border: 1px solid #ddd; padding: 8px; }
-.habits-table tr:nth-child(even){background-color: #f2f2f2;}
-.habits-table tr:hover {background-color: #e0eafc;}
-.habits-table th { background-color: #39c; color: white; }
-#week-select { margin: 0 0 1em 0; padding: 6px 12px; font-size: 1em; }
-</style>
