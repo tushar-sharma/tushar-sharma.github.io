@@ -4,6 +4,7 @@ title: Sunscreen for Dummies
 category: blog
 tags:
   - sunscreen
+  - health
 thumb: https://unsplash.com/photos/rhn-r1IHi0I/download?w=437
 image: https://unsplash.com/photos/rhn-r1IHi0I/download?w=437
 author: Tushar Sharma
@@ -53,6 +54,8 @@ While sunscreen is vital for protecting against UV damage, some concerns have be
 
 * **Skin Cancer Concerns:** There's no direct evidence suggesting that sunscreen use promotes skin cancer. However, relying solely on sunscreen and neglecting other protective measures, like wearing hats and protective clothing, can give a false sense of security and potentially increase sun exposure, raising skin cancer risk.
 
+* **Avoid sunscreen which contains oxybenzone and octinoxate**: Look for reef-safe and mineral-based sunscreens like Zinc Oxide and Titanium dioxide. These sit on skin and reflect UV rays instead of being absorbed. Zinc Oxide and Titanium dioxide are usually considered safe [^ewg].
+
 ### Reef-Safe Sunscreens
 
 With the increasing awareness of environmental concerns, many sunscreens now tout being "reef-safe." These sunscreens are formulated without oxybenzone and octinoxate, two common sunscreen ingredients that have been found to be harmful to coral reefs. If you're planning a trip to an area with coral reefs or want to make an eco-conscious choice, it's advisable to opt for a reef-safe sunscreen.
@@ -69,6 +72,6 @@ Several tourist destinations around the world, particularly those with sensitive
 
 Many of these destinations either outright ban non-reef-safe sunscreens or strongly encourage tourists to opt for biodegradable alternatives. Some dive shops, hotels, and tour operators even provide reef-safe sunscreen samples or sell them as part of their commitment to marine conservation.
 
-### Conclusion
+## References
 
-When selecting a sunscreen, choose one that offers broad-spectrum protection (against both UVA and UVB rays), is water-resistant if you're engaging in water activities, and has an appropriate SPF for your skin type and activity level. Always remember to apply generously and reapply regularly, especially after swimming or sweating.
+[^review]: [ewg](https://www.ewg.org/sunscreen/report/the-trouble-with-sunscreen-chemicals/)
