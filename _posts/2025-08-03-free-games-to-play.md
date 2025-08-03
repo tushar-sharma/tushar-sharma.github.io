@@ -45,3 +45,9 @@ tags:
 ## https://old.reddit.com/r/CozyGamers/comments/1ctkoe5/all_the_cleaning_games_i_managed_to_find/
 
 ## https://store.steampowered.com/app/568770/Cinderella_Phenomenon__OtomeVisual_Novel/
+
+## Epic games has regular free games every week 
+
+also 
+
+- rocket league
