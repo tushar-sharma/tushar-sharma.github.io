@@ -1,8 +1,8 @@
 ---
 layout: post
 title: List of Free games
-image: https://avatars.dzeninfra.ru/get-zen_doc/3300410/pub_60293ebac219c97e32d022b1_60294210241d462d44dae1d3/scale_1200
-thumb: https://avatars.dzeninfra.ru/get-zen_doc/3300410/pub_60293ebac219c97e32d022b1_60294210241d462d44dae1d3/scale_1200
+image: https://avatars.mds.yandex.net/i?id=c0315bc2ebeb5f3b9334ca9d8a35bf629afb02bd-5142520-images-thumbs&n=13
+thumb: https://avatars.mds.yandex.net/i?id=c0315bc2ebeb5f3b9334ca9d8a35bf629afb02bd-5142520-images-thumbs&n=13
 category: blog
 tags:
  - video games
