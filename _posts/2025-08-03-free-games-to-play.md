@@ -77,6 +77,10 @@ Games available to play for free.<!-- truncate_here -->
 
 - Life simulation game where you create and control people. The base game is free to play.
 
+### [DATA WING (Mobile)](https://apps.apple.com/us/app/data-wing/id1206723870)
+
+- Stylish, story-driven racing adventure for mobile. 
+
 ### Epic Games Store
 
 - Offers free games every week.
