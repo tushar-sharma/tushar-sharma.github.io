@@ -398,3 +398,12 @@
   pending: true
   progress: 10
   comments: "<a href='/blog/review-book-modern-java-in-action' target='_blank'>Notes</a>"
+
+- title: "Quantum Computing in Action"
+  author: Johan Vos
+  rating: 0
+  pending: true
+  progress: 0
+  comments: ""
+
+
