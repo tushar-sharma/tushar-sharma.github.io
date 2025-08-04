@@ -29,8 +29,6 @@ Looking for the best free games to play?<!-- truncate_here --><!-- truncate_here
 | Warframe | [Steam](https://store.steampowered.com/app/230410/Warframe/) | Popular free-to-play online action game with co-op missions. |
 | Atuel | [Steam](https://store.steampowered.com/app/2794330/Atuel/) | Short, meditative adventure exploring the Atuel River in Argentina. |
 | The Sims 4 | [Steam](https://store.steampowered.com/app/1222670/The_Sims_4/) | Life simulation game. The base game is free. |
-| Name | Link | Comments |
-|------|------|----------|
 | Wheelborn | [Steam](https://store.steampowered.com/app/2704210/Wheelborn) | Roguelite action game with unique wheel-based combat. Free to play. |
 | KnightLight | [Steam](https://store.steampowered.com/app/3086850/KnightLight/) | Atmospheric pixel-art adventure with puzzle and stealth elements. Free demo available. |
 | Batography | [Steam](https://store.steampowered.com/app/3351430/Batography/) | Explore as a bat in this relaxing, experimental flying game. Free to play. |
