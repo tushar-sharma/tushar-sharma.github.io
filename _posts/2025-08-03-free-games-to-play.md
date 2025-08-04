@@ -6,6 +6,7 @@ thumb: https://avatars.mds.yandex.net/i?id=c0315bc2ebeb5f3b9334ca9d8a35bf629afb0
 category: blog
 tags:
  - video games
+skipImage: true
 ---
 
 Looking for the best free games to play?<!-- truncate_here --><!-- truncate_here -->
