@@ -109,5 +109,5 @@ public class MyService implements CommanLineRunner {
 
 | PostConstruct | When you need initialization right after bean creation | Triggered immediately after bean construction and dependency injection |
 | CommnadLineRunner | When you need to run code after the application context is fully started | Executes after the application context is ready but before the application start |
-| APplicationReadyEvent | When you need to ensure all aspects of application are ready | Trigger after the application is started and ready to server the request | 
+| ApplicationReadyEvent | When you need to ensure all aspects of application are ready | Trigger after the application is started and ready to server the request | 
 
