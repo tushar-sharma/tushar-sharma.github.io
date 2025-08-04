@@ -1,17 +1,17 @@
 ---
 layout: post
-title: How to Listen to a Kafka Consumer in Spring boot
-image: https://unsplash.com/photos//download?w=437
-thumb: https://unsplash.com/photos//download?w=437
+title:  How to Listen to a Kafka Consumer in Spring Boot (Reactive & Non-Reactive)
+image: https://unsplash.com/photos/7LNatQYMzm4/download?w=437
+thumb: https://unsplash.com/photos/7LNatQYMzm4/download?w=437
 author: tushar sharma
 category: blog
-published: false
 tags:
  - java
  - spring boot
  - kafka
 ---
 
+Listening to a kafka consumer varies in both servlet and reactive application.<!-- truncate_here --><!-- truncate_here -->
 
 In a traditional servlet based Spring boot, you can use `KafkaListener` annotation
 
@@ -25,10 +25,20 @@ public class MyService {
 }
 ```
 
-However, this approach is blocking and isn't suitable for reactive application. Here are serveral ways to implement it for reactive kafka consumers
+✅ **Pros**:
+  * Simple, declarative, and well-documented.
+  * Supports message deserialization, error handling, retries, and DLQ out of the box.
+  * Integrates seamlessly with Spring’s dependency injection.
+
+❌ **Cons**:
+  * Blocking I/O: Each message is processed synchronously.
+  * Not suitable for high-throughput reactive pipelines.
+  * Threads are tied up during processing (limited scalability under load).
 
 
-## ApplicationEventListener
+## Reactive Kafka Consumer with Project Reactor
+
+### ApplicationEventListener
 
 ```java
 @Service
