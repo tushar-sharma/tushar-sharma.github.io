@@ -304,3 +304,117 @@ Predicate<String> combined = startsWithA.and(endsWithZ);
 System.out.println(combined.test("applez")); // true
 System.out.println(combined.test("apple"));  // false
 ```
+
+## Anonymous Inner classs
+
+```java
+
+public class MeaningOfThis {
+
+    public final int value = 4;
+
+    public void doIt() {
+        int value = 6;
+        Runnable r = new Runnable() {
+            public final int value = 5;
+            public void run() {
+                int value = 10;
+                System.out.println(this.value);
+            }
+        };
+
+        r.run();
+    }
+    public static void main(String[] args) {
+        MeaningOfThis m = new MeaningOfThis();
+        m.doIt();
+    }
+}
+
+```
+
+First, MeaningOfThis has a variable value with value 4. Next, the doIt method declares a local value with value 6, shadowing the field. Then, an inner class is defined with its own value set to 5. Inside its run method, another local value is declared with value 10. However, this.value refers to the inner class's field, so the output is 5. 
+
+
+Before Java 5, a common way to execute code in a separate thread was to implement Runnable and pass it to a Thread object:
+
+```java
+Runnable r = new Runnable() {
+    @Override
+    public void run() {
+        System.out.println("Running in a thread");
+    }
+};
+
+Thread t = new Thread(r);
+t.start(); // This actually starts a new thread
+
+```
+
+> r.run(), which does not start a new thread — it just calls the method directly on the current thread.
+
+Java 5 introduced the java.util.concurrent package, including ExecutorService, which abstracts thread creation and management. You submit tasks to a thread pool, and you can optionally get a result via a Future.
+
+```java
+import java.util.concurrent.*;
+
+public class Example {
+    public static void main(String[] args) throws Exception {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+
+        // Runnable example (no result)
+        executor.submit(() -> System.out.println("Running in a thread pool"));
+
+        // Callable example (returns a result)
+        Future<String> future = executor.submit(() -> {
+            Thread.sleep(500);
+            return "Task completed!";
+        });
+
+        System.out.println(future.get()); // Wait and get the result
+
+        executor.shutdown();
+    }
+}
+```
+
+Java 8 (2014) introduced CompletableFuture in java.util.concurrent.
+
+It implements both Future and CompletionStage.
+
+Adds non-blocking, chainable async programming
+
+```java
+CompletableFuture.supplyAsync(() -> "Hello")
+    .thenApply(s -> s + " World")
+    .thenAccept(System.out::println);
+
+```
+
+* No manual get() needed — it reacts when data is ready.
+
+* Supports chaining (thenApply, thenCompose) and combining multiple tasks (allOf, anyOf).
+
+## Lambda expression 
+
+it's the `anonymous functions` that can be passed around. So there are first class citizens in java. It has three parts
+
+1. Lambda parameters
+
+2. Arrow
+
+3. Lambda body
+
+```java
+(String s ) -> s.length() // takes one parameter of tyep string and returns an int
+(Apple a) -> a.getWeight() > 2 // return a boolean (implied)
+(int x, int y) -> {
+    return 2;
+}
+
+() -> 42 //takes no parameters and returns an int
+```
+
+## Functional Interface
+
+Interface that only has exactly one **abstract method**. e.g. predicate, runnable, comparator.

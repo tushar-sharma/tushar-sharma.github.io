@@ -36,3 +36,4 @@ Curated list of free games to play.
 | Swallow the Sea | [Steam](https://store.steampowered.com/app/1511860/Swallow_the_Sea/) | |
 | Perfect Vermin | [Steam](https://store.steampowered.com/app/1416130/Perfect_Vermin/) | |
 | Leaf Blower Revolution - Idle Game | [Steam](https://store.steampowered.com/app/1468260/Leaf_Blower_Revolution__Idle_Game/) | |
+| Landfill | [Steam](https://store.steampowered.com/app/2353760/Landfall_Archives/) | |
