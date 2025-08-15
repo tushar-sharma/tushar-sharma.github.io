@@ -3,6 +3,11 @@
   ratings: 4
   comments: "Graphic card must support mesh shaders. Graphics are amazing. Scare factor is high. Combat is clumsy. You can enable, One Shot Mode, in the settings to make combat easier. Wandering in dark is tedious."
 
+- title: "Detroit: Become Human"
+  platform: "steam deck"
+  ratings: 5
+  comments: "Made by Quantic Dream. This is a masterpiece of an interactive story. Never a dull moment in the game. Download it from <a href='/blog/download-detroit-become-Human'>here <i class='fas fa-download'></i></a>."
+
 - title: "Guardian of the Galaxy"
   platform: "steam deck"
   ratings: 4
@@ -16,4 +21,9 @@
 - title: "Sunset Overdrive"
   platform: "steam deck"
   ratings: 5
-  comments: "Cons: Annoying popup evertime you start the game of corrupt file which you can ignore. The game is goofy and fun. You can even shoot a dog at enemies."
+  comments: "Cons: Corrupt file message pops up everytime you start the game. The game is goofy and fun. You can even shoot a dog at enemies."
+
+- title: "Super Mario Odyssey"
+  platform: "steam deck"
+  ratings: 5
+  comments: "You need yuzu emulator to play this on steam deck or PC. It supports multiplayer where 2nd player can control the hat."
