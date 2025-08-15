@@ -30,8 +30,8 @@ author: Tushar Sharma
       <tr>
         <th class="th-sm">Title</th>
         <th class="th-sm">Rating</th>
-        <th class="th-sm">Comments</th>
         <th class="th-sm">Platform</th>
+        <th class="th-sm">Comments</th>
       </tr>
     </thead>
   
@@ -68,10 +68,11 @@ author: Tushar Sharma
                 {% endfor %}
           </div>
         </td>
-        <td>{{ game.comments }}</td>
         <td>
           {{ game.platform }}
         </td>
+        <td>{{ game.comments }}</td>
+      </tr>
       </tr>
       {% endfor %}
     </tbody>
