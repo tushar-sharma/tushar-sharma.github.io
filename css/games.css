@@ -162,3 +162,22 @@
     }
   }
 
+#dtMaterial th, #dtMaterial td {
+    padding: 15px;
+    text-align: left;
+}
+
+#dtMaterial th {
+}
+.cl{
+    color: rgb(51, 153, 204);
+    overflow:hidden; 
+    display: inline-block; 
+}
+.cl {
+    white-space: nowrap !important;
+}
+.disclaimer-stars {
+    color: rgb(51, 153, 204);
+}
+

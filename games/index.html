@@ -6,76 +6,90 @@ summary: Download Games
 author: Tushar Sharma
 ---
 
-<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
 <link rel="stylesheet" href="{{ root_url }}/css/games.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
+<link rel="stylesheet" type="text/css" href="{{ root_url }}/css/jquery.dataTables.min.css" />
+<script
+    type="text/javascript"
+    charset="utf8"
+    src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"
+    integrity="sha384-cjmdOgDzOE22dUheI5E6Gzd3upfmReW8N1y/4jwKQE50KYcvFKZJA9JxWgQOzqwQ"
+    crossorigin="anonymous">
+</script>
+<script src="{{ root_url }}/js/custom-datatable-init.js"></script>
 
-<div class="games-container">
-
-      <div class="game-search-container">
-        <input type="text" id="gameSearch" placeholder="Search games by title, genre..." 
-               aria-label="Search games">
-        <i class="fas fa-search search-icon"></i>
-      </div>
-    </div>
-  </header>
-
-  <!-- Game Grid -->
-  <div class="game-grid">
-    {% for game in site.data.games %}
-    <div class="game-card" data-searchable="{{ game.title | downcase }} {{ game.genre | downcase }}">
-      <div class="game-thumbnail">
-        <img src="{{ game.image }}" alt="{{ game.title }} cover art" loading="lazy">
-      </div>
-      
-      <div class="game-info">
-        <h3 class="game-title">{{ game.title }}</h3>
-        <div class="game-meta">
-          <span class="game-genre">{{ game.genre }}</span>
-        </div>
-        
-        <div class="game-actions">
-          <a href="{{ game.download_url }}" 
-          class="guide-button"
-          rel="noopener noreferrer">
-            <i class="fas fa-download"></i>
-            Download
-          </a>
-
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-
-  <div class="no-results">
-    <i class="fas fa-gamepad"></i>
-    <p>No games found matching your search</p>
-  </div>
+<!-- dummy box begins -->
+<div style="padding-bottom:60px; padding-top:20px; background : white;">
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('gameSearch');
-  const gameCards = document.querySelectorAll('.game-card');
-  const noResults = document.querySelector('.no-results');
+<!-- heading -->
+<h1 class="entry-title">Game Reviews</h1>
 
-  function filterGames() {
-    const searchTerm = searchInput.value.toLowerCase();
-    let visibleCount = 0;
+  <table id="dtMaterial" class="table table-striped" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th class="th-sm">Title</th>
+        <th class="th-sm">Rating</th>
+        <th class="th-sm">Comments</th>
+        <th class="th-sm">Platform</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      {% for game in site.data.games %}
+      <tr>
+        <td>
+          {% if game.links %}
+            <a href="{{ game.links }}" target="_blank">{{ game.title }}</a>
+          {% else %}
+             {{ game.title }}
+          {% endif %}
+        </td>
+        <td>
+          <div class="cl">
+                 <!-- full stars -->
+                {% assign full_stars = game.ratings | floor %}
+                {% for i in (1..full_stars) %}
+                  <span class="fa fa-star checked"></span>
+                {% endfor %}
+    
+                 <!-- half stars -->
+                 {% assign has_half_star = game.ratings | modulo: 1 %}
+                 {% if has_half_star > 0 %}
+                   <i class="fas fa-star-half-alt"></i>
+                  {% assign empty_stars = 5 | minus: full_stars | minus: 1 %}
+                 {% else %}
+                   {% assign empty_stars = 5 | minus: full_stars %}
+                 {% endif %}
+                
+                <!-- Empty stars -->
+                {% for i in (1..empty_stars) %}
+                  <span class="icon-star-empty"></span>
+                {% endfor %}
+          </div>
+        </td>
+        <td>{{ game.comments }}</td>
+        <td>
+          {{ game.platform }}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    
+    <tfoot>
+    </tfoot>
+  </table>
+  
 
-    gameCards.forEach(card => {
-      const searchableText = card.dataset.searchable;
-      const isVisible = searchableText.includes(searchTerm);
-      
-      card.style.display = isVisible ? 'flex' : 'none';
-      if(isVisible) visibleCount++;
-    });
+<br><br>
+<!-- disclaimer -->
+  <div class="disclaimer" style="text-align: center;">
+    <p><strong>Rating Legend:</strong></p>
+    <p><span class="fa fa-star checked"></span> - Uninstalled it in 5 minutes</p>
+    <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> - Meh-diocre</p>
+    <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> - Fun, with flaws</p>
+    <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> - Highly Recommended</p>
+    <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> - A Must-Play before you die</p>
+  </div>
 
-    noResults.style.display = visibleCount > 0 ? 'none' : 'flex';
-  }
-
-  searchInput.addEventListener('input', filterGames);
-  filterGames(); // Initial filter
-});
-</script>
+<div style="border:none;" id="Pagination" class="pagination"></div>
