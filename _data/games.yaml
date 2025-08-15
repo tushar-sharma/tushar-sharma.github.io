@@ -10,7 +10,7 @@
 
 - title: "Guardian of the Galaxy"
   platform: "steam deck"
-  ratings: 4
+  ratings: 5
   comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot."
 
 - title: "Hades"
@@ -37,3 +37,8 @@
   platform: "steam deck"
   ratings: 5
   comments: "Developed by Crystal Dynamics. This is the first game in the rebooted Tomb Raider series. The gameplay and story is amazing."
+
+- title: "The Were Cleaner"
+  platform: "steam deck"
+  ratings: 5
+  comments: "Free to play short, cozy game. You play as a werewolf who works as janitor to pay his rent."
