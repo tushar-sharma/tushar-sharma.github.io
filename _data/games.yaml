@@ -1,9 +1,4 @@
-- title: "Super Mario Odyssey"
-  genre: "Platform, action-adventure"
-  image: "https://upload.wikimedia.org/wikipedia/en/8/8d/Super_Mario_Odyssey.jpg"
-  download_url: "/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator"
-
-- title: "Detroit: Become Human"
-  genre: "Adventure"
-  image: "https://upload.wikimedia.org/wikipedia/en/e/ee/Detroit_Become_Human.jpg"
-  download_url: "/blog/download-detroit-become-Human"
+- title: "Alan Wake2"
+  platform: "steam deck"
+  ratings: 4
+  comments: "Graphic card must support mesh shaders. Graphics are amazing. Scare factor is high. Combat is clumsy. You can enable, One Shot Mode, in the settings to make combat easier. Wandering in dark is tedious."
