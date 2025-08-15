@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Compile Time vs Runtime Safety in Java
-image: https://unsplash.com/photos/mmmhKXpdhNM/download?w=437
-thumb: https://unsplash.com/photos/mmmhKXpdhNM/download?w=437
+image: https://unsplash.com/photos/we4enFZr0aA/download?w=437
+thumb: https://unsplash.com/photos/we4enFZr0aA/download?w=437
 author: tushar sharma
 category: blog
 tags:
