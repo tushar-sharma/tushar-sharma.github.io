@@ -5,6 +5,7 @@ image: https://unsplash.com/photos/we4enFZr0aA/download?w=437
 thumb: https://unsplash.com/photos/we4enFZr0aA/download?w=437
 author: tushar sharma
 category: blog
+skipImage: true
 tags:
  - java
 ---
