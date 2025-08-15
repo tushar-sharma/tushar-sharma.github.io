@@ -2,3 +2,8 @@
   platform: "steam deck"
   ratings: 4
   comments: "Graphic card must support mesh shaders. Graphics are amazing. Scare factor is high. Combat is clumsy. You can enable, One Shot Mode, in the settings to make combat easier. Wandering in dark is tedious."
+
+- title: "Rayman Legends"
+  platform: "steam deck"
+  ratings: 5
+  comments: "One of the best platformer game. The background music is fantastic. Gameplay is smooth and fun. Cons: You need to be online to start the game thanks to Ubisoft launcher. The `Challenge mode` is no longer available if you bought it on Steam as the Ubisoft servers are down."
