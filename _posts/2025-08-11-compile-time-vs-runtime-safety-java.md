@@ -1,14 +1,19 @@
 ---
 layout: post
-title: [draft] Compile Time vs Runtime Safety in Java
-image: https://unsplash.com/photos//download?w=437
-thumb: https://unsplash.com/photos//download?w=437
+title: Compile Time vs Runtime Safety in Java
+image: https://unsplash.com/photos/mmmhKXpdhNM/download?w=437
+thumb: https://unsplash.com/photos/mmmhKXpdhNM/download?w=437
 author: tushar sharma
 category: blog
-published: false
+tags:
+ - java
 ---
 
-We can write a simple code in java to print a list of integers
+When writing Java code, ensuring correctness and reliability is a key concern. One way to achieve this is by leveraging the type system to catch errors early—ideally at compile time rather than at runtime. Let's explore this concept through a simple example.<!-- truncate_here -->
+
+When writing Java code, ensuring correctness and reliability is a key concern. One way to achieve this is by leveraging the type system to catch errors early—ideally at compile time rather than at runtime. Let's explore this concept through a simple example.
+
+Consider the following code that prints a list of integers:
 
 ```java
 List<Integer> myList = List.of(1, 2, 3, 4, 5);
@@ -17,30 +22,28 @@ myList
   .stream()
   .forEach(System.out::println);
 
-// this prints 1, 2, 3, 4, 5
+// Output: 1, 2, 3, 4, 5
 ```
 
-We can rewrite this as : 
+This is straightforward and type-safe. The variable myList is explicitly declared as a List<Integer>, so the compiler guarantees that only integer values are present.
+
+Now, consider a modified version of the same code using the Object type:
 
 ```java
-
 Object myList = List.of(1, 2, 3, 4, 5);
 
-((List<Integer> myList)
+((List<Integer>) myList)
   .stream()
   .forEach(System.out::println);
 
-// this also prints 1, 2, 3, 4, 5
-
+// Output: 1, 2, 3, 4, 5
 ```
 
-So why not use Object all the time? 
+At runtime, this behaves identically. However, the use of Object introduces a critical weakness: type safety is no longer enforced by the compiler.
 
-
-Imagine bad data like 
+To illustrate the risk, imagine the list contains invalid data:
 
 ```java
-
 Object myList = List.of(1, 2, 3, 4, 5, "string");
 
 ((List<Integer> myList)
@@ -53,6 +56,11 @@ Object myList = List.of(1, 2, 3, 4, 5, "string");
 3
 4
 5
-class cast exception */
+Exception in thread "main": java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer*/
 ```
-This will throw runtime exception. We usually want to fail fast. Object casting defers errors at runtime.
+
+The error occurs only when the stream processes the String value, meaning the application fails after deployment rather than during development or build.
+
+Using raw `Object` references and relying on explicit casting shifts error detection from compile time to runtime. This violates the principle of failing fast—a best practice in software engineering where issues should be exposed as early as possible.
+
+Compile-time safety, enabled by Java’s generics and strong typing, allows the compiler to validate type correctness before the program runs. In contrast, runtime safety checks introduce unpredictable failures, harder debugging, and increased risk in production environments.
