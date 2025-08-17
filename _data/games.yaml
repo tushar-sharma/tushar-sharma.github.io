@@ -46,7 +46,7 @@
 - title: "Super Mario Odyssey"
   platform: "steam deck"
   ratings: 5
-  comments: "You need yuzu emulator to play this on steam deck or PC. It supports multiplayer where 2nd player can control the hat. Download the game from <a href='/blog/how-to-play-super-mario-odyssey-on-pc-yuzu-emulator'><i class='fas fa-download'></i> here</a>."
+  comments: "You need yuzu emulator to play this on steam deck or PC. It supports multiplayer where 2nd player can control the hat. Download the game from <a href='/blog/how-to-play-super-mario-odyssey-on-pc-yuzu-emulator'>here <i class='fas fa-download'></i></a>."
 
 - title: "Tomb Raider 2013"
   platform: "steam deck"
