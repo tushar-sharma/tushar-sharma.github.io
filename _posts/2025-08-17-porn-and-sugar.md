@@ -32,17 +32,7 @@ Both sugar and porn are not simply about appetite. Neither offers true nourishme
 
 When I gave up sugar, my mother walked the path with me. That companionship made the struggle lighter, almost natural. When I went skydiving, I only jumped because my friend did first, and I couldn’t bear the thought of staying behind. Even going to the gym is easier with a workout partner who pushes you and shares the struggle.
 
-But porn is different —it is hidden, private, carried in silence. There is no natural buddy system, no shared accountability. And that makes the challenge more isolating. Still, I’ve come across some tools that would be helpful:
-
-* **Online meetup groups**: Join groups like [this](https://www.meetup.com/porn-addiction-recovery-fight-the-beast/) where you can connect with other folks
-
-* **I Am Sober**: Tracks your streaks and includes an “I’m having an urge” prompt to guide you through the peak—not just log it.
-
-* **Quitzilla**: Lets you log cravings and start a 10–15 minute “survival countdown,” teaching you to wait them out.
-
-* **Habitica**: Transforms recovery into an RPG—complete tasks to gain rewards, fail them and lose health. It shifts you from guilt to growth.
-
-* **Meditation**: Use meditation app like Sattva and Waking Up by Sam Harris. Or find a in-person meditation classes. [Won Buddhist temple](https://www.wonbuddhismnc.org/) near my place offers free meditation classes on Saturday.
+But porn is different —it is hidden, private, carried in silence. There is no comradeship. And that makes the challenge more isolating. 
 
 ## Footnotes 
 
