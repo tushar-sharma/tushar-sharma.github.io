@@ -57,3 +57,8 @@
   platform: "steam deck"
   ratings: 5
   comments: "Free to play short, cozy game. You play as a werewolf who works as janitor to pay his rent."
+
+- title: "Firewatch"
+  platform: "PC"
+  rating: 4
+  comments: "Walking sim. Humor is great"
