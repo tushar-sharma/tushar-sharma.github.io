@@ -60,5 +60,11 @@
 
 - title: "Firewatch"
   platform: "PC"
-  rating: 4
+  ratings: 4
   comments: "Walking sim. Humor is great"
+
+- title: "My Friend Pedro"
+  ratings: 5
+  platform: "steam deck"
+  comments: "It's a total blast – it's like doing backflips while dual-wielding pistols, all with a talking banana as your guide. It's like Max Payne style slow motion shooting game."
+
