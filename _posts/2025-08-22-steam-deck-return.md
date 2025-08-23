@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Returning Steam Deck
+title: Returning Steam Deck for Repair
 image: https://i0.wp.com/formula-iq.com/wp-content/uploads/2025/02/25.02.14-obzor-valve-steam-deck-kak-odna-konsol-izmenila-zhizn-gejmerov.webp
 thumb: https://i0.wp.com/formula-iq.com/wp-content/uploads/2025/02/25.02.14-obzor-valve-steam-deck-kak-odna-konsol-izmenila-zhizn-gejmerov.webp
 author: tushar sharma
@@ -9,7 +9,7 @@ tags:
  - steam deck
 ---
 
-Recently, my Steam Deck suddenly developed a display issue—the screen stayed completely black even though the device powered on and I could hear sound. There was no physical damage or signs of impact. Fortunately, the Steam Deck comes with a one-year warranty, and I was still covered with two months remaining.<!-- truncate_here -->
+Recently, my Steam Deck suddenly developed a display glitch — black screen of death. There was no physical damage or liquid spills. Luckily, the Steam Deck comes with a one-year warranty, and I was still covered with two months remaining.<!-- truncate_here -->
 
 Recently, my Steam Deck suddenly developed a display issue—the screen stayed completely black even though the device powered on and I could hear sound. There was no physical damage or signs of impact. Fortunately, the Steam Deck comes with a one-year warranty, and I was still covered with two months remaining.
 
