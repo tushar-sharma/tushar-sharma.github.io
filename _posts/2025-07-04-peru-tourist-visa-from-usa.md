@@ -12,16 +12,7 @@ tags:
 
 My experience on how to get Peru's tourist visa with India passport living in the US.<!-- truncate_here -->
 
-<link rel="stylesheet" href="{{ root_url }}/css/books.css" />
-
 My experience on how to get Peru's tourist visa with India passport living in the US.
-
-<!-- disclaimer -->
-<div style="margin: 0 auto" class="cl disclaimer">
-  <i class="icon-star"></i>
-    <span style="color:black"> &nbsp;&nbsp;This post is in progress. It will be updated continuously</span>
-</div>
-<br>
 
 ## Option 1
 
@@ -49,6 +40,18 @@ Peru consulate expects a **negative criminal report**. You need to request for F
 
 4. Next select USPS nearby for fingerprints
 
+### Additional Documents
+
+1. **Travel Itinerary:** You must provide complete flight details, including both international and domestic flights within Peru.  
+   *Note:* When I first submitted only my international arrival and departure details, the Peru Embassy in Washington contacted me[^number] and requested the full itinerary. They asked me to email it to: `visas@conperdc.org`.
+
+2. **Recent Bank Statements:** Include copies of your last three bank statements.
+
+3. **Driver’s License Copy:** Attach a copy of your valid driver’s license.
+
+4. **Original Passport:** Submit your original passport.
+
 ## References
 
 [^Peru]: [https://www.gob.pe/](https://www.gob.pe/institucion/rree/informes-publicaciones/279522-convenios-de-visas-para-ciudadanos-extranjeros)
+[^number]: Peru embassy number in Washington, DC is +1 (202) 990-4064
