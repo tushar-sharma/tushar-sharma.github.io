@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting Started with Oauth2
-image: https://unsplash.com/photos/8FxJi5wuwKc/download?w=437
-thumb: https://unsplash.com/photos/8FxJi5wuwKc/download?w=437
+image: https://images.unsplash.com/photo-1570393597884-ba37bef04adc
+thumb: https://images.unsplash.com/photo-1570393597884-ba37bef04adc
 author: tushar sharma
 category: blog
 tags:
