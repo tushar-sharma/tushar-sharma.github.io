@@ -18,7 +18,7 @@ Curated list of free games to play.
 |------|------|----------|----------------|
 | The Were Cleaner | [Steam](https://store.steampowered.com/app/2795000/The_WereCleaner/) |You play as a janitor who needs to pay his rent. However you are also a warewolf who can eat people. My only pet peeve is that it's too short| 
 | Agni | [Steam](https://store.steampowered.com/app/1822340/AGNI/) | Simple runner game |
-| Doronko Wanko | [Steam](https://store.steampowered.com/app/2512840/DORONKO_WANKO/) | Play as a mischievous dog and make a mess. You might need to change language from Japanese to English |
+| Doronko Wanko | [Steam](https://store.steampowered.com/app/2512840/DORONKO_WANKO/) | Play as a mischievous dog and make a mess. You need to change language from Japanese to English |
 | Atuel | [Steam](https://store.steampowered.com/app/2794330/Atuel/) | Short, meditative adventure exploring the Atuel River in Argentina. |
 | The Sims 4 | [Steam](https://store.steampowered.com/app/1222670/The_Sims_4/) | Fun simulation game |
 | Alpaca Stacka | [Steam](https://store.steampowered.com/app/1655140/Alpaca_Stacka/) | Help lost chicks as a friendly alpaca. |
@@ -37,3 +37,4 @@ Curated list of free games to play.
 | Perfect Vermin | [Steam](https://store.steampowered.com/app/1416130/Perfect_Vermin/) | |
 | Leaf Blower Revolution - Idle Game | [Steam](https://store.steampowered.com/app/1468260/Leaf_Blower_Revolution__Idle_Game/) | |
 | Landfill | [Steam](https://store.steampowered.com/app/2353760/Landfall_Archives/) | |
+| Life is Strange Episode 1 | [Steam](https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/) | |

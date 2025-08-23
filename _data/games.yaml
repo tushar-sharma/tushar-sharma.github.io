@@ -13,6 +13,12 @@
   ratings: 5
   comments: "Made by Quantic Dream. This is a masterpiece of an interactive story. Never a dull moment in the game. Download it from <a href='/blog/download-detroit-become-Human'>here <i class='fas fa-download'></i></a>."
 
+
+- title: "Beyond Two Souls"
+  comments: "Made by Quantic Dream. You play as a little girl and her spirit. Choices affect the story."
+  ratings: 4
+  steam_deck: yes
+
 - title: "Guardian of the Galaxy"
   platform: "steam deck"
   ratings: 5
@@ -72,3 +78,90 @@
   ratings: 5
   platform: "steam deck"
   comments: "One of the best local coop games."
+
+- title: "GTA 4"
+  ratings: 4
+  comments: "This reminds me of driving in NYC. Great game though graphics are old"
+  platform: "steam deck"
+
+- title: "It takes two"
+  ratings: 4
+  comments: "It's a local split screen coop game. Graphics are nice and the story is good. You play as a couple who are going through divorce and they are turned into dolls. You need to work together to solve puzzles."
+  platform: "steam deck"
+
+- title: "Life is Strange Episode 1"
+  ratings: 4
+  links: "https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/"
+  comments: "Free Game. You can reverse time."
+  platform: "steam deck"
+
+- title: "Max Payne II"
+  ratings: 4
+  platform: "PC"
+  comments: "Favourite game in the series. You play as both Max and Mona. The slow motion gunplay is the most fun part of the game."
+
+- title: "Papers, Please"
+  comments: "You play as an immigration officer who has to check passport of visitors into a fictional country of Arstotzka. The game is an example of empathy game as your choices affect the lives of people."
+  ratings: 5
+  platform: "steam deck"
+
+- title: "The Curse of Monkey Island"
+  comments: "Point and click puzzle game with great humor."
+  ratings: 4
+  platform: "PC" 
+
+- title: "The Walking Dead Season 1"
+  comments: 3
+  comments: "Gameplay was okish and it's too short"
+
+- title: "Undertale"
+  comments: "Great Indie game. Graphics are minimal but story and humor is great."
+  ratings: 5
+  platform: "steam deck"
+
+- title: "Wreckfest"
+  ratings: 4
+  comments: "Fun wrecking racing game. You can race like a sofa or a lawnmower."
+  platform: "steam deck"
+
+- title: "The Witcher 3"
+  ratings: 5
+  comments : "Great RPG game. Graphics are great with amazing story and open world"
+  platform: "steam deck"
+
+- title: "Sayonara Wild Hearts"
+  ratings: 3
+  comments: "It's a rhythm game with great soundtrack. However, gameplay is interesting but it's too short"
+  platform: "steam deck"
+
+- title: "NFS Heat"
+  ratings: 4
+  platform: "steam deck"
+  comments: "Drifting is the most fun part of the game. It has both day and night mode. However, game requires you to be online everytime you play it if you purchased it form Steam"
+
+
+- title: "Hotline Miami"
+  ratings: 5
+  platform: "steam deck"
+  comments: "Fun top down shooter game. The soundtrack is amazing. I binged played it."
+
+
+- title: "Heavy Rain"
+  comments: "Made by Quantic Dream. It's intense interactive game. Difficult QTE for important choices. Some controll requires shaking the controller which was both awkward and tiring"
+  ratings: 3
+  platform: "steam deck"
+
+- title: "Fable III"
+  ratings: 4
+  comments: "Best RPG game I played growing up. Good or bad choices affect the story. You can even marry and buy a house while still slaying monsters on the side."
+  platform: "PC"
+
+- title: "Blur"
+  comments: "Best racing game where you have power to blast off other cars. There is a split screen to play local coop."
+  ratings: 5
+  platform: "steam deck"
+
+- title: "Anger Foot"
+  ratings: 4
+  comments: "Fun kicking game with your mighty feet. Sountrack is also cool. You are a Hulk with angry feet."
+  platform: "steam deck"
