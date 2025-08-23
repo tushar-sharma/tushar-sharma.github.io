@@ -1,0 +1,285 @@
+- title: "Modern Family"
+  ratings: 5
+  platform: "Hulu"
+  comments: "A hilarious and heartwarming sitcom that follows three very different families. The first is a traditional couple with three kids, the second is a gay couple raising an adopted Vietnamese daughter, and the third is an older man with his lively Colombian wife and young son. The writing is witty, sharp, and consistently funny."
+
+- title: "Panchayat"
+  ratings: 4
+  platform: "Amazon Prime"
+  comments: "A comedy-drama about an engineering graduate who, unable to find a corporate job, reluctantly takes a government posting as a secretary in a remote village. It captures the humor and struggles of rural life with simple story."
+
+- title: "Death Note"
+  ratings: 5
+  platform: "Netflix"
+  comments: "A gripping anime where a Shinigami drops a Death Note into the human world. Light discovers it and begins using it to eliminate criminals, sparking a high-stakes battle of wits with his brilliant rival, L. A dark, suspenseful story that’s both thrilling and addictive—I binge-watched it in one go."
+
+- title: "Ne Zha 2"
+  ratings: 0
+  platform: "Theatre"
+  comments: "TODO"
+
+- title: "From the World of John Wick: Ballerina"
+  ratings: 4
+  platform: "Theatre"
+  comments: "I love John Wick movies. The cinematography is great and beautiful. John Wick makes a cameo appearance in the movie."
+
+- title: "Maa (2025)"
+  ratings: 4
+  platform: "Theatre"
+  comments: "Acting by Kajol is superb. The story is gripping. Though the graphics reminds me of Dark King from Game of Thrones."
+
+- title: "Breaking Bad"
+  ratings: 5
+  platform: "Netflix"
+  comments: "The gripping story of a high school chemistry teacher who becomes a meth kingpin. Brilliant writing with a unique chemistry twist."
+
+- title: "Friends"
+  ratings: 5
+  platform: "Netflix"
+  comments: "A timeless sitcom about six friends in New York. Funny, heartwarming, and endlessly rewatchable."
+
+- title: "Kaala Paani"
+  ratings: 4
+  platform: "Netflix"
+  comments: "A gripping drama set in the Andaman Islands. Strong storytelling, though unfortunately season 2 was cancelled."
+
+- title: "Serious Men"
+  ratings: 4
+  platform: "Netflix"
+  comments: "An underrated film with a sharp story and a strong social message."
+
+- title: "Narcos"
+  ratings: 5
+  platform: "Netflix"
+  comments: "Based on the life of Pablo Escobar, the king of cocaine. The soundtrack is fantastic and the storytelling keeps you hooked."
+
+- title: "Misanga"
+  ratings: 5
+  platform: "Netflix"
+  comments: "A Korean drama with a powerful story of perseverance, love, and betrayal. Strong soundtrack adds to the emotional impact."
+
+- title: "Squid Game Season 1"
+  ratings: 5
+  platform: "Netflix"
+  comments: "A groundbreaking Korean survival drama. Intense, emotional, and one of the most memorable shows I’ve seen."
+
+- title: "Squid Game Seasons 2 & 3"
+  ratings: 3
+  platform: "Netflix"
+  comments: "Disappointing follow-ups. The story lacks the impact and originality of season 1."
+
+- title: "Lie to Me"
+  ratings: 5
+  platform: "Hulu"
+  comments: "A fascinating crime drama about a deception expert who solves cases by reading micro-expressions. Smart and engaging."
+
+- title: "TVF Pitchers Season 1"
+  ratings: 5
+  platform: "YouTube"
+  comments: "A brilliant Indian series about startup founders. Inspiring and funny, with great writing."
+
+- title: "Ozark"
+  ratings: 4
+  platform: "Netflix"
+  comments: "A financial advisor is forced into money laundering for a cartel. Dark, suspenseful, and filled with twists."
+
+- title: "Guardians of the Galaxy"
+  ratings: 3
+  platform: "Online"
+  comments: "A fun Marvel adventure with Star-Lord and his team. Entertaining, but the story feels predictable."
+
+- title: "A Minecraft Movie (2025)"
+  ratings: 1
+  platform: "Theatre"
+  comments: "Decent for kids, but the story is dull and unengaging."
+
+- title: "Avatar: The Way of Water"
+  ratings: 3
+  platform: "Theatre"
+  comments: "Visually stunning with breathtaking graphics, but feels like watching an aquarium. The ending is predictable and it lacks the magic of the first film."
+
+- title: "Avatar"
+  ratings: 5
+  platform: "Online"
+  comments: "A groundbreaking film with the beautiful world of Pandora. Strong concept and gorgeous visuals make it unforgettable."
+
+- title: "The Big Short"
+  ratings: 5
+  platform: "Online"
+  comments: "A sharp and entertaining take on the 2008 financial crisis. Brilliant storytelling that makes complex finance both accessible and gripping."
+
+
+- title: "Extraordinary Attorney Woo"
+  ratings: 5
+  platform: "Netflix"
+  comments: "A heartwarming Korean drama about a brilliant lawyer with autism. Uplifting, emotional, and full of charm."
+
+- title: "Roadies Season 20"
+  ratings: 3
+  platform: "YouTube"
+  comments: "Watched the show as it was debut of Elvish. Stunts were okay and not high budget"
+
+- title: "Khatron Ke Khiladi 14"
+  ratings: 4
+  platform: "YouTube"
+  comments: "Krishna Shroff made a debut. The stunts were good."
+
+- title: "Big Boss Season 5"
+  ratings: 2
+  platform: "YouTube"
+  comments: "Watched only because Sunny Leone was a contestant. The show is torture otherwise"
+
+- title: "Office Office"
+  ratings: 4
+  platform: "YouTube"
+  comments: "A classic Hindi sitcom satirizing government bureaucracy. Simple yet timeless comedy."
+
+- title: "Flop Show"
+  ratings: 4
+  platform: "YouTube"
+  comments: "A cult comedy by Jaspal Bhatti. Raw, witty, and still hilarious after all these years."
+
+- title: "The Good Place"
+  ratings: 4
+  platform: "Netflix"
+  comments: "A clever comedy about the afterlife with philosophical undertones. Funny and thought-provoking."
+
+- title: "Misaeng: Incomplete Life"
+  ratings: 4
+  platform: "Netflix"
+  comments: "A realistic Korean drama about corporate struggles and life in the office. Relatable and moving."
+
+- title: "The Sound of Your Heart"
+  ratings: 3
+  platform: "Netflix"
+  comments: "A goofy Korean sitcom with over-the-top humor. Fun but hit-or-miss."
+
+- title: "Mind Your Language"
+  ratings: 4
+  platform: "YouTube"
+  comments: "A classic British comedy about adult students learning English. Lighthearted and nostalgic."
+
+- title: "The Family Man - Season 1"
+  ratings: 4
+  platform: "Amazon Prime"
+  comments: "A gripping Indian action-drama about a secret agent balancing national duty and family life."
+
+- title: "Scam 1992: The Harshad Mehta Story"
+  ratings: 4
+  platform: "SonyLIV"
+  comments: "An excellent retelling of the Harshad Mehta scam. Strong performances and a brilliant soundtrack."
+
+- title: "Game of Thrones"
+  ratings: 5
+  platform: "HBO"
+  comments: "An epic fantasy series with politics, betrayal, and battles for power. Gripping from start to finish (at least the early seasons)."
+
+- title: "Mob Psycho 100"
+  ratings: 4
+  platform: "Online"
+  comments: "A funny and action-packed anime about a boy with psychic powers. Great mix of comedy and heart."
+
+- title: "Kiki's Delivery Service"
+  ratings: 5
+  platform: "Online"
+  comments: "A beautiful Studio Ghibli film about a young witch finding her way in the world. Wholesome and enchanting."
+
+- title: "The Irishman"
+  ratings: 3
+  platform: "Online"
+  comments: "A long Scorsese crime drama with stellar acting, but it drags and feels overly stretched."
+
+- title: "Castle in the Sky"
+  ratings: 5
+  platform: "Online"
+  comments: "A magical Studio Ghibli classic. Strong opening, a slower middle, but a fantastic ending with a beautiful closing song."
+
+- title: "Train to Busan"
+  ratings: 4
+  platform: "Online"
+  comments: "A thrilling Korean zombie film. Intense, emotional, and brilliantly executed."
+
+- title: "Taare Zameen Par"
+  ratings: 5
+  platform: "Online"
+  comments: "A touching Indian drama about a dyslexic child and his teacher. Emotional and inspiring."
+
+- title: "A Beautiful Mind"
+  ratings: 5
+  platform: "Online"
+  comments: "A powerful biopic about John Nash. Emotional and inspiring."
+
+- title: "A Chinese Odyssey Part 1"
+  ratings: 4
+  platform: "Online"
+  comments: "A classic Stephen Chow fantasy-comedy. Whimsical and fun, though a bit chaotic."
+
+- title: "RRR"
+  ratings: 3
+  platform: "Online"
+  comments: "An over-the-top action epic. Fun in parts, but exaggerated and exhausting."
+
+- title: "I Lost My Body"
+  ratings: 4
+  platform: "Netflix"
+  comments: "A French animated film with a unique premise. Beautiful and touching."
+
+- title: "A Chinese Odyssey Part 2"
+  ratings: 3
+  platform: "Online"
+  comments: "A continuation of the first part. Okish though not as good as the first."
+
+- title: "A Taxi Driver"
+  ratings: 5
+  platform: "Online"
+  comments: "A brilliant Korean film based on true events where journalist and a taxi driver cover the Gwangju Uprising. Emotional and powerful."
+
+- title: "Oppenheimer"
+  ratings: 4
+  platform: "Theatre"
+  comments: "A political-heavy biopic about J. Robert Oppenheimer. Less about science, more about Oppenheimer's personal and political struggles. Didn't do justice to the nuclear bomb tragedy."
+
+- title: "Barefoot Gen"
+  ratings: 5
+  platform: "Online"
+  comments: "A harrowing anime about the aftermath of the Hiroshima bombing. Better than Oppenheimer movie"
+
+- title: "Aligarh"
+  ratings: 5
+  platform: "Online"
+  comments: "A moving film based on a real story where a professor was suspended because he was homosexual. This was before homosexuality was decriminalized in India."
+
+- title: "The Pursuit of Happyness"
+  ratings: 5
+  platform: "Online"
+  comments: "A great movie based on a true story. Will Smith's acting is superb. It's an ultimately inspirational film."
+
+- title: "Ankhon Dekhi"
+  ratings: 5
+  platform: "Online"
+  comments: "A thought-provoking Indian indie film. Philosophical, warm, and beautifully acted."
+
+- title: "Arrival"
+  ratings: 5
+  platform: "Online"
+  comments: "A stunning sci-fi film about communication and time. Intelligent and emotional."
+
+- title: "Bheja Fry"
+  ratings: 4
+  platform: "Online"
+  comments: "A hilarious Indian comedy of errors with Sanjay Mishra stealing the show."
+
+- title: "Blade Runner 2049"
+  ratings: 5
+  platform: "Online"
+  comments: "A visually breathtaking sci-fi film with Ryan Gosling. Slow but rewarding and profound."
+
+- title: "Bol"
+  ratings: 4
+  platform: "Online"
+  comments: "A powerful Pakistani film tackling social issues. Bold and emotional."
+
+- title: "Django Unchained"
+  ratings: 5
+  platform: "Online"
+  comments: "A Quentin Tarantino movie that's amazoing. The soundtrack is spot on and movie is great"

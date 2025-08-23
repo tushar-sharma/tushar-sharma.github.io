@@ -1,0 +1,100 @@
+---
+layout: default
+title: Watchlist
+published: true
+summary: Movies and TV shows I've watched and reviewed.
+author: Tushar Sharma
+---
+
+<link rel="stylesheet" href="{{ root_url }}/css/games.css" />
+<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
+<link rel="stylesheet" type="text/css" href="{{ root_url }}/css/jquery.dataTables.min.css" />
+<script
+    type="text/javascript"
+    charset="utf8"
+    src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"
+    integrity="sha384-cjmdOgDzOE22dUheI5E6Gzd3upfmReW8N1y/4jwKQE50KYcvFKZJA9JxWgQOzqwQ"
+    crossorigin="anonymous">
+</script>
+<script src="{{ root_url }}/js/custom-datatable-init.js"></script>
+
+<!-- dummy box begins -->
+<div style="padding-bottom:60px; padding-top:20px; background : white;">
+</div>
+
+<!-- heading -->
+<h1 class="entry-title">Watchlist</h1>
+
+  <table id="dtMaterial" class="table table-striped" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th class="th-sm">Title</th>
+        <th class="th-sm">Rating</th>
+        <th class="th-sm">Platform</th>
+        <th class="th-sm">Comments</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      {% for item in site.data.watchlist %}
+      <tr>
+        <td>
+          {% if item.links %}
+            <a href="{{ item.links }}" target="_blank">{{ item.title }}</a>
+          {% else %}
+             {{ item.title }}
+          {% endif %}
+        </td>
+        <td>
+          <div class="cl">
+                 <!-- full stars -->
+                {% assign full_stars = item.ratings | floor %}
+                {% for i in (1..full_stars) %}
+                  <span class="fa fa-star checked"></span>
+                {% endfor %}
+    
+                 <!-- half stars -->
+                 {% assign has_half_star = item.ratings | modulo: 1 %}
+                 {% if has_half_star > 0 %}
+                   <i class="fas fa-star-half-alt"></i>
+                  {% assign empty_stars = 5 | minus: full_stars | minus: 1 %}
+                 {% else %}
+                   {% assign empty_stars = 5 | minus: full_stars %}
+                 {% endif %}
+                
+                <!-- Empty stars -->
+                {% for i in (1..empty_stars) %}
+                  <span class="icon-star-empty"></span>
+                {% endfor %}
+          </div>
+        </td>
+        <td>
+          {{ item.platform }}
+        </td>
+        <td>{{ item.comments }}</td>
+      </tr>
+      </tr>
+      {% endfor %}
+    </tbody>
+    
+    <tfoot>
+    </tfoot>
+  </table>
+  
+
+<br><br>
+<!-- disclaimer -->
+  <div class="disclaimer" style="text-align: center;">
+    <p><strong>Rating Legend:</strong></p>
+    <p><span class="fa fa-star checked"></span>Torture</p>
+    <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>Meh</p>
+    <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>One time watch</p>
+    <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> - Highly recommended</p>
+    <p><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>Watch before you die
+<div style="border:none;" id="Pagination" class="pagination"></div>
+
+<script>
+  $(document).ready(function () {
+    customDataTableInit("#dtMaterial");
+  });
+</script>
