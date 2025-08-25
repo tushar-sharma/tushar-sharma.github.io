@@ -1,88 +1,74 @@
 - title: "Alan Wake2"
-  platform: "steam deck"
   ratings: 4
   comments: "Graphic card must support mesh shaders. Graphics are amazing. Scare factor is high. Combat is clumsy. You can enable, One Shot Mode, in the settings to make combat easier. Wandering in dark is tedious."
 
 - title: "Alpaca Stacka"
-  platform: "steam deck"
-  ratings: 4
-  comments: ""
+  download: "<a href='https://store.steampowered.com/app/1655140/Alpaca_Stacka/' target='_blank' aria-label='Free to Play'><i class='fas fa-download'></i> Steam</a>"
+  ratings: 3
+  comments: "It's a cute short little fetch quest. Gameplay is simple where you play as an alpaca, Paz, tasked with collecting five lost chicks for their mother, Mama Hen"
 
 - title: "Detroit: Become Human"
-  platform: "steam deck"
+  download: "<a href='https://randomwits.com/blog/download-detroit-become-Human' aria-label='Download Detroit: Become Human' style='color:#007bff; font-weight:bold;'><i class='fas fa-download'></i> 🤖</a>"
   ratings: 5
-  comments: "Made by Quantic Dream. This is a masterpiece of an interactive story. Never a dull moment in the game. Download it from <a href='/blog/download-detroit-become-Human'>here <i class='fas fa-download'></i></a>."
-
+  comments: "Made by Quantic Dream. This is a masterpiece of an interactive story. Never a dull moment in the game."
 
 - title: "Beyond Two Souls"
   comments: "Made by Quantic Dream. You play as a little girl and her spirit. Choices affect the story."
   ratings: 4
-  steam_deck: yes
 
 - title: "Guardian of the Galaxy"
-  platform: "steam deck"
   ratings: 5
   comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot."
 
 - title: "Hades"
-  platform: "steam deck"
   ratings: 4
   comments: "It's a good rogue-like game. The combat rooms are procedurally generated. You get more powerful after you die. You can enable god mode which just increases your damage resistance by 2 percent every time you die till 80%."
 
 - title: "Rayman Legends"
-  platform: "steam deck"
   ratings: 5
   comments: "One of the best platformers ever made. Fantastic background music and smooth, fun gameplay. Note: Ubisoft launcher requires you to be online to start the game. The `Challenge mode` is no longer available on Steam due to Ubisoft server shutdown ([details](https://www.ubisoft.com/en-us/help/purchases-and-rewards/article/decommissioning-of-online-services-for-older-legacy-ubisoft-games-n-to-z/000105855))."
 
 - title: "Sunset Overdrive"
-  platform: "steam deck"
   ratings: 5
   comments: "Cons: Corrupt file message pops up everytime you start the game. The game is goofy and fun. You can even shoot a dog at enemies."
 
 - title: "Super Mario Odyssey"
-  platform: "steam deck"
+  download: "<a href='/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator' aria-label='Download Super Mario Odyssey' style='color:#007bff; font-weight:bold;'><i class='fas fa-download'></i> 🍄</a>"
   ratings: 5
-  comments: "You need yuzu emulator to play this on steam deck or PC. It supports multiplayer where 2nd player can control the hat. Download the game from <a href='/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator'>here <i class='fas fa-download'></i></a>."
+  comments: "You need yuzu emulator to play this on steam deck or PC. It supports multiplayer where 2nd player can control the hat."
 
 - title: "Tomb Raider 2013"
-  platform: "steam deck"
   ratings: 5
   comments: "Developed by Crystal Dynamics. This is the first game in the rebooted Tomb Raider series. The gameplay and story is amazing."
 
 - title: "The Were Cleaner"
-  platform: "steam deck"
+  download: "<a href='https://store.steampowered.com/app/2795000/The_WereCleaner/' target='_blank' aria-label='Download The Were Cleaner'><i class='fas fa-download'></i> Steam</a>"
   ratings: 5
-  comments: "Free to play short, cozy game. You play as a werewolf who works as janitor to pay his rent."
+  comments: "It's a cute game where you play as janitor who is also a warewolf who needs to pay his rent."
 
 - title: "Firewatch"
-  platform: "PC"
   ratings: 4
   comments: "Walking sim. Humor is great"
 
 - title: "My Friend Pedro"
   ratings: 5
-  platform: "steam deck"
   comments: "It's a total blast – it's like doing backflips while dual-wielding pistols, all with a talking banana as your guide. It's like Max Payne style slow motion shooting game."
 
 - title: "Limbo"
   ratings: 5
-  platform: "steam deck"
   comments: "It's a dark, puzzle game in a dystopian world. You play as a small child navigating eerie environments filled with deadly traps."
 
 - title: "Inside"
   ratings: 5
-  platform: "steam deck"
   comments: "It's both cute and dystopian, with clever puzzles. The unsettling moments will stick with you long after you finish. The graphics are gorgeous, and the gameplay feels smooth and immersive. If you love puzzles wrapped in a dark, haunting atmosphere, this game is definitely for you! "
 
 - title: "Boomerang Fu"
   ratings: 5
-  platform: "steam deck"
   comments: "One of the best local coop games."
 
 - title: "GTA 4"
   ratings: 4
   comments: "This reminds me of driving in NYC. Great game though graphics are old"
-  platform: "steam deck"
 
 - title: "It takes two"
   ratings: 4
@@ -91,24 +77,21 @@
 
 - title: "Life is Strange Episode 1"
   ratings: 4
-  links: "https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/"
-  comments: "Free Game. You can reverse time."
+  download: "<a href='https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/' target='_blank' aria-label='Download Life is Strange Episode 1'><i class='fas fa-download'></i> Steam</a>"
+  comments: "It's a interactive story game. I like the concept of reversing time."
   platform: "steam deck"
 
 - title: "Max Payne II"
   ratings: 4
-  platform: "PC"
   comments: "Favourite game in the series. You play as both Max and Mona. The slow motion gunplay is the most fun part of the game."
 
 - title: "Papers, Please"
   comments: "You play as an immigration officer who has to check passport of visitors into a fictional country of Arstotzka. The game is an example of empathy game as your choices affect the lives of people."
   ratings: 5
-  platform: "steam deck"
 
 - title: "The Curse of Monkey Island"
   comments: "Point and click puzzle game with great humor."
   ratings: 4
-  platform: "PC" 
 
 - title: "The Walking Dead Season 1"
   ratings: 3
@@ -117,51 +100,41 @@
 - title: "Undertale"
   comments: "Great Indie game. Graphics are minimal but story and humor is great."
   ratings: 5
-  platform: "steam deck"
 
 - title: "Wreckfest"
   ratings: 4
   comments: "Fun wrecking racing game. You can race like a sofa or a lawnmower."
-  platform: "steam deck"
 
 - title: "The Witcher 3"
   ratings: 5
   comments : "Great RPG game. Graphics are great with amazing story and open world"
-  platform: "steam deck"
 
 - title: "Sayonara Wild Hearts"
   ratings: 3
   comments: "It's a rhythm game with great soundtrack. However, gameplay is interesting but it's too short"
-  platform: "steam deck"
 
 - title: "NFS Heat"
   ratings: 4
-  platform: "steam deck"
   comments: "Drifting is the most fun part of the game. It has both day and night mode. However, game requires you to be online everytime you play it if you purchased it form Steam"
 
 
 - title: "Hotline Miami"
   ratings: 5
-  platform: "steam deck"
   comments: "Fun top down shooter game. The soundtrack is amazing. I binged played it."
 
 
 - title: "Heavy Rain"
   comments: "Made by Quantic Dream. It's intense interactive game. Difficult QTE for important choices. Some controll requires shaking the controller which was both awkward and tiring"
   ratings: 4
-  platform: "steam deck"
 
 - title: "Fable III"
   ratings: 4
   comments: "Best RPG game I played growing up. Good or bad choices affect the story. You can even marry and buy a house while still slaying monsters on the side."
-  platform: "PC"
 
 - title: "Blur"
   comments: "Best racing game where you have power to blast off other cars. There is a split screen to play local coop."
   ratings: 5
-  platform: "steam deck"
 
 - title: "Anger Foot"
   ratings: 4
   comments: "Fun kicking game with your mighty feet. Sountrack is also cool. You are a Hulk with angry feet."
-  platform: "steam deck"

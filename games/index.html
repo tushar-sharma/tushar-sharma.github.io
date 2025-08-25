@@ -25,12 +25,28 @@ author: Tushar Sharma
 <!-- heading -->
 <h1 class="entry-title">Game Reviews</h1>
 
+<!-- highlight box for requests -->
+<div style="background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%); color: #fff; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); padding: 24px 20px; margin-bottom: 32px; font-size: 1.15em; font-weight: 500; text-align: center;">
+  <span style="font-size:1.4em; font-weight:700; letter-spacing:1px;">
+    🎮 Want to download a specific game for free?
+  </span>
+  <br><br>
+  <span>
+    Drop me a 
+    <a href="{{ root_url }}/contact" aria-label="Request a specific game" style="color: #ffe066; font-weight: bold; text-decoration: underline;">
+      message
+      <i class="fas fa-chevron-right"></i>
+    </a>
+    and let me know!
+  </span>
+</div>
+
   <table id="dtMaterial" class="table table-striped" cellspacing="0" width="100%">
     <thead>
       <tr>
         <th class="th-sm">Title</th>
         <th class="th-sm">Rating</th>
-        <th class="th-sm">Platform</th>
+        <th class="th-sm">Download</th>
         <th class="th-sm">Comments</th>
       </tr>
     </thead>
@@ -69,7 +85,7 @@ author: Tushar Sharma
           </div>
         </td>
         <td>
-          {{ game.platform }}
+          {{ game.download }}
         </td>
         <td>{{ game.comments }}</td>
       </tr>
