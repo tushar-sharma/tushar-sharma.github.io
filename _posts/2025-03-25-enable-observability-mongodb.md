@@ -62,7 +62,7 @@ file: CustomMongoReactiveAutoConfiguration.java
 
 **Key Components**:
 
-- **@AutoConfigureAfter:** Ensures proper configuration ordering
+- **AutoConfigureAfter:** Ensures proper configuration ordering
 
 - **MongoClientSettingsBuilderCustomizer:** Injects observability instrumentation
 
