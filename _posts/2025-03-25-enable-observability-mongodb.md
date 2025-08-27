@@ -80,5 +80,3 @@ id: 012eda6dae0f2bbcaa188b7e0f5f94d2
 file: CustomMongoReactiveAutoConfigurationIntegrationTest.java
 ---
 {% endtemplate %}
-
-```
