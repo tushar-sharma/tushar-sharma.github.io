@@ -43,13 +43,14 @@ In reactive MongoDB applications, observability becomes crucial due to:
 Let’s create an **autoconfigure** class that will be loaded automatically when the dependency is added in `build.gradle`:
 
 
-```gradle
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
-}
-```
+{% template  customCode.html %}
+---
+id: 012eda6dae0f2bbcaa188b7e0f5f94d2
+file: build.gradle
+---
+{% endtemplate %}
 
-Make sure to register this class in `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports` for Spring Boot to pick it up automatically.
+Make sure to register this class in **META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports** for Spring Boot to pick it up automatically.
 <br>
 
 
