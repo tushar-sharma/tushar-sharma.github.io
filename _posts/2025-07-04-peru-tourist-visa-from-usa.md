@@ -51,6 +51,12 @@ Peru consulate expects a **negative criminal report**. You need to request for F
 
 4. **Original Passport:** Submit your original passport.
 
+## Peru Visa
+
+Finally got **Peru visa** stamped on my passport.
+
+<img align="center" loading="lazy" src="https://raw.githubusercontent.com/tushar-sharma/imgs/main/online/peru_visa.png" />
+
 ## References
 
 [^Peru]: [https://www.gob.pe/](https://www.gob.pe/institucion/rree/informes-publicaciones/279522-convenios-de-visas-para-ciudadanos-extranjeros)
