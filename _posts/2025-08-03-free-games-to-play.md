@@ -27,6 +27,7 @@ Curated list of free games to play.
 | BABBDI | [Steam](https://store.steampowered.com/app/2240530/BABBDI/) | |
 | Indigo Park: Chapter 1 | [Steam](https://store.steampowered.com/app/2504480/Indigo_Park_Chapter_1/) | Atmospheric horror adventure, first chapter is free. |
 | Rental  | [Steam](https://store.steampowered.com/app/2796550/Rental/) | | 
+| How fish is made | [Steam](https://store.steampowered.com/app/1854430/How_Fish_Is_Made/) | Simple gameplay where you propel a fish with eerie background music. |
 | The Supper | [Steam](https://store.steampowered.com/app/1171370/The_Supper/) |  |
 | Super Animal Royale | [Steam](https://store.steampowered.com/app/843380/Super_Animal_Royale/) | |
 | Zardy's Maze | [Steam](https://store.steampowered.com/app/1484800/Zardys_Maze/) | |
