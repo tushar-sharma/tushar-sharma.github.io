@@ -32,7 +32,6 @@ Curated list of free games to play.
 | Zardy's Maze | [Steam](https://store.steampowered.com/app/1484800/Zardys_Maze/) | |
 | Supermarket Together | [Steam](https://store.steampowered.com/app/2709570/Supermarket_Together/) | |
 | Break a Leg | [Steam](https://store.steampowered.com/app/3022110/Break_a_Leg/) | |
-| Beat Around The Bush | [Steam](https://store.steampowered.com/app/3099730/Beat_Around_The_Bush/) | |
 | Swallow the Sea | [Steam](https://store.steampowered.com/app/1511860/Swallow_the_Sea/) | |
 | Perfect Vermin | [Steam](https://store.steampowered.com/app/1416130/Perfect_Vermin/) | |
 | Leaf Blower Revolution - Idle Game | [Steam](https://store.steampowered.com/app/1468260/Leaf_Blower_Revolution__Idle_Game/) | |
