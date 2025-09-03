@@ -19,6 +19,10 @@ Anecdotal Travel Tips for Smart Flying.
 
 Check in 24 hours before your flight to avoid overbooking risks and secure preferred seating. Many airlines allocate unclaimed seats to standby passengers just before departure, so early check-in ensures your spot.
 
+## Check if you need visa? 
+
+[traveldoc.aero](https://www.traveldoc.aero/) allows you to check if you need visa for your destination. It also helps to check if you need transit visa.
+
 ## Ear pain
 
 I have started getting ear pain recently. Mostly it's during take off and landing. Few things have helped me alleviate the pain 
