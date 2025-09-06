@@ -50,11 +50,11 @@ They asked me to try troubleshooting steps, like getting into BIOS mode and maki
 
 <ul class="chatlist ">
 <li class="shared received">
-Hello,
+Hello,<br>
 
-Thanks for the prompt response and confirming. 
+Thanks for the prompt response and confirming. <br>
 
-Based on the information you have provided, we believe it is unlikely that the current issue reflects a problem with this device as it was delivered to you. It may instead be related to your particular use of the product. Regardless, we would like to offer complimentary service as a gesture of goodwill. This will not affect your remaining warranty coverage, but downtime related to the RMA process will be considered when evaluating future warranty claims. Please note that if you encounter additional issues in the future, we may request an opportunity to evaluate the device before deciding how to proceed.
+Based on the information you have provided, we believe it is unlikely that the current issue reflects a problem with this device as it was delivered to you. It may instead be related to your particular use of the product. Regardless, we would like to offer complimentary service as a gesture of goodwill. This will not affect your remaining warranty coverage, but downtime related to the RMA process will be considered when evaluating future warranty claims. Please note that if you encounter additional issues in the future, we may request an opportunity to evaluate the device before deciding how to proceed.<br>
 
 Steam will send you an email containing two documents - an RMA instruction sheet and a pre-paid shipping label. Please allow 24 hours for the email to be prepared and sent.
 
@@ -72,7 +72,7 @@ Use the instructions below to prepare your return. Please review our return pack
         Steam Deck with serial number FYZZ43402EF6, placed inside original carrying case.
         You should only include your PSU if you are returning your device for a charging issue. Otherwise, please keep it with you.
 
-Failure to follow these instructions may cause processing delays. You may be asked to pay any additional shipping costs if we require additional items from you to consider your return complete.
+Failure to follow these instructions may cause processing delays. You may be asked to pay any additional shipping costs if we require additional items from you to consider your return complete.<br>
 
 Steam Support
 Pacs 
@@ -94,4 +94,17 @@ Here’s an article on how to [pack your Steam Deck](https://help.steampowered.c
 
 ## Step 4: Conclusion 
 
-At the time of writing, my Steam Deck is still with Steam for repair. I'll update this post once I receive any further updates or the device is returned.
+Finally, you should get an email from **Steam Support**
+
+<ul class="chatlist ">
+<li class="shared received">
+Hello tshrocks2306<br>
+
+We're preparing your items to ship.<br>
+
+Tracking information has been created and is attached below.<br>
+ 	
+Cheers,
+The Steam Team 
+</li>
+</ul>
