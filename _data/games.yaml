@@ -44,7 +44,7 @@
 - title: "The Were Cleaner"
   download: "<a href='https://store.steampowered.com/app/2795000/The_WereCleaner/' target='_blank' aria-label='Download The Were Cleaner'><i class='fas fa-download'></i> Steam</a>"
   ratings: 5
-  comments: "It's a cute game where you play as janitor who is also a warewolf who needs to pay his rent."
+  comments: "Free to play. It's a cute game where you play as janitor who is also a warewolf who needs to pay his rent."
 
 - title: "Firewatch"
   ratings: 4
@@ -132,7 +132,7 @@
   comments: "Best RPG game I played growing up. Good or bad choices affect the story. You can even marry and buy a house while still slaying monsters on the side."
 
 - title: "Blur"
-  comments: "Best racing game where you have power to blast off other cars. There is a split screen to play local coop."
+  comments: "One of the best racing game where you have power to blast off other cars. Supports a split screen to play local coop. Cons: Drift is not that great."
   ratings: 5
 
 - title: "Anger Foot"
@@ -141,9 +141,12 @@
 
 - title: "How Fish Is Made"
   ratings: 2
-  comments: "Simple gameplay where you propel a fish with eerie background music."
+  comments: "Free to play. Simple gameplay where you propel a fish with eerie background music."
 
 - title: "Alice: Madness Returns"
   ratings: 3 
-  comments: "Visually Interesting game with nice story. Gameplay could have been more fluid."
+  comments: "Colorful platform game. Puzzles are okish. Inspired by Alice in Wonderland."
 
+- title: "Lonely Mountains: Downhill"
+  ratings: 5
+  comments: "Cozy game where you ride downhill amidst a soothing background noise."
