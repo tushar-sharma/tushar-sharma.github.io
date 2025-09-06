@@ -46,10 +46,6 @@
   ratings: 5
   comments: "Free to play. It's a cute game where you play as janitor who is also a warewolf who needs to pay his rent."
 
-- title: "Firewatch"
-  ratings: 4
-  comments: "Walking sim. Humor is great"
-
 - title: "My Friend Pedro"
   ratings: 5
   comments: "It's a total blast – it's like doing backflips while dual-wielding pistols, all with a talking banana as your guide. It's like Max Payne style slow motion shooting game."
@@ -64,11 +60,19 @@
 
 - title: "Boomerang Fu"
   ratings: 5
-  comments: "One of the best local coop games."
+  comments: "One of the best local co-op games. You play as cute food characters like milk cartons or avocados, slashing each other with boomerangs. Hilarious and great with friends."
 
 - title: "GTA 4"
   ratings: 4
-  comments: "This reminds me of driving in NYC. Great game though graphics are old"
+  comments: "Open-world action game set in Liberty City, a parody of NYC. Graphics feel dated now, but the story is gripping—following Niko Bellic, an immigrant trying to chase the American dream through crime and missions."
+
+- title: "The Curse of Monkey Island"
+  comments: "Classic point-and-click adventure with clever puzzles and great humor. I grew up learning English from its witty dialogues and memorable voice acting."
+  ratings: 4
+
+- title: "Firewatch"
+  ratings: 3
+  comments: "Walking sim. Humor is great. Most of the time you talk to your supervisor, Delilah, through the radio."
 
 - title: "It takes two"
   ratings: 4
@@ -88,10 +92,6 @@
 - title: "Papers, Please"
   comments: "You play as an immigration officer who has to check passport of visitors into a fictional country of Arstotzka. The game is an example of empathy game as your choices affect the lives of people."
   ratings: 5
-
-- title: "The Curse of Monkey Island"
-  comments: "Point and click puzzle game with great humor."
-  ratings: 4
 
 - title: "The Walking Dead Season 1"
   ratings: 3
@@ -117,11 +117,9 @@
   ratings: 4
   comments: "Drifting is the most fun part of the game. It has both day and night mode. However, game requires you to be online everytime you play it if you purchased it form Steam"
 
-
 - title: "Hotline Miami"
   ratings: 5
   comments: "Fun top down shooter game. The soundtrack is amazing. I binged played it."
-
 
 - title: "Heavy Rain"
   comments: "Made by Quantic Dream. It's intense interactive game. Difficult QTE for important choices. Some controll requires shaking the controller which was both awkward and tiring"
@@ -132,21 +130,21 @@
   comments: "Best RPG game I played growing up. Good or bad choices affect the story. You can even marry and buy a house while still slaying monsters on the side."
 
 - title: "Blur"
-  comments: "One of the best racing game where you have power to blast off other cars. Supports a split screen to play local coop. Cons: Drift is not that great."
+  comments: "One of the best arcade racing games. You can blast off other cars with power-ups. Supports split-screen for local co-op. Cons: drifting isn’t very satisfying. Tips: Press `B` to drift."
   ratings: 5
 
 - title: "Anger Foot"
   ratings: 4
-  comments: "Fun kicking game with your mighty feet. Sountrack is also cool. You are a Hulk with angry feet."
+  comments: "Fun first-person kicker game where your mighty feet smash everything. The soundtrack is cool and chaotic. You feel like a Hulk with angry feet."
 
 - title: "How Fish Is Made"
   ratings: 2
-  comments: "Free to play. Simple gameplay where you propel a fish with eerie background music."
+  comments: "Free to play. Short, eerie, and experimental. You propel a fish through unsettling environments with haunting background music."
 
 - title: "Alice: Madness Returns"
   ratings: 3 
-  comments: "Colorful platform game. Puzzles are okish. Inspired by Alice in Wonderland."
+  comments: "Gothic action-platformer inspired by Alice in Wonderland. The dark style and visuals are great, but puzzles feel repetitive. Tips: Press `LT + A` to open the umbrella. Press `LB` to shrink and reveal hidden hints."
 
 - title: "Lonely Mountains: Downhill"
   ratings: 5
-  comments: "Cozy game where you ride downhill amidst a soothing background noise."
+  comments: "A relaxing biking game where you ride downhill through beautiful, minimalistic landscapes with soothing ambient sounds."
