@@ -68,6 +68,12 @@ If you are getting error: **Could not lock database: Read-only file system**, ru
 sudo steamos-readonly disable
 ```
 
+remember to enable it after installing
+
+```bash
+sudo steamos-readonly enable
+```
+
 ## 🧩 Solution 2: Lutris (Flatpak) – Wine DLL Missing in Non-Steam Game
 
 If you're using **Lutris installed via Flatpak** and running into missing DLLs like `isskin.dll`, follow these steps:
@@ -119,6 +125,38 @@ file: ex5.sh
 
 Now that the correct DLL is available in the prefix, the game should launch without runtime errors.
 
+## 🧩 Solution 3: Use Nix
+
+Nix is both a package manager and a build system.
+
+Unlike pacman/apt, it installs everything into its own store (/nix/store) with exact versions and hashes.
+
+It does not overwrite system files → so it works perfectly with SteamOS (where the root partition is tiny & immutable).
+
+SteamOS 3.5+ even ships a /nix directory on the big /home partition, specifically to support it.
+
+Install it : 
+
+```bash
+sh <(curl -L https://nixos.org/nix/install) --daemon
+
+# This makes sure your shell picks up the Nix environment.
+sudo reboot 
+
+nix-env --version
+
+# Start the Nix daemon manually
+
+sudo systemctl start nix-daemon.service
+# enable it in next boot
+sudo systemctl enable nix-daemon.service
+
+#  install winetricks 
+
+nix-env -iA nixpkgs.winetricks
+nix-env -iA nixpkgs.wine
+WINEPREFIX=$HOME/.local/share/NonSteamGames/prefix winetricks vcrun6sp6
+```
 
 ## 🧪 Advanced Tip: Register a DLL Manually
 
