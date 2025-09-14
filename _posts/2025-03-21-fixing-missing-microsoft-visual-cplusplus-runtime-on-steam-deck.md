@@ -61,7 +61,12 @@ From the list, select your game:
 
 Accept all prompts and wait for confirmation.
 
+If you are getting error: **Could not lock database: Read-only file system**, run this command
 
+
+```bash
+sudo steamos-readonly disable
+```
 
 ## 🧩 Solution 2: Lutris (Flatpak) – Wine DLL Missing in Non-Steam Game
 
