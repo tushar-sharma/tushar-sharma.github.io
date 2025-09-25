@@ -129,10 +129,6 @@
   ratings: 4
   comments: "Best RPG game I played growing up. Good or bad choices affect the story. You can even marry and buy a house while still slaying monsters on the side."
 
-- title: "Blur"
-  comments: "One of the best arcade racing games. You can blast off other cars with power-ups. Supports split-screen for local co-op. Cons: drifting isn’t very satisfying. Tips: Press `B` to drift."
-  ratings: 5
-
 - title: "Anger Foot"
   ratings: 4
   comments: "Fun kicker game where you smash everything. The soundtrack is cool. You feel like a Hulk with angry feet."
@@ -144,10 +140,6 @@
 - title: "Alice: Madness Returns"
   ratings: 3 
   comments: "Gothic action-platformer inspired by Alice in Wonderland. The dark style and visuals are great, but puzzles feel repetitive. Tips: Press `LT + A` to open the umbrella. Press `LB` to shrink and reveal hidden hints."
-
-- title: "Lonely Mountains: Downhill"
-  ratings: 5
-  comments: "A relaxing biking game where you ride downhill through beautiful, minimalistic landscapes with soothing ambient sounds."
 
 - title: "Bomb Rush Cyberfunk"
   ratings: 4
@@ -162,5 +154,19 @@
   comments: "Fun racing game. You feel like a movie star as you perform stunts and race on everything from skis to jetpacks."
 
 - title: "Dredge"
-  ratings: 5 
-  comments: "Dredge starts as a tranquil fishing game but quickly evolves into an unnerving horror experience. The sailing and exploration are fantastic, all while a growing sense of dread builds with every catch."
+  ratings: 0
+  pending: true
+  progress: 100
+  comments: "Horror fishing game but also has a cozy sailing vibe. Use Passive Mode to make it more peaceful to navigate at night. In normal mode, sleep properly to avoid hallucinations and avoid venturing out at night to avoid scary encounters."
+
+- title: "Blur"
+  ratings: 0
+  pending: true
+  progress: 100
+  comments: "One of the best arcade racing games. You can blast off other cars with power-ups. Supports split-screen for local co-op. Cons: drifting isn’t very satisfying. Tips: Press `B` to drift."
+
+- title: "Lonely Mountains: Downhill"
+  ratings: 0
+  pending: true
+  progress: 100
+  comments: "A relaxing biking game where you ride downhill through beautiful, minimalistic landscapes with soothing ambient sounds."

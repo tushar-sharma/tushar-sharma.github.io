@@ -63,6 +63,12 @@ author: Tushar Sharma
         </td>
         <td>
           <div class="cl">
+            {% if game.pending %}
+            <!-- Progress bar for pending games -->
+            <div class="progress-outer">
+              <div class="progress-inner" style="width: {{ game.progress }}%;"></div> <!-- Add % to ensure it's treated as a percentage-->
+            </div>
+          {% else %}
                  <!-- full stars -->
                 {% assign full_stars = game.ratings | floor %}
                 {% for i in (1..full_stars) %}
@@ -82,6 +88,7 @@ author: Tushar Sharma
                 {% for i in (1..empty_stars) %}
                   <span class="icon-star-empty"></span>
                 {% endfor %}
+            {% endif %}
           </div>
         </td>
         <td>
