@@ -170,3 +170,9 @@
   pending: true
   progress: 100
   comments: "A relaxing biking game where you ride downhill through beautiful, minimalistic landscapes with soothing ambient sounds."
+
+- title: "Max Payne III"
+  ratings: 0
+  pending: true
+  progress: 100
+  comments: "Great sequel to Max Payne II. `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, `LS` (press) to crouch."
