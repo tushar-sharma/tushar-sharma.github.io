@@ -176,3 +176,9 @@
   pending: true
   progress: 100
   comments: "Set in São Paulo, Brazil. Lot of cutscenes. Great game but I liked Max Payne II more. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch."
+
+- title: "The Artful Escape"
+  ratings: 0
+  pending: true
+  progress: true
+  comments: "Change Layout to Keyboard(WASD) and mouse on Steam Deck. Press RS for clicking."
