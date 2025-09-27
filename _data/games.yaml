@@ -86,8 +86,8 @@
   platform: "steam deck"
 
 - title: "Max Payne II"
-  ratings: 4
-  comments: "Favourite game in the series. You play as both Max and Mona. The slow motion gunplay is the most fun part of the game."
+  ratings: 5
+  comments: "Favourite shooting game in the series. You play as Max most of the times but Mona is playable in few levels. You could slows down time during combat."
 
 - title: "Papers, Please"
   comments: "You play as an immigration officer who has to check passport of visitors into a fictional country of Arstotzka. The game is an example of empathy game as your choices affect the lives of people."
@@ -175,4 +175,4 @@
   ratings: 0
   pending: true
   progress: 100
-  comments: "Great sequel to Max Payne II, set in São Paulo, Brazil. Features many cinematic cutscenes. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch."
+  comments: "Set in São Paulo, Brazil. Lot of cutscenes. Great game but I liked Max Payne II more. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch."
