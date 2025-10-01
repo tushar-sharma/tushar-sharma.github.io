@@ -6,8 +6,8 @@ thumb: https://www.tourdom.ru/hotline/upload/medialibrary/510/510547bd6e6dcd193a
 author: Tushar Sharma
 category: Blog
 tags:
-- Flying
-- Travel
+- flying
+- travel
 ---
 
 Anecdotal Travel Tips for Smart Flying.<!-- truncate_here -->
