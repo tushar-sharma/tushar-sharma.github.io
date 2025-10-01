@@ -228,9 +228,11 @@
                 <ul class="unstyled list-hover-slide">
                   <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
                   <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
                   <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
                   <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
                   <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
                   <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
                   <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
                   <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
@@ -281,33 +283,6 @@
           <div class="pure-u-1-2">
             <div style="padding-right:10px; padding-left:10px;">
               <small style="float:right; margin-top:5px;"><strong></strong></small>
-              <a href="/untitled">
-                <h2>Getting Started with Redis: Concepts, Commands, and Monitoring</h2>
-              </a>
-              <div>
-                <div>
-                  <a href="/untitled">
-                    <img src="" class="thumb" width="800" height="437">
-                  </a>
-                </div>
-                ## Introduction
-                Redis is a in-memory NoSQL database mainly used for caching. It's a key-value store which means each unique keys map to a value which could be either a stirng, list, set, hash, blob, JSON or any other data. Each keys are unique and can be queried...
-              </div>
-              <br>
-              <p>
-                <a href="/untitled">
-                  <span>Continue reading →</span>
-                </a>
-                <span style="float:right;">
-                  <a class="mytag" href="/tag/redis">redis</a>
-                  <a class="mytag" href="/tag/nosql">nosql</a>
-                  <a class="mytag" href="/tag/database">database</a>
-                  <a class="mytag" href="/tag/python">python</a>
-                </span>
-              </p>
-              <br>
-              <hr>
-              <small style="float:right; margin-top:5px;"><strong></strong></small>
               <a href="/getting-started-with-redis">
                 <h2>Getting Started with Redis: Concepts, Commands, and Monitoring</h2>
               </a>
@@ -334,27 +309,51 @@
               <br>
               <hr>
               <small style="float:right; margin-top:5px;"><strong></strong></small>
-              <a href="/blog/tutorial">
-                <h2>Integration Test for redis / valkey using TestContainers</h2>
+              <a href="/blog/spring-data-redis-reactive">
+                <h2>An Introduction to Spring Data Redis Reactive</h2>
               </a>
               <div>
                 <div>
-                  <a href="/blog/tutorial">
-                    <img src="https://unsplash.com/photos/Ekih0VNBkr8/download?w=437" class="thumb" width="800" height="437">
+                  <a href="/blog/spring-data-redis-reactive">
+                    <img src="https://unsplash.com/photos/w1K9Ug_pjXw/download?w=437" class="thumb" width="800" height="437">
                   </a>
                 </div>
-                An integration test verifies that multiple components work together correctly within the full Spring context. Unlike unit tests, it loads the entire application context, including configuration, beans, and external dependencies like databases...
+                Spring Data Redis Reactive offers a powerful solution for working with Redis in a non-blocking, reactive manner. Let's dive into the key components and how to use them effectively...
               </div>
               <br>
               <p>
-                <a href="/blog/tutorial">
+                <a href="/blog/spring-data-redis-reactive">
                   <span>Continue reading →</span>
                 </a>
                 <span style="float:right;">
-                  <a class="mytag" href="/tag/valkey">valkey</a>
                   <a class="mytag" href="/tag/redis">redis</a>
-                  <a class="mytag" href="/tag/spring%20boot">spring boot</a>
                   <a class="mytag" href="/tag/java">java</a>
+                </span>
+              </p>
+              <br>
+              <hr>
+              <small style="float:right; margin-top:5px;"><strong></strong></small>
+              <a href="/blog/crossslot-keys-error-redis">
+                <h2>Resolve the Error CROSSSLOT Keys in request don't hash to the same slot</h2>
+              </a>
+              <div>
+                <div>
+                  <a href="/blog/crossslot-keys-error-redis">
+                    <img src="https://unsplash.com/photos/kEFrAFKY6Sk/download?w=437" class="thumb" width="800" height="437">
+                  </a>
+                </div>
+                AWS offers managed service Amazon MemoryDB which is redis compatible. The entire keyspace in Redis cluster is divided into hash slots and these slots are assigned to multiple nodes. In redis, getting a single value is straightforward...
+              </div>
+              <br>
+              <p>
+                <a href="/blog/crossslot-keys-error-redis">
+                  <span>Continue reading →</span>
+                </a>
+                <span style="float:right;">
+                  <a class="mytag" href="/tag/python">python</a>
+                  <a class="mytag" href="/tag/redis">redis</a>
+                  <a class="mytag" href="/tag/memorydb">memorydb</a>
+                  <a class="mytag" href="/tag/aws">aws</a>
                 </span>
               </p>
               <br>
@@ -365,10 +364,6 @@
         </div>
  <!-- Close #blog -->
         <div class="pagination" style="margin-top:30px; display:flex; align-items:center; justify-content:center; gap:16px;">
-          <span class="pagination-info" style="font-weight:bold; color:#3399cc; background:#f2f2f2; padding:4px 12px; border-radius:6px;">
-            Page 1 of 2
-          </span>
-          <a class="pagination-link" style="white-space:nowrap;" href="/tag/redis/page2/">Next »</a>
         </div>
         <script type="text/javascript">
           window.onload = function() { scroll_to('blog'); };
