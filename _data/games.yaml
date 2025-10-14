@@ -16,10 +16,6 @@
   comments: "Made by Quantic Dream. You play as a little girl and her spirit. Choices affect the story."
   ratings: 4
 
-- title: "Guardian of the Galaxy"
-  ratings: 4
-  comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot."
-
 - title: "Hades"
   ratings: 4
   comments: "It's a good rogue-like game. The combat rooms are procedurally generated. You get more powerful after you die. You can enable god mode which just increases your damage resistance by 2 percent every time you die till 80%."
@@ -111,7 +107,7 @@
 
 - title: "Sayonara Wild Hearts"
   ratings: 3
-  comments: "It's a rhythm game with great soundtrack. However, gameplay is interesting but it's too short"
+  comments: "It's a rhythm game with great soundtrack. However, gameplay is simple and too short"
 
 - title: "NFS Heat"
   ratings: 4
@@ -129,10 +125,6 @@
   ratings: 4
   comments: "Best RPG game I played growing up. Good or bad choices affect the story. You can even marry and buy a house while still slaying monsters on the side."
 
-- title: "Anger Foot"
-  ratings: 4
-  comments: "Fun kicker game where you smash everything. The soundtrack is cool. You feel like a Hulk with angry feet."
-
 - title: "How Fish Is Made"
   ratings: 2
   comments: "Free to play. Short, eerie. You just have to propel the fish forward in terms of gameplay."
@@ -141,17 +133,31 @@
   ratings: 3 
   comments: "Gothic action-platformer inspired by Alice in Wonderland. The dark style and visuals are great, but puzzles feel repetitive. Tips: Press `LT + A` to open the umbrella. Press `LB` to shrink and reveal hidden hints. Abandoned."
 
-- title: "Bomb Rush Cyberfunk"
-  ratings: 4
-  comments: "A stylish skating game set in a vibrant, dystopian world."
-
 - title: "A Short Hike"
   ratings: 5 
-  comments: "Indie game. I'ts cute short game where you play as a bird who needs to reach the top of the mountain to get reception for his phone. You improve your hike by collecting golden feathers. Tips: Change amount of pixalation in Options > Graphics > Pixel Size. Press A to glide."
+  comments: "Indie game. I'ts cute short game where you play as a bird who needs to reach the top of the mountain to get reception for his phone. You improve your hike by collecting golden feathers. Tips: Change amount of pixalation in Options > Graphics > Pixel Size. Press A to glide. Played on Steam Deck."
+
+- title: "Max Payne III"
+  ratings: 4
+  comments: "Set in São Paulo, Brazil. Lot of cutscenes. Feels like Rambo on a shooting spree. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch. Played on Steam Deck."
 
 - title: "Joe Danger 2: The Movie"
-  ratings: 4
+  ratings: 0
+  proress: 100
+  pending: true
   comments: "Fun racing game. You feel like a movie star as you perform stunts and race on everything from skis to jetpacks."
+
+- title: "Bomb Rush Cyberfunk"
+  ratings: 0
+  pending: true
+  progress: 100
+  comments: "A stylish skating game set in a vibrant, dystopian world."
+
+- title: "Anger Foot"
+  ratings: 0
+  progress: 100
+  pending: true
+  comments: "Fun kicker game where you smash everything. The soundtrack is cool. You feel like a Hulk with angry feet."
 
 - title: "Dredge"
   ratings: 0
@@ -163,7 +169,7 @@
   ratings: 0
   pending: true
   progress: 100
-  comments: "One of the best arcade racing games. You can blast off other cars with power-ups. Supports split-screen for local co-op. Cons: drifting isn’t very satisfying. Tips: Press `B` to drift."
+  comments: "One of the best arcade racing games. You can blast off other cars with power-ups. Supports split-screen for local co-op. Tips: Press `B` to drift."
 
 - title: "Lonely Mountains: Downhill"
   ratings: 0
@@ -171,11 +177,11 @@
   progress: 100
   comments: "A relaxing biking game where you ride downhill through beautiful, minimalistic landscapes with soothing ambient sounds."
 
-- title: "Max Payne III"
+- title: "Guardian of the Galaxy"
   ratings: 0
   pending: true
   progress: 100
-  comments: "Set in São Paulo, Brazil. Lot of cutscenes. Great game but I liked Max Payne II more. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch."
+  comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot. Played on Steam Deck"
 
 - title: "The Artful Escape"
   ratings: 0
