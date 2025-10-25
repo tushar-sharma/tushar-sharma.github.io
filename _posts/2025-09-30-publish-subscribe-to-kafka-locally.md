@@ -2,8 +2,8 @@
 layout: post
 title: Publish / Subscribe to Kafka locally
 category: blog
-thumb: https://bing.com/th?id=OHR.EucalyptusKoala_EN-US8743417111_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp&w=437
-image: https://bing.com/th?id=OHR.EucalyptusKoala_EN-US8743417111_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp&w=437
+thumb: https://unsplash.com/photos/w1IKykb2YmQ/download?w=437
+image: https://unsplash.com/photos/w1IKykb2YmQ/download?w=437
 tags:
  - kafka
  - kcat
