@@ -141,9 +141,15 @@
   ratings: 4
   comments: "Set in São Paulo, Brazil. Lot of cutscenes. Feels like Rambo on a shooting spree. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch. Played on Steam Deck."
 
+- title: "Lego City Undercover"
+  ratings: 0
+  pending: true
+  progress: 100
+  comments: "Fun game. Minor technical bugs: green bar during cutscenes. Saving at multiple slots have conflict if the gameplay progress is the same."
+
 - title: "Joe Danger 2: The Movie"
   ratings: 0
-  proress: 100
+  progress: 100
   pending: true
   comments: "Fun racing game. You feel like a movie star as you perform stunts and race on everything from skis to jetpacks."
 
