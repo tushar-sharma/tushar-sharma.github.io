@@ -175,6 +175,13 @@
   pending: false
   progress: 0
 
+- title: "The Psychology of Money"
+  author: "Morgan Housel"
+  ratings: 4
+  pending: false
+  progress: 0
+  comments: "<a href='/blog/review-book-psychology-of-money' target='_blank'>Notes</a>"
+
 - title: "One, Two, Three...Infinity"
   author: "George Gamow"
   rating: 5
@@ -407,10 +414,4 @@
   comments: ""
 
 
-- title: "The Psychology of Money"
-  author: "Morgan Housel"
-  ratings: 0
-  pending: true
-  progress: 61
-  comments: "<a href='/blog/review-book-psychology-of-money' target='_blank'>Notes</a>"
 
