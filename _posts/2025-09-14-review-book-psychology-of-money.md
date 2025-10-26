@@ -23,6 +23,32 @@ Getting money requires taking risk. But staying wealthy requires opposite of tak
 
 Jim Simmons achieved better investment returns than Warren Buffett. Yet he was less wealthy than Buffett. The main reason was that Warren Buffett started investing at young age, and compounded his money for decades. In contrast, Jim Simmons began investing around his 40s. 
 
+Having a six-month emergency fund and save 10% of your salary.
+
+Bill Gates went to one of the only high schools in the world that had a computer (Lakeside School). 
+
+Economist Bhaskhar Mazumder has shown that incomes among brothers are more correlated than height or weight. If you are rich and tall, your brother is more likely to also be rich than he is tall. I think most of us intuitively know this to be true - the quality of your educations and the doors that open for you are heavily linked to your parents' socio-econmomic status.
+
+..think Mark Zuckerberg is a genius for turning down Yahoo!'s 2006 $1 billion offer to buy his company. But people criticize Yahoo! for turning down buyout offer from Microsoft. 
+
+40% of all Russell 3000 stock components lost at least 70% of their value and never recovered...you have to achieved a certain level of success to become a public company and a member of Russell 3000. 
+
+No one talks about dud picks. Charlie Munger, "If you remove just a few of Berkshire's top investments, its long-term track record is pretty average"
+
+Universal fuel of joy -it's that people want to control their lives.
+
+99.9% of all companies that were created went out of business. 
+
+One study in America found that people overestimate the number of calories they burned in a workout by a factor of four. 
+
+The world is filled with people who look modest are actually wealthy and people who look rich who live at the razor's edge of insolvency. 
+
+Saving is a hedge against life's inevitable ability to surprise the hell out of you at the worst possible moment. 
+
+Day trading and picking individual stocks is not rational for most investors - the odds are heavily against your success. 
+
+
+
 Progress happens too slowly to notice, but setbacks happen tooo quickly to ignore. There are rarely overnight miracles. 
 
 B. H. Lidell Hart writes in is book **Why Don't We learn from History ?**
