@@ -282,3 +282,7 @@
   ratings: 5
   platform: "Online"
   comments: "A Quentin Tarantino movie that's both thrilling and entertaining. The soundtrack is spot on and movie is great"
+
+- title: "Planes, Trains and Automobiles"
+  ratings: 3
+  comments: "Okay movie — had a few laughs, but felt slow and didn’t grab me much."
