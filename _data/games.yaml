@@ -1,6 +1,7 @@
-- title: "Alan Wake2"
   ratings: 4
+- title: "Alan Wake2"
   comments: "Graphic card must support mesh shaders. Graphics are amazing. Scare factor is high. Combat is clumsy. You can enable, One Shot Mode, in the settings to make combat easier. Wandering in dark is tedious. Abandoned."
+  platform: "Steam Deck"
 
 - title: "Alpaca Stacka"
   download: "<a href='https://store.steampowered.com/app/1655140/Alpaca_Stacka/' target='_blank' aria-label='Free to Play'><i class='fas fa-download'></i> Steam</a>"
@@ -41,6 +42,7 @@
   download: "<a href='https://store.steampowered.com/app/2795000/The_WereCleaner/' target='_blank' aria-label='Download The Were Cleaner'><i class='fas fa-download'></i> Steam</a>"
   ratings: 5
   comments: "Free to play. It's a cute game where you play as janitor who is also a warewolf who needs to pay his rent."
+  platform: "Steam Deck"
 
 - title: "My Friend Pedro"
   ratings: 5
@@ -79,15 +81,17 @@
   ratings: 4
   download: "<a href='https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/' target='_blank' aria-label='Download Life is Strange Episode 1'><i class='fas fa-download'></i> Steam</a>"
   comments: "It's a interactive story game. I like the concept of reversing time."
-  platform: "steam deck"
+  platform: "Steam Deck"
 
 - title: "Max Payne II"
   ratings: 5
   comments: "Favourite shooting game in the series. You play as Max most of the times but Mona is playable in few levels. You could slows down time during combat."
+  platform: "PC"
 
 - title: "Papers, Please"
   comments: "You play as an immigration officer who has to check passport of visitors into a fictional country of Arstotzka. The game is an example of empathy game as your choices affect the lives of people."
   ratings: 5
+  platform: "Steam Deck"
 
 - title: "The Walking Dead Season 1"
   ratings: 3
@@ -104,48 +108,59 @@
 - title: "The Witcher 3"
   ratings: 5
   comments : "Great RPG game. Graphics are great with amazing story and open world"
+  platform: "Steam Deck"
 
 - title: "Sayonara Wild Hearts"
   ratings: 3
   comments: "It's a rhythm game with great soundtrack. However, gameplay is simple and too short"
+  platform: "Steam Deck"
 
 - title: "NFS Heat"
   ratings: 4
   comments: "Drifting is the most fun part of the game. It has both day and night mode. However, game requires you to be online everytime you play it if you purchased it form Steam"
+  platform: "Steam Deck"
 
 - title: "Hotline Miami"
   ratings: 5
   comments: "Fun top down shooter game. The soundtrack is amazing. I binged played it."
+  platform: "Steam Deck"
 
 - title: "Heavy Rain"
   comments: "Made by Quantic Dream. It's intense interactive game. Difficult QTE for important choices. Some controll requires shaking the controller which was both awkward and tiring"
   ratings: 4
+  platform: "Steam Deck"
 
 - title: "Fable III"
   ratings: 4
   comments: "Best RPG game I played growing up. Good or bad choices affect the story. You can even marry and buy a house while still slaying monsters on the side."
+  platform: "PC"
 
 - title: "How Fish Is Made"
   ratings: 2
   comments: "Free to play. Short, eerie. You just have to propel the fish forward in terms of gameplay."
+  platform: "PC"
 
 - title: "Alice: Madness Returns"
   ratings: 3 
   comments: "Gothic action-platformer inspired by Alice in Wonderland. The dark style and visuals are great, but puzzles feel repetitive. Tips: Press `LT + A` to open the umbrella. Press `LB` to shrink and reveal hidden hints. Abandoned."
+  platform: "Steam Deck"
 
 - title: "A Short Hike"
   ratings: 5 
   comments: "Indie game. I'ts cute short game where you play as a bird who needs to reach the top of the mountain to get reception for his phone. You improve your hike by collecting golden feathers. Tips: Change amount of pixalation in Options > Graphics > Pixel Size. Press A to glide. Played on Steam Deck."
+  platform: "Steam Deck"
 
 - title: "Max Payne III"
   ratings: 4
-  comments: "Set in São Paulo, Brazil. Lot of cutscenes. Feels like Rambo on a shooting spree. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch. Played on Steam Deck."
+  comments: "Set in São Paulo, Brazil. Lot of cutscenes. Feels like Rambo on a shooting spree. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch."
+  platform: "Steam Deck"
 
 - title: "Lego City Undercover"
   ratings: 0
   pending: true
   progress: 100
-  comments: "Fun game. Minor technical bugs: green bar during cutscenes. Saving at multiple slots have conflict if the gameplay progress is the same."
+  comments: "Goofy open-world LEGO game. Minor technical bugs: a green bar may appear during cutscenes, and saving only works correctly when the progress percentage differs from the previous save."
+  platform: "Steam Deck"
 
 - title: "Joe Danger 2: The Movie"
   ratings: 0
@@ -182,12 +197,14 @@
   pending: true
   progress: 100
   comments: "A relaxing biking game where you ride downhill through beautiful, minimalistic landscapes with soothing ambient sounds."
+  platform: "Steam Deck"
 
 - title: "Guardian of the Galaxy"
   ratings: 0
   pending: true
   progress: 100
-  comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot. Played on Steam Deck"
+  comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot."
+  platform: "Steam Deck"
 
 - title: "The Artful Escape"
   ratings: 0
