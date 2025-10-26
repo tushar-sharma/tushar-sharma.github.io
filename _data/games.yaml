@@ -1,7 +1,6 @@
-  ratings: 4
 - title: "Alan Wake2"
+  ratings: 4
   comments: "Graphic card must support mesh shaders. Graphics are amazing. Scare factor is high. Combat is clumsy. You can enable, One Shot Mode, in the settings to make combat easier. Wandering in dark is tedious. Abandoned."
-  platform: "Steam Deck"
 
 - title: "Alpaca Stacka"
   download: "<a href='https://store.steampowered.com/app/1655140/Alpaca_Stacka/' target='_blank' aria-label='Free to Play'><i class='fas fa-download'></i> Steam</a>"
@@ -74,11 +73,13 @@
 - title: "It takes two"
   ratings: 4
   comments: "It's a local split screen coop game. Graphics are nice and the story is good. You play as a couple who are going through divorce and they are turned into dolls. You need to work together to solve puzzles."
+  platform: "steam deck"
 
 - title: "Life is Strange Episode 1"
   ratings: 4
   download: "<a href='https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/' target='_blank' aria-label='Download Life is Strange Episode 1'><i class='fas fa-download'></i> Steam</a>"
   comments: "It's a interactive story game. I like the concept of reversing time."
+  platform: "steam deck"
 
 - title: "Max Payne II"
   ratings: 5
@@ -119,7 +120,6 @@
 - title: "Heavy Rain"
   comments: "Made by Quantic Dream. It's intense interactive game. Difficult QTE for important choices. Some controll requires shaking the controller which was both awkward and tiring"
   ratings: 4
-  platform: "Steam Deck"
 
 - title: "Fable III"
   ratings: 4
@@ -139,13 +139,13 @@
 
 - title: "Max Payne III"
   ratings: 4
-  comments: "Set in São Paulo, Brazil. Lot of cutscenes. Feels like Rambo on a shooting spree. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch."
+  comments: "Set in São Paulo, Brazil. Lot of cutscenes. Feels like Rambo on a shooting spree. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch. Played on Steam Deck."
 
 - title: "Lego City Undercover"
   ratings: 0
   pending: true
   progress: 100
-  comments: "Goofy open-world LEGO game. Minor technical bugs: a green bar may appear during cutscenes, and saving only works correctly when the progress percentage differs from the previous save."
+  comments: "Fun game. Minor technical bugs: green bar during cutscenes. Saving at multiple slots have conflict if the gameplay progress is the same."
 
 - title: "Joe Danger 2: The Movie"
   ratings: 0
@@ -187,7 +187,7 @@
   ratings: 0
   pending: true
   progress: 100
-  comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot."
+  comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot. Played on Steam Deck"
 
 - title: "The Artful Escape"
   ratings: 0
