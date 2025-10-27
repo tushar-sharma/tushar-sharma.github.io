@@ -182,6 +182,13 @@
   progress: 0
   comments: "<a href='/blog/review-book-psychology-of-money' target='_blank'>Notes</a>"
 
+- title: "Oxygen: The molecule that made the world"
+  author: "Nick Lane"
+  rating: 0
+  progress: 0
+  pending: true
+  comments: ""
+
 - title: "One, Two, Three...Infinity"
   author: "George Gamow"
   rating: 5
