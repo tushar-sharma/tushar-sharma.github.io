@@ -144,8 +144,14 @@
 - title: "Lego City Undercover"
   ratings: 0
   pending: true
-  progress: 100
+  progress: 4.1
   comments: "Fun game. Minor technical bugs: green bar during cutscenes. Saving at multiple slots have conflict if the gameplay progress is the same."
+
+- title: "Titanfall 2
+  ratings: 0
+  pending: true
+  progress: 2
+  comments: ""
 
 - title: "Joe Danger 2: The Movie"
   ratings: 0
