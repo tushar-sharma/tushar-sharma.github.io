@@ -175,20 +175,6 @@
   pending: false
   progress: 0
 
-- title: "The Psychology of Money"
-  author: "Morgan Housel"
-  rating: 4
-  pending: false
-  progress: 0
-  comments: "<a href='/blog/review-book-psychology-of-money' target='_blank'>Notes</a>"
-
-- title: "Oxygen: The molecule that made the world"
-  author: "Nick Lane"
-  rating: 0
-  progress: 0
-  pending: true
-  comments: ""
-
 - title: "One, Two, Three...Infinity"
   author: "George Gamow"
   rating: 5
@@ -210,7 +196,20 @@
   progress: 0
   comments: "<a href='/blog/review-book-a-philosophy-of-software-design' target='_blank'>Notes</a>"
 
-  
+- title: "The Psychology of Money"
+  author: "Morgan Housel"
+  rating: 4
+  pending: false
+  progress: 0
+  comments: "<a href='/blog/review-book-psychology-of-money' target='_blank'>Notes</a>"
+
+- title: "Oxygen: The molecule that made the world"
+  author: "Nick Lane"
+  rating: 0
+  progress: 0
+  pending: true
+  comments: "<a href='/blog/ review-oxygen-the-molecule-that-made-the-world' target='_blank'>Notes</a>"
+
 - title: "A Beginning Spring AI"
   author: Andrew Lombardi , Joseph Ottinger
   rating: 0
