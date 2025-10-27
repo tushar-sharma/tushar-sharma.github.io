@@ -412,12 +412,12 @@
   progress: 14
   comments: "<a href='/blog/review-book-modern-java-in-action' target='_blank'>Notes</a>"
 
-- title: "Quantum Computing in Action"
-  author: Johan Vos
+- title: "Practical Reactor workshop"
+  author: Stefan Dragišić
   rating: 0
   pending: true
   progress: 0
-  comments: ""
+  comments: "[Link](https://github.com/schananas/practical-reactor)"
 
 
 
