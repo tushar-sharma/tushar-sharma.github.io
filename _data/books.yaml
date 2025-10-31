@@ -404,7 +404,6 @@
   progress: 15
   comments: ""
 
-
 - title: "Modern Java in Action"
   author: Alan Mycroft, Mario Fusco, and Raoul-Gabriel Urma
   rating: 0
@@ -419,5 +418,26 @@
   progress: 0
   comments: "[Link](https://github.com/schananas/practical-reactor)"
 
+- title: "Thinking, Fast and Slow"
+  author: "Daniel Kahneman"
+  rating: 0
+  pending: true
+  progress: 0
 
+- title: "Predictably Irrational"
+  author: "Dan Ariely"
+  rating: 0
+  pending: true
+  progress: 0
 
+- title: "Talking to Strangers"
+  author: "Malcolm Gladwell"
+  rating: 0
+  pending: true
+  progress: 0
+
+- title: "Maybe You Should Talk To Someone"
+  author: "Lori Gottlieb"
+  rating: 0
+  pending: true
+  progress: 0

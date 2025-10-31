@@ -169,7 +169,7 @@
   ratings: 0
   progress: 100
   pending: true
-  comments: "Fun kicker game where you smash everything. The soundtrack is cool. You feel like a Hulk with angry feet."
+  comments: "FPS. Kicking on adrenaline. The soundtrack is cool. You feel like a Hulk with anger foot."
 
 - title: "Dredge"
   ratings: 0
@@ -198,5 +198,275 @@
 - title: "The Artful Escape"
   ratings: 0
   pending: true
-  progress: true
+  progress: 0
   comments: "Change Layout to Keyboard(WASD) and mouse on Steam Deck. Press RS for clicking."
+
+- title: "Gunfire Reborn"
+  ratings: 0
+  pending: true
+  progress: 0
+  comments: "FPS"
+
+- title: "Roboquest"
+  ratings: 0
+  pending: true
+  progress: 0
+  comments: "FPS"
+
+- title: "Selaco"
+  ratings: 0
+  pending: true
+  progress: 0
+  comments: "FPS"
+
+- title: "Fashion Police Squad"
+  ratings: 0
+  pending: true
+  comments: "FPS"
+  progress: 0
+
+- title: "The Wolf Among Us"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Slay the Princess — The Pristine Cut"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Clair Obscur: Expedition 33"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Stardew Valley"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "God of War Ragnarök"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Assassin's Creed IV: Black Flag"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "FIFA 19"
+  ratings: 5
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Palworld"
+  ratings: 0
+  comments: ""
+  pending: true
+  progress: 0
+
+- title: "DELTARUNE"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Katana ZERO"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Neon White"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Inscryption"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "OneShot"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "The Binding of Isaac: Rebirth"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "SIGNALIS"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "ULTRAKILL"
+  ratings: 0
+  pending: true
+  comments: "FPS"
+  progress: 0
+
+- title: "The Stanley Parable"
+  ratings: 0
+  pending: true
+  comments: "FPS"
+  progress: 0
+
+- title: "Hollow Knight"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Celeste"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "OMRI"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Alba: A Wildlife Adventure"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "DAVE THE DIVER"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Mark of the Ninja: Remastered"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Ghost of Tsushima DIRECTOR'S CUT"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Cult of the Lamb"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Kenshi"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "The Elder Scrolls V: Skyrim"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Ori and the Blind Forest"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Ori and the Will of the Wisps"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Yakuza 0"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Koira"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "OTXO"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "1000xRESIST"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Batman: Arkham City GOTY"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Batman™: Arkham Knight"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Dishonored"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Fallout 4"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Five Hearts Under One Roof"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Knowledge, or know Lady"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Red Dead Redemption 2"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Resident Evil 2"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0

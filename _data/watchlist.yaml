@@ -286,3 +286,9 @@
 - title: "Planes, Trains and Automobiles"
   ratings: 3
   comments: "Okay movie — had a few laughs, but felt slow and didn’t grab me much."
+
+- title: "Spy x Family"
+  ratings: 4
+  comments: ""
+  progress: 0
+  pending: true
