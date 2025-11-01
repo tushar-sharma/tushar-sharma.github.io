@@ -268,6 +268,12 @@
   comments: "FPS"
   progress: 0
 
+- title: "Left 4 Dead 2"
+  rating: 0
+  pending: true
+  comments: "FPS"
+  progress: 0
+
 - title: "The Wolf Among Us"
   rating: 0
   pending: true
@@ -329,6 +335,12 @@
   progress: 0
 
 - title: "DELTARUNE"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- progress: "Child of Light"
   rating: 0
   pending: true
   comments: ""
