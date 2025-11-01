@@ -201,6 +201,37 @@
   progress: 0
   comments: "Change Layout to Keyboard(WASD) and mouse on Steam Deck. Press RS for clicking."
 
+- title: "GUILTY GEAR -STRIVE-"
+  ratings: 0
+  pending: true
+  progress: 0
+  comments: ""
+
+- title: "Ratchet & Clank: Rift Apart"
+  ratings: 0
+  pending: true
+  progress: 0
+  comments: ""
+
+- title: "Sleeping Dogs"
+  ratings: 0
+  pending: true
+  progress: 0
+  comments: ""
+
+- title: "GTA 5"
+  ratings: 0
+  pending: true
+  progress: 0
+  comments: ""
+
+- title: "METAL GEAR SOLID V: THE PHANTOM PAIN"
+  ratings: 0
+  pending: true
+  progress: 0
+  comments: ""
+
+
 - title: "Gunfire Reborn"
   ratings: 0
   pending: true
@@ -208,6 +239,12 @@
   comments: "FPS"
 
 - title: "Roboquest"
+  ratings: 0
+  pending: true
+  progress: 0
+  comments: "FPS"
+
+- title: "Vanquish "
   ratings: 0
   pending: true
   progress: 0
@@ -225,7 +262,19 @@
   comments: "FPS"
   progress: 0
 
+- title: "CULTIC"
+  ratings: 0
+  pending: true
+  comments: "FPS"
+  progress: 0
+
 - title: "The Wolf Among Us"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Hi-Fi RUSH"
   ratings: 0
   pending: true
   comments: ""
@@ -244,6 +293,12 @@
   progress: 0
 
 - title: "Stardew Valley"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "God of War"
   ratings: 0
   pending: true
   comments: ""
@@ -324,7 +379,7 @@
 - title: "The Stanley Parable"
   ratings: 0
   pending: true
-  comments: "FPS"
+  comments: ""
   progress: 0
 
 - title: "Hollow Knight"
@@ -465,7 +520,13 @@
   comments: ""
   progress: 0
 
-- title: "Resident Evil 2"
+- title: "Resident Evil 2 (2019)"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Resident Evil 4 (2023)"
   ratings: 0
   pending: true
   comments: ""
@@ -500,3 +561,64 @@
   pending: true
   comments: ""
   progress: 0
+
+- title: "Uncharted 4: A Thief's End"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Uncharted 4 : The Lost Legacy"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "A Plague Tale: Requiem"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Another Crab's Treasure"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "LISA: The Painful"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "LISA: The Joyful"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Zeepkist"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "ANTONBLAST"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Psychonauts 2"
+  ratings: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "The Killing Antidote"
+  ratings: 0
+  pending: true
+  comments: "" 
+  progress: 0
+
