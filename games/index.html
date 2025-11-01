@@ -70,13 +70,13 @@ author: Tushar Sharma
             </div>
           {% else %}
                  <!-- full stars -->
-                {% assign full_stars = game.ratings | floor %}
+                {% assign full_stars = game.rating | floor %}
                 {% for i in (1..full_stars) %}
                   <span class="fa fa-star checked"></span>
                 {% endfor %}
     
                  <!-- half stars -->
-                 {% assign has_half_star = game.ratings | modulo: 1 %}
+                 {% assign has_half_star = game.rating | modulo: 1 %}
                  {% if has_half_star > 0 %}
                    <i class="fas fa-star-half-alt"></i>
                   {% assign empty_stars = 5 | minus: full_stars | minus: 1 %}

@@ -1,623 +1,623 @@
 - title: "Alan Wake2"
-  ratings: 4
+  rating: 4
   comments: "Graphic card must support mesh shaders. Graphics are amazing. Scare factor is high. Combat is clumsy. You can enable, One Shot Mode, in the settings to make combat easier. Wandering in dark is tedious. Abandoned."
 
 - title: "Alpaca Stacka"
   download: "<a href='https://store.steampowered.com/app/1655140/Alpaca_Stacka/' target='_blank' aria-label='Free to Play'><i class='fas fa-download'></i> Steam</a>"
-  ratings: 3
+  rating: 3
   comments: "It's a cute short little fetch quest. Gameplay is simple where you play as an alpaca, Paz, tasked with collecting five lost chicks for their mother, Mama Hen"
 
 - title: "Detroit: Become Human"
   download: "<a href='https://randomwits.com/blog/download-detroit-become-Human' aria-label='Download Detroit: Become Human' style='color:#007bff; font-weight:bold;'><i class='fas fa-download'></i> 🤖</a>"
-  ratings: 5
+  rating: 5
   comments: "Made by Quantic Dream. It's a great game where you play as androids who struggles with moral choices and steers closer to consciousness. One of the best interactive story games."
 
 - title: "Beyond Two Souls"
   comments: "Made by Quantic Dream. You play as a little girl and her spirit. Choices affect the story."
-  ratings: 4
+  rating: 4
 
 - title: "Hades"
-  ratings: 4
+  rating: 4
   comments: "It's a good rogue-like game. The combat rooms are procedurally generated. You get more powerful after you die. You can enable god mode which just increases your damage resistance by 2 percent every time you die till 80%."
 
 - title: "Rayman Legends"
-  ratings: 5
+  rating: 5
   comments: "One of the best platformers ever made. Fantastic background music and smooth, fun gameplay. Note: Ubisoft launcher requires you to be online to start the game. The `Challenge mode` is no longer available on Steam due to Ubisoft server shutdown ([details](https://www.ubisoft.com/en-us/help/purchases-and-rewards/article/decommissioning-of-online-services-for-older-legacy-ubisoft-games-n-to-z/000105855))."
 
 - title: "Sunset Overdrive"
-  ratings: 5
+  rating: 5
   comments: "Cons: Corrupt file message pops up everytime you start the game. The game is goofy and fun. You can even shoot a dog at enemies."
 
 - title: "Super Mario Odyssey"
   download: "<a href='/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator' aria-label='Download Super Mario Odyssey' style='color:#007bff; font-weight:bold;'><i class='fas fa-download'></i> 🍄</a>"
-  ratings: 5
+  rating: 5
   comments: "You need yuzu emulator to play this on steam deck or PC. It supports multiplayer where 2nd player can control the hat."
 
-- title: "Tomb Raider 2013"
-  ratings: 5
+- title: "Tomb Raider 2014"
+  rating: 5
   comments: "Developed by Crystal Dynamics. This is the first game in the rebooted Tomb Raider series. The gameplay and story is amazing."
 
 - title: "The Were Cleaner"
   download: "<a href='https://store.steampowered.com/app/2795000/The_WereCleaner/' target='_blank' aria-label='Download The Were Cleaner'><i class='fas fa-download'></i> Steam</a>"
-  ratings: 5
+  rating: 5
   comments: "Free to play. It's a cute game where you play as janitor who is also a warewolf who needs to pay his rent."
 
 - title: "My Friend Pedro"
-  ratings: 5
+  rating: 5
   comments: "It's a total blast – it's like doing backflips while dual-wielding pistols, all with a talking banana as your guide. It's like Max Payne style slow motion shooting game."
 
 - title: "Limbo"
-  ratings: 5
+  rating: 5
   comments: "It's a dark, puzzle game in a dystopian world. You play as a small child navigating eerie environments filled with deadly traps."
 
 - title: "Inside"
-  ratings: 5
+  rating: 5
   comments: "It's both cute and dystopian, with clever puzzles. The unsettling moments will stick with you long after you finish. The graphics are gorgeous, and the gameplay feels smooth and immersive. If you love puzzles wrapped in a dark, haunting atmosphere, this game is definitely for you! "
 
 - title: "Boomerang Fu"
-  ratings: 5
+  rating: 5
   comments: "One of the best local co-op games. You play as cute food characters like milk cartons or avocados, slashing each other with boomerangs. Hilarious and great with friends."
 
 - title: "GTA 4"
-  ratings: 4
+  rating: 4
   comments: "Open-world action game set in Liberty City, a parody of NYC. Graphics feel dated now, but the story is gripping—following Niko Bellic, an immigrant trying to chase the American dream through crime and missions."
 
 - title: "The Curse of Monkey Island"
   comments: "Classic point-and-click adventure with clever puzzles and great humor. I grew up learning English from its witty dialogues and memorable voice acting."
-  ratings: 4
+  rating: 4
 
 - title: "Firewatch"
-  ratings: 3
+  rating: 3
   comments: "Walking sim. Humor is great. Most of the time you talk to your supervisor, Delilah, through the radio."
 
 - title: "It takes two"
-  ratings: 4
+  rating: 4
   comments: "It's a local split screen coop game. Graphics are nice and the story is good. You play as a couple who are going through divorce and they are turned into dolls. You need to work together to solve puzzles."
   platform: "steam deck"
 
 - title: "Life is Strange Episode 1"
-  ratings: 4
+  rating: 4
   download: "<a href='https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/' target='_blank' aria-label='Download Life is Strange Episode 1'><i class='fas fa-download'></i> Steam</a>"
   comments: "It's a interactive story game. I like the concept of reversing time."
   platform: "steam deck"
 
 - title: "Max Payne II"
-  ratings: 5
+  rating: 5
   comments: "Favourite shooting game in the series. You play as Max most of the times but Mona is playable in few levels. You could slows down time during combat."
 
 - title: "Papers, Please"
   comments: "You play as an immigration officer who has to check passport of visitors into a fictional country of Arstotzka. The game is an example of empathy game as your choices affect the lives of people."
-  ratings: 5
+  rating: 5
 
 - title: "The Walking Dead Season 1"
-  ratings: 3
+  rating: 3
   comments: "Gameplay was okish and it's too short"
 
 - title: "Undertale"
   comments: "Great Indie game. Graphics are minimal but story and humor is great."
-  ratings: 5
+  rating: 5
 
 - title: "Wreckfest"
-  ratings: 4
+  rating: 4
   comments: "Fun wrecking racing game. You can race like a sofa or a lawnmower."
 
 - title: "The Witcher 3"
-  ratings: 5
+  rating: 5
   comments : "Great RPG game. Graphics are great with amazing story and open world"
 
 - title: "Sayonara Wild Hearts"
-  ratings: 3
+  rating: 3
   comments: "It's a rhythm game with great soundtrack. However, gameplay is simple and too short"
 
 - title: "NFS Heat"
-  ratings: 4
+  rating: 4
   comments: "Drifting is the most fun part of the game. It has both day and night mode. However, game requires you to be online everytime you play it if you purchased it form Steam"
 
 - title: "Hotline Miami"
-  ratings: 5
+  rating: 5
   comments: "Fun top down shooter game. The soundtrack is amazing. I binged played it."
 
 - title: "Heavy Rain"
   comments: "Made by Quantic Dream. It's intense interactive game. Difficult QTE for important choices. Some controll requires shaking the controller which was both awkward and tiring"
-  ratings: 4
+  rating: 4
 
 - title: "Fable III"
-  ratings: 4
+  rating: 4
   comments: "Best RPG game I played growing up. Good or bad choices affect the story. You can even marry and buy a house while still slaying monsters on the side."
 
 - title: "How Fish Is Made"
-  ratings: 2
+  rating: 2
   comments: "Free to play. Short, eerie. You just have to propel the fish forward in terms of gameplay."
 
 - title: "Alice: Madness Returns"
-  ratings: 3 
+  rating: 3 
   comments: "Gothic action-platformer inspired by Alice in Wonderland. The dark style and visuals are great, but puzzles feel repetitive. Tips: Press `LT + A` to open the umbrella. Press `LB` to shrink and reveal hidden hints. Abandoned."
 
 - title: "A Short Hike"
-  ratings: 5 
+  rating: 5 
   comments: "Indie game. I'ts cute short game where you play as a bird who needs to reach the top of the mountain to get reception for his phone. You improve your hike by collecting golden feathers. Tips: Change amount of pixalation in Options > Graphics > Pixel Size. Press A to glide. Played on Steam Deck."
 
 - title: "Max Payne III"
-  ratings: 4
+  rating: 4
   comments: "Set in São Paulo, Brazil. Lot of cutscenes. Feels like Rambo on a shooting spree. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch. Played on Steam Deck."
 
 - title: "Lego City Undercover"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 4
   comments: "Fun game. Minor technical bugs: green bar during cutscenes. Saving at multiple slots have conflict if the gameplay progress is the same."
 
 - title: "Titanfall 2"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 55
-  comments: "One of the best FPS game. Combat is fun both solo as well as when you embark on Titan. Cons: EA launcher tries to connect to internet everytime you start the game. It sometimes gives you a blank screen. Force restart the game to fix it."
+  comments: "One of the best FPS game. Combat is fun both solo as well as when you embark on Titan. Timeshift level was my most favourite stage. Cons: EA launcher tries to connect to internet everytime you start the game. It sometimes gives you a blank screen. Force restart the game to fix it."
 
 - title: "Joe Danger 2: The Movie"
-  ratings: 0
+  rating: 0
   progress: 100
   pending: true
   comments: "Fun racing game. You feel like a movie star as you perform stunts and race on everything from skis to jetpacks."
 
 - title: "Bomb Rush Cyberfunk"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 100
   comments: "A stylish skating game set in a vibrant, dystopian world."
 
 - title: "Anger Foot"
-  ratings: 0
+  rating: 0
   progress: 100
   pending: true
   comments: "FPS. Kicking on adrenaline. The soundtrack is cool. You feel like a Hulk with anger foot."
 
 - title: "Dredge"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 100
   comments: "Horror fishing game but also has a cozy sailing vibe. Use Passive Mode to make it more peaceful to navigate at night. In normal mode, sleep properly to avoid hallucinations and avoid venturing out at night to avoid scary encounters."
 
 - title: "Blur"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 100
   comments: "One of the best arcade racing games. You can blast off other cars with power-ups. Supports split-screen for local co-op. Tips: Press `B` to drift."
 
 - title: "Lonely Mountains: Downhill"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 100
   comments: "A relaxing biking game where you ride downhill through beautiful, minimalistic landscapes with soothing ambient sounds."
 
 - title: "Guardian of the Galaxy"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 100
   comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot. Played on Steam Deck"
 
 - title: "The Artful Escape"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 0
   comments: "Change Layout to Keyboard(WASD) and mouse on Steam Deck. Press RS for clicking."
 
 - title: "GUILTY GEAR -STRIVE-"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 0
   comments: ""
 
 - title: "Ratchet & Clank: Rift Apart"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 0
   comments: ""
 
 - title: "Sleeping Dogs"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 0
   comments: ""
 
 - title: "GTA 5"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 0
   comments: ""
 
 - title: "METAL GEAR SOLID V: THE PHANTOM PAIN"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 0
   comments: ""
 
 
 - title: "Gunfire Reborn"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 0
   comments: "FPS"
 
 - title: "Roboquest"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 0
   comments: "FPS"
 
 - title: "Vanquish "
-  ratings: 0
+  rating: 0
   pending: true
   progress: 0
   comments: "FPS"
 
 - title: "Selaco"
-  ratings: 0
+  rating: 0
   pending: true
   progress: 0
   comments: "FPS"
 
 - title: "Fashion Police Squad"
-  ratings: 0
+  rating: 0
   pending: true
   comments: "FPS"
   progress: 0
 
 - title: "CULTIC"
-  ratings: 0
+  rating: 0
   pending: true
   comments: "FPS"
   progress: 0
 
 - title: "The Wolf Among Us"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Hi-Fi RUSH"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Slay the Princess — The Pristine Cut"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Clair Obscur: Expedition 33"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Stardew Valley"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "God of War"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "God of War Ragnarök"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Assassin's Creed IV: Black Flag"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "FIFA 19"
-  ratings: 5
+  rating: 5
   pending: true
   comments: ""
   progress: 0
 
 - title: "Palworld"
-  ratings: 0
+  rating: 0
   comments: ""
   pending: true
   progress: 0
 
 - title: "DELTARUNE"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Katana ZERO"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Neon White"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Inscryption"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "OneShot"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "The Binding of Isaac: Rebirth"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "SIGNALIS"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "ULTRAKILL"
-  ratings: 0
+  rating: 0
   pending: true
   comments: "FPS"
   progress: 0
 
 - title: "The Stanley Parable"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Hollow Knight"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Celeste"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "OMRI"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Alba: A Wildlife Adventure"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "DAVE THE DIVER"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Mark of the Ninja: Remastered"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Ghost of Tsushima DIRECTOR'S CUT"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Cult of the Lamb"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Kenshi"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "The Elder Scrolls V: Skyrim"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Ori and the Blind Forest"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Ori and the Will of the Wisps"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Yakuza 0"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Koira"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "OTXO"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "1000xRESIST"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Batman: Arkham City GOTY"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Batman™: Arkham Knight"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Dishonored"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Fallout 4"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Five Hearts Under One Roof"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Knowledge, or know Lady"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Red Dead Redemption 2"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Resident Evil 2 (2019)"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Resident Evil 4 (2023)"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Bastion"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Digimon Story Time Stranger"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Dungeons of Hinterberg"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Bully"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "FINAL FANTASY XVI"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Uncharted 4: A Thief's End"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Uncharted 4 : The Lost Legacy"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "A Plague Tale: Requiem"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Another Crab's Treasure"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "LISA: The Painful"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "LISA: The Joyful"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Zeepkist"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "ANTONBLAST"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "Psychonauts 2"
-  ratings: 0
+  rating: 0
   pending: true
   comments: ""
   progress: 0
 
 - title: "The Killing Antidote"
-  ratings: 0
+  rating: 0
   pending: true
   comments: "" 
   progress: 0
