@@ -195,6 +195,18 @@
   progress: 100
   comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot. Played on Steam Deck"
 
+- title: "Mark of the Ninja: Remastered"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Shadow Warrior 2"
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "FPS"
+
 - title: "The Artful Escape"
   rating: 0
   pending: true
@@ -436,12 +448,6 @@
   progress: 0
 
 - title: "DAVE THE DIVER"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Mark of the Ninja: Remastered"
   rating: 0
   pending: true
   comments: ""
