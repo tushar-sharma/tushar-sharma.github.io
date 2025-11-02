@@ -201,11 +201,11 @@
   comments: ""
   progress: 0
 
-- title: "Shadow Warrior 2"
+- title: "Ratchet & Clank: Rift Apart"
   rating: 0
   pending: true
   progress: 0
-  comments: "FPS"
+  comments: ""
 
 - title: "The Artful Escape"
   rating: 0
@@ -214,12 +214,6 @@
   comments: "Change Layout to Keyboard(WASD) and mouse on Steam Deck. Press RS for clicking."
 
 - title: "GUILTY GEAR -STRIVE-"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: ""
-
-- title: "Ratchet & Clank: Rift Apart"
   rating: 0
   pending: true
   progress: 0
@@ -369,6 +363,18 @@
   comments: ""
   progress: 0
 
+- title: "Lethal League Blaze"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "ROLLERDROME"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
 - title: "Katana ZERO"
   rating: 0
   pending: true
@@ -381,7 +387,19 @@
   comments: ""
   progress: 0
 
+- title: "Marvel’s Spider-Man Remastered"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
 - title: "Inscryption"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "and Roger"
   rating: 0
   pending: true
   comments: ""
@@ -412,6 +430,12 @@
   progress: 0
 
 - title: "DOOM (2016)"
+  rating: 0
+  pending: true
+  comments: "FPS"
+  progress: 0
+
+- title: "DOOM Eternal"
   rating: 0
   pending: true
   comments: "FPS"
@@ -550,6 +574,12 @@
   progress: 0
 
 - title: "Red Dead Redemption 2"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "A Space for the Unbound"
   rating: 0
   pending: true
   comments: ""
