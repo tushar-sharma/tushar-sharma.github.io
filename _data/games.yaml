@@ -141,17 +141,17 @@
   rating: 4
   comments: "Set in São Paulo, Brazil. Lot of cutscenes. Feels like Rambo on a shooting spree. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch. Played on Steam Deck."
 
+- title: "Titanfall 2"
+  rating: 5
+  pending: false
+  progress: 100
+  comments: "One of the best FPS games out there. The combat feels incredible—whether you’re on foot or piloting a Titan, every battle is pure adrenaline. The story builds up beautifully, and the ending is nothing short of spectacular. Cons: The EA launcher can be a bit annoying—it insists on connecting to the internet every time you launch the game on steam deck, and occasionally you’ll get a blank screen. A quick restart usually fixes it, though."
+
 - title: "Lego City Undercover"
   rating: 0
   pending: true
   progress: 4
   comments: "Fun game. Minor technical bugs: green bar during cutscenes. Saving at multiple slots have conflict if the gameplay progress is the same."
-
-- title: "Titanfall 2"
-  rating: 0
-  pending: true
-  progress: 55
-  comments: "One of the best FPS game. Combat is fun both solo as well as when you embark on Titan. Timeshift level was my most favourite stage. Cons: EA launcher tries to connect to internet everytime you start the game. It sometimes gives you a blank screen. Force restart the game to fix it."
 
 - title: "Joe Danger 2: The Movie"
   rating: 0
@@ -231,6 +231,11 @@
   progress: 0
   comments: ""
 
+- title: "Deus Ex: Human Revolution - Director's Cut"
+  rating: 0
+  pending: true
+  progress: 0
+  comments: ""
 
 - title: "Gunfire Reborn"
   rating: 0
@@ -346,6 +351,12 @@
   comments: ""
   progress: 0
 
+- title: "Fallout: New Vegas"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
 - title: "Katana ZERO"
   rating: 0
   pending: true
@@ -383,6 +394,12 @@
   progress: 0
 
 - title: "ULTRAKILL"
+  rating: 0
+  pending: true
+  comments: "FPS"
+  progress: 0
+
+- title: "DOOM (2016)"
   rating: 0
   pending: true
   comments: "FPS"
