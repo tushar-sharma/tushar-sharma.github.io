@@ -6,321 +6,353 @@ author: Tushar Sharma
 published: true
 ---
 
+<!-- dependencies -->
 <script src="https://unpkg.com/jquery.terminal@2.35.0/js/jquery.terminal.js"></script>
 <link href="{{ root_url}}/css/jquery.terminal.css" rel="stylesheet" />
 <script src="https://unpkg.com/js-polyfills/keyboard.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/jcubic/static/js/wcwidth.js"></script>
 
 <style>
+  :root{
+    --terminal-bg: #f8f8f8;
+    --terminal-text: #111;    /* main text color — darker for a professional look */
+    --terminal-muted: #6c6c6c; /* optional muted color */
+    --accent: #3399cc;        /* highlight color used by .cl */
+  }
+
   .terminal {
-    font-family: FreeMono, monospace !important;
-    line-height: 14px !important;
+    color: var(--terminal-text) !important;
+    font-family: "FreeMono", monospace !important;
+    line-height: 1.4 !important;
     padding: 8px 15px !important;
-    background: #f8f8f8 !important;
+    background: var(--terminal-bg) !important;
     border-radius: 5px !important;
     border: 1px solid #e5e5e5 !important;
     overflow-x: auto !important;
   }
 
-  .cmd div {
-    color: var(--color, #aaa);
-    background-color: #f8f8f8 !important;
+  /* keep the old `.cl` styling but make it stand out from the main text */
+  .terminal .cl {
+    color: var(--accent) !important;
+    font-weight: 600;
   }
 
-  textarea #lb4yip {
+  /* secondary highlight used elsewhere */
+  .terminal .cl2 {
+    color: #c0392b !important;
+  }
+
+  /* ensure inner command divs inherit the main terminal color (not grey) */
+  .cmd div {
+    color: inherit;
+    background-color: var(--terminal-bg) !important;
+  }
+
+  /* inputs / textarea inside terminal */
+  textarea#lb4yip {
     font-size: 16px !important;
+    color: var(--terminal-text) !important;
+    background: #fff;
+  }
+
+  /* links inside terminal use accent color */
+  .terminal a {
+    color: var(--accent) !important;
+    text-decoration: underline;
+  }
+
+  /* man-style help */
+  .terminal .man-page pre {
+    font-family: "FreeMono", monospace;
+    color: var(--terminal-text);
+    margin: 0;
+    white-space: pre;
+    line-height: 1.45;
+  }
+  .terminal .man-page .man-cmd {
+    color: var(--accent);
+    font-weight: 700;
+    display: inline-block;
+    min-width: 18ch; /* reserve space for command column */
+  }
+  .terminal .man-page .man-desc {
+    color: inherit;
   }
 </style>
 
 <script type="text/javascript">
-  function myIP() {
-    ajax = new XMLHttpRequest();
-    if (ajax != null) {
-      ajax.open("GET", "https://europe-west3-devrcc.cloudfunctions.net/whatismyip", true);
-      ajax.onreadystatechange = function () {
-        if (this.readyState == 4) {
-          if (this.status == 200) {
-            console.log(this.responseText);
-          }
-        }
-      }
-      ajax.send(null);
+(function () {
+  'use strict';
+
+  // Utilities
+  const fetchIP = async () => {
+    try {
+      const res = await fetch('https://europe-west3-devrcc.cloudfunctions.net/whatismyip');
+      if (!res.ok) return '';
+      return await res.text();
+    } catch (e) {
+      console.warn('fetchIP failed', e);
+      return '';
     }
+  };
 
-    return false;
-  }
-
-  $(function () {
-    var aOnce = true;
-    var aHelp = true; /* used to avoid triggering help in greetings */
-
-    var greetTxt = " __      __           .__                                       \n" +
-      "/  \\    /  \\   ____   |  |     ____     ____     _____     ____  \n" +
-      "\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  \n" +
-      " \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  \n" +
-      "  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > \n" +
-      "       \\/         \\/              \\/                 \\/       \\/ \n\n\n" +
-      "      ----   to Random Wits   ----  \n";
-
-
-    var anim = false;
-    function typed(finish_typing) {
-      return function (term, message, delay, finish) {
-        anim = true;
-        var prompt = term.get_prompt();
-        var c = 0;
-        if (message.length > 0) {
-          term.set_prompt('');
-          var interval = setInterval(function () {
-            term.insert(message[c++]);
-            if (c == message.length) {
-              clearInterval(interval);
-              // execute in next interval
-              setTimeout(function () {
-                // swap command with prompt
-                finish_typing(term, message, prompt);
-                anim = false
-                finish && finish();
-              }, delay);
-            }
+  const createTyped = (onFinish) => {
+    return (term, message = '', delay = 20, finish) => {
+      let i = 0;
+      const prompt = term.get_prompt();
+      if (!message) return;
+      term.set_prompt('');
+      const interval = setInterval(() => {
+        term.insert(message[i++]);
+        if (i === message.length) {
+          clearInterval(interval);
+          setTimeout(() => {
+            onFinish(term, message, prompt);
+            finish && finish();
           }, delay);
         }
-      };
-    }
-    var typed_prompt = typed(function (term, message, prompt) {
-      // swap command with prompt
-      term.set_command('');
-      term.set_prompt(message + ' ');
-    });
-    var typed_message = typed(function (term, message, prompt) {
-      term.set_command('');
-      term.echo(message)
-      term.set_prompt(prompt);
-    });
-    $('#foo').terminal(function (cmd, term) {
-      var finish = false;
+      }, delay);
+    };
+  };
 
-      var msg = "\n\nWake up, " + cmd + "! The Matrix has you. You take blue pill, the story ends here. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes!\n\nType red for red pill, blue for blue pill.\n\n";
+  const typedPrompt = createTyped((term, message, prompt) => {
+    term.set_command('');
+    term.set_prompt(message + ' ');
+  });
+
+  const typedMessage = createTyped((term, message, prompt) => {
+    term.set_command('');
+    term.echo(message);
+    term.set_prompt(prompt);
+  });
+
+  // Static greeting art
+  const GREET = [
+    " __      __           .__                                       ",
+    "/  \\    /  \\   ____   |  |     ____     ____     _____     ____  ",
+    "\\   \\/\\/   / _/ __ \\  |  |   _/ ___\\   /  _ \\   /     \\  _/ __ \\  ",
+    " \\        /  \\  ___/  |  |__ \\  \\___  (  <_> ) |  Y Y  \\ \\  ___/  ",
+    "  \\__/\\  /    \\___  > |____/  \\___  >  \\____/  |__|_|  /  \\___  > ",
+    "       \\/         \\/              \\/                 \\/       \\/ ",
+    "",
+    "      ----   to Random Wits   ----"
+  ].join('\n') + '\n\n';
+
+  // Command handlers map
+  const handlers = {
+    help(term) {
+      const commands = [
+        ['clear',  'Clear the terminal output'],
+        ['about',  'About the site / author'],
+        ['resume', 'Show resume / experience'],
+        ['ls',     'List pseudo-files and folders'],
+        ['songs',  'Play a random song (YouTube)'],
+        ['books',  'Show current / last reads'],
+        ['games',  'Show current / last games'],
+        ['contact','Open contact page'],
+        ['quote',  'Show a random quote'],
+        ['trivia', 'Show a random trivia item'],
+        ['travel', 'Show recommended destinations'],
+        ['hack',   'Load experimental scripts (legacy)'],
+        ['search', 'Redirect to site search (usage: search <term>)']
+      ];
+
+      const html = ['<div class="man-page"><pre>'];
+      commands.forEach(([cmd, desc]) => {
+        // two spaces between columns to keep alignment in monospace
+        html.push(`<span class="man-cmd">${cmd}</span>  <span class="man-desc">${desc}</span>`);
+      });
+      html.push('</pre></div><br>');
+
+      term.echo(html.join('\n'), { raw: true });
+    },
+
+    about(term) {
+      term.echo(
+        `Hi! My name is <span class="clr">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes. Feel free to explore my site or <a href="/contact">drop a line</a>.<br>`,
+        { raw: true }
+      );
+    },
+
+    ls(term) {
+      term.echo('<span class="cl">css</span> 404.html <br> <span class="cl">js</span> index.php <br> <span class="cl">nsa_classified</span> contact.html<br> <span class="cl">evil_plan</span> spies.txt', { raw: true });
+    },
+
+    cd(term) {
+      fetchIP().then(ip => {
+        term.echo(`You've tried to gain access to something you are not authorized to. Your IP address has been logged. To file a dispute, submit an apology <a href="/contact">here</a>.`, { raw: true });
+      });
+    },
+
+    cat(term) {
+      fetchIP().then(ip => {
+        term.echo(`Unauthorized access attempt logged. To avoid reporting it, submit an apology <a href="/contact">here</a>.`, { raw: true });
+      });
+    },
+
+    dir(term) {
+      this.ls(term);
+    },
+
+    contact() { window.location.href = '/contact'; },
+    projects() { window.location.href = '/projects'; },
+
+    search(term, args) {
+      if (!args) {
+        term.echo('Wrong Parameters. Usage: search <term>');
+      } else {
+        window.location.href = '/search/?q=' + encodeURIComponent(args);
+      }
+    },
+
+    games(term) {
+      term.echo('Currently playing: <span class="cl">Doom Eternal</span>. Last played: <span class="cl">Titanfall 2</span>', { raw: true });
+    },
+
+    books(term) {
+      term.echo('Currently reading: <span class="cl">Oxygen: The Molecule that Made the World</span>. Last read: <span class="cl">The Psychology of Money</span>', { raw: true });
+    },
+
+    hack() {
+      const scripts = ['{{ root-url }}/js/kh.js', 'https://web.archive.org/web/20140615132821/http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];
+      scripts.forEach(src => {
+        const s = document.createElement('script');
+        s.src = src;
+        document.body.appendChild(s);
+      });
+    },
+
+    resume(term) {
+      term.echo(
+        `<span class="cl">University of Florida</span> Senior Certificate, Spring 2013.<br><span class="cl">JUIT</span> B.Tech in ECE (2009-2013).<br><span class="cl">Experience:</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a target="_blank" href="https://dl.dropboxusercontent.com/u/85584172/resume.pdf">..resume</a>`,
+        { raw: true }
+      );
+    },
+
+    quote(term) {
+      jQuery.get('/../quotes.txt', function (data) {
+        const quotes = data.split('\n');
+        const idx = Math.floor(Math.random() * (quotes.length - 1));
+        term.echo(`<span style="color: rgb(51,153,204);">${quotes[idx]}</span>`, { raw: true });
+      });
+    },
+
+    trivia(term) {
+      jQuery.get('/../trivia.txt', function (data) {
+        const trivia = data.split('\n');
+        const idx = Math.floor(Math.random() * (trivia.length - 1));
+        term.echo(`<span style="color: rgb(51,153,204);">${trivia[idx]}</span>`, { raw: true });
+      });
+    },
+
+    travel(term) {
+      const places = {
+        "Chimney Rock, North Carolina": "https://www.youtube.com/watch?v=z8poghdWw3Y",
+        "Yellow Stone": "https://www.youtube.com/watch?v=YjPGz9192S0",
+        "Seabreacher Ride": "https://www.getyourguide.com/cancun-l150/cancun-seabreacher-ride-t251922/",
+        "Dunk Tanks": "",
+        "Bamboo river rafting, Thailand": "https://www.airbnb.com/experiences/933327",
+        "Marble caves of Chile": "",
+        "Las Botas Viejas, Cartagena": "",
+        "North Carolina Museum of Natural Science, Raleigh, NC": "",
+        "Siwa Oasis, Egypt": "https://twitter.com/fasc1nate/status/1753871039606469009"
+      };
+
+      let list = '<pre style="font-family:Courier,monospace;color:#ff6347;">_..-----._\n-          -\n|｡ ♥ ｡|\n\'.  -ˏˋ Destination List ˊˎ-  .\'\n  `""""""""`</pre><br>';
+      for (const [place, link] of Object.entries(places)) {
+        list += link ? `<a href="${link}" style="color:#008080;font-family:Courier,monospace;" target="_blank">${place}</a><br><br>`
+                     : `<span style="color:#008080;font-family:Courier,monospace;">${place}</span><br><br>`;
+      }
+      term.echo(list, { raw: true });
+    },
+
+    songs(term) {
+      term.clear();
+      jQuery.get('/../songs.txt', function (data) {
+        const songs = data.split('\n');
+        const idx = Math.floor(Math.random() * (songs.length - 1));
+        const song = songs[idx];
+        const video = `<iframe style="position:relative;width:100%;" height="500" src="https://www.youtube.com/embed/${song}&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Sample"></iframe>`;
+        term.echo(`<br><br><span style="color: rgb(51,153,204);">${video}</span><br><br>`, { raw: true });
+      });
+    }
+  };
+
+  // Terminal initialization
+  $(function () {
+    let firstRun = true;
+    let animating = false;
+
+    $('#foo').terminal(function (input, term) {
+      const trimmed = (input || '').trim();
+      if (!trimmed) return;
+
+      // simple parsing: first token is command, rest is argument string
+      const spaceIndex = trimmed.indexOf(' ');
+      const cmd = spaceIndex > -1 ? trimmed.slice(0, spaceIndex) : trimmed;
+      const args = spaceIndex > -1 ? trimmed.slice(spaceIndex + 1) : '';
+
       term.set_prompt('$ ');
 
-      /*typed_message(term, msg, 100, function() {
-          finish = true;
-      });*/
-
-      arg = cmd.substr(0, cmd.indexOf(' '));
-      toSearch = cmd.substr(cmd.indexOf(' ') + 1);
-
-      if (aOnce == true) {  //only once
-        aOnce = false;
-        term.echo(msg);
-        this.echo('<img src="https://pbs.twimg.com/media/CtZpAWgUkAEVGX1?format=jpg&name=small"/><br><br>', {raw: true});
-      } else if (cmd == "blue") {
-        window.location.href = "/"
-      } else if (cmd == "red" || cmd == "help") {
-
-        mystr = `
-        <span class=\"cl\">clear</span> Clear screen<br><br>
-        <span class=\"cl\">about</span> Who the heck am I?<br><br>
-        <span class=\"cl\"> Resume</span> Do you want to hire me?<br><br>
-        <span class=\"cl\">ls</span> See hidden files<br><br>
-        <span class=\"cl\">songs</span> Recommend me a song<br><br>
-        <span class=\"cl\">games</span> List some of games I developed.<br><br>
-        <span class=\"cl\">contact</span> Send me a direct message<br><br>
-        <span class=\"cl\">quote</span> A random quote.<br><br>
-        <span class=\"cl\">hack</span> Go loco<br><br>
-        <span class=\"cl\">search</span> Search my site.`;
-
-        term.echo(mystr, {
-          raw: function (div) {
-          }
-        });
-      } else if (cmd == "about") {
-        term.echo("Hi! My name is <span class=\"clr\">Tushar Sharma</span>. I am a software developer by vocation, blogger by hobby and a poet by genes (probably..&#12484;). Feel free to explore my site or drop me a line.<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" href=\"/about\">...more</a><br>", {
-          raw: function (div) {
-          }
-        });
-
-      } else if (cmd == "ls") {
-
-        term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
-          raw: function (div) {
-          }
-        });
-
-      } else if (arg == "cd" || cmd == "cd") {
-
-        ip = myIP();
-        term.echo("You've tried to gain access to something which you're not authorized to. Your IP address has been logged and reported to FBI. To file a dispute, please submit an apology <a href=\"/../contact/\">here</a>.", {
-          raw: function (div) {
-          }
-        });
-
-
-      } else if (arg == "cat" || cmd == "cat") {
-
-        ip = myIP();
-        term.echo("You've tried to gain access to something which you're not authorized to. Your IP <span class=\"cl2\">" + ip + "</span> would be reported to FBI. To avoid reporting it, please submit an apology <a href=\"/../contact/\">here</a>.", {
-          raw: function (div) {
-          }
-        });
-
-
-      } else if (arg == "dir" || cmd == "dir") {
-
-        term.echo("<span class=\"cl\">css</span> 404.html <br> <span class=\"cl\">js</span> index.php <br> <span class=\"cl\">nsa_classified</span> contact.html<br> <span class=\"cl\">evil_plan</span> spies.txt", {
-          raw: function (div) {
-          }
-        });
-
-
-      } else if (cmd == "contact") {
-        window.location.href = "/contact";
-      } else if (cmd == "projects") {
-        window.location.href = "/projects";
-      } else if (arg == "search" || cmd == "search") {
-        if (toSearch == "" || cmd == "search")
-          term.echo("Wrong Parameters. Usage: search <to search>");
-        else window.location.href = "/search/?q=" + toSearch;
-      } else if (cmd == "games") {
-        window.location.href = "/games";
-      } /*else if (cmd == "qrcode") {
-            term.echo("<img src=\"http://api.qrserver.com/v1/create-qr-code/?data=MECARD%3AN%3ASharma%2CTushar%3BEMAIL%3Atushar%40randomwits.com%3BTEL%3A%2B919837264416%3BURL%3Ahttp%3A%2F%2Frandomwits.com%3B%3B&#38;size=150x150&#38;prov=goqrme\" alt=\"MECARD:N:Sharma,Tushar;EMAIL:tushar@randomwits.com;TEL:+919837264416;URL:http://randomwits.com;; \"  /> ", {
-              raw: function(div) {
-            }
-         });
-
-        }*/ else if (cmd == "hack") {
-
-        javascript: var i, s, ss = ['{{ root-url }}/js/kh.js', 'https://web.archive.org/web/20140615132821/http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js']; for (i = 0; i != ss.length; i++) {s = document.createElement('script'); s.src = ss[i]; document.body.appendChild(s);} void (0);
-
-      } else if (cmd == "resume") {
-
-        term.echo("<span class=\"cl\">University of Florida</span> Senior Certificate, Spring 2013.<br><span class=\"cl\">JUIT</span> B.Tech in ECE from 2009 to 2013.<br><span class=\"cl\">Experience with</span> C, C++, Java, HTML, CSS, PHP, JS, Python<br><a style=\"text-decoration: none; background: #00ee11; color:#000; \" target=\"_blank\" href=\"https://dl.dropboxusercontent.com/u/85584172/resume.pdf\" >..resume</a>", {
-          raw: function (div) {
-          }
-        });
-      } else if (cmd == "quote") {
-        jQuery.get('/../quotes.txt', function (data) {
-          quotes = data.split("\n");
-          idx = Math.floor((quotes.length - 1) * Math.random());
-          term.echo("<span style=\"color: rgb(51, 153, 204); \">" + quotes[idx] + "</span>", {
-            raw: function (div) { }
-          });
-        });
-
-      } else if (cmd == "trivia") {
-        jQuery.get('/../trivia.txt', function (data) {
-          trivia = data.split("\n");
-          idx = Math.floor((trivia.length - 1) * Math.random());
-          term.echo("<span style=\"color: rgb(51, 153, 204); \">" + trivia[idx] + "</span>", {
-            raw: function (div) { }
-          });
-        });
-        
-
-
-        /* term.echo(art, {
-           finalize: function(div) {
-             div.css("color", "rgb(51, 153, 204)");
-           }
-        });*/
-
-      } 
-           
-      else if (cmd == "travel") {
-         var places = {
-             "Chimney Rock, North Carolina": "https://www.youtube.com/watch?v=z8poghdWw3Y",
-             "Yellow Stone": "https://www.youtube.com/watch?v=YjPGz9192S0",
-             "Seabreacher Ride": "https://www.getyourguide.com/cancun-l150/cancun-seabreacher-ride-t251922/",
-             "Dunk Tanks": "",
-             "Bamboo river rafting, Thailand": "https://www.airbnb.com/experiences/933327",
-             "Marble caves of Chile": "",
-             "Las Botas Viejas, Cartagena": "",
-             "North Carolina Museum of Natural Sciene, Raleigh, North Carolina": "",
-             "Siwa Oasis, Egypt": "https://twitter.com/fasc1nate/status/1753871039606469009"
-         };
-         
-         var list = '<pre style="font-family: Courier, monospace; color: #ff6347;">_..-----._<br>-          -<br>|｡ ♥ ｡|<br>\'.  -ˏˋ Destination List ˊˎ-  .\'<br>  `""""""""`</pre><br>';
-         
-         for (var place in places) {
-             if (places[place]) {
-                 // If the place has a link, add it as a hyperlink
-                 list += '<a href="' + places[place] + '" style="color: #008080; font-family: Courier, monospace; margin-bottom: 10px;" target="_blank">' + place + '</a><br><br>';
-             } else {
-                 // If the place doesn't have a link, add it as plain text
-                 list += '<span style="color: #008080; font-family: Courier, monospace; margin-bottom: 10px;">' + place + '</span><br><br>';
-             }
-         }
-         
-         term.echo(list, {
-             raw: true
-         });
-       }
-
-      else if (cmd == "songs") {
-        // Clear the terminal first
-        term.clear();
-
-        jQuery.get('/../songs.txt', function (data) {
-          let songs = data.split("\n");
-          idx = Math.floor((songs.length - 1) * Math.random());
-          let song = songs[idx];
-
-          let video = `<iframe
-  style="position: relative;  width: 100%;"
-   height="500"
-	   src="https://www.youtube.com/embed/${song}&autoplay=1"
-		srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/${song}?autoplay=1><img src=https://img.youtube.com/vi/${song}/hqdefault.jpg alt='Sample'><span>▶</span></a>"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-  title="Sample"
-></iframe>`
-          term.echo("<br><br><span style=\"color: rgb(51, 153, 204); \">" + video + "</span><br><br>", {
-            raw: function (div) { }
-          });
-
-        });
-
-      } else {
-        if (aOnce == false) {
-          term.echo("Unknown command <span class=\"cl2\">" + cmd + "</span>. Please type <span class=\"cl2\">help</span>.", {
-            raw: function (div) {
-            }
-          });
-        }
+      if (firstRun) {
+        firstRun = false;
+        term.echo(`\n\nWelcome, ${cmd || 'stranger'}! Type "help" to list available commands.\n\n`, { raw: true });
+        return;
       }
 
-      var args = {cmd: cmd};
-      $.get('cmds.php', args, function (result) {
-        (function wait() {
-          if (finish) {
+      if (cmd === 'blue') {
+        window.location.href = '/';
+        return;
+      }
+
+      if (cmd === 'red' || cmd === 'help') {
+        handlers.help(term);
+        return;
+      }
+
+      // command dispatch
+      const handler = handlers[cmd.toLowerCase()];
+      if (handler) {
+        try {
+          handler.call(handlers, term, args);
+        } catch (err) {
+          console.error('handler error', err);
+          term.echo('An error occurred while processing the command.');
+        }
+      } else {
+        term.echo(`Unknown command <span class="cl2">${cmd}</span>. Please type <span class="cl2">help</span>.`, { raw: true });
+      }
+
+      // Preserve original backend "cmds.php" async behaviour
+      $.get('cmds.php', { cmd: input }, function (result) {
+        // delay echo until any animations finish (compat with original code)
+        const waitForFinish = (done) => {
+          if (!animating) {
             term.echo(result);
+            done && done();
           } else {
-            setTimeout(wait, 500);
+            setTimeout(() => waitForFinish(done), 200);
           }
-        })();
+        };
+        waitForFinish();
       });
     }, {
       name: 'Tushar',
-      greetings: greetTxt,
-      onInit: function (term) {
-        // first question
-        var msg = "\n";
-        typed_message(term, msg, 100, function () {
-          typed_prompt(term, "What's your name? :", 100, function () { });
+      greetings: GREET,
+      onInit(term) {
+        // ask for name using typed prompt
+        typedMessage(term, '\n', 100, () => {
+          typedPrompt(term, "What's your name? :", 100);
         });
       },
-      keydown: function (e) {
-        //disable keyboard when animating
-        if (anim) {
-          return false;
-        }
+      keydown(e) {
+        // disable input while animating typed sequences
+        if (animating) return false;
       }
     });
   });
 
+})();
 </script>
 
-<div style="" class="myterminal" id="foo">
-</div>
+<div class="myterminal" id="foo"></div>
