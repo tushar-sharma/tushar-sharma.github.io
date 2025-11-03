@@ -2,7 +2,7 @@
 layout: post
 title: Kafka Consumers with Reactive OAuth2 in Non-HTTP Contexts
 category: blog
-author: tushar shamra
+author: tushar sharma
 tags: [kafka, spring, reactive, oauth2]
 thumb: https://unsplash.com/photos/t9EziRd2RBk/download?w=437
 image: https://unsplash.com/photos/t9EziRd2RBk/download?w=437
