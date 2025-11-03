@@ -142,21 +142,20 @@ published: true
   const handlers = {
     help(term) {
       const commands = [
-        ['clear',  'Clear the terminal output'],
-        ['about',  'About the site / author'],
-        ['resume', 'Show resume / experience'],
-        ['ls',     'List pseudo-files and folders'],
-        ['songs',  'Play a random song (YouTube)'],
-        ['books',  'Show current / last reads'],
-        ['games',  'Show current / last games'],
-        ['contact','Open contact page'],
-        ['quote',  'Show a random quote'],
-        ['trivia', 'Show a random trivia item'],
-        ['travel', 'Show last distination'],
-        ['hack',   'Load experimental scripts (legacy)'],
-        ['hobbies', 'Show current hobbies'],
-        ['search', 'Redirect to site search (usage: search <term>)'],
-        ['hobbies', 'Current hobbies']
+        ['clear',     'Clear the terminal output'],
+        ['about',     'About the site / author'],
+        ['resume',    'Show resume / experience'],
+        ['ls',        'List pseudo-files and folders'],
+        ['songs',     'Play a random song (YouTube)'],
+        ['books',     'Show current / last reads'],
+        ['games',     'Show current / last games'],
+        ['contact',   'Open contact page'],
+        ['quote',     'Show a random quote'],
+        ['trivia',    'Show a random trivia item'],
+        ['travel',    'Show last destination'],
+        ['hack',      'Load experimental scripts (legacy)'],
+        ['hobbies',   'Show current hobbies'],
+        ['search',    'Redirect to site search (usage: search <term>)'],
         ['watchlist', 'Show last and current watchlist']
       ];
 
@@ -164,7 +163,7 @@ published: true
       commands.forEach(([cmd, desc]) => {
         html.push(`<span class="man-cmd">${cmd}</span>  <span class="man-desc">${desc}</span>`);
       });
-      html.push('</pre></div><br>');
+      html.push('</pre></div>');
 
       term.echo(html.join('\n'), { raw: true });
     },
