@@ -152,14 +152,14 @@ published: true
         ['contact','Open contact page'],
         ['quote',  'Show a random quote'],
         ['trivia', 'Show a random trivia item'],
-        ['travel', 'Show recommended destinations'],
+        ['travel', 'Show last distination'],
         ['hack',   'Load experimental scripts (legacy)'],
-        ['search', 'Redirect to site search (usage: search <term>)']
+        ['search', 'Redirect to site search (usage: search <term>)'],
+        ['watchlist', 'Show last and current watchlist']
       ];
 
       const html = ['<div class="man-page"><pre>'];
       commands.forEach(([cmd, desc]) => {
-        // two spaces between columns to keep alignment in monospace
         html.push(`<span class="man-cmd">${cmd}</span>  <span class="man-desc">${desc}</span>`);
       });
       html.push('</pre></div><br>');
@@ -206,7 +206,7 @@ published: true
     },
 
     games(term) {
-      term.echo('Currently playing: <span class="cl">Doom Eternal</span>. Last played: <span class="cl">Titanfall 2</span>', { raw: true });
+      term.echo('Currently playing: <span class="cl">Rachet & Clank: Rift Apart</span>. Last played: <span class="cl">Titanfall 2</span>', { raw: true });
     },
 
     books(term) {
@@ -246,24 +246,7 @@ published: true
     },
 
     travel(term) {
-      const places = {
-        "Chimney Rock, North Carolina": "https://www.youtube.com/watch?v=z8poghdWw3Y",
-        "Yellow Stone": "https://www.youtube.com/watch?v=YjPGz9192S0",
-        "Seabreacher Ride": "https://www.getyourguide.com/cancun-l150/cancun-seabreacher-ride-t251922/",
-        "Dunk Tanks": "",
-        "Bamboo river rafting, Thailand": "https://www.airbnb.com/experiences/933327",
-        "Marble caves of Chile": "",
-        "Las Botas Viejas, Cartagena": "",
-        "North Carolina Museum of Natural Science, Raleigh, NC": "",
-        "Siwa Oasis, Egypt": "https://twitter.com/fasc1nate/status/1753871039606469009"
-      };
-
-      let list = '<pre style="font-family:Courier,monospace;color:#ff6347;">_..-----._\n-          -\n|｡ ♥ ｡|\n\'.  -ˏˋ Destination List ˊˎ-  .\'\n  `""""""""`</pre><br>';
-      for (const [place, link] of Object.entries(places)) {
-        list += link ? `<a href="${link}" style="color:#008080;font-family:Courier,monospace;" target="_blank">${place}</a><br><br>`
-                     : `<span style="color:#008080;font-family:Courier,monospace;">${place}</span><br><br>`;
-      }
-      term.echo(list, { raw: true });
+      term.echo('Recently I visited Peru on Oct, 2025. For more travel, <a href="{{ root _jekyll}}/travel">link</a>', { raw: true });
     },
 
     songs(term) {
@@ -275,7 +258,11 @@ published: true
         const video = `<iframe style="position:relative;width:100%;" height="500" src="https://www.youtube.com/embed/${song}&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Sample"></iframe>`;
         term.echo(`<br><br><span style="color: rgb(51,153,204);">${video}</span><br><br>`, { raw: true });
       });
-    }
+    },
+
+    watchlist(term) {
+      term.echo('Last watched: <span class="cl">Planes, Trains and Automobiles</span>. Currently watching: <span class="cl">Spy x Family</span>', { raw: true });
+    },
   };
 
   // Terminal initialization

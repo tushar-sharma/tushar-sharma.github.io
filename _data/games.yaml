@@ -26,7 +26,7 @@
 
 - title: "Sunset Overdrive"
   rating: 5
-  comments: "Cons: Corrupt file message pops up everytime you start the game. The game is goofy and fun. You can even shoot a dog at enemies."
+  comments: "Made by Insomniac Games. Cons: Corrupt file message pops up everytime you start the game. The game is goofy and fun. You can even shoot a dog at enemies."
 
 - title: "Super Mario Odyssey"
   download: "<a href='/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator' aria-label='Download Super Mario Odyssey' style='color:#007bff; font-weight:bold;'><i class='fas fa-download'></i> 🍄</a>"
@@ -195,17 +195,17 @@
   progress: 100
   comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot. Played on Steam Deck"
 
+- title: "Ratchet & Clank: Rift Apart"
+  rating: 0
+  pending: true
+  progress: 1
+  comments: "Made by Insomniac Games. Controller don't work by default. Disable Steam Input per game settings to make it work."
+
 - title: "Mark of the Ninja: Remastered"
   rating: 0
   pending: true
   comments: ""
   progress: 0
-
-- title: "Ratchet & Clank: Rift Apart"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: ""
 
 - title: "The Artful Escape"
   rating: 0
