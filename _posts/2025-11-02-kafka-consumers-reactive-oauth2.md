@@ -3,7 +3,7 @@ layout: post
 title: Kafka Consumers with Reactive OAuth2 in Non-HTTP Contexts
 category: blog
 author: tushar shamra
-tags: [Kafka, Spring WebFlux, OAuth2, Reactive Programming, Security]
+tags: [kafka, spring, reactive, oauth2]
 thumb: https://unsplash.com/photos/t9EziRd2RBk/download?w=437
 image: https://unsplash.com/photos/t9EziRd2RBk/download?w=437
 ---
