@@ -219,6 +219,12 @@
   progress: 0
   comments: ""
 
+- title: "Rivals of Aether"
+  rating: 0
+  pending: true
+  progress: 0
+  comments: ""
+  
 - title: "Sleeping Dogs"
   rating: 0
   pending: true
