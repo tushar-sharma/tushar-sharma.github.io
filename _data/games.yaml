@@ -201,6 +201,12 @@
   progress: 1
   comments: "Made by Insomniac Games. Controller don't work by default. Disable Steam Input per game settings to make it work."
 
+- title: "Animal Well"
+  rating: 0
+  pending: true
+  progress: 1
+  comments: "Metroidvania game. Calm background music with pixel art style."
+
 - title: "Mark of the Ninja: Remastered"
   rating: 0
   pending: true
