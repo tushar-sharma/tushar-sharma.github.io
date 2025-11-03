@@ -447,6 +447,18 @@
   comments: "FPS"
   progress: 0
 
+- title: "POSTAL: Brain Damaged"
+  rating: 0
+  pending: true
+  comments: "FPS"
+  progress: 0
+
+- title: "CRUEL"
+  rating: 0
+  pending: true
+  comments: "FPS"
+  progress: 0
+
 - title: "The Stanley Parable"
   rating: 0
   pending: true
@@ -693,3 +705,56 @@
   comments: "" 
   progress: 0
 
+- title: "The Upturned"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "The Drifter"
+  rating: 0
+  pending: true
+  comments: "Point & Click."
+  progress: 0
+
+- title: "Day of the Tentacle Remastered"
+  rating: 0
+  pending: true
+  comments: "Point & Click."
+  progress: 0
+
+- title: "METAL GEAR RISING: REVENGEANCE"
+  rating: 0
+  pending: true
+  comments: "Hack and slash."
+  progress: 0
+
+- title: "Devil May Cry 5"
+  rating: 0
+  pending: true
+  comments: "Hack and slash."
+  progress: 0
+
+- title: "LOK Digital"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Metroid Dread "
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "The Forgotten City"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Deathloop"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
