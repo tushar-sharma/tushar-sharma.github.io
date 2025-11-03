@@ -293,3 +293,9 @@
   progress: 0
   platform: "HiAnime"
   pending: true
+
+- title: "Bocchi the Rock!"
+  rating: 0 
+  pending: true
+  progress: 0
+  comments: ""
