@@ -46,27 +46,31 @@ author: Tushar Sharma
           {% endif %}
         </td>
         <td>
-          <div class="cl">
-                 <!-- full stars -->
-                {% assign full_stars = item.rating | floor %}
-                {% for i in (1..full_stars) %}
-                  <span class="fa fa-star checked"></span>
-                {% endfor %}
-    
-                 <!-- half stars -->
-                 {% assign has_half_star = item.rating | modulo: 1 %}
-                 {% if has_half_star > 0 %}
-                   <i class="fas fa-star-half-alt"></i>
-                  {% assign empty_stars = 5 | minus: full_stars | minus: 1 %}
-                 {% else %}
-                   {% assign empty_stars = 5 | minus: full_stars %}
-                 {% endif %}
-                
-                <!-- Empty stars -->
-                {% for i in (1..empty_stars) %}
-                  <span class="icon-star-empty"></span>
-                {% endfor %}
-          </div>
+          {% if item.pending %}
+            Pending <progress value="{{ item.progress | default: 0 }}" max="100"></progress>
+          {% else %}
+            <div class="cl">
+                   <!-- full stars -->
+                  {% assign full_stars = item.rating | floor %}
+                  {% for i in (1..full_stars) %}
+                    <span class="fa fa-star checked"></span>
+                  {% endfor %}
+      
+                   <!-- half stars -->
+                   {% assign has_half_star = item.rating | modulo: 1 %}
+                   {% if has_half_star > 0 %}
+                     <i class="fas fa-star-half-alt"></i>
+                    {% assign empty_stars = 5 | minus: full_stars | minus: 1 %}
+                   {% else %}
+                     {% assign empty_stars = 5 | minus: full_stars %}
+                   {% endif %}
+                  
+                  <!-- Empty stars -->
+                  {% for i in (1..empty_stars) %}
+                    <span class="icon-star-empty"></span>
+                  {% endfor %}
+            </div>
+          {% endif %}
         </td>
         <td>
           {{ item.platform }}
