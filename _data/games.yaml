@@ -153,6 +153,12 @@
   progress: 4
   comments: "Fun game. Minor technical bugs: green bar during cutscenes. Saving at multiple slots have conflict if the gameplay progress is the same."
 
+- title: "Don Bradman Cricket 14"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: "Error: You must be online in order to play Don Bradman Cricket 14. Fix : Use older proton like Proton 7.0-6."
+
 - title: "Joe Danger 2: The Movie"
   rating: 0
   progress: 100
@@ -238,6 +244,12 @@
   comments: ""
 
 - title: "GTA 5"
+  rating: 0
+  pending: true
+  progress: 0
+  comments: ""
+
+- title: "Stellar Blade"
   rating: 0
   pending: true
   progress: 0
@@ -760,6 +772,42 @@
   progress: 0
 
 - title: "Deathloop"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "The Last of Us Part I"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "The Last of Us Part II Remastered"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "1000xRESIST"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Atuel"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Baba Is You"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "TIS-100"
   rating: 0
   pending: true
   comments: ""
