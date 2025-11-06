@@ -151,7 +151,13 @@
   rating: 5
   pending: false
   progress: 100
-  comments: "Free to play game. It's a demo version of BroForce. Retro feel and great shooting."
+  comments: "Fun free demo of Broforce with a great retro feel and awesome gameplay."
+
+- title: "BroForce"
+  rating: 0
+  pending: true
+  progress: 1
+  comments: ""
   
 - title: "Lego City Undercover"
   rating: 0
