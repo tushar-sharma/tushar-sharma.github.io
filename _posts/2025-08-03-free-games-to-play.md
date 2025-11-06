@@ -37,4 +37,5 @@ Curated list of free games to play.
 | Perfect Vermin | [Steam](https://store.steampowered.com/app/1416130/Perfect_Vermin/) | |
 | Leaf Blower Revolution - Idle Game | [Steam](https://store.steampowered.com/app/1468260/Leaf_Blower_Revolution__Idle_Game/) | |
 | Landfill | [Steam](https://store.steampowered.com/app/2353760/Landfall_Archives/) | |
-| Life is Strange Episode 1 | [Steam](https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/) | |
+| The Expendabros | [Steam](https://store.steampowered.com/app/312990/The_Expendabros/) | Free to play game. It's a demo version of BroForce. Retro feel and great shooting. | |
+| Life is Strange Episode 1 | [Steam](https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/) | | |

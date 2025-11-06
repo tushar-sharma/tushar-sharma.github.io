@@ -147,6 +147,12 @@
   progress: 100
   comments: "One of the best FPS games out there. The combat feels incredible—whether you’re on foot or piloting a Titan, every battle is pure adrenaline. The story builds up beautifully, and the ending is nothing short of spectacular. Cons: The EA launcher can be a bit annoying—it insists on connecting to the internet every time you launch the game on steam deck, and occasionally you’ll get a blank screen. A quick restart usually fixes it, though."
 
+- title: "The Expendabros"
+  rating: 5
+  pending: false
+  progress: 100
+  comments: "Free to play game. It's a demo version of BroForce. Retro feel and great shooting."
+  
 - title: "Lego City Undercover"
   rating: 0
   pending: true
