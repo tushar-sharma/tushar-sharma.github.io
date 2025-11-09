@@ -17,6 +17,7 @@ Curated list of free games to play.
 | Name | Link | Comments | Recommendation |
 |------|------|----------|----------------|
 | The Were Cleaner | [Steam](https://store.steampowered.com/app/2795000/The_WereCleaner/) |You play as a janitor who needs to pay his rent. However you are also a warewolf who can eat people. My only pet peeve is that it's too short| 
+| 20 Small Mazes | [Steam](https://store.steampowered.com/app/2570630/20_Small_Mazes/) | |
 | Agni | [Steam](https://store.steampowered.com/app/1822340/AGNI/) | Simple runner game |
 | Doronko Wanko | [Steam](https://store.steampowered.com/app/2512840/DORONKO_WANKO/) | Play as a mischievous dog and make a mess. You need to change language from Japanese to English |
 | Atuel | [Steam](https://store.steampowered.com/app/2794330/Atuel/) | Short, meditative adventure exploring the Atuel River in Argentina. |
