@@ -153,6 +153,11 @@
   progress: 100
   comments: "Fun free demo of Broforce with a great retro feel and awesome gameplay."
 
+- title: "Promise Mascot Agency"
+  rating: 4
+  pending: false
+  comments: "The Japanese voice acting is excellent, and the English subtitles are great. The writing is hilarious. Cons: Driving is not that fun. Also maps is difficult to navigate. Abandoned"
+
 - title: "BroForce"
   rating: 5
   pending: true
@@ -206,12 +211,6 @@
   pending: true
   progress: 100
   comments: "A relaxing biking game where you ride downhill through beautiful, minimalistic landscapes with soothing ambient sounds."
-
-- title: "Promise Mascot Agency"
-  rating: 0
-  pending: true
-  progress: 100
-  comments: "The Japanese voice acting is excellent, and the English subtitles are well done. The writing is hilarious — Michi, once an extortionist, now has to work as a mascot to repay his debts. Driving around the city is surprisingly fun!"
 
 - title: "Guardian of the Galaxy"
   rating: 0
