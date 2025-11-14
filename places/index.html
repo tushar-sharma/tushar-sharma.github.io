@@ -1,0 +1,80 @@
+---
+layout: default
+title: Log of Places
+published: true
+---
+
+<link rel="stylesheet" href="{{ root_url }}/css/search.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+<style type="text/css">
+  td{
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: #667;
+      letter-spacing: 0.015em;
+      hyphens: none;
+  }
+</style>
+
+<script  type="text/javascript">
+$(document).ready(function () {
+  $('#dtMaterial').DataTable({
+    "bSort": false,
+    pageLength : 10,
+    "autoWidth" : true,
+    "columns": [
+      null,
+      null,
+      { 'searchable': false },
+      null
+    ]
+  });
+
+  $('#dtMaterial_wrapper').find('label').each(function () {
+    $(this).parent().append($(this).children());
+  });
+  $('#dtMaterial_wrapper .dataTables_filter').find('input').each(function () {
+    $('input').attr("placeholder", "Search");
+    $('input').removeClass('form-control-sm');
+  });
+  $('#dtMaterial_wrapper .dataTables_length').addClass('d-flex flex-row');
+  $('#dtMaterial_wrapper .dataTables_filter').addClass('md-form');
+  $('#dtMaterial_wrapper select').removeClass(
+    'custom-select custom-select-sm form-control form-control-sm');
+  $('#dtMaterial_wrapper select').addClass('mdb-select');
+  $('#dtMaterial_wrapper .mdb-select').materialSelect();
+  $('#dtMaterial_wrapper .dataTables_filter').find('label').remove();
+});
+</script>
+
+<h1 class="entry-title">Log of Places</h1>
+
+<table id="dtMaterial" class="table table-striped" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th class="th-sm">Name</th>
+      <th class="th-sm">Notes</th>
+      <th class="th-sm">Address</th>
+      <th class="th-sm">City</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for place in site.data.places %}
+    <tr>
+      <td>{{ place.name }}</td>
+      <td>{{ place.notes }}</td>
+      <td>
+        {% if place.map_link != "" %}
+          <a href="{{ place.map_link }}" target="_blank" rel="noopener noreferrer">{{ place.address }}</a>
+        {% else %}
+          {{ place.address }}
+        {% endif %}
+      </td>
+      <td>{{ place.city }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
