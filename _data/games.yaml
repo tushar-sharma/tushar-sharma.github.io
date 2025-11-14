@@ -159,11 +159,17 @@
   comments: "The Japanese voice acting is excellent, and the English subtitles are great. The writing is hilarious. Cons: Driving is not that fun. Also maps is difficult to navigate. Abandoned"
 
 - title: "BroForce"
-  rating: 5
+  rating: 1
   pending: true
-  progress: 1
+  progress: 15
   comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em."
   
+- title: "Time Flies"
+  rating: 1
+  pending: true
+  progress: 1
+  comments: "Finish your bucket list before your die in a minute or so."
+
 - title: "Lego City Undercover"
   rating: 0
   pending: true
