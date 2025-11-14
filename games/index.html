@@ -63,7 +63,11 @@ author: Tushar Sharma
         </td>
         <td>
           <div class="cl">
-            {% if game.pending %}
+            {% if game.comments contains "Abandoned" %}
+            <div class="progress-outer">
+              <div class="progress-inner-abandoned" style="width: 100%;"></div>
+            </div>
+            {% elsif game.pending %}
             <!-- Progress bar for pending games -->
             <div class="progress-outer">
               <div class="progress-inner" style="width: {{ game.progress }}%;"></div> <!-- Add % to ensure it's treated as a percentage-->
