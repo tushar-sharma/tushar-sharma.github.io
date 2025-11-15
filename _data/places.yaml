@@ -21,3 +21,21 @@
   address: 6826 South Blvd, Charlotte, NC 28217
   map_link: "https://www.google.com/maps/search/?api=1&query=6826+South+Blvd%2C+Charlotte%2C+NC+28217"
   city: "Charlotte, NC"
+
+- name: Won Buddhism Temple of North Carolina
+  notes: On Saturday, free meditation class in person. Nice peaceful ambience.
+  address: 8021 Old NC 86, Chapel Hill, NC 27516
+  map_link: "https://www.google.com/maps/search/?api=1&query=8021+Old+NC+86%2C+Chapel+Hill%2C+NC+27516"
+  city: "Chapel Hill, NC"
+
+- name: Velvet Taco
+  notes: I had `Say What?! Combo`. was okish.
+  address: 2170 Hawkins St, Charlotte, NC 28203
+  map_link: "https://www.google.com/maps/search/?api=1&query=2170+Hawkins+St%2C+Charlotte%2C+NC+28203"
+  city: "Charlotte, NC"
+
+- name: Malaya Kitchen Asian Fusion
+  notes: shrimp + eggplant is good. mee goreng was good. Subgum Wonton Soup good.
+  address: 8200-400 Providence Rd, Charlotte, NC 28277
+  map_link: "https://www.google.com/maps/search/?api=1&query=8200-400+Providence+Rd%2C+Charlotte%2C+NC+28277"
+  city: "Charlotte, NC"
