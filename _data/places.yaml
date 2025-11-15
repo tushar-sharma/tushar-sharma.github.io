@@ -1,0 +1,23 @@
+- name: Discount Tires
+  notes: I bought Falken tires for $436. They accept walk-ins, which is convenient.
+  address: 4051 Durham-Chapel Hill Blvd, Durham, NC 27707
+  map_link: "https://www.google.com/maps/search/?api=1&query=4051+Durham-Chapel+Hill+Blvd%2C+Durham%2C+NC+27707"
+  city: "Durham, NC"
+
+- name: Los Tres Mexican Restaurant Grill and Bar
+  notes: Liked michelada drink.
+  address: 6905 Fayetteville Rd #104, Durham, NC 27713
+  map_link: "https://www.google.com/maps/search/?api=1&query=6905+Fayetteville+Rd+%23104%2C+Durham%2C+NC+27713"
+  city: "Durham, NC"
+
+- name: Bull City Mobile Repair
+  notes: They replaced my iPhone screen in about 30 minutes. The service was great.
+  address: 4201 University Dr #105, Durham, NC 27707
+  map_link: "https://www.google.com/maps/search/?api=1&query=4201+University+Dr+%23105%2C+Durham%2C+NC+27707"
+  city: "Durham, NC"
+
+- name: Queen City Auto Care & Lube
+  notes: You can buy your own parts and pay for only labor. Very reasonable. Only $20 for oil change and you can get your own oil.
+  address: 6826 South Blvd, Charlotte, NC 28217
+  map_link: "https://www.google.com/maps/search/?api=1&query=6826+South+Blvd%2C+Charlotte%2C+NC+28217"
+  city: "Charlotte, NC"
