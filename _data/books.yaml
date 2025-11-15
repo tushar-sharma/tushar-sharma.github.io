@@ -323,8 +323,8 @@
   author: Sebastian Raschka
   rating: 0
   pending: true
-  progress: 0
-  comments: ""
+  progress: 1
+  comments: "<a href='/blog/review-book-build-a-large-language-model' target='_blank'>Notes</a>"
 
 - title: "The Wall"
   author: "Marlen Haushofer"
