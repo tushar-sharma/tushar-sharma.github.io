@@ -1,11 +1,13 @@
 - name: Discount Tires
   notes: I bought Falken tires for $436. They accept walk-ins, which is convenient.
   address: 4051 Durham-Chapel Hill Blvd, Durham, NC 27707
+  category: car
   map_link: "https://www.google.com/maps/search/?api=1&query=4051+Durham-Chapel+Hill+Blvd%2C+Durham%2C+NC+27707"
   city: "Durham, NC"
 
 - name: Los Tres Mexican Restaurant Grill and Bar
   notes: Liked michelada drink.
+  category: food
   address: 6905 Fayetteville Rd #104, Durham, NC 27713
   map_link: "https://www.google.com/maps/search/?api=1&query=6905+Fayetteville+Rd+%23104%2C+Durham%2C+NC+27713"
   city: "Durham, NC"
@@ -13,29 +15,42 @@
 - name: Bull City Mobile Repair
   notes: They replaced my iPhone screen in about 30 minutes. The service was great.
   address: 4201 University Dr #105, Durham, NC 27707
+  category: phone
   map_link: "https://www.google.com/maps/search/?api=1&query=4201+University+Dr+%23105%2C+Durham%2C+NC+27707"
   city: "Durham, NC"
 
 - name: Queen City Auto Care & Lube
   notes: You can buy your own parts and pay for only labor. Very reasonable. Only $20 for oil change and you can get your own oil.
   address: 6826 South Blvd, Charlotte, NC 28217
+  category: car
   map_link: "https://www.google.com/maps/search/?api=1&query=6826+South+Blvd%2C+Charlotte%2C+NC+28217"
   city: "Charlotte, NC"
 
 - name: Won Buddhism Temple of North Carolina
   notes: On Saturday, free meditation class in person. Nice peaceful ambience.
   address: 8021 Old NC 86, Chapel Hill, NC 27516
+  category: activity
   map_link: "https://www.google.com/maps/search/?api=1&query=8021+Old+NC+86%2C+Chapel+Hill%2C+NC+27516"
   city: "Chapel Hill, NC"
 
 - name: Velvet Taco
   notes: I had `Say What?! Combo`. was okish.
   address: 2170 Hawkins St, Charlotte, NC 28203
+  category: food
   map_link: "https://www.google.com/maps/search/?api=1&query=2170+Hawkins+St%2C+Charlotte%2C+NC+28203"
   city: "Charlotte, NC"
 
 - name: Malaya Kitchen Asian Fusion
   notes: shrimp + eggplant is good. mee goreng was good. Subgum Wonton Soup good.
   address: 8200-400 Providence Rd, Charlotte, NC 28277
+  category: food
   map_link: "https://www.google.com/maps/search/?api=1&query=8200-400+Providence+Rd%2C+Charlotte%2C+NC+28277"
   city: "Charlotte, NC"
+
+
+- name: Cannabliss Dispensary
+  notes: "Attended a free event, Yin Yoga with Bella."
+  category: activity
+  address: 4810 Hope Valley Rd STE 108, Durham, NC
+  map_link: "https://www.google.com/maps/search/?api=1&query=4810+Hope+Delta+Rd+STE+108%2C+Durham%2C+NC"
+  city: "Durham, NC"

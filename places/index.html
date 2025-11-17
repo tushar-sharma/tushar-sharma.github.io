@@ -50,22 +50,22 @@ $(document).ready(function () {
 });
 </script>
 
-<h1 class="entry-title">Log of Places</h1>
+<h1 class="entry-title">Logging Places</h1>
 
 <table id="dtMaterial" class="table table-striped" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th class="th-sm">Name</th>
-      <th class="th-sm">Notes</th>
+      <th class="th-sm">Category</th>
       <th class="th-sm">Address</th>
-      <th class="th-sm">City</th>
+      <th class="th-sm">Notes</th>
     </tr>
   </thead>
   <tbody>
     {% for place in site.data.places %}
     <tr>
       <td>{{ place.name }}</td>
-      <td>{{ place.notes }}</td>
+      <td>{{ place.category }}</td>
       <td>
         {% if place.map_link != "" %}
           <a href="{{ place.map_link }}" target="_blank" rel="noopener noreferrer">{{ place.address }}</a>
@@ -73,7 +73,8 @@ $(document).ready(function () {
           {{ place.address }}
         {% endif %}
       </td>
-      <td>{{ place.city }}</td>
+      <td>{{ place.notes }}</td>
+
     </tr>
     {% endfor %}
   </tbody>
