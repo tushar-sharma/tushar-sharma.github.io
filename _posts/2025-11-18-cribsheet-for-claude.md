@@ -16,7 +16,7 @@ Global persistent configuration file for Claude Code
 @~/.claude/security-requirements.md
 ```
 
-## Set Environment Variables
+## Authentication
 
 ```
 export ANTHROPIC_API_KEY="your-api-key"
