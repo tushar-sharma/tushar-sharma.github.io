@@ -28,5 +28,6 @@ okta-aws-cli --org-domain company.okta.com --oidc-client-id 123456789 --aws-acct
 ## Environment Varibales
 
 ```
+# Disables telemetry, error reporting, and auto-updates
 export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
 ```
