@@ -6,9 +6,7 @@ Global persistent configuration file for Claude Code
 ~/.claude/CLAUDE.md
 ```
 
-## Split Multiple file
-
-For complex setup
+## Split instructions into multiple files
 
 ```bash
 # Main CLAUDE.md
