@@ -144,6 +144,7 @@
 - title: "Titanfall 2"
   rating: 5
   pending: false
+  progress: 100
   comments: "One of the best FPS games out there. The combat feels incredible—whether you’re on foot or piloting a Titan, every battle is pure adrenaline. The story builds up beautifully, and the ending is nothing short of spectacular. Cons: The EA launcher can be a bit annoying—it insists on connecting to the internet every time you launch the game on steam deck, and occasionally you’ll get a blank screen. A quick restart usually fixes it, though."
 
 - title: "The Expendabros"
@@ -153,8 +154,10 @@
   comments: "Fun free demo of Broforce with a great retro feel and awesome gameplay."
 
 - title: "Promise Mascot Agency"
-  rating: 5
-  comments: "It's a cinematic experience while growing a mascot agency. The Japanese voice acting is excellent, and the English subtitles are great. The writing is hilarious. Cons: You will not get GTA like driving experience. Tips: 1. There is a ATM near the hotel. 2. Use *Captain Stain* for physical tasks like when the mascot is blocked by boxes. 3. Use *Jose* for faulty register. 4. Use *Pinky* for dog attack. 5. Enable fast travel early."
+  rating: 4
+  progress: 10
+  pending: true
+  comments: "The Japanese voice acting is excellent, and the English subtitles are great. The writing is hilarious. Cons: Driving is not that fun but you can upgrade it to make it better like Pinky launcher, glide on rails. Tips: 1. There is a ATM near the hotel. 2. Use *Captain Stain* for physical tasks like when the mascot is blocked by boxes. 3. Use *Jose* for faulty register. 4. Use *Pinky* for dog attack. 5. Enable fast travel early."
 
 - title: "BroForce"
   rating: 1
@@ -839,9 +842,3 @@
   pending: true
   comments: ""
   progress: 0
-
-- title: "Persona 4 Golden"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: ""
