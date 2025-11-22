@@ -1,3 +1,14 @@
+---
+layout: post
+image: https://unsplash.com/photos//download?w=437
+thumb: https://unsplash.com/photos//download?w=437
+author: tushar sharma
+category: blog
+published: false
+tags:
+ - letters
+---
+
 ## Global Cluade.md file
 
 Global persistent configuration file for Claude Code
