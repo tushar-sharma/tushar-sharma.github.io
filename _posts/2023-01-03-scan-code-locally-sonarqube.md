@@ -1,6 +1,5 @@
 ---
 layout: post
-date: {}
 title: Scan Code locally using SonarQube
 image: 'https://unsplash.com/photos/3yzE1SUfbwY/download?w=437'
 thumb: 'https://unsplash.com/photos/3yzE1SUfbwY/download?w=437'
