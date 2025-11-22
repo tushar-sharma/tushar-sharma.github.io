@@ -158,7 +158,7 @@
   rating: 0
   pending: true
   progress: 1
-  comments: "Broken audio in steam deck. Need to install d3dx9 and xact DLL using winetricks."
+  comments: "Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
 
 - title: "BroForce"
   rating: 1
