@@ -285,6 +285,11 @@
   progress: 0
   comments: ""
 
+- title: "Nine Sols"
+  ratings: 0 
+  pending: true
+  comments: "Broken audio in steam deck. Need to install d3dx9 and xact DLL using winetricks."
+
 - title: "Stellar Blade"
   rating: 0
   pending: true
