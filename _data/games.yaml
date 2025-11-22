@@ -143,21 +143,22 @@
 
 - title: "Titanfall 2"
   rating: 5
-  pending: false
-  progress: 100
   comments: "One of the best FPS games out there. The combat feels incredible—whether you’re on foot or piloting a Titan, every battle is pure adrenaline. The story builds up beautifully, and the ending is nothing short of spectacular. Cons: The EA launcher can be a bit annoying—it insists on connecting to the internet every time you launch the game on steam deck, and occasionally you’ll get a blank screen. A quick restart usually fixes it, though."
 
 - title: "The Expendabros"
   rating: 5
-  pending: false
   progress: 100
   comments: "Fun free demo of Broforce with a great retro feel and awesome gameplay."
 
 - title: "Promise Mascot Agency"
   rating: 4
-  progress: 10
-  pending: true
   comments: "It's a cinematic experience while growing a mascot agency. The Japanese voice acting is excellent, and the English subtitles are great. The writing is hilarious. Cons: Don't expect GTA like driving experience. Tips: 1. There is a ATM near the hotel. 2. Use *Captain Stain* for physical tasks like when the mascot is blocked by boxes. 3. Use *Jose* for faulty register. 4. Use *Pinky* for dog attack. 5. Enable fast travel early."
+
+- title: "Bully"
+  rating: 0
+  pending: true
+  progress: 1
+  comments: "Broken audio in steam deck. Need to install d3dx9 and xact DLL using winetricks."
 
 - title: "BroForce"
   rating: 1
@@ -169,13 +170,13 @@
   rating: 1
   pending: true
   progress: 1
-  comments: "Finish your bucket list before your die in about 80 seconds."
+  comments: "Finish your bucket list before your die in about a minute. Puzzles are very cleverly designed."
 
 - title: "哎呦!这么多美女呀!"
   rating: 1
   pending: true
   progress: 1
-  comments: "FMV. Videos don't load in US region. Use VPN to load full game."
+  comments: "FMV. Videos don't load in U.S. region. Use VPN (e.g. India) to load full game."
 
 - title: "Dave the Diver"
   rating: 1
@@ -288,7 +289,7 @@
 - title: "Nine Sols"
   ratings: 0 
   pending: true
-  comments: "Broken audio in steam deck. Need to install d3dx9 and xact DLL using winetricks."
+  comments: ""
 
 - title: "Stellar Blade"
   rating: 0
@@ -681,12 +682,6 @@
   progress: 0
 
 - title: "Dungeons of Hinterberg"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Bully"
   rating: 0
   pending: true
   comments: ""
