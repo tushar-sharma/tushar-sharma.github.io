@@ -229,7 +229,7 @@
 - title: "Baldur's gate 3"
   pending: true
   progress: 0
-  comments: "Change language: Modify the file`Data\Localization\language.lsx` and change entry like `Russian` to `English`. The executable is bin/bg3.exe for launching the game. "
+  comments: "Change language: Modify the file`Data\\Localization\\language.lsx` and change entry like `Russian` to `English`. The executable is bin/bg3.exe for launching the game. "
 
 - title: "Forza Horizon 5"
   rating: 0
