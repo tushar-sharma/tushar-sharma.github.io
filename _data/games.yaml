@@ -154,6 +154,11 @@
   rating: 4
   comments: "It feels like a cinematic experience while you build a mascot agency. The Japanese voice acting is excellent, and the English subtitles are great. The writing is hilarious. Cons: Don't expect GTA like driving experience."
 
+- title: "Time Flies"
+  rating: 5
+  progress: 
+  comments: "Finish your bucket list before your die in about a minute. It's a beautiful game that makes you contemplate the finiteness of life."
+
 - title: "Bully"
   rating: 0
   pending: true
@@ -165,12 +170,7 @@
   pending: true
   progress: 15
   comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em."
-  
-- title: "Time Flies"
-  rating: 1
-  pending: true
-  progress: 1
-  comments: "Finish your bucket list before your die in about a minute. Puzzles are very cleverly designed."
+
 
 - title: "哎呦!这么多美女呀!"
   rating: 1
