@@ -162,7 +162,7 @@
 - title: "Bully"
   rating: 0
   pending: true
-  progress: 1
+  progress: 4
   comments: "Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
 
 - title: "BroForce"
@@ -234,7 +234,7 @@
 - title: "Forza Horizon 5"
   rating: 0
   pending: true
-  comments: ""
+  comments: "It's beautiful driving across Mexico."
   progress: 0
 
 - title: "Lonely Mountains: Downhill"
@@ -260,6 +260,55 @@
   pending: true
   progress: 1
   comments: "Metroidvania game. Calm background music with pixel art style."
+
+
+- title: "Night in the Woods"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
+
+- title: "There Is No Game: Wrong Dimension"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
+
+- title: "Hypnospace Outlaw"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
+
+- title: "The Henry Stickmin Collection"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
+
+- title: "Dead Cells"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
+
+- title: "Splunky"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
+
+- title: "Splunky 2"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
+
+- title: "Spyro Reignited Trilogy"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
 
 - title: "Mark of the Ninja: Remastered"
   rating: 0
@@ -717,6 +766,12 @@
   progress: 0
 
 - title: "A Plague Tale: Requiem"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Plants vs. Zombies GOTY Edition"
   rating: 0
   pending: true
   comments: ""
