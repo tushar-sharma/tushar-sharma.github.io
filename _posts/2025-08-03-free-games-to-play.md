@@ -40,3 +40,4 @@ Curated list of free games to play.
 | Landfill | [Steam](https://store.steampowered.com/app/2353760/Landfall_Archives/) | |
 | The Expendabros | [Steam](https://store.steampowered.com/app/312990/The_Expendabros/) | Free to play game. It's a demo version of BroForce. Retro feel and great shooting. | |
 | Life is Strange Episode 1 | [Steam](https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/) | | |
+| Sludge Life: The Big Mud Sessions | [Steam](https://store.steampowered.com/app/2494930/Sludge_Life_The_Big_Mud_Sessions/) | The demo to sludge life 2. |
