@@ -194,37 +194,37 @@
 - title: "Don Bradman Cricket 14"
   rating: 0
   pending: true
-  progress: 100
+  progress: 0
   comments: "Error: You must be online in order to play Don Bradman Cricket 14. Fix : Use older proton like Proton 5.0-10"
 
 - title: "Joe Danger 2: The Movie"
   rating: 0
-  progress: 100
+  progress: 0
   pending: true
   comments: "Fun racing game. You feel like a movie star as you perform stunts and race on everything from skis to jetpacks."
 
 - title: "Bomb Rush Cyberfunk"
   rating: 0
   pending: true
-  progress: 100
+  progress: 0
   comments: "A stylish skating game set in a vibrant, dystopian world."
 
 - title: "Anger Foot"
   rating: 0
-  progress: 100
+  progress: 0
   pending: true
   comments: "FPS. Kicking on adrenaline. The soundtrack is cool. You feel like a Hulk with anger foot."
 
 - title: "Dredge"
   rating: 0
   pending: true
-  progress: 100
+  progress: 0
   comments: "Horror fishing game but also has a cozy sailing vibe. Use Passive Mode to make it more peaceful to navigate at night. In normal mode, sleep properly to avoid hallucinations and avoid venturing out at night to avoid scary encounters."
 
 - title: "Blur"
   rating: 0
   pending: true
-  progress: 100
+  progress: 0
   comments: "One of the best arcade racing games. You can blast off other cars with power-ups. Supports split-screen for local co-op. Tips: Press `B` to drift."
 
 - title: "Baldur's gate 3"
@@ -241,13 +241,13 @@
 - title: "Lonely Mountains: Downhill"
   rating: 0
   pending: true
-  progress: 100
+  progress: 0
   comments: "A relaxing biking game where you ride downhill through beautiful, minimalistic landscapes with soothing ambient sounds."
 
 - title: "Guardian of the Galaxy"
   rating: 0
   pending: true
-  progress: 100
+  progress: 0
   comments: "You play as Star Lord aka Peter Quill. The combat is fun where you can control other guardians like Gamora, Drax, Rocket and Groot. Played on Steam Deck"
 
 - title: "Ratchet & Clank: Rift Apart"
@@ -261,6 +261,12 @@
   pending: true
   progress: 1
   comments: "Metroidvania game. Calm background music with pixel art style."
+
+- title: "West of Loathing"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
 
 
 - title: "Night in the Woods"
@@ -1005,4 +1011,11 @@
   pending: true
   comments: ""
   progress: 0
+
+- title: "Murders on the Yangtze River"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
 
