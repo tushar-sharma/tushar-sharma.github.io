@@ -104,7 +104,7 @@
 
 - title: "The Witcher 3"
   rating: 5
-  comments : "Great RPG game. Graphics are great with amazing story and open world"
+  comments : "Great RPG game. Graphics are great with amazing story and open world."
 
 - title: "Sayonara Wild Hearts"
   rating: 3
@@ -1018,4 +1018,38 @@
   comments: ""
   progress: 0
 
+- title: "Fallen Aces"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
 
+- title: "Is This Seat Taken?"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Chicory: A Colorful Tale"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Peaks of Yore"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "SLUDGE LIFE 2"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Grunn"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
