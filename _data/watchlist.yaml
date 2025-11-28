@@ -219,9 +219,14 @@
   comments: "An over-the-top action epic. Fun in parts, but exaggerated and exhausting."
 
 - title: "I Lost My Body"
-  rating: 4
+  rating: 5
   platform: "Netflix"
   comments: "A French animated film with a unique premise. Beautiful and touching."
+
+- title: "My Mister"
+  rating: 5
+  platform: "Netflix"
+  comments: "K-drama. Architect with his infidel wife and a young woman living a hard life form an unlikely bond that helps them heal. Soundtrack is great."
 
 - title: "A Chinese Odyssey Part 2"
   rating: 3
@@ -231,7 +236,7 @@
 - title: "A Taxi Driver"
   rating: 5
   platform: "Online"
-  comments: "A brilliant Korean film based on true events where journalist and a taxi driver cover the Gwangju Uprising. Emotional and powerful."
+  comments: "A brilliant Korean film based on true events where journalist and a taxi driver cover the Gwangju Uprising. It draws on the experiences of German journalist Jürgen Hinzpeter of the ARD and his interactions with driver Kim Man-seob."
 
 - title: "Oppenheimer"
   rating: 4
@@ -266,22 +271,22 @@
 - title: "Bheja Fry"
   rating: 4
   platform: "Online"
-  comments: "A hilarious Indian comedy of errors with Sanjay Mishra stealing the show."
+  comments: "Funny Indian movie."
 
 - title: "Blade Runner 2049"
   rating: 5
   platform: "Online"
-  comments: "A visually breathtaking sci-fi film with Ryan Gosling. Slow but rewarding and profound."
+  comments: "A visually breathtaking sci-fi film with Ryan Gosling. "
 
 - title: "Bol"
   rating: 4
   platform: "Online"
-  comments: "A powerful Pakistani film tackling social issues. Bold and emotional."
+  comments: "An emotional film about social issues from Pakistan."
 
 - title: "Django Unchained"
   rating: 5
   platform: "Online"
-  comments: "A Quentin Tarantino movie that's both thrilling and entertaining. The soundtrack is spot on and movie is great"
+  comments: "A Quentin Tarantino movie. Cinematography was spectacular. Soundtrack was awesome."
 
 - title: "Planes, Trains and Automobiles"
   rating: 3
