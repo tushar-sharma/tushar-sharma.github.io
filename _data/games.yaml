@@ -20,6 +20,7 @@
   rating: 4
   comments: "It's a good rogue-like game. The combat rooms are procedurally generated. You get more powerful after you die. You can enable god mode which just increases your damage resistance by 2 percent every time you die till 80%."
 
+
 - title: "Rayman Legends"
   rating: 5
   comments: "One of the best platformers ever made. Fantastic background music and smooth, fun gameplay. Note: Ubisoft launcher requires you to be online to start the game. The `Challenge mode` is no longer available on Steam due to Ubisoft server shutdown ([details](https://www.ubisoft.com/en-us/help/purchases-and-rewards/article/decommissioning-of-online-services-for-older-legacy-ubisoft-games-n-to-z/000105855))."
@@ -908,3 +909,100 @@
   pending: true
   comments: ""
   progress: 0
+
+- title: "Dispatch"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Five Hearts Under One Roof 2"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Love Is All Around"
+  rating: 0
+  pending: true
+  comments: "FMV."
+  progress: 0
+
+- title: "Lil Gator Game"
+  rating: 0
+  pending: true
+  comments: "Casual."
+  progress: 0
+
+- title: "Chants of Sennaar"
+  rating: 0
+  pending: true
+  comments: "Indie."
+  progress: 0
+
+- title: "SnowRunner"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Rhythm Doctor"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Tactical Breach Wizards"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Hylics"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "I Wani Hug that Gator!"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Felvidek"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Goat Simulator 3"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "The Drifter"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Frog Detective 3: Corruption at Cowboy County"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Hades 2"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "SANABI"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
