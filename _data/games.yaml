@@ -162,7 +162,7 @@
 - title: "Bully"
   rating: 0
   pending: true
-  progress: 4
+   progress: 10
   comments: "Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
 
 - title: "BroForce"
