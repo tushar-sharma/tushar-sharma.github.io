@@ -167,10 +167,10 @@
   comments: "Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
 
 - title: "BroForce"
-  rating: 1
+  rating: 5
   pending: true
-  progress: 15
-  comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em."
+  progress: 30
+  comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em. Supports local coop."
 
 
 - title: "哎呦!这么多美女呀!"
