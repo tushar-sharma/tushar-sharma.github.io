@@ -73,7 +73,7 @@
 
 - title: "It takes two"
   rating: 4
-  comments: "It's a local split screen coop game. Graphics are nice and the story is good. You play as a couple who are going through divorce and they are turned into dolls. You need to work together to solve puzzles."
+  comments: "It's a local split screen co-op game. Graphics are nice and the story is good. You play as a couple who are going through divorce and they are turned into dolls. You need to work together to solve puzzles."
   platform: "steam deck"
 
 - title: "Life is Strange Episode 1"
@@ -161,16 +161,16 @@
   comments: "Finish your bucket list before your die in about a minute. It's a beautiful game that makes you contemplate the finiteness of life."
 
 - title: "Bully"
-  rating: 0
+  rating: 4
   pending: true
   progress: 10
-  comments: "Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
+  comments: "Graphics are dated. However it has GTA like feel to it. Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
 
 - title: "BroForce"
   rating: 5
   pending: true
   progress: 30
-  comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em. Supports local coop."
+  comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em. Supports local co-op."
 
 
 - title: "哎呦!这么多美女呀!"
