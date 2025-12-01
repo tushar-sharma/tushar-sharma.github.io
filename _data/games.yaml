@@ -1,6 +1,6 @@
 - title: "Alan Wake2"
   rating: 4
-  comments: "Graphic card must support mesh shaders. Graphics are amazing. Scare factor is high. Combat is clumsy. You can enable, One Shot Mode, in the settings to make combat easier. Wandering in dark is tedious. Abandoned."
+  comments: "You need a GPU with mesh-shader support, but the visual payoff is spectacular. The atmosphere is genuinely terrifying, and the cinematography in the cutscenes is top-tier. The Mind Place is a clever system for organizing clues and objectives. Combat can feel a bit clunky, though enabling One-Shot Mode helps smooth the experience. Exploration in dark areas occasionally drags, but the overall presentation is stunning."
 
 - title: "Alpaca Stacka"
   download: "<a href='https://store.steampowered.com/app/1655140/Alpaca_Stacka/' target='_blank' aria-label='Free to Play'><i class='fas fa-download'></i> Steam</a>"
@@ -155,10 +155,18 @@
   rating: 4
   comments: "It feels like a cinematic experience while you build a mascot agency. The Japanese voice acting is excellent, and the English subtitles are great. The writing is hilarious. Cons: Don't expect GTA like driving experience."
 
+- title: "哎呦!这么多美女呀!"
+  rating: 3
+  comments: "FMV. No English translation yet. Videos don't load in U.S. region. Use VPN (e.g. India) to load full game."
+
 - title: "Time Flies"
   rating: 5
   progress: 
   comments: "Finish your bucket list before your die in about a minute. It's a beautiful game that makes you contemplate the finiteness of life."
+
+- title: "Road Redemption"
+  rating: 5
+  comments: "Fun bike racing game reminiscent of Road Rash. Supports local co-op."
 
 - title: "Bully"
   rating: 4
@@ -172,12 +180,6 @@
   progress: 30
   comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em. Supports local co-op."
 
-
-- title: "哎呦!这么多美女呀!"
-  rating: 1
-  pending: true
-  progress: 1
-  comments: "FMV. No English translation yet. Videos don't load in U.S. region. Use VPN (e.g. India) to load full game."
 
 - title: "Dave the Diver"
   rating: 1
@@ -198,10 +200,9 @@
   comments: "Error: You must be online in order to play Don Bradman Cricket 14. Fix : Use older proton like Proton 5.0-10"
 
 - title: "Joe Danger 2: The Movie"
-  rating: 0
-  progress: 0
+  rating: 4
   pending: true
-  comments: "Fun racing game. You feel like a movie star as you perform stunts and race on everything from skis to jetpacks."
+  comments: "Fun stunt racing game. You feel like a movie star as you perform stunts and race on everything from skis to jetpacks. Supports local co-op."
 
 - title: "Bomb Rush Cyberfunk"
   rating: 0
