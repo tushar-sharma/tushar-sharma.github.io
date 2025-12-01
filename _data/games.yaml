@@ -164,6 +164,11 @@
   progress: 
   comments: "Finish your bucket list before your die in about a minute. It's a beautiful game that makes you contemplate the finiteness of life."
 
+- title: "BroForce"
+  rating: 5
+  progress: 30
+  comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em. Supports local co-op."
+
 - title: "Road Redemption"
   rating: 5
   comments: "Fun bike racing game reminiscent of Road Rash. Supports local co-op."
@@ -173,12 +178,6 @@
   pending: true
   progress: 10
   comments: "Graphics are dated. However it has GTA like feel to it. Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
-
-- title: "BroForce"
-  rating: 5
-  pending: true
-  progress: 30
-  comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em. Supports local co-op."
 
 
 - title: "Dave the Diver"
