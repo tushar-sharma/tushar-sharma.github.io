@@ -164,14 +164,16 @@
   progress: 
   comments: "Finish your bucket list before your die in about a minute. It's a beautiful game that makes you contemplate the finiteness of life."
 
-- title: "BroForce"
-  rating: 5
-  progress: 30
-  comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em. Supports local co-op."
-
 - title: "Road Redemption"
   rating: 5
   comments: "Fun bike racing game reminiscent of Road Rash. Supports local co-op."
+
+- title: "BroForce"
+  rating: 5
+  progress: 30
+  pending: true
+  comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em. Supports local co-op."
+
 
 - title: "Bully"
   rating: 4
@@ -268,6 +270,11 @@
   progress: 100
   comments: ""
 
+- title: "Shadows Over Loathing"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
 
 - title: "Night in the Woods"
   rating: 0
