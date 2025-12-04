@@ -3,26 +3,51 @@ published: false
 --- 
 
 
-**Helm** is the package manager for kubernetes. We can either deploy our application (*yamls) to kubernetes using native **kubectl**  like
+kubectl is a utility to deploy *yaml files to k8. These yaml files describe the state of your application. like
+
+ > Are all *yaml files that kubectl deployes called manifest files
 
 ```yaml
-# deployement.yaml
-image: node/latest
-replica: 2
+# deployment.yaml
+image: node:latest
+replicas: 2
 
-# values.yaml
-services:
- - bla
+# service.yaml
+type: ClusterIP
+ports:
+  - port: 80
 ```
 
-Or we can use **helm** to template these files using **helm chart**. You can replace variables and inject those parameters. **helm** send template to **tiller** (helm server) .
+Here the values are static and there is no version control. 
 
-```bash
-helm install myChart
+> Can we use environment variables with *yaml files and kubectl 
+
+
+```yaml
+# deployment.yaml
+image: node:latest
+replicas: ${ENV_REPLIC}
+
+# service.yaml
+type: ClusterIP
+ports:
+  - port: ${ENV_PORT)
 ```
 
-and for upgrde
+**Helm** is a package manager for kuberenetes. We can turn these yaml into a template
 
-```bash
-helm upgrade install
 ```
+templates\ 
+    deployment.yaml
+    service.yaml
+values.yaml
+```
+
+Helm does
+
+```
+yaml + values -> rendendered manifest -> then deploy to k8
+```
+
+
+
