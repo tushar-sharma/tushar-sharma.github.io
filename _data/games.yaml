@@ -57,7 +57,11 @@
 
 - title: "Boomerang Fu"
   rating: 5
-  comments: "One of the best local co-op games. You play as cute food characters like milk cartons or avocados, slashing each other with boomerangs. Hilarious and great with friends."
+  comments: "Local co-op. You play as cute food items, slashing each other with boomerangs."
+
+- title: "Stick Fight: The Game"
+  rating: 4
+  comments: "Local co-op."
 
 - title: "GTA 4"
   rating: 4
@@ -69,12 +73,11 @@
 
 - title: "Firewatch"
   rating: 4
-  comments: "Walking sim. Humor is great. Most of the time you talk to your supervisor, Delilah, through the radio. Ambience is peaceful. If you like going on a hike, you probably gonna like this."
+  comments: "Walking sim. Most of the time you are talking to your supervisor on the radio. Ambience is peaceful. If you like going on a hike, you probably gonna like this."
 
 - title: "It takes two"
   rating: 4
-  comments: "It's a local split screen co-op game. Graphics are nice and the story is good. You play as a couple who are going through divorce and they are turned into dolls. You need to work together to solve puzzles."
-  platform: "steam deck"
+  comments: "Local co-op with split-screen. Graphics are nice and the story is good. You play as a couple who are going through divorce and they are turned into dolls. You need to work together to solve puzzles."
 
 - title: "Life is Strange Episode 1"
   rating: 4
@@ -84,7 +87,7 @@
 
 - title: "Max Payne II"
   rating: 5
-  comments: "Favourite shooting game in the series. You play as Max most of the times but Mona is playable in few levels. You could slows down time during combat."
+  comments: "Favourite shooting game in the series. You play story of both Max and Mona. Writing and game play is top notch."
 
 - title: "Papers, Please"
   comments: "You play as an immigration officer who has to check passport of visitors into a fictional country of Arstotzka. The game is an example of empathy game as your choices affect the lives of people."
@@ -166,21 +169,19 @@
 
 - title: "Road Redemption"
   rating: 5
-  comments: "Fun bike racing game reminiscent of Road Rash. Supports local co-op."
+  comments: "Fun bike racing game reminiscent of Road Rash. Local co-op."
 
 - title: "BroForce"
   rating: 5
   progress: 30
   pending: true
-  comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em. Supports local co-op."
-
+  comments: "This is retro feel commando game where you liberate (;-) countries by bombing 'em. Local co-op."
 
 - title: "Bully"
   rating: 4
   pending: true
   progress: 10
   comments: "Graphics are dated. However it has GTA like feel to it. Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
-
 
 - title: "Dave the Diver"
   rating: 1
@@ -203,7 +204,7 @@
 - title: "Joe Danger 2: The Movie"
   rating: 4
   pending: true
-  comments: "Fun stunt racing game. You feel like a movie star as you perform stunts and race on everything from skis to jetpacks. Supports local co-op."
+  comments: "Fun stunt racing game. You feel like a movie star as you perform stunts and race on everything from skis to jetpacks. Local co-op."
 
 - title: "Bomb Rush Cyberfunk"
   rating: 0
@@ -227,7 +228,7 @@
   rating: 0
   pending: true
   progress: 0
-  comments: "One of the best arcade racing games. You can blast off other cars with power-ups. Supports split-screen for local co-op. Tips: Press `B` to drift."
+  comments: "One of the best arcade racing games. You can blast off other cars with power-ups. Local co-op with split-screen. Tips: Press `B` to drift."
 
 - title: "Baldur's gate 3"
   pending: true
@@ -263,6 +264,12 @@
   pending: true
   progress: 1
   comments: "Metroidvania game. Calm background music with pixel art style."
+
+- title: "despelote"
+  rating: 0
+  pending: true
+  progress: 100
+  comments: ""
 
 - title: "West of Loathing"
   rating: 0
@@ -340,7 +347,7 @@
   rating: 0
   pending: true
   progress: 0
-  comments: ""
+  comments: "Local co-op."
 
 - title: "Rivals of Aether"
   rating: 0
@@ -1056,6 +1063,48 @@
   progress: 0
 
 - title: "Grunn"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Castle Crashers"
+  rating: 0
+  pending: true
+  comments: "Local co-op."
+  progress: 0
+
+- title: "TMNT: Shredder's Revenge"
+  rating: 0
+  pending: true
+  comments: "For steam deck: controller options -> Force Off steam input."
+  progress: 0
+
+- title: "Transistor"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "Bitburner"
+  rating: 0
+  pending: true
+  comments: "Free to play."
+  progress: 0
+
+- title : "NIGHT-RUNNERS PROLOGUE"
+  rating: 0
+  pending: true
+  comments: "Free to play."
+  progress: 0
+
+- title: "Geometry Dash"
+  rating: 0
+  pending: true
+  comments: ""
+  progress: 0
+
+- title: "5D Chess With Multiverse Time Travel"
   rating: 0
   pending: true
   comments: ""
