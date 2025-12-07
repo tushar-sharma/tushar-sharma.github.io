@@ -1071,7 +1071,7 @@
 - title: "Castle Crashers"
   rating: 0
   pending: true
-  comments: "Local co-op."
+  comments: "Local co-op. No sound in steam deck fix: On desktop mode, install ProtonUp-Qt. Install GE-Proton10-25."
   progress: 0
 
 - title: "TMNT: Shredder's Revenge"
