@@ -30,7 +30,7 @@
   notes: On Saturday, free meditation class in person. Nice peaceful ambience.
   address: 8021 Old NC 86, Chapel Hill, NC 27516
   category: activity
-  map_link: "https://www.google.com/maps/search/?api=1&query=8021+Old+NC+86%2C+Chapel+Hill%2C+NC+27516"
+  map_link: "https://www.google.com/maps/search/?api=1&query=8021+Old+NC+86%2C+Chapel Hill%2C+NC+27516"
   city: "Chapel Hill, NC"
 
 - name: Velvet Taco
@@ -47,10 +47,16 @@
   map_link: "https://www.google.com/maps/search/?api=1&query=8200-400+Providence+Rd%2C+Charlotte%2C+NC+28277"
   city: "Charlotte, NC"
 
-
 - name: Cannabliss Dispensary
-  notes: "Attended a free event, Yin Yoga with Bella."
+  notes: "Fee yoga event, Yin Yoga with Bella."
   category: activity
   address: 4810 Hope Valley Rd STE 108, Durham, NC
   map_link: "https://www.google.com/maps/search/?api=1&query=4810+Hope+Delta+Rd+STE+108%2C+Durham%2C+NC"
   city: "Durham, NC"
+
+- name: H Mart
+  notes: "Huge selection of Asian grocery."
+  address: 1961 High House Rd, Cary, NC 27519, United States
+  map_link: "https://www.google.com/maps/search/?api=1&query=1961+High+House+Rd,+Cary,+NC+27519,+United+States"
+  city: "Cary, NC"
+  category: "grocery"
