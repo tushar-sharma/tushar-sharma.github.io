@@ -1,29 +1,51 @@
 ---
 layout: post
-title: Manager your docker files using make
-image: 'https://unsplash.com/photos//download?w=437'
-thumb: 'https://unsplash.com/photos//download?w=437'
-author: null
+title: Manage Your Dockerfiles Using Make
+image: 'https://unsplash.com/photos/S7u9sJ1gvqY/download?w=437'
+thumb: 'https://unsplash.com/photos/S7u9sJ1gvqY/download?w=437'
+author: Tushar Sharma
 category: blog
-published: false
+tags:
+  - docker
+  - devops
 ---
 
-Dear Vishi, dear logs for today.<!-- truncate_here --	>
+Managing multiple `docker-compose` projects can become cumbersome. If you have separate services like Postgres, Kafka, and others, each with its own `docker-compose.yml`, running commands across them can be repetitive. In this post, we'll explore a neat way to simplify this using a master `Makefile`.<!-- truncate_here -->
 
-Dear Vishi, dear logs for today.
+The idea is to have a single entry point to start and stop all your services, without having to `cd` into each directory.
 
+### Project Structure
 
-Create a folder `masterImages`. 
+Let's organize our project like this:
+
+```
+masterImages/
+├── Makefile
+├── postgres/
+│   ├── docker-compose.yml
+│   ├── init-scripts/
+│   │   └── 01-init-schema.sql
+│   └── Makefile
+└── kafka/
+    ├── docker-compose.yml
+    └── Makefile
+```
+
+The `masterImages` directory will contain our master `Makefile` and subdirectories for each service.
+
+### The Master Makefile
+
+First, create the `masterImages` directory and the main `Makefile` within it.
 
 ```bash
+mkdir masterImages
 cd masterImages
-cd $_
 touch Makefile
 ```
 
-Create a Makefile with following content
+Now, add the following content to the `masterImages/Makefile`:
 
-```
+```makefile
 .PHONY: start stop
 
 start:
@@ -34,31 +56,39 @@ stop:
 
 %:
     @:
-
 ```
 
-lets create a postgres image
+This master `Makefile` is the heart of our setup. It redirects `make` commands to the `Makefile` inside the respective service directory. For instance, `make postgres start` will execute the `start` target in the `postgres/Makefile`.
+
+### Postgres Service
+
+Now, let's set up the `postgres` service.
 
 ```bash
-mkdir postgres
-cd $_
-Makefile
+mkdir -p postgres/init-scripts
+cd postgres
+touch Makefile docker-compose.yml init-scripts/01-init-schema.sql
+```
 
-.PHONY: start
+#### Postgres Makefile
+
+The `postgres/Makefile` is simple:
+
+```makefile
+.PHONY: start stop
 
 start:
-        docker compose up
-
-.PHONY: stop
+	docker compose up
 
 stop:
-        docker compose down
-
+	docker compose down
 ```
 
-and docker-compose
+#### Postgres Docker Compose
 
-```
+Here is the content for `postgres/docker-compose.yml`:
+
+```yaml
 version: '3.8'
 services:
   postgres:
@@ -76,8 +106,13 @@ services:
 
 volumes:
   postgres_data:
+```
 
-cat init-scripts/01-init-schema.sql
+#### Postgres Init Script
+
+And the initialization script `postgres/init-scripts/01-init-schema.sql`:
+
+```sql
 -- Create the schema
 CREATE SCHEMA IF NOT EXISTS mySchema;
 
@@ -91,10 +126,35 @@ GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA mySchema TO postgres;
 ALTER USER postgres SET search_path TO mySchema,public;
 ```
 
-kakfa
+### Kafka Service
 
-````
-mkdir -p kakfa
+Similarly, for the `kafka` service:
+
+```bash
+mkdir kafka
+cd kafka
+touch Makefile docker-compose.yml
+```
+
+#### Kafka Makefile
+
+The `kafka/Makefile` is identical to the Postgres one:
+
+```makefile
+.PHONY: start stop
+
+start:
+	docker compose up
+
+stop:
+	docker compose down
+```
+
+#### Kafka Docker Compose
+
+And the `kafka/docker-compose.yml`:
+
+```yaml
 version: '2.1'
 
 services:
@@ -105,7 +165,7 @@ services:
     ports:
       - 2181:2181
     environment:
-      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKeeper_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
 
   kafka-1:
@@ -155,22 +215,30 @@ services:
       KAFKA_CONFLUENT_SUPPORT_METRICS_ENABLE: "false"
     depends_on:
       - zookeeper
-
 ```
 
-makefile is : ```.PHONY: start
+### Usage
 
-start:
-        docker compose up
+Now, from the `masterImages` directory, you can manage your services like this:
 
-.PHONY: stop
+To start the Postgres service:
+```bash
+make postgres start
+```
 
-stop:
-        docker compose down```
+To stop the Postgres service:
+```bash
+make postgres stop
+```
 
+To start the Kafka cluster:
+```bash
+make kafka start
+```
 
-make start postgress
-make sstop postgress
-make start kafka
+And to stop it:
+```bash
+make kafka stop
+```
 
-
+This approach keeps your projects organized and makes them easy to manage from a single place.
