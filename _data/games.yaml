@@ -1,7 +1,3 @@
-- title: "Alan Wake2"
-  rating: 4
-  comments: "You need a GPU with mesh-shader support, but the visual payoff is spectacular. The atmosphere is genuinely terrifying, and the cinematography in the cutscenes is top-tier. The Mind Place is a clever system for organizing clues and objectives. Combat can feel a bit clunky, though enabling One-Shot Mode helps smooth the experience. Exploration in dark areas occasionally drags, but the overall presentation is stunning."
-
 - title: "Alpaca Stacka"
   download: "<a href='https://store.steampowered.com/app/1655140/Alpaca_Stacka/' target='_blank' aria-label='Free to Play'><i class='fas fa-download'></i> Steam</a>"
   rating: 3
@@ -20,6 +16,9 @@
   rating: 4
   comments: "It's a good rogue-like game. The combat rooms are procedurally generated. You get more powerful after you die. You can enable god mode which just increases your damage resistance by 2 percent every time you die till 80%."
 
+- title: "Alan Wake2"
+  rating: 4
+  comments: "You need a GPU with mesh-shader support to run the game. The atmosphere is genuinely terrifying, and the cinematography in the cutscenes is top-tier. The Mind Place is a clever system for organizing clues and objectives. Combat can feel a bit clunky, though enabling One-Shot Mode helps smooth the experience. Exploration in dark areas occasionally drags, but the overall presentation is stunning. Abandoned."
 
 - title: "Rayman Legends"
   rating: 5
@@ -61,7 +60,11 @@
 
 - title: "Stick Fight: The Game"
   rating: 4
-  comments: "Local co-op."
+  comments: "Local co-op. "
+
+- title: "River City Girls 2"
+  rating: 3
+  comments: "Local co-op. Abandoned."
 
 - title: "GTA 4"
   rating: 4
@@ -135,7 +138,7 @@
 
 - title: "Alice: Madness Returns"
   rating: 3 
-  comments: "Gothic action-platformer inspired by Alice in Wonderland. The dark style and visuals are great, but puzzles feel repetitive. Tips: Press `LT + A` to open the umbrella. Press `LB` to shrink and reveal hidden hints. Abandoned."
+  comments: "Gothic inspired visuals are great, but puzzles feel repetitive. Tips: Press `LT + A` to open the umbrella. Press `LB` to shrink and reveal hidden hints. Abandoned."
 
 - title: "A Short Hike"
   rating: 5 
@@ -349,12 +352,7 @@
   progress: 0
   comments: "Local co-op."
 
-- title: "Rivals of Aether"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: ""
-  
+ 
 - title: "Sleeping Dogs"
   rating: 0
   pending: true
@@ -1109,3 +1107,41 @@
   pending: true
   comments: ""
   progress: 0
+
+- title: "Fall of the stick knights"
+  rating: 0
+  pending: true
+  comments: "Free to play. Local co-op."
+  progress: 0
+
+- title: "Bopl Battle"
+  rating: 0
+  pending: true
+  comments: "Local co-op."
+  progress: 0
+
+- title: "MELTY BLOOD: TYPE LUMINA"
+  rating: 0
+  pending: true
+  comments: "Local co-op."
+  progress: 0
+
+- title: "Dreams of Aether"
+  rating: 0
+  pending: true
+  comments: "Local co-op."
+  progress: 0
+
+- title: "Rivals of Aether"
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "Local co-op."
+
+- title: "Spiderheck"
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "Local co-op."
+
+
