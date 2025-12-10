@@ -268,6 +268,14 @@
   comments: "Free to play. Local co-op."
   progress: 0
 
+
+- title: "TMNT: Shredder's Revenge"
+  rating: 0
+  pending: true
+  comments: "Local co-op. For steam deck: controller options -> Force Off steam input."
+  progress: 0
+  
+  
 - title: "Animal Well"
   rating: 0
   pending: true
@@ -1067,11 +1075,6 @@
   comments: "Local co-op. No sound in steam deck fix: On desktop mode, install ProtonUp-Qt. Install GE-Proton10-25."
   progress: 0
 
-- title: "TMNT: Shredder's Revenge"
-  rating: 0
-  pending: true
-  comments: "For steam deck: controller options -> Force Off steam input."
-  progress: 0
 
 - title: "Transistor"
   rating: 0
