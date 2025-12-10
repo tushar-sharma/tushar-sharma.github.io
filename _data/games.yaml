@@ -967,12 +967,6 @@
   comments: ""
   progress: 0
 
-- title: "Rhythm Doctor"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
 - title: "Tactical Breach Wizards"
   rating: 0
   pending: true
@@ -1138,4 +1132,6 @@
   
   # Yume Nikki : Game like Undertale.
   # West of Loathing and Shadows Over Loathing, funny games.
+  # rhythm doctor : rhythm game
+
 
