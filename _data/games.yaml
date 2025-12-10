@@ -319,112 +319,6 @@
   progress: 0
   comments: ""
 
-- title: "Nine Sols"
-  ratings: 0 
-  pending: true
-  comments: ""
-
-- title: "Stellar Blade"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: ""
-
-- title: "METAL GEAR SOLID V: THE PHANTOM PAIN"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: ""
-
-- title: "Deus Ex: Human Revolution - Director's Cut"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: ""
-
-- title: "Gunfire Reborn"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: "FPS"
-
-- title: "Roboquest"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: "FPS"
-
-- title: "Vanquish "
-  rating: 0
-  pending: true
-  progress: 0
-  comments: "FPS"
-
-- title: "Selaco"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: "FPS"
-
-- title: "Fashion Police Squad"
-  rating: 0
-  pending: true
-  comments: "FPS"
-  progress: 0
-
-- title: "CULTIC"
-  rating: 0
-  pending: true
-  comments: "FPS"
-  progress: 0
-
-- title: "Left 4 Dead 2"
-  rating: 0
-  pending: true
-  comments: "FPS"
-  progress: 0
-
-- title: "The Wolf Among Us"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Hi-Fi RUSH"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Slay the Princess — The Pristine Cut"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Clair Obscur: Expedition 33"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Stardew Valley"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "God of War"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "God of War Ragnarök"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
 
 - title: "Assassin's Creed IV: Black Flag"
   rating: 0
@@ -434,138 +328,6 @@
 
 - title: "FIFA 19"
   rating: 5
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Palworld"
-  rating: 0
-  comments: ""
-  pending: true
-  progress: 0
-
-- title: "DELTARUNE"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- progress: "Child of Light"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Fallout: New Vegas"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Lethal League Blaze"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "ROLLERDROME"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Katana ZERO"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Neon White"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Marvel’s Spider-Man Remastered"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Inscryption"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "and Roger"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "OneShot"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "The Binding of Isaac: Rebirth"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "SIGNALIS"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "ULTRAKILL"
-  rating: 0
-  pending: true
-  comments: "FPS"
-  progress: 0
-
-- title: "DOOM (2016)"
-  rating: 0
-  pending: true
-  comments: "FPS"
-  progress: 0
-
-- title: "DOOM Eternal"
-  rating: 0
-  pending: true
-  comments: "FPS"
-  progress: 0
-
-- title: "POSTAL: Brain Damaged"
-  rating: 0
-  pending: true
-  comments: "FPS"
-  progress: 0
-
-- title: "CRUEL"
-  rating: 0
-  pending: true
-  comments: "FPS"
-  progress: 0
-
-- title: "The Stanley Parable"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Hollow Knight"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Celeste"
-  rating: 0
   pending: true
   comments: ""
   progress: 0
@@ -594,25 +356,8 @@
   comments: ""
   progress: 0
 
-- title: "Kenshi"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
 
 - title: "The Elder Scrolls V: Skyrim"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Ori and the Blind Forest"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Ori and the Will of the Wisps"
   rating: 0
   pending: true
   comments: ""
@@ -630,11 +375,6 @@
   comments: ""
   progress: 0
 
-- title: "OTXO"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
 
 - title: "1000xRESIST"
   rating: 0
@@ -672,179 +412,6 @@
   comments: ""
   progress: 0
 
-- title: "Knowledge, or know Lady"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Red Dead Redemption 2"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "A Space for the Unbound"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Resident Evil 2 (2019)"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Resident Evil 4 (2023)"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Bastion"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Digimon Story Time Stranger"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Dungeons of Hinterberg"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "FINAL FANTASY XVI"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Uncharted 4: A Thief's End"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Uncharted 4 : The Lost Legacy"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "A Plague Tale: Requiem"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Plants vs. Zombies GOTY Edition"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Another Crab's Treasure"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "LISA: The Painful"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "LISA: The Joyful"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Zeepkist"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "ANTONBLAST"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Psychonauts 2"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "The Killing Antidote"
-  rating: 0
-  pending: true
-  comments: "" 
-  progress: 0
-
-- title: "The Upturned"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "The Drifter"
-  rating: 0
-  pending: true
-  comments: "Point & Click."
-  progress: 0
-
-- title: "Day of the Tentacle Remastered"
-  rating: 0
-  pending: true
-  comments: "Point & Click."
-  progress: 0
-
-- title: "METAL GEAR RISING: REVENGEANCE"
-  rating: 0
-  pending: true
-  comments: "Hack and slash."
-  progress: 0
-
-- title: "Devil May Cry 5"
-  rating: 0
-  pending: true
-  comments: "Hack and slash."
-  progress: 0
-
-- title: "LOK Digital"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Metroid Dread "
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "The Forgotten City"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Deathloop"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
 
 - title: "The Last of Us Part I"
   rating: 0
@@ -870,77 +437,6 @@
   comments: ""
   progress: 0
 
-- title: "Baba Is You"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "TIS-100"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Dispatch"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Five Hearts Under One Roof 2"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Love Is All Around"
-  rating: 0
-  pending: true
-  comments: "FMV."
-  progress: 0
-
-- title: "Lil Gator Game"
-  rating: 0
-  pending: true
-  comments: "Casual."
-  progress: 0
-
-- title: "Chants of Sennaar"
-  rating: 0
-  pending: true
-  comments: "Indie."
-  progress: 0
-
-- title: "SnowRunner"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Tactical Breach Wizards"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Hylics"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "I Wani Hug that Gator!"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Felvidek"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
 
 - title: "Goat Simulator 3"
   rating: 0
@@ -948,71 +444,6 @@
   comments: ""
   progress: 0
 
-- title: "The Drifter"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Frog Detective 3: Corruption at Cowboy County"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Hades 2"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "SANABI"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Murders on the Yangtze River"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Fallen Aces"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Is This Seat Taken?"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Chicory: A Colorful Tale"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Peaks of Yore"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "SLUDGE LIFE 2"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Grunn"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
 
 - title: "Castle Crashers"
   rating: 0
@@ -1020,63 +451,6 @@
   comments: "Local co-op. No sound in steam deck fix: On desktop mode, install ProtonUp-Qt. Install GE-Proton10-25."
   progress: 0
 
-
-- title: "Transistor"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Bitburner"
-  rating: 0
-  pending: true
-  comments: "Free to play."
-  progress: 0
-
-- title : "NIGHT-RUNNERS PROLOGUE"
-  rating: 0
-  pending: true
-  comments: "Free to play."
-  progress: 0
-
-- title: "Geometry Dash"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "5D Chess With Multiverse Time Travel"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Bopl Battle"
-  rating: 0
-  pending: true
-  comments: "Local co-op."
-  progress: 0
-
-- title: "MELTY BLOOD: TYPE LUMINA"
-  rating: 0
-  pending: true
-  comments: "Local co-op."
-  progress: 0
-
-- title: "Dreams of Aether"
-  rating: 0
-  pending: true
-  comments: "Local co-op."
-  progress: 0
-
-- title: "Rivals of Aether"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: "Local co-op."
-
-
-  
 # Yume Nikki : Game like Undertale.
 # West of Loathing and Shadows Over Loathing, funny games.
 # rhythm doctor : rhythm game
@@ -1088,3 +462,108 @@
 # The Henry Stickmin Collection
 # splunky and splunky 2
 # Spyro Reignited Trilogy
+# Nine Sols
+# Stellar Blade
+# METAL GEAR SOLID V: THE PHANTOM PAIN
+# Deus Ex: Human Revolution - Director's Cut
+# Gunfire Reborn
+# Roboquest
+# Vanquish
+# Selaco
+# Fashion Police Squad
+# CULTIC
+# Left 4 Dead 2
+# The Wolf Among Us
+# Hi-Fi RUSH
+# Slay the Princess — The Pristine Cut
+# Clair Obscur: Expedition 33
+# Stardew Valley
+# God of War
+# God of War Ragnarök
+# MELTY BLOOD: TYPE LUMINA
+# Dreams of Aether
+# Rivals of Aether
+# Transistor
+# Bitburner
+# NIGHT-RUNNERS PROLOGUE
+# Geometry Dash
+# 5D Chess With Multiverse Time Travel
+# Bopl Battle
+# The Drifter
+# Frog Detective 3: Corruption at Cowboy County
+# Hades 2
+# SANABI
+# Murders on the Yangtze River
+# Fallen Aces
+# Is This Seat Taken?
+# Chicory: A Colorful Tale
+# Peaks of Yore
+# SLUDGE LIFE 2
+# Grunn
+# Baba Is You
+# TIS-100
+# Dispatch
+# Five Hearts Under One Roof 2
+# Love Is All Around
+# Lil Gator Game
+# Chants of Sennaar
+# SnowRunner
+# Tactical Breach Wizards
+# Hylics
+# I Wani Hug that Gator!
+# Felvidek
+# Knowledge, or know Lady
+# Red Dead Redemption 2
+# A Space for the Unbound
+# Resident Evil 2 (2019)
+# Resident Evil 4 (2023)
+# Bastion
+# Digimon Story Time Stranger
+# Dungeons of Hinterberg
+# FINAL FANTASY XVI
+# Uncharted 4: A Thief's End
+# Uncharted 4 : The Lost Legacy
+# A Plague Tale: Requiem
+# Plants vs. Zombies GOTY Edition
+# Another Crab's Treasure
+# LISA: The Painful
+# LISA: The Joyful
+# Zeepkist
+# ANTONBLAST
+# Psychonauts 2
+# The Killing Antidote
+# The Upturned
+# The Drifter
+# Day of the Tentacle Remastered
+# METAL GEAR RISING: REVENGEANCE
+# Devil May Cry 5
+# LOK Digital
+# Metroid Dread
+# The Forgotten City
+# Deathloop
+# OTXO
+# Ori and the Blind Forest
+# Ori and the Will of the Wisps
+# Kenshi
+# Palworld
+# DELTARUNE
+# Child of Light
+# Fallout: New Vegas
+# Lethal League Blaze
+# ROLLERDROME
+# Katana ZERO
+# Neon White
+# Marvel’s Spider-Man Remastered
+# Inscryption
+# and Roger
+# OneShot
+# The Binding of Isaac: Rebirth
+# SIGNALIS
+# ULTRAKILL
+# DOOM (2016)
+# DOOM Eternal
+# POSTAL: Brain Damaged
+# CRUEL
+# The Stanley Parable
+# Hollow Knight
+# Celeste
