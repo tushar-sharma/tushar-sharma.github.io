@@ -268,7 +268,12 @@
   comments: "Free to play. Local co-op."
   progress: 0
 
-
+- title: "Spiderheck"
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "Local co-op."
+  
 - title: "TMNT: Shredder's Revenge"
   rating: 0
   pending: true
@@ -282,60 +287,6 @@
   progress: 1
   comments: "Metroidvania game. Calm background music with pixel art style."
 
-- title: "despelote"
-  rating: 0
-  pending: true
-  progress: 100
-  comments: ""
-
-
-- title: "Night in the Woods"
-  rating: 0
-  pending: true
-  progress: 100
-  comments: ""
-
-- title: "There Is No Game: Wrong Dimension"
-  rating: 0
-  pending: true
-  progress: 100
-  comments: ""
-
-- title: "Hypnospace Outlaw"
-  rating: 0
-  pending: true
-  progress: 100
-  comments: ""
-
-- title: "The Henry Stickmin Collection"
-  rating: 0
-  pending: true
-  progress: 100
-  comments: ""
-
-- title: "Dead Cells"
-  rating: 0
-  pending: true
-  progress: 100
-  comments: ""
-
-- title: "Splunky"
-  rating: 0
-  pending: true
-  progress: 100
-  comments: ""
-
-- title: "Splunky 2"
-  rating: 0
-  pending: true
-  progress: 100
-  comments: ""
-
-- title: "Spyro Reignited Trilogy"
-  rating: 0
-  pending: true
-  progress: 100
-  comments: ""
 
 - title: "Mark of the Ninja: Remastered"
   rating: 0
@@ -1124,14 +1075,16 @@
   progress: 0
   comments: "Local co-op."
 
-- title: "Spiderheck"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: "Local co-op."
+
   
-  # Yume Nikki : Game like Undertale.
-  # West of Loathing and Shadows Over Loathing, funny games.
-  # rhythm doctor : rhythm game
-
-
+# Yume Nikki : Game like Undertale.
+# West of Loathing and Shadows Over Loathing, funny games.
+# rhythm doctor : rhythm game
+# despelote : football game from ecuador 
+# Night in the Woods
+# Dead cells 
+# There Is No Game: Wrong Dimension
+# Hypnospace Outlaw
+# The Henry Stickmin Collection
+# splunky and splunky 2
+# Spyro Reignited Trilogy
