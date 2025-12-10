@@ -306,7 +306,6 @@
   progress: 0
   comments: "Local co-op."
 
- 
 - title: "Sleeping Dogs"
   rating: 0
   pending: true
@@ -318,7 +317,6 @@
   pending: true
   progress: 0
   comments: ""
-
 
 - title: "Assassin's Creed IV: Black Flag"
   rating: 0
@@ -332,23 +330,6 @@
   comments: ""
   progress: 0
 
-- title: "OMRI"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Alba: A Wildlife Adventure"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Ghost of Tsushima DIRECTOR'S CUT"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
 
 - title: "Cult of the Lamb"
   rating: 0
@@ -364,12 +345,6 @@
   progress: 0
 
 - title: "Yakuza 0"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "Koira"
   rating: 0
   pending: true
   comments: ""
@@ -567,3 +542,7 @@
 # The Stanley Parable
 # Hollow Knight
 # Celeste
+# Koira
+# OMRI
+# Alba: A Wildlife Adventure
+# Ghost of Tsushima DIRECTOR'S CUT
