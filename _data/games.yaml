@@ -331,7 +331,7 @@
 - title: "FIFA 19"
   rating: 5
   pending: true
-  comments: ""
+  comments: "Local co-op."
   progress: 0
 
 
@@ -431,6 +431,14 @@
   progress: 0
 
 - title: "Horizon Chase Turbo"
+  pending: true
+  comments: "Local co-op."
+
+- title: "Enter the Gungeon"
+  pending: true
+  comments: "Local co-op."
+
+- title: "Distance"
   pending: true
   comments: "Local co-op."
 
@@ -567,3 +575,6 @@
 # UFO 50
 # Sonic Racing: CrossWorlds
 # Old School Rally
+# Gunpoint
+# DEADBOLT
+# Hifi Rush
