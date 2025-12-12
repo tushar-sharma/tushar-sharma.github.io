@@ -74,6 +74,10 @@
   comments: "Classic point-and-click adventure with clever puzzles and great humor. I grew up learning English from its witty dialogues and memorable voice acting."
   rating: 4
 
+- title : "Windjammers 2"
+  ratings: 4
+  comments: "Local co-op."
+
 - title: "Firewatch"
   rating: 4
   comments: "Walking sim. Most of the time you are talking to your supervisor on the radio. Ambience is peaceful. If you like going on a hike, you probably gonna like this."
@@ -426,6 +430,10 @@
   comments: "Local co-op. No sound in steam deck fix: On desktop mode, install ProtonUp-Qt. Install GE-Proton10-25."
   progress: 0
 
+- title: "Horizon Chase Turbo"
+  pending: true
+  comments: "Local co-op."
+
 # Yume Nikki : Game like Undertale.
 # West of Loathing and Shadows Over Loathing, funny games.
 # rhythm doctor : rhythm game
@@ -547,5 +555,15 @@
 # Alba: A Wildlife Adventure
 # Ghost of Tsushima DIRECTOR'S CUT
 # Disney Dreamlight Valley
-# Windjammers 2
+# The Spike Cross, free to play
 # Makeway
+# The Last of Us™ Part II Remastered
+# Escape From Duckov
+# Clair Obscur: Expedition 33
+# The Midnight Walk
+# A Few Quick Matches
+# Just Shapes & Beats
+# PAC-MAN WORLD 2 Re-PAC
+# UFO 50
+# Sonic Racing: CrossWorlds
+# Old School Rally
