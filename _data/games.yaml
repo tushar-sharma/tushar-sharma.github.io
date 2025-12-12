@@ -22,7 +22,7 @@
 
 - title: "Rayman Legends"
   rating: 5
-  comments: "One of the best platformers ever made. Fantastic background music and smooth, fun gameplay. Note: Ubisoft launcher requires you to be online to start the game. The `Challenge mode` is no longer available on Steam due to Ubisoft server shutdown ([details](https://www.ubisoft.com/en-us/help/purchases-and-rewards/article/decommissioning-of-online-services-for-older-legacy-ubisoft-games-n-to-z/000105855))."
+  comments: "One of the best platformers ever made. Fantastic background music and smooth, fun gameplay. Local co-op. Ubisoft launcher requires you to be online to start the game. The `Challenge mode` is no longer available on Steam due to Ubisoft server shutdown ([details](https://www.ubisoft.com/en-us/help/purchases-and-rewards/article/decommissioning-of-online-services-for-older-legacy-ubisoft-games-n-to-z/000105855))."
 
 - title: "Sunset Overdrive"
   rating: 5
@@ -430,6 +430,10 @@
   comments: "Local co-op. No sound in steam deck fix: On desktop mode, install ProtonUp-Qt. Install GE-Proton10-25."
   progress: 0
 
+- title: "The Henry Stickman Collection"
+  rating: 0
+  comments: "Change Layout to Keyboard(WASD) and mouse on Steam Deck."
+
 - title: "Horizon Chase Turbo"
   pending: true
   comments: "Local co-op."
@@ -442,15 +446,42 @@
   pending: true
   comments: "Local co-op."
 
+- title: "Paint the town red"
+  pending: true
+  comments: "Change setting in `settings/language.txt`."
+
+- title: "Make way"
+  pending: true
+  comments: "Local co-op."
+
+- title: "Buckshot Roulette"
+  pending: true
+  comments: "If game crashes, add this in launch option: `--rendering-driver opengl3`"
+
+- title: "Genital Jousting"
+  pending: true
+  comments: "Local co-op."
+
+- title: "Lovers in a Dangerous Spacetime"
+  pending: true
+  comments: "Local co-op."
+
+- title: "A Few Quick Matches"
+  pending: true
+  comments: "Local co-op."
+
+- title: "Nightmare Kart"
+  pending: true
+  comments: "Free to play. Local co-op."
+
 # Yume Nikki : Game like Undertale.
 # West of Loathing and Shadows Over Loathing, funny games.
 # rhythm doctor : rhythm game
 # despelote : football game from ecuador 
 # Night in the Woods
-# Dead cells 
+# Dead cells
 # There Is No Game: Wrong Dimension
 # Hypnospace Outlaw
-# The Henry Stickmin Collection
 # splunky and splunky 2
 # Spyro Reignited Trilogy
 # Nine Sols
@@ -569,8 +600,7 @@
 # Escape From Duckov
 # Clair Obscur: Expedition 33
 # The Midnight Walk
-# A Few Quick Matches
-# Just Shapes & Beats
+# # Just Shapes & Beats
 # PAC-MAN WORLD 2 Re-PAC
 # UFO 50
 # Sonic Racing: CrossWorlds
@@ -578,3 +608,5 @@
 # Gunpoint
 # DEADBOLT
 # Hifi Rush
+# Class of '09
+# Fran Bow
