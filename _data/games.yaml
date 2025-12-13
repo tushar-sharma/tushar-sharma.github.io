@@ -341,7 +341,6 @@
   comments: ""
   progress: 0
 
-
 - title: "The Elder Scrolls V: Skyrim"
   rating: 0
   pending: true
@@ -349,13 +348,6 @@
   progress: 0
 
 - title: "Yakuza 0"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-
-- title: "1000xRESIST"
   rating: 0
   pending: true
   comments: ""
@@ -399,12 +391,6 @@
   progress: 0
 
 - title: "The Last of Us Part II Remastered"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
-- title: "1000xRESIST"
   rating: 0
   pending: true
   comments: ""
@@ -607,3 +593,4 @@
 # Hifi Rush
 # Class of '09
 # Fran Bow
+#1000xRESIST
