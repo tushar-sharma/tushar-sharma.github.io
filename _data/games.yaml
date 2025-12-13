@@ -411,11 +411,8 @@
   progress: 0
 
 - title: "Atuel"
-  rating: 0
-  pending: true
-  comments: ""
-  progress: 0
-
+  rating: 5
+  comments: "Free to play. Beautiful short game that's an ode to Atuel river."
 
 - title: "Goat Simulator 3"
   rating: 0
@@ -432,7 +429,7 @@
 
 - title: "The Henry Stickman Collection"
   rating: 0
-  comments: "Change Layout to Keyboard(WASD) and mouse on Steam Deck."
+  comments: "Change Layout to Keyboard(WASD) and use a mouse on Steam Deck."
 
 - title: "Horizon Chase Turbo"
   pending: true
