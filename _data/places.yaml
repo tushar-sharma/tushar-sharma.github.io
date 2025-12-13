@@ -2,7 +2,7 @@
   notes: I bought Falken tires for $436. They accept walk-ins, which is convenient.
   address: 4051 Durham-Chapel Hill Blvd, Durham, NC 27707
   category: car
-  map_link: "https://www.google.com/maps/search/?api=1&query=4051+Durham-Chapel+Hill+Blvd%2C+Durham%2C+NC+27707"
+  map_link: "https://www.google.com/maps/search/?api=1&query=4051+Durham-Chapel-Hill+Blvd%2C+Durham%2C+NC+27707"
   city: "Durham, NC"
 
 - name: Los Tres Mexican Restaurant Grill and Bar
@@ -30,7 +30,7 @@
   notes: On Saturday, free meditation class in person. Nice peaceful ambience.
   address: 8021 Old NC 86, Chapel Hill, NC 27516
   category: activity
-  map_link: "https://www.google.com/maps/search/?api=1&query=8021+Old+NC+86%2C+Chapel Hill%2C+NC+27516"
+  map_link: "https://www.google.com/maps/search/?api=1&query=8021+Old+NC+86%2C+Chapel+Hill%2C+NC+27516"
   city: "Chapel Hill, NC"
 
 - name: Velvet Taco
@@ -60,3 +60,10 @@
   map_link: "https://www.google.com/maps/search/?api=1&query=1961+High+House+Rd,+Cary,+NC+27519,+United+States"
   city: "Cary, NC"
   category: "grocery"
+
+- name: Roosters men's grooming center
+  notes: Fabian was great for beard shave.
+  address: 14021 Conlan Cir Ste B-7, Charlotte, North Carolina 28277
+  category: barbershop
+  map_link: "https://www.google.com/maps/search/?api=1&query=14021+Conlan+Cir+Ste+B-7,+Charlotte,+North+Carolina+28277"
+  city: "Charlotte, NC"
