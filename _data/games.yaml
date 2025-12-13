@@ -187,8 +187,8 @@
 - title: "Bully"
   rating: 4
   pending: true
-  progress: 10
-  comments: "Graphics are dated. However it has GTA like feel to it. Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
+  progress: 20
+  comments: "Graphics are dated. No Auto Save. It has a GTA like feel to it. There are classes to attend in school along with side quest. Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
 
 - title: "Dave the Diver"
   rating: 1
