@@ -44,6 +44,7 @@ algolia:
   application_id: '0XJJCPHPDY'
   index_name: randomwits
   public_key: 618de85a39ad952f6e4c506d3c752777
+  nodes_to_index: 'td'
   files_to_exclude:
     - tag/*
     - blog/*
