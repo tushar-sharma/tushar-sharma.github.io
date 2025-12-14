@@ -414,8 +414,8 @@
   progress: 0
 
 - title: "The Henry Stickman Collection"
-  rating: 0
-  comments: "Change Layout to Keyboard(WASD) and use a mouse on Steam Deck."
+  rating: 4
+  comments: "Point and click. Short funny game of six episodes where you can choose hilarious actions as you progress through the story. For Steam deck, change layout to Keyboard(WASD) and use bluetooth mouse."
 
 - title: "Horizon Chase Turbo"
   pending: true
@@ -458,8 +458,8 @@
   comments: "Free to play. Local co-op."
 
 # Yume Nikki : Game like Undertale.
-# West of Loathing and Shadows Over Loathing, funny games.
 # rhythm doctor : rhythm game
+# West of Loathing
 # despelote : football game from ecuador 
 # Night in the Woods
 # Dead cells
@@ -594,3 +594,7 @@
 # Class of '09
 # Fran Bow
 #1000xRESIST
+# Beneath a Steel Sky (1994)
+# Beyond a Steel Sky
+# Broken Sword - Shadow of the Templars: Reforged
+# You're not family
