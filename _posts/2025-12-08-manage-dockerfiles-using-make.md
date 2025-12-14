@@ -45,18 +45,12 @@ touch Makefile
 
 Now, add the following content to the `masterImages/Makefile`:
 
-```makefile
-.PHONY: start stop
-
-start:
-	@$(MAKE) -C $(filter-out $@,$(MAKECMDGOALS)) start
-
-stop:
-	@$(MAKE) -C $(filter-out $@,$(MAKECMDGOALS)) stop
-
-%:
-    @:
-```
+{% template  customCode.html %}
+---
+id: 99fd2473fc4531b4158281654c7ff613
+file: Makefile
+---
+{% endtemplate %}
 
 This master `Makefile` is the heart of our setup. It redirects `make` commands to the `Makefile` inside the respective service directory. For instance, `make postgres start` will execute the `start` target in the `postgres/Makefile`.
 
@@ -74,57 +68,37 @@ touch Makefile docker-compose.yml init-scripts/01-init-schema.sql
 
 The `postgres/Makefile` is simple:
 
-```makefile
-.PHONY: start stop
-
-start:
-	docker compose up
-
-stop:
-	docker compose down
-```
+{% template  customCode.html %}
+---
+id: 99fd2473fc4531b4158281654c7ff613
+file:  MakefilePostgres 
+---
+{% endtemplate %}
 
 #### Postgres Docker Compose
 
 Here is the content for `postgres/docker-compose.yml`:
 
-```yaml
-version: '3.8'
-services:
-  postgres:
-    image: postgres:17
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: postgres
-      POSTGRES_SCHEMA: digitalassets
-    ports:
-      - '5432:5432'
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./init-scripts:/docker-entrypoint-initdb.d
+{% template  customCode.html %}
+---
+id: 99fd2473fc4531b4158281654c7ff613
+file:  postgress.yaml
+---
+{% endtemplate %}
 
-volumes:
-  postgres_data:
-```
 
 #### Postgres Init Script
 
 And the initialization script `postgres/init-scripts/01-init-schema.sql`:
 
-```sql
--- Create the schema
-CREATE SCHEMA IF NOT EXISTS mySchema;
+{% template  customCode.html %}
+---
+id: 99fd2473fc4531b4158281654c7ff613
+file:  01-init-schema.sql
+---
+{% endtemplate %}
 
--- Grant all permissions to postgres user
-GRANT ALL PRIVILEGES ON SCHEMA mySchema TO postgres;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA mySchema TO postgres;
-GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA mySchema TO postgres;
-GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA mySchema TO postgres;
 
--- Set default search path for postgres user
-ALTER USER postgres SET search_path TO mySchema,public;
-```
 
 ### Kafka Service
 
@@ -140,82 +114,25 @@ touch Makefile docker-compose.yml
 
 The `kafka/Makefile` is identical to the Postgres one:
 
-```makefile
-.PHONY: start stop
-
-start:
-	docker compose up
-
-stop:
-	docker compose down
-```
+{% template  customCode.html %}
+---
+id: 99fd2473fc4531b4158281654c7ff613
+file:  MakefilePostgres 
+---
+{% endtemplate %}
 
 #### Kafka Docker Compose
 
 And the `kafka/docker-compose.yml`:
 
-```yaml
-version: '2.1'
+{% template  customCode.html %}
+---
+id: 99fd2473fc4531b4158281654c7ff613
+file:  kafkaDockerCompose.yaml
+---
+{% endtemplate %}
 
-services:
 
-  zookeeper:
-    image: confluentinc/cp-zookeeper:7.7.0
-    container_name: zookeeper
-    ports:
-      - 2181:2181
-    environment:
-      ZOOKeeper_CLIENT_PORT: 2181
-      ZOOKEEPER_TICK_TIME: 2000
-
-  kafka-1:
-    image: confluentinc/cp-kafka:7.7.0
-    ports:
-      - "9092:9092"
-    environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: LISTENER_DOCKER_INTERNAL://kafka-1:19092,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: LISTENER_DOCKER_INTERNAL:PLAINTEXT,LISTENER_DOCKER_EXTERNAL:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
-      KAFKA_LOG4J_ROOT_LOGLEVEL: ERROR
-      KAFKA_CONFLUENT_SUPPORT_METRICS_ENABLE: "false"
-      KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "true"
-    depends_on:
-      - zookeeper
-
-  kafka-2:
-    image: confluentinc/cp-kafka:7.7.0
-    ports:
-      - "9093:9093"
-    environment:
-      KAFKA_BROKER_ID: 2
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: LISTENER_DOCKER_INTERNAL://kafka-2:19093,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9093
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: LISTENER_DOCKER_INTERNAL:PLAINTEXT,LISTENER_DOCKER_EXTERNAL:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
-      KAFKA_LOG4J_ROOT_LOGLEVEL: ERROR
-      KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "true"
-      KAFKA_CONFLUENT_SUPPORT_METRICS_ENABLE: "false"
-    depends_on:
-      - zookeeper
-
-  kafka-3:
-    image: confluentinc/cp-kafka:7.7.0
-    ports:
-      - "9094:9094"
-    environment:
-      KAFKA_BROKER_ID: 3
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: LISTENER_DOCKER_INTERNAL://kafka-3:19094,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9094
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: LISTENER_DOCKER_INTERNAL:PLAINTEXT,LISTENER_DOCKER_EXTERNAL:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
-      KAFKA_LOG4J_ROOT_LOGLEVEL: ERROR
-      KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "true"
-      KAFKA_CONFLUENT_SUPPORT_METRICS_ENABLE: "false"
-    depends_on:
-      - zookeeper
-```
 
 ### Usage
 
