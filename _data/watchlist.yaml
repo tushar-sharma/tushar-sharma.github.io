@@ -4,7 +4,7 @@
   comments: "A hilarious and heartwarming sitcom that follows three very different families. The first is a traditional couple with three kids, the second is a gay couple raising an adopted Vietnamese daughter, and the third is an older man with his lively Colombian wife and young son. The writing is witty, sharp, and consistently funny."
 
 - title: "Panchayat"
-  rating: 4
+  rating: 5
   platform: "Amazon Prime"
   comments: "A comedy-drama about an engineering graduate who, unable to find a corporate job, reluctantly takes a government posting as a secretary in a remote village. It captures the humor and struggles of rural life with simple story."
 
@@ -19,7 +19,7 @@
   comments: "Watched in English dubbed. The animation is spectacular and the story is inspired by Chinese mythology."
 
 - title: "From the World of John Wick: Ballerina"
-  rating: 4
+  rating: 5
   platform: "Theatre"
   comments: "I love John Wick movies. The cinematography is great and beautiful. John Wick makes a cameo appearance in the movie."
 
@@ -41,7 +41,7 @@
 - title: "Kaala Paani"
   rating: 4
   platform: "Netflix"
-  comments: "A gripping drama set in the Andaman Islands. Strong storytelling, though unfortunately season 2 was cancelled."
+  comments: "Story of contaminated water causing a rare disease in Andaman Islands. Season 2 was cancelled."
 
 - title: "Serious Men"
   rating: 4
@@ -53,10 +53,15 @@
   platform: "Netflix"
   comments: "Based on the life of Pablo Escobar, the king of cocaine. The soundtrack is fantastic and the storytelling keeps you hooked."
 
-- title: "Misanga"
+- title: "My Mister"
   rating: 5
   platform: "Netflix"
-  comments: "A Korean drama with a powerful story of perseverance, love, and betrayal. Strong soundtrack adds to the emotional impact."
+  comments: "A Korean drama with a roller coaster ride of emotions. The story of an architect with an unfaithful wife and a young eccentric woman. Great soundtracks."
+
+- title: "Misaeng"
+  rating: 5
+  platform: "Netflix"
+  comments: "An underdog without a college degree converts an internship into full time and succeeds in corporte world in Korea."
 
 - title: "Squid Game Season 1"
   rating: 5
@@ -66,7 +71,7 @@
 - title: "Squid Game Seasons 2 & 3"
   rating: 3
   platform: "Netflix"
-  comments: "Disappointing follow-ups. The story lacks the impact and originality of season 1."
+  comments: "Disappointing follow-ups. There's not much new to offer. Just felt like a mediocre addition to the original."
 
 - title: "Lie to Me"
   rating: 5
@@ -91,7 +96,7 @@
 - title: "A Minecraft Movie (2025)"
   rating: 1
   platform: "Theatre"
-  comments: "Decent for kids, but the story is dull and unengaging."
+  comments: "May be suitable for kids, but the story was dull for me."
 
 - title: "Avatar: The Way of Water"
   rating: 3
@@ -101,7 +106,7 @@
 - title: "Avatar"
   rating: 5
   platform: "Online"
-  comments: "A groundbreaking film with the beautiful world of Pandora. Strong concept and gorgeous visuals make it unforgettable."
+  comments: "A groundbreaking film with the beautiful world of Pandora. Subtle commentary on the exploitation of natural resources by big corporation and protection of natural resources and indiginous people."
 
 - title: "The Big Short"
   rating: 5
@@ -298,7 +303,7 @@
 
 - title: "Namesake"
   rating: 4
-  comments: "Story of an Indian couple who migrate to USA. It captures cultural differences between India and USA and how they children adapt to those changes."
+  comments: "Story of an Indian couple who migrate to USA. It captures cultural differences between India and USA and how their children adapt to those changes."
 
 - title: "Spy x Family"
   rating: 5
@@ -307,14 +312,16 @@
   platform: "HiAnime"
   pending: true
 
-- title: "Bocchi the Rock!"
-  rating: 0 
-  pending: true
-  progress: 0
-  comments: ""
+- title: "Zootopia"
+  rating: 5
+  comments: "An amazing animated movie with a strong message about diversity and acceptance."
 
-- title: "Kaguya-sama: Love Is War"
-  rating: 0 
-  pending: true
-  progress: 0
-  comments: ""
+- title: "Zootopia 2"
+  rating: 4
+  comments: "Animation was great though the story was a bit weak compared to the first one."
+
+# Kaguya-sama: Love Is War
+# Bocchi the Rock!
+# Hyderbad Blues
+# Blue Umbrella
+# Kill
