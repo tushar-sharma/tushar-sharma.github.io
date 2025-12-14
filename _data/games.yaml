@@ -152,6 +152,10 @@
   rating: 4
   comments: "Set in São Paulo, Brazil. Lot of cutscenes. Feels like Rambo on a shooting spree. Controls: `X` to take cover, `LT` to aim, `RT` to shoot, `LS` + `RB` to dive forward, `RS` to trigger bullet time, and `LS` (press) to crouch. Played on Steam Deck."
 
+- title: "Atuel"
+  rating: 5
+  comments: "Free to play. Beautiful short game that's an ode to Atuel river."
+
 - title: "Titanfall 2"
   rating: 5
   comments: "One of the best FPS games out there. The combat feels incredible—whether you’re on foot or piloting a Titan, every battle is pure adrenaline. The story builds up beautifully, and the ending is nothing short of spectacular. Cons: The EA launcher can be a bit annoying—it insists on connecting to the internet every time you launch the game on steam deck, and occasionally you’ll get a blank screen. A quick restart usually fixes it, though."
@@ -383,7 +387,6 @@
   comments: ""
   progress: 0
 
-
 - title: "The Last of Us Part I"
   rating: 0
   pending: true
@@ -396,16 +399,11 @@
   comments: ""
   progress: 0
 
-- title: "Atuel"
-  rating: 5
-  comments: "Free to play. Beautiful short game that's an ode to Atuel river."
-
 - title: "Goat Simulator 3"
   rating: 0
   pending: true
   comments: ""
   progress: 0
-
 
 - title: "Castle Crashers"
   rating: 0
@@ -419,52 +417,64 @@
 
 - title: "Horizon Chase Turbo"
   pending: true
+  progress: 0
   comments: "Local co-op."
 
 - title: "Enter the Gungeon"
   pending: true
   comments: "Local co-op."
+  progress: 0
 
 - title: "Distance"
   pending: true
   comments: "Local co-op."
+  progress: 0
 
 - title: "Paint the town red"
   pending: true
   comments: "Change setting in `settings/language.txt`."
+  progress: 0
 
 - title: "Make way"
   pending: true
+  progress: 0
   comments: "Local co-op."
 
 - title: "Buckshot Roulette"
   pending: true
+  progress: 0
   comments: "If game crashes, add this in launch option: `--rendering-driver opengl3`"
 
 - title: "Genital Jousting"
   pending: true
+  progress: 0
   comments: "Local co-op."
 
 - title: "Lovers in a Dangerous Spacetime"
   pending: true
+  progress: 0
   comments: "Local co-op."
 
 - title: "A Few Quick Matches"
   pending: true
+  progress: 0
   comments: "Local co-op."
 
 - title: "Nightmare Kart"
   pending: true
+  progress: 0
   comments: "Free to play. Local co-op."
 
 - title: "Ultimate Chicken Horse"
   pending: true
+  progress: 0
   comments: "Local co-op."
 
 - title: "Academy Love Saga: Tennis Angels EX"
   pending: true
+  progress: 0
   comments: "Steam deck: Use proton hotfix."
-  
+
 # Yume Nikki : Game like Undertale.
 # rhythm doctor : rhythm game
 # West of Loathing
@@ -601,9 +611,11 @@
 # Hifi Rush
 # Class of '09
 # Fran Bow
-#1000xRESIST
-# Beneath a Steel Sky (1994)
+# 1000xRESIST
 # Beyond a Steel Sky
 # Broken Sword - Shadow of the Templars: Reforged
 # You're not family
 # One Finger Death Punch 2
+# Know by heart
+# Night in the Woods
+# Not For Broadcast
