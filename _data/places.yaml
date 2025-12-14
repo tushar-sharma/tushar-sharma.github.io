@@ -67,3 +67,11 @@
   category: barbershop
   map_link: "https://www.google.com/maps/search/?api=1&query=14021+Conlan+Cir+Ste+B-7,+Charlotte,+North+Carolina+28277"
   city: "Charlotte, NC"
+
+- name : La Vita Dolce
+  notes: "Honey ginger tea was good."
+  address: 610 Market St, Chapel Hill, NC 27516, United States
+  category: food
+  map_link: "https://www.google.com/maps/search/?api=1&query=610+Market+St,+Chapel+Hill,+NC+27516,+United+States"
+  city: "Chapel Hill, NC"
+  
