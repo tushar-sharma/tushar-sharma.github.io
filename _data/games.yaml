@@ -477,6 +477,11 @@
   progress: 0
   comments: "Steam deck: Use proton hotfix."
 
+- title: "Marvel’s Spider-Man Remastered"
+  pending: true
+  progress: 0
+  comments: "Steam Deck controller issue: Disable Steam Input. rename `steam_appid.txt` to `steam_appid.txt.bk`."
+
 # Yume Nikki : Game like Undertale.
 # rhythm doctor : rhythm game
 # West of Loathing
@@ -578,8 +583,7 @@
 # ROLLERDROME
 # Katana ZERO
 # Neon White
-# Marvel’s Spider-Man Remastered
-# Inscryption
+## Inscryption
 # and Roger
 # OneShot
 # The Binding of Isaac: Rebirth
