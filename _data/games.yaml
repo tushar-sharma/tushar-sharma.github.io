@@ -54,6 +54,10 @@
   rating: 5
   comments: "It's both cute and dystopian, with clever puzzles. The unsettling moments will stick with you long after you finish. The graphics are gorgeous, and the gameplay feels smooth and immersive. If you love puzzles wrapped in a dark, haunting atmosphere, this game is definitely for you! "
 
+- title: "Spiritfarer: Farewell Edition"
+  rating: 5
+  comments: "Cozy game."
+
 - title: "Boomerang Fu"
   rating: 5
   comments: "Local co-op. You play as cute food items, slashing each other with boomerangs."
@@ -75,8 +79,8 @@
   rating: 4
 
 - title : "Windjammers 2"
-  ratings: 4
-  comments: "Local co-op."
+  rating: 4
+  comments: "Score goal using flying disc. Local co-op."
 
 - title: "Firewatch"
   rating: 4
@@ -224,9 +228,7 @@
   comments: "A stylish skating game set in a vibrant, dystopian world."
 
 - title: "Anger Foot"
-  rating: 0
-  progress: 0
-  pending: true
+  rating: 5
   comments: "FPS. Kicking on adrenaline. The soundtrack is cool. You feel like a Hulk with anger foot."
 
 - title: "Dredge"
