@@ -6,7 +6,7 @@ thumb: 'https://unsplash.com/photos/flha0KwRrRc/download?w=437'
 author: Tushar Sharma
 skipImage: true
 tags:
-  - macos
+  - mac
   - vpn
 category: blog
 ---
