@@ -9,6 +9,7 @@ summary: My musing in my solitude.
 image: /img/moon.jpg
 author: Tushar Sharma
 featuredPost: true
+skipImage: true
 ---
 
 Often we meet,<br>
