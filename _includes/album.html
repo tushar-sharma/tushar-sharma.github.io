@@ -12,8 +12,8 @@
         {% when 'neutral' %}
            <span class="cl fa fa-meh checked"></span> <br>
         {% endcase %}
-        <a data-lightbox="gallery" href="{{ image.source }}" class="album-image" data-sub-html="{{ image.caption }}">
-            <br><img src="{{ image.thumb }}" /><br>
+        <a data-lightbox="gallery" href="{{ image.source }}" class="album-image" title="{{ image.caption }}">
+            <br><img src="{{ image.thumb }}" style="height: 200px; object-fit: cover; width: auto;" /><br>
         </a>
     </div>
     {% endfor %}
