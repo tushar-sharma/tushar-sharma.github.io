@@ -36,6 +36,7 @@ author: Tushar Sharma
 category: blog
 tags:
  - north carolina
+ - museum
 published: true
 location:   
   latitude: 35.7822
