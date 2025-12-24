@@ -2,8 +2,8 @@
 layout: post
 title: Ode to Cashew  - Guinea pig
 skipImage: true
-image:  https://unsplash.com/photos/q1pw1dOW0_0/download?w=437
-thumb: https://unsplash.com/photos/q1pw1dOW0_0/download?w=437
+image: https://res.cloudinary.com/dlazo0sj2/image/upload/w_800,c_fit,f_auto,q_auto/v1766588087/PHOTO-2025-12-24-01-46-07_pf08s8.jpg
+thumb: https://res.cloudinary.com/dlazo0sj2/image/upload/w_400,h_300,c_fill,f_auto,q_auto/v1766588087/PHOTO-2025-12-24-01-46-07_pf08s8.jpg
 images:
   - source: "https://res.cloudinary.com/dlazo0sj2/image/upload/w_2600,f_auto,q_auto/v1766543294/IMG_0015_lxdrp5.jpg"
     thumb: "https://res.cloudinary.com/dlazo0sj2/image/upload/w_200,f_auto,q_auto/v1766543294/IMG_0015_lxdrp5.jpg"
@@ -23,6 +23,9 @@ images:
   - source: "https://res.cloudinary.com/dlazo0sj2/image/upload/w_2600,f_auto,q_auto/v1766548116/IMG_2474_q3ulsb.jpg"
     thumb: "https://res.cloudinary.com/dlazo0sj2/image/upload/w_200,f_auto,q_auto/v1766548116/IMG_2474_q3ulsb.jpg"
     caption: "It was not me 😠"
+  - source: "https://res.cloudinary.com/dlazo0sj2/image/upload/w_2600,f_auto,q_auto/v1766588087/PHOTO-2025-12-24-01-46-07_pf08s8.jpg"
+    thumb: "https://res.cloudinary.com/dlazo0sj2/image/upload/w_300,h_200,c_fit,f_auto,q_auto/v1766588087/PHOTO-2025-12-24-01-46-07_pf08s8.jpg"
+    caption: "To live in the hearts we leave behind is to live forever"
 author: tushar sharma
 category: blog
 tags:
@@ -34,17 +37,7 @@ travel: true
 
 Ode to Cashew, our Guinea Pig. Rest in Peace.<!-- truncate_here -->
 
-In loving memory of Cashew:
 
-> Fat as a piggy,  
-> yet fast like thunder,  
-> he squeaked for carrots,  
-> and munched on hay like a snack.  
->   
-> He liked to cuddle,  
-> obedient as a cow,  
-> never made a mess,  
-> was cute until he crossed the rainbow bridge
 
 {% include album.html albumname="cashew" %}
 
@@ -82,3 +75,16 @@ In loving memory of Cashew:
   allowfullscreen
   title="Richu with Cashew"
 ></iframe>
+
+
+Epitaph of Cashew:
+
+> Fat as a piggy,  
+> yet fast like thunder,  
+> he squeaked for carrots,  
+> and munched on hay like a snack.  
+>   
+> He liked to cuddle,  
+> obedient as a cow,  
+> never made a mess,  
+> was cute until he crossed the rainbow bridge
