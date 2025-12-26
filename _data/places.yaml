@@ -82,4 +82,18 @@
   map_link: "https://www.google.com/maps/search/?api=1&query=CW7H+XHW,+San+Juan,+00918,+Puerto+Rico"
   city: "San Juan, PR"
 
+- name: Target Rent A Car
+  notes: "Rental car company. This is the reason why there's no Target stores in Puerto Rico due to a trademark conflict."
+  address: 204 Cll Pomarrosa, San Juan, 00912, Puerto Rico
+  category: car
+  map_link: "https://www.google.com/maps/search/?api=1&query=204+Cll+Pomarrosa,+San+Juan,+00912,+Puerto+Rico"
+  city: "San Juan, PR"
+
+- name: Ceiba Ferry Terminal
+  notes: "Ferry to Culebra and Vieques. Try to get tickets a few days in advance by going there in person."
+  address: 69HJ+XM4, Marina Dr, Roosevelt Roads, Ceiba 00735, Puerto Rico
+  category: transport
+  map_link: "https://www.google.com/maps/search/?api=1&query=69HJ+XM4,+Marina+Dr,+Roosevelt+Roads,+Ceiba+00735,+Puerto+Rico"
+  city: "Ceiba, PR"
+
 # Valle de la Luna (Chile)
