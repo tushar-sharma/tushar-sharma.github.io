@@ -75,4 +75,11 @@
   map_link: "https://www.google.com/maps/search/?api=1&query=610+Market+St,+Chapel+Hill,+NC+27516,+United+States"
   city: "Chapel Hill, NC"
 
+- name: La Feria The Park
+  notes: "Fun rides for kids and adults. Celebrated christmas night there. Parking is $5."
+  address: CW7H+XHW, San Juan, 00918, Puerto Rico
+  category: activity
+  map_link: "https://www.google.com/maps/search/?api=1&query=CW7H+XHW,+San+Juan,+00918,+Puerto+Rico"
+  city: "San Juan, PR"
+
 # Valle de la Luna (Chile)

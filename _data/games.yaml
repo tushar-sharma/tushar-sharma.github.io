@@ -54,6 +54,10 @@
   rating: 5
   comments: "It's both cute and dystopian, with clever puzzles. The unsettling moments will stick with you long after you finish. The graphics are gorgeous, and the gameplay feels smooth and immersive. If you love puzzles wrapped in a dark, haunting atmosphere, this game is definitely for you! "
 
+- title: "Dispatch"
+  ratings: 5
+  comments: "Interactive game where you dispatch superheroes for various task. Humor is great along with voice acting."
+
 - title: "Spiritfarer: Farewell Edition"
   rating: 5
   comments: "Cozy game."
@@ -482,7 +486,11 @@
   progress: 0
   comments: "Steam Deck controller issue: Disable Steam Input. rename `steam_appid.txt` to `steam_appid.txt.bk`."
 
+# The Wolf Among Us : buy at $3.74
+## DOOM (2016) buy at 1.99
+# DOOM Eternal buy at 3.99
 # Yume Nikki : Game like Undertale.
+# Antichamber
 # rhythm doctor : rhythm game
 # West of Loathing
 # despelote : football game from ecuador 
@@ -503,7 +511,6 @@
 # Fashion Police Squad
 # CULTIC
 # Left 4 Dead 2
-# The Wolf Among Us
 # Hi-Fi RUSH
 # Slay the Princess — The Pristine Cut
 # Clair Obscur: Expedition 33
@@ -532,7 +539,6 @@
 # Grunn
 # Baba Is You
 # TIS-100
-# Dispatch
 # Five Hearts Under One Roof 2
 # Love Is All Around
 # Lil Gator Game
@@ -589,8 +595,6 @@
 # The Binding of Isaac: Rebirth
 # SIGNALIS
 # ULTRAKILL
-# DOOM (2016)
-# DOOM Eternal
 # POSTAL: Brain Damaged
 # CRUEL
 # The Stanley Parable
