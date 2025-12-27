@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Best Restaurant in Cozumel Mexico
+title: Best Restaurant in Cozumel: Restaurante El Cedral
 image: https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg
 thumb: https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg
 author: Tushar Sharma
@@ -29,15 +29,15 @@ images:
 category: blog
 travel: true
 location:   
-  latitude: 20.5066904
-  longitude: -87.107032
+  latitude: 20.5067
+  longitude: -86.9458
 ---
 
-During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.<!-- truncate_here -->
+During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered Restaurante El Cedral, leaving me with the sole regret of not finding it sooner.<!-- truncate_here -->
 
 {% google_map center: page.location latitude: page.location.latitude longitude: page.location.longitude width="100%" height="568" zoom="15" show_popup="false" %} <br>
 
-During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered a true gem, leaving me with the sole regret of not finding it sooner.
+During my week-long stay in Cozumel, I explored numerous restaurants. However, it was not until the last day that I discovered Restaurante El Cedral, leaving me with the sole regret of not finding it sooner.
 
 ## Things I liked about this restaurant:
 
