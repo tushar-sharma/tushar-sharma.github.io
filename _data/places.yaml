@@ -90,10 +90,24 @@
   city: "San Juan, PR"
 
 - name: Ceiba Ferry Terminal
-  notes: "Ferry to Culebra and Vieques. Try to get tickets a few days in advance by going there in person."
+  notes: "Ferry to Culebra and Vieques. Try to get tickets a few days in advance by going there in person if you can't get it online."
   address: 69HJ+XM4, Marina Dr, Roosevelt Roads, Ceiba 00735, Puerto Rico
   category: transport
   map_link: "https://www.google.com/maps/search/?api=1&query=69HJ+XM4,+Marina+Dr,+Roosevelt+Roads,+Ceiba+00735,+Puerto+Rico"
   city: "Ceiba, PR"
+
+- name: El Batey
+  notes: great food. crab patacones was great. drinks were also great.
+  address: Culebra, PR 00775
+  category: food
+  map_link: "https://www.google.com/maps/search/?api=1&query=El+Batey,+Culebra,+PR+00775"
+  city: "Culebra, PR"
+
+- name: Restaurante El Cedral
+  notes: "Delicious food, nice host, small and not crowded, affordable prices around 150 pesos. It gave complimentary water which was surprisingly lacking in other restaurants."
+  address: Calle 3 Sur s/n, El Cedral, Cozumel, Quintana Roo, Mexico
+  category: food
+  map_link: "https://www.google.com/maps/search/?api=1&query=Restaurante+El+Cedral,+Calle+3+Sur+s%2Fn,+El+Cedral,+Cozumel,+Quintana+Roo,+Mexico"
+  city: "Cozumel, Mexico"
 
 # Valle de la Luna (Chile)
