@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Best Restaurant in Cozumel: Restaurante El Cedral
+title: "Best Restaurant in Cozumel: Restaurante El Cedral"
 image: https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg
 thumb: https://cdn-images-1.medium.com/v2/resize:fit:668/format:webp/1*oG9ecEdDA58VnUl8j7kymg.jpeg
 author: Tushar Sharma
