@@ -428,22 +428,10 @@
   author: "Dan Ariely"
   rating: 0
   pending: true
-  progress: 26
+  progress: 42
 
 - title: "Talking to Strangers"
   author: "Malcolm Gladwell"
-  rating: 0
-  pending: true
-  progress: 0
-
-- title: "Maybe You Should Talk To Someone"
-  author: "Lori Gottlieb"
-  rating: 0
-  pending: true
-  progress: 0
-
-- title: "Essentialism: The Disciplined Pursuit of Less"
-  author: "Greg McKeown"
   rating: 0
   pending: true
   progress: 0
@@ -454,6 +442,8 @@
   pending: true
   progress: 0
 
+# Maybe You Should Talk To Someone by Lori Gottlieb
+# Essentialism: The Disciplined Pursuit of Less by Greg McKeown
 # A Little Book In C Major by H L Mencken 
 # Introduction to Futures & Options : https://www.udemy.com/course/introduction-to-futures-options/
 # The Little Book That Still Beats the Market: Joel Greenblatt
@@ -462,3 +452,4 @@
 # The Right Stuff by Tom Wolfe
 # Java Coding Problems: Become an expert Java programmer by solving over 250 brand-new, modern, real-world problems by Anghel Leonard 
 # Java Concurrency in Practice by Brian Goetz
+# Connectome: How the Brain's Wiring Makes Us Who We Are
