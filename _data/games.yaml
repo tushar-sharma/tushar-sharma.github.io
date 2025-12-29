@@ -55,7 +55,8 @@
   comments: "It's both cute and dystopian, with clever puzzles. The unsettling moments will stick with you long after you finish. The graphics are gorgeous, and the gameplay feels smooth and immersive. If you love puzzles wrapped in a dark, haunting atmosphere, this game is definitely for you! "
 
 - title: "Dispatch"
-  ratings: 5
+  progress: 75
+  pending: true
   comments: "Interactive game where you dispatch superheroes for various task. Humor is great along with voice acting."
 
 - title: "Spiritfarer: Farewell Edition"
