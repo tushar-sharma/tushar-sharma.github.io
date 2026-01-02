@@ -167,6 +167,19 @@ Update index in algolia with admin API Key.
 ALGOLIA_API_KEY='' bundle exec jekyll algolia
 ```
 
+Or you can create a `.env` file
+
+```
+ALGOLIA_API_KEY=xxx
+```
+
+And run the following script
+
+```
+./run-aloglia.sh
+
+```
+
 ### Build this website
 
 ```
