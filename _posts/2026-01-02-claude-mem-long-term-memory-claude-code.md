@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Claude-Mem - Long Term memory for Claude code
-image: https://unsplash.com/photos/obMYFaWoZxM/download?w=437
-thumb: https://unsplash.com/photos/obMYFaWoZxM/download?w=437
+image: https://unsplash.com/photos/UWFnSfocJbA/download?w=437
+thumb: https://unsplash.com/photos/UWFnSfocJbA/download?w=437
 author: tushar sharma
 tags:
  - claude code
