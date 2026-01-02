@@ -110,4 +110,11 @@
   map_link: "https://www.google.com/maps/search/?api=1&query=Restaurante+El+Cedral,+Calle+3+Sur+s%2Fn,+El+Cedral,+Cozumel,+Quintana+Roo,+Mexico"
   city: "Cozumel, Mexico"
 
+- name: "Caracas Beach"
+  notes: "Feels like a swimming pool with calm water and white sand. Parking is free. It closes at 6.30 pm."
+  address: "Puerto Ferro, Vieques 00765, Puerto Rico"
+  map_link: "https://www.google.com/maps/search/?api=1&query=Puerto+Ferro,+Vieques+00765,+Puerto+Rico"
+  city: "Vieques, PR"
+
+
 # Valle de la Luna (Chile)
