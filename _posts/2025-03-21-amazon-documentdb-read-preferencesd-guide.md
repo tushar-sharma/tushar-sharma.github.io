@@ -11,7 +11,7 @@ tags:
  - aws
 ---
 
-Amazon DocumentDB is a fully managed, MongoDB-compatible database service provided by AWS. It replicates data six times across three Availability Zones (two copies per zone) for high durability and availability..<!-- truncate_here -->
+Amazon DocumentDB is a fully managed, MongoDB-compatible database service provided by AWS. It replicates data six times across three Availability Zones (two copies per zone) for high durability and availability.<!-- truncate_here -->
 
 Amazon DocumentDB is a fully managed, MongoDB-compatible database service provided by AWS. It replicates data six times across three Availability Zones (two copies per zone) for high durability and availability.
 
