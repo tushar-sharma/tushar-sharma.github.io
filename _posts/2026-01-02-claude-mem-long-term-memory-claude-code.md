@@ -72,25 +72,33 @@ Claude-Mem is a plugin that automatically captures everything Claude does during
 
 Install directly from the Claude Code plugin marketplace:
 
-```bash
-/plugin marketplace add thedotmack/claude-mem
-/plugin install claude-mem
-```
+{% template  customCode.html %}
+---
+id: 5cf466a92f5753c8b13d9ee32bf58995
+file: plugin.sh
+---
+{% endtemplate %}
 
 Restart Claude Code.
 
 Verify the worker service is running:
 
-```bash
-cd ~/.claude/plugins/marketplaces/thedotmack
-npm run worker:status
-```
+{% template  customCode.html %}
+---
+id: 5cf466a92f5753c8b13d9ee32bf58995
+file: check_worker.sh
+---
+{% endtemplate %}
+
 
 If the worker isn't running, start it manually:
 
-```bash
-npm run worker:start
-```
+{% template  customCode.html %}
+---
+id: 5cf466a92f5753c8b13d9ee32bf58995
+file: start_worker.sh
+---
+{% endtemplate %}
 
 The worker service provides a web UI at `http://localhost:37777` where you can browse your session history, search observations, and view the timeline.
 
@@ -108,9 +116,13 @@ All data is stored in ` ~/.claude-mem/`
 
 Override the lcoation if you need 
 
-```bash 
-export CLAUDE_MEM_DATA_DIR=/custom/path
-```
+{% template  customCode.html %}
+---
+id: 5cf466a92f5753c8b13d9ee32bf58995
+file: export_path.sh
+---
+{% endtemplate %}
+
 
 ## Handling Sensitive Data
 
@@ -143,31 +155,22 @@ You get a clean slate in the conversation without losing project memory. This is
 
 Claude-Mem uses SQLite under the hood. You can query it directly:
 
-```bash
-sqlite3 ~/.claude-mem/claude-mem.db
-```
+{% template  customCode.html %}
+---
+id: 5cf466a92f5753c8b13d9ee32bf58995
+file: start_sqlite.sh
+---
+{% endtemplate %}
+
 
 example queries
 
-```sql
--- List recent sessions
-SELECT session_id, created_at, summary
-FROM sdk_sessions
-ORDER BY created_at DESC
-LIMIT 10;
-
--- Find observations mentioning "authentication"
-SELECT id, tool_name, created_at, content
-FROM observations
-WHERE content LIKE '%authentication%'
-ORDER BY created_at DESC;
-
--- Token usage by session
-SELECT session_id, SUM(tokens_used) as total_tokens
-FROM observations
-GROUP BY session_id
-ORDER BY total_tokens DESC;
-```
+{% template  customCode.html %}
+---
+id: 5cf466a92f5753c8b13d9ee32bf58995
+file: sample.sql
+---
+{% endtemplate %}
 
 ## Conclusion
 
