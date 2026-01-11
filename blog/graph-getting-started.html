@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:site_name" content="Tushar Sharma">
+<title>Getting started with Graph Part 1</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@Tushar Sharma">
+    <meta name="twitter:title" content="Getting started with Graph Part 1">
+    <meta name="twitter:description" content="Graph Datastructure implementation">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.imgur.com/KdU5gTZ.png">
+    <meta property="og:image" content="https://i.imgur.com/KdU5gTZ.png">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Getting started with Graph Part 1 | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3">
+    <meta property="og:title" content="Getting started with Graph Part 1">
+    <meta name="author" content="Tushar Sharma">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Graph are data structures made of vertices &amp; edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.">
+    <meta property="og:description" content="Graph are data structures made of vertices &amp; edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.">
+    <link rel="canonical" href="https://randomwits.com/blog/graph-getting-started">
+    <meta property="og:url" content="https://randomwits.com/blog/graph-getting-started">
+    <meta property="og:site_name" content="RandomWits">
+    <meta property="og:image" content="https://i.imgur.com/KdU5gTZ.png">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2019-11-10T00:00:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://i.imgur.com/KdU5gTZ.png">
+    <meta property="twitter:title" content="Getting started with Graph Part 1">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2019-11-10T00:00:00+00:00","datePublished":"2019-11-10T00:00:00+00:00","description":"Graph are data structures made of vertices &amp; edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.","headline":"Getting started with Graph Part 1","image":"https://i.imgur.com/KdU5gTZ.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/graph-getting-started"},"url":"https://randomwits.com/blog/graph-getting-started"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <a style="cursor:pointer;" class="DarkReader_Button">
+            <i id="icon-dark" class="fa fa-cloud-moon"></i>
+          </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/places"><i class="fas fa-map-pin"></i> Places</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206"
+     crossorigin="anonymous"></script> -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Getting started with Graph Part 1</h1>
+        <p>Tags:  <a class="mytag" href="/tag/graph" title="View posts tagged with: graph">graph</a>    <a class="mytag" href="/tag/java" title="View posts tagged with: java">java</a>    <a class="mytag" href="/tag/implementation" title="View posts tagged with: implementation">implementation</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="https://i.imgur.com/KdU5gTZ.png?w=800" alt="Featured image for Getting started with Graph Part 1" style="max-width:100%; height:auto;">
+        </div>
+        <p>Graph are data structures made of vertices &amp; edges. There are lots of interesting problems that can be solved using graphs. Part 1 covers the basic for creating a template for graph data structure.</p>
+        <p>First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).</p>
+        <table>
+          <tbody>
+            <tr>
+              <td><img align="center" src="https://i.imgur.com/KdU5gTZ.png" alt="Graph image"></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="create-a-vertex">Create a vertex</h2>
+        <p>First we need to create a vertex. A vertex is a fundamental unit of graph. A graph is a set of points (vertices) connected by lines (edges).</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
+
+    <span class="nc">String</span> <span class="n">label</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Vertex</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">label</span> <span class="o">=</span> <span class="n">label</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+          </div>
+        </div>
+        <h2 id="represent-a-graph">Represent a graph</h2>
+        <p>We need a data structure to represent our graph. We have two choices</p>
+        <ol>
+          <li>Adjacency Matrix</li>
+          <li>Adjacency List</li>
+        </ol>
+        <p>So we have a graph like below</p>
+        <table>
+          <tbody>
+            <tr>
+              <td><img align="center" src="/img/noden.png" alt="one node in a graph"></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="using-adjaceny-matrix">Using Adjaceny matrix</h2>
+        <p><code class="language-plaintext highlighter-rouge">1</code> means edge between two vertex where as <code class="language-plaintext highlighter-rouge">0</code> means no edge</p>
+        <table>
+          <tbody>
+            <tr>
+              <td> </td>
+              <td><strong>1</strong></td>
+              <td><strong>2</strong></td>
+              <td><strong>3</strong></td>
+              <td><strong>4</strong></td>
+              <td><strong>5</strong></td>
+              <td><strong>6</strong></td>
+              <td><strong>7</strong></td>
+            </tr>
+            <tr>
+              <td><strong>1</strong></td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><strong>2</strong></td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><strong>3</strong></td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><strong>4</strong></td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td><strong>5</strong></td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td><strong>6</strong></td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td><strong>7</strong></td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="using-adjacency-list-well-be-using-this-for-efficiency">Using Adjacency List (we'll be using this for efficiency)</h2>
+        <p>Here each vertex correspond to a linked list of outgoing edges</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+<strong>1</strong> → 2, 3</td>
+            </tr>
+            <tr>
+              <td>
+<strong>2</strong> →  4, 5</td>
+            </tr>
+            <tr>
+              <td>
+<strong>3</strong> →  6</td>
+            </tr>
+            <tr>
+              <td>
+<strong>4</strong> → 7</td>
+            </tr>
+            <tr>
+              <td>
+<strong>5</strong> → 7</td>
+            </tr>
+            <tr>
+              <td>
+<strong>6</strong> → 5 , 7</td>
+            </tr>
+            <tr>
+              <td><strong>7</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
+
+    <span class="nc">String</span> <span class="n">label</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Vertex</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">label</span> <span class="o">=</span> <span class="n">label</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Graph</span> <span class="o">{</span>
+    <span class="c1">//adjacency list</span>
+    <span class="kd">private</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">adjList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+<span class="o">}</span>
+
+</code></pre>
+          </div>
+        </div>
+        <h2 id="add-lots-of-vertex-or-vertices">Add lots of vertex (or vertices)</h2>
+        <p>We now need to add add vertex (if it doesn't exist) to our graph using method <code class="language-plaintext highlighter-rouge">addVertex</code></p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
+
+    <span class="nc">String</span> <span class="n">label</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Vertex</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">label</span> <span class="o">=</span> <span class="n">label</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasKey</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">label</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">label</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Graph</span> <span class="o">{</span>
+    <span class="c1">//adjacency list</span>
+    <span class="kd">private</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">adjList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addVertex</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+
+       <span class="k">for</span> <span class="o">(</span><span class="nc">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">entry</span> <span class="o">:</span> <span class="n">adjList</span><span class="o">.</span><span class="na">entrySet</span><span class="o">())</span> <span class="o">{</span>
+           <span class="nc">Vertex</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">();</span>
+
+           <span class="k">if</span> <span class="o">(</span><span class="n">temp</span><span class="o">.</span><span class="na">hasKey</span><span class="o">(</span><span class="n">label</span><span class="o">))</span> <span class="o">{</span>
+               <span class="k">return</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">adjList</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label</span><span class="o">),</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
+          </div>
+        </div>
+        <h2 id="add-edges">Add Edges</h2>
+        <p>We need to add edges between two vertex (if not already existing)</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>
+<span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getKey</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">label</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">Graph</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addEdge</span><span class="o">(</span><span class="nc">String</span> <span class="n">label1</span><span class="o">,</span> <span class="nc">String</span> <span class="n">label2</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="nc">Vertex</span> <span class="n">v1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label1</span><span class="o">);</span>
+        <span class="nc">Vertex</span> <span class="n">v2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label2</span><span class="o">);</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="nc">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">entry</span> <span class="o">:</span> <span class="n">adjList</span><span class="o">.</span><span class="na">entrySet</span><span class="o">())</span> <span class="o">{</span>
+            <span class="nc">Vertex</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">();</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">temp</span><span class="o">.</span><span class="na">hasKey</span><span class="o">(</span><span class="n">label1</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">adjList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">temp</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label2</span><span class="o">));</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+   <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+          </div>
+        </div>
+        <h2 id="is-that-it">Is that it?</h2>
+        <p>Yup. It's a basic template for a simple graph. Below is the full code</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">class</span> <span class="nc">Vertex</span> <span class="o">{</span>
+
+    <span class="nc">String</span> <span class="n">label</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Vertex</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">label</span> <span class="o">=</span> <span class="n">label</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasKey</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">label</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">label</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getKey</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">label</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Graph</span> <span class="o">{</span>
+    <span class="c1">//adjacency list</span>
+    <span class="kd">private</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">adjList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addVertex</span><span class="o">(</span><span class="nc">String</span> <span class="n">label</span><span class="o">)</span> <span class="o">{</span>
+
+       <span class="k">for</span> <span class="o">(</span><span class="nc">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">entry</span> <span class="o">:</span> <span class="n">adjList</span><span class="o">.</span><span class="na">entrySet</span><span class="o">())</span> <span class="o">{</span>
+           <span class="nc">Vertex</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">();</span>
+
+           <span class="k">if</span> <span class="o">(</span><span class="n">temp</span><span class="o">.</span><span class="na">hasKey</span><span class="o">(</span><span class="n">label</span><span class="o">))</span> <span class="o">{</span>
+               <span class="k">return</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">adjList</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label</span><span class="o">),</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;());</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addEdge</span><span class="o">(</span><span class="nc">String</span> <span class="n">label1</span><span class="o">,</span> <span class="nc">String</span> <span class="n">label2</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="nc">Vertex</span> <span class="n">v1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label1</span><span class="o">);</span>
+        <span class="nc">Vertex</span> <span class="n">v2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label2</span><span class="o">);</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="nc">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Vertex</span><span class="o">&gt;&gt;</span> <span class="n">entry</span> <span class="o">:</span> <span class="n">adjList</span><span class="o">.</span><span class="na">entrySet</span><span class="o">())</span> <span class="o">{</span>
+            <span class="nc">Vertex</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">();</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">temp</span><span class="o">.</span><span class="na">hasKey</span><span class="o">(</span><span class="n">label1</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">adjList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">temp</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Vertex</span><span class="o">(</span><span class="n">label2</span><span class="o">));</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Graph</span> <span class="n">graph</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Graph</span><span class="o">();</span>
+        <span class="c1">//add vertices</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addVertex</span><span class="o">(</span><span class="s">"1"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addVertex</span><span class="o">(</span><span class="s">"2"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addVertex</span><span class="o">(</span><span class="s">"3"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addVertex</span><span class="o">(</span><span class="s">"4"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addVertex</span><span class="o">(</span><span class="s">"5"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addVertex</span><span class="o">(</span><span class="s">"6"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addVertex</span><span class="o">(</span><span class="s">"7"</span><span class="o">);</span>
+        <span class="c1">//add edges</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"1"</span><span class="o">,</span> <span class="s">"2"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"1"</span><span class="o">,</span> <span class="s">"3"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"2"</span><span class="o">,</span> <span class="s">"4"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"2"</span><span class="o">,</span> <span class="s">"4"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"2"</span><span class="o">,</span> <span class="s">"5"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"3"</span><span class="o">,</span> <span class="s">"6"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"4"</span><span class="o">,</span> <span class="s">"7"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"5"</span><span class="o">,</span> <span class="s">"7"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"6"</span><span class="o">,</span> <span class="s">"5"</span><span class="o">);</span>
+        <span class="n">graph</span><span class="o">.</span><span class="na">addEdge</span><span class="o">(</span><span class="s">"6"</span><span class="o">,</span> <span class="s">"7"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+          </div>
+        </div>
+        <h2 id="conculsion">Conculsion</h2>
+        <p>It concludes Part 1 of graph series. Later series will cover much more operations on graph.</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/recursive-sort" title="Previous Post: Recursively sort a array">←Previous</a>     <a class="next-item" href="/blog/hum-dekhenge" title="Next Post: Unwarranted Controversy - Hum Dekhenge">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/graph-getting-started';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/graph-getting-started';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
