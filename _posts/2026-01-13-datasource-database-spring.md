@@ -4,6 +4,11 @@ published: false
 
 1. set up docker sybase
 
+```bash
+docker pull postgres
+docker run postgres
+```
+
 2. create gradle file 
 
 ```xml
