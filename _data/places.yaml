@@ -116,5 +116,19 @@
   map_link: "https://www.google.com/maps/search/?api=1&query=Puerto+Ferro,+Vieques+00765,+Puerto+Rico"
   city: "Vieques, PR"
 
+- name: "Peluqueria Toretto Dominican Barbershop"
+  notes: "Cheap lationos barber. Cheap and walk in. "
+  address: "4504 N Roxboro St A, Durham, NC 27704"
+  category: barbershop
+  city: "Durham, NC"
+  map_link: "https://www.google.com/maps/search/?api=1&query=4504+N+Roxboro+St+A,+Durham,+NC+27704"
+
+- name: "Hanging Rock State Park"
+  notes: "Easy hike with plenty of free parking. The Hanging Rock Trail leads to the quartzite rock formation. It takes most people about 1 hour to hike the trail and reach Hanging Rock."
+  address: "1790 Hanging Rock Park Rd, Danbury, NC 27016"
+  category: hike
+  city: "Danbury, NC"
+  map_link: "https://www.google.com/maps/search/?api=1&query=
+  
 
 # Valle de la Luna (Chile)
