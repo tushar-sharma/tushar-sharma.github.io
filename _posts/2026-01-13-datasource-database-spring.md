@@ -26,6 +26,14 @@ published: false
 </dependency>
 ```
 
+Add this to properties.yaml
+
+```yaml
+spring.datasource.url=jdbc:postgresql://localhost:5432/demo
+spring.datasource.username=admin
+spring.datasource.password=password
+spring.datasource.driver-class-name=org.postgresql.Driver
+```
 
 create a datasource Configuration
 
