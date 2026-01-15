@@ -21,3 +21,6 @@
 
 - label: "Jan 5-11, 2026"
   range: "A518:T528"
+
+- label: "Jan 12-18, 2026"
+  range: "A529:T539"
