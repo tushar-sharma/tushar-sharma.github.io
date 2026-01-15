@@ -69,6 +69,9 @@ rectangle "**ConnectionFactory**\nR2DBC Pool" as cf #FFA726
 rectangle "**JdbcTemplate**\nSimpleJdbcCall" as jt #64B5F6
 rectangle "**DatabaseClient**" as dc #FFB74D
 
+rectangle "**JPA / Hibernate**\n(Full ORM)" as hibernate #1565C0
+rectangle "**Basic Mapping**\n(No ORM)" as basicMapping #F57C00
+
 rectangle "**Spring Data JPA**\n@Procedure" as jpa #90CAF9
 rectangle "**Spring Data R2DBC**\n@Query" as r2dbcRepo #FFCC80
 
@@ -79,10 +82,56 @@ jdbc -down-> ds
 r2dbc -down-> cf
 ds -down-> jt
 cf -down-> dc
-jt -down-> jpa
-dc -down-> r2dbcRepo
+jt -down-> hibernate
+dc -down-> basicMapping
+hibernate -down-> jpa
+basicMapping -down-> r2dbcRepo
 @enduml
 </div>
+
+## Where Does Hibernate Fit?
+
+In the JDBC stack, there's an important layer between JdbcTemplate and Spring Data JPA:
+
+```
+Spring Data JPA (@Procedure, repositories)
+        ↓
+JPA (Specification - just interfaces)
+        ↓
+Hibernate (Implementation - actual code)
+        ↓
+JDBC
+```
+
+**JPA** (Java Persistence API) is just a *specification* - interfaces that define what an ORM should do. No actual code.
+
+**Hibernate** is an *implementation* of JPA - the actual code that does the work. EclipseLink is another implementation.
+
+**Hibernate does NOT work with R2DBC.** It's built on JDBC (blocking). That's why `@Procedure` only exists in the JDBC stack.
+
+## ORM vs Repository
+
+These are different concepts:
+
+**Repository** = A pattern for abstracting data access (find, save, delete). Both stacks have this.
+
+**ORM** (Object-Relational Mapping) = Maps Java objects ↔ database tables with advanced features:
+- Class → Table mapping
+- Relationships (OneToMany, ManyToOne)
+- Lazy loading
+- Caching
+- Dirty checking (tracking changes)
+
+| Feature | JDBC + Hibernate | R2DBC |
+|---|---|---|
+| **Repository** | JpaRepository | ReactiveCrudRepository |
+| **ORM** | Hibernate (full) | None |
+| **Entity mapping** | @Entity, @OneToMany | @Table, @Id (basic) |
+| **Lazy loading** | Yes | No |
+| **Relationships** | Automatic | Manual |
+| **Caching** | Yes | No |
+
+R2DBC is more "direct" - it talks to the database through drivers without a heavy ORM layer. Less magic, more control, but more manual work for complex scenarios.
 
 ## DriverManager vs DataSource
 
