@@ -145,7 +145,7 @@ file: SimpleJdbcCall.java
 {% endtemplate %}
 
 
-### Spring Data JPA @Procedure
+### Spring Data JPA `@Procedure`
 
 The cleanest - but **only works with JDBC** (blocking):
 
