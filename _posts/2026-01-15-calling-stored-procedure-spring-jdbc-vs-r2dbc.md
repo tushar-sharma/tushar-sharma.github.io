@@ -10,6 +10,7 @@ tags:
  - spring-boot
  - jdbc
  - r2dbc
+ - java
 ---
 
 Calling stored procedures from Spring Boot? You have two paths: JDBC (blocking) or R2DBC (reactive).<!-- truncate_here -->
