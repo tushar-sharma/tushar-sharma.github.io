@@ -94,15 +94,25 @@ basicMapping -down-> r2dbcRepo
 
 In the JDBC stack, there's an important layer between JdbcTemplate and Spring Data JPA:
 
-```
-Spring Data JPA (@Procedure, repositories)
-        ↓
-JPA (Specification - just interfaces)
-        ↓
-Hibernate (Implementation - actual code)
-        ↓
-JDBC
-```
+<div style="text-align: center;">
+@startuml
+skinparam backgroundColor transparent
+skinparam defaultFontName Arial
+skinparam rectangle {
+    RoundCorner 10
+    BorderColor #555555
+}
+
+rectangle "**Spring Data JPA**\n@Procedure, repositories" as sdjpa #90CAF9
+rectangle "**JPA**\nSpecification - just interfaces" as jpa #64B5F6
+rectangle "**Hibernate**\nImplementation - actual code" as hibernate #42A5F5
+rectangle "**JDBC**\nLow-level database access" as jdbc #1E88E5
+
+sdjpa -down-> jpa
+jpa -down-> hibernate
+hibernate -down-> jdbc
+@enduml
+</div>
 
 **JPA** (Java Persistence API) is just a *specification* - interfaces that define what an ORM should do. No actual code.
 
