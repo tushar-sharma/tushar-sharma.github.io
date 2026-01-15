@@ -133,6 +133,44 @@ These are different concepts:
 
 R2DBC is more "direct" - it talks to the database through drivers without a heavy ORM layer. Less magic, more control, but more manual work for complex scenarios.
 
+## How to Tell Which Stack You're Using
+
+Quick ways to identify the stack in code:
+
+| See this? | You're using |
+|---|---|
+| `DataSource` | JDBC |
+| `ConnectionFactory` | R2DBC |
+| `@Entity` | JPA/Hibernate (JDBC) |
+| `@Table` (without @Entity) | R2DBC |
+| `JdbcTemplate` | JDBC |
+| `DatabaseClient` | R2DBC |
+| `JpaRepository` | JPA/Hibernate (JDBC) |
+| `ReactiveCrudRepository` | R2DBC |
+| `@Procedure` | JPA (JDBC only) |
+| Returns `Mono`/`Flux` | R2DBC |
+
+**Connection management is different:**
+- JDBC uses `DataSource` (blocking connection pool like HikariCP)
+- R2DBC uses `ConnectionFactory` (reactive connection pool)
+
+You cannot use `DataSource` with `DatabaseClient` - they're from different worlds.
+
+**Entity annotations tell the story:**
+
+```java
+// JPA/Hibernate (JDBC stack)
+@Entity                    // ← This means Hibernate
+@Table(name = "users")
+public class User { }
+
+// R2DBC (no Hibernate)
+@Table("users")            // ← No @Entity = R2DBC
+public class User { }
+```
+
+If you see `@Entity`, you're in Hibernate territory. R2DBC only uses `@Table`.
+
 ## DriverManager vs DataSource
 
 Both are ways to get a database connection, but `DataSource` is the modern choice.
