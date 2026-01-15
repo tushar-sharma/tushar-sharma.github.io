@@ -126,7 +126,7 @@ These are different concepts:
 |---|---|---|
 | **Repository** | JpaRepository | ReactiveCrudRepository |
 | **ORM** | Hibernate (full) | None |
-| **Entity mapping** | @Entity, @OneToMany | @Table, @Id (basic) |
+| **Entity mapping** | `@Entity`, `@OneToMany` | `@Table`, `@Id (basic)` |
 | **Lazy loading** | Yes | No |
 | **Relationships** | Automatic | Manual |
 | **Caching** | Yes | No |
@@ -155,21 +155,6 @@ Quick ways to identify the stack in code:
 - R2DBC uses `ConnectionFactory` (reactive connection pool)
 
 You cannot use `DataSource` with `DatabaseClient` - they're from different worlds.
-
-**Entity annotations tell the story:**
-
-```java
-// JPA/Hibernate (JDBC stack)
-@Entity                    // ← This means Hibernate
-@Table(name = "users")
-public class User { }
-
-// R2DBC (no Hibernate)
-@Table("users")            // ← No @Entity = R2DBC
-public class User { }
-```
-
-If you see `@Entity`, you're in Hibernate territory. R2DBC only uses `@Table`.
 
 ## DriverManager vs DataSource
 
@@ -201,6 +186,29 @@ Why `DataSource` is preferred:
 - **Health monitoring** - pools can validate connections before use
 
 In Spring Boot, just add `spring.datasource.*` properties and you get a `HikariDataSource` automatically.
+
+## ConnectionFactory (R2DBC)
+
+For R2DBC, you use `ConnectionFactory` instead of `DataSource`:
+
+{% template  customCode.html %}
+---
+id: ca33ddf1335fdc8c63f4fc23f2dd6ef1
+file: ConnectionFactory.java
+---
+{% endtemplate %}
+
+
+In Spring Boot, just add `spring.r2dbc.*` properties:
+
+{% template  customCode.html %}
+---
+id: ca33ddf1335fdc8c63f4fc23f2dd6ef1
+file: application.yaml
+---
+{% endtemplate %}
+
+Spring Boot auto-configures `ConnectionFactory` and `DatabaseClient` for you.
 
 ## JDBC Stack (Blocking)
 
