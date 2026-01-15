@@ -153,7 +153,7 @@ Quick ways to identify the stack in code:
 | `DataSource` | JDBC |
 | `ConnectionFactory` | R2DBC |
 | `@Entity` | JPA/Hibernate (JDBC) |
-| `@Table` (without @Entity) | R2DBC |
+| `@Table` (without `@Entity`) | R2DBC |
 | `JdbcTemplate` | JDBC |
 | `DatabaseClient` | R2DBC |
 | `JpaRepository` | JPA/Hibernate (JDBC) |
