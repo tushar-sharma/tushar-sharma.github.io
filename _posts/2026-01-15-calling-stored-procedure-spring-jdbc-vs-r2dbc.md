@@ -44,10 +44,11 @@ There are two distinct stacks for database access in Java:
 | **Connection** | DataSource | ConnectionFactory |
 | **Client API** | JdbcTemplate, SimpleJdbcCall | DatabaseClient |
 | **ORM** | Spring Data JPA | Spring Data R2DBC |
-| **Annotation** | @Procedure | @Query (no @Procedure) |
+| **Annotation** | `@Procedure` | `@Query` |
 
 **Key insight**: These are separate stacks. You can't mix them - `JdbcTemplate` only works with JDBC drivers, and `DatabaseClient` only works with R2DBC drivers.
 
+<div style="text-align: center;">
 @startuml
 skinparam backgroundColor transparent
 skinparam defaultFontName Arial
@@ -81,6 +82,7 @@ cf -down-> dc
 jt -down-> jpa
 dc -down-> r2dbcRepo
 @enduml
+</div>
 
 ## DriverManager vs DataSource
 
@@ -182,7 +184,7 @@ file: DatabaseClient.java
 
 Use this when you need full control - dynamic queries, complex mappings, or operations that don't fit the repository pattern.
 
-### @Query in Repository - Declarative
+### `@Query` in Repository - Declarative
 
 You annotate a method and Spring generates the implementation:
 
