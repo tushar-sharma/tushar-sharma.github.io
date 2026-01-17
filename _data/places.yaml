@@ -129,5 +129,11 @@
   category: hike
   city: "Danbury, NC"
   map_link: "https://www.google.com/maps/search/?api=1&query=1790+Hanging+Rock+Park+Rd,+Danbury,+NC+27016"
-  
+
+- name: "Miller Park"
+  address: "400 Leisure Lane, Winston-Salem, NC 27101"
+  map_link: "https://www.google.com/maps/search/?api=1&query=400+Leisure+Lane,+Winston-Salem,+NC+27101"
+  city: "Winston-Salem, NC"
+  notes: "Free walk-in to play Table Tennis. Saturday 10am-12pm. Wednesday 6.30pm-8.30pm."
+
 # Valle de la Luna (Chile)
