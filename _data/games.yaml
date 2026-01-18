@@ -55,8 +55,8 @@
   comments: "It's both cute and dystopian, with clever puzzles. The unsettling moments will stick with you long after you finish. The graphics are gorgeous, and the gameplay feels smooth and immersive. If you love puzzles wrapped in a dark, haunting atmosphere, this game is definitely for you! "
 
 - title: "Dispatch"
-  rating: 5
-  comments: "It's an interactive story of a life of Mecha man. He is incharge of dispatching heroes to distress calls. Each hero has different powers suitable for specific task. Voice acting and humor is great. It also a mini puzzle games of hacking the system by guessing the password."
+  rating: 4
+  comments: "An interactive story gameplay. Feels like 911 call operator but for superheroes. You are suppose to discharge superheroes based on their abilities based on specific task. Voice action has great production value. There's also mini hacking puzzle games in between"
 
 - title: "Spiritfarer: Farewell Edition"
   rating: 5
@@ -174,7 +174,7 @@
   comments: "Fun free demo of Broforce with a great retro feel and awesome gameplay."
 
 - title: "Promise Mascot Agency"
-  rating: 4
+  rating: 5
   comments: "It feels like a cinematic experience while you build a mascot agency. The Japanese voice acting is excellent, and the English subtitles are great. The writing is hilarious. Cons: Don't expect GTA like driving experience."
 
 - title: "哎呦!这么多美女呀!"
@@ -490,8 +490,13 @@
   progress: 0
   comments: "Steam Deck controller issue: Disable Steam Input. rename `steam_appid.txt` to `steam_appid.txt.bk`."
 
+- title: "Ace Combat 7: Skies Unkown"
+  pending: true
+  progress: 20
+  comments: "Campaign mode is great. Aerial flying is great with thrilling combat"
+
 # The Wolf Among Us : buy at $3.74
-## DOOM (2016) buy at 1.99
+# DOOM (2016) buy at 1.99
 # DOOM Eternal buy at 3.99
 # Doom the Dark Ages
 # Yume Nikki : Game like Undertale.
