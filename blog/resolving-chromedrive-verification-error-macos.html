@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:site_name" content="Tushar Sharma">
+<title>Resolving chromedrive verification error in MacOS</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@Tushar Sharma">
+    <meta name="twitter:title" content="Resolving chromedrive verification error in MacOS">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://unsplash.com/photos/3xQ65cknLPk/download?w=437">
+    <meta property="og:image" content="https://unsplash.com/photos/3xQ65cknLPk/download?w=437">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Resolving chromedrive verification error in MacOS | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3">
+    <meta property="og:title" content="Resolving chromedrive verification error in MacOS">
+    <meta name="author" content="Tushar Sharma">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="The MacOS Catalina (v 10.15.3) has a security feature known as Gatekeeper, which verifies downloaded applications. When you encounter the error: &quot;chromedriver&quot; cannot be opened because the developer cannot be verified, it's due to Gatekeeper restricting the execution of the chromedriver executable. This is because it doesn't recognize the developer, which is a common issue for developers and testers who use chromedriver for browser automation.">
+    <meta property="og:description" content="The MacOS Catalina (v 10.15.3) has a security feature known as Gatekeeper, which verifies downloaded applications. When you encounter the error: &quot;chromedriver&quot; cannot be opened because the developer cannot be verified, it's due to Gatekeeper restricting the execution of the chromedriver executable. This is because it doesn't recognize the developer, which is a common issue for developers and testers who use chromedriver for browser automation.">
+    <link rel="canonical" href="https://randomwits.com/blog/resolving-chromedrive-verification-error-macos">
+    <meta property="og:url" content="https://randomwits.com/blog/resolving-chromedrive-verification-error-macos">
+    <meta property="og:site_name" content="RandomWits">
+    <meta property="og:image" content="https://unsplash.com/photos/3xQ65cknLPk/download?w=437">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-03-03T00:00:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://unsplash.com/photos/3xQ65cknLPk/download?w=437">
+    <meta property="twitter:title" content="Resolving chromedrive verification error in MacOS">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2024-03-03T00:00:00+00:00","datePublished":"2024-03-03T00:00:00+00:00","description":"The MacOS Catalina (v 10.15.3) has a security feature known as Gatekeeper, which verifies downloaded applications. When you encounter the error: &quot;chromedriver&quot; cannot be opened because the developer cannot be verified, it&#39;s due to Gatekeeper restricting the execution of the chromedriver executable. This is because it doesn&#39;t recognize the developer, which is a common issue for developers and testers who use chromedriver for browser automation.","headline":"Resolving chromedrive verification error in MacOS","image":"https://unsplash.com/photos/3xQ65cknLPk/download?w=437","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/resolving-chromedrive-verification-error-macos"},"url":"https://randomwits.com/blog/resolving-chromedrive-verification-error-macos"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <a style="cursor:pointer;" class="DarkReader_Button">
+            <i id="icon-dark" class="fa fa-cloud-moon"></i>
+          </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/places"><i class="fas fa-map-pin"></i> Places</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206"
+     crossorigin="anonymous"></script> -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Resolving chromedrive verification error in MacOS</h1>
+        <p>Tags:  <a class="mytag" href="/tag/macos" title="View posts tagged with: macos">macos</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="https://unsplash.com/photos/3xQ65cknLPk/download?w=800" alt="Featured image for Resolving chromedrive verification error in MacOS" style="max-width:100%; height:auto;">
+        </div>
+        <p>The MacOS Catalina (v 10.15.3) has a security feature known as Gatekeeper, which verifies downloaded applications. When you encounter the error: "chromedriver" cannot be opened because the developer cannot be verified, it's due to Gatekeeper restricting the execution of the chromedriver executable. This is because it doesn't recognize the developer, which is a common issue for developers and testers who use chromedriver for browser automation.</p>
+        <p>Chromedriver is a separate executable that WebDriver uses to control Chrome. It's part of the Selenium project, which is a framework for conducting automated testing of web applications. WebDriver is an open standard for automating browsers, providing a way to interact with them in a way that mimics a human user.</p>
+        <p>Error while runing the chromedriver :</p>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Error: "chromedriver" cannot be opened because the developer cannot be verified
+</code></pre>
+          </div>
+        </div>
+        <p>We can manually override this security feature for the chromedriver executable.</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span>xattr <span class="nt">-d</span> com.apple.quarantine <span class="si">$(</span>which chromedriver<span class="si">)</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The command uses xattr, a utility for viewing and modifying extended attributes of file system objects. Extended attributes are metadata components that can be unique to specific files and applications. In this case, xattr -d is used to delete a specific extended attribute.</p>
+        <p>The attribute in question is com.apple.quarantine. This attribute is assigned to files downloaded from the internet or received via AirDrop to indicate that the file might be unsafe.</p>
+        <p>The $(which chromedriver) part of the command is a command substitution that finds the path of the chromedriver executable. which is a command-line utility that shows the full path of shell commands.</p>
+        <p>By deleting the com.apple.quarantine attribute from the chromedriver executable, you're effectively telling MacOS that the chromedriver is safe, and it can be run without Gatekeeper's intervention. That's why the error "chromedriver" cannot be opened because the developer cannot be verified is resolved after running this command.</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/disabling-enabling-globalprotect-vpn-on-macos" title="Previous Post: Disabling Enabling Globalprotect Vpn On Macos">←Previous</a>     <a class="next-item" href="/blog/refresh-materialized-views-concurrently" title="Next Post: Optimizing SQL Queries - Understanding and Refreshing Materialized Views">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/resolving-chromedrive-verification-error-macos';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/resolving-chromedrive-verification-error-macos';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

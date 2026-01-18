@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:site_name" content="Tushar Sharma">
+<title>A Philosophy of Software Design by John Ousterhout</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@tushar sharma">
+    <meta name="twitter:title" content="A Philosophy of Software Design by John Ousterhout">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437">
+    <meta property="og:image" content="https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>A Philosophy of Software Design by John Ousterhout | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3">
+    <meta property="og:title" content="A Philosophy of Software Design by John Ousterhout">
+    <meta name="author" content="tushar sharma">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="These are my rough notes while reading this book.">
+    <meta property="og:description" content="These are my rough notes while reading this book.">
+    <link rel="canonical" href="https://randomwits.com/blog/review-book-a-philosophy-of-software-design">
+    <meta property="og:url" content="https://randomwits.com/blog/review-book-a-philosophy-of-software-design">
+    <meta property="og:site_name" content="RandomWits">
+    <meta property="og:image" content="https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-11-08T00:00:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437">
+    <meta property="twitter:title" content="A Philosophy of Software Design by John Ousterhout">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"tushar sharma"},"dateModified":"2024-11-08T00:00:00+00:00","datePublished":"2024-11-08T00:00:00+00:00","description":"These are my rough notes while reading this book.","headline":"A Philosophy of Software Design by John Ousterhout","image":"https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/review-book-a-philosophy-of-software-design"},"url":"https://randomwits.com/blog/review-book-a-philosophy-of-software-design"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <a style="cursor:pointer;" class="DarkReader_Button">
+            <i id="icon-dark" class="fa fa-cloud-moon"></i>
+          </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/places"><i class="fas fa-map-pin"></i> Places</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206"
+     crossorigin="anonymous"></script> -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>A Philosophy of Software Design by John Ousterhout</h1>
+        <p>Tags:  <a class="mytag" href="/tag/books" title="View posts tagged with: books">books</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="https://unsplash.com/photos/hgFY1mZY-Y0/download?w=800" alt="Featured image for A Philosophy of Software Design by John Ousterhout" style="max-width:100%; height:auto;">
+        </div>
+        <link rel="stylesheet" href="/css/books.css">
+        <!-- disclaimer -->
+        <div style="margin: 0 auto" class="cl disclaimer">
+          <span style="color:black">   These are my rough notes while reading this book
+          </span>
+        </div>
+        <p><br>
+        </p>
+        <p>In the Waterfall model, development is a linear process with distinct phases: requirements, design, implementation, testing, and deployment. Each phase must be completed before the next begins. This rigid approach can lead to challenges in adapting to changing requirements or unexpected issues.</p>
+        <p>Agile methodologies, like Scrum or Kanban, emphasize iterative development. A project is broken down into smaller, manageable iterations or sprints. Each sprint involves planning, designing, implementing, and testing a specific set of features. This iterative approach allows for flexibility and continuous improvement.</p>
+        <p>Modular design is an approach where a software system is divided into distinct, relatively independent modules. Each module has two components: an interface and an implementation. The interface specifies what the module does without detailing how it accomplishes it. The implementation contains the code that fulfills the promises made by the interface.</p>
+        <p>In object-oriented programming (OOP), each class can be viewed as a module. By adhering to the interface, changes to a module's implementation do not impact other modules that depend on it. This isolation enhances flexibility and maintainability across the system.</p>
+        <p>Abstraction provides a simplified view of an entity, focusing only on essential details while omitting irrelevant information. This principle allows developers to manage complexity effectively.</p>
+        <p>An interface is like a contract that specifies methods which must be implemented by any class that adheres to it. It exposes these methods to other modules without revealing the actual implementation, ensuring that interactions occur through a consistent set of behaviors rather than direct access to the implementation."</p>
+        <p>The best modules are deep: they have a lot of functionality hidden behind a simple interface. Shallow module is one whose interface is complicated relative to the functionality it provides.</p>
+        <p>Often taught that "classes should be small". Instead classes should be deep. Small classes don't contribute much functionality and increase boilerplate. e.g.</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nc">FileInputStream</span> <span class="n">fileStream</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="n">filename</span><span class="o">);</span>
+<span class="nc">BufferedInputStream</span> <span class="n">bufferedStream</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedInputStream</span><span class="o">(</span><span class="n">fileStream</span><span class="o">);</span>
+<span class="nc">ObjectInputStream</span> <span class="n">objectStream</span> <span class="o">=</span> <span class="n">enw</span> <span class="nf">ObjectInputStream</span><span class="o">(</span><span class="n">bufferedStream</span><span class="o">);</span>
+</code></pre>
+          </div>
+        </div>
+        <p>In this code, <code class="language-plaintext highlighter-rouge">FileInputStream</code> only provides rudimentary I/O: it's not capable of bueffered I/O, nor can it read or write searialized objects. <code class="language-plaintext highlighter-rouge">BufferedInputStream</code> adds buffering to <code class="language-plaintext highlighter-rouge">FileInputStream</code> and <code class="language-plaintext highlighter-rouge">ObjectInputStream</code> adds read ability to read and write serialized objects. First two objects, <code class="language-plaintext highlighter-rouge">fileStream</code> and <code class="language-plaintext highlighter-rouge">bufferedStream</code> are never used once the file has been opened. So buffering must be requested explicitly. If a developer forgest to creat this object, there will be no bufferring and I/O will be slow.</p>
+        <p>Java Developers argue that since not everyone wants to use buffering for file I/O, so that's why there's an additional step. However interfaces should be desigend to make <strong>common case</strong> as simple as possible. In contrast, Unix develoeprs made sequential I/O most common use case.</p>
+        <p>A pass-through method is one that does little except invoke another method, whose signature is similar or identical to that of the calling method. They make the <code class="language-plaintext highlighter-rouge">class</code> more shallow, increase the complexity without increasing the functionality of system. However, one such exception like dispatcher. A dispatcher is a method that uses its arguments to select one of several other methods to invoke.</p>
+        <p><strong>Decorators</strong>. Also called wrapper. A decorator objct takes an existing object and extends its functionality. In Java, <strong>BufferedInputStream</strong> class is a decorator: given an <strong>InputStream</strong> object, it provides the same API but intorduces bufering.</p>
+        <p>A pass-through variable is a variable that has been passed through long chain of methods. It increases complexity for intermediate methods. One Soulution - Use Global Variable. However it has it's cons. It's impossible to create independent instances of same system in same process that access same global variable (conflict). ANother solution - Use Context object. It stores all the glboal variable. Cons is that it can have thread safety issue. Solution use immutable objects in a context object.</p>
+        <p><strong>Subdivision</strong>: Breaking up classes to divide work. However too many classes will increase complexity if there are shallow. Also subdivision works great if classes are independent. If there is dependencies between them, it would be to merge them into single class. e.g. HTTP request reader and parsing it into String would be better to have a single class.</p>
+        <p><strong>GOTO</strong> are bad programming practice because unstructured jumps makes it hard to understand the program.</p>
+        <p><strong>How to Split a method</strong> :</p>
+        <ul>
+          <li>
+            <p>Keep methods concise: Avoid methods exceeding 20 lines. While this isn't a strict rule, it serves as a guideline for keeping code readable and maintainable.</p>
+          </li>
+          <li>
+            <p>Single Responsibility Principle: A method should perform one specific task and do it completely. If a method appears to do more than one thing, consider splitting it.</p>
+          </li>
+          <li>
+            <p>Extract reusable subtasks: If a subtask within a method is general-purpose (i.e., it can be reused by other methods or components), extract it into its own method.</p>
+          </li>
+          <li>
+            <p>Avoid overly dependent methods: If a child method requires extensive understanding of its parent method to be understood, it is not a clean split. Such "conjoined methods" make code harder to maintain and debug.</p>
+          </li>
+        </ul>
+        <p><strong>Exception Handling:</strong>:</p>
+        <ul>
+          <li>
+            <p>Increased complexity: Exceptions can increase code complexity if not handled properly. Always strive for clear and consistent exception handling.</p>
+          </li>
+          <li>
+            <p>Masking exceptions: Handling exceptions at a low level (without propagating them when necessary) can hide the root cause of an issue. For example, silently failing or "hanging" instead of crashing might make debugging and resolution harder.</p>
+          </li>
+          <li>
+            <p>Aggregating exceptions: Handle exceptions at a higher level when possible. This means propagating errors upwards to a central place where they can be logged or managed consistently, reducing duplicated error-handling logic across the codebase.</p>
+          </li>
+        </ul>
+        <p>Self-Documenting Code is discouraged. Good code doesn't repeat the code. eg</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1">// Bad comment</span>
+<span class="c1">// Calculate the total price with tax</span>
+<span class="kt">double</span> <span class="n">total</span> <span class="o">=</span> <span class="n">price</span> <span class="o">+</span> <span class="o">(</span><span class="n">price</span> <span class="o">*</span> <span class="n">taxRate</span><span class="o">);</span>
+
+<span class="c1">// Better: Make the code self-explanatory</span>
+<span class="kt">double</span> <span class="n">totalPriceWithTax</span> <span class="o">=</span> <span class="n">price</span> <span class="o">+</span> <span class="o">(</span><span class="n">price</span> <span class="o">*</span> <span class="n">taxRate</span><span class="o">);</span>
+</code></pre>
+          </div>
+        </div>
+        <p>However comments are useful eg.</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1">// Using binary search because the dataset is pre-sorted and performance is critical</span>
+<span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">binarySearch</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="n">target</span><span class="o">);</span>
+
+<span class="c1">// Workaround for a bug in library version 1.2.3 that causes null pointer exceptions</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">value</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">process</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p><strong>Avoid Repeating the Code:</strong></p>
+        <p>Comments should add value by providing context or intent, not restating what the code does. Bad Example (Repeats the code):</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1">// Setting the status to LOADING</span>
+<span class="n">readRPC</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">status</span> <span class="o">=</span> <span class="no">LOADING</span><span class="o">;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Good Example (Explains the purpose):</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1">// Indicate that the RPC is currently being processed</span>
+<span class="n">readRPC</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">status</span> <span class="o">=</span> <span class="no">LOADING</span><span class="o">;</span>
+</code></pre>
+          </div>
+        </div>
+        <p><strong>Provide High-Level Information:</strong></p>
+        <p>Comments should explain the intent or purpose of the code rather than its specific implementation details.</p>
+        <p>Ask Yourself: What is this code trying to achieve?</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1">// Append the current hash to the RPC list for the appropriate server if it hasn’t been processed yet</span>
+<span class="k">if</span> <span class="o">(!</span><span class="n">processedHashes</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">currentHash</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">appendToRPC</span><span class="o">(</span><span class="n">currentHash</span><span class="o">,</span> <span class="n">server</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p><strong>Abstraction in Comments:</strong></p>
+        <p>Provide a simplified view of the entity or process. Focus on essential details and omit those that can be safely ignored. Bad Example (Too Detailed):</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1">// Check if the hash is already in the list of processed hashes, </span>
+<span class="c1">// then find the appropriate server using the server map, </span>
+<span class="c1">// and finally append the hash to the RPC queue of that server.</span>
+<span class="k">if</span> <span class="o">(!</span><span class="n">processedHashes</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">currentHash</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">appendToRPC</span><span class="o">(</span><span class="n">currentHash</span><span class="o">,</span> <span class="n">server</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Good Example (Abstracted):</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1">// Ensure the current hash is processed by the appropriate server</span>
+<span class="k">if</span> <span class="o">(!</span><span class="n">processedHashes</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">currentHash</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">appendToRPC</span><span class="o">(</span><span class="n">currentHash</span><span class="o">,</span> <span class="n">server</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p><strong>Use Comments for Context:</strong></p>
+        <p>Comments should clarify the why and not just the what of the code. Example:</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1">// Avoid duplicate processing by checking if the hash has already been handled</span>
+<span class="k">if</span> <span class="o">(!</span><span class="n">processedHashes</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">currentHash</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">appendToRPC</span><span class="o">(</span><span class="n">currentHash</span><span class="o">,</span> <span class="n">server</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Interface documentation shouldn't have implementation details.</p>
+        <p>Comments first before writing the code. Also comments are more like abstraction rather than repeting the code</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>// phase 1 : scan active RPC to see <span class="k">if </span>call is completed
+</code></pre>
+          </div>
+        </div>
+        <p>Local Variables should be named precise. Generic names are not good. e.g.</p>
+        <ul>
+          <li>
+            <p><strong>count</strong> is too generic.</p>
+          </li>
+          <li>
+            <p>Instead of using <strong>x</strong> and <strong>y</strong> for co-ordinates, better would be to use <strong>charIndex</strong>, <strong>lineIndex</strong></p>
+          </li>
+          <li>
+            <p>Another bad named variable is <strong>result</strong>.</p>
+          </li>
+          <li>
+            <p>However, <strong>i</strong>, <strong>j</strong> is fine for loop iteration as it only spans few lines of code</p>
+          </li>
+          <li>
+            <p>For <strong>Go Developers</strong>, convention is usually opposite, variable names are often short</p>
+          </li>
+        </ul>
+        <p><strong>Invariant</strong> is a property of variable or structure that's always true.</p>
+        <p><strong>Generic container</strong> are non obvious code. e.g.</p>
+        <div class="language-java highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="k">return</span> <span class="k">new</span> <span class="nc">Pair</span><span class="o">&lt;</span><span class="nc">Intger</span><span class="o">,</span> <span class="nc">Boolean</span><span class="o">&gt;();</span>
+</code></pre>
+          </div>
+        </div>
+        <p>It's much better to wrap it under a class and give it a meaningful name.</p>
+        <p>If there's a bug in the code, first write a unit test and then fix the test.</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/weekly-logs-2024-nov-04-10" title="Previous Post: Weekly Logs from Nov 4 to 10, 2024">←Previous</a>     <a class="next-item" href="/blog/brazil-tourist-visa-from-usa" title="Next Post: How to Get Brazil Tourist Visa from USA with Indian passport">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/review-book-a-philosophy-of-software-design';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/review-book-a-philosophy-of-software-design';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
