@@ -138,7 +138,7 @@
   category: "sports"
 
 - name : "Q noodles"
-  addres: "1026 Ryan Rd, Cary, NC 27511"
+  address: "1026 Ryan Rd, Cary, NC 27511"
   map_link: "https://www.google.com/maps/search/?api=1&query=1026+Ryan+Rd,+Cary,+NC+27511"
   city: "Cary, NC"
   notes: "Great noodle bowls."
