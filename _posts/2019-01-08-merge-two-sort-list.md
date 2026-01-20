@@ -8,6 +8,7 @@ tags:
 - code
 name: merge-sorted-lists
 thumb: /img/heap_array.png
+skipImage: true
 ---
 
 <style type="text/css">
@@ -17,7 +18,7 @@ thumb: /img/heap_array.png
 
 
 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.<!-- truncate_here -->
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 Merge two sorted linked lists and return it as a new list.<sup><a href='#fn:1' rel='footnote'>1</a></sup>The new list should be made by splicing together the nodes of the first two lists.
 
@@ -25,56 +26,26 @@ It's an easy problem in Leetcode for practicing linked list. It's similar to the
 
 # Brute force algorithm
 
-Merge the both list together and sort the returning list.  This will take complexitiy of  @L O(n + m)log(n + m) @L , where n & m are length of each two list.
+Merge the both list together and sort the returning list.  This will take complexitiy of  $ O(n + m)log(n + m) $ , where n & m are length of each two list
+
+{% template customCode.html %}
+---
+id: 0f11e4ba933c83ae7f1cae07b38d66e0
+file: Simple.java
+---
+{% endtemplate %}
+```
 
 # More efficient solution
 
-Similary to algorithm used in merging step of Merge Sort, we can acheive @L O(n + m) @L time complexity. Traverse both the list together, and insert the smallest value into the new list.
+Similary to algorithm used in merging step of Merge Sort, we can acheive $ O(n + m) $ time complexity. Traverse both the list together, and insert the smallest value into the new list.
 
-{% highlight java %}
-public class ListNode {
-   int val;
-   ListNode next;
-   ListNode(int x) { val = x; }
-}
-
-class Solution {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode l3 = null;
-        ListNode tail = null;
-
-        while (l1 != null && l2 != null) {
-            int lowestValue;
-
-            if (l1.val < l2.val) {
-                lowestValue = l1.val;
-                l1 = l1.next;
-            } else {
-                lowestValue = l2.val;
-                l2 = l2.next;
-            }
-
-            if (l3 == null) {
-                l3 = new ListNode(lowestValue);
-                tail = l3;
-            } else {
-                ListNode ptr = new ListNode(lowestValue);
-                tail.next = ptr;
-                tail = ptr;
-            }
-        }
-
-        //if any of the two lists is not yet completely traversed
-        if (tail != null) {
-            tail.next = l1 != null ? l1 : l2;
-        } else {
-            l3 = l1 != null ? l1 : l2;
-        }
-
-        return l3;
-    }
-}
-{% endhighlight %}
+{% template customCode.html %}
+---
+id: 0f11e4ba933c83ae7f1cae07b38d66e0
+file: Solution.java
+---
+{% endtemplate %}
 
 <div class='footnotes'><h3>Footnotes</h3><hr />
   <ol>
