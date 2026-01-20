@@ -137,4 +137,19 @@
   notes: "Free walk-in to play Table Tennis. Saturday 10am-12pm. Wednesday 6.30pm-8.30pm."
   category: "sports"
 
+- name : "Q noodles"
+  addres: "1026 Ryan Rd, Cary, NC 27511"
+  map_link: "https://www.google.com/maps/search/?api=1&query=1026+Ryan+Rd,+Cary,+NC+27511"
+  city: "Cary, NC"
+  notes: "Great noodle bowls."
+  category: "food"
+
+- name: "James B. Hunt Jr. Library"
+  address: "1070 Partners Way, Raleigh, NC 27606"
+  map_link: "https://www.google.com/maps/search/?api=1&query=1070+Partners+Way,+Raleigh,+NC+27606"
+  city: "Raleigh, NC"
+  notes: "Great free public library. Free guest internet and multiple floors. Great place to study."
+  category: "activity"
+
+
 # Valle de la Luna (Chile)
