@@ -70,9 +70,22 @@ Let's break down each part:
 | Property | Description |
 |----------|-------------|
 | `id` | A unique identifier for this route |
-| `uri` | The internal Kubernetes service URL where the JSON API is running |
+| `uri` | The internal Kubernetes service URL where the JSON API is running (see note below) |
 | `predicates` | Conditions that must match for the route to be used. Here, any request starting with `/json-api/` will match |
 | `filters` | Transformations applied to the request. `RewritePath` removes the `/json-api` prefix before forwarding |
+
+> **What is `svc.cluster.local`?**
+>
+> Kubernetes provides built-in DNS for service discovery. Every service gets a DNS name following the pattern:
+>
+> ```
+> <service-name>.<namespace>.svc.cluster.local
+> ```
+>
+> - `svc` indicates this is a Service resource
+> - `cluster.local` is the default cluster domain
+>
+> This allows pods to communicate with services by name without hardcoding IP addresses. The DNS is only resolvable from within the Kubernetes cluster.
 
 ### How It Works
 
