@@ -5,6 +5,13 @@
   map_link: "https://www.google.com/maps/search/?api=1&query=4051+Durham-Chapel-Hill+Blvd%2C+Durham%2C+NC+27707"
   city: "Durham, NC"
 
+- name: "Marion Diehl Center"
+  notes: "Wednesday badminton indoor play between 7pm-9pm. Call them ahead to register for the session."
+  address: "2219 Tyvola Rd, Charlotte, NC 28210"
+  category: sports
+  map_link: "https://www.google.com/maps/search/?api=1&query=2219+Tyvola+Rd,+Charlotte,+NC+28210"
+  city: "Charlotte, NC"
+
 - name: Los Tres Mexican Restaurant Grill and Bar
   notes: Liked michelada drink.
   category: food
