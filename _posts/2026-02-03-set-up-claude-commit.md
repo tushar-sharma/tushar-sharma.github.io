@@ -17,4 +17,9 @@ Error
 TypeError: Console.print() got an unexpected keyword argument 'file
 ```
 
-Monkey Patching
+
+```
+pipx uninstall claude-commit
+pipx install git+https://github.com/tushar-sharma/claude-commit.git
+```
+
