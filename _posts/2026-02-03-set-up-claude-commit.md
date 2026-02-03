@@ -1,5 +1,6 @@
 ---
 published: false
+comments: deleteme
 ---
 
 `claude-commit` uses `claude` to generate git commit messages. 
