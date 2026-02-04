@@ -348,6 +348,11 @@
   comments: "Local co-op."
   progress: 0
 
+- title: "FIFA 22"
+  rating: 5
+  pending: true
+  comments: "Local co-op."
+  progress: 0
 
 - title: "Cult of the Lamb"
   rating: 0
@@ -495,13 +500,22 @@
   progress: 55
   comments: "The campaign mode is excellent, and the aircraft maneuvering feels great. Tip: During missions, you can return to the fleet to refuel and restock weapons."
 
+- title: "Persona 4 Golden"
+  pending: true
+  progress: 0
+  comments: "Used Proton 9.0-4 on Steam deck"
+
+- title: "Rhythm doctor"
+  pending: true
+  progress: 0
+  comments: ""
+
 # The Wolf Among Us : buy at $3.74
 # DOOM (2016) buy at 1.99
 # DOOM Eternal buy at 3.99
 # Doom the Dark Ages
 # Yume Nikki : Game like Undertale.
 # Antichamber
-# rhythm doctor : rhythm game
 # West of Loathing
 # despelote : football game from ecuador 
 # Night in the Woods
