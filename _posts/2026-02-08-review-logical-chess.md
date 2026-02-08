@@ -9,4 +9,5 @@ The chief object of all opening strategy is to get the pieces out quickly. **e4*
 
 Black must fight for an equal share of the good squares. Black must dispute possession of the centre.
 
+Why all this stress on the centre? Why is it so important? Pieces placed in the centre enjoy the greatest freedom of action and have the widest scope for their attacking powers.
 
