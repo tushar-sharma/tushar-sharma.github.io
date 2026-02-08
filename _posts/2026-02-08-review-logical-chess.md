@@ -16,6 +16,4 @@ Sequence of White and Black, use lichess's [website](https://lichess.org/analysi
 
 - black moves **e5**
 
-- white moves **Nf3**. This makes a threat to black's pawn. 
-
-- 
+- white moves **Nf3**. This makes a threat to black's pawn. Precept : Knight before bishop.
