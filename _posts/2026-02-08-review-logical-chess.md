@@ -11,3 +11,10 @@ Black must fight for an equal share of the good squares. Black must dispute poss
 
 Why all this stress on the centre? Why is it so important? Pieces placed in the centre enjoy the greatest freedom of action and have the widest scope for their attacking powers.
 
+Sequence of White and Black
+
+```
+White e4 Nf3
+
+Black e5 
+```
