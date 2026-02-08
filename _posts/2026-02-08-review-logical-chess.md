@@ -26,3 +26,13 @@ Why all this stress on the centre? Why is it so important? Pieces placed in the 
 - white moves **Bc4**. This attacks blacks **f7** pawn. This pawn is vulnerable because it's guarded by only one i.e. king.
 
 -  black also moves **Bc5**. This also attacks the white's pawn which is most vulnerable.
+
+- white moves **c3**. 
+
+- black moves **2..Nf6**
+
+- white moves **d4**
+
+- black moves **exd4**
+
+- white moves **cxd4**. This would allow the white to place central pawns. 
