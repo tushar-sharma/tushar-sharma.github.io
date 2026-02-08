@@ -36,3 +36,9 @@ Why all this stress on the centre? Why is it so important? Pieces placed in the 
 - black moves **exd4**
 
 - white moves **cxd4**. This would allow the white to place central pawns. 
+
+We can prevent this 
+
+- black can move **Qe7** after white moves **c3**
+
+- If White persists in playing 5 d4, the continuation 5…exd4 6 cxd4 Qxe4+ wins a pawn.
