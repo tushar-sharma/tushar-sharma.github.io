@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:site_name" content="Tushar Sharma">
+<title>Why I never close Emacs</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Why I never close Emacs">
+    <meta name="twitter:description" content="Tips and tricks in Emacs.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="/img/emacs.png">
+    <meta property="og:image" content="/img/emacs.png">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Why I never close Emacs | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3">
+    <meta property="og:title" content="Why I never close Emacs">
+    <meta name="author" content="Tushar Sharma">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &quot;It's easier this way.&quot;, he chuckled, &quot;I can quickly find all the softwares I need.&quot;. I showed him my desktop which was spick and span.&quot;Doesn't it consumes time in finding the softwares you need?&quot;, he asked.">
+    <meta property="og:description" content="I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &quot;It's easier this way.&quot;, he chuckled, &quot;I can quickly find all the softwares I need.&quot;. I showed him my desktop which was spick and span.&quot;Doesn't it consumes time in finding the softwares you need?&quot;, he asked.">
+    <link rel="canonical" href="https://randomwits.com/blog/why-i-never-close-emacs">
+    <meta property="og:url" content="https://randomwits.com/blog/why-i-never-close-emacs">
+    <meta property="og:site_name" content="RandomWits">
+    <meta property="og:image" content="https://randomwits.com/img/emacs.png">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2013-11-06T00:00:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://randomwits.com/img/emacs.png">
+    <meta property="twitter:title" content="Why I never close Emacs">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2013-11-06T00:00:00+00:00","datePublished":"2013-11-06T00:00:00+00:00","description":"I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. &quot;It&#39;s easier this way.&quot;, he chuckled, &quot;I can quickly find all the softwares I need.&quot;. I showed him my desktop which was spick and span.&quot;Doesn&#39;t it consumes time in finding the softwares you need?&quot;, he asked.","headline":"Why I never close Emacs","image":"https://randomwits.com/img/emacs.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/why-i-never-close-emacs"},"url":"https://randomwits.com/blog/why-i-never-close-emacs"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <a style="cursor:pointer;" class="DarkReader_Button">
+            <i id="icon-dark" class="fa fa-cloud-moon"></i>
+          </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/places"><i class="fas fa-map-pin"></i> Places</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206"
+     crossorigin="anonymous"></script> -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Why I never close Emacs</h1>
+        <p>Tags:  <a class="mytag" href="/tag/emacs" title="View posts tagged with: emacs">emacs</a>    <a class="mytag" href="/tag/editor" title="View posts tagged with: editor">editor</a>    </p>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="/img/emacs.png?w=800" alt="Featured image for Why I never close Emacs" style="max-width:100%; height:auto;">
+        </div>
+        <div>
+          <p>
+            I once complained to my friend of his desktop on his computer. His desktop was a tangled mess of icons. "It's easier this way.", he chuckled, "I can quickly find all the softwares I need.". I showed him my desktop which was spick and span."Doesn't it consumes time in finding the softwares you need?", he asked. I told him I have all the softwares I need on my desktop. His eyes rolled down my screen until they stumbled upon a solo icon of emacs. "You just use one software?", he asked."Mostly, yes", I said. "What about *editing*, *browsing*, *music*, etc?", he asked. "I do it all in emacs.", I quipped. Before he raised his eyebrows, I explained to him why emacs is informally called as a complete operating system and why I never close emacs.
+          </p>
+        </div>
+        <link rel="stylesheet" href="/css/books.css">
+        <!-- disclaimer -->
+        <div style="margin: 0 auto" class="cl disclaimer">
+          <i class="icon-star"></i>
+          <span style="color:black">   This article has been published in <a href="http://www.linuxforu.com" target="_blank">LinuxforYou</a> magazine,January 2014 issue
+          </span>
+        </div>
+        <p><br>
+        </p>
+        <p><strong>Note:</strong> For those who are unfamiliar with emacs, Key abbreviations used :</p>
+        <ol>
+          <li>M – x means holding meta key (usually Esc) and x</li>
+          <li>C – Control</li>
+          <li>S – Shift</li>
+          <li>C-x f – means holding both Control and x, release both, and press f</li>
+        </ol>
+        <p><img src="/img/emacs.png"></p>
+        <h4 id="emacs-for-editing">Emacs for Editing</h4>
+        <p>Emacs is modeless editor which mean that unlike vim, you can start inserting text as soon as you open it. This is one of the reason why it's popular with newbies. But that doesn't mean you can't get your hands dirty with emacs.</p>
+        <p>Most people criticize emacs user for trying to do everything with emacs except editing. So let's begin with editing for which emacs was initially built.</p>
+        <p>Emacs can handle pretty much any type of file. Just type</p>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>$ emacs myFile.ext
+</code></pre>
+          </div>
+        </div>
+        <p>Emacs also does syntax highlighting and indentation. It usually follows GNU style of indentation. The best thing about emacs is that you can customize it the way you want. I usually like <a href="http://en.wikipedia.org/wiki/Indent_style#Allman_style">Allman</a> indentation when editing <code class="language-plaintext highlighter-rouge">C</code> code with <code class="language-plaintext highlighter-rouge">4 spaces</code>. To change it, add this to your <code class="language-plaintext highlighter-rouge">~/.emacs</code> file.</p>
+        <figure class="highlight">
+          <pre><code class="language-common-lisp" data-lang="common-lisp">    <span class="p">(</span><span class="k">setq</span> <span class="nv">c-default-style</span> <span class="s">"linux"</span>
+          <span class="nv">c-basic-offset</span> <span class="mi">4</span><span class="p">)</span></code></pre>
+        </figure>
+        <h4 id="emacs-for-backup">Emacs for Backup</h4>
+        <p>Emacs by default creates a backup file for every file it edits. It's usually named as the original file followed by tilde like FileName~. Though backup files are life saver, they are difficult to manage if they accumulate on the same folder. To save all your files in one place, let's say in folder <code class="language-plaintext highlighter-rouge">.saves</code>, add this to your <code class="language-plaintext highlighter-rouge">~/.emacs</code></p>
+        <figure class="highlight">
+          <pre><code class="language-common-lisp" data-lang="common-lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">backup-directory-alist</span> <span class="o">`</span><span class="p">((</span><span class="s">"."</span> <span class="o">.</span> <span class="s">"~/.saves"</span><span class="p">)))</span></code></pre>
+        </figure>
+        <h4 id="emacs-for-browsing">Emacs for Browsing</h4>
+        <p>If you are only interested in the content of a website and want to avoid those jarring javascript, emacs is a way to go. It uses an extension <code class="language-plaintext highlighter-rouge">w3m.el</code> which uses <code class="language-plaintext highlighter-rouge">w3m</code> which itself is a <code class="language-plaintext highlighter-rouge">text-browser</code>. Of course there are <code class="language-plaintext highlighter-rouge">Lynx</code> and other text editors, but integrating w3m with emacs is very fast.</p>
+        <figure class="highlight">
+          <pre><code class="language-common-lisp" data-lang="common-lisp"> 
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">'load-path</span> <span class="s">"~/emacs-w3m"</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">'w3m-load</span><span class="p">)</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">browse-url-browser-function</span> <span class="ss">'w3m-browse-url</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">autoload</span> <span class="ss">'w3m-browse-url</span> <span class="s">"w3m"</span> <span class="s">"Ask a WWW browser to show a URL."</span> <span class="no">t</span><span class="p">)</span>
+<span class="c1">;; optional keyboard short-cut</span>
+<span class="p">(</span><span class="nv">global-set-key</span> <span class="s">"\C-xm"</span> <span class="ss">'browse-url-at-point</span><span class="p">)</span></code></pre>
+        </figure>
+        <p>Here's a snapshot of my website in emacs.</p>
+        <p><img src="/img/myblog.png" alt="myblog" title="My Blog"></p>
+        <h4 id="emacs-for-email">Emacs for Email</h4>
+        <p>How about integrating emacs to view your email. You could do this by <code class="language-plaintext highlighter-rouge">GNUS</code>. Add this to your <code class="language-plaintext highlighter-rouge">~/.gnus</code> file</p>
+        <figure class="highlight">
+          <pre><code class="language-common-lisp" data-lang="common-lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-select-method</span>
+      <span class="o">'</span><span class="p">(</span><span class="nv">nnimap</span> <span class="s">"gmail"</span>
+	       <span class="p">(</span><span class="nv">nnimap-address</span> <span class="s">"imap.gmail.com"</span><span class="p">)</span>
+	       <span class="p">(</span><span class="nv">nnimap-server-port</span> <span class="mi">993</span><span class="p">)</span>
+	       <span class="p">(</span><span class="nv">nnimap-stream</span> <span class="nv">ssl</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="k">setq</span> <span class="nv">message-send-mail-function</span> <span class="ss">'smtpmail-send-it</span>
+      <span class="nv">smtpmail-starttls-credentials</span> <span class="o">'</span><span class="p">((</span><span class="s">"smtp.gmail.com"</span> <span class="mi">587</span> <span class="no">nil</span> <span class="no">nil</span><span class="p">))</span>
+      <span class="nv">smtpmail-auth-credentials</span> <span class="o">'</span><span class="p">((</span><span class="s">"smtp.gmail.com"</span> <span class="mi">587</span>
+				   <span class="s">"user@gmail.com"</span> <span class="no">nil</span><span class="p">))</span>
+      <span class="nv">smtpmail-default-smtp-server</span> <span class="s">"smtp.gmail.com"</span>
+      <span class="nv">smtpmail-smtp-server</span> <span class="s">"smtp.gmail.com"</span>
+      <span class="nv">smtpmail-smtp-service</span> <span class="mi">587</span>
+      <span class="nv">gnus-ignored-newsgroups</span> <span class="s">"^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]"</span><span class="p">)</span></code></pre>
+        </figure>
+        <p>Replace user with you're gmail username.Also add this to your <code class="language-plaintext highlighter-rouge">~/.authinfo</code> file</p>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>machine imap.gmail.com login user@gmail.com password secret port 993
+machine smtp.gmail.com login user@gmail.com password secret port 587
+</code></pre>
+          </div>
+        </div>
+        <p>The password field is optional. Type <code class="language-plaintext highlighter-rouge">M-x gnus</code> to start GNUS. To compose email, type <code class="language-plaintext highlighter-rouge">m</code>. Press <code class="language-plaintext highlighter-rouge">C-c C-c</code> to send mail.</p>
+        <p><img src="/img/gnus.png" alt="gnus" title="GNUS"></p>
+        <h4 id="emacs-for-photo-editing">Emacs for Photo Editing</h4>
+        <p>The other task I usually do is look up few photos. Emacs can do more than just viewing the pictures, it has an inbuilt powerful power editor called <code class="language-plaintext highlighter-rouge">Image-Dired</code>. Simply press <code class="language-plaintext highlighter-rouge">M-x image-dired</code> on your emacs.</p>
+        <p><img src="/img/image_dired.png" alt="Image-dired" title="Image Dired"></p>
+        <h4 id="emacs-for-composing-documents">Emacs for composing Documents</h4>
+        <p>This is one of the feature I find unparalleled to emacs. The official website says about org mode, "Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system".</p>
+        <p><img src="/img/orgMode.png" alt="orgMode" title="Org"></p>
+        <p>If you love <em>LaTeX</em>, then there are more reasons to love <code class="language-plaintext highlighter-rouge">org mode</code>. You could integrated <em>TeX</em> support and export your work in <em>PDF</em>.For this add this to your ~/.emacs file</p>
+        <figure class="highlight">
+          <pre><code class="language-common-lisp" data-lang="common-lisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">'org-latex</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nb">boundp</span> <span class="ss">'org-export-latex-classes</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">setq</span> <span class="nv">org-export-latex-classes</span> <span class="no">nil</span><span class="p">))</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">'org-export-latex-classes</span>
+             <span class="o">'</span><span class="p">(</span><span class="s">"article"</span>
+               <span class="s">"\\documentclass{article}"</span>
+               <span class="p">(</span><span class="s">"\\section{ %s}"</span> <span class="o">.</span> <span class="s">"\\section*{ %s}"</span><span class="p">)))</span></code></pre>
+        </figure>
+        <h4 id="emacs-for-secret-writing">Emacs for Secret Writing</h4>
+        <p>If you happen to maintain a personal diary, you must be paranoid about it's secrecy. Emacs could be used to store your personal information. It uses <code class="language-plaintext highlighter-rouge">GNU GPG</code> to save the file. Open any file in emacs with <code class="language-plaintext highlighter-rouge">gpg</code> extension.To save it, press <code class="language-plaintext highlighter-rouge">C-s</code> which asks for which type of encryption method to use. Just use the default and press OK. This would prompt for a passphrase for saving.</p>
+        <p><img src="/img/secretGPG.png" alt="secretGPG" title="GPG"></p>
+        <h4 id="emacs-for-playing-music">Emacs for Playing Music</h4>
+        <p>First install mplayer.</p>
+        <p>In Linux (Ubuntu/Debian) try</p>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>$ sudo apt-get install mplayer
+</code></pre>
+          </div>
+        </div>
+        <p>In Mac try</p>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>$ brew install mplayer
+</code></pre>
+          </div>
+        </div>
+        <p>Clone <code class="language-plaintext highlighter-rouge">emms</code></p>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code> $ git clone git://git.sv.gnu.org/emms.git
+</code></pre>
+          </div>
+        </div>
+        <p>If it fails try this</p>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code> $ git clone git://git.sv.gnu.org/r/emms.git
+</code></pre>
+          </div>
+        </div>
+        <p>It will clone the folder emms. Inside the folder, there are <code class="language-plaintext highlighter-rouge">*el</code> file inside <code class="language-plaintext highlighter-rouge">lisp</code>. Copy them all to <code class="language-plaintext highlighter-rouge">~/.emacs.d/site-lisp/emms</code>. Find the executable of <code class="language-plaintext highlighter-rouge">mplayer</code> which is usually in <code class="language-plaintext highlighter-rouge">/usr/local/bin/</code>. Then add this to your <code class="language-plaintext highlighter-rouge">~/.emacs</code></p>
+        <figure class="highlight">
+          <pre><code class="language-common-lisp" data-lang="common-lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">exec-path</span> <span class="p">(</span><span class="nb">append</span> <span class="nv">exec-path</span> <span class="o">'</span><span class="p">(</span><span class="s">"/usr/local/bin"</span><span class="p">)))</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">'load-path</span> <span class="s">"~/.emacs.d/site-lisp/emms/lisp"</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">'emms-setup</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">'emms-player-mplayer</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">emms-standard</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">emms-default-players</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">define-emms-simple-player</span> <span class="nv">mplayer</span> <span class="o">'</span><span class="p">(</span><span class="nv">file</span> <span class="nv">url</span><span class="p">)</span>
+      <span class="p">(</span><span class="nv">regexp-opt</span> <span class="o">'</span><span class="p">(</span><span class="s">".ogg"</span> <span class="s">".mp3"</span> <span class="s">".wav"</span> <span class="s">".mpg"</span> <span class="s">".mpeg"</span> <span class="s">".wmv"</span> <span class="s">".wma"</span>
+                    <span class="s">".mov"</span> <span class="s">".avi"</span> <span class="s">".divx"</span> <span class="s">".ogm"</span> <span class="s">".asf"</span> <span class="s">".mkv"</span> <span class="s">"http://"</span> <span class="s">"mms://"</span>
+                    <span class="s">".rm"</span> <span class="s">".rmvb"</span> <span class="s">".mp4"</span> <span class="s">".flac"</span> <span class="s">".vob"</span> <span class="s">".m4a"</span> <span class="s">".flv"</span> <span class="s">".ogv"</span> <span class="s">".pls"</span><span class="p">))</span>
+      <span class="s">"mplayer"</span> <span class="s">"-slave"</span> <span class="s">"-quiet"</span> <span class="s">"-really-quiet"</span> <span class="s">"-fullscreen"</span><span class="p">)</span></code></pre>
+        </figure>
+        <p>Then type <code class="language-plaintext highlighter-rouge">M-x emms-play-directory</code> to navigate to music directory and play files.</p>
+        <h4 id="emacs-for-social-networking">Emacs for Social Networking</h4>
+        <p>If you cling for user experience, it's better to use regular browsers for social networking. And it sometimes becomes difficult to replicate all functionality of websites in emacs. Nevertheless, there's a ways to circumvent some of the limitations and use social networking in emacs.</p>
+        <p>To use facebook, visit <code class="language-plaintext highlighter-rouge">http://m.facebook.com</code>. If you want login information to remain store, add cookie information in emacs.</p>
+        <figure class="highlight">
+          <pre><code class="language-common-lisp" data-lang="common-lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">w3m-use-cookies</span> <span class="no">t</span><span class="p">)</span></code></pre>
+        </figure>
+        <p>To use twitter, download <code class="language-plaintext highlighter-rouge">twittering-mode.el</code> and store it somewhere. Add this to your <code class="language-plaintext highlighter-rouge">~/.emacs</code></p>
+        <figure class="highlight">
+          <pre><code class="language-common-lisp" data-lang="common-lisp"><span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">'load-path</span> <span class="s">"/PATH/TO/"</span><span class="p">)</span></code></pre>
+        </figure>
+        <h4 id="emacs-for-amusement">Emacs for Amusement</h4>
+        <p>Last but not least, emacs also has lots of interesting features for amusement.</p>
+        <p><img src="/img/doctor.png" alt="doctor" title="doctor"></p>
+        <ol>
+          <li>Type <code class="language-plaintext highlighter-rouge">M-x doctor</code> to talk to a psychologist.</li>
+          <li>Type <code class="language-plaintext highlighter-rouge">M-x tetris</code> to play tetris.</li>
+          <li>Type <code class="language-plaintext highlighter-rouge">M-x snake</code> to play classic snake game.</li>
+          <li>Type <code class="language-plaintext highlighter-rouge">M-x pong</code> to play ping pong.</li>
+          <li>Type <code class="language-plaintext highlighter-rouge">M-x mpuz</code> for multiplication puzzle.</li>
+          <li>Type <code class="language-plaintext highlighter-rouge">M-x hanoi</code> for computer solving towers of hanoi game</li>
+          <li>Type <code class="language-plaintext highlighter-rouge">M-x gomoku</code> for five-in-a-row against the computer 
+            8.Type <code class="language-plaintext highlighter-rouge">M-x dunnet</code> for text based adventure game.</li>
+          <li>Type <code class="language-plaintext highlighter-rouge">M-x life</code> to grow your own cell in emacs.</li>
+          <li>Type <code class="language-plaintext highlighter-rouge">M-x butterfly</code> if you're a <a href="http://xkcd.com/378/">xkcd</a> fan.</li>
+        </ol>
+        <p>For more visit emac's <a href="http://www.emacswiki.org/emacs/CategoryGames">games</a>.</p>
+        <h4 id="conclusion">Conclusion</h4>
+        <p>Emacs is not meant to be an <strong>all-in-one</strong> substitute for all softwares. Of course certain softwares are better at doing specific tasks. Emacs wins over the fact that I rarely needs to close it. One can easily customize and extend emacs using elisp, a dialect of lisp. If you're convinced of the power of emacs, let me welcome you to the <a href="http://www.emacswiki.org/emacs/ChurchOfEmacs">Church of Emacs</a>. If not, let's part ways with an old joke, "<em>The Emacs operaating system needs a better editor</em>".</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/how-vim-saved-my-day" title="Previous Post: How ViM Saved My Day">←Previous</a>     <a class="next-item" href="/blog/happiness" title="Next Post: Happiness">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/why-i-never-close-emacs';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/why-i-never-close-emacs';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
