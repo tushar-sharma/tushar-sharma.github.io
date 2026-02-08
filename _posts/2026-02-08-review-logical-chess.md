@@ -12,10 +12,10 @@ Why all this stress on the centre? Why is it so important? Pieces placed in the 
 
 Sequence of White and Black, use lichess's [website](https://lichess.org/analysis) for practice. 
 
-```
-White e4 Nf3
+- white moves **e4** 
 
-Black e5 
-```
+- black moves **e5**
 
-Nf3 makes a threat to the black's pawn.
+- white moves **Nf3**. This makes a threat to black's pawn. 
+
+- 
