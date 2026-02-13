@@ -510,6 +510,11 @@
   progress: 0
   comments: ""
 
+- title: "Return to Monkey Island"
+  pending: true
+  progress: 0
+  comments: "Steam deck crash fix: Launch on Desktop mode. Disable full screen from Videos settings. Proton version used : 9.0.4"
+
 # The Wolf Among Us : buy at $3.74
 # DOOM (2016) buy at 1.99
 # DOOM Eternal buy at 3.99
