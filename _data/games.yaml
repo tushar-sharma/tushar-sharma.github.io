@@ -207,9 +207,8 @@
   comments: "Graphics are dated. No Auto Save. It has a GTA like feel to it. There are classes to attend in school along with side quest. Broken audio in steam deck. Install **d3dx9** and **xact** DLL using winetricks to fix."
 
 - title: "Dave the Diver"
-  rating: 1
+  rating: 5
   pending: true
-  progress: 1
   comments: "Error: failed to load il2cpp on Proton Experimental. Fix: Use Proton 9.0-4. To use cobra shop, stand next to cobra and buy steal trap for tuna."
 
 - title: "Lego City Undercover"
