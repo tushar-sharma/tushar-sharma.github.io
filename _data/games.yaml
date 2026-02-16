@@ -208,7 +208,6 @@
 
 - title: "Dave the Diver"
   rating: 5
-  pending: true
   comments: "Error: failed to load il2cpp on Proton Experimental. Fix: Use Proton 9.0-4. To use cobra shop, stand next to cobra and buy steal trap for tuna."
 
 - title: "Lego City Undercover"
