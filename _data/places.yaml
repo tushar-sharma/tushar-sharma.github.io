@@ -1,9 +1,9 @@
-- name: Discount Tires
-  notes: I bought Falken tires for $436. They accept walk-ins, which is convenient.
-  address: 4051 Durham-Chapel Hill Blvd, Durham, NC 27707
-  category: car
-  map_link: "https://www.google.com/maps/search/?api=1&query=4051+Durham-Chapel-Hill+Blvd%2C+Durham%2C+NC+27707"
-  city: "Durham, NC"
+- name: Oh My Soul
+  notes: Had The Crunchy Mom with Hushpuppies (Cheddar Jalapeño). Was good.
+  address: 3046 N Davidson St, Charlotte, NC 28205
+  category: food
+  map_link: "https://www.google.com/maps/search/?api=1&query=3046+N+Davidson+St%2C+Charlotte%2C+NC+28205"
+  city: "Charlotte, NC"
 
 - name: "Marion Diehl Center"
   notes: "Wednesday badminton indoor play between 7pm-9pm. Call them ahead to register for the session."
