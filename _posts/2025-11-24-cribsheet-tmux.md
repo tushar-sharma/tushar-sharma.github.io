@@ -1,11 +1,11 @@
 ---
 published: false
 tags:
- - tmux
+  - tmux
 ---
 
 
-1. First copy the config 
+## Install the config
 
 
 ```bash
@@ -13,8 +13,16 @@ cd
 curl -O https://raw.githubusercontent.com/tushar-sharma/dotfiles/refs/heads/master/.tmux.conf
 ```
 
-2. Rename the terminal : `ctrl + ,` 
+## Run commands
 
-3. Rename the pane: `cltr + :` and then type `select-pane -T <your name>` 
+Use Ctrl + a as the tmux prefix, then run these commands:
 
-4. View all the pane : ```cltrl + w` 
+- **Rename terminal** : Press , (comma).
+
+- **Rename the pane**: Type `select-pane -T <your name>`
+
+- **View all panes**: Press `w`
+
+- **Reset pane size**: Press '+'
+
+- **Move/resize the current pane**: Use H, J, K, L to move left, down, up, and right.
