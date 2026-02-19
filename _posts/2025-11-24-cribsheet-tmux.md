@@ -33,4 +33,16 @@ Use `Ctrl + a` as the tmux prefix, then run these commands:
 
 - **Copy mode:**: prefix + `[` then use arrows/vi keys
 
+- **Detach session:** prefix + d
+
+- **List sessions:**: `tmux ls`
+
+- **Reattach:** `tmux attach -t <name>`
+
+- **Rename session:** prefix + $
+
+- **Swap pane positions:** prefix + { or }
+
+- **Zoom/unzoom pane:** prefix + z
+
 
