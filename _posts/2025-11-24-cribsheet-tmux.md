@@ -15,14 +15,22 @@ curl -O https://raw.githubusercontent.com/tushar-sharma/dotfiles/refs/heads/mast
 
 ## Run commands
 
-Use Ctrl + a as the tmux prefix, then run these commands:
+Use `Ctrl + a` as the tmux prefix, then run these commands:
 
-- **Rename terminal** : Press , (comma).
+- **Rename terminal** : prefix + ',' (comma)
 
 - **Rename the pane**: Type `select-pane -T <your name>`
 
-- **View all panes**: Press `w`
+- **View all panes**: prefix + `w`
 
-- **Reset pane size**: Press '+'
+- **Reset pane size**: prefix + '+'
 
-- **Move/resize the current pane**: Use H, J, K, L to move left, down, up, and right.
+- **Move/resize the current pane**: prefix Use H, J, K, L to move left, down, up, and right.
+
+- **Split horizontally:** prefix + `"`
+
+- **Split vertically:** prefix + `%`
+
+- **Copy mode:**: prefix + `[` then use arrows/vi keys
+
+
