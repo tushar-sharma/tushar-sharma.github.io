@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:site_name" content="Tushar Sharma">
+<title>Exploring the Power of Outlier Detection in Regression Analysis</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@richa gairola">
+    <meta name="twitter:title" content="Exploring the Power of Outlier Detection in Regression Analysis">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="/img/dog-computer.jpeg">
+    <meta property="og:image" content="/img/dog-computer.jpeg">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Exploring the Power of Outlier Detection in Regression Analysis | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3">
+    <meta property="og:title" content="Exploring the Power of Outlier Detection in Regression Analysis">
+    <meta name="author" content="richa gairola">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Imagine you have a magical tool called studentized residuals that helps you explore the secrets hidden in data. These residuals are like detectives who investigate the influence and odd behaviors of individual data points. They compare the actual values of something you're trying to predict with the values your model predicts, and then they measure how different they are. By using a special formula, they make sure the measurements are fair, no matter what model or dataset you're using.">
+    <meta property="og:description" content="Imagine you have a magical tool called studentized residuals that helps you explore the secrets hidden in data. These residuals are like detectives who investigate the influence and odd behaviors of individual data points. They compare the actual values of something you're trying to predict with the values your model predicts, and then they measure how different they are. By using a special formula, they make sure the measurements are fair, no matter what model or dataset you're using.">
+    <link rel="canonical" href="https://randomwits.com/blog/outlier-detection-in-regression-analysis">
+    <meta property="og:url" content="https://randomwits.com/blog/outlier-detection-in-regression-analysis">
+    <meta property="og:site_name" content="RandomWits">
+    <meta property="og:image" content="https://randomwits.com/img/dog-computer.jpeg">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2023-06-15T00:00:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://randomwits.com/img/dog-computer.jpeg">
+    <meta property="twitter:title" content="Exploring the Power of Outlier Detection in Regression Analysis">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"richa gairola"},"dateModified":"2023-06-15T00:00:00+00:00","datePublished":"2023-06-15T00:00:00+00:00","description":"Imagine you have a magical tool called studentized residuals that helps you explore the secrets hidden in data. These residuals are like detectives who investigate the influence and odd behaviors of individual data points. They compare the actual values of something you&#39;re trying to predict with the values your model predicts, and then they measure how different they are. By using a special formula, they make sure the measurements are fair, no matter what model or dataset you&#39;re using.","headline":"Exploring the Power of Outlier Detection in Regression Analysis","image":"https://randomwits.com/img/dog-computer.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/outlier-detection-in-regression-analysis"},"url":"https://randomwits.com/blog/outlier-detection-in-regression-analysis"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <a style="cursor:pointer;" class="DarkReader_Button">
+            <i id="icon-dark" class="fa fa-cloud-moon"></i>
+          </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/places"><i class="fas fa-map-pin"></i> Places</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206"
+     crossorigin="anonymous"></script> -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Exploring the Power of Outlier Detection in Regression Analysis</h1>
+        <p>Tags:  <a class="mytag" href="/tag/sas" title="View posts tagged with: sas">sas</a>    <a class="mytag" href="/tag/richa%20gairola" title="View posts tagged with: richa gairola">richa gairola</a>    <a class="mytag" href="/tag/r" title="View posts tagged with: r">r</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <a href="/tag/richa%20gairola">
+              <img src="/img/richa_gairola.jpg" alt="Author">
+            </a>
+          </div>
+          <span class="author-name">Written by: 
+            Richa
+            Gairola
+          </span>
+        </div>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="/img/dog-computer.jpeg?w=800" alt="Featured image for Exploring the Power of Outlier Detection in Regression Analysis" style="max-width:100%; height:auto;">
+        </div>
+        <p>Imagine you have a magical tool called studentized residuals that helps you explore the secrets hidden in data. These residuals are like detectives who investigate the influence and odd behaviors of individual data points. They compare the actual values of something you're trying to predict with the values your model predicts, and then they measure how different they are. By using a special formula, they make sure the measurements are fair, no matter what model or dataset you're using.</p>
+        <p>The cool thing about studentized residuals is that they give you a superpower to spot outliers or extreme data points. If a studentized residual has a big number (positive or negative), it means that the data point is behaving very differently from what your model expected. It's like a rebel breaking the rules! Positive residuals show that the actual value is higher than predicted, while negative residuals mean it's lower. By understanding these residuals, you can find those special data points that have a strong impact on your model and might change your conclusions.</p>
+        <p>To make sense of these residuals, you need to look at their size and direction. Big numbers could mean something important, like a discovery waiting to be made. You compare the residuals to certain critical values, kind of like comparing your detective's findings to clues. And by doing this, you can understand how these residuals affect the overall analysis of your model.</p>
+        <p>So, studentized residuals are like your trusted companions in the world of data analysis. They help you understand the influence of data points, find the rebels that break the rules, and ensure you're making the most accurate predictions possible. With their help, you can unlock the secrets hidden within your data and make amazing discoveries!</p>
+        <h3 id="why-are-they-used-in-the-final-models">Why are they used in the final models?</h3>
+        <p>Studentized residuals are like special superpowers that help us create the most awesome and accurate models. They have some fantastic uses that make our models even better! Let's explore why they are so important:</p>
+        <ol>
+          <li>
+            <p><strong>Super Sleuths:</strong> Studentized residuals are like detectives who can spot unusual and important things in our data. They help us find those sneaky outliers and data points that behave strangely and might mess up our model. They make sure our model assumptions are in check!</p>
+          </li>
+          <li>
+            <p><strong>Model Upgrade:</strong> Imagine we have some superheroes in our data, like outliers or influential observations. These superheroes can have a big impact on our model's predictions. Studentized residuals help us identify them and make our model stronger. We can give them special attention and make sure they don't spoil our model's performance.</p>
+          </li>
+          <li>
+            <p><strong>Secret Messages:</strong> Studentized residuals hold secret messages about our data. They tell us about the patterns, trends, and relationships hidden within the numbers. By studying these residuals, we can discover amazing things about how our data is connected and find areas where we can improve our model even more!</p>
+          </li>
+          <li>
+            <p><strong>Comparing Heroes:</strong> Sometimes we have different models or different sets of data, and we want to see which one is the best. Studentized residuals can help us compare these models fairly. They give us a special measurement that tells us how far off our predictions are from reality. It's like a superpower that helps us see which model performs the best in different situations.</p>
+          </li>
+        </ol>
+        <p>By using studentized residuals in our final models, we become data superheroes! We can spot problems, improve our models, uncover hidden secrets, and make smart decisions based on what the numbers are telling us. So, let's embrace the power of studentized residuals and make our regression models supercharged!</p>
+        <p>Hey there, fellow data adventurers! Let's embark on an exciting journey into the world of studentized residuals using SAS. Imagine we have some super cool data stored in a dataset called 'YourData' (don't worry, you can change the name to something more awesome!). Here's how we can calculate those fascinating studentized residuals:</p>
+        <p><strong>Step 1:</strong> Casting the Regression Spell 🧙‍♀️ We'll use the magical PROC REG procedure in SAS to fit our regression model. We'll predict the values of our dependent variable using some independent variables like IndependentVariable1 and IndependentVariable2. Brace yourselves, the code is coming!</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex1.sas"></script> <button class="copy-button">Copy</button> </div>
+        <p><strong>Step 2:</strong> Unveiling the Residuals' Power 💪 Now, let's see what these studentized residuals have to say! We'll use another enchantment called PROC PRINT to display the studentized residuals. It's like opening a treasure chest filled with intriguing numbers. Get ready for the grand reveal!</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex2.sas"></script> <button class="copy-button">Copy</button> </div>
+        <p>And voila! The SAS sorcery will conjure up the studentized residuals, revealing their fascinating values. It might look something like this:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>/<span class="k">**</span>OUTPUT<span class="k">**</span>/
+
+StudentizedResiduals
+
+0.1245
+
+<span class="nt">-0</span>.3421
+
+0.7589
+
+<span class="nt">-1</span>.2567
+</code></pre>
+          </div>
+        </div>
+        <p>You'll see a list of those extraordinary residuals, each one representing a special deviation from the predicted values. It's like discovering hidden secrets about our data!</p>
+        <p>Remember to customize the code with your own dataset name and variable names to make it truly magical. Now, armed with SAS and the power of studentized residuals, you can unlock the mysteries of your regression models and conquer the realm of data analysis! Happy exploring! 🌟🔮</p>
+        <h3 id="embarking-on-an-epic-quest-with-r-to-unravel-the-magic-of-studentized-residuals">Embarking on an Epic Quest with R to Unravel the Magic of Studentized Residuals!</h3>
+        <p>In our previous adventure, we witnessed the SAS sorcery to calculate studentized residuals. Now, let's unveil the captivating R incantation that accomplishes the same feat. Brace yourselves for a mesmerizing experience!</p>
+        <p>Assuming you have donned the R wizard's robe and your dataset has been summoned into the R universe, let's weave the code together:</p>
+        <p><strong>Step 1:</strong> Conjuring the Regression Spell 🧙‍♂️ We shall begin by fitting a magical regression model using the extraordinary capabilities of R. Imagine you have already crafted a wondrous fitted regression model object called 'model' (you can choose a name that resonates with your inner sorcerer).</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex3.r"></script> <button class="copy-button">Copy</button> </div>
+        <p><strong>Step 2:</strong>  Unveiling the Residuals' Enigma 💫 Prepare to witness the astounding power of studentized residuals as we unveil their hidden secrets! With a simple wave of the R wand, we can showcase these mysterious values. It's like unraveling the pages of an ancient scroll containing the numerical wonders of our data. Are you prepared for this revelation?</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/61c45d98524ca2471059dbdb216b631b.js?file=ex4.r"></script> <button class="copy-button">Copy</button> </div>
+        <p>Behold! The R sorcery will manifest the studentized residuals before your eyes, illuminating the path to enlightenment. You will be greeted with a mesmerizing display, similar to this:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>0.1245
+
+<span class="nt">-0</span>.3421
+
+0.7589
+
+<span class="nt">-1</span>.2567
+</code></pre>
+          </div>
+        </div>
+        <p>Each of these bewitching residuals represents a unique departure from the predicted values. They hold the key to uncovering hidden insights within our data!</p>
+        <p>Remember to replace 'model' with the actual name of your fitted regression model object. With the powerful combination of R and the guidance of studentized residuals, you can delve deeper into the mysteries of your regression models and embark on thrilling data adventures! May your journey be filled with wonder and discovery! 🌟🔮</p>
+        <h3 id="unveiling-the-mystical-limitations-of-studentized-residuals---when-the-magic-fades-away">Unveiling the Mystical Limitations of Studentized Residuals - When the Magic Fades Away</h3>
+        <p>Listen closely, young apprentices, as we delve into the secrets of studentized residuals and uncover the circumstances where their enchanting powers may wane. Remember, even the mightiest spells have their limits!</p>
+        <ol>
+          <li>
+            <p><strong>The Tiny Sample Enigma:</strong> Picture a scenario where your dataset is but a meager collection of observations. In such cases, the reliability of studentized residuals may dwindle. With too few data points, the calculations required for studentization may lack the accuracy needed to estimate the elusive standard deviations. Before relying on these mystical residuals, ensure that your sample size is sufficiently magical!</p>
+          </li>
+          <li>
+            <p><strong>The Assumption Abyss:</strong> Linear regression, a powerful magical framework, comes with its own set of assumptions. If these assumptions, such as normality, constant variance, and independence of errors, are severely violated, the insight provided by studentized residuals may diminish. Fear not, for there are alternative paths to tread! Addressing the violations and embracing alternative regression methods or robust techniques may hold the key to unlocking meaningful insights.</p>
+          </li>
+          <li>
+            <p><strong>Non-linear Sorcery and the Outlier Riddle:</strong> Ah, non-linear regression models and their intricate spells! When exploring these captivating realms or venturing into models with complex functional forms, the interpretive prowess of studentized residuals may falter. Outlier detection, a task often entrusted to studentized residuals in linear regression, becomes a more enigmatic quest in these domains. Fear not, for unique methods tailored to each model's arcane nature shall guide your way!</p>
+          </li>
+          <li>
+            <p><strong>The Interpretability Mirage:</strong> Let us not forget that studentized residuals are but one piece of the grand puzzle. In some cases, their role as outcome variables may offer little additional insight beyond what other diagnostic measures can reveal. Should your quest be to assess model fit, evaluate residuals, or unearth outliers, alternative diagnostic techniques or captivating visualizations may offer a more intuitive glimpse into the mysteries that lie within your data.
+              Remember, young apprentices, while studentized residuals possess great power, they are not the sole enchantment in the realm of regression analysis. Embrace their might when the circumstances align, but do not be afraid to wield alternative tools and embark on new adventures to unravel the secrets that dwell within your data!</p>
+          </li>
+        </ol>
+        <p>With this newfound knowledge of studentized residuals, young minds are equipped to embark on their own journeys into the realm of regression analysis. But remember, dear readers, that the true magic lies not just in the techniques and formulas we employ, but in the curiosity and creativity we bring to our investigations. As you venture forth, may you wield the power of studentized residuals wisely, recognizing their strengths and limitations. Embrace the challenges, seek alternative paths when needed, and never cease in your pursuit of understanding the hidden patterns and relationships that shape our world.</p>
+        <p>May your data-driven adventures be filled with wonder and discovery. Farewell, young statisticians, as you set forth on your quest to unlock the secrets of model fit with the aid of studentized residuals. May your journey be filled with excitement, enlightenment, and the thrill of unraveling the mysteries that lie within your data. Happy analyzing!</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/publish-to-msk-kafka-using-aws-lambda-python" title="Previous Post: Publish to MSK Kafka using AWS Lambda Python">←Previous</a>     <a class="next-item" href="/blog/people-and-their-stories-marianne-bachmeier" title="Next Post: People and Their Stories - Marianne Bachmeier">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/outlier-detection-in-regression-analysis';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/outlier-detection-in-regression-analysis';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

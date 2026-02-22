@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:site_name" content="Tushar Sharma">
+<title>Getting Started with decorators in Python</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Getting Started with decorators in Python">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://unsplash.com/photos/Cl-OpYWFFm0/download?w=437">
+    <meta property="og:image" content="https://unsplash.com/photos/Cl-OpYWFFm0/download?w=437">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Getting Started with decorators in Python | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3">
+    <meta property="og:title" content="Getting Started with decorators in Python">
+    <meta name="author" content="Tushar Sharma">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.">
+    <meta property="og:description" content="In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.">
+    <link rel="canonical" href="https://randomwits.com/blog/getting-started-decorators-python">
+    <meta property="og:url" content="https://randomwits.com/blog/getting-started-decorators-python">
+    <meta property="og:site_name" content="RandomWits">
+    <meta property="og:image" content="https://unsplash.com/photos/Cl-OpYWFFm0/download?w=437">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2022-05-29T00:00:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://unsplash.com/photos/Cl-OpYWFFm0/download?w=437">
+    <meta property="twitter:title" content="Getting Started with decorators in Python">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2022-05-29T00:00:00+00:00","datePublished":"2022-05-29T00:00:00+00:00","description":"In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.","headline":"Getting Started with decorators in Python","image":"https://unsplash.com/photos/Cl-OpYWFFm0/download?w=437","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/getting-started-decorators-python"},"url":"https://randomwits.com/blog/getting-started-decorators-python"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <a style="cursor:pointer;" class="DarkReader_Button">
+            <i id="icon-dark" class="fa fa-cloud-moon"></i>
+          </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/places"><i class="fas fa-map-pin"></i> Places</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206"
+     crossorigin="anonymous"></script> -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Getting Started with decorators in Python</h1>
+        <p>Tags:  <a class="mytag" href="/tag/python" title="View posts tagged with: python">python</a>    </p>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="https://unsplash.com/photos/Cl-OpYWFFm0/download?w=800" alt="Featured image for Getting Started with decorators in Python" style="max-width:100%; height:auto;">
+        </div>
+        <p>In python, everything is an object. So functons are also objects which can be passed around. A decorator is a function that receives a function and returns a function.</p>
+        <h2 id="use-case-1">Use case 1</h2>
+        <h3 id="without-using-decorator">Without using decorator</h3>
+        <p>Let's say we have two simple functions to add and multiply numbers.</p>
+        <script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex1.py"></script>
+        <p>This will print</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>6
+5
+</code></pre>
+          </div>
+        </div>
+        <p>Now lets say we want to print <code class="language-plaintext highlighter-rouge">execution</code> time in both these functions. We could do something like this</p>
+        <script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex2.py"></script>
+        <p>This will print</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">multiply_me</span> <span class="n">took</span> <span class="mf">2.00507378578</span>
+<span class="mi">6</span>
+<span class="n">add_me</span> <span class="n">took</span> <span class="mf">2.00509095192</span>
+<span class="mi">5</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Here we are repeating our logic for logging execution time. This can be solved by using decorators.</p>
+        <h3 id="with-using-decorator">With using decorator</h3>
+        <p>Let's create a wrapper function called <code class="language-plaintext highlighter-rouge">timeme</code> that will do the following-</p>
+        <ol>
+          <li>Receive the <code class="language-plaintext highlighter-rouge">function</code> as an argument</li>
+          <li>Execute the <code class="language-plaintext highlighter-rouge">function</code>
+          </li>
+          <li>Log the execution time</li>
+        </ol>
+        <script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex3.py"></script>
+        <p>Next we can <code class="language-plaintext highlighter-rouge">decorate</code> our functions using syntatic sugar like this</p>
+        <script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex4.py"></script>
+        <p>This is similar to the following</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">multiply_me</span> <span class="o">=</span> <span class="nf">timeme</span><span class="p">(</span><span class="n">multiply_me</span><span class="p">)</span>
+
+<span class="n">add_me</span> <span class="o">=</span> <span class="nf">timeme</span><span class="p">(</span><span class="n">add_me</span><span class="p">)</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Lastly runnig the functions will be like</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="nf">multiply_me</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">add_me</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre>
+          </div>
+        </div>
+        <p>This will print</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>multiply_me took 2.00506806374
+6
+add_me took 2.00509810448
+5
+</code></pre>
+          </div>
+        </div>
+        <h2 id="use-case-2">Use case 2</h2>
+        <h3 id="without-using-decorator-1">Without using decorator</h3>
+        <p>Lets define a function which depends on type of argument.</p>
+        <script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex5.py"></script>
+        <p>We can invoke the function with different arguments.</p>
+        <div class="language-python highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nf">process_data</span><span class="p">(</span><span class="nf">set</span><span class="p">())</span>
+
+<span class="nf">process_data</span><span class="p">(</span><span class="sh">"</span><span class="s">string</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="nf">process_data</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+
+<span class="nf">process_data</span><span class="p">(</span><span class="nc">Dog</span><span class="p">(</span><span class="sh">"</span><span class="s">bowbow</span><span class="sh">"</span><span class="p">))</span>
+</code></pre>
+          </div>
+        </div>
+        <p>This will print</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Default executed <span class="nb">set</span><span class="o">()</span>
+str executed string
+int executed 123
+Dog executed bowbow
+</code></pre>
+          </div>
+        </div>
+        <h3 id="with-using-decorator-1">With using decorator</h3>
+        <p>This coding style becomes hard to read as the number of cases increases. We can use <code class="language-plaintext highlighter-rouge">singledispatch</code> decorator.</p>
+        <script src="https://gist.github.com/tushar-sharma/91b5ee39ccca52fad0776b5571f4fa1c.js?file=ex6.py"></script>
+        <p>This will print the same result</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Default executed <span class="nb">set</span><span class="o">()</span>
+str executed string
+int executed 123
+Dog executed bowbow
+</code></pre>
+          </div>
+        </div>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/minimum-consecutive-cards-to-pick-up-solution" title="Previous Post: Minimum Consecutive Cards to Pick up solution leetcode">←Previous</a>     <a class="next-item" href="/blog/create-a-lambda-function-to-run-sql-queries-in-redshift-cluster" title="Next Post: Create a Lambda Function to run SQL queries in Redshift Cluster">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/getting-started-decorators-python';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/getting-started-decorators-python';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

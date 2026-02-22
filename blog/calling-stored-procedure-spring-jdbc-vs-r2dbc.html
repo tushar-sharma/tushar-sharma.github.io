@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:site_name" content="Tushar Sharma">
+<title>Calling Stored Procedure in Spring using jdbc vs r2dbc</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@tushar sharma">
+    <meta name="twitter:title" content="Calling Stored Procedure in Spring using jdbc vs r2dbc">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.pinimg.com/originals/da/a4/64/daa4647f6b6159a23763884b92597bcf.jpg">
+    <meta property="og:image" content="https://i.pinimg.com/originals/da/a4/64/daa4647f6b6159a23763884b92597bcf.jpg">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Calling Stored Procedure in Spring using jdbc vs r2dbc | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3">
+    <meta property="og:title" content="Calling Stored Procedure in Spring using jdbc vs r2dbc">
+    <meta name="author" content="tushar sharma">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Calling stored procedures from Spring Boot? You have two paths: JDBC (blocking) or R2DBC (reactive).">
+    <meta property="og:description" content="Calling stored procedures from Spring Boot? You have two paths: JDBC (blocking) or R2DBC (reactive).">
+    <link rel="canonical" href="https://randomwits.com/blog/calling-stored-procedure-spring-jdbc-vs-r2dbc">
+    <meta property="og:url" content="https://randomwits.com/blog/calling-stored-procedure-spring-jdbc-vs-r2dbc">
+    <meta property="og:site_name" content="RandomWits">
+    <meta property="og:image" content="https://i.pinimg.com/originals/da/a4/64/daa4647f6b6159a23763884b92597bcf.jpg">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-01-15T00:00:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://i.pinimg.com/originals/da/a4/64/daa4647f6b6159a23763884b92597bcf.jpg">
+    <meta property="twitter:title" content="Calling Stored Procedure in Spring using jdbc vs r2dbc">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"tushar sharma"},"dateModified":"2026-01-15T00:00:00+00:00","datePublished":"2026-01-15T00:00:00+00:00","description":"Calling stored procedures from Spring Boot? You have two paths: JDBC (blocking) or R2DBC (reactive).","headline":"Calling Stored Procedure in Spring using jdbc vs r2dbc","image":"https://i.pinimg.com/originals/da/a4/64/daa4647f6b6159a23763884b92597bcf.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/calling-stored-procedure-spring-jdbc-vs-r2dbc"},"url":"https://randomwits.com/blog/calling-stored-procedure-spring-jdbc-vs-r2dbc"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <a style="cursor:pointer;" class="DarkReader_Button">
+            <i id="icon-dark" class="fa fa-cloud-moon"></i>
+          </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/places"><i class="fas fa-map-pin"></i> Places</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206"
+     crossorigin="anonymous"></script> -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Calling Stored Procedure in Spring using jdbc vs r2dbc</h1>
+        <p>Tags:  <a class="mytag" href="/tag/spring-boot" title="View posts tagged with: spring-boot">spring-boot</a>    <a class="mytag" href="/tag/jdbc" title="View posts tagged with: jdbc">jdbc</a>    <a class="mytag" href="/tag/r2dbc" title="View posts tagged with: r2dbc">r2dbc</a>    <a class="mytag" href="/tag/java" title="View posts tagged with: java">java</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <p>Calling stored procedures from Spring Boot? You have two paths: JDBC (blocking) or R2DBC (reactive).</p>
+        <h2 id="whats-a-stored-procedure">What's a stored procedure</h2>
+        <ul>
+          <li>
+            <p>it's a sql code that's saved and executed on database server</p>
+          </li>
+          <li>
+            <p>it's like a resuable function that has business logic</p>
+          </li>
+          <li>
+            <p>can accept input parameter, produce output parameters</p>
+          </li>
+        </ul>
+        <p>e.g.</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/ca33ddf1335fdc8c63f4fc23f2dd6ef1.js?file=store.sql"></script> <button class="copy-button">Copy</button> </div>
+        <h2 id="the-two-paths-jdbc-vs-r2dbc">The Two Paths: JDBC vs R2DBC</h2>
+        <p>There are two distinct stacks for database access in Java:</p>
+        <table>
+          <thead>
+            <tr>
+              <th> </th>
+              <th><strong>JDBC (Blocking)</strong></th>
+              <th><strong>R2DBC (Reactive)</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Driver</strong></td>
+              <td>JDBC Driver</td>
+              <td>R2DBC Driver</td>
+            </tr>
+            <tr>
+              <td><strong>Connection</strong></td>
+              <td>DataSource</td>
+              <td>ConnectionFactory</td>
+            </tr>
+            <tr>
+              <td><strong>Client API</strong></td>
+              <td>JdbcTemplate, SimpleJdbcCall</td>
+              <td>DatabaseClient</td>
+            </tr>
+            <tr>
+              <td><strong>ORM</strong></td>
+              <td>Spring Data JPA</td>
+              <td>Spring Data R2DBC</td>
+            </tr>
+            <tr>
+              <td><strong>Annotation</strong></td>
+              <td><code class="language-plaintext highlighter-rouge">@Procedure</code></td>
+              <td><code class="language-plaintext highlighter-rouge">@Query</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Key insight</strong>: These are separate stacks. You can't mix them - <code class="language-plaintext highlighter-rouge">JdbcTemplate</code> only works with JDBC drivers, and <code class="language-plaintext highlighter-rouge">DatabaseClient</code> only works with R2DBC drivers.</p>
+        <div style="text-align: center;">
+          <img class="plantuml" src="http://www.plantuml.com/plantuml/svg/~h407374617274756d6c0a736b696e706172616d206261636b67726f756e64436f6c6f72207472616e73706172656e740a736b696e706172616d2064656661756c74466f6e744e616d6520417269616c0a736b696e706172616d2072656374616e676c65207b0a20202020526f756e64436f726e65722031300a20202020426f72646572436f6c6f7220233535353535350a7d0a0a646174616261736520222a2a44415441424153452a2a2220617320646220233338384533430a72656374616e676c6520222a2a50726f746f636f6c2a2a5c6e506f73746772657320576972652050726f746f636f6c222061732070726f746f636f6c20233443414635300a0a72656374616e676c6520222a2a4a444243204472697665722a2a5c6e28426c6f636b696e672922206173206a64626320233145383845350a72656374616e676c6520222a2a5232444243204472697665722a2a5c6e285265616374697665292220617320723264626320234642384330300a0a72656374616e676c6520222a2a44617461536f757263652a2a5c6e48696b6172694350202f204472697665724d616e616765722220617320647320233432413546350a72656374616e676c6520222a2a436f6e6e656374696f6e466163746f72792a2a5c6e523244424320506f6f6c2220617320636620234646413732360a0a72656374616e676c6520222a2a4a64626354656d706c6174652a2a5c6e53696d706c654a64626343616c6c22206173206a7420233634423546360a72656374616e676c6520222a2a4461746162617365436c69656e742a2a2220617320646320234646423734440a0a72656374616e676c6520222a2a4a5041202f2048696265726e6174652a2a5c6e2846756c6c204f524d29222061732068696265726e61746520233135363543300a72656374616e676c6520222a2a4261736963204d617070696e672a2a5c6e284e6f204f524d29222061732062617369634d617070696e6720234635374330300a0a72656374616e676c6520222a2a537072696e672044617461204a50412a2a5c6e4050726f63656475726522206173206a706120233930434146390a72656374616e676c6520222a2a537072696e6720446174612052324442432a2a5c6e405175657279222061732072326462635265706f20234646434338300a0a6462202d646f776e2d3e2070726f746f636f6c0a70726f746f636f6c202d646f776e2d3e206a6462630a70726f746f636f6c202d646f776e2d3e2072326462630a6a646263202d646f776e2d3e2064730a7232646263202d646f776e2d3e2063660a6473202d646f776e2d3e206a740a6366202d646f776e2d3e2064630a6a74202d646f776e2d3e2068696265726e6174650a6463202d646f776e2d3e2062617369634d617070696e670a68696265726e617465202d646f776e2d3e206a70610a62617369634d617070696e67202d646f776e2d3e2072326462635265706f0a40656e64756d6c">
+        </div>
+        <h2 id="where-does-hibernate-fit">Where Does Hibernate Fit?</h2>
+        <p>In the JDBC stack, there's an important layer between JdbcTemplate and Spring Data JPA:</p>
+        <div style="text-align: center;">
+          <img class="plantuml" src="http://www.plantuml.com/plantuml/svg/~h407374617274756d6c0a736b696e706172616d206261636b67726f756e64436f6c6f72207472616e73706172656e740a736b696e706172616d2064656661756c74466f6e744e616d6520417269616c0a736b696e706172616d2072656374616e676c65207b0a20202020526f756e64436f726e65722031300a20202020426f72646572436f6c6f7220233535353535350a7d0a0a72656374616e676c6520222a2a537072696e672044617461204a50412a2a5c6e4050726f6365647572652c207265706f7369746f72696573222061732073646a706120233930434146390a72656374616e676c6520222a2a4a50412a2a5c6e53706563696669636174696f6e202d206a75737420696e746572666163657322206173206a706120233634423546360a72656374616e676c6520222a2a48696265726e6174652a2a5c6e496d706c656d656e746174696f6e202d2061637475616c20636f6465222061732068696265726e61746520233432413546350a72656374616e676c6520222a2a4a4442432a2a5c6e4c6f772d6c6576656c2064617461626173652061636365737322206173206a64626320233145383845350a0a73646a7061202d646f776e2d3e206a70610a6a7061202d646f776e2d3e2068696265726e6174650a68696265726e617465202d646f776e2d3e206a6462630a40656e64756d6c">
+        </div>
+        <p><strong>JPA</strong> (Java Persistence API) is just a <em>specification</em> - interfaces that define what an ORM should do. No actual code.</p>
+        <p><strong>Hibernate</strong> is an <em>implementation</em> of JPA - the actual code that does the work. EclipseLink is another implementation.</p>
+        <p><strong>Hibernate does NOT work with R2DBC.</strong> It's built on JDBC (blocking). That's why <code class="language-plaintext highlighter-rouge">@Procedure</code> only exists in the JDBC stack.</p>
+        <h2 id="orm-vs-repository">ORM vs Repository</h2>
+        <p>These are different concepts:</p>
+        <p><strong>Repository</strong> = A pattern for abstracting data access (find, save, delete). Both stacks have this.</p>
+        <p><strong>ORM</strong> (Object-Relational Mapping) = Maps Java objects ↔ database tables with advanced features:</p>
+        <ul>
+          <li>Class → Table mapping</li>
+          <li>Relationships (OneToMany, ManyToOne)</li>
+          <li>Lazy loading</li>
+          <li>Caching</li>
+          <li>Dirty checking (tracking changes)</li>
+        </ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>JDBC + Hibernate</th>
+              <th>R2DBC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Repository</strong></td>
+              <td>JpaRepository</td>
+              <td>ReactiveCrudRepository</td>
+            </tr>
+            <tr>
+              <td><strong>ORM</strong></td>
+              <td>Hibernate (full)</td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td><strong>Entity mapping</strong></td>
+              <td>
+<code class="language-plaintext highlighter-rouge">@Entity</code>, <code class="language-plaintext highlighter-rouge">@OneToMany</code>
+</td>
+              <td>
+<code class="language-plaintext highlighter-rouge">@Table</code>, <code class="language-plaintext highlighter-rouge">@Id (basic)</code>
+</td>
+            </tr>
+            <tr>
+              <td><strong>Lazy loading</strong></td>
+              <td>Yes</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td><strong>Relationships</strong></td>
+              <td>Automatic</td>
+              <td>Manual</td>
+            </tr>
+            <tr>
+              <td><strong>Caching</strong></td>
+              <td>Yes</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>R2DBC is more "direct" - it talks to the database through drivers without a heavy ORM layer. Less magic, more control, but more manual work for complex scenarios.</p>
+        <h2 id="how-to-tell-which-stack-youre-using">How to Tell Which Stack You're Using</h2>
+        <p>Quick ways to identify the stack in code:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>See this?</th>
+              <th>You're using</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">DataSource</code></td>
+              <td>JDBC</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">ConnectionFactory</code></td>
+              <td>R2DBC</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">@Entity</code></td>
+              <td>JPA/Hibernate (JDBC)</td>
+            </tr>
+            <tr>
+              <td>
+<code class="language-plaintext highlighter-rouge">@Table</code> (without <code class="language-plaintext highlighter-rouge">@Entity</code>)</td>
+              <td>R2DBC</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">JdbcTemplate</code></td>
+              <td>JDBC</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">DatabaseClient</code></td>
+              <td>R2DBC</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">JpaRepository</code></td>
+              <td>JPA/Hibernate (JDBC)</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">ReactiveCrudRepository</code></td>
+              <td>R2DBC</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">@Procedure</code></td>
+              <td>JPA (JDBC only)</td>
+            </tr>
+            <tr>
+              <td>Returns <code class="language-plaintext highlighter-rouge">Mono</code>/<code class="language-plaintext highlighter-rouge">Flux</code>
+</td>
+              <td>R2DBC</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Connection management is different:</strong></p>
+        <ul>
+          <li>JDBC uses <code class="language-plaintext highlighter-rouge">DataSource</code> (blocking connection pool like HikariCP)</li>
+          <li>R2DBC uses <code class="language-plaintext highlighter-rouge">ConnectionFactory</code> (reactive connection pool)</li>
+        </ul>
+        <p>You cannot use <code class="language-plaintext highlighter-rouge">DataSource</code> with <code class="language-plaintext highlighter-rouge">DatabaseClient</code> - they're from different worlds.</p>
+        <h2 id="drivermanager-vs-datasource">DriverManager vs DataSource</h2>
+        <p>Both are ways to get a database connection, but <code class="language-plaintext highlighter-rouge">DataSource</code> is the modern choice.</p>
+        <p><strong>DriverManager</strong> (JDBC 1.0) - the old way:</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/ca33ddf1335fdc8c63f4fc23f2dd6ef1.js?file=DriverManager.java"></script> <button class="copy-button">Copy</button> </div>
+        <p><strong>DataSource</strong> (JDBC 2.0+) - the preferred way:</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/ca33ddf1335fdc8c63f4fc23f2dd6ef1.js?file=DataSource.java"></script> <button class="copy-button">Copy</button> </div>
+        <p>Why <code class="language-plaintext highlighter-rouge">DataSource</code> is preferred:</p>
+        <ul>
+          <li>
+            <strong>Connection pooling</strong> - reuses connections instead of creating new ones</li>
+          <li>
+            <strong>Configuration externalized</strong> - connection details in properties, not code</li>
+          <li>
+            <strong>Transparent to application</strong> - switch databases without code changes</li>
+          <li>
+            <strong>Health monitoring</strong> - pools can validate connections before use</li>
+        </ul>
+        <p>In Spring Boot, just add <code class="language-plaintext highlighter-rouge">spring.datasource.*</code> properties and you get a <code class="language-plaintext highlighter-rouge">HikariDataSource</code> automatically.</p>
+        <h2 id="connectionfactory-r2dbc">ConnectionFactory (R2DBC)</h2>
+        <p>For R2DBC, you use <code class="language-plaintext highlighter-rouge">ConnectionFactory</code> instead of <code class="language-plaintext highlighter-rouge">DataSource</code>:</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/ca33ddf1335fdc8c63f4fc23f2dd6ef1.js?file=ConnectionFactory.java"></script> <button class="copy-button">Copy</button> </div>
+        <p>In Spring Boot, just add <code class="language-plaintext highlighter-rouge">spring.r2dbc.*</code> properties:</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/ca33ddf1335fdc8c63f4fc23f2dd6ef1.js?file=application.yaml"></script> <button class="copy-button">Copy</button> </div>
+        <p>Spring Boot auto-configures <code class="language-plaintext highlighter-rouge">ConnectionFactory</code> and <code class="language-plaintext highlighter-rouge">DatabaseClient</code> for you.</p>
+        <h2 id="jdbc-stack-blocking">JDBC Stack (Blocking)</h2>
+        <p>Everything in this stack <strong>blocks the thread</strong> while waiting for the database.</p>
+        <h3 id="raw-jdbctemplate">Raw JdbcTemplate</h3>
+        <p>Full control, but verbose:</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/ca33ddf1335fdc8c63f4fc23f2dd6ef1.js?file=JdbcTemplate.java"></script> <button class="copy-button">Copy</button> </div>
+        <p>Why <code class="language-plaintext highlighter-rouge">registerOutParameter</code>? The JDBC driver needs to know which parameters are outputs <strong>before</strong> execution. After the call completes, it retrieves the value from that registered position.</p>
+        <h3 id="simplejdbccall">SimpleJdbcCall</h3>
+        <p>Declarative, less boilerplate:</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/ca33ddf1335fdc8c63f4fc23f2dd6ef1.js?file=SimpleJdbcCall.java"></script> <button class="copy-button">Copy</button> </div>
+        <h3 id="spring-data-jpa-procedure">Spring Data JPA <code class="language-plaintext highlighter-rouge">@Procedure</code>
+        </h3>
+        <p>The cleanest - but <strong>only works with JDBC</strong> (blocking):</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/ca33ddf1335fdc8c63f4fc23f2dd6ef1.js?file=MathRepository.java"></script> <button class="copy-button">Copy</button> </div>
+        <p><code class="language-plaintext highlighter-rouge">@Procedure</code> is a JPA annotation. JPA is built on JDBC, so it's inherently blocking. There's no reactive equivalent.</p>
+        <h2 id="r2dbc-stack-reactive">R2DBC Stack (Reactive)</h2>
+        <p>Everything in this stack is <strong>non-blocking</strong> and returns <code class="language-plaintext highlighter-rouge">Mono</code>/<code class="language-plaintext highlighter-rouge">Flux</code>.</p>
+        <p>Two ways to execute queries - same pattern as JDBC:</p>
+        <table>
+          <thead>
+            <tr>
+              <th> </th>
+              <th><strong>Programmatic (Client)</strong></th>
+              <th><strong>Declarative (Repository)</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>JDBC</strong></td>
+              <td><code class="language-plaintext highlighter-rouge">JdbcTemplate.query()</code></td>
+              <td>
+<code class="language-plaintext highlighter-rouge">@Query</code> in JpaRepository</td>
+            </tr>
+            <tr>
+              <td><strong>R2DBC</strong></td>
+              <td><code class="language-plaintext highlighter-rouge">DatabaseClient.sql()</code></td>
+              <td>
+<code class="language-plaintext highlighter-rouge">@Query</code> in ReactiveCrudRepository</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 id="databaseclientsql---programmatic">DatabaseClient.sql() - Programmatic</h3>
+        <p>The reactive equivalent of <code class="language-plaintext highlighter-rouge">JdbcTemplate</code>. You write code to build and execute queries manually:</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/ca33ddf1335fdc8c63f4fc23f2dd6ef1.js?file=DatabaseClient.java"></script> <button class="copy-button">Copy</button> </div>
+        <p>Use this when you need full control - dynamic queries, complex mappings, or operations that don't fit the repository pattern.</p>
+        <h3 id="query-in-repository---declarative">
+          <code class="language-plaintext highlighter-rouge">@Query</code> in Repository - Declarative</h3>
+        <p>You annotate a method and Spring generates the implementation:</p>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/ca33ddf1335fdc8c63f4fc23f2dd6ef1.js?file=Query.java"></script> <button class="copy-button">Copy</button> </div>
+        <p>Same SQL, but Spring handles the binding and execution. You just call <code class="language-plaintext highlighter-rouge">mathRepository.addNumbers(2, 3)</code>.</p>
+        <p><strong>No <code class="language-plaintext highlighter-rouge">@Procedure</code> in R2DBC</strong> - Spring Data R2DBC doesn't have a <code class="language-plaintext highlighter-rouge">@Procedure</code> annotation because R2DBC drivers don't have standardized stored procedure support like JDBC's <code class="language-plaintext highlighter-rouge">CallableStatement</code>. You must use <code class="language-plaintext highlighter-rouge">@Query</code> with native SQL instead.</p>
+        <h2 id="summary">Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Want to…</th>
+              <th>Use</th>
+              <th>Driver</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Call stored procedures with annotations</td>
+              <td>
+<code class="language-plaintext highlighter-rouge">@Procedure</code> (JPA)</td>
+              <td>JDBC (blocking)</td>
+            </tr>
+            <tr>
+              <td>Call stored procedures with full control</td>
+              <td>
+<code class="language-plaintext highlighter-rouge">JdbcTemplate</code> / <code class="language-plaintext highlighter-rouge">SimpleJdbcCall</code>
+</td>
+              <td>JDBC (blocking)</td>
+            </tr>
+            <tr>
+              <td>Reactive database access</td>
+              <td>
+<code class="language-plaintext highlighter-rouge">DatabaseClient</code> / <code class="language-plaintext highlighter-rouge">@Query</code>
+</td>
+              <td>R2DBC (non-blocking)</td>
+            </tr>
+            <tr>
+              <td>Reactive stored procedures</td>
+              <td>
+<code class="language-plaintext highlighter-rouge">DatabaseClient</code> with native SQL</td>
+              <td>R2DBC (limited support)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>If you need <code class="language-plaintext highlighter-rouge">@Procedure</code>, you're using JDBC. If you need reactive/non-blocking, you're using R2DBC and will need <code class="language-plaintext highlighter-rouge">@Query</code> with native SQL instead.</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/reading-agent-tools-interoperability-mcp" title="Previous Post: Reading - Agent Tools &amp; Interoperability with MCP">←Previous</a>     <a class="next-item" href="/blog/exposing-canton-ledger-api-spring-gateway" title="Next Post: Exposing Canton Ledger API via Spring Cloud Gateway">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/calling-stored-procedure-spring-jdbc-vs-r2dbc';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/calling-stored-procedure-spring-jdbc-vs-r2dbc';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
