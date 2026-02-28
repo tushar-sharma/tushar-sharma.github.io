@@ -1,6 +1,18 @@
 ---
 layout: post
 title: Handling Kafka Poison Pills in Reactive Spring Boot Applications
+image: 'https://unsplash.com/photos/h1xOm9iffKQ/download?w=437'
+thumb: 'https://unsplash.com/photos/h1xOm9iffKQ/download?w=437'
+author: tushar sharma
+tags:
+  - kafka
+  - spring-boot
+  - reactive
+category: blog
+---
+---
+layout: post
+title: Handling Kafka Poison Pills in Reactive Spring Boot Applications
 image: https://unsplash.com/photos/h1xOm9iffKQ/download?w=437
 thumb: https://unsplash.com/photos/h1xOm9iffKQ/download?w=437
 author: tushar sharma
@@ -9,336 +21,461 @@ tags:
  - spring-boot
  - reactive
 category: blog
+published: true
 ---
 
-A single malformed Kafka message can silently halt your entire consumer group. If you've ever been paged at 2 AM because messages stopped processing and your consumer lag was climbing, there's a good chance you were dealing with a poison pill. Here's how to handle it in a reactive Spring Boot application.<!-- truncate_here -->
+A single malformed Kafka message can silently halt your entire consumer group. If you've ever been paged at 2 AM because messages stopped processing and your consumer lag was climbing, there's a good chance you were dealing with a poison pill. Here's how to handle it in a reactive Spring Boot 4.x application.<!-- truncate_here -->
 
 A single malformed Kafka message can silently halt your entire consumer group. If you've ever been paged at 2 AM because messages stopped processing and your consumer lag was climbing, there's a good chance you were dealing with a poison pill. Here's how to handle it in a reactive Spring Boot application.
 
 ## What's a Kafka Poison Pill?
 
-A poison pill is a message that a consumer can never successfully process. The most common cause is a deserialization failure — a producer sends a message in a format the consumer doesn't expect (malformed JSON, an incompatible schema version, or raw bytes where structured data was expected).
+A poison pill is a message that a consumer can never successfully process. The most common cause is a **deserialization failure** — a producer sends malformed JSON, an incompatible schema version, or raw bytes where structured data was expected.
 
-Here's what makes it dangerous: Kafka's offset commit model means a consumer won't advance past a message it can't process. The consumer retries the same broken message indefinitely, blocking every subsequent message in that partition. Meanwhile, consumer lag grows, alerts fire, and downstream systems starve.
+Here's what makes it deadly: Kafka's offset commit model means a consumer won't advance past a message it can't process. The deserializer throws an exception **before** the reactive stream even starts, so your reactive error handlers (`doOnError`, `onErrorResume`) never trigger. The consumer re-fetches the same broken message indefinitely, blocking every subsequent message in that partition. Consumer lag climbs, alerts fire, and your pipeline is effectively dead.
 
-## The Failure Mode
 
-Consider a consumer expecting JSON messages conforming to this record:
+## Project Setup
+
+Let's understand this by creating a simple Spring Boot application from [Spring Initializr](https://start.spring.io/). 
+
+
+```gradle
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '4.0.3'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+description = 'Test poisonPill for Kafka'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-kafka'
+	implementation 'io.projectreactor.kafka:reactor-kafka:1.3.25'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-webflux-test'
+	testImplementation 'org.springframework.kafka:spring-kafka-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+```
+
+## Model the Kafka Message
+
+Create a **KafkaMessage** record that we will be receiving from Kafka:
 
 ```java
-public record KafkaMessage(String name, int id) {}
+package com.example.poisonPill.model;
+
+public record KafkaMessage(String message, Integer id) {}
 ```
 
-A producer sends this malformed payload (note the trailing comma):
-
-```json
-{"id": 1, "name": "Tushar", }
-```
-
-The consumer's `JsonDeserializer` throws a `RecordDeserializationException` *before* your application code ever sees the message. Since the record never reaches your `doOnNext` handler, the offset is never acknowledged. The consumer re-fetches the same record, fails again, and you're stuck in an infinite loop:
-
-```
-ERROR RecordDeserializationException: Error deserializing VALUE
-      for partition my-topic-0 at offset 243.
-      If needed, please seek past the record to continue consumption.
-Caused by: JsonParseException: Unexpected character ('}' (code 125)):
-      was expecting double-quote to start field name
-```
-
-This blocks the entire partition — not just one message.
-
-## The Solution: `ErrorHandlingDeserializer`
-
-Spring Kafka's `ErrorHandlingDeserializer` wraps your actual deserializer and catches any exception it throws. Instead of propagating the error, it:
-
-1. Returns `null` as the deserialized value
-2. Stores the original exception in the record's headers (under `springDeserializationException`)
-
-This means your consumer code *always* receives the record, even when deserialization fails. You can then inspect the value, detect the `null`, extract error details from headers, and route the poison pill to a dead-letter topic (DLT) for later investigation.
-
-## Demo: A Reproducible Example
-
-Let's build a reactive Spring Boot application that demonstrates this end to end.
-
-### 1. Project Setup
-
-Create a new project from [Spring Initializr](https://start.spring.io/) with:
-
-*   Spring Reactive Web
-*   Spring for Apache Kafka
-*   Reactor Kafka
-
-### 2. Docker Compose
-
-Run Kafka locally with this `docker-compose.yml`:
-
-```yaml
-version: '3'
-services:
-  zookeeper:
-    image: confluentinc/cp-zookeeper:latest
-    environment:
-      ZOOKEEPER_CLIENT_PORT: 2181
-      ZOOKEEPER_TICK_TIME: 2000
-    ports:
-      - "2181:2181"
-
-  kafka:
-    image: confluentinc/cp-kafka:latest
-    depends_on:
-      - zookeeper
-    ports:
-      - "9092:9092"
-    environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-```
-
-```bash
-docker-compose up -d
-```
-
-### 3. Application Configuration
+Next, define the `application.yaml` configuration for Kafka:
 
 ```yaml
 spring:
-  main:
-    web-application-type: reactive
+  application:
+    name: poisonPill
+
+  profiles:
+    active: basic
+
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
     consumer:
-      group-id: my-group
+      group-id: poison-pill-demo
       auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
       properties:
-        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
-        spring.json.trusted.packages: com.example.poisonpills.model
-        spring.json.value.default.type: com.example.poisonpills.model.KafkaMessage
+        topics: test-topic
+        security.protocol: PLAINTEXT
 
-server:
-  port: 8080
 
-app:
+logging:
+  level:
+    com.example.poisonPill: INFO
+    reactor.kafka: INFO
+```
+
+We need two additional profile-specific YAML files. First, create `application-basic.yaml`: 
+
+```yaml
+# Profile: basic
+# Demonstrates POISON PILL problem - consumer will STOP on malformed messages
+# This configuration will FAIL when receiving invalid JSON
+
+spring:
   kafka:
-    topic: my-topic
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+logging:
+  level:
+    com.example.poisonPill: DEBUG
+    reactor.kafka: INFO
 ```
 
-Two things to note:
+Next, create `application-errorhandling.yaml`:
 
-- The `value-deserializer` is set to `ErrorHandlingDeserializer`, which delegates to `JsonDeserializer` via the `spring.deserializer.value.delegate.class` property.
-- `spring.json.trusted.packages` and `spring.json.value.default.type` tell the `JsonDeserializer` which class to deserialize into and which packages to trust. Without these, you'll get a different class of deserialization errors.
+```yaml
+# Profile: errorhandling
+# SOLUTION to poison pill problem using error handling in application code
+# Consumer will continue processing even with malformed messages
 
-### 4. The Code
+spring:
+  kafka:
+    consumer:
+      # Use StringDeserializer for value - we'll deserialize manually with error handling
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
-**`KafkaMessage.java`** — the message model:
-
-```java
-package com.example.poisonpills.model;
-
-public record KafkaMessage(String name, int id) {
-}
+logging:
+  level:
+    com.example.poisonPill: DEBUG
+    reactor.kafka: INFO
+    org.springframework.kafka.support.serializer: DEBUG
 ```
 
-**`ReactiveKafkaConfig.java`** — wires up the `ReactiveKafkaConsumerTemplate`:
+## Kafka Configuration
+
+Create a configuration class to set up the Kafka receiver options:
 
 ```java
-package com.example.poisonpills.config;
+package com.example.poisonPill.configuration;
 
-import com.example.poisonpills.model.KafkaMessage;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.kafka.autoconfigure.KafkaProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.kafka.core.reactive.ReactiveKafkaConsumerTemplate;
 import reactor.kafka.receiver.ReceiverOptions;
 
 import java.util.Collections;
 
 @Configuration
-public class ReactiveKafkaConfig {
+public class KafkaConfig {
+
+    @Value("${spring.kafka.consumer.properties.topics}")
+    private String topic;
 
     @Bean
-    public ReceiverOptions<String, KafkaMessage> receiverOptions(KafkaProperties kafkaProperties) {
-        return ReceiverOptions.<String, KafkaMessage>create(
-                        kafkaProperties.buildConsumerProperties()
-                )
-                .subscription(Collections.singletonList(
-                        kafkaProperties.getConsumer().getGroupId() != null
-                                ? "my-topic" : "my-topic"
-                ));
-    }
-
-    @Bean
-    public ReactiveKafkaConsumerTemplate<String, KafkaMessage> reactiveKafkaConsumerTemplate(
-            ReceiverOptions<String, KafkaMessage> receiverOptions) {
-        return new ReactiveKafkaConsumerTemplate<>(receiverOptions);
+    public ReceiverOptions<String, String> receiverOptions(KafkaProperties kafkaProperties) {
+        return ReceiverOptions.<String, String>create(kafkaProperties.buildConsumerProperties())
+                .subscription(Collections.singleton(topic));
     }
 }
 ```
 
-**`KafkaConsumerService.java`** — the consumer with poison pill detection and header inspection:
+## Basic Consumer Service (Demonstrates the Problem)
+
+First, let's create a consumer service for the `basic` profile that demonstrates the poison pill problem: 
 
 ```java
-package com.example.poisonpills.service;
+package com.example.poisonPill.service;
 
-import com.example.poisonpills.model.KafkaMessage;
-import org.apache.kafka.common.header.Header;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.example.poisonPill.model.KafkaMessage;
+import tools.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.EventListener;
-import org.springframework.kafka.core.reactive.ReactiveKafkaConsumerTemplate;
 import org.springframework.stereotype.Service;
-import reactor.util.retry.Retry;
+import reactor.core.publisher.Mono;
+import reactor.kafka.receiver.KafkaReceiver;
+import reactor.kafka.receiver.ReceiverOptions;
+import reactor.kafka.receiver.ReceiverRecord;
 
-import java.time.Duration;
-
+/**
+ * Simple Kafka consumer to demonstrate the POISON PILL problem.
+ *
+ * PROBLEM: When a malformed message arrives that cannot be deserialized,
+ * the consumer stream will STOP and never recover, even though we have
+ * doOnError() and onErrorResume() error handlers.
+ *
+ * WHY: Deserialization errors happen BEFORE the reactive stream starts,
+ * so reactive error handlers cannot catch them. The deserializer throws
+ * an exception during record fetching, killing the consumer.
+ *
+ * To test:
+ * 1. Send a valid JSON: {"message": "hello", "id": 123}
+ * 2. Send invalid JSON: {bad json}
+ * 3. Observe: Consumer stops, doOnError never triggers
+ * 4. Send another valid message - it won't be processed!
+ */
 @Service
-public class KafkaConsumerService {
+@Slf4j
+@Profile("basic")
+public class KafkaService {
 
-    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumerService.class);
-    private static final String DESERIALIZATION_EXCEPTION_HEADER =
-            "springDeserializationException";
+    private final ReceiverOptions<String, String> receiverOptions;
 
-    private final ReactiveKafkaConsumerTemplate<String, KafkaMessage> consumerTemplate;
+    private final ObjectMapper objectMapper;
 
-    public KafkaConsumerService(
-            ReactiveKafkaConsumerTemplate<String, KafkaMessage> consumerTemplate) {
-        this.consumerTemplate = consumerTemplate;
+    public KafkaService(ReceiverOptions<String, String> receiverOptions, ObjectMapper objectMapper) {
+        this.receiverOptions = receiverOptions;
+        this.objectMapper = objectMapper;
     }
 
     @EventListener(ApplicationReadyEvent.class)
-    public void consumeMessages() {
-        consumerTemplate
-                .receive()
-                .doOnNext(record -> {
-                    if (record.value() == null) {
-                        handlePoisonPill(record);
-                    } else {
-                        processMessage(record.value());
-                    }
-                    record.receiverOffset().acknowledge();
+    public void listen() {
+        log.info("Starting Kafka consumer...");
+
+        KafkaReceiver.create(receiverOptions)
+                .receive()  // Returns Flux<ReceiverRecord<String, String>>
+                .flatMap(record -> {
+                    // Deserialize JSON string to KafkaMessage
+                    return deserializeMessage(record.value())
+                            .flatMap(message -> processMessage(record.key(), message))
+                            .doOnSuccess(v -> record.receiverOffset().acknowledge());
                 })
-                .doOnError(error -> logger.error("Error in consumer pipeline", error))
-                .retryWhen(Retry.backoff(Long.MAX_VALUE, Duration.ofSeconds(1))
-                        .maxBackoff(Duration.ofSeconds(60)))
+                // NOTE: These error handlers ONLY catch errors INSIDE the reactive stream!
+                //
+                // WILL CATCH:
+                // - Exceptions thrown during processMessage() execution
+                // - Runtime errors in business logic (NPE, IllegalArgumentException, etc.)
+                // - Errors during offset acknowledgment
+                // - Any exception within the flatMap reactive chain
+                //
+                // WILL NOT CATCH:
+                // - Deserialization errors (happen BEFORE stream, during record fetch)
+                // - Kafka consumer poll() failures
+                // - Network errors fetching from Kafka brokers
+                //
+                // For deserialization errors, you need ErrorHandlingDeserializer!
+                .doOnError(error -> log.error("doOnError caught: ", error))
+                .onErrorResume(error -> {
+                    log.error("onErrorResume caught: ", error);
+                    return Mono.empty();
+                })
                 .subscribe();
     }
 
-    private void handlePoisonPill(
-            org.apache.kafka.clients.consumer.ConsumerRecord<String, KafkaMessage> record) {
-        logger.error("Poison pill detected: topic={}, partition={}, offset={}",
-                record.topic(), record.partition(), record.offset());
-
-        // Extract deserialization error details from headers
-        Header exceptionHeader = record.headers()
-                .lastHeader(DESERIALIZATION_EXCEPTION_HEADER);
-        if (exceptionHeader != null) {
-            logger.error("Deserialization error: {}",
-                    new String(exceptionHeader.value()));
-        }
-
-        // In production, send to a dead-letter topic:
-        // deadLetterProducer.send("my-topic.DLT", record.key(),
-        //     new String(record.headers().lastHeader("spring
-        //         DeserializationExceptionValue").value()));
+    private Mono<KafkaMessage> deserializeMessage(String json) {
+        return Mono.fromCallable(() -> objectMapper.readValue(json, KafkaMessage.class));
     }
 
-    private void processMessage(KafkaMessage message) {
-        logger.info("Processing message: {}", message);
+    private Mono<Void> processMessage(String key, KafkaMessage message) {
+        return Mono.fromRunnable(() ->
+            log.info("Received: key={}, message={}, id={}", key, message.message(), message.id())
+        );
     }
 }
 ```
 
-**`KafkaProducerController.java`** — a simple REST endpoint to produce test messages:
+## Consumer Service with Error Handling (The Solution)
+
+Now let's create the solution that properly handles poison pills: 
 
 ```java
-package com.example.poisonpills.controller;
+package com.example.poisonPill.service;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.poisonPill.model.KafkaMessage;
+import tools.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.annotation.Profile;
+import org.springframework.context.event.EventListener;
+import reactor.core.publisher.Mono;
+import reactor.kafka.receiver.KafkaReceiver;
+import reactor.kafka.receiver.ReceiverOptions;
+import reactor.kafka.receiver.ReceiverRecord;
 
-@RestController
-public class KafkaProducerController {
+/**
+ * SOLUTION: Handling deserialization errors in application code.
+ *
+ * This service demonstrates how to properly handle deserialization errors
+ * by catching them in the reactive stream and continuing processing.
+ *
+ * HOW IT WORKS:
+ * 1. Use StringDeserializer to receive raw JSON strings
+ * 2. Manually deserialize using ObjectMapper in the reactive stream
+ * 3. Catch deserialization errors with onErrorResume
+ * 4. Log the error and skip the poison pill, keeping the stream alive
+ *
+ * To activate this service, run with: --spring.profiles.active=errorhandling
+ */
+@org.springframework.stereotype.Service
+@Slf4j
+@Profile("errorhandling")
+public class KafkaServiceWithErrorHandling {
 
-    private final KafkaTemplate<String, String> kafkaTemplate;
+    private final ReceiverOptions<String, String> receiverOptions;
 
-    @Value("${app.kafka.topic}")
-    private String topic;
+    private final ObjectMapper objectMapper;
 
-    public KafkaProducerController(KafkaTemplate<String, String> kafkaTemplate) {
-        this.kafkaTemplate = kafkaTemplate;
+    public KafkaServiceWithErrorHandling(ReceiverOptions<String, String> receiverOptions, ObjectMapper objectMapper) {
+        this.receiverOptions = receiverOptions;
+        this.objectMapper = objectMapper;
     }
 
-    @PostMapping("/messages")
-    public void sendMessage(@RequestBody String message) {
-        kafkaTemplate.send(topic, message);
+    @EventListener(ApplicationReadyEvent.class)
+    public void listen() {
+        log.info("Starting Kafka consumer with error handling...");
+
+        KafkaReceiver.create(receiverOptions)
+                .receive()
+                .flatMap(record -> {
+                    // Try to deserialize JSON string to KafkaMessage
+                    return deserializeMessage(record.value())
+                            .flatMap(message -> processMessage(record.key(), message))
+                            // If deserialization fails, handle as poison pill
+                            .onErrorResume(error -> handlePoisonPill(record, error))
+                            .doOnSuccess(v -> record.receiverOffset().acknowledge());
+                })
+                .doOnError(error -> log.error("Stream error: ", error))
+                .onErrorResume(error -> {
+                    log.error("Recovering from stream error", error);
+                    return Mono.empty();
+                })
+                .subscribe();
+    }
+
+    private Mono<KafkaMessage> deserializeMessage(String json) {
+        return Mono.fromCallable(() -> objectMapper.readValue(json, KafkaMessage.class));
+    }
+
+    private Mono<Void> handlePoisonPill(ReceiverRecord<String, String> record, Throwable error) {
+        return Mono.fromRunnable(() -> {
+            log.error("POISON PILL detected at offset {}, partition {}: {}",
+                    record.offset(), record.partition(), error.getMessage());
+            log.error("Raw message: {}", record.value());
+            log.info("Skipping poison pill and continuing...");
+        });
+    }
+
+    private Mono<Void> processMessage(String key, KafkaMessage message) {
+        return Mono.fromRunnable(() -> {
+            log.info("Received: key={}, message={}, id={}", key, message.message(), message.id());
+        });
     }
 }
 ```
 
-### 5. Running the Demo
+## Testing the Basic Profile (Problem Demonstration)
 
-Start Kafka and the application, then test both scenarios:
-
-**Send a valid message:**
+First, let's start the application with the `basic` profile to see the poison pill problem in action:
 
 ```bash
-curl -X POST -H "Content-Type: application/json" \
-  -d '{"id": 1, "name": "Tushar"}' \
-  http://localhost:8080/messages
+./gradlew bootRun --args='--spring.profiles.active=basic'
 ```
 
-```
-Processing message: KafkaMessage[name=Tushar, id=1]
-```
-
-**Send a poison pill:**
+Send a valid JSON message:
 
 ```bash
-curl -X POST -H "Content-Type: application/json" \
-  -d '{"id": 1, "name": "Tushar", }' \
-  http://localhost:8080/messages
+echo '{"message": "Hello World", "id": 1}' | \
+  kcat -P -b localhost:9092 -t test-topic
 ```
 
-```
-ERROR Poison pill detected: topic=my-topic, partition=0, offset=1
-ERROR Deserialization error: <exception details>
-```
-
-You can also use `kcat` to produce messages directly to the broker, which is useful for simulating poison pills that bypass your application's producer:
+The message is processed successfully. Now send a malformed JSON with a trailing comma:
 
 ```bash
-# Valid message
-echo '{"id": 1, "name": "Tushar"}' | kcat -b localhost:9092 -t my-topic -P
-
-# Poison pill
-echo 'not-even-json' | kcat -b localhost:9092 -t my-topic -P
+echo '{"message": "Hello World", "id": 2,}' | \
+  kcat -P -b localhost:9092 -t test-topic
 ```
 
-The consumer processes the valid message, logs the poison pill with its error details, acknowledges both offsets, and moves on. No infinite loop.
+You'll see an error like this:
 
-## Production Considerations
+```
+tools.jackson.core.exc.StreamReadException: Unexpected character ('}' (code 125)):
+was expecting double-quote to start property name
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled);
+ byte offset: #UNKNOWN]
+```
 
-In a real system, you'll want to go beyond just logging:
+**The critical issue**: try sending another valid message:
 
-**Dead-letter topics (DLT):** Route poison pills to a `<topic>.DLT` topic. This preserves the original message for debugging and lets you replay it once the bug is fixed. Spring Kafka's `DefaultErrorHandler` supports this natively for non-reactive consumers; for reactive consumers, you'll need to publish to the DLT manually.
+```bash
+echo '{"message": "Hello World", "id": 3}' | \
+  kcat -P -b localhost:9092 -t test-topic
+```
 
-**Monitoring:** Track poison pill counts as a metric (via Micrometer/Prometheus). A spike in poison pills usually means a producer deployed a breaking schema change — you want to catch this fast, not discover it in logs hours later.
+**The consumer is now stuck**. This valid message won't be processed because the consumer keeps retrying the poison pill at offset 2. Your consumer lag will start climbing, and no subsequent messages will be consumed.
 
-**Schema validation:** Consider using Avro or Protobuf with a Schema Registry instead of raw JSON. Schema evolution rules (backward/forward compatibility) prevent most poison pills at the producer side before they ever hit your consumer.
+## Testing with Error Handling (The Solution)
 
-**Alerting on consumer lag:** Even with proper poison pill handling, monitor consumer lag. It's the most reliable signal that something is wrong with your pipeline.
+Now let's test the solution. Restart the application with the `errorhandling` profile:
 
-## Conclusion
+```bash
+./gradlew bootRun --args='--spring.profiles.active=errorhandling'
+```
 
-Poison pills are one of Kafka's sharpest edges. A single malformed message can block an entire partition indefinitely, and the default behavior gives you no indication of *why* messages stopped flowing — just growing consumer lag.
+Send the same malformed message:
 
-The `ErrorHandlingDeserializer` fixes this by turning a fatal deserialization error into a `null` value with error metadata in the headers. Combined with dead-letter topics and monitoring, you can build a consumer pipeline that degrades gracefully instead of grinding to a halt.
+```bash
+echo '{"message": "Hello World", "id": 2,}' | \
+  kcat -P -b localhost:9092 -t test-topic
+```
+
+This time, you'll see the error handler in action:
+
+```
+2026-02-28T17:51:55.716-05:00 ERROR 61935 --- [poisonPill] [on-pill-demo-1]
+c.e.p.s.KafkaServiceWithErrorHandling : POISON PILL detected at offset 2,
+partition 0: Unexpected character ('}' (code 125)): was expecting double-quote
+to start property name
+
+2026-02-28T17:51:55.716-05:00 ERROR 61935 --- [poisonPill] [on-pill-demo-1]
+c.e.p.s.KafkaServiceWithErrorHandling : Raw message: {"message": "Hello World", "id": 2,}
+
+2026-02-28T17:51:55.716-05:00  INFO 61935 --- [poisonPill] [on-pill-demo-1]
+c.e.p.s.KafkaServiceWithErrorHandling : Skipping poison pill and continuing...
+```
+
+Send valid messages after the poison pill:
+
+```bash
+echo '{"message": "Hello World", "id": 3}' | \
+  kcat -P -b localhost:9092 -t test-topic
+
+echo '{"message": "Hello World", "id": 4}' | \
+  kcat -P -b localhost:9092 -t test-topic
+
+echo '{"message": "Hello World", "id": 5}' | \
+  kcat -P -b localhost:9092 -t test-topic
+```
+
+**Success!** All subsequent messages are processed normally:
+
+```
+2026-02-28T17:51:55.716-05:00  INFO 61935 --- [poisonPill] [on-pill-demo-1]
+c.e.p.s.KafkaServiceWithErrorHandling : Received: key=null, message=Hello World, id=3
+
+2026-02-28T17:51:55.716-05:00  INFO 61935 --- [poisonPill] [on-pill-demo-1]
+c.e.p.s.KafkaServiceWithErrorHandling : Received: key=null, message=Hello World, id=4
+
+2026-02-28T17:51:55.716-05:00  INFO 61935 --- [poisonPill] [on-pill-demo-1]
+c.e.p.s.KafkaServiceWithErrorHandling : Received: key=null, message=Hello World, id=5
+```
+
+## Key Takeaways
+
+1. **Reactive error handlers only catch errors inside the stream**: `doOnError()` and `onErrorResume()` won't catch deserialization failures that occur before the reactive stream starts.
+
+2. **The solution: manual deserialization**: By using `StringDeserializer` and deserializing manually within the reactive stream, you can catch and handle deserialization errors gracefully.
+
+3. **Always acknowledge the offset**: Even when skipping poison pills, remember to acknowledge the offset so the consumer can move forward.
+
+4. **Production considerations**: In production, you might want to:
+   - Send poison pills to a dead-letter queue for later analysis
+   - Add metrics to track poison pill frequency
+   - Alert when poison pills are detected
+   - Implement a retry mechanism with exponential backoff for transient errors
