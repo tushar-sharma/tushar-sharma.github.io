@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Monkey Patching Claude commit for AWS Bedrock
-image: https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvMzA1LXJvYjY0OTktY2hpbS5qcGc.jpg
-thumb: https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvMzA1LXJvYjY0OTktY2hpbS5qcGc.jpg
+image: https://unsplash.com/photos/bLiuV2CKJcA/download?w=437
+thumb: https://unsplash.com/photos/bLiuV2CKJcA/download?w=437
 author: tushar sharma
 tags:
  - claude code
