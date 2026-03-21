@@ -6,21 +6,21 @@ tags:
 - canton
 - blockchain
 - oauth
-published : false
+published: false
 name: canton-oauth-fix
 thumb: https://unsplash.com/photos/_mX0sSpVbOg/download?w=437
 image: https://unsplash.com/photos/_mX0sSpVbOg/download?w=437
 ---
 
-Onboarding **canton valdiator** to **devent, testnet, or mainnet** could be daunting. One particular error that kept me pulling my hairs was integrating oauth2 with canton node.<!-- truncate_here -->
+Onboarding a **Canton validator** to **devnet, testnet, or mainnet** can be challenging. One error that kept me stuck was integrating OAuth2 with the Canton node—specifically, the missing `access_token` error.<!-- truncate_here -->
 
-Onboarding **canton valdiator** to **devent, testnet, or mainnet** could be daunting. One particular error that kept me pulling my hairs was integrating oauth2 with canton node.
+Onboarding a **Canton validator** to **devnet, testnet, or mainnet** can be challenging. One error that kept me stuck was integrating OAuth2 with the Canton node—specifically, the missing `access_token` error.
 
-## Refersher
+## Background
 
-Canton is a private permissioned blockchain network. This is differnet than public permissioned blockchain. In canton, only the parties having access can read the ledger with the data. To talk to the canton network, you need to deploy participant and validator. One common issue I encountered when deploying canton validator was missing `access_token`. 
+Canton is a privacy-enabled blockchain network. Unlike public blockchains, only authorized parties can read ledger data. To interact with Canton, you deploy a participant node and a validator node.
 
-You will see logs like this : 
+The issue I hit was the validator failing to authenticate with this error: 
 
 ```json
 {
@@ -32,15 +32,14 @@ You will see logs like this :
 }
 ```
 
+## The Problem
 
-## Oauth2
+OAuth2 requires a bearer token in request headers. How you get that token is up to you. We use Okta as our identity provider with `client_credentials` grant type for machine-to-machine auth.
 
-First lets understand how oauth2 works before we diagnosze this error. Oauth2 is a protocol that demands that it needs a bearer token in the headers. That's it. Now how do you get this token, it's upto you. We have okta as our IDP , and we use `client credentials` grant type to get the token when there's no UI. For UI we use SSO. 
+First, verify you can get a token from your OAuth provider: 
 
-verify that you are able to get bearer token using 
-
-```
-curl -X POST https://yourorg.okta.com/oauth2/{auth server}/token \
+```bash
+curl -X POST https://yourorg.okta.com/oauth2/{auth_server}/token \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "client_id=YOUR_CLIENT_ID" \
   -d "client_secret=YOUR_CLIENT_SECRET" \
@@ -49,9 +48,9 @@ curl -X POST https://yourorg.okta.com/oauth2/{auth server}/token \
   -d "scope=default"
 ```
 
-These information you should get form your Okta admin team. and respond like 
+Get these values from your Okta admin. You should see a response like:
 
-```bash
+```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImtleTEifQ...",
   "token_type": "Bearer",
@@ -60,9 +59,11 @@ These information you should get form your Okta admin team. and respond like
 }
 ```
 
-### Extract the Sub Field
+## The Fix
 
-The token contains a `sub` (subject) claim that identifies the client. Decode the JWT to view it:
+### 1. Extract the Sub Field
+
+The JWT contains a `sub` (subject) claim that identifies the client. Canton needs this for authentication. Decode the token:
 
 ```bash
 # Save the token first
@@ -79,23 +80,30 @@ You'll see something like:
   "sub": "0abc123def456ghi789@clients",
   "client_id": "YOUR_CLIENT_ID",
   "aud": "YOUR_AUDIENCE",
-  "iat": 1710883369,
-  "exp": 1710886969,
+  "iss": "https://******.oktapreview.com/oauth2/aus***********8",
   "scope": "default"
 }
 ```
 
-The `sub` field needs to be captured and stored as an environment variable for the validator. Add this to your Kubernetes manifest:
+Use the `sub` value in your validator's Kubernetes configuration:
 
 ```yaml
-- name: SPLICE_APP_VALIDATOR_OAUTH_SUB
-  value: "0abc123def456ghi789@clients"
+- name: LEDGER_API_ADMIN_USER
+  value: "0abc123def456ghi789@clients"  # Your sub field
+
+- name: VALIDATOR_AUTH_CLIENT_ID
+  value: "0abc123def456ghi789@clients"  # Your sub field
+
+- name: LEDGER_API_AUTH_AUDIENCE
+  value: "YOUR_AUDIENCE"
+
+- name: VALIDATOR_AUTH_AUDIENCE
+  value: "YOUR_AUDIENCE"
 ```
 
-# Add default scope
+### 2. Add Default Scope
 
-
-Add this configuration block to your environment variables:
+This was the missing piece. Canton's OAuth client needs the scope explicitly configured:
 
 ```yaml
 - name: ADDITIONAL_CONFIG_OAUTH_SCOPE
@@ -105,7 +113,7 @@ Add this configuration block to your environment variables:
     }
 ```
 
-For context, here's where this sits among your other `ADDITIONAL_CONFIG_*` variables:
+Here's the full configuration in context:
 
 ```yaml
 spec:
@@ -119,7 +127,7 @@ spec:
           env:
             - name: ADDITIONAL_CONFIG_GLOBAL_DOMAIN_UPGRADE_DUMP_PATH
               value: canton.validator-apps.validator_backend.domain-migration-dump-path = "/domain-upgrade-dump/domain_migration_dump.json"
-            
+
             - name: ADDITIONAL_CONFIG_OAUTH_SCOPE
               value: |
                 canton.validator-apps.validator_backend.participant-client.ledger-api.auth-config {
@@ -127,13 +135,57 @@ spec:
                 }
 ```
 
-### Deployment Strategy Note
+### 3. Grant User Rights
 
-Also consider adding the `Recreate` deployment strategy to ensure clean pod restarts:
+After the validator is onboarded, grant it ledger access rights via the Canton Ledger API:
 
-```yaml
-spec:
-  strategy:
-    $patch: replace
-    type: Recreate
+```bash
+POST /v2/users/<SUB_FIELD>/rights
 ```
+
+Request body:
+
+```json
+{
+  "identityProviderId": "",
+  "userId": "0abc123def456ghi789@clients",
+  "rights": [
+    {
+      "kind": {
+        "CanActAs": {
+          "value": {
+            "party": "YourPartyId::122028c637.."
+          }
+        }
+      }
+    },
+    {
+      "kind": {
+        "CanReadAs": {
+          "value": {
+            "party": "YourPartyId::122028c637.."
+          }
+        }
+      }
+    },
+    {
+      "kind": {
+        "CanReadAsAnyParty": {
+          "value": {}
+        }
+      }
+    }
+  ]
+}
+```
+
+## Summary
+
+The missing `access_token` error happens when Canton's OAuth scope isn't explicitly configured. The fix:
+
+1. Extract the `sub` field from your JWT
+2. Add it to `LEDGER_API_ADMIN_USER` and `VALIDATOR_AUTH_CLIENT_ID`
+3. Set `scope = "default"` in the `ADDITIONAL_CONFIG_OAUTH_SCOPE` variable
+4. Grant the validator proper ledger rights after onboarding
+
+This resolved the authentication issue and got my validator connecting properly.
