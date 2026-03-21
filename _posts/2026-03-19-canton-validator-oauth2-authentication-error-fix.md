@@ -1,21 +1,26 @@
 ---
-published: false
+layout: post
+title: Fixing Canton Validator OAuth2 Authentication Errors
+category: blog
+tags:
+- canton
+- blockchain
+- oauth
+published : false
+name: canton-oauth-fix
+thumb: https://unsplash.com/photos/_mX0sSpVbOg/download?w=437
+image: https://unsplash.com/photos/_mX0sSpVbOg/download?w=437
 ---
 
-# Canton Validator OAuth Authentication Error: Missing access_token Fix
+Onboarding **canton valdiator** to **devent, testnet, or mainnet** could be daunting. One particular error that kept me pulling my hairs was integrating oauth2 with canton node.<!-- truncate_here -->
 
-**Last Updated:** March 19, 2026  
-**Tags:** #canton #blockchain #oauth #kubernetes #troubleshooting #daml
+Onboarding **canton valdiator** to **devent, testnet, or mainnet** could be daunting. One particular error that kept me pulling my hairs was integrating oauth2 with canton node.
 
-## Problem Summary
+## Refersher
 
-Canton Network validator applications may fail to authenticate with OAuth providers, causing circuit breaker failures and preventing command submissions. This guide explains how to fix the "Object is missing required member 'access_token'" error in Canton validator deployments.
+Canton is a private permissioned blockchain network. This is differnet than public permissioned blockchain. In canton, only the parties having access can read the ledger with the data. To talk to the canton network, you need to deploy participant and validator. One common issue I encountered when deploying canton validator was missing `access_token`. 
 
----
-
-## Error Symptoms
-
-### Primary Error Message
+You will see logs like this : 
 
 ```json
 {
@@ -27,48 +32,70 @@ Canton Network validator applications may fail to authenticate with OAuth provid
 }
 ```
 
-### Related Error Messages
 
-```json
+## Oauth2
+
+First lets understand how oauth2 works before we diagnosze this error. Oauth2 is a protocol that demands that it needs a bearer token in the headers. That's it. Now how do you get this token, it's upto you. We have okta as our IDP , and we use `client credentials` grant type to get the token when there's no UI. For UI we use SSO. 
+
+verify that you are able to get bearer token using 
+
+```
+curl -X POST https://yourorg.okta.com/oauth2/{auth server}/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "client_id=YOUR_CLIENT_ID" \
+  -d "client_secret=YOUR_CLIENT_SECRET" \
+  -d "audience=YOUR_AUDIENCE" \
+  -d "grant_type=client_credentials" \
+  -d "scope=default"
+```
+
+These information you should get form your Okta admin team. and respond like 
+
+```bash
 {
-  "message": "Acquiring auth token failed with an unknown exception, not retrying",
-  "stack_trace": "spray.json.DeserializationException: Object is missing required member 'access_token'
-    at spray.json.package$.deserializationError(package.scala:23)
-    at spray.json.ProductFormats.fromField(ProductFormats.scala:61)
-    Caused by: java.util.NoSuchElementException: key not found: access_token"
+  "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImtleTEifQ...",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "scope": "default"
 }
 ```
 
+### Extract the Sub Field
+
+The token contains a `sub` (subject) claim that identifies the client. Decode the JWT to view it:
+
+```bash
+# Save the token first
+TOKEN="eyJhbGciOiJSUzI1NiIsImtpZCI6ImtleTEifQ..."
+
+# Decode and view the payload (requires jq)
+echo $TOKEN | cut -d'.' -f2 | base64 -d | jq .
+```
+
+You'll see something like:
+
 ```json
 {
-  "message": "Command submission aborted by circuit breaker due to too many successive failures, next attempt in 30s",
-  "logger_name": "ValidatorLicenseActivityTrigger:validator=validator_backend",
-  "level": "INFO"
+  "sub": "0abc123def456ghi789@clients",
+  "client_id": "YOUR_CLIENT_ID",
+  "aud": "YOUR_AUDIENCE",
+  "iat": 1710883369,
+  "exp": 1710886969,
+  "scope": "default"
 }
 ```
 
-### Affected Components
+The `sub` field needs to be captured and stored as an environment variable for the validator. Add this to your Kubernetes manifest:
 
-- **AuthTokenManager**: Token refresh fails
-- **DomainIngestionService**: Periodic task processing fails
-- **UpdateIngestionService**: Ledger ingestion subscription fails
-- **ValidatorLicenseActivityTrigger**: Command submissions blocked by circuit breaker
+```yaml
+- name: SPLICE_APP_VALIDATOR_OAUTH_SUB
+  value: "0abc123def456ghi789@clients"
+```
 
----
+# Add default scope
 
-## Root Cause
 
-The Canton validator backend is missing the OAuth scope configuration in the ledger API authentication settings. Without the proper scope configuration, the OAuth token endpoint returns responses that cannot be properly deserialized, resulting in the missing `access_token` field error.
-
----
-
-## Solution
-
-Add the `ADDITIONAL_CONFIG_OAUTH_SCOPE` environment variable to your Kubernetes deployment manifest to configure the OAuth scope for the Canton validator's ledger API authentication.
-
-### Configuration Fix
-
-Add this configuration block to your `deployment-update.yaml` or equivalent manifest file:
+Add this configuration block to your environment variables:
 
 ```yaml
 - name: ADDITIONAL_CONFIG_OAUTH_SCOPE
@@ -78,9 +105,7 @@ Add this configuration block to your `deployment-update.yaml` or equivalent mani
     }
 ```
 
-### Complete Example Context
-
-Place this configuration alongside other `ADDITIONAL_CONFIG_*` environment variables:
+For context, here's where this sits among your other `ADDITIONAL_CONFIG_*` variables:
 
 ```yaml
 spec:
@@ -92,8 +117,6 @@ spec:
       containers:
         - name: validator-app
           env:
-            # ... other environment variables ...
-            
             - name: ADDITIONAL_CONFIG_GLOBAL_DOMAIN_UPGRADE_DUMP_PATH
               value: canton.validator-apps.validator_backend.domain-migration-dump-path = "/domain-upgrade-dump/domain_migration_dump.json"
             
@@ -102,15 +125,9 @@ spec:
                 canton.validator-apps.validator_backend.participant-client.ledger-api.auth-config {
                   scope = "default"
                 }
-            
-            - name: ADDITIONAL_CONFIG_DISABLE_WALLET
-              value: |
-                canton.validator-apps.validator_backend {
-                  enable-wallet = false
-                }
 ```
 
-### Deployment Strategy Recommendation
+### Deployment Strategy Note
 
 Also consider adding the `Recreate` deployment strategy to ensure clean pod restarts:
 
@@ -120,113 +137,3 @@ spec:
     $patch: replace
     type: Recreate
 ```
-
-This ensures the old pod is fully terminated before the new one starts, preventing potential state conflicts.
-
----
-
-## Implementation Steps
-
-1. **Update your deployment manifest** with the OAuth scope configuration
-2. **Apply the changes** to your Kubernetes cluster:
-   ```bash
-   kubectl apply -k devops/[environment]/k8s/
-   ```
-3. **Restart the validator pods** to pick up the new configuration:
-   ```bash
-   kubectl rollout restart deployment/validator-deploy -n [namespace]
-   ```
-4. **Verify the fix** by checking the logs:
-   ```bash
-   kubectl logs -f deployment/validator-deploy -n [namespace] | grep -i "auth\|token"
-   ```
-
----
-
-## Verification
-
-After applying the fix, you should see:
-
-✅ No more `DeserializationException` errors for missing `access_token`  
-✅ Successful OAuth token acquisition  
-✅ Circuit breaker no longer blocking command submissions  
-✅ Domain ingestion service processing normally  
-✅ Validator license activity trigger working without retries  
-
----
-
-## Related Configuration
-
-### OAuth Environment Variables
-
-Ensure these OAuth-related secrets are properly configured:
-
-- `SPLICE_APP_VALIDATOR_LEDGER_API_AUTH_URL` - OAuth well-known URL
-- `SPLICE_APP_VALIDATOR_LEDGER_API_AUTH_CLIENT_ID` - OAuth client ID
-- `SPLICE_APP_VALIDATOR_LEDGER_API_AUTH_CLIENT_SECRET` - OAuth client secret
-- `SPLICE_APP_VALIDATOR_LEDGER_API_AUTH_AUDIENCE` - OAuth audience
-
-### Additional Validator Configuration
-
-Other common validator configurations:
-
-```yaml
-# BFT Scan Client Configuration
-- name: ADDITIONAL_CONFIG_BFT_SCAN
-  value: |
-    canton.validator-apps.validator_backend.scan-client.type = "bft"
-    canton.validator-apps.validator_backend.scan-client.seed-urls = [ "https://scan.example.com" ]
-
-# Migration ID
-- name: ADDITIONAL_CONFIG_MIGRATION_ID
-  value: |
-    canton.validator-apps.validator_backend {
-      domain-migration-id = ${MIGRATION_ID}
-    }
-
-# Disable Wallet (if not needed)
-- name: ADDITIONAL_CONFIG_DISABLE_WALLET
-  value: |
-    canton.validator-apps.validator_backend {
-      enable-wallet = false
-    }
-```
-
----
-
-## Troubleshooting Tips
-
-### If the error persists after applying the fix:
-
-1. **Check OAuth credentials**: Verify that client ID and secret are correct
-2. **Verify OAuth endpoint**: Ensure the auth URL is reachable from the pod
-3. **Check network policies**: Ensure the validator can reach the OAuth provider
-4. **Review secrets**: Confirm all required secrets are present in Kubernetes
-5. **Check OAuth provider logs**: Look for errors on the authentication server side
-
-### Common Related Errors
-
-- **Circuit breaker failures**: Usually a symptom of authentication issues
-- **Command submission timeouts**: Can be caused by authentication problems
-- **Ledger API connection failures**: Check participant service connectivity
-
----
-
-## Keywords
-
-Canton blockchain, Canton Network validator, OAuth authentication error, Daml ledger, spray.json DeserializationException, access_token missing, Kubernetes deployment, Canton validator configuration, ledger-api auth-config, circuit breaker error, Canton troubleshooting, Digital Asset Canton, validator authentication fix
-
----
-
-## Additional Resources
-
-- [Canton Documentation](https://docs.canton.network/)
-- [Canton Network Architecture](https://docs.canton.network/concepts/architecture/)
-- [OAuth 2.0 Specification](https://oauth.net/2/)
-- [Kubernetes Deployment Strategies](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy)
-
----
-
-## Changelog
-
-- **2026-03-19**: Initial documentation - OAuth scope configuration fix for Canton validator authentication error
