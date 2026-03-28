@@ -158,6 +158,12 @@
   notes: "Great free public library. Free guest internet and multiple floors. Great place to study."
   category: "activity"
 
+- name: "Road To Myanmar Asian Cuisine"
+  address: "147 E Franklin St, Chapel Hill, NC 27514"
+  map_link: "https://www.google.com/maps/search/?api=1&query=147+E+Franklin+St,+Chapel+Hill,+NC+27514"
+  city: "Chapel Hill, NC"
+  notes: "Long wait. Tom Yum soup was a hit, but Mohinga missed the mark. Dumplings and summer rolls were just okay."
+  category: "food"
 
 # Valle de la Luna (Chile)
 # INSANE Grassland Slide In Inner Mongolia, China
