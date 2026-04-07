@@ -4,7 +4,7 @@ title: "Building and Testing Canton Smart Contracts Locally: A Makefile-Driven W
 tags: [blockchain, canton, daml, smart-contracts, makefile, tutorial]
 author: tushar sharma
 category: blog
-publish: false
+published: false
 image: https://unsplash.com/photos/JrjhtBJ-pGU/download?w=437
 thumb: https://unsplash.com/photos/JrjhtBJ-pGU/download?w=437
 ---
@@ -178,27 +178,61 @@ daml version
 #   3.4.10 (or later)
 ```
 
-## Create Your First Project
+## Create Your First Project from Scratch
 
-Let's create a simple asset tracking smart contract from scratch.
+Let's create a simple asset tracking smart contract with step-by-step instructions.
 
-### Step 1: Initialize Project
+### Step 1: Create Project Directory
 
 ```bash
-# Create a new DAML project
-mkdir my-daml-project && cd my-daml-project
-daml new . --template skeleton
+# Create a new directory
+mkdir my-canton-project
+cd my-canton-project
 
-# Project structure created:
-# my-daml-project/
-# ├── daml.yaml         # Project configuration
-# └── daml/
-#     └── Main.daml     # Smart contract code
+# Verify you're in the right place
+pwd
+# Output: /Users/yourname/my-canton-project
 ```
 
-### Step 2: Write a Simple Contract
+### Step 2: Initialize DAML Project
 
-Edit `daml/Main.daml`:
+```bash
+# Initialize project with dpm
+dpm init
+
+# This creates:
+# my-canton-project/
+# ├── daml.yaml         # Project configuration
+# └── daml/
+#     └── Main.daml     # Smart contract code (empty by default)
+
+# Or use daml new for template
+daml new . --template skeleton
+```
+
+**What `dpm init` does:**
+- Creates `daml.yaml` with project metadata
+- Sets up `daml/` directory for your contracts
+- Configures SDK version and dependencies
+
+### Step 3: Check Project Structure
+
+```bash
+# List files
+ls -la
+
+# Output:
+# daml.yaml         # Project config
+# daml/             # Contract directory
+#   └── Main.daml   # Your smart contract
+
+# View the config
+cat daml.yaml
+```
+
+### Step 4: Write Your First Smart Contract
+
+Create or edit `daml/Main.daml`:
 
 ```haskell
 module Main where
@@ -226,72 +260,120 @@ template Asset
 - **signatory owner**: Only the owner can create this contract
 - **choice Transfer**: Allows owner to transfer asset to a new owner
 
-### Step 3: Build the Contract
+### Step 5: Build the Contract
 
 ```bash
-# Build the project
+# Build the project (creates .dar file)
 daml build
 
 # Output:
-# Compiling my-daml-project to a DAR.
-# Created .daml/dist/my-daml-project-0.0.1.dar
+# Compiling my-canton-project to a DAR.
+# Created .daml/dist/my-canton-project-0.0.1.dar
+
+# Verify the DAR was created
+ls -lh .daml/dist/
+# Output:
+# -rw-r--r--  1 user  staff   45K Apr  7 16:00 my-canton-project-0.0.1.dar
 ```
+
+**What's a DAR file?**
+- **D**AML **AR**chive - like a JAR file for DAML
+- Contains compiled smart contracts
+- Ready to deploy to Canton
 
 ## Running Locally with Canton Sandbox
 
-### Start the Sandbox
+### Step 6: Start the Sandbox
+
+**Terminal 1** (keep this running):
 
 ```bash
 # Start Canton Sandbox with your contract
-daml sandbox --port 6865 --dar .daml/dist/my-daml-project-0.0.1.dar
+daml sandbox --port 6865 --dar .daml/dist/my-canton-project-0.0.1.dar
 
 # Output:
 # Starting Canton Sandbox...
 # Ledger API (gRPC): localhost:6865
 # Sandbox ready.
+# [INFO] Canton Sandbox is running
 ```
 
-### Test Your Contract
+**Leave this terminal open.** The sandbox is now running and ready to accept contracts.
 
-Open a new terminal:
+### Step 7: Test Your Contract in REPL
+
+**Terminal 2** (open a new terminal):
 
 ```bash
+# Navigate to your project
+cd my-canton-project
+
 # Connect to the running sandbox
 daml repl --ledger-host=localhost --ledger-port=6865
 
-# In the REPL, test your contract:
+# You'll see:
+# daml> 
+# (REPL prompt ready)
 ```
+
+### Step 8: Create and Test Contracts
+
+In the REPL prompt, run these commands:
 
 ```haskell
--- Import your module
-import Main
+-- Step 1: Import your contract module
+daml> import Main
 
--- Create parties
-alice <- allocateParty "Alice"
-bob <- allocateParty "Bob"
+-- Step 2: Create test parties (Alice and Bob)
+daml> alice <- allocateParty "Alice"
+daml> bob <- allocateParty "Bob"
 
--- Alice creates an asset
-assetId <- submit alice $ createCmd Asset with
-  owner = alice
-  name = "Tesla Model 3"
-  value = 35000.0
+-- Step 3: Alice creates an asset
+daml> assetId <- submit alice $ createCmd Asset with
+        owner = alice
+        name = "Tesla Model 3"
+        value = 35000.0
 
--- Query Alice's assets
-query @Asset alice
--- Output: [Asset { owner = Alice, name = "Tesla Model 3", value = 35000.0 }]
+-- Output: Contract created with ID #001:0
 
--- Alice transfers the asset to Bob
-newAssetId <- submit alice $ exerciseCmd assetId Transfer with
-  newOwner = bob
+-- Step 4: Query Alice's assets (verify it exists)
+daml> query @Asset alice
 
--- Verify Bob owns it now
-query @Asset bob
--- Output: [Asset { owner = Bob, name = "Tesla Model 3", value = 35000.0 }]
+-- Output: 
+-- [Asset { 
+--   owner = Alice::1220..., 
+--   name = "Tesla Model 3", 
+--   value = 35000.0 
+-- }]
 
--- Alice no longer has it
-query @Asset alice
--- Output: []
+-- Step 5: Alice transfers the asset to Bob
+daml> newAssetId <- submit alice $ exerciseCmd assetId Transfer with
+        newOwner = bob
+
+-- Output: Transfer successful, new contract #002:0
+
+-- Step 6: Verify Bob owns it now
+daml> query @Asset bob
+
+-- Output: 
+-- [Asset { 
+--   owner = Bob::1220..., 
+--   name = "Tesla Model 3", 
+--   value = 35000.0 
+-- }]
+
+-- Step 7: Verify Alice no longer has it
+daml> query @Asset alice
+
+-- Output: []  (empty - Alice has no assets)
 ```
+
+**What just happened?**
+1. Created two parties (Alice, Bob)
+2. Alice created an asset contract
+3. Transfer choice created new contract with Bob as owner
+4. Old contract (Alice's) was archived automatically
+5. Bob now owns the asset
 
 ## Automating with Makefile
 
@@ -349,26 +431,6 @@ make sandbox
 daml repl --ledger-host=localhost --ledger-port=6865
 ```
 
-## Visualizing the Workflow
-
-Here's how the local development workflow looks:
-
-```mermaid
-graph TB
-    A[Edit Contract] --> B[make build]
-    B --> C[Build DAR]
-    C --> D[make sandbox]
-    D --> E[Canton Sandbox Running]
-    E --> F[Test with REPL]
-    F --> G{Tests Pass?}
-    G -->|No| A
-    G -->|Yes| H[Done!]
-    
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style H fill:#9f9,stroke:#333,stroke-width:2px
-    style E fill:#bbf,stroke:#333,stroke-width:2px
-```
-
 ## Advanced: Testing with Scripts
 
 Create `test-asset.daml` for automated testing:
@@ -412,26 +474,6 @@ daml test
 ```
 
 ## How Canton Differs from Public Blockchains
-
-```mermaid
-graph LR
-    subgraph Public Blockchains
-        A[Ethereum] --> B[Slow: 15s]
-        A --> C[Expensive: $5-50/tx]
-        A --> D[Public: Anyone sees data]
-    end
-    
-    subgraph Canton
-        E[Canton] --> F[Fast: <1s]
-        E --> G[Free locally]
-        E --> H[Private: Authorized only]
-    end
-    
-    style A fill:#fbb,stroke:#333,stroke-width:2px
-    style E fill:#bbf,stroke:#333,stroke-width:2px
-```
-
-**Key differences**:
 
 | Feature | Ethereum/Public | Canton |
 |---------|----------------|--------|
@@ -501,28 +543,6 @@ make sandbox
 ```bash
 make build
 make sandbox
-```
-
-## Comparing Development Workflows
-
-```mermaid
-sequenceDiagram
-    participant Dev as Developer
-    participant Local as Local Sandbox
-    participant Remote as Remote Canton
-    
-    Note over Dev,Remote: Traditional Workflow (Remote)
-    Dev->>Remote: 1. Upload DAR (25s)
-    Remote->>Dev: 2. Confirm upload
-    Dev->>Remote: 3. Create contract
-    Remote->>Dev: 4. Result (slow)
-    Note over Dev,Remote: Total: 2-3 minutes
-    
-    Note over Dev,Local: Local Workflow
-    Dev->>Local: 1. Start sandbox (2s)
-    Dev->>Local: 2. Create contract
-    Local->>Dev: 3. Result (instant)
-    Note over Dev,Local: Total: <10 seconds
 ```
 
 ## Next Steps
