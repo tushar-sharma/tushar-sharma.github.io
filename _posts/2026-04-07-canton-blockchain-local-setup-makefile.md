@@ -1,15 +1,14 @@
 ---
 layout: post
-title: "Building and Testing Canton Smart Contracts Locally: A Makefile-Driven Workflow"
-tags: [blockchain, canton, daml, smart-contracts, makefile, tutorial]
+title: "Building and Testing Canton Smart Contracts Locally"
+tags: [blockchain, canton, daml, makefile]
 author: tushar sharma
 category: blog
-published: false
-image: https://unsplash.com/photos/JrjhtBJ-pGU/download?w=437
-thumb: https://unsplash.com/photos/JrjhtBJ-pGU/download?w=437
+image: https://unsplash.com/photos/eSJSmF5y15U/download?w=437
+thumb: https://unsplash.com/photos/eSJSmF5y15U/download?w=437
 ---
 
-### Why Test Locally?
+Building on Canton requires fast feedback loops. Testing locally before deploying to a testnet saves time and costs. This guide walks through a complete workflow: create a contract, build it, spin up a sandbox, and verify it works via the JSON API.<!-- truncate_here -->
 
 Building on Canton requires fast feedback loops. Testing locally before deploying to a testnet saves time and costs. This guide walks through a complete workflow: create a contract, build it, spin up a sandbox, and verify it works via the JSON API.
 
@@ -33,24 +32,12 @@ testContract/
 
 Create `daml/Main.daml`:
 
-```daml
-module Main where
-
-template Asset
-  with
-    owner : Party
-    name : Text
-    value : Decimal
-  where
-    signatory owner
-
-    choice Transfer : ContractId Asset
-      with
-        newOwner : Party
-      controller owner
-      do
-        create this with owner = newOwner
-```
+{% template  customCode.html %}
+---
+id: 9913b68c100405cd70c77baaa4333f9f
+file: Main.daml
+---
+{% endtemplate %}
 
 **What this does:**
 - **Template Asset**: Represents an asset with owner, name, and value
@@ -75,42 +62,12 @@ The `.dar` file (DAML ARchive) is like a JAR—it bundles your compiled smart co
 
 Create a `Makefile` at the project root:
 
-```makefile
-.PHONY: build sandbox test clean start help
-
-build:
-    @echo "Building DAML project..."
-    @daml build
-    @echo "Build complete!"
-
-sandbox:
-    @if ! ls .daml/dist/*.dar >/dev/null 2>&1; then \
-        echo "No DAR found. Run 'make build' first."; \
-        exit 1; \
-    fi
-    @echo "Starting Canton Sandbox + JSON API..."
-    @echo "Ledger API: localhost:6865"
-    @echo "JSON API: localhost:7575"
-    @daml start --sandbox-port 6865 --json-api-port 7575
-
-test:
-    @echo "Running DAML tests..."
-    @daml test
-
-clean:
-    @echo "Cleaning build artifacts..."
-    @rm -rf .daml/dist
-    @echo "Clean complete!"
-
-start: build sandbox
-
-help:
-    @echo "DAML Project Commands:"
-    @echo "  make build    - Build the DAR file"
-    @echo "  make start    - Build and start Sandbox + JSON API"
-    @echo "  make test     - Run DAML tests"
-    @echo "  make clean    - Remove build artifacts"
-```
+{% template  customCode.html %}
+---
+id: 9913b68c100405cd70c77baaa4333f9f
+file: Makefile
+---
+{% endtemplate %}
 
 ## Step 5: Run the Sandbox
 
@@ -131,7 +88,8 @@ curl http://localhost:7575/readyz
 ```
 
 Response:
-```json
+
+```bash
 [+] ledger ok (SERVING)
 readyz check passed
 ```
