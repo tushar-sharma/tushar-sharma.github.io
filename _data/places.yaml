@@ -158,6 +158,13 @@
   notes: "Great free public library. Free guest internet and multiple floors. Great place to study."
   category: "activity"
 
+- name: "Duke Free Electron Laser Laboratory"
+  address: "LaSalle St, Durham, NC 27705"
+  map_link: "https://www.google.com/maps/search/?api=1&query=Duke+Free+Electron+Laser+Laboratory"
+  city: "Durham, NC"
+  notes: "A fascinating particle accelerator facility. The RF cavity and microwave generator were acquired from the Budker Institute in Russia."
+  category: "activity"
+
 - name: "Road To Myanmar Asian Cuisine"
   address: "147 E Franklin St, Chapel Hill, NC 27514"
   map_link: "https://www.google.com/maps/search/?api=1&query=147+E+Franklin+St,+Chapel+Hill,+NC+27514"
@@ -165,5 +172,14 @@
   notes: "Long wait. Tom Yum soup was a hit, but Mohinga missed the mark. Dumplings and summer rolls were just okay."
   category: "food"
 
+- name: "Fiesta Patria Mexican Restaurant Cantina"
+  address: "7410 NC-73, Denver, NC 28037"
+  map_link: "https://www.google.com/maps/search/?api=1&query=7410+NC-73,+Denver,+NC+28037"
+  city: "Denver, NC"
+  notes: "Went with the Pollo Acapulco—shrimp and chicken sautéed with broccoli, served alongside rice and beans. Portions were generous for the price, and the complimentary salsa and chips was great."
+  category: "food"
+
 # Valle de la Luna (Chile)
 # INSANE Grassland Slide In Inner Mongolia, China
+# Rokusan Angel (Burlesque Tokyo)
+# Tapati Rapa Nui festival
