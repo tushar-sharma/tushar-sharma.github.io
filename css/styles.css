@@ -311,6 +311,16 @@ https://muffinman.io/blog/custom-jekyll-pagination/
 
 }
 
+.pagination span.pagination-info {
+  /* Tag pages use a "Page X of Y" label; don't force it into a tiny square. */
+  float: none;
+  width: auto;
+  height: auto;
+  line-height: 20px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
 .pagination-wrapper a.pagination-step,
 span.pagination-step {
   width: auto;
