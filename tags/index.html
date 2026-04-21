@@ -19,75 +19,152 @@ title: Tags
 
 a.myIcon:hover { color:red;}
 
-/* Tag cloud layout + sizing */
-.tag-cloud {
+/* Tags graph (Obsidian-ish) */
+:root {
+  --rw-accent: rgb(51, 153, 204);
+  --rw-graph-bg-1: #061826;
+  --rw-graph-bg-2: #0b2333;
+  --rw-graph-ink: rgba(234, 246, 255, 0.92);
+}
+
+.tag-graph {
+  margin: 10px 0 26px;
+}
+
+.tag-graph__head {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 12px;
-  align-items: baseline;
-  padding: 10px 0 40px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 12px;
 }
 
-.tag-cloud a.tag-cloud__tag {
-  /* --w is 0..100. Keep the range tight so large tags don't dominate. */
-  font-size: calc(0.95rem + (0.9rem * (var(--w, 50) * 0.01)));
-  line-height: 1.1;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  text-decoration: none;
-  border: 1px solid rgba(4, 43, 63, 0.45);
-  background: rgba(51, 153, 204, 0.22);
-  color: #042b3f;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
-  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease, border-color 120ms ease;
-}
-
-.tag-cloud a.tag-cloud__tag:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
-  border-color: rgba(8, 77, 112, 0.55);
-  filter: saturate(1.15) contrast(1.03);
-}
-
-/* Modern color syntax: give chips an indie gradient that strengthens with weight. */
-@supports (color: rgb(0 0 0 / 1)) {
-  .tag-cloud a.tag-cloud__tag {
-    border-color: rgb(4 43 63 / calc(0.32 + (var(--w, 50) * 0.003)));
-    background:
-      radial-gradient(110% 140% at 18% 10%,
-        rgb(255 166 72 / calc(0.22 + (var(--w, 50) * 0.004))),
-        transparent 60%),
-      radial-gradient(120% 150% at 78% 40%,
-        rgb(22 140 206 / calc(0.20 + (var(--w, 50) * 0.004))),
-        transparent 64%),
-      linear-gradient(135deg,
-        rgb(255 242 232 / 1),
-        rgb(220 246 255 / 1));
-  }
-}
-
-.tag-cloud sup.tag-cloud__count {
-  font-size: 0.72em;
-  opacity: 0.95;
-  padding: 0 7px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(4, 43, 63, 0.25);
+.tag-graph__title {
+  font-size: 1.05rem;
   color: rgba(4, 43, 63, 0.88);
+  margin: 0;
+}
+
+.tag-graph__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.tag-graph__controls input[type="search"] {
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(4, 43, 63, 0.22);
+  outline: none;
+  min-width: 220px;
+}
+
+.tag-graph__controls input[type="search"]:focus {
+  border-color: rgba(51, 153, 204, 0.55);
+  box-shadow: 0 0 0 3px rgba(51, 153, 204, 0.16);
+}
+
+.tag-graph__controls button {
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(4, 43, 63, 0.22);
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.tag-graph__panel {
+  border-radius: 18px;
+  border: 1px solid rgba(4, 43, 63, 0.18);
+  overflow: hidden;
+  background:
+    radial-gradient(1100px 640px at 18% 15%, rgba(51, 153, 204, 0.24), transparent 58%),
+    radial-gradient(900px 650px at 78% 52%, rgba(255, 166, 72, 0.12), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92));
+}
+
+.tag-graph__stage {
+  position: relative;
+  height: min(72vh, 760px);
+  background:
+    radial-gradient(1100px 740px at 18% 12%, rgba(51, 153, 204, 0.20), transparent 55%),
+    radial-gradient(900px 720px at 80% 52%, rgba(255, 166, 72, 0.12), transparent 58%),
+    linear-gradient(180deg, var(--rw-graph-bg-1), var(--rw-graph-bg-2));
+}
+
+.tag-graph__hint {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  font-size: 0.9rem;
+  color: rgba(234, 246, 255, 0.70);
+  background: rgba(4, 18, 28, 0.42);
+  border: 1px solid rgba(234, 246, 255, 0.12);
+  padding: 8px 10px;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.tag-graph__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.tg-link {
+  stroke: rgba(234, 246, 255, 0.12);
+  stroke-width: 1;
+}
+
+.tg-node {
+  cursor: pointer;
+}
+
+.tg-node circle {
+  fill: rgba(4, 23, 35, 0.62);
+  stroke: rgba(234, 246, 255, 0.18);
+  stroke-width: 1;
+}
+
+.tg-node text {
+  font-family: inherit;
+  fill: rgba(234, 246, 255, 0.88);
+  dominant-baseline: middle;
+  paint-order: stroke;
+  stroke: rgba(4, 18, 28, 0.85);
+  stroke-width: 3px;
+}
+
+.tg-node[data-hot="1"] circle {
+  stroke: rgba(51, 153, 204, 0.65);
+  filter: drop-shadow(0 0 10px rgba(51, 153, 204, 0.25));
+}
+
+.tg-node[data-dim="1"] {
+  opacity: 0.15;
+}
+
+.tg-link[data-dim="1"] {
+  opacity: 0.05;
+}
+
+.tag-cloud-fallback {
+  margin: 18px 0 0;
+}
+
+.tag-cloud-fallback a {
+  display: inline-block;
+  margin: 0 10px 10px 0;
 }
 </style>
-
-<!-- dummy box begins -->
-<div style="padding-bottom:60px; padding-top:20px; background : white;">
-</div>
 
 {% assign tags_sorted = site.tags | sort %}
 {% assign max_tag_count = 1 %}
 {% for tag in tags_sorted %}
-{% if tag[0] != 'sidebar' %} <!-- hack to remove sidebar tags -->
+{% if tag[0] != 'sidebar' %}
   {% assign tag_count = tag | last | size %}
   {% if tag_count > max_tag_count %}
     {% assign max_tag_count = tag_count %}
@@ -95,23 +172,459 @@ a.myIcon:hover { color:red;}
 {% endif %}
 {% endfor %}
 
-<div class="tag-cloud">
-{% assign tags_list = tags_sorted %}
-{% if tags_list.first[0] == null %}
+<div class="tag-graph" id="tag-graph-root">
+  <div class="tag-graph__head">
+    <p class="tag-graph__title">Tag graph: connections are tag co-occurrences inside the same post.</p>
+    <div class="tag-graph__controls">
+      <input id="tag-graph-search" type="search" placeholder="Search tag (e.g. ai, claude, aws)" autocomplete="off" />
+      <button id="tag-graph-reset" type="button">Reset view</button>
+      <button id="tag-graph-toggle" type="button">Toggle list</button>
+    </div>
+  </div>
+  <div class="tag-graph__panel">
+    <div class="tag-graph__stage" id="tag-graph-stage">
+      <svg class="tag-graph__svg" id="tag-graph-svg" aria-label="Interactive tag graph">
+        <g id="tag-graph-viewport">
+          <g id="tag-graph-links"></g>
+          <g id="tag-graph-nodes"></g>
+        </g>
+      </svg>
+      <div class="tag-graph__hint">Drag to pan. Scroll to zoom. Hover to highlight. Click a node to open the tag.</div>
+    </div>
+  </div>
+</div>
+
+<div class="tag-cloud-fallback" id="tag-cloud-fallback" style="display:none;">
+  {% assign tags_list = tags_sorted %}
   {% for tag in tags_list %}
-     <a class="mytag tag-cloud__tag" style="--w: 60;" href="/tag/{{ tag }}">{{ tag }} <sup class="tag-cloud__count">{{ site.tags[tag].size }}</sup></a>
-  {% endfor %}
-{% else %}
-  {% for tag in tags_list %}
-{% if tag[0] != 'sidebar' %} <!-- hack to remove sidebar tags -->
+  {% if tag[0] != 'sidebar' %}
     {% assign tag_count = tag | last | size %}
-    {% assign weight = tag_count | times: 100 | divided_by: max_tag_count %}
-    {% assign w = weight | times: 65 | divided_by: 100 | plus: 35 %}
-    <a class="mytag tag-cloud__tag" style="--w: {{ w }};" href="/tag/{{ tag[0] }}">{{ tag[0] }} <sup class="tag-cloud__count">{{ tag_count }}</sup></a>
-{% endif %}
+    <a class="mytag" href="/tag/{{ tag[0] }}">{{ tag[0] }} <sup>{{ tag_count }}</sup></a>
+  {% endif %}
   {% endfor %}
-{% endif %}
+</div>
+
+<script type="application/json" id="tag-graph-data">
+{
+  "maxCount": {{ max_tag_count }},
+  "nodes": [
+    {% assign first_node = true %}
+    {% for tag in tags_sorted %}
+    {% if tag[0] != 'sidebar' %}
+      {% assign tag_count = tag | last | size %}
+      {% assign weight = tag_count | times: 100 | divided_by: max_tag_count %}
+      {% assign w = weight | times: 65 | divided_by: 100 | plus: 35 %}
+      {% unless first_node %},{% endunless %}
+      {"id": {{ tag[0] | jsonify }}, "count": {{ tag_count }}, "w": {{ w }}}
+      {% assign first_node = false %}
+    {% endif %}
+    {% endfor %}
+  ],
+  "posts": [
+    {% assign first_post = true %}
+    {% for post in site.posts %}
+      {% if post.tags %}
+        {% unless first_post %},{% endunless %}
+        {{ post.tags | jsonify }}
+        {% assign first_post = false %}
+      {% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<script>
+(() => {
+  const root = document.getElementById('tag-graph-root');
+  const stage = document.getElementById('tag-graph-stage');
+  const svg = document.getElementById('tag-graph-svg');
+  const viewport = document.getElementById('tag-graph-viewport');
+  const linksG = document.getElementById('tag-graph-links');
+  const nodesG = document.getElementById('tag-graph-nodes');
+  const dataEl = document.getElementById('tag-graph-data');
+  const searchEl = document.getElementById('tag-graph-search');
+  const resetBtn = document.getElementById('tag-graph-reset');
+  const toggleBtn = document.getElementById('tag-graph-toggle');
+  const listFallback = document.getElementById('tag-cloud-fallback');
+  if (!root || !stage || !svg || !viewport || !linksG || !nodesG || !dataEl) return;
+
+  const data = JSON.parse(dataEl.textContent || '{}');
+  const allNodes = Array.isArray(data.nodes) ? data.nodes : [];
+  const posts = Array.isArray(data.posts) ? data.posts : [];
+
+  // Keep it snappy: render top N tags by count.
+  const MAX_NODES = 120;
+  const nodes = allNodes
+    .slice()
+    .sort((a, b) => (b.count - a.count) || String(a.id).localeCompare(String(b.id)))
+    .slice(0, MAX_NODES)
+    .map((n) => ({ ...n }));
+
+  const nodeById = new Map(nodes.map((n, i) => [n.id, i]));
+
+  // Build co-occurrence edges from posts. Only among included nodes.
+  const edgeWeights = new Map();
+  const key = (a, b) => (a < b ? a + '|' + b : b + '|' + a);
+
+  for (const tags of posts) {
+    if (!Array.isArray(tags) || tags.length < 2) continue;
+    const filtered = tags.filter((t) => nodeById.has(t));
+    if (filtered.length < 2) continue;
+    // De-dupe within a post.
+    const uniq = Array.from(new Set(filtered));
+    // Avoid quadratic blowups on posts with huge tag lists.
+    if (uniq.length > 12) uniq.length = 12;
+    for (let i = 0; i < uniq.length; i++) {
+      for (let j = i + 1; j < uniq.length; j++) {
+        const k = key(uniq[i], uniq[j]);
+        edgeWeights.set(k, (edgeWeights.get(k) || 0) + 1);
+      }
+    }
+  }
+
+  // Keep only meaningful edges.
+  const edges = [];
+  for (const [k, w] of edgeWeights.entries()) {
+    if (w < 2) continue;
+    const [a, b] = k.split('|');
+    const ai = nodeById.get(a);
+    const bi = nodeById.get(b);
+    if (ai == null || bi == null) continue;
+    edges.push({ a: ai, b: bi, w });
+  }
+
+  // If graph is too sparse, fall back to "connect to nearest big nodes" so it never looks empty.
+  if (edges.length < Math.max(24, nodes.length * 0.35)) {
+    const sortedIdx = nodes
+      .map((n, i) => ({ i, score: n.count }))
+      .sort((x, y) => y.score - x.score)
+      .slice(0, Math.min(18, nodes.length))
+      .map((x) => x.i);
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = 0; j < sortedIdx.length; j++) {
+        const b = sortedIdx[j];
+        if (b === i) continue;
+        edges.push({ a: i, b, w: 1 });
+        break;
+      }
+    }
+  }
+
+  const ns = 'http://www.w3.org/2000/svg';
+  const el = (name) => document.createElementNS(ns, name);
+
+  // Viewport transform (pan/zoom)
+  const view = { x: 0, y: 0, k: 1 };
+  const applyView = () => viewport.setAttribute('transform', `translate(${view.x} ${view.y}) scale(${view.k})`);
+  applyView();
+
+  const size = () => {
+    const r = stage.getBoundingClientRect();
+    return { w: Math.max(320, r.width), h: Math.max(360, r.height) };
+  };
+
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+  const rand = (a, b) => a + Math.random() * (b - a);
+
+  // Initial positions in a blob.
+  const { w: W0, h: H0 } = size();
+  const cx0 = W0 / 2;
+  const cy0 = H0 / 2;
+  for (const n of nodes) {
+    const r = Math.sqrt(Math.random());
+    const t = Math.random() * Math.PI * 2;
+    n.x = cx0 + r * (Math.min(W0, H0) * 0.32) * Math.cos(t);
+    n.y = cy0 + r * (Math.min(W0, H0) * 0.32) * Math.sin(t);
+    n.vx = 0;
+    n.vy = 0;
+  }
+
+  const nodeRadius = (n) => 3.5 + (n.w * 0.12);
+  const nodeFont = (n) => clamp(10 + (n.w * 0.10), 10, 18);
+
+  // Render links
+  const linkEls = edges.map((e) => {
+    const l = el('line');
+    l.classList.add('tg-link');
+    const alpha = clamp(0.05 + e.w * 0.06, 0.06, 0.28);
+    l.style.stroke = `rgba(234, 246, 255, ${alpha})`;
+    l.style.strokeWidth = String(clamp(0.6 + e.w * 0.35, 0.8, 2.4));
+    linksG.appendChild(l);
+    return l;
+  });
+
+  // Render nodes
+  const nodeEls = nodes.map((n) => {
+    const g = el('g');
+    g.classList.add('tg-node');
+    g.dataset.id = n.id;
+
+    const c = el('circle');
+    c.setAttribute('r', String(nodeRadius(n)));
+    g.appendChild(c);
+
+    const t = el('text');
+    t.textContent = n.id;
+    t.setAttribute('x', String(nodeRadius(n) + 6));
+    t.setAttribute('y', '0');
+    t.style.fontSize = `${nodeFont(n)}px`;
+    g.appendChild(t);
+
+    const title = el('title');
+    title.textContent = `${n.id} (${n.count} posts)`;
+    g.appendChild(title);
+
+    nodesG.appendChild(g);
+    return g;
+  });
+
+  const update = () => {
+    for (let i = 0; i < edges.length; i++) {
+      const e = edges[i];
+      const a = nodes[e.a];
+      const b = nodes[e.b];
+      const l = linkEls[i];
+      l.setAttribute('x1', a.x);
+      l.setAttribute('y1', a.y);
+      l.setAttribute('x2', b.x);
+      l.setAttribute('y2', b.y);
+    }
+    for (let i = 0; i < nodes.length; i++) {
+      const n = nodes[i];
+      nodeEls[i].setAttribute('transform', `translate(${n.x} ${n.y})`);
+    }
+  };
+
+  // Force simulation (simple, stable, no dependencies).
+  let ticking = true;
+  const simulate = () => {
+    if (!ticking) return;
+    const { w: W, h: H } = size();
+    const centerX = W / 2;
+    const centerY = H / 2;
+
+    // Link (spring) forces
+    for (const e of edges) {
+      const a = nodes[e.a];
+      const b = nodes[e.b];
+      const dx = b.x - a.x;
+      const dy = b.y - a.y;
+      const dist = Math.max(1, Math.hypot(dx, dy));
+      const desired = 70 + (a.w + b.w) * 0.35;
+      const k = 0.0022 + e.w * 0.0006;
+      const f = (dist - desired) * k;
+      const fx = (dx / dist) * f;
+      const fy = (dy / dist) * f;
+      a.vx += fx;
+      a.vy += fy;
+      b.vx -= fx;
+      b.vy -= fy;
+    }
+
+    // Repulsion + collision
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i];
+        const b = nodes[j];
+        const dx = b.x - a.x;
+        const dy = b.y - a.y;
+        const dist2 = dx * dx + dy * dy + 0.01;
+        const dist = Math.sqrt(dist2);
+
+        const rep = 240 / dist2;
+        const rx = (dx / dist) * rep;
+        const ry = (dy / dist) * rep;
+        a.vx -= rx;
+        a.vy -= ry;
+        b.vx += rx;
+        b.vy += ry;
+
+        const minD = nodeRadius(a) + nodeRadius(b) + 10;
+        if (dist < minD) {
+          const push = (minD - dist) * 0.012;
+          const px = (dx / dist) * push;
+          const py = (dy / dist) * push;
+          a.vx -= px;
+          a.vy -= py;
+          b.vx += px;
+          b.vy += py;
+        }
+      }
+    }
+
+    // Integrate + mild centering + damping
+    for (const n of nodes) {
+      n.vx += (centerX - n.x) * 0.0008;
+      n.vy += (centerY - n.y) * 0.0008;
+      n.vx *= 0.88;
+      n.vy *= 0.88;
+      n.x += n.vx;
+      n.y += n.vy;
+    }
+
+    update();
+    requestAnimationFrame(simulate);
+  };
+
+  update();
+  requestAnimationFrame(simulate);
+
+  // Pan/zoom
+  let panning = false;
+  let panStart = null;
+
+  const pt = (evt) => {
+    const r = svg.getBoundingClientRect();
+    return { x: evt.clientX - r.left, y: evt.clientY - r.top };
+  };
+
+  svg.addEventListener('pointerdown', (evt) => {
+    // If you start on a node, let node drag handle it.
+    if (evt.target && evt.target.closest && evt.target.closest('.tg-node')) return;
+    panning = true;
+    svg.setPointerCapture(evt.pointerId);
+    const p = pt(evt);
+    panStart = { px: p.x, py: p.y, x: view.x, y: view.y };
+  });
+
+  svg.addEventListener('pointermove', (evt) => {
+    if (!panning || !panStart) return;
+    const p = pt(evt);
+    view.x = panStart.x + (p.x - panStart.px);
+    view.y = panStart.y + (p.y - panStart.py);
+    applyView();
+  });
+
+  svg.addEventListener('pointerup', () => {
+    panning = false;
+    panStart = null;
+  });
+
+  svg.addEventListener('wheel', (evt) => {
+    evt.preventDefault();
+    const delta = evt.deltaY;
+    const zoom = Math.exp(-delta * 0.0012);
+    const nextK = clamp(view.k * zoom, 0.35, 3.2);
+    const p = pt(evt);
+    // Zoom around cursor.
+    const kRatio = nextK / view.k;
+    view.x = p.x - (p.x - view.x) * kRatio;
+    view.y = p.y - (p.y - view.y) * kRatio;
+    view.k = nextK;
+    applyView();
+  }, { passive: false });
+
+  const resetView = () => {
+    view.x = 0;
+    view.y = 0;
+    view.k = 1;
+    applyView();
+  };
+  resetBtn && resetBtn.addEventListener('click', resetView);
+
+  // Node interactions: drag + hover highlighting + click navigate.
+  const neighbors = new Map();
+  for (const e of edges) {
+    if (!neighbors.has(e.a)) neighbors.set(e.a, new Set());
+    if (!neighbors.has(e.b)) neighbors.set(e.b, new Set());
+    neighbors.get(e.a).add(e.b);
+    neighbors.get(e.b).add(e.a);
+  }
+
+  const clearFocus = () => {
+    for (const g of nodeEls) {
+      g.dataset.dim = '0';
+      g.dataset.hot = '0';
+    }
+    for (const l of linkEls) l.dataset.dim = '0';
+  };
+
+  const focusNode = (idx) => {
+    const neigh = neighbors.get(idx) || new Set();
+    for (let i = 0; i < nodeEls.length; i++) {
+      const hot = (i === idx || neigh.has(i)) ? '1' : '0';
+      nodeEls[i].dataset.hot = hot;
+      nodeEls[i].dataset.dim = hot === '1' ? '0' : '1';
+    }
+    for (let i = 0; i < edges.length; i++) {
+      const e = edges[i];
+      const on = (e.a === idx || e.b === idx || (neigh.has(e.a) && neigh.has(e.b)));
+      linkEls[i].dataset.dim = on ? '0' : '1';
+    }
+  };
+
+  let draggingNode = null;
+  let dragOffset = null;
+
+  const toWorld = (p) => ({
+    x: (p.x - view.x) / view.k,
+    y: (p.y - view.y) / view.k
+  });
+
+  for (let i = 0; i < nodeEls.length; i++) {
+    const g = nodeEls[i];
+    g.addEventListener('pointerdown', (evt) => {
+      draggingNode = i;
+      svg.setPointerCapture(evt.pointerId);
+      const p = toWorld(pt(evt));
+      dragOffset = { dx: nodes[i].x - p.x, dy: nodes[i].y - p.y };
+      // Make it responsive during drag.
+      nodes[i].vx = 0;
+      nodes[i].vy = 0;
+      ticking = true;
+      evt.stopPropagation();
+    });
+
+    g.addEventListener('pointerenter', () => focusNode(i));
+    g.addEventListener('pointerleave', () => clearFocus());
+
+    g.addEventListener('click', () => {
+      const id = nodes[i].id;
+      const href = '/tag/' + encodeURIComponent(id);
+      window.location.href = href;
+    });
+  }
+
+  svg.addEventListener('pointermove', (evt) => {
+    if (draggingNode == null || !dragOffset) return;
+    const p = toWorld(pt(evt));
+    const n = nodes[draggingNode];
+    n.x = p.x + dragOffset.dx;
+    n.y = p.y + dragOffset.dy;
+    n.vx = 0;
+    n.vy = 0;
+    update();
+  });
+
+  svg.addEventListener('pointerup', () => {
+    draggingNode = null;
+    dragOffset = null;
+  });
+
+  // Search
+  const search = (q) => {
+    const s = (q || '').trim().toLowerCase();
+    if (!s) return clearFocus();
+    const idx = nodes.findIndex((n) => String(n.id).toLowerCase() === s);
+    if (idx >= 0) return focusNode(idx);
+    // Prefix match fallback
+    const idx2 = nodes.findIndex((n) => String(n.id).toLowerCase().startsWith(s));
+    if (idx2 >= 0) return focusNode(idx2);
+    clearFocus();
+  };
+  searchEl && searchEl.addEventListener('input', (e) => search(e.target.value));
+
+  // Toggle list fallback
+  const toggleList = () => {
+    if (!listFallback) return;
+    const isHidden = listFallback.style.display === 'none';
+    listFallback.style.display = isHidden ? 'block' : 'none';
+    toggleBtn.textContent = isHidden ? 'Hide list' : 'Toggle list';
+  };
+  toggleBtn && toggleBtn.addEventListener('click', toggleList);
+})();
+</script>
+
 {% assign tags_list = nil %}
 {% assign tags_sorted = nil %}
 {% assign max_tag_count = nil %}
-</div>
