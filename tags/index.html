@@ -174,7 +174,6 @@ a.myIcon:hover { color:red;}
 
 <div class="tag-graph" id="tag-graph-root">
   <div class="tag-graph__head">
-    <p class="tag-graph__title">Tag graph: connections are tag co-occurrences inside the same post.</p>
     <div class="tag-graph__controls">
       <input id="tag-graph-search" type="search" placeholder="Search tag (e.g. ai, claude, aws)" autocomplete="off" />
       <button id="tag-graph-reset" type="button">Reset view</button>
@@ -355,6 +354,11 @@ a.myIcon:hover { color:red;}
 
   // Render nodes
   const nodeEls = nodes.map((n) => {
+    const href = '/tag/' + encodeURIComponent(n.id) + '/';
+    const a = el('a');
+    a.setAttribute('href', href);
+    a.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', href);
+
     const g = el('g');
     g.classList.add('tg-node');
     g.dataset.id = n.id;
@@ -374,7 +378,8 @@ a.myIcon:hover { color:red;}
     title.textContent = `${n.id} (${n.count} posts)`;
     g.appendChild(title);
 
-    nodesG.appendChild(g);
+    a.appendChild(g);
+    nodesG.appendChild(a);
     return g;
   });
 
@@ -539,6 +544,15 @@ a.myIcon:hover { color:red;}
     for (const l of linkEls) l.dataset.dim = '0';
   };
 
+  let lockedFocusIdx = null; // set by search
+  let hoverFocusIdx = null;  // set by pointer hover
+
+  const applyFocus = () => {
+    if (hoverFocusIdx != null) return focusNode(hoverFocusIdx);
+    if (lockedFocusIdx != null) return focusNode(lockedFocusIdx);
+    clearFocus();
+  };
+
   const focusNode = (idx) => {
     const neigh = neighbors.get(idx) || new Set();
     for (let i = 0; i < nodeEls.length; i++) {
@@ -553,64 +567,101 @@ a.myIcon:hover { color:red;}
     }
   };
 
-  let draggingNode = null;
-  let dragOffset = null;
-
   const toWorld = (p) => ({
     x: (p.x - view.x) / view.k,
     y: (p.y - view.y) / view.k
   });
 
+  let draggedRecently = false;
+
   for (let i = 0; i < nodeEls.length; i++) {
     const g = nodeEls[i];
     g.addEventListener('pointerdown', (evt) => {
-      draggingNode = i;
-      svg.setPointerCapture(evt.pointerId);
+      const pointerId = evt.pointerId;
+      g.setPointerCapture(pointerId);
       const p = toWorld(pt(evt));
-      dragOffset = { dx: nodes[i].x - p.x, dy: nodes[i].y - p.y };
+      const dragOffset = { dx: nodes[i].x - p.x, dy: nodes[i].y - p.y };
       // Make it responsive during drag.
       nodes[i].vx = 0;
       nodes[i].vy = 0;
       ticking = true;
+      draggedRecently = false;
+      let dragMoved = 0;
+
+      const onMove = (moveEvt) => {
+        if (moveEvt.pointerId !== pointerId) return;
+        const wp = toWorld(pt(moveEvt));
+        const n = nodes[i];
+        const nx = wp.x + dragOffset.dx;
+        const ny = wp.y + dragOffset.dy;
+        dragMoved += Math.hypot(nx - n.x, ny - n.y);
+        n.x = nx;
+        n.y = ny;
+        n.vx = 0;
+        n.vy = 0;
+        update();
+      };
+
+      const onUp = (upEvt) => {
+        if (upEvt.pointerId !== pointerId) return;
+        if (dragMoved > 6) draggedRecently = true;
+        try { g.releasePointerCapture(pointerId); } catch {}
+        g.removeEventListener('pointermove', onMove);
+        g.removeEventListener('pointerup', onUp);
+        g.removeEventListener('pointercancel', onUp);
+      };
+
+      g.addEventListener('pointermove', onMove);
+      g.addEventListener('pointerup', onUp);
+      g.addEventListener('pointercancel', onUp);
       evt.stopPropagation();
     });
 
-    g.addEventListener('pointerenter', () => focusNode(i));
-    g.addEventListener('pointerleave', () => clearFocus());
-
-    g.addEventListener('click', () => {
-      const id = nodes[i].id;
-      const href = '/tag/' + encodeURIComponent(id);
-      window.location.href = href;
+    g.addEventListener('pointerenter', () => {
+      hoverFocusIdx = i;
+      applyFocus();
+    });
+    g.addEventListener('pointerleave', () => {
+      hoverFocusIdx = null;
+      applyFocus();
+    });
+    g.addEventListener('click', (evt) => {
+      // Some browsers can be finicky about SVG <a> activation under pointer capture;
+      // keep the <a> for "open in new tab" and use this only for plain clicks.
+      if (draggedRecently) return;
+      if (evt.defaultPrevented) return;
+      if (evt.metaKey || evt.ctrlKey || evt.shiftKey || evt.altKey) return;
+      window.location.href = '/tag/' + encodeURIComponent(nodes[i].id) + '/';
     });
   }
 
-  svg.addEventListener('pointermove', (evt) => {
-    if (draggingNode == null || !dragOffset) return;
-    const p = toWorld(pt(evt));
-    const n = nodes[draggingNode];
-    n.x = p.x + dragOffset.dx;
-    n.y = p.y + dragOffset.dy;
-    n.vx = 0;
-    n.vy = 0;
-    update();
-  });
-
-  svg.addEventListener('pointerup', () => {
-    draggingNode = null;
-    dragOffset = null;
+  // If you were dragging a node, prevent the underlying <a> navigation on click.
+  nodesG.addEventListener('click', (evt) => {
+    if (!draggedRecently) return;
+    evt.preventDefault();
+    draggedRecently = false;
   });
 
   // Search
   const search = (q) => {
     const s = (q || '').trim().toLowerCase();
-    if (!s) return clearFocus();
+    if (!s) {
+      lockedFocusIdx = null;
+      return applyFocus();
+    }
     const idx = nodes.findIndex((n) => String(n.id).toLowerCase() === s);
-    if (idx >= 0) return focusNode(idx);
+    if (idx >= 0) {
+      lockedFocusIdx = idx;
+      return applyFocus();
+    }
     // Prefix match fallback
     const idx2 = nodes.findIndex((n) => String(n.id).toLowerCase().startsWith(s));
-    if (idx2 >= 0) return focusNode(idx2);
-    clearFocus();
+    if (idx2 >= 0) {
+      lockedFocusIdx = idx2;
+      return applyFocus();
+    }
+    lockedFocusIdx = null;
+    applyFocus();
   };
   searchEl && searchEl.addEventListener('input', (e) => search(e.target.value));
 
