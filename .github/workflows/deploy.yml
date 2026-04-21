@@ -16,8 +16,6 @@ concurrency:
 
 jobs:
   build-deploy:
-    # Prevent infinite loops when this workflow pushes generated tag pages back to master.
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
@@ -27,7 +25,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Full history for Jekyll plugins
-          persist-credentials: true
 
       - name: 💎 Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -42,7 +39,10 @@ jobs:
           bundle install
 
       - name: 🏗️ Build Site
-        run: JEKYLL_ENV=production bundle exec jekyll build
+        run: |
+          # Ensure no stale build artifacts are carried across runs.
+          JEKYLL_ENV=production bundle exec jekyll clean
+          JEKYLL_ENV=production bundle exec jekyll build
         env:
           TZ: UTC  # Ensures consistent timestamps
           
@@ -56,34 +56,6 @@ jobs:
           if [ -f "sitemap.xml" ]; then cp sitemap.xml _site/; fi
           if [ -f "robots.txt" ]; then cp robots.txt _site/; fi
           if [ -f "loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt" ]; then cp loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt _site/; fi
-          
-          # Handle tag directory if needed
-          if [ -d "_site/tag" ]; then
-            rm -fr tag
-            cp -r _site/tag .
-          fi
-      
-      - name: 📝 Commit Generated Tag Pages Back To master
-        run: |
-          set -euo pipefail
-          
-          if [ ! -d "tag" ]; then
-            echo "No ./tag directory present; skipping commit."
-            exit 0
-          fi
-          
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
-          git add -A tag
-          
-          if git diff --cached --quiet; then
-            echo "No tag changes to commit."
-            exit 0
-          fi
-          
-          git commit -m "chore: update generated tag pages"
-          git push origin HEAD:master
 
       - name: ✅ Verify Build
         run: |
