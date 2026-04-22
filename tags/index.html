@@ -33,10 +33,10 @@ a.myIcon:hover { color:red;}
 
 .tag-graph__head {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 10px 12px;
-  align-items: center;
-  justify-content: space-between;
+  align-items: stretch;
   margin: 0 0 12px;
 }
 
@@ -58,7 +58,7 @@ a.myIcon:hover { color:red;}
   border-radius: 999px;
   border: 1px solid rgba(4, 43, 63, 0.22);
   outline: none;
-  min-width: 220px;
+  min-width: min(420px, 92vw);
 }
 
 .tag-graph__controls input[type="search"]:focus {
@@ -72,6 +72,38 @@ a.myIcon:hover { color:red;}
   border: 1px solid rgba(4, 43, 63, 0.22);
   background: rgba(255, 255, 255, 0.9);
   cursor: pointer;
+}
+
+.tag-graph__controls button:hover {
+  background: rgba(239, 247, 252, 0.95);
+}
+
+.tag-graph__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.tag-graph__chip {
+  background: rgba(51, 153, 204, 0.10);
+  border: 1px solid rgba(51, 153, 204, 0.28);
+  border-radius: 999px;
+  color: rgba(4, 43, 63, 0.88);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+}
+
+.tag-graph__status {
+  min-height: 1.3rem;
+  font-size: 0.92rem;
+  color: rgba(4, 43, 63, 0.82);
+}
+
+.tag-graph__status a {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .tag-graph__panel {
@@ -152,12 +184,62 @@ a.myIcon:hover { color:red;}
 }
 
 .tag-cloud-fallback {
-  margin: 18px 0 0;
+  margin: 14px 0 0;
+  border-radius: 14px;
+  border: 1px solid rgba(4, 43, 63, 0.14);
+  padding: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(249,252,255,0.95));
+}
+
+.tag-cloud-fallback__title {
+  margin: 0 0 10px;
+  color: rgba(4, 43, 63, 0.85);
 }
 
 .tag-cloud-fallback a {
   display: inline-block;
-  margin: 0 10px 10px 0;
+  margin: 0 8px 8px 0;
+}
+
+.tag-cloud-fallback__item {
+  border-radius: 999px;
+  border: 1px solid rgba(51, 153, 204, 0.35);
+  background: rgba(51, 153, 204, 0.12);
+  color: rgba(4, 43, 63, 0.95);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 7px 10px;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.tag-cloud-fallback__item sup {
+  color: rgba(4, 43, 63, 0.65);
+  font-weight: 600;
+}
+
+.tag-cloud-fallback__item:hover {
+  background: rgba(51, 153, 204, 0.2);
+}
+
+.tag-cloud-fallback__empty {
+  display: none;
+  margin-top: 8px;
+  color: rgba(4, 43, 63, 0.76);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .tag-graph__stage {
+    height: 62vh;
+  }
+  .tag-graph__controls button {
+    font-size: 0.9rem;
+  }
+  .tag-graph__hint {
+    max-width: 88%;
+  }
 }
 </style>
 
@@ -177,8 +259,13 @@ a.myIcon:hover { color:red;}
     <div class="tag-graph__controls">
       <input id="tag-graph-search" type="search" placeholder="Search tag (e.g. ai, claude, aws)" autocomplete="off" />
       <button id="tag-graph-reset" type="button">Reset view</button>
-      <button id="tag-graph-toggle" type="button">Toggle list</button>
+      <button id="tag-graph-toggle" type="button">Show all tags</button>
     </div>
+    <div class="tag-graph__meta">
+      <span id="tag-chip-total" class="tag-graph__chip"></span>
+      <span id="tag-chip-graph" class="tag-graph__chip"></span>
+    </div>
+    <div id="tag-graph-search-status" class="tag-graph__status"></div>
   </div>
   <div class="tag-graph__panel">
     <div class="tag-graph__stage" id="tag-graph-stage">
@@ -188,19 +275,21 @@ a.myIcon:hover { color:red;}
           <g id="tag-graph-nodes"></g>
         </g>
       </svg>
-      <div class="tag-graph__hint">Drag to pan. Scroll to zoom. Hover to highlight. Click a node to open the tag.</div>
+      <div class="tag-graph__hint">Drag to pan. Scroll to zoom. Hover to highlight. Click a node to open a tag.</div>
     </div>
   </div>
 </div>
 
 <div class="tag-cloud-fallback" id="tag-cloud-fallback" style="display:none;">
+  <h3 class="tag-cloud-fallback__title">All tags</h3>
   {% assign tags_list = tags_sorted %}
   {% for tag in tags_list %}
   {% if tag[0] != 'sidebar' %}
     {% assign tag_count = tag | last | size %}
-    <a class="mytag" href="/tag/{{ tag[0] }}">{{ tag[0] }} <sup>{{ tag_count }}</sup></a>
+    <a class="mytag tag-cloud-fallback__item" data-tag="{{ tag[0] | downcase }}" data-count="{{ tag_count }}" href="/tag/{{ tag[0] }}">{{ tag[0] }} <sup>{{ tag_count }}</sup></a>
   {% endif %}
   {% endfor %}
+  <div id="tag-cloud-empty" class="tag-cloud-fallback__empty">No tags match this search.</div>
 </div>
 
 <script type="application/json" id="tag-graph-data">
@@ -244,22 +333,34 @@ a.myIcon:hover { color:red;}
   const searchEl = document.getElementById('tag-graph-search');
   const resetBtn = document.getElementById('tag-graph-reset');
   const toggleBtn = document.getElementById('tag-graph-toggle');
+  const statusEl = document.getElementById('tag-graph-search-status');
+  const tagChipTotalEl = document.getElementById('tag-chip-total');
+  const tagChipGraphEl = document.getElementById('tag-chip-graph');
   const listFallback = document.getElementById('tag-cloud-fallback');
+  const listEmptyEl = document.getElementById('tag-cloud-empty');
   if (!root || !stage || !svg || !viewport || !linksG || !nodesG || !dataEl) return;
 
   const data = JSON.parse(dataEl.textContent || '{}');
   const allNodes = Array.isArray(data.nodes) ? data.nodes : [];
   const posts = Array.isArray(data.posts) ? data.posts : [];
-
-  // Keep it snappy: render top N tags by count.
-  const MAX_NODES = 120;
-  const nodes = allNodes
+  const allNodesSorted = allNodes
     .slice()
-    .sort((a, b) => (b.count - a.count) || String(a.id).localeCompare(String(b.id)))
+    .sort((a, b) => (b.count - a.count) || String(a.id).localeCompare(String(b.id)));
+  const allByLower = new Map(allNodesSorted.map((n) => [String(n.id).toLowerCase(), n]));
+
+  // Balance: cap graph for smooth animation, keep full index in the list/search.
+  const MAX_NODES = 140;
+  const nodes = allNodesSorted
     .slice(0, MAX_NODES)
     .map((n) => ({ ...n }));
 
   const nodeById = new Map(nodes.map((n, i) => [n.id, i]));
+  const graphByLower = new Map(nodes.map((n, i) => [String(n.id).toLowerCase(), i]));
+  const listItems = Array.from(listFallback ? listFallback.querySelectorAll('.tag-cloud-fallback__item') : []);
+
+  if (tagChipTotalEl) tagChipTotalEl.textContent = `${allNodesSorted.length} tags indexed`;
+  if (tagChipGraphEl) tagChipGraphEl.textContent = `Graph showing top ${Math.min(MAX_NODES, allNodesSorted.length)}`;
+  if (toggleBtn) toggleBtn.textContent = `Show all tags (${allNodesSorted.length})`;
 
   // Build co-occurrence edges from posts. Only among included nodes.
   const edgeWeights = new Map();
@@ -323,7 +424,6 @@ a.myIcon:hover { color:red;}
   };
 
   const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
-  const rand = (a, b) => a + Math.random() * (b - a);
 
   // Initial positions in a blob.
   const { w: W0, h: H0 } = size();
@@ -642,37 +742,86 @@ a.myIcon:hover { color:red;}
     draggedRecently = false;
   });
 
-  // Search
+  const setStatus = (html) => {
+    if (!statusEl) return;
+    statusEl.innerHTML = html || '';
+  };
+  const esc = (v) =>
+    String(v)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+
+  const filterList = (query) => {
+    if (!listItems.length) return;
+    const s = String(query || '').trim().toLowerCase();
+    let visible = 0;
+    for (const item of listItems) {
+      const tag = item.dataset.tag || '';
+      const show = !s || tag.includes(s);
+      item.style.display = show ? 'inline-block' : 'none';
+      if (show) visible += 1;
+    }
+    if (listEmptyEl) listEmptyEl.style.display = visible === 0 ? 'block' : 'none';
+  };
+
+  const findTagForQuery = (query) => {
+    const s = String(query || '').trim().toLowerCase();
+    if (!s) return null;
+    const exact = allByLower.get(s);
+    if (exact) return exact;
+    return allNodesSorted.find((n) => String(n.id).toLowerCase().startsWith(s)) || null;
+  };
+
+  // Search across all tags; graph focus applies only when tag is in graph.
   const search = (q) => {
     const s = (q || '').trim().toLowerCase();
+    filterList(s);
     if (!s) {
       lockedFocusIdx = null;
+      setStatus('');
       return applyFocus();
     }
-    const idx = nodes.findIndex((n) => String(n.id).toLowerCase() === s);
-    if (idx >= 0) {
-      lockedFocusIdx = idx;
-      return applyFocus();
+
+    const match = findTagForQuery(s);
+    if (!match) {
+      lockedFocusIdx = null;
+      applyFocus();
+      setStatus('No matching tag. Try a shorter prefix.');
+      return;
     }
-    // Prefix match fallback
-    const idx2 = nodes.findIndex((n) => String(n.id).toLowerCase().startsWith(s));
-    if (idx2 >= 0) {
-      lockedFocusIdx = idx2;
-      return applyFocus();
+
+    const graphIdx = graphByLower.get(String(match.id).toLowerCase());
+    if (graphIdx != null) {
+      lockedFocusIdx = graphIdx;
+      applyFocus();
+      setStatus(`Found <a href="/tag/${encodeURIComponent(match.id)}/">${esc(match.id)}</a> in graph (${match.count} posts).`);
+      return;
     }
+
     lockedFocusIdx = null;
     applyFocus();
+    setStatus(`Found <a href="/tag/${encodeURIComponent(match.id)}/">${esc(match.id)}</a> (${match.count} posts). This tag is in the full list, not the graph cap.`);
   };
   searchEl && searchEl.addEventListener('input', (e) => search(e.target.value));
+  searchEl && searchEl.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter') return;
+    const match = findTagForQuery(searchEl.value);
+    if (!match) return;
+    window.location.href = '/tag/' + encodeURIComponent(match.id) + '/';
+  });
 
   // Toggle list fallback
   const toggleList = () => {
     if (!listFallback) return;
     const isHidden = listFallback.style.display === 'none';
     listFallback.style.display = isHidden ? 'block' : 'none';
-    toggleBtn.textContent = isHidden ? 'Hide list' : 'Toggle list';
+    toggleBtn.textContent = isHidden ? 'Hide all tags' : `Show all tags (${allNodesSorted.length})`;
   };
   toggleBtn && toggleBtn.addEventListener('click', toggleList);
+  filterList('');
 })();
 </script>
 
