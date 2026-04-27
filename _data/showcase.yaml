@@ -1,0 +1,18 @@
+tools:
+  - title: "YouTube to MP3"
+    url: "https://ootobmp3.randomwits.com/"
+    label: "Featured tool"
+    icon: "youtube-mp3"
+    accent: "sunset"
+    description: "Paste a YouTube link and jump straight to audio conversion in a focused, low-friction flow."
+    cta: "Open tool"
+
+spaces:
+  - title: "Ball Hit"
+    url: "/games/ball-hit.html"
+    label: "Browser game"
+    icon: "ball-hit"
+    accent: "ocean"
+    description: "A simple paddle-and-ball browser game built for quick, casual play."
+    meta: "Your original mini game."
+    cta: "Play now"
