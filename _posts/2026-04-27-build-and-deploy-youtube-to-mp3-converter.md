@@ -11,11 +11,13 @@ tags: [python, fastapi, docker, github actions, scaleway]
 
 I often find myself searching for websites to convert YouTube videos to MP3. Most of these sites are full of spam and annoying ads, so I decided to build a simple website and learn along the way.<!-- truncate_here -->
 
+I often find myself searching for websites to convert YouTube videos to MP3. Most of these sites are full of spam and annoying ads, so I decided to build a simple website and learn along the way.
+
 <div style="text-align: center; margin: 20px 0;">
   <a href="https://nsstrangeheisenberge569cdbf-container-vigorous-torvalds.functions.fnc.fr-par.scw.cloud" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 24px; background-color: #39c; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 18px;">Live Demo</a>
 </div>
 
-Use this project only for content you have permission to download and convert.
+> Use this project only for content you have permission to download and convert.
 
 ## Architecture at a Glance
 
