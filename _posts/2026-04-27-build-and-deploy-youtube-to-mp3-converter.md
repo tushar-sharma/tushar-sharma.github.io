@@ -6,7 +6,6 @@ thumb: https://unsplash.com/photos/VltJrvovRbY/download?w=437
 author: Tushar Sharma
 category: blog
 tags: [python, fastapi, docker, github actions, scaleway]
-published: false
 ---
 
 
@@ -86,7 +85,7 @@ youtubeMp3Converter/
 
 **`main.py`** creates the `FastAPI` app instance, registers routers, and mounts the static file server. It is intentionally thin — no business logic lives here.
 
-```python
+<div style="display:none;" markdown="1">
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from routers.convert import router
@@ -94,13 +93,20 @@ from routers.convert import router
 app = FastAPI(title="OotobMp3", version="0.1.0")
 app.include_router(router)
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
-```
+</div>
+
+{% template  customCode.html %}
+---
+id: cb3fbdf5a8663fb9b43807baebb00898
+file: main.py
+---
+{% endtemplate %}
 
 One important constraint: `include_router` must come before `app.mount`. FastAPI evaluates routes in registration order. If `StaticFiles` is mounted first, its catch-all handler intercepts every request — including `/api/*` — before the API router sees them.
 
 **`routers/convert.py`** contains only HTTP concerns: parsing request bodies, validating input, raising `HTTPException`, and returning response models. It knows nothing about how conversion actually works.
 
-```python
+<div style="display:none;" markdown="1">
 from fastapi import APIRouter, BackgroundTasks, HTTPException
 
 router = APIRouter(prefix="/api", tags=["convert"])
@@ -114,7 +120,14 @@ def submit_conversion(body: ConvertRequest, background_tasks: BackgroundTasks):
     jobs[job_id] = {"status": "pending", "file_path": None, "title": None, "error": None}
     background_tasks.add_task(converter.convert_video, job_id, body.url, jobs)
     return ConvertResponse(job_id=job_id)
-```
+</div>
+
+{% template  customCode.html %}
+---
+id: cb3fbdf5a8663fb9b43807baebb00898
+file: convert.py
+---
+{% endtemplate %}
 
 `BackgroundTasks` is FastAPI's built-in mechanism for running work after the response is sent. The conversion starts, the response returns immediately with the `job_id`, and the download happens in a thread pool in the background.
 
@@ -122,7 +135,7 @@ This is a good fit for lightweight jobs in a single service. For heavier or long
 
 **`schemas/convert.py`** defines Pydantic models — Python dataclasses with built-in validation, serialization, and JSON schema generation.
 
-```python
+<div style="display:none;" markdown="1">
 from pydantic import BaseModel
 
 class ConvertRequest(BaseModel):
@@ -136,11 +149,18 @@ class StatusResponse(BaseModel):
     status: str
     title: str | None = None
     error: str | None = None
-```
+</div>
+
+{% template  customCode.html %}
+---
+id: cb3fbdf5a8663fb9b43807baebb00898
+file: schemas.py
+---
+{% endtemplate %}
 
 **`services/converter.py`** is the only place that knows about yt-dlp and ffmpeg. If we ever swap yt-dlp for another library, only this file changes.
 
-```python
+<div style="display:none;" markdown="1">
 def convert_video(job_id: str, url: str, jobs: dict) -> None:
     jobs[job_id]["status"] = "processing"
     try:
@@ -166,7 +186,14 @@ def convert_video(job_id: str, url: str, jobs: dict) -> None:
     except Exception as e:
         jobs[job_id]["status"] = "error"
         jobs[job_id]["error"] = str(e)
-```
+</div>
+
+{% template  customCode.html %}
+---
+id: cb3fbdf5a8663fb9b43807baebb00898
+file: services.py
+---
+{% endtemplate %}
 
 ## Important Production Caveat: In-Memory State
 
@@ -194,7 +221,7 @@ This is why we invested in Pydantic models for every request and response. The m
 
 The UI is a single `static/index.html` file — HTML, CSS, and JavaScript, no framework, no build step. FastAPI's `StaticFiles` serves it at `GET /`. The JavaScript polls `GET /api/status/{job_id}` every two seconds using `setInterval`.
 
-```javascript
+<div style="display:none;" markdown="1">
 async function pollStatus(jobId) {
   pollInterval = setInterval(async () => {
     const res  = await fetch(`/api/status/${jobId}`);
@@ -209,7 +236,15 @@ async function pollStatus(jobId) {
     }
   }, 2000);
 }
-```
+</div>
+
+{% template  customCode.html %}
+---
+id: cb3fbdf5a8663fb9b43807baebb00898
+file: ui.js
+---
+{% endtemplate %}
+
 
 The UI has four explicit states — IDLE, CONVERTING, READY, ERROR — each showing and hiding the relevant cards. Theme (light/dark) is toggled via a CSS `data-theme` attribute on `<html>` and persisted to `localStorage`.
 
@@ -219,7 +254,7 @@ The UI has four explicit states — IDLE, CONVERTING, READY, ERROR — each show
 
 A `Makefile` is a portable task runner. Every engineer on the project runs the same commands regardless of their local setup.
 
-```makefile
+<div style="display:none;" markdown="1">
 IMAGE     = ootobmp3
 CONTAINER = ootobmp3
 PORT      = 8080
@@ -236,7 +271,14 @@ test: ## Run tests with coverage
 
 coverage: ## Open HTML coverage report in browser
 	open htmlcov/index.html
-```
+</div>
+
+{% template  customCode.html %}
+---
+id: cb3fbdf5a8663fb9b43807baebb00898
+file: Makefile
+---
+{% endtemplate %}
 
 `make test` produces a coverage table in the terminal that shows exactly which lines are not covered:
 
@@ -259,7 +301,7 @@ TOTAL                     164     12    93%
 
 The Dockerfile is the answer to "it works on my machine". It packages Python, ffmpeg, your dependencies, and your code into a single artifact that runs identically everywhere.
 
-```dockerfile
+<div style="display:none;" markdown="1">
 FROM python:3.12-slim
 
 # Pull uv from its official image — no pip install needed
@@ -287,7 +329,14 @@ EXPOSE 8080
 
 # PORT env var lets hosting platforms (Render, Scaleway) inject their assigned port
 CMD ["sh", "-c", "uv run uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}"]
-```
+</div>
+
+{% template  customCode.html %}
+---
+id: cb3fbdf5a8663fb9b43807baebb00898
+file: Dockerfile
+---
+{% endtemplate %}
 
 **Layer ordering matters.** Docker caches layers. If you copy source code before installing dependencies, any code change invalidates the dependency cache — meaning `uv sync` re-runs on every build even when `pyproject.toml` did not change. By copying `pyproject.toml` and `uv.lock` first and running `uv sync` before copying source, dependency installation is cached as long as the lockfile is unchanged.
 
@@ -309,7 +358,7 @@ When you push code to GitHub, your source lives at `github.com/username/repo`. W
 
 `.github/workflows/push_image.yml`:
 
-```yaml
+<div style="display:none;" markdown="1">
 name: Build and Push to GHCR
 
 on:
@@ -343,7 +392,15 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ env.OWNER_LC }}/ootobmp3:latest
-```
+</div>
+
+
+{% template  customCode.html %}
+---
+id: cb3fbdf5a8663fb9b43807baebb00898
+file: push.yaml
+---
+{% endtemplate %}
 
 **What each step does:**
 
