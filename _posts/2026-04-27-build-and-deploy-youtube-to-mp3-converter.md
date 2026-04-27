@@ -11,13 +11,16 @@ tags: [python, fastapi, docker, github actions, scaleway]
 
 I often find myself searching for websites to convert YouTube videos to MP3. Most of these sites are full of spam and annoying ads, so I decided to build a simple website and learn along the way.<!-- truncate_here -->
 
+<div style="background-color: #fff3cd; border-left: 5px solid #ffc107; border-radius: 4px; padding: 15px; margin: 20px 0; color: #856404;">
+  <strong style="font-size: 16px;">⚠️ Disclaimer:</strong> Use this project only for content you have permission to download and convert.
+</div>
+
 I often find myself searching for websites to convert YouTube videos to MP3. Most of these sites are full of spam and annoying ads, so I decided to build a simple website and learn along the way.
 
 <div style="text-align: center; margin: 20px 0;">
-  <a href="https://nsstrangeheisenberge569cdbf-container-vigorous-torvalds.functions.fnc.fr-par.scw.cloud" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 24px; background-color: #39c; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 18px;">Live Demo</a>
+  <a alt="https://nsstrangeheisenberge569cdbf-container-vigorous-torvalds.functions.fnc.fr-par.scw.cloud" href="https://ootobmp3.randomwits.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 24px; background-color: #39c; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 18px;">Live Demo</a>
 </div>
 
-> Use this project only for content you have permission to download and convert.
 
 ## Architecture at a Glance
 
@@ -552,3 +555,32 @@ New version is live
 ```
 
 ---
+
+## Mapping a Custom Subdomain (CNAME)
+
+The default Scaleway URL is great for testing, but for production, you'll want a custom domain like `ootobmp3.randomwits.com`.
+
+### Step 1 — Configure DNS in Namecheap
+
+To point your domain to Scaleway, create a CNAME (Canonical Name) record in your registrar. This acts as an alias.
+
+1. Log in to Namecheap (or any other domain hosting site like Godaddy, etc) and go to **Advanced DNS**.
+2. Click **+ Add Record** and select **CNAME Record**.
+3. Fill in the fields:
+   - **Host:** `ootobmp3` (creates `ootobmp3.randomwits.com`)
+   - **Value:** `ootobmp3.functions.fnc.fr-par.scw.cloud` (your Scaleway endpoint)
+   - **TTL:** Automatic
+
+> **Pro Tip:** Never include `https://` or trailing slashes in the DNS Value field. It must be the raw hostname only.
+
+### Step 2 — Add the Endpoint in Scaleway
+
+Now, tell Scaleway to listen for requests coming from your new subdomain.
+
+1. In the Scaleway Console, click on your **ootobmp3** container.
+2. Go to the **Endpoints** tab.
+3. Click **+ Add Endpoint** and select **Custom Domain**.
+4. Enter your full subdomain: `ootobmp3.randomwits.com`
+5. Scaleway will verify domain ownership (usually instant for CNAME records) and activate it.
+
+Your app is now accessible at `https://ootobmp3.randomwits.com` with an automatic HTTPS certificate from Let's Encrypt.
