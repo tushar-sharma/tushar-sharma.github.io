@@ -4,7 +4,7 @@ tools:
     label: "Featured tool"
     icon: "youtube-mp3"
     accent: "sunset"
-    description: "Paste a YouTube link and jump straight to audio conversion in a focused, low-friction flow."
+    description: "Paste a YouTube link and download mp3 audio file."
     cta: "Open tool"
 
 spaces:
@@ -13,6 +13,6 @@ spaces:
     label: "Browser game"
     icon: "ball-hit"
     accent: "ocean"
-    description: "A simple paddle-and-ball browser game built for quick, casual play."
-    meta: "Your original mini game."
+    description: "A simple paddle-and-ball browser game built for casual play."
+    meta: ""
     cta: "Play now"
