@@ -6,27 +6,16 @@ tags:
   - vim
   - neovim
   - lunarvim
-  - git
-  - tutorial
 name: fugitive-blame-lunarvim-window-width
-thumb: 'https://unsplash.com/photos/8IJ5xNTv1QM/download?w=437'
+thumb: 'https://unsplash.com/photos/VNwQyZL6jtk/download?w=437'
 summary: Install vim-fugitive in LunarVim and keep Git blame readable by resizing the blame split to half the editor.
-image: 'https://unsplash.com/photos/8IJ5xNTv1QM/download?w=437'
+image: 'https://unsplash.com/photos/VNwQyZL6jtk/download?w=437'
 author: Tushar Sharma
-published: false
 ---
 
 [`vim-fugitive`](https://github.com/tpope/vim-fugitive) gives you a proper `:Git blame` view inside LunarVim. The annoying part is that the blame window can become too wide when author names, dates, or commit metadata are long. On a laptop screen that means you can see the committers, but not enough of the code.<!-- truncate_here -->
 
 [`vim-fugitive`](https://github.com/tpope/vim-fugitive) gives you a proper `:Git blame` view inside LunarVim. The annoying part is that the blame window can become too wide when author names, dates, or commit metadata are long. On a laptop screen that means you can see the committers, but not enough of the code.
-
-This post shows the full setup from a fresh laptop:
-
-1. Install the basic tools.
-2. Install LunarVim.
-3. Add `vim-fugitive` to `~/.config/lvim/config.lua`.
-4. Force Fugitive's blame split to stay at 50 percent of the editor width.
-5. Verify the setup with a tiny Git repository.
 
 ## What We Want
 
