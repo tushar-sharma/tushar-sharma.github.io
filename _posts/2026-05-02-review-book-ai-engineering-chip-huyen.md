@@ -26,43 +26,58 @@ This book focuses on the engineering aspects of building applications using foun
 
 ## Chapter 1: Introduction to Building AI Applications with Foundation Models
 
-Previously , software as a service as popular e.g. SAAS cloudfare, Okta, etc. Now we have, model as a service. So Gemini, Anthropic, ChatGPT, etc develop models which are used by others. 
+Previously, Software as a Service (SaaS) was popular — e.g. Cloudflare, Okta, etc. Now we have **Model as a Service**: companies like Google (Gemini), Anthropic, and OpenAI (ChatGPT) develop models which others build on top of.
 
-**Language models** of 1950s are precursor to the **large language model**.  **Language models** predict how likely a word is to appear in a given context. e.g. my fav color is _ . "blue" is more likely to be correct answer than car.
+**Language models** of the 1950s are precursors to modern **large language models**. A language model predicts how likely a word (or token) is to appear in a given context. e.g. "My favourite color is ___". "Blue" is more likely than "car".
 
-The basic unit of a language model is called **token**. A token can be a character, a word, or a part of a word, etc. The process of breaking a text into tokens is called **tokenization**. A set of all tokens a model can work with is the model's vocabulary.  ? I still dont undnerstand what's vocabulary. Does it means how much tokens can a model work with ? Chatp-4's vocabular isze is 100,256 and Mixtral 8x7b has vocualbar of 32,000 . what does it mean ? 
+The basic unit of a language model is called a **token**. A token can be a character, a word, or a part of a word. The process of breaking text into tokens is called **tokenization**.
 
+The model's **vocabulary** is a fixed lookup table mapping every known token to a unique number (ID). The model never sees raw text — only sequences of these IDs. For example, `"what's the capital of north carolina?"` might become `[3493, 596, 279, 6864, 315, 4892, 15696, 30]`.
 
-Two types of langauge models:
+**Vocabulary size** is how many entries are in that table. GPT-4 has 100,256 entries; Mixtral 8x7B has 32,000.
 
-1. Masked langauge model 
-2. autoregresive lanauge model 
+This matters in two ways:
+- **Output**: when generating the next token, the model scores *every* entry in the vocabulary and picks the most likely one. So vocabulary size defines the full range of things it can ever say.
+- **Input splitting**: if a word isn't in the vocabulary as a single entry, the tokenizer breaks it into smaller pieces that are. A larger vocabulary stores more words whole, keeping sequences shorter and more efficient.
 
-1. Masked language model: trained to predict missing token anywhere in the sequence , using hte context from before or after the missing token. e.g. bidirectional encoder representaions from transformers or BERT
+---
 
-2. Augoregressive lanauge model: predict next token in a sequence, using only the preciding token. they predict wwhat comes next ? but how is it differnt than masked lanague model? 
+Two types of language models:
 
-mermaid diagram
+1. **Masked language model** — trained to predict a missing token *anywhere* in a sequence, using context from both before and after the gap. Example: BERT (Bidirectional Encoder Representations from Transformers).
 
-> Augtoregrresiv lM | What does the chicken corss the | -> context previous token only -> prediciton
+2. **Autoregressive language model** — trained to predict the *next* token in a sequence, using only the preceding tokens.
 
-> mask lm : why does the [predictiopn [corss the road] > =thsi has context (surroinding tokens)
+The key difference: masked models are **bidirectional** (they see both sides of a gap), while autoregressive models are **unidirectional** (they only look backwards). This makes autoregressive models natural text generators — they produce output left to right, just like we write.
 
-modles can genrate. open endied outputs that' why it's called genrative. it generates infimit psosible outputs. 
+```
+Masked LM:     "Why does the [?] cross the road?"
+               ← context ←         → context →
+               Predicts: "chicken" (using both sides)
 
+Autoregressive LM:  "Why does the chicken" → predicts "cross"
+                     ← only previous tokens used
+```
 
+Models can generate open-ended outputs — that's why they're called **generative**. The completions are predictions based on probabilities, not guaranteed to be correct.
 
-The completiions are pridcitons, based on probalbitys , not guarted to be correct. 
+---
 
-what's self supervision?  language models can be trained using self supervision. unlike other like weather forecasting model are trained using supervisions. supermission refersn to trainign ML algorithming using labeled data. which can be expensive nad slow to obtain. Self userpverison helps overthis this data labelling bottleneck. the model can infer label from input data. each inptu sequence : both laables (token to be precited  an the context the model use to rpedccit these labloes. .)
+**Self-supervision** is how language models are trained. Unlike supervised learning (e.g. a weather forecasting model trained on labelled historical data), self-supervision doesn't require human-labelled data. Instead, the model infers its own labels from the input: given a sequence of tokens, the model uses some tokens as context and treats the remaining token(s) as the label to predict. This sidesteps the expensive and slow process of manual data labelling.
 
-Model size is measured by it snumber of. parametes. A parmaters is avaibale within a ML modle that is update thorugh the traingin process. 
+---
 
-Chatgpt = genrative pretrained transform model. 
+**Model size** is measured by its number of **parameters** — values inside the model that are adjusted during training. More parameters generally means more capacity to learn patterns.
 
-foiundation model ? A model that can dela with more than one data modealitys is called a multimodal model. what' si modal? A generative mulit modal model is also called large lanague model.  You can also fine tunee a model to make it on datasets if you want. 
+GPT stands for **Generative Pre-trained Transformer**.
 
-Using a database to suppment the isnturmction sis called retrivel augmental generation (RAG). 
+A **foundation model** is a large model pre-trained on broad data that can be adapted (fine-tuned) for many downstream tasks.
+
+A **multimodal model** is one that can work with more than one type of data (modality) — e.g. both text and images. A generative multimodal model is sometimes loosely called a large language model, though strictly LLMs are text-focused.
+
+You can also **fine-tune** a foundation model on a specific dataset to specialise its behaviour.
+
+Using an external database to supplement the model's knowledge at inference time is called **Retrieval-Augmented Generation (RAG)**.
 
 ## References & Further Reading
 - [Chip Huyen's Blog](https://huyenchip.com/blog)
