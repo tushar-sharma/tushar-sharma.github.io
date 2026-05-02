@@ -6,7 +6,6 @@ thumb: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&
 author: tushar sharma
 category: blog
 tags: books ai llm
-published: false
 ---
 
 These are my learning notes and reflections while reading "AI Engineering: Building Applications with Foundation Models" by Chip Huyen. I plan to update this periodically as I progress through the book.<!-- truncate_here -->
