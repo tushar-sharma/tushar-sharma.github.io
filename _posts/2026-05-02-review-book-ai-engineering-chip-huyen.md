@@ -1,8 +1,8 @@
 ---
 layout: post
 title: AI Engineering - Building Applications with Foundation Models by Chip Huyen
-image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000
-thumb: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=200
+thumb: 'https://unsplash.com/photos/Ne2ANNXGW6M/download?w=437'
+image: thumb: 'https://unsplash.com/photos/Ne2ANNXGW6M/download?w=437'
 author: tushar sharma
 category: blog
 tags: books ai llm

@@ -1,13 +1,12 @@
 ---
 layout: post
 title: "How to Disable Canton Coins on a Canton Validator"
-image: https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1000&q=80
-thumb: https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=200&q=80
+image: 'https://unsplash.com/photos/SQG9tSKPeVM/download?w=437'
+thumb: 'https://unsplash.com/photos/SQG9tSKPeVM/download?w=437'
 author: tushar sharma
 category: blog
 skipImage: true
 tags: [canton, blockchain, kubernetes, daml]
-published: false
 ---
 
 When running a Canton Validator node, the wallet component (which manages Canton Coin transactions) is enabled by default. If your use case does not require Canton Coins — for example, you are running a private or enterprise deployment and do not want to participate in the CC economy — you can disable it with a single configuration flag.<!-- truncate_here -->
@@ -26,11 +25,18 @@ Disabling the wallet does not affect your validator's ability to process transac
 
 Canton validator configuration is written in [HOCON](https://github.com/lightbend/config/blob/main/HOCON.md) syntax. The flag to disable the wallet lives under the validator backend config block:
 
-```hocon
+<div style="display:none;" markdown="1">
 canton.validator-apps.validator_backend {
   enable-wallet = false
 }
-```
+</div>
+
+{% template  customCode.html %}
+---
+id: 680d6ef4cc728a77795a4884eac4acd2
+file: validator-backend.conf
+---
+{% endtemplate %}
 
 Setting `enable-wallet = false` prevents the validator from initialising the wallet app instance on startup.
 
@@ -42,17 +48,25 @@ The Canton validator image reads additional HOCON config from environment variab
 
 Add the following env entry to your validator container spec:
 
-```yaml
+<div style="display:none;" markdown="1">
 - name: ADDITIONAL_CONFIG_DISABLE_WALLET
   value: |
     canton.validator-apps.validator_backend {
       enable-wallet = false
     }
-```
+</div>
+
+{% template  customCode.html %}
+---
+id: 680d6ef4cc728a77795a4884eac4acd2
+file: disable-wallet-env.yaml
+---
+{% endtemplate %}
+
 
 A minimal deployment snippet showing this in context:
 
-```yaml
+<div style="display:none;" markdown="1">
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -78,7 +92,14 @@ spec:
                 canton.validator-apps.validator_backend {
                   enable-wallet = false
                 }
-```
+</div>
+
+{% template  customCode.html %}
+---
+id: 680d6ef4cc728a77795a4884eac4acd2
+file: validator-deployment.yaml
+---
+{% endtemplate %}
 
 Replace `<VERSION>` with the validator app version you are deploying (e.g. `0.5.12`).
 
