@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:site_name" content="Tushar Sharma">
+<title>Cribsheet for Heap data structure</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@tushar sharma">
+    <meta name="twitter:title" content="Cribsheet for Heap data structure">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://unsplash.com/photos/tGTVxeOr_Rs/download?w=437">
+    <meta property="og:image" content="https://unsplash.com/photos/tGTVxeOr_Rs/download?w=437">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <link rel="stylesheet" href="/css/multipleTab.css">
+    <script src="/js/jquery.easytabs.min.js"></script>
+    <script src="/js/multipleTab.js"></script>
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Cribsheet for Heap data structure | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3">
+    <meta property="og:title" content="Cribsheet for Heap data structure">
+    <meta name="author" content="tushar sharma">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="A quick reference guide for heap data structures, algorithms, and common interview patterns. Covers max/min heaps, heapsort, priority queues, and practical implementations in Java and Python.">
+    <meta property="og:description" content="A quick reference guide for heap data structures, algorithms, and common interview patterns. Covers max/min heaps, heapsort, priority queues, and practical implementations in Java and Python.">
+    <link rel="canonical" href="https://randomwits.com/blog/cribsheet-for-heap">
+    <meta property="og:url" content="https://randomwits.com/blog/cribsheet-for-heap">
+    <meta property="og:site_name" content="RandomWits">
+    <meta property="og:image" content="https://unsplash.com/photos/tGTVxeOr_Rs/download?w=437">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-04-11T00:00:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://unsplash.com/photos/tGTVxeOr_Rs/download?w=437">
+    <meta property="twitter:title" content="Cribsheet for Heap data structure">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"tushar sharma"},"dateModified":"2026-04-11T00:00:00+00:00","datePublished":"2026-04-11T00:00:00+00:00","description":"A quick reference guide for heap data structures, algorithms, and common interview patterns. Covers max/min heaps, heapsort, priority queues, and practical implementations in Java and Python.","headline":"Cribsheet for Heap data structure","image":"https://unsplash.com/photos/tGTVxeOr_Rs/download?w=437","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/cribsheet-for-heap"},"url":"https://randomwits.com/blog/cribsheet-for-heap"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <a style="cursor:pointer;" class="DarkReader_Button">
+            <i id="icon-dark" class="fa fa-cloud-moon"></i>
+          </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/places"><i class="fas fa-map-pin"></i> Places</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206"
+     crossorigin="anonymous"></script> -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Cribsheet for Heap data structure</h1>
+        <p>Tags:  <a class="mytag" href="/tag/java" title="View posts tagged with: java">java</a>    <a class="mytag" href="/tag/python" title="View posts tagged with: python">python</a>    <a class="mytag" href="/tag/algorithm" title="View posts tagged with: algorithm">algorithm</a>    <a class="mytag" href="/tag/heap" title="View posts tagged with: heap">heap</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="https://unsplash.com/photos/tGTVxeOr_Rs/download?w=800" alt="Featured image for Cribsheet for Heap data structure" style="max-width:100%; height:auto;">
+        </div>
+        <p>A heap is a specialized tree-based data structure that satisfies the <strong>heap property</strong>: for every node $i$ other than the root, $A[\text{parent}(i)] \ge A[i]$ (Max-Heap) or $A[\text{parent}(i)] \le A[i]$ (Min-Heap).</p>
+        <h3 id="core-properties">Core Properties</h3>
+        <ul>
+          <li>
+            <strong>Structure:</strong> A nearly complete binary tree.</li>
+          <li>
+            <strong>Height:</strong> A heap of $n$ nodes has height $h = \lfloor \log n \rfloor$.
+            <ul>
+              <li>
+                <em>Bounds:</em> $2^h \le n \le 2^{h+1} - 1$.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Representation (Array):</strong> Usually implemented as a 1-indexed array.
+            <ul>
+              <li>
+                <code class="language-plaintext highlighter-rouge">Root</code>: $A[1]$</li>
+              <li>
+                <code class="language-plaintext highlighter-rouge">Parent(i)</code>: $\lfloor i/2 \rfloor$</li>
+              <li>
+                <code class="language-plaintext highlighter-rouge">Left(i)</code>: $2i$</li>
+              <li>
+                <code class="language-plaintext highlighter-rouge">Right(i)</code>: $2i + 1$</li>
+              <li>
+                <strong>Fact:</strong> The leaves are the nodes indexed by $\lfloor n/2 \rfloor + 1, \dots, n$.</li>
+            </ul>
+          </li>
+        </ul>
+        <h3 id="key-algorithms">Key Algorithms</h3>
+        <h4 id="1-max-heapify-olog-n">1. Max-Heapify ($O(\log n)$)</h4>
+        <p>Assumes the left and right subtrees of node $i$ are already max-heaps, but $A[i]$ might be smaller than its children. It "bubbles down" $A[i]$ to its correct position.</p>
+        <h4 id="2-build-max-heap-on">2. Build-Max-Heap ($O(n)$)</h4>
+        <p>Converts an unordered array into a max-heap by calling <code class="language-plaintext highlighter-rouge">Max-Heapify</code> on all non-leaf nodes in bottom-up order (from $n/2$ down to $1$).</p>
+        <ul>
+          <li>
+            <strong>Why $O(n)$?</strong> While $O(n \log n)$ is an upper bound, the tight bound is $O(n)$ because most nodes are near the leaves and only travel a small distance. The sum of heights is a convergent series: $\sum_{h=0}^{\lfloor \log n \rfloor} \frac{n}{2^{h+1}} O(h) = O(n)$.</li>
+        </ul>
+        <h4 id="3-heapsort-on-log-n">3. Heapsort ($O(n \log n)$)</h4>
+        <ol>
+          <li>Build a max-heap from the array.</li>
+          <li>Swap the root (max element) with the last element of the heap.</li>
+          <li>Reduce <code class="language-plaintext highlighter-rouge">heapsize</code> and call <code class="language-plaintext highlighter-rouge">Max-Heapify</code> on the new root.</li>
+          <li>Repeat until the heap is empty.</li>
+        </ol>
+        <h3 id="priority-queue-api">Priority Queue API</h3>
+        <p>A Max-Priority Queue maintains a set $S$ and supports:</p>
+        <ul>
+          <li>
+            <strong>Insert(S, x):</strong> Adds element $x$ ($O(\log n)$).</li>
+          <li>
+            <strong>Maximum(S):</strong> Returns the max element ($O(1)$).</li>
+          <li>
+            <strong>Extract-Max(S):</strong> Removes and returns the max element ($O(\log n)$).</li>
+          <li>
+            <strong>Increase-Key(S, x, k):</strong> Increases $x$'s value to $k$ ($O(\log n)$).</li>
+        </ul>
+        <h3 id="using-standard-libraries">Using Standard Libraries</h3>
+        <div class="tab-container">
+          <ul>
+            <li class="tab Java1"><a href="#Java1">Java</a></li>
+            <li class="tab Python1"><a href="#Python1">Python</a></li>
+          </ul>
+          <div class="codeSample Java1" id="Java1">
+            <div class="language-java highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="c1">// Min Heap (Default)</span>
+<span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">minHeap</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PriorityQueue</span><span class="o">&lt;&gt;();</span>
+
+<span class="c1">// Max Heap</span>
+<span class="nc">PriorityQueue</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">maxHeap</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PriorityQueue</span><span class="o">&lt;&gt;(</span><span class="nc">Collections</span><span class="o">.</span><span class="na">reverseOrder</span><span class="o">());</span>
+
+<span class="c1">// Operations</span>
+<span class="n">minHeap</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>    <span class="c1">// Insert - O(log n)</span>
+<span class="n">minHeap</span><span class="o">.</span><span class="na">peek</span><span class="o">();</span>       <span class="c1">// Maximum - O(1)</span>
+<span class="n">minHeap</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>       <span class="c1">// Extract-Min - O(log n)</span>
+</code></pre>
+              </div>
+    </div>
+          </div>
+          <div class="codeSample Python1" id="Python1">
+            <div class="language-python highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="kn">import</span> <span class="n">heapq</span>
+
+<span class="c1"># Min Heap (Default)
+</span><span class="n">min_heap</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">heapq</span><span class="p">.</span><span class="nf">heapify</span><span class="p">(</span><span class="n">min_heap</span><span class="p">)</span> <span class="c1"># O(n)
+</span>
+<span class="c1"># Operations
+</span><span class="n">heapq</span><span class="p">.</span><span class="nf">heappush</span><span class="p">(</span><span class="n">min_heap</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># Insert - O(log n)
+</span><span class="n">heapq</span><span class="p">.</span><span class="nf">heappop</span><span class="p">(</span><span class="n">min_heap</span><span class="p">)</span>       <span class="c1"># Extract-Min - O(log n)
+</span><span class="n">min_heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>                    <span class="c1"># Minimum - O(1)
+</span>
+<span class="c1"># Max Heap: Use negative values
+</span></code></pre>
+              </div>
+    </div>
+          </div>
+        </div>
+        <h3 id="common-patterns">Common Patterns</h3>
+        <ol>
+          <li>
+            <strong>Top K Elements:</strong> Use a Min-Heap of size $K$.</li>
+          <li>
+            <strong>Median from Stream:</strong> Use a Max-Heap (lower half) and a Min-Heap (upper half).</li>
+          <li>
+            <strong>Greedy with Cooldown:</strong> Use a Max-Heap for the next best item and a Queue for items in cooldown.</li>
+        </ol>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/canton-blockchain-local-setup-makefile" title="Previous Post: Building and Testing Canton Smart Contracts Locally">←Previous</a>     <a class="next-item" href="/blog/claude-code-custom-command" title="Next Post: Claude Code Custom Command: Import JVM Certificates">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/cribsheet-for-heap';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/cribsheet-for-heap';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

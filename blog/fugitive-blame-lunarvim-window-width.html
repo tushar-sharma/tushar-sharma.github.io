@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:site_name" content="Tushar Sharma">
+<title>Add Fugitive Git Blame to LunarVim with a 50 Percent Blame Window</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@Tushar Sharma">
+    <meta name="twitter:title" content="Add Fugitive Git Blame to LunarVim with a 50 Percent Blame Window">
+    <meta name="twitter:description" content="Install vim-fugitive in LunarVim and keep Git blame readable by resizing the blame split to half the editor.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://unsplash.com/photos/VNwQyZL6jtk/download?w=437">
+    <meta property="og:image" content="https://unsplash.com/photos/VNwQyZL6jtk/download?w=437">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Add Fugitive Git Blame to LunarVim with a 50 Percent Blame Window | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3">
+    <meta property="og:title" content="Add Fugitive Git Blame to LunarVim with a 50 Percent Blame Window">
+    <meta name="author" content="Tushar Sharma">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="vim-fugitive gives you a proper :Git blame view inside LunarVim. The annoying part is that the blame window can become too wide when author names, dates, or commit metadata are long. On a laptop screen that means you can see the committers, but not enough of the code.">
+    <meta property="og:description" content="vim-fugitive gives you a proper :Git blame view inside LunarVim. The annoying part is that the blame window can become too wide when author names, dates, or commit metadata are long. On a laptop screen that means you can see the committers, but not enough of the code.">
+    <link rel="canonical" href="https://randomwits.com/blog/fugitive-blame-lunarvim-window-width">
+    <meta property="og:url" content="https://randomwits.com/blog/fugitive-blame-lunarvim-window-width">
+    <meta property="og:site_name" content="RandomWits">
+    <meta property="og:image" content="https://unsplash.com/photos/VNwQyZL6jtk/download?w=437">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-04-30T00:00:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://unsplash.com/photos/VNwQyZL6jtk/download?w=437">
+    <meta property="twitter:title" content="Add Fugitive Git Blame to LunarVim with a 50 Percent Blame Window">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2026-04-30T00:00:00+00:00","datePublished":"2026-04-30T00:00:00+00:00","description":"vim-fugitive gives you a proper :Git blame view inside LunarVim. The annoying part is that the blame window can become too wide when author names, dates, or commit metadata are long. On a laptop screen that means you can see the committers, but not enough of the code.","headline":"Add Fugitive Git Blame to LunarVim with a 50 Percent Blame Window","image":"https://unsplash.com/photos/VNwQyZL6jtk/download?w=437","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/fugitive-blame-lunarvim-window-width"},"url":"https://randomwits.com/blog/fugitive-blame-lunarvim-window-width"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <a style="cursor:pointer;" class="DarkReader_Button">
+            <i id="icon-dark" class="fa fa-cloud-moon"></i>
+          </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/places"><i class="fas fa-map-pin"></i> Places</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206"
+     crossorigin="anonymous"></script> -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Add Fugitive Git Blame to LunarVim with a 50 Percent Blame Window</h1>
+        <p>Tags:  <a class="mytag" href="/tag/vim" title="View posts tagged with: vim">vim</a>    <a class="mytag" href="/tag/neovim" title="View posts tagged with: neovim">neovim</a>    <a class="mytag" href="/tag/lunarvim" title="View posts tagged with: lunarvim">lunarvim</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="https://unsplash.com/photos/VNwQyZL6jtk/download?w=800" alt="Featured image for Add Fugitive Git Blame to LunarVim with a 50 Percent Blame Window" style="max-width:100%; height:auto;">
+        </div>
+        <p><a href="https://github.com/tpope/vim-fugitive"><code class="language-plaintext highlighter-rouge">vim-fugitive</code></a> gives you a proper <code class="language-plaintext highlighter-rouge">:Git blame</code> view inside LunarVim. The annoying part is that the blame window can become too wide when author names, dates, or commit metadata are long. On a laptop screen that means you can see the committers, but not enough of the code.</p>
+        <h2 id="what-we-want">What We Want</h2>
+        <p>The final workflow should be simple:</p>
+        <div class="language-vim highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">:</span>Git blame
+</code></pre>
+          </div>
+        </div>
+        <p>After running that command, LunarVim should open a scroll-bound vertical blame window. The blame pane should use half the editor width, leaving the other half for code.</p>
+        <h2 id="install-the-base-tools">Install the Base Tools</h2>
+        <p>On macOS, install the common dependencies with Homebrew:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>git neovim ripgrep fd node python
+</code></pre>
+          </div>
+        </div>
+        <p>If you do not have Homebrew yet, install it first from the <a href="https://brew.sh/">official Homebrew website</a>.</p>
+        <p>On Ubuntu or Debian:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt update
+<span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> git curl neovim ripgrep fd-find nodejs npm python3 python3-pip
+</code></pre>
+          </div>
+        </div>
+        <p>Verify the important commands:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span>git <span class="nt">--version</span>
+<span class="nv">$ </span>nvim <span class="nt">--version</span>
+</code></pre>
+          </div>
+        </div>
+        <p>LunarVim requires Neovim. If your operating system ships an old Neovim version, install a newer Neovim release before installing LunarVim.</p>
+        <h2 id="install-lunarvim">Install LunarVim</h2>
+        <p>Install LunarVim using the official installer command for the release you want. Check the <a href="https://www.lunarvim.org/docs/installation">official LunarVim installation guide</a> if a newer release exists. For LunarVim release <code class="language-plaintext highlighter-rouge">1.4</code> with Neovim <code class="language-plaintext highlighter-rouge">0.9</code>, the command is:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ LV_BRANCH</span><span class="o">=</span><span class="s1">'release-1.4/neovim-0.9'</span> bash &lt;<span class="o">(</span>curl <span class="nt">-s</span> https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh<span class="o">)</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Open LunarVim once so it can finish installing plugins:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span>lvim
+</code></pre>
+          </div>
+        </div>
+        <p>Then quit:</p>
+        <div class="language-vim highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">:</span><span class="k">q</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Create the LunarVim config directory if it does not exist:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.config/lvim
+</code></pre>
+          </div>
+        </div>
+        <p>Open the config file:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span>lvim ~/.config/lvim/config.lua
+</code></pre>
+          </div>
+        </div>
+        <p>If this is a new laptop, the file may be empty or small. That is fine.</p>
+        <h2 id="add-vim-fugitive">Add vim-fugitive</h2>
+        <p>LunarVim lets you add user plugins through <code class="language-plaintext highlighter-rouge">lvim.plugins</code>. The official plugin configuration docs are at <a href="https://www.lunarvim.org/docs/configuration/plugins/user-plugins">LunarVim user plugins</a>.</p>
+        <p>If you do not already have a plugin list, add this to <code class="language-plaintext highlighter-rouge">~/.config/lvim/config.lua</code>:</p>
+        <div class="language-lua highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">lvim</span><span class="p">.</span><span class="n">plugins</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">{</span> <span class="s2">"tpope/vim-fugitive"</span> <span class="p">},</span>
+<span class="p">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p>If you already have a plugin list, add only the Fugitive line inside the existing table:</p>
+        <div class="language-lua highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">lvim</span><span class="p">.</span><span class="n">plugins</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1">-- keep your existing plugins here</span>
+  <span class="p">{</span> <span class="s2">"tpope/vim-fugitive"</span> <span class="p">},</span>
+<span class="p">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Save the file and restart LunarVim:</p>
+        <div class="language-vim highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">:</span><span class="k">w</span>
+<span class="p">:</span><span class="k">q</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Then start LunarVim again:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span>lvim
+</code></pre>
+          </div>
+        </div>
+        <p>Open the plugin manager and sync plugins:</p>
+        <div class="language-vim highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">:</span>Lazy <span class="k">sync</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Restart LunarVim after the sync completes.</p>
+        <h2 id="keep-the-blame-window-at-50-percent">Keep the Blame Window at 50 Percent</h2>
+        <p>Fugitive already creates a nice <code class="language-plaintext highlighter-rouge">:Git blame</code> split. The problem is the width. Fugitive sizes the blame split based on the blame annotation text. Long author names or metadata can push the blame pane too far across the screen.</p>
+        <p>Add this after your <code class="language-plaintext highlighter-rouge">lvim.plugins</code> block in <code class="language-plaintext highlighter-rouge">~/.config/lvim/config.lua</code>:</p>
+        <div class="language-lua highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_autocmd</span><span class="p">(</span><span class="s2">"FileType"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="n">group</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_augroup</span><span class="p">(</span><span class="s2">"lvim_fugitive_blame_width"</span><span class="p">,</span> <span class="p">{</span> <span class="n">clear</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">}),</span>
+  <span class="n">pattern</span> <span class="o">=</span> <span class="s2">"fugitiveblame"</span><span class="p">,</span>
+  <span class="n">callback</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">win</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_get_current_win</span><span class="p">()</span>
+
+    <span class="c1">-- Fugitive resizes blame by annotation length; keep it to half the editor.</span>
+    <span class="n">vim</span><span class="p">.</span><span class="n">schedule</span><span class="p">(</span><span class="k">function</span><span class="p">()</span>
+      <span class="k">if</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_win_is_valid</span><span class="p">(</span><span class="n">win</span><span class="p">)</span> <span class="ow">and</span> <span class="n">vim</span><span class="p">.</span><span class="n">bo</span><span class="p">[</span><span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_win_get_buf</span><span class="p">(</span><span class="n">win</span><span class="p">)].</span><span class="n">filetype</span> <span class="o">==</span> <span class="s2">"fugitiveblame"</span> <span class="k">then</span>
+        <span class="nb">pcall</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_win_set_width</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">o</span><span class="p">.</span><span class="n">columns</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">))</span>
+      <span class="k">end</span>
+    <span class="k">end</span><span class="p">)</span>
+  <span class="k">end</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The important pieces are:</p>
+        <ol>
+          <li>
+            <code class="language-plaintext highlighter-rouge">pattern = "fugitiveblame"</code> runs this only for Fugitive blame buffers.</li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">vim.schedule(...)</code> lets Fugitive finish opening and resizing its own window first.</li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">vim.api.nvim_win_set_width(...)</code> resizes the blame window to half the current editor width.</li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">pcall(...)</code> prevents the config from crashing if Neovim cannot resize the window in a very narrow terminal.</li>
+        </ol>
+        <p>Your minimal <code class="language-plaintext highlighter-rouge">config.lua</code> now looks like this:</p>
+        <div class="language-lua highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">lvim</span><span class="p">.</span><span class="n">plugins</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">{</span> <span class="s2">"tpope/vim-fugitive"</span> <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_autocmd</span><span class="p">(</span><span class="s2">"FileType"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="n">group</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_augroup</span><span class="p">(</span><span class="s2">"lvim_fugitive_blame_width"</span><span class="p">,</span> <span class="p">{</span> <span class="n">clear</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">}),</span>
+  <span class="n">pattern</span> <span class="o">=</span> <span class="s2">"fugitiveblame"</span><span class="p">,</span>
+  <span class="n">callback</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">win</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_get_current_win</span><span class="p">()</span>
+
+    <span class="n">vim</span><span class="p">.</span><span class="n">schedule</span><span class="p">(</span><span class="k">function</span><span class="p">()</span>
+      <span class="k">if</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_win_is_valid</span><span class="p">(</span><span class="n">win</span><span class="p">)</span> <span class="ow">and</span> <span class="n">vim</span><span class="p">.</span><span class="n">bo</span><span class="p">[</span><span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_win_get_buf</span><span class="p">(</span><span class="n">win</span><span class="p">)].</span><span class="n">filetype</span> <span class="o">==</span> <span class="s2">"fugitiveblame"</span> <span class="k">then</span>
+        <span class="nb">pcall</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_win_set_width</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">o</span><span class="p">.</span><span class="n">columns</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">))</span>
+      <span class="k">end</span>
+    <span class="k">end</span><span class="p">)</span>
+  <span class="k">end</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre>
+          </div>
+        </div>
+        <h2 id="dry-run-with-a-sample-repository">Dry Run with a Sample Repository</h2>
+        <p>Before trying this on a real project, create a tiny Git repository:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir</span> <span class="nt">-p</span> /tmp/lvim-blame-demo
+<span class="nv">$ </span><span class="nb">cd</span> /tmp/lvim-blame-demo
+<span class="nv">$ </span>git init
+<span class="nv">$ </span>git config user.name <span class="s2">"Ada Lovelace"</span>
+<span class="nv">$ </span>git config user.email <span class="s2">"ada@example.com"</span>
+<span class="nv">$ </span><span class="nb">printf</span> <span class="s1">'one\ntwo\nthree\n'</span> <span class="o">&gt;</span> notes.txt
+<span class="nv">$ </span>git add notes.txt
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"Add notes"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Now change one line as a different author:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span>git config user.name <span class="s2">"Grace Hopper"</span>
+<span class="nv">$ </span>git config user.email <span class="s2">"grace@example.com"</span>
+<span class="nv">$ </span><span class="nb">printf</span> <span class="s1">'one\ntwo changed\nthree\n'</span> <span class="o">&gt;</span> notes.txt
+<span class="nv">$ </span>git add notes.txt
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"Update second line"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Open the file:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">$ </span>lvim notes.txt
+</code></pre>
+          </div>
+        </div>
+        <p>Run:</p>
+        <div class="language-vim highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">:</span>Git blame
+</code></pre>
+          </div>
+        </div>
+        <p>You should now see:</p>
+        <ol>
+          <li>A blame pane on the left.</li>
+          <li>Your source file on the right.</li>
+          <li>The blame pane using roughly 50 percent of the editor width.</li>
+          <li>Both windows scrolling together.</li>
+        </ol>
+        <h2 id="useful-fugitive-blame-keys">Useful Fugitive Blame Keys</h2>
+        <p>Inside the blame window:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>What it does</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">g?</code></td>
+              <td>Show Fugitive blame help</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">gq</code></td>
+              <td>Close the blame window</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">&lt;CR&gt;</code></td>
+              <td>Open the commit for the current blamed line</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">o</code></td>
+              <td>Open the commit in a horizontal split</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">O</code></td>
+              <td>Open the commit in a new tab</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">p</code></td>
+              <td>Open the commit in a preview window</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">A</code></td>
+              <td>Resize to the end of the author column</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">C</code></td>
+              <td>Resize to the end of the commit column</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">D</code></td>
+              <td>Resize to the end of the date column</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>The <code class="language-plaintext highlighter-rouge">A</code>, <code class="language-plaintext highlighter-rouge">C</code>, and <code class="language-plaintext highlighter-rouge">D</code> keys are still useful when you want Fugitive's original column-based sizing temporarily. The autocmd only runs when the blame buffer is created, so manual resizing still works after the window opens.</p>
+        <h2 id="troubleshooting">Troubleshooting</h2>
+        <h3 id="git-blame-is-not-a-command">
+          <code class="language-plaintext highlighter-rouge">:Git blame</code> is not a command</h3>
+        <p>Fugitive did not load. Check that this line exists in <code class="language-plaintext highlighter-rouge">~/.config/lvim/config.lua</code>:</p>
+        <div class="language-lua highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">{</span> <span class="s2">"tpope/vim-fugitive"</span> <span class="p">},</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Then run:</p>
+        <div class="language-vim highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">:</span>Lazy <span class="k">sync</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Restart LunarVim after the sync finishes.</p>
+        <h3 id="the-blame-window-is-still-too-wide">The blame window is still too wide</h3>
+        <p>Check that the autocmd is outside the <code class="language-plaintext highlighter-rouge">lvim.plugins</code> table. This is correct:</p>
+        <div class="language-lua highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">lvim</span><span class="p">.</span><span class="n">plugins</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">{</span> <span class="s2">"tpope/vim-fugitive"</span> <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_autocmd</span><span class="p">(</span><span class="s2">"FileType"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="c1">-- autocmd config here</span>
+<span class="p">})</span>
+</code></pre>
+          </div>
+        </div>
+        <p>This is wrong:</p>
+        <div class="language-lua highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">lvim</span><span class="p">.</span><span class="n">plugins</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">{</span> <span class="s2">"tpope/vim-fugitive"</span> <span class="p">},</span>
+
+  <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_autocmd</span><span class="p">(</span><span class="s2">"FileType"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="c1">-- do not put autocmds inside lvim.plugins</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</code></pre>
+          </div>
+        </div>
+        <h3 id="the-split-is-close-to-50-percent-but-not-exact">The split is close to 50 percent but not exact</h3>
+        <p>That is normal. Neovim window borders, minimum widths, sidebars, and line number columns can make the final split a column or two off. The goal is not pixel-perfect sizing. The goal is to keep enough room for both blame metadata and code.</p>
+        <h3 id="you-want-a-different-size">You want a different size</h3>
+        <p>Change <code class="language-plaintext highlighter-rouge">0.5</code> to another ratio:</p>
+        <div class="language-lua highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">math.floor</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">o</span><span class="p">.</span><span class="n">columns</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">)</span>
+</code></pre>
+          </div>
+        </div>
+        <p>That makes the blame pane 40 percent of the editor width.</p>
+        <p>For a fixed width, use a number:</p>
+        <div class="language-lua highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">pcall</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_win_set_width</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="mi">72</span><span class="p">)</span>
+</code></pre>
+          </div>
+        </div>
+        <h2 id="final-config">Final Config</h2>
+        <p>Here is the complete focused setup:</p>
+        <div class="language-lua highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1">-- Git integration</span>
+<span class="n">lvim</span><span class="p">.</span><span class="n">plugins</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">{</span> <span class="s2">"tpope/vim-fugitive"</span> <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_autocmd</span><span class="p">(</span><span class="s2">"FileType"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="n">group</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_augroup</span><span class="p">(</span><span class="s2">"lvim_fugitive_blame_width"</span><span class="p">,</span> <span class="p">{</span> <span class="n">clear</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">}),</span>
+  <span class="n">pattern</span> <span class="o">=</span> <span class="s2">"fugitiveblame"</span><span class="p">,</span>
+  <span class="n">callback</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">win</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_get_current_win</span><span class="p">()</span>
+
+    <span class="c1">-- Fugitive resizes blame by annotation length; keep it to half the editor.</span>
+    <span class="n">vim</span><span class="p">.</span><span class="n">schedule</span><span class="p">(</span><span class="k">function</span><span class="p">()</span>
+      <span class="k">if</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_win_is_valid</span><span class="p">(</span><span class="n">win</span><span class="p">)</span> <span class="ow">and</span> <span class="n">vim</span><span class="p">.</span><span class="n">bo</span><span class="p">[</span><span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_win_get_buf</span><span class="p">(</span><span class="n">win</span><span class="p">)].</span><span class="n">filetype</span> <span class="o">==</span> <span class="s2">"fugitiveblame"</span> <span class="k">then</span>
+        <span class="nb">pcall</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_win_set_width</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="nb">math.floor</span><span class="p">(</span><span class="n">vim</span><span class="p">.</span><span class="n">o</span><span class="p">.</span><span class="n">columns</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">))</span>
+      <span class="k">end</span>
+    <span class="k">end</span><span class="p">)</span>
+  <span class="k">end</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Now <code class="language-plaintext highlighter-rouge">:Git blame</code> is usable on a laptop screen: commit information on one side, readable code on the other.</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/build-and-deploy-youtube-to-mp3-converter" title="Previous Post: Build and Deploy a YouTube-to-MP3 Converter">←Previous</a>     <a class="next-item" href="/blog/disable-canton-coins-canton-validator" title="Next Post: How to Disable Canton Coins on a Canton Validator">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/fugitive-blame-lunarvim-window-width';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/fugitive-blame-lunarvim-window-width';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

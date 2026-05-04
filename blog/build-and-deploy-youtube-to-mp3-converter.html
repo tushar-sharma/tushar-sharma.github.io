@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:site_name" content="Tushar Sharma">
+<title>Build and Deploy a YouTube-to-MP3 Converter</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@Tushar Sharma">
+    <meta name="twitter:title" content="Build and Deploy a YouTube-to-MP3 Converter">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://unsplash.com/photos/VltJrvovRbY/download?w=437">
+    <meta property="og:image" content="https://unsplash.com/photos/VltJrvovRbY/download?w=437">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206" crossorigin="anonymous"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Build and Deploy a YouTube-to-MP3 Converter | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3">
+    <meta property="og:title" content="Build and Deploy a YouTube-to-MP3 Converter">
+    <meta name="author" content="Tushar Sharma">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="I often find myself searching for websites to convert YouTube videos to MP3. Most of these sites are full of spam and annoying ads, so I decided to build a simple website and learn along the way.">
+    <meta property="og:description" content="I often find myself searching for websites to convert YouTube videos to MP3. Most of these sites are full of spam and annoying ads, so I decided to build a simple website and learn along the way.">
+    <link rel="canonical" href="https://randomwits.com/blog/build-and-deploy-youtube-to-mp3-converter">
+    <meta property="og:url" content="https://randomwits.com/blog/build-and-deploy-youtube-to-mp3-converter">
+    <meta property="og:site_name" content="RandomWits">
+    <meta property="og:image" content="https://unsplash.com/photos/VltJrvovRbY/download?w=437">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-04-27T00:00:00+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://unsplash.com/photos/VltJrvovRbY/download?w=437">
+    <meta property="twitter:title" content="Build and Deploy a YouTube-to-MP3 Converter">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tushar Sharma"},"dateModified":"2026-04-27T00:00:00+00:00","datePublished":"2026-04-27T00:00:00+00:00","description":"I often find myself searching for websites to convert YouTube videos to MP3. Most of these sites are full of spam and annoying ads, so I decided to build a simple website and learn along the way.","headline":"Build and Deploy a YouTube-to-MP3 Converter","image":"https://unsplash.com/photos/VltJrvovRbY/download?w=437","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/build-and-deploy-youtube-to-mp3-converter"},"url":"https://randomwits.com/blog/build-and-deploy-youtube-to-mp3-converter"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <a style="cursor:pointer;" class="DarkReader_Button">
+            <i id="icon-dark" class="fa fa-cloud-moon"></i>
+          </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/places"><i class="fas fa-map-pin"></i> Places</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3875134254611206"
+     crossorigin="anonymous"></script> -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Build and Deploy a YouTube-to-MP3 Converter</h1>
+        <p>Tags:  <a class="mytag" href="/tag/python" title="View posts tagged with: python">python</a>    <a class="mytag" href="/tag/fastapi" title="View posts tagged with: fastapi">fastapi</a>    <a class="mytag" href="/tag/docker" title="View posts tagged with: docker">docker</a>    <a class="mytag" href="/tag/github%20actions" title="View posts tagged with: github actions">github actions</a>    <a class="mytag" href="/tag/scaleway" title="View posts tagged with: scaleway">scaleway</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="https://unsplash.com/photos/VltJrvovRbY/download?w=800" alt="Featured image for Build and Deploy a YouTube-to-MP3 Converter" style="max-width:100%; height:auto;">
+        </div>
+        <div style="background-color: #fff3cd; border-left: 5px solid #ffc107; border-radius: 4px; padding: 15px; margin: 20px 0; color: #856404;">
+          <strong style="font-size: 16px;">⚠️ Disclaimer:</strong> Use this project only for content you have permission to download and convert.
+        </div>
+        <p>I often find myself searching for websites to convert YouTube videos to MP3. Most of these sites are full of spam and annoying ads, so I decided to build a simple website and learn along the way.</p>
+        <div style="text-align: center; margin: 20px 0;">
+          <a alt="https://nsstrangeheisenberge569cdbf-container-vigorous-torvalds.functions.fnc.fr-par.scw.cloud" href="https://ootobmp3.randomwits.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 24px; background-color: #39c; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 18px;">Live Demo</a>
+        </div>
+        <h2 id="architecture-at-a-glance">Architecture at a Glance</h2>
+        <p>This app has one frontend and three backend endpoints:</p>
+        <ul>
+          <li>
+            <code class="language-plaintext highlighter-rouge">POST /api/convert</code> accepts a YouTube URL and returns a <code class="language-plaintext highlighter-rouge">job_id</code> immediately.</li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">GET /api/status/{job_id}</code> returns <code class="language-plaintext highlighter-rouge">pending | processing | done | error</code>.</li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">GET /api/download/{job_id}</code> streams the final MP3 once conversion is complete.</li>
+        </ul>
+        <p>The frontend does not hold conversion state itself. It only stores the <code class="language-plaintext highlighter-rouge">job_id</code> and polls the status endpoint until the backend marks the job as <code class="language-plaintext highlighter-rouge">done</code>.</p>
+        <h2 id="sequence-diagram">Sequence Diagram</h2>
+        <p>Before writing even a single line of code, let's think through the <strong>APIs</strong> responsible for the application's logic.</p>
+        <p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5wYXJ0aWNpcGFudCBVIGFzIFVzZXIgKEJyb3dzZXIpXG5wYXJ0aWNpcGFudCBBUEkgYXMgU2VydmVyXG5wYXJ0aWNpcGFudCBCRyBhcyBCYWNrZ3JvdW5kVGhyZWFkXG4lJS1cblUtPj5BUEk6IFBPU1QgL2FwaS9jb252ZXJ0IHt1cmx9XG5BUEktPj5CRzogU3RhcnQgY29udmVyc2lvbiAoeS1kbHAgKyBmZm1wZWcpXG5BUEktLT4-VTogMjAwIHsgam9iX2lkIH0gPC0gcmV0dXJucyBpbW1lZGlhdGVseVxuJSUtXG5sb29wIGV2ZXJ5IDIgc2Vjb25kc1xuVS0-PkFQSTogR0VUIC9hcGkvc3RhdHVzL3tqb2JfaWR9XG5BUEktPj5VOiB7IHN0YXR1cyA6IFwiZG9uZVwiIH1cbiUlLVxuVS0-PkFQSTogR0VUIC9hcGkvZG93bmxvYWQve2pvYl9pZH1cbkFQSS0tPj5VOiBhdWRpby9tcGVnIChNUDMgZmlsZSlcbmVuZCIsIm1lcm1haWQiOm51bGx9"></p>
+        <p>I usually refer to <a href="https://github.com/zalando/restful-api-guidelines">Zalando</a> guidelines when designing APIs.</p>
+        <h2 id="server">Server</h2>
+        <p>I chose <strong>FastAPI</strong> for the server code. It is an <strong>ASGI</strong> framework (Asynchronous Server Gateway Interface), which means it can handle many requests concurrently using Python's <code class="language-plaintext highlighter-rouge">asyncio</code> event loop. By contrast, traditional <strong>WSGI</strong> setups process one request per worker thread/process until the response is sent.</p>
+        <p>Another reason for choosing a Python framework is to use <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> for downloading and <strong>ffmpeg</strong> for conversion.</p>
+        <h2 id="project-structure">Project Structure</h2>
+        <p>We start by creating a simple application. Open a terminal and create folders like this:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> youtubeMp3Converter/<span class="o">{</span>routers,schemas,services,static<span class="o">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Next, create files like this:</p>
+        <div class="language-markdown highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>cd youtubeMp3Converter
+
+youtubeMp3Converter/
+├── main.py               # App entry point
+├── routers/
+│   └── convert.py        # HTTP routes and request handling
+├── schemas/
+│   └── convert.py        # Pydantic models for request and response
+├── services/
+│   └── converter.py      # Business logic: yt-dlp, ffmpeg, file management
+└── static/
+    └── index.html        # Frontend UI served as static site
+</code></pre>
+          </div>
+        </div>
+        <p><strong><code class="language-plaintext highlighter-rouge">main.py</code></strong> creates the <code class="language-plaintext highlighter-rouge">FastAPI</code> app instance, registers routers, and mounts the static file server. It is intentionally thin — no business logic lives here.</p>
+        <div style="display:none;">
+          <p>from fastapi import FastAPI
+            from fastapi.staticfiles import StaticFiles
+            from routers.convert import router</p>
+          <p>app = FastAPI(title="OotobMp3", version="0.1.0")
+            app.include_router(router)
+            app.mount("/", StaticFiles(directory="static", html=True), name="static")</p>
+        </div>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/cb3fbdf5a8663fb9b43807baebb00898.js?file=main.py"></script> <button class="copy-button">Copy</button> </div>
+        <p>One important constraint: <code class="language-plaintext highlighter-rouge">include_router</code> must come before <code class="language-plaintext highlighter-rouge">app.mount</code>. FastAPI evaluates routes in registration order. If <code class="language-plaintext highlighter-rouge">StaticFiles</code> is mounted first, its catch-all handler intercepts every request — including <code class="language-plaintext highlighter-rouge">/api/*</code> — before the API router sees them.</p>
+        <p><strong><code class="language-plaintext highlighter-rouge">routers/convert.py</code></strong> contains only HTTP concerns: parsing request bodies, validating input, raising <code class="language-plaintext highlighter-rouge">HTTPException</code>, and returning response models. It knows nothing about how conversion actually works.</p>
+        <div style="display:none;">
+          <p>from fastapi import APIRouter, BackgroundTasks, HTTPException</p>
+          <p>router = APIRouter(prefix="/api", tags=["convert"])</p>
+          <p>@router.post("/convert", response_model=ConvertResponse)
+            def submit_conversion(body: ConvertRequest, background_tasks: BackgroundTasks):
+            if not is_valid_youtube_url(body.url):
+            raise HTTPException(status_code=422, detail="Invalid YouTube URL")</p>
+          <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>job_id = str(uuid.uuid4())
+jobs[job_id] = {"status": "pending", "file_path": None, "title": None, "error": None}
+background_tasks.add_task(converter.convert_video, job_id, body.url, jobs)
+return ConvertResponse(job_id=job_id)
+</code></pre>
+            </div>
+  </div>
+        </div>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/cb3fbdf5a8663fb9b43807baebb00898.js?file=convert.py"></script> <button class="copy-button">Copy</button> </div>
+        <p><code class="language-plaintext highlighter-rouge">BackgroundTasks</code> is FastAPI's built-in mechanism for running work after the response is sent. The conversion starts, the response returns immediately with the <code class="language-plaintext highlighter-rouge">job_id</code>, and the download happens in a thread pool in the background.</p>
+        <p>This is a good fit for lightweight jobs in a single service. For heavier or longer-running jobs, use an external queue (for example Celery/RQ/Arq with Redis) so work survives process restarts and can be retried.</p>
+        <p><strong><code class="language-plaintext highlighter-rouge">schemas/convert.py</code></strong> defines Pydantic models — Python dataclasses with built-in validation, serialization, and JSON schema generation.</p>
+        <div style="display:none;">
+          <p>from pydantic import BaseModel</p>
+          <p>class ConvertRequest(BaseModel):
+            url: str</p>
+          <p>class ConvertResponse(BaseModel):
+            job_id: str</p>
+          <p>class StatusResponse(BaseModel):
+            job_id: str
+            status: str
+            title: str | None = None
+            error: str | None = None</p>
+        </div>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/cb3fbdf5a8663fb9b43807baebb00898.js?file=schemas.py"></script> <button class="copy-button">Copy</button> </div>
+        <p><strong><code class="language-plaintext highlighter-rouge">services/converter.py</code></strong> is the only place that knows about yt-dlp and ffmpeg. If we ever swap yt-dlp for another library, only this file changes.</p>
+        <div style="display:none;">
+          <p>def convert_video(job_id: str, url: str, jobs: dict) -&gt; None:
+            jobs[job_id]["status"] = "processing"
+            try:
+            output_path = f"/tmp/ootob/{job_id}.mp3"
+            os.makedirs("/tmp/ootob", exist_ok=True)</p>
+          <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>    ydl_opts = {
+        "format": "bestaudio/best",
+        "outtmpl": f"/tmp/ootob/{job_id}.%(ext)s",
+        "postprocessors": [{
+            "key": "FFmpegExtractAudio",
+            "preferredcodec": "mp3",
+            "preferredquality": "128",
+        }],
+        "quiet": True,
+    }
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        info = ydl.extract_info(url, download=True)
+        jobs[job_id]["title"] = info.get("title", job_id)
+
+    jobs[job_id]["file_path"] = output_path
+    jobs[job_id]["status"] = "done"
+except Exception as e:
+    jobs[job_id]["status"] = "error"
+    jobs[job_id]["error"] = str(e)
+</code></pre>
+            </div>
+  </div>
+        </div>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/cb3fbdf5a8663fb9b43807baebb00898.js?file=services.py"></script> <button class="copy-button">Copy</button> </div>
+        <h2 id="important-production-caveat-in-memory-state">Important Production Caveat: In-Memory State</h2>
+        <p>The <code class="language-plaintext highlighter-rouge">jobs</code> dictionary and <code class="language-plaintext highlighter-rouge">/tmp/ootob</code> files are local to one container instance. That is fine for a demo, but it has two implications in production:</p>
+        <ul>
+          <li>A restart loses in-memory job state.</li>
+          <li>With multiple replicas, one request can hit instance A and the next request can hit instance B, where the job/file does not exist.</li>
+        </ul>
+        <p>For production reliability, store state and artifacts outside the process:</p>
+        <ul>
+          <li>Job metadata in Redis/PostgreSQL.</li>
+          <li>Audio files in object storage (for example S3-compatible storage).</li>
+          <li>Conversion workers on a queue, with API instances handling only HTTP.</li>
+        </ul>
+        <h3 id="openapi-and-swagger--free-documentation">OpenAPI and Swagger — Free Documentation</h3>
+        <p>FastAPI generates an OpenAPI specification automatically from your Pydantic schemas and route decorators. No extra work required.</p>
+        <p>Once the server is running:</p>
+        <ul>
+          <li>
+            <code class="language-plaintext highlighter-rouge">http://localhost:8080/docs</code> — <strong>Swagger UI</strong>: interactive documentation where you can call every endpoint directly from the browser</li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">http://localhost:8080/redoc</code> — <strong>ReDoc</strong>: clean, readable reference documentation</li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">http://localhost:8080/openapi.json</code> — the raw OpenAPI JSON schema</li>
+        </ul>
+        <p>This is why we invested in Pydantic models for every request and response. The models do double duty: runtime validation <em>and</em> documentation generation. If you add a field to <code class="language-plaintext highlighter-rouge">StatusResponse</code>, it appears in Swagger automatically.</p>
+        <h2 id="the-frontend">The Frontend</h2>
+        <p>The UI is a single <code class="language-plaintext highlighter-rouge">static/index.html</code> file — HTML, CSS, and JavaScript, no framework, no build step. FastAPI's <code class="language-plaintext highlighter-rouge">StaticFiles</code> serves it at <code class="language-plaintext highlighter-rouge">GET /</code>. The JavaScript polls <code class="language-plaintext highlighter-rouge">GET /api/status/{job_id}</code> every two seconds using <code class="language-plaintext highlighter-rouge">setInterval</code>.</p>
+        <div style="display:none;">
+          <p>async function pollStatus(jobId) {
+            pollInterval = setInterval(async () =&gt; {
+            const res  = await fetch(<code class="language-plaintext highlighter-rouge">/api/status/${jobId}</code>);
+            const data = await res.json();
+            if (data.status === 'done') {
+            clearInterval(pollInterval);
+            showReady(data.title, jobId);
+            }
+            if (data.status === 'error') {
+            clearInterval(pollInterval);
+            showError(data.error || 'Conversion failed');
+            }
+            }, 2000);
+            }</p>
+        </div>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/cb3fbdf5a8663fb9b43807baebb00898.js?file=ui.js"></script> <button class="copy-button">Copy</button> </div>
+        <p>The UI has four explicit states — IDLE, CONVERTING, READY, ERROR — each showing and hiding the relevant cards. Theme (light/dark) is toggled via a CSS <code class="language-plaintext highlighter-rouge">data-theme</code> attribute on <code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> and persisted to <code class="language-plaintext highlighter-rouge">localStorage</code>.</p>
+        <hr>
+        <h2 id="makefile--local-development-workflow">Makefile — Local Development Workflow</h2>
+        <p>A <code class="language-plaintext highlighter-rouge">Makefile</code> is a portable task runner. Every engineer on the project runs the same commands regardless of their local setup.</p>
+        <div style="display:none;">
+          <p>IMAGE     = ootobmp3
+            CONTAINER = ootobmp3
+            PORT      = 8080</p>
+          <p>start: ## Build image if needed, then run in foreground (Ctrl+C to stop)
+            <a href="https://github.com/docker" class="user-mention">@docker</a> image inspect $(IMAGE) &gt; /dev/null 2&gt;&amp;1 || $(MAKE) build
+            docker run –rm -p $(PORT):$(PORT) –name $(CONTAINER) $(IMAGE)</p>
+          <p>dev: ## Run locally without Docker (requires ffmpeg installed locally)
+            uv run uvicorn main:app –reload</p>
+          <p>test: ## Run tests with coverage
+            uv run pytest -v –cov=. –cov-report=term-missing –cov-report=html</p>
+          <p>coverage: ## Open HTML coverage report in browser
+            open htmlcov/index.html</p>
+        </div>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/cb3fbdf5a8663fb9b43807baebb00898.js?file=Makefile"></script> <button class="copy-button">Copy</button> </div>
+        <p><code class="language-plaintext highlighter-rouge">make test</code> produces a coverage table in the terminal that shows exactly which lines are not covered:</p>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Name                    Stmts   Miss  Cover   Missing
+-----------------------------------------------------
+main.py                     6      0   100%
+routers/convert.py         43      2    95%   51, 58
+schemas/convert.py         10      0   100%
+services/converter.py      14     10    29%   9-33
+-----------------------------------------------------
+TOTAL                     164     12    93%
+</code></pre>
+          </div>
+        </div>
+        <p><code class="language-plaintext highlighter-rouge">services/converter.py</code> sits at 29% — intentionally. The real yt-dlp + ffmpeg code is mocked in tests. You would need an actual YouTube download to hit those lines, which is not appropriate for a fast, offline test suite.</p>
+        <hr>
+        <h2 id="dockerfile--ship-the-whole-environment">Dockerfile — Ship the Whole Environment</h2>
+        <p>The Dockerfile is the answer to "it works on my machine". It packages Python, ffmpeg, your dependencies, and your code into a single artifact that runs identically everywhere.</p>
+        <div style="display:none;">
+          <p>FROM python:3.12-slim</p>
+          <h1 id="pull-uv-from-its-official-image--no-pip-install-needed">Pull uv from its official image — no pip install needed</h1>
+          <p>COPY –from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv</p>
+          <h1 id="install-ffmpeg--this-is-the-whole-reason-for-docker-in-this-project">Install ffmpeg — this is the whole reason for Docker in this project</h1>
+          <p>RUN apt-get update \
+            &amp;&amp; apt-get install -y –no-install-recommends ffmpeg \
+            &amp;&amp; rm -rf /var/lib/apt/lists/*</p>
+          <p>WORKDIR /app</p>
+          <h1 id="copy-manifest-first--this-layer-is-cached-unless-dependencies-change">Copy manifest first — this layer is cached unless dependencies change</h1>
+          <p>COPY pyproject.toml uv.lock ./
+            RUN uv sync –no-dev –frozen</p>
+          <h1 id="copy-application-source">Copy application source</h1>
+          <p>COPY main.py ./
+            COPY routers/ ./routers/
+            COPY schemas/ ./schemas/
+            COPY services/ ./services/
+            COPY static/ ./static/</p>
+          <p>EXPOSE 8080</p>
+          <h1 id="port-env-var-lets-hosting-platforms-render-scaleway-inject-their-assigned-port">PORT env var lets hosting platforms (Render, Scaleway) inject their assigned port</h1>
+          <p>CMD ["sh", "-c", "uv run uvicorn main:app –host 0.0.0.0 –port ${PORT:-8080}"]</p>
+        </div>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/cb3fbdf5a8663fb9b43807baebb00898.js?file=Dockerfile"></script> <button class="copy-button">Copy</button> </div>
+        <p><strong>Layer ordering matters.</strong> Docker caches layers. If you copy source code before installing dependencies, any code change invalidates the dependency cache — meaning <code class="language-plaintext highlighter-rouge">uv sync</code> re-runs on every build even when <code class="language-plaintext highlighter-rouge">pyproject.toml</code> did not change. By copying <code class="language-plaintext highlighter-rouge">pyproject.toml</code> and <code class="language-plaintext highlighter-rouge">uv.lock</code> first and running <code class="language-plaintext highlighter-rouge">uv sync</code> before copying source, dependency installation is cached as long as the lockfile is unchanged.</p>
+        <p><strong><code class="language-plaintext highlighter-rouge">--frozen</code></strong> tells uv to install exactly the versions in <code class="language-plaintext highlighter-rouge">uv.lock</code> — no resolution, no version drift. Production builds should always pin exact versions.</p>
+        <p><strong><code class="language-plaintext highlighter-rouge">${PORT:-8080}</code></strong> is a shell default: if the <code class="language-plaintext highlighter-rouge">PORT</code> environment variable is set (Render and Scaleway both inject it), use that. Otherwise fall back to 8080. This makes the container portable across hosting platforms without changing the Dockerfile.</p>
+        <hr>
+        <h2 id="github-actions---ghcr">GitHub Actions -&gt; GHCR</h2>
+        <h3 id="what-is-ghcr">What Is GHCR?</h3>
+        <p><strong>GHCR (GitHub Container Registry)</strong> is GitHub's hosted registry for Docker images — the same concept as AWS ECR or Docker Hub, but integrated directly into your GitHub account. It is free for public repositories and included in most GitHub plans for private ones.</p>
+        <p>When you push code to GitHub, your source lives at <code class="language-plaintext highlighter-rouge">github.com/username/repo</code>. When you push a Docker image to GHCR, it lives at <code class="language-plaintext highlighter-rouge">ghcr.io/username/image</code>. The registry stores the image layers and a manifest, so any server with Docker can pull and run your image without needing your source code at all.</p>
+        <h3 id="the-workflow">The Workflow</h3>
+        <p><code class="language-plaintext highlighter-rouge">.github/workflows/push_image.yml</code>:</p>
+        <div style="display:none;">
+          <p>name: Build and Push to GHCR</p>
+          <p>on:
+            push:
+            branches: [ main ]</p>
+          <p>jobs:
+            build:
+            runs-on: ubuntu-latest
+            permissions:
+            contents: read
+            packages: write   # required to push to GHCR</p>
+          <div class="language-plaintext highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>steps:
+  - name: Checkout code
+    uses: actions/checkout@v4
+
+  - name: Login to GHCR
+    uses: docker/login-action@v3
+    with:
+      registry: ghcr.io
+      username: $
+      password: $
+
+  - name: Set lowercase owner name
+    run: echo "OWNER_LC=${GITHUB_REPOSITORY_OWNER,,}" &gt;&gt; ${GITHUB_ENV}
+
+  - name: Build and push
+    uses: docker/build-push-action@v5
+    with:
+      context: .
+      push: true
+      tags: ghcr.io/$/ootobmp3:latest
+</code></pre>
+            </div>
+  </div>
+        </div>
+        <div class="line-numbers code-block"> <script src="https://gist.github.com/tushar-sharma/cb3fbdf5a8663fb9b43807baebb00898.js?file=push.yaml"></script> <button class="copy-button">Copy</button> </div>
+        <p><strong>What each step does:</strong></p>
+        <ol>
+          <li>
+            <strong>Checkout</strong> — pulls your repo into the GitHub Actions runner (a fresh Ubuntu VM).</li>
+          <li>
+            <strong>Login to GHCR</strong> — authenticates using <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code>, a secret that GitHub automatically injects into every workflow run. No manual secret setup needed.</li>
+          <li>
+            <strong>Lowercase owner</strong> — GHCR image names must be lowercase. GitHub usernames can have uppercase letters. This step normalises the owner before using it in the image tag.</li>
+          <li>
+            <strong>Build and push</strong> — runs <code class="language-plaintext highlighter-rouge">docker build</code> and <code class="language-plaintext highlighter-rouge">docker push</code> in one step. The resulting image is tagged <code class="language-plaintext highlighter-rouge">ghcr.io/username/ootobmp3:latest</code>.</li>
+        </ol>
+        <p>Every <code class="language-plaintext highlighter-rouge">git push</code> to <code class="language-plaintext highlighter-rouge">main</code> now automatically builds and publishes a fresh image. Your CI pipeline is: code review → merge → image published → ready to deploy.</p>
+        <h3 id="the-full-picture">The Full Picture</h3>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Developer pushes code to main
+    ↓
+GitHub Actions runner spins up (Ubuntu VM, free)
+    ↓
+docker build -t ghcr.io/username/ootobmp3:latest .
+    ↓
+docker push ghcr.io/username/ootobmp3:latest
+    ↓
+Image is stored at ghcr.io
+    ↓
+Any server can now: docker pull ghcr.io/username/ootobmp3:latest
+</code></pre>
+          </div>
+        </div>
+        <hr>
+        <h2 id="deploying-to-scaleway-serverless-containers">Deploying to Scaleway Serverless Containers</h2>
+        <h3 id="what-are-serverless-containers">What Are Serverless Containers?</h3>
+        <p>Serverless containers sit between a raw VPS and a fully managed PaaS. You provide a Docker image. The platform handles:</p>
+        <ul>
+          <li>Running the container</li>
+          <li>Scaling to zero when there is no traffic (you pay nothing while idle)</li>
+          <li>Scaling up when requests arrive</li>
+          <li>HTTPS termination</li>
+          <li>Health checks and restarts</li>
+        </ul>
+        <p>You do not manage a server. You do not SSH anywhere. You point at an image and the platform runs it.</p>
+        <p>Scaleway's Serverless Containers product is organised around <strong>namespaces</strong> (a logical grouping, like a project or environment) and <strong>containers</strong> (the actual running unit within a namespace).</p>
+        <h3 id="step-1--make-your-ghcr-image-accessible">Step 1 — Make Your GHCR Image Accessible</h3>
+        <p>By default, GHCR images are private. Scaleway needs credentials to pull them.</p>
+        <p>Go to GitHub → Settings → Developer Settings → Personal Access Tokens → Fine-grained tokens. Create a token with <code class="language-plaintext highlighter-rouge">read:packages</code> scope. Copy it — you will use it in the next step.</p>
+        <p>Alternatively, you can make the GHCR package public: go to your GitHub profile → Packages → select the image → Package Settings → Change visibility → Public. Public images need no credentials to pull.</p>
+        <h3 id="step-2--create-a-namespace">Step 2 — Create a Namespace</h3>
+        <p>In the Scaleway console, navigate to <strong>Serverless → Containers → Create namespace</strong>.</p>
+        <p>Choose:</p>
+        <ul>
+          <li>
+            <strong>Name:</strong> <code class="language-plaintext highlighter-rouge">ootobmp3</code>
+          </li>
+          <li>
+            <strong>Region:</strong> closest to your users (Paris <code class="language-plaintext highlighter-rouge">fr-par</code>, Amsterdam <code class="language-plaintext highlighter-rouge">nl-ams</code>, Warsaw <code class="language-plaintext highlighter-rouge">pl-waw</code>)</li>
+        </ul>
+        <p>If your GHCR image is private, add registry credentials here:</p>
+        <ul>
+          <li>
+            <strong>Registry endpoint:</strong> <code class="language-plaintext highlighter-rouge">ghcr.io</code>
+          </li>
+          <li>
+            <strong>Username:</strong> your GitHub username</li>
+          <li>
+            <strong>Password:</strong> the PAT token from Step 1</li>
+        </ul>
+        <p>Via the Scaleway CLI:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c"># Install CLI</span>
+brew <span class="nb">install </span>scaleway/tap/scw
+
+<span class="c"># Authenticate</span>
+scw init
+
+<span class="c"># Create namespace</span>
+scw container namespace create <span class="nv">name</span><span class="o">=</span>ootobmp3 <span class="nv">region</span><span class="o">=</span>fr-par
+</code></pre>
+          </div>
+        </div>
+        <p>Note the <code class="language-plaintext highlighter-rouge">namespace-id</code> from the output — you need it in the next step.</p>
+        <h3 id="step-3--create-the-container">Step 3 — Create the Container</h3>
+        <p>In the console, inside your namespace, click <strong>Create Container</strong>.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><code class="language-plaintext highlighter-rouge">ootobmp3</code></td>
+            </tr>
+            <tr>
+              <td>Image URL</td>
+              <td><code class="language-plaintext highlighter-rouge">ghcr.io/yourusername/ootobmp3:latest</code></td>
+            </tr>
+            <tr>
+              <td>Port</td>
+              <td><code class="language-plaintext highlighter-rouge">8080</code></td>
+            </tr>
+            <tr>
+              <td>Min scale</td>
+              <td>
+<code class="language-plaintext highlighter-rouge">0</code> (scales to zero, no idle cost)</td>
+            </tr>
+            <tr>
+              <td>Max scale</td>
+              <td><code class="language-plaintext highlighter-rouge">5</code></td>
+            </tr>
+            <tr>
+              <td>Memory</td>
+              <td><code class="language-plaintext highlighter-rouge">512 MB</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Via CLI:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>scw container container create <span class="se">\</span>
+  namespace-id<span class="o">=</span>&lt;YOUR_NAMESPACE_ID&gt; <span class="se">\</span>
+  <span class="nv">name</span><span class="o">=</span>ootobmp3 <span class="se">\</span>
+  registry-image<span class="o">=</span>ghcr.io/yourusername/ootobmp3:latest <span class="se">\</span>
+  <span class="nv">port</span><span class="o">=</span>8080 <span class="se">\</span>
+  min-scale<span class="o">=</span>0 <span class="se">\</span>
+  max-scale<span class="o">=</span>5 <span class="se">\</span>
+  memory-limit<span class="o">=</span>512 <span class="se">\</span>
+  <span class="nv">region</span><span class="o">=</span>fr-par
+</code></pre>
+          </div>
+        </div>
+        <h3 id="step-4--deploy">Step 4 — Deploy</h3>
+        <p>Click <strong>Deploy</strong> in the console. Scaleway pulls your image from GHCR, runs it, and gives you an endpoint:</p>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>https://ootobmp3-&lt;random&gt;.containers.fnc.fr-par.scw.cloud
+</code></pre>
+          </div>
+        </div>
+        <p>Your app is live. Open that URL — you will see the OotobMp3 UI.</p>
+        <h3 id="step-5--redeploy-after-a-code-change">Step 5 — Redeploy After a Code Change</h3>
+        <p>Because the GitHub Actions workflow pushes <code class="language-plaintext highlighter-rouge">ghcr.io/username/ootobmp3:latest</code> on every merge to main, a redeploy just means telling Scaleway to pull the new <code class="language-plaintext highlighter-rouge">latest</code> image:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>scw container container deploy &lt;CONTAINER_ID&gt; <span class="nv">region</span><span class="o">=</span>fr-par
+</code></pre>
+          </div>
+        </div>
+        <p>Or trigger it from the Scaleway console by clicking <strong>Redeploy</strong>.</p>
+        <p>For stronger release traceability, prefer immutable tags (for example commit SHA tags) in addition to <code class="language-plaintext highlighter-rouge">latest</code>, then deploy a specific tag.</p>
+        <hr>
+        <h2 id="the-full-deployment-pipeline">The Full Deployment Pipeline</h2>
+        <div class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Code change
+    ↓
+git push to main
+    ↓
+GitHub Actions builds Docker image
+    ↓
+Image pushed to ghcr.io/username/ootobmp3:latest
+    ↓
+scw container container deploy (or click Redeploy)
+    ↓
+Scaleway pulls new image from GHCR
+    ↓
+New version is live
+</code></pre>
+          </div>
+        </div>
+        <hr>
+        <h2 id="mapping-a-custom-subdomain-cname">Mapping a Custom Subdomain (CNAME)</h2>
+        <p>The default Scaleway URL is great for testing, but for production, you'll want a custom domain like <code class="language-plaintext highlighter-rouge">ootobmp3.randomwits.com</code>.</p>
+        <h3 id="step-1--configure-dns-in-namecheap">Step 1 — Configure DNS in Namecheap</h3>
+        <p>To point your domain to Scaleway, create a CNAME (Canonical Name) record in your registrar. This acts as an alias.</p>
+        <ol>
+          <li>Log in to Namecheap (or any other domain hosting site like Godaddy, etc) and go to <strong>Advanced DNS</strong>.</li>
+          <li>Click <strong>+ Add Record</strong> and select <strong>CNAME Record</strong>.</li>
+          <li>Fill in the fields:
+            <ul>
+              <li>
+                <strong>Host:</strong> <code class="language-plaintext highlighter-rouge">ootobmp3</code> (creates <code class="language-plaintext highlighter-rouge">ootobmp3.randomwits.com</code>)</li>
+              <li>
+                <strong>Value:</strong> <code class="language-plaintext highlighter-rouge">ootobmp3.functions.fnc.fr-par.scw.cloud</code> (your Scaleway endpoint)</li>
+              <li>
+                <strong>TTL:</strong> Automatic</li>
+            </ul>
+          </li>
+        </ol>
+        <blockquote>
+          <p><strong>Pro Tip:</strong> Never include <code class="language-plaintext highlighter-rouge">https://</code> or trailing slashes in the DNS Value field. It must be the raw hostname only.</p>
+        </blockquote>
+        <h3 id="step-2--add-the-endpoint-in-scaleway">Step 2 — Add the Endpoint in Scaleway</h3>
+        <p>Now, tell Scaleway to listen for requests coming from your new subdomain.</p>
+        <ol>
+          <li>In the Scaleway Console, click on your <strong>ootobmp3</strong> container.</li>
+          <li>Go to the <strong>Endpoints</strong> tab.</li>
+          <li>Click <strong>+ Add Endpoint</strong> and select <strong>Custom Domain</strong>.</li>
+          <li>Enter your full subdomain: <code class="language-plaintext highlighter-rouge">ootobmp3.randomwits.com</code>
+          </li>
+          <li>Scaleway will verify domain ownership (usually instant for CNAME records) and activate it.</li>
+        </ol>
+        <p>Your app is now accessible at <code class="language-plaintext highlighter-rouge">https://ootobmp3.randomwits.com</code> with an automatic HTTPS certificate from Let's Encrypt.</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/dns-route53-weighted-routing" title="Previous Post: DNS Strategy: Weighted Routing with Route 53 and Spring Cloud Gateway">←Previous</a>     <a class="next-item" href="/blog/fugitive-blame-lunarvim-window-width" title="Next Post: Add Fugitive Git Blame to LunarVim with a 50 Percent Blame Window">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/build-and-deploy-youtube-to-mp3-converter';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/build-and-deploy-youtube-to-mp3-converter';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; help from <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
