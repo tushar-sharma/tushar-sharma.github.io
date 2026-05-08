@@ -33,7 +33,7 @@
   rating: 5
   comments: "You need yuzu emulator to play this on steam deck or PC. It supports multiplayer where 2nd player can control the hat."
 
-- title: "Tomb Raider 2014"
+- title: "Tomb Raider 2013"
   rating: 5
   comments: "Developed by Crystal Dynamics. This is the first game in the rebooted Tomb Raider series. The gameplay and story is amazing."
 
@@ -343,13 +343,13 @@
 - title: "FIFA 19"
   rating: 5
   pending: true
-  comments: "Local co-op."
+  comments: "It support's Local co-op."
   progress: 0
 
 - title: "FIFA 22"
   rating: 5
   pending: true
-  comments: "Local co-op."
+  comments: "It support's Local co-op. Mostly enjoyed carrer mode where you build your team and play through sessions. Gameplay feels slightly better from FIFA 19 due to hyper motion technology."
   progress: 0
 
 - title: "Cult of the Lamb"
