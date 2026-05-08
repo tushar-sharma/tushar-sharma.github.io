@@ -58,7 +58,7 @@ input::-webkit-input-placeholder {
     <input type="search" name="q" placeholder="Search">
   </form>
 </div>
-{% assign blogposts = site.categories.blog | where_exp: "item", "item.is_log != true" %}
+{% assign blogposts = site.categories.blog %}
 <div class="pure-u-1-2">
 <div style="padding-right:10px; padding-left:10px;">
 {% for post in blogposts %}
