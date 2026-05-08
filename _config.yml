@@ -29,6 +29,7 @@ kramdown:
   hard_wrap: false
   smart_quotes: ["apos", "apos", "quot", "quot"]
 exclude:
+- tag/
 - README.md
 - CNAME
 - params.json
@@ -45,8 +46,10 @@ algolia:
   index_name: randomwits
   public_key: 618de85a39ad952f6e4c506d3c752777
   nodes_to_index: 'td'
+  max_record_size: 50000
   files_to_exclude:
-    - tag/*
+    - tag/**
+    - tags/**
     - blog/*
 pagination:
   enabled: true
