@@ -14,7 +14,7 @@ These are my learning notes and reflections while reading "AI Engineering: Build
 
 <!-- disclaimer -->
 <div style="margin: 0 auto" class="cl disclaimer">
-<span style="color:black"> &nbsp;&nbsp;These are my rough notes while reading this book
+<span style="color:black"> &nbsp;&nbsp;These are my rough notes while reading the book.
 </span> 
 </div> <br>
 
@@ -23,7 +23,7 @@ This book focuses on the engineering aspects of building applications using foun
 
 ---
 
-## Chapter 1: Introduction to Building AI Applications with Foundation Models
+## May 2, 2026
 
 Previously, Software as a Service (SaaS) was popular — e.g. Cloudflare, Okta, etc. Now we have **Model as a Service**: companies like Google (Gemini), Anthropic, and OpenAI (ChatGPT) develop models which others build on top of.
 
@@ -78,6 +78,49 @@ You can also **fine-tune** a foundation model on a specific dataset to specialis
 
 Using an external database to supplement the model's knowledge at inference time is called **Retrieval-Augmented Generation (RAG)**.
 
-## References & Further Reading
-- [Chip Huyen's Blog](https://huyenchip.com/blog)
-- [Official Book Website](https://www.oreilly.com/library/view/ai-engineering/9781098166298/)
+
+## May 10, 2026
+
+Foundation models are trained by companies like OpenAI, Anthropic, Google, and Meta. Training them is extremely expensive because it needs massive datasets, large GPU clusters, and long training runs. Most teams don't train a foundation model from scratch. Instead, they adapt existing models using **prompt engineering**, **fine-tuning**, or **RAG**.
+
+**Model as a Service** means a company exposes a model through an API so other developers can build products on top of it without owning the model training stack.
+
+Tools like AutoGPT, LangChain, Ollama, Stable Diffusion web UIs, GPT Engineer, screenshot-to-code, DB-GPT, PandasAI, and similar projects are part of the application layer around models. They are not foundation models themselves. They are developer tools, wrappers, agents, orchestration frameworks, or product demos built on top of models.
+
+**TTFT** means *time to first token*.
+**TPOT** means *time per output token*.
+**Total latency** is the full time from sending a request to receiving the complete response.
+
+Why does this matter for an engineer? These metrics help diagnose where an LLM application feels slow. If **TTFT** is high, the user waits too long before seeing anything, so the app feels unresponsive. If **TPOT** is high, the model starts responding but streams too slowly, which hurts long answers. If **total latency** is high, the entire workflow takes too long, even if the first token appears quickly. These metrics are useful in chat apps, copilots, RAG systems, and agent workflows because they help identify whether the bottleneck is prompt size, retrieval, model speed, output length, or the overall pipeline design.
+
+Models with **open-ended output** are powerful because they can handle many kinds of tasks, but they are also harder to evaluate than systems with fixed answer choices.
+
+**Prompt engineering** means adapting model behavior without changing the model's weights. You guide the model through instructions, examples, constraints, and context.
+
+**Weights** are the learned numerical parameters inside a neural network. They store what the model learned during training.
+
+**Fine-tuning** means updating those weights using additional training data so the model becomes better at a specific task, domain, or style. This changes the model itself, unlike prompting.
+
+### Model development 
+
+ - come up with model architecture
+ - train it 
+ - fine tune it
+
+#### Training the model
+
+1. Pretraining: training a model from scratch. Model weights are randomly initialized. For an LLM, pretraining usually means training for next-token prediction on a very large corpus. Pretraining is the most resource-intensive phase.
+
+#### Fine-tuning
+
+Fine-tuning starts with an already pretrained model. The weights come from the earlier training process and are then updated further for a narrower use case. In that sense, the weights are the main artifact produced by model development.
+
+What do you mean by open-ended vs closed-ended tasks? In a closed-ended task, the output is restricted to predefined labels or values. For example: spam vs not spam, yes vs no, positive vs negative. In an open-ended task, the model can generate many valid outputs. That is why annotating open-ended queries is harder.
+
+**Annotation** means creating labels or reference answers for training or evaluation. For a closed task, annotation can be simple. For an open-ended task, humans may disagree on what counts as the best answer.
+
+### Inference optimization
+
+Inference optimization means making a model cheaper and faster at serving time.
+
+Foundation models are autoregressive, so tokens are generated sequentially. That is one reason latency matters so much in production systems.
