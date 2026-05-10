@@ -107,11 +107,11 @@ Models with **open-ended output** are powerful because they can handle many kind
  - train it 
  - fine tune it
 
-### Trainng the model 
+### Training the model
 
-1. Pre training : training a model from scratch. Model weights are randomly initialized. For an LLM, pretraining usually means training for next-token prediction on a very large corpus. Pretraining is the most resource-intensive phase.
+1. Pretraining: training a model from scratch. Model weights are randomly initialized. For an LLM, pretraining usually means training for next-token prediction on a very large corpus. Pretraining is the most resource-intensive phase.
 
-### Fine tunings
+### Fine-tuning
 
 Fine-tuning starts with an already pretrained model. The weights come from the earlier training process and are then updated further for a narrower use case. In that sense, the weights are the main artifact produced by model development.
 
@@ -119,7 +119,7 @@ What do you mean by open-ended vs closed-ended tasks? In a closed-ended task, th
 
 **Annotation** means creating labels or reference answers for training or evaluation. For a closed task, annotation can be simple. For an open-ended task, humans may disagree on what counts as the best answer.
 
-## Inference otpimtiaztion 
+## Inference optimization
 
 Inference optimization means making a model cheaper and faster at serving time.
 
