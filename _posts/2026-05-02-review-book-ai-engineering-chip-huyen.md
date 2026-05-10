@@ -78,6 +78,42 @@ You can also **fine-tune** a foundation model on a specific dataset to specialis
 
 Using an external database to supplement the model's knowledge at inference time is called **Retrieval-Augmented Generation (RAG)**.
 
-## References & Further Reading
-- [Chip Huyen's Blog](https://huyenchip.com/blog)
-- [Official Book Website](https://www.oreilly.com/library/view/ai-engineering/9781098166298/)
+
+We have foundation model that companies like ChatGpt, Anthropic, etc. It takes millions of money to train the foundation model. But we can adapt it using three methods : prompt engineering, finetuning and RAG. 
+
+Lets talk about model as a service. Models are exposed via APIS. 
+
+What's : autogpt, stable difusion eb UI, langchain, ollama ? ther's also gpt-engineer ,scrneeshot-to-code?  draw-a-ui, db-gpt, sql chat, pandas ai. gpt migrate, ai code translotr. autodoc . pentestgpt , ai commits. 
+
+waht is ttft , tpot. and total latency? 
+
+Modles with open ended output is favored. Open ended output give models the flexibility to do more tasks, but are harder to evaluate. 
+
+Prompt engineering. adapt a model without updatehing the model weights. You adapt a model by giving instructions and context. What do you mean by weghts?
+
+Finetuning, means update model weights. You make changes to the model itself. This require more data to train for new task that it was not trained on. 
+
+## Model development 
+
+ - come up with model architecture
+ - train it 
+ - fine tune it
+
+### Trainng the model 
+
+1. Pre training : trainng a model from scratch. Model weights are randomly initialized. For LLm, pre trainng means traingn a model for text completion. Pre training is most resource intensive phase. 
+
+### Fine tunings
+
+train a model already trained. model weights are obtainedf frmo previsoul trainign process. I think the model weights is the end game for model development. 
+
+What do you mean open ended vs close ended models? in closed ended models, the otuput is restrained to be among predefined values. Eg.g spam classification, yes or not. So annotating open ended queires is much harder. What' sis annotating? 
+
+## Inference otpimtiaztion 
+
+make model cheaper and faster. how ? 
+
+foundation models are autoregressive, tokens are generated sequentially. 
+
+## Evaluation
+
