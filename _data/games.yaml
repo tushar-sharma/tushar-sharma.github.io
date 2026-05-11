@@ -210,6 +210,10 @@
   rating: 5
   comments: "Error: failed to load il2cpp on Proton Experimental. Fix: Use Proton 9.0-4. To use cobra shop, stand next to cobra and buy steal trap for tuna."
 
+- title: "Risk of Rain 2"
+  rating: 5
+  comments: "Each stage follows a simple loop: land on a planet, fight enemies, find the teleporter, and escape. On Steam Deck, use Proton 9.0-4 if you run into gamepad issues. Also check Settings > Gameplay for options like `Enable Teleporter Particle Scaling` and `Teleporter Indicator`. These make the teleporter easier to spot during chaotic fights and heavy visual effects."
+
 - title: "Lego City Undercover"
   rating: 0
   pending: true
