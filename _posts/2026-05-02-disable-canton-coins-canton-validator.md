@@ -25,18 +25,11 @@ Disabling the wallet does not affect your validator's ability to process transac
 
 Canton validator configuration is written in [HOCON](https://github.com/lightbend/config/blob/main/HOCON.md) syntax. The flag to disable the wallet lives under the validator backend config block:
 
-<div style="display:none;" markdown="1">
+```hocon
 canton.validator-apps.validator_backend {
   enable-wallet = false
 }
-</div>
-
-{% template  customCode.html %}
----
-id: 680d6ef4cc728a77795a4884eac4acd2
-file: validator-backend.conf
----
-{% endtemplate %}
+```
 
 Setting `enable-wallet = false` prevents the validator from initialising the wallet app instance on startup.
 
@@ -48,25 +41,18 @@ The Canton validator image reads additional HOCON config from environment variab
 
 Add the following env entry to your validator container spec:
 
-<div style="display:none;" markdown="1">
+```yaml
 - name: ADDITIONAL_CONFIG_DISABLE_WALLET
   value: |
     canton.validator-apps.validator_backend {
       enable-wallet = false
     }
-</div>
-
-{% template  customCode.html %}
----
-id: 680d6ef4cc728a77795a4884eac4acd2
-file: disable-wallet-env.yaml
----
-{% endtemplate %}
+```
 
 
 A minimal deployment snippet showing this in context:
 
-<div style="display:none;" markdown="1">
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -92,14 +78,7 @@ spec:
                 canton.validator-apps.validator_backend {
                   enable-wallet = false
                 }
-</div>
-
-{% template  customCode.html %}
----
-id: 680d6ef4cc728a77795a4884eac4acd2
-file: validator-deployment.yaml
----
-{% endtemplate %}
+```
 
 Replace `<VERSION>` with the validator app version you are deploying (e.g. `0.5.12`).
 
