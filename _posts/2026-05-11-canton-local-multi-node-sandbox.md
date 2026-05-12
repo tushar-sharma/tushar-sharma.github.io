@@ -6,13 +6,15 @@ tags:
 - canton
 - daml
 - blockchain
-- distributed-systems
 author: tushar sharma
+image: 'https://unsplash.com/photos/tQagUWpAx5k/download?w=437'
+thumb: 'https://unsplash.com/photos/tQagUWpAx5k/download?w=437'
 skipImage: true
-published: false
 ---
 
 A single local Canton sandbox is good for fast contract development. It gives you one participant, one Ledger API, one JSON API, and a simple place to upload DAR files. But it does not help much when you want to reason about distributed behavior: two participants, party hosting, package vetting on more than one participant, and the role of a synchronizer.<!-- truncate_here -->
+
+A single local Canton sandbox is good for fast contract development. It gives you one participant, one Ledger API, one JSON API, and a simple place to upload DAR files. But it does not help much when you want to reason about distributed behavior: two participants, party hosting, package vetting on more than one participant, and the role of a synchronizer.
 
 This tutorial builds a local two-participant Canton sandbox from scratch. The goal is not to reproduce a production Canton Network deployment. The goal is to create a small, deterministic development environment that helps you understand the moving pieces and test multi-participant behavior locally.
 
