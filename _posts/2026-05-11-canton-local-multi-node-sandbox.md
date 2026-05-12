@@ -116,9 +116,7 @@ The sequencer handles ordered communication. The mediator participates in transa
 
 The official Canton docs describe a synchronizer as providing sequencing and mediating for independent participant nodes:
 
-```text
-https://docs.digitalasset.com/subnet/3.4/overview/index.html
-```
+[Canton Overview](https://docs.digitalasset.com/subnet/3.4/overview/index.html)
 
 ### Validator
 
@@ -139,9 +137,7 @@ The bootstrap script below does the small amount of setup that a larger environm
 
 Files ending in `.canton` are Canton console scripts. The Canton console is Scala-based. The official docs describe it as a REPL where commands must be valid Scala:
 
-```text
-https://docs.digitalasset.com/operate/3.4/howtos/operate/console/console.html
-```
+[Canton Console Documentation](https://docs.digitalasset.com/operate/3.4/howtos/operate/console/console.html)
 
 That is why the bootstrap file looks like Scala:
 
@@ -210,13 +206,13 @@ This remains one participant. It is still the right tool when you only need to t
 
 ## Step 2: Add a Multi-Node Canton Config
 
-Create:
+Create this file:
 
 ```text
 canton/multinode-sandbox.conf
 ```
 
-with:
+Paste in:
 
 ```hocon
 canton {
@@ -314,13 +310,13 @@ Important: `sandbox-multinode` and `sandbox` both use participant1 ports `6865` 
 
 ## Step 3: Add the Bootstrap Script
 
-Create:
+Create this file:
 
 ```text
 canton/multinode-bootstrap.canton
 ```
 
-with:
+Paste in:
 
 ```scala
 import com.digitalasset.canton.config.RequireTypes.PositiveInt
@@ -398,9 +394,7 @@ If only participant1 has the DARs, participant2 may be connected to the synchron
 
 The Canton console command reference documents `dars.upload` as the command for uploading a DAR to a participant:
 
-```text
-https://docs.digitalasset.com/operate/3.4/reference/console.html
-```
+[Canton Console Reference](https://docs.digitalasset.com/operate/3.4/reference/console.html)
 
 ---
 
@@ -438,7 +432,7 @@ make sandbox-multinode CANTON_JAR=/path/to/canton.jar
 
 ## Step 5: Add `make sandbox-multinode`
 
-Add this target:
+Add this target to your `Makefile`:
 
 ```make
 .PHONY: sandbox-multinode
@@ -486,7 +480,7 @@ This target deliberately checks prerequisites before starting Canton. Missing DA
 
 ## Step 6: Add a Smoke Test
 
-Add:
+Add this target to your `Makefile`:
 
 ```make
 .PHONY: sandbox-multinode-smoke
@@ -529,7 +523,7 @@ This is better than checking only the number of packages. The package endpoint c
 
 ## Step 7: Run It
 
-Build first:
+Build the DARs first:
 
 ```bash
 make build-all
@@ -565,7 +559,7 @@ Uploading dist/models-v2-1.0.0.dar to all local participants
 Canton multi-node sandbox is ready.
 ```
 
-In a second terminal:
+In a second terminal, run the smoke test:
 
 ```bash
 make sandbox-multinode-smoke
@@ -585,7 +579,7 @@ Multi-node sandbox smoke check passed.
 
 ## Step 8: Interact With Each Participant
 
-Participant1:
+Quick checks for `participant1`:
 
 ```bash
 curl http://localhost:7575/readyz
@@ -593,7 +587,7 @@ curl http://localhost:7575/v2/packages
 curl http://localhost:7575/v2/parties
 ```
 
-Participant2:
+Quick checks for `participant2`:
 
 ```bash
 curl http://localhost:7576/readyz
