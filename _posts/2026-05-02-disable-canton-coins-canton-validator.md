@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "How to Disable Canton Coins on a Canton Validator"
-image: 'https://unsplash.com/photos/SQG9tSKPeVM/download?w=437'
-thumb: 'https://unsplash.com/photos/SQG9tSKPeVM/download?w=437'
+image: 'https://unsplash.com/photos/sBbm92cRIQo/download?w=437'
+thumb: 'https://unsplash.com/photos/sBbm92cRIQo/download?w=437'
 author: tushar sharma
 category: blog
 skipImage: true
