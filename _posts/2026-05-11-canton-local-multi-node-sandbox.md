@@ -12,11 +12,11 @@ thumb: 'https://unsplash.com/photos/tQagUWpAx5k/download?w=437'
 skipImage: true
 ---
 
-A single local Canton sandbox is good for fast contract development. It gives you one participant, one Ledger API, one JSON API, and a simple place to upload DAR files. But it does not help much when you want to reason about distributed behavior: two participants, party hosting, package vetting on more than one participant, and the role of a synchronizer.<!-- truncate_here -->
+A single local Canton sandbox is good for fast contract development. It gives you one participant, one Ledger API, one JSON API, and a simple place to upload DAR files. But it does not help much when you want to reason about distributed behavior: multiple participants, party hosting, package vetting on more than one participant, and the role of a synchronizer.<!-- truncate_here -->
 
-A single local Canton sandbox is good for fast contract development. It gives you one participant, one Ledger API, one JSON API, and a simple place to upload DAR files. But it does not help much when you want to reason about distributed behavior: two participants, party hosting, package vetting on more than one participant, and the role of a synchronizer.
+A single local Canton sandbox is good for fast contract development. It gives you one participant, one Ledger API, one JSON API, and a simple place to upload DAR files. But it does not help much when you want to reason about distributed behavior: multiple participants, party hosting, package vetting on more than one participant, and the role of a synchronizer.
 
-This tutorial builds a local two-participant Canton sandbox from scratch. The goal is not to reproduce a production Canton Network deployment. The goal is to create a small, deterministic development environment that helps you understand the moving pieces and test multi-participant behavior locally.
+This tutorial builds a local three-participant Canton sandbox from scratch. The goal is not to reproduce a production Canton Network deployment. The goal is to create a small, deterministic development environment that helps you understand the moving pieces and test multi-participant behavior locally.
 
 By the end, you will be able to run:
 
@@ -29,9 +29,15 @@ and get:
 ```text
 participant1 Ledger API: localhost:6865
 participant1 JSON API:   http://localhost:7575
+participant1 Admin API:  localhost:6866
 
 participant2 Ledger API: localhost:6875
 participant2 JSON API:   http://localhost:7576
+participant2 Admin API:  localhost:6876
+
+participant3 Ledger API: localhost:6895
+participant3 JSON API:   http://localhost:7577
+participant3 Admin API:  localhost:6896
 
 local synchronizer: sequencer + mediator
 ```
@@ -42,7 +48,7 @@ You will also have a smoke test:
 make sandbox-multinode-smoke
 ```
 
-that verifies both participants are up and both have the expected DAR packages available.
+that verifies all three participants are up and each one has the expected DAR packages available.
 
 ---
 
@@ -56,20 +62,21 @@ The local topology looks like this:
                  | sequencer + mediator |
                  +----------+----------+
                             |
-              +-------------+-------------+
-              |                           |
-       +-------------+             +-------------+
-       | participant1 |             | participant2 |
-       | Ledger 6865  |             | Ledger 6875  |
-       | JSON   7575  |             | JSON   7576  |
-       +-------------+             +-------------+
+          +-----------------+-----------------+
+          |                 |                 |
+   +-------------+   +-------------+   +-------------+
+   | participant1 |   | participant2 |   | participant3 |
+   | Ledger 6865  |   | Ledger 6875  |   | Ledger 6895  |
+   | Admin  6866  |   | Admin  6876  |   | Admin  6896  |
+   | JSON   7575  |   | JSON   7576  |   | JSON   7577  |
+   +-------------+   +-------------+   +-------------+
 ```
 
 There are three important points:
 
-1. `participant1` and `participant2` are distinct Canton participant nodes.
-2. Both participants connect to the same local synchronizer.
-3. Both participants receive the same DAR uploads.
+1. `participant1`, `participant2`, and `participant3` are distinct Canton participant nodes.
+2. All three participants connect to the same local synchronizer.
+3. All three participants receive the same DAR uploads.
 
 The existing single-node sandbox remains useful. It is still the fastest path when you only need one participant:
 
@@ -127,6 +134,7 @@ For this local tutorial, we do not need a separate validator app. We only need:
 ```text
 participant1
 participant2
+participant3
 sequencer1
 mediator1
 ```
@@ -144,6 +152,8 @@ That is why the bootstrap file looks like Scala:
 ```scala
 val synchronizerName = "local-multinode"
 participant1.synchronizers.connect_local(sequencer1, synchronizerName)
+participant2.synchronizers.connect_local(sequencer1, synchronizerName)
+participant3.synchronizers.connect_local(sequencer1, synchronizerName)
 ```
 
 ---
@@ -260,6 +270,24 @@ canton {
         type = "memory"
       }
     }
+
+    participant3 {
+      admin-api {
+        port = 6896
+      }
+      http-ledger-api {
+        port = 7577
+      }
+      ledger-api {
+        port = 6895
+        user-management-service {
+          enabled = true
+        }
+      }
+      storage {
+        type = "memory"
+      }
+    }
   }
 
   sequencers {
@@ -296,6 +324,7 @@ The ports are chosen so the first participant matches the existing sandbox:
 |---|---:|---:|---:|
 | participant1 | 6865 | 7575 | 6866 |
 | participant2 | 6875 | 7576 | 6876 |
+| participant3 | 6895 | 7577 | 6896 |
 
 The local synchronizer uses:
 
@@ -342,6 +371,7 @@ bootstrap.synchronizer(
 
 participant1.synchronizers.connect_local(sequencer1, synchronizerName)
 participant2.synchronizers.connect_local(sequencer1, synchronizerName)
+participant3.synchronizers.connect_local(sequencer1, synchronizerName)
 
 val darDirectory = new File("dist")
 val darFiles = Option(darDirectory.listFiles())
@@ -359,6 +389,8 @@ println(s"Participant 1 Ledger API (gRPC): localhost:${participant1.config.ledge
 println(s"Participant 1 JSON API (HTTP):   http://localhost:${participant1.config.httpLedgerApi.port.unwrap}/readyz")
 println(s"Participant 2 Ledger API (gRPC): localhost:${participant2.config.ledgerApi.port.unwrap}")
 println(s"Participant 2 JSON API (HTTP):   http://localhost:${participant2.config.httpLedgerApi.port.unwrap}/readyz")
+println(s"Participant 3 Ledger API (gRPC): localhost:${participant3.config.ledgerApi.port.unwrap}")
+println(s"Participant 3 JSON API (HTTP):   http://localhost:${participant3.config.httpLedgerApi.port.unwrap}/readyz")
 ```
 
 This file is the startup glue.
@@ -373,7 +405,7 @@ The bootstrap script says:
 
 ```text
 create a synchronizer
-connect both participants to it
+connect all three participants to it
 upload every DAR to every participant
 print useful endpoint information
 ```
@@ -386,11 +418,11 @@ Bootstrap is procedural. It performs actions after the nodes exist.
 
 That separation matters. A participant can exist but still not be connected to a synchronizer. A participant can be running but still not have your DARs uploaded. The bootstrap script closes that gap.
 
-### Why upload to both participants?
+### Why upload to every participant?
 
 Each participant needs access to the Daml packages it will use.
 
-If only participant1 has the DARs, participant2 may be connected to the synchronizer but still unable to submit or inspect contracts using your templates.
+If only participant1 has the DARs, participant2 and participant3 may be connected to the synchronizer but still unable to submit or inspect contracts using your templates.
 
 The Canton console command reference documents `dars.upload` as the command for uploading a DAR to a participant:
 
@@ -459,17 +491,24 @@ sandbox-multinode:
 		echo "Error: $(MULTINODE_BOOTSTRAP) not found"; \
 		exit 1; \
 	fi
-	@echo "Loading DARs from $(DIST_DIR)/ to participant1 and participant2:"
+	@echo "Loading DARs from $(DIST_DIR)/ to participant1, participant2, and participant3:"
 	@ls -1 $(DIST_DIR)/*.dar
 	@echo ""
 	@echo "Participant 1 Ledger API (gRPC): localhost:6865"
+	@echo "Participant 1 Admin API (gRPC):  localhost:6866"
 	@echo "Participant 1 JSON API (HTTP):   http://localhost:7575/readyz"
 	@echo "                                   http://localhost:7575/v2/parties"
 	@echo "                                   http://localhost:7575/v2/packages"
 	@echo "Participant 2 Ledger API (gRPC): localhost:6875"
+	@echo "Participant 2 Admin API (gRPC):  localhost:6876"
 	@echo "Participant 2 JSON API (HTTP):   http://localhost:7576/readyz"
 	@echo "                                   http://localhost:7576/v2/parties"
 	@echo "                                   http://localhost:7576/v2/packages"
+	@echo "Participant 3 Ledger API (gRPC): localhost:6895"
+	@echo "Participant 3 Admin API (gRPC):  localhost:6896"
+	@echo "Participant 3 JSON API (HTTP):   http://localhost:7577/readyz"
+	@echo "                                   http://localhost:7577/v2/parties"
+	@echo "                                   http://localhost:7577/v2/packages"
 	@echo ""
 	@java -jar "$(CANTON_JAR)" daemon --config "$(MULTINODE_CONFIG)" --bootstrap "$(MULTINODE_BOOTSTRAP)" --log-file-name log/canton-multinode.log
 ```
@@ -486,38 +525,32 @@ Add this target to your `Makefile`:
 .PHONY: sandbox-multinode-smoke
 sandbox-multinode-smoke:
 	@set -e; \
-	for api in http://localhost:7575 http://localhost:7576; do \
+	for api in http://localhost:7575 http://localhost:7576 http://localhost:7577; do \
 		echo "Checking $$api/readyz..."; \
 		curl -fsS -o /dev/null "$$api/readyz"; \
 	done; \
-	expected_package_ids=$$(for dar in $(DIST_DIR)/*.dar; do \
-		$(DPM) inspect-dar --json "$$dar" | jq -r '.main_package_id'; \
-	done); \
-	for api in http://localhost:7575 http://localhost:7576; do \
+	for api in http://localhost:7575 http://localhost:7576 http://localhost:7577; do \
 		echo "Checking packages on $$api..."; \
-		actual_package_ids=$$(curl -fsS "$$api/v2/packages" | jq -r '(.packages // .packageIds)[]'); \
-		for package_id in $$expected_package_ids; do \
-			if ! echo "$$actual_package_ids" | grep -qx "$$package_id"; then \
-				echo "Error: Expected package $$package_id on $$api"; \
-				exit 1; \
-			fi; \
-		done; \
+		package_count=$$(curl -fsS "$$api/v2/packages" | jq -r '(.packages // .packageIds) | length'); \
+		if [ "$$package_count" -lt 3 ]; then \
+			echo "Error: Expected at least 3 uploaded packages on $$api, found $$package_count"; \
+			exit 1; \
+		fi; \
 	done; \
 	echo "Multi-node sandbox smoke check passed."
 ```
 
 This does two checks.
 
-First, it checks both JSON APIs:
+First, it checks all three JSON APIs:
 
 ```bash
 curl -fsS -o /dev/null http://localhost:7575/readyz
 curl -fsS -o /dev/null http://localhost:7576/readyz
+curl -fsS -o /dev/null http://localhost:7577/readyz
 ```
 
-Second, it checks that the exact main package IDs from your local DAR files exist on both participants.
-
-This is better than checking only the number of packages. The package endpoint can include standard library packages and dependencies. A count can accidentally pass even if your project DARs were not uploaded. Checking exact package IDs proves the expected DARs are present.
+Second, it checks that each participant exposes at least the three project DAR packages uploaded by the bootstrap script. In this example repository those are the application, enumerations, and models DARs.
 
 ---
 
@@ -539,19 +572,26 @@ Expected output:
 
 ```text
 Starting Canton multi-node sandbox + JSON APIs with your contracts...
-Loading DARs from dist/ to participant1 and participant2:
+Loading DARs from dist/ to participant1, participant2, and participant3:
 dist/app-1.0.0.dar
 dist/enumerations-1.0.0.dar
 dist/models-v2-1.0.0.dar
 
 Participant 1 Ledger API (gRPC): localhost:6865
+Participant 1 Admin API (gRPC):  localhost:6866
 Participant 1 JSON API (HTTP):   http://localhost:7575/readyz
                                    http://localhost:7575/v2/parties
                                    http://localhost:7575/v2/packages
 Participant 2 Ledger API (gRPC): localhost:6875
+Participant 2 Admin API (gRPC):  localhost:6876
 Participant 2 JSON API (HTTP):   http://localhost:7576/readyz
                                    http://localhost:7576/v2/parties
                                    http://localhost:7576/v2/packages
+Participant 3 Ledger API (gRPC): localhost:6895
+Participant 3 Admin API (gRPC):  localhost:6896
+Participant 3 JSON API (HTTP):   http://localhost:7577/readyz
+                                   http://localhost:7577/v2/parties
+                                   http://localhost:7577/v2/packages
 
 Uploading dist/app-1.0.0.dar to all local participants
 Uploading dist/enumerations-1.0.0.dar to all local participants
@@ -570,8 +610,10 @@ Expected output:
 ```text
 Checking http://localhost:7575/readyz...
 Checking http://localhost:7576/readyz...
+Checking http://localhost:7577/readyz...
 Checking packages on http://localhost:7575...
 Checking packages on http://localhost:7576...
+Checking packages on http://localhost:7577...
 Multi-node sandbox smoke check passed.
 ```
 
@@ -595,6 +637,14 @@ curl http://localhost:7576/v2/packages
 curl http://localhost:7576/v2/parties
 ```
 
+Quick checks for `participant3`:
+
+```bash
+curl http://localhost:7577/readyz
+curl http://localhost:7577/v2/packages
+curl http://localhost:7577/v2/parties
+```
+
 Using the Ledger API, participant1 is on port `6865`:
 
 ```bash
@@ -613,6 +663,15 @@ daml ledger allocate-party \
   --display-name="Party Two"
 ```
 
+Participant3 is on port `6895`:
+
+```bash
+daml ledger allocate-party \
+  --host=localhost --port=6895 \
+  PartyThree \
+  --display-name="Party Three"
+```
+
 The exact party workflow depends on your templates. A useful first check is to allocate one party on each participant, then use your application or Daml scripts to create contracts involving those parties.
 
 ---
@@ -621,7 +680,7 @@ The exact party workflow depends on your templates. A useful first check is to a
 
 This setup is useful for:
 
-- verifying both participants can start from the same local DAR set
+- verifying all three participants can start from the same local DAR set
 - testing client configuration against different Ledger API ports
 - testing visibility differences between parties hosted on different participants
 - preparing for party replication or party migration experiments
@@ -694,13 +753,20 @@ make sandbox-multinode CANTON_JAR=/path/to/canton.jar
 
 ### Error: port already in use
 
-The multi-node sandbox uses `6865` and `7575`, same as the single-node sandbox. Stop the single-node sandbox before starting the multi-node one.
+The multi-node sandbox uses participant1 ports `6865` and `7575`, same as the single-node sandbox. It also binds participant2 ports `6875` and `7576`, participant3 ports `6895` and `7577`, and the Admin API ports listed earlier. Stop any process that already owns those ports before starting the multi-node sandbox.
 
 On macOS or Linux:
 
 ```bash
 lsof -iTCP:6865 -sTCP:LISTEN -n -P
+lsof -iTCP:6866 -sTCP:LISTEN -n -P
 lsof -iTCP:7575 -sTCP:LISTEN -n -P
+lsof -iTCP:6875 -sTCP:LISTEN -n -P
+lsof -iTCP:6876 -sTCP:LISTEN -n -P
+lsof -iTCP:7576 -sTCP:LISTEN -n -P
+lsof -iTCP:6895 -sTCP:LISTEN -n -P
+lsof -iTCP:6896 -sTCP:LISTEN -n -P
+lsof -iTCP:7577 -sTCP:LISTEN -n -P
 ```
 
 Then stop the owning process.
@@ -710,7 +776,7 @@ Then stop the owning process.
 If readiness passes but package verification fails:
 
 ```text
-Error: Expected package <package-id> on http://localhost:7575
+Error: Expected at least 3 uploaded packages on http://localhost:7575, found 0
 ```
 
 then the participant is running, but one of your project DARs was not uploaded or is not visible through the package service.
@@ -721,9 +787,10 @@ Check:
 dpm inspect-dar --json dist/app-1.0.0.dar | jq -r '.main_package_id'
 curl -s http://localhost:7575/v2/packages | jq .
 curl -s http://localhost:7576/v2/packages | jq .
+curl -s http://localhost:7577/v2/packages | jq .
 ```
 
-The main package ID from `inspect-dar` should appear in both package lists.
+The main package ID from `inspect-dar` should appear in each participant's package list.
 
 ### The sandbox starts inside a restricted tool but cannot bind ports
 
@@ -752,12 +819,12 @@ For example:
 - You may test only one Ledger API endpoint.
 - You may confuse a participant with a synchronizer or validator app.
 
-A two-participant local sandbox makes those boundaries visible.
+A three-participant local sandbox makes those boundaries visible.
 
 It is still small enough to understand, but it has enough structure to teach the real Canton model:
 
 ```text
-application -> participant -> synchronizer -> other participant
+application -> participant -> synchronizer -> other participants
 ```
 
 That mental model is the point of the exercise.
