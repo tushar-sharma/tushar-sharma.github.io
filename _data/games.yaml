@@ -3,11 +3,6 @@
   rating: 3
   comments: "It's a cute short little fetch quest. Gameplay is simple where you play as an alpaca, Paz, tasked with collecting five lost chicks for their mother, Mama Hen"
 
-- title: "Detroit: Become Human"
-  download: "<a href='https://randomwits.com/blog/download-detroit-become-Human' aria-label='Download Detroit: Become Human' style='color:#007bff; font-weight:bold;'><i class='fas fa-download'></i> 🤖</a>"
-  rating: 5
-  comments: "Made by Quantic Dream. It's a great game where you play as androids who struggles with moral choices and steers closer to consciousness. One of the best interactive story games."
-
 - title: "Beyond Two Souls"
   comments: "Made by Quantic Dream. You play as a little girl and her spirit. Choices affect the story."
   rating: 4
@@ -27,11 +22,6 @@
 - title: "Sunset Overdrive"
   rating: 5
   comments: "Made by Insomniac Games. Cons: Corrupt file message pops up everytime you start the game. The game is goofy and fun. You can even shoot a dog at enemies."
-
-- title: "Super Mario Odyssey"
-  download: "<a href='/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator' aria-label='Download Super Mario Odyssey' style='color:#007bff; font-weight:bold;'><i class='fas fa-download'></i> 🍄</a>"
-  rating: 5
-  comments: "You need yuzu emulator to play this on steam deck or PC. It supports multiplayer where 2nd player can control the hat."
 
 - title: "Tomb Raider 2013"
   rating: 5
@@ -246,6 +236,16 @@
   pending: true
   progress: 0
   comments: "Horror fishing game but also has a cozy sailing vibe. Use Passive Mode to make it more peaceful to navigate at night. In normal mode, sleep properly to avoid hallucinations and avoid venturing out at night to avoid scary encounters."
+
+- title: "Super Mario Odyssey"
+  download: "<a href='/blog/How-to-play-Super-Mario-Odyssey-on-PC-Yuzu-Emulator' aria-label='Download Super Mario Odyssey' style='color:#007bff; font-weight:bold;'><i class='fas fa-download'></i> 🍄</a>"
+  rating: 5
+  comments: "You need yuzu emulator to play this on steam deck or PC. It supports multiplayer where 2nd player can control the hat."
+
+- title: "Detroit: Become Human"
+  download: "<a href='https://randomwits.com/blog/download-detroit-become-Human' aria-label='Download Detroit: Become Human' style='color:#007bff; font-weight:bold;'><i class='fas fa-download'></i> 🤖</a>"
+  rating: 5
+  comments: "Made by Quantic Dream. It's a great game where you play as androids who struggles with moral choices and steers closer to consciousness. One of the best interactive story games."
 
 - title: "Blur"
   rating: 0
