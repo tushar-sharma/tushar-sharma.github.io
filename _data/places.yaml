@@ -1,3 +1,10 @@
+- name: "Thai Pearl Restaurant"
+  notes: Had the green curry with crunchy tofu — it was very good. The Tom Yum soup was also delicious. The 4-star spice level was perfect for me; not sure I would try 5 stars.
+  address: 747 Haywood Rd, Asheville, NC 28806
+  category: food
+  map_link: "https://www.google.com/maps/search/?api=1&query=747+Haywood+Rd,+Asheville,+NC+28806"
+  city: "Asheville, NC"
+
 - name: Oh My Soul
   notes: Had The Crunchy Mom with Hushpuppies (Cheddar Jalapeño). Was good.
   address: 3046 N Davidson St, Charlotte, NC 28205
@@ -192,3 +199,4 @@
 # FastTrax Fort Myers, Florida
 # Deli St Charlotte:  Vegan Cindy’s Breakfast was good wrap. You can add eggs for extra. It comes with hash brown on the side.
 # blue surf cafe
+# islamorada, florida
