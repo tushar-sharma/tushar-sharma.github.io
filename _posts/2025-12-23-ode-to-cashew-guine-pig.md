@@ -32,6 +32,7 @@ tags:
  - cashew
  - guinea pig
  - pets
+ - photos
 travel: true
 ---
 
