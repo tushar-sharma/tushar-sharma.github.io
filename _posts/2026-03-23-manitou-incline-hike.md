@@ -40,6 +40,7 @@ category: blog
 tags:
  - colorado springs
  - hike
+ - photos
 location:
   latitude: 38.8570
   longitude: -104.9317
