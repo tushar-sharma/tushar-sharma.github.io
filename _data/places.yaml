@@ -1,3 +1,10 @@
+- name: "Avo"
+  notes: "Nice cafe without outdoor seating. Nachos were good and frozen avocado margarita was good."
+  address: "4 City Blvd #104, Nashville, TN 37209"
+  category: food
+  map_link: "https://www.google.com/maps/search/?api=1&query=4+City+Blvd+%23104,+Nashville,+TN+37209"
+  city: "Nashville, TN"
+
 - name: "Thai Pearl Restaurant"
   notes: Had the green curry with crunchy tofu — it was very good. The Tom Yum soup was also delicious. The 4-star spice level was perfect for me; not sure I would try 5 stars.
   address: 747 Haywood Rd, Asheville, NC 28806
