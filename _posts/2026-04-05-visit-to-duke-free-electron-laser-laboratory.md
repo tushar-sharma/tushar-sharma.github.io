@@ -59,6 +59,7 @@ tags:
  - science
  - physics
  - north carolina
+ - photos
 travel: true
 ---
 
