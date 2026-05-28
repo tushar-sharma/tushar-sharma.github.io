@@ -494,8 +494,8 @@
 
 - title: "Marvel’s Spider-Man Remastered"
   pending: true
-  progress: 0
-  comments: "Steam Deck controller issue: Disable Steam Input. rename `steam_appid.txt` to `steam_appid.txt.bk`."
+  progress: 58
+  comments: "I like swinging through buildings as spiderman. You also get to play as Mary Jane and Miles Morales for few missions. Steam Deck controller issue: Disable Steam Input. rename `steam_appid.txt` to `steam_appid.txt.bk`."
 
 - title: "Ace Combat 7: Skies Unkown"
   pending: true
@@ -591,6 +591,7 @@
 # Resident Evil 2 (2019)
 # Resident Evil 4 (2023)
 # Bastion
+# 007 First Light
 # Digimon Story Time Stranger
 # Dungeons of Hinterberg
 # FINAL FANTASY XVI
