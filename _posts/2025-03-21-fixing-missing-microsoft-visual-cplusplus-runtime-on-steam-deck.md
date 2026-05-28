@@ -14,13 +14,7 @@ When launching non-Steam games via Proton or Wine on the Steam Deck, you may enc
 
 When launching non-Steam games via Proton or Wine on the Steam Deck, you may encounter the following error:
 
-{% template  customCode.html %}
----
-id: 0537f40629aefbe99947a710e37c2d91
-file: ex2.txt
----
-{% endtemplate %}
-
+> The following component(s) are required to run this program: Microsoft Visual C++ Runtime
 
 This is a common issue when certain runtime libraries (like `vcrun6sp6` or `vcrun2022`) are missing. This guide provides two solutions: one for **Proton games using Protontricks**, and one for **Lutris-based installations** (especially via Flatpak).
 
@@ -41,12 +35,9 @@ Open the **Discover** store (blue shopping bag icon), then search for: `Protontr
 
 Open **Konsole** (terminal), and run:
 
-{% template  customCode.html %}
----
-id: 0537f40629aefbe99947a710e37c2d91
-file: ex1.sh
----
-{% endtemplate %}
+```bash
+protontricks --gui
+```
 
 
 From the list, select your game:
@@ -82,35 +73,27 @@ If you're using **Lutris installed via Flatpak** and running into missing DLLs l
 
 In terminal:
 
-{% template  customCode.html %}
----
-id: 0537f40629aefbe99947a710e37c2d91
-file: ex3.sh
----
-{% endtemplate %}
+```bash
+mkdir -p ~/Games/MyGamePrefix
+WINEPREFIX=~/Games/MyGamePrefix wineboot
+```
 
 This sets up a new Wine environment specifically for your game.
 
 ### 2. Install the Missing Runtime (`vcrun6sp6`)
 
-{% template  customCode.html %}
----
-id: 0537f40629aefbe99947a710e37c2d91
-file: ex4.sh
----
-{% endtemplate %}
+```bash
+WINEPREFIX=~/Games/MyGamePrefix winetricks vcrun6sp6
+```
 
 This installs the required Microsoft Visual C++ 6.0 components, including `isskin.dll`.
 
-> ✅ Make sure you have **native `winetricks` installed**, not the Flatpak version.  
+> Make sure you have **native `winetricks` installed**, not the Flatpak version.  
 > Install it with:
 
-{% template  customCode.html %}
----
-id: 0537f40629aefbe99947a710e37c2d91
-file: ex5.sh
----
-{% endtemplate %}
+```bash
+sudo pacman -S winetricks
+```
 
 
 ### 3. Configure Lutris to Use This Prefix
@@ -125,7 +108,7 @@ file: ex5.sh
 
 Now that the correct DLL is available in the prefix, the game should launch without runtime errors.
 
-## 🧩 Solution 3: Use Nix
+## Solution 3: Use Nix
 
 Nix is both a package manager and a build system.
 
@@ -158,27 +141,22 @@ nix-env -iA nixpkgs.wine
 WINEPREFIX=$HOME/.local/share/NonSteamGames/prefix winetricks vcrun6sp6
 ```
 
-## 🧪 Advanced Tip: Register a DLL Manually
+## Advanced Tip: Register a DLL Manually
 
 If a DLL like `isskin.dll` is still not detected, you can download it manually (from a trusted source), place it in: `~/Games/MyGamePrefix/drive_c/windows/system32/`
 
 
 Then register it using:
 
-{% template  customCode.html %}
----
-id: 0537f40629aefbe99947a710e37c2d91
-file: ex6.sh
----
-{% endtemplate %}
+```bash
+WINEPREFIX=~/Games/MyGamePrefix wine regsvr32 isskin.dll
+```
 
 ---
 
-## ✅ Summary
+## Summary
 
 | Platform         | Tool             | Fix                                 |
 |------------------|------------------|--------------------------------------|
 | Steam/Proton     | Protontricks     | Install `vcrun2022` via GUI         |
 | Lutris (Flatpak) | Wine + Winetricks| Create prefix, install `vcrun6sp6`  |
-
-By using the correct tools and setting up Wine prefixes properly, you can get even the trickiest non-Steam games running on your Steam Deck.
