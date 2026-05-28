@@ -7,8 +7,19 @@
 
   {% for item in template.files %}
     <div class=" code-block codeSample {{ item.language }}" id="{{ item.language }}">
+      {% if item.code %}
+      {% assign code_language = item.language | downcase %}
+      {% if code_language == "maven" %}
+        {% assign code_language = "xml" %}
+      {% endif %}
+      {% capture highlighted_code %}```{{ code_language }}
+{{ item.code | strip }}
+```{% endcapture %}
+      {{ highlighted_code | markdownify }}
+      {% else %}
       <script src="https://gist.github.com/tushar-sharma/{{ template.id }}.js?file={{ item.file }}"></script>
       <button class="copy-button">Copy</button>
+      {% endif %}
     </div>
   {% endfor %}
 

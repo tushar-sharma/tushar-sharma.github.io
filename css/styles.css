@@ -548,6 +548,10 @@ span.pagination-step {
   text-transform: uppercase;
 }
 
+.tab-container .code-frame__label {
+  display: none;
+}
+
 .code-frame__scroll {
   overflow-x: hidden;
   background: #fbfbf8;
