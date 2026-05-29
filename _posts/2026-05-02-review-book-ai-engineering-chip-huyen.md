@@ -97,7 +97,11 @@ Models with **open-ended output** are powerful because they can handle many kind
 
 **Prompt engineering** means adapting model behavior without changing the model's weights. You guide the model through instructions, examples, constraints, and context.
 
-**Weights** are the learned numerical parameters inside a neural network. They store what the model learned during training.
+**Weights** are the learned numerical parameters inside a neural network. They store what the model learned during training. Initilaly, before training LLM's weight are set to random numbers.
+
+$$
+\text{Output} = \text{Input Vector} \times \text{Weights}
+$$
 
 **Fine-tuning** means updating those weights using additional training data so the model becomes better at a specific task, domain, or style. This changes the model itself, unlike prompting.
 
@@ -124,3 +128,257 @@ What do you mean by open-ended vs closed-ended tasks? In a closed-ended task, th
 Inference optimization means making a model cheaper and faster at serving time.
 
 Foundation models are autoregressive, so tokens are generated sequentially. That is one reason latency matters so much in production systems.
+
+
+## May 28, 2026
+
+The model generates the next output token with different probabilities. Sampling is a process of choosing which token to pick from all possible options. Example 
+
+```
+The cat sat on the 
+```
+
+The model consider all tokens in it's vocabulary. Example:
+
+| Token     | Probability |
+| --------- | ----------: |
+| `"mat"`   |         45% |
+| `"floor"` |         25% |
+| `"bed"`   |         10% |
+| `"roof"`  |          5% |
+| others    |         15% |
+
+
+So a model with low temperature might pick up **mat**, whereas with **high temperature** it might pick up **roof**. Low temperature makes the distribution sharper (more deterministic), so the model tends to choose high-probability tokens more often. High temperature flattens the distribution, increasing randomness and diversity.
+
+So an input to a LLM is broken into tokens. These tokens are then mapped to index numbers using a vocabulary lookup table. It's just a basic array lookup. Now those values are then converted to vectors, which are points in a high-dimensional space (a long list of numbers).
+
+In a 2D space, (x,y) are needed to describe a point. In 3D, we have (x,y,z). In model, we have 1024D like (x1, x2, x3, ..., x1024). This means it has more features that it can encode. This is called **embedding dimension** which represnet what's the representation capacity of a model.
+
+---
+
+Common source of training data is **common crawl**. Google's **Med-PalM2** combines the power of LLM with medical data.
+
+---
+
+### Transformer Architecture and Attention
+
+A **transformer** is the neural-network architecture behind most modern LLMs. Its key idea is **attention**: each token can look at other tokens and decide which ones matter for understanding the current token.
+
+Suppose the input is:
+
+```text
+The cat sat on the mat
+```
+
+When the model processes the token `"sat"`, it should pay attention to `"cat"` because `"cat"` tells us who performed the action. It may pay less attention to `"the"` because that token carries less meaning for this decision.
+
+Attention is often explained with three terms: **query**, **key**, and **value**.
+
+- **Query (Q)**: what the current token is trying to find.
+- **Key (K)**: what each token advertises about itself.
+- **Value (V)**: the information each token can contribute.
+
+An analogy: if you search a library catalog, your search phrase is the **query**, the book titles and metadata are the **keys**, and the book contents are the **values**. The search first finds matching books, then returns useful content from those books.
+
+In a transformer, Q, K, and V are not human-written labels. They are vectors learned from data. Starting from token embeddings, the model creates Q, K, and V with learned weight matrices:
+
+$$
+Q = XW_Q,\quad K = XW_K,\quad V = XW_V
+$$
+
+Here, \(X\) is the matrix of token embeddings. Each row is one token. \(W_Q\), \(W_K\), and \(W_V\) are learned weights.
+
+The attention calculation is:
+
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+$$
+
+Read this formula from left to right:
+
+1. **Compare queries with keys**: \(QK^T\) gives a score for how much each token should pay attention to every other token.
+2. **Scale the scores**: divide by \(\sqrt{d_k}\), where \(d_k\) is the key-vector dimension. This keeps large vectors from producing extremely large scores.
+3. **Normalize with softmax**: softmax turns raw scores into attention weights. For each token, the weights across all tokens sum to 1.
+4. **Mix values**: multiply the attention weights by \(V\). The result is a new representation for each token that includes information from relevant context tokens.
+
+This is called **self-attention** when the tokens attend to other tokens in the same sequence.
+
+#### Why Transformers Replaced RNN Seq2Seq Models
+
+Before transformers, many sequence-to-sequence models used **RNNs (Recurrent Neural Networks)**. An RNN reads tokens one at a time:
+
+```text
+token 1 -> hidden state 1
+token 2 -> hidden state 2
+token 3 -> hidden state 3
+```
+
+A **hidden state** is the model's internal summary of what it has read so far. It is called hidden because it is not the final visible output.
+
+The problem is that RNNs are sequential. Token 3 cannot be processed until token 2 is done. Token 100 cannot be processed until token 99 is done. This makes training slower and makes long-range dependencies harder to preserve.
+
+Attention improved RNN-based seq2seq models because the decoder could look back at earlier encoder states. But the recurrent structure still remained.
+
+Transformers removed the recurrent loop. Instead of updating one hidden state step by step, a transformer represents the whole sequence as matrices and uses matrix multiplication to compare many tokens at once. This makes transformers much more GPU-friendly during training.
+
+Important nuance: autoregressive transformers still **generate** one token at a time during inference. They can process the input prompt efficiently, but when producing output, the next token depends on the tokens already generated.
+
+```text
+RNN seq2seq:
+  - Processes tokens sequentially.
+  - Maintains a hidden state.
+  - Uses attention as an add-on to look back at encoder states.
+
+Transformer:
+  - Represents tokens as matrices.
+  - Uses self-attention as the central operation.
+  - Processes sequence positions in parallel during training.
+```
+
+#### A Small Self-Attention Example
+
+This is a simplified example. A real transformer has multiple layers, multiple attention heads, residual connections, normalization, and feed-forward networks. But this code shows the core attention idea.
+
+```python
+import numpy as np
+
+def softmax(x, axis=-1):
+    # Subtract max for numerical stability.
+    shifted = x - np.max(x, axis=axis, keepdims=True)
+    exp = np.exp(shifted)
+    return exp / np.sum(exp, axis=axis, keepdims=True)
+
+# Three token embeddings, each with two dimensions.
+# Imagine these are embeddings for: "The", "cat", "sat"
+X = np.array([
+    [0.1, 0.8],
+    [0.9, 0.2],
+    [0.2, 0.1],
+])
+
+# In a real transformer, these are learned matrices.
+W_Q = np.array([
+    [1.0, 0.0],
+    [0.0, 1.0],
+])
+
+W_K = np.array([
+    [1.0, 0.0],
+    [0.0, 1.0],
+])
+
+W_V = np.array([
+    [1.0, 0.0],
+    [0.0, 1.0],
+])
+
+Q = X @ W_Q
+K = X @ W_K
+V = X @ W_V
+
+dk = K.shape[-1]
+scores = (Q @ K.T) / np.sqrt(dk)
+weights = softmax(scores, axis=-1)
+output = weights @ V
+
+print("Attention scores:")
+print(scores)
+
+print("\nAttention weights:")
+print(weights)
+
+print("\nOutput after mixing value vectors:")
+print(output)
+```
+
+The shape is important:
+
+- `scores` is a 3 x 3 matrix. Each row asks: "For this token, how much should I look at every token?"
+- `weights` is also 3 x 3, but each row sums to 1 after softmax.
+- `output` is a new representation for each token after it has gathered information from other tokens.
+
+---
+
+### Softmax
+
+**Softmax** turns raw scores into probabilities.
+
+The raw scores are called **logits**. A logit can be any real number: negative, zero, or positive. Softmax converts a list of logits into positive numbers that sum to 1.
+
+Softmax appears in two important places:
+
+- **Inside attention**: it converts token-to-token scores into attention weights.
+- **At the model output**: it converts vocabulary logits into next-token probabilities.
+
+For example, after the prompt:
+
+```text
+the cat sat on the
+```
+
+the model might produce logits for possible next tokens:
+
+| Token     | Logit |
+| --------- | ----: |
+| `"mat"`   |   2.0 |
+| `"floor"` |   0.0 |
+| `"sky"`   |  -1.0 |
+
+These are not probabilities yet. Softmax converts them into probabilities.
+
+The formula is:
+
+$$
+\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}
+$$
+
+Step by step:
+
+1. Apply \(e^x\) to every logit. This makes every value positive.
+2. Add all exponentials together.
+3. Divide each exponential by the total.
+
+Let's write softmax from scratch:
+
+```python
+import math
+
+tokens = ["mat", "floor", "sky"]
+logits = [2.0, 0.0, -1.0]
+
+exponentials = []
+for logit in logits:
+    exponentials.append(math.exp(logit))
+
+total = sum(exponentials)
+
+probabilities = []
+for exp_value in exponentials:
+    probabilities.append(exp_value / total)
+
+for token, probability in zip(tokens, probabilities):
+    print(f"{token}: {probability:.2%}")
+
+print(f"Total: {sum(probabilities):.2f}")
+```
+
+Output:
+
+```text
+mat: 84.38%
+floor: 11.42%
+sky: 4.20%
+Total: 1.00
+```
+
+In real code, we usually subtract the maximum logit before exponentiating. This does not change the final probabilities, but it prevents numerical overflow when logits are large.
+
+```python
+import numpy as np
+
+def softmax(x, axis=-1):
+    shifted = x - np.max(x, axis=axis, keepdims=True)
+    exp = np.exp(shifted)
+    return exp / np.sum(exp, axis=axis, keepdims=True)
+```
