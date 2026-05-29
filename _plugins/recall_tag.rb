@@ -1,5 +1,7 @@
 require 'jekyll'
 
+puts ">>> Loading RecallTag plugin..."
+
 module Jekyll
   module Tags
     class RecallTag < Liquid::Block
@@ -11,9 +13,7 @@ module Jekyll
       def render(context)
         content = super
         site = context.registers[:site]
-        # Access the markdown converter
         converter = site.find_converter_instance(Jekyll::Converters::Markdown)
-        # Convert markdown to HTML and strip the surrounding <p> tags
         rendered_content = converter.convert(content).gsub(/<\/?p>/, '').strip
         
         "<span class=\"term-popover\">#{@term}<span class=\"popover-content\">#{rendered_content}</span></span>"
