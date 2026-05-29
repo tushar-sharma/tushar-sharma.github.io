@@ -247,6 +247,10 @@
   rating: 5
   comments: "Made by Quantic Dream. It's a great game where you play as androids who struggles with moral choices and steers closer to consciousness. One of the best interactive story games."
 
+- title: "Marvel’s Spider-Man Remastered"
+  rating: 5
+  comments: "I like swinging through buildings as spiderman. You also get to play as Mary Jane and Miles Morales for few missions. Steam Deck controller issue: Disable Steam Input. rename `steam_appid.txt` to `steam_appid.txt.bk`."
+
 - title: "Blur"
   rating: 0
   pending: true
@@ -491,11 +495,6 @@
   pending: true
   progress: 0
   comments: "Steam deck: Use proton hotfix."
-
-- title: "Marvel’s Spider-Man Remastered"
-  pending: true
-  progress: 58
-  comments: "I like swinging through buildings as spiderman. You also get to play as Mary Jane and Miles Morales for few missions. Steam Deck controller issue: Disable Steam Input. rename `steam_appid.txt` to `steam_appid.txt.bk`."
 
 - title: "Ace Combat 7: Skies Unkown"
   pending: true
