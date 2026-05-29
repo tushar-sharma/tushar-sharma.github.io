@@ -161,3 +161,159 @@ However, model uses **sampling**, which introduces controlled randomness when ch
 In contrast, **higher temperature**, flattens the distribution, increasing the chances of less likely tokens such as "roof" being selected.
 
 > use lower temperature for more deterministic output. Higher temperature for creative outputs
+
+--- 
+
+### Embeddings
+
+In a 2D space, a point `(x, y)` represents two values. In a 3D space, a point `(x, y, z)` can represent three properties such as width, height, and length.
+
+Similarly, machine learning models can use points in much higher-dimensional spaces, such as **1024 dimensions**. A point in this space looks like:
+
+```text
+(x1, x2, x3, ..., x1024)
+```
+
+Each coordinate captures some learned feature or characteristic. So, an **embedding** is essentially a coordinate (vector) in a high-dimensional space that represents information in a numerical form.
+
+When text is given to an LLM, it first goes through **tokenization**, where the input is split into tokens. These tokens are then mapped to a unique ID. Later, the model converts these IDs into embedding vectors. 
+
+#### Static embeddings
+
+However, token IDs themselves do not carry meaning. Therefore, the model converts these IDs into **embedding vectors**.
+
+Earlier NLP systems often used **static embeddings**, where each word always had the same vector regardless of context. A famous example is **Word2Vec**.
+
+For example, the word `"bank"` would always receive the same embedding whether the sentence referred to:
+
+- a river bank
+- a financial bank
+
+Static embeddings capture general meaning but cannot adapt to context.
+
+#### contextual embedding
+
+Modern LLMs use **contextual embeddings**.
+
+The model may start with an initial embedding lookup, but these embeddings are then continuously updated based on surrounding words using a mechanism called **attention**.
+
+This allows the same word to have different meanings depending on context.
+
+For example:
+
+```text
+I deposited money in the bank
+```
+
+and
+
+```text
+The boat reached the river bank
+```
+
+The token `"bank"` begins with an initial embedding, but attention updates it differently in each sentence.
+
+This contextual updating is one of the key differences between older NLP models and modern transformer-based LLMs.
+
+> Note: embeddings are not exactly "1024 pieces of information." Each dimension is a learned numerical feature, and meaning is distributed across many dimensions rather than one dimension representing one explicit concept.
+
+---
+
+Common source of training data is **common crawl**. Google's **Med-PalM2** combines the power of LLM with medical data.
+
+---
+
+LLMs are based on **transformer** architecture. It relies on **attention mechanism**.
+
+> TODO: what's attention mechanism? 
+
+Before transformers, many sequence-to-sequence models used **RNNs (Recurrent Neural Networks)**. 
+
+```text
+seq2seq = RNN + Attention 
+
+LLM = Attention
+```
+
+### Softmax
+
+**Softmax** turns raw scores into probabilities.
+
+The raw scores are called **logits**. A logit can be any real number: negative, zero, or positive. Softmax converts a list of logits into positive numbers that sum to 1.
+
+Softmax appears in two important places:
+
+- **Inside attention**: it converts token-to-token scores into attention weights.
+- **At the model output**: it converts vocabulary logits into next-token probabilities.
+
+For example, after the prompt:
+
+```text
+the cat sat on the
+```
+
+the model might produce logits for possible next tokens:
+
+| Token     | Logit |
+| --------- | ----: |
+| `"mat"`   |   2.0 |
+| `"floor"` |   0.0 |
+| `"sky"`   |  -1.0 |
+
+These are not probabilities yet. Softmax converts them into probabilities.
+
+The formula is:
+
+$$
+\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}
+$$
+
+Step by step:
+
+1. Apply \(e^x\) to every logit. This makes every value positive.
+2. Add all exponentials together.
+3. Divide each exponential by the total.
+
+Let's write softmax from scratch:
+
+```python
+import math
+
+tokens = ["mat", "floor", "sky"]
+logits = [2.0, 0.0, -1.0]
+
+exponentials = []
+for logit in logits:
+    exponentials.append(math.exp(logit))
+
+total = sum(exponentials)
+
+probabilities = []
+for exp_value in exponentials:
+    probabilities.append(exp_value / total)
+
+for token, probability in zip(tokens, probabilities):
+    print(f"{token}: {probability:.2%}")
+
+print(f"Total: {sum(probabilities):.2f}")
+```
+
+Output:
+
+```text
+mat: 84.38%
+floor: 11.42%
+sky: 4.20%
+Total: 1.00
+```
+
+In real code, we usually subtract the maximum logit before exponentiating. This does not change the final probabilities, but it prevents numerical overflow when logits are large.
+
+```python
+import numpy as np
+
+def softmax(x, axis=-1):
+    shifted = x - np.max(x, axis=axis, keepdims=True)
+    exp = np.exp(shifted)
+    return exp / np.sum(exp, axis=axis, keepdims=True)
+```
