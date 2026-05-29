@@ -108,3 +108,69 @@ select {
     display: none;
   }
 /* end -  book progress*/
+
+/* Term Popover Styles */
+.term-popover {
+    position: relative;
+    display: inline-block;
+    color: #39c;
+    border-bottom: 1px dashed #39c;
+    cursor: help;
+}
+
+.term-popover .popover-content {
+    visibility: hidden;
+    width: 350px;
+    background-color: #ffffff;
+    color: #333;
+    text-align: left;
+    border: 1px solid #39c;
+    border-radius: 8px;
+    padding: 15px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    pointer-events: none;
+    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.term-popover:hover .popover-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Popover Arrow */
+.term-popover .popover-content::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.term-popover .popover-content::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -9px;
+    border-width: 9px;
+    border-style: solid;
+    border-color: #39c transparent transparent transparent;
+}
+
+@media (max-width: 600px) {
+    .term-popover .popover-content {
+        width: 250px;
+    }
+}
