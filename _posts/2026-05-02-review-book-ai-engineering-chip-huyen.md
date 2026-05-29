@@ -134,4 +134,5 @@ Foundation models are autoregressive, so tokens are generated sequentially. That
 
 ## May 28, 2026
 
-A LLM generates text one token a time. To choose a next token, the model uses its vocabulary (a lookup table of all possible tokens) and calculates a probability score for each one. **Sampling** is actual process of selecting the **next token** from these ranked probablities.
+A LLM generates text one token a time. To choose a next token, the model uses its {% recall vocabulary %} The model's **vocabulary** is a fixed lookup table mapping every known token to a unique number (ID). The model never sees raw text — only sequences of these IDs. For example, `"what's the capital of north carolina?"` might become `[3493, 596, 279, 6864, 315, 4892, 15696, 30]`. {% endrecall %} and calculates a probability score for each one. **Sampling** is actual process of selecting the **next token** from these ranked probablities.
+
