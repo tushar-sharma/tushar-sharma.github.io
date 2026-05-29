@@ -24,8 +24,9 @@ $(document).ready(function () {
             $(this).find('a').addClass('active');
 
             //show the appropriate code sample, hide the others
-            $(this).parent().siblings('div.' + codeLang).addClass('active').css('display', 'block');
-            $(this).parent().siblings('div.codeSample').not('.' + codeLang).removeClass('active').css('display', 'none');
+            var $container = $(this).closest('.tab-container');
+            $container.find('.code-frame__scroll div.' + codeLang).addClass('active').css('display', 'block');
+            $container.find('.code-frame__scroll div.codeSample').not('.' + codeLang).removeClass('active').css('display', 'none');
         });
     });
 });
