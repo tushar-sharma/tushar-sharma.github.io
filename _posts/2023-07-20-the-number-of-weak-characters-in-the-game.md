@@ -6,6 +6,7 @@ image: https://i.imgur.com/PC32zDw.jpg
 thumb: https://i.imgur.com/PC32zDw.jpg 
 author: Tushar Sharma
 category: blog
+mathjax: true
 tags:
  - java
 ---

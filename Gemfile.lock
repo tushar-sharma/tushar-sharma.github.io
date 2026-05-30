@@ -48,7 +48,6 @@ GEM
     httpclient (2.8.3)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
-    iconv (1.0.8)
     jekyll (4.3.3)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -174,7 +173,6 @@ DEPENDENCIES
   addressable (>= 2.8.0)
   exifr
   ffi (>= 1.9.24)
-  iconv (~> 1.0.3)
   jekyll (>= 3.6.3)
   jekyll-algolia (~> 1.0)
   jekyll-brotli

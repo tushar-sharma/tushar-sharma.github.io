@@ -9,6 +9,7 @@ tags:
 author: tushar sharma
 image: 'https://unsplash.com/photos/tQagUWpAx5k/download?w=437'
 thumb: 'https://unsplash.com/photos/tQagUWpAx5k/download?w=437'
+mathjax: true
 skipImage: true
 ---
 

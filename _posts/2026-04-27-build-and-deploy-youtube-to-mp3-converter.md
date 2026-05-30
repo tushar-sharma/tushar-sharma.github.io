@@ -5,6 +5,7 @@ image: https://unsplash.com/photos/VltJrvovRbY/download?w=437
 thumb: https://unsplash.com/photos/VltJrvovRbY/download?w=437
 author: Tushar Sharma
 category: blog
+mermaid: true
 tags: [python, fastapi, docker, github actions, scaleway]
 ---
 
@@ -36,7 +37,7 @@ The frontend does not hold conversion state itself. It only stores the `job_id` 
 
 Before writing even a single line of code, let's think through the **APIs** responsible for the application's logic.
 
-@startmermaid
+```mermaid
 sequenceDiagram
     participant U as User (Browser)
     participant API as Server
@@ -53,7 +54,7 @@ sequenceDiagram
        U->>API: GET /api/download/{job_id}
        API-->>U: audio/mpeg (MP3 file)
     end
-@endmermaid
+```
 
 I usually refer to [Zalando](https://github.com/zalando/restful-api-guidelines) guidelines when designing APIs.
 

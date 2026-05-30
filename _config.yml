@@ -16,13 +16,14 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-gzip
   - jekyll-include-cache
-  - jekyll-spaceship
   - jekyll-maps
 maps:
   google:
     api_key: AIzaSyB6zGGwhhPehgRGDlc84747vLqaitf57_E 
 kramdown:
   math_engine: mathjax
+  mathjax_config:
+    tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] }
   input: GFM
   syntax_highlighter: rouge
   auto_ids: true
