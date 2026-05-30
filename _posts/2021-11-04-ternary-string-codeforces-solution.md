@@ -7,6 +7,7 @@ tags:
 - two pointers
 - java
 - python
+mathjax: true
 name: ternary-string-codeforces
 thumb: https://i.imgur.com/ceIoDSn.jpeg
 ---

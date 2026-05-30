@@ -9,6 +9,7 @@ tags:
 - java
 - python
 mutipleTab: true
+mermaid: true
 name: highest-score-binary-array
 featuredPost: false
 image: https://unsplash.com/photos/uXLgmicKSi4/download?w=437
@@ -71,7 +72,7 @@ Only index 0 has the highest possible division score 2.
 
 We can maintain two window `left` with size 0 and `right` with full length of array. For each iteration, we will increase the length of `left` window and reduce the `right` window. We will also keep track of number of zeros in the `left` window and number of ones in `right` window. The `maximum sum` of `left + right` will contain the highest score.
 
-@startmermaid
+```mermaid
 graph TD
 A["[0, 0, 1, 0]"] --> B["[ ]"]
 A["[0, 0, 1, 0]"] --> C["[0, 0, 1, 0]"]
@@ -88,8 +89,7 @@ G["[1, 0]"] -->  I["[0]"]
 
 H["[0, 0, 1]"] --> J["[0, 0, 1, 0]"] 
 I["[0]"] -->  K["[ ]"]
-@endmermaid
-
+```
 
 The maxium key in **hashmap** will contain the list of indices with the highest score.
 

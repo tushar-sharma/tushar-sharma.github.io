@@ -2,11 +2,9 @@ source 'https://rubygems.org'
 
 gem 'addressable', '>= 2.8.0'
 gem 'ffi', '>= 1.9.24'
-gem 'iconv', '~> 1.0.3'
 gem 'jekyll', '>= 3.6.3'
 gem 'jekyll-paginate-v2'
 gem 'jekyll_reading_time', '~> 0.1.1'
-gem 'jekyll-spaceship'
 gem 'kramdown', '>= 2.3.1'
 gem 'liquid', '>= 3.0'
 gem 'liquid-c'
@@ -32,4 +30,3 @@ group :jekyll_plugins do
   gem "exifr"
   gem "jekyll-tidy"
 end
-

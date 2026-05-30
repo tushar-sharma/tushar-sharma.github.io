@@ -8,6 +8,7 @@ tags:
 - bfs
 - java
 - python
+mathjax: true
 name: course-schedule
 thumb: https://unsplash.com/photos/Fi-GJaLRGKc/download?w=437
 summary: Course Schedule Leetcode Solution

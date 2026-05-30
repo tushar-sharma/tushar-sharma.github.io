@@ -8,6 +8,7 @@ tags:
 - matter
 - antimatter
 - audio
+mathjax: true
 name: wild-marriage
 thumb: https://unsplash.com/photos/hBzrr6m6-pc/download?w=437
 summary: Mutual Suicide of an Electron

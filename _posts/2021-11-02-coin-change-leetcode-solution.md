@@ -7,6 +7,7 @@ tags:
 - dp
 - java
 - python
+mathjax: true
 name: coin-change
 featuredPost: true
 thumb: https://i.imgur.com/LYeioqF.jpeg

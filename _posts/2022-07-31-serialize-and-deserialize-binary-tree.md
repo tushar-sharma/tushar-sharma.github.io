@@ -7,6 +7,7 @@ tags:
 - java
 - python
 - design
+mathjax: true
 thumb: https://i.imgur.com/yznwqse.jpg
 image: https://i.imgur.com/yznwqse.jpg
 mutipleTab: true

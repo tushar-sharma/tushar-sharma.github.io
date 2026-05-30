@@ -11,6 +11,7 @@ tags:
 - two pointers
 - set
 - string
+mathjax: true
 ---
 
 In this [leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/) problem, we are asked to find the length of the longest string of characters in a provided string that does not contain repeating characters. In other words, in the string `abcabcbb` the longest substring without repeating characters is `abc` (with a length of 3).<!-- truncate_here -->

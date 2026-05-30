@@ -7,6 +7,7 @@ author: Tushar Sharma
 category: Blog
 skipImage: true
 tags: [philosophy]
+mathjax: true
 ---
 
 If you drop a feather and an elephant from a mountain, who hits the ground first?<!-- truncate_here -->

@@ -7,6 +7,7 @@ tags:
 - java
 - python
 - hashmap
+mathjax: true
 name: minimum-cards-pick-up
 thumb: https://unsplash.com/photos/-2vD8lIhdnw/download?w=437
 ---

@@ -9,6 +9,7 @@ tags:
  - books
  - ai
  - llm
+mathjax: true
 ---
 
 These are my learning notes and reflections while reading "AI Engineering: Building Applications with Foundation Models" by Chip Huyen. I plan to update this periodically as I progress through the book.<!-- truncate_here -->

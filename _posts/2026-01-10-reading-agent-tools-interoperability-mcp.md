@@ -5,6 +5,7 @@ image: https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437
 thumb: https://unsplash.com/photos/hgFY1mZY-Y0/download?w=437
 author: tushar sharma
 category: blog
+mermaid: true
 tags:
  - reading
  - mcp
@@ -65,7 +66,7 @@ MCP follows a similar architectural pattern to LSP. It provides:
 
 Tool discovery example:
 
-@startmermaid
+```mermaid
 sequenceDiagram
     participant Client
     participant MCP_Server as MCP Server
@@ -77,7 +78,7 @@ sequenceDiagram
 
     Client->>MCP_Server: tools/call(name, arguments)
     MCP_Server-->>Client: Tool result
-@endmermaid
+```
 
 ### Tool Invocation
 

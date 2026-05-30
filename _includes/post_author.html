@@ -1,0 +1,20 @@
+{% if page.author %}
+  {% assign author_tag = page.author | downcase %}
+  <div class="author-info">
+    <div class="author-image">
+      {% if page.tags contains author_tag %}
+        <a href="/tag/{{ author_tag | replace: ' ', '%20' }}">
+          <img src="{{ root_url }}/img/{{ author_tag | replace: ' ', '_' | append: '.jpg' }}" alt="{{ page.author }}">
+        </a>
+      {% else %}
+        <img src="{{ root_url }}/img/{{ author_tag | replace: ' ', '_' | append: '.jpg' }}" alt="{{ page.author }}">
+      {% endif %}
+    </div>
+    <span class="author-name">Written by: 
+      {% assign author_parts = page.author | split: ' ' %}
+      {% for part in author_parts %}
+        {{ part | capitalize }}{% unless forloop.last %} {% endunless %}
+      {% endfor %}
+    </span>
+  </div>
+{% endif %}

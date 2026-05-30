@@ -1,0 +1,31 @@
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  
+  const initMermaid = () => {
+    mermaid.initialize({ 
+      startOnLoad: false, 
+      theme: 'default',
+      securityLevel: 'loose'
+    });
+
+    const codeBlocks = document.querySelectorAll('pre > code.language-mermaid');
+    codeBlocks.forEach((codeBlock, index) => {
+      const pre = codeBlock.parentElement;
+      const graphDefinition = codeBlock.textContent;
+      const mermaidDiv = document.createElement('div');
+      mermaidDiv.className = 'mermaid';
+      mermaidDiv.id = `mermaid-diagram-${index}`;
+      mermaidDiv.textContent = graphDefinition;
+      pre.insertAdjacentElement('afterend', mermaidDiv);
+      pre.style.display = 'none';
+    });
+    
+    mermaid.run();
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMermaid);
+  } else {
+    initMermaid();
+  }
+</script>
