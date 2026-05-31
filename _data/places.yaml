@@ -1,3 +1,10 @@
+- name: "Griffin Avian & Exotic Veterinary Hospital"
+  notes: "We brought our guinea pig here. The veterinarian seemed knowledgeable, attentive, and helpful. Pricing was also reasonable."
+  address: "2100 Ln St, Kannapolis, NC 28083"
+  category: "vet"
+  map_link: "https://www.google.com/maps/search/?api=1&query=2100+Ln+St,+Kannapolis,+NC+28083"
+  city: "Kannapolis, NC"
+
 - name: "Avo"
   notes: "Nice vegan cafe with outdoor seating. Nachos were good and frozen avocado margarita was good."
   address: "4 City Blvd #104, Nashville, TN 37209"
