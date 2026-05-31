@@ -1,14 +1,12 @@
 ---
 layout: post
 title: "Sigmoid vs Softmax"
-date: 2026-05-31 10:00:00 +0530
-categories: [machine-learning]
-published: false
-tags: [ml, python, interview-prep]
-description: "A quick, interview-friendly guide to understanding the difference between sigmoid and softmax."
+tags: [ml, python]
+image: 'https://unsplash.com/photos/HqbsmJpWt34/download?w=437'
+thumb: 'https://unsplash.com/photos/HqbsmJpWt34/download?w=437'
 ---
 
-Sigmoid and softmax are both functions that turn model scores into values that are easier to interpret, but they solve different kinds of classification problems.
+Sigmoid and softmax are both functions that turn model scores into values that are easier to interpret, but they solve different kinds of classification problems.<!-- truncate_here -->Sigmoid and softmax are both functions that turn model scores into values that are easier to interpret, but they solve different kinds of classification problems.
 
 ## Rule of thumb
 
