@@ -199,6 +199,13 @@
   city: "Chapel Hill, NC"
   notes: "Great brunch spot. Tomato soup is good. Sandwitch are okish"
 
+- name: "Griffin Avian & Exotic Veterinary Hospital"
+  notes: "took my guinea pig to the vet. the vet seemed knowledgable and price was resonable"
+  address: "2100 Ln St, Kannapolis, NC 28083"
+  category: "vet"
+  map_link: "https://www.google.com/maps/search/?api=1&query=2100+Ln+St,+Kannapolis,+NC+28083"
+  city: "Kannapolis, NC"
+
 # Valle de la Luna (Chile)
 # INSANE Grassland Slide In Inner Mongolia, China
 # Rokusan Angel (Burlesque Tokyo)
