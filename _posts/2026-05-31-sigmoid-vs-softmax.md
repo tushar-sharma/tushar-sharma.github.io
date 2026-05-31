@@ -2,8 +2,9 @@
 layout: post
 title: "Sigmoid vs Softmax"
 tags: [ml, python]
-image: 'https://unsplash.com/photos/HqbsmJpWt34/download?w=437'
-thumb: 'https://unsplash.com/photos/HqbsmJpWt34/download?w=437'
+mathjax: true
+image: 'https://unsplash.com/photos/GzDrm7SYQ0g/download?w=437'
+thumb: 'https://unsplash.com/photos/GzDrm7SYQ0g/download?w=437'
 ---
 
 Sigmoid and softmax are both functions that turn model scores into values that are easier to interpret, but they solve different kinds of classification problems.<!-- truncate_here -->Sigmoid and softmax are both functions that turn model scores into values that are easier to interpret, but they solve different kinds of classification problems.
@@ -29,15 +30,113 @@ Sigmoid and softmax are both functions that turn model scores into values that a
 
 ### Sigmoid
 
-```text
-σ(x) = 1 / (1 + e^(-x))
-```
+$$ \sigma(x) = \frac{1}{1 + e^{-x}} $$
 
 ### Softmax
 
-```text
-softmax(z_i) = e^(z_i) / Σ_j e^(z_j)
-```
+$$ \text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}} $$
+
+## Visualization
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
+  <div style="width: 100%; max-width: 400px;">
+    <canvas id="sigmoidChart"></canvas>
+  </div>
+  <div style="width: 100%; max-width: 400px;">
+    <canvas id="softmaxChart"></canvas>
+  </div>
+</div>
+
+<script>
+  // Sigmoid Data
+  const xValues = [];
+  const yValues = [];
+  for (let x = -6; x <= 6; x += 0.2) {
+    xValues.push(x.toFixed(1));
+    yValues.push(1 / (1 + Math.exp(-x)));
+  }
+
+  new Chart(document.getElementById("sigmoidChart"), {
+    type: "line",
+    data: {
+      labels: xValues,
+      datasets: [{
+        label: "Sigmoid σ(x)",
+        data: yValues,
+        borderColor: "rgba(54, 162, 235, 1)",
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        fill: true,
+        pointRadius: 0
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: "Sigmoid Function"
+        }
+      },
+      scales: {
+        y: {
+          min: 0,
+          max: 1
+        },
+        x: {
+          ticks: {
+            callback: function(val, index) {
+              // Show only integer ticks to avoid clutter
+              return xValues[index] % 1 === 0 ? xValues[index] : '';
+            }
+          }
+        }
+      }
+    }
+  });
+
+  // Softmax Data (using the tiny example)
+  const scores = [2.0, 1.0, 0.1];
+  const expScores = scores.map(s => Math.exp(s));
+  const sumExp = expScores.reduce((a, b) => a + b, 0);
+  const softmaxValues = expScores.map(s => s / sumExp);
+
+  new Chart(document.getElementById("softmaxChart"), {
+    type: "bar",
+    data: {
+      labels: ["Class A (2.0)", "Class B (1.0)", "Class C (0.1)"],
+      datasets: [{
+        label: "Raw Score",
+        data: scores,
+        backgroundColor: "rgba(201, 203, 207, 0.5)",
+        borderColor: "rgb(201, 203, 207)",
+        borderWidth: 1
+      }, {
+        label: "Softmax Probability",
+        data: softmaxValues,
+        backgroundColor: "rgba(75, 192, 192, 0.8)",
+        borderColor: "rgb(75, 192, 192)",
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: "Softmax: Scores vs Probabilities"
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
 
 ## Key differences
 
