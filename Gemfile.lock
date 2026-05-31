@@ -35,7 +35,6 @@ GEM
     ffi (1.17.0)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
-    gemoji (3.0.1)
     google-protobuf (3.25.4-arm64-darwin)
     google-protobuf (3.25.4-x86_64-darwin)
     google-protobuf (3.25.4-x86_64-linux)
@@ -98,11 +97,6 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-spaceship (0.10.2)
-      gemoji (~> 3.0)
-      jekyll (>= 3.6, < 5.0)
-      nokogiri (~> 1.6)
-      rainbow (~> 3.0)
     jekyll-tidy (0.2.2)
       htmlbeautifier
       htmlcompressor
@@ -139,7 +133,6 @@ GEM
     progressbar (1.13.0)
     public_suffix (6.0.1)
     racc (1.8.1)
-    rainbow (3.1.1)
     rake (13.2.1)
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
@@ -185,7 +178,6 @@ DEPENDENCIES
   jekyll-paginate-v2
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-spaceship
   jekyll-tidy
   jekyll_reading_time (~> 0.1.1)
   kramdown (>= 2.3.1)
