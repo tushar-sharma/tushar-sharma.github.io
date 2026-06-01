@@ -7,6 +7,7 @@ tags:
   - python
   - algorithm
   - heap
+mathjax: true
 thumb: https://unsplash.com/photos/tGTVxeOr_Rs/download?w=437
 image: https://unsplash.com/photos/tGTVxeOr_Rs/download?w=437
 mutipleTab: true
