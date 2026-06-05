@@ -262,6 +262,12 @@
   progress: 0
   comments: "Change language: Modify the file`Data\\Localization\\language.lsx` and change entry like `Russian` to `English`. The executable is bin/bg3.exe for launching the game. "
 
+- title: "Forza Horizon 6"
+  rating: 0
+  pending: true
+  comments: "Steam Deck controller issue: change `steam_appid.txt` to `480`. Use Proton Experimental on Steam Deck. Disable wifi if the game is stuck at loading screen."
+  progress: 0
+
 - title: "Forza Horizon 5"
   rating: 0
   pending: true
