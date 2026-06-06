@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+<script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+
+<style>
+.highlight-white {
+  box-shadow: inset 0 0 3px 3px yellow !important;
+}
+.highlight-black {
+  box-shadow: inset 0 0 3px 3px blue !important;
+}
+.chess-board {
+    margin: 20px auto;
+    width: 400px;
+    max-width: 100%;
+}
+.chess-controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.chess-controls button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.chess-controls button:hover {
+    background: #e0e0e0;
+}
+</style>
+
+<script>
+function initChessGame(boardId, pgn) {
+    if (typeof Chessboard === 'undefined' || typeof Chess === 'undefined') {
+        console.error('Chess libraries not loaded yet');
+        return;
+    }
+
+    var game = new Chess();
+    var board = null;
+    var boardEl = document.getElementById(boardId);
+
+    // load PGN
+    game.load_pgn(pgn);
+    var history = game.history({ verbose: true });
+    game.reset();
+
+    var currentMoveIndex = -1;
+
+    board = Chessboard(boardId, {
+        position: 'start',
+        pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png'
+    });
+
+    window['nextMove_' + boardId] = function() {
+        if (currentMoveIndex < history.length - 1) {
+            currentMoveIndex++;
+            game.move(history[currentMoveIndex]);
+            board.position(game.fen());
+            updateHighlights();
+        }
+    };
+
+    window['prevMove_' + boardId] = function() {
+        if (currentMoveIndex >= 0) {
+            game.undo();
+            currentMoveIndex--;
+            board.position(game.fen());
+            updateHighlights();
+        }
+    };
+
+    window['resetBoard_' + boardId] = function() {
+        game.reset();
+        currentMoveIndex = -1;
+        board.position('start');
+        updateHighlights();
+    };
+
+    function updateHighlights() {
+        var squares = boardEl.querySelectorAll('.square-55d62');
+        squares.forEach(function(s) {
+            s.classList.remove('highlight-white', 'highlight-black');
+        });
+        
+        // Always highlight f2 and f7 to explain the concept
+        var f2 = boardEl.querySelector('.square-f2');
+        if (f2) f2.classList.add('highlight-white');
+        
+        var f7 = boardEl.querySelector('.square-f7');
+        if (f7) f7.classList.add('highlight-black');
+
+        if (currentMoveIndex >= 0) {
+            var lastMove = history[currentMoveIndex];
+            var fromSquare = boardEl.querySelector('.square-' + lastMove.from);
+            var toSquare = boardEl.querySelector('.square-' + lastMove.to);
+            if (fromSquare) fromSquare.classList.add('highlight-white');
+            if (toSquare) toSquare.classList.add('highlight-white');
+        }
+    }
+
+    // Initial highlight
+    setTimeout(updateHighlights, 500);
+    
+    // Resize board on window resize
+    window.addEventListener('resize', board.resize);
+}
+</script>
