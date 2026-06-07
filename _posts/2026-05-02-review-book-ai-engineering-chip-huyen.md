@@ -455,13 +455,34 @@ Modern models like Llama often use **GeLU (Gaussian Error Linear Unit)** or **Si
 
 ## June 7, 2026
 
-### ReLU (Rectivied Linear Unit)
+### ReLU (Rectified Linear Unit)
 
 - A **non-linear** activation function.
-
-- Formula : ReLU(x) = max(x, 0)
-
+- Formula: ReLU(x) = max(x, 0)
 - Clamps all negative numbers to zero. Positive numbers are unchanged.
+
+### Epoch
+
+An epoch is one complete pass through the entire dataset.
+
+```bash
+                  ┌─────────────────────────────────────┐
+                  │ START OF EPOCH 1                    │
+                  └─────────────────────────────────────┘
+                                     │
+Step 1: Row 1 ──► [Transformer Matrix Math] ──► Guess vs. "Raleigh" ──► Loss ──► Gradient Update
+                                     │
+Step 2: Row 2 ──► [Transformer Matrix Math] ──► Guess vs. "Madrid"  ──► Loss ──► Gradient Update
+                                     │
+Step 3: Row 3 ──► [Transformer Matrix Math] ──► Guess vs. "4"       ──► Loss ──► Gradient Update
+                                     │
+                  ┌─────────────────────────────────────┐
+                  │ END OF EPOCH 1                      │
+```
+
+Once step 3 is over, the model switches back to **Row 1** and begins **Epoch 2**. The loop repeats hundreds of thousands of times since the weights in the first epoch were random. The goal of training is to find the correct weights. An epoch typically ends when the average loss is less than a **pre-set** threshold like 0.05, or after a fixed number of iterations.
+
+For larger datasets, we use mini-batches. After each batch, gradient descent updates the weights.
 
 ### Training pipeline
 
@@ -490,26 +511,94 @@ Modern models like Llama often use **GeLU (Gaussian Error Linear Unit)** or **Si
                        ◀── [Updates All Weights] ─────┴── Gradient Descent
 ```
 
-### Epoch
+### Inference pipeline
 
-Epoch is a one complet passs through entire data set. 
+- Inference is when a model is generating text. Think of it like when a pod is ready to serve the user request.
+- Loss function and Gradient Descent are completely stripped off since weights are frozen.
+- The model predicts exactly one token at a time. It can store these intermediate Keys and Values in a slice of VRAM called the **KV cache**.
 
+Let's do a dry run.
 
-```bash
-                  ┌─────────────────────────────────────┐
-                  │ START OF EPOCH 1                    │
-                  └─────────────────────────────────────┘
-                                     │
-Step 1: Row 1 ──► [Transformer Matrix Math] ──► Guess vs. "Raleigh" ──► Loss ──► Gradient Update
-                                     │
-Step 2: Row 2 ──► [Transformer Matrix Math] ──► Guess vs. "Madrid"  ──► Loss ──► Gradient Update
-                                     │
-Step 3: Row 3 ──► [Transformer Matrix Math] ──► Guess vs. "4"       ──► Loss ──► Gradient Update
-                                     │
-                  ┌─────────────────────────────────────┐
-                  │ END OF EPOCH 1                      │
-```
+Prompt: "What's the capital of North Carolina?"
 
-Once step 3 is over, the model switches back to **Row 1** and begins **Epoch 2**. The loop repeats for hundreds of thousands of times since the weights in the first epoch were random. The goal of training is to find the correct weights. Epoch ends when the average loss is less than a **pre-set** threshold like 0.05.
+Tokens (Seq): 7
+Hidden dimensions (d_model) = 10 (assumed)
 
-For larger datasets, we have mini batches. After each batch, gradient descent updates the weights.
+Your 7 words are converted by the tokenizer into a 1D array of 7 token IDs.
+
+$$\text{Token IDs} = [412, 18, 24, 1095, 13, 856, 3014]$$
+
+Now we convert these into the hidden dimension of 10. The model will look up these IDs in the **embedding matrix**.
+
+The embedding matrix is a static lookup table of size $[V \times d_{model}]$, where $V$ is the number of unique words (vocabulary size) the tokenizer knows. (e.g., [100 x 10]).
+
+The positional matrix is a static table of shape $[c \times d_{model}]$, where $c$ is the limit of tokens (context window) that a model can handle.
+
+$$\text{Input Matrix } (X) = \begin{bmatrix} 
+\text{"What"} \\ \text{"is"} \\ \text{"the"} \\ \text{"capital"} \\ \text{"of"} \\ \text{"North"} \\ \text{"Carolina"} 
+\end{bmatrix} = 
+\begin{bmatrix}
+0.15 & -0.23 & 0.81 & \dots & 0.04 \\
+0.91 & 0.02 & -0.45 & \dots & 0.12 \\
+-0.03 & 0.67 & 0.12 & \dots & -0.89 \\
+0.54 & -0.11 & 0.99 & \dots & 0.33 \\
+0.22 & 0.44 & -0.01 & \dots & 0.76 \\
+0.88 & -0.92 & 0.34 & \dots & -0.11 \\
+-0.41 & 0.15 & 0.62 & \dots & 0.55 
+\end{bmatrix}_{7 \times 10}$$
+
+Next, we generate **Q, K, V** vectors.
+
+We multiply the $[7 \times 10]$ input by the $(W_Q, W_K, W_V)$ weights $[10 \times 10]$, which gives us three $[7 \times 10]$ matrices.
+
+- **Q (Query)** means what each token is looking for.
+- **K (Key)** means what each token contains.
+- **V (Value)** means what each token represents.
+
+Next, calculate **attention**.
+
+- K has $[7 \times 10]$ shape.
+- $K^T$ has a shape of $[10 \times 7]$.
+
+$$\text{Scores} = Q [7 \times \cancel{10}] \cdot K^T [\cancel{10} \times 7] \rightarrow \mathbf{[7 \times 7]}$$
+
+Scores is a $[7 \times 7]$ grid. This corresponds to the $seq \times seq$ dimensions.
+
+$$\text{Scores Matrix} = \begin{aligned} &\quad \text{Wht} \quad \text{is} \quad \text{the} \quad \text{cap} \quad \text{of} \quad \text{Nth} \quad \text{Car} \\ &\begin{bmatrix} 
+8.2 & 0.1 & 0.4 & 1.2 & 0.2 & 0.5 & 0.3 \\
+0.2 & 6.4 & 1.1 & 0.1 & 0.9 & 0.2 & 0.1 \\
+0.5 & 0.9 & 4.1 & 2.2 & 0.3 & 0.4 & 0.6 \\
+1.1 & 0.2 & 2.1 & 9.5 & 0.4 & 7.8 & 8.1 \\
+0.1 & 0.8 & 0.2 & 0.5 & 5.5 & 0.1 & 0.2 \\
+0.4 & 0.1 & 0.3 & 8.2 & 0.1 & 9.1 & 9.4 \\
+0.2 & 0.2 & 0.5 & 8.0 & 0.2 & 9.3 & 9.7 
+\end{bmatrix} \end{aligned}$$
+
+We run this matrix through **softmax** row by row.
+
+**Multiply by V**: 
+
+Attention $[7 \times 10]$ = softmax score $[7 \times 7] \times V [7 \times 10]$
+
+Lastly, multiply this by the **Output projection** $W_O [10 \times 10]$.
+
+$$\text{Final Attention Layer Output} = \text{Attention Output } [7 \times \cancel{10}] \cdot W_O [\cancel{10} \times 10] \rightarrow \mathbf{[7 \times 10]}$$
+
+---
+
+When we say **Llama-13B**, it means that it has 13 billion parameters.
+
+### Parameter vs Hyperparameter
+
+A **parameter** is a value learned during model training (like weights). A **hyperparameter** is a setting you configure outside the learning process, like temperature, model dimensions, vocabulary size, etc.
+
+--- 
+
+**What is a sparse model?**
+A sparse model has a large percentage of zero-value parameters. It allows for more efficient data storage and computation. Then why use dense models? (Dense models often capture more complex patterns but are more expensive).
+
+**Mixtral 8x7B** = Mixture of Eight Experts (MoE). This means that not all parameters are active for every token; only a subset of "experts" is triggered.
+
+**FLOPs** is how we measure the computational cost of a model. FLOPs stands for Floating Point Operations. 
+
+**FLOP/s** (FLOPs per second) is different; it measures hardware performance.
