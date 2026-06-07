@@ -453,3 +453,12 @@ $$ReLU(x) = \max(0, x)$$
 
 Modern models like Llama often use **GeLU (Gaussian Error Linear Unit)** or **SiLU/SwiGLU**, which are smoother versions of ReLU that perform better in deep networks.
 
+## June 7, 2026
+
+### ReLU (Rectivied Linear Unit)
+
+- A **non-linear** activation function.
+
+- Formula : ReLU(x) = max(x, 0)
+
+- Clamps all negative numbers to zero. Positive numbers are unchanged.
