@@ -462,3 +462,54 @@ Modern models like Llama often use **GeLU (Gaussian Error Linear Unit)** or **Si
 - Formula : ReLU(x) = max(x, 0)
 
 - Clamps all negative numbers to zero. Positive numbers are unchanged.
+
+### Training pipeline
+
+```
+[Input Text] ──► Tokenizer ──► Token IDs ──► Embedding + Positional Matrix
+                                                      │
+                                                      ▼
+                                            ┌───────────────────┐
+                                            │ Transformer Blk 1 │
+                                            └─────────┬─────────┘
+                                                      │
+                                                      ▼
+                                            ┌───────────────────┐
+                                            │ Transformer Blk N │
+                                            └─────────┬─────────┘
+                                                      │
+                                                      ▼
+                                              Unembedding Layer
+                                                      │
+                                                      ▼
+                                                Output Layer
+                                                      │
+                                                      ▼
+                                                Loss Function
+                                                      │
+                       ◀── [Updates All Weights] ─────┴── Gradient Descent
+```
+
+### Epoch
+
+Epoch is a one complet passs through entire data set. 
+
+
+```bash
+                  ┌─────────────────────────────────────┐
+                  │ START OF EPOCH 1                    │
+                  └─────────────────────────────────────┘
+                                     │
+Step 1: Row 1 ──► [Transformer Matrix Math] ──► Guess vs. "Raleigh" ──► Loss ──► Gradient Update
+                                     │
+Step 2: Row 2 ──► [Transformer Matrix Math] ──► Guess vs. "Madrid"  ──► Loss ──► Gradient Update
+                                     │
+Step 3: Row 3 ──► [Transformer Matrix Math] ──► Guess vs. "4"       ──► Loss ──► Gradient Update
+                                     │
+                  ┌─────────────────────────────────────┐
+                  │ END OF EPOCH 1                      │
+```
+
+Once step 3 is over, the model switches back to **Row 1** and begins **Epoch 2**. The loop repeats for hundreds of thousands of times since the weights in the first epoch were random. The goal of training is to find the correct weights. Epoch ends when the average loss is less than a **pre-set** threshold like 0.05.
+
+For larger datasets, we have mini batches. After each batch, gradient descent updates the weights.
