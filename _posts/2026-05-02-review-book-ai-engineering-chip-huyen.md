@@ -408,3 +408,48 @@ To get started with an actual project, I should familiarize myself with these li
 *   **LangChain / LlamaIndex:** Frameworks for building RAG pipelines and agentic workflows.
 *   **PyTorch / JAX:** For more low-level model manipulation or fine-tuning.
 *   **Pydantic:** Essential for structured output parsing (making LLM outputs usable in code).
+
+### Deep Dive: The Attention Formula
+
+The core of the transformer is the **Scaled Dot-Product Attention** formula:
+$$Attention(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+
+*   **$QK^T$**: This dot product calculates the "similarity" between the Query (what we want) and the Keys (what is available).
+*   **$\sqrt{d_k}$**: We scale by the square root of the dimension to prevent the dot products from getting too large, which would cause the softmax to have very small gradients.
+*   **Softmax**: Turns these similarities into weights (probabilities).
+*   **$V$**: We multiply the weights by the Values to get the final context-aware representation.
+
+This calculation happens in **every layer** of the model.
+
+---
+
+### The Transformer Block
+
+A Transformer model is essentially a stack of identical **Transformer Blocks**. Each block consists of two main components:
+
+#### 1. The Attention Module
+This is where the model "looks" at other tokens. It includes:
+*   **Linear Layers** to project the input into Q, K, and V vectors.
+*   **Multi-Head Attention** to capture different types of relationships.
+*   **Output Projection Matrix:** After the multiple attention heads are concatenated, we apply a projection matrix. 
+    *   **What is it?** It's a weight matrix that transforms the concatenated output back into the model's hidden dimension (e.g., 4096). This "mixes" the information from all heads.
+
+#### 2. The MLP (Multi-Layer Perceptron) Module
+Also known as the **Feed-Forward Network (FFN)**. It processes each token independently (in parallel). It consists of:
+*   **Two Linear Layers** separated by a **Non-Linear Activation Function**.
+
+---
+
+### Why Non-Linear Activation (ReLU/GeLU)?
+
+The most famous activation function is **ReLU (Rectified Linear Unit)**:
+$$ReLU(x) = \max(0, x)$$
+
+*   **What it does:** It keeps positive numbers as they are and converts all negative numbers to zero.
+*   **Why convert negatives to zero?** 
+    1.  **Non-linearity:** Without a non-linear function, multiple layers of a neural network would just collapse into a single linear transformation (simple matrix multiplication). Non-linearity allows the model to learn complex, non-linear patterns.
+    2.  **Sparsity:** By setting negatives to zero, it "deactivates" certain neurons, making the network's representation sparse and efficient.
+    3.  **Efficiency:** It is computationally very cheap to calculate.
+
+Modern models like Llama often use **GeLU (Gaussian Error Linear Unit)** or **SiLU/SwiGLU**, which are smoother versions of ReLU that perform better in deep networks.
+
