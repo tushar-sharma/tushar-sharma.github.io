@@ -24,8 +24,10 @@ Think of your SD card as a physical library:
 
 When you use two identical cards (like two Samsung Evo 512GB cards) without explicit custom volume labels, SteamOS maps both of them to the exact same generic fallback path: `/run/media/steamdeck`.
 
+```
 [Card A: Generic Label]  ---> Mounts to: /run/media/steamdeck
 [Card B: Generic Label]  ---> Mounts to: /run/media/steamdeck
+```
 
 ### The Caching Glitch
 
