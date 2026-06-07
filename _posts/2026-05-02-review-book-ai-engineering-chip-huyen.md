@@ -318,3 +318,71 @@ def softmax(x, axis=-1):
     exp = np.exp(shifted)
     return exp / np.sum(exp, axis=axis, keepdims=True)
 ```
+
+## June 6, 2026
+
+Two architecture
+
+1. seq2seq
+2. transformer
+
+Previously, seq2seq was popular and was extensively used in language translation. 
+
+### Seq2Seq arch
+
+1. It uses RNN (recurring nural network)
+
+2. The encoder and decoder uses RNN
+
+3. Input token is processed sequentially and output token is generated sequentially
+
+4. Decoder generates output token based on **final hidden state**. Hidden state just means it's internal. 
+
+
+### Transformer arch
+
+1. It doesn't use **RNN**
+
+2. Famous paper, "Attention is all you need". IT uses attention mechanism. 
+
+3. Input tokens are processed in parallel 
+
+4. Autoregressive language model still has bottleneck in output. Output is still generated sequentiall.
+
+### Inference
+
+Inference is how you run your model. It consist of two parts
+
+1. **Prefill**: This consist of process of how to process input. It creates a key value vectors for all inptu tokens. 
+
+2. **Decode**: Model generates outptu token one at a time. 
+
+
+### Attention Mechanism
+
+1. It uses **Key, Value, and Query** vectors
+
+2. **Query vectors (Q)**: current state of decoder at every step. 
+
+3. **Key vector (K)**: represent the previous token
+
+4. **Value vector (V)**: Actual value of the previous token
+
+Next, a **dot product** is taken of **K** and **V** vectors. What's so special about dot product conceptually?
+
+IN LLM, each previous token vectors need to be computed and stored. This is the reason why context window is difficutl to scale and its' get dumberr after mid way ? 
+
+
+The dimensions of **K, V , Q** are same as **hidden dimension**. I understand that a tensor flows thorugh a model. So a 4096 dimension means 4096 vectos of K, V, Q ? 
+
+### Multi headed
+
+I know what a multi threaded is? Concurrent application inside same processor is multi threading. This is different multi paralleism
+
+Multi tenant is to make sure that same resources it avaialbe tto n applications (slicing ) but each application feels they own the whole resoruces. 
+
+Multi headed in LLM is how attenion head is borken into x numbers. Like if there are hidden dimension of 4096 , and LLM llama 2-7B has 32 attention head. then each attention head is 4096/32=128 vectors size. 
+
+Later , all attention head are concatenated and passed thorugh projection matrtix? But why? 
+
+This is how a projection matrxi would look like. It has hte same dimension as hidden dimensiosn.
