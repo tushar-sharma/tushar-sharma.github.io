@@ -319,70 +319,92 @@ def softmax(x, axis=-1):
     return exp / np.sum(exp, axis=axis, keepdims=True)
 ```
 
-## June 6, 2026
+---
 
-Two architecture
+## June 6, 2026: Architectures, Inference, and Implementation
 
-1. seq2seq
-2. transformer
+In this session, I explored the evolution of model architectures, the mechanics of high-performance inference, and the practicalities of building AI applications.
 
-Previously, seq2seq was popular and was extensively used in language translation. 
+### From Seq2Seq to Transformers
 
-### Seq2Seq arch
+Historically, machine translation and sequence modeling relied heavily on the **Seq2Seq (Sequence-to-Sequence)** architecture. 
 
-1. It uses RNN (recurring nural network)
+#### 1. Seq2Seq (The RNN Era)
+Seq2Seq models typically use **Recurrent Neural Networks (RNNs)** for both the encoder and the decoder.
+*   **What is an RNN?** A Recurrent Neural Network is a type of neural network designed for sequential data. It processes inputs one by one, maintaining a "hidden state" that carries information from previous steps to the current one.
+*   **The Process:** 
+    1.  The **Encoder** processes the input tokens sequentially and generates a final hidden state (a "context vector").
+    2.  The **Decoder** takes this final hidden state and generates output tokens one by one.
+*   **The Bottleneck:** Because RNNs process tokens sequentially, they are slow and struggle with long-range dependencies (the "vanishing gradient" problem).
 
-2. The encoder and decoder uses RNN
+#### 2. The Transformer Architecture
+Introduced in the seminal paper *"Attention Is All You Need"* (2017), Transformers revolutionized the field by ditching RNNs entirely in favor of the **Attention Mechanism**.
+*   **Parallelism:** Unlike RNNs, Transformers can process the entire input sequence in parallel during training.
+*   **Current State:** Today, almost all state-of-the-art systems (like GPT-4, Llama 3) use Transformer-based architectures.
 
-3. Input token is processed sequentially and output token is generated sequentially
+> **Note on Tokenization:** A larger vocabulary allows a model to represent complex words as single tokens (e.g., "extraordinary"). Smaller vocabularies might break the same word into multiple tokens ("extra", "ordinary"), increasing the sequence length the model has to process.
 
-4. Decoder generates output token based on **final hidden state**. Hidden state just means it's internal. 
+---
 
+### The Mechanics of Inference and KV Caching
 
-### Transformer arch
+When we run an LLM, we use an **Inference Server** (like vLLM, Ollama, or TensorRT-LLM). There is a lot of nuance in how "Inference" works, particularly around the **KV Cache**.
 
-1. It doesn't use **RNN**
+#### 1. Prefill vs. Decode
+Inference isn't just one step; it has two distinct phases:
+*   **Prefill Phase:** The model processes your entire prompt in parallel. It computes the **Query (Q)**, **Key (K)**, and **Value (V)** vectors for every token in the prompt. The K and V vectors are then stored in the **KV Cache**.
+*   **Decode Phase:** The model predicts the next token sequentially. For every *new* token, the model reuses the previously stored K and V vectors instead of recomputing them from scratch.
 
-2. Famous paper, "Attention is all you need". IT uses attention mechanism. 
+#### 2. What Exactly is the KV Cache?
+It is a cache of vectors. Specifically, for every token and every transformer layer, the model stores the **Key (K)** and **Value (V)** vectors.
+*   **Why not Query (Q)?** During generation, the model needs a *new* Query vector for the current state. However, it can attend to all previous tokens by reusing their *old* K and V vectors. Caching Q wouldn't help because Q changes at every decoding step.
 
-3. Input tokens are processed in parallel 
+#### 3. Context Window vs. KV Cache
+*   **KV Cache:** The actual data stored (like cars parked in a lot).
+*   **Context Window:** The limit on how much data can be kept (like the size of the parking lot).
 
-4. Autoregressive language model still has bottleneck in output. Output is still generated sequentiall.
+#### 4. The Context Window Trade-off: Why "Bigger" isn't always "Better"
+We use large context windows for **long-form tasks** (codebases, books), but they come with penalties:
+*   **Efficiency (The "Quadratic Tax"):** Standard self-attention has **quadratic complexity** $O(n^2)$. Doubling tokens quadruples the computation.
+*   **Quality (Why Models Get "Dumb"):** Models suffer from **"Lost in the Middle"**. Attention is diluted, and noise from irrelevant information can lead to hallucinations.
 
-### Inference
+**Simplified Inference Flow:**
+```text
+User Prompt
+     │
+     ▼
+  Prefill Phase
+     │
+     ├── Compute Q, K, V for all prompt tokens
+     └── Store K, V in the KV Cache
+     │
+     ▼
+  Decode Phase
+     │
+     ├── New token generated
+     ├── Compute new Q, K, V
+     ├── Append new K, V to cache
+     └── Attend to all cached K, V
+     │
+     ▼
+  Final Output
+```
 
-Inference is how you run your model. It consist of two parts
+---
 
-1. **Prefill**: This consist of process of how to process input. It creates a key value vectors for all inptu tokens. 
+### Preparing for Implementation
 
-2. **Decode**: Model generates outptu token one at a time. 
+To move from understanding these notes to an actual AI Engineering project, I need to focus on:
 
+1.  **KV Caching:** Recomputing K and V vectors for every token is inefficient. KV caching stores these vectors in memory to speed up inference.
+2.  **Quantization:** Reducing the precision of model weights (e.g., from FP16 to INT8 or INT4) to fit large models on smaller GPUs.
+3.  **Evaluation Frameworks:** Setting up "LLM-as-a-judge" or using frameworks like **DeepEval** or **RAGAS** to measure model performance beyond "vibe checks."
+4.  **Serving Infrastructure:** Exploring tools like **vLLM** or **TGI (Text Generation Inference)** for high-throughput model serving.
 
-### Attention Mechanism
+### Implementation Toolkit
 
-1. It uses **Key, Value, and Query** vectors
-
-2. **Query vectors (Q)**: current state of decoder at every step. 
-
-3. **Key vector (K)**: represent the previous token
-
-4. **Value vector (V)**: Actual value of the previous token
-
-Next, a **dot product** is taken of **K** and **V** vectors. What's so special about dot product conceptually?
-
-IN LLM, each previous token vectors need to be computed and stored. This is the reason why context window is difficutl to scale and its' get dumberr after mid way ? 
-
-
-The dimensions of **K, V , Q** are same as **hidden dimension**. I understand that a tensor flows thorugh a model. So a 4096 dimension means 4096 vectos of K, V, Q ? 
-
-### Multi headed
-
-I know what a multi threaded is? Concurrent application inside same processor is multi threading. This is different multi paralleism
-
-Multi tenant is to make sure that same resources it avaialbe tto n applications (slicing ) but each application feels they own the whole resoruces. 
-
-Multi headed in LLM is how attenion head is borken into x numbers. Like if there are hidden dimension of 4096 , and LLM llama 2-7B has 32 attention head. then each attention head is 4096/32=128 vectors size. 
-
-Later , all attention head are concatenated and passed thorugh projection matrtix? But why? 
-
-This is how a projection matrxi would look like. It has hte same dimension as hidden dimensiosn.
+To get started with an actual project, I should familiarize myself with these libraries:
+*   **Hugging Face Transformers:** The industry standard for loading and using foundation models.
+*   **LangChain / LlamaIndex:** Frameworks for building RAG pipelines and agentic workflows.
+*   **PyTorch / JAX:** For more low-level model manipulation or fine-tuning.
+*   **Pydantic:** Essential for structured output parsing (making LLM outputs usable in code).
