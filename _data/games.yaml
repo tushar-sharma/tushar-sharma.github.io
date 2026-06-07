@@ -258,8 +258,7 @@
   comments: "One of the best arcade racing games. You can blast off other cars with power-ups. Local co-op with split-screen. Tips: Press `B` to drift."
 
 - title: "Baldur's gate 3"
-  pending: true
-  progress: 0
+  rating: 5
   comments: "Change language: Modify the file`Data\\Localization\\language.lsx` and change entry like `Russian` to `English`. The executable is bin/bg3.exe for launching the game. "
 
 - title: "Forza Horizon 6"
