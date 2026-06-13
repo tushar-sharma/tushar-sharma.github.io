@@ -1,7 +1,10 @@
 $(document).ready(function(){
 
-    document.getElementsByClassName('DarkReader_Button')[0].onclick = function() {
+    const darkButton = document.getElementsByClassName('DarkReader_Button')[0];
+    if (darkButton) {
+      darkButton.onclick = function() {
         darkmode()
+      }
     }
 
     let enabled = localStorage.getItem('dark-mode')
@@ -21,7 +24,15 @@ $(document).ready(function(){
       localStorage.setItem('dark-mode', 'true');
       audio.src = "../sounds/static_switch-on.mp3";
       audio.play();
-      document.getElementById('icon-dark').className = "fa fa-sun";
+      const icon = document.getElementById('icon-dark');
+      if (icon) {
+        icon.innerHTML = "&#9728;";
+      }
+      if (darkButton) {
+        darkButton.setAttribute('aria-pressed', 'true');
+        darkButton.setAttribute('title', 'Turn off dark mode');
+        darkButton.setAttribute('aria-label', 'Turn off dark mode');
+      }
 
     }
     function disable() {
@@ -29,7 +40,15 @@ $(document).ready(function(){
       localStorage.setItem('dark-mode', 'false');
        audio.src = "../sounds/static_switch-off.mp3";
       audio.play();
-     document.getElementById('icon-dark').className = "fa fa-cloud-moon";
+     const icon = document.getElementById('icon-dark');
+     if (icon) {
+       icon.innerHTML = "&#9790;";
+     }
+     if (darkButton) {
+       darkButton.setAttribute('aria-pressed', 'false');
+       darkButton.setAttribute('title', 'Turn on dark mode');
+       darkButton.setAttribute('aria-label', 'Turn on dark mode');
+     }
     }
     function darkmode() {
       if (localStorage.getItem('dark-mode') === 'false') {
@@ -38,4 +57,6 @@ $(document).ready(function(){
           disable();
       }
     }
+
+    window.toggleDarkMode = darkmode;
 });
