@@ -10,7 +10,7 @@ image: https://i.pinimg.com/736x/34/a5/44/34a544cdec18911e289935660ebe5eae.jpg
 tags:
 - javascript
 - tensorflowjs
-- machine-learning
+- ml
 - jekyll
 - dark-mode
 ---
