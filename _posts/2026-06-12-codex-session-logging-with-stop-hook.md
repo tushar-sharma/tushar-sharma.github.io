@@ -6,6 +6,7 @@ thumb: https://img.magnific.com/premium-photo/young-woman-using-laptop-while-sit
 image: https://img.magnific.com/premium-photo/young-woman-using-laptop-while-sitting-against-yellow-background_1048944-365568.jpg?semt=ais_hybrid
 author: tushar sharma
 category: blog
+skipImage: true
 tags:
 - codex
 - ai
@@ -77,7 +78,7 @@ Then we will register the logger as a Codex `Stop` hook.
 The logger creates one Markdown file per Codex session:
 
 ```text
-~/myFiles/obsidian/codex-session/
+~/myFiles/obsidian/personal/codex-session/
 └── 2026-06-12T10-00-00-example.md
 ```
 
@@ -112,14 +113,34 @@ Check that Codex is writing session transcripts:
 find "$HOME/.codex/sessions" -name '*.jsonl' | tail -n 5
 ```
 
-Create the destination directory. I use an Obsidian vault path here, but this can be any local directory:
+Find the Obsidian vault root. The vault root is the directory that contains `.obsidian`:
 
 ```bash
-mkdir -p "$HOME/myFiles/obsidian/codex-session"
+find "$HOME/myFiles/obsidian" -maxdepth 3 -name .obsidian -type d -print
+```
+
+On my machine this returns:
+
+```text
+/Users/$USER/myFiles/obsidian/personal/.obsidian
+```
+
+That means my vault path is:
+
+```text
+/Users/$USER/myFiles/obsidian/personal
+```
+
+Obsidian only shows Markdown files inside the opened vault. In this setup `personal` is the vault folder, so the Codex log directory must be inside `personal`.
+
+Create the destination directory inside the vault:
+
+```bash
+mkdir -p "$HOME/myFiles/obsidian/personal/codex-session"
 mkdir -p "$HOME/.codex/hooks"
 ```
 
-If your vault path is different, use it consistently in the commands below.
+If your vault root is different, replace `"$HOME/myFiles/obsidian/personal"` with your actual vault root everywhere below.
 
 ## Step 1: Create The Hook
 
@@ -174,7 +195,7 @@ if [ -z "$prompt" ]; then
   exit 0
 fi
 
-default_log_dir="$HOME/myFiles/obsidian/codex-session"
+default_log_dir="$HOME/myFiles/obsidian/personal/codex-session"
 log_dir="${CODEX_SESSION_LOG_DIR:-$default_log_dir}"
 
 session_date=$(date '+%Y-%m-%d')
@@ -363,13 +384,13 @@ Restart Codex after changing hook configuration. Codex may ask you to review or 
 Start a new Codex session and ask a small question. After Codex answers, check the output directory:
 
 ```bash
-ls -lt "$HOME/myFiles/obsidian/codex-session" | head
+ls -lt "$HOME/myFiles/obsidian/personal/codex-session" | head
 ```
 
 Open the newest Markdown file:
 
 ```bash
-latest=$(ls -t "$HOME/myFiles/obsidian/codex-session"/*.md | head -n 1)
+latest=$(ls -t "$HOME/myFiles/obsidian/personal/codex-session"/*.md | head -n 1)
 sed -n '1,120p' "$latest"
 ```
 
