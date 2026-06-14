@@ -40,13 +40,7 @@ wide: true
       </div>
       <div class="places-controls">
         <input id="placeSearch" type="search" placeholder="Search places, cities, notes" aria-label="Search places">
-        <select id="cityFilter" aria-label="Filter by city">
-          <option value="">All cities</option>
-          {% assign cities = site.data.places | map: "city" | compact | uniq | sort %}
-          {% for city in cities %}
-          <option value="{{ city | downcase | escape }}">{{ city }}</option>
-          {% endfor %}
-        </select>
+        <input id="cityFilter" type="hidden" value="">
         <select id="categoryFilter" aria-label="Filter by category">
           <option value="">All categories</option>
           {% assign categories = site.data.places | map: "category" | compact | uniq | sort %}
@@ -55,6 +49,27 @@ wide: true
           {% endfor %}
         </select>
         <button id="resetPlaceFilters" type="button" hidden>Clear filters</button>
+      </div>
+    </div>
+
+    {% assign cities = site.data.places | map: "city" | compact | uniq | sort %}
+    <div class="places-city-browser" aria-label="Browse saved places by city">
+      <div class="places-city-summary">
+        <span id="selectedCityLabel">All cities</span>
+        <span>{{ cities | size }} cities</span>
+      </div>
+      <div class="places-city-chips" role="group" aria-label="City filters">
+        <button class="city-chip is-active" type="button" data-city="" data-city-label="All cities" aria-pressed="true" aria-label="Show all cities">
+          All
+          <span>{{ site.data.places | size }}</span>
+        </button>
+        {% for city in cities %}
+        {% assign city_count = site.data.places | where: "city", city | size %}
+        <button class="city-chip" type="button" data-city="{{ city | downcase | escape }}" data-city-label="{{ city | escape }}" aria-pressed="false" aria-label="Filter by {{ city | escape }}{% if city_count %}, {{ city_count }} places{% endif %}">
+          {{ city }}
+          <span>{{ city_count }}</span>
+        </button>
+        {% endfor %}
       </div>
     </div>
 
@@ -145,6 +160,8 @@ wide: true
     var city = document.getElementById('cityFilter');
     var category = document.getElementById('categoryFilter');
     var reset = document.getElementById('resetPlaceFilters');
+    var cityButtons = Array.prototype.slice.call(document.querySelectorAll('.city-chip'));
+    var selectedCityLabel = document.getElementById('selectedCityLabel');
     var cards = Array.prototype.slice.call(document.querySelectorAll('.place-card'));
     var empty = document.getElementById('emptyPlaces');
     var count = document.getElementById('placesResultCount');
@@ -154,6 +171,23 @@ wide: true
     var pageNumbers = document.getElementById('placesPageNumbers');
     var currentPage = 1;
     var pageSize = 12;
+
+    function updateCityButtons() {
+      var selectedCity = city.value;
+      var activeLabel = 'All cities';
+
+      cityButtons.forEach(function(button) {
+        var isActive = button.dataset.city === selectedCity;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+
+        if (isActive) {
+          activeLabel = button.dataset.cityLabel;
+        }
+      });
+
+      selectedCityLabel.textContent = activeLabel;
+    }
 
     function getMatchingCards() {
       var query = search.value.trim().toLowerCase();
@@ -256,6 +290,7 @@ wide: true
       pagination.hidden = matchingCards.length <= pageSize;
       prevPage.disabled = currentPage === 1;
       nextPage.disabled = currentPage === totalPages;
+      updateCityButtons();
       renderPagination(totalPages);
 
       if (matchingCards.length === 0) {
@@ -269,6 +304,7 @@ wide: true
       search.value = '';
       city.value = '';
       category.value = '';
+      updateCityButtons();
       filterPlaces(true);
       search.focus();
     }
@@ -276,8 +312,11 @@ wide: true
     search.addEventListener('input', function() {
       filterPlaces(true);
     });
-    city.addEventListener('change', function() {
-      filterPlaces(true);
+    cityButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        city.value = button.dataset.city;
+        filterPlaces(true);
+      });
     });
     category.addEventListener('change', function() {
       filterPlaces(true);

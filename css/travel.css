@@ -141,7 +141,7 @@ section.section-wide {
 .places-controls {
   display: grid;
   gap: 10px;
-  grid-template-columns: minmax(180px, 1fr) minmax(130px, 170px) minmax(130px, 170px) max-content;
+  grid-template-columns: minmax(180px, 1fr) minmax(130px, 180px) max-content;
   min-width: 0;
 }
 
@@ -177,6 +177,93 @@ section.section-wide {
 
 .places-controls button[hidden] {
   display: none;
+}
+
+.places-city-browser {
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 10px;
+  margin: -4px 0 16px;
+  padding: 12px 0;
+}
+
+.places-city-summary {
+  align-items: baseline;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.places-city-summary span:first-child {
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.places-city-summary span:last-child {
+  color: var(--muted);
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+}
+
+.places-city-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+  padding: 0;
+}
+
+.city-chip {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-family: inherit;
+  font-size: 0.84rem;
+  gap: 7px;
+  min-height: 34px;
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+
+.city-chip[hidden] {
+  display: none;
+}
+
+.city-chip span {
+  background: var(--wash);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1;
+  padding: 4px 6px;
+}
+
+.city-chip:hover,
+.city-chip:focus {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.city-chip.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.city-chip.is-active span {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
 }
 
 .places-meta {
@@ -322,6 +409,10 @@ section.section-wide {
   .places-header,
   .places-controls {
     grid-template-columns: 1fr;
+  }
+
+  .places-controls button {
+    width: 100%;
   }
 
   .travel-hero {
