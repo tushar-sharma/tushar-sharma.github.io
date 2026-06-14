@@ -605,51 +605,57 @@ A sparse model has a large percentage of zero-value parameters. It allows for mo
 
 ## June 13, 2026
 
-A language model has two phases. Pre training and post training. Pre training mostly happens with self-supervised learning on a large low quality internet data.
+A language model has two phases. Pre training and post training. Pre training mostly happens with self-supervised learning on a large amount of internet data. The data can be noisy and mixed quality, but the scale helps the model learn language, facts, patterns, and reasoning-like behavior.
 
-Fine tuning is required to refine the model. Two famous post training methods are 
+Fine tuning is used to refine the model. Two famous post training methods are 
 
-1. **Supervised fine tuning**: Traing the model on high quality instructions data. So a model is trained for not just **text completion** but on conversations. 
+1. **Supervised fine tuning**: Training the model on high quality instruction data. So a model is trained for not just **text completion** but on following instructions and conversations. 
 
-2. **Preference fine tuning**: Finetuned model so that it aligns with human preferences. Use **Reinforcement Learning** (RL).
+2. **Preference fine tuning**: Fine tune the model so that it aligns with human preferences. This can use **Reinforcement Learning** (RL), like RLHF, but not all preference tuning has to be RL. There are also methods like DPO.
 
 ## Sampling
 
-Limits the number of tokens that are selected for picking next output token. A model generates a logits vectors. Next we send these logits to softmax functions. 
+Sampling is the process of picking the next output token. A model generates a logits vector. The size of this vector is equal to the vocabulary size. Next we send these logits to a softmax function to convert them into probabilities. Then we choose one token from this probability distribution.
 
 
-### Temperate
+### Temperature
 
-Sampling technique where you divide each value in logits vector with temperatue. So If temperatue is high, the most common token will be reduced more. So the model with hight temperate is less determinsitic and more creative
+Sampling technique where you divide each value in logits vector with temperature before softmax. So if temperature is high, the probability distribution becomes flatter. The most likely token is still likely, but less dominant. So the model with high temperature is less deterministic and more creative.
 
-WIth low tempeartue, more common logits tokens are not affected so model is more deterministic. In a temperature of zero, no temperatue division is applied. 
+With low temperature, the probability distribution becomes sharper. The most likely token becomes even more likely, so the model is more deterministic. In practice, temperature of zero usually means greedy decoding: always pick the token with the highest probability.
 
 
 ### Greedy Sampling
 
-Choose the token with hightest probabilty . Works great for classification model like spam filter.
+Choose the token with highest probability. Works great for tasks where you want a stable answer, like classification or extraction. It can be too boring or brittle for open ended generation.
 
-### LogProbablities
+### LogProbabilities
 
-Anwhere you apply log, think of squeezing it. Usually with probablities with long end tail, log of those values is easy to comprehend. So taking log base 10 of softwmax probablities is often done . It also fixes underflow problem? 
+Anywhere you apply log, think of squeezing it. Usually with probabilities with long end tail, log of those values is easier to comprehend and compute with. In language models, log probabilities are usually natural logs of softmax probabilities. They are useful because multiplying many small probabilities can underflow, but adding log probabilities is stable.
 
-Alos most companies hide their LogProb APIS ? why 
+Also most companies hide their LogProb APIs? why 
+
+Maybe because logprobs expose more about model behavior and make APIs harder to support consistently across model families. But they are useful for debugging, classification confidence, evals, autocomplete, and comparing possible outputs.
 
 ### Top-k 
 
-so before we send logits to softwmax function, we can only allow k values to be sejnd. The size of logits is queal to vocabular size and computing softwtmax is expensive compute. 
+Top-k means only allow the top k most likely tokens to be sampled from. The rest are masked out. Then the probabilities are re-normalized over only these k tokens.
+
+This is not mainly to make softmax cheaper. The model still produces logits for the whole vocabulary. Top-k is mainly a decoding control so that very unlikely tokens are not sampled.
 
 
 ### Top-p 
 
-Instead of having fixed k size logitst , we can make it dynamic. So this value of p depends on cumulative probablities , we start with descending order of logits probablities and then we can stop from descending order if the sum of probabities is equal to k . 
+Instead of having fixed k size logits, we can make it dynamic. We sort tokens by probability in descending order and keep adding tokens until their cumulative probability is at least p. Then we sample only from this smaller set.
 
-Emeperically it works great than top-k. 
+Empirically it often works better than top-k because the candidate set can be small when the model is confident and larger when the model is uncertain.
 
-How does a model knows when to stop? 
+How does a model know when to stop? 
 
-1. Restirct no of toeksn? but we could have incomplete resposne
+1. Restrict number of tokens? but we could have incomplete response
 
-2. Use End of Sequence toekn ? liek 
+2. Use End of Sequence token? During training, the model learns special tokens that mark the end of a response/document. During generation, if the model emits this token, decoding stops.
 
-3. What else?
+3. Use stop sequences? The application can define strings like `\n\nUser:` or `</answer>` and stop generation when they appear.
+
+4. The API or serving system can also stop because of max output tokens, safety filters, tool call boundaries, or structured output constraints.
