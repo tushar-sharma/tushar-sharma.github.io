@@ -206,6 +206,55 @@
   map_link: "https://www.google.com/maps/search/?api=1&query=2100+Ln+St,+Kannapolis,+NC+28083"
   city: "Kannapolis, NC"
 
+- name: "South Indian Vibes"
+  address: "3, Astley hall Rajpur road Ist floor 2nd floor, Uttarakhand 248001, India"
+  map_link: "https://www.google.com/maps/search/?api=1&query=South+Indian+Vibes,+3,+Astley+hall+Rajpur+road+Ist+floor+2nd+floor,+Uttarakhand+248001,+India"
+  city: "Dehradun, India"
+  notes: "special dosa - Good; Mysore masala dosa - Okay; sambar - Good; Filter coffee - not good; Lemon soda (salt & sweet) - Good"
+  category: "food"
+
+- name: "Bigway Cafe restro"
+  address: "Dehradun"
+  map_link: "https://www.google.com/maps/search/?api=1&query=Bigway+Cafe+restro,+Dehradun"
+  city: "Dehradun, India"
+  notes: "cardamom tea - Good; cappuccino - Good; malai soya chaap - Okay; momos veg - good; Veg grilled sandwitch - okay; chicken grilled sandwitch - bad; grilled burger - bad"
+  category: "food"
+
+- name: "Café De Piccolo"
+  address: "Dehradun"
+  map_link: "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9+De+Piccolo,+Dehradun"
+  city: "Dehradun, India"
+  notes: "cappuccino - good; Penne Pasta - Good; cold coffee - NOT good (too much sweet); chicken sandwitch - not good"
+  category: "food"
+
+- name: "Duck Tales"
+  address: "Mussoorie Rd, Kolukhet Village, Doom Gaon, Uttarakhand 248141, India"
+  map_link: "https://www.google.com/maps/search/?api=1&query=Duck+Tales,+Mussoorie+Rd,+Kolukhet+Village,+Doom+Gaon,+Uttarakhand+248141,+India"
+  city: "Mussoorie, India"
+  notes: "Special tea - Good; sandwitch - not good; view - Good"
+  category: "food"
+
+- name: "Lata cafe"
+  address: "Dehradun"
+  map_link: "https://www.google.com/maps/search/?api=1&query=Lata+cafe,+Dehradun"
+  city: "Dehradun, India"
+  notes: "Sandwitch veg - Very good; Tea - Good"
+  category: "food"
+
+- name: "Great Teocalli"
+  address: "Highway, Mexico-pyramids Kilometer 21.5, 55800 San Juan Teotihuacan de Arista, Mex."
+  map_link: "https://www.google.com/maps/search/?api=1&query=Great+Teocalli,+Highway,+Mexico-pyramids+Kilometer+21.5,+55800+San+Juan+Teotihuacan+de+Arista,+Mex."
+  city: "San Juan Teotihuacan, Mexico"
+  notes: "dont speak english; but buffet is great"
+  category: "food"
+
+- name: "Basílica de Guadalupe"
+  address: "Basílica de Guadalupe, Mexico City, Mexico"
+  map_link: "https://www.google.com/maps/search/?api=1&query=Bas%C3%ADlica+de+Guadalupe,+Mexico+City,+Mexico"
+  city: "CDMX, Mexico"
+  notes: "churches; nice garden"
+  category: "activity"
+
 # Valle de la Luna (Chile)
 # INSANE Grassland Slide In Inner Mongolia, China
 # Rokusan Angel (Burlesque Tokyo)
