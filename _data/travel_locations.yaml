@@ -1,0 +1,218 @@
+- name: "Dehradun"
+  lat: 30.49921310
+  lng: 77.86223141
+  kind: lived
+- name: "Bangalore"
+  lat: 12.98883395
+  lng: 77.62227731
+  kind: lived
+- name: "Kota"
+  lat: 25.17370190
+  lng: 75.85741940
+  kind: lived
+- name: "Gainesville, FL"
+  lat: 29.65196840
+  lng: -82.32498460
+  kind: lived
+- name: "Harrison, NJ"
+  lat: 40.76843420
+  lng: -74.14542140
+  kind: lived
+- name: "Charlotte"
+  lat: 35.227085
+  lng: -80.843124
+  kind: lived
+  url: "/tag/charlotte/"
+- name: "Chapel Hill"
+  lat: 35.9132
+  lng: -79.0558
+  kind: lived
+  url: "/tag/chapel-hill/"
+- name: "Pearl River, NY"
+  lat: 41.05538850
+  lng: -74.00737637
+  kind: lived
+- name: "Waknaghat"
+  lat: 31.00999600
+  lng: 77.09153160
+  kind: lived
+- name: "East Providence, RI"
+  lat: 41.825226
+  lng: -71.418884
+  kind: lived
+- name: "Mexico City"
+  lat: 19.432608
+  lng: -99.133209
+  kind: visited
+  url: "/tag/mexico/"
+- name: "Boston, MA"
+  lat: 42.31271390
+  lng: -71.06384893
+  kind: visited
+- name: "Orlando, FL"
+  lat: 28.538336
+  lng: -81.379234
+  kind: visited
+- name: "Las Vegas"
+  lat: 36.169941
+  lng: -115.139832
+  kind: visited
+- name: "Asheville, NC"
+  lat: 35.5951
+  lng: -82.5515
+  kind: visited
+- name: "Nashville, TN"
+  lat: 36.1627
+  lng: -86.7816
+  kind: visited
+- name: "Colorado Springs, CO"
+  lat: 38.8339
+  lng: -104.8214
+  kind: visited
+- name: "Radford, VA"
+  lat: 37.1318
+  lng: -80.5764
+  kind: visited
+- name: "San Diego"
+  lat: 32.715736
+  lng: -117.161087
+  kind: visited
+- name: "Death Valley"
+  lat: 36.5323
+  lng: -116.9325
+  kind: visited
+- name: "Arizona"
+  lat: 36.917839
+  lng: -111.458664
+  kind: visited
+- name: "Ohio"
+  lat: 40.22535690
+  lng: -82.68813950
+  kind: visited
+- name: "Anchorage, AK"
+  lat: 61.2181
+  lng: -149.9003
+  kind: visited
+- name: "Chennai"
+  lat: 13.08369390
+  lng: 80.27018600
+  kind: visited
+- name: "Thailand"
+  lat: 15.870032
+  lng: 100.992541
+  kind: visited
+  url: "/tag/thailand/"
+- name: "Merida"
+  lat: 20.9671
+  lng: -89.5926
+  kind: visited
+- name: "Playa del Carmen"
+  lat: 20.6296
+  lng: -87.0739
+  kind: visited
+- name: "Cozumel"
+  lat: 20.4220
+  lng: -86.9223
+  kind: visited
+  url: "/tag/cozumel/"
+- name: "Isla Mujeres"
+  lat: 21.2322
+  lng: -86.7310
+  kind: visited
+- name: "Cancun"
+  lat: 21.1619
+  lng: -86.8515
+  kind: visited
+- name: "Tulum"
+  lat: 20.2114
+  lng: -87.4654
+  kind: visited
+- name: "Cartagena"
+  lat: 10.3910
+  lng: -75.4794
+  kind: visited
+- name: "Rosario Islands"
+  lat: 10.1658
+  lng: -75.7824
+  kind: visited
+- name: "Medellin"
+  lat: 6.2442
+  lng: -75.5812
+  kind: visited
+- name: "Puebla"
+  lat: 19.0414
+  lng: -98.2063
+  kind: visited
+- name: "Bali"
+  lat: -8.3405
+  lng: 115.0920
+  kind: visited
+- name: "Jakarta"
+  lat: -6.2088
+  lng: 106.8456
+  kind: visited
+- name: "Bandung"
+  lat: -6.9175
+  lng: 107.6191
+  kind: visited
+- name: "Kanatal"
+  lat: 30.6667
+  lng: 77.9167
+  kind: visited
+- name: "Mussoorie"
+  lat: 30.4599
+  lng: 78.0665
+  kind: visited
+- name: "Grandfather Mountain State Park"
+  lat: 36.0791
+  lng: -81.6823
+  kind: visited
+  url: "/blog/hike-grandfather-trail"
+- name: "Hanoi"
+  lat: 21.028511
+  lng: 105.804817
+  kind: visited
+- name: "Saigon"
+  lat: 10.823099
+  lng: 106.629662
+  kind: visited
+- name: "Da Nang"
+  lat: 16.047079
+  lng: 108.206230
+  kind: visited
+- name: "Sao Paulo, Brazil"
+  lat: -23.550520
+  lng: -46.633308
+  kind: visited
+- name: "Iguazu Falls, Brazil"
+  lat: -25.695271
+  lng: -54.436667
+  kind: visited
+- name: "Rio de Janeiro, Brazil"
+  lat: -22.908333
+  lng: -43.196388
+  kind: visited
+- name: "Arequipa, Peru"
+  lat: -16.40905
+  lng: -71.53745
+  kind: visited
+- name: "Cusco, Peru"
+  lat: -13.529427
+  lng: -71.984978
+  kind: visited
+- name: "Lima, Peru"
+  lat: -12.046374
+  lng: -77.042793
+  kind: visited
+- name: "San Juan, Puerto Rico"
+  lat: 18.4655
+  lng: -66.1057
+  kind: visited
+- name: "Culebra"
+  lat: 18.3039
+  lng: -65.3010
+  kind: visited
+- name: "Vieques"
+  lat: 18.1497
+  lng: -65.4425
+  kind: visited

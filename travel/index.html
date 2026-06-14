@@ -1,387 +1,296 @@
 ---
 layout: default
-title: Travel Log
-summary: About Me
+title: Travel and Places
+summary: Travel map and practical notes for places I have visited.
 image: 'https://randomwits.com/img/little_world.png'
 author: Tushar Sharma
 published: true
+wide: true
 ---
 
-<link rel="stylesheet" href="{{ root_url }}/css/chat.css" />
-
-<!-- dummy box begins -->
-<div style="padding-bottom:60px; padding-top:20px; background : white;">
-</div>
-
-
 <link rel="stylesheet" href="{{ root_url }}/css/travel.css" />
-<!-- leaflet -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-<!-- leaflet easybutton -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
 <script src="https://use.fontawesome.com/e1f76e437e.js"></script>
 
-    <!-- content table beginning -->
-    <div id="contenttable">
-
-      <!-- header graphic -->
-
-      <!-- content beginning-->
-      <div class="content-place">
-       <br>
-        <h1 class="me_blurb">
-         Travel log
-         </h1><br>
-
-         <div class="blue-attention">
-            "Wherever you go becomes a part of you somehow" - Anita Desai
-        </div><br>    
-
-          <div id="map"></div>
-
-          <script>
-            
-              var map = L.map('map', {
-                  scrollWheelZoom: false,
-              }).setView([30, 5.5], 2);
-
-
-              var greyCartoDB = L.tileLayer('https://{s}.tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=36d8b80d7de9431998538d4760d0f568', {
-                attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                apikey: '36d8b80d7de9431998538d4760d0f568',
-                maxZoom: 22
-              });
-              greyCartoDB.addTo(map);
-
-              /* own marker design */
-
-              var home = L.icon({
-                  iconUrl: '{{ root_url }}/img/home.png',
-                  iconSize: [20, 20],
-                  iconAnchor: [10, 20]
-              });
-
-              var travel = L.icon({
-                  iconUrl: '{{ root_url }}/img/visit.png',
-                  iconSize: [20, 20],
-                  iconAnchor: [10, 20]
-              });
-
-              var activities = L.icon({
-                  iconUrl: '{{ root_url }}/img/activities.png',
-                  iconSize: [20, 20],
-                  iconAnchor: [10, 20]
-              });
-
-              var car = L.icon({
-                  iconUrl: '{{ root_url }}/img/car.png',
-                  iconSize: [20, 20],
-                  iconAnchor: [10, 20]
-              });
-              
-              var ballon = L.icon({
-                  iconUrl: '{{ root_url }}/img/ballon.png',
-                  iconSize: [20, 20],
-                  iconAnchor: [10, 20]
-              });
-
-              var plan = L.icon({
-                  iconUrl: '{{ root_url }}/img/plan.png',
-                  iconSize: [20, 20],
-                  iconAnchor: [10, 20]
-              });
-
-              var bucket = L.icon({
-                  iconUrl: '{{ root_url }}/img/bucket.png',
-                  iconSize: [20, 20],
-                  iconAnchor: [10, 20]
-              });
-
-      /*** markers ***/
-
-              /* home */
-
-
-             L.marker([30.49921310, 77.86223141], {
-                  icon: home
-              }).addTo(map).bindPopup("Dehradun");
-
-               L.marker([12.98883395, 77.62227731], {
-                  icon: home
-                }).addTo(map).bindPopup("Bangalore");
-
-                L.marker([25.17370190, 75.85741940], {
-                  icon: home
-                }).addTo(map).bindPopup("Kota");
-
-                L.marker([29.65196840, -82.32498460 ], {
-                  icon: home
-                }).addTo(map).bindPopup("Gainesville,FL");
-
-                L.marker([40.76843420, -74.14542140 ], {
-                  icon: home
-                }).addTo(map).bindPopup("Harrison,NJ");
-
-                L.marker([35.227085, -80.843124], {
-                  icon: home
-                }).addTo(map).bindPopup("<a target=\"_blank\" href=\"{{ root_url }}/tag/charlotte/\">Charlotte</a>");
-
-                L.marker([35.9132, -79.0558], {
-                  icon: home
-                }).addTo(map).bindPopup("<a target=\"_blank\" href=\"{{ root_url }}/tag/chapel-hill/\">Chapel Hill</a>");
-
-                L.marker([41.05538850, -74.00737637], {
-                  icon: home
-                }).addTo(map).bindPopup("Pearl River,NY");
-
-                L.marker([31.00999600, 77.09153160], {
-                  icon: home
-                }).addTo(map).bindPopup("Waknaghat");
-
-
-                L.marker([41.825226, -71.418884], {
-                  icon: home
-              }).addTo(map).bindPopup("East Providence, RI");
-
-              /* travel */
-
-              L.marker([19.432608, -99.133209], {
-                  icon: travel
-              }).addTo(map).bindPopup("<a target=\"_blank\" href=\"{{ root_url }}/tag/mexico/\">Mexico city</a>");
-
-              L.marker([42.31271390, -71.06384893], {
-                  icon: travel
-              }).addTo(map).bindPopup("Boston,MA");
-
-              L.marker([28.538336, -81.379234], {
-                  icon: travel
-              }).addTo(map).bindPopup("Orlando,FL");
-
-              L.marker([36.169941, -115.139832], {
-                  icon: travel
-              }).addTo(map).bindPopup("Las Vegas");
-
-              L.marker([35.5951, -82.5515], {
-                  icon: travel
-              }).addTo(map).bindPopup("Asheville, NC");
-
-              L.marker([36.1627, -86.7816], {
-                  icon: travel
-              }).addTo(map).bindPopup("Nashville, TN");
-
-              L.marker([38.8339, -104.8214], {
-                  icon: travel
-              }).addTo(map).bindPopup("Colorado Springs, CO");
-
-              L.marker([37.1318, -80.5764], {
-                  icon: travel
-              }).addTo(map).bindPopup("Radford, VA");
-              
-
-              L.marker([32.715736, -117.161087], {
-                  icon: travel
-              }).addTo(map).bindPopup("San Diego");
-
-              L.marker([36.5323, -116.9325], {
-                  icon: travel
-              }).addTo(map).bindPopup("Death Valley");
-
-              L.marker([36.917839, -111.458664], {
-                  icon: travel
-              }).addTo(map).bindPopup("Arizona");
-
-              L.marker([40.22535690, -82.68813950], {
-                icon: travel
-              }).addTo(map).bindPopup("Ohio");
-
-              L.marker([61.2181, -149.9003], {
-                icon: travel
-              }).addTo(map).bindPopup("Anchorage, AK");
-
-              L.marker([13.08369390, 80.27018600], {
-                  icon: travel
-              }).addTo(map).bindPopup("Chennai");
-
-              L.marker([15.870032, 100.99254100000007], {
-                  icon: travel
-              }).addTo(map).bindPopup("<a target=\"_blank\" href=\"{{ root_url }}/tag/thailand/\">Thailand</a>");
-
-              L.marker([20.9671, -89.5926], {
-                icon: travel
-              }).addTo(map).bindPopup("Mérida");
-
-              L.marker([20.6296, -87.0739], {
-                icon: travel
-              }).addTo(map).bindPopup("Playa del Carmen");
-
-              L.marker([20.4220, -86.9223], {
-                  icon: travel
-              }).addTo(map).bindPopup("<a target=\"_blank\" href=\"{{ root_url }}/tag/cozumel/\">Cozumel</a>");
-
-              L.marker([21.2322, -86.7310], {
-                  icon: travel
-              }).addTo(map).bindPopup("Isla Mujeres");
-
-              L.marker([21.1619, -86.8515], {
-                  icon: travel
-              }).addTo(map).bindPopup("Cancún");
-
-              L.marker([20.2114, -87.4654], {
-                icon: travel
-              }).addTo(map).bindPopup("Tulum");     
-
-              L.marker([10.3910, -75.4794], {
-                icon: travel
-              }).addTo(map).bindPopup("Cartagena");
-
-              L.marker([10.1658, -75.7824], {
-                icon: travel
-              }).addTo(map).bindPopup("Rosario Islands");
-            
-              L.marker([6.2442, -75.5812], {
-                icon: travel
-              }).addTo(map).bindPopup("Medellín");
-
-              L.marker([19.0414, -98.2063], {
-                  icon: travel
-              }).addTo(map).bindPopup("Puebla");
-              
-              L.marker([-8.3405, 115.0920], {
-                  icon: travel
-              }).addTo(map).bindPopup("Bali");
-
-              L.marker([-6.2088, 106.8456], {
-                  icon: travel
-              }).addTo(map).bindPopup("Jakarta");
-              
-              L.marker([-6.9175, 107.6191], {
-                  icon: travel
-              }).addTo(map).bindPopup("Bandung");
-
-              L.marker([30.6667, 77.9167], {
-                icon: travel 
-              }).addTo(map).bindPopup("Kanatal");
-
-              L.marker([30.4599, 78.0665], {
-                icon: travel
-              }).addTo(map).bindPopup("Mussoorie");
-
-              L.marker([36.0791, -81.6823], {
-                   icon: travel  
-              }).addTo(map).bindPopup("<a target=\"_blank\" href=\"{{ root_url }}/blog/hike-grandfather-trail\">Grandfather Mountain State Park</a>");
-              /*}).addTo(map).bindPopup("");*/
-
-      
-              L.marker([21.028511, 105.804817], {
-                icon: travel
-              }).addTo(map).bindPopup("Hanoi");
-
-              L.marker([10.823099, 106.629662], {
-                icon: travel
-              }).addTo(map).bindPopup("Saigon");
-
-              L.marker([16.047079, 108.206230], {
-                icon: travel
-              }).addTo(map).bindPopup("Da Nang");
-
-              L.marker([-23.550520, -46.633308], {
-                  icon: travel
-              }).addTo(map).bindPopup("São Paulo, Brazil");
-
-              L.marker([-25.695271, -54.436667], {
-                  icon: travel
-              }).addTo(map).bindPopup("Iguazu Falls, Brazil");
-
-              L.marker([-22.908333, -43.196388], {
-                  icon: travel
-              }).addTo(map).bindPopup("Rio de Janeiro, Brazil");
-
-              L.marker([-16.40905, -71.53745], {
-                  icon: travel
-              }).addTo(map).bindPopup("Arequipa, Peru");
-
-              L.marker([-13.529427, -71.984978], {
-                  icon: travel
-              }).addTo(map).bindPopup("Cusco, Peru");
-
-              L.marker([-12.046374, -77.042793], {
-                  icon: travel
-              }).addTo(map).bindPopup("Lima, Peru");
-
-              L.marker([18.4655, -66.1057], {
-                  icon: travel
-              }).addTo(map).bindPopup("San Juan, Puerto Rico");
-
-              L.marker([18.3039, -65.3010], {
-                  icon: travel
-              }).addTo(map).bindPopup("Culebra");
-
-              L.marker([18.1497, -65.4425], {
-                  icon: travel
-              }).addTo(map).bindPopup("Vieques");
-
-              /** bucket
-               * 
-               * Amsterdam : Micropia 
-               */
-
-
-              /** round trips **/
-              //courtesy ~ https://www.latlong.net/place/ohio-usa-5522.html
-
-
-              var westcoastTrip = [
-                  [40.741895, -73.989308], //NYC
-                  [39.9525839, -75.1652215], //Philly
-                  [38.9071923, -77.0368707], //Washington
-                  [40.741895, -73.989308], //NYC
-                  [45.4215296, -75.697193], //Otawa
-                  [45.5016889, -73.5672559], //Montreal
-                  [42.3600825, -71.05888] //Boston
-              ];
-
-              var brownTrip = [
-                  [40.367474,  -82.996216], //ohio
-                  [41.825226, -71.418884], //Providence RI
-                  [42.361145, -71.057083] //Boston
-              ]
-              var moodysTrip = [
-                  [40.883884, -74.055984], // Hackensack, NJ
-                  [35.227085, -80.843124] // Charlotte, NC
-              ]
-
-             
-
-              /** legend **/
-
-              var legend = L.control({
-                  position: 'topright'
-              });
-
-              legend.onAdd = function(map) {
-
-                  var div = L.DomUtil.create('div', 'legend');
-                  div.innerHTML += '<img src="{{ root_url }}/img/visit.png"/> Places I visited<br /><img src="{{ root_url }}/img/home.png"/>Places I lived, worked & studied';
-                  return div;
-              };
-
-
-              legend.addTo(map);
-
-
-              /** reset zoom button **/
-
-              L.easyButton('fa fa-globe fa-lg', function() {
-                  map.setView([30, 5.5], 2);
-              }).addTo(map);
-
-          </script>
-
+<main class="travel-page">
+  <section class="travel-hero">
+    <div>
+      <p class="travel-kicker">Travel log</p>
+      <p class="travel-quote">"Wherever you go becomes a part of you somehow" - Anita Desai</p>
+    </div>
+    <div class="travel-stats" aria-label="Travel statistics">
+      <span><strong>{{ site.data.travel_locations | where: "kind", "visited" | size }}</strong> visited</span>
+      <span><strong>{{ site.data.travel_locations | where: "kind", "lived" | size }}</strong> lived</span>
+      <span><strong>{{ site.data.places | size }}</strong> saved places</span>
+    </div>
+  </section>
+
+  <section class="travel-map-panel" aria-label="Travel map">
+    <div id="map"></div>
+  </section>
+
+  <section id="places" class="places-panel">
+    <div class="places-header">
+      <div>
+        <p class="travel-kicker">Directory</p>
+        <h2>Saved Places</h2>
       </div>
-      <!--content ending-->
+      <div class="places-controls">
+        <input id="placeSearch" type="search" placeholder="Search places, cities, notes" aria-label="Search places">
+        <select id="cityFilter" aria-label="Filter by city">
+          <option value="">All cities</option>
+          {% assign cities = site.data.places | map: "city" | compact | uniq | sort %}
+          {% for city in cities %}
+          <option value="{{ city | downcase | escape }}">{{ city }}</option>
+          {% endfor %}
+        </select>
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="">All categories</option>
+          {% assign categories = site.data.places | map: "category" | compact | uniq | sort %}
+          {% for category in categories %}
+          <option value="{{ category | downcase | escape }}">{{ category }}</option>
+          {% endfor %}
+        </select>
+        <button id="resetPlaceFilters" type="button" hidden>Clear filters</button>
+      </div>
+    </div>
 
-      <!-- footer for futer links (disclaimer, contact, etc)-->
-      <div id="footer"></div>
-  </div><br>
+    <p class="places-meta" id="placesResultCount" aria-live="polite"></p>
+
+    <div class="places-grid" id="placesGrid">
+      {% for place in site.data.places %}
+      <article
+        class="place-card"
+        data-city="{{ place.city | downcase | escape }}"
+        data-category="{{ place.category | downcase | escape }}"
+        data-search="{{ place.name | append: ' ' | append: place.city | append: ' ' | append: place.category | append: ' ' | append: place.address | append: ' ' | append: place.notes | downcase | escape }}">
+        <div class="place-card-top">
+          <h3>{{ place.name }}</h3>
+          {% if place.category %}
+          <span>{{ place.category }}</span>
+          {% endif %}
+        </div>
+        {% if place.city %}
+        <p class="place-city">{{ place.city }}</p>
+        {% endif %}
+        <p class="place-notes">{{ place.notes }}</p>
+        {% if place.address %}
+        <p class="place-address">
+          {% if place.map_link %}
+          <a href="{{ place.map_link }}" target="_blank" rel="noopener noreferrer">{{ place.address }}</a>
+          {% else %}
+          {{ place.address }}
+          {% endif %}
+        </p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    <nav class="places-pagination" id="placesPagination" aria-label="Places pagination" hidden>
+      <button id="prevPlacesPage" type="button">Previous</button>
+      <div class="places-page-numbers" id="placesPageNumbers"></div>
+      <button id="nextPlacesPage" type="button">Next</button>
+    </nav>
+    <p class="empty-state" id="emptyPlaces" hidden>No places match this filter.</p>
+  </section>
+</main>
+
+<script>
+  var map = L.map('map', {
+    scrollWheelZoom: false
+  }).setView([30, 5.5], 2);
+
+  L.tileLayer('https://{s}.tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=36d8b80d7de9431998538d4760d0f568', {
+    attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    apikey: '36d8b80d7de9431998538d4760d0f568',
+    maxZoom: 22
+  }).addTo(map);
+
+  var icons = {
+    lived: L.icon({
+      iconUrl: '{{ root_url }}/img/home.png',
+      iconSize: [22, 22],
+      iconAnchor: [11, 22]
+    }),
+    visited: L.icon({
+      iconUrl: '{{ root_url }}/img/visit.png',
+      iconSize: [22, 22],
+      iconAnchor: [11, 22]
+    })
+  };
+
+  {% for location in site.data.travel_locations %}
+  L.marker([{{ location.lat }}, {{ location.lng }}], {
+    icon: icons['{{ location.kind }}'] || icons.visited
+  }).addTo(map).bindPopup('{% if location.url %}<a target="_blank" rel="noopener noreferrer" href="{{ root_url }}{{ location.url }}">{{ location.name | escape }}</a>{% else %}{{ location.name | escape }}{% endif %}');
+  {% endfor %}
+
+  var legend = L.control({ position: 'topright' });
+  legend.onAdd = function() {
+    var div = L.DomUtil.create('div', 'legend');
+    div.innerHTML = '<img src="{{ root_url }}/img/visit.png" alt=""> Places I visited<br><img src="{{ root_url }}/img/home.png" alt=""> Places I lived, worked, or studied';
+    return div;
+  };
+  legend.addTo(map);
+
+  L.easyButton('fa fa-globe fa-lg', function() {
+    map.setView([30, 5.5], 2);
+  }).addTo(map);
+
+  (function() {
+    var search = document.getElementById('placeSearch');
+    var city = document.getElementById('cityFilter');
+    var category = document.getElementById('categoryFilter');
+    var reset = document.getElementById('resetPlaceFilters');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.place-card'));
+    var empty = document.getElementById('emptyPlaces');
+    var count = document.getElementById('placesResultCount');
+    var pagination = document.getElementById('placesPagination');
+    var prevPage = document.getElementById('prevPlacesPage');
+    var nextPage = document.getElementById('nextPlacesPage');
+    var pageNumbers = document.getElementById('placesPageNumbers');
+    var currentPage = 1;
+    var pageSize = 12;
+
+    function getMatchingCards() {
+      var query = search.value.trim().toLowerCase();
+      var selectedCity = city.value;
+      var selectedCategory = category.value;
+
+      return cards.filter(function(card) {
+        var matchesSearch = !query || card.dataset.search.indexOf(query) !== -1;
+        var matchesCity = !selectedCity || card.dataset.city === selectedCity;
+        var matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
+        return matchesSearch && matchesCity && matchesCategory;
+      });
+    }
+
+    function renderPagination(totalPages) {
+      var pages = [];
+      pageNumbers.innerHTML = '';
+
+      function addPage(page) {
+        if (pages.indexOf(page) === -1 && page >= 1 && page <= totalPages) {
+          pages.push(page);
+        }
+      }
+
+      function appendPageButton(page) {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = page;
+        button.setAttribute('aria-label', 'Go to places page ' + page);
+
+        if (page === currentPage) {
+          button.className = 'is-active';
+          button.setAttribute('aria-current', 'page');
+        }
+
+        button.addEventListener('click', function(event) {
+          currentPage = Number(event.target.textContent);
+          filterPlaces(false);
+        });
+
+        pageNumbers.appendChild(button);
+      }
+
+      function appendEllipsis() {
+        var ellipsis = document.createElement('span');
+        ellipsis.textContent = '...';
+        ellipsis.setAttribute('aria-hidden', 'true');
+        pageNumbers.appendChild(ellipsis);
+      }
+
+      addPage(1);
+      addPage(currentPage - 1);
+      addPage(currentPage);
+      addPage(currentPage + 1);
+      addPage(totalPages);
+      pages.sort(function(left, right) {
+        return left - right;
+      });
+
+      pages.forEach(function(page, index) {
+        if (index > 0 && page - pages[index - 1] > 1) {
+          appendEllipsis();
+        }
+
+        appendPageButton(page);
+      });
+    }
+
+    function filterPlaces(resetPage) {
+      var query = search.value.trim().toLowerCase();
+      var selectedCity = city.value;
+      var selectedCategory = category.value;
+      var hasFilters = Boolean(query || selectedCity || selectedCategory);
+      var matchingCards = getMatchingCards();
+      var totalPages = Math.max(1, Math.ceil(matchingCards.length / pageSize));
+      var start;
+      var end;
+
+      if (resetPage) {
+        currentPage = 1;
+      }
+
+      if (currentPage > totalPages) {
+        currentPage = totalPages;
+      }
+
+      start = (currentPage - 1) * pageSize;
+      end = start + pageSize;
+
+      cards.forEach(function(card) {
+        card.hidden = true;
+      });
+
+      matchingCards.slice(start, end).forEach(function(card) {
+        card.hidden = false;
+      });
+
+      empty.hidden = matchingCards.length !== 0;
+      reset.hidden = !hasFilters;
+      pagination.hidden = matchingCards.length <= pageSize;
+      prevPage.disabled = currentPage === 1;
+      nextPage.disabled = currentPage === totalPages;
+      renderPagination(totalPages);
+
+      if (matchingCards.length === 0) {
+        count.textContent = 'Showing 0 of ' + cards.length + ' places';
+      } else {
+        count.textContent = 'Showing ' + (start + 1) + '-' + Math.min(end, matchingCards.length) + ' of ' + matchingCards.length + ' places';
+      }
+    }
+
+    function resetPlaceFilters() {
+      search.value = '';
+      city.value = '';
+      category.value = '';
+      filterPlaces(true);
+      search.focus();
+    }
+
+    search.addEventListener('input', function() {
+      filterPlaces(true);
+    });
+    city.addEventListener('change', function() {
+      filterPlaces(true);
+    });
+    category.addEventListener('change', function() {
+      filterPlaces(true);
+    });
+    reset.addEventListener('click', resetPlaceFilters);
+    prevPage.addEventListener('click', function() {
+      currentPage -= 1;
+      filterPlaces(false);
+    });
+    nextPage.addEventListener('click', function() {
+      currentPage += 1;
+      filterPlaces(false);
+    });
+    filterPlaces(true);
+  })();
+</script>

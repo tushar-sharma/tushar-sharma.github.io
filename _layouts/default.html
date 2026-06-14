@@ -19,7 +19,7 @@
       <header>
         {% include sidebar.html %}
       </header>
-      <section>
+      <section{% if page.wide %} class="section-wide"{% endif %}>
         {{ content }}
       </section>
    </div>

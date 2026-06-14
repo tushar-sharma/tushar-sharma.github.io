@@ -1,165 +1,364 @@
-/**
- Courtesy : https://lauralouu.github.io/TravelBucketList/
- */
- #contenttable {
-    padding: 0 0 5px 5px;
-    width: 100%;
-    margin: 0 auto;
-    /*margin-top: 35px;*/
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #e0e0e0;
+.travel-page {
+  --ink: #24313f;
+  --muted: #687383;
+  --line: #d9e1e8;
+  --panel: #ffffff;
+  --wash: #f4f7f6;
+  --accent: #0f766e;
+  --accent-soft: #dff3ee;
+  --visited: #9d4f22;
+  color: var(--ink);
 }
 
-#content {
-    width: 600px;
-    float: right;
-    padding: 10px;
+section.section-wide {
+  box-sizing: border-box;
+  max-width: none;
+  padding-left: clamp(16px, 3vw, 44px);
+  padding-right: clamp(16px, 3vw, 44px);
+  width: 65%;
 }
 
-#footer {
-    clear: both;
+.travel-page section {
+  box-sizing: border-box;
+  float: none;
+  max-width: none;
+  min-width: 0;
+  width: 100%;
 }
 
-p {
-    margin: 0 0 15px 0;
+.travel-page a {
+  color: #0b648f;
+  text-decoration: none;
 }
 
-i {}
-
-/**** links ****/
-
-a {
-    text-decoration: none;
+.travel-page a:hover {
+  text-decoration: underline;
 }
 
-/**** content boxes classes ****/
-
-.content-place {
-    margin-left: 5px;
-    padding: 5px 5px 5px 0;
+.travel-hero {
+  background: linear-gradient(135deg, #eef6f1 0%, #f7f3eb 58%, #eef3f8 100%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin: 18px 0;
+  padding: 28px;
 }
 
+.travel-kicker {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
 
-/*** leaflet ***/
-.leaflet-container {
-    background-color:rgba(255,0,0,0.0) !important;
+.travel-hero h1 {
+  font-size: 2.05rem;
+  line-height: 1.16;
+  margin: 0;
+}
+
+.travel-quote {
+  color: var(--muted);
+  font-size: 0.98rem;
+  margin: 14px 0 0;
+}
+
+.travel-stats {
+  align-self: end;
+  display: grid;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.travel-stats span {
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(217, 225, 232, 0.9);
+  border-radius: 8px;
+  color: var(--muted);
+  padding: 10px 12px;
+}
+
+.travel-stats strong {
+  color: var(--ink);
+  display: block;
+  font-size: 1.35rem;
+}
+
+.travel-map-panel,
+.places-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin: 18px 0;
+  overflow: hidden;
 }
 
 #map {
-    height: 670px; /*470  */
-    margin: 5px 5px 25px 0;
+  height: 640px;
+  width: 100%;
+}
+
+.leaflet-container {
+  background-color: transparent !important;
 }
 
 .legend {
-    padding: 5px;
-    background-color: #efefef;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    width: 260px;
-    line-height: 23px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(36, 49, 63, 0.12);
+  line-height: 24px;
+  padding: 8px 10px;
 }
 
 .legend img {
-    vertical-align: middle;
-    width: 20px;
-    margin-right: 5px;
-
+  margin-right: 7px;
+  vertical-align: middle;
+  width: 20px;
 }
 
-.legendResp {
-    padding: 5px;
-    background-color: #efefef;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    width: 260px;
-    line-height: 23px;
-    display: none;
+.places-panel {
+  padding: 22px;
 }
 
-.legendResp img {
-    vertical-align: middle;
-    width: 20px;
-    margin-right: 5px;
+.places-header {
+  align-items: start;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1fr);
+  margin-bottom: 18px;
 }
 
-/***************** responsive *******************/
-
-/* cannot test any widescreen,
-so it is hard to decide what would look good */
-
-/* for 980px or less */
-
-@media screen and (max-width: 980px) {
-
-    #contenttable {
-        width: 94%;
-    }
-    #content {
-        width: 65%;
-        box-sizing: border-box;
-    }
+.places-header h2 {
+  font-size: 1.55rem;
+  margin: 0;
 }
 
-/* for 700px or less */
-
-@media screen and (max-width: 700px) {
-
-    #content {
-        width: auto;
-        float: none;
-    }
-
+.places-controls {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(180px, 1fr) minmax(130px, 170px) minmax(130px, 170px) max-content;
+  min-width: 0;
 }
 
+.places-controls input,
+.places-controls select,
+.places-controls button {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.9rem;
+  min-height: 40px;
+  padding: 8px 10px;
+  width: 100%;
+}
 
-/* for 480px or less */
+.places-controls button {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+  cursor: pointer;
+  width: auto;
+  white-space: nowrap;
+}
 
-@media screen and (max-width: 480px) {
+.places-controls button:hover,
+.places-controls button:focus {
+  background: var(--accent);
+  border-color: var(--accent);
+}
 
-    #header {
-        height: auto;
-    }
+.places-controls button[hidden] {
+  display: none;
+}
 
-    #contenttable {
-        width: auto;
-        margin-top: 0;
-    }
+.places-meta {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: -4px 0 14px;
+}
 
+.places-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+}
 
-    .legend {
-        padding: 5px;
-        background-color: #efefef;
-        border: 1px solid #e0e0e0;
-        border-radius: 5px;
-        width: 260px;
-        line-height: 23px;
-        display: none;
-    }
+.places-pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 18px;
+}
 
-    .legend img {
-        vertical-align: middle;
-        width: 20px;
-        margin-right: 5px;
+.places-pagination[hidden] {
+  display: none;
+}
 
-    }
+.places-pagination button {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.84rem;
+  min-height: 36px;
+  min-width: 38px;
+  padding: 7px 10px;
+}
 
-    .legendResp {
-        padding: 5px;
-        background-color: #efefef;
-        border: 1px solid #e0e0e0;
-        border-radius: 5px;
-        width: auto;
-        line-height: 23px;
-        display: block;
-        margin-right: 5px;
-    }
+.places-pagination button:hover,
+.places-pagination button:focus {
+  border-color: var(--accent);
+  color: var(--accent);
+}
 
-    .legendResp img {
-        vertical-align: middle;
-        width: 20px;
-        margin-right: 5px;
-    }
+.places-pagination button:disabled {
+  color: #a6afb8;
+  cursor: not-allowed;
+}
 
+.places-pagination button.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
 
+.places-page-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.places-page-numbers span {
+  color: var(--muted);
+  line-height: 36px;
+  padding: 0 2px;
+}
+
+.place-card {
+  background: var(--wash);
+  border: 1px solid #e1e8df;
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+}
+
+.place-card[hidden] {
+  display: none;
+}
+
+.place-card-top {
+  align-items: start;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.place-card h3 {
+  font-size: 1rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.place-card-top span {
+  background: var(--accent-soft);
+  border-radius: 999px;
+  color: #0d5e58;
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  line-height: 1;
+  padding: 6px 8px;
+}
+
+.place-city,
+.place-notes,
+.place-address {
+  font-size: 0.86rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.place-city {
+  color: var(--visited);
+  font-weight: 700;
+}
+
+.place-notes,
+.place-address {
+  color: var(--muted);
+}
+
+.place-notes {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.empty-state {
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  margin: 16px 0 0;
+  padding: 18px;
+  text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  .travel-hero,
+  .places-header,
+  .places-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-hero {
+    padding: 22px;
+  }
+
+  .travel-hero h1 {
+    font-size: 1.55rem;
+  }
+
+  .travel-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #map {
+    height: 520px;
+  }
+}
+
+@media print, screen and (max-width: 960px) {
+  section.section-wide {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .places-panel {
+    padding: 14px;
+  }
+
+  .travel-stats {
+    grid-template-columns: 1fr;
+  }
+
+  #map {
+    height: 430px;
+  }
 }
