@@ -602,3 +602,54 @@ A sparse model has a large percentage of zero-value parameters. It allows for mo
 **FLOPs** is how we measure the computational cost of a model. FLOPs stands for Floating Point Operations. 
 
 **FLOP/s** (FLOPs per second) is different; it measures hardware performance.
+
+## June 13, 2026
+
+A language model has two phases. Pre training and post training. Pre training mostly happens with self-supervised learning on a large low quality internet data.
+
+Fine tuning is required to refine the model. Two famous post training methods are 
+
+1. **Supervised fine tuning**: Traing the model on high quality instructions data. So a model is trained for not just **text completion** but on conversations. 
+
+2. **Preference fine tuning**: Finetuned model so that it aligns with human preferences. Use **Reinforcement Learning** (RL).
+
+## Sampling
+
+Limits the number of tokens that are selected for picking next output token. A model generates a logits vectors. Next we send these logits to softmax functions. 
+
+
+### Temperate
+
+Sampling technique where you divide each value in logits vector with temperatue. So If temperatue is high, the most common token will be reduced more. So the model with hight temperate is less determinsitic and more creative
+
+WIth low tempeartue, more common logits tokens are not affected so model is more deterministic. In a temperature of zero, no temperatue division is applied. 
+
+
+### Greedy Sampling
+
+Choose the token with hightest probabilty . Works great for classification model like spam filter.
+
+### LogProbablities
+
+Anwhere you apply log, think of squeezing it. Usually with probablities with long end tail, log of those values is easy to comprehend. So taking log base 10 of softwmax probablities is often done . It also fixes underflow problem? 
+
+Alos most companies hide their LogProb APIS ? why 
+
+### Top-k 
+
+so before we send logits to softwmax function, we can only allow k values to be sejnd. The size of logits is queal to vocabular size and computing softwtmax is expensive compute. 
+
+
+### Top-p 
+
+Instead of having fixed k size logitst , we can make it dynamic. So this value of p depends on cumulative probablities , we start with descending order of logits probablities and then we can stop from descending order if the sum of probabities is equal to k . 
+
+Emeperically it works great than top-k. 
+
+How does a model knows when to stop? 
+
+1. Restirct no of toeksn? but we could have incomplete resposne
+
+2. Use End of Sequence toekn ? liek 
+
+3. What else?
