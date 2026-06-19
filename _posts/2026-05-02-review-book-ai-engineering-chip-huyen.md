@@ -613,23 +613,33 @@ Fine tuning is used to refine the model. Two famous post training methods are
 
 2. **Preference fine tuning**: Fine tune the model so that it aligns with human preferences. This can use **Reinforcement Learning** (RL), like RLHF, but not all preference tuning has to be RL. There are also methods like DPO.
 
-## Sampling
+### Sampling
 
-Sampling is the process of picking the next output token. A model generates a logits vector. The size of this vector is equal to the vocabulary size. Next we send these logits to a softmax function to convert them into probabilities. Then we choose one token from this probability distribution.
+Sampling is the final step where we pick the next output token from a probability distribution. The full decoding pipeline is usually:
+
+1. The model generates a **logits vector**. The size of this vector is equal to the vocabulary size.
+
+2. Some decoding rules transform logits before softmax. For example, temperature rescales logits, and grammar constraints can mask illegal tokens by setting their logits to negative infinity.
+
+3. Softmax converts logits into probabilities.
+
+4. Some decoding rules filter the probability distribution. For example, top-k keeps the k most likely tokens, while top-p keeps the smallest set of tokens whose cumulative probability reaches p. Implementations often apply this by masking logits and then re-running softmax to re-normalize.
+
+5. Sampling chooses one token from the final probability distribution. If we always choose the highest-probability token, that is greedy decoding rather than random sampling.
 
 
-### Temperature
+#### Temperature
 
-Sampling technique where you divide each value in logits vector with temperature before softmax. So if temperature is high, the probability distribution becomes flatter. The most likely token is still likely, but less dominant. So the model with high temperature is less deterministic and more creative.
+Decoding parameter where you divide each value in logits vector with temperature before softmax. So if temperature is high, the probability distribution becomes flatter. The most likely token is still likely, but less dominant. So the model with high temperature is less deterministic and more creative.
 
 With low temperature, the probability distribution becomes sharper. The most likely token becomes even more likely, so the model is more deterministic. In practice, temperature of zero usually means greedy decoding: always pick the token with the highest probability.
 
 
-### Greedy Sampling
+#### Greedy Sampling
 
 Choose the token with highest probability. Works great for tasks where you want a stable answer, like classification or extraction. It can be too boring or brittle for open ended generation.
 
-### LogProbabilities
+#### LogProbabilities
 
 Anywhere you apply log, think of squeezing it. Usually with probabilities with long end tail, log of those values is easier to comprehend and compute with. In language models, log probabilities are usually natural logs of softmax probabilities. They are useful because multiplying many small probabilities can underflow, but adding log probabilities is stable.
 
@@ -637,20 +647,20 @@ Also most companies hide their LogProb APIs? why
 
 Maybe because logprobs expose more about model behavior and make APIs harder to support consistently across model families. But they are useful for debugging, classification confidence, evals, autocomplete, and comparing possible outputs.
 
-### Top-k 
+### Top-k
 
-Top-k means only allow the top k most likely tokens to be sampled from. The rest are masked out. Then the probabilities are re-normalized over only these k tokens.
+Top-k means only allow the top k most likely tokens to be sampled from. The rest are filtered out. In implementation, this is usually done by setting their logits to negative infinity and then applying softmax again, which re-normalizes the probability distribution over only these k tokens.
 
 This is not mainly to make softmax cheaper. The model still produces logits for the whole vocabulary. Top-k is mainly a decoding control so that very unlikely tokens are not sampled.
 
 
-### Top-p 
+#### Top-p
 
 Instead of having fixed k size logits, we can make it dynamic. We sort tokens by probability in descending order and keep adding tokens until their cumulative probability is at least p. Then we sample only from this smaller set.
 
 Empirically it often works better than top-k because the candidate set can be small when the model is confident and larger when the model is uncertain.
 
-How does a model know when to stop? 
+How does a model know when to stop?
 
 1. Restrict number of tokens? but we could have incomplete response
 
@@ -659,3 +669,58 @@ How does a model know when to stop?
 3. Use stop sequences? The application can define strings like `\n\nUser:` or `</answer>` and stop generation when they appear.
 
 4. The API or serving system can also stop because of max output tokens, safety filters, tool call boundaries, or structured output constraints.
+
+## June 14, 2026
+
+
+### Prompting
+
+You can use prompting to instruct a model to generate **structured output** like JSON or SQL. But prompting alone is a soft constraint: the model can still emit invalid JSON, miss a field, or add extra text.
+
+### Constrained Decoding
+
+We already know decoding controls like **temperature**, **top-k**, and **top-p**. The model first produces a **logits vector**, then decoding rules transform or filter the possible next tokens before the final token is sampled.
+
+With **constrained decoding**, we restrict which tokens are legal at each generation step. This is stronger than just asking nicely in the prompt.
+
+Examples:
+
+- If output must be JSON, after `{` the decoder can allow only tokens that keep the JSON valid.
+- If a field must be one of `["small", "medium", "large"]`, the decoder can block tokens that cannot lead to one of those values.
+- If output must match a regex or grammar, the decoder masks out tokens that violate that grammar.
+
+A **classifier head** is different. It predicts a class from model representations. It can be used for classification, reranking, or moderation, but it is not the usual meaning of constrained sampling.
+
+### Limitations of Language Models
+
+1. **Inconsistency**: The same prompt can produce different answers when decoding is stochastic. Even with low temperature, small prompt changes can change the answer.
+
+2. **Hallucination**: The model generates text that sounds plausible but is false, unsupported, or not grounded in the provided context. It is not simply "answering something it was not trained on." A model can hallucinate about common facts too.
+
+3. **Lack of calibrated confidence**: The model may sound equally confident when it is correct, uncertain, or wrong.
+
+### Snowballing hallucination
+
+Snowballing hallucination happens when the model makes one incorrect assumption, then builds more reasoning on top of it.
+
+Example: "Is 1337 a prime number?"
+
+Incorrect path: "Yes, 1337 is prime because it is not divisible by small primes."
+
+Correct path: 1337 is not prime because `1337 = 7 * 191`.
+
+Once the model commits to the wrong first step, the rest of the explanation can become a justification of that mistake.
+
+### Underflow Problem
+
+Probabilities are between 0 and 1. When we multiply many small probabilities together, the result can become so tiny that a computer rounds it to zero. This is called **numerical underflow**.
+
+Instead of multiplying probabilities directly:
+
+$$P(x_1, x_2, x_3) = P(x_1) * P(x_2) * P(x_3)$$
+
+we usually add log probabilities:
+
+$$\log P(x_1, x_2, x_3) = \log P(x_1) + \log P(x_2) + \log P(x_3)$$
+
+This is more numerically stable and easier to compare across candidate outputs.
