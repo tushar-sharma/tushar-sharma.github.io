@@ -724,3 +724,189 @@ we usually add log probabilities:
 $$\log P(x_1, x_2, x_3) = \log P(x_1) + \log P(x_2) + \log P(x_3)$$
 
 This is more numerically stable and easier to compare across candidate outputs.
+
+## June 19, 2026
+
+Language models are **open-ended** models. They can produce many possible valid outputs, not just one fixed label.
+
+Closed-ended models have a fixed output space. Example: classification model outputs `spam` or `not spam`.
+
+Open-ended models have an almost unlimited output space. Example: summarization, chat, code generation, and reasoning. This makes them powerful, but also harder to test because there may be many acceptable answers and many subtle failure modes.
+
+### Entropy
+
+In Claude Shannon's information theory, **entropy** measures uncertainty.
+
+For language models, entropy tells us how unpredictable the next token is.
+
+- Low entropy: the next token is obvious.
+- High entropy: many next tokens are plausible.
+
+Information is measured with negative log probability:
+
+$$
+I(x) = -\log_2 P(x)
+$$
+
+If an event has probability `0.5`, then:
+
+$$
+-\log_2(0.5) = 1
+$$
+
+So an event with 50% probability carries **1 bit** of information. This means one yes/no question is enough to resolve that uncertainty.
+
+If an event is very likely, it carries little information. If an event is surprising, it carries more information.
+
+Conceptually, different logs measure the same thing in different units:
+
+- `log_2`: measures information in **bits**. Common in information theory and compression.
+- `ln` or `log_e`: measures information in **nats**. Common in machine learning because calculus with `e` is cleaner.
+- `log_10`: measures information in decimal digits. Common in science/engineering scales.
+
+The base changes the unit, not the idea.
+
+$$
+\log_2(x) = \frac{\ln(x)}{\ln(2)}
+$$
+
+### Cross-Entropy
+
+**Cross-entropy** measures how hard it is for a model to predict the true next token.
+
+In language model training:
+
+- `P` is the real data distribution.
+- `Q` is the model's learned distribution.
+- Lower cross-entropy means the model assigns higher probability to the correct tokens.
+- Training tries to minimize cross-entropy.
+
+Practical meaning: if the model sees `"The capital of France is"` and gives high probability to `"Paris"`, loss is low. If it gives low probability to `"Paris"`, loss is high.
+
+### KL Divergence
+
+**KL divergence** measures how different one probability distribution is from another.
+
+$$
+D_{KL}(P \Vert Q) = H(P, Q) - H(P)
+$$
+
+Where:
+
+- `P` is the true distribution.
+- `Q` is the model's learned distribution.
+- `H(P)` is the entropy of the real data.
+- `H(P, Q)` is the cross-entropy when using the model to predict real data.
+
+`P || Q` is read as "P compared to Q". It is not symmetric:
+
+$$
+D_{KL}(P \Vert Q) \ne D_{KL}(Q \Vert P)
+$$
+
+Intuition: KL divergence is the extra surprise or extra cost we pay because the model's distribution is not the same as the true distribution.
+
+Simple example:
+
+```text
+True distribution P:
+cat = 0.8
+dog = 0.2
+
+Model distribution Q:
+cat = 0.5
+dog = 0.5
+```
+
+The model is not completely wrong, but it is less confident about `cat` than the real data. KL divergence measures that mismatch.
+
+A model's job during pretraining is to learn the probability distribution of the training data.
+
+Useful compression-style metrics:
+
+- **Bits per character**: average bits needed to encode each character.
+- **Bits per byte**: average bits needed to encode each byte.
+
+Lower is better because the model is less surprised by the data.
+
+### Perplexity
+
+**Perplexity** is another way to express cross-entropy. It roughly means: "how many equally likely choices the model feels it has at each step."
+
+If entropy is measured in bits:
+
+$$
+PPL = 2^H
+$$
+
+If cross-entropy is measured in nats:
+
+$$
+PPL = e^H
+$$
+
+Low perplexity means the model is confident and usually assigns high probability to the correct next token.
+
+High perplexity means the model is uncertain; many tokens seem possible.
+
+For a token sequence `x_1, x_2, ..., x_n`:
+
+$$
+PPL(x_1, ..., x_n) = P(x_1, ..., x_n)^{-\frac{1}{n}}
+$$
+
+Using next-token probabilities:
+
+$$
+PPL = \left(\prod_{i=1}^{n} \frac{1}{P(x_i \mid x_1, ..., x_{i-1})}\right)^{\frac{1}{n}}
+$$
+
+Important practical note: post-training can sometimes increase perplexity while making the model more useful. Why? Because instruction tuning and RLHF may teach the model to follow human preferences instead of only imitating raw internet text.
+
+### Embeddings
+
+An **embedding** is a vector: a list of numbers representing the meaning of something.
+
+Text, images, audio, users, products, or documents can all be converted into embeddings.
+
+The useful property: similar meanings tend to have nearby vectors.
+
+Example: `sad` and `disappointed` should be closer to each other than `sad` and `happiness`.
+
+We can compare embeddings using metrics like **cosine similarity**.
+
+Practical uses:
+
+- semantic search
+- recommendations
+- clustering
+- duplicate detection
+- RAG document retrieval
+
+### CLIP Technology
+
+**CLIP** connects text and images in the same embedding space.
+
+It has two encoders:
+
+- Text encoder: converts text into a text embedding.
+- Image encoder: converts an image into an image embedding.
+
+If an image and a caption match, their embeddings should be close.
+
+Practical use: search images using text. For example, query `"a dog playing in snow"` and retrieve images whose embeddings are close to that text embedding.
+
+### How Do We Evaluate Models?
+
+Evaluation is harder for open-ended models because there is often no single correct answer.
+
+Useful evaluation dimensions:
+
+- **Accuracy**: is the answer correct?
+- **Faithfulness**: is the answer supported by the provided context?
+- **Helpfulness**: does it actually solve the user's task?
+- **Safety**: does it avoid harmful or disallowed output?
+- **Consistency**: does it give stable answers across similar prompts?
+- **Latency and cost**: is it fast and cheap enough for the product?
+
+For RAG systems, faithfulness is especially important. The model should answer from the retrieved context, not from unsupported memory or guesses.
