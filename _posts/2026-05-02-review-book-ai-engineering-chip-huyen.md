@@ -10,20 +10,15 @@ tags:
  - ai
  - llm
 mathjax: true
+book_notes: true
 ---
 
 These are my learning notes and reflections while reading "AI Engineering: Building Applications with Foundation Models" by Chip Huyen. I plan to update this periodically as I progress through the book.<!-- truncate_here -->
 
-<link rel="stylesheet" href="{{ root_url }}/css/books.css" />
-
 <!-- disclaimer -->
-<div style="margin: 0 auto" class="cl disclaimer">
-<span style="color:black"> &nbsp;&nbsp;These are my rough notes while reading the book.
-</span> 
-</div> <br>
-
-## Overview
-This book focuses on the engineering aspects of building applications using foundation models (LLMs). It covers the full lifecycle from understanding models to deployment and monitoring.
+<div class="book-notes-disclaimer">
+  These are my rough notes while reading the book.
+</div>
 
 ---
 

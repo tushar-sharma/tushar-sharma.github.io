@@ -7,6 +7,11 @@
   <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
     {% include head.html %}
     {% seo %}
+    {% if page.book_notes == true %}
+      {% if page.tags contains 'books' %}
+        <link rel="stylesheet" href="{{ root_url }}/css/book-notes.css">
+      {% endif %}
+    {% endif %}
   </head>
   <body>
     <noscript>
@@ -30,5 +35,10 @@
         {% include footer.html %}
       </footer>
     </div>
+    {% if page.book_notes == true %}
+      {% if page.tags contains 'books' %}
+        <script src="{{ root_url }}/js/book-notes.js"></script>
+      {% endif %}
+    {% endif %}
   </body>
 </html>
