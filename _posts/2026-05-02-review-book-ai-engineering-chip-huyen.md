@@ -910,3 +910,101 @@ Useful evaluation dimensions:
 - **Latency and cost**: is it fast and cheap enough for the product?
 
 For RAG systems, faithfulness is especially important. The model should answer from the retrieved context, not from unsupported memory or guesses.
+
+## June 21, 2026
+
+### Prompt engineering
+
+Prompt engineering means designing the input to a model so that it is more likely to produce the behavior you want. It is an inference-time technique: it changes the tokens sent to the model, but it does **not** update the model's weights.
+
+The model's **weights** are the learned parameters produced during training. If the weights change, we are doing some form of training or fine-tuning. If only the prompt changes, we are steering the model at inference time.
+
+Most chat APIs separate the prompt into roles:
+
+- **System prompt**: high-level instructions about behavior, constraints, persona, safety rules, output format, or domain expectations.
+- **User prompt**: the concrete task or question from the user.
+- **Assistant messages**: previous model responses, often included in multi-turn conversations.
+- **Tool messages**: outputs returned by tools, when the model is used in an agentic or tool-calling setup.
+
+Example:
+
+```text
+System: You are a dental assistant. Give scientifically grounded information and recommend professional care when symptoms could be serious.
+
+User: I have had a toothache since yesterday. What should I do?
+```
+
+Internally, chat APIs usually serialize these role-based messages into one token sequence before sending them through the model. The exact formatting depends on the model provider and the model's chat template.
+
+Important interview point: instruction placement can matter because transformers do not treat all positions equally. Models can show **position bias** or **lost-in-the-middle** behavior, where information near the beginning or end of the context may be easier to use than information buried in the middle. In practice, follow the provider's chat template and put durable behavioral instructions in the system message instead of hiding them deep inside the user prompt.
+
+### In context learning
+
+Models update their weights during **pretraining**, **post-training**, and **fine-tuning**.
+
+- **Pretraining**: the model learns general language and world patterns from large datasets, usually with next-token prediction.
+- **Post-training**: the model is adapted for usefulness, instruction following, safety, preference alignment, or domain behavior. This can include supervised fine-tuning and reinforcement learning from feedback.
+- **Fine-tuning**: the model is trained further on a narrower dataset for a specific task, domain, style, or behavior.
+
+**In-context learning** is different. The model is given instructions, examples, or reference material inside the prompt, and it uses them to perform the current task. The model appears to "learn" from the examples, but its weights do not change. Once the context is gone, that adaptation is gone too.
+
+The examples included in a prompt are called **shots**:
+
+- **Zero-shot**: no examples are given; the model must infer the task from the instruction alone.
+- **One-shot**: one example is given.
+- **Few-shot**: a few examples are given.
+
+Few-shot examples help most when the task has an ambiguous format, unusual label space, or domain-specific convention. Good examples should be representative, correctly labeled, and formatted exactly like the expected output.
+
+### Context length
+
+Context length is the maximum number of tokens the model can consider in one request. It includes system messages, user messages, assistant messages, tool outputs, retrieved documents, few-shot examples, and the generated output tokens.
+
+Longer context is useful because you can provide more instructions, conversation history, documents, examples, or tool results. But it also has tradeoffs:
+
+- It increases inference cost because more tokens must be processed.
+- It can increase latency, especially during the prompt-processing/prefill stage.
+- It uses more memory because transformer inference stores attention-related state in the **KV cache**.
+- It can make retrieval harder if important details are buried in irrelevant text.
+
+The **KV cache** stores key and value tensors for previous tokens so the model does not recompute attention over the entire prefix for every generated token. During generation, each new token attends to prior tokens through this cache. Larger contexts therefore require more memory, commonly in GPU VRAM during hosted inference.
+
+> A larger context window does not mean the model understands everything equally well. The model may still miss facts, over-focus on recent text, or ignore information in the middle. 
+
+### Best prompt engineering practices
+
+1. **Be specific about the task**
+
+   State the goal, audience, constraints, and success criteria. Vague prompts produce vague outputs.
+
+2. **Provide relevant context**
+
+   Include only information the model needs. More context is not always better if it adds noise.
+
+3. **Specify the output format**
+
+   Ask for JSON, a table, bullet points, code, a rubric, or a fixed schema when downstream processing matters.
+
+4. **Use roles when they clarify behavior**
+
+   A role can help set expectations, such as "act as a senior ML engineer reviewing this design." Avoid decorative roles that do not change the task.
+
+5. **Use examples**
+
+   Few-shot examples are often stronger than long explanations. Show the model what good input-output pairs look like.
+
+6. **Ask for reasoning carefully**
+
+   Prompts like "think step by step" can improve performance on reasoning tasks, but they also increase token cost and may produce verbose or unreliable explanations. A practical pattern is to ask the model to solve the problem carefully, then return a concise explanation or final answer.
+
+7. **Ask the model to check its work**
+
+   Self-critique can catch obvious mistakes, especially for formatting, missing requirements, or inconsistent assumptions. It is not a guarantee of correctness, so use external checks when the task is high-stakes.
+
+8. **Decompose complex tasks**
+
+   Break large tasks into smaller stages: extract facts, identify constraints, reason over options, then produce the answer. This is often more reliable than asking for everything in one pass.
+
+9. **Use automatic prompt optimization when the task is repeated**
+
+   Tools can search for better prompts using evaluation datasets, but they can be expensive because they require many model calls. They are most useful when you have a measurable target, such as accuracy, extraction quality, latency, or cost.
