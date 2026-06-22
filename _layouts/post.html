@@ -2,6 +2,12 @@
 layout: default
 root: true
 ---
+{% assign is_book_notes = false %}
+{% if page.book_notes == true %}
+  {% if page.tags contains 'books' %}
+    {% assign is_book_notes = true %}
+  {% endif %}
+{% endif %}
 <link rel="stylesheet" href="{{ root_url }}/css/search.css" />
 <link rel="stylesheet" href="{{ root_url }}/css/toc.css" />
 <script src="{{ root_url }}/js/copyClipboard.js" type="text/javascript"></script>
@@ -55,9 +61,17 @@ root: true
      </div>
   {% endif %}
 
-  {{ truncated_post.last }}
+  {% if is_book_notes %}
+    {% include book_notes_content.html content=truncated_post.last %}
+  {% else %}
+    {{ truncated_post.last }}
+  {% endif %}
 {% else %}
- {{ truncated_post.last }}
+ {% if is_book_notes %}
+    {% include book_notes_content.html content=truncated_post.last %}
+  {% else %}
+    {{ truncated_post.last }}
+  {% endif %}
 {% endif %}
 
 <!-- this is for pagination -->
