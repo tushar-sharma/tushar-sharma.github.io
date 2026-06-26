@@ -1,6 +1,6 @@
 ---
 layout: post
-title: boolean vs Boolean in Java
+title: Use Wrapper Boolean for Optional PATCH Fields in Java
 image: https://unsplash.com/photos/tPtP2IXnSm0/download?w=437
 thumb: https://unsplash.com/photos/tPtP2IXnSm0/download?w=437
 author: tushar sharma
