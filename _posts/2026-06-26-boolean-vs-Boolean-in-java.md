@@ -1,13 +1,15 @@
 ---
 layout: post
 title: boolean vs Boolean in Java
-image: https://unsplash.com/photos/tQagUWpAx5k/download?w=437
-thumb: https://unsplash.com/photos/tQagUWpAx5k/download?w=437
+image: https://unsplash.com/photos/tPtP2IXnSm0/download?w=437
+thumb: https://unsplash.com/photos/tPtP2IXnSm0/download?w=437
 author: tushar sharma
 category: blog
 tags:
  - java
 ---
+
+What's the difference between boolean and Boolean in Java? At first, they look almost the same. Both can hold true or false.<!-- truncate_here -->
 
 What's the difference between `boolean` and `Boolean` in Java?
 
