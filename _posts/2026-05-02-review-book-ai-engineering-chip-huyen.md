@@ -1027,7 +1027,7 @@ Solution:
 
 - Limiting secrets or priviledged instructions in model visible context
 
-```text
+
 ### Retrieval-Augmented Generation
 
 RAG is useful when the model needs access to private, changing, or long-tail knowledge that is not reliably stored in its parameters. The system retrieves relevant external context and gives it to the model at generation time.
