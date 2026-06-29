@@ -1090,11 +1090,7 @@ The brute-force nearest-neighbor approach compares the query vector with every v
 
 Approximate nearest neighbor search, or ANN, speeds this up by searching an index that returns very close candidates without checking every vector exactly. The tradeoff is usually recall versus latency and cost.
 
-```text
-Exact nearest-neighbor search gives the best recall but does not scale well.
-ANN indexes trade a small amount of recall for much lower latency, which is usually
-acceptable in production RAG systems if we measure retrieval quality end to end.
-```
+Exact nearest-neighbor search gives the best recall but does not scale well. ANN indexes trade a small amount of recall for much lower latency, which is usually
 
 What to tune:
 
