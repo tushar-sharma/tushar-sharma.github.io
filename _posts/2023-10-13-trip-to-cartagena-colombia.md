@@ -43,7 +43,7 @@ I also took [ATV adventures](https://www.viator.com/tours/Cozumel/ATV-Ride-to-th
 <iframe
   style="position: relative;  width: 100%;"
    height="400"
-	   src="{{ root_url }}/encrypted/{{ page.path | split:'/'  | last | replace: '.md' '' }}.html"
+	   src="{{ root_url }}/encrypted/{{ page.path | split:'/'  | last | replace: '.md', '' }}.html"
   frameborder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
