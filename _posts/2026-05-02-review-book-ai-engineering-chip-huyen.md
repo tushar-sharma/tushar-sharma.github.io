@@ -5,7 +5,7 @@ thumb: 'https://unsplash.com/photos/Ne2ANNXGW6M/download?w=437'
 image: 'https://unsplash.com/photos/Ne2ANNXGW6M/download?w=437'
 author: tushar sharma
 category: blog
-tags: 
+tags:
  - books
  - ai
  - llm
@@ -104,10 +104,10 @@ $$
 
 **Fine-tuning** means updating those weights using additional training data so the model becomes better at a specific task, domain, or style. This changes the model itself, unlike prompting.
 
-### Model development 
+### Model development
 
  - come up with model architecture
- - train it 
+ - train it
  - fine tune it
 
 #### Training the model
@@ -132,10 +132,10 @@ Foundation models are autoregressive, so tokens are generated sequentially. That
 
 A LLM generates text one token a time. To choose a next token, the model uses its {% recall vocabulary %} The model's **vocabulary** is a fixed lookup table mapping every known token to a unique number (ID). The model never sees raw text — only sequences of these IDs.{% endrecall %} and calculates a probability score for each one. **Sampling** is actual process of selecting the **next token** from these ranked probablities.
 
-Lets say, the user gave the following prompt to the model 
+Lets say, the user gave the following prompt to the model
 
 ```
-The cat sat on the 
+The cat sat on the
 ```
 
 The model consider all tokens in it's vocabulary. Example:
@@ -158,7 +158,7 @@ In contrast, **higher temperature**, flattens the distribution, increasing the c
 
 > use lower temperature for more deterministic output. Higher temperature for creative outputs
 
---- 
+---
 
 ### Embeddings
 
@@ -172,7 +172,7 @@ Similarly, machine learning models can use points in much higher-dimensional spa
 
 Each coordinate captures some learned feature or characteristic. So, an **embedding** is essentially a coordinate (vector) in a high-dimensional space that represents information in a numerical form.
 
-When text is given to an LLM, it first goes through **tokenization**, where the input is split into tokens. These tokens are then mapped to a unique ID. Later, the model converts these IDs into embedding vectors. 
+When text is given to an LLM, it first goes through **tokenization**, where the input is split into tokens. These tokens are then mapped to a unique ID. Later, the model converts these IDs into embedding vectors.
 
 #### Static embeddings
 
@@ -221,12 +221,12 @@ Common source of training data is **common crawl**. Google's **Med-PalM2** combi
 
 LLMs are based on **transformer** architecture. It relies on **attention mechanism**.
 
-> TODO: what's attention mechanism? 
+> TODO: what's attention mechanism?
 
-Before transformers, many sequence-to-sequence models used **RNNs (Recurrent Neural Networks)**. 
+Before transformers, many sequence-to-sequence models used **RNNs (Recurrent Neural Networks)**.
 
 ```text
-seq2seq = RNN + Attention 
+seq2seq = RNN + Attention
 
 LLM = Attention
 ```
@@ -322,12 +322,12 @@ In this session, I explored the evolution of model architectures, the mechanics 
 
 ### From Seq2Seq to Transformers
 
-Historically, machine translation and sequence modeling relied heavily on the **Seq2Seq (Sequence-to-Sequence)** architecture. 
+Historically, machine translation and sequence modeling relied heavily on the **Seq2Seq (Sequence-to-Sequence)** architecture.
 
 #### 1. Seq2Seq (The RNN Era)
 Seq2Seq models typically use **Recurrent Neural Networks (RNNs)** for both the encoder and the decoder.
 *   **What is an RNN?** A Recurrent Neural Network is a type of neural network designed for sequential data. It processes inputs one by one, maintaining a "hidden state" that carries information from previous steps to the current one.
-*   **The Process:** 
+*   **The Process:**
     1.  The **Encoder** processes the input tokens sequentially and generates a final hidden state (a "context vector").
     2.  The **Decoder** takes this final hidden state and generates output tokens one by one.
 *   **The Bottleneck:** Because RNNs process tokens sequentially, they are slow and struggle with long-range dependencies (the "vanishing gradient" problem).
@@ -426,7 +426,7 @@ A Transformer model is essentially a stack of identical **Transformer Blocks**. 
 This is where the model "looks" at other tokens. It includes:
 *   **Linear Layers** to project the input into Q, K, and V vectors.
 *   **Multi-Head Attention** to capture different types of relationships.
-*   **Output Projection Matrix:** After the multiple attention heads are concatenated, we apply a projection matrix. 
+*   **Output Projection Matrix:** After the multiple attention heads are concatenated, we apply a projection matrix.
     *   **What is it?** It's a weight matrix that transforms the concatenated output back into the model's hidden dimension (e.g., 4096). This "mixes" the information from all heads.
 
 #### 2. The MLP (Multi-Layer Perceptron) Module
@@ -441,7 +441,7 @@ The most famous activation function is **ReLU (Rectified Linear Unit)**:
 $$ReLU(x) = \max(0, x)$$
 
 *   **What it does:** It keeps positive numbers as they are and converts all negative numbers to zero.
-*   **Why convert negatives to zero?** 
+*   **Why convert negatives to zero?**
     1.  **Non-linearity:** Without a non-linear function, multiple layers of a neural network would just collapse into a single linear transformation (simple matrix multiplication). Non-linearity allows the model to learn complex, non-linear patterns.
     2.  **Sparsity:** By setting negatives to zero, it "deactivates" certain neurons, making the network's representation sparse and efficient.
     3.  **Efficiency:** It is computationally very cheap to calculate.
@@ -529,9 +529,9 @@ The embedding matrix is a static lookup table of size $[V \times d_{model}]$, wh
 
 The positional matrix is a static table of shape $[c \times d_{model}]$, where $c$ is the limit of tokens (context window) that a model can handle.
 
-$$\text{Input Matrix } (X) = \begin{bmatrix} 
-\text{"What"} \\ \text{"is"} \\ \text{"the"} \\ \text{"capital"} \\ \text{"of"} \\ \text{"North"} \\ \text{"Carolina"} 
-\end{bmatrix} = 
+$$\text{Input Matrix } (X) = \begin{bmatrix}
+\text{"What"} \\ \text{"is"} \\ \text{"the"} \\ \text{"capital"} \\ \text{"of"} \\ \text{"North"} \\ \text{"Carolina"}
+\end{bmatrix} =
 \begin{bmatrix}
 0.15 & -0.23 & 0.81 & \dots & 0.04 \\
 0.91 & 0.02 & -0.45 & \dots & 0.12 \\
@@ -539,7 +539,7 @@ $$\text{Input Matrix } (X) = \begin{bmatrix}
 0.54 & -0.11 & 0.99 & \dots & 0.33 \\
 0.22 & 0.44 & -0.01 & \dots & 0.76 \\
 0.88 & -0.92 & 0.34 & \dots & -0.11 \\
--0.41 & 0.15 & 0.62 & \dots & 0.55 
+-0.41 & 0.15 & 0.62 & \dots & 0.55
 \end{bmatrix}_{7 \times 10}$$
 
 Next, we generate **Q, K, V** vectors.
@@ -559,19 +559,19 @@ $$\text{Scores} = Q [7 \times \cancel{10}] \cdot K^T [\cancel{10} \times 7] \rig
 
 Scores is a $[7 \times 7]$ grid. This corresponds to the $seq \times seq$ dimensions.
 
-$$\text{Scores Matrix} = \begin{aligned} &\quad \text{Wht} \quad \text{is} \quad \text{the} \quad \text{cap} \quad \text{of} \quad \text{Nth} \quad \text{Car} \\ &\begin{bmatrix} 
+$$\text{Scores Matrix} = \begin{aligned} &\quad \text{Wht} \quad \text{is} \quad \text{the} \quad \text{cap} \quad \text{of} \quad \text{Nth} \quad \text{Car} \\ &\begin{bmatrix}
 8.2 & 0.1 & 0.4 & 1.2 & 0.2 & 0.5 & 0.3 \\
 0.2 & 6.4 & 1.1 & 0.1 & 0.9 & 0.2 & 0.1 \\
 0.5 & 0.9 & 4.1 & 2.2 & 0.3 & 0.4 & 0.6 \\
 1.1 & 0.2 & 2.1 & 9.5 & 0.4 & 7.8 & 8.1 \\
 0.1 & 0.8 & 0.2 & 0.5 & 5.5 & 0.1 & 0.2 \\
 0.4 & 0.1 & 0.3 & 8.2 & 0.1 & 9.1 & 9.4 \\
-0.2 & 0.2 & 0.5 & 8.0 & 0.2 & 9.3 & 9.7 
+0.2 & 0.2 & 0.5 & 8.0 & 0.2 & 9.3 & 9.7
 \end{bmatrix} \end{aligned}$$
 
 We run this matrix through **softmax** row by row.
 
-**Multiply by V**: 
+**Multiply by V**:
 
 Attention $[7 \times 10]$ = softmax score $[7 \times 7] \times V [7 \times 10]$
 
@@ -587,14 +587,14 @@ When we say **Llama-13B**, it means that it has 13 billion parameters.
 
 A **parameter** is a value learned during model training (like weights). A **hyperparameter** is a setting you configure outside the learning process, like temperature, model dimensions, vocabulary size, etc.
 
---- 
+---
 
 **What is a sparse model?**
 A sparse model has a large percentage of zero-value parameters. It allows for more efficient data storage and computation. Then why use dense models? (Dense models often capture more complex patterns but are more expensive).
 
 **Mixtral 8x7B** = Mixture of Eight Experts (MoE). This means that not all parameters are active for every token; only a subset of "experts" is triggered.
 
-**FLOPs** is how we measure the computational cost of a model. FLOPs stands for Floating Point Operations. 
+**FLOPs** is how we measure the computational cost of a model. FLOPs stands for Floating Point Operations.
 
 **FLOP/s** (FLOPs per second) is different; it measures hardware performance.
 
@@ -602,9 +602,9 @@ A sparse model has a large percentage of zero-value parameters. It allows for mo
 
 A language model has two phases. Pre training and post training. Pre training mostly happens with self-supervised learning on a large amount of internet data. The data can be noisy and mixed quality, but the scale helps the model learn language, facts, patterns, and reasoning-like behavior.
 
-Fine tuning is used to refine the model. Two famous post training methods are 
+Fine tuning is used to refine the model. Two famous post training methods are
 
-1. **Supervised fine tuning**: Training the model on high quality instruction data. So a model is trained for not just **text completion** but on following instructions and conversations. 
+1. **Supervised fine tuning**: Training the model on high quality instruction data. So a model is trained for not just **text completion** but on following instructions and conversations.
 
 2. **Preference fine tuning**: Fine tune the model so that it aligns with human preferences. This can use **Reinforcement Learning** (RL), like RLHF, but not all preference tuning has to be RL. There are also methods like DPO.
 
@@ -638,7 +638,7 @@ Choose the token with highest probability. Works great for tasks where you want 
 
 Anywhere you apply log, think of squeezing it. Usually with probabilities with long end tail, log of those values is easier to comprehend and compute with. In language models, log probabilities are usually natural logs of softmax probabilities. They are useful because multiplying many small probabilities can underflow, but adding log probabilities is stable.
 
-Also most companies hide their LogProb APIs? why 
+Also most companies hide their LogProb APIs? why
 
 Maybe because logprobs expose more about model behavior and make APIs harder to support consistently across model families. But they are useful for debugging, classification confidence, evals, autocomplete, and comparing possible outputs.
 
@@ -964,7 +964,7 @@ Longer context is useful because you can provide more instructions, conversation
 
 The **KV cache** stores key and value tensors for previous tokens so the model does not recompute attention over the entire prefix for every generated token. During generation, each new token attends to prior tokens through this cache. Larger contexts therefore require more memory, commonly in GPU VRAM during hosted inference.
 
-> A larger context window does not mean the model understands everything equally well. The model may still miss facts, over-focus on recent text, or ignore information in the middle. 
+> A larger context window does not mean the model understands everything equally well. The model may still miss facts, over-focus on recent text, or ignore information in the middle.
 
 ### Best prompt engineering practices
 
@@ -1003,3 +1003,111 @@ The **KV cache** stores key and value tensors for previous tokens so the model d
 9. **Use automatic prompt optimization when the task is repeated**
 
    Tools can search for better prompts using evaluation datasets, but they can be expensive because they require many model calls. They are most useful when you have a measurable target, such as accuracy, extraction quality, latency, or cost.
+
+## June 28, 2026
+
+
+### Prompt Attacks
+
+Prompt attacks happen because an LLM sees the system prompt, developer instructions, retrieved context, tool outputs, and user message as one combined text sequence. The model does not naturally enforce a hard security boundary between trusted instructions and untrusted text.
+
+Types of attacks:
+
+- **Prompt extraction**: the attacker tries to reveal hidden system prompts, policies, credentials, or private context.
+- **Jailbreaks**: the attacker tries to override safety or behavior constraints.
+- **Indirect prompt injection**: malicious instructions are hidden inside retrieved documents, web pages, emails, tickets, PDFs, or tool outputs.
+- **Data exfiltration**: the attacker uses the model or tools to leak information the user should not receive.
+
+
+Solution:
+
+- reduce blast radius by treating retrieved text and user input as untrusted 
+
+- Limiting the tools the model call call
+
+- Limiting secrets or priviledged instructions in model visible context
+
+```text
+### Retrieval-Augmented Generation
+
+RAG is useful when the model needs access to private, changing, or long-tail knowledge that is not reliably stored in its parameters. The system retrieves relevant external context and gives it to the model at generation time.
+
+- It reduces hallucination by grounding answers in supplied documents.
+- It supports fresh or proprietary data without retraining the model.
+- It gives better auditability because answers can cite retrieved sources.
+- It introduces new failure modes: bad chunking, poor retrieval, stale indexes, irrelevant context, and prompt injection through retrieved text.
+
+A typical RAG pipeline:
+
+1. Ingest documents.
+2. Split documents into chunks.
+3. Convert chunks into searchable representations.
+4. Store them in an index.
+5. Retrieve top candidates for a query.
+6. Optionally rerank, filter, or compress candidates.
+7. Generate the answer using the retrieved context.
+8. Evaluate faithfulness, relevance, latency, and cost.
+
+### Sparse Retrieval
+
+Sparse retrieval is term-based retrieval. It works well when exact words, names, IDs, error codes, API fields, or domain terms matter. The classic representation is a sparse vector where most vocabulary dimensions are zero.
+
+Important concepts:
+
+- **Term frequency (TF)**: how often a term appears in a document.
+- **Inverse document frequency (IDF)**: how rare a term is across the corpus. Rare terms usually carry more signal.
+- **BM25**: a strong traditional ranking function that improves on raw TF-IDF by handling term saturation and document length normalization.
+- **Inverted index**: a mapping from each term to the documents that contain it, often with counts or positions. This is the core data structure behind systems like Elasticsearch.
+
+It's useful when User search for error code, product SKU, function name, exact phrase
+
+Tradeoffs:
+
+- **Pros**: fast, mature, interpretable, strong for exact terms, easier to debug.
+- **Cons**: weaker for synonyms, paraphrases, semantic similarity, and vague natural-language queries.
+
+### Dense Retrieval
+
+Dense retrieval represents queries and documents as embedding vectors. Similar meaning should map to nearby vectors, even when the exact words differ. This is useful for semantic search.
+
+Important concepts:
+
+- A document chunk is embedded into a dense vector.
+- A user query is embedded using the same or compatible embedding model.
+- The retriever finds nearby vectors using a similarity metric such as cosine similarity, dot product, or Euclidean distance.
+- The top-k nearest chunks are passed to the generation model.
+
+It' useful when you don't know exact words in a document. It can retrieve semantically related content e.g. matching "refund policy" with "returns and reimbursements," even if the terms do not exactly overlap.
+
+Tradeoffs:
+
+- **Pros**: strong semantic matching, good for paraphrases, useful for natural-language questions.
+- **Cons**: less interpretable, can miss exact identifiers, depends on embedding quality, and vector search infrastructure can be more complex.
+
+### Vector Search and ANN
+
+The brute-force nearest-neighbor approach compares the query vector with every vector in the database, then returns the most similar results. This is simple but too slow for large corpora.
+
+Approximate nearest neighbor search, or ANN, speeds this up by searching an index that returns very close candidates without checking every vector exactly. The tradeoff is usually recall versus latency and cost.
+
+```text
+Exact nearest-neighbor search gives the best recall but does not scale well.
+ANN indexes trade a small amount of recall for much lower latency, which is usually
+acceptable in production RAG systems if we measure retrieval quality end to end.
+```
+
+What to tune:
+
+- Chunk size and overlap.
+- Embedding model.
+- Similarity metric.
+- Top-k retrieval count.
+- ANN index parameters.
+- Reranking model.
+- Filtering by metadata such as tenant, date, permission, language, or document type.
+
+### Hybrid Retrieval
+
+A strong production answer is often hybrid retrieval: combine sparse and dense retrieval, then rerank. Sparse retrieval catches exact matches. Dense retrieval catches semantic matches. A reranker can then score the candidates more carefully.
+
+I would start with hybrid retrieval for high-value knowledge search. BM25 handles exact terms and identifiers, embeddings handle semantic similarity, and a reranker improves precision before the final context is sent to the LLM.
