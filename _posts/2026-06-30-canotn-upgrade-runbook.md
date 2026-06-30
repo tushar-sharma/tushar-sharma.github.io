@@ -125,15 +125,3 @@ ghcr.io/digital-asset/decentralized-canton-sync/docker/validator-app:0.6.8
 Restart the validator and monitor the logs until startup completes successfully.
 
 Verify that the validator reconnects to the participant and resumes normal operation.
-
----
-
-## Rollback Procedure
-
-If the upgrade must be reverted, perform the rollback in the opposite order.
-
-1. Downgrade the validator to **v0.6.7**.
-2. Confirm the validator has stopped cleanly or is running normally.
-3. Downgrade the participant to **v0.6.7**.
-4. Restart the participant.
-5. Restart the validator.
