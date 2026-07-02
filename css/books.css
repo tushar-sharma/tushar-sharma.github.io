@@ -1,0 +1,176 @@
+.cl{ color: rgb(51, 153, 204);
+     overflow:hidden; display: inline-block; }
+
+img.book {
+    height: 150px;
+    padding: 15px 15px 15px 0px;
+    max-width: 100px;
+}
+img.book_p {
+    height: 250px;
+    padding: 15px 15px 15px 0px;
+    max-width: 250px;
+}
+.rating{
+    width: 150px;
+}
+.rating2{
+    width: 200px;
+}
+h2.entry-title{
+    color: black;
+    text-decoration: none;
+    font-family: "Rokkitt", serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+nav#pagination span.next a, nav#pagination span.prev a {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid;
+}
+nav a, nav a:visited {
+    color: #080808;
+    text-decoration: none;
+    outline: 0;
+}
+nav#pagination span.next {
+    display: block;
+    float: right;
+}
+nav#pagination span.prev {
+    display: block;
+    float: left;
+}
+
+.disclaimer{
+   border-radius: 25px;
+   border: 2px solid rgb(51, 153, 204);
+   padding: 20px;
+   text-align: left;
+   word-wrap: break-word;
+   width: 100%;
+ }
+
+ .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+  }
+
+ .alert.success {background-color: #4CAF50;}
+
+ td{
+    line-height: 1.4;
+    color: #667;
+    letter-spacing: 0.015em;
+    hyphens: none;
+}
+
+select {
+    font-size: 1rem;
+    margin-left: 10px;
+    line-height: 1.5;
+    color: #495057;
+    font-size: 20px !important;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.cl {
+    white-space: nowrap !important;
+}
+
+.dataTables_filter {
+    float: right !important;
+}
+/* Hide the DataTables search label */
+.dataTables_filter label {
+    display: none !important;
+}
+
+/* begin - books progress*/
+.tbd {width: 0%; }  /* TBD */
+.hidden {
+    display: none;
+  }
+/* end -  book progress*/
+
+/* Term Popover Styles */
+.term-popover {
+    position: relative;
+    display: inline-block;
+    color: #39c;
+    border-bottom: 1px dashed #39c;
+    cursor: help;
+}
+
+.term-popover .popover-content {
+    visibility: hidden;
+    width: 350px;
+    background-color: #ffffff;
+    color: #333;
+    text-align: left;
+    border: 1px solid #39c;
+    border-radius: 8px;
+    padding: 15px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    pointer-events: none;
+    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.term-popover:hover .popover-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Popover Arrow */
+.term-popover .popover-content::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.term-popover .popover-content::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -9px;
+    border-width: 9px;
+    border-style: solid;
+    border-color: #39c transparent transparent transparent;
+}
+
+@media (max-width: 600px) {
+    .term-popover .popover-content {
+        width: 250px;
+    }
+}

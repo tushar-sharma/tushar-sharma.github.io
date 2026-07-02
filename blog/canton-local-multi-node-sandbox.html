@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta property="og:site_name" content="Tushar Sharma" />
+<title>Running a Local Multi-Node Canton Sandbox</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@tushar sharma">
+    <meta name="twitter:title" content="Running a Local Multi-Node Canton Sandbox">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://unsplash.com/photos/tQagUWpAx5k/download?w=437">
+    <meta property="og:image" content="https://unsplash.com/photos/tQagUWpAx5k/download?w=437">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true,
+          processEnvironments: true
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          renderActions: {
+            findScript: [10, function (doc) {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+              }
+            }, '']
+          }
+        },
+        svg: { fontCache: 'global' }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Running a Local Multi-Node Canton Sandbox | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3" />
+    <meta property="og:title" content="Running a Local Multi-Node Canton Sandbox" />
+    <meta name="author" content="tushar sharma" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="A single local Canton sandbox is good for fast contract development. It gives you one participant, one Ledger API, one JSON API, and a simple place to upload DAR files. But it does not help much when you want to reason about distributed behavior: multiple participants, party hosting, package vetting on more than one participant, and the role of a synchronizer." />
+    <meta property="og:description" content="A single local Canton sandbox is good for fast contract development. It gives you one participant, one Ledger API, one JSON API, and a simple place to upload DAR files. But it does not help much when you want to reason about distributed behavior: multiple participants, party hosting, package vetting on more than one participant, and the role of a synchronizer." />
+    <link rel="canonical" href="https://randomwits.com/blog/canton-local-multi-node-sandbox" />
+    <meta property="og:url" content="https://randomwits.com/blog/canton-local-multi-node-sandbox" />
+    <meta property="og:site_name" content="RandomWits" />
+    <meta property="og:image" content="https://unsplash.com/photos/tQagUWpAx5k/download?w=437" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2026-05-11T00:00:00+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="https://unsplash.com/photos/tQagUWpAx5k/download?w=437" />
+    <meta property="twitter:title" content="Running a Local Multi-Node Canton Sandbox" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"tushar sharma"},"dateModified":"2026-05-11T00:00:00+00:00","datePublished":"2026-05-11T00:00:00+00:00","description":"A single local Canton sandbox is good for fast contract development. It gives you one participant, one Ledger API, one JSON API, and a simple place to upload DAR files. But it does not help much when you want to reason about distributed behavior: multiple participants, party hosting, package vetting on more than one participant, and the role of a synchronizer.","headline":"Running a Local Multi-Node Canton Sandbox","image":"https://unsplash.com/photos/tQagUWpAx5k/download?w=437","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/canton-local-multi-node-sandbox"},"url":"https://randomwits.com/blog/canton-local-multi-node-sandbox"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.2/dist/tf.min.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.5.4/dist/speech-commands.min.js" crossorigin="anonymous"></script>
+        <script defer src="/js/dark_clap.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          .theme-controls {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: 8px;
+            vertical-align: middle;
+          }
+
+          .theme-control {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(51, 153, 204, 0.35);
+            border-radius: 4px;
+            background: transparent;
+            color: inherit;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 1;
+            padding: 0;
+          }
+
+          .theme-control:hover,
+          .theme-control:focus {
+            border-color: rgb(51, 153, 204);
+            outline: none;
+          }
+
+          .theme-control:focus-visible {
+            box-shadow: 0 0 0 2px rgba(51, 153, 204, 0.35);
+          }
+
+          .theme-control[aria-pressed="true"] {
+            background: rgba(51, 153, 204, 0.12);
+            border-color: rgb(51, 153, 204);
+          }
+
+          .theme-control.is-loading {
+            cursor: wait;
+            opacity: 0.6;
+          }
+
+          .theme-control.is-detected {
+            transform: scale(1.12);
+          }
+
+          .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+          }
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <span class="theme-controls" aria-label="Theme controls">
+            <button type="button" class="DarkReader_Button theme-control" title="Toggle dark mode" aria-label="Toggle dark mode" aria-pressed="false">
+              <span id="icon-dark" aria-hidden="true">☾</span>
+            </button>
+            <button type="button" class="ClapDark_Button theme-control" title="Clap listener off" aria-label="Start clap listener for dark mode" aria-pressed="false">
+              <span id="icon-clap-dark" aria-hidden="true">👏</span>
+            </button>
+            <span id="clap-dark-status" class="visually-hidden" aria-live="polite"></span>
+          </span>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- 
+ -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Running a Local Multi-Node Canton Sandbox</h1>
+        <p>Tags:  <a class="mytag" href="/tag/canton" title="View posts tagged with: canton">canton</a>    <a class="mytag" href="/tag/daml" title="View posts tagged with: daml">daml</a>    <a class="mytag" href="/tag/blockchain" title="View posts tagged with: blockchain">blockchain</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <p>A single local Canton sandbox is good for fast contract development. It gives you one participant, one Ledger API, one JSON API, and a simple place to upload DAR files. But it does not help much when you want to reason about distributed behavior: multiple participants, party hosting, package vetting on more than one participant, and the role of a synchronizer.</p>
+        <p>This tutorial builds a local three-participant Canton sandbox from scratch. The goal is not to reproduce a production Canton Network deployment. The goal is to create a small, deterministic development environment that helps you understand the moving pieces and test multi-participant behavior locally.</p>
+        <p>By the end, you will be able to run:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox-multinode
+</code></pre>
+          </div>
+        </div>
+        <p>and get:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>participant1 Ledger API: localhost:6865
+participant1 JSON API:   http://localhost:7575
+participant1 Admin API:  localhost:6866
+
+participant2 Ledger API: localhost:6875
+participant2 JSON API:   http://localhost:7576
+participant2 Admin API:  localhost:6876
+
+participant3 Ledger API: localhost:6895
+participant3 JSON API:   http://localhost:7577
+participant3 Admin API:  localhost:6896
+
+local synchronizer: sequencer + mediator
+</code></pre>
+          </div>
+        </div>
+        <p>You will also have a smoke test:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox-multinode-smoke
+</code></pre>
+          </div>
+        </div>
+        <p>that verifies all three participants are up and each one has the expected DAR packages available.</p>
+        <hr>
+        <h2 id="what-we-are-building">What We Are Building</h2>
+        <p>The local topology looks like this:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>                    local synchronizer
+                 +---------------------+
+                 | sequencer + mediator |
+                 +----------+----------+
+                            |
+          +-----------------+-----------------+
+          |                 |                 |
+   +-------------+   +-------------+   +-------------+
+   | participant1 |   | participant2 |   | participant3 |
+   | Ledger 6865  |   | Ledger 6875  |   | Ledger 6895  |
+   | Admin  6866  |   | Admin  6876  |   | Admin  6896  |
+   | JSON   7575  |   | JSON   7576  |   | JSON   7577  |
+   +-------------+   +-------------+   +-------------+
+</code></pre>
+          </div>
+        </div>
+        <p>There are three important points:</p>
+        <ol>
+          <li>
+            <code class="language-plaintext highlighter-rouge">participant1</code>, <code class="language-plaintext highlighter-rouge">participant2</code>, and <code class="language-plaintext highlighter-rouge">participant3</code> are distinct Canton participant nodes.</li>
+          <li>All three participants connect to the same local synchronizer.</li>
+          <li>All three participants receive the same DAR uploads.</li>
+        </ol>
+        <p>The existing single-node sandbox remains useful. It is still the fastest path when you only need one participant:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox
+</code></pre>
+          </div>
+        </div>
+        <p>The multi-node target is for a different use case: testing distributed assumptions.</p>
+        <hr>
+        <h2 id="the-concepts">The Concepts</h2>
+        <p>Before writing any files, it helps to separate the Canton concepts.</p>
+        <h3 id="participant">Participant</h3>
+        <p>A participant is the Canton node that applications connect to. It exposes the Ledger API and, in this setup, the JSON API. It hosts parties, stores the private ledger state visible to those parties, validates submissions, and participates in the Canton protocol.</p>
+        <p>If you run an application that submits Daml commands, it normally talks to a participant.</p>
+        <h3 id="party">Party</h3>
+        <p>A party is a Daml identity. Contracts are not hosted by random machines; they are visible to parties based on signatories, observers, controllers, and stakeholders.</p>
+        <p>A participant can host one or more parties. A party can also be hosted on more than one participant, which is the basis for party replication and migration scenarios.</p>
+        <h3 id="dar">DAR</h3>
+        <p>A DAR is a Daml Archive. It packages compiled Daml code and dependencies. A participant cannot use your templates unless the relevant DAR packages are uploaded and vetted.</p>
+        <p>In a one-node sandbox, the <code class="language-plaintext highlighter-rouge">daml sandbox --dar ...</code> shortcut hides much of this. In a multi-node setup, it is better to make the upload explicit.</p>
+        <h3 id="synchronizer">Synchronizer</h3>
+        <p>A synchronizer coordinates participants. It gives participants a shared ordering and transaction coordination mechanism without making all contract data public.</p>
+        <p>In a local development setup, the synchronizer is usually represented by:</p>
+        <ul>
+          <li>a sequencer</li>
+          <li>a mediator</li>
+        </ul>
+        <p>The sequencer handles ordered communication. The mediator participates in transaction confirmation and conflict resolution.</p>
+        <p>The official Canton docs describe a synchronizer as providing sequencing and mediating for independent participant nodes:</p>
+        <p><a href="https://docs.digitalasset.com/subnet/3.4/overview/index.html">Canton Overview</a></p>
+        <h3 id="validator">Validator</h3>
+        <p>In Canton Network or DevNet discussions, the word "validator" often refers to an application or deployment bundle around a Canton participant. It may automate onboarding, wallet behavior, party management, DAR upload, or network connection tasks.</p>
+        <p>For this local tutorial, we do not need a separate validator app. We only need:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>participant1
+participant2
+participant3
+sequencer1
+mediator1
+</code></pre>
+          </div>
+        </div>
+        <p>The bootstrap script below does the small amount of setup that a larger environment might automate elsewhere.</p>
+        <h3 id="canton-console-script">Canton Console Script</h3>
+        <p>Files ending in <code class="language-plaintext highlighter-rouge">.canton</code> are Canton console scripts. The Canton console is Scala-based. The official docs describe it as a REPL where commands must be valid Scala:</p>
+        <p><a href="https://docs.digitalasset.com/operate/3.4/howtos/operate/console/console.html">Canton Console Documentation</a></p>
+        <p>That is why the bootstrap file looks like Scala:</p>
+        <div class="language-scala highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="k">val</span> <span class="nv">synchronizerName</span> <span class="k">=</span> <span class="s">"local-multinode"</span>
+<span class="nv">participant1</span><span class="o">.</span><span class="py">synchronizers</span><span class="o">.</span><span class="py">connect_local</span><span class="o">(</span><span class="n">sequencer1</span><span class="o">,</span> <span class="n">synchronizerName</span><span class="o">)</span>
+<span class="nv">participant2</span><span class="o">.</span><span class="py">synchronizers</span><span class="o">.</span><span class="py">connect_local</span><span class="o">(</span><span class="n">sequencer1</span><span class="o">,</span> <span class="n">synchronizerName</span><span class="o">)</span>
+<span class="nv">participant3</span><span class="o">.</span><span class="py">synchronizers</span><span class="o">.</span><span class="py">connect_local</span><span class="o">(</span><span class="n">sequencer1</span><span class="o">,</span> <span class="n">synchronizerName</span><span class="o">)</span>
+</code></pre>
+          </div>
+        </div>
+        <hr>
+        <h2 id="prerequisites">Prerequisites</h2>
+        <p>This tutorial assumes:</p>
+        <ul>
+          <li>You have a Daml project that can produce one or more <code class="language-plaintext highlighter-rouge">.dar</code> files.</li>
+          <li>You have Daml SDK 3.4.x installed.</li>
+          <li>You have <code class="language-plaintext highlighter-rouge">dpm</code>, <code class="language-plaintext highlighter-rouge">jq</code>, <code class="language-plaintext highlighter-rouge">curl</code>, <code class="language-plaintext highlighter-rouge">make</code>, and Java available.</li>
+          <li>Your repository has a <code class="language-plaintext highlighter-rouge">versions.yaml</code> file containing the SDK version.</li>
+          <li>Your built DARs are copied to a <code class="language-plaintext highlighter-rouge">dist/</code> directory.</li>
+        </ul>
+        <p>Example <code class="language-plaintext highlighter-rouge">versions.yaml</code>:</p>
+        <div class="language-yaml highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="na">sdk_version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.4.10"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Example output after building:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>dist/
+|-- app-1.0.0.dar
+|-- enumerations-1.0.0.dar
+`-- models-v2-1.0.0.dar
+</code></pre>
+          </div>
+        </div>
+        <p>The exact DAR names do not matter. The Makefile target below uploads every <code class="language-plaintext highlighter-rouge">dist/*.dar</code>.</p>
+        <hr>
+        <h2 id="step-1-keep-the-single-node-sandbox">Step 1: Keep the Single-Node Sandbox</h2>
+        <p>Do not replace the simple sandbox target. Keep it for the common case.</p>
+        <div class="language-make highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">sandbox</span>
+<span class="nl">sandbox</span><span class="o">:</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Starting Canton Sandbox + JSON API with your contracts..."</span>
+	<span class="p">@</span><span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-d</span> <span class="s2">"</span><span class="p">$(</span><span class="s2">DIST_DIR</span><span class="p">)</span><span class="s2">"</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="p">$$(</span><span class="s2">ls -A </span><span class="p">$(</span><span class="s2">DIST_DIR</span><span class="p">)</span><span class="s2">/*.dar 2&gt;/dev/null</span><span class="p">)</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\</span>
+		<span class="nb">echo</span> <span class="s2">"Error: No DARs found in </span><span class="p">$(</span><span class="s2">DIST_DIR</span><span class="p">)</span><span class="s2">/. Run 'make build-all' first."</span><span class="p">;</span> <span class="se">\</span>
+		<span class="nb">exit </span>1<span class="p">;</span> <span class="se">\</span>
+	<span class="k">fi</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Loading DARs from </span><span class="p">$(</span><span class="s2">DIST_DIR</span><span class="p">)</span><span class="s2">/:"</span>
+	<span class="p">@</span><span class="nb">ls</span> <span class="nt">-1</span> <span class="p">$(</span>DIST_DIR<span class="p">)</span>/<span class="k">*</span>.dar
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">""</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Ledger API (gRPC): localhost:6865"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"JSON API (HTTP):   http://localhost:7575/readyz"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"                   http://localhost:7575/v2/parties"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"                   http://localhost:7575/v2/packages"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">""</span>
+	<span class="p">@</span>daml sandbox <span class="nt">--port</span> 6865 <span class="nt">--json-api-port</span> 7575 <span class="p">$$(</span><span class="nb">ls</span> <span class="p">$(</span>DIST_DIR<span class="p">)</span>/<span class="k">*</span>.dar | <span class="nb">sed</span> <span class="s1">'s/^/--dar /'</span><span class="p">)</span>
+</code></pre>
+          </div>
+        </div>
+        <p>This remains one participant. It is still the right tool when you only need to test contract logic quickly.</p>
+        <hr>
+        <h2 id="step-2-add-a-multi-node-canton-config">Step 2: Add a Multi-Node Canton Config</h2>
+        <p>Create this file:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>canton/multinode-sandbox.conf
+</code></pre>
+          </div>
+        </div>
+        <p>Paste in:</p>
+        <div class="language-hocon highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nl">canton</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">mediators</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">mediator1</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">admin-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6889</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+  </span><span class="nl">participants</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">participant1</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">admin-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6866</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">http-ledger-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">7575</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">ledger-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6865</span><span class="w">
+        </span><span class="nl">user-management-service</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">enabled</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">storage</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"memory"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+    </span><span class="nl">participant2</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">admin-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6876</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">http-ledger-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">7576</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">ledger-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6875</span><span class="w">
+        </span><span class="nl">user-management-service</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">enabled</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">storage</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"memory"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+    </span><span class="nl">participant3</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">admin-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6896</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">http-ledger-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">7577</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">ledger-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6895</span><span class="w">
+        </span><span class="nl">user-management-service</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">enabled</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">storage</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"memory"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+  </span><span class="nl">sequencers</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">sequencer1</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">admin-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6888</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">public-api</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">port</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">6887</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">sequencer</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"reference"</span><span class="w">
+        </span><span class="nl">config</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">storage</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"memory"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+      </span><span class="nl">storage</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">"memory"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+          </div>
+        </div>
+        <p>This file defines the nodes and ports. It does not yet connect participants to the synchronizer or upload DARs.</p>
+        <p>The storage is intentionally in-memory. That makes startup clean and repeatable. Every restart gives you a fresh local network.</p>
+        <p>The ports are chosen so the first participant matches the existing sandbox:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Node</th>
+              <th style="text-align: right">Ledger API</th>
+              <th style="text-align: right">JSON API</th>
+              <th style="text-align: right">Admin API</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>participant1</td>
+              <td style="text-align: right">6865</td>
+              <td style="text-align: right">7575</td>
+              <td style="text-align: right">6866</td>
+            </tr>
+            <tr>
+              <td>participant2</td>
+              <td style="text-align: right">6875</td>
+              <td style="text-align: right">7576</td>
+              <td style="text-align: right">6876</td>
+            </tr>
+            <tr>
+              <td>participant3</td>
+              <td style="text-align: right">6895</td>
+              <td style="text-align: right">7577</td>
+              <td style="text-align: right">6896</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>The local synchronizer uses:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Node</th>
+              <th style="text-align: right">Public API</th>
+              <th style="text-align: right">Admin API</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>sequencer1</td>
+              <td style="text-align: right">6887</td>
+              <td style="text-align: right">6888</td>
+            </tr>
+            <tr>
+              <td>mediator1</td>
+              <td style="text-align: right">n/a</td>
+              <td style="text-align: right">6889</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Important: <code class="language-plaintext highlighter-rouge">sandbox-multinode</code> and <code class="language-plaintext highlighter-rouge">sandbox</code> both use participant1 ports <code class="language-plaintext highlighter-rouge">6865</code> and <code class="language-plaintext highlighter-rouge">7575</code>. Do not run them at the same time.</p>
+        <hr>
+        <h2 id="step-3-add-the-bootstrap-script">Step 3: Add the Bootstrap Script</h2>
+        <p>Create this file:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>canton/multinode-bootstrap.canton
+</code></pre>
+          </div>
+        </div>
+        <p>Paste in:</p>
+        <div class="language-scala highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="k">import</span> <span class="nn">com.digitalasset.canton.config.RequireTypes.PositiveInt</span>
+<span class="k">import</span> <span class="nn">com.digitalasset.canton.version.ProtocolVersion</span>
+<span class="k">import</span> <span class="nn">java.io.File</span>
+
+<span class="k">val</span> <span class="nv">synchronizerName</span> <span class="k">=</span> <span class="s">"local-multinode"</span>
+<span class="k">val</span> <span class="nv">staticSynchronizerParameters</span> <span class="k">=</span> <span class="nv">StaticSynchronizerParameters</span><span class="o">.</span><span class="py">defaults</span><span class="o">(</span>
+  <span class="nv">sequencer1</span><span class="o">.</span><span class="py">config</span><span class="o">.</span><span class="py">crypto</span><span class="o">,</span>
+  <span class="nv">ProtocolVersion</span><span class="o">.</span><span class="py">forSynchronizer</span><span class="o">,</span>
+  <span class="n">topologyChangeDelay</span> <span class="k">=</span> <span class="nv">NonNegativeFiniteDuration</span><span class="o">.</span><span class="py">Zero</span>
+<span class="o">)</span>
+<span class="k">val</span> <span class="nv">synchronizerOwners</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="n">sequencer1</span><span class="o">,</span> <span class="n">mediator1</span><span class="o">)</span>
+
+<span class="nv">bootstrap</span><span class="o">.</span><span class="py">synchronizer</span><span class="o">(</span>
+  <span class="n">synchronizerName</span><span class="o">,</span>
+  <span class="nc">Seq</span><span class="o">(</span><span class="n">sequencer1</span><span class="o">),</span>
+  <span class="nc">Seq</span><span class="o">(</span><span class="n">mediator1</span><span class="o">),</span>
+  <span class="n">synchronizerOwners</span><span class="o">,</span>
+  <span class="nv">PositiveInt</span><span class="o">.</span><span class="py">one</span><span class="o">,</span>
+  <span class="n">staticSynchronizerParameters</span>
+<span class="o">)</span>
+
+<span class="nv">participant1</span><span class="o">.</span><span class="py">synchronizers</span><span class="o">.</span><span class="py">connect_local</span><span class="o">(</span><span class="n">sequencer1</span><span class="o">,</span> <span class="n">synchronizerName</span><span class="o">)</span>
+<span class="nv">participant2</span><span class="o">.</span><span class="py">synchronizers</span><span class="o">.</span><span class="py">connect_local</span><span class="o">(</span><span class="n">sequencer1</span><span class="o">,</span> <span class="n">synchronizerName</span><span class="o">)</span>
+<span class="nv">participant3</span><span class="o">.</span><span class="py">synchronizers</span><span class="o">.</span><span class="py">connect_local</span><span class="o">(</span><span class="n">sequencer1</span><span class="o">,</span> <span class="n">synchronizerName</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="nv">darDirectory</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"dist"</span><span class="o">)</span>
+<span class="k">val</span> <span class="nv">darFiles</span> <span class="k">=</span> <span class="nc">Option</span><span class="o">(</span><span class="nv">darDirectory</span><span class="o">.</span><span class="py">listFiles</span><span class="o">())</span>
+  <span class="o">.</span><span class="py">getOrElse</span><span class="o">(</span><span class="nv">Array</span><span class="o">.</span><span class="py">empty</span><span class="o">[</span><span class="kt">File</span><span class="o">])</span>
+  <span class="o">.</span><span class="py">filter</span><span class="o">(</span><span class="n">file</span> <span class="k">=&gt;</span> <span class="nv">file</span><span class="o">.</span><span class="py">isFile</span> <span class="o">&amp;&amp;</span> <span class="nv">file</span><span class="o">.</span><span class="py">getName</span><span class="o">.</span><span class="py">endsWith</span><span class="o">(</span><span class="s">".dar"</span><span class="o">))</span>
+  <span class="o">.</span><span class="py">sortBy</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">getName</span><span class="o">)</span>
+
+<span class="nv">darFiles</span><span class="o">.</span><span class="py">foreach</span> <span class="o">{</span> <span class="n">darFile</span> <span class="k">=&gt;</span>
+  <span class="nf">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Uploading ${darFile.getPath} to all local participants"</span><span class="o">)</span>
+  <span class="nv">participants</span><span class="o">.</span><span class="py">all</span><span class="o">.</span><span class="py">dars</span><span class="o">.</span><span class="py">upload</span><span class="o">(</span><span class="nv">darFile</span><span class="o">.</span><span class="py">getPath</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="nf">println</span><span class="o">(</span><span class="s">"Canton multi-node sandbox is ready."</span><span class="o">)</span>
+<span class="nf">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Participant 1 Ledger API (gRPC): localhost:${participant1.config.ledgerApi.port.unwrap}"</span><span class="o">)</span>
+<span class="nf">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Participant 1 JSON API (HTTP):   http://localhost:${participant1.config.httpLedgerApi.port.unwrap}/readyz"</span><span class="o">)</span>
+<span class="nf">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Participant 2 Ledger API (gRPC): localhost:${participant2.config.ledgerApi.port.unwrap}"</span><span class="o">)</span>
+<span class="nf">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Participant 2 JSON API (HTTP):   http://localhost:${participant2.config.httpLedgerApi.port.unwrap}/readyz"</span><span class="o">)</span>
+<span class="nf">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Participant 3 Ledger API (gRPC): localhost:${participant3.config.ledgerApi.port.unwrap}"</span><span class="o">)</span>
+<span class="nf">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Participant 3 JSON API (HTTP):   http://localhost:${participant3.config.httpLedgerApi.port.unwrap}/readyz"</span><span class="o">)</span>
+</code></pre>
+          </div>
+        </div>
+        <p>This file is the startup glue.</p>
+        <p>The config file says:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>these nodes exist
+</code></pre>
+          </div>
+        </div>
+        <p>The bootstrap script says:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>create a synchronizer
+connect all three participants to it
+upload every DAR to every participant
+print useful endpoint information
+</code></pre>
+          </div>
+        </div>
+        <h3 id="why-not-put-this-in-the-config-file">Why not put this in the config file?</h3>
+        <p>Configuration is static. It declares nodes, ports, and storage.</p>
+        <p>Bootstrap is procedural. It performs actions after the nodes exist.</p>
+        <p>That separation matters. A participant can exist but still not be connected to a synchronizer. A participant can be running but still not have your DARs uploaded. The bootstrap script closes that gap.</p>
+        <h3 id="why-upload-to-every-participant">Why upload to every participant?</h3>
+        <p>Each participant needs access to the Daml packages it will use.</p>
+        <p>If only participant1 has the DARs, participant2 and participant3 may be connected to the synchronizer but still unable to submit or inspect contracts using your templates.</p>
+        <p>The Canton console command reference documents <code class="language-plaintext highlighter-rouge">dars.upload</code> as the command for uploading a DAR to a participant:</p>
+        <p><a href="https://docs.digitalasset.com/operate/3.4/reference/console.html">Canton Console Reference</a></p>
+        <hr>
+        <h2 id="step-4-add-makefile-variables">Step 4: Add Makefile Variables</h2>
+        <p>At the top of your <code class="language-plaintext highlighter-rouge">Makefile</code>, add:</p>
+        <div class="language-make highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">DIST_DIR</span> <span class="o">:=</span> dist
+<span class="nv">VERSIONS_FILE</span> <span class="o">:=</span> versions.yaml
+<span class="nv">DPM</span> <span class="o">:=</span> dpm
+<span class="nv">SDK_VERSION</span> <span class="o">:=</span> <span class="p">$(</span>shell <span class="nb">grep</span> <span class="s1">'sdk_version:'</span> <span class="p">$(</span>VERSIONS_FILE<span class="p">)</span> 2&gt;/dev/null | <span class="nb">awk</span> <span class="s1">'{print $$2</span><span class="p">}</span><span class="s1">'</span> | <span class="nb">tr</span> <span class="nt">-d</span> <span class="s1">'"\r'</span><span class="o">)</span>
+<span class="nv">CANTON_JAR</span> <span class="o">?=</span> <span class="p">$(</span>HOME<span class="p">)</span>/.daml/sdk/<span class="p">$(</span>SDK_VERSION<span class="p">)</span>/canton/canton.jar
+<span class="nv">MULTINODE_CONFIG</span> <span class="o">:=</span> canton/multinode-sandbox.conf
+<span class="nv">MULTINODE_BOOTSTRAP</span> <span class="o">:=</span> canton/multinode-bootstrap.canton
+</code></pre>
+          </div>
+        </div>
+        <p>The important variable is <code class="language-plaintext highlighter-rouge">CANTON_JAR</code>.</p>
+        <p>In a Daml SDK installation, Canton is bundled under the SDK directory. For SDK <code class="language-plaintext highlighter-rouge">3.4.10</code>, the jar is usually:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>~/.daml/sdk/3.4.10/canton/canton.jar
+</code></pre>
+          </div>
+        </div>
+        <p>Reading the SDK version from <code class="language-plaintext highlighter-rouge">versions.yaml</code> avoids hard-coding it in two places.</p>
+        <p>You can still override it:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox-multinode <span class="nv">CANTON_JAR</span><span class="o">=</span>/path/to/canton.jar
+</code></pre>
+          </div>
+        </div>
+        <hr>
+        <h2 id="step-5-add-make-sandbox-multinode">Step 5: Add <code class="language-plaintext highlighter-rouge">make sandbox-multinode</code>
+        </h2>
+        <p>Add this target to your <code class="language-plaintext highlighter-rouge">Makefile</code>:</p>
+        <div class="language-make highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">sandbox-multinode</span>
+<span class="nl">sandbox-multinode</span><span class="o">:</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Starting Canton multi-node sandbox + JSON APIs with your contracts..."</span>
+	<span class="p">@</span><span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-d</span> <span class="s2">"</span><span class="p">$(</span><span class="s2">DIST_DIR</span><span class="p">)</span><span class="s2">"</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="p">$$(</span><span class="s2">ls -A </span><span class="p">$(</span><span class="s2">DIST_DIR</span><span class="p">)</span><span class="s2">/*.dar 2&gt;/dev/null</span><span class="p">)</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\</span>
+		<span class="nb">echo</span> <span class="s2">"Error: No DARs found in </span><span class="p">$(</span><span class="s2">DIST_DIR</span><span class="p">)</span><span class="s2">/. Run 'make build-all' first."</span><span class="p">;</span> <span class="se">\</span>
+		<span class="nb">exit </span>1<span class="p">;</span> <span class="se">\</span>
+	<span class="k">fi</span>
+	<span class="p">@</span><span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="p">$(</span><span class="s2">SDK_VERSION</span><span class="p">)</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\</span>
+		<span class="nb">echo</span> <span class="s2">"Error: Failed to parse sdk_version from </span><span class="p">$(</span><span class="s2">VERSIONS_FILE</span><span class="p">)</span><span class="s2">"</span><span class="p">;</span> <span class="se">\</span>
+		<span class="nb">exit </span>1<span class="p">;</span> <span class="se">\</span>
+	<span class="k">fi</span>
+	<span class="p">@</span><span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-f</span> <span class="s2">"</span><span class="p">$(</span><span class="s2">CANTON_JAR</span><span class="p">)</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\</span>
+		<span class="nb">echo</span> <span class="s2">"Error: Canton jar not found at </span><span class="p">$(</span><span class="s2">CANTON_JAR</span><span class="p">)</span><span class="s2">"</span><span class="p">;</span> <span class="se">\</span>
+		<span class="nb">echo</span> <span class="s2">"Install DAML SDK </span><span class="p">$(</span><span class="s2">SDK_VERSION</span><span class="p">)</span><span class="s2">, or set CANTON_JAR=/path/to/canton.jar"</span><span class="p">;</span> <span class="se">\</span>
+		<span class="nb">exit </span>1<span class="p">;</span> <span class="se">\</span>
+	<span class="k">fi</span>
+	<span class="p">@</span><span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-f</span> <span class="s2">"</span><span class="p">$(</span><span class="s2">MULTINODE_CONFIG</span><span class="p">)</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\</span>
+		<span class="nb">echo</span> <span class="s2">"Error: </span><span class="p">$(</span><span class="s2">MULTINODE_CONFIG</span><span class="p">)</span><span class="s2"> not found"</span><span class="p">;</span> <span class="se">\</span>
+		<span class="nb">exit </span>1<span class="p">;</span> <span class="se">\</span>
+	<span class="k">fi</span>
+	<span class="p">@</span><span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-f</span> <span class="s2">"</span><span class="p">$(</span><span class="s2">MULTINODE_BOOTSTRAP</span><span class="p">)</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\</span>
+		<span class="nb">echo</span> <span class="s2">"Error: </span><span class="p">$(</span><span class="s2">MULTINODE_BOOTSTRAP</span><span class="p">)</span><span class="s2"> not found"</span><span class="p">;</span> <span class="se">\</span>
+		<span class="nb">exit </span>1<span class="p">;</span> <span class="se">\</span>
+	<span class="k">fi</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Loading DARs from </span><span class="p">$(</span><span class="s2">DIST_DIR</span><span class="p">)</span><span class="s2">/ to participant1, participant2, and participant3:"</span>
+	<span class="p">@</span><span class="nb">ls</span> <span class="nt">-1</span> <span class="p">$(</span>DIST_DIR<span class="p">)</span>/<span class="k">*</span>.dar
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">""</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Participant 1 Ledger API (gRPC): localhost:6865"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Participant 1 Admin API (gRPC):  localhost:6866"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Participant 1 JSON API (HTTP):   http://localhost:7575/readyz"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"                                   http://localhost:7575/v2/parties"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"                                   http://localhost:7575/v2/packages"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Participant 2 Ledger API (gRPC): localhost:6875"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Participant 2 Admin API (gRPC):  localhost:6876"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Participant 2 JSON API (HTTP):   http://localhost:7576/readyz"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"                                   http://localhost:7576/v2/parties"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"                                   http://localhost:7576/v2/packages"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Participant 3 Ledger API (gRPC): localhost:6895"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Participant 3 Admin API (gRPC):  localhost:6896"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"Participant 3 JSON API (HTTP):   http://localhost:7577/readyz"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"                                   http://localhost:7577/v2/parties"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">"                                   http://localhost:7577/v2/packages"</span>
+	<span class="p">@</span><span class="nb">echo</span> <span class="s2">""</span>
+	<span class="p">@</span>java <span class="nt">-jar</span> <span class="s2">"</span><span class="p">$(</span><span class="s2">CANTON_JAR</span><span class="p">)</span><span class="s2">"</span> daemon <span class="nt">--config</span> <span class="s2">"</span><span class="p">$(</span><span class="s2">MULTINODE_CONFIG</span><span class="p">)</span><span class="s2">"</span> <span class="nt">--bootstrap</span> <span class="s2">"</span><span class="p">$(</span><span class="s2">MULTINODE_BOOTSTRAP</span><span class="p">)</span><span class="s2">"</span> <span class="nt">--log-file-name</span> log/canton-multinode.log
+</code></pre>
+          </div>
+        </div>
+        <p>This target deliberately checks prerequisites before starting Canton. Missing DARs or a missing SDK should fail fast with a readable error.</p>
+        <hr>
+        <h2 id="step-6-add-a-smoke-test">Step 6: Add a Smoke Test</h2>
+        <p>Add this target to your <code class="language-plaintext highlighter-rouge">Makefile</code>:</p>
+        <div class="language-make highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">sandbox-multinode-smoke</span>
+<span class="nl">sandbox-multinode-smoke</span><span class="o">:</span>
+	<span class="p">@</span><span class="nb">set</span> <span class="nt">-e</span><span class="p">;</span> <span class="se">\</span>
+	<span class="k">for </span>api <span class="k">in </span>http://localhost:7575 http://localhost:7576 http://localhost:7577<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+		<span class="nb">echo</span> <span class="s2">"Checking </span><span class="nv">$$</span><span class="s2">api/readyz..."</span><span class="p">;</span> <span class="se">\</span>
+		curl <span class="nt">-fsS</span> <span class="nt">-o</span> /dev/null <span class="s2">"</span><span class="nv">$$</span><span class="s2">api/readyz"</span><span class="p">;</span> <span class="se">\</span>
+	<span class="k">done</span><span class="p">;</span> <span class="se">\</span>
+	<span class="k">for </span>api <span class="k">in </span>http://localhost:7575 http://localhost:7576 http://localhost:7577<span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+		<span class="nb">echo</span> <span class="s2">"Checking packages on </span><span class="nv">$$</span><span class="s2">api..."</span><span class="p">;</span> <span class="se">\</span>
+		<span class="nv">package_count</span><span class="o">=</span><span class="p">$$(</span>curl <span class="nt">-fsS</span> <span class="s2">"</span><span class="nv">$$</span><span class="s2">api/v2/packages"</span> | jq <span class="nt">-r</span> <span class="s1">'(.packages // .packageIds</span><span class="p">)</span><span class="s1"> | length'</span><span class="o">)</span><span class="p">;</span> <span class="se">\</span>
+		<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$$</span><span class="s2">package_count"</span> <span class="nt">-lt</span> 3 <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="se">\</span>
+			<span class="nb">echo</span> <span class="s2">"Error: Expected at least 3 uploaded packages on </span><span class="nv">$$</span><span class="s2">api, found </span><span class="nv">$$</span><span class="s2">package_count"</span><span class="p">;</span> <span class="se">\</span>
+			<span class="nb">exit </span>1<span class="p">;</span> <span class="se">\</span>
+		<span class="k">fi</span><span class="p">;</span> <span class="se">\</span>
+	<span class="k">done</span><span class="p">;</span> <span class="se">\</span>
+	<span class="nb">echo</span> <span class="s2">"Multi-node sandbox smoke check passed."</span>
+</code></pre>
+          </div>
+        </div>
+        <p>This does two checks.</p>
+        <p>First, it checks all three JSON APIs:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>curl <span class="nt">-fsS</span> <span class="nt">-o</span> /dev/null http://localhost:7575/readyz
+curl <span class="nt">-fsS</span> <span class="nt">-o</span> /dev/null http://localhost:7576/readyz
+curl <span class="nt">-fsS</span> <span class="nt">-o</span> /dev/null http://localhost:7577/readyz
+</code></pre>
+          </div>
+        </div>
+        <p>Second, it checks that each participant exposes at least the three project DAR packages uploaded by the bootstrap script. In this example repository those are the application, enumerations, and models DARs.</p>
+        <hr>
+        <h2 id="step-7-run-it">Step 7: Run It</h2>
+        <p>Build the DARs first:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make build-all
+</code></pre>
+          </div>
+        </div>
+        <p>Start the multi-node sandbox:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox-multinode
+</code></pre>
+          </div>
+        </div>
+        <p>Expected output:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Starting Canton multi-node sandbox + JSON APIs with your contracts...
+Loading DARs from dist/ to participant1, participant2, and participant3:
+dist/app-1.0.0.dar
+dist/enumerations-1.0.0.dar
+dist/models-v2-1.0.0.dar
+
+Participant 1 Ledger API (gRPC): localhost:6865
+Participant 1 Admin API (gRPC):  localhost:6866
+Participant 1 JSON API (HTTP):   http://localhost:7575/readyz
+                                   http://localhost:7575/v2/parties
+                                   http://localhost:7575/v2/packages
+Participant 2 Ledger API (gRPC): localhost:6875
+Participant 2 Admin API (gRPC):  localhost:6876
+Participant 2 JSON API (HTTP):   http://localhost:7576/readyz
+                                   http://localhost:7576/v2/parties
+                                   http://localhost:7576/v2/packages
+Participant 3 Ledger API (gRPC): localhost:6895
+Participant 3 Admin API (gRPC):  localhost:6896
+Participant 3 JSON API (HTTP):   http://localhost:7577/readyz
+                                   http://localhost:7577/v2/parties
+                                   http://localhost:7577/v2/packages
+
+Uploading dist/app-1.0.0.dar to all local participants
+Uploading dist/enumerations-1.0.0.dar to all local participants
+Uploading dist/models-v2-1.0.0.dar to all local participants
+Canton multi-node sandbox is ready.
+</code></pre>
+          </div>
+        </div>
+        <p>In a second terminal, run the smoke test:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox-multinode-smoke
+</code></pre>
+          </div>
+        </div>
+        <p>Expected output:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Checking http://localhost:7575/readyz...
+Checking http://localhost:7576/readyz...
+Checking http://localhost:7577/readyz...
+Checking packages on http://localhost:7575...
+Checking packages on http://localhost:7576...
+Checking packages on http://localhost:7577...
+Multi-node sandbox smoke check passed.
+</code></pre>
+          </div>
+        </div>
+        <hr>
+        <h2 id="step-8-interact-with-each-participant">Step 8: Interact With Each Participant</h2>
+        <p>Quick checks for <code class="language-plaintext highlighter-rouge">participant1</code>:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>curl http://localhost:7575/readyz
+curl http://localhost:7575/v2/packages
+curl http://localhost:7575/v2/parties
+</code></pre>
+          </div>
+        </div>
+        <p>Quick checks for <code class="language-plaintext highlighter-rouge">participant2</code>:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>curl http://localhost:7576/readyz
+curl http://localhost:7576/v2/packages
+curl http://localhost:7576/v2/parties
+</code></pre>
+          </div>
+        </div>
+        <p>Quick checks for <code class="language-plaintext highlighter-rouge">participant3</code>:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>curl http://localhost:7577/readyz
+curl http://localhost:7577/v2/packages
+curl http://localhost:7577/v2/parties
+</code></pre>
+          </div>
+        </div>
+        <p>Using the Ledger API, participant1 is on port <code class="language-plaintext highlighter-rouge">6865</code>:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>daml ledger allocate-party <span class="se">\</span>
+  <span class="nt">--host</span><span class="o">=</span>localhost <span class="nt">--port</span><span class="o">=</span>6865 <span class="se">\</span>
+  PartyOne <span class="se">\</span>
+  <span class="nt">--display-name</span><span class="o">=</span><span class="s2">"Party One"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Participant2 is on port <code class="language-plaintext highlighter-rouge">6875</code>:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>daml ledger allocate-party <span class="se">\</span>
+  <span class="nt">--host</span><span class="o">=</span>localhost <span class="nt">--port</span><span class="o">=</span>6875 <span class="se">\</span>
+  PartyTwo <span class="se">\</span>
+  <span class="nt">--display-name</span><span class="o">=</span><span class="s2">"Party Two"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Participant3 is on port <code class="language-plaintext highlighter-rouge">6895</code>:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>daml ledger allocate-party <span class="se">\</span>
+  <span class="nt">--host</span><span class="o">=</span>localhost <span class="nt">--port</span><span class="o">=</span>6895 <span class="se">\</span>
+  PartyThree <span class="se">\</span>
+  <span class="nt">--display-name</span><span class="o">=</span><span class="s2">"Party Three"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The exact party workflow depends on your templates. A useful first check is to allocate one party on each participant, then use your application or Daml scripts to create contracts involving those parties.</p>
+        <hr>
+        <h2 id="what-this-setup-can-test">What This Setup Can Test</h2>
+        <p>This setup is useful for:</p>
+        <ul>
+          <li>verifying all three participants can start from the same local DAR set</li>
+          <li>testing client configuration against different Ledger API ports</li>
+          <li>testing visibility differences between parties hosted on different participants</li>
+          <li>preparing for party replication or party migration experiments</li>
+          <li>catching assumptions hidden by a single-node sandbox</li>
+        </ul>
+        <p>It is also a good teaching tool. You can see explicitly that:</p>
+        <ul>
+          <li>participants host parties</li>
+          <li>participants need DARs</li>
+          <li>participants connect to synchronizers</li>
+          <li>synchronizers are separate from participants</li>
+          <li>JSON API readiness does not prove your project DARs are uploaded</li>
+        </ul>
+        <hr>
+        <h2 id="what-this-setup-does-not-test">What This Setup Does Not Test</h2>
+        <p>This is not a production network.</p>
+        <p>It does not test:</p>
+        <ul>
+          <li>durable participant storage</li>
+          <li>production identities and certificates</li>
+          <li>Kubernetes deployment behavior</li>
+          <li>validator app APIs</li>
+          <li>Canton Coin wallet flows</li>
+          <li>HA failover</li>
+          <li>performance under realistic network latency</li>
+          <li>a real shared/global synchronizer</li>
+        </ul>
+        <p>Everything runs locally, in one Canton process, with in-memory storage. That is intentional. The goal is conceptual clarity and fast feedback.</p>
+        <hr>
+        <h2 id="troubleshooting">Troubleshooting</h2>
+        <h3 id="error-no-dars-found">Error: no DARs found</h3>
+        <p>If you see:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Error: No DARs found in dist/. Run 'make build-all' first.
+</code></pre>
+          </div>
+        </div>
+        <p>build your packages:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make build-all
+</code></pre>
+          </div>
+        </div>
+        <h3 id="error-canton-jar-not-found">Error: Canton jar not found</h3>
+        <p>If you see:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Error: Canton jar not found at ~/.daml/sdk/3.4.10/canton/canton.jar
+</code></pre>
+          </div>
+        </div>
+        <p>check your installed SDKs:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>daml version
+</code></pre>
+          </div>
+        </div>
+        <p>Then either install the expected SDK or override the jar path:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox-multinode <span class="nv">CANTON_JAR</span><span class="o">=</span>/path/to/canton.jar
+</code></pre>
+          </div>
+        </div>
+        <h3 id="error-port-already-in-use">Error: port already in use</h3>
+        <p>The multi-node sandbox uses participant1 ports <code class="language-plaintext highlighter-rouge">6865</code> and <code class="language-plaintext highlighter-rouge">7575</code>, same as the single-node sandbox. It also binds participant2 ports <code class="language-plaintext highlighter-rouge">6875</code> and <code class="language-plaintext highlighter-rouge">7576</code>, participant3 ports <code class="language-plaintext highlighter-rouge">6895</code> and <code class="language-plaintext highlighter-rouge">7577</code>, and the Admin API ports listed earlier. Stop any process that already owns those ports before starting the multi-node sandbox.</p>
+        <p>On macOS or Linux:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>lsof <span class="nt">-iTCP</span>:6865 <span class="nt">-sTCP</span>:LISTEN <span class="nt">-n</span> <span class="nt">-P</span>
+lsof <span class="nt">-iTCP</span>:6866 <span class="nt">-sTCP</span>:LISTEN <span class="nt">-n</span> <span class="nt">-P</span>
+lsof <span class="nt">-iTCP</span>:7575 <span class="nt">-sTCP</span>:LISTEN <span class="nt">-n</span> <span class="nt">-P</span>
+lsof <span class="nt">-iTCP</span>:6875 <span class="nt">-sTCP</span>:LISTEN <span class="nt">-n</span> <span class="nt">-P</span>
+lsof <span class="nt">-iTCP</span>:6876 <span class="nt">-sTCP</span>:LISTEN <span class="nt">-n</span> <span class="nt">-P</span>
+lsof <span class="nt">-iTCP</span>:7576 <span class="nt">-sTCP</span>:LISTEN <span class="nt">-n</span> <span class="nt">-P</span>
+lsof <span class="nt">-iTCP</span>:6895 <span class="nt">-sTCP</span>:LISTEN <span class="nt">-n</span> <span class="nt">-P</span>
+lsof <span class="nt">-iTCP</span>:6896 <span class="nt">-sTCP</span>:LISTEN <span class="nt">-n</span> <span class="nt">-P</span>
+lsof <span class="nt">-iTCP</span>:7577 <span class="nt">-sTCP</span>:LISTEN <span class="nt">-n</span> <span class="nt">-P</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Then stop the owning process.</p>
+        <h3 id="smoke-test-fails-on-packages">Smoke test fails on packages</h3>
+        <p>If readiness passes but package verification fails:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Error: Expected at least 3 uploaded packages on http://localhost:7575, found 0
+</code></pre>
+          </div>
+        </div>
+        <p>then the participant is running, but one of your project DARs was not uploaded or is not visible through the package service.</p>
+        <p>Check:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>dpm inspect-dar <span class="nt">--json</span> dist/app-1.0.0.dar | jq <span class="nt">-r</span> <span class="s1">'.main_package_id'</span>
+curl <span class="nt">-s</span> http://localhost:7575/v2/packages | jq <span class="nb">.</span>
+curl <span class="nt">-s</span> http://localhost:7576/v2/packages | jq <span class="nb">.</span>
+curl <span class="nt">-s</span> http://localhost:7577/v2/packages | jq <span class="nb">.</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The main package ID from <code class="language-plaintext highlighter-rouge">inspect-dar</code> should appear in each participant's package list.</p>
+        <h3 id="the-sandbox-starts-inside-a-restricted-tool-but-cannot-bind-ports">The sandbox starts inside a restricted tool but cannot bind ports</h3>
+        <p>Some automation sandboxes restrict local server sockets. If the Canton process fails with an error like:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Failed to bind to address /127.0.0.1:&lt;port&gt;
+</code></pre>
+          </div>
+        </div>
+        <p>try running the command directly in a normal terminal:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox-multinode
+</code></pre>
+          </div>
+        </div>
+        <hr>
+        <h2 id="why-this-is-worth-doing">Why This Is Worth Doing</h2>
+        <p>A single-node sandbox can hide distributed assumptions.</p>
+        <p>For example:</p>
+        <ul>
+          <li>You may accidentally assume all parties are on the same participant.</li>
+          <li>You may upload DARs to one participant and forget another.</li>
+          <li>You may test only one Ledger API endpoint.</li>
+          <li>You may confuse a participant with a synchronizer or validator app.</li>
+        </ul>
+        <p>A three-participant local sandbox makes those boundaries visible.</p>
+        <p>It is still small enough to understand, but it has enough structure to teach the real Canton model:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>application -&gt; participant -&gt; synchronizer -&gt; other participants
+</code></pre>
+          </div>
+        </div>
+        <p>That mental model is the point of the exercise.</p>
+        <hr>
+        <h2 id="final-file-list">Final File List</h2>
+        <p>At the end, you should have:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>canton/
+|-- multinode-bootstrap.canton
+`-- multinode-sandbox.conf
+
+Makefile
+</code></pre>
+          </div>
+        </div>
+        <p>Optional but useful:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>scripts/
+`-- validate-multinode-sandbox-static.sh
+</code></pre>
+          </div>
+        </div>
+        <p>The single-node sandbox remains:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox
+</code></pre>
+          </div>
+        </div>
+        <p>The new multi-node sandbox is:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox-multinode
+</code></pre>
+          </div>
+        </div>
+        <p>And the smoke test is:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>make sandbox-multinode-smoke
+</code></pre>
+          </div>
+        </div>
+        <p>That gives you a reproducible local environment for learning and testing multi-participant Canton behavior.</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/review-book-ai-engineering-chip-huyen" title="Previous Post: AI Engineering - Building Applications with Foundation Models by Chip Huyen">←Previous</a>     <a class="next-item" href="/blog/daily-logs-2026-05-12" title="Next Post: Daily Logs for May 12, 2026">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/canton-local-multi-node-sandbox';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/canton-local-multi-node-sandbox';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; inspired from my sister ~ <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
