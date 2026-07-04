@@ -1,7 +1,8 @@
 $(document).ready(function () {
-    var table = $('#dtMaterial').DataTable({
+    var $table = $('#dtMaterial');
+    var dataTableOptions = {
         "paging": true,
-        "bSort": false,
+        "bSort": true,
         pageLength: 10 ,
         "autoWidth": true,
         "columns": [
@@ -10,7 +11,16 @@ $(document).ready(function () {
           {'searchable': false},
           null
         ]
-      });
+      };
+
+    var defaultOrderColumn = $table.data('default-order-column');
+    var defaultOrderDirection = $table.data('default-order-direction') || 'asc';
+
+    if (defaultOrderColumn !== undefined) {
+      dataTableOptions.order = [[Number(defaultOrderColumn), defaultOrderDirection]];
+    }
+
+    var table = $table.DataTable(dataTableOptions);
 
     // You can hide and remove rows as follows
     table.rows('.hidden').remove().draw();

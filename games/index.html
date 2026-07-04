@@ -26,7 +26,7 @@ author: Tushar Sharma
 <h1 class="entry-title">Game Reviews</h1>
 
 
-  <table id="dtMaterial" class="table table-striped" cellspacing="0" width="100%">    <thead>
+  <table id="dtMaterial" class="table table-striped" cellspacing="0" width="100%" data-default-order-column="2" data-default-order-direction="desc">    <thead>
       <tr>
         <th class="th-sm">Title</th>
         <th class="th-sm">Rating</th>
@@ -42,8 +42,17 @@ author: Tushar Sharma
       {% if game.download contains "href='" %}
         {% assign download_href = game.download | split: "href='" | last | split: "'" | first %}
       {% endif %}
+      {% assign time_logged_sort = 0 %}
+      {% if game.hours_logged %}
+        {% assign time_logged_value = game.hours_logged | split: " " | first | times: 1.0 %}
+        {% if game.hours_logged contains "min" %}
+          {% assign time_logged_sort = time_logged_value %}
+        {% else %}
+          {% assign time_logged_sort = time_logged_value | times: 60 %}
+        {% endif %}
+      {% endif %}
       <tr>
-        <td>
+        <td data-order="{{ game_title | strip_html | downcase | escape }}">
           {% if game.links %}
             <a href="{{ game.links }}" target="_blank">{{ game_title | strip_html }}</a>
 
@@ -54,7 +63,7 @@ author: Tushar Sharma
              {{ game_title | strip_html }}
           {% endif %}
         </td>
-        <td>
+        <td data-order="{{ game.rating | default: 0 }}">
           <div class="cl">
             {% if game.comments contains "Abandoned" %}
             <div class="progress-outer">
@@ -88,7 +97,7 @@ author: Tushar Sharma
             {% endif %}
           </div>
         </td>
-        <td>
+        <td data-order="{{ time_logged_sort }}">
           {{ game.hours_logged | default: "-" }}
         </td>
         <td>{{ game.comments }}</td>
