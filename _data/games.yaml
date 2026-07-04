@@ -27,10 +27,12 @@
 
 - title: "Rayman Legends"
   rating: 5
+  hours_logged: 26.3 hrs
   comments: "One of the best platformers ever made. Fantastic background music and smooth, fun gameplay. Local co-op. Ubisoft launcher requires you to be online to start the game. The `Challenge mode` is no longer available on Steam due to Ubisoft server shutdown ([details](https://www.ubisoft.com/en-us/help/purchases-and-rewards/article/decommissioning-of-online-services-for-older-legacy-ubisoft-games-n-to-z/000105855))."
 
 - title: "Sunset Overdrive"
   rating: 5
+  hours_logged: 25.2
   comments: "Made by Insomniac Games. Cons: Corrupt file message pops up everytime you start the game. The game is goofy and fun. You can even shoot a dog at enemies."
 
 - title: "Tomb Raider 2013"
@@ -80,6 +82,7 @@
 
 - title: "GTA 4"
   rating: 4
+  hours_logged: 27.6 hrs
   comments: "Open-world action game set in Liberty City, a parody of NYC. Graphics feel dated now, but the story is gripping—following Niko Bellic, an immigrant trying to chase the American dream through crime and missions."
 
 - title: "The Curse of Monkey Island"
@@ -126,6 +129,7 @@
 
 - title: "The Witcher 3"
   rating: 5
+  hours_logged: 45 hrs
   comments : "Great RPG game. Graphics are great with amazing story and open world."
 
 - title: "Sayonara Wild Hearts"
@@ -226,10 +230,9 @@
   comments: "Fun game. Minor technical bugs: green bar during cutscenes. Saving at multiple slots have conflict if the gameplay progress is the same."
 
 - title: "Don Bradman Cricket 14"
-  rating: 0
-  pending: true
-  progress: 0
-  comments: "Error: You must be online in order to play Don Bradman Cricket 14. Fix : Use older proton like Proton 5.0-10"
+  rating: 4
+  hours_logged: 41.3
+  comments: "Descent cricket game. Error: You must be online in order to play Don Bradman Cricket 14. Fix : Use older proton like Proton 5.0-10"
 
 - title: "Joe Danger 2: The Movie"
   rating: 4
@@ -376,9 +379,8 @@
 
 - title: "FIFA 22"
   rating: 5
-  pending: true
-  comments: "It support's Local co-op. Mostly enjoyed carrer mode where you build your team and play through sessions. Gameplay feels slightly better from FIFA 19 due to hyper motion technology."
-  progress: 0
+  hours_logged: 36 hrs
+  comments: "I made a switch from FIFA 19. The gameplay is little better due to hyper motion technology. I mostly enjoy carrer mode where I make a dream FC Barcelona team. It has local coop as well"
 
 - title: "Cult of the Lamb"
   rating: 0
@@ -517,8 +519,8 @@
   comments: "Steam deck: Use proton hotfix."
 
 - title: "Ace Combat 7: Skies Unkown"
-  pending: true
-  progress: 55
+  rating: 5
+  hours_logged: 34 hrs
   comments: "The campaign mode is excellent, and the aircraft maneuvering feels great. Tip: During missions, you can return to the fleet to refuel and restock weapons."
 
 - title: "Persona 4 Golden"
