@@ -130,22 +130,22 @@
 - title: "The Witcher 3"
   rating: 5
   hours_logged: 45 hrs
-  comments : "Great RPG game. Graphics are great with amazing story and open world."
+  comments: 'Great RPG where you play as a witcher haunted by dreams from his past. The story follows Geralt as he searches for his lost adopted daughter, Ciri, while also trying to reunite with the love of his life, Yennefer. The gameplay is a mix of horseback riding, sword combat, and powerful magic.'
 
 - title: "Sayonara Wild Hearts"
   rating: 3
-  comments: "It's a rhythm game with great soundtrack. However, gameplay is simple and too short"
+  comments: "It's a rhythm game with great soundtrack. However, gameplay was unique but too short for the pricel."
 
 - title: "NFS Heat"
-  rating: 4
-  comments: "Drifting is the most fun part of the game. It has both day and night mode. However, game requires you to be online everytime you play it if you purchased it form Steam"
+  rating: 5
+  comments: "It fells like arcade racing. Drifting is the most fun part of the game. It has both day and night mode. However, game requires you to be online everytime you play it if you purchased it form Steam."
 
 - title: "Hotline Miami"
   rating: 5
   comments: "Fun top down shooter game. The soundtrack is amazing. I binged played it."
 
 - title: "Heavy Rain"
-  comments: "Made by Quantic Dream. It's intense interactive game. Difficult QTE for important choices. Some controll requires shaking the controller which was both awkward and tiring"
+  comments: 'Made by Quantic Dream, this is an interactive detective story where you play as a father trying to solve the mystery of his son's disappearance. Your choices matter, and many important moments rely on quick-time events (QTEs), which can be quite challenging. Some controls require you to shake the controller, which felt awkward and became tiring after a while. Despite that, the story kept me engaged from beginning to end.'
   rating: 4
 
 - title: "Fable - The Lost Chapters"
@@ -163,7 +163,7 @@
 
 - title: "A Short Hike"
   rating: 5 
-  comments: "Indie game. I'ts cute short game where you play as a bird who needs to reach the top of the mountain to get reception for his phone. You improve your hike by collecting golden feathers. Tips: Change amount of pixalation in Options > Graphics > Pixel Size. Press A to glide. Played on Steam Deck."
+  comments: "Indie game. It's cute short game where you play as a bird who needs to reach the top of the mountain to get reception for his phone. You improve your hike by collecting golden feathers. Tips: Change amount of pixalation in Options > Graphics > Pixel Size. Press A to glide. Played on Steam Deck."
 
 - title: "Max Payne III"
   rating: 4
@@ -184,7 +184,7 @@
 
 - title: "Promise Mascot Agency"
   rating: 5
-  comments: "It feels like a cinematic experience while you build a mascot agency. The Japanese voice acting is excellent, and the English subtitles are great. The writing is hilarious. Cons: Don't expect GTA like driving experience."
+  comments: "It feels like a Japanese cinematic experience while you build a mascot agency. The Japanese voice acting is excellent, and the English subtitles are great. The writing is hilarious. Cons: Don't expect GTA like driving experience."
 
 - title: "哎呦!这么多美女呀!"
   rating: 3
