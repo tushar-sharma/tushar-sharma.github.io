@@ -30,19 +30,28 @@ author: Tushar Sharma
       <tr>
         <th class="th-sm">Title</th>
         <th class="th-sm">Rating</th>
-        <th class="th-sm">Download</th>
+        <th class="th-sm">Time Logged</th>
         <th class="th-sm">Comments</th>
       </tr>
     </thead>
   
     <tbody>
       {% for game in site.data.games %}
+      {% assign game_title = game.title | default: game.tilte %}
+      {% assign download_href = "" %}
+      {% if game.download contains "href='" %}
+        {% assign download_href = game.download | split: "href='" | last | split: "'" | first %}
+      {% endif %}
       <tr>
         <td>
           {% if game.links %}
-            <a href="{{ game.links }}" target="_blank">{{ game.title }}</a>
+            <a href="{{ game.links }}" target="_blank">{{ game_title | strip_html }}</a>
+
+          {% elsif download_href != "" %}
+
+            <a href="{{ download_href }}" target="_blank">{{ game_title | strip_html }}</a>
           {% else %}
-             {{ game.title }}
+             {{ game_title | strip_html }}
           {% endif %}
         </td>
         <td>
@@ -80,7 +89,7 @@ author: Tushar Sharma
           </div>
         </td>
         <td>
-          {{ game.download }}
+          {{ game.hours_logged | default: "-" }}
         </td>
         <td>{{ game.comments }}</td>
       </tr>
