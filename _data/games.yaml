@@ -1,6 +1,12 @@
+- title: "despelote"
+  rating: 5
+  hours_logged: 45 min
+  comments: "Started playing this game due to FIFA World cup 2026. It's a love letter to the love of football. It follows the journey of Ecuador football team. The gameplay is minimal but storytelling is amazing."
+
 - title: "Stray"
   rating: 5
-  comments: "You play as a stray cat in a cyberpunk city. I started playing this game because of my cat, hiccup. The game is beautiful and the puzzles are fun enough not to be frustrating. The ending is nice and heartwarming.Time logged: 9.5 hours." 
+  hours_logged: 9.5 hrs
+  comments: "You play as a stray cat in a cyberpunk city. I started playing this game because of my cat, hiccup. The game is beautiful and the puzzles are fun enough not to be frustrating. The ending is nice and heartwarming."
 
 - title: "Alpaca Stacka"
   download: "<a href='https://store.steampowered.com/app/1655140/Alpaca_Stacka/' target='_blank' aria-label='Free to Play'><i class='fas fa-download'></i> Steam</a>"
@@ -542,7 +548,6 @@
 # Yume Nikki : Game like Undertale.
 # Antichamber
 # West of Loathing
-# despelote : football game from ecuador 
 # Night in the Woods
 # Dead cells
 # There Is No Game: Wrong Dimension
