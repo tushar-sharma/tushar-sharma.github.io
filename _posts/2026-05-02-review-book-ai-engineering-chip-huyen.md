@@ -1107,3 +1107,74 @@ What to tune:
 A strong production answer is often hybrid retrieval: combine sparse and dense retrieval, then rerank. Sparse retrieval catches exact matches. Dense retrieval catches semantic matches. A reranker can then score the candidates more carefully.
 
 I would start with hybrid retrieval for high-value knowledge search. BM25 handles exact terms and identifiers, embeddings handle semantic similarity, and a reranker improves precision before the final context is sent to the LLM.
+
+## July 4, 2026
+
+
+Elastic search uses inverted index. 
+
+> What's inverted index? 
+
+
+There are two types of search : 
+
+1. Term based search 
+
+2. Embedding based search 
+
+
+**Term based serach**: It's a lexical search. It means you are actually searching the string. 
+
+
+**Embedded based search**: First you create a search query into embeddings. Next you search it against embeddings. **Retrieval** is responsible for getitng the releavant embeddings. 
+
+How do we know quality of the retriever? 
+
+1. Context precision : how much relevant document were retreived
+
+2. Context recall : after the retieved data, how much docs were relevant
+
+
+K nearest neighbor is brute force embeddgin search algo: 
+  find embedding of the search query 
+  compare it against all the embeddings and give it a score 
+  pick up top k ranked result 
+
+
+### chunking 
+
+before sending text to embedding, you can use chunking. You pick up a chunk size and break into multiple chunks. Youc an use overalpping with it or wirhotu it 
+
+> What's the difference ? what's overlapping 
+
+
+chunk size hsould not be greater than context length of the generative model. also not greater than context limit of model 
+
+> wha'ts context length: total number of tokens that can be processed by a model in one epoch . How is context limit differnt ? i dont know
+
+
+Benefit of small chunk size 
+
+1. more diverse info 
+2. fit more chunks into context window 
+
+Drawbacks of small chunks
+1. loss of information 
+2. more computation 
+3. more chunk size, double the embedding vectos required to store 
+
+> remember you chain of thouhgs, expalin gby by for models to be bettter at tasks when prompting  
+
+
+### Planning 
+
+Foundation model are not great for planning. Becuase auto regresssive model are not good at plannign becuase they cannot backgrack. 
+
+> So codex has planning mode and claude. is it not good? 
+
+
+### Tool calling 
+
+a tools ia  function , function calling is just invoking a tool. Model can be turned into agents. 
+
+Control Flow : order of execution in a plannign is called. 
