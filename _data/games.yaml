@@ -145,7 +145,7 @@
   comments: "Fun top down shooter game. The soundtrack is amazing. I binged played it."
 
 - title: "Heavy Rain"
-  comments: 'Made by Quantic Dream, this is an interactive detective story where you play as a father trying to solve the mystery of his son's disappearance. Your choices matter, and many important moments rely on quick-time events (QTEs), which can be quite challenging. Some controls require you to shake the controller, which felt awkward and became tiring after a while. Despite that, the story kept me engaged from beginning to end.'
+  comments: "Made by Quantic Dream, this is an interactive detective story where you play as a father trying to solve the mystery of his son's disappearance. Your choices matter, and many important moments rely on quick-time events (QTEs), which can be quite challenging. Some controls require you to shake the controller, which felt awkward and became tiring after a while. Despite that, the story kept me engaged from beginning to end."
   rating: 4
 
 - title: "Fable - The Lost Chapters"
@@ -379,8 +379,8 @@
 
 - title: "FIFA 22"
   rating: 5
-  hours_logged: 70 hrs
-  comments: "I made a switch from FIFA 19. The gameplay is little better due to hyper motion technology. I mostly enjoy carrer mode where I make a dream FC Barcelona team. It has local coop as well"
+  hours_logged: "70 hrs"
+  comments: "I made a switch from FIFA 19. The gameplay is little better due to hyper motion technology. I mostly enjoy career mode with FC Barcelona team. It support's Local co-op."
 
 - title: "Cult of the Lamb"
   rating: 0
@@ -520,7 +520,7 @@
 
 - title: "Ace Combat 7: Skies Unkown"
   rating: 5
-  hours_logged: 34 hrs
+  hours_logged: "34 hrs"
   comments: "The campaign mode is excellent, and the aircraft maneuvering feels great. Tip: During missions, you can return to the fleet to refuel and restock weapons."
 
 - title: "Persona 4 Golden"
