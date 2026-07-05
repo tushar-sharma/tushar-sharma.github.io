@@ -1110,71 +1110,330 @@ I would start with hybrid retrieval for high-value knowledge search. BM25 handle
 
 ## July 4, 2026
 
+### Elasticsearch and the Inverted Index
 
-Elastic search uses inverted index. 
+**Elasticsearch** uses an **inverted index**, which is the core data structure behind most modern search engines.
 
-> What's inverted index? 
+**What is an inverted index?**
+
+Instead of storing documents like this:
+
+```text
+Doc1 -> "I love machine learning"
+Doc2 -> "Machine learning uses embeddings"
+```
+
+an inverted index stores:
+
+```text
+machine -> [Doc1, Doc2]
+learning -> [Doc1, Doc2]
+love -> [Doc1]
+embeddings -> [Doc2]
+```
+
+**Advantages**
+- Extremely fast keyword search
+- Efficient for exact words, IDs, product codes, error messages and names
+
+---
+
+## Two Types of Search
+
+### 1. Term-based (Lexical) Search
+
+Term-based search matches the **actual words** in the query.
+
+Example:
+
+Query:
+```
+refund policy
+```
+
+Matches:
+
+```
+Refund Policy
+```
+
+It may completely miss:
+
+```
+Returns and reimbursements
+```
+
+because the words differ.
+
+Common algorithms:
+- TF-IDF
+- BM25 (used by Elasticsearch)
+
+---
+
+### 2. Embedding-based Search (Semantic Search)
+
+Instead of comparing words, we compare **meaning**.
+
+Pipeline:
+
+```
+User query
+      │
+      ▼
+Embedding model
+      │
+      ▼
+Query embedding
+      │
+      ▼
+Vector database
+      │
+      ▼
+Nearest document embeddings
+```
+
+A retriever converts the query into an embedding and searches for the closest document embeddings.
+
+This allows:
+
+```
+refund policy
+```
+
+to retrieve
+
+```
+Returns and reimbursement guide
+```
+
+even though the words differ.
+
+---
+
+## Retriever Evaluation
+
+A retriever should return the **right documents**, not just many documents.
+
+### Context Precision
+
+Of all retrieved chunks, how many were actually relevant?
+
+High precision means few irrelevant chunks.
+
+### Context Recall
+
+Of all relevant chunks in the corpus, how many did the retriever find?
+
+High recall means very little useful information was missed.
+
+A good retriever tries to maximize both.
+
+---
+
+## k-Nearest Neighbors (kNN)
+
+Brute-force kNN works like this:
+
+1. Embed the query.
+2. Compute similarity against **every** document embedding.
+3. Rank by similarity.
+4. Return the top-k.
+
+This is accurate but slow for millions of vectors.
+
+Large systems therefore use **Approximate Nearest Neighbor (ANN)** indexes (FAISS, HNSW, ScaNN, Milvus, Pinecone, etc.) which trade a tiny amount of accuracy for much faster retrieval.
+
+---
+
+## Chunking
+
+Documents are usually too large to embed as one piece.
+
+We split them into **chunks** before creating embeddings.
+
+Example:
+
+```
+100-page PDF
+        │
+        ▼
+Chunk 1
+Chunk 2
+Chunk 3
+...
+```
+
+### Overlapping Chunks
+
+Without overlap:
+
+```
+ABCDE
+FGHIJ
+```
+
+Information crossing the boundary can be lost.
+
+With overlap:
+
+```
+ABCDE
+DEFGH
+GHIJK
+```
+
+Important context appears in neighboring chunks, improving retrieval.
+
+The trade-off is storing more embeddings.
+
+---
+
+## Chunk Size
+
+Chunk size should generally be **smaller than the embedding model's maximum input length**.
+
+When building RAG, you also need to ensure enough retrieved chunks fit inside the **LLM's context window**.
+
+### Small chunks
+
+Advantages
+
+- More precise retrieval
+- Can fit more retrieved chunks into the LLM context
+- Less irrelevant information
+
+Disadvantages
+
+- May lose surrounding context
+- More embeddings to store
+- Higher indexing cost
+
+### Large chunks
+
+Advantages
+
+- Better preserves context
+
+Disadvantages
+
+- More irrelevant text
+- Fewer chunks fit into the LLM context window
+
+---
+
+## Context Length vs Context Window
+
+These terms are usually used interchangeably.
+
+They both mean:
+
+> The maximum number of tokens a model can process in a single request.
+
+Example:
+
+128K context window means:
+
+System prompt
++ User prompt
++ Retrieved documents
++ Conversation history
++ Generated output
+
+must all fit within roughly 128K tokens.
+
+---
+
+## Planning
+
+Autoregressive models generate one token at a time and cannot literally backtrack once a token has been emitted.
 
 
-There are two types of search : 
+Modern systems improve planning using:
 
-1. Term based search 
+- reasoning models
+- hidden reasoning tokens
+- tree search or multiple candidate solutions
+- tool use
+- code execution
+- iterative refinement
 
-2. Embedding based search 
+The base transformer is still autoregressive, but the surrounding inference system makes planning much stronger.
 
+---
 
-**Term based serach**: It's a lexical search. It means you are actually searching the string. 
+## Chain-of-Thought
 
+Giving examples that decompose a difficult task into smaller reasoning steps often improves performance because it encourages structured reasoning.
 
-**Embedded based search**: First you create a search query into embeddings. Next you search it against embeddings. **Retrieval** is responsible for getitng the releavant embeddings. 
+However, production systems usually **do not expose** the model's internal reasoning to users. Instead, they return only the final answer or a brief explanation.
 
-How do we know quality of the retriever? 
+---
 
-1. Context precision : how much relevant document were retreived
+## Tool Calling
 
-2. Context recall : after the retieved data, how much docs were relevant
+A tool is simply a function the model can invoke.
 
+Example:
 
-K nearest neighbor is brute force embeddgin search algo: 
-  find embedding of the search query 
-  compare it against all the embeddings and give it a score 
-  pick up top k ranked result 
+```
+Weather(city)
+Calculator(expression)
+Database(query)
+Search(query)
+```
 
+The model predicts:
 
-### chunking 
+```
+Call Weather("Charlotte")
+```
 
-before sending text to embedding, you can use chunking. You pick up a chunk size and break into multiple chunks. Youc an use overalpping with it or wirhotu it 
+The application executes the function and returns the result to the model.
 
-> What's the difference ? what's overlapping 
+The model never executes Python itself—it only decides **which tool to call** and **with what arguments**.
 
+---
 
-chunk size hsould not be greater than context length of the generative model. also not greater than context limit of model 
+## Agents
 
-> wha'ts context length: total number of tokens that can be processed by a model in one epoch . How is context limit differnt ? i dont know
+An **agent** is an LLM that can repeatedly:
 
+- think
+- choose a tool
+- observe the result
+- decide the next action
 
-Benefit of small chunk size 
+until the task is complete.
 
-1. more diverse info 
-2. fit more chunks into context window 
+---
 
-Drawbacks of small chunks
-1. loss of information 
-2. more computation 
-3. more chunk size, double the embedding vectos required to store 
+## Control Flow
 
-> remember you chain of thouhgs, expalin gby by for models to be bettter at tasks when prompting  
+Control flow is the order in which an agent performs actions.
 
+Example:
 
-### Planning 
+```
+Receive question
+      │
+      ▼
+Search documents
+      │
+      ▼
+Retrieve chunks
+      │
+      ▼
+Call LLM
+      │
+      ▼
+Need calculator?
+      │
+   Yes ▼ No
+Calculator
+      │
+      ▼
+Generate final answer
+```
 
-Foundation model are not great for planning. Becuase auto regresssive model are not good at plannign becuase they cannot backgrack. 
-
-> So codex has planning mode and claude. is it not good? 
-
-
-### Tool calling 
-
-a tools ia  function , function calling is just invoking a tool. Model can be turned into agents. 
-
-Control Flow : order of execution in a plannign is called. 
+Unlike a normal chat completion, an agent's control flow may branch, loop, and call multiple tools before producing the final response.
