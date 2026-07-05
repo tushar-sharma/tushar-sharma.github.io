@@ -1138,9 +1138,9 @@ embeddings -> [Doc2]
 
 ---
 
-## Two Types of Search
+### Two Types of Search
 
-### 1. Term-based (Lexical) Search
+#### 1. Term-based (Lexical) Search
 
 Term-based search matches the **actual words** in the query.
 
@@ -1171,7 +1171,7 @@ Common algorithms:
 
 ---
 
-### 2. Embedding-based Search (Semantic Search)
+#### 2. Embedding-based Search (Semantic Search)
 
 Instead of comparing words, we compare **meaning**.
 
@@ -1211,17 +1211,17 @@ even though the words differ.
 
 ---
 
-## Retriever Evaluation
+### Retriever Evaluation
 
 A retriever should return the **right documents**, not just many documents.
 
-### Context Precision
+#### Context Precision
 
 Of all retrieved chunks, how many were actually relevant?
 
 High precision means few irrelevant chunks.
 
-### Context Recall
+#### Context Recall
 
 Of all relevant chunks in the corpus, how many did the retriever find?
 
@@ -1231,7 +1231,7 @@ A good retriever tries to maximize both.
 
 ---
 
-## k-Nearest Neighbors (kNN)
+### k-Nearest Neighbors (kNN)
 
 Brute-force kNN works like this:
 
@@ -1246,7 +1246,7 @@ Large systems therefore use **Approximate Nearest Neighbor (ANN)** indexes (FAIS
 
 ---
 
-## Chunking
+### Chunking
 
 Documents are usually too large to embed as one piece.
 
@@ -1264,7 +1264,7 @@ Chunk 3
 ...
 ```
 
-### Overlapping Chunks
+#### Overlapping Chunks
 
 Without overlap:
 
@@ -1289,13 +1289,13 @@ The trade-off is storing more embeddings.
 
 ---
 
-## Chunk Size
+### Chunk Size
 
 Chunk size should generally be **smaller than the embedding model's maximum input length**.
 
 When building RAG, you also need to ensure enough retrieved chunks fit inside the **LLM's context window**.
 
-### Small chunks
+#### Small chunks
 
 Advantages
 
@@ -1309,7 +1309,7 @@ Disadvantages
 - More embeddings to store
 - Higher indexing cost
 
-### Large chunks
+#### Large chunks
 
 Advantages
 
@@ -1322,7 +1322,7 @@ Disadvantages
 
 ---
 
-## Context Length vs Context Window
+### Context Length vs Context Window
 
 These terms are usually used interchangeably.
 
@@ -1344,7 +1344,7 @@ must all fit within roughly 128K tokens.
 
 ---
 
-## Planning
+### Planning
 
 Autoregressive models generate one token at a time and cannot literally backtrack once a token has been emitted.
 
@@ -1362,7 +1362,7 @@ The base transformer is still autoregressive, but the surrounding inference syst
 
 ---
 
-## Chain-of-Thought
+### Chain-of-Thought
 
 Giving examples that decompose a difficult task into smaller reasoning steps often improves performance because it encourages structured reasoning.
 
@@ -1370,7 +1370,7 @@ However, production systems usually **do not expose** the model's internal reaso
 
 ---
 
-## Tool Calling
+### Tool Calling
 
 A tool is simply a function the model can invoke.
 
@@ -1395,7 +1395,7 @@ The model never executes Python itself—it only decides **which tool to call** 
 
 ---
 
-## Agents
+### Agents
 
 An **agent** is an LLM that can repeatedly:
 
@@ -1408,7 +1408,7 @@ until the task is complete.
 
 ---
 
-## Control Flow
+### Control Flow
 
 Control flow is the order in which an agent performs actions.
 
