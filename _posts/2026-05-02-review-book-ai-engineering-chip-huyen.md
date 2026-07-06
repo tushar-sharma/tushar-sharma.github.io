@@ -1437,3 +1437,43 @@ Generate final answer
 ```
 
 Unlike a normal chat completion, an agent's control flow may branch, loop, and call multiple tools before producing the final response.
+
+## July 5, 2026
+
+### Hallucination
+
+Hallucination: It's not wrong answer. It's when a model gives a response that seems plausible but is based on wrong fact. It just mades it up. 
+
+e.g. 
+
+1. It can invent a city that never lived.
+
+2. Cite a paper that never exist.
+
+### Planning 
+
+- It's harder because it requires more reasoning ability so use stronger model for planning
+
+
+### Function calling
+
+Tools are functions so it's tool calling. It makes the model behave like an agent. 
+
+you need tools description , tool definition.
+
+Failures: Model can hallucinate and fault on invalid tool name and invalid parameters.
+
+Too many tools can also pollute the contex window. 
+
+
+### Reflection
+
+- Use a specialized score for plan execution 
+
+### Agents
+
+- Agents are wrapper over raw LLM 
+
+- LLM in a loop
+
+- a model is nothing but learns the distribution of next token.
