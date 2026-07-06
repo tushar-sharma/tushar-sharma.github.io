@@ -1442,38 +1442,52 @@ Unlike a normal chat completion, an agent's control flow may branch, loop, and c
 
 ### Hallucination
 
-Hallucination: It's not wrong answer. It's when a model gives a response that seems plausible but is based on wrong fact. It just mades it up. 
+Hallucination is not just any wrong answer. It is a response that sounds plausible but is unsupported by the model's context, tools, or source data. The model may fabricate facts, references, entities, or details because it is optimizing for a likely continuation of text, not for truth.
 
-e.g. 
+Examples:
 
-1. It can invent a city that never lived.
+1. It invents a city that does not exist.
 
-2. Cite a paper that never exist.
+2. It cites a paper that was never published.
 
-### Planning 
+3. It gives a confident explanation for a system behavior without enough evidence.
 
-- It's harder because it requires more reasoning ability so use stronger model for planning
+For engineering, the key point is that hallucination is a reliability problem. Mitigations include grounding responses in retrieved context, validating claims against tools or databases, constraining output formats, asking the model to say when information is missing, and evaluating outputs with task-specific checks.
 
+### Planning
+
+Planning is harder than direct question answering because it requires the model to break a goal into steps, keep dependencies straight, choose actions, and revise the plan when new information arrives. This usually benefits from a stronger model, especially when the task has many constraints or a long horizon.
+
+Good planning systems separate plan generation from plan execution. The model can propose a plan, but the application should still check whether each step is valid, executable, and useful. For high-risk tasks, the system should verify intermediate results before continuing.
 
 ### Function calling
 
-Tools are functions so it's tool calling. It makes the model behave like an agent. 
+Function calling, or tool calling, lets the model request that the application call a specific function with structured arguments. The model does not execute the function by itself. It chooses a tool name and arguments; the surrounding application validates the request, runs the tool, and sends the result back to the model.
 
-you need tools description , tool definition.
+This is one of the main building blocks for agents because it lets the model interact with external systems such as search, databases, calendars, code runners, or internal APIs.
 
-Failures: Model can hallucinate and fault on invalid tool name and invalid parameters.
+To make tool calling reliable, the model needs clear tool descriptions, strict parameter schemas, and enough context to choose the right tool. The application should treat tool calls as untrusted input and validate them before execution.
 
-Too many tools can also pollute the contex window. 
+Common failures:
 
+1. The model calls a tool that does not exist.
+
+2. The model passes invalid parameters.
+
+3. The model chooses the wrong tool for the task.
+
+4. The model calls a tool when it should answer directly, or answers directly when it should call a tool.
+
+Too many tools can also pollute the context window. If the model sees a large list of irrelevant tools, tool selection becomes harder and the prompt becomes more expensive. A practical system should expose only the tools that are relevant to the current task or route the request to a smaller tool set first.
 
 ### Reflection
 
-- Use a specialized score for plan execution 
+Reflection means having the system inspect its own output, plan, or intermediate work before producing the final answer or taking the next action. It can catch obvious gaps, but it should not be treated as proof of correctness. A model can review its own flawed reasoning and still miss the error.
+
+For plan execution, use specialized scoring rather than a vague "is this good?" check. The score should match the task: factual accuracy, schema validity, code test results, retrieval coverage, tool success, latency, cost, or user-facing quality. This makes reflection measurable instead of purely subjective.
 
 ### Agents
 
-- Agents are wrapper over raw LLM 
+At the model level, an LLM learns statistical patterns in text and predicts likely next tokens. An agent is more than a raw LLM call. It is a system that wraps a model in a loop: observe the current state, decide what to do, act through tools or messages, read the result, and continue until it reaches a stopping condition.
 
-- LLM in a loop
-
-- a model is nothing but learns the distribution of next token.
+The simplest way to remember it: an agent is an LLM in a loop, with tools, memory or state, and control logic around it.
