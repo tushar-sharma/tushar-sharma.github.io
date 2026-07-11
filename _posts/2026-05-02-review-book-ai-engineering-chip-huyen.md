@@ -1491,3 +1491,133 @@ For plan execution, use specialized scoring rather than a vague "is this good?" 
 At the model level, an LLM learns statistical patterns in text and predicts likely next tokens. An agent is more than a raw LLM call. It is a system that wraps a model in a loop: observe the current state, decide what to do, act through tools or messages, read the result, and continue until it reaches a stopping condition.
 
 The simplest way to remember it: an agent is an LLM in a loop, with tools, memory or state, and control logic around it.
+
+## July 11, 2026
+
+
+### RAG vs Finetuning 
+
+- RAG is when you proivde additional context to the model. RAG means adding more facts avaialbe for the model. This would help to prevent hallucination also. 
+
+- Use RAG for facts, Finetuning if you want to change behavior. 
+
+- RAG can also be done easier using BM25 rather then embedding based search. Start with BM25 first since you dont need a vector datbase?
+
+> TODO make a RAG serach with BM25 with FastAPI
+
+> Question: Is annotation same as label when we are talking about data
+
+- Embedding based search increase cost during inference.
+
+### Finetuning 
+
+- take a base model after it's trained (both pretrained and posttrained), and train it in smaller data set for a specific task. 
+
+- this updates the weights of model unlike prompt engineering
+
+- supervised learning since the training set needs labeled data
+
+- Lanugage models are trained in self-supervised learning, where model itself learns the annotation for the data.
+
+**cons**:
+
+- finetuning a model for x task , might make it forget task b. This is called catastropic forgetting.
+
+- expensive
+
+**Types of finetuning**: 
+
+1. Supervised finetuning : data is annotated
+
+2. Preference finetuning : Instructions are given in detail
+
+**types of language model**:
+
+1. Autoregressive model: they predict next token based on previous token from left to right 
+
+2. Masked token: They can edit the text in between the prompt. Helpful for task like code debugging.
+
+**key points**
+
+1. Trainable parameters: parameters which can be updated during training 
+
+2. Frozen parameters: parameters which cannot be updated during training
+
+
+During **Pretraining**, all parameters are updated. Finetuning only trainable parameters are updated. During **inference**, no parameters are updated.
+
+### Backpropogation 
+
+- Forward pass: compute output parameters from input 
+
+- backword pass: update the existing weights based on the loss
+
+Inference only has forward pass. 
+
+What's backward pass? 
+
+1. compute the output 
+
+2. Compare it against the predicted output and calculate loss 
+
+3. For each parameters, we need to calculate gradient value. mathematically,
+
+take  a derivative of each parameter against the loss 
+
+4. We need an optimizer like Stochastic gradient descent or Adam, to update the weights based on the loss. It calculates gradient descent
+
+For transformer based modle we use Adam . 
+
+> what's diffrence between paramter and weights.
+
+
+There are other ways than backpropogation to update weigts in backpass like evolutionally strategy which uses surrogate gradient instead of real gradient. 
+
+
+### Memory 
+
+Paramters is N . Memory is M. memory is N * M 
+
+infernece alos needs memory to maintain key value cache. So that's 20% of models' weights
+
+So total memory is N * M * 1.2
+
+lets say a model has 13B paramters 
+= 13B x 2(bytes) x 1.2
+ 26 billion bytes 
+= 26 GB x 1.2 = 32.1 GB
+
+
+Since each weight is numercial value, it's represent using floating point. Few values
+
+fp32 is single precisison = 4 bytes
+fp16 : half prescison : 2 bytes
+fp64 : double precious 
+
+
+### Qantization 
+
+- reduce precision to save memory 
+
+- weight optimization is more common than activation matrix
+
+- cons:reduces accuracy 
+
+- pros: larger batchsize so more data can be process in parallel 
+
+- PTQ : reduce preiciosn during post trianing 
+
+### Model merging 
+
+since models suffer from catastropic forgetting, have separate models for each task. 
+
+> TODO code to merge models 
+```
+
+### Model ensemble 
+
+- we can differnt models produces output and then vote or decide which one is the optimal one. 
+
+### Hyperparamters 
+
+recall, hyperparmaters are not that's is learned during training. ti can be finetuned before the training or after? like temperaature is one.
