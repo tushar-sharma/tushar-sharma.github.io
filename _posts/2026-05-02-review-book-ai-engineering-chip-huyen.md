@@ -1497,7 +1497,7 @@ The simplest way to remember it: an agent is an LLM in a loop, with tools, memor
 
 ### RAG vs Finetuning
 
-**Interview answer**: Use RAG when the model needs access to facts or fresh domain knowledge. Use finetuning when the model needs to change its behavior, style, format, policy-following, or task-specific pattern. Use both when the system needs both new knowledge and a reliable behavior change.
+Use RAG when the model needs access to facts or fresh domain knowledge. Use finetuning when the model needs to change its behavior, style, format, policy-following, or task-specific pattern. Use both when the system needs both new knowledge and a reliable behavior change.
 
 - RAG means retrieval-augmented generation: retrieve relevant context from an external source and add it to the prompt.
 - RAG does not update model weights. It changes the model's input context at inference time.
@@ -1517,8 +1517,6 @@ The simplest way to remember it: an agent is an LLM in a loop, with tools, memor
 - Start with BM25 for a RAG baseline when lexical matching is likely to work. It is cheap, fast, simple, explainable, and does not require a vector database.
 - Embedding search is better when queries and documents use different words but have the same meaning.
 - Embedding-based RAG can increase inference cost because the query may need to be embedded on every request, vector infrastructure is more expensive than an inverted index, retrieved chunks can add prompt tokens, and reranking can add another model call.
-
-> TODO: Make a RAG search example with BM25 and FastAPI.
 
 **Annotation vs label**:
 
@@ -1666,7 +1664,6 @@ Model merging combines the weights of multiple models into one model. The goal i
 
 This can help avoid running many specialized models, but it can also create conflicts if the merged models learned incompatible behaviors.
 
-> TODO: Add a small model-merging code example.
 
 ### Model Ensemble
 
