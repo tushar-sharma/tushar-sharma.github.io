@@ -1491,3 +1491,199 @@ For plan execution, use specialized scoring rather than a vague "is this good?" 
 At the model level, an LLM learns statistical patterns in text and predicts likely next tokens. An agent is more than a raw LLM call. It is a system that wraps a model in a loop: observe the current state, decide what to do, act through tools or messages, read the result, and continue until it reaches a stopping condition.
 
 The simplest way to remember it: an agent is an LLM in a loop, with tools, memory or state, and control logic around it.
+
+## July 11, 2026
+
+
+### RAG vs Finetuning
+
+Use RAG when the model needs access to facts or fresh domain knowledge. Use finetuning when the model needs to change its behavior, style, format, policy-following, or task-specific pattern. Use both when the system needs both new knowledge and a reliable behavior change.
+
+- RAG means retrieval-augmented generation: retrieve relevant context from an external source and add it to the prompt.
+- RAG does not update model weights. It changes the model's input context at inference time.
+- RAG can reduce hallucination because the model has a source of truth, but it cannot eliminate hallucination. The model can still retrieve the wrong document, ignore context, misread context, or generate unsupported claims.
+- Finetuning updates model parameters using training examples. It is closer to additional training than prompt engineering.
+- Prompt engineering is enough when the task can be solved by better instructions and examples without new knowledge or weight updates.
+
+**Decision rule**:
+
+- Use RAG when facts change often, the answer must come from documents, or the model lacks domain knowledge.
+- Use finetuning when the model must consistently follow a behavior, format, policy, tone, or task pattern.
+- Use both when the model needs current/private knowledge and a specialized response behavior.
+- Use neither when a clear prompt, tool call, or deterministic rule is enough.
+
+**BM25 vs embedding retrieval**:
+
+- Start with BM25 for a RAG baseline when lexical matching is likely to work. It is cheap, fast, simple, explainable, and does not require a vector database.
+- Embedding search is better when queries and documents use different words but have the same meaning.
+- Embedding-based RAG can increase inference cost because the query may need to be embedded on every request, vector infrastructure is more expensive than an inverted index, retrieved chunks can add prompt tokens, and reranking can add another model call.
+
+**Annotation vs label**:
+
+- A label is usually the target output in supervised learning.
+- An annotation is human- or system-added metadata on data. A label is one type of annotation, but annotations can also include spans, bounding boxes, rankings, rationales, or quality scores.
+- Example: in `email -> spam/not spam`, `spam` is the label. In an image dataset, the class `car` and the bounding box around the car are annotations.
+
+### Finetuning
+
+- Finetuning takes a pretrained or post-trained model and trains it further on a smaller, task-specific dataset.
+- Unlike RAG or prompt engineering, finetuning updates model weights.
+- Supervised finetuning uses labeled examples. For language models, the target is usually the desired output token sequence.
+- Base language model pretraining is self-supervised: the model learns from raw text by predicting missing or next tokens without humans labeling every example.
+
+**Cons**:
+
+- Finetuning can cause catastrophic forgetting: improving the model on one task can make it worse on earlier or general tasks.
+- It can be expensive because training requires GPU memory, optimizer state, activations, data quality work, and evaluation.
+- Bad finetuning data can teach the model bad behavior.
+
+**Types of finetuning**:
+
+1. Supervised finetuning: train on input-output examples.
+2. Preference finetuning: train from preference data, such as one answer being preferred over another.
+3. Parameter-efficient finetuning: freeze most model parameters and train a small number of adapter parameters, such as LoRA.
+
+**Types of language model objectives**:
+
+1. Autoregressive models predict the next token from previous tokens, usually left to right.
+2. Masked-token models predict hidden or masked tokens using surrounding context. They are useful for representation learning and fill-in-the-blank style tasks.
+
+**Parameters, weights, and hyperparameters**:
+
+- A parameter is a learned value inside the model, such as entries in embedding tables, attention matrices, MLP matrices, and layer norm parameters.
+- A weight is usually a matrix parameter. In casual ML language, "weights" often means all learned parameters.
+- Trainable parameters are updated during training.
+- Frozen parameters are not updated during training.
+- A hyperparameter is set outside gradient descent. Examples: learning rate, batch size, number of layers, hidden size, optimizer choice, dropout, weight decay, and temperature.
+- Temperature is an inference/sampling hyperparameter, not a learned parameter.
+
+During **pretraining**, usually all model parameters are updated. During **finetuning**, only trainable parameters are updated. During **inference**, no parameters are updated.
+
+Freezing most parameters reduces training memory, compute cost, storage cost, and risk of catastrophic forgetting.
+
+### Backpropagation
+
+- Forward pass: compute activations, logits, and outputs from inputs using the current parameters.
+- Backward pass: compute gradients of the loss with respect to parameters, then use an optimizer to update trainable parameters.
+- Inference only needs the forward pass. It needs activations, but it does not need gradients or optimizer state.
+
+**Next-token training flow**:
+
+1. The model receives input tokens.
+2. The forward pass produces logits: unnormalized scores for each possible next token.
+3. Softmax converts logits into probabilities that sum to 1.
+4. Cross-entropy loss measures how much probability the model assigned to the correct next token.
+5. Backprop computes gradients.
+6. The optimizer updates trainable parameters.
+
+**Cross-entropy**:
+
+- For language models, cross-entropy punishes the model when it assigns low probability to the correct next token.
+- Simple intuition: `loss = -log(probability assigned to the correct token)`.
+- If the correct token has probability `0.9`, loss is low.
+- If the correct token has probability `0.01`, loss is high.
+
+**Gradients and optimizers**:
+
+- The gradient is `d(loss) / d(parameter)`.
+- It tells us how the loss changes if that parameter increases slightly.
+- If `d(loss) / d(weight)` is positive, increasing the weight increases loss, so gradient descent decreases that weight.
+- Loss is just a scalar number. Gradients tell us which direction to move each parameter.
+- SGD update intuition: `weight = weight - learning_rate * gradient`.
+- Adam uses running averages of recent gradients and gradient magnitudes to adapt the learning rate per parameter. It is commonly used for transformer training because it is usually more stable and efficient than plain SGD.
+- Backprop computes gradients through activations and parameters, but only trainable parameters are updated.
+
+There are alternatives to standard backpropagation, such as evolutionary strategies or surrogate-gradient methods, but backprop is the standard training method for neural networks.
+
+### Memory
+
+If a model has `N` parameters and each parameter uses `M` bytes, weight memory is roughly:
+
+```text
+N * M
+```
+
+Example: 13B parameters with fp16 weights:
+
+```text
+13B * 2 bytes = 26 billion bytes
+```
+
+That is about 26 GB in decimal units, or about 24.2 GiB.
+
+Inference usually needs more memory than just weights:
+
+- KV cache for previous tokens
+- activations and temporary workspace
+- batching overhead
+- framework/runtime overhead
+
+The rough formula:
+
+```text
+total inference memory ~= weight memory + KV cache + activation/workspace overhead
+```
+
+The "20% extra" rule can be a rough estimate, but it is not universal. KV cache size depends on sequence length, batch size, number of layers, hidden size, number of attention heads, and precision.
+
+**Common numeric formats**:
+
+- fp32: single precision, 4 bytes
+- fp16: half precision, 2 bytes
+- bf16: brain floating point, 2 bytes
+- int8: 8-bit integer, 1 byte
+- int4: 4-bit integer, 0.5 bytes
+
+**KV cache**:
+
+- During generation, the model stores attention keys and values for previous tokens.
+- This avoids recomputing keys and values for the entire prompt on every new generated token.
+- KV cache grows with sequence length and batch size.
+- Context limits exist partly because attention and KV cache become expensive as the sequence grows.
+
+### Quantization
+
+- Quantization reduces numerical precision to save memory and bandwidth.
+- Example: fp16 to int8 means values represented as 16-bit floating point numbers are approximated using 8-bit integers plus scaling factors.
+- Quantization can allow larger batch sizes because weights, activations, or KV cache values use less memory.
+- Quantization can hurt quality because many distinct high-precision values get rounded into fewer representable values.
+
+**Weight vs activation quantization**:
+
+- Weight quantization compresses stored model weights. This is usually easier and more common.
+- Activation quantization compresses intermediate values computed during the forward pass. This is harder because activations depend on the input and can vary widely at runtime.
+
+**PTQ vs QAT**:
+
+- PTQ means post-training quantization: quantize an already-trained model after training, usually with little or no retraining.
+- QAT means quantization-aware training: train or finetune while simulating quantization effects so the model adapts to lower precision.
+
+### Model Merging
+
+Model merging combines the weights of multiple models into one model. The goal is to preserve capabilities from different finetuned models while serving only one model at inference time.
+
+This can help avoid running many specialized models, but it can also create conflicts if the merged models learned incompatible behaviors.
+
+
+### Model Ensemble
+
+An ensemble keeps multiple models separate, runs them independently, and combines their outputs by voting, averaging probabilities, reranking, or another decision rule.
+
+Model merging produces one merged model. Ensembling keeps multiple models and combines their predictions at inference time.
+
+### Hyperparameters
+
+Hyperparameters are values chosen outside gradient descent. They are not learned as model parameters.
+
+Examples:
+
+- learning rate
+- batch size
+- number of training epochs
+- optimizer choice
+- weight decay
+- dropout rate
+- model depth and hidden size
+- temperature, top-k, and top-p during sampling
+
+Some hyperparameters are training-time choices, such as learning rate and batch size. Others are inference-time choices, such as temperature and top-p.
