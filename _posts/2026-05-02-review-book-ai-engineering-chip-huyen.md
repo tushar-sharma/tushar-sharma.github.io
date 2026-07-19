@@ -1687,3 +1687,30 @@ Examples:
 - temperature, top-k, and top-p during sampling
 
 Some hyperparameters are training-time choices, such as learning rate and batch size. Others are inference-time choices, such as temperature and top-p.
+
+
+## Jul 18, 2026
+
+
+Model quality depends upon the quality of the data that it's trained on. 
+
+CLIP model is a multimodal vision and language mode. I/P is pair of (text, images) and detect image.
+
+
+A model has 7B paramters that means it has 7 billion weights. Weight is the value that a model learns during training.
+
+**Finetuning types**: 
+
+1. Instruction fine tuning: i/p is pair of (instruciton, response)
+
+2. Prefernce Finetuning: I/P is (instructions, winning response, losing response)
+
+**Ossification**: Sometimes pretraining a model freezes it's weight so that finetuning doesn't improve model's learning. Solution? 
+
+You can add a white nosie to a image, and model can misclassify the image. This is called a `adding a single pixel`, also perturbation.
+
+what's a position bias in a model? how do we solve it ?
+
+The code genrated by codex, claude or any other ai agetn goes through parser and linter so that it has determinsitc guardrails.
+
+We can use sythetic data to train model. 
