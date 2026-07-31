@@ -1768,8 +1768,74 @@ Higher precision usually uses more memory and bandwidth and may reduce hardware 
 
 **Pruning** removes or zeroes out some parameters so the model becomes sparse. This can reduce memory use if the runtime and hardware can take advantage of sparsity.
 
-Why do we need the **KV cache**? During training, all tokens in a sequence are known in advance, so attention for many positions can be computed in parallel.
+Why do we need the **KV cache**, and why is it mainly an inference problem?
 
-During inference, if the model is generating `x`<sub>t</sub>, it needs information from previous tokens `x`<sub>1</sub> through `x`<sub>t-1</sub>. Without a KV cache, the model would recompute keys and values for previous tokens at every step. The KV cache stores those previous keys and values so generation is faster.
+Imagine this training sentence:
+
+```text
+The cat sat on the mat
+```
+
+During **training**, the whole sequence is already known. The model computes the key and value vectors for all tokens in one forward pass:
+
+| Token | Key | Value |
+| --- | --- | --- |
+| `The` | K1 | V1 |
+| `cat` | K2 | V2 |
+| `sat` | K3 | V3 |
+| `on` | K4 | V4 |
+| `the` | K5 | V5 |
+| `mat` | K6 | V6 |
+
+Then it predicts the next token for many positions in parallel:
+
+| Given tokens | Target token |
+| --- | --- |
+| `The` | `cat` |
+| `The cat` | `sat` |
+| `The cat sat` | `on` |
+| `The cat sat on` | `the` |
+| `The cat sat on the` | `mat` |
+
+A causal mask prevents each position from looking at future tokens, but the model still computes the K/V vectors once for the full sequence. There is no repeated loop where the model first runs on `The cat sat`, then runs again on `The cat sat on`, then runs again on `The cat sat on the`. Since the same K/V values are not recomputed again and again during that one training pass, a KV cache is not usually needed for normal training.
+
+During **inference**, the future tokens are not known yet. The model starts with only the prompt:
+
+```text
+The cat sat
+```
+
+During **prefill**, the model reads the prompt and computes:
+
+| Token | Key | Value |
+| --- | --- | --- |
+| `The` | K1 | V1 |
+| `cat` | K2 | V2 |
+| `sat` | K3 | V3 |
+
+The KV cache stores these key and value vectors. It does not store the words as plain text; it stores the model's internal vectors for those tokens.
+
+Now suppose the model generates the next token:
+
+```text
+The cat sat on
+```
+
+To generate the token after `on`, the model now needs the full context `The cat sat on`. The K/V values for `The`, `cat`, and `sat` were already computed during prefill. Without a KV cache, the model would run the whole longer context again and recompute K1/V1, K2/V2, and K3/V3 before computing K4/V4 for `on`. With a KV cache, it reuses the stored vectors and only computes the new key and value for `on`:
+
+| Token | Key | Value |
+| --- | --- | --- |
+| `The` | K1 | V1 |
+| `cat` | K2 | V2 |
+| `sat` | K3 | V3 |
+| `on` | K4 | V4 |
+
+If the next token is `the`, the cache grows again:
+
+```text
+The cat sat on the
+```
+
+The model now reuses K1/V1 through K4/V4 and only computes K5/V5 for `the`. So the KV cache is like saving your previous handwritten work instead of recalculating the same columns every time a new word is added. It uses more memory, but it makes token-by-token generation much faster.
 
 **Kernels** are optimized low-level functions for a specific chip. CUDA kernels are common on NVIDIA GPUs. `torch.compile` can optimize PyTorch code by compiling parts of the model graph. **Lowering** is the process of converting high-level model operations into lower-level operations that run efficiently on the target hardware.
