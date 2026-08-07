@@ -68,6 +68,13 @@
   map_link: "https://www.google.com/maps/search/?api=1&query=8200-400+Providence+Rd%2C+Charlotte%2C+NC+28277"
   city: "Charlotte, NC"
 
+- name: "Coco Mexican Restaurant - CLT"
+  notes: "Nice ambience. Reasonable price and good food."
+  address: "8145 Ardrey Kell Rd #103, Charlotte, NC 28277"
+  category: food
+  map_link: "https://www.google.com/maps/search/?api=1&query=8145+Ardrey+Kell+Rd+%23103%2C+Charlotte%2C+NC+28277"
+  city: "Charlotte, NC"
+
 - name: Cannabliss Dispensary
   notes: "Fee yoga event, Yin Yoga with Bella."
   category: activity
