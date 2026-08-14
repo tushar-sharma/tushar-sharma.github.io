@@ -1,14 +1,21 @@
 ---
 layout: post
 title: Mastering Ethereum: Implementing Smart Contracts
-image: https://unsplash.com/photos//download?w=437
-thumb: https://unsplash.com/photos//download?w=437
-author: 
+image: https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg
+thumb: https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg
+author: tushar sharma
 category: blog
 published: false
 ---
 
-<!-- truncate_here -->
+These are my learning notes and reflections while reading the book. I plan to update this periodically as I progress through the book.<!-- truncate_here -->
+
+<!-- disclaimer -->
+<div class="book-notes-disclaimer">
+  These are my rough notes while reading the book.
+</div>
+
+---
 
 Etherium is a blockchain it uses ether as currency.  Bitcoin is also a blokchain , it uses bitcoin currency?
 
