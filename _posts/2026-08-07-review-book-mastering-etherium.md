@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mastering Ethereum: Implementing Smart Contracts
+title: "Mastering Ethereum: Implementing Smart Contracts"
 image: https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg
 thumb: https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg
 author: tushar sharma
@@ -81,4 +81,3 @@ Bitcoin is a distributed consensus state machine. Etherium is also a distrubuted
 You can create a turin gcomplete machine with smallest 4 states and six symbols ? ownershipoof
 
 Modenr printers are turing complete , so you can snet them file that could freeze them . How to do that ?
-
