@@ -86,15 +86,30 @@ Ethereum is often described as a Turing-complete distributed state machine. More
 
 Alan Turing described a state machine that can change symbols by reading from and writing to sequential memory. This model is called a Turing machine. Universal computability is the idea that a machine can compute anything that is computable, given enough time and memory.
 
-Not all questions about programs are decidable. For example, the halting problem asks whether, given any arbitrary program and input, we can always determine whether that program will eventually stop. In other words, can we know the future execution path of every possible program without executing it?
+Not all questions about programs are decidable. For example, the halting problem asks whether, given any arbitrary program and input, we can always determine whether that program will eventually stop. In other words, can we build a perfect function like this?
 
-```python 
-def foo(x : int):
-  x = x * x 
-  return x 
-``` 
+```python
+halts(program, input) -> True if program(input) stops, else False
+```
 
-For simple programs like `foo`, yes, we can decide that it ends. The halting problem says there is no general algorithm that can decide this for every possible program and input. The classic proof is by contradiction: assume a perfect halting detector exists, then construct a program that does the opposite of what the detector predicts, creating a contradiction.
+Turing's idea was proof by contradiction. Suppose this perfect `halts` function exists. Now create another program that uses `halts` and then does the opposite:
+
+```python
+def strange(program):
+  if halts(program, program):
+    while True:
+      pass
+  else:
+    return
+```
+
+Now ask: what happens if we run `strange(strange)`?
+
+If `halts(strange, strange)` says it will halt, then `strange` goes into an infinite loop. So the prediction is wrong.
+
+If `halts(strange, strange)` says it will not halt, then `strange` returns immediately. So the prediction is wrong again.
+
+This contradiction means the perfect `halts` function cannot exist. It is not that we cannot decide simple programs. We can. The point is that there is no one general algorithm that works for every possible program and input.
 
 The system that can simulate a Turing machine is called Turing complete. A machine that can simulate any other Turing machine is called a Universal Turing Machine.
 
