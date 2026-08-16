@@ -21,6 +21,7 @@ These are my learning notes and reflections while reading "Mastering Ethereum: I
 
 ---
 
+
 ## Aug 15, 2026
 
 Ethereum is an unbounded state machine.
@@ -127,3 +128,68 @@ Ethereum adds gas. Gas is the unit used to meter computation, storage, and trans
 Dapp means decentralized application. In practice it usually means smart contracts plus a web interface, so users interact with blockchain logic through a browser and wallet.
 
 Web1 generally means the early read-only web: mostly static pages connected by hyperlinks. It was created by Tim Berners-Lee at CERN around 1989-1991. Web2 refers to the interactive and social web, where users create content and platforms manage much of the data. Web3 refers to applications that use blockchains, wallets, tokens, and decentralized protocols.
+
+
+## Aug 16, 2026
+
+Ether is the currency of Etherium. Every transcations requires transcation fee. 
+
+```
+1 ETH = 10 ^ 9 Gwei (giga way) = 10^18 wei 
+```
+
+Wallets stores keys. It could be software or hardware. Software wallets can also create and broadcast transcations. 
+
+Private keys in the wallet helps acces the funds (ether) and smart contract.
+
+**Metamask** is one such wallet. There's a [chrome extension](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) or from their [website](https://metamask.io/download). 
+
+Wallet generates a private key. Next you can generate public key from your private key. The last 20 bytes of hash of your public key is your address. 
+
+Transcations will use this address `to` or `from` fields to transfer ether. Transcations are messages that are stored as cyrptographical links in the blockchain.
+
+```
+An address can logically look like 0x23..1bc
+   ETH balance
+   transcations count nonce 
+   Smart contract code 
+```
+
+Nonce is Numewr used once. Different blockchain uses nonce differntly. In ether, nonce is sequential identification of the transcations block.
+
+Bitcoin uses UXTO model, where miners use nonce to perform proof of work.
+
+What's differnce between private and public key? Previously you had one private key that was used to encryptt and decrypt messages. However it causes isses to securely distribute private key. 
+
+
+Public key solves that. Every use will have a pair of (public and private key). Public key can be broadcasted to all.
+
+For scenario 1, Alice wants to send secure message to Bob. Alice will take Bob's public key to encryp the message and her private key. Now Bob can decrypt the message with his private key. Bob didn't had to send ALice his private key. 
+
+For scenario 2, Alice can digital signed the message with her private key, and anyone can verify using her public key that it was signed by Alice.
+
+Etherium has various neetwork 
+
+1. Main network 
+2. private network like localhost
+3. Testnet like Sepolia
+4. Holešky network
+
+Gas fees are paid by the Sender. There are 3 types of transcations
+
+1. Ether transfer : It has `to' and 'from` field. Datafield is emtpy. Used for transfer ether
+
+2. Contract deployment: `To` is empty, & data load is contract bytecode
+
+ > To is specail address like zero or not
+
+3. Contract Interaction: Transcation has encoded function call in the data field.  
+
+EVM is a global singleton; each node has the same state. There are two types of accounts in Ethereum 
+
+1. Externaly owned account (EOA) : IT has a private key. Used for sending ether or accessing contract code
+
+2. Contract Account: It doens't have private key. canot initiate transcations. 
+
+
+What's a facuet? A code that gives out ether to any address and can be refilled.
