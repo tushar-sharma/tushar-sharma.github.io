@@ -5,7 +5,6 @@ image: https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-busine
 thumb: https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg
 author: tushar sharma
 category: blog
-published: false
 ---
 
 These are my learning notes and reflections while reading the book. I plan to update this periodically as I progress through the book.<!-- truncate_here -->
@@ -15,69 +14,97 @@ These are my learning notes and reflections while reading the book. I plan to up
   These are my rough notes while reading the book.
 </div>
 
----
-
-Etherium is a blockchain it uses ether as currency.  Bitcoin is also a blokchain , it uses bitcoin currency?
-
-Etherium is an unbounded state machine. A state machine is a design system with precomputed states based on some logics. 
-
-Etheirum has a singletone state and a virutal machine. Virtula Machine allows other OSes to run on host computer using logical partition. Like VMWare had a virutal machine. 
-
-The Etheirum virtual machine (EVM) executes smart contract.  Think of smart contract as the code that is is saved on the ledger.
-
-## Similarties of Etherium with Bitcoin
-
-1. Participants uses P2P network through gossip protocol without the need of a trusted third party. Gossip protoocol is used for P2P network unlike HTTP protocol? 
-
-2. It has byzantine fault tolernace ? 
-
-3. It has a digital currency. Etherium has ether
-
-4. Use Digital signature and hashes for cyrptographical verification 
-
-## Differnce between Etherium and Bitcoin
-
-1. Etherium language is Turing computer. A turing complete was proposed by Alan Turing. He divided problems in solvable and non-solvable like the halting problem. A universal turing computer can theoritcall solve any problem or run any algorithm that's art of sovlable set. 
-
- A halting probllem is that it's impossioble to detec if a progtram will stop evnetually without running it ? what's so important about this ? 
-
-2. Bitcoin has very limited scripting language
-
-3. Etherium migrated from Proof of Work to Proof of Stake. IN proof of stake, validators stake part of their currency to validate the transcations. But why ? Do they get new rewards?
-
-## Components of a blockchain 
-
-1. Blockchain is a distributed state machine . I thoght it was distributed ledger ? 
-
-2. P2p network for communication 
-
-3. Messages are communicated using trnascations whichi have a sender, recipients, and a payload 
-
-4. Game theory based incentivized schme like PoW or PoS 
-
-5. Bitcoin has just one clinet, etheirum has two clients: one for consensus, other for executing smart contract. 
-
-## Categories of blockchain 
-
-1. permission less ; everyone is open the join the network
-
-2. permissioned : Only approved participants can join the network
-
-3. public
-
-4. private 
-
-Bitcoin is a distributed consensus state machine. Etherium is also a distrubuted consensus state machine but also has a EVM . Bitcoin only keep track of the change of ownershipoof coins. Etheirum also keep track of general purpsoe data store , key value topic. Is this smart contract ?
-
-## Etherium Components
-
-1. a p2p nework using devP2p runing on port 30303 
-
-2. Transcations = network messages 
-
-3. EVM which executes byte code called smart contract. We can use any langhuage to conver it to byte code in etherium. 
+## Aug 15, 2026
 
 
-You can create a turin gcomplete machine with smallest 4 states and six symbols ? ownershipoof
+Etheium is an unbounded state machine. 
 
-Modenr printers are turing complete , so you can snet them file that could freeze them . How to do that ?
+> What's unbounded means here? 
+
+Etheirum has EVM (Etherium virtual machine) that apply changes to the state machine.
+
+> What's a state mahcine? A function that takes previous state, input parameter -> next state machine
+
+
+### Comparision Bitcoin and Etherium 
+
+1. Both are permissionles and open 
+
+
+2. Participants uses P2P nework to communicate without trusted third party. Each node can act as client and serer. There's no dedicated server. 
+
+> HTTP protocol is used by client server model. Is Gossip protocol used by P2P network. Browsers implments Http protocol, where it defines how a client can request HTTP request from a server and server can response with HTTP response. The request and response can be either REST standard if it's payload is JSON , XML if SOAP , or grpc if payload is binary
+
+> What's gossip protocol when it comes to P2P network? 
+
+3. IT uses Byzantine consensus algo for validating the writes to the ledger
+
+> What's Byzantine? 
+
+4. Both uses digital currency like etherium uses ether 
+
+> Does Bitcoin uses bitcoin currency? 
+
+5. Both ues digital signature and hashes. Hashes are one way function that generates a fixed length string from an arbitrrary output. It's easy to generate one way, but very difficult to decode it. 
+
+### Types of blockchain 
+
+|        | permissionless        | Permissioned |
+----------------------------------|---------------
+
+private  |          X             |   Canton
+----------------------------------|---------------
+open     | bitcoin, etherium      |   Hadera
+
+
+
+Permissioned : Only authorized validators can participante in consensus
+
+permissionless: Anyone can participante in consensus 
+
+open: anyone can view the data
+
+private: Only authorized parties can view the data
+
+### Etherium compoennts
+
+1. P2p network 
+
+2. Etherium consist of two clients; one for apply consensus, other for exeucting smart contract. The smart contract lives on the ledger. It changes the singleton state on the ledger. 
+
+3. EVM executes EVM byte code. High level langauge like Solidity can be compiled into machine instructions. 
+
+
+### Turing Complete
+
+
+Etherium is Turing complete distributed state machine. Lets understand turing complete. 
+
+Alan Turning thought of a state machine that can change symbols by reading and writing form a sequential memory. He defined the term called Universal computablity. All the programs that can be solved by this machine which is a state machine . 
+
+Not all programs are solvable. E.g. halting problem. WIthotu runnign the program, given an arbitrary program and its' input, see if the program will stop. In other words, find the path of a program before executing it. 
+
+```python 
+def foo(x : int):
+  x = x * x 
+  return x 
+``` 
+
+> Cant' we decide if this program will end ? It's the proof by negation?
+
+The system which can simulate a Turing machine is called Turing Complete. And the system is called Universal Turing Machine. 
+
+> Why universal ? 
+
+Ehteirum is Universal Turing Machine. 
+
+Turing completeness is easy to implmeent by just using fours tates and six symbols. Even SQL is turing complete. This creates a problem? If etherium can execute any program, it doens't know whether the program will end or not.
+
+
+Etheirum adds a gas fee. It's a fee assoicated for runing the smart contract. Each smart contract has to define an upper bound for the gas fee. Gas fee can be purchased using ether. Every ether is included in every transcations. 
+
+### Dapp
+
+Dapp is a smart contracxt with a webinterface. So a web program on a distributed platform. 
+
+> W3m is thrid version of web. current version which we access with the browser is called w2m. What was the first version ? Was it implemented by Tim Lee ?  
