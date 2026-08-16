@@ -132,30 +132,47 @@ Web1 generally means the early read-only web: mostly static pages connected by h
 
 ## Aug 16, 2026
 
-Ether is the currency of Etherium. Every transcations requires transcation fee. 
+Ether is the native currency of Etherium. It is used to pay gas fees and transfer value. Every transcation that is sent to Ethereum and executed by EVM needs gas, even if it fails. Read only operations are free when called locally, because they are not stored on-chain.
+
+After EIP-1559, gas fee has base fee and priority fee. Base fee is burned and priority fee goes to the validator.
 
 ```
-1 ETH = 10 ^ 9 Gwei (giga way) = 10^18 wei 
+1 gwei = 10^9 wei
+
+1 ETH = 10^9 gwei = 10^18 wei 
 ```
 
 Wallets stores keys. It could be software or hardware. Software wallets can also create and broadcast transcations. 
 
-Private keys in the wallet helps acces the funds (ether) and smart contract.
+Private keys authorize the ownership of the address. They also authorize transcations by signing them.
+
+Funds are not inside the wallet. Funds are in Ethereum state. Wallet just stores the key that can sign transcations from that address.
 
 **Metamask** is one such wallet. There's a [chrome extension](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) or from their [website](https://metamask.io/download). 
 
 Wallet generates a private key. Next you can generate public key from your private key. The last 20 bytes of hash of your public key is your address. 
 
-Transcations will use this address `to` or `from` fields to transfer ether. Transcations are messages that are stored as cyrptographical links in the blockchain.
+```
+private key is generated randomly
+
+public key is generated from private key using elliptic curve cryptography (secp256k1)
+
+address = last 20 bytes of Keccak-256 hash(public key)
+```
+
+In Ethereum, public key is usually hashed without the `0x04` uncompressed public key prefix. The rightmost 20 bytes of the Keccak-256 hash becomes the address.
+
+Transcations use addresses to transfer ether or interact with contracts. `to` is inside the transcation. `from` is recovered from the digital signature. Transcations are stored inside blocks, and blocks are cryptographically linked using the parent block hash.
 
 ```
 An address can logically look like 0x23..1bc
    ETH balance
    transcations count nonce 
+   contract storage
    Smart contract code 
 ```
 
-Nonce is Numewr used once. Different blockchain uses nonce differntly. In ether, nonce is sequential identification of the transcations block.
+Nonce is number used once. Different blockchain uses nonce differently. In Ethereum, nonce is not a block id. For EOA, nonce counts the number of transcations sent from that account. For contract account, nonce counts the number of contracts created by that account.
 
 Bitcoin uses UXTO model, where miners use nonce to perform proof of work.
 
@@ -164,7 +181,9 @@ What's differnce between private and public key? Previously you had one private 
 
 Public key solves that. Every use will have a pair of (public and private key). Public key can be broadcasted to all.
 
-For scenario 1, Alice wants to send secure message to Bob. Alice will take Bob's public key to encryp the message and her private key. Now Bob can decrypt the message with his private key. Bob didn't had to send ALice his private key. 
+For scenario 1, Alice wants to send secure message to Bob. Alice will take just use Bob's public key to encrypt the message. Now Bob can decrypt the message with his private key. Bob didn't had to send ALice his private key. 
+
+Alice does not need her private key for encryption to Bob. She only needs Bob's public key. Her private key is needed when she wants to sign something.
 
 For scenario 2, Alice can digital signed the message with her private key, and anyone can verify using her public key that it was signed by Alice.
 
@@ -177,19 +196,21 @@ Etherium has various neetwork
 
 Gas fees are paid by the Sender. There are 3 types of transcations
 
-1. Ether transfer : It has `to' and 'from` field. Datafield is emtpy. Used for transfer ether
+1. Ether transfer : It has `to`, `value`, nonce, gas limit, gas fee fields and signature. Data field is empty. `from` is recovered from signature. Used for transfer ether
 
 2. Contract deployment: `To` is empty, & data load is contract bytecode
 
- > To is specail address like zero or not
+ > To is empty/null, not the zero address. Data contains init code and contract bytecode.
 
 3. Contract Interaction: Transcation has encoded function call in the data field.  
 
-EVM is a global singleton; each node has the same state. There are two types of accounts in Ethereum 
+EVM is the execution environment for Ethereum. Each full node runs the EVM and maintains the same world state after processing the same chain of blocks. There are two types of accounts in Ethereum 
 
 1. Externaly owned account (EOA) : IT has a private key. Used for sending ether or accessing contract code
 
 2. Contract Account: It doens't have private key. canot initiate transcations. 
 
+Contract account cannot initiate top-level transcations because it has no private key to sign a transcation. But contract code can call other contracts during execution when an EOA or another contract triggers it.
 
-What's a facuet? A code that gives out ether to any address and can be refilled.
+
+What's a facuet? A service or smart contract in testnet that gives out test ether to any address and can be refilled. Faucets exist because developers need testnet ETH to deploy and test contracts without spending real ETH.
