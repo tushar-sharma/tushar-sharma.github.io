@@ -214,3 +214,59 @@ Contract account cannot initiate top-level transcations because it has no privat
 
 
 What's a facuet? A service or smart contract in testnet that gives out test ether to any address and can be refilled. Faucets exist because developers need testnet ETH to deploy and test contracts without spending real ETH.
+
+
+## Aug 22, 2026
+
+Lets revise a smart contract is written in high lelel programing language like Solidity and is converted to bytecode. A simple program: 
+
+
+```c
+pragma solidity 0.8.34;
+
+//SPDX-License-Identifier: GPL-3.0
+
+contract Faucet {
+    function withdraw(uint256 _withdrawAmount, address payable _to) public {
+        require(_withdrawAmount <= 100000000000);
+
+        _to.transfer(_withdrawAmount);
+    }
+
+    //Function to receive ether if data.msg is empty
+    receive() external payable {}
+
+    // if data.msg is not empty
+    fallback() external payable {}
+}
+```
+
+Faucet is a smart contract that tranfer ether to any external owned account.
+
+How do you register a smart contract?
+
+Create a special **transcations** with destination as zero address. Deploying a smart contract is free?
+
+Internal transcations: transcations that are created by the smart contract. 
+
+
+### Ethereum node 
+
+You can run full ethereum node. For that you need to download two clients : 
+
+1. for consensus e.g. Geth
+2. for execution e.g. Prsym
+
+
+Other alternative is to use remote clients that can be connected to other ethereum node. They are also called wallets. e.g. metamask, coinbase wallet, etc.
+
+
+Etherum clients can execute set of RPC commands over API. This is called JSON-RPC API and it follows [specification](https://www.jsonrpc.org/specification)
+
+Remote clients don't validate block headers or transcations. This is done by light client in Bitcoin.
+
+Cool trick , on termianl you can convert hexadecimal to decimal 
+
+```
+echo $((0x123234))
+```
