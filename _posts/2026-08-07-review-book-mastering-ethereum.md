@@ -233,10 +233,10 @@ contract Faucet {
         _to.transfer(_withdrawAmount);
     }
 
-    //Function to receive ether if data.msg is empty
+    // Function to receive ether when msg.data is empty
     receive() external payable {}
 
-    // if data.msg is not empty
+    // Function called when msg.data is not empty or no function matches
     fallback() external payable {}
 }
 ```
@@ -260,15 +260,17 @@ Example shape:
 
 Deploying a smart contract is not free. You pay gas for executing the initialization code and for storing the contract bytecode on-chain.
 
-Internal transcations: transcations that are created by the smart contract. 
+After successful deployment, the contract address is determined automatically by Ethereum. The deployer does not manually choose a normal contract address.
+
+Internal calls: calls made by a smart contract while executing a top-level transaction. Top-level transactions are created and signed by externally owned accounts (EOAs).
 
 
 ### Ethereum node 
 
 You can run full ethereum node. For that you need to download two clients : 
 
-1. for consensus e.g. Geth
-2. for execution e.g. Prsym
+1. for execution e.g. Geth
+2. for consensus e.g. Prysm
 
 
 Other alternative is to use remote clients that can be connected to other ethereum node. They are also called wallets. e.g. metamask, coinbase wallet, etc.
