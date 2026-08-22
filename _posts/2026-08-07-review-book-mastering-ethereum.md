@@ -241,11 +241,24 @@ contract Faucet {
 }
 ```
 
-Faucet is a smart contract that tranfer ether to any external owned account.
+Faucet is a smart contract that can transfer ether to another payable address.
 
 How do you register a smart contract?
 
-Create a special **transcations** with destination as zero address. Deploying a smart contract is free?
+Create a special **transaction** called a contract-creation transaction. It does not have a normal destination address (`to` is empty / `null`); instead, the contract's initialization bytecode goes in the transaction `data`.
+
+Example shape:
+
+```json
+{
+  "from": "0xYourEOA...",
+  "to": null,
+  "value": "0x0",
+  "data": "0x<contract init bytecode>"
+}
+```
+
+Deploying a smart contract is not free. You pay gas for executing the initialization code and for storing the contract bytecode on-chain.
 
 Internal transcations: transcations that are created by the smart contract. 
 
@@ -267,6 +280,6 @@ Remote clients don't validate block headers or transcations. This is done by lig
 
 Cool trick , on termianl you can convert hexadecimal to decimal 
 
-```
+```sh
 echo $((0x123234))
 ```
