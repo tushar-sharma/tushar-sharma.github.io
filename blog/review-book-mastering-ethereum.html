@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta property="og:site_name" content="Tushar Sharma" />
+<title>Mastering Ethereum: Implementing Smart Contracts</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@tushar sharma">
+    <meta name="twitter:title" content="Mastering Ethereum: Implementing Smart Contracts">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg">
+    <meta property="og:image" content="https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Mastering Ethereum: Implementing Smart Contracts | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3" />
+    <meta property="og:title" content="Mastering Ethereum: Implementing Smart Contracts" />
+    <meta name="author" content="tushar sharma" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="These are my learning notes and reflections while reading &quot;Mastering Ethereum: Implementing Smart Contracts&quot; by Carlo Parisi, Alessandro Mazza, Niccolo Pozzolini, Gavin Wood, and Andreas M. Antonopoulos. I plan to update this periodically as I progress through the book." />
+    <meta property="og:description" content="These are my learning notes and reflections while reading &quot;Mastering Ethereum: Implementing Smart Contracts&quot; by Carlo Parisi, Alessandro Mazza, Niccolo Pozzolini, Gavin Wood, and Andreas M. Antonopoulos. I plan to update this periodically as I progress through the book." />
+    <link rel="canonical" href="https://randomwits.com/blog/review-book-mastering-ethereum" />
+    <meta property="og:url" content="https://randomwits.com/blog/review-book-mastering-ethereum" />
+    <meta property="og:site_name" content="RandomWits" />
+    <meta property="og:image" content="https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2026-08-07T00:00:00+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg" />
+    <meta property="twitter:title" content="Mastering Ethereum: Implementing Smart Contracts" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"tushar sharma"},"dateModified":"2026-08-07T00:00:00+00:00","datePublished":"2026-08-07T00:00:00+00:00","description":"These are my learning notes and reflections while reading &quot;Mastering Ethereum: Implementing Smart Contracts&quot; by Carlo Parisi, Alessandro Mazza, Niccolo Pozzolini, Gavin Wood, and Andreas M. Antonopoulos. I plan to update this periodically as I progress through the book.","headline":"Mastering Ethereum: Implementing Smart Contracts","image":"https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/review-book-mastering-ethereum"},"url":"https://randomwits.com/blog/review-book-mastering-ethereum"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+    <link rel="stylesheet" href="/css/book-notes.css">
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.2/dist/tf.min.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.5.4/dist/speech-commands.min.js" crossorigin="anonymous"></script>
+        <script defer src="/js/dark_clap.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          .theme-controls {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: 8px;
+            vertical-align: middle;
+          }
+
+          .theme-control {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(51, 153, 204, 0.35);
+            border-radius: 4px;
+            background: transparent;
+            color: inherit;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 1;
+            padding: 0;
+          }
+
+          .theme-control:hover,
+          .theme-control:focus {
+            border-color: rgb(51, 153, 204);
+            outline: none;
+          }
+
+          .theme-control:focus-visible {
+            box-shadow: 0 0 0 2px rgba(51, 153, 204, 0.35);
+          }
+
+          .theme-control[aria-pressed="true"] {
+            background: rgba(51, 153, 204, 0.12);
+            border-color: rgb(51, 153, 204);
+          }
+
+          .theme-control.is-loading {
+            cursor: wait;
+            opacity: 0.6;
+          }
+
+          .theme-control.is-detected {
+            transform: scale(1.12);
+          }
+
+          .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+          }
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <span class="theme-controls" aria-label="Theme controls">
+            <button type="button" class="DarkReader_Button theme-control" title="Toggle dark mode" aria-label="Toggle dark mode" aria-pressed="false">
+              <span id="icon-dark" aria-hidden="true">☾</span>
+            </button>
+            <button type="button" class="ClapDark_Button theme-control" title="Clap listener off" aria-label="Start clap listener for dark mode" aria-pressed="false">
+              <span id="icon-clap-dark" aria-hidden="true">👏</span>
+            </button>
+            <span id="clap-dark-status" class="visually-hidden" aria-live="polite"></span>
+          </span>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- 
+ -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Mastering Ethereum: Implementing Smart Contracts</h1>
+        <p>Tags:  <a class="mytag" href="/tag/blockchain" title="View posts tagged with: blockchain">blockchain</a>    <a class="mytag" href="/tag/ethereum" title="View posts tagged with: ethereum">ethereum</a>    <a class="mytag" href="/tag/books" title="View posts tagged with: books">books</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="https://thumbs.dreamstime.com/b/crypto-currency-market-mixed-media-businesswoman-using-tablet-pc-symbols-out-screen-d-rendering-171649622.jpg?w=800" alt="Featured image for Mastering Ethereum: Implementing Smart Contracts" style="max-width:100%; height:auto;">
+        </div>
+        <div class="book-notes-shell" data-book-notes>
+          <article class="book-notes-content">
+            <!-- disclaimer -->
+            <div class="book-notes-disclaimer">
+              These are my rough notes while reading the book.
+            </div>
+            <hr>
+            <h2 id="aug-15-2026">Aug 15, 2026</h2>
+            <p>Ethereum is an unbounded state machine.</p>
+            <p>Unbounded means the state is not a fixed small table. Ethereum's global state can keep growing as accounts, balances, contract code, and contract storage change. In practice it is still bounded by gas, storage cost, and protocol limits.</p>
+            <p>Ethereum has the EVM (Ethereum Virtual Machine), which applies valid transactions to the current state and produces the next state.</p>
+            <p>A state machine is a system where current state + input gives the next state. In Ethereum, the input is a transaction, and the output is the updated global state.</p>
+            <h3 id="comparison-between-bitcoin-and-ethereum">Comparison between Bitcoin and Ethereum</h3>
+            <ol>
+              <li>
+                <p>Both are permissionless and open.</p>
+              </li>
+              <li>
+                <p>Participants use a P2P network to communicate without a trusted third party. Each node can act as both a client and a server. There is no dedicated central server.</p>
+              </li>
+            </ol>
+            <p>HTTP is commonly used in a client-server model. Browser sends a request and server returns a response. The payload can follow different conventions, such as JSON for REST APIs, XML for SOAP, or binary formats for gRPC.</p>
+            <p>A gossip protocol is a way for nodes in a P2P network to spread information by forwarding it to some of their peers, who then forward it to more peers. Instead of one central server broadcasting to everyone, information propagates through the network.</p>
+            <ol>
+              <li>Both need consensus because nodes have to agree on valid writes to the ledger.</li>
+            </ol>
+            <p>Byzantine means faulty or malicious behavior in a distributed system. Bitcoin uses Nakamoto consensus with proof-of-work. Ethereum now uses proof-of-stake, with validators and finality rules. Both systems are designed for a network where some nodes cannot be trusted.</p>
+            <ol>
+              <li>Both use a native digital currency. Ethereum uses ether (ETH), and Bitcoin uses bitcoin (BTC).</li>
+            </ol>
+            <p>Bitcoin is the network/protocol, and bitcoin is the currency unit used on that network. The ticker symbol is BTC.</p>
+            <ol>
+              <li>Both use digital signatures and hashes. A hash is a one-way function that generates a fixed-length output from arbitrary input. It is easy to compute the hash from the input, but infeasible to recover the original input from only the hash.</li>
+            </ol>
+            <h3 id="types-of-blockchain">Types of blockchain</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th> </th>
+                  <th>Permissionless</th>
+                  <th>Permissioned</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Private</td>
+                  <td>Usually not useful</td>
+                  <td>Canton</td>
+                </tr>
+                <tr>
+                  <td>Open</td>
+                  <td>Bitcoin, Ethereum</td>
+                  <td>Hedera</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Permissioned: Only authorized validators can participate in consensus.</p>
+            <p>Permissionless: Anyone can participate in consensus.</p>
+            <p>Open: Anyone can view the data.</p>
+            <p>Private: Only authorized parties can view the data.</p>
+            <h3 id="ethereum-components">Ethereum components</h3>
+            <ol>
+              <li>
+                <p>P2P network.</p>
+              </li>
+              <li>
+                <p>Ethereum nodes run two main clients: a consensus client and an execution client. Validators also run validator client software. The consensus client handles proof-of-stake consensus. The execution client executes transactions and smart contracts. Contract code and storage are part of Ethereum state, and transactions change this singleton global state.</p>
+              </li>
+              <li>
+                <p>The EVM executes EVM bytecode. A high-level language like Solidity can be compiled into this bytecode.</p>
+              </li>
+            </ol>
+            <h3 id="turing-complete">Turing Complete</h3>
+            <p>Ethereum is often described as a Turing-complete distributed state machine. More precisely, the EVM instruction set is Turing complete, but every real transaction is bounded by gas. Let's understand Turing completeness.</p>
+            <p>Alan Turing described a state machine that can change symbols by reading from and writing to sequential memory. This model is called a Turing machine. Universal computability is the idea that a machine can compute anything that is computable, given enough time and memory.</p>
+            <p>Not all questions about programs are decidable. For example, the halting problem asks whether, given any arbitrary program and input, we can always determine whether that program will eventually stop. In other words, can we build a perfect function like this?</p>
+            <div class="language-python highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="nf">halts</span><span class="p">(</span><span class="n">program</span><span class="p">,</span> <span class="nb">input</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">True</span> <span class="k">if</span> <span class="nf">program</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span> <span class="n">stops</span><span class="p">,</span> <span class="k">else</span> <span class="bp">False</span>
+</code></pre>
+              </div>
+            </div>
+            <p>Turing's idea was proof by contradiction. Suppose this perfect <code class="language-plaintext highlighter-rouge">halts</code> function exists. Now create another program that uses <code class="language-plaintext highlighter-rouge">halts</code> and then does the opposite:</p>
+            <div class="language-python highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="k">def</span> <span class="nf">strange</span><span class="p">(</span><span class="n">program</span><span class="p">):</span>
+  <span class="k">if</span> <span class="nf">halts</span><span class="p">(</span><span class="n">program</span><span class="p">,</span> <span class="n">program</span><span class="p">):</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+      <span class="k">pass</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span>
+</code></pre>
+              </div>
+            </div>
+            <p>Now ask: what happens if we run <code class="language-plaintext highlighter-rouge">strange(strange)</code>?</p>
+            <p>If <code class="language-plaintext highlighter-rouge">halts(strange, strange)</code> says it will halt, then <code class="language-plaintext highlighter-rouge">strange</code> goes into an infinite loop. So the prediction is wrong.</p>
+            <p>If <code class="language-plaintext highlighter-rouge">halts(strange, strange)</code> says it will not halt, then <code class="language-plaintext highlighter-rouge">strange</code> returns immediately. So the prediction is wrong again.</p>
+            <p>This contradiction means the perfect <code class="language-plaintext highlighter-rouge">halts</code> function cannot exist. It is not that we cannot decide simple programs. We can. The point is that there is no one general algorithm that works for every possible program and input.</p>
+            <p>The system that can simulate a Turing machine is called Turing complete. A machine that can simulate any other Turing machine is called a Universal Turing Machine.</p>
+            <p>Universal means it is not built for only one specific computation. It can take another machine's description and input, then simulate that machine's behavior.</p>
+            <p>So Ethereum is not literally an unlimited Universal Turing Machine while executing a transaction. Better way to say it: EVM programs can express arbitrary computation, but execution stops when gas runs out.</p>
+            <p>Turing completeness can be implemented with a surprisingly small machine. Even SQL can be Turing complete in some forms. This creates a problem: if Ethereum can execute arbitrary programs, it cannot know in general whether a program will end.</p>
+            <p>Ethereum adds gas. Gas is the unit used to meter computation, storage, and transaction execution. Each transaction includes a gas limit, which is the maximum gas the sender is willing to spend. Gas is paid for using ether. This prevents a smart contract from running forever because execution stops when gas runs out.</p>
+            <h3 id="dapp">Dapp</h3>
+            <p>Dapp means decentralized application. In practice it usually means smart contracts plus a web interface, so users interact with blockchain logic through a browser and wallet.</p>
+            <p>Web1 generally means the early read-only web: mostly static pages connected by hyperlinks. It was created by Tim Berners-Lee at CERN around 1989-1991. Web2 refers to the interactive and social web, where users create content and platforms manage much of the data. Web3 refers to applications that use blockchains, wallets, tokens, and decentralized protocols.</p>
+            <h2 id="aug-16-2026">Aug 16, 2026</h2>
+            <p>Ether is the native currency of Etherium. It is used to pay gas fees and transfer value. Every transcation that is sent to Ethereum and executed by EVM needs gas, even if it fails. Read only operations are free when called locally, because they are not stored on-chain.</p>
+            <p>After EIP-1559, gas fee has base fee and priority fee. Base fee is burned and priority fee goes to the validator.</p>
+            <div class="language-plaintext highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>1 gwei = 10^9 wei
+
+1 ETH = 10^9 gwei = 10^18 wei 
+</code></pre>
+              </div>
+            </div>
+            <p>Wallets stores keys. It could be software or hardware. Software wallets can also create and broadcast transcations.</p>
+            <p>Private keys authorize the ownership of the address. They also authorize transcations by signing them.</p>
+            <p>Funds are not inside the wallet. Funds are in Ethereum state. Wallet just stores the key that can sign transcations from that address.</p>
+            <p><strong>Metamask</strong> is one such wallet. There's a <a href="https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn">chrome extension</a> or from their <a href="https://metamask.io/download">website</a>.</p>
+            <p>Wallet generates a private key. Next you can generate public key from your private key. The last 20 bytes of hash of your public key is your address.</p>
+            <div class="language-plaintext highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>private key is generated randomly
+
+public key is generated from private key using elliptic curve cryptography (secp256k1)
+
+address = last 20 bytes of Keccak-256 hash(public key)
+</code></pre>
+              </div>
+            </div>
+            <p>In Ethereum, public key is usually hashed without the <code class="language-plaintext highlighter-rouge">0x04</code> uncompressed public key prefix. The rightmost 20 bytes of the Keccak-256 hash becomes the address.</p>
+            <p>Transcations use addresses to transfer ether or interact with contracts. <code class="language-plaintext highlighter-rouge">to</code> is inside the transcation. <code class="language-plaintext highlighter-rouge">from</code> is recovered from the digital signature. Transcations are stored inside blocks, and blocks are cryptographically linked using the parent block hash.</p>
+            <div class="language-plaintext highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>An address can logically look like 0x23..1bc
+   ETH balance
+   transcations count nonce 
+   contract storage
+   Smart contract code 
+</code></pre>
+              </div>
+            </div>
+            <p>Nonce is number used once. Different blockchain uses nonce differently. In Ethereum, nonce is not a block id. For EOA, nonce counts the number of transcations sent from that account. For contract account, nonce counts the number of contracts created by that account.</p>
+            <p>Bitcoin uses UXTO model, where miners use nonce to perform proof of work.</p>
+            <p>What's differnce between private and public key? Previously you had one private key that was used to encryptt and decrypt messages. However it causes isses to securely distribute private key.</p>
+            <p>Public key solves that. Every use will have a pair of (public and private key). Public key can be broadcasted to all.</p>
+            <p>For scenario 1, Alice wants to send secure message to Bob. Alice will take just use Bob's public key to encrypt the message. Now Bob can decrypt the message with his private key. Bob didn't had to send ALice his private key.</p>
+            <p>Alice does not need her private key for encryption to Bob. She only needs Bob's public key. Her private key is needed when she wants to sign something.</p>
+            <p>For scenario 2, Alice can digital signed the message with her private key, and anyone can verify using her public key that it was signed by Alice.</p>
+            <p>Etherium has various neetwork</p>
+            <ol>
+              <li>Main network</li>
+              <li>private network like localhost</li>
+              <li>Testnet like Sepolia</li>
+              <li>Holešky network</li>
+            </ol>
+            <p>Gas fees are paid by the Sender. There are 3 types of transcations</p>
+            <ol>
+              <li>
+                <p>Ether transfer : It has <code class="language-plaintext highlighter-rouge">to</code>, <code class="language-plaintext highlighter-rouge">value</code>, nonce, gas limit, gas fee fields and signature. Data field is empty. <code class="language-plaintext highlighter-rouge">from</code> is recovered from signature. Used for transfer ether</p>
+              </li>
+              <li>
+                <p>Contract deployment: <code class="language-plaintext highlighter-rouge">To</code> is empty, &amp; data load is contract bytecode</p>
+              </li>
+            </ol>
+            <blockquote>
+              <p>To is empty/null, not the zero address. Data contains init code and contract bytecode.</p>
+            </blockquote>
+            <ol>
+              <li>Contract Interaction: Transcation has encoded function call in the data field.</li>
+            </ol>
+            <p>EVM is the execution environment for Ethereum. Each full node runs the EVM and maintains the same world state after processing the same chain of blocks. There are two types of accounts in Ethereum</p>
+            <ol>
+              <li>
+                <p>Externaly owned account (EOA) : IT has a private key. Used for sending ether or accessing contract code</p>
+              </li>
+              <li>
+                <p>Contract Account: It doens't have private key. canot initiate transcations.</p>
+              </li>
+            </ol>
+            <p>Contract account cannot initiate top-level transcations because it has no private key to sign a transcation. But contract code can call other contracts during execution when an EOA or another contract triggers it.</p>
+            <p>What's a facuet? A service or smart contract in testnet that gives out test ether to any address and can be refilled. Faucets exist because developers need testnet ETH to deploy and test contracts without spending real ETH.</p>
+            <h2 id="aug-22-2026">Aug 22, 2026</h2>
+            <p>Lets revise a smart contract is written in high lelel programing language like Solidity and is converted to bytecode. A simple program:</p>
+            <div class="language-c highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="n">pragma</span> <span class="n">solidity</span> <span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">34</span><span class="p">;</span>
+
+<span class="c1">//SPDX-License-Identifier: GPL-3.0</span>
+
+<span class="n">contract</span> <span class="n">Faucet</span> <span class="p">{</span>
+    <span class="n">function</span> <span class="n">withdraw</span><span class="p">(</span><span class="n">uint256</span> <span class="n">_withdrawAmount</span><span class="p">,</span> <span class="n">address</span> <span class="n">payable</span> <span class="n">_to</span><span class="p">)</span> <span class="n">public</span> <span class="p">{</span>
+        <span class="n">require</span><span class="p">(</span><span class="n">_withdrawAmount</span> <span class="o">&lt;=</span> <span class="mi">100000000000</span><span class="p">);</span>
+
+        <span class="n">_to</span><span class="p">.</span><span class="n">transfer</span><span class="p">(</span><span class="n">_withdrawAmount</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Function to receive ether when msg.data is empty</span>
+    <span class="n">receive</span><span class="p">()</span> <span class="n">external</span> <span class="n">payable</span> <span class="p">{}</span>
+
+    <span class="c1">// Function called when msg.data is not empty or no function matches</span>
+    <span class="n">fallback</span><span class="p">()</span> <span class="n">external</span> <span class="n">payable</span> <span class="p">{}</span>
+<span class="p">}</span>
+</code></pre>
+              </div>
+            </div>
+            <p>Faucet is a smart contract that can transfer ether to another payable address.</p>
+            <p>How do you register a smart contract?</p>
+            <p>Create a special <strong>transaction</strong> called a contract-creation transaction. It does not have a normal destination address (<code class="language-plaintext highlighter-rouge">to</code> is empty / <code class="language-plaintext highlighter-rouge">null</code>); instead, the contract's initialization bytecode goes in the transaction <code class="language-plaintext highlighter-rouge">data</code>.</p>
+            <p>Example shape:</p>
+            <div class="language-json highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xYourEOA..."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x&lt;contract init bytecode&gt;"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+              </div>
+            </div>
+            <p>Deploying a smart contract is not free. You pay gas for executing the initialization code and for storing the contract bytecode on-chain.</p>
+            <p>After successful deployment, the contract address is determined automatically by Ethereum. The deployer does not manually choose a normal contract address.</p>
+            <p>Internal calls: calls made by a smart contract while executing a top-level transaction. Top-level transactions are created and signed by externally owned accounts (EOAs).</p>
+            <h3 id="ethereum-node">Ethereum node</h3>
+            <p>You can run full ethereum node. For that you need to download two clients :</p>
+            <ol>
+              <li>for execution e.g. Geth</li>
+              <li>for consensus e.g. Prysm</li>
+            </ol>
+            <p>Other alternative is to use remote clients that can be connected to other ethereum node. They are also called wallets. e.g. metamask, coinbase wallet, etc.</p>
+            <p>Etherum clients can execute set of RPC commands over API. This is called JSON-RPC API and it follows <a href="https://www.jsonrpc.org/specification">specification</a></p>
+            <p>Remote clients don't validate block headers or transcations. This is done by light client in Bitcoin.</p>
+            <p>Cool trick , on termianl you can convert hexadecimal to decimal</p>
+            <div class="language-sh highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="nb">echo</span> <span class="k">$((</span><span class="m">0</span>x123234<span class="k">))</span>
+</code></pre>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/daily-logs-2026-07-02" title="Previous Post: Daily Logs for July 2, 2026">←Previous</a>     <a class="next-item" href="/blog/daily-logs-2026-08-14" title="Next Post: Daily Logs for Aug 14, 2026">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/review-book-mastering-ethereum';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/review-book-mastering-ethereum';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; inspired from my sister ~ <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+        <script src="/js/book-notes.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>
