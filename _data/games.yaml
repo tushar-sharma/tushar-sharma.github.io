@@ -379,7 +379,7 @@
 
 - title: "FIFA 22"
   rating: 5
-  hours_logged: "100 hrs"
+  hours_logged: "120 hrs"
   comments: "I made a switch from FIFA 19. The gameplay is little better due to hyper motion technology. I mostly enjoy career mode with FC Barcelona team. It support's Local co-op. Use Proton 9.0-4 if you face controller issues."
 
 - title: "Cult of the Lamb"
@@ -543,7 +543,13 @@
   progress: 0
   comments: "use `/screamer/Binaries/Win64/screamer-Win64-Shipping.exe` instead of Screamer.exe."
 
-# Mouse pi for hire
+- title: "PRAGMATA"
+  pending: true 
+  progress: 0 
+  hours_logged: "11 hrs"
+  comments: "It's a cool sci-fi action-adventure game set on the Moon. You play as Hugh and fight alongside Diana, an adorable android girl. She’s so lovable that the game will make you want to adopt her as your daughter! Flying around with a jetpack is fun."
+
+  # Mouse pi for hire
 # The Wolf Among Us : buy at $3.74
 # DOOM (2016) buy at 1.99
 # DOOM Eternal buy at 3.99
@@ -703,4 +709,4 @@
 # Fear the spotlight
 # Yellow Taxi Goes Vroom
 # Slay the Princess — The Pristine Cut
-# PRAGMATA
+
