@@ -74,29 +74,140 @@ Code:
 ### PR review
 
 ```text
-Review this branch against `main` as a senior engineer.
+Act as a Principal/Staff-level software engineer reviewing this branch against `main`.
 
-First inspect the diff for:
-- Correctness bugs
-- Code smells
-- Anti-patterns
-- Deviations from the project's existing style
-- Missing or weak tests
+Your goal is to provide a rigorous, actionable, and constructive code review. Review the complete diff from the merge base with `main`, then inspect relevant surrounding code, tests, documentation, and repository instructions to understand the intended behavior, architecture, conventions, and affected user flows.
 
-Then dry-run the main user flow with sample data and check:
-- Logic errors
-- Race conditions
-- Scalability bottlenecks
-- Error handling
-- Backward compatibility
+Treat this as a read-only review. Do not modify the code unless explicitly asked.
 
-Return findings first, ordered by severity. For each finding include:
-- File and line
-- Why it matters
-- A concrete fix
+## Phase 1: Understand the Change
 
-Branch:
-<branch name>
+Before reporting findings:
+
+* Read applicable repository instructions, such as `AGENTS.md`, `README.md`, contribution guidelines, and architecture documentation.
+* Determine the purpose and intended behavior of the branch from the diff, commit history, tests, and surrounding code.
+* Identify the primary user or system flows affected by the changes.
+* Focus on problems introduced or materially worsened by this branch. Do not report unrelated pre-existing issues.
+
+## Phase 2: Static Analysis
+
+Inspect the changes for:
+
+* Correctness bugs and unhandled edge cases
+* Security, authorization, privacy, or data-integrity risks
+* Code smells and harmful anti-patterns
+* Deviations from established project architecture, style, and conventions
+* Missing, weak, misleading, or brittle tests
+* Incorrect error handling, retry behavior, logging, or observability
+* Resource leaks or lifecycle-management problems
+* Backward-compatibility, schema, configuration, and migration risks
+
+Evaluate the design against Kent Beck’s Four Rules of Simple Design:
+
+1. Passes the tests
+2. Reveals intention
+3. Contains no unnecessary duplication
+4. Uses the fewest necessary elements
+
+Treat these as design heuristics, not rigid rules. Report a violation only when it creates a concrete correctness, maintainability, or change-safety problem.
+
+If the branch adds or changes an HTTP API, evaluate it against the project’s existing API conventions and the Zalando RESTful API Guidelines, including:
+
+* Resource and URL design
+* HTTP methods and status codes
+* Request and response schemas
+* Validation and error responses
+* Idempotency
+* Pagination and filtering
+* Versioning and backward compatibility
+* Security and sensitive-data exposure
+
+Prefer explicit repository conventions when they intentionally differ from Zalando’s recommendations. Explain any material deviation instead of mechanically flagging it.
+
+## Phase 3: Behavioral Validation
+
+Run the most relevant available validation, such as:
+
+* Compilation or build
+* Unit tests
+* Integration tests
+* Static analysis
+* Linting or type checking
+* Focused tests covering the changed behavior
+
+Trace the primary affected flows using representative sample data. Execute the flow when the repository provides a safe and practical way to do so. Otherwise, perform a code-path walkthrough and clearly state that it was reasoned about rather than executed.
+
+Check:
+
+* Happy paths
+* Invalid, empty, null, boundary, and unusually large inputs
+* State transitions
+* Partial and dependency failures
+* Duplicate or concurrent requests
+* Race conditions and unsafe shared state
+* N+1 queries, unbounded operations, memory growth, and other credible scalability problems
+* Backward compatibility with existing callers, configuration, schemas, and stored data
+
+Do not claim that a command, test, or flow succeeded unless you actually ran it.
+
+## Finding Requirements
+
+Report only actionable issues with:
+
+* Evidence in the changed code or validation output
+* A plausible triggering scenario
+* A concrete impact
+* A practical fix
+
+Avoid:
+
+* Purely subjective style preferences
+* Generic best-practice advice
+* Speculative problems without a credible failure scenario
+* Issues already prevented by the language, framework, or existing validation
+* Unrelated pre-existing problems
+* Large refactoring proposals unless necessary for correctness
+* Inventing findings to fill the report
+
+## Output Format
+
+Return findings first, ordered by severity:
+
+* **Critical:** Security compromise, data loss, severe outage, or fundamentally broken behavior
+* **Major:** Likely production failure, significant regression, or serious compatibility problem
+* **Minor:** A real defect with limited impact or a maintainability problem likely to cause future errors
+* **Nitpick:** Small, objective improvement; omit subjective preferences
+
+Use this exact structure for every finding:
+
+### [Severity] Brief title
+
+* **Location:** `path/to/file.ext:line`
+* **Trigger:** The specific input, state, or sequence that exposes the issue
+* **Why it matters:** The concrete effect on users, the system, or future changes
+* **Evidence:** Relevant behavior from the code or validation output
+* **Concrete fix:** A minimal implementation change or focused code snippet
+* **Regression test:** A test that would fail before the fix and pass afterward
+
+After the findings, include:
+
+## Validation Performed
+
+List the commands and scenarios actually executed, their results, and anything that could not be run.
+
+## Residual Risks
+
+List relevant behavior that could not be verified. Omit this section if nothing material remains unverified.
+
+## What’s Done Well
+
+Highlight one or two specific, meaningful strengths in the implementation. Do not include generic praise.
+
+If no actionable issues are found, explicitly state:
+
+**No actionable findings.**
+
+Do not invent findings merely to produce a populated review.
 ```
 
 ### Debug failing tests
