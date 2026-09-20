@@ -21,7 +21,6 @@ These are my learning notes and reflections while reading "Mastering Ethereum: I
 
 ---
 
-
 ## Aug 15, 2026
 
 Ethereum is an unbounded state machine.
@@ -285,3 +284,67 @@ Cool trick , on termianl you can convert hexadecimal to decimal
 ```sh
 echo $((0x123234))
 ```
+
+## Sep 20, 2026
+
+Ethereum has two types of accounts: 
+
+1. **EOA** 
+
+2. **Contract**
+
+EOA account has ether. So it can craeate  a transcations. Blockchain is nohting but a link of cyrptographic hashes. A transcation in ethereum looks like this 
+
+|--------------------|
+| From: address      |
+| To: address        |
+| code: Nil          |
+|---------------------
+
+Code can contain byte code for smart contract. A smart contract is a sefl executing code that lives on the ledger. It runs in EVM.  
+
+**Contract** account is to used to manage the smart contract code once it's created..
+
+### Public key cryptograph 
+
+Previously, if Alice wants to send secret message to Bob. It needs to encrypt it with a secret key and then transport secret key to Bob. This creates security risk. 
+
+With PKC, we cretae a pair of private and public key. And we broadcast public key to Bob who can decrypt messages using his private key. 
+
+A private key is a just a long random number. In Ethereum, it's a 256 bit random number. 
+
+Ethereum uses an ellyptic curve over prive to get public key. So all public keys are coordinates on ellyptic curve. They are all prime numbers.
+
+The curve equation is:
+
+```text
+y^2 = x^3 + 7  (mod p)
+```
+
+The important part is `mod p`.
+
+We are not working over normal real numbers. We are working inside a **finite field**.
+
+For secp256k1:
+
+```text
+p =
+2^256
+- 2^32
+- 2^9
+- 2^8
+- 2^7
+- 2^6
+- 2^4
+- 1
+```
+
+`p` is a very large prime number.
+
+So the calculations wrap around modulo `p`.
+
+There's a Generator point which is fixed for everyone and private key is multiplied with it to get a new coordinate , which is the public key.
+
+Wallet is a software that contains both private and public key.
+
+1 hexadecimal is 4 bit.
