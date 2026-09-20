@@ -289,31 +289,32 @@ echo $((0x123234))
 
 Ethereum has two types of accounts: 
 
-1. **EOA** 
+1. **EOA**
 
 2. **Contract**
 
-EOA account has ether. So it can craeate  a transcations. Blockchain is nohting but a link of cyrptographic hashes. A transcation in ethereum looks like this 
+An EOA is controlled by a private key, so it can create and sign transactions. Both EOAs and contract accounts can hold ether.  A blockchain links blocks using cryptographic hashes. An Ethereum transaction looks like this:
 
-|--------------------|
-| From: address      |
-| To: address        |
-| code: Nil          |
-|---------------------
+| Field | Value |
+| --- | --- |
+| From | Address recovered from the signature |
+| To | Recipient address, or empty for contract creation |
+| Value | Amount of ether to transfer |
+| Data | Input data or contract initialization code |
 
-Code can contain byte code for smart contract. A smart contract is a sefl executing code that lives on the ledger. It runs in EVM.  
+For contract creation, the data field contains initialization bytecode. A smart contract is self-executing code that lives on the ledger. It runs in the EVM.
 
-**Contract** account is to used to manage the smart contract code once it's created..
+A **contract** account holds smart contract code and storage once it is created.
 
-### Public key cryptograph 
+### Public-key cryptography
 
-Previously, if Alice wants to send secret message to Bob. It needs to encrypt it with a secret key and then transport secret key to Bob. This creates security risk. 
+With symmetric cryptography, if Alice wants to send a secret message to Bob, she encrypts it with a secret key and must securely share that key with Bob. This creates a key-distribution risk.
 
-With PKC, we cretae a pair of private and public key. And we broadcast public key to Bob who can decrypt messages using his private key. 
+With public-key cryptography, Bob creates a pair of private and public keys. He shares his public key, which Alice can use to encrypt a message that Bob can decrypt using his private key.
 
-A private key is a just a long random number. In Ethereum, it's a 256 bit random number. 
+A private key is just a long random number. In Ethereum, it is a 256-bit number within the valid secp256k1 key range.
 
-Ethereum uses an ellyptic curve over prive to get public key. So all public keys are coordinates on ellyptic curve. They are all prime numbers.
+Ethereum uses an elliptic curve over a finite field to derive a public key from a private key. Public keys are points on the elliptic curve, and their coordinates are elements of the finite field.
 
 The curve equation is:
 
@@ -343,8 +344,6 @@ p =
 
 So the calculations wrap around modulo `p`.
 
-There's a Generator point which is fixed for everyone and private key is multiplied with it to get a new coordinate , which is the public key.
+There is a generator point that is fixed for everyone. The private key is multiplied by it to get a new point, which is the public key.
 
-Wallet is a software that contains both private and public key.
-
-1 hexadecimal is 4 bit.
+A wallet is software or hardware that stores private keys and derives their public keys and addresses.
