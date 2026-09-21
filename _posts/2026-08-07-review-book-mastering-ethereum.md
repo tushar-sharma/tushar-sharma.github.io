@@ -138,18 +138,18 @@ After EIP-1559, gas fee has base fee and priority fee. Base fee is burned and pr
 ```
 1 gwei = 10^9 wei
 
-1 ETH = 10^9 gwei = 10^18 wei 
+1 ETH = 10^9 gwei = 10^18 wei
 ```
 
-Wallets stores keys. It could be software or hardware. Software wallets can also create and broadcast transcations. 
+Wallets stores keys. It could be software or hardware. Software wallets can also create and broadcast transcations.
 
 Private keys authorize the ownership of the address. They also authorize transcations by signing them.
 
 Funds are not inside the wallet. Funds are in Ethereum state. Wallet just stores the key that can sign transcations from that address.
 
-**Metamask** is one such wallet. There's a [chrome extension](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) or from their [website](https://metamask.io/download). 
+**Metamask** is one such wallet. There's a [chrome extension](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) or from their [website](https://metamask.io/download).
 
-Wallet generates a private key. Next you can generate public key from your private key. The last 20 bytes of hash of your public key is your address. 
+Wallet generates a private key. Next you can generate public key from your private key. The last 20 bytes of hash of your public key is your address.
 
 ```
 private key is generated randomly
@@ -166,29 +166,29 @@ Transcations use addresses to transfer ether or interact with contracts. `to` is
 ```
 An address can logically look like 0x23..1bc
    ETH balance
-   transcations count nonce 
+   transcations count nonce
    contract storage
-   Smart contract code 
+   Smart contract code
 ```
 
 Nonce is number used once. Different blockchain uses nonce differently. In Ethereum, nonce is not a block id. For EOA, nonce counts the number of transcations sent from that account. For contract account, nonce counts the number of contracts created by that account.
 
 Bitcoin uses UXTO model, where miners use nonce to perform proof of work.
 
-What's differnce between private and public key? Previously you had one private key that was used to encryptt and decrypt messages. However it causes isses to securely distribute private key. 
+What's differnce between private and public key? Previously you had one private key that was used to encryptt and decrypt messages. However it causes isses to securely distribute private key.
 
 
 Public key solves that. Every use will have a pair of (public and private key). Public key can be broadcasted to all.
 
-For scenario 1, Alice wants to send secure message to Bob. Alice will take just use Bob's public key to encrypt the message. Now Bob can decrypt the message with his private key. Bob didn't had to send ALice his private key. 
+For scenario 1, Alice wants to send secure message to Bob. Alice will take just use Bob's public key to encrypt the message. Now Bob can decrypt the message with his private key. Bob didn't had to send ALice his private key.
 
 Alice does not need her private key for encryption to Bob. She only needs Bob's public key. Her private key is needed when she wants to sign something.
 
 For scenario 2, Alice can digital signed the message with her private key, and anyone can verify using her public key that it was signed by Alice.
 
-Etherium has various neetwork 
+Etherium has various neetwork
 
-1. Main network 
+1. Main network
 2. private network like localhost
 3. Testnet like Sepolia
 4. Holešky network
@@ -201,13 +201,13 @@ Gas fees are paid by the Sender. There are 3 types of transcations
 
  > To is empty/null, not the zero address. Data contains init code and contract bytecode.
 
-3. Contract Interaction: Transcation has encoded function call in the data field.  
+3. Contract Interaction: Transcation has encoded function call in the data field.
 
-EVM is the execution environment for Ethereum. Each full node runs the EVM and maintains the same world state after processing the same chain of blocks. There are two types of accounts in Ethereum 
+EVM is the execution environment for Ethereum. Each full node runs the EVM and maintains the same world state after processing the same chain of blocks. There are two types of accounts in Ethereum
 
 1. Externaly owned account (EOA) : IT has a private key. Used for sending ether or accessing contract code
 
-2. Contract Account: It doens't have private key. canot initiate transcations. 
+2. Contract Account: It doens't have private key. canot initiate transcations.
 
 Contract account cannot initiate top-level transcations because it has no private key to sign a transcation. But contract code can call other contracts during execution when an EOA or another contract triggers it.
 
@@ -217,7 +217,7 @@ What's a facuet? A service or smart contract in testnet that gives out test ethe
 
 ## Aug 22, 2026
 
-Lets revise a smart contract is written in high lelel programing language like Solidity and is converted to bytecode. A simple program: 
+Lets revise a smart contract is written in high lelel programing language like Solidity and is converted to bytecode. A simple program:
 
 
 ```c
@@ -264,9 +264,9 @@ After successful deployment, the contract address is determined automatically by
 Internal calls: calls made by a smart contract while executing a top-level transaction. Top-level transactions are created and signed by externally owned accounts (EOAs).
 
 
-### Ethereum node 
+### Ethereum node
 
-You can run full ethereum node. For that you need to download two clients : 
+You can run full ethereum node. For that you need to download two clients :
 
 1. for execution e.g. Geth
 2. for consensus e.g. Prysm
@@ -279,7 +279,7 @@ Etherum clients can execute set of RPC commands over API. This is called JSON-RP
 
 Remote clients don't validate block headers or transcations. This is done by light client in Bitcoin.
 
-Cool trick , on termianl you can convert hexadecimal to decimal 
+Cool trick , on termianl you can convert hexadecimal to decimal
 
 ```sh
 echo $((0x123234))
@@ -287,13 +287,13 @@ echo $((0x123234))
 
 ## Sep 20, 2026
 
-Ethereum has two types of accounts: 
+Ethereum has two types of accounts, and each account is identified by an address:
 
 1. **EOA**
 
 2. **Contract**
 
-An EOA is controlled by a private key, so it can create and sign transactions. Both EOAs and contract accounts can hold ether.  A blockchain links blocks using cryptographic hashes. An Ethereum transaction looks like this:
+An EOA is controlled by a private key, so it can create and sign transactions. Both EOAs and contract accounts can hold ether. A blockchain links blocks using cryptographic hashes. A simplified view of an Ethereum transaction looks like this:
 
 | Field | Value |
 | --- | --- |
@@ -302,7 +302,7 @@ An EOA is controlled by a private key, so it can create and sign transactions. B
 | Value | Amount of ether to transfer |
 | Data | Input data or contract initialization code |
 
-For contract creation, the data field contains initialization bytecode. A smart contract is self-executing code that lives on the ledger. It runs in the EVM.
+For contract creation, the data field contains initialization bytecode. A smart contract is code stored on the ledger. It runs in the EVM when invoked by a transaction or another contract.
 
 A **contract** account holds smart contract code and storage once it is created.
 
@@ -310,7 +310,7 @@ A **contract** account holds smart contract code and storage once it is created.
 
 With symmetric cryptography, if Alice wants to send a secret message to Bob, she encrypts it with a secret key and must securely share that key with Bob. This creates a key-distribution risk.
 
-With public-key cryptography, Bob creates a pair of private and public keys. He shares his public key, which Alice can use to encrypt a message that Bob can decrypt using his private key.
+In a public-key encryption system, Bob creates a pair of private and public keys. He shares his public key, which Alice can use to encrypt a message that Bob can decrypt using his private key. This is a general cryptography example; Ethereum uses its key pairs to sign transactions rather than encrypt them.
 
 A private key is just a long random number. In Ethereum, it is a 256-bit number within the valid secp256k1 key range.
 
@@ -322,28 +322,14 @@ The curve equation is:
 y^2 = x^3 + 7  (mod p)
 ```
 
-The important part is `mod p`.
-
-We are not working over normal real numbers. We are working inside a **finite field**.
-
-For secp256k1:
-
-```text
-p =
-2^256
-- 2^32
-- 2^9
-- 2^8
-- 2^7
-- 2^6
-- 2^4
-- 1
-```
-
-`p` is a very large prime number.
-
-So the calculations wrap around modulo `p`.
-
 There is a generator point that is fixed for everyone. The private key is multiplied by it to get a new point, which is the public key.
 
-A wallet is software or hardware that stores private keys and derives their public keys and addresses.
+Ethereum transactions can:
+
+1. Transfer ether to an EOA or contract
+
+2. Call a smart contract, optionally transferring ether
+
+3. Create a smart contract by leaving the `to` field empty and putting initialization code in the `data` field
+
+Reading from a smart contract does not require a transaction or cost gas. The call is executed locally by a node without changing blockchain state, although an RPC provider may charge for access.
