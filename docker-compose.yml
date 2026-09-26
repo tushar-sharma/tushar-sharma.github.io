@@ -1,0 +1,22 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  serve:
+    image: jekyll/jekyll:3.8
+    command: jekyll serve --livereload --drafts
+    environment:
+      - JEKYLL_ENV=production
+    ports:
+      - 4000:4000
+      - 35729:35729
+    volumes:
+      - .:/srv/jekyll
+  build:
+    image: jekyll/jekyll:3.8
+    command: jekyll build --trace
+    environment:
+      - JEKYLL_ENV=production
+    ports:
+      - 4000:4000
+      - 35729:35729
+    volumes:
+      - .:/srv/jekyll
