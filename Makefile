@@ -1,5 +1,34 @@
+LOG_AUTHOR ?= tushar sharma
+LOG_IMAGE_ID ?= MlrBBF8Er8s
+
+.PHONY: create logs
+
 create:
 	bash createPost.sh
+logs:
+	@postdate=$$(date "+%Y-%m-%d"); \
+	display_date=$$(date "+%b %-d, %Y"); \
+	post="_posts/$$postdate-daily-logs-$$postdate.md"; \
+	if [ -e "$$post" ]; then \
+		echo "Daily log already exists: $$post"; \
+		exit 1; \
+	fi; \
+	printf '%s\n' \
+		'---' \
+		'layout: post' \
+		"title: Daily logs for $$display_date" \
+		'image: https://unsplash.com/photos/$(LOG_IMAGE_ID)/download?w=437' \
+		'thumb: https://unsplash.com/photos/$(LOG_IMAGE_ID)/download?w=437' \
+		'author: $(LOG_AUTHOR)' \
+		'category: blog' \
+		'tags:' \
+		'  - letters' \
+		'---' \
+		'' \
+		'Dear Vishi, dear logs for today.<!-- truncate_here -->' \
+		'' \
+		'Dear Vishi, dear logs for today.' > "$$post"; \
+	echo "Created $$post"
 serve:
 	JEKYLL_ENV=production bundle exec jekyll serve --trace
 clean:
