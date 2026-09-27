@@ -33,6 +33,7 @@ images:
   - source: "https://cdn-images-1.medium.com/v2/resize:fit:2600/1*_bQRF9fPcTEle_GgalyMKQ.jpeg"
     thumb: "https://cdn-images-1.medium.com/v2/resize:fit:200/1*_bQRF9fPcTEle_GgalyMKQ.jpeg"
 author: Tushar Sharma
+skipImage: true 
 category: blog
 tags:
  - north carolina

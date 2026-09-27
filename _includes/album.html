@@ -1,22 +1,20 @@
 <div id="{{ include.albumname }}" class="album">
     {% for image in page.images %}
     <div class="album-item">
-        {% unless image.text == empty or image.text == nil %}
-            <br><span class="image-text">{{ image.text }}</span>
-        {% endunless %}
-        {% case image.rating %}
-        {% when 'up' %}
-            <span class="cl fa fa-thumbs-up checked"></span><br>
-        {% when 'down' %}
-            <span class="cl fa fa-thumbs-down checked"></span><br>
-        {% when 'neutral' %}
-           <span class="cl fa fa-meh checked"></span> <br>
-        {% endcase %}
-        <a data-lightbox="gallery" href="{{ image.source }}" class="album-image" title="{{ image.caption }}">
-            <br><img src="{{ image.thumb }}" style="height: 200px; object-fit: cover; width: auto;" /><br>
+        <a data-lightbox="gallery" href="{{ image.source }}" class="album-image" title="{{ image.caption | default: image.text }}">
+            <img src="{{ image.thumb }}" alt="{{ image.text | default: image.caption }}" />
+            {% case image.rating %}
+            {% when 'up' %}
+                <span class="album-rating cl fa fa-thumbs-up checked" aria-label="Recommended"></span>
+            {% when 'down' %}
+                <span class="album-rating cl fa fa-thumbs-down checked" aria-label="Not recommended"></span>
+            {% when 'neutral' %}
+                <span class="album-rating cl fa fa-meh checked" aria-label="Neutral"></span>
+            {% endcase %}
+            {% unless image.text == empty or image.text == nil %}
+                <span class="image-text">{{ image.text }}</span>
+            {% endunless %}
         </a>
     </div>
     {% endfor %}
-    <a id="album-left" href="#">&lsaquo;</a>
-    <a id="album-right" href="#">&rsaquo;</a>
 </div>
