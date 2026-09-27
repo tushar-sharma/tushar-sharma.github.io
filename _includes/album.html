@@ -1,7 +1,18 @@
 <div id="{{ include.albumname }}" class="album">
     {% for image in page.images %}
     <div class="album-item">
-        <a data-lightbox="gallery" href="{{ image.source }}" class="album-image" title="{{ image.caption | default: image.text }}">
+        <a
+            {% if image.type == "video" %}
+                href="{{ image.source }}"
+                class="album-image album-video"
+                data-video-url="{{ image.embed }}"
+                data-video-orientation="{{ image.orientation | default: 'landscape' }}"
+            {% else %}
+                data-lightbox="gallery"
+                href="{{ image.source }}"
+                class="album-image"
+            {% endif %}
+            title="{{ image.caption | default: image.text }}">
             <img src="{{ image.thumb }}" alt="{{ image.text | default: image.caption }}" />
             {% case image.rating %}
             {% when 'up' %}
@@ -11,6 +22,9 @@
             {% when 'neutral' %}
                 <span class="album-rating cl fa fa-meh checked" aria-label="Neutral"></span>
             {% endcase %}
+            {% if image.type == "video" %}
+                <span class="album-play" aria-hidden="true">&#9654;</span>
+            {% endif %}
             {% unless image.text == empty or image.text == nil %}
                 <span class="image-text">{{ image.text }}</span>
             {% endunless %}
