@@ -955,17 +955,78 @@ code[class*=language-],pre[class*=language-]{
 /** album */
 
 .album {
-  text-align: center; /* Centers the content of '.album-item' */
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin: 1.5rem auto;
+  width: 100%;
 }
 
 .album-item {
-  display: inline-block; /* Allows block-level elements to sit side-by-side and respects text-align */
-  margin: 0 auto; /* Additional centering for margin alignment */
-  text-align: center; /* Ensures text is centered within '.album-item' */
+  border-radius: 0.65rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  justify-self: center;
+  max-width: 380px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.album-image {
+  aspect-ratio: 4 / 3;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.album-image img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  width: 100%;
 }
 
 .album .image-text {
-  margin-bottom: 1rem; /* Optional: Adds space between the text and the image */
+  align-items: center;
+  background: rgba(0, 0, 0, 0.68);
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  padding: 0.75rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s ease;
+}
+
+.album-rating {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  left: 0.65rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0.65rem;
+  z-index: 2;
+}
+
+.album-image:hover img,
+.album-image:focus img {
+  transform: scale(1.035);
+}
+
+.album-image:hover .image-text,
+.album-image:focus .image-text {
+  opacity: 1;
+}
+
+@media (max-width: 540px) {
+  .album {
+    grid-template-columns: 1fr;
+  }
 }
 
 .progress-outer {
