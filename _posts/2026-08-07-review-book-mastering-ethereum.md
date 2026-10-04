@@ -392,8 +392,6 @@ So A does not become B, and A's ether and tokens do not move to B. A keeps its a
 
 A guardian is an address or other authority that a **particular wallet's recovery design** trusts to help approve recovery. It might be an EOA or a smart contract account, depending on that wallet's rules. Ethereum does not assign guardians to all accounts, and a guardian cannot recover an ordinary EOA just because it is named as one.
 
-Example of smart contract : https://github.com/coinbase/smart-wallet
-
 ### Other notes
 
 **ENS:** Similar to DNS in that a readable name can resolve to an address. The name's owner configures its records; I still need to verify that a name resolves to the intended address before sending assets.
