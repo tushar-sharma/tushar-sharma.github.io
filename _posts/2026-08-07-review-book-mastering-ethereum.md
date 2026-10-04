@@ -333,3 +333,69 @@ Ethereum transactions can:
 3. Create a smart contract by leaving the `to` field empty and putting initialization code in the `data` field
 
 Reading from a smart contract does not require a transaction or cost gas. The call is executed locally by a node without changing blockchain state, although an RPC provider may charge for access.
+
+## Oct 3, 2026
+
+### Wallets, keys, and ownership
+
+A wallet is like a keychain: it manages private keys and the addresses derived from them. The keys let me authorize actions; the wallet does not hold the ether or tokens themselves. Native ether is recorded in Ethereum account balances. Token balances or ownership are usually recorded in a token contract's state.
+
+> What's a token? Is it a transaction that lives on the blockchain?
+
+No. A token is an asset represented by a smart contract. For example, an ERC-20 contract tracks balances, while an ERC-721 contract tracks which address owns each token ID. Transactions can *change* that state; they are not the tokens.
+
+> How do I prove ownership of a token?
+
+First check the token contract's current state to see which address holds the balance or owns the token ID. To prove I *control* that address, I can sign a message with its private key (or satisfy the authorization rules of a smart contract account). A valid signature alone proves control of an address, not that the address currently owns a particular token. To transfer a token from an EOA, I sign a transaction that calls the token contract; the contract checks its rules and updates its state.
+
+### Where wallet keys come from
+
+1. **Nondeterministic wallet:** Its private keys are generated independently, so each key needs its own backup.
+2. **Deterministic wallet:** Its keys are derived from one starting secret, so the same starting secret and derivation paths can recreate them.
+
+> What's a mnemonic code?
+
+A mnemonic (seed phrase) is a human-readable way to back up the starting secret. In the common BIP-39 scheme, the words plus an optional passphrase produce a seed; an HD wallet then derives keys from it. The words, passphrase (if used), and derivation paths must match to recover the same accounts. The seed phrase is **not** a public address and must stay secret.
+
+An **HD (hierarchical deterministic) wallet** organizes derived keys into a tree, so I can use different accounts and addresses from one backup. The hierarchy is useful for organization and recovery; it does not make an exposed seed phrase safer. Anyone with that phrase (and the passphrase, if one was used) can derive the keys.
+
+> How do I make a disaster-recovery copy of my seed?
+
+Record the phrase accurately on a durable offline medium, keep the backup in a separate secure place, and verify that recovery works. If I use a BIP-39 passphrase, I need to back that up securely too: the same words with a different passphrase produce different accounts. I should never put the phrase in these notes, a screenshot, cloud storage, or a website.
+
+### Proposals and accounts
+
+- **EIP (Ethereum Improvement Proposal):** The umbrella process for proposing Ethereum standards and changes. Some EIPs change the protocol; others specify standards used by applications.
+- **ERC (Ethereum Request for Comments):** An application-level standards category within the EIP process, such as ERC-20 or ERC-721. An ERC is therefore also an EIP.
+- **RIP (Rollup Improvement Proposal):** A proposal for standards or improvements shared across Ethereum rollups. It does not automatically change Ethereum mainnet.
+
+Ethereum has two basic account types:
+
+1. **EOA (externally owned account):** An account controlled by a private key. Its key can sign transactions.
+2. **Contract account:** An account with code. Its code defines what it does when called; it does not have its own private key.
+
+> What is account abstraction (AA), and why use a smart wallet?
+
+Account abstraction lets an account use programmable authorization instead of relying only on one EOA key. A **smart wallet** is wallet logic implemented in a contract. Depending on its design, it can support multiple signers, spending limits, batched actions, sponsored fees, or recovery rules. These are possible features, not guarantees of every smart wallet. ERC-4337 is one approach: a user submits a `UserOperation` that is validated and executed by a smart account through an `EntryPoint` contract.
+
+> EIP-7702 lets an EOA execute smart contract code. How does that work?
+
+Think of **A** as my existing EOA address and **B** as an already deployed contract containing wallet logic:
+
+1. A signs an EIP-7702 authorization naming B as its delegate.
+2. A type-4 transaction includes that authorization. The transaction sender can be A or someone else submitting it for A.
+3. Ethereum stores a *delegation marker* in A's code, pointing to B. When A is called, Ethereum executes B's code **in A's context**: A's address, balance, and storage are used.
+
+So A does not become B, and A's ether and tokens do not move to B. A keeps its address and private key; the delegated code adds programmable behavior at A. The choice of B matters because its code can act with A's assets. A's private key can still send transactions and change the delegation, so code-based spending limits cannot protect against someone who has that key. Revoking or changing the delegation requires a new authorization and transaction.
+
+> What's a guardian? Does it have to be another EOA?
+
+A guardian is an address or other authority that a **particular wallet's recovery design** trusts to help approve recovery. It might be an EOA or a smart contract account, depending on that wallet's rules. Ethereum does not assign guardians to all accounts, and a guardian cannot recover an ordinary EOA just because it is named as one.
+
+Example of smart contract : https://github.com/coinbase/smart-wallet
+
+### Other notes
+
+**ENS:** Similar to DNS in that a readable name can resolve to an address. The name's owner configures its records; I still need to verify that a name resolves to the intended address before sending assets.
+
+**ERtool:** Emergency tool used by Blockdaemon to get the original master private key and RSA decryption key. This is separate from the Ethereum wallet concepts above; I need to check the tool's documentation for its exact recovery process.
