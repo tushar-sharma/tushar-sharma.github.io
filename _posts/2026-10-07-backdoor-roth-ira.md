@@ -1,228 +1,168 @@
 ---
 layout: post
-title: "Backdoor Roth IRA at Schwab: Concepts and Annual Runbook"
+title: "Traditional IRA, Roth IRA, and the Backdoor Roth"
 image: https://unsplash.com/photos/EQdPHtE86UI/download?w=437
 thumb: https://unsplash.com/photos/EQdPHtE86UI/download?w=437
 author: tushar sharma
-tags: 
+tags:
  - roth ira
 category: blog
 ---
 
-A backdoor Roth IRA has two money movements: contribute after-tax cash to a traditional IRA without taking a deduction, then convert that money to a Roth IRA. This runbook records the Schwab workflow reviewed in October 2026 and the concepts needed to repeat it later.<!-- truncate_here -->
+An IRA is a retirement account with tax advantages. The two common types are a traditional IRA and a Roth IRA. They differ mainly in *when* you receive the tax benefit. If your income is too high to contribute directly to a Roth IRA, a backdoor Roth may provide another route.<!-- truncate_here -->
 
-A backdoor Roth IRA has two money movements: contribute after-tax cash to a traditional IRA without taking a deduction, then convert that money to a Roth IRA. This runbook records the Schwab workflow reviewed in October 2026 and the concepts needed to repeat it later.
+This article explains how these accounts work, why a Roth IRA can be useful, and how I completed the backdoor Roth process at Schwab.
 
-**Last reviewed: October 7, 2026.** Amounts below are for 2026. Verify the new limits and current account screens before repeating this in another year. This remains an unpublished draft; the original image URLs above are placeholders to replace before publication.
+**Last reviewed: October 7, 2026.** Contribution limits, income limits, tax rules, and Schwab's screens can change, so verify them before repeating the process.
 
-## The process in one sentence
+## First, what is an IRA?
 
-**Regular brokerage cash → traditional IRA contribution → Roth conversion → invest inside the Roth → report both steps on the tax return.**
+IRA stands for **Individual Retirement Arrangement**, commonly called an individual retirement account. It is a type of account, not an investment.
 
-A backdoor Roth is a process, not a special account type. The result is an ordinary Roth IRA.
+After adding money to an IRA, I still need to invest it—for example, in a mutual fund, ETF, bond, or stock. Cash left uninvested may earn little and will not automatically participate in the market.
 
-## What we verified in October 2026
+An IRA is also different from a 401(k). An IRA is opened by an individual, while a 401(k) is offered through an employer. Each has its own contribution rules and limits, so contributing to a 401(k) does not prevent me from also contributing to an IRA if I am eligible.
 
-We opened a traditional IRA and a Roth IRA at Schwab. We reviewed a $7,500 contribution setup for 2026, scheduled for October 5. On October 7, the conversion screen showed $7,500 available in the traditional IRA and the correct Roth conversion code.
+## Traditional IRA versus Roth IRA
 
-The initial conversion screen defaulted to $750 federal withholding and $300 North Carolina withholding. We changed those elections so the full $7,500 would reach the Roth.
+Both accounts allow investments to grow without a current tax bill each time a fund is sold or pays a dividend. The important difference is how contributions and withdrawals are taxed.
 
-| Final review item | Verified setting |
+| | Traditional IRA | Roth IRA |
+|---|---|---|
+| Money going in | A contribution may be tax-deductible, depending on income and workplace retirement-plan coverage | Contributions are made with after-tax money and are not deductible |
+| While invested | No current tax on trades, dividends, or capital gains inside the account | No current tax on trades, dividends, or capital gains inside the account |
+| Money coming out | Withdrawals are generally taxed as ordinary income | Qualified withdrawals are tax-free |
+| Required minimum distributions | Generally required during the owner's lifetime | None for the original owner under current federal rules |
+
+A traditional IRA can be attractive when I qualify for a deduction today and expect to be in a lower tax bracket when I withdraw the money.
+
+A Roth IRA reverses that trade: I receive no deduction today, but qualified withdrawals—including investment growth—can be tax-free. That can be valuable when I have many years for the money to grow, expect a similar or higher future tax rate, or want more tax-free income in retirement.
+
+Neither account guarantees a return. The benefit comes from its tax treatment; the result still depends on what I invest in, its fees, and market performance.
+
+## Why not simply contribute to a Roth IRA?
+
+Direct Roth IRA contributions have an income limit based on **modified adjusted gross income (MAGI)**. MAGI is calculated under tax rules; it is not the same as salary or take-home pay.
+
+For 2026, the Roth contribution phaseout is:
+
+| Tax filing status | 2026 MAGI phaseout |
+|---|---:|
+| Single or head of household | $153,000–$168,000 |
+| Married filing jointly | $242,000–$252,000 |
+| Married filing separately and lived with spouse during the year | $0–$10,000 |
+
+Within the phaseout range, the permitted direct contribution is reduced. At or above its upper end, a direct Roth IRA contribution is not allowed.
+
+If I am eligible to contribute directly to a Roth IRA, that is the simpler choice. If my MAGI is too high, I may be able to use a **backdoor Roth IRA** instead.
+
+## What is a backdoor Roth IRA?
+
+A backdoor Roth is not a special account. It is a two-step process:
+
+1. Make a **nondeductible contribution** to a traditional IRA.
+2. Convert the money from the traditional IRA to a Roth IRA.
+
+The income limit that restricts direct Roth contributions does not apply in the same way to Roth conversions. After the conversion, the money sits in an ordinary Roth IRA and can be invested there.
+
+For 2026, the combined contribution limit across all of one person's traditional and Roth IRAs is $7,500, or $8,600 for someone age 50 or older. A person also needs enough eligible compensation. The limit is per person, so spouses use separate IRAs.
+
+The conversion itself is not another contribution and does not use a second contribution limit. For example, if I contribute $7,500 and it earns $2 before conversion, I can convert the full $7,502. In a simple case, the $7,500 of basis is not taxed again, but the $2 of earnings is taxable.
+
+## The most important check: the pro-rata rule
+
+Before using the backdoor Roth strategy, I need to check whether I have pretax money in **any** traditional, rollover, SEP, or SIMPLE IRA—not just the new account at Schwab.
+
+The IRS generally combines these IRA balances when calculating how much of a conversion is taxable. I cannot select only the nondeductible dollars and leave the pretax dollars untouched. This is known as the **pro-rata rule**.
+
+Workplace accounts such as a 401(k) are not included in this calculation. A spouse's IRAs are also separate from mine.
+
+If I have a substantial pretax IRA balance, the conversion may create a larger tax bill than expected. That is the point at which I would pause and consult a tax professional before proceeding. I would also think carefully before rolling a former employer's 401(k) into an IRA during the conversion year.
+
+## How I do it at Schwab
+
+I need two accounts in my name:
+
+- a Schwab Traditional IRA (shown as **Contributory IRA** in my account); and
+- a Schwab Roth IRA (shown as **Roth Contributory IRA**).
+
+The process is then straightforward.
+
+### 1. Contribute cash to the traditional IRA
+
+From Schwab's transfer workflow, I select my bank or taxable brokerage account as the source and the traditional IRA as the destination. I enter the contribution amount and choose the correct tax year.
+
+The contribution must be cash. If the money is invested in a taxable brokerage account, selling an investment first may create a taxable gain or loss.
+
+Schwab does not need to label the transfer as “nondeductible.” I establish that tax treatment when filing my return.
+
+### 2. Wait until the cash is available
+
+I leave the contribution in cash and wait until Schwab makes it available to convert. There is no special investment I need to buy in the traditional IRA. Keeping this interval short can minimize earnings that would be taxable upon conversion.
+
+An operational hold is not a reason to submit the contribution again. I check the account history instead.
+
+### 3. Convert it to the Roth IRA
+
+In Schwab's transfer workflow, I choose:
+
+| Setting | Selection |
 |---|---|
-| Source | Contributory IRA (traditional IRA) |
-| Destination | Roth Contributory IRA |
-| Distribution type | Distribution Code 2 - Roth Conversion under age 59 1/2 |
+| From | Traditional/Contributory IRA |
+| To | Roth Contributory IRA |
+| Transaction type | Roth conversion |
+| Amount | Full available amount intended for conversion |
 | Amount type | Before taxes (gross) |
-| Gross amount | $7,500 |
-| Federal withholding | 0%, or $0 |
-| North Carolina election | No, I do not want state income tax withheld |
-| Total withholding | $0 |
-| Cash transferred to Roth | $7,500 |
-| Total taken from traditional IRA | $7,500 |
+| Federal withholding | 0% |
+| State withholding | No withholding, when available and appropriate |
 
-**Status boundary:** The conversation verified the pre-submission settings. It did not establish that Submit was clicked or that the conversion settled. Complete the record below using Schwab's confirmation/history; do not submit a duplicate conversion just because this checklist is unfinished.
+Schwab's wording may differ between the website and app. On my screen, the transaction displayed **Distribution Code 2—Roth Conversion under age 59½**.
 
-- [ ] Conversion submitted; confirmation saved privately.
-- [ ] Conversion posted to Roth; actual date: __________.
-- [ ] Actual conversion amount: __________.
-- [ ] Investments purchased inside Roth.
-- [ ] Residual interest checked later.
-- [ ] December 31 IRA balances reviewed.
-- [ ] 2026 tax reporting completed in 2027.
+### 4. Review before submitting
 
-## The concepts that confused me
+I verify the source, destination, contribution year, conversion amount, and withholding. I submit once and save the confirmation.
 
-### Account versus investment
+The withholding choice is especially important. When I reviewed a $7,500 conversion, Schwab initially showed $750 of federal withholding and $300 of North Carolina withholding. Had I accepted those defaults, only $6,450 would have reached the Roth.
 
-An IRA is the account holding the investments. A stock or ETF is something purchased inside it. Transferring money into an IRA does not automatically buy an ETF.
+I normally want the full amount converted and would pay any tax due with money outside the IRA. Choosing zero withholding does **not** mean the conversion has no tax consequences; it only means Schwab will not remove taxes from the transfer.
 
-| Account | How it is funded | Tax treatment in brief |
-|---|---|---|
-| Regular brokerage | Cash from a bank or another taxable account | Sales can generate taxable gains; dividends are generally taxable even when reinvested. |
-| Traditional IRA | Personal contributions or eligible retirement transfers | Contributions may be deductible; nondeductible contributions are also possible. Trading generally creates no current tax. Pretax money and earnings are generally taxed on withdrawal. |
-| Roth IRA | Eligible direct contributions or conversions | No deduction for regular contributions; qualified withdrawals are tax-free. Ordinary stock/ETF trades inside it create no current capital-gains tax. |
-| Traditional 401(k) | Employer payroll | Pretax contributions generally reduce current taxable income; retirement withdrawals are generally taxable. |
-| Roth 401(k) | Employer payroll, if offered | After-tax contributions; qualified withdrawals are tax-free. Its employee limit is shared with the traditional 401(k), separately from IRA limits. |
+### 5. Invest inside the Roth IRA
 
-At Schwab, our traditional account appeared as **Contributory** and the Roth as **Roth Contributory IRA**. Verify the actual account registration rather than relying only on a nickname.
+Once the conversion arrives, I buy the investments I want inside the Roth IRA. The transfer alone does not invest the money.
 
-### What "after-tax" means
+I also check the traditional IRA again later. If a small interest payment arrives after the conversion, I can convert that residual amount too. It is an additional conversion, not an excess contribution, although the earnings are generally taxable.
 
-The cash in my bank or regular brokerage came from money already subject to tax, such as my take-home pay. Moving that cash into an IRA is not itself a new tax on the deposit.
+## Tax reporting I should not forget
 
-For the backdoor process, I do **not** claim an IRA deduction. The nondeductible contribution becomes tax basis, which tracks money that should not be taxed again. Converting earnings or other pretax money can still create tax.
+A backdoor Roth creates paperwork even when little or no tax is due.
 
-### Why use a Roth?
+- **Form 1099-R:** Schwab reports the conversion from the traditional IRA.
+- **Form 8606:** I report the nondeductible contribution, track its basis, and calculate the taxable part of the conversion.
+- **Form 5498:** Schwab reports IRA contribution information. This form may arrive after the tax-filing deadline and is generally kept for my records.
 
-If $7,500 grows to $30,000 inside a Roth, qualified withdrawals of the entire balance can be tax-free. I can sell an ETF and buy another inside the Roth without a current capital-gains tax on the sale. Selling inside the account and withdrawing from the account are different events.
+The contribution and conversion can also fall in different tax years. A 2026 IRA contribution can generally be made by the 2027 tax-filing deadline, but a conversion completed in 2027 is a **2027 conversion**. Completing both steps in the same calendar year usually makes the records easier to follow.
 
-The account does not guarantee investment returns or remove market risk. Losses inside the IRA generally cannot be deducted like taxable brokerage capital losses.
+For a clean example—with no prior IRA basis, no other traditional/SEP/SIMPLE IRA money, and no investment gain—a $7,500 nondeductible contribution followed by a $7,500 conversion would generally result in no taxable conversion income. I would still report both steps correctly on Form 8606.
 
-### Contribution limits versus conversion amounts
+## My annual checklist
 
-For 2026, the regular IRA contribution limit is $7,500 if under 50, or $8,600 if age 50 or older by year-end. It is shared across a person's traditional and Roth IRAs at all brokers. Sufficient eligible compensation is required; joint filers may use the spousal IRA rules.
+- Verify the current IRA contribution and Roth MAGI limits.
+- Account for contributions already made to any traditional or Roth IRA for the year.
+- Check all traditional, rollover, SEP, and SIMPLE IRA balances for the pro-rata rule.
+- Contribute cash to the traditional IRA for the correct tax year.
+- Convert the available balance to the Roth IRA with zero withholding.
+- Save the confirmation, invest the Roth cash, and check later for residual interest.
+- Keep Forms 1099-R and 5498, and file Form 8606 correctly.
 
-A conversion moves existing retirement money. It does not consume another contribution allowance and has no annual dollar cap. For example, $7,500 contributed plus $2 interest can all be converted: $7,502 in conversions is not a $7,502 contribution. In the simple no-other-IRA case, the $2 is generally taxable.
+A backdoor Roth is mechanically simple, but the pro-rata rule and tax reporting matter. My summary is: **contribute after-tax cash to a traditional IRA, convert it to a Roth IRA, invest it, and report both steps.**
 
-Each spouse has separate accounts and an individual allowance. The household cannot put both spouses' allowances into one person's IRA. [1][2]
+## Sources
 
-### Why the backdoor route?
+1. [IRS: 2026 retirement contribution limits and Roth income phaseouts](https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500)
+2. [IRS: Form 8606 instructions](https://www.irs.gov/instructions/i8606)
+3. [IRS Publication 590-A: Contributions to IRAs](https://www.irs.gov/publications/p590a)
+4. [IRS Publication 590-B: Distributions from IRAs](https://www.irs.gov/publications/p590b)
+5. [Schwab: Is a backdoor Roth IRA right for you?](https://www.schwab.com/learn/story/backdoor-roth-is-it-right-you)
+6. [Schwab: How to convert a traditional IRA to a Roth IRA](https://www.schwab.com/content/how-to-convert-traditional-ira-to-roth-ira)
 
-For married filing jointly in 2026, direct Roth contributions phase out over MAGI of $242,000–$252,000; at $252,000 or more, no direct contribution is allowed. MAGI is a tax calculation, not simply salary or take-home pay. A previous year's return is only a starting point for estimating the current year.
-
-Traditional IRA nondeductible contributions and Roth conversions are not subject to that direct-Roth income ceiling. That is why this two-step route is available. If eligible for a full direct Roth contribution, that is the simpler route. [1][2]
-
-## Before repeating this runbook
-
-- [ ] Verify the contribution limit for the intended tax year and my age.
-- [ ] Confirm sufficient eligible compensation, including applicable spousal rules.
-- [ ] Subtract any regular IRA contributions already made for that year, at any broker.
-- [ ] Check all traditional, rollover, SEP, and SIMPLE IRA balances and any prior nondeductible basis.
-- [ ] Keep sufficient emergency cash and account for high-interest debt and the employer 401(k) match.
-- [ ] Confirm the source cash is available to transfer.
-
-This simple workflow assumes no other pretax IRAs. At the time we discussed it, we reported having only workplace 401(k)s. Recheck that assumption every year, especially after changing jobs.
-
-### The pro-rata rule
-
-Opening a fresh IRA does not isolate the new nondeductible contribution from other IRA money. The tax calculation generally aggregates a person's traditional, SEP, and SIMPLE IRAs, including rollover IRAs, and uses year-end balances along with relevant distributions/conversions. Workplace 401(k)s are excluded. Spouses are calculated separately.
-
-If other pretax IRA balances exist, part of a conversion may be taxable. A $0 balance in the new Schwab IRA alone is not enough. Evaluate any 401(k)-to-IRA rollover before doing it during the conversion year. A small residual balance is not illegal; it simply needs accurate reporting. [2][3]
-
-## Schwab runbook
-
-### 1. Open the accounts once
-
-Open a Traditional IRA and a Roth IRA under the same person's Schwab login. Existing accounts can be reused next year; an empty traditional IRA does not need to be closed.
-
-Beneficiaries can be added or updated afterward. Limited margin, options approval, and thinkorswim are not required for this process or ordinary stock/ETF purchases.
-
-### 2. Contribute cash to the traditional IRA
-
-In Schwab's transfer workflow, select the regular brokerage as source and the traditional Contributory IRA as destination. Enter the allowed cash amount and select the correct contribution year. For our 2026 setup, that was a one-time $7,500 contribution.
-
-Regular contributions must be cash. If money is invested in the taxable brokerage, selling investments to raise cash may produce taxable gains or losses. Wait for the proceeds to become available.
-
-Treat the traditional IRA contribution as nondeductible on the tax return. There may be no separate "nondeductible" checkbox in the transfer screen; the tax reporting establishes that treatment.
-
-### 3. Wait for availability
-
-Keep the money in cash until conversion. Wait for Schwab to make it available for the transaction. There is no mandatory one-day tax-law waiting period; operational holds or settlement may take longer. Avoid submitting the contribution again while waiting. [2][6]
-
-### 4. Start the conversion
-
-Use Schwab's transfer workflow. Menu wording may be **Transfer & Pay → Transfer Funds** or **Move Money → Online Transfers**, depending on platform/version.
-
-Choose the traditional IRA as source and Roth IRA as destination. Our screen automatically displayed **Distribution Code 2 - Roth Conversion under age 59 1/2**. That identified the conversion; a second special dropdown was unnecessary on that screen. If a distribution-type choice is offered, select Roth conversion. [4]
-
-### 5. Set gross amount and zero withholding
-
-Select **Before taxes (gross)** and enter the full available balance intended for conversion.
-
-- **Gross** means the amount leaving the source before withholding.
-- **Net** means the amount delivered after withholding; with positive withholding, requesting a net amount can require more money from the source.
-- With both withholding amounts at zero, gross and net are equal.
-
-Enter **0% federal withholding**. Select **No, I do not want state income tax withheld** for the North Carolina election we saw.
-
-The default 10% federal rate was a withholding setting, not a determination that we owed 10% tax. The state wording said "If you withhold, 4% minimum required"; we elected no withholding. State rules and screens can change, so verify the available election in future years.
-
-At the original defaults, $1,050 would have gone to tax authorities and only $6,450 to Roth. Money withheld is not converted and can create an early-distribution issue. Zero withholding also does not prove zero tax liability: the tax return calculates the taxable portion. Pay any actual tax due from outside funds as appropriate.
-
-### 6. Review and submit once
-
-Confirm the source, destination, conversion label, amount, date, and $0 total withholding. For our reviewed transaction, all $7,500 was to reach the Roth.
-
-Submit once and save the confirmation. A review screen is not proof of completion. Check transfer history for pending/completed status rather than creating another request.
-
-### 7. Invest and check for late interest
-
-After the money arrives and is available to trade, buy the intended investments inside the Roth. Keep the traditional IRA available for next year's contribution.
-
-Cash may earn interest before conversion but receive the credit later. If a small amount subsequently appears in the traditional IRA, convert that balance too when available. It is another conversion, not another contribution. Generally, that interest is taxable. Check again around statement time and before year-end. [2]
-
-## Dates: contribution year is not conversion year
-
-| Event | Governing timing |
-|---|---|
-| Regular 2026 contribution | Generally permitted through April 15, 2027; select 2026 explicitly. |
-| Conversion completed in 2026 | Reported for calendar year 2026. |
-| Conversion completed in January 2027 | Reported for 2027, even if funded by a 2026 contribution. |
-| Pro-rata year-end balance check | December 31 of the conversion year. |
-
-Completing both steps within the same calendar year simplifies reporting. A contribution in early 2027 for 2026 followed by a 2027 conversion is allowed, but involves two tax years and potentially carried-forward basis.
-
-A new year's allowance does not require waiting 12 months after the last contribution. Recheck the next year's limit rather than assuming it remains $7,500. [3][7]
-
-## Tax paperwork: file in 2027 for the 2026 transactions
-
-| Record | Who supplies it | Purpose |
-|---|---|---|
-| Form 1099-R | Schwab | Reports the distribution/conversion from the traditional IRA. Include it in tax preparation even when little or no tax is due. |
-| Form 8606 | Me or my tax preparer | Reports nondeductible contributions and calculates the taxable conversion amount. Each spouse files their own when required. |
-| Form 5498 | Schwab | Records IRA contribution/conversion information. Keep it; it may arrive after the usual filing deadline and is not attached to my return. |
-| Confirmations and December statements | Schwab | Support dates, amounts and year-end IRA balances. |
-
-For same-year contribution and conversion, use the applicable year's Form 8606, generally Parts I and II. Retain basis records rather than blindly copying last year's numbers. [3]
-
-### Sanity check for the simple case
-
-Assume no prior basis, no other IRA money, no other IRA distributions, and a $0 aggregate traditional/SEP/SIMPLE IRA balance at year-end:
-
-| Item | No interest | $2 interest converted too |
-|---|---:|---:|
-| Nondeductible contribution | $7,500 | $7,500 |
-| Total Roth conversion | $7,500 | $7,502 |
-| Expected taxable conversion | $0 | $2 |
-
-Give the preparer the actual figures, not just this example. If software taxes the entire $7,500 in this simple case, review whether the nondeductible contribution was entered correctly. Do not ignore a 1099-R or assume its gross distribution equals taxable income. [2][3]
-
-Message to my preparer: "I made a nondeductible traditional IRA contribution for 2026 and converted it to Roth in 2026. Please include the contribution and conversion on Form 8606, check my aggregate year-end IRA balances, and do not deduct the contribution. Attached are the actual amounts, confirmations and 1099-R."
-
-## The two five-year rules
-
-For ordinary tax-free retirement withdrawals of earnings, I generally need both age 59½ and completion of the Roth IRA five-tax-year period. If my first Roth funding is this conversion completed in 2026, the period starts January 1, 2026 and is satisfied January 1, 2031. Opening an empty Roth or funding only the traditional IRA does not start this Roth clock. Later Roth contributions do not restart it.
-
-There is also a separate five-year early-distribution rule for each conversion, generally relevant to the amount taxable at conversion when withdrawn before 59½. It does not mean every dollar of a nondeductible conversion automatically faces a five-year penalty. Withdrawal ordering and other conversions can matter. Regular contributions, conversions and earnings are different categories; check the rules before an early withdrawal. [5]
-
-## Next-year checklist
-
-- [ ] Verify new limits, compensation, prior contributions and any changed IRA balances.
-- [ ] Reuse the existing traditional and Roth accounts.
-- [ ] Contribute the permitted cash amount for the correct year.
-- [ ] Convert after availability; verify gross amount and withholding elections.
-- [ ] Save confirmation, confirm settlement and invest inside Roth.
-- [ ] Check residual interest and year-end balances.
-- [ ] Keep tax forms and complete Form 8606.
-
-## Sources to revisit
-
-1. [IRS: 2026 IRA and 401(k) limits and Roth income phaseouts](https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500).
-2. [Schwab: Backdoor Roth IRA explanation and tax considerations](https://www.schwab.com/learn/story/backdoor-roth-is-it-right-you).
-3. [IRS: Form 8606 instructions](https://www.irs.gov/instructions/i8606). Use the version for the tax year being filed; the page reviewed currently presents 2025 instructions.
-4. [Schwab: How to convert a traditional IRA to a Roth IRA](https://www.schwab.com/content/how-to-convert-traditional-ira-to-roth-ira). Exact October 2026 mobile withholding labels above came from the screens reviewed during this workflow.
-5. [IRS Publication 590-B: Distributions, withdrawal ordering and five-year rules](https://www.irs.gov/publications/p590b).
-6. [White Coat Investor: 17 Backdoor Roth IRA Mistakes](https://www.whitecoatinvestor.com/17-ways-to-screw-up-a-backdoor-roth-ira/). Useful practical checklist; its historical dollar examples are not 2026 limits.
-7. [IRS Publication 590-A: Contributions to IRAs](https://www.irs.gov/publications/p590a).
-
-This runbook describes a specific nondeductible-contribution workflow. Reassess if compensation, IRA balances, residency, tax law or broker procedures change; do not use it as a blanket instruction to convert an existing pretax retirement balance tax-free.
+Tax rules depend on individual circumstances. This article documents my understanding and process; it is not individualized tax advice.
