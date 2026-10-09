@@ -1,0 +1,124 @@
+hr {
+  margin-top:-14px;
+  margin-bottom:2px;
+}
+
+th {
+  font-size:11pt;
+  font-weight: bold;
+  margin-bottom:2px;
+}
+
+ul {
+  margin:2px 0 20px;
+}
+
+body {
+  padding:15px;
+  font:12pt/1.5 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:#444;
+}
+
+h4 {
+  font-variant:small-caps;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  color: black;
+}
+
+#titlename {
+  text-align:center;
+  margin-top:-40px;
+  margin-left:160px;
+  margin-bottom:25px;
+  font-variant:small-caps;
+}
+
+.go_right {
+  float:right;
+}
+
+/* Last column of job/school details */
+tr th:nth-child(3) {
+  text-align: right;
+  width:40%;
+}
+
+/* Middle column of job/school details */
+tr th:nth-child(2) {
+  text-align: center;
+  width:30%;
+}
+
+/* First column of job/school details */
+tr th:nth-child(1) {
+  text-align: left;
+  margin-left: 0px;
+  padding-left: 0px;
+  width:35%;
+}
+
+th {
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-bottom: none;
+  color: black;
+}
+
+.jobrole {
+  margin-top: 2px;
+  margin-bottom: -4px;
+  margin-left: 8px;
+  color: black;
+  font-size:11pt;
+  /*font-family:Calibri;*/
+}
+
+.color_link {
+  color:#39c;
+  font-weight:400;
+}
+
+ul {
+  padding-top: 2px;
+  padding-bottom:0px;
+  margin-bottom: 0px;
+}
+
+ul li {
+  margin-left: -15px;
+  margin-top: -2px;
+  font-size: 11pt;
+  margin-bottom: 0px;
+}
+
+a {
+  color: #444;
+}
+
+th a {
+  font-weight: bold;
+  color: black;
+}
+
+strong a {
+  font-weight: bold;
+  color:#222;
+}
+
+.nobullets {
+  list-style:none;
+  list-style-position:outside;
+  padding-left:20;
+  margin-left:0;
+}
+
+table {
+  margin-bottom:-10px;
+}
+
+p {
+  margin-bottom: 4px;
+  font-size:12pt;
+}

@@ -1,0 +1,98 @@
+/* GitHub-Style Syntax Highlighting with Professional Adjustments */
+
+.highlight .hll {
+    background-color: #ffeb3b; /* Highlighted background color */
+}
+
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
+    color: #546e7a; /* Comment color */
+    font-style: italic;
+}
+
+.highlight .err {
+    color: #e53935; /* Error text color */
+    background-color: #ffcdd2; /* Error background color */
+}
+
+.highlight .k, .highlight .o, .highlight .kd, .highlight .kp, .highlight .kr, .highlight .ow {
+    color: #2196f3; /* Keyword color */
+    font-weight: bold;
+}
+
+.highlight .gd, .highlight .gi {
+    color: #4caf50; /* Generic.Deleted and Generic.Inserted color */
+    background-color: #e8f5e9; /* Generic.Deleted and Generic.Inserted background color */
+}
+
+.highlight .go {
+    color: #757575; /* Generic.Output color */
+}
+
+.highlight .gp {
+    color: #795548; /* Generic.Prompt color */
+}
+
+.highlight .gs {
+    font-weight: bold; /* Generic.Strong font weight */
+}
+
+.highlight .gu {
+    color: #795548; /* Generic.Subheading color */
+}
+
+.highlight .kc, .highlight .kt {
+    color: #512da8; /* Keyword.Constant and Keyword.Type color */
+    font-weight: bold;
+}
+
+.highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr {
+    color: #673ab7; /* Keyword.Declaration, Keyword.Namespace, Keyword.Pseudo, Keyword.Reserved color */
+    font-weight: bold;
+}
+
+.highlight .m, .highlight .mi, .highlight .mo, .highlight .mf, .highlight .mh {
+    color: #f57c00; /* Literal.Number color */
+}
+
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1 {
+    color: #d32f2f; /* Literal.String color */
+}
+
+.highlight .na, .highlight .nb, .highlight .nc, .highlight .ne, .highlight .nf, .highlight .nl, .highlight .nn, .highlight .nt, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi {
+    color: #009688; /* Name.* and Name.Variable.* color */
+}
+
+.highlight .ow {
+    color: #2196f3; /* Operator.Word color */
+    font-weight: bold;
+}
+
+.highlight .w {
+    color: #607d8b; /* Text.Whitespace color */
+}
+
+.highlight .mf, .highlight .mi, .highlight .mo, .highlight .mh {
+    color: #4caf50; /* Literal.Number.Float, Literal.Number.Hex, Literal.Number.Oct, Literal.Number.Integer color */
+}
+
+.highlight .il {
+    color: #f57c00; /* Literal.Number.Integer.Long color */
+}
+
+.highlight .ss {
+    color: #e91e63; /* Literal.String.Symbol color */
+}
+
+.highlight .bp {
+    color: #795548; /* Name.Builtin.Pseudo color */
+}
+
+.highlight .nn {
+    color: #009688; /* Name.Namespace color */
+}
+
+/* Additional Adjustments for a More Professional Look */
+.highlight {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set a clean and professional font */
+    line-height: 1.6; /* Improved line height for better readability */
+}

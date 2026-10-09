@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta property="og:site_name" content="Tushar Sharma" />
+<title>Logging Codex Sessions Without Spending Context</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@tushar sharma">
+    <meta name="twitter:title" content="Logging Codex Sessions Without Spending Context">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://img.magnific.com/premium-photo/young-woman-using-laptop-while-sitting-against-yellow-background_1048944-365568.jpg?semt=ais_hybrid">
+    <meta property="og:image" content="https://img.magnific.com/premium-photo/young-woman-using-laptop-while-sitting-against-yellow-background_1048944-365568.jpg?semt=ais_hybrid">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Logging Codex Sessions Without Spending Context | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3" />
+    <meta property="og:title" content="Logging Codex Sessions Without Spending Context" />
+    <meta name="author" content="tushar sharma" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="Codex already writes a local JSONL transcript for every session. A stop hook can use that transcript to append each prompt and response to Markdown, giving you searchable Obsidian notes without asking the model to summarize anything." />
+    <meta property="og:description" content="Codex already writes a local JSONL transcript for every session. A stop hook can use that transcript to append each prompt and response to Markdown, giving you searchable Obsidian notes without asking the model to summarize anything." />
+    <link rel="canonical" href="https://randomwits.com/blog/codex-session-logging-with-stop-hook" />
+    <meta property="og:url" content="https://randomwits.com/blog/codex-session-logging-with-stop-hook" />
+    <meta property="og:site_name" content="RandomWits" />
+    <meta property="og:image" content="https://img.magnific.com/premium-photo/young-woman-using-laptop-while-sitting-against-yellow-background_1048944-365568.jpg?semt=ais_hybrid" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2026-06-12T00:00:00+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="https://img.magnific.com/premium-photo/young-woman-using-laptop-while-sitting-against-yellow-background_1048944-365568.jpg?semt=ais_hybrid" />
+    <meta property="twitter:title" content="Logging Codex Sessions Without Spending Context" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"tushar sharma"},"dateModified":"2026-06-12T00:00:00+00:00","datePublished":"2026-06-12T00:00:00+00:00","description":"Codex already writes a local JSONL transcript for every session. A stop hook can use that transcript to append each prompt and response to Markdown, giving you searchable Obsidian notes without asking the model to summarize anything.","headline":"Logging Codex Sessions Without Spending Context","image":"https://img.magnific.com/premium-photo/young-woman-using-laptop-while-sitting-against-yellow-background_1048944-365568.jpg?semt=ais_hybrid","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/codex-session-logging-with-stop-hook"},"url":"https://randomwits.com/blog/codex-session-logging-with-stop-hook"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.2/dist/tf.min.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.5.4/dist/speech-commands.min.js" crossorigin="anonymous"></script>
+        <script defer src="/js/dark_clap.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          .theme-controls {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: 8px;
+            vertical-align: middle;
+          }
+
+          .theme-control {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(51, 153, 204, 0.35);
+            border-radius: 4px;
+            background: transparent;
+            color: inherit;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 1;
+            padding: 0;
+          }
+
+          .theme-control:hover,
+          .theme-control:focus {
+            border-color: rgb(51, 153, 204);
+            outline: none;
+          }
+
+          .theme-control:focus-visible {
+            box-shadow: 0 0 0 2px rgba(51, 153, 204, 0.35);
+          }
+
+          .theme-control[aria-pressed="true"] {
+            background: rgba(51, 153, 204, 0.12);
+            border-color: rgb(51, 153, 204);
+          }
+
+          .theme-control.is-loading {
+            cursor: wait;
+            opacity: 0.6;
+          }
+
+          .theme-control.is-detected {
+            transform: scale(1.12);
+          }
+
+          .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+          }
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <span class="theme-controls" aria-label="Theme controls">
+            <button type="button" class="DarkReader_Button theme-control" title="Toggle dark mode" aria-label="Toggle dark mode" aria-pressed="false">
+              <span id="icon-dark" aria-hidden="true">☾</span>
+            </button>
+            <button type="button" class="ClapDark_Button theme-control" title="Clap listener off" aria-label="Start clap listener for dark mode" aria-pressed="false">
+              <span id="icon-clap-dark" aria-hidden="true">👏</span>
+            </button>
+            <span id="clap-dark-status" class="visually-hidden" aria-live="polite"></span>
+          </span>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- 
+ -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Logging Codex Sessions Without Spending Context</h1>
+        <p>Tags:  <a class="mytag" href="/tag/codex" title="View posts tagged with: codex">codex</a>    <a class="mytag" href="/tag/ai" title="View posts tagged with: ai">ai</a>    <a class="mytag" href="/tag/obsidian" title="View posts tagged with: obsidian">obsidian</a>    <a class="mytag" href="/tag/tmux" title="View posts tagged with: tmux">tmux</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <h2 id="the-problem">The Problem</h2>
+        <p>I often run Codex inside <code class="language-plaintext highlighter-rouge">tmux</code>. That works well for long-running terminal work, but it is a poor place to preserve useful Q/A history.</p>
+        <p>The failure mode is familiar:</p>
+        <ol>
+          <li>Terminal scrollback is limited or awkward to navigate.</li>
+          <li>Copying a long answer from <code class="language-plaintext highlighter-rouge">tmux</code> copy mode is tedious.</li>
+          <li>Important debugging context disappears into a terminal session.</li>
+          <li>Sending everything through an MCP note-taking tool spends model context and tokens on a logging task.</li>
+        </ol>
+        <p>The goal is simple: after every Codex answer, append the last user prompt and the assistant response to a local Markdown file. The implementation should be local, deterministic, and easy to test.</p>
+        <h2 id="design">Design</h2>
+        <p>Codex stores session transcripts under <code class="language-plaintext highlighter-rouge">~/.codex/sessions</code>. The exact path is nested by date, but the file itself is a JSONL transcript. JSONL means newline-delimited JSON: one JSON object per line.</p>
+        <p>When a Codex stop hook runs, it receives a small JSON payload on standard input. The important fields are:</p>
+        <div class="language-json highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"last_assistant_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The answer Codex just produced"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"transcript_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/Users/me/.codex/sessions/2026/06/12/rollout-2026-06-12T10-00-00-example.jsonl"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+          </div>
+        </div>
+        <p>The hook does not need to ask Codex to do anything. It can:</p>
+        <ol>
+          <li>Read <code class="language-plaintext highlighter-rouge">last_assistant_message</code> from the hook payload.</li>
+          <li>Read <code class="language-plaintext highlighter-rouge">transcript_path</code> from the hook payload.</li>
+          <li>Parse the transcript locally with <code class="language-plaintext highlighter-rouge">jq</code>.</li>
+          <li>Extract the latest user message.</li>
+          <li>Append a Q/A block to a stable Markdown file for that session.</li>
+        </ol>
+        <p>That gives this flow:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>User prompt
+  -&gt; Codex response
+  -&gt; Stop hook receives payload on stdin
+  -&gt; Shell script reads transcript_path
+  -&gt; Shell script appends Q/A to Markdown
+  -&gt; Obsidian indexes the note later
+</code></pre>
+          </div>
+        </div>
+        <p>The important property is that logging happens outside the model path. No MCP call, no summarization request, no extra prompt content.</p>
+        <h2 id="what-we-will-build">What We Will Build</h2>
+        <p>We will create two files:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>~/.codex/hooks/
+├── log-session-to-markdown.sh
+└── test-log-session-to-markdown.sh
+</code></pre>
+          </div>
+        </div>
+        <p>Then we will register the logger as a Codex <code class="language-plaintext highlighter-rouge">Stop</code> hook.</p>
+        <p>The logger creates one Markdown file per Codex session:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>~/myFiles/obsidian/personal/codex-session/
+└── 2026-06-12T10-00-00-example.md
+</code></pre>
+          </div>
+        </div>
+        <p>If the same Codex session continues, the hook appends more Q/A blocks to the same file.</p>
+        <p>Each new note starts with YAML front matter:</p>
+        <div class="language-yaml highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nn">---</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">codex-session</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2026-06-12</span>
+<span class="na">tags</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">codex-session</span>
+  <span class="pi">-</span> <span class="s">ai-log</span>
+  <span class="pi">-</span> <span class="s">needs-review</span>
+<span class="nn">---</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The front matter is written only when the note is created. That matters because you can later edit the tags manually without the hook overwriting your metadata.</p>
+        <h2 id="prerequisites">Prerequisites</h2>
+        <p>Install <code class="language-plaintext highlighter-rouge">jq</code> if it is not already available:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>brew <span class="nb">install </span>jq
+</code></pre>
+          </div>
+        </div>
+        <p>Check that Codex is writing session transcripts:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>find <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.codex/sessions"</span> <span class="nt">-name</span> <span class="s1">'*.jsonl'</span> | <span class="nb">tail</span> <span class="nt">-n</span> 5
+</code></pre>
+          </div>
+        </div>
+        <p>Find the Obsidian vault root. The vault root is the directory that contains <code class="language-plaintext highlighter-rouge">.obsidian</code>:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>find <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/myFiles/obsidian"</span> <span class="nt">-maxdepth</span> 3 <span class="nt">-name</span> .obsidian <span class="nt">-type</span> d <span class="nt">-print</span>
+</code></pre>
+          </div>
+        </div>
+        <p>On my machine this returns:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>/Users/$USER/myFiles/obsidian/personal/.obsidian
+</code></pre>
+          </div>
+        </div>
+        <p>That means my vault path is:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>/Users/$USER/myFiles/obsidian/personal
+</code></pre>
+          </div>
+        </div>
+        <p>Obsidian only shows Markdown files inside the opened vault. In this setup <code class="language-plaintext highlighter-rouge">personal</code> is the vault folder, so the Codex log directory must be inside <code class="language-plaintext highlighter-rouge">personal</code>.</p>
+        <p>Create the destination directory inside the vault:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/myFiles/obsidian/personal/codex-session"</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.codex/hooks"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>If your vault root is different, replace <code class="language-plaintext highlighter-rouge">"$HOME/myFiles/obsidian/personal"</code> with your actual vault root everywhere below.</p>
+        <h2 id="step-1-create-the-hook">Step 1: Create The Hook</h2>
+        <p>Create <code class="language-plaintext highlighter-rouge">~/.codex/hooks/log-session-to-markdown.sh</code>:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nb">set</span> <span class="nt">-u</span>
+
+<span class="nv">input</span><span class="o">=</span><span class="si">$(</span><span class="nb">cat</span><span class="si">)</span>
+
+<span class="nv">response</span><span class="o">=</span><span class="si">$(</span><span class="nb">printf</span> <span class="s1">'%s'</span> <span class="s2">"</span><span class="nv">$input</span><span class="s2">"</span> | jq <span class="nt">-r</span> <span class="s1">'.last_assistant_message // empty'</span> 2&gt;/dev/null<span class="si">)</span>
+<span class="nv">transcript</span><span class="o">=</span><span class="si">$(</span><span class="nb">printf</span> <span class="s1">'%s'</span> <span class="s2">"</span><span class="nv">$input</span><span class="s2">"</span> | jq <span class="nt">-r</span> <span class="s1">'.transcript_path // empty'</span> 2&gt;/dev/null<span class="si">)</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$response</span><span class="s2">"</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$transcript</span><span class="s2">"</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$transcript</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">exit </span>0
+<span class="k">fi
+
+</span><span class="nv">prompt</span><span class="o">=</span><span class="si">$(</span>jq <span class="nt">-r</span> <span class="s1">'
+  def text_content:
+    if type == "string" then
+      .
+    elif type == "array" then
+      [
+        .[]
+        | if (.text? | type) == "string" then
+            .text
+          elif (.content? | type) == "string" then
+            .content
+          else
+            empty
+          end
+      ] | join("\n")
+    else
+      empty
+    end;
+
+  (
+    if .type == "response_item"
+       and .payload.type == "message"
+       and .payload.role == "user" then
+      .payload.content | text_content
+    elif .type == "user" then
+      .message.content | text_content
+    else
+      empty
+    end
+  ) | select(length &gt; 0)
+'</span> <span class="s2">"</span><span class="nv">$transcript</span><span class="s2">"</span> 2&gt;/dev/null | <span class="nb">tail</span> <span class="nt">-n</span> 1<span class="si">)</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$prompt</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">exit </span>0
+<span class="k">fi
+
+</span><span class="nv">default_log_dir</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/myFiles/obsidian/personal/codex-session"</span>
+<span class="nv">log_dir</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">CODEX_SESSION_LOG_DIR</span><span class="k">:-</span><span class="nv">$default_log_dir</span><span class="k">}</span><span class="s2">"</span>
+
+<span class="nv">session_date</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> <span class="s1">'+%Y-%m-%d'</span><span class="si">)</span>
+<span class="nv">session_base</span><span class="o">=</span><span class="si">$(</span><span class="nb">basename</span> <span class="s2">"</span><span class="nv">$transcript</span><span class="s2">"</span><span class="si">)</span>
+<span class="nv">session_name</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">session_base</span><span class="p">%.jsonl</span><span class="k">}</span><span class="s2">"</span>
+<span class="nv">session_name</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">session_name</span><span class="p">#rollout-</span><span class="k">}</span><span class="s2">"</span>
+<span class="nv">session_file</span><span class="o">=</span><span class="si">$(</span><span class="nb">printf</span> <span class="s1">'%s'</span> <span class="s2">"</span><span class="nv">$session_name</span><span class="s2">"</span> | <span class="nb">tr</span> <span class="s1">'/:'</span> <span class="s1">'__'</span><span class="si">)</span>
+<span class="nv">log_file</span><span class="o">=</span><span class="s2">"</span><span class="nv">$log_dir</span><span class="s2">/</span><span class="nv">$session_file</span><span class="s2">.md"</span>
+
+<span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="nv">$log_dir</span><span class="s2">"</span> <span class="o">||</span> <span class="nb">exit </span>0
+
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$log_file</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="o">{</span>
+    <span class="nb">printf</span> <span class="nt">--</span> <span class="s1">'---\n'</span>
+    <span class="nb">printf</span> <span class="s1">'type: codex-session\n'</span>
+    <span class="nb">printf</span> <span class="s1">'date: %s\n'</span> <span class="s2">"</span><span class="nv">$session_date</span><span class="s2">"</span>
+    <span class="nb">printf</span> <span class="s1">'tags:\n'</span>
+    <span class="nb">printf</span> <span class="s1">'  - codex-session\n'</span>
+    <span class="nb">printf</span> <span class="s1">'  - ai-log\n'</span>
+    <span class="nb">printf</span> <span class="s1">'  - needs-review\n'</span>
+    <span class="nb">printf</span> <span class="nt">--</span> <span class="s1">'---\n\n'</span>
+    <span class="nb">printf</span> <span class="s1">'# Codex Session: %s\n\n'</span> <span class="s2">"</span><span class="nv">$session_name</span><span class="s2">"</span>
+    <span class="nb">printf</span> <span class="nt">--</span> <span class="s1">'- Transcript: `%s`\n\n'</span> <span class="s2">"</span><span class="nv">$transcript</span><span class="s2">"</span>
+  <span class="o">}</span> <span class="o">&gt;</span> <span class="s2">"</span><span class="nv">$log_file</span><span class="s2">"</span>
+<span class="k">fi</span>
+
+<span class="o">{</span>
+  <span class="nb">printf</span> <span class="s1">'\n---\n\n'</span>
+  <span class="nb">printf</span> <span class="s1">'## %s\n\n'</span> <span class="s2">"</span><span class="si">$(</span><span class="nb">date</span> <span class="s1">'+%Y-%m-%d %H:%M:%S %Z'</span><span class="si">)</span><span class="s2">"</span>
+  <span class="nb">printf</span> <span class="s1">'### Question\n\n%s\n\n'</span> <span class="s2">"</span><span class="nv">$prompt</span><span class="s2">"</span>
+  <span class="nb">printf</span> <span class="s1">'### Answer\n\n%s\n'</span> <span class="s2">"</span><span class="nv">$response</span><span class="s2">"</span>
+<span class="o">}</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">$log_file</span><span class="s2">"</span>
+
+<span class="nb">exit </span>0
+</code></pre>
+          </div>
+        </div>
+        <p>Make it executable:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">chmod</span> +x <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.codex/hooks/log-session-to-markdown.sh"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The script exits with status <code class="language-plaintext highlighter-rouge">0</code> on missing data. A logging hook should not break the Codex session just because the transcript format changed, the destination directory is unavailable, or the payload is incomplete. Silent failure is usually the right default for a non-critical append-only logger.</p>
+        <h2 id="step-2-understand-the-parsing">Step 2: Understand The Parsing</h2>
+        <p>This line gets the assistant response directly from the hook payload:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">response</span><span class="o">=</span><span class="si">$(</span><span class="nb">printf</span> <span class="s1">'%s'</span> <span class="s2">"</span><span class="nv">$input</span><span class="s2">"</span> | jq <span class="nt">-r</span> <span class="s1">'.last_assistant_message // empty'</span> 2&gt;/dev/null<span class="si">)</span>
+</code></pre>
+          </div>
+        </div>
+        <p>This line gets the JSONL transcript path:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">transcript</span><span class="o">=</span><span class="si">$(</span><span class="nb">printf</span> <span class="s1">'%s'</span> <span class="s2">"</span><span class="nv">$input</span><span class="s2">"</span> | jq <span class="nt">-r</span> <span class="s1">'.transcript_path // empty'</span> 2&gt;/dev/null<span class="si">)</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The latest user prompt is extracted from the transcript, not from terminal scrollback. That is the key part. It avoids <code class="language-plaintext highlighter-rouge">tmux</code> copy mode entirely and works even when the terminal UI has wrapped or truncated output.</p>
+        <p>The output file name is derived from the transcript file name:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">session_base</span><span class="o">=</span><span class="si">$(</span><span class="nb">basename</span> <span class="s2">"</span><span class="nv">$transcript</span><span class="s2">"</span><span class="si">)</span>
+<span class="nv">session_name</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">session_base</span><span class="p">%.jsonl</span><span class="k">}</span><span class="s2">"</span>
+<span class="nv">session_name</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">session_name</span><span class="p">#rollout-</span><span class="k">}</span><span class="s2">"</span>
+<span class="nv">session_file</span><span class="o">=</span><span class="si">$(</span><span class="nb">printf</span> <span class="s1">'%s'</span> <span class="s2">"</span><span class="nv">$session_name</span><span class="s2">"</span> | <span class="nb">tr</span> <span class="s1">'/:'</span> <span class="s1">'__'</span><span class="si">)</span>
+</code></pre>
+          </div>
+        </div>
+        <p>That produces one stable Markdown file per session. If the hook runs again for the same transcript, it appends to the same note.</p>
+        <p>The front matter is created once:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$log_file</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  ...
+<span class="k">fi</span>
+</code></pre>
+          </div>
+        </div>
+        <p>That is intentional. After a session, I might edit the note:</p>
+        <div class="language-yaml highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="na">tags</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">codex-session</span>
+  <span class="pi">-</span> <span class="s">ai-log</span>
+  <span class="pi">-</span> <span class="s">my-service</span>
+  <span class="pi">-</span> <span class="s">pr-review</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The hook should not erase that manual classification on the next append.</p>
+        <p>One shell detail is worth keeping:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">printf</span> <span class="nt">--</span> <span class="s1">'- Transcript: `%s`\n\n'</span> <span class="s2">"</span><span class="nv">$transcript</span><span class="s2">"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The <code class="language-plaintext highlighter-rouge">--</code> prevents <code class="language-plaintext highlighter-rouge">printf</code> from treating a format string that starts with <code class="language-plaintext highlighter-rouge">-</code> as an option.</p>
+        <h2 id="step-3-add-a-local-test-harness">Step 3: Add A Local Test Harness</h2>
+        <p>Create <code class="language-plaintext highlighter-rouge">~/.codex/hooks/test-log-session-to-markdown.sh</code>:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+<span class="nb">set</span> <span class="nt">-eu</span>
+
+<span class="nv">tmp_dir</span><span class="o">=</span><span class="si">$(</span><span class="nb">mktemp</span> <span class="nt">-d</span><span class="si">)</span>
+<span class="nv">transcript</span><span class="o">=</span><span class="s2">"</span><span class="nv">$tmp_dir</span><span class="s2">/rollout-2026-06-12T10-00-00-test-session.jsonl"</span>
+<span class="nv">output_dir</span><span class="o">=</span><span class="s2">"</span><span class="nv">$tmp_dir</span><span class="s2">/output"</span>
+
+<span class="nb">cat</span> <span class="o">&gt;</span> <span class="s2">"</span><span class="nv">$transcript</span><span class="s2">"</span> <span class="o">&lt;&lt;</span><span class="sh">'</span><span class="no">JSONL</span><span class="sh">'
+{"type":"response_item","payload":{"type":"message","role":"user","content":[{"type":"input_text","text":"How do I reproduce the issue?"}]}}
+{"type":"response_item","payload":{"type":"message","role":"assistant","content":[{"type":"output_text","text":"Run the failing test first."}]}}
+</span><span class="no">JSONL
+
+</span><span class="nv">payload</span><span class="o">=</span><span class="si">$(</span>jq <span class="nt">-n</span> <span class="se">\</span>
+  <span class="nt">--arg</span> answer <span class="s2">"Run the failing test first."</span> <span class="se">\</span>
+  <span class="nt">--arg</span> transcript <span class="s2">"</span><span class="nv">$transcript</span><span class="s2">"</span> <span class="se">\</span>
+  <span class="s1">'{last_assistant_message: $answer, transcript_path: $transcript}'</span><span class="si">)</span>
+
+<span class="nv">CODEX_SESSION_LOG_DIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$output_dir</span><span class="s2">"</span> <span class="se">\</span>
+  <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.codex/hooks/log-session-to-markdown.sh"</span> <span class="o">&lt;&lt;&lt;</span> <span class="s2">"</span><span class="nv">$payload</span><span class="s2">"</span>
+
+<span class="nv">log_file</span><span class="o">=</span><span class="si">$(</span>find <span class="s2">"</span><span class="nv">$output_dir</span><span class="s2">"</span> <span class="nt">-name</span> <span class="s1">'*.md'</span> | <span class="nb">head</span> <span class="nt">-n</span> 1<span class="si">)</span>
+
+<span class="nb">test</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$log_file</span><span class="s2">"</span>
+<span class="nb">grep</span> <span class="nt">-q</span> <span class="s1">'How do I reproduce the issue?'</span> <span class="s2">"</span><span class="nv">$log_file</span><span class="s2">"</span>
+<span class="nb">grep</span> <span class="nt">-q</span> <span class="s1">'Run the failing test first.'</span> <span class="s2">"</span><span class="nv">$log_file</span><span class="s2">"</span>
+<span class="nb">grep</span> <span class="nt">-q</span> <span class="s1">'type: codex-session'</span> <span class="s2">"</span><span class="nv">$log_file</span><span class="s2">"</span>
+
+<span class="nb">printf</span> <span class="s1">'PASS: %s\n'</span> <span class="s2">"</span><span class="nv">$log_file</span><span class="s2">"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Make it executable and run it:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">chmod</span> +x <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.codex/hooks/test-log-session-to-markdown.sh"</span>
+<span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.codex/hooks/test-log-session-to-markdown.sh"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Expected output:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>PASS: /var/folders/.../output/2026-06-12T10-00-00-test-session.md
+</code></pre>
+          </div>
+        </div>
+        <p>This test does not require a live Codex session. It creates a fake transcript, sends a fake hook payload to the real logger, and verifies that the Markdown file contains the prompt, answer, and front matter.</p>
+        <h2 id="step-4-register-the-stop-hook">Step 4: Register The Stop Hook</h2>
+        <p>Create or update <code class="language-plaintext highlighter-rouge">~/.codex/hooks.json</code>:</p>
+        <div class="language-json highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"Stop"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"command"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/Users/YOUR_USER/.codex/hooks/log-session-to-markdown.sh"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+          </div>
+        </div>
+        <p>Replace <code class="language-plaintext highlighter-rouge">/Users/YOUR_USER</code> with your actual home directory.</p>
+        <p>If you already have <code class="language-plaintext highlighter-rouge">Stop</code> hooks, do not replace the whole file. Add this command to the existing <code class="language-plaintext highlighter-rouge">Stop</code> hook list:</p>
+        <div class="language-json highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"command"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/Users/YOUR_USER/.codex/hooks/log-session-to-markdown.sh"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+          </div>
+        </div>
+        <p>Restart Codex after changing hook configuration. Codex may ask you to review or trust the hook command. Read the path carefully and approve it only if it points to the script you created.</p>
+        <h2 id="step-5-verify-with-a-real-session">Step 5: Verify With A Real Session</h2>
+        <p>Start a new Codex session and ask a small question. After Codex answers, check the output directory:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-lt</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/myFiles/obsidian/personal/codex-session"</span> | <span class="nb">head</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Open the newest Markdown file:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">latest</span><span class="o">=</span><span class="si">$(</span><span class="nb">ls</span> <span class="nt">-t</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/myFiles/obsidian/personal/codex-session"</span>/<span class="k">*</span>.md | <span class="nb">head</span> <span class="nt">-n</span> 1<span class="si">)</span>
+<span class="nb">sed</span> <span class="nt">-n</span> <span class="s1">'1,120p'</span> <span class="s2">"</span><span class="nv">$latest</span><span class="s2">"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>You should see:</p>
+        <div class="language-markdown highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nn">---</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">codex-session</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2026-06-12</span>
+<span class="na">tags</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">codex-session</span>
+  <span class="pi">-</span> <span class="s">ai-log</span>
+  <span class="pi">-</span> <span class="s">needs-review</span>
+<span class="nn">---</span>
+
+<span class="gh"># Codex Session: 2026-06-12T10-00-00-test-session</span>
+<span class="p">
+-</span> Transcript: <span class="sb">`/Users/me/.codex/sessions/.../rollout-....jsonl`</span>
+<span class="p">
+---
+</span>
+<span class="gu">## 2026-06-12 10:05:12 EDT</span>
+
+<span class="gu">### Question</span>
+
+...
+
+<span class="gu">### Answer</span>
+
+...
+</code></pre>
+          </div>
+        </div>
+        <p>If you ask another question in the same Codex session, the same Markdown file should get another timestamped Q/A block.</p>
+        <h2 id="operational-notes">Operational Notes</h2>
+        <p>Do not log secrets blindly. Codex transcripts can contain commands, file paths, error messages, and pasted configuration. If you routinely work with credentials or customer data, point <code class="language-plaintext highlighter-rouge">CODEX_SESSION_LOG_DIR</code> to a private local folder and review notes before syncing them.</p>
+        <p>Keep the hook append-only. Rewriting old session notes from a hook makes debugging harder and can destroy manual annotations. If you want cleanup, run a separate offline maintenance script.</p>
+        <p>Keep automatic tags generic. It is tempting to derive tags from the current directory, branch, or repository name. That can leak private project names and create noisy taxonomy. I prefer generic tags like <code class="language-plaintext highlighter-rouge">codex-session</code>, then manual project tags after review.</p>
+        <p>Do not route this through an MCP server unless you actually need model-mediated note operations. MCP is useful when Codex needs to read or reason over your notes. This use case is only logging, so a local shell hook is cheaper and more reproducible.</p>
+        <h2 id="troubleshooting">Troubleshooting</h2>
+        <p>If no Markdown file is created, check that the hook is executable:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.codex/hooks/log-session-to-markdown.sh"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>If the test harness fails, check <code class="language-plaintext highlighter-rouge">jq</code>:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>jq <span class="nt">--version</span>
+</code></pre>
+          </div>
+        </div>
+        <p>If the real session does not log but the test passes, check hook registration and restart Codex. Also confirm that the path in <code class="language-plaintext highlighter-rouge">~/.codex/hooks.json</code> is absolute and points to the executable script.</p>
+        <p>If the note is created but the question is empty, inspect the latest transcript format:</p>
+        <div class="language-bash highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nv">latest_transcript</span><span class="o">=</span><span class="si">$(</span>find <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.codex/sessions"</span> <span class="nt">-name</span> <span class="s1">'*.jsonl'</span> | <span class="nb">sort</span> | <span class="nb">tail</span> <span class="nt">-n</span> 1<span class="si">)</span>
+<span class="nb">tail</span> <span class="nt">-n</span> 20 <span class="s2">"</span><span class="nv">$latest_transcript</span><span class="s2">"</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The script handles the common Codex transcript shapes I have seen:</p>
+        <div class="language-json highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"response_item"</span><span class="p">,</span><span class="nl">"payload"</span><span class="p">:{</span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"message"</span><span class="p">,</span><span class="nl">"role"</span><span class="p">:</span><span class="s2">"user"</span><span class="p">,</span><span class="nl">"content"</span><span class="p">:[{</span><span class="nl">"text"</span><span class="p">:</span><span class="s2">"..."</span><span class="p">}]}}</span><span class="w">
+</span></code></pre>
+          </div>
+        </div>
+        <p>and:</p>
+        <div class="language-json highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"user"</span><span class="p">,</span><span class="nl">"message"</span><span class="p">:{</span><span class="nl">"content"</span><span class="p">:</span><span class="s2">"..."</span><span class="p">}}</span><span class="w">
+</span></code></pre>
+          </div>
+        </div>
+        <p>If Codex changes the transcript schema, update only the <code class="language-plaintext highlighter-rouge">jq</code> extraction block. The rest of the hook can stay the same.</p>
+        <h2 id="result">Result</h2>
+        <p>This gives you a local, reproducible session log:</p>
+        <ol>
+          <li>One Markdown file per Codex session.</li>
+          <li>Timestamped prompt/response blocks.</li>
+          <li>Editable YAML metadata.</li>
+          <li>No terminal scrollback dependency.</li>
+          <li>No MCP call and no extra model context spent on logging.</li>
+        </ol>
+        <p>For my workflow, that is the right boundary: Codex does the engineering work, and the local machine records the audit trail.</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/fixing-steam-deck-sd-card-corruption" title="Previous Post: Fixing Steam Deck SD Card Corruption">←Previous</a>     <a class="next-item" href="/blog/clap-controlled-dark-mode-tensorflow-js" title="Next Post: Adding Clap Controlled Dark Mode With TensorFlow.js">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/codex-session-logging-with-stop-hook';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/codex-session-logging-with-stop-hook';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; inspired from my sister ~ <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

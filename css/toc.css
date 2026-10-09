@@ -1,0 +1,23 @@
+#markdown-toc::before {
+    content: "Contents";
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 2;
+}
+
+#markdown-toc ul {
+    list-style: decimal;
+}
+
+#markdown-toc {
+    font-family: $base-font-family;
+    font-size: 0.9em;
+    border: 1px solid #aaa;
+    padding: 1.5em;
+    padding-left: 2em;
+    list-style: decimal;
+    display: inline-block;
+    float: left;
+    margin-right: 2em;
+
+}
