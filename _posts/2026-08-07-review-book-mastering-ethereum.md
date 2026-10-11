@@ -397,3 +397,100 @@ A guardian is an address or other authority that a **particular wallet's recover
 **ENS:** Similar to DNS in that a readable name can resolve to an address. The name's owner configures its records; I still need to verify that a name resolves to the intended address before sending assets.
 
 **ERtool:** Emergency tool used by Blockdaemon to get the original master private key and RSA decryption key. This is separate from the Ethereum wallet concepts above; I need to check the tool's documentation for its exact recovery process.
+
+## Oct 10, 2026
+
+The Ethereum blockchain is:
+
+1. open = anyone can read it
+2. permissionless = anyone who meets the protocol requirements can become a validator
+
+**Transactions**
+
+Ethereum is a global singleton state machine. You need to create a transaction to change its state.
+
+Transactions are signed messages included in the blockchain. They can originate only from EOAs because only EOAs have private keys.
+
+A transaction can:
+
+1. Transfer ETH from one account to another
+
+> ETH can be held by an EOA or a smart contract.
+
+2. Invoke a smart contract
+
+> To read a smart contract without changing state, we can use `eth_call`, which is simulated by a node and does not create an on-chain transaction or require a gas fee.
+
+### Components of a transaction
+
+Usually, it looks like:
+
+```
+to: <EOA or contract address>
+gasLimit
+maxFeePerGas
+maxPriorityFeePerGas
+data
+value
+nonce
+chainId
+```
+
+Chain ID identifies a blockchain network. It prevents a transaction signed for one chain from being replayed on another chain.
+
+Nonce: It is a sequential number. EOAs use it to order transactions and prevent replay.
+
+Data: calldata for a contract call, or initialization bytecode for contract creation.
+
+Value: ETH, denominated in wei.
+
+How to create a new smart contract?
+
+You send a special transaction with an empty `to` field. The data contains the contract's initialization bytecode.
+
+> Bytecode is commonly displayed in hexadecimal, but it is machine-readable rather than human-readable.
+
+For `CREATE`, the contract address is deterministic and is derived from the creator's address and nonce. `CREATE2` instead uses the creator's address, a salt, and a hash of the initialization code.
+
+How to invoke a smart contract?
+
+For a local read that does not change stored state, use `eth_call`. To change state, create a transaction:
+
+```
+to: contract address
+data: function selector + ABI-encoded function arguments
+```
+
+The function selector is the first 4 bytes of the Keccak-256 hash of the function signature.
+
+The function signature is not a digital signature. A function signature consists of the function name and its parameter types.
+
+### Foundry
+
+Cast is a tool included with Foundry. You can create a new account:
+
+```
+cast wallet new
+```
+
+This creates a new private-public key pair. The public key is a point on the secp256k1 elliptic curve. It is derived by multiplying the private key by the curve's generator point.
+
+The account address is derived from the last 20 bytes of the Keccak-256 hash of the uncompressed public key, excluding its `0x04` prefix.
+
+For `CREATE`: contract address = last 20 bytes of `keccak256(rlp([creator address, nonce]))`.
+
+You can import a private key into Foundry's encrypted keystore:
+
+```
+cast wallet import example --private-key
+```
+
+Check the ETH balance of an EOA or contract address:
+
+```
+cast balance 0x...
+```
+
+Digital signature: Created with a private key, but anyone can validate it using the public key.
+
+Multisig: Safe is an example of an on-chain smart wallet that supports multiple signers.
