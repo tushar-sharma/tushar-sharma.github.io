@@ -3,17 +3,14 @@ layout: post
 title: "Getting Started with WebSockets"
 author: tushar sharma
 category: blog
-tags: [websocket]
-image: https://live.staticflickr.com/65535/55578021056_991ca6d0f6_b.jpg
-thumb: https://live.staticflickr.com/65535/55578021056_991ca6d0f6_b.jpg
+tags: [websocket, http]
+image: https://unsplash.com/photos/5d2_vsrfvMg/download?w=437
+thumb: https://unsplash.com/photos/5d2_vsrfvMg/download?w=437
 mermaid: true
 ---
 
 
 HTTP follows a request-response model: a client sends a request, and the server returns a response. This works well for most web applications, but what if the server needs to send data as soon as it becomes available?<!-- truncate_here -->
-
-
-> Caption Image -  Machu Pichu
 
 
 HTTP follows a request-response model: a client sends a request, and the server returns a response. This works well for most web applications, but what if the server needs to send data as soon as it becomes available?11
