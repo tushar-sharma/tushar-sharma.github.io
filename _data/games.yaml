@@ -544,10 +544,9 @@
   comments: "use `/screamer/Binaries/Win64/screamer-Win64-Shipping.exe` instead of Screamer.exe."
 
 - title: "PRAGMATA"
-  pending: true 
-  progress: 0 
-  hours_logged: "11 hrs"
-  comments: "It's a cool sci-fi action-adventure game set on the Moon. You play as Hugh and fight alongside Diana, an adorable android girl. She’s so lovable that the game will make you want to adopt her as your daughter! Flying around with a jetpack is fun."
+  progress: 100
+  hours_logged: "14 hrs"
+  comments: "It's a cool sci-fi action-adventure game set on the Moon. You play as Hugh and fight alongside Diana, an adorable android girl. She’s so lovable that the game will make you want to adopt her as your daughter! Flying around with a jetpack is fun. Great emotional ending."
 
   # Mouse pi for hire
 # The Wolf Among Us : buy at $3.74
