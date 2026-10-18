@@ -543,6 +543,11 @@
   progress: 0
   comments: "use `/screamer/Binaries/Win64/screamer-Win64-Shipping.exe` instead of Screamer.exe."
 
+- title: "Opus: Prism Break"
+  pending: true
+  progress: 0
+  comments: ""
+
 - title: "PRAGMATA"
   progress: 100
   hours_logged: "14 hrs"
