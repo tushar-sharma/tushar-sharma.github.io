@@ -33,7 +33,7 @@ search.addWidget(
     container: '#searchbox',
     placeholder: 'Search Randomwits...',
     autofocus: false,
-    searchAsYouType: true,
+    searchAsYouType: false,
   })
 );
 
