@@ -494,3 +494,85 @@ cast balance 0x...
 Digital signature: Created with a private key, but anyone can validate it using the public key.
 
 Multisig: Safe is an example of an on-chain smart wallet that supports multiple signers.
+
+## Oct 24, 2026
+
+Solidity is a high-level language. The Solidity compiler, **solc**, compiles Solidity source code into EVM bytecode. That bytecode can be deployed to Ethereum and executed by the EVM.
+
+```bash
+$ solc --bin Program.sol
+```
+
+Ethereum has two basic account types: externally owned accounts (EOAs) and contract accounts. An EOA is controlled by a private key. A wallet is an interface or application that manages that key; the wallet itself is not the account. A contract account is controlled by its deployed code.
+
+Why call it a smart contract? It is a computer program that is:
+
+1. deployed on the blockchain
+2. immutable by default
+3. deterministic: every node executing it from the same state with the same inputs must reach the same result
+
+The deployed bytecode at a contract address normally does not change. An upgradeable proxy is an important qualification: the proxy keeps a stable address and storage while delegating calls to an implementation contract whose address can be changed.
+
+Two useful programming styles to contrast are:
+
+1. Imperative programming describes the sequence of steps used to change program state. It commonly uses variables and side effects.
+2. Declarative programming describes the desired result more than the control flow used to produce it. Functional programming is one declarative-influenced style, but the two terms are not synonyms, and functional programs can still have controlled side effects.
+
+Solidity is primarily imperative. Its compiler releases use semantic-version-shaped numbers: `MAJOR.MINOR.PATCH`. In SemVer, a major release may contain breaking changes, a minor release adds backward-compatible functionality, and a patch release contains backward-compatible fixes. However, Solidity is still in the `0.x` series, so a minor release can also introduce breaking changes. A source file's `pragma solidity` specifies which compiler versions may compile it; it does not switch compiler features on or off.
+
+Foundry is a popular toolkit for developing, testing, debugging, and deploying Solidity smart contracts.
+
+### ABI
+
+1. An API is a source-level interface through which software components communicate.
+2. An ABI, or Application Binary Interface, specifies how data is represented at the binary level. Ethereum's Contract ABI defines how callers encode function calls and how contracts encode return values and events.
+3. A wallet or library uses the ABI to encode transaction calldata and to decode return data and logs. The ABI is not machine code itself.
+4. The ABI describes functions, inputs, outputs, errors, and events. For a function call, the calldata begins with a four-byte function selector followed by ABI-encoded arguments.
+
+We can ask `solc` to print a contract's JSON ABI:
+
+```bash
+$ solc --abi Faucet.sol
+```
+
+### Patterns in Solidity
+
+We can use the proxy pattern to keep a single, stable contract address while upgrading the implementation code. Users and other contracts always call the proxy address. The proxy stores the address of the current implementation contract, such as V1, and an authorized upgrade changes that address to a new implementation, such as V2. The proxy address and its persistent state remain in place.
+
+The proxy usually forwards a call to the implementation using the EVM's `delegatecall` operation. A useful sentence to remember is: **`delegatecall` executes the implementation's code using the proxy's storage.** It also preserves the original caller (`msg.sender`) and Ether value (`msg.value`).
+
+An ordinary external `call` executes the called contract's code using the called contract's own storage. Therefore, `delegatecall` is not merely a "safer call"; it has different behavior and introduces its own risks. For example, if V2 changes the order or types of existing state variables, its code may interpret the proxy's old storage slots incorrectly and corrupt the contract's state. Upgradeable implementations must preserve a compatible storage layout, and upgrades must be properly authorized.
+
+Solidity exposes three commonly used low-level call operations:
+
+| Operation | Code that runs | Storage context | Can modify state? | Typical use |
+|---|---|---|---|---|
+| `call` | Destination's code | Destination's storage | Yes | Interacting with another independent contract |
+| `delegatecall` | Destination's code | Caller's storage | Yes | Running an implementation contract's code in a proxy's context |
+| `staticcall` | Destination's code | Destination's storage | No | Reading another contract without allowing state changes |
+
+A useful memory rule is:
+
+```text
+call         -> their code, their storage
+delegatecall -> their code, my storage
+staticcall   -> their code, their storage, no state changes
+```
+
+Here, "my" means the contract making the low-level call, and "their" means the destination contract. If a `staticcall` attempts to modify state, that call fails. When the destination contract's type and function are known, a normal typed Solidity call such as `token.transfer(recipient, amount)` is usually clearer than manually constructing a low-level call.
+
+Solidity has three main data locations for reference types:
+
+1. `storage`: persistent data kept as part of contract state; state variables use storage.
+2. `memory`: temporary, mutable data that exists only during an external call.
+3. `calldata`: temporary, read-only input data supplied with an external call. Solidity exposes the complete call payload as `msg.data`. For a normal function call, this payload has two parts: the four-byte function selector followed by the ABI-encoded function arguments. `calldata` exists only for the duration of that call and cannot be modified by the receiving function.
+
+In short, both `storage` and `memory` can be modified, while `calldata` is read-only. `storage` persists between transactions, whereas `memory` and `calldata` last only for the current call.
+
+The EVM also has a stack used while executing bytecode. It is limited to 1,024 items, each 256 bits wide. It is not a Solidity data location, although local value types are often handled on the stack. Stack operations are generally cheaper than reading or writing memory or storage, and storage writes are especially expensive.
+
+The `receive()` function is invoked when calldata is empty, whether the call sends some Ether or zero Ether. If the contract does not define `receive()`, an empty-calldata call goes to `fallback()` instead. The `fallback()` function is also invoked when calldata contains a function selector that does not match any function in the contract. Either function must be marked `payable` if it needs to accept Ether.
+
+Events let a smart contract write indexed logs. A successful or reverted transaction gets a transaction receipt, and that receipt contains the logs emitted by successful execution. If execution reverts, its state changes and emitted logs are discarded. Applications can query these logs or subscribe to new ones.
+
+We can use **ethers.js** to build a dapp—a decentralized application that interacts with Ethereum. A dapp usually has smart contracts deployed onchain and a user interface hosted offchain; it is therefore not quite right to say that the whole application either exists or does not exist on the blockchain. For example, ethers.js can connect to a node through a WebSocket provider and listen for events such as `Transfer` events emitted by the USDT contract.
