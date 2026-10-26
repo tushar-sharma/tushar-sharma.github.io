@@ -6,6 +6,7 @@ authors = ["Tushar Sharma <tushar.sharma1729@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+certifi = ">=2023.7.22"
 gspread = "^4.0.0"
 oauth2client = "^4.1.3"
 
