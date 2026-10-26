@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta property="og:site_name" content="Tushar Sharma" />
+<title>Adding Clap Controlled Dark Mode With TensorFlow.js</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@tushar sharma">
+    <meta name="twitter:title" content="Adding Clap Controlled Dark Mode With TensorFlow.js">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.pinimg.com/736x/34/a5/44/34a544cdec18911e289935660ebe5eae.jpg">
+    <meta property="og:image" content="https://i.pinimg.com/736x/34/a5/44/34a544cdec18911e289935660ebe5eae.jpg">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Adding Clap Controlled Dark Mode With TensorFlow.js | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.3.3" />
+    <meta property="og:title" content="Adding Clap Controlled Dark Mode With TensorFlow.js" />
+    <meta name="author" content="tushar sharma" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="I added a small experiment to this site: click a clap listener button, allow the microphone, clap your hands, and the site toggles dark mode. The interesting part is not the dark mode itself. The interesting part is how a static Jekyll site can run a small machine learning model in the browser without a backend server." />
+    <meta property="og:description" content="I added a small experiment to this site: click a clap listener button, allow the microphone, clap your hands, and the site toggles dark mode. The interesting part is not the dark mode itself. The interesting part is how a static Jekyll site can run a small machine learning model in the browser without a backend server." />
+    <link rel="canonical" href="https://randomwits.com/blog/clap-controlled-dark-mode-tensorflow-js" />
+    <meta property="og:url" content="https://randomwits.com/blog/clap-controlled-dark-mode-tensorflow-js" />
+    <meta property="og:site_name" content="RandomWits" />
+    <meta property="og:image" content="https://i.pinimg.com/736x/34/a5/44/34a544cdec18911e289935660ebe5eae.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2026-06-13T00:00:00+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="https://i.pinimg.com/736x/34/a5/44/34a544cdec18911e289935660ebe5eae.jpg" />
+    <meta property="twitter:title" content="Adding Clap Controlled Dark Mode With TensorFlow.js" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"tushar sharma"},"dateModified":"2026-06-13T00:00:00+00:00","datePublished":"2026-06-13T00:00:00+00:00","description":"I added a small experiment to this site: click a clap listener button, allow the microphone, clap your hands, and the site toggles dark mode. The interesting part is not the dark mode itself. The interesting part is how a static Jekyll site can run a small machine learning model in the browser without a backend server.","headline":"Adding Clap Controlled Dark Mode With TensorFlow.js","image":"https://i.pinimg.com/736x/34/a5/44/34a544cdec18911e289935660ebe5eae.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/clap-controlled-dark-mode-tensorflow-js"},"url":"https://randomwits.com/blog/clap-controlled-dark-mode-tensorflow-js"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.2/dist/tf.min.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.5.4/dist/speech-commands.min.js" crossorigin="anonymous"></script>
+        <script defer src="/js/dark_clap.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          .theme-controls {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: 8px;
+            vertical-align: middle;
+          }
+
+          .theme-control {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(51, 153, 204, 0.35);
+            border-radius: 4px;
+            background: transparent;
+            color: inherit;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 1;
+            padding: 0;
+          }
+
+          .theme-control:hover,
+          .theme-control:focus {
+            border-color: rgb(51, 153, 204);
+            outline: none;
+          }
+
+          .theme-control:focus-visible {
+            box-shadow: 0 0 0 2px rgba(51, 153, 204, 0.35);
+          }
+
+          .theme-control[aria-pressed="true"] {
+            background: rgba(51, 153, 204, 0.12);
+            border-color: rgb(51, 153, 204);
+          }
+
+          .theme-control.is-loading {
+            cursor: wait;
+            opacity: 0.6;
+          }
+
+          .theme-control.is-detected {
+            transform: scale(1.12);
+          }
+
+          .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+          }
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <span class="theme-controls" aria-label="Theme controls">
+            <button type="button" class="DarkReader_Button theme-control" title="Toggle dark mode" aria-label="Toggle dark mode" aria-pressed="false">
+              <span id="icon-dark" aria-hidden="true">☾</span>
+            </button>
+            <button type="button" class="ClapDark_Button theme-control" title="Clap listener off" aria-label="Start clap listener for dark mode" aria-pressed="false">
+              <span id="icon-clap-dark" aria-hidden="true">👏</span>
+            </button>
+            <span id="clap-dark-status" class="visually-hidden" aria-live="polite"></span>
+          </span>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- 
+ -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1>Adding Clap Controlled Dark Mode With TensorFlow.js</h1>
+        <p>Tags:  <a class="mytag" href="/tag/javascript" title="View posts tagged with: javascript">javascript</a>    <a class="mytag" href="/tag/tensorflowjs" title="View posts tagged with: tensorflowjs">tensorflowjs</a>    <a class="mytag" href="/tag/ml" title="View posts tagged with: ml">ml</a>    <a class="mytag" href="/tag/jekyll" title="View posts tagged with: jekyll">jekyll</a>    <a class="mytag" href="/tag/dark-mode" title="View posts tagged with: dark-mode">dark-mode</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <p>This post explains the idea conceptually and technically. The implementation is inspired by <a href="https://github.com/charliegerard/dark-mode-clap-extension">Charlie Gerard's dark-mode clap extension</a>, which uses TensorFlow.js and a Teachable Machine audio model to detect claps.</p>
+        <h2 id="the-goal">The Goal</h2>
+        <p>I already had dark mode on this site using <code class="language-plaintext highlighter-rouge">DarkReader</code>. The manual flow was simple:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>user clicks dark mode button
+  -&gt; JavaScript calls DarkReader.enable() or DarkReader.disable()
+  -&gt; dark-mode state is saved in localStorage
+</code></pre>
+          </div>
+        </div>
+        <p>The new goal was:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>user clicks clap listener button
+  -&gt; browser asks for microphone permission
+  -&gt; browser listens to microphone audio
+  -&gt; TensorFlow.js model predicts whether the sound is a clap
+  -&gt; if prediction is "Clap", call the same dark-mode toggle function
+</code></pre>
+          </div>
+        </div>
+        <p>There are two important design choices:</p>
+        <ol>
+          <li>The microphone and model run on the client, inside the browser.</li>
+          <li>The clap listener reuses the existing dark-mode function instead of creating a second theme system.</li>
+        </ol>
+        <p>That keeps the feature small. The ML part only answers one question: "Was that sound a clap?"</p>
+        <h2 id="why-not-use-a-server">Why Not Use A Server?</h2>
+        <p>One tempting idea is to send microphone audio to a serverless function and run a model there. That is unnecessary for this feature.</p>
+        <p>A clap toggle needs low latency. If every short audio window had to travel to a server and back, the interaction would feel slow. It would also create an avoidable privacy problem: users do not expect a personal blog to stream microphone audio to a backend.</p>
+        <p>The better architecture is:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>microphone audio
+  -&gt; browser audio APIs
+  -&gt; TensorFlow.js model in browser
+  -&gt; local prediction
+  -&gt; local UI action
+</code></pre>
+          </div>
+        </div>
+        <p>The browser downloads the model files, but the actual inference happens locally.</p>
+        <h2 id="what-tensorflowjs-does-here">What TensorFlow.js Does Here</h2>
+        <p>TensorFlow.js can do many things, but in this feature it is only doing inference.</p>
+        <p>Training and inference are different phases:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>training:
+  many labeled audio examples
+  -&gt; model learns patterns
+  -&gt; model files are saved
+
+inference:
+  new microphone audio
+  -&gt; load saved model
+  -&gt; output probabilities for known labels
+</code></pre>
+          </div>
+        </div>
+        <p>We are not training a model every time the page loads. That would be slow and unnecessary. We are loading a model that was trained earlier.</p>
+        <p>Conceptually, the model receives a transformed representation of sound and returns scores:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">Background Noise</span><span class="dl">"</span><span class="p">:</span> <span class="mf">0.03</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">Clap</span><span class="dl">"</span><span class="p">:</span> <span class="mf">0.91</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">Unknown</span><span class="dl">"</span><span class="p">:</span> <span class="mf">0.06</span>
+<span class="p">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Then the app logic is ordinary JavaScript:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="k">if </span><span class="p">(</span><span class="nx">prediction</span><span class="p">.</span><span class="nx">label</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">Clap</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="nx">prediction</span><span class="p">.</span><span class="nx">score</span> <span class="o">&gt;=</span> <span class="mf">0.75</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nf">toggleDarkMode</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The machine learning model does not know what "dark mode" is. It only classifies audio. The web app decides what to do with the classification.</p>
+        <h2 id="why-use-httpsteachablemachinewithgooglecommodelsgwaybcqle">Why Use <code class="language-plaintext highlighter-rouge">https://teachablemachine.withgoogle.com/models/GWAYbcqlE/</code>
+        </h2>
+        <p>The inspiration project uses this model URL:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">const</span> <span class="nx">modelUrl</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://teachablemachine.withgoogle.com/models/GWAYbcqlE/</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>This is not an API endpoint where we upload audio and get a result back. It is a folder containing model assets exported by Google's Teachable Machine.</p>
+        <p>A TensorFlow.js audio model normally has files like:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>model.json
+metadata.json
+weights.bin
+</code></pre>
+          </div>
+        </div>
+        <p>The JavaScript code builds URLs from the base path:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">const</span> <span class="nx">checkpointUrl</span> <span class="o">=</span> <span class="nx">modelUrl</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">model.json</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">metadataUrl</span> <span class="o">=</span> <span class="nx">modelUrl</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">metadata.json</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Then TensorFlow.js downloads those files into the browser and runs the model locally.</p>
+        <p>So the reason to use <code class="language-plaintext highlighter-rouge">https://teachablemachine.withgoogle.com/models/GWAYbcqlE/</code> was practical: it already contains a pretrained clap detector. That lets us implement and understand the full application flow before training our own model.</p>
+        <p>This is a good learning sequence:</p>
+        <ol>
+          <li>First use someone else's pretrained model.</li>
+          <li>Understand the browser inference loop.</li>
+          <li>Replace the model URL later with your own exported model.</li>
+        </ol>
+        <p>If the model disappears or its labels change, the feature can break. For a serious version, I would train my own model and host the exported model files inside this site.</p>
+        <h2 id="what-is-inside-an-audio-classifier">What Is Inside An Audio Classifier?</h2>
+        <p>A browser does not pass "sound" to the model as a human concept. It passes numbers.</p>
+        <p>The rough pipeline is:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>microphone waveform
+  -&gt; short audio frames
+  -&gt; frequency features
+  -&gt; neural network
+  -&gt; class probabilities
+</code></pre>
+          </div>
+        </div>
+        <p>Raw microphone audio is a waveform: amplitude over time. A clap has a sharp transient: a sudden burst of energy. But robust detection is harder than checking volume, because a dropped object or cough can also create a spike.</p>
+        <p>Audio ML models usually transform audio into frequency-domain features. In TensorFlow.js speech commands, the recognizer can use <code class="language-plaintext highlighter-rouge">BROWSER_FFT</code>.</p>
+        <p>FFT means Fast Fourier Transform. It converts a short window of audio from "how loud was the signal over time?" into "which frequencies were present, and how strong were they?"</p>
+        <p>That gives the model a better representation than raw volume:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>time-domain waveform
+  -&gt; FFT / spectrogram-like features
+  -&gt; classifier
+</code></pre>
+          </div>
+        </div>
+        <p>The classifier has learned patterns from examples. During training, it saw examples labeled something like:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>Clap
+Background Noise
+Unknown
+</code></pre>
+          </div>
+        </div>
+        <p>During inference, it outputs the probability that the current audio window belongs to each label.</p>
+        <h2 id="the-browser-code">The Browser Code</h2>
+        <p>The page loads three important scripts:</p>
+        <div class="language-html highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">defer</span> <span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.2/dist/tf.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">defer</span> <span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.5.4/dist/speech-commands.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">defer</span> <span class="na">src=</span><span class="s">"/js/dark_clap.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The first script is TensorFlow.js. The second script is the speech commands helper library. The third script is my site-specific code.</p>
+        <p>The model is created like this:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">const</span> <span class="nx">speechRecognizer</span> <span class="o">=</span> <span class="nx">speechCommands</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">BROWSER_FFT</span><span class="dl">"</span><span class="p">,</span>
+  <span class="kc">undefined</span><span class="p">,</span>
+  <span class="nx">checkpointUrl</span><span class="p">,</span>
+  <span class="nx">metadataUrl</span>
+<span class="p">);</span>
+
+<span class="k">await</span> <span class="nx">speechRecognizer</span><span class="p">.</span><span class="nf">ensureModelLoaded</span><span class="p">();</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The important pieces:</p>
+        <ul>
+          <li>
+            <code class="language-plaintext highlighter-rouge">BROWSER_FFT</code> tells the recognizer to use browser FFT audio features.</li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">checkpointUrl</code> points to <code class="language-plaintext highlighter-rouge">model.json</code>.</li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">metadataUrl</code> points to <code class="language-plaintext highlighter-rouge">metadata.json</code>.</li>
+          <li>
+            <code class="language-plaintext highlighter-rouge">ensureModelLoaded()</code> downloads and initializes the model before listening.</li>
+        </ul>
+        <p>Once the model is loaded, the recognizer starts listening:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nx">recognizer</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">prediction</span> <span class="o">=</span> <span class="nf">getPrediction</span><span class="p">(</span><span class="nx">labels</span><span class="p">,</span> <span class="nx">result</span><span class="p">.</span><span class="nx">scores</span><span class="p">);</span>
+
+  <span class="k">if </span><span class="p">(</span><span class="nx">prediction</span><span class="p">.</span><span class="nx">label</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">Clap</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="nx">prediction</span><span class="p">.</span><span class="nx">score</span> <span class="o">&gt;=</span> <span class="mf">0.75</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nf">toggleDarkMode</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">includeSpectrogram</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">probabilityThreshold</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>
+  <span class="na">invokeCallbackOnNoiseAndUnknown</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">overlapFactor</span><span class="p">:</span> <span class="mf">0.5</span>
+<span class="p">});</span>
+</code></pre>
+          </div>
+        </div>
+        <p><code class="language-plaintext highlighter-rouge">result.scores</code> is an array of probabilities. The labels come from the model metadata:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">const</span> <span class="nx">labels</span> <span class="o">=</span> <span class="nx">recognizer</span><span class="p">.</span><span class="nf">wordLabels</span><span class="p">();</span>
+</code></pre>
+          </div>
+        </div>
+        <p>The code finds the highest scoring label:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">function</span> <span class="nf">getPrediction</span><span class="p">(</span><span class="nx">labels</span><span class="p">,</span> <span class="nx">scores</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">bestIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for </span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">scores</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">scores</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">scores</span><span class="p">[</span><span class="nx">bestIndex</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">bestIndex</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">label</span><span class="p">:</span> <span class="nx">labels</span><span class="p">[</span><span class="nx">bestIndex</span><span class="p">],</span>
+    <span class="na">score</span><span class="p">:</span> <span class="nx">scores</span><span class="p">[</span><span class="nx">bestIndex</span><span class="p">]</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Then it checks whether that label is <code class="language-plaintext highlighter-rouge">Clap</code>.</p>
+        <h2 id="avoiding-repeated-toggles">Avoiding Repeated Toggles</h2>
+        <p>Audio classifiers run continuously while listening. A single clap can be detected across more than one overlapping audio window.</p>
+        <p>Without protection, one clap might toggle dark mode on and then immediately off.</p>
+        <p>So the listener uses a cooldown:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">const</span> <span class="nx">clapCooldownMs</span> <span class="o">=</span> <span class="mi">1200</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">lastClapAt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">now</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nf">now</span><span class="p">();</span>
+<span class="k">if </span><span class="p">(</span><span class="nx">now</span> <span class="o">-</span> <span class="nx">lastClapAt</span> <span class="o">&gt;</span> <span class="nx">clapCooldownMs</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">lastClapAt</span> <span class="o">=</span> <span class="nx">now</span><span class="p">;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nf">toggleDarkMode</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+          </div>
+        </div>
+        <p>This is not an ML concept. It is interaction design. The model gives predictions; the product code still has to decide how to handle them.</p>
+        <h2 id="reusing-the-existing-dark-mode-function">Reusing The Existing Dark Mode Function</h2>
+        <p>The existing dark mode wrapper had internal <code class="language-plaintext highlighter-rouge">enable()</code>, <code class="language-plaintext highlighter-rouge">disable()</code>, and <code class="language-plaintext highlighter-rouge">darkmode()</code> functions. To let the clap listener reuse the same behavior, I exposed one public function:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">toggleDarkMode</span> <span class="o">=</span> <span class="nx">darkmode</span><span class="p">;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>That gives this structure:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>manual button click
+  -&gt; window.toggleDarkMode()
+
+clap prediction
+  -&gt; window.toggleDarkMode()
+</code></pre>
+          </div>
+        </div>
+        <p>Both paths update the same <code class="language-plaintext highlighter-rouge">localStorage</code> key and the same DarkReader state. This matters. If clap mode had its own dark-mode logic, the two controls could drift out of sync.</p>
+        <h2 id="ux-matters-more-with-microphones">UX Matters More With Microphones</h2>
+        <p>The first version was technically interesting but not great UX. A clap icon beside a moon icon is ambiguous. Also, users should not be surprised by a microphone permission prompt.</p>
+        <p>The improved version uses two separate controls:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>moon/sun button
+  -&gt; toggles the theme
+
+clap listener button
+  -&gt; starts or stops microphone listening
+</code></pre>
+          </div>
+        </div>
+        <p>On first use, the site explains what is about to happen:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nf">confirm</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">This uses your microphone locally to detect claps and toggle dark mode. Audio is not sent to this site. Start listening?</span><span class="dl">"</span>
+<span class="p">);</span>
+</code></pre>
+          </div>
+        </div>
+        <p>This is not just politeness. It clarifies the privacy boundary:</p>
+        <ul>
+          <li>the model files are downloaded from Teachable Machine</li>
+          <li>microphone audio is processed locally by TensorFlow.js</li>
+          <li>the site does not need a backend to classify the clap</li>
+        </ul>
+        <p>The controls are also real buttons, not links:</p>
+        <div class="language-html highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span>
+        <span class="na">class=</span><span class="s">"DarkReader_Button theme-control"</span>
+        <span class="na">aria-label=</span><span class="s">"Toggle dark mode"</span>
+        <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"icon-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;#9790;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span>
+        <span class="na">class=</span><span class="s">"ClapDark_Button theme-control"</span>
+        <span class="na">aria-label=</span><span class="s">"Start clap listener for dark mode"</span>
+        <span class="na">aria-pressed=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"icon-clap-dark"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;#128079;</span><span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>That gives better keyboard behavior and better assistive technology semantics.</p>
+        <h2 id="what-i-would-do-next">What I Would Do Next</h2>
+        <p>Using the pretrained model is fine for learning, but it is not ideal long term.</p>
+        <p>The next step is to train my own model:</p>
+        <ol>
+          <li>Open Teachable Machine.</li>
+          <li>Create an audio project.</li>
+          <li>Record examples for <code class="language-plaintext highlighter-rouge">Clap</code>.</li>
+          <li>Record examples for <code class="language-plaintext highlighter-rouge">Background Noise</code>.</li>
+          <li>Add more negative examples: typing, speech, desk taps, coughs.</li>
+          <li>Export the model as TensorFlow.js.</li>
+          <li>Host <code class="language-plaintext highlighter-rouge">model.json</code>, <code class="language-plaintext highlighter-rouge">metadata.json</code>, and weights inside this repository.</li>
+          <li>Change <code class="language-plaintext highlighter-rouge">modelUrl</code> from the public Teachable Machine URL to a local path.</li>
+        </ol>
+        <p>For example:</p>
+        <div class="language-js highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="kd">const</span> <span class="nx">modelUrl</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/models/clap-dark-mode/</span><span class="dl">"</span><span class="p">;</span>
+</code></pre>
+          </div>
+        </div>
+        <p>At that point the site would not depend on someone else's model staying online.</p>
+        <h2 id="mental-model">Mental Model</h2>
+        <p>The main lesson is that TensorFlow.js lets a static website run pretrained ML models directly in the browser.</p>
+        <p>The full architecture is:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>trained Teachable Machine model
+  -&gt; exported as TensorFlow.js files
+  -&gt; browser downloads model files
+  -&gt; microphone audio becomes FFT features
+  -&gt; model predicts audio label
+  -&gt; app code checks label and confidence
+  -&gt; app toggles dark mode
+</code></pre>
+          </div>
+        </div>
+        <p>The ML model is only one component. A usable feature also needs state management, cooldowns, permission handling, accessibility, and clear UI language.</p>
+        <p>That separation is the key concept:</p>
+        <div class="language-text highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>model responsibility:
+  classify sound
+
+application responsibility:
+  decide what classification means for the user interface
+</code></pre>
+          </div>
+        </div>
+        <p>Once that boundary is clear, replacing the model is straightforward. The rest of the site does not care whether the classifier came from Teachable Machine, a custom TensorFlow.js model, or some future audio model. It only needs a label and a confidence score.</p>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/codex-session-logging-with-stop-hook" title="Previous Post: Logging Codex Sessions Without Spending Context">←Previous</a>     <a class="next-item" href="/blog/daily-logs-2026-06-20" title="Next Post: Daily Logs for June 21, 2026">Next→</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/clap-controlled-dark-mode-tensorflow-js';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/clap-controlled-dark-mode-tensorflow-js';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; inspired from my sister ~ <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
