@@ -1,7 +1,7 @@
 LOG_AUTHOR ?= tushar sharma
 LOG_IMAGE_ID ?= MlrBBF8Er8s
 
-.PHONY: create logs
+.PHONY: create logs build pagefind
 
 create:
 	bash createPost.sh
@@ -40,8 +40,9 @@ add:
 	git add sitemap.xml
 build:
 	JEKYLL_ENV=production bundle exec jekyll build
-search:
-	ALGOLIA_API_KEY='your_admin_api_key' bundle exec jekyll algolia
+	npx --yes pagefind@1.5.2 --site _site
+pagefind:
+	npx --yes pagefind@1.5.2 --site _site
 cleanbranch:
 	git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -D
 copy:

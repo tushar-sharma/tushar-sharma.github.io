@@ -161,22 +161,17 @@ Dont create tags with upper case name. Always use lowercase.
 
 ### Searching
 
-Update index in algolia with admin API Key. 
+Search is built locally with Pagefind after Jekyll renders the site. The index includes the complete rendered post body, including code blocks.
 
-```
-ALGOLIA_API_KEY='' bundle exec jekyll algolia
-```
-
-Or you can create a `.env` file
-
-```
-ALGOLIA_API_KEY=xxx
+```sh
+make build
 ```
 
-And run the following script
+To rebuild only the search index after `_site` already exists:
 
+```sh
+make pagefind
 ```
-./run-aloglia.sh
 
 ```
 

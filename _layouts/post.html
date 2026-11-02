@@ -23,7 +23,9 @@ root: true
 <br>
 
 <small style="float:right; margin-top:5px;"><strong></strong></small>
-<h1>{{ page.title }}</h1>
+<h1 data-pagefind-body data-pagefind-weight="10" data-pagefind-meta="title">{{ page.title }}</h1>
+<span hidden data-pagefind-meta="date" content="{{ page.date | date_to_xmlschema }}"></span>
+<span hidden data-pagefind-meta="tags" content="{{ page.tags | join: ', ' | escape }}"></span>
 
 {% assign truncated_post = content | split:"<!-- truncate_here -->" %}
 {% if truncated_post != content %}
@@ -62,15 +64,23 @@ root: true
   {% endif %}
 
   {% if is_book_notes %}
-    {% include book_notes_content.html content=truncated_post.last %}
+    <div data-pagefind-body>
+      {% include book_notes_content.html content=truncated_post.last %}
+    </div>
   {% else %}
-    {{ truncated_post.last }}
+    <div data-pagefind-body>
+      {{ truncated_post.last }}
+    </div>
   {% endif %}
 {% else %}
  {% if is_book_notes %}
-    {% include book_notes_content.html content=truncated_post.last %}
+    <div data-pagefind-body>
+      {% include book_notes_content.html content=truncated_post.last %}
+    </div>
   {% else %}
-    {{ truncated_post.last }}
+    <div data-pagefind-body>
+      {{ truncated_post.last }}
+    </div>
   {% endif %}
 {% endif %}
 

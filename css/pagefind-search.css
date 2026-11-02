@@ -1,0 +1,148 @@
+.pagefind-search {
+  --search-accent: #2584ad;
+  --search-border: #d8dee4;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 4rem;
+}
+
+.pagefind-search__label {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.pagefind-search__controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagefind-search__controls input {
+  background: #fff;
+  border: 1px solid #aeb7c0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  flex: 1;
+  font: inherit;
+  min-width: 0;
+  padding: 0.75rem 0.9rem;
+}
+
+.pagefind-search__controls button {
+  cursor: pointer;
+  font: 600 0.9rem/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 0.75rem 1rem;
+}
+
+.pagefind-search__controls button {
+  background: var(--search-accent);
+  border: 1px solid var(--search-accent);
+  border-radius: 6px;
+  color: #fff;
+}
+
+.pagefind-search__controls button:hover {
+  background: #1d6d91;
+}
+
+.pagefind-search__hint {
+  color: #68717a;
+  font-size: 0.8rem;
+  margin-top: 0.55rem;
+}
+
+.pagefind-search__hint kbd {
+  background: #f4f6f8;
+  border: 1px solid #c9d0d6;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #c9d0d6;
+  font-family: inherit;
+  padding: 0.05rem 0.35rem;
+}
+
+.pagefind-search__controls input:focus-visible,
+.pagefind-search__controls button:focus-visible,
+.pagefind-search__pagination button:focus-visible,
+.pagefind-search__result a:focus-visible {
+  outline: 3px solid #39c;
+  outline-offset: 2px;
+}
+
+.pagefind-search__status {
+  color: #58616a;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  min-height: 1.5em;
+}
+
+.pagefind-search__result {
+  border-bottom: 1px solid var(--search-border);
+  padding: 1rem 0;
+}
+
+.pagefind-search__result h2 {
+  margin-bottom: 0.35rem;
+  overflow-wrap: anywhere;
+}
+
+.pagefind-search__excerpt {
+  line-height: 1.55;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.pagefind-search__meta {
+  color: #68717a;
+  font: 0.78rem/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: -0.1rem 0 0.45rem;
+}
+
+.pagefind-search__excerpt mark {
+  background: #fff2a8;
+  padding: 0 0.1em;
+}
+
+.pagefind-search__pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font: 0.85rem/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  gap: 0.35rem;
+  margin-top: 1.5rem;
+}
+
+.pagefind-search__pagination button {
+  background: #fff;
+  border: 1px solid #aeb7c0;
+  border-radius: 5px;
+  color: #35414b;
+  cursor: pointer;
+  min-width: 2.25rem;
+  padding: 0.55rem 0.7rem;
+}
+
+.pagefind-search__pagination button:hover:not(:disabled),
+.pagefind-search__pagination button[aria-current="page"] {
+  border-color: var(--search-accent);
+  color: var(--search-accent);
+}
+
+.pagefind-search__pagination button[aria-current="page"] {
+  background: var(--search-accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+.pagefind-search__pagination button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+@media (max-width: 520px) {
+  .pagefind-search__controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
