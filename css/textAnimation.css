@@ -1,0 +1,510 @@
+/** animation 
+Courtesy: https://codepen.io/brandonmcconnell/pen/bZqGdw
+**/
+
+@keyframes typed {
+	/* string #{
+		$i
+	}
+	, char #{
+		$j
+	}
+	 */
+	/* string #{
+		$i
+	}
+	, char #{
+		$j
+	}
+	 */
+	/* string #{
+		$i
+	}
+	, char #{
+		$j
+	}
+	 */
+	 0%, 0.4470286738% {
+		 content: "W";
+	}
+	 0.4480286738%, 0.8950573477% {
+		 content: "We";
+	}
+	 0.8960573477%, 1.3430860215% {
+		 content: "Wel";
+	}
+	 1.3440860215%, 1.7911146953% {
+		 content: "Welc";
+	}
+	 1.7921146953%, 2.2391433692% {
+		 content: "Welco";
+	}
+	 2.2401433692%, 2.687172043% {
+		 content: "Welcom";
+	}
+	 2.688172043%, 3.1352007168% {
+		 content: "Welcome";
+	}
+	 3.1362007168%, 3.5832293907% {
+		 content: "Welcome ";
+	}
+	 3.5842293907%, 4.0312580645% {
+		 content: "Welcome t";
+	}
+	 4.0322580645%, 4.4792867384% {
+		 content: "Welcome to";
+	}
+	 4.4802867384%, 4.9273154122% {
+		 content: "Welcome to ";
+	}
+	 4.9283154122%, 5.375344086% {
+		 content: "Welcome to m";
+	}
+	 5.376344086%, 5.8233727599% {
+		 content: "Welcome to my";
+	}
+	 5.8243727599%, 6.2714014337% {
+		 content: "Welcome to my ";
+	}
+	 6.2724014337%, 6.7194301075% {
+		 content: "Welcome to my d";
+	}
+	 6.7204301075%, 7.1674587814% {
+		 content: "Welcome to my di";
+	}
+	 7.1684587814%, 7.6154874552% {
+		 content: "Welcome to my dig";
+	}
+	 7.6164874552%, 8.063516129% {
+		 content: "Welcome to my digi";
+	}
+	 8.064516129%, 8.5115448029% {
+		 content: "Welcome to my digit";
+	}
+	 8.5125448029%, 8.9595734767% {
+		 content: "Welcome to my digita";
+	}
+	 8.9605734767%, 9.4076021505% {
+		 content: "Welcome to my digital";
+	}
+	 9.4086021505%, 9.8556308244% {
+		 content: "Welcome to my digital ";
+	}
+	 9.8566308244%, 10.3036594982% {
+		 content: "Welcome to my digital n";
+	}
+	 10.3046594982%, 10.751688172% {
+		 content: "Welcome to my digital ne";
+	}
+	 10.752688172%, 11.1997168459% {
+		 content: "Welcome to my digital nes";
+	}
+	 11.2007168459%, 20.9667419355% {
+		 content: "Welcome to my digital nest";
+	}
+	 20.9677419355%, 21.3251648746% {
+		 content: "Welcome to my digital nes";
+	}
+	 21.3261648746%, 21.6835878136% {
+		 content: "Welcome to my digital ne";
+	}
+	 21.6845878136%, 22.0420107527% {
+		 content: "Welcome to my digital n";
+	}
+	 22.0430107527%, 22.4004336918% {
+		 content: "Welcome to my digital ";
+	}
+	 22.4014336918%, 22.7588566308% {
+		 content: "Welcome to my digital";
+	}
+	 22.7598566308%, 23.1172795699% {
+		 content: "Welcome to my digita";
+	}
+	 23.1182795699%, 23.475702509% {
+		 content: "Welcome to my digit";
+	}
+	 23.476702509%, 23.834125448% {
+		 content: "Welcome to my digi";
+	}
+	 23.835125448%, 24.1925483871% {
+		 content: "Welcome to my dig";
+	}
+	 24.1935483871%, 24.5509713262% {
+		 content: "Welcome to my di";
+	}
+	 24.5519713262%, 24.9093942652% {
+		 content: "Welcome to my d";
+	}
+	 24.9103942652%, 25.2678172043% {
+		 content: "Welcome to my ";
+	}
+	 25.2688172043%, 25.6262401434% {
+		 content: "Welcome to my";
+	}
+	 25.6272401434%, 25.9846630824% {
+		 content: "Welcome to m";
+	}
+	 25.9856630824%, 26.3430860215% {
+		 content: "Welcome to ";
+	}
+	 26.3440860215%, 26.7015089606% {
+		 content: "Welcome to";
+	}
+	 26.7025089606%, 27.0599318996% {
+		 content: "Welcome t";
+	}
+	 27.0609318996%, 27.4183548387% {
+		 content: "Welcome ";
+	}
+	 27.4193548387%, 27.7767777778% {
+		 content: "Welcome";
+	}
+	 27.7777777778%, 28.1352007168% {
+		 content: "Welcom";
+	}
+	 28.1362007168%, 28.4936236559% {
+		 content: "Welco";
+	}
+	 28.4946236559%, 28.852046595% {
+		 content: "Welc";
+	}
+	 28.853046595%, 29.2104695341% {
+		 content: "Wel";
+	}
+	 29.2114695341%, 29.5688924731% {
+		 content: "We";
+	}
+	 29.5698924731%, 29.9273154122% {
+		 content: "W";
+	}
+	 29.9283154122%, 34.4076021505% {
+		 content: "​";
+	}
+	 34.4086021505%, 34.8556308244% {
+		 content: "B";
+	}
+	 34.8566308244%, 35.3036594982% {
+		 content: "Be";
+	}
+	 35.3046594982%, 35.751688172% {
+		 content: "Bew";
+	}
+	 35.752688172%, 36.1997168459% {
+		 content: "Bewa";
+	}
+	 36.2007168459%, 36.6477455197% {
+		 content: "Bewar";
+	}
+	 36.6487455197%, 37.0957741935% {
+		 content: "Beware";
+	}
+	 37.0967741935%, 37.5438028674% {
+		 content: "Beware ";
+	}
+	 37.5448028674%, 37.9918315412% {
+		 content: "Beware o";
+	}
+	 37.9928315412%, 38.4398602151% {
+		 content: "Beware of";
+	}
+	 38.4408602151%, 38.8878888889% {
+		 content: "Beware of ";
+	}
+	 38.8888888889%, 39.3359175627% {
+		 content: "Beware of r";
+	}
+	 39.3369175627%, 39.7839462366% {
+		 content: "Beware of ra";
+	}
+	 39.7849462366%, 40.2319749104% {
+		 content: "Beware of ran";
+	}
+	 40.2329749104%, 40.6800035842% {
+		 content: "Beware of rand";
+	}
+	 40.6810035842%, 41.1280322581% {
+		 content: "Beware of rando";
+	}
+	 41.1290322581%, 41.5760609319% {
+		 content: "Beware of random";
+	}
+	 41.5770609319%, 42.0240896057% {
+		 content: "Beware of randomw";
+	}
+	 42.0250896057%, 42.4721182796% {
+		 content: "Beware of randomwi";
+	}
+	 42.4731182796%, 42.9201469534% {
+		 content: "Beware of randomwit";
+	}
+	 42.9211469534%, 43.3681756272% {
+		 content: "Beware of randomwits";
+	}
+	 43.3691756272%, 43.8162043011% {
+		 content: "Beware of randomwits.";
+	}
+	 43.8172043011%, 44.2642329749% {
+		 content: "Beware of randomwits..";
+	}
+	 44.2652329749%, 44.7122616487% {
+		 content: "Beware of randomwits...";
+	}
+	 44.7132616487%, 54.4792867384% {
+		 content: "Beware of randomwits... ";
+	}
+	 54.4802867384%, 54.8377096774% {
+		 content: "Beware of randomwits...";
+	}
+	 54.8387096774%, 55.1961326165% {
+		 content: "Beware of randomwits..";
+	}
+	 55.1971326165%, 55.5545555556% {
+		 content: "Beware of randomwits.";
+	}
+	 55.5555555556%, 55.9129784946% {
+		 content: "Beware of randomwits";
+	}
+	 55.9139784946%, 56.2714014337% {
+		 content: "Beware of randomwit";
+	}
+	 56.2724014337%, 56.6298243728% {
+		 content: "Beware of randomwi";
+	}
+	 56.6308243728%, 56.9882473118% {
+		 content: "Beware of randomw";
+	}
+	 56.9892473118%, 57.3466702509% {
+		 content: "Beware of random";
+	}
+	 57.3476702509%, 57.70509319% {
+		 content: "Beware of rando";
+	}
+	 57.70609319%, 58.063516129% {
+		 content: "Beware of rand";
+	}
+	 58.064516129%, 58.4219390681% {
+		 content: "Beware of ran";
+	}
+	 58.4229390681%, 58.7803620072% {
+		 content: "Beware of ra";
+	}
+	 58.7813620072%, 59.1387849462% {
+		 content: "Beware of r";
+	}
+	 59.1397849462%, 59.4972078853% {
+		 content: "Beware of ";
+	}
+	 59.4982078853%, 59.8556308244% {
+		 content: "Beware of";
+	}
+	 59.8566308244%, 60.2140537634% {
+		 content: "Beware o";
+	}
+	 60.2150537634%, 60.5724767025% {
+		 content: "Beware ";
+	}
+	 60.5734767025%, 60.9308996416% {
+		 content: "Beware";
+	}
+	 60.9318996416%, 61.2893225806% {
+		 content: "Bewar";
+	}
+	 61.2903225806%, 61.6477455197% {
+		 content: "Bewa";
+	}
+	 61.6487455197%, 62.0061684588% {
+		 content: "Bew";
+	}
+	 62.0071684588%, 62.3645913978% {
+		 content: "Be";
+	}
+	 62.3655913978%, 62.7230143369% {
+		 content: "B";
+	}
+	 62.7240143369%, 67.2033010753% {
+		 content: "​";
+	}
+	 67.2043010753%, 67.6513297491% {
+		 content: "s";
+	}
+	 67.6523297491%, 68.0993584229% {
+		 content: "so";
+	}
+	 68.1003584229%, 68.5473870968% {
+		 content: "som";
+	}
+	 68.5483870968%, 68.9954157706% {
+		 content: "some";
+	}
+	 68.9964157706%, 69.4434444444% {
+		 content: "somet";
+	}
+	 69.4444444444%, 69.8914731183% {
+		 content: "someti";
+	}
+	 69.8924731183%, 70.3395017921% {
+		 content: "sometim";
+	}
+	 70.3405017921%, 70.7875304659% {
+		 content: "sometime";
+	}
+	 70.7885304659%, 71.2355591398% {
+		 content: "sometimes";
+	}
+	 71.2365591398%, 71.6835878136% {
+		 content: "sometimes ";
+	}
+	 71.6845878136%, 72.1316164875% {
+		 content: "sometimes t";
+	}
+	 72.1326164875%, 72.5796451613% {
+		 content: "sometimes th";
+	}
+	 72.5806451613%, 73.0276738351% {
+		 content: "sometimes the";
+	}
+	 73.0286738351%, 73.475702509% {
+		 content: "sometimes they";
+	}
+	 73.476702509%, 73.9237311828% {
+		 content: "sometimes they ";
+	}
+	 73.9247311828%, 74.3717598566% {
+		 content: "sometimes they b";
+	}
+	 74.3727598566%, 74.8197885305% {
+		 content: "sometimes they bi";
+	}
+	 74.8207885305%, 75.2678172043% {
+		 content: "sometimes they bit";
+	}
+	 75.2688172043%, 75.7158458781% {
+		 content: "sometimes they bite";
+	}
+	 75.7168458781%, 76.163874552% {
+		 content: "sometimes they bite ";
+	}
+	 76.164874552%, 76.6119032258% {
+		 content: "sometimes they bite 😊";
+	}
+	 76.6129032258%, 77.0599318996% {
+		 content: "sometimes they bite 😊";
+	}
+	 77.0609318996%, 77.5079605735% {
+		 content: "sometimes they bite 😊";
+	}
+	 77.5089605735%, 87.2749856631% {
+		 content: "sometimes they bite 😊";
+	}
+	 87.2759856631%, 87.6334086022% {
+		 content: "sometimes they bite 😊";
+	}
+	 87.6344086022%, 87.9918315412% {
+		 content: "sometimes they bite 😊";
+	}
+	 87.9928315412%, 88.3502544803% {
+		 content: "sometimes they bite 😊";
+	}
+	 88.3512544803%, 88.7086774194% {
+		 content: "sometimes they bite ";
+	}
+	 88.7096774194%, 89.0671003584% {
+		 content: "sometimes they bite";
+	}
+	 89.0681003584%, 89.4255232975% {
+		 content: "sometimes they bit";
+	}
+	 89.4265232975%, 89.7839462366% {
+		 content: "sometimes they bi";
+	}
+	 89.7849462366%, 90.1423691756% {
+		 content: "sometimes they b";
+	}
+	 90.1433691756%, 90.5007921147% {
+		 content: "sometimes they ";
+	}
+	 90.5017921147%, 90.8592150538% {
+		 content: "sometimes they";
+	}
+	 90.8602150538%, 91.2176379928% {
+		 content: "sometimes the";
+	}
+	 91.2186379928%, 91.5760609319% {
+		 content: "sometimes th";
+	}
+	 91.5770609319%, 91.934483871% {
+		 content: "sometimes t";
+	}
+	 91.935483871%, 92.29290681% {
+		 content: "sometimes ";
+	}
+	 92.29390681%, 92.6513297491% {
+		 content: "sometimes";
+	}
+	 92.6523297491%, 93.0097526882% {
+		 content: "sometime";
+	}
+	 93.0107526882%, 93.3681756272% {
+		 content: "sometim";
+	}
+	 93.3691756272%, 93.7265985663% {
+		 content: "someti";
+	}
+	 93.7275985663%, 94.0850215054% {
+		 content: "somet";
+	}
+	 94.0860215054%, 94.4434444444% {
+		 content: "some";
+	}
+	 94.4444444444%, 94.8018673835% {
+		 content: "som";
+	}
+	 94.8028673835%, 95.1602903226% {
+		 content: "so";
+	}
+	 95.1612903226%, 95.5187132616% {
+		 content: "s";
+	}
+	 95.5197132616% {
+		 content: "​";
+	}
+	100% {
+		content: "Life is too short for a diary"
+	}
+}
+ @keyframes beam-blink {
+	 75% {
+		 border-color: transparent;
+	}
+}
+
+#textAnimation::after {
+	 content: "​";
+	 position: relative;
+	 display: inline-block;
+	 border-right: 4px solid #39c;
+	 white-space: nowrap;
+     -webkit-animation-name: typed;
+	 animation-name: typed;
+	 -webkit-animation-duration: 26.94s;
+	 animation-duration: 26.94s;
+	 -webkit-animation-iteration-count: forwards;
+	 animation-iteration-count: forwards;
+	 -webkit-animation-timing-function: linear;
+	 animation-timing-function: linear;
+	 -webkit-animation-fill-mode: forwards;
+	 animation-fill-mode: forwards;
+	 -webkit-animation: typed 26.94s linear 1s forwards, beam-blink 1s forwards; ;
+	 animation: typed 26.94s linear 1s forwards, beam-blink 1s forwards;
+}
+ @media (max-width: 575px) {
+	 #textAnimation::after {
+	}
+}
+#textAnimation::before {
+	 display: inline;
+	 bottom: 0;
+	 width: 100%;
+	 font-size: 16px;
+}
+
