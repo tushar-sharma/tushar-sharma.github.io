@@ -81,7 +81,7 @@ const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const fuzzyExcerpt = (content, matchedTokens) => {
   const lowerContent = content.toLocaleLowerCase();
-  const positions = matchedTokens.map((token) => lowerContent.indexOf(token)).filter((position) => position >= 0);
+  const positions = [...matchedTokens].map((token) => lowerContent.indexOf(token)).filter((position) => position >= 0);
   const center = positions.length ? Math.min(...positions) : 0;
   const start = Math.max(0, center - 90);
   const end = Math.min(content.length, start + 260);
