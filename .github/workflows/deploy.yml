@@ -33,6 +33,11 @@ jobs:
           bundler-cache: true
           cache-version: 1
 
+      - name: 🟢 Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: 🔧 Install Dependencies
         run: |
           bundle config set --local path 'vendor/bundle'
@@ -57,10 +62,17 @@ jobs:
           if [ -f "robots.txt" ]; then cp robots.txt _site/; fi
           if [ -f "loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt" ]; then cp loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt _site/; fi
 
+      - name: 🔎 Build Pagefind Search Index
+        run: |
+          bundle exec ruby scripts/build_fuzzy_index.rb _site
+          npx --yes pagefind@1.5.2 --site _site
+
       - name: ✅ Verify Build
         run: |
           ls -la _site
           [ -f _site/index.html ] || exit 1
+          [ -f _site/pagefind/pagefind.js ] || exit 1
+          [ -f _site/search/fuzzy-index.json ] || exit 1
 
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
