@@ -40,8 +40,10 @@ add:
 	git add sitemap.xml
 build:
 	JEKYLL_ENV=production bundle exec jekyll build
+	bundle exec ruby scripts/build_fuzzy_index.rb _site
 	npx --yes pagefind@1.5.2 --site _site
 pagefind:
+	bundle exec ruby scripts/build_fuzzy_index.rb _site
 	npx --yes pagefind@1.5.2 --site _site
 cleanbranch:
 	git branch --merged master | grep -v '^\*' | xargs -n 1 git branch -D

@@ -3,14 +3,21 @@ const input = document.querySelector("#pagefind-search-input");
 const status = document.querySelector("#pagefind-search-status");
 const results = document.querySelector("#pagefind-search-results");
 const pagination = document.querySelector("#pagefind-search-pagination");
+const modeInputs = [...document.querySelectorAll('input[name="mode"]')];
 const pagefindUrl = new URL("../pagefind/pagefind.js", import.meta.url);
+const fuzzyIndexUrl = new URL("../search/fuzzy-index.json", import.meta.url);
 const pageSize = 12;
 let resultRefs = [];
 let activeQuery = "";
+let activeMode = "keyword";
 let currentPage = 1;
 let searchVersion = 0;
 let debounceTimer;
 let pagefindPromise;
+let fuzzyIndexPromise;
+
+const tokenize = (text) => (text.toLocaleLowerCase().match(/[\p{L}\p{N}_$.-]+/gu) || [])
+  .filter((token) => token.length > 1);
 
 const loadPagefind = () => {
   pagefindPromise ||= import(pagefindUrl.href).then(async (pagefind) => {
@@ -18,6 +25,110 @@ const loadPagefind = () => {
     return pagefind;
   });
   return pagefindPromise;
+};
+
+const loadFuzzyIndex = () => {
+  fuzzyIndexPromise ||= fetch(fuzzyIndexUrl).then(async (response) => {
+    if (!response.ok) throw new Error(`Fuzzy index returned ${response.status}`);
+    const payload = await response.json();
+    const vocabulary = new Map();
+
+    payload.documents.forEach((document, documentIndex) => {
+      const weights = new Map();
+      tokenize(document.content).forEach((token) => {
+        weights.set(token, Math.min(3, (weights.get(token) || 0) + 1));
+      });
+      tokenize(document.title).forEach((token) => {
+        weights.set(token, (weights.get(token) || 0) + 8);
+      });
+      weights.forEach((weight, token) => {
+        if (!vocabulary.has(token)) vocabulary.set(token, []);
+        vocabulary.get(token).push([documentIndex, weight]);
+      });
+    });
+
+    return { documents: payload.documents, vocabulary };
+  });
+  return fuzzyIndexPromise;
+};
+
+const editDistanceWithin = (left, right, limit) => {
+  if (Math.abs(left.length - right.length) > limit) return limit + 1;
+  let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let row = 1; row <= left.length; row += 1) {
+    const current = [row];
+    let rowMinimum = row;
+    for (let column = 1; column <= right.length; column += 1) {
+      const value = Math.min(
+        previous[column] + 1,
+        current[column - 1] + 1,
+        previous[column - 1] + (left[row - 1] === right[column - 1] ? 0 : 1),
+      );
+      current.push(value);
+      rowMinimum = Math.min(rowMinimum, value);
+    }
+    if (rowMinimum > limit) return limit + 1;
+    previous = current;
+  }
+  return previous[right.length];
+};
+
+const escapeHtml = (value) => value.replace(/[&<>"']/g, (character) => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+})[character]);
+
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const fuzzyExcerpt = (content, matchedTokens) => {
+  const lowerContent = content.toLocaleLowerCase();
+  const positions = matchedTokens.map((token) => lowerContent.indexOf(token)).filter((position) => position >= 0);
+  const center = positions.length ? Math.min(...positions) : 0;
+  const start = Math.max(0, center - 90);
+  const end = Math.min(content.length, start + 260);
+  let excerpt = `${start ? "…" : ""}${content.slice(start, end).trim()}${end < content.length ? "…" : ""}`;
+  excerpt = escapeHtml(excerpt);
+  const terms = [...matchedTokens].sort((a, b) => b.length - a.length).map(escapeHtml).map(escapeRegExp);
+  if (terms.length) excerpt = excerpt.replace(new RegExp(`(${terms.join("|")})`, "giu"), "<mark>$1</mark>");
+  return excerpt;
+};
+
+const fuzzySearch = async (query) => {
+  const { documents, vocabulary } = await loadFuzzyIndex();
+  const queryTokens = [...new Set(tokenize(query))];
+  if (!queryTokens.length) return [];
+  const scoredDocuments = new Map();
+
+  queryTokens.forEach((queryToken, queryIndex) => {
+    const limit = queryToken.length >= 8 ? 2 : 1;
+    vocabulary.forEach((postings, candidate) => {
+      let similarity = 0;
+      if (candidate === queryToken) similarity = 3;
+      else if (queryToken.length >= 3 && candidate.startsWith(queryToken)) similarity = 2;
+      else if (queryToken.length >= 4 && editDistanceWithin(queryToken, candidate, limit) <= limit) similarity = 1;
+      if (!similarity) return;
+
+      postings.forEach(([documentIndex, weight]) => {
+        const entry = scoredDocuments.get(documentIndex) || { score: 0, queryTokens: new Set(), matchedTokens: new Set() };
+        entry.score += similarity * weight;
+        entry.queryTokens.add(queryIndex);
+        entry.matchedTokens.add(candidate);
+        scoredDocuments.set(documentIndex, entry);
+      });
+    });
+  });
+
+  return [...scoredDocuments.entries()]
+    .filter(([, entry]) => entry.queryTokens.size === queryTokens.length)
+    .sort((left, right) => right[1].score - left[1].score)
+    .map(([documentIndex, entry]) => {
+      const document = documents[documentIndex];
+      const result = {
+        url: document.url,
+        excerpt: fuzzyExcerpt(document.content, entry.matchedTokens),
+        meta: { title: document.title, date: document.date, tags: document.tags },
+      };
+      return { data: async () => result };
+    });
 };
 
 const setStatus = (message) => { status.textContent = message; };
@@ -46,10 +157,11 @@ const renderResult = (result) => {
   return item;
 };
 
-const updateUrl = (query, page) => {
+const updateUrl = (query, page, mode = activeMode) => {
   const url = new URL(window.location.href);
   if (query) url.searchParams.set("q", query); else url.searchParams.delete("q");
   if (query && page > 1) url.searchParams.set("page", page); else url.searchParams.delete("page");
+  if (mode === "fuzzy") url.searchParams.set("mode", mode); else url.searchParams.delete("mode");
   window.history.replaceState({}, "", url);
 };
 
@@ -93,30 +205,39 @@ const renderPage = async (page, { scroll = false } = {}) => {
   results.replaceChildren(...matches.map(renderResult));
   renderPagination(totalPages);
   updateUrl(activeQuery, currentPage);
-  setStatus(resultRefs.length
-    ? `Showing ${start + 1}–${start + matches.length} of ${resultRefs.length} results for “${activeQuery}”.`
-    : `No results found for “${activeQuery}”.`);
+  if (resultRefs.length) {
+    setStatus(`Showing ${start + 1}–${start + matches.length} of ${resultRefs.length} ${activeMode} results for “${activeQuery}”.`);
+  } else if (activeMode === "keyword") {
+    setStatus(`No keyword results for “${activeQuery}”. Try Fuzzy for spelling variations.`);
+  } else {
+    setStatus(`No fuzzy results found for “${activeQuery}”.`);
+  }
   if (scroll) status.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
-const runSearch = async (query, page = 1, updateHistory = true) => {
+const runSearch = async (query, page = 1, mode = activeMode, updateHistory = true) => {
   const version = ++searchVersion;
+  activeQuery = query;
+  activeMode = mode;
   results.replaceChildren();
   pagination.hidden = true;
   resultRefs = [];
-  activeQuery = query;
-  if (updateHistory) updateUrl(query, page);
+  modeInputs.forEach((radio) => { radio.checked = radio.value === activeMode; });
+  if (updateHistory) updateUrl(query, page, mode);
   if (!query) { setStatus("Enter a word, phrase, or code identifier to begin."); return; }
   form.setAttribute("aria-busy", "true");
-  setStatus("Searching…");
+  setStatus(activeMode === "fuzzy" ? "Loading fuzzy search…" : "Searching…");
   try {
-    const pagefind = await loadPagefind();
-    const response = await pagefind.search(query);
+    if (activeMode === "fuzzy") {
+      resultRefs = await fuzzySearch(query);
+    } else {
+      const pagefind = await loadPagefind();
+      resultRefs = (await pagefind.search(query)).results;
+    }
     if (version !== searchVersion) return;
-    resultRefs = response.results;
     await renderPage(page);
   } catch (error) {
-    console.error("Pagefind search failed", error);
+    console.error("Search failed", error);
     setStatus("Search is temporarily unavailable. Please try again.");
   } finally {
     form.removeAttribute("aria-busy");
@@ -133,6 +254,9 @@ input.addEventListener("input", () => {
   const query = input.value.trim();
   debounceTimer = window.setTimeout(() => runSearch(query, 1), query ? 180 : 0);
 });
+modeInputs.forEach((radio) => radio.addEventListener("change", () => {
+  if (radio.checked) runSearch(input.value.trim(), 1, radio.value);
+}));
 pagination.addEventListener("click", async (event) => {
   const button = event.target.closest("button[data-page]");
   if (button && !button.disabled) await renderPage(Number(button.dataset.page), { scroll: true });
@@ -141,8 +265,9 @@ pagination.addEventListener("click", async (event) => {
 const initialParams = new URLSearchParams(window.location.search);
 const initialQuery = initialParams.get("q")?.trim() || "";
 const initialPage = Number.parseInt(initialParams.get("page"), 10) || 1;
+const initialMode = initialParams.get("mode") === "fuzzy" ? "fuzzy" : "keyword";
 input.value = initialQuery;
-runSearch(initialQuery, initialPage, false);
+runSearch(initialQuery, initialPage, initialMode, false);
 
 document.addEventListener("keydown", (event) => {
   const target = event.target;

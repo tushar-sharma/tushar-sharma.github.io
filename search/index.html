@@ -17,6 +17,17 @@ title: Search
           aria-describedby="pagefind-search-hint pagefind-search-status" />
         <button type="submit" aria-label="Search">Search</button>
       </div>
+      <fieldset class="pagefind-search__modes" aria-label="Search mode">
+        <legend>Search mode</legend>
+        <label>
+          <input type="radio" name="mode" value="keyword" checked />
+          <span>Keyword</span>
+        </label>
+        <label>
+          <input type="radio" name="mode" value="fuzzy" />
+          <span>Fuzzy</span>
+        </label>
+      </fieldset>
       <p id="pagefind-search-hint" class="pagefind-search__hint">
         Press <kbd>/</kbd> to focus. Results stay on this device.
       </p>

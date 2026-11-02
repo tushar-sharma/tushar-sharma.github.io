@@ -63,13 +63,16 @@ jobs:
           if [ -f "loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt" ]; then cp loaderio-7f4b60e67a3aaee0ab4eb4633167d793.txt _site/; fi
 
       - name: 🔎 Build Pagefind Search Index
-        run: npx --yes pagefind@1.5.2 --site _site
+        run: |
+          bundle exec ruby scripts/build_fuzzy_index.rb _site
+          npx --yes pagefind@1.5.2 --site _site
 
       - name: ✅ Verify Build
         run: |
           ls -la _site
           [ -f _site/index.html ] || exit 1
           [ -f _site/pagefind/pagefind.js ] || exit 1
+          [ -f _site/search/fuzzy-index.json ] || exit 1
 
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

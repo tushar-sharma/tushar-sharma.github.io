@@ -161,7 +161,7 @@ Dont create tags with upper case name. Always use lowercase.
 
 ### Searching
 
-Search is built locally with Pagefind after Jekyll renders the site. The index includes the complete rendered post body, including code blocks.
+Search is built locally after Jekyll renders the site. Pagefind provides the default keyword search, while a lazily loaded local corpus provides opt-in fuzzy matching for misspellings. Both indexes include the complete rendered post body, including code blocks.
 
 ```sh
 make build
