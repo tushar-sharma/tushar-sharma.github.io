@@ -13,7 +13,7 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
 /*
 Copyright Alex Leone, David Nufer, David Truong, 2011-03-11. kathack.com
 
-javascript:var i,s,ss=['https://web.archive.org/web/20140616225042/http://kathack.com/js/kh.js','https://web.archive.org/web/20140616225042/http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
+javascript:var i,s,ss=['https://web.archive.org/web/20140616225042/http://kathack.com/js/kh.js','https://code.jquery.com/jquery-3.7.1.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
 
 */
 var BORDER_STYLE = "1px solid #bbb",
