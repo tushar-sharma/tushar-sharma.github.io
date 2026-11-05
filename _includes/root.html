@@ -14,6 +14,7 @@
 {% assign blogposts = paginator.posts  %}
 {% if true %}
   {% for post in blogposts %}
+    {% unless post.hidden %}
         <small style="float:right; margin-top:5px;"><strong></strong></small>
   <a href="{{ post.url }}">
     <h1>{{ post.title }}{% if post.tags contains 'audio' %}
@@ -55,6 +56,7 @@
     <hr />
     <br><br>
     {% endif %}
+    {% endunless %}
   {% endfor %}
 {% endif %}
 

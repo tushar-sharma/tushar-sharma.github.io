@@ -1,7 +1,7 @@
 LOG_AUTHOR ?= tushar sharma
 LOG_IMAGE_ID ?= MlrBBF8Er8s
 
-.PHONY: create logs build pagefind
+.PHONY: create logs encrypted-post build pagefind
 
 create:
 	bash createPost.sh
@@ -29,6 +29,8 @@ logs:
 		'' \
 		'Dear Vishi, dear logs for today.' > "$$post"; \
 	echo "Created $$post"
+encrypted-post:
+	bash scripts/create_encrypted_post.sh
 serve:
 	JEKYLL_ENV=production bundle exec jekyll serve --trace
 clean:

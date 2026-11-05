@@ -44,6 +44,11 @@ tag/
 .env.*
 !.env.example
 
+# Plaintext sources for encrypted posts. Never commit these files.
+.private-posts/
+encrypted/*.md
+encrypted/*.plain.html
+
 # OS generated files #
 ######################
 .DS_Store
