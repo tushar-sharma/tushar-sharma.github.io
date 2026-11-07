@@ -576,3 +576,72 @@ The `receive()` function is invoked when calldata is empty, whether the call sen
 Events let a smart contract write indexed logs. A successful or reverted transaction gets a transaction receipt, and that receipt contains the logs emitted by successful execution. If execution reverts, its state changes and emitted logs are discarded. Applications can query these logs or subscribe to new ones.
 
 We can use **ethers.js** to build a dapp—a decentralized application that interacts with Ethereum. A dapp usually has smart contracts deployed onchain and a user interface hosted offchain; it is therefore not quite right to say that the whole application either exists or does not exist on the blockchain. For example, ethers.js can connect to a node through a WebSocket provider and listen for events such as `Transfer` events emitted by the USDT contract.
+
+## Nov 7, 2026
+
+
+Eth_call is a rpc method exposed by ethereum node. It's used for lcoal simulation. It doens't modify the state. To modify the state, you need to create a transcaton.
+
+A **Swiss cheese model** in security: Use mutliple security layers, each with weakness. A breach happens when those weakness aligh, so defense in depth reduce the chance of total compromise.
+
+In Solidity 
+
+It's a key-value store similar to a dictionary.  It' doesn't store support iterations. It's stored in contract storage slot. 
+
+```solidity
+mapping (address => uint256) balances;
+
+balances[alice] = 100; 
+
+uint256  aliceBalance  = balance[alice]; //100
+unit256 fooBlance = balance[foo] // 0
+```
+
+
+**Reentrancy lock**: In a smart contract , if we pass control to external code , we can use 
+
+a. call 
+b. delegatecall  
+c. static call
+
+Reentrancy occurs when external contract calls back into your contract before the original invocation finishes.
+
+```
+Smart contract A and B 
+
+A.withdraw() -> B.receive() -> A.withdraw() again 
+
+the first A.withdraw()  is paused.
+```
+
+Reentrancy lock can be implemented using **modififier**. A modifier is like a decorator which wraps a function with additional behavior 
+
+```solidity
+
+bool locked;
+
+modifier nonReentrant() {
+    require(!locked, "Reentrant call");
+    locked = true;
+    _;
+    locked = false;
+}
+
+function withdraw() external nonReentrant {
+    // checks, state updates, then external call
+}
+```
+
+Setter function should validate both input validation and zero address assignment. Sending a transcation to zero address makes it inaccessible 
+
+```solidity
+function setOwner(address newOwner) external onlyOwner {
+    require(newOwner != address(0), "Zero address");
+    owner = newOwner;
+}
+```
+
+Address(0) is used to 
+
+1. unset address
+2. A token burn 

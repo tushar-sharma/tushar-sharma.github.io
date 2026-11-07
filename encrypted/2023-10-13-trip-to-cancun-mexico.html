@@ -767,8 +767,8 @@ exports.init = init;
   return exports;
 })());
             const templateError = "Bad password!",
-                isRememberEnabled = true,
-                staticryptConfig = {"staticryptEncryptedMsgUniqueVariableName":"4658c87bc6f8a8469cf4dc7d262644e1e7efd2e37756826c4ef7d8cf381924ade89ea4f997cd9579c7831f79e8e0568838f6b650ffb14e548530594dd65ee8e7dec193d53548acfb22823e91a4aa855925059ae351fd3bd088c9da41fc659d25","isRememberEnabled":true,"rememberDurationInDays":0,"staticryptSaltUniqueVariableName":"daaac86c9ad81bde7088109ebc774e98"};
+                isRememberEnabled = false,
+                staticryptConfig = {"staticryptEncryptedMsgUniqueVariableName":"4658c87bc6f8a8469cf4dc7d262644e1e7efd2e37756826c4ef7d8cf381924ade89ea4f997cd9579c7831f79e8e0568838f6b650ffb14e548530594dd65ee8e7dec193d53548acfb22823e91a4aa855925059ae351fd3bd088c9da41fc659d25","isRememberEnabled":false,"rememberDurationInDays":0,"staticryptSaltUniqueVariableName":"daaac86c9ad81bde7088109ebc774e98"};
 
             // you can edit these values to customize some of the behavior of StatiCrypt
             const templateConfig = {
@@ -783,6 +783,10 @@ exports.init = init;
 
             // try to automatically decrypt on load if there is a saved password
             window.onload = async function () {
+                if (!isRememberEnabled) {
+                    localStorage.removeItem("staticrypt_passphrase");
+                    localStorage.removeItem("staticrypt_expiration");
+                }
                 const { isSuccessful } = await staticrypt.handleDecryptOnLoad();
 
                 // if we didn't decrypt anything on load, show the password prompt. Otherwise the content has already been

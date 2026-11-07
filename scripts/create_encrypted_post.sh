@@ -69,6 +69,11 @@ if ! grep -q 'staticryptEncryptedMsgUniqueVariableName' "$generated_html"; then
   exit 1
 fi
 
+if ! grep -q '"isRememberEnabled":false' "$generated_html"; then
+  echo "Refusing to publish: StatiCrypt enabled browser password remembering." >&2
+  exit 1
+fi
+
 cp "$generated_html" "$encrypted_output"
 
 printf '%s\n' \
