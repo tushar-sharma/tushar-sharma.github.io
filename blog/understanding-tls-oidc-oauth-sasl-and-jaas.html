@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+    <link rel="alternate" type="application/rss+xml" title="Randomwits RSS" href="/feed.xml">
+    <meta charset="UTF-8">
+    <!--[if IE]<meta http-equiv="X-UA-Compatible" content="chrome=1"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="Tushar Sharma">
+<meta name="description" content="Random Wits, my digital footprint.">
+<meta name="keywords" content="Tushar, Sharma, Web, Development, Personal Website, Random Wits, Randomwits">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta property="og:site_name" content="Tushar Sharma" />
+<title>Understanding TLS, OIDC, OAuth, SASL, and JAAS</title>
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="stylesheet" href="/css/github.css">
+<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script async src="/js/scale.fix.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@tshrocks">
+    <meta name="twitter:creator" content="@tushar sharma">
+    <meta name="twitter:title" content="Understanding TLS, OIDC, OAuth, SASL, and JAAS">
+    <meta name="twitter:description" content="Welcome to Randomwits, my digital nest.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://unsplash.com/photos/Fi334arhI2o/download?w=437">
+    <meta property="og:image" content="https://unsplash.com/photos/Fi334arhI2o/download?w=437">
+    <!-- end of Twitter cards -->
+    <!-- this is to allow mutiple tabs for code selection-->
+    <script src="/js/clipboard.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Understanding TLS, OIDC, OAuth, SASL, and JAAS | RandomWits</title>
+    <meta name="generator" content="Jekyll v4.4.1" />
+    <meta property="og:title" content="Understanding TLS, OIDC, OAuth, SASL, and JAAS" />
+    <meta name="author" content="tushar sharma" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="I kept seeing TLS, Okta, OIDC, OAuth, SASL, and JAAS together. They all relate to security, but they do not do the same job. This is the mental model I want to remember." />
+    <meta property="og:description" content="I kept seeing TLS, Okta, OIDC, OAuth, SASL, and JAAS together. They all relate to security, but they do not do the same job. This is the mental model I want to remember." />
+    <link rel="canonical" href="https://randomwits.com/blog/understanding-tls-oidc-oauth-sasl-and-jaas" />
+    <meta property="og:url" content="https://randomwits.com/blog/understanding-tls-oidc-oauth-sasl-and-jaas" />
+    <meta property="og:site_name" content="RandomWits" />
+    <meta property="og:image" content="https://unsplash.com/photos/Fi334arhI2o/download?w=437" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2026-11-13T00:00:00+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="https://unsplash.com/photos/Fi334arhI2o/download?w=437" />
+    <meta property="twitter:title" content="Understanding TLS, OIDC, OAuth, SASL, and JAAS" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"tushar sharma"},"dateModified":"2026-11-13T00:00:00+00:00","datePublished":"2026-11-13T00:00:00+00:00","description":"I kept seeing TLS, Okta, OIDC, OAuth, SASL, and JAAS together. They all relate to security, but they do not do the same job. This is the mental model I want to remember.","headline":"Understanding TLS, OIDC, OAuth, SASL, and JAAS","image":"https://unsplash.com/photos/Fi334arhI2o/download?w=437","mainEntityOfPage":{"@type":"WebPage","@id":"https://randomwits.com/blog/understanding-tls-oidc-oauth-sasl-and-jaas"},"url":"https://randomwits.com/blog/understanding-tls-oidc-oauth-sasl-and-jaas"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <noscript>
+      <h4 style="background: #ffacd; margin: 0; padding: 15px; text-align: center;">
+        For a better experience on RandomWits, enable JavaScript in your browser.
+      </h4>
+    </noscript>
+    <div class="wrapper">
+      <header>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script defer src="/js/toc.js" type="text/javascript"></script>
+        <script async src="https://kit.fontawesome.com/7aae5464ce.js" crossorigin="anonymous"></script>
+        <script async src="/js/darkreader.js" crossorigin="anonymous"></script>
+        <script async src="/js/dark_wrapper.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.2/dist/tf.min.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.5.4/dist/speech-commands.min.js" crossorigin="anonymous"></script>
+        <script defer src="/js/dark_clap.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+          @font-face {font-family: 'Somefont';
+          	src:url('/font/OneDirection.ttf');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: "King Basil";
+            src: url("/font/King-Basil.ttf");
+            font-display: swap;
+          }
+
+          .king-basil {
+            font-family: "King Basil";
+          }
+
+
+          h1.heading { font-family: Myfont;
+            color: rgb(51, 153, 204);}
+          .top{color: rgb(68, 68, 68);}
+          .sub{font-family:Somefont;}
+
+          .theme-controls {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: 8px;
+            vertical-align: middle;
+          }
+
+          .theme-control {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(51, 153, 204, 0.35);
+            border-radius: 4px;
+            background: transparent;
+            color: inherit;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 1;
+            padding: 0;
+          }
+
+          .theme-control:hover,
+          .theme-control:focus {
+            border-color: rgb(51, 153, 204);
+            outline: none;
+          }
+
+          .theme-control:focus-visible {
+            box-shadow: 0 0 0 2px rgba(51, 153, 204, 0.35);
+          }
+
+          .theme-control[aria-pressed="true"] {
+            background: rgba(51, 153, 204, 0.12);
+            border-color: rgb(51, 153, 204);
+          }
+
+          .theme-control.is-loading {
+            cursor: wait;
+            opacity: 0.6;
+          }
+
+          .theme-control.is-detected {
+            transform: scale(1.12);
+          }
+
+          .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+          }
+
+          /* for the toc */
+          header ul  {
+            height: auto !important;
+            border: none !important;
+            width: auto !important;
+            border-radius: 0px solid !important;
+            border-right: 0px solid !important;
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+          }
+          header ul a {
+            padding-top: none !important;
+            color: #39c !important;
+            border-right: 0px solid !important;
+            display: inline !important;
+            padding: 0.5rem 1rem !important;
+            border-bottom: 1px solid #39c !important;
+          }
+
+          /** toc */
+          header li {
+            height : auto !important;
+            float: none !important;
+            line-height: 140% !important;
+            margin: 10px 0 !important;
+            border-right: 0px solid !important;
+
+          }
+        </style>
+        <div id="random" class="top king-basil" style="font-size: 32px; color: rgb(81, 170, 232); margin-bottom: 10px;">
+          <a href="/">
+            RandomWits
+          </a>
+          <span class="theme-controls" aria-label="Theme controls">
+            <button type="button" class="DarkReader_Button theme-control" title="Toggle dark mode" aria-label="Toggle dark mode" aria-pressed="false">
+              <span id="icon-dark" aria-hidden="true">☾</span>
+            </button>
+            <button type="button" class="ClapDark_Button theme-control" title="Clap listener off" aria-label="Start clap listener for dark mode" aria-pressed="false">
+              <span id="icon-clap-dark" aria-hidden="true">👏</span>
+            </button>
+            <span id="clap-dark-status" class="visually-hidden" aria-live="polite"></span>
+          </span>
+        </div>
+        <div style="clear:both;"></div>
+        <div>
+          <p class="me_blurb">
+          </p>
+          <div class="sub">
+            <!-- <span id="textAnimation"></span>-->
+            life is too short for a diary
+          </div>
+        </div>
+        <!--<a href="/"><h1 class="heading">Random<span class="top">Wits</span></h1></a> -->
+        <!--<p class="me_blurb"><div >beware of random wits...<br>sometimes they bite</div></p> -->
+        <!--<span class="quora-follow-button" data-name="Tushar-Sharma-3">Follow <a href="http://www.quora.com/Tushar-Sharma-3">Tushar Sharma</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/follow?embed_code=Wo7vDKF"></script></span>
+<br>
+-->
+        <!-- <h2>Projects</h2>
+<div class="highlight" >
+  <pre style="overflow: hidden; overflow-y: hidden;">
+<code><span class="nv">$</span> latest projects</code>
+     ├── <span class="nv"></span><a href="/projects/k-largest" title="Find kth largest element in an array">k-largest</a><br />     ├── <span class="nv"></span><a href="/projects/encrypt-files" title="Encrypted Files in Minix 3">encrypted-files</a><br />     └── <span class="nv"></span><a href="/projects/binary-semaphore" title="Binary Sempahore">binary-semaphore</a><br><div style="float:right;">+&nbsp;<a href="/projects">view all</a></div>
+</pre>
+</div>
+-->
+        <div class="highlight">
+          <!-- Responsive Sidebar Navigation -->
+          <style>
+            .sidebar-hamburger {
+              display: none;
+              background: none;
+              border: none;
+              font-size: 2em;
+              margin: 10px;
+              cursor: pointer;
+              z-index: 1001;
+            }
+            .nav-wrap {
+              transition: right 0.3s;
+            }
+            @media (max-width: 800px) {
+              .nav-wrap {
+                position: fixed;
+                top: 0;
+                right: -260px;
+                left: auto;
+                width: 240px;
+                height: 100vh;
+                background: #fff;
+                box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+                z-index: 1000;
+                padding-top: 60px;
+              }
+              .nav-wrap.open {
+                right: 0;
+              }
+              .sidebar-hamburger {
+                display: block;
+                position: fixed;
+                right: 10px;
+                left: auto;
+                top: 10px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .main-nav ul {
+                padding: 0;
+                margin: 0;
+              }
+              .main-nav li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #eee;
+              }
+              .main-nav a {
+                display: block;
+                padding: 18px 24px;
+                font-size: 1.1em;
+                color: #333;
+                text-decoration: none;
+              }
+              .main-nav a:active, .main-nav a:focus {
+                background: #f0f0f0;
+              }
+              body.sidebar-open {
+                overflow: hidden;
+              }
+            }
+          </style>
+          <button class="sidebar-hamburger" aria-label="Open navigation" onclick="document.querySelector('.nav-wrap').classList.toggle('open'); document.body.classList.toggle('sidebar-open');">
+            <span>☰</span>
+          </button>
+          <div style="clear:both;float:left;padding-bottom:15px;" class="navbar-nav">
+            <div class="nav-wrap">
+              <nav class="main-nav">
+                <ul class="unstyled list-hover-slide">
+                  <li><a href="/tags"><i class="fa fa-tag"></i> Tags</a></li>
+                  <li><a href="/games"><i class="fas fa-gamepad"></i> Games</a></li>
+                  <li><a href="/watchlist"><i class="fas fa-film"></i> Watchlist</a></li>
+                  <li><a href="/bookshelf"><i class="fas fa-book-open"></i> Bookshelf</a></li>
+                  <li><a href="/quotes"><i class="fas fa-comment-dots"></i> Quotes</a></li>
+                  <li><a href="/travel"><i class="fas fa-map-marked-alt"></i> Travel</a></li>
+                  <li><a href="/habits"><i class="fas fa-heartbeat"></i> Habits</a></li>
+                  <li><a href="/resources"><i class="fas fa-laptop-code"></i> Resources</a></li>
+                  <li><a href="/tools"><i class="fas fa-hammer"></i> Tools</a></li>
+                  <li><a href="/contact"><i class="fas fa-file-signature"></i> Contact</a></li>
+                  <li><a href="/about"><i class="fas fa-fingerprint"></i> About</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <script>
+            // Close sidebar when clicking outside (mobile)
+            document.addEventListener('click', function(e) {
+              var nav = document.querySelector('.nav-wrap');
+              var btn = document.querySelector('.sidebar-hamburger');
+              if (!nav || !btn) return;
+              if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn && !btn.contains(e.target)) {
+                nav.classList.remove('open');
+                document.body.classList.remove('sidebar-open');
+              }
+            });
+          </script>
+        </div>
+        <!-- only if page is root page -->
+        <div id="toc-block" class="codeblock" style="display:none;">
+          <h3 style="color:#39c;">
+            <i class="far fa-bookmark"></i> On This Page</h3>
+          <div id="toc"></div>
+        </div>
+        <br>
+        <!-- toc page -->
+        <br>
+        <br>
+        <script type="text/javascript">
+          $(document).ready(function() {
+              $('#toc').toc();
+          });
+        </script>
+        <!-- Upvote next : disabled -->
+        <!-- 
+-->
+        <!-- begin - this is to include Adds in the site -->
+        <!-- 
+ -->
+        <!-- end - this is to include Adds in the site -->
+      </header>
+      <section>
+        <link rel="stylesheet" href="/css/search.css">
+        <link rel="stylesheet" href="/css/toc.css">
+        <script src="/js/copyClipboard.js" type="text/javascript"></script>
+        <!-- search box begins -->
+        <div style="padding-bottom:60px; padding-top:20px; background : white;">
+          <form style="float:right;" action="/search/?">
+            <input type="search" name="q" placeholder="Search">
+          </form>
+        </div>
+        <!-- search box ends -->
+        <br>
+        <small style="float:right; margin-top:5px;"><strong></strong></small>
+        <h1 data-pagefind-body data-pagefind-weight="10" data-pagefind-meta="title">Understanding TLS, OIDC, OAuth, SASL, and JAAS</h1>
+        <span hidden data-pagefind-meta="date" content="2026-11-13T00:00:00+00:00"></span>
+        <span hidden data-pagefind-meta="tags" content="security, authentication, oauth, oidc, kafka, java"></span>
+        <p>Tags:  <a class="mytag" href="/tag/security" title="View posts tagged with: security">security</a>    <a class="mytag" href="/tag/authentication" title="View posts tagged with: authentication">authentication</a>    <a class="mytag" href="/tag/oauth" title="View posts tagged with: oauth">oauth</a>    <a class="mytag" href="/tag/oidc" title="View posts tagged with: oidc">oidc</a>    <a class="mytag" href="/tag/kafka" title="View posts tagged with: kafka">kafka</a>    <a class="mytag" href="/tag/java" title="View posts tagged with: java">java</a>    </p>
+        <div class="author-info">
+          <div class="author-image">
+            <img src="/img/tushar_sharma.jpg" alt="Author">
+          </div>
+          <span class="author-name">Written by: 
+            Tushar
+            Sharma
+          </span>
+        </div>
+        <div class="post-featured-image" style="text-align:center; margin-bottom:20px;">
+          <img src="https://unsplash.com/photos/Fi334arhI2o/download?w=800" alt="Featured image for Understanding TLS, OIDC, OAuth, SASL, and JAAS" style="max-width:100%; height:auto;">
+        </div>
+        <div data-pagefind-body>
+          <ul>
+            <li>
+              <strong>TLS</strong> protects the connection.</li>
+            <li>
+              <strong>Okta</strong> is an identity provider that manages identities.</li>
+            <li>
+              <strong>OIDC</strong> tells an application who signed in.</li>
+            <li>
+              <strong>OAuth 2.0</strong> gives a client permission to access a resource.</li>
+            <li>
+              <strong>SASL</strong> authenticates a client connection inside another protocol, such as Kafka.</li>
+            <li>
+              <strong>JAAS</strong> configures the authentication mechanism in a Java application.</li>
+          </ul>
+          <h2 id="tls">TLS</h2>
+          <p>TLS stands for <strong>Transport Layer Security</strong>. It encrypts data in transit, checks that the data was not modified along the way, and usually verifies the server's identity using a certificate. It can also verify the client's identity when mutual TLS, or mTLS, is enabled.</p>
+          <p>SSL is the older, obsolete predecessor to TLS. People still casually say "SSL," but modern systems should be using TLS.</p>
+          <p>TLS does not automatically mean that the application user has been authenticated. It secures the road between the client and server; another mechanism can still be needed to identify who is travelling on that road.</p>
+          <h2 id="okta-the-identity-provider">Okta: the identity provider</h2>
+          <p>Okta is an <strong>identity provider</strong>, or IdP. It manages or connects to identities and information such as users, credentials, groups, application assignments, and MFA settings.</p>
+          <p>When I visit <code class="language-plaintext highlighter-rouge">company.okta.com</code>, Okta may ask for my password and send an Okta Verify Push. The Push is one authentication factor. Only after I complete authentication can Okta issue tokens to the application.</p>
+          <p>Okta also keeps an SSO session, normally through a secure browser cookie. When I open another company application, that application can redirect me to Okta again. If my Okta session is still valid, I may not need to enter my password or approve another Push. Okta can still issue new tokens intended for that application.</p>
+          <h2 id="oidc-and-the-id-token">OIDC and the ID token</h2>
+          <p>OpenID Connect, or <strong>OIDC</strong>, is an identity and authentication protocol built on top of OAuth 2.0. It lets an application ask an identity provider: <strong>Who signed in?</strong></p>
+          <p>After the user authenticates, an OIDC flow can return an <strong>ID token</strong>. The ID token is usually a signed JWT containing claims such as:</p>
+          <div class="language-json highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"iss"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://company.okta.com/oauth2/default"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user-123"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"aud"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application-client-id"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@company.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1234567890</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+            </div>
+          </div>
+          <p>The application must validate the signature and claims. In particular, it checks the issuer (<code class="language-plaintext highlighter-rouge">iss</code>), audience (<code class="language-plaintext highlighter-rouge">aud</code>), expiration (<code class="language-plaintext highlighter-rouge">exp</code>), and subject (<code class="language-plaintext highlighter-rouge">sub</code>). Decoding a JWT only makes its contents readable; decoding does not validate it.</p>
+          <p>The ID token is for the client application to establish a login session. It should not be sent to an API as if it were an access token.</p>
+          <h2 id="oauth-20-and-the-access-token">OAuth 2.0 and the access token</h2>
+          <p>OAuth 2.0 is primarily an <strong>authorization framework</strong>. It lets a client obtain permission to access a protected resource, such as an API. The result is normally an <strong>access token</strong>.</p>
+          <p>The client sends that token to the API:</p>
+          <div class="language-http highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code><span class="err">Authorization: Bearer &lt;access-token&gt;
+</span></code></pre>
+            </div>
+          </div>
+          <p>The API validates the token and checks whether it was issued by a trusted authorization server, has not expired, is intended for that API, and has the necessary scopes or permissions.</p>
+          <p>An access token is often a bearer token. This means whoever possesses it may be able to use it, so it must be protected.</p>
+          <p>The distinction I want to remember is:</p>
+          <div class="language-text highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>ID token     -&gt; who authenticated?
+Access token -&gt; what resource may the client access?
+</code></pre>
+            </div>
+          </div>
+          <p>OIDC and OAuth do not necessarily happen as two completely separate flows. An application commonly uses the Authorization Code flow and receives both tokens after exchanging the code:</p>
+          <div class="language-text highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>Browser -&gt; Okta: authenticate the user, including MFA when required
+Okta -&gt; application: authorization code
+Application -&gt; Okta: exchange the code
+Okta -&gt; application: ID token + access token
+</code></pre>
+            </div>
+          </div>
+          <p>The request must include the <code class="language-plaintext highlighter-rouge">openid</code> scope to make it an OIDC request and receive an ID token.</p>
+          <h3 id="why-client-credentials-gives-me-no-id-token">Why client credentials gives me no ID token</h3>
+          <p>The Client Credentials flow represents a service or application, not a human user:</p>
+          <div class="language-text highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>Application authenticates itself -&gt; access token
+No user signs in                 -&gt; no ID token
+</code></pre>
+            </div>
+          </div>
+          <p>This explains why calling Okta's token endpoint with a client ID and client secret gives me an access token but no ID token. To receive an ID token for a user, I need a user-facing OIDC flow such as Authorization Code with PKCE.</p>
+          <p>During development, the <code class="language-plaintext highlighter-rouge">id_token</code> appears in the response from the token endpoint. For a server-side application, the backend usually performs the code exchange, so the browser may never see the tokens. I should not log real tokens or paste company tokens into public JWT-decoding websites.</p>
+          <h2 id="sasl">SASL</h2>
+          <p>SASL stands for <strong>Simple Authentication and Security Layer</strong>. It is not one authentication algorithm. It is a framework that lets a client and server agree on and use an authentication mechanism.</p>
+          <p>Some SASL mechanisms I keep seeing are:</p>
+          <ol>
+            <li>
+              <strong>SCRAM-SHA-512</strong>: a challenge-response mechanism based on a username and password. The password itself is not sent across the network. The <code class="language-plaintext highlighter-rouge">512</code> refers to the SHA-512 hash function used by the mechanism.</li>
+            <li>
+              <strong>GSSAPI/Kerberos</strong>: a ticket-based mechanism. Kerberos is the authentication system, while GSSAPI is the SASL mechanism name commonly exposed by applications such as Kafka.</li>
+            <li>
+              <strong>OAUTHBEARER</strong>: a mechanism through which a client presents an OAuth access token to the server.</li>
+          </ol>
+          <p>SASL can support security features beyond authentication, depending on the mechanism. In the systems I am looking at, however, the useful mental model is still: <strong>TLS encrypts the connection, while SASL authenticates the client</strong>.</p>
+          <p>This is why configuration names sometimes combine both ideas. For example, <code class="language-plaintext highlighter-rouge">SASL_SSL</code> in Kafka means: use SASL for authentication over a TLS-encrypted connection. Despite the name, modern Kafka configurations use TLS rather than the obsolete SSL protocol.</p>
+          <h2 id="why-oidc-and-sasl-are-both-related-to-authentication">Why OIDC and SASL are both related to authentication</h2>
+          <p>OIDC and SASL can both participate in authentication, but at different boundaries:</p>
+          <table>
+            <thead>
+              <tr>
+                <th> </th>
+                <th>OIDC</th>
+                <th>SASL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Main conversation</td>
+                <td>Application and identity provider</td>
+                <td>Protocol client and protocol server</td>
+              </tr>
+              <tr>
+                <td>Typical use</td>
+                <td>Sign a user into a web or mobile application</td>
+                <td>Authenticate a Kafka, SMTP, or LDAP connection</td>
+              </tr>
+              <tr>
+                <td>Result</td>
+                <td>Identity represented by an ID token</td>
+                <td>Authenticated protocol connection</td>
+              </tr>
+              <tr>
+                <td>Built-in browser login, SSO, and MFA flow</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Authentication choices</td>
+                <td>OIDC flow through an identity provider</td>
+                <td>Pluggable mechanisms such as SCRAM, GSSAPI, and OAUTHBEARER</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>SASL does not store identities and it is not an identity provider. It defines the authentication conversation inside another protocol. Depending on the selected mechanism, the proof might be based on a password, a Kerberos ticket, or an OAuth access token.</p>
+          <p>The analogy that works for me is:</p>
+          <blockquote>
+            <p>The identity provider issues the badge. SASL defines how I show an accepted badge at a particular door. The server's authorization rules decide which rooms I may enter.</p>
+          </blockquote>
+          <h2 id="how-oauth-and-sasl-can-connect-in-kafka">How OAuth and SASL can connect in Kafka</h2>
+          <p>A self-managed Kafka cluster can be configured to trust OAuth tokens from an identity provider:</p>
+          <div class="language-text highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>Client -&gt; Okta/OAuth: obtain an access token
+Client -&gt; Kafka using SASL/OAUTHBEARER: present the access token
+Kafka: validate the token and map it to a principal
+Kafka ACLs: decide which topics or consumer groups it may use
+</code></pre>
+            </div>
+          </div>
+          <p>OIDC by itself cannot replace the Kafka authentication handshake. Kafka speaks its own binary protocol and does not redirect a client to an Okta login page. The access token is presented to Kafka through the <code class="language-plaintext highlighter-rouge">OAUTHBEARER</code> SASL mechanism.</p>
+          <p>For Amazon MSK, the mechanism named <code class="language-plaintext highlighter-rouge">SASL_OAUTHBEARER</code> is used for AWS IAM authentication; it does not mean that MSK accepts an arbitrary Okta token. AWS controls the managed brokers and supports its documented authentication choices, such as IAM, SASL/SCRAM, and mutual TLS. An organization can federate an Okta identity into an AWS IAM role, but the Kafka client ultimately uses AWS credentials to generate the token MSK accepts.</p>
+          <h2 id="jaas">JAAS</h2>
+          <p>JAAS stands for <strong>Java Authentication and Authorization Service</strong>. In this context, it is the Java-side configuration that tells the application which login module to use and provides the options that module needs.</p>
+          <p>For example, a Java or Kafka client using SCRAM may configure a SCRAM login module with a username and password. A client using Kerberos would use a Kerberos login module and supply settings such as a principal and keytab.</p>
+          <p>So JAAS is not another network protocol competing with TLS or SASL. It is how the Java application plugs into the chosen authentication mechanism.</p>
+          <p>Putting the original Kafka flow together in my head:</p>
+          <ol>
+            <li>The client opens a connection to the server.</li>
+            <li>TLS can encrypt that connection and verify the server certificate.</li>
+            <li>SASL runs an authentication mechanism, such as SCRAM-SHA-512 or GSSAPI, over the connection.</li>
+            <li>In a Java client, JAAS supplies the login module and credentials needed by that SASL mechanism.</li>
+          </ol>
+          <p>The final shortcut I want to recall is:</p>
+          <div class="language-text highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code>TLS         -&gt; protects the network connection
+Okta        -&gt; manages identities and authentication policies
+OIDC        -&gt; supplies identity information to an application
+ID token    -&gt; describes who authenticated
+OAuth 2.0   -&gt; grants delegated access
+Access token-&gt; represents permission to call a resource
+SASL        -&gt; authenticates a client within a protocol such as Kafka
+Kafka ACLs  -&gt; decide what the authenticated principal may do
+JAAS        -&gt; wires the chosen authentication into a Java client
+</code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- this is for pagination -->
+        <nav class="pagination clear" style="padding-bottom:20px;">
+          <a class="prev-item" href="/blog/postgres-cdc" title="Previous Post: Postgres CDC: Following Changes Through the WAL">←Previous</a>
+        </nav>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'randomwits'; // required: replace example with your forum shortname
+          var disqus_identifier = '/blog/understanding-tls-oidc-oauth-sasl-and-jaas';
+          	    var disqus_url = 'http://tushar-sharma.github.io/blog/understanding-tls-oidc-oauth-sasl-and-jaas';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="wrapper">
+      <footer>
+        <!-- <p><small>Tushar Sharma &copy; 2026</small></p> -->
+        <link rel="stylesheet" href="/css/font-awesome.css">
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <script src="/js/scroll_top.js" type="text/javascript"></script>
+        <div class="footer">
+          <hr>
+          <!--
+  
+    <div> <a href="/blog/"> blog </a> </div> <br>
+  
+    <div> <a href="/projects/"> projects </a> </div> <br>
+  
+    <div> <a href="/Blog/"> Blog </a> </div> <br>
+  `
+  -->
+          <div style="margin: 0 auto; text-align: center; font-size:large;">
+            <span><small>Made with <span style="color:#e00"><i class="icon-heart"></i></span> &amp; inspired from my sister ~ <a href="https://www.linkedin.com/in/sharmiwish" target="_blank">Vishi</a>  <br>
+                Tushar Sharma © 2026
+                <a title="Email" href="mailto:tushar@randomwits.com">
+                  <i class="icon-envelope-alt icon-large"></i>  
+                </a>
+                <!--
+  <a href="/contact/">
+    <i class="icon-bell"></i> &nbsp;
+  </a>
+  <a title="PGP key"  href="http://pgp.mit.edu/pks/lookup?op=get&search=0xD339D367130569DC">
+    <i class="icon-key"></i> &nbsp;
+  </a>
+  -->
+                <a title="Github" href="https://github.com/tushar-sharma" target="_blank">
+                  <i class="icon-github icon-large"></i>   
+                </a>
+                <a title="Linkedin" href="http://in.linkedin.com/in/tsharma3" target="_blank">
+                  <i class="icon-linkedin icon-large"></i>  
+                </a>
+                <a title="Twitter" href="https://twitter.com/tshrocks" target="_blank">
+                  <i class="icon-twitter icon-large"></i>  
+                </a>
+                <a title="Facebook" href="https://www.facebook.com/tushar.sharma1729" target="_blank">
+                  <i class="icon-facebook icon-large"></i>  
+                </a>
+                <a title="RSS" href="/feed.xml">
+                  <i class="icon-rss icon-large"></i>
+                </a>
+              </small></span><br>
+            <br>
+          </div>
+          <div style="clear:both;">
+            <hr>
+          </div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43895904-1', 'randomwits.com');
+            ga('send', 'pageview');
+          </script>
+          <!-- back to top scroll -->
+          <br>
+          <br>
+          <br>
+          <br>
+          <p id="back-top">
+            <a href="#top">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

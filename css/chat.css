@@ -1,0 +1,67 @@
+/* Chat bubble */
+.chatlist {
+    --sentColor: #0b93f6;
+    --receiveColor: #e5e5ea;
+    --bg: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+.shared {
+    position: relative;
+   /* Setup a relative container for our psuedo elements */
+    max-width: 255px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    line-height: 24px;
+    word-wrap: break-word;
+   /* Make sure the text wraps to multiple lines if long */
+    border-radius: 25px;
+}
+.shared:before {
+    width: 20px;
+}
+.shared:after {
+    width: 26px;
+    background-color: var(--bg);
+   /* All tails have the same bg cutout */
+}
+.shared:before, .shared:after {
+    position: absolute;
+    bottom: 0;
+    height: 25px;
+   /* height of our bubble "tail" - should match the border-radius above */
+    content: '';
+}
+.sent {
+    align-self: flex-end;
+    color: white;
+    background: var(--sentColor);
+}
+.sent:before {
+    right: -7px;
+    background-color: var(--sentColor);
+    border-bottom-left-radius: 16px 14px;
+}
+.sent:after {
+    right: -26px;
+    border-bottom-left-radius: 10px;
+}
+.received {
+    align-self: flex-start;
+    color: black;
+    background: var(--receiveColor);
+}
+.received:before {
+    left: -7px;
+    background-color: var(--receiveColor);
+    border-bottom-right-radius: 16px 14px;
+}
+.received:after {
+    left: -26px;
+    border-bottom-right-radius: 10px;
+}
