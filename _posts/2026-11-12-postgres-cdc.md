@@ -6,7 +6,6 @@ thumb: https://unsplash.com/photos/toBSID2_0F8/download?w=437
 author: tushar sharma
 category: blog
 tags:
-  - letters
   - postgres
   - cdc
 ---
