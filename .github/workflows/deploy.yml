@@ -16,7 +16,9 @@ concurrency:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    # Keep the OS stable: Ubuntu 26.04 cannot install this site's legacy
+    # native gem set, and only provides the latest Ruby patch releases.
+    runs-on: ubuntu-24.04
     steps:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -29,8 +31,7 @@ jobs:
       - name: 💎 Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          # Use the latest 3.2 patch available on the current runner image.
-          ruby-version: '3.2'
+          ruby-version: '3.2.2'
           bundler-cache: true
           cache-version: 1
 
