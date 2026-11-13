@@ -29,7 +29,8 @@ jobs:
       - name: 💎 Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2.2  # Match the development and lockfile Ruby version
+          # Use the latest 3.2 patch available on the current runner image.
+          ruby-version: '3.2'
           bundler-cache: true
           cache-version: 1
 
