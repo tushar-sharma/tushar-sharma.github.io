@@ -2,7 +2,13 @@
   hours_logged: 3.5 hrs
   pending: true
   progress: 1
-  comments: ""
+  comments: "Difficult platformer game. Background story and audio is great."
+
+- title: "Aurelia"
+  pendintg: true
+  hours_logged: 4.5 hrs 
+  progress: 10 
+  comments: "Adult game. Story is fun and lot of mini games"
 
 - title: "Crash Team Racing Nitro-Fueled"
   rating: 0
@@ -392,7 +398,7 @@
 
 - title: "FIFA 22"
   rating: 5
-  hours_logged: "120 hrs"
+  hours_logged: "170 hrs"
   comments: "I made a switch from FIFA 19. The gameplay is little better due to hyper motion technology. I mostly enjoy career mode with FC Barcelona team. It support's Local co-op. Use Proton 9.0-4 if you face controller issues."
 
 - title: "Cult of the Lamb"
