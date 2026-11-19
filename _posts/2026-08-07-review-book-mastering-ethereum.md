@@ -645,3 +645,102 @@ Address(0) is used to
 
 1. unset address
 2. A token burn 
+
+
+## Nov 18, 2026 
+
+**What's an oracle service?**
+It's a off chain service that helps smart contract to get external data. 
+
+**Can a smart contract make a HTTP request to a API itself? why does it needs an oracle service?** 
+A smart contract cannot initiate a HTTP request. Every node needs to reproduce API response deterministically. Since an API request can fail, change , etc, so it's not deterministic. So that's why a smart contract cannot make a HTTP request. 
+
+Oracle fetches data off chain. It signs and submits the chosen value in a blockchain transcation. 
+
+**Three types of oracle service**:
+
+1. immediate read : 
+
+a. Data is already in on-chain contract 
+
+b. best for stable data 
+
+c. Stored data can become stale
+
+d. Each update requires a new transaction and gas fees 
+
+2. publish subscribe
+
+a. oracle periodically publishes values to on chain feed contract
+
+b. off chain client will need to poll the feed
+
+c. consumers smart contract read the latest stored value when they execute
+
+3. request response oracle
+
+a. consumer smart contract records a request and emit an event 
+
+b. an off chain oracle detects the event and obtain relevant data and submit a signed transaction to the smart's callback function 
+
+What's a callback function ? 
+
+It's executed later when a asynchronous operation finishes. For an oracle. 
+
+```solidity 
+function fulfillRequest(byte32 requestId, uint256 price) external   {
+}
+```
+
+**What's an DAPP**
+
+It's decentralized app. It's trust critical logic is managed by smart contracts on blockchain. It's fronted may be hosted on traditional web2.0.
+
+what is trust critical logic? Balances, liquidity pools , swap rules, etc. But search indexes , analatics , etc can be off chain.
+
+**What's a blockchain indexer?** Service to query the blockchain like a database. It might be dealyed or incorrect. 
+
+**Merkel trees**: 
+
+It's a binary tree because each parent has two children.
+
+lets assume, 
+
+T1 = Alice pays Bob 5 ETH 
+T2 = Bob pays Carol 2 ETH 
+T3 = Carol pays Dave 1 ETH 
+T4 = Dave pays Eve 0.5 ETH 
+
+H(x) means hash x.
+P1 = H(L1 || L2)
+P2 = H(L3 || L4)
+Root = H(P1 || P2)
+
+```
+
+                  Root
+                 /    \
+               P1      P2
+              /  \    /  \
+             L1  L2  L3  L4
+             |    |   |    |
+             T1  T2  T3   T4
+```
+
+Smart contract only stores the Root hash.
+
+Merkle proof is a small list of sibling hashes needed to rebuild path from leaf to the root 
+
+```
+For T3:
+
+                  Root
+                 /    \
+               P1      P2
+                      /  \
+                     L3  L4
+                     |
+                     T3
+```
+
+Merkle proof solves the verifier's storage and computation, problem, instead of reading full merkel tree.
