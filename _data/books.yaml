@@ -18,6 +18,13 @@
   pending: false
   progress: 0
 
+- title: "Mastering Ethereum: 2nd Edition"
+  author: "Andreas M. Antonopoulos, Gavin Wood, Carlo Parisi, Alessandro Mazza, Niccolò Pozzolini"
+  rating: 5
+  pending: false
+  comments: "A great book on Ethereum that helped me understand the fundamentals of the EVM. It also gave me a solid grounding in wallets, oracle services, and Solidity."
+
+
 - title: "Man's Search for Meaning"
   author: "Viktor Frankl"
   rating: 5
