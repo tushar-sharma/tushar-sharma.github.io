@@ -1,16 +1,13 @@
 ---
 layout: post
 title: Build a Merkle Tree Verifier in Solidity with Foundary
-image: https://unsplash.com/photos//download?w=437
-thumb: https://unsplash.com/photos//download?w=437
-author: 
+image: https://unsplash.com/photos/EPy0gBJzzZU/download?w=437
+thumb: https://unsplash.com/photos/EPy0gBJzzZU/download?w=437
+author: tushar sharma
 category: blog
-published: false
 ---
 
-Dear Vishi, dear logs for today.<!-- truncate_here -->
-
-Dear Vishi, dear logs for today.
+Build a Merkle Tree Verifier in Solidity with Foundary.<!-- truncate_here -->
 
 
 ## What's a Merkle tree?
