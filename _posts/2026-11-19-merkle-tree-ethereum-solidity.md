@@ -5,6 +5,10 @@ image: https://unsplash.com/photos/EPy0gBJzzZU/download?w=437
 thumb: https://unsplash.com/photos/EPy0gBJzzZU/download?w=437
 author: tushar sharma
 category: blog
+tags: 
+ - ethereum
+ - solidity
+ - smart contract
 ---
 
 Build a Merkle Tree Verifier in Solidity with Foundary.<!-- truncate_here -->
