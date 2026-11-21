@@ -4,6 +4,11 @@
   progress: 1
   comments: "Difficult platformer game. Background story and audio is great."
 
+- title: "Red Dead Redemption 2"
+  hours_logged: 20 hrs
+  pending: true
+  comments: "Works great on Steam Deck. Riding through the open world on horseback really captures the feeling of being a cowboy. The dialogue is excellent, and the whole experience feels cinematic."
+
 - title: "Aurelia"
   pendintg: true
   hours_logged: 4.5 hrs 
@@ -637,7 +642,6 @@
 # I Wani Hug that Gator!
 # Felvidek
 # Knowledge, or know Lady
-# Red Dead Redemption 2
 # A Space for the Unbound
 # Resident Evil 2 (2019)
 # Resident Evil 4 (2023)
