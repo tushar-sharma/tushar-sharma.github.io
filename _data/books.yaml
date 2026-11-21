@@ -2,7 +2,7 @@
   author: "John Doak, David Justice"
   rating: 0
   pending: true
-  progress: 0
+  progress: 5
   comments: "<a href='/blog/review-book-go-for-devops' target='_blank'>Notes</a>"
 
 - title: "AI Engineering: Building Applications with Foundation Models"
@@ -480,3 +480,8 @@
 # Eating Animals (read by Natalie Portman)
 # Jonathan Livingston Seagull
 # The Fabric of the Cosmos
+# Distributed Services with Go by Travis Jeffery
+# TinyML and Efficient AI Computin https://hanlab.mit.edu/courses/2026-fall-65940
+# learn-claude-code https://github.com/shareAI-lab/learn-claude-code
+# Building a coding agent from scratch https://github.com/itsdecodingai/building-a-coding-agent-from-scratch-course
+# kafka https://app.codecrafters.io/courses/kafka/overview
