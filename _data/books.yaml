@@ -1,3 +1,10 @@
+- title: "Go for DevOps"
+  author: "John Doak, David Justice"
+  rating: 0
+  pending: true
+  progress: 0
+  comments: "<a href='/blog/review-book-go-for-devops' target='_blank'>Notes</a>"
+
 - title: "AI Engineering: Building Applications with Foundation Models"
   author: Chip Huyen
   rating: 5
