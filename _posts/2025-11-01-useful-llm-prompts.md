@@ -11,7 +11,7 @@ author: tushar sharma
 
 List of LLM prompts that I have found useful. I will be updating this list over time.<!-- truncate_here -->
 
-Last updated: September 3, 2026.
+Last updated: November 21, 2026.
 
 The current OpenAI pattern is to use the [Responses API](https://platform.openai.com/docs/quickstart/make-your-first-api-request), put durable behavior in `developer` or `system` instructions, and choose the model and reasoning level deliberately. OpenAI's model guide currently recommends GPT-5.6 Sol for complex reasoning and coding, GPT-5.6 Terra for a balance of quality and cost, and GPT-5.6 Luna for cost-sensitive high-volume work: [OpenAI models](https://platform.openai.com/docs/models). For production prompts, pin model versions when you need repeatable behavior and add evals because prompting behavior can change between model snapshots: [backward compatibility](https://platform.openai.com/docs/api-reference/backward-compatibility).
 
@@ -44,6 +44,41 @@ Return:
 
 Draft prompt:
 <paste prompt>
+```
+
+### Self-Socratic review
+
+This prompt makes an LLM use the Socratic method on itself. The minimum time helps, but the exit condition is more important. The LLM should stop because it has covered and challenged every idea, not simply because the timer ended.
+
+```text
+Your task is to understand and improve the material I give you. Do not edit it immediately.
+
+First, create a goal that describes the final result. Keep the goal active until every requirement below has been completed and verified.
+
+Use the Socratic method on yourself:
+
+1. Break the material into four to ten concrete ideas or claims.
+2. Ask one diagnostic question about each idea, from basic meaning to difficult implications.
+3. Answer every question using evidence from the material. Clearly label assumptions and anything you cannot determine.
+4. Challenge each answer. Look for unsupported claims, contradictions, missing context, ambiguous wording, and plausible alternative interpretations.
+5. Ask narrower follow-up questions wherever an answer is weak. Do not accept an answer merely because it sounds reasonable.
+6. Re-test the earlier ideas in a different order. Include at least one devil's-advocate question and one question that connects multiple ideas.
+7. Continue this question-and-answer debate for at least two minutes and at least twelve substantive questions. Time alone is not a stopping condition.
+8. Stop only when every idea has been examined, the important contradictions are resolved or explicitly marked unresolved, and you can summarize the material without introducing new assumptions.
+
+Then show me a concise audit containing:
+
+- the important questions you asked;
+- the conclusions you reached;
+- the uncertainties that remain;
+- the changes you intend to make and why.
+
+After the audit, edit the material. Preserve the author's original voice, structure, level of formality, and intent. Correct grammar and clarity, but do not turn informal writing into generic polished prose. Do not silently invent facts. If a factual claim may be wrong or current information matters, verify it with reliable sources before editing.
+
+Finally, compare the result with the original requirements, run any relevant checks, and mark the goal complete only after the edited material passes that audit.
+
+Material:
+<paste the material here>
 ```
 
 ### Dry-run code
