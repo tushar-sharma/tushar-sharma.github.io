@@ -45,7 +45,7 @@
   rating: 4
   comments: "It's a good rogue-like game. The combat rooms are procedurally generated. You get more powerful after you die. You can enable god mode which just increases your damage resistance by 2 percent every time you die till 80%."
 
-- title: "Alan Wake2"
+- title: "Alan Wake 2"
   rating: 4
   comments: "You need a GPU with mesh-shader support to run the game. The atmosphere is genuinely terrifying, and the cinematography in the cutscenes is top-tier. The Mind Place is a clever system for organizing clues and objectives. Combat can feel a bit clunky, though enabling One-Shot Mode helps smooth the experience. Exploration in dark areas occasionally drags, but the overall presentation is stunning. Abandoned."
 
@@ -144,8 +144,12 @@
   comments: "Gameplay was okish and it's too short"
 
 - title: "Undertale"
-  comments: "Great Indie game. Graphics are minimal but story and humor is great."
+  comments: "Great Indie game. Graphics are minimal but story and humor is great. stuck at Asgore fight. Abandoned."
   rating: 5
+
+- title: "Valiant Hearts: The Great War"
+  rating: 4 
+  comments: "There is a  bug where the car is continously moving in a loop in steam deck. Launch it on desktop and finish the mission."
 
 - title: "Wreckfest"
   rating: 4
